@@ -1,0 +1,222 @@
+---
+id: cron-jobs
+title: Cron Jobs
+sidebar_label: Cron Jobs
+---
+
+## Before You Starting
+
+Please make sure you have basic knowledge skills in _**JavaScript**_ and in _Netuno_ platform, also available at [Netuno Academy](https://doc.netuno.org/docs/en/academy/overview/).
+
+## Introduction
+
+Cron Jobs allow you to automate certain commands or scripts on your server to complete repetitive tasks automatically. This can be a very resourceful tool as a **Cron Job** can be set to run by 15 minute or hourly increments, a day of the week or month, or any combination of these. [Cron in Linux](https://opensource.com/article/17/11/how-use-cron-linux).
+
+In Linux/UNIX/Mac there is a service called _Cron_ with the famous settings `crontab`, on the other hand on _Windows_ will be the `Task Manager`.
+
+**Cron Jobs** comes already fully integrated with _Netuno_ platform which helps to avoid further external configurations.
+
+_Cron Jobs_ are known as periodic operations.
+
+Each _Netuno_ app can have several **Cron Jobs**, also these _Netuno_ Cron Jobs can execute internal and external URL's and services
+
+> For more information please check our documentation at [cron](https://doc.netuno.org/docs/en/library/resources/cron/).
+
+## Cron Jobs Guide
+
+Each application has its own service settings reschedule (**cron jobs**) with a specific execution configuration.
+
+To simplify each scheduled service, it is a separate ** job **, which has its own execution configuration, and can be executed every minute, every 5 minutes, every hour, on a certain day and time of the week, also has the URL that will be called when it is time to execute it.
+
+>_Netuno_ uses the library <a href="http://www.quartz-scheduler.org/" target="_blank">Quartz Scheduler</a> to manage the execution of scheduled services. The timing rules configuration can be found in this library.
+
+Furthermore, the execution of each **job** involves the execution of a URL (_web address, link_), which can be both external and internal to the application itself. When it is an external link, it can be from another application or any external URL on the internet, on the network or on the computer.
+
+<iframe frameborder="0" style="width:100%;height:500px;" src="https://viewer.diagrams.net/?layers=1&nav=1&title=cron-jobs.drawio#R7Vpdc5s4FP01fmwHSXz5MXGddDppk1nPTptHDLLNBiMqRGLvr18BkgFLxnYwjsfdPCToSCJwz7lXV1cM0Gi5uqdesvhOAhwNoBGsBujLAMKhafPfObAuAcuCJTCnYVBCRgVMwn9xCQKJZmGAU4GVECMkYmHSBH0Sx9hnDcyjlLw1h81IFDSAxJtjBZj4XqSiP8OALUrUNowK%2F4rD%2BYLJ1xMdS0%2BOFUC68ALyVoPQeIBGlBBWXi1XIxzlpmua5W5H7%2Ba5KI7ZIRO%2B%2Bm40vU%2FHKZ78TNk3xx0%2F%2Fv4kuHj1oky8r3hYtpYGoCSLA5zfxBig27dFyPAk8fy8940zzrEFW0a8Bfhlyih5wSMSEVrMRshGQ8Qn387CKKrhY%2FtudMcf9VZ9DfFmr5gyvKpB4rXuMVliRtd8iOy1yhlCYQCVzbeKLssRJCxqVJmSQ09IZL65c2VGfiEseYRVkbHfrFwOSX7pZ1O8367TkoSH6Qbw%2FJd5Qc1jxqIwxgIPPPryyG8TstwaxmfDaoKwQIFKCAaBhR0dhUPbQZ59GqoQcD432RpChS1oWCpbAPbFlv0%2FWXqynMvjang4Vwu88uYk5qZIMA35v8e0Qp8kBPfTOQtXWC5MRZvEbCL%2Bn4YbzowbmDpuXDhF9qkcqckMtDVBD2mCHgB9UQN0Qc%2BOWK7%2FBkP27yxf8wo7fkoLu97wARAmq6qTX83zvz8wy2Iib8QfbCp7FOK55VjbahST3PEadAnIi8J5nLs35yNXyW3OQ8hzgBvRsQyDINrl%2Bc0FsgduD6TW7ItZEyi2xgFPkkSTULYg3Ke8aFyht35GXwuj5ERUQx4ISQT4D2ZsLfzKyxhpcsfNR9e%2F6o3nIhpasvllJSxettaiVXincFY3712F7Fc1k7ee5Tx%2BXd0kb6z3cZiSjPq4zQmcciDz6ByztsRLRLLckK2aoDjyWPjazEZ1FBdTbyj11rUBCQljltbu%2FJQDldRMmRhJrQmu73aMtyzQabxltQ5HBuwyHNiNp%2BEXpT0q6W8M28Eb1CXnjN5Qc4Dnet%2FR3uCcxR3cA90BoVO7Q7cE3vlYjs1mzNvHctF6qmU5Ouo7sDg8NKg5l8Wi%2Fad5apnwyDoF6MS6zOE%2FYCnrxLoUYS0P%2FfuvBw6MV9w5Yi9VRRFFYZLm5G%2F2eRHJggN2BjXObM1OwMPuzNftBGzfxdPZqaofzSXWlO5ayxdNoNsK9LZLQ%2BY7HO%2BEvmYc6WsNn%2B%2FgMYeudtLwH5z8AWA2kznLbU23gGm0je8n3ZKbob611KqJHcEYnC8YHyotcBn7CmBvScWBrdKCVuv4nqTlXlB%2BcGzMer%2BWEDxUS%2B5FaAm5qKkNs11LaFt75hm0JEPjWbV0YM7YHqZqgoRHKfIcCjz5huJ9VRJjS1FCkbsUaJqobXw%2FCgRq3vuN5JVXNRmTaW7KcLJVH8%2Bh2k7y6Np4MwOezWbQ12bAgT21rRPVws2tA0CkOQEEugy4t4qpjJwKF%2BjauUDGxXGhnhmVXKh1vCvjAgwvjQuonhGVXKgnDFfGhXtxVACFihElscLDZZyqKZWWxhlsd3oggFtn3dDRMORoDrtRb1UUlaGbJNEGru4kRXjGTkdR6wbliMXE3P4CAUCosGJr3Ka%2F0hZU3YbEs3CucFJZBxxXSYRqjMLFjy5Gbb6v6sfcms8K9J9S9WVupJh7gulrOBihwY1D2mq53Sx%2BntqtCYeKwG3F4q7G4vawr3XB2hF11CX6SqMOMC4u6kB1P3E1UUdj7o%2BOOlDdMlxT1AHuGaMOb1bfOJe1juo7cTT%2BDw%3D%3D"></iframe>
+
+The graph above shows that _Netuno_ contains 2 applications, where each one has configured 2 jobs (_scheduled services_), which are executed at different times, corresponding to any configuration.
+
+The execution that will happen is as follows:
+
+- App 1 send 2 jobs:
+  - Job 1: Run an URL internal service of the App 1 itself.
+  - Job 2: Run an external, public URL.
+- App 2 send 2 jobs:
+  - Job 3: Run an internal service URL from App 2 itself.
+  - Job 4: Run an App 1 service URL.
+
+> Applications should have the services that are run by **Cron Jobs** within the folder:
+> - 📂 `server/services/jobs`
+
+Each URL is executed using the _HTTP POST_ method. In the job configuration, it allows adding additional parameters, as well as a secret key to prevent it from being executed outside the controlled context.
+
+## Configuration
+
+According to the environment, the schedule services is carried out in the configuration file app.
+
+> This configure should never start with `*` this will cause the execution to occur every second, therefore generating performance complications in a snowball effect in case the processing at any time takes more than 1 second.
+
+To do this, navigate within the application you are developing to the environment configuration file. In this example, we will use the development environment file located at:
+
+- 📂 `config/_development.json`
+
+Check that there are no more configurations for _Cron_, if it does not add the configuration parameters at the end of the configuration file (in JSON format):
+
+```
+{
+    ...
+    "cron": {
+        "secret": "m3u-S3Gred0",
+        "jobs": [
+            {
+                "name": "my-job",
+                "config": "0 30 12 * * ?",
+                "url": "http://my-app.local.netu.no:9000/jobs/my-job"
+            },
+            {
+                "name": "my-job",
+                "config": "0 0/2 * * * ?",
+                "url": "http://my-app.local.netu.no:9000/jobs/my-other-job",
+                "params": {
+                    "secret": "m3u-Ou7ro-S3Gred0",
+                    "type": "client"
+                }
+            }
+        ]
+    },
+    ...
+}
+```
+
+In this configuration, the first job will be executed every day at noon and thirty minutes. And the second job will run every 2 minutes.
+
+##### Jobs
+
+The list of scheduled services that we have in the application is an array and for this reason we can have multiple services configured.
+
+##### Secret
+
+It is a security key parameter that protects the service, to be executed only when it receives this parameter with exactly the same value.
+
+The reason why `jobs` are public services and to prevent them from being executed externally they contain this protection.
+
+##### Name
+
+The name that identifies the service internally, which can be used to perform management manipulation, such as stop and restart.
+
+##### Config
+
+The configuration of the expression of the service timing, on other hand the rules of its scheduling.
+
+> The configuration should never start with `*` this will cause the execution to occur every second, thus, generating performance complications with a snowball effect in case the processing at any time takes more than 1 second.
+
+Check the supported expressions below.
+
+##### URL
+
+The address that will be executed periodically.
+
+##### Params
+
+The parameters that are passed to the URL in the execution, the URL is executed with the ** HTTP POST ** method and therefore additional parameters such as _type_ can be added in the example above, or even specify another secret key.
+
+### Supported formats of Cron expressions
+
+|Name Field | Compulsory | VALUES ACCEPTED| SPECIAL CHARACTERS ALLOWED |
+| ------- |:------:|:-----------:|--------------|
+| Seconds | YES | 0-59 | , - * / |
+| Minutes | YES | 0-59 | , - * / |
+| Hours | YES | 0-23 | , - * / |
+| Day of the Month | YES | 1-31 | , - * ? / L W |
+| Month | YES | 1-12 or JAN-DEC | , - * / |
+| Day of the week | YES | 1-7 or SUN-SAT | , - * ? / L # |
+| Year | NO | empty, 1970-2099 | , - * / |
+
+##### Cron expressions, examples
+
+|EXPRESSION | MEANING |
+| ------- |------|
+| 1 * * * * ? | Performs on the second number 1 of every minute. |
+| 0 0 12 * * ? | Starts at 12h00 every day |
+| 0 15 10 ? * * | Starts at 10h15 every day|
+| 0 15 10 * * ? | Starts at 10h15 every day |
+| 0 15 10 * * ? * | Starts at 10h15 every day |
+| 0 15 10 * * ? 2005 | Starts at 10h15 every day during 2005 |
+| 0 * 14 * * ? | Starts every minute starting at 14h and ends at 14h59, every day |
+| 0 0/5 14 * * ? | Starts every 5 minutes starting at 14h00 and ending at 14h55, every day |
+| 0 0/5 14,18 * * ? | It starts every 5 minutes, starting at 14h00 and ending at 14h55. Subsequently, it starts every 5 minutes, starting at 18h00 and ending at 18h55, every day |
+| 0 0-5 14 * * ? | Starts every minute starting at 14h00 and ends at 14h05, every day |
+| 0 10,44 14 ? 3 WED | Starts at 14h10 and 14h44 every Wednesday in March. |
+| 0 15 10 ? * MON-FRI | Starts at 10h15 every working day of the week (Monday to Friday) |
+| 0 15 10 15 * ? | Starts at 10h15 on the 15th of each month |
+| 0 15 10 L * ? | Starts at 10h15 on the last day of each month |
+| 0 15 10 L-2 * ? | Starts at 10h15 on the penultimate day of each month |
+| 0 15 10 ? * 6L | Starts at 10h15 on the last Friday of each month |
+| 0 15 10 ? * 6L 2002-2005 | Starts at 10h15 every last Friday of each month during 2002, 2003, 2004 and 2005 |
+| 0 15 10? * 6 # 3 | Starts at 10h15 on the third Friday of each month |
+| 0 0 12 1/5 * ? | Starts at 12 noon every 5 days of each month, starting on the first day of each month. |
+| 0 11 11 11 11 ? | It starts every 11th of November at 11h11 |
+
+> The configuration should never start with `*` this will cause the execution to occur every second, thus generating performance complications with a snowball effect in case the processing at any time takes more than 1 second. 
+[Cron Tab](https://crontab.guru/examples.html)
+
+## Service
+
+Scheduled services should be scheduled within the folder:
+
+- 📂 `server/services/jobs`
+
+_Netuno_ will automatically execute these services and validate the `secret` parameter with the right configuration value.
+
+> The `secret` has the purpose for the service to be executed externally without authentication, but in a secure way.
+
+The service will be executed periodically according to the defined parameterization.
+
+Just execute the service's direct URL and pass the `secret` parameter, to run the service execution test manually.
+
+Via GET for example:
+
+- http://my-app.local.netu.no:9000/services/job/my-job?secret=\*\*\*\*\*
+
+In place of the `*****` at the end of the URL, it should be replaced with the actual configured value of the` secret`.
+
+## Example
+
+Create the file at:
+
+- 📂 `server/services/jobs/test.js`
+
+In this service file, place the following code:
+```javascript
+_log.info("Job test!")
+_out.print("Ok")
+```
+
+In your application's configuration JSON, adjust the parameterization as below:
+
+```javascript
+{
+    ...
+    "cron": {
+        "secret": "m3u-S3Gred0",
+        "jobs": [
+            {
+                "name": "test",
+                "config": "0/30 * * * * ?",
+                "url": "/services/jobs/test"
+            }
+        ]
+    },
+    ...
+}
+```
+
+When running the _Netuno_ server into the terminal, the message `Test job!` Will appear every 30 seconds.
+
+Open the URL in the browser:
+
+- http://localhost:9000/services/jobs/test?secret=m3u-S3Gred0
+
+Only `Ok` will return and the message` Test job! `Will appear in the terminal.
+
+> In the `development` environment, the validation of the` secret` has no effect, so it can run without passing any `secret` and it will work, but in different environment, such as the production one will be already taken into account.
