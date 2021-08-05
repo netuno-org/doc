@@ -2,7 +2,7 @@
 
 This is the official Netuno Platform documentation available in [doc.netuno.org](https://doc.netuno.org/)
 
-Made with [https://docusaurus.io/](https://docusaurus.io/).
+Made with [Docusaurus](https://docusaurus.io/).
 
 ## Install
 
