@@ -10,7 +10,7 @@ Before you start this tutorial make sure you know how to create **Forms, Fields,
 * [Forms](academy/explore/graphical-interface/forms.md)
 * [Fields](academy/explore/graphical-interface/fields.md)
 * [Relationship between forms](academy/explore/graphical-interface/relationships-between-forms.md)
-* [Web REST Services](web-rest-services.md)
+* [Web REST Services](academy/explore/services.md)
 
 It is also advisable that, before starting this tutorial, ensure that you have some basic knowledge in _**JavaScript**_, _**React.js**_ and _**HTML**_.
 

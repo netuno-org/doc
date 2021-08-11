@@ -7,7 +7,7 @@ sidebar_label: Templates
 ## Before you start
 Before creating services that call templates make sure you know how to create **Web REST Services** , if you don't know how to visit the following link:
 
-* [Web Rest Services](web-rest-services.md)
+* [Web Rest Services](../explore/services.md)
 
 It is also advisable that, before you start this tutorial, you make sure you have some basics in _**JavaScript**_.
 

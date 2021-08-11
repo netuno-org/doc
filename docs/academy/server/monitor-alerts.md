@@ -364,7 +364,7 @@ It can be implemented to send alerts through email, SMS, or even store the infor
 
 Also any kind of `url` can be used and so the alert can be triggered to other technologies like NodeJS, PHP, .NET, Rails, Laravel, Sails, etc...
 
-In the case of Netuno you can implement a service for sending email by following the instructions in the [Sending Emails](library/tutorials/sending-emails.md) tutorial.
+In the case of Netuno you can implement a service for sending email by following the instructions in the [Sending Emails](services/sending-emails.md) tutorial.
 
 Below is how to implement a complete example adapted to monitoring alerts.
 

@@ -41,7 +41,6 @@ Explore and discover the various types of resources available on Netuno.
 * [Form](resources/form.md)
 * [Group](resources/group.md)
 * [Header](resources/header.md)
-* [Instant](resources/instant.md)
 * [Jasper](resources/jasper.md)
 * [Jwt](resources/jwt.md)
 * [Lang](resources/lang.md)
