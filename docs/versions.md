@@ -131,7 +131,7 @@ The `File` class has the new `isFile` and `isFolder` methods, the `InputStream` 
 
 Improved database connection failure errors.
 
-##### Recursos
+##### Resources
 
 New `_cors` resource to easily manipulate CORS (Cross-Origin Resource Sharing).
 
@@ -143,7 +143,7 @@ Resource `_xml` with `transform`, `save` and `output`.
 
 Resource `_smtp` supports setting the _subtype_ of _multipart_, default is `mixed`.
 
-##### Configuração
+##### Configuration
 
 Remote now supports setting the `urlPrefix` parameter as an alternative to `url` to avoid mistakes.
 
