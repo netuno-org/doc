@@ -79,9 +79,13 @@ And to start to use and manage _Netuno_ server with the **Demo**_nstration_ appl
 
 ### Open the Application in the Browser
 
-After started the server the browser will be launched and will open automatically with the address of the local _Netuno_ server.
+After starting the server the browser will be launched and open automatically with the address of the local _Netuno_ server.
 
-If your browser is not running automatically then open the below address into your browser:
+If your browser is not opened automatically then open the below address in your browser:
+
+* <a href="http://demo.local.netu.no:9000" target="_blank">http://demo.local.netu.no:9000</a>
+
+or:
 
 * <a href="http://localhost:9000" target="_blank">http://localhost:9000</a>
 

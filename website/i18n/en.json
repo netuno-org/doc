@@ -133,6 +133,10 @@
         "title": "Templates",
         "sidebar_label": "Templates"
       },
+      "academy/start/demonstration/config": {
+        "title": "Config",
+        "sidebar_label": "Config"
+      },
       "academy/start/demonstration/database": {
         "title": "Database",
         "sidebar_label": "Database"

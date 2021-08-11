@@ -10,11 +10,11 @@ In the previous stage, you have created your task management, however as you can
 
 For this reason, our next step will be to know if an employee has done a task and the time spent on the same task.
 
-You will need to co-relate **Tasks** with the **Register** and their hours/time spend.
+You will need to co-relate **Tasks** with the **Record** and their hours/time spend.
 
 ### Selecting Field Type
 
-Clicking on **"Build"** after that going to the form field management **"Register"** you will create a new field where the the settings of the **"Display Name"** should be `Task`.
+Clicking on **"Build"** after that going to the form field management **"Record"** you will create a new field where the the settings of the **"Display Name"** should be `Task`.
 
 The configuration **Name** was set automatically with `task`, however you should add `_id` as suffix as the following example:
 

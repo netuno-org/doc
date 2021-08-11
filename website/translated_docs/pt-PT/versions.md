@@ -78,7 +78,7 @@ Para realizar a instalação de uma versão específica utilize o comando:
 
 > Alterar o valor do argumento `version` para a identificação da versão pretendida.
 
-## Vesões Legadas (Pré open-source)
+## Versões Legadas (Pré open-source)
 
 Estas versões deixarão de ser disponibilizadas em 2022, por favor atualizar para a versão open-source mais recente.
 

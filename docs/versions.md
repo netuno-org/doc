@@ -67,6 +67,24 @@ Here is the list of available versions for installation with the command:
 ./netuno install version=7:20210208.1437
 ```
 
+## Available Versions
+
+All Netuno versions are available in:
+
+- [github.com/netuno-org/platform/releases](https://github.com/netuno-org/platform/releases)
+
+To install a specific version run the following command:
+
+```
+./netuno install version=7:20020129.1745
+```
+
+> Change the `version`'s argument to the version that you wnat to isntall.
+
+## Legacy versions (before open-source)
+
+These versions won't be available after 2022, please update your Netuno to the latest open-source version.
+
 ### 7:20210208.1437
 
 Supports the new GraalVM 21.

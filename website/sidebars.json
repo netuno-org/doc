@@ -111,6 +111,7 @@
                 "type" : "subcategory",
                 "label": "Demo Application",
                 "ids" : [
+                    "academy/start/demonstration/config",
                     "academy/start/demonstration/form",
                     "academy/start/demonstration/relate",
                     "academy/start/demonstration/service",

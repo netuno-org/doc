@@ -52,6 +52,10 @@
         "title": "Introdução",
         "sidebar_label": "Introdução"
       },
+      "academy/start/demonstration/config": {
+        "title": "Configuração",
+        "sidebar_label": "Configuração"
+      },
       "academy/start/demonstration/database": {
         "title": "Base de dados",
         "sidebar_label": "Base de dados"
