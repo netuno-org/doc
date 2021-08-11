@@ -10,7 +10,7 @@ Antes de começar este tutorial certifique-se que sabe criar **Formulários, Cam
 * [Formulários](academy/explore/graphical-interface/forms.md)
 * [Campos](academy/explore/graphical-interface/fields.md)
 * [Relações entre formulários](academy/explore/graphical-interface/relationships-between-forms.md)
-* [Serviços Web REST](web-rest-services.md)
+* [Serviços Web REST](academy/explore/services.md)
 
 É também aconselhável que, antes de começar este tutorial, se certifique que tem noções básicas em _**JavaScript**_, _**React.js**_ e _**HTML**_.
 

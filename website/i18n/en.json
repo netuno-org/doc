@@ -527,10 +527,6 @@
         "title": "Tutorials",
         "sidebar_label": "Introduction"
       },
-      "library/ui/tutorials": {
-        "title": "Tutorials",
-        "sidebar_label": "Introduction"
-      },
       "server-commands-tips": {
         "title": "Server, Commands & Tips",
         "sidebar_label": "Server, Commands & Tips"
