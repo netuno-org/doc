@@ -14,7 +14,7 @@ Certifique-se que tem o Java instalado, executando no terminal o commando:
 
 `java -version`
 
-A versão do Java deverá ser a versão 8 ou superior.
+A versão do Java deverá ser a versão 11.
 
 Ou, caso não tenha, então instale o Java <a href="https://adoptopenjdk.net/" target="_blank">AdoptOpenJDK</a>.
 

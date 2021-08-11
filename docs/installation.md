@@ -14,7 +14,7 @@ Make sure you have Java installed by running the below command into the terminal
 
 `java -version`
 
-Java version should be version 8 _(1.8)_ or higher.
+Java version should be version 11.
 
 Or install Java <a href="https://adoptopenjdk.net/" target="_blank">AdoptOpenJDK</a>.
 

@@ -66,11 +66,21 @@ md netuno-latest; cd netuno-latest; Invoke-WebRequest -Uri "https://github.com/n
 
 ## Versões Disponíveis
 
-Segue a lista de versões disponíveis para instalação com o comando:
+Todas as versões disponíveis estão em:
+
+- [github.com/netuno-org/platform/releases](https://github.com/netuno-org/platform/releases)
+
+Para realizar a instalação de uma versão específica utilize o comando:
 
 ```
-./netuno install version=7:20210429.1738
+./netuno install version=7:20020129.1745
 ```
+
+> Alterar o valor do argumento `version` para a identificação da versão pretendida.
+
+## Vesões Legadas (Pré open-source)
+
+Estas versões deixarão de ser disponibilizadas em 2022, por favor atualizar para a versão open-source mais recente.
 
 ### 7:20210429.1738
 
