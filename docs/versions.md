@@ -85,6 +85,74 @@ To install a specific version run the following command:
 
 These versions won't be available after 2022, please update your Netuno to the latest open-source version.
 
+### 7:20210429.1738
+
+Major performance improvements with the resolution of memory leakage with GraalVM, resulting in low memory and CPU consumption overall, more on:
+
+- [LinkedHashMap memory leak](https://github.com/oracle/graal/issues/3260)
+
+More convenient `dev` user access recovery.
+
+The conflict of `multiselect` fields on forms with the `_db.insert` command has been resolved.
+
+The `File` object has the new `changeName` method.
+
+The integration issues with **RabbitMQ** for RPC-like queues have been solved.
+
+Visual Studio Code Server has been experimentally integrated, for example just add the parameter `code` when starting the Netuno server when developing a specific app:
+
+- `./netuno server app=myapp code`.
+
+The JWT Conflict with Sessions has also been resolved.
+
+##### Resources
+
+`_user` and `_group` have better error reporting when used without authentication.
+
+`_env` has the new `sleep` method.
+
+`_server` has the new `shutdown` method.
+
+### 7:20210319.1747
+
+The applications are now in the `apps` folder in Netuno's root directory, they will automatically be moved from `./web/apps` to `./apps`.
+
+Improved overall execution errors and added better file and line indication.
+
+New `./netuno stats` command to view the latest hardware consumption metrics.
+
+Fixed issue on MacOS that made `bin-unix` scripts fail to detect Netuno's server port number.
+
+Started cross support for WebSockets.
+
+Several overall performance improvements.
+
+The `File` class has the new `isFile` and `isFolder` methods, the `InputStream` with the new `readAllAndClose` method, the `OutputStream` with the new `writeAndClose` and `writeFileAndClose` methods, support for the _fluent interface_ directly available in the resources: `_app`, `_storage` and `_os`.
+
+Improved database connection failure errors.
+
+##### Recursos
+
+New `_cors` resource to easily manipulate CORS (Cross-Origin Resource Sharing).
+
+New `_server` resource that provides information and future interactions with the server.
+
+New experimental resource `_rabbitmq`, for integrations with RabbitMQ, it currently supports RPC and Work queues.
+
+Resource `_xml` with `transform`, `save` and `output`.
+
+Resource `_smtp` supports setting the _subtype_ of _multipart_, default is `mixed`.
+
+##### Configuração
+
+Remote now supports setting the `urlPrefix` parameter as an alternative to `url` to avoid mistakes.
+
+The server now supports an identification name configuration, can be used in communications and is obtained by the `_server` resource.
+
+The server now experimentally supports the configuration of a folder to store sessions on disk.
+
+In the applications, configuration of CORS (Cross-Origin Resource Sharing) sources and headers is now supported along with the new `_cors` resource.
+
 ### 7:20210208.1437
 
 Supports the new GraalVM 21.
