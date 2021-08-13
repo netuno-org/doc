@@ -44,7 +44,3 @@ Desta forma o **Link** foi definido com o valor `tarefa:nome`.
 Isto significa que vai relacionar com a tabela **tarefa** apresentando os dados da coluna **nome**.
 
 Para concluir clique em **Guardar**.
-
-## 🎬 Veja como
-
-![Relacionar Dados](assets/comece/demonstracao/relacionar.gif)

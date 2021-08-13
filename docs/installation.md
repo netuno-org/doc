@@ -4,8 +4,6 @@ title: Installation
 sidebar_label: Installation
 ---
 
-![Installation](/docs/assets/comece/instalacao.gif)
-
 ## Requirements
 
 ##### Java

@@ -200,6 +200,3 @@ Quick introduction to <a href="https://reactjs.org/" target="_blank">ReactJS</a>
 * <a href="https://medium.com/rocketseat/um-guia-para-iniciantes-no-react-js-80e1ac357649" target="_blank"> A Beginner's Guide to ReactJS.
 
 * <a href="https://www.youtube.com/watch?v=Ke90Tje7VS0&t=3104s" target=" _blank"> React JS - React Tutorial for Beginners
-
-## 🎬 See How ...
-![User Interface](/docs/assets/comece/demonstracao/ui.gif)

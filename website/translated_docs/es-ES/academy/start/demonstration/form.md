@@ -48,7 +48,3 @@ Repare que agora tem uma nova opção no menu lateral: **Tarefa**
 Ao clicar no menu em **Tarefa** vai poder criar, editar, pesquisar e apagar as tarefas. Isto é, vai poder realizar a manipulação dos dados.
 
 Este é o resultado para o utilizador final poder manipular o dados do sistema.
-
-## 🎬 Veja Como
-
-![Formulário](/docs/assets/comece/demonstracao/formulario.gif)

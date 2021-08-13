@@ -56,7 +56,3 @@ No formulário de edição do **Registo** tem o campo que permite selecionar a *
 Os **Registos** passam a estar associados com alguma **Tarefa** e ficam relacionados.
 
 Guarde a alteração em alguns registos com a tarefa associada.
-
-## 🎬 Veja como
-
-![Relacionar Dados](assets/comece/demonstracao/relacionar.gif)

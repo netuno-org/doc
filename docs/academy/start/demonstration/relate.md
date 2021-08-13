@@ -48,7 +48,3 @@ The **Link** will be defined with the value `task:name`.
 Which means it will related to the present **task** table showing some information in the collumn **name**.
 
 Click **Save** when you finish.
-
-## 🎬 See How ...
-
-![Relate Data](assets/comece/demonstracao/relacionar.gif)

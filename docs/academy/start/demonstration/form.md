@@ -44,7 +44,3 @@ Completing all the previous steps you will be able to see your final result clic
 By clicking on **Task** you will be able to create, edit, search, delete these Tasks and also to manipulate data.
 
 Watch the video below where you can follow all the steps on how to manage your data and see the outcome.
-
-## 🎬 See How ...
-
-![Form](/docs/assets/comece/demonstracao/formulario.gif)

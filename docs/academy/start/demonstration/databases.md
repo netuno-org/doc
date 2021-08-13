@@ -57,7 +57,3 @@ You should also not use plural names such as **task**_s_, **registration**_s_ or
 
 > By default the Name of the forms and fields should always be in the singular.
 
-## 🎬 Here's how
-
-![Database](/docs/assets/comece/demonstracao/basededados.gif)
-

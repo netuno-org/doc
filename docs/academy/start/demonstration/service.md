@@ -80,7 +80,3 @@ To run the service just open in the browser the address of the service that was 
 * <a href="http://localhost:9000/services/tarefas" target="_blank">http://localhost:9000/services/tarefas</a>
 
 In this case we recommend the <a href="https://www.mozilla.org/" target="_blank">Firefox</a> browser because it allows a better visualization of the <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> object.
-
-## 🎬 See How ...
-
-![Service](/docs/assets/comece/demonstracao/servico.gif)

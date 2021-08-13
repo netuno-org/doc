@@ -193,7 +193,3 @@ Agora atualize a página no browser e deverá ver o resultado final, ou alternat
 Introdução rápida ao <a href="https://reactjs.org/" target="_blank">ReactJS</a>:
 
 * <a href="https://medium.com/rocketseat/um-guia-para-iniciantes-no-react-js-80e1ac357649" target="_blank">Um Guia Para Iniciantes no ReactJS.
-
-## 🎬 Veja Como
-
-![User Interface](/docs/assets/comece/demonstracao/ui.gif)

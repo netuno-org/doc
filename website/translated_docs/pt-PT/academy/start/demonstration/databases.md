@@ -57,7 +57,3 @@ Também não se devem utilizar nomes no plural, como **tarefa**_s_, **registo**_
 
 > Como padrão o Nome dos formulários e campos deverá ser sempre no singular.
 
-## 🎬 Veja Como
-
-![Base de Dados](/docs/assets/comece/demonstracao/basededados.gif)
-

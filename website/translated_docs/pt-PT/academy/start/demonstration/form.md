@@ -62,7 +62,3 @@ Pode inserir tarefas de exemplo, como:
 - Reunião
 - Faturação
 - Cobrança
-
-## 🎬 Veja Como
-
-![Formulário](/docs/assets/comece/demonstracao/formulario.gif)

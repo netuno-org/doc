@@ -82,7 +82,3 @@ Para executar o serviço basta abrir no browser o endereço do serviço criado, 
 * <a href="http://localhost:9000/services/tarefas" target="_blank">http://localhost:9000/services/tarefas</a>
 
 Neste caso recomendamos o <a href="https://www.mozilla.org/" target="_blank">Firefox</a> por que permite uma melhor visualização do objeto <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a>.
-
-## 🎬 Veja Como
-
-![Serviço](/docs/assets/comece/demonstracao/servico.gif)
