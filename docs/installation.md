@@ -48,7 +48,7 @@ mkdir -p netuno && cd netuno && wget https://github.com/netuno-org/platform/rele
 
 ```plaintext
 
-mkdir -p netuno && cd netuno && curl https://github.com/netuno-org/platform/releases/download/latest/netuno.jar > netuno.jar && java -jar netuno.jar install
+mkdir -p netuno && cd netuno && curl -L https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -o netuno.jar && java -jar netuno.jar install
 
 ```
 
