@@ -1542,6 +1542,48 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
+#### _exec.find(arg0: _Predicate_) : _Object_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Predicate_ |   |
+
+##### Retorno
+
+( _Object_ )
+
+
+---
+
+#### _exec.find(arg0: _Value_) : _Object_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Value_ |   |
+
+##### Retorno
+
+( _Object_ )
+
+
+---
+
+#### _exec.find(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 ## forEach
 
 ---
@@ -1626,6 +1668,29 @@ Define a restrição de segurança em um diretório específico para os objetos 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
+
+
+---
+
+## gc
+
+---
+
+#### _exec.gc() : _void_
+##### Descrição
+
+Executa a limpeza da memória através da execução do coletor de lixo ([JVM garbage collector](https://www.baeldung.com/jvm-garbage-collectors)).
+
+##### Como Usar
+
+```javascript
+// Libertar memória exetando o Garbage Collector:
+_exec.gc();
+```
+
+##### Retorno
+
+( _void_ )
 
 
 ---
@@ -4493,6 +4558,47 @@ _exec.sleep(3000);
 ##### Retorno
 
 ( _Object[]_ )
+
+
+---
+
+## toFormMap
+
+---
+
+#### _exec.toFormMap() : _[Values](../../objects/Values)_
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _exec.toFormMap(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _[Values](../../objects/Values)_ |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _exec.toFormMap(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
 
 
 ---

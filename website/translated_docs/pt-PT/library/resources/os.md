@@ -105,6 +105,25 @@ Instância do recurso de sistema operacional.
 
 ---
 
+#### _os.directory(diretorio: _[File](../../objects/File)_) : _OS_
+##### Descrição
+
+Define o caminho onde os comandos serão executados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| diretorio | _[File](../../objects/File)_ | O local onde o comando será executado. |
+
+##### Retorno
+
+( _OS_ )
+
+Instância do recurso de sistema operacional.
+
+---
+
 #### _os.directory(diretorio: _Storage_) : _OS_
 ##### Descrição
 
@@ -418,6 +437,25 @@ Define o caminho onde os comandos serão executados.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | diretorio | string | O local onde o comando será executado. |
+
+##### Retorno
+
+( _OS_ )
+
+Instância do recurso de sistema operacional.
+
+---
+
+#### _os.setDirectory(diretorio: _[File](../../objects/File)_) : _OS_
+##### Descrição
+
+Define o caminho onde os comandos serão executados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| diretorio | _[File](../../objects/File)_ | O local onde o comando será executado. |
 
 ##### Retorno
 

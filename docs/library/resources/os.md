@@ -105,6 +105,25 @@ Instance of the operating system resource.
 
 ---
 
+#### _os.directory(directory: _[File](../../objects/File)_) : _OS_
+##### Description
+
+Defines the path where the commands will be executed.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| directory | _[File](../../objects/File)_ | The location where the command will be executed. |
+
+##### Return
+
+( _OS_ )
+
+Instance of the operating system resource.
+
+---
+
 #### _os.directory(directory: _Storage_) : _OS_
 ##### Description
 
@@ -418,6 +437,25 @@ Defines the path where the commands will be executed.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | directory | string | The location where the command will be executed. |
+
+##### Return
+
+( _OS_ )
+
+Instance of the operating system resource.
+
+---
+
+#### _os.setDirectory(directory: _[File](../../objects/File)_) : _OS_
+##### Description
+
+Defines the path where the commands will be executed.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| directory | _[File](../../objects/File)_ | The location where the command will be executed. |
 
 ##### Return
 

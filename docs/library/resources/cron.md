@@ -65,6 +65,35 @@ Configures periodic scheduling by importing the configuration file.
 
 ---
 
+## delete
+
+---
+
+#### _cron.delete(key: string) : _void_
+##### Description
+
+Removes a service execution schedule.
+
+##### How To Use
+
+```javascript
+_cron.delete("pricesUpdate")
+
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| key | string | Job ID key name. |
+
+##### Return
+
+( _void_ )
+
+
+---
+
 ## pause
 
 ---
@@ -170,6 +199,18 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 ##### Return
 
 ( _void_ )
+
+
+---
+
+## schedules
+
+---
+
+#### _cron.schedules() : _[Values](../../objects/Values)_
+##### Return
+
+( _[Values](../../objects/Values)_ )
 
 
 ---

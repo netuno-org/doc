@@ -35,6 +35,25 @@ O tipo do formato que deverá ser utilizado.
 
 ---
 
+#### _csv.parser(storage: _Reader_) : _CSVParser_
+##### Descrição
+
+Obtém o parser do CSV.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| storage | _Reader_ | Caminho do ficheiro em storage que deverá ser processado. |
+
+##### Retorno
+
+( _CSVParser_ )
+
+O parser inicializado.
+
+---
+
 #### _csv.parser(reader: _Reader_, nomeFormato: _CSVFormat_) : _CSVParser_
 ##### Descrição
 
@@ -66,6 +85,51 @@ Obtém o parser do CSV.
 |---|---|---|
 | content | string | Conteúdo de texto que deverá ser processado. |
 | nomeFormato | _CSVFormat_ | Nome do formato que será utilizado. |
+
+##### Retorno
+
+( _CSVParser_ )
+
+O parser inicializado.
+
+---
+
+#### _csv.parser(storage: _Storage_) : _CSVParser_
+##### Descrição
+
+Obtém o parser do CSV.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| storage | _Storage_ | Caminho do ficheiro em storage que deverá ser processado. |
+
+##### Retorno
+
+( _CSVParser_ )
+
+O parser inicializado.
+
+---
+
+#### _csv.parser(storage: _Storage_, charset: string) : _CSVParser_
+##### Descrição
+
+Obtém o parser do CSV.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| storage | _Storage_ | Caminho do ficheiro em storage que deverá ser processado. |
+| charset | string | Código do tipo de codificação de caracteres como: |
+|   |   | - US-ASCII |
+|   |   | - ISO-8859-1 |
+|   |   | - UTF-8 |
+|   |   | - UTF-16BE |
+|   |   | - UTF-16LE |
+|   |   | - UTF-16 |
 
 ##### Retorno
 

@@ -65,6 +65,35 @@ Configura o agendamento periódico pela importação do ficheiro de configuraç�
 
 ---
 
+## delete
+
+---
+
+#### _cron.delete(chave: string) : _void_
+##### Descrição
+
+Remove (apaga) um agendamento de execução de serviço.
+
+##### Como Usar
+
+```javascript
+_cron.delete("atualizaPrecos")
+
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| chave | string | Nome chave de identificação do job. |
+
+##### Retorno
+
+( _void_ )
+
+
+---
+
 ## pause
 
 ---
@@ -170,6 +199,18 @@ _cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos"
 ##### Retorno
 
 ( _void_ )
+
+
+---
+
+## schedules
+
+---
+
+#### _cron.schedules() : _[Values](../../objects/Values)_
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
 
 
 ---

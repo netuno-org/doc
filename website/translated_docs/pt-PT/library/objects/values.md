@@ -1414,6 +1414,48 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
+#### find(arg0: _Predicate_) : _Object_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Predicate_ |   |
+
+##### Retorno
+
+( _Object_ )
+
+
+---
+
+#### find(arg0: _Value_) : _Object_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Value_ |   |
+
+##### Retorno
+
+( _Object_ )
+
+
+---
+
+#### find(arg0: _Values_) : _Values_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Retorno
+
+( _Values_ )
+
+
+---
+
 ## forEach
 
 ---
@@ -4308,6 +4350,47 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 ##### Retorno
 
 ( _Object[]_ )
+
+
+---
+
+## toFormMap
+
+---
+
+#### toFormMap() : _Values_
+##### Retorno
+
+( _Values_ )
+
+
+---
+
+#### toFormMap(arg0: string, arg1: _Values_) : _Values_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Values_ |   |
+
+##### Retorno
+
+( _Values_ )
+
+
+---
+
+#### toFormMap(arg0: _Values_) : _Values_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Retorno
+
+( _Values_ )
 
 
 ---

@@ -89,6 +89,25 @@ Recurso de atribuição de linguagem.
 
 ---
 
+## getOrDefault
+
+---
+
+#### _lang.getOrDefault(arg0: string, arg1: string) : string
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Retorno
+
+( string )
+
+
+---
+
 ## init
 
 ---

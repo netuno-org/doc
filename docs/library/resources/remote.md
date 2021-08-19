@@ -876,6 +876,53 @@ Submission response, with status, header, content, etc.
 
 ---
 
+## ping
+
+---
+
+#### _remote.ping(host: string) : _boolean_
+##### Description
+
+Check whether the server name or IP is available.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| host | string | Server name or IP. |
+
+##### Return
+
+( _boolean_ )
+
+Result if address is available.
+
+---
+
+## portListening
+
+---
+
+#### _remote.portListening(host: string, port: _int_) : _boolean_
+##### Description
+
+Checks if the port is available for a server name or IP.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| host | string | Server name or IP. |
+| port | _int_ | Port number. |
+
+##### Return
+
+( _boolean_ )
+
+Result if port is available.
+
+---
+
 ## post
 
 ---

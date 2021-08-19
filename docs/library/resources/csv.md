@@ -35,6 +35,25 @@ The type of format to be used.
 
 ---
 
+#### _csv.parser(storage: _Reader_) : _CSVParser_
+##### Description
+
+Gets the CSV parser.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _Reader_ | Path of the file in storage that is to be processed. |
+
+##### Return
+
+( _CSVParser_ )
+
+The parser initialized.
+
+---
+
 #### _csv.parser(reader: _Reader_, format: _CSVFormat_) : _CSVParser_
 ##### Description
 
@@ -66,6 +85,51 @@ Gets the CSV parser.
 |---|---|---|
 | content | string | Text content that must be processed. |
 | format | _CSVFormat_ | Name of the format to be used. |
+
+##### Return
+
+( _CSVParser_ )
+
+The parser initialized.
+
+---
+
+#### _csv.parser(storage: _Storage_) : _CSVParser_
+##### Description
+
+Gets the CSV parser.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _Storage_ | Path of the file in storage that is to be processed. |
+
+##### Return
+
+( _CSVParser_ )
+
+The parser initialized.
+
+---
+
+#### _csv.parser(storage: _Storage_, charset: string) : _CSVParser_
+##### Description
+
+Gets the CSV parser.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _Storage_ | Path of the file in storage that is to be processed. |
+| charset | string | Character encoding type code such as: |
+|   |   | - US-ASCII |
+|   |   | - ISO-8859-1 |
+|   |   | - UTF-8 |
+|   |   | - UTF-16BE |
+|   |   | - UTF-16LE |
+|   |   | - UTF-16 |
 
 ##### Return
 

@@ -1426,6 +1426,48 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
+#### _req.find(arg0: _Predicate_) : _Object_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Predicate_ |   |
+
+##### Return
+
+( _Object_ )
+
+
+---
+
+#### _req.find(arg0: _Value_) : _Object_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Value_ |   |
+
+##### Return
+
+( _Object_ )
+
+
+---
+
+#### _req.find(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 ## forEach
 
 ---
@@ -4340,6 +4382,47 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 ##### Return
 
 ( _Object[]_ )
+
+
+---
+
+## toFormMap
+
+---
+
+#### _req.toFormMap() : _[Values](../../objects/Values)_
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _req.toFormMap(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _req.toFormMap(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
 
 
 ---

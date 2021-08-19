@@ -104,6 +104,18 @@ sidebar_label: OutputStream
 
 ---
 
+## nullOutputStream
+
+---
+
+#### nullOutputStream() : _OutputStream_
+##### Retorno
+
+( _OutputStream_ )
+
+
+---
+
 ## print
 
 ---

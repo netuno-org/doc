@@ -62,6 +62,18 @@ sidebar_label: InputStream
 
 ---
 
+## nullInputStream
+
+---
+
+#### nullInputStream() : _InputStream_
+##### Return
+
+( _InputStream_ )
+
+
+---
+
 ## read
 
 ---
@@ -172,6 +184,14 @@ sidebar_label: InputStream
 ---
 
 ## readAllBytes
+
+---
+
+#### readAllBytes() : _byte[]_
+##### Return
+
+( _byte[]_ )
+
 
 ---
 
@@ -330,6 +350,14 @@ sidebar_label: InputStream
 
 ---
 
+#### readLine() : string
+##### Return
+
+( string )
+
+
+---
+
 #### readLine(arg0: _InputStream_) : string
 ##### Attributes
 
@@ -340,6 +368,40 @@ sidebar_label: InputStream
 ##### Return
 
 ( string )
+
+
+---
+
+## readNBytes
+
+---
+
+#### readNBytes(arg0: _byte[]_, arg1: _int_, arg2: _int_) : _int_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _byte[]_ |   |
+| arg1 | _int_ |   |
+| arg2 | _int_ |   |
+
+##### Return
+
+( _int_ )
+
+
+---
+
+#### readNBytes(arg0: _int_) : _byte[]_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+
+##### Return
+
+( _byte[]_ )
 
 
 ---
@@ -418,6 +480,24 @@ sidebar_label: InputStream
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _long_ |   |
+
+##### Return
+
+( _long_ )
+
+
+---
+
+## transferTo
+
+---
+
+#### transferTo(arg0: _OutputStream_) : _long_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _OutputStream_ |   |
 
 ##### Return
 

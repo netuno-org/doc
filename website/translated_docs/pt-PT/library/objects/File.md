@@ -32,6 +32,90 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
+## bufferedReader
+
+---
+
+#### bufferedReader() : _BufferedReader_
+##### Retorno
+
+( _BufferedReader_ )
+
+
+---
+
+#### bufferedReader(arg0: _int_) : _BufferedReader_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+
+##### Retorno
+
+( _BufferedReader_ )
+
+
+---
+
+#### bufferedReader(arg0: _int_, arg1: string) : _BufferedReader_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | string |   |
+
+##### Retorno
+
+( _BufferedReader_ )
+
+
+---
+
+#### bufferedReader(arg0: _int_, arg1: _Charset_) : _BufferedReader_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Charset_ |   |
+
+##### Retorno
+
+( _BufferedReader_ )
+
+
+---
+
+#### bufferedReader(arg0: string) : _BufferedReader_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+
+##### Retorno
+
+( _BufferedReader_ )
+
+
+---
+
+#### bufferedReader(arg0: _Charset_) : _BufferedReader_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Charset_ |   |
+
+##### Retorno
+
+( _BufferedReader_ )
+
+
+---
+
 ## bytes
 
 ---

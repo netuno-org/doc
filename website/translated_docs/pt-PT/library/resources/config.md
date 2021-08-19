@@ -1424,6 +1424,48 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
+#### _config.find(arg0: _Predicate_) : _Object_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Predicate_ |   |
+
+##### Retorno
+
+( _Object_ )
+
+
+---
+
+#### _config.find(arg0: _Value_) : _Object_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Value_ |   |
+
+##### Retorno
+
+( _Object_ )
+
+
+---
+
+#### _config.find(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 ## forEach
 
 ---
@@ -4318,6 +4360,47 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 ##### Retorno
 
 ( _Object[]_ )
+
+
+---
+
+## toFormMap
+
+---
+
+#### _config.toFormMap() : _[Values](../../objects/Values)_
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _config.toFormMap(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _[Values](../../objects/Values)_ |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _config.toFormMap(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
 
 
 ---

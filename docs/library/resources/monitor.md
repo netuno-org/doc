@@ -25,3 +25,26 @@ Performance data such as CPU, Memory and Disk.
 
 ---
 
+## stats
+
+---
+
+#### _monitor.stats() : _void_
+##### Description
+
+Presents statistical information on performance, such as CPU, Memory and Disk data, in the terminal and in the logs.
+
+##### How To Use
+
+```javascript
+// Prints the performance data in the terminal and in the logs:
+_monitor.stats()
+```
+
+##### Return
+
+( _void_ )
+
+
+---
+

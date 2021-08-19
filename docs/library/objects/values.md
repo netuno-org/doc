@@ -1414,6 +1414,48 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
+#### find(arg0: _Predicate_) : _Object_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Predicate_ |   |
+
+##### Return
+
+( _Object_ )
+
+
+---
+
+#### find(arg0: _Value_) : _Object_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Value_ |   |
+
+##### Return
+
+( _Object_ )
+
+
+---
+
+#### find(arg0: _Values_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Return
+
+( _Values_ )
+
+
+---
+
 ## forEach
 
 ---
@@ -4308,6 +4350,47 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 ##### Return
 
 ( _Object[]_ )
+
+
+---
+
+## toFormMap
+
+---
+
+#### toFormMap() : _Values_
+##### Return
+
+( _Values_ )
+
+
+---
+
+#### toFormMap(arg0: string, arg1: _Values_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Values_ |   |
+
+##### Return
+
+( _Values_ )
+
+
+---
+
+#### toFormMap(arg0: _Values_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Return
+
+( _Values_ )
 
 
 ---
