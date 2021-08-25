@@ -146,6 +146,25 @@ Current date.
 
 ---
 
+#### _db.date(time: _Long_) : _Date_
+##### Description
+
+Through the long number that identifies the exact date, it creates a new Date object to be used in database operations.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| time | _Long_ | Long number for the exact date. |
+
+##### Return
+
+( _Date_ )
+
+New object of type: _java.sql.Date_
+
+---
+
 #### _db.date(text: string) : _Date_
 ##### Description
 
@@ -1608,6 +1627,25 @@ Current time.
 
 ---
 
+#### _db.time(time: _Long_) : _Time_
+##### Description
+
+Through the long number that identifies the exact time, it creates a new Time object to be used in database operations.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| time | _Long_ | Long number referring to the exact time. |
+
+##### Return
+
+( _Time_ )
+
+New object of type: _java.sql.Time_
+
+---
+
 #### _db.time(text: string) : _Time_
 ##### Description
 
@@ -1679,6 +1717,25 @@ Gets the current date and time to be used in database operations.
 ( _Timestamp_ )
 
 Current date and time.
+
+---
+
+#### _db.timestamp(time: _Long_) : _Timestamp_
+##### Description
+
+Through the long number that identifies the exact time, it creates a new Timestamp object to be used in database operations.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| time | _Long_ | Long number referring to the exact time. |
+
+##### Return
+
+( _Timestamp_ )
+
+New object of type: _java.sql.Timestamp_
 
 ---
 

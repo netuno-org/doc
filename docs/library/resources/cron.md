@@ -49,6 +49,38 @@ Below are indications of how the configuration should be performed.
 
 ---
 
+## checkExists
+
+---
+
+#### _cron.checkExists(key: string) : _boolean_
+##### Description
+
+Checks if the scheduled service key exists.
+
+##### How To Use
+
+```javascript
+if (_cron.checkExists("pricesUpdate")) {
+    _out.print("The scheduled service 'pricesUpdate' exists!")
+}
+
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| key | string | Job ID key name. |
+
+##### Return
+
+( _boolean_ )
+
+Whether the scheduled service was found.
+
+---
+
 ## config
 
 ---
@@ -69,7 +101,7 @@ Configures periodic scheduling by importing the configuration file.
 
 ---
 
-#### _cron.delete(key: string) : _void_
+#### _cron.delete(key: string) : _boolean_
 ##### Description
 
 Removes a service execution schedule.
@@ -89,8 +121,39 @@ _cron.delete("pricesUpdate")
 
 ##### Return
 
-( _void_ )
+( _boolean_ )
 
+Whether it was possible to delete the scheduled service.
+
+---
+
+## interrupt
+
+---
+
+#### _cron.interrupt(key: string) : _boolean_
+##### Description
+
+Interrupts a service execution schedule.
+
+##### How To Use
+
+```javascript
+_cron.interrupt("pricesUpdate")
+
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| key | string | Job ID key name. |
+
+##### Return
+
+( _boolean_ )
+
+Whether it was possible to stop the scheduled service.
 
 ---
 
@@ -98,7 +161,7 @@ _cron.delete("pricesUpdate")
 
 ---
 
-#### _cron.pause(key: string) : _void_
+#### _cron.pause(key: string) : _boolean_
 ##### Description
 
 Changes the execution state to **pause**, in this state the associated service is not executed.
@@ -118,8 +181,39 @@ _cron.pause("pricesUpdate")
 
 ##### Return
 
-( _void_ )
+( _boolean_ )
 
+Whether it was possible to pause the scheduled service.
+
+---
+
+## remove
+
+---
+
+#### _cron.remove(key: string) : _boolean_
+##### Description
+
+Removes a service execution schedule.
+
+##### How To Use
+
+```javascript
+_cron.delete("pricesUpdate")
+
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| key | string | Job ID key name. |
+
+##### Return
+
+( _boolean_ )
+
+Whether it was possible to delete the scheduled service.
 
 ---
 
@@ -127,7 +221,7 @@ _cron.pause("pricesUpdate")
 
 ---
 
-#### _cron.resume(key: string) : _void_
+#### _cron.resume(key: string) : _boolean_
 ##### Description
 
 Changes the execution state to **resume**, after a schedule is in the _pause_ state, it can be reactivated via _resume_.
@@ -147,8 +241,9 @@ _cron.resume("pricesUpdate")
 
 ##### Return
 
-( _void_ )
+( _boolean_ )
 
+Whether it was possible to continue the scheduled service.
 
 ---
 
@@ -156,7 +251,7 @@ _cron.resume("pricesUpdate")
 
 ---
 
-#### _cron.schedule(key: string, config: string, url: string) : _void_
+#### _cron.schedule(key: string, config: string, url: string) : _Cron_
 ##### Description
 
 Creates a service execution schedule.
@@ -181,25 +276,41 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 
 ##### Return
 
-( _void_ )
+( _Cron_ )
 
+The current Cron instance.
 
 ---
 
-#### _cron.schedule(arg0: string, arg1: string, arg2: string, arg3: _[Values](../../objects/Values)_) : _void_
+#### _cron.schedule(key: string, config: string, url: string, params: _[Values](../../objects/Values)_) : _Cron_
+##### Description
+
+Creates a service execution schedule.
+
+##### How To Use
+
+```javascript
+_cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
+    _val.map()
+        .set("categoryId", 1)
+        .set("productId", 1)
+)
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _[Values](../../objects/Values)_ |   |
+| key | string | Job ID key name. |
+| config | string | Cron Scheduling Time Expression, see table above. |
+| url | string | URL to be run by the job. |
+| params | _[Values](../../objects/Values)_ | Data to pass as a parameter to service. |
 
 ##### Return
 
-( _void_ )
+( _Cron_ )
 
+The current Cron instance.
 
 ---
 
@@ -208,10 +319,15 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 ---
 
 #### _cron.schedules() : _[Values](../../objects/Values)_
+##### Description
+
+List of all application service schedules.
+
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+The list of all scheduled services of the application that are configured in Cron.
 
 ---
 

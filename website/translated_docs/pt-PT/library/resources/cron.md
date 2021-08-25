@@ -49,6 +49,38 @@ Abaixo segue indicações de como a configuração deve ser realizada.
 
 ---
 
+## checkExists
+
+---
+
+#### _cron.checkExists(chave: string) : _boolean_
+##### Descrição
+
+Verifica se a chave do serviço agendado existe.
+
+##### Como Usar
+
+```javascript
+if (_cron.checkExists("atualizaPrecos")) {
+    _out.print("O serviço agendado 'atualizaPrecos' existe!")
+}
+
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| chave | string | Nome chave de identificação do job. |
+
+##### Retorno
+
+( _boolean_ )
+
+Se o serviço agendado foi encontrado.
+
+---
+
 ## config
 
 ---
@@ -69,7 +101,7 @@ Configura o agendamento periódico pela importação do ficheiro de configuraç�
 
 ---
 
-#### _cron.delete(chave: string) : _void_
+#### _cron.delete(chave: string) : _boolean_
 ##### Descrição
 
 Remove (apaga) um agendamento de execução de serviço.
@@ -89,8 +121,39 @@ _cron.delete("atualizaPrecos")
 
 ##### Retorno
 
-( _void_ )
+( _boolean_ )
 
+Se foi possível apagar o serviço agendado.
+
+---
+
+## interrupt
+
+---
+
+#### _cron.interrupt(chave: string) : _boolean_
+##### Descrição
+
+Interrompe um agendamento de execução de serviço.
+
+##### Como Usar
+
+```javascript
+_cron.delete("atualizaPrecos")
+
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| chave | string | Nome chave de identificação do job. |
+
+##### Retorno
+
+( _boolean_ )
+
+Se foi possível interromper o serviço agendado.
 
 ---
 
@@ -98,7 +161,7 @@ _cron.delete("atualizaPrecos")
 
 ---
 
-#### _cron.pause(chave: string) : _void_
+#### _cron.pause(chave: string) : _boolean_
 ##### Descrição
 
 Muda o estado de execução para **pause**, neste estado não é executado o serviço associado.
@@ -118,8 +181,39 @@ _cron.pause("atualizaPrecos")
 
 ##### Retorno
 
-( _void_ )
+( _boolean_ )
 
+Se foi possível pausar o serviço agendado.
+
+---
+
+## remove
+
+---
+
+#### _cron.remove(chave: string) : _boolean_
+##### Descrição
+
+Remove (apaga) um agendamento de execução de serviço.
+
+##### Como Usar
+
+```javascript
+_cron.delete("atualizaPrecos")
+
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| chave | string | Nome chave de identificação do job. |
+
+##### Retorno
+
+( _boolean_ )
+
+Se foi possível apagar o serviço agendado.
 
 ---
 
@@ -127,7 +221,7 @@ _cron.pause("atualizaPrecos")
 
 ---
 
-#### _cron.resume(chave: string) : _void_
+#### _cron.resume(chave: string) : _boolean_
 ##### Descrição
 
 Muda o estado de execução para **resume**, após um agendamento estar no estado _pause_, este pode ser reativado por via de _resume_
@@ -147,8 +241,9 @@ _cron.resume("atualizaPrecos")
 
 ##### Retorno
 
-( _void_ )
+( _boolean_ )
 
+Se foi possível continuar o serviço agendado.
 
 ---
 
@@ -156,7 +251,7 @@ _cron.resume("atualizaPrecos")
 
 ---
 
-#### _cron.schedule(chave: string, config: string, url: string) : _void_
+#### _cron.schedule(chave: string, config: string, url: string) : _Cron_
 ##### Descrição
 
 Cria um agendamento de execução de serviço.
@@ -181,25 +276,41 @@ _cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos"
 
 ##### Retorno
 
-( _void_ )
+( _Cron_ )
 
+A instância atual do Cron.
 
 ---
 
-#### _cron.schedule(arg0: string, arg1: string, arg2: string, arg3: _[Values](../../objects/Values)_) : _void_
+#### _cron.schedule(chave: string, config: string, url: string, params: _[Values](../../objects/Values)_) : _Cron_
+##### Descrição
+
+Cria um agendamento de execução de serviço.
+
+##### Como Usar
+
+```javascript
+_cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos",
+    _val.map()
+        .set("categoriaId", 1)
+        .set("produtoId", 1)
+)
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _[Values](../../objects/Values)_ |   |
+| chave | string | Nome chave de identificação do job. |
+| config | string | Expressão horária de agendamento do Cron, ver tabela acima. |
+| url | string | URL a ser executada pelo job. |
+| params | _[Values](../../objects/Values)_ | Dados a passar como parametro ao serviço. |
 
 ##### Retorno
 
-( _void_ )
+( _Cron_ )
 
+A instância atual do Cron.
 
 ---
 
@@ -208,10 +319,15 @@ _cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos"
 ---
 
 #### _cron.schedules() : _[Values](../../objects/Values)_
+##### Descrição
+
+Lista de todos os agendamentos de serviços da aplicação.
+
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+A lista de todos os serviços agendados da aplicação que estão configurados no Cron.
 
 ---
 

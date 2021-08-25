@@ -146,6 +146,25 @@ Data atual.
 
 ---
 
+#### _db.date(time: _Long_) : _Date_
+##### Descrição
+
+Através do número longo que identifica a data exata, cria um novo objeto Date para ser utilizado em operações de base de dados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| time | _Long_ | Número longo referente a data exata. |
+
+##### Retorno
+
+( _Date_ )
+
+Novo objeto do tipo: _java.sql.Date_
+
+---
+
 #### _db.date(texto: string) : _Date_
 ##### Descrição
 
@@ -1608,6 +1627,25 @@ Hora atual.
 
 ---
 
+#### _db.time(time: _Long_) : _Time_
+##### Descrição
+
+Através do número longo que identifica a hora exata, cria um novo objeto Time para ser utilizado em operações de base de dados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| time | _Long_ | Número longo referente a hora exato. |
+
+##### Retorno
+
+( _Time_ )
+
+Novo objeto do tipo: _java.sql.Time_
+
+---
+
 #### _db.time(texto: string) : _Time_
 ##### Descrição
 
@@ -1679,6 +1717,25 @@ Obtém a data e hora atual para ser utilizada em operações de base de dados.
 ( _Timestamp_ )
 
 Data e hora atual.
+
+---
+
+#### _db.timestamp(time: _Long_) : _Timestamp_
+##### Descrição
+
+Através do número longo que identifica o tempo exato, cria um novo objeto Timestamp para ser utilizado em operações de base de dados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| time | _Long_ | Número longo referente ao tempo exato. |
+
+##### Retorno
+
+( _Timestamp_ )
+
+Novo objeto do tipo: _java.sql.Timestamp_
 
 ---
 

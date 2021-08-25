@@ -86,6 +86,18 @@ if (_dataItem.isUpdate()) {
 
 ---
 
+## getOldRecord
+
+---
+
+#### getOldRecord() : _Values_
+##### Return
+
+( _Values_ )
+
+
+---
+
 ## getRecord
 
 ---
