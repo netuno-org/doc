@@ -3240,6 +3240,24 @@ Whether it is in read-only mode or not.
 
 ---
 
+## join
+
+---
+
+#### _res.join(arg0: string) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( string )
+
+
+---
+
 ## keySet
 
 ---

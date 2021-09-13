@@ -239,6 +239,32 @@ O novo objeto de valores iniciado como mapa.
 
 ---
 
+## persistent
+
+---
+
+#### _val.persistent() : _[Values](../../objects/Values)_
+##### Description
+
+Values type instance to store data that persists in memory, that is, the data stored here are available for all HTTP requests.
+
+##### How To Use
+
+```javascript
+// Count kept in memory that increases with each refresh:
+const persistent = _val.persistent()
+persistent.set('counter', persistent.getInt('counter') + 1)
+_out.json(persistent)
+```
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+Data that is kept in memory and is available for all requests.
+
+---
+
 ## toJSON
 
 ---
@@ -305,6 +331,77 @@ lista.add("Item 1")lista.add("Item 2")lista.add("Item 3")const jsonString = _val
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _List_ |   |
+| arg1 | _int_ |   |
+
+##### Return
+
+( string )
+
+
+---
+
+#### _val.toJSON(arg0: _[Values](../../objects/Values)_) : string
+##### Description
+
+Converte o values para JSON.
+
+##### How To Use
+
+```javascript
+const lista = _val.list()
+lista.add("Item 1")lista.add("Item 2")lista.add("Item 3")const jsonString = _val.toJSON(values);
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( string )
+
+
+---
+
+#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _boolean_) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+| arg1 | _boolean_ |   |
+
+##### Return
+
+( string )
+
+
+---
+
+#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _boolean_, arg2: _int_) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+| arg1 | _boolean_ |   |
+| arg2 | _int_ |   |
+
+##### Return
+
+( string )
+
+
+---
+
+#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _int_) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
 | arg1 | _int_ |   |
 
 ##### Return

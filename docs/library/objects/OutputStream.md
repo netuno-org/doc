@@ -232,6 +232,122 @@ sidebar_label: OutputStream
 
 ---
 
+## printAndClose
+
+---
+
+#### printAndClose(arg0: _boolean_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printAndClose(arg0: _char_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _char_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printAndClose(arg0: _double_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _double_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printAndClose(arg0: _float_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _float_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printAndClose(arg0: _int_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printAndClose(arg0: string) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printAndClose(arg0: _long_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _long_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printAndClose(arg0: _short_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _short_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
 ## println
 
 ---
@@ -343,6 +459,130 @@ sidebar_label: OutputStream
 ---
 
 #### println(arg0: _short_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _short_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+## printlnAndClose
+
+---
+
+#### printlnAndClose() : _OutputStream_
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printlnAndClose(arg0: _boolean_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printlnAndClose(arg0: _char_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _char_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printlnAndClose(arg0: _double_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _double_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printlnAndClose(arg0: _float_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _float_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printlnAndClose(arg0: _int_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printlnAndClose(arg0: string) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printlnAndClose(arg0: _long_) : _OutputStream_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _long_ |   |
+
+##### Return
+
+( _OutputStream_ )
+
+
+---
+
+#### printlnAndClose(arg0: _short_) : _OutputStream_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |

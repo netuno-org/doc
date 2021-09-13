@@ -239,6 +239,32 @@ O novo objeto de valores iniciado como mapa.
 
 ---
 
+## persistent
+
+---
+
+#### _val.persistent() : _[Values](../../objects/Values)_
+##### Descrição
+
+Instância do tipo Values para armazenar dados que persistem na memória, ou seja os dados aqui guardados ficam disponíveis por todos os pedidos HTTP.
+
+##### Como Usar
+
+```javascript
+// Contagem mantida em memória que aumenta a cada refresh:
+const persistente = _val.persistent()
+persistente.set('counter', persistente.getInt('counter') + 1)
+_out.json(persistente)
+```
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Dados que são mantidos em memória e que estão disponíveis para todas as solicitações.
+
+---
+
 ## toJSON
 
 ---
@@ -305,6 +331,77 @@ lista.add("Item 1")lista.add("Item 2")lista.add("Item 3")const jsonString = _val
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _List_ |   |
+| arg1 | _int_ |   |
+
+##### Retorno
+
+( string )
+
+
+---
+
+#### _val.toJSON(arg0: _[Values](../../objects/Values)_) : string
+##### Descrição
+
+Converte o values para JSON.
+
+##### Como Usar
+
+```javascript
+const lista = _val.list()
+lista.add("Item 1")lista.add("Item 2")lista.add("Item 3")const jsonString = _val.toJSON(values);
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Retorno
+
+( string )
+
+
+---
+
+#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _boolean_) : string
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+| arg1 | _boolean_ |   |
+
+##### Retorno
+
+( string )
+
+
+---
+
+#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _boolean_, arg2: _int_) : string
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+| arg1 | _boolean_ |   |
+| arg2 | _int_ |   |
+
+##### Retorno
+
+( string )
+
+
+---
+
+#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _int_) : string
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
 | arg1 | _int_ |   |
 
 ##### Retorno

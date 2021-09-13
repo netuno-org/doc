@@ -483,76 +483,123 @@ Beginning of names in database.
 #### _db.execute(sqlCommand: string) : _int_
 ##### Description
 
-Starts the batch processing of executions in the database, based on a single command that will be executed multiple times with variation of the data.
+Execute commands directly on the database, commands such as inserts and updates can be executed as required.
 
 ##### How To Use
 
 ```javascript
-const batchParameters = _db.batch(`
-        insert into product(id, uid, name, price, active)
-        values(nextval('product_id'), ?, ?, ?, true)
-    `)
-    .put(_uid.generate(), "Netuno Batch 1", 3.2)
-    .put(_uid.generate(), "Netuno Batch 2", 5.4)
-const results = batchParameters.execute()
+const linhasAfetadas = _db.execute(`
+    insert into product(id, uid, name, price, active)
+    values(nextval('product_id'), "${_uid.generate()}", "${_db.sanitize('Netuno Insert Test 1')}", 3.2, true)
+`)
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| sqlCommand | string | SQL command that will be used as the basis for all interactions. |
+| sqlCommand | string | SQL command that will be executed directly on the database. |
 
 ##### Return
 
 ( _int_ )
 
-Batch execution manager.
+Number of lines affected by the executed command.
 
 ---
 
-#### _db.execute(arg0: string, arg1: _Object[]_) : _int_
+#### _db.execute(sqlCommand: string, params: _Object[]_) : _int_
+##### Description
+
+Execute commands directly on the database, commands such as inserts and updates can be executed as required.
+
+##### How To Use
+
+```javascript
+const rowsAffected = _db.execute(`
+    insert into product(id, uid, name, price, active)
+    values(nextval('product_id'), ?, ?, ?, true)
+`, _uid.generate(), "Netuno Insert Test 1", 3.2)
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| sqlCommand | string | SQL command that will be executed directly on the database. |
+| params | _Object[]_ | The sequence of parameter values that are injected into the command. |
 
 ##### Return
 
 ( _int_ )
 
+Number of lines affected by the executed command.
 
 ---
 
-#### _db.execute(arg0: string, arg1: _List_) : _int_
+#### _db.execute(sqlCommand: string, params: _List_) : _int_
+##### Description
+
+Execute commands directly on the database, commands such as inserts and updates can be executed as required.
+
+##### How To Use
+
+```javascript
+const rowsAffected = _db.execute(`
+    insert into product(id, uid, name, price, active)
+    values(nextval('product_id'), ?, ?, ?, true)
+    `, _val.list()
+        .add(_uid.generate())
+        .add("Netuno Insert Test 1")
+        .add(3.2)
+)
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| sqlCommand | string | SQL command that will be executed directly on the database. |
+| params | _List_ | List of parameter values that are injected into the command. |
 
 ##### Return
 
 ( _int_ )
 
+Number of lines affected by the executed command.
 
 ---
 
-#### _db.execute(arg0: string, arg1: _[Values](../../objects/Values)_) : _int_
+#### _db.execute(sqlCommand: string, params: _[Values](../../objects/Values)_) : _int_
+##### Description
+
+Execute commands directly on the database, commands such as inserts and updates can be executed as required.
+
+##### How To Use
+
+```javascript
+const rowsAffected = _db.execute(`
+    insert into product(id, uid, name, price, active)
+    values(nextval('product_id'), ?, ?, ?, true)
+    `, _val.list()
+        .add(_uid.generate())
+        .add("Netuno Insert Test 1")
+        .add(3.2)
+)
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| sqlCommand | string | SQL command that will be executed directly on the database. |
+| params | _[Values](../../objects/Values)_ | List of parameter values that are injected into the command. |
 
 ##### Return
 
 ( _int_ )
 
+Number of lines affected by the executed command.
 
 ---
 

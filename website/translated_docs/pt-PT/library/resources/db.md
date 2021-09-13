@@ -483,76 +483,123 @@ Início de nomes em base de dados.
 #### _db.execute(comandoSQL: string) : _int_
 ##### Descrição
 
-Inicia o processamento em lote de execuções em base de dados, com base em um único comando que será executado múltiplas vezes com variação dos dados.
+Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
 
 ##### Como Usar
 
 ```javascript
-const batchComParametros = _db.batch(`
-        insert into producto(id, uid, nome, preco, active)
-        values(nextval('producto_id'), ?, ?, ?, true)
-    `)
-    .put(_uid.generate(), "Netuno Lote 1", 3.2)
-    .put(_uid.generate(), "Netuno Lote 2", 5.4)
-const resultados = batchComParametros.execute()
+const linhasAfetadas = _db.execute(`
+    insert into product(id, uid, nome, preco, active)
+    values(nextval('product_id'), "${_uid.generate()}", "${_db.sanitize('Netuno Insert Teste 1')}", 3.2, true)
+`)
 ```
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| comandoSQL | string | Comando SQL que será utilizado como base para todas as interações. |
+| comandoSQL | string | Comando SQL que será executado diretamente na base de dados. |
 
 ##### Retorno
 
 ( _int_ )
 
-Gestor da execução de operações em lote.
+Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### _db.execute(arg0: string, arg1: _Object[]_) : _int_
+#### _db.execute(comandoSQL: string, parametros: _Object[]_) : _int_
+##### Descrição
+
+Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
+
+##### Como Usar
+
+```javascript
+const linhasAfetadas = _db.execute(`
+    insert into product(id, uid, nome, preco, active)
+    values(nextval('product_id'), ?, ?, ?, true)
+`, _uid.generate(), "Netuno Insert Teste 1", 3.2)
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| comandoSQL | string | Comando SQL que será executado diretamente na base de dados. |
+| parametros | _Object[]_ | Sequência de valores dos parâmetros que são injetados no comando. |
 
 ##### Retorno
 
 ( _int_ )
 
+Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### _db.execute(arg0: string, arg1: _List_) : _int_
+#### _db.execute(comandoSQL: string, parametros: _List_) : _int_
+##### Descrição
+
+Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
+
+##### Como Usar
+
+```javascript
+const linhasAfetadas = _db.execute(`
+    insert into product(id, uid, nome, preco, active)
+    values(nextval('product_id'), ?, ?, ?, true)
+    `, _val.list()
+        .add(_uid.generate())
+        .add("Netuno Insert Teste 1")
+        .add(3.2)
+)
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| comandoSQL | string | Comando SQL que será executado diretamente na base de dados. |
+| parametros | _List_ | Lista dos valores dos parâmetros que são injetados no comando. |
 
 ##### Retorno
 
 ( _int_ )
 
+Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### _db.execute(arg0: string, arg1: _[Values](../../objects/Values)_) : _int_
+#### _db.execute(comandoSQL: string, parametros: _[Values](../../objects/Values)_) : _int_
+##### Descrição
+
+Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
+
+##### Como Usar
+
+```javascript
+const linhasAfetadas = _db.execute(`
+    insert into product(id, uid, nome, preco, active)
+    values(nextval('product_id'), ?, ?, ?, true)
+    `, _val.list()
+        .add(_uid.generate())
+        .add("Netuno Insert Teste 1")
+        .add(3.2)
+)
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| comandoSQL | string | Comando SQL que será executado diretamente na base de dados. |
+| parametros | _[Values](../../objects/Values)_ | Lista dos valores dos parâmetros que são injetados no comando. |
 
 ##### Retorno
 
 ( _int_ )
 
+Número de linhas afetadas pelo comando executado.
 
 ---
 

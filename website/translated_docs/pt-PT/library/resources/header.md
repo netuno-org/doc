@@ -3460,6 +3460,24 @@ Se está em modo apenas leitura ou não.
 
 ---
 
+## join
+
+---
+
+#### _header.join(arg0: string) : string
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+
+##### Retorno
+
+( string )
+
+
+---
+
 ## keySet
 
 ---
