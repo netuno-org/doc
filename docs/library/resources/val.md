@@ -4,24 +4,26 @@ title: Val
 sidebar_label: Val
 ---
 
-Recurso para interagir com listas ou mapas com chaves e valores (dicionários). 
-O valores é um objecto de armazenamento dados que pode ser representado como uma lista ou como um mapa de dados (dicionário). Uma vez inicializado como uma dessas estruturas, lista ou mapa, não poderá mais ser alterado para a outra.
+Resource to interact with lists or maps with keys and values (dictionaries). 
+Values is a data storage object that can be represented as a list or as a data map (dictionary). Once initialized as one of these structures, list or map, it can no longer be changed to the other.
 
 ```javascript
-const mapaDeDados = _val.map()
-  .set('id', 1)
-  .set('name', 'Netuno')
-  .set('site', 'www.netuno.org')
-  .set('active', 'true')
-const idComoString = mapaDeDados.getString('id')
-const name = mapaDeDados['name']
-const site = mapaDeDados['site']
+const dataMap = _val.map()
+    .set('id', 1)
+    .set('name', 'Netuno')
+    .set('site', 'www.netuno.org')
+    .set('active', 'true')
+const idAsString = dataMap.getString('id')
+const name = dataMap['name']
+const site = dataMap['site']
+const active = dataMap.getBoolean('active')
 
-const listaDeDados = _val.list()
-listaDeDados.add('Linha 1')
-listaDeDados.push('Linha 2')
-for (const linha of listaDeDados) {
-  _log.info(linha)
+const dataList = _val.list()
+    .add('Linha 1')
+    .push('Linha 2')
+    .add('Linha 3')
+for (const line of dataList) {
+    _log.info(line)
 }
 ```
 
@@ -31,22 +33,22 @@ for (const linha of listaDeDados) {
 
 ---
 
-#### _val.cast(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _val.cast(obj: _Object_) : _[Values](../../objects/Values)_
 ##### Description
 
-Transforma um objeto em valores se possível.
+Turns an object into values if possible.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| obj | _Object_ | Object to be converted. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
-O objeto convertido para valores.
+The object converted to values.
 
 ---
 
@@ -54,21 +56,22 @@ O objeto convertido para valores.
 
 ---
 
-#### _val.fromJSON(arg0: string) : _[Values](../../objects/Values)_
+#### _val.fromJSON(text: string) : _[Values](../../objects/Values)_
 ##### Description
 
-Obtém o values de uma string com JSON.
+Gets the values of a string with an array or object in JSON.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| text | string | JSON content. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+The values object loaded with the structure and data obtained with the JSON string.
 
 ---
 
@@ -79,40 +82,51 @@ Obtém o values de uma string com JSON.
 #### _val.init() : _[Values](../../objects/Values)_
 ##### Description
 
-Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
+Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+The new generic value object.
 
 ---
 
-#### _val.init(arg0: _Iterable_) : _[Values](../../objects/Values)_
+#### _val.init(obj: _Iterable_) : _[Values](../../objects/Values)_
+##### Description
+
+Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Iterable_ |   |
+| obj | _Iterable_ | Object to load the newly created values object. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+The new values object starts with the data from the passed object.
 
 ---
 
-#### _val.init(arg0: _Map_) : _[Values](../../objects/Values)_
+#### _val.init(obj: _Map_) : _[Values](../../objects/Values)_
+##### Description
+
+Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Map_ |   |
+| obj | _Map_ | Object to load the newly created values object. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+The new values object starts with the data from the passed object.
 
 ---
 
@@ -120,22 +134,22 @@ Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá
 
 ---
 
-#### _val.is(arg0: _Object_) : _boolean_
+#### _val.is(obj: _Object_) : _boolean_
 ##### Description
 
-Verifica se o objeto é do tipo de valores.
+Checks whether the object is of the value type.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| obj | _Object_ | Object to be validated if it is of the value type. |
 
 ##### Return
 
 ( _boolean_ )
 
-Resultado da verificação se é do tipo valores ou não.
+Result of checking whether it is of type values or not.
 
 ---
 
@@ -146,51 +160,51 @@ Resultado da verificação se é do tipo valores ou não.
 #### _val.list() : _[Values](../../objects/Values)_
 ##### Description
 
-Inicia um novo objeto de valores mas do tipo lista.
+Starts a new object of values but of type list.
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
-O novo objeto de valores iniciado como lista.
+The new values object started as list.
 
 ---
 
-#### _val.list(valores: _Object_) : _List_
+#### _val.list(values: _Object_) : _List_
 ##### Description
 
-Transforma um objeto de valores para uma lista normal.
+Transforms an object from values to a normal list.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| valores | _Object_ | Objeto de valores no modo lista. |
+| values | _Object_ | Value object in list mode. |
 
 ##### Return
 
 ( _List_ )
 
-Uma nova lista normal com os itens do objeto de valores recebido.
+A new normal list of items from the received value object.
 
 ---
 
-#### _val.list(valores: _[Values](../../objects/Values)_) : _List_
+#### _val.list(values: _[Values](../../objects/Values)_) : _List_
 ##### Description
 
-Transforma um objeto de valores para uma lista normal.
+Transforms an object from values to a normal list.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| valores | _[Values](../../objects/Values)_ | Objeto de valores no modo lista. |
+| values | _[Values](../../objects/Values)_ | Value object in list mode. |
 
 ##### Return
 
 ( _List_ )
 
-Uma nova lista normal com os itens do objeto de valores recebido.
+A new normal list of items from the received value object.
 
 ---
 
@@ -201,41 +215,51 @@ Uma nova lista normal com os itens do objeto de valores recebido.
 #### _val.map() : _[Values](../../objects/Values)_
 ##### Description
 
-Inicia um novo objeto de valores mas do tipo mapa.
+Starts a new object of values but of type map.
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
-O novo objeto de valores iniciado como mapa.
+The new values object started as map.
 
 ---
 
-#### _val.map(arg0: _Object_) : _Map_
+#### _val.map(values: _Object_) : _Map_
+##### Description
+
+Transforms an object from values to a normal map.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| values | _Object_ | Value object in map mode. |
 
 ##### Return
 
 ( _Map_ )
 
+A new normal map with the data from the received values object.
 
 ---
 
-#### _val.map(arg0: _[Values](../../objects/Values)_) : _Map_
+#### _val.map(values: _[Values](../../objects/Values)_) : _Map_
+##### Description
+
+Transforms an object from values to a normal map.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| values | _[Values](../../objects/Values)_ | Value object in map mode. |
 
 ##### Return
 
 ( _Map_ )
 
+A new normal map with the data from the received values object.
 
 ---
 
@@ -269,145 +293,195 @@ Data that is kept in memory and is available for all requests.
 
 ---
 
-#### _val.toJSON(arg0: _List_) : string
+#### _val.toJSON(values: _List_) : string
 ##### Description
 
-Converte o values para JSON.
+Convert values to JSON.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| values | _List_ | Values object to be transformed into JSON format. |
+
+##### Return
+
+( string )
+
+String JSON with the structure and data of the values object.
+
+---
+
+#### _val.toJSON(values: _List_, indentFactor: _boolean_) : string
+##### Description
+
+Convert values to JSON.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| values | _List_ | Values object to be transformed into JSON format. |
+| indentFactor | _boolean_ | Number of spaces that should be used in JSON indentation. |
+
+##### Return
+
+( string )
+
+String JSON with the structure and data of the values object.
+
+---
+
+#### _val.toJSON(values: _List_, htmlEscape: _boolean_, indentFactor: _int_) : string
+##### Description
+
+Convert values to JSON.
 
 ##### How To Use
 
 ```javascript
-const lista = _val.list()
-lista.add("Item 1")lista.add("Item 2")lista.add("Item 3")const jsonString = _val.toJSON(values);
+const list = _val.list()
+    .add("Item 1")
+    .add("Item 2")
+    .add("Item 3")
+const listString = _val.toJSON(list)
+_out.println(`${listString}<br/>`)
+const map = _val.map()
+    .set("key1", "Value 1")
+    .set("key2", "Value 2")
+const mapString = _val.toJSON(map)
+_out.println(`${mapString}<br/>`)
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _List_ |   |
+| values | _List_ | Values object to be transformed into JSON format. |
+| htmlEscape | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
+| indentFactor | _int_ | Number of spaces that should be used in JSON indentation. |
 
 ##### Return
 
 ( string )
 
+String JSON with the structure and data of the values object.
 
 ---
 
-#### _val.toJSON(arg0: _List_, arg1: _boolean_) : string
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _List_ |   |
-| arg1 | _boolean_ |   |
-
-##### Return
-
-( string )
-
-
----
-
-#### _val.toJSON(arg0: _List_, arg1: _boolean_, arg2: _int_) : string
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _List_ |   |
-| arg1 | _boolean_ |   |
-| arg2 | _int_ |   |
-
-##### Return
-
-( string )
-
-
----
-
-#### _val.toJSON(arg0: _List_, arg1: _int_) : string
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _List_ |   |
-| arg1 | _int_ |   |
-
-##### Return
-
-( string )
-
-
----
-
-#### _val.toJSON(arg0: _[Values](../../objects/Values)_) : string
+#### _val.toJSON(values: _List_, indentFactor: _int_) : string
 ##### Description
 
-Converte o values para JSON.
+Convert values to JSON.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| values | _List_ | Values object to be transformed into JSON format. |
+| indentFactor | _int_ | Number of spaces that should be used in JSON indentation. |
+
+##### Return
+
+( string )
+
+String JSON with the structure and data of the values object.
+
+---
+
+#### _val.toJSON(values: _[Values](../../objects/Values)_) : string
+##### Description
+
+Convert values to JSON.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| values | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+
+##### Return
+
+( string )
+
+String JSON with the structure and data of the values object.
+
+---
+
+#### _val.toJSON(values: _[Values](../../objects/Values)_, htmlEscape: _boolean_) : string
+##### Description
+
+Convert values to JSON.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| values | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+| htmlEscape | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
+
+##### Return
+
+( string )
+
+String JSON with the structure and data of the values object.
+
+---
+
+#### _val.toJSON(values: _[Values](../../objects/Values)_, htmlEscape: _boolean_, indentFactor: _int_) : string
+##### Description
+
+Convert values to JSON.
 
 ##### How To Use
 
 ```javascript
-const lista = _val.list()
-lista.add("Item 1")lista.add("Item 2")lista.add("Item 3")const jsonString = _val.toJSON(values);
+const list = _val.list()
+    .add("Item 1")
+    .add("Item 2")
+    .add("Item 3")
+const listString = _val.toJSON(list)
+_out.println(`${listString}<br/>`)
+const map = _val.map()
+    .set("key1", "Value 1")
+    .set("key2", "Value 2")
+const mapString = _val.toJSON(map)
+_out.println(`${mapString}<br/>`)
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| values | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+| htmlEscape | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
+| indentFactor | _int_ | Number of spaces that should be used in JSON indentation. |
 
 ##### Return
 
 ( string )
 
+String JSON with the structure and data of the values object.
 
 ---
 
-#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _boolean_) : string
+#### _val.toJSON(values: _[Values](../../objects/Values)_, indentFactor: _int_) : string
+##### Description
+
+Convert values to JSON.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-| arg1 | _boolean_ |   |
+| values | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+| indentFactor | _int_ | Number of spaces that should be used in JSON indentation. |
 
 ##### Return
 
 ( string )
 
-
----
-
-#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _boolean_, arg2: _int_) : string
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-| arg1 | _boolean_ |   |
-| arg2 | _int_ |   |
-
-##### Return
-
-( string )
-
-
----
-
-#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _int_) : string
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-| arg1 | _int_ |   |
-
-##### Return
-
-( string )
-
+String JSON with the structure and data of the values object.
 
 ---
 
@@ -415,41 +489,41 @@ lista.add("Item 1")lista.add("Item 2")lista.add("Item 3")const jsonString = _val
 
 ---
 
-#### _val.toList(valores: _Object_) : _List_
+#### _val.toList(values: _Object_) : _List_
 ##### Description
 
-Transforma um objeto de valores para uma lista normal.
+Transforms an object from values to a normal list.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| valores | _Object_ | Objeto de valores no modo lista. |
+| values | _Object_ | Value object in list mode. |
 
 ##### Return
 
 ( _List_ )
 
-Uma nova lista normal com os itens do objeto de valores recebido.
+A new normal list of items from the received value object.
 
 ---
 
-#### _val.toList(valores: _[Values](../../objects/Values)_) : _List_
+#### _val.toList(values: _[Values](../../objects/Values)_) : _List_
 ##### Description
 
-Transforma um objeto de valores para uma lista normal.
+Transforms an object from values to a normal list.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| valores | _[Values](../../objects/Values)_ | Objeto de valores no modo lista. |
+| values | _[Values](../../objects/Values)_ | Value object in list mode. |
 
 ##### Return
 
 ( _List_ )
 
-Uma nova lista normal com os itens do objeto de valores recebido.
+A new normal list of items from the received value object.
 
 ---
 
@@ -457,31 +531,41 @@ Uma nova lista normal com os itens do objeto de valores recebido.
 
 ---
 
-#### _val.toMap(arg0: _Object_) : _Map_
+#### _val.toMap(values: _Object_) : _Map_
+##### Description
+
+Transforms an object from values to a normal map.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| values | _Object_ | Value object in map mode. |
 
 ##### Return
 
 ( _Map_ )
 
+A new normal map with the data from the received values object.
 
 ---
 
-#### _val.toMap(arg0: _[Values](../../objects/Values)_) : _Map_
+#### _val.toMap(values: _[Values](../../objects/Values)_) : _Map_
+##### Description
+
+Transforms an object from values to a normal map.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| values | _[Values](../../objects/Values)_ | Value object in map mode. |
 
 ##### Return
 
 ( _Map_ )
 
+A new normal map with the data from the received values object.
 
 ---
 

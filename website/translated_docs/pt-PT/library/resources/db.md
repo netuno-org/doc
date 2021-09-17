@@ -490,7 +490,7 @@ Executa comandos diretamente na base de dados, pode ser executados comandos como
 ```javascript
 const linhasAfetadas = _db.execute(`
     insert into product(id, uid, nome, preco, active)
-    values(nextval('product_id'), "${_uid.generate()}", "${_db.sanitize('Netuno Insert Teste 1')}", 3.2, true)
+    values(nextval('product_id'), '${_uid.generate()}', '${_db.sanitize('Netuno Insert Teste 1')}', 3.2, true)
 `)
 ```
 

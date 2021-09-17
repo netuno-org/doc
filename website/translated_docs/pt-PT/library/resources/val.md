@@ -5,23 +5,25 @@ sidebar_label: Val
 ---
 
 Recurso para interagir com listas ou mapas com chaves e valores (dicionários). 
-O valores é um objecto de armazenamento dados que pode ser representado como uma lista ou como um mapa de dados (dicionário). Uma vez inicializado como uma dessas estruturas, lista ou mapa, não poderá mais ser alterado para a outra.
+O valores é um objeto de armazenamento dados que pode ser representado como uma lista ou como um mapa de dados (dicionário). Uma vez inicializado como uma dessas estruturas, lista ou mapa, não poderá mais ser alterado para a outra.
 
 ```javascript
 const mapaDeDados = _val.map()
-  .set('id', 1)
-  .set('name', 'Netuno')
-  .set('site', 'www.netuno.org')
-  .set('active', 'true')
+    .set('id', 1)
+    .set('name', 'Netuno')
+    .set('site', 'www.netuno.org')
+    .set('active', 'true')
 const idComoString = mapaDeDados.getString('id')
 const name = mapaDeDados['name']
 const site = mapaDeDados['site']
+const active = mapaDeDados.getBoolean('active')
 
 const listaDeDados = _val.list()
-listaDeDados.add('Linha 1')
-listaDeDados.push('Linha 2')
+    .add('Linha 1')
+    .push('Linha 2')
+    .add('Linha 3')
 for (const linha of listaDeDados) {
-  _log.info(linha)
+    _log.info(linha)
 }
 ```
 
@@ -31,7 +33,7 @@ for (const linha of listaDeDados) {
 
 ---
 
-#### _val.cast(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _val.cast(obj: _Object_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Transforma um objeto em valores se possível.
@@ -40,7 +42,7 @@ Transforma um objeto em valores se possível.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| obj | _Object_ | Objeto para ser convertido. |
 
 ##### Retorno
 
@@ -54,21 +56,22 @@ O objeto convertido para valores.
 
 ---
 
-#### _val.fromJSON(arg0: string) : _[Values](../../objects/Values)_
+#### _val.fromJSON(texto: string) : _[Values](../../objects/Values)_
 ##### Descrição
 
-Obtém o values de uma string com JSON.
+Obtém o values de uma string com array ou objecto em JSON.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| texto | string | Conteúdo JSON. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+O objeto de valores carregado com a estrutura e dados obtidos com a string JSON.
 
 ---
 
@@ -85,34 +88,45 @@ Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá
 
 ( _[Values](../../objects/Values)_ )
 
+O novo objeto de valores genérico.
 
 ---
 
-#### _val.init(arg0: _Iterable_) : _[Values](../../objects/Values)_
+#### _val.init(obj: _Iterable_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Iterable_ |   |
+| obj | _Iterable_ | Objeto para carregar o novo objeto de valores criado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+O novo objeto de valores iniciado com os dados do objeto passado.
 
 ---
 
-#### _val.init(arg0: _Map_) : _[Values](../../objects/Values)_
+#### _val.init(obj: _Map_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| obj | _Map_ | Objeto para carregar o novo objeto de valores criado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+O novo objeto de valores iniciado com os dados do objeto passado.
 
 ---
 
@@ -120,7 +134,7 @@ Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá
 
 ---
 
-#### _val.is(arg0: _Object_) : _boolean_
+#### _val.is(obj: _Object_) : _boolean_
 ##### Descrição
 
 Verifica se o objeto é do tipo de valores.
@@ -129,7 +143,7 @@ Verifica se o objeto é do tipo de valores.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| obj | _Object_ | Objeto para ser validado se é do tipo de valores. |
 
 ##### Retorno
 
@@ -211,31 +225,41 @@ O novo objeto de valores iniciado como mapa.
 
 ---
 
-#### _val.map(arg0: _Object_) : _Map_
+#### _val.map(valores: _Object_) : _Map_
+##### Descrição
+
+Transforma um objeto de valores para um mapa normal.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| valores | _Object_ | Objeto de valores no modo mapa. |
 
 ##### Retorno
 
 ( _Map_ )
 
+Uma novo mapa normal com os dados do objeto de valores recebido.
 
 ---
 
-#### _val.map(arg0: _[Values](../../objects/Values)_) : _Map_
+#### _val.map(valores: _[Values](../../objects/Values)_) : _Map_
+##### Descrição
+
+Transforma um objeto de valores para um mapa normal.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| valores | _[Values](../../objects/Values)_ | Objeto de valores no modo mapa. |
 
 ##### Retorno
 
 ( _Map_ )
 
+Uma novo mapa normal com os dados do objeto de valores recebido.
 
 ---
 
@@ -269,7 +293,46 @@ Dados que são mantidos em memória e que estão disponíveis para todas as soli
 
 ---
 
-#### _val.toJSON(arg0: _List_) : string
+#### _val.toJSON(valores: _List_) : string
+##### Descrição
+
+Converte o values para JSON.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| valores | _List_ | Objeto de valores para ser transformado no formato JSON. |
+
+##### Retorno
+
+( string )
+
+String JSON com a estrutura e dados do objeto de valores.
+
+---
+
+#### _val.toJSON(valores: _List_, indentacao: _boolean_) : string
+##### Descrição
+
+Converte o values para JSON.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| valores | _List_ | Objeto de valores para ser transformado no formato JSON. |
+| indentacao | _boolean_ | Quantidade de espaços que deve ser utilizado na indentação do JSON. |
+
+##### Retorno
+
+( string )
+
+String JSON com a estrutura e dados do objeto de valores.
+
+---
+
+#### _val.toJSON(valores: _List_, emHTML: _boolean_, indentacao: _int_) : string
 ##### Descrição
 
 Converte o values para JSON.
@@ -278,69 +341,94 @@ Converte o values para JSON.
 
 ```javascript
 const lista = _val.list()
-lista.add("Item 1")lista.add("Item 2")lista.add("Item 3")const jsonString = _val.toJSON(values);
+    .add("Item 1")
+    .add("Item 2")
+    .add("Item 3")
+const listaString = _val.toJSON(lista)
+_out.println(`${listaString}<br/>`)
+const mapa = _val.map()
+    .set("chave1", "Valor 1")
+    .set("chave2", "Valor 2")
+const mapaString = _val.toJSON(mapa)
+_out.println(`${mapaString}<br/>`)
 ```
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| valores | _List_ | Objeto de valores para ser transformado no formato JSON. |
+| emHTML | _boolean_ | Ativa a formatação automática em HTML dos caracteres especiais que estão nos valores de texto, útil para a transformação de acentos. |
+| indentacao | _int_ | Quantidade de espaços que deve ser utilizado na indentação do JSON. |
 
 ##### Retorno
 
 ( string )
 
+String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### _val.toJSON(arg0: _List_, arg1: _boolean_) : string
+#### _val.toJSON(valores: _List_, indentacao: _int_) : string
+##### Descrição
+
+Converte o values para JSON.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
-| arg1 | _boolean_ |   |
+| valores | _List_ | Objeto de valores para ser transformado no formato JSON. |
+| indentacao | _int_ | Quantidade de espaços que deve ser utilizado na indentação do JSON. |
 
 ##### Retorno
 
 ( string )
 
+String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### _val.toJSON(arg0: _List_, arg1: _boolean_, arg2: _int_) : string
+#### _val.toJSON(valores: _[Values](../../objects/Values)_) : string
+##### Descrição
+
+Converte o values para JSON.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
-| arg1 | _boolean_ |   |
-| arg2 | _int_ |   |
+| valores | _[Values](../../objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
 
 ##### Retorno
 
 ( string )
 
+String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### _val.toJSON(arg0: _List_, arg1: _int_) : string
+#### _val.toJSON(valores: _[Values](../../objects/Values)_, emHTML: _boolean_) : string
+##### Descrição
+
+Converte o values para JSON.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
-| arg1 | _int_ |   |
+| valores | _[Values](../../objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
+| emHTML | _boolean_ | Ativa a formatação automática em HTML dos caracteres especiais que estão nos valores de texto, útil para a transformação de acentos. |
 
 ##### Retorno
 
 ( string )
 
+String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### _val.toJSON(arg0: _[Values](../../objects/Values)_) : string
+#### _val.toJSON(valores: _[Values](../../objects/Values)_, emHTML: _boolean_, indentacao: _int_) : string
 ##### Descrição
 
 Converte o values para JSON.
@@ -349,65 +437,51 @@ Converte o values para JSON.
 
 ```javascript
 const lista = _val.list()
-lista.add("Item 1")lista.add("Item 2")lista.add("Item 3")const jsonString = _val.toJSON(values);
+    .add("Item 1")
+    .add("Item 2")
+    .add("Item 3")
+const listaString = _val.toJSON(lista)
+_out.println(`${listaString}<br/>`)
+const mapa = _val.map()
+    .set("chave1", "Valor 1")
+    .set("chave2", "Valor 2")
+const mapaString = _val.toJSON(mapa)
+_out.println(`${mapaString}<br/>`)
 ```
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| valores | _[Values](../../objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
+| emHTML | _boolean_ | Ativa a formatação automática em HTML dos caracteres especiais que estão nos valores de texto, útil para a transformação de acentos. |
+| indentacao | _int_ | Quantidade de espaços que deve ser utilizado na indentação do JSON. |
 
 ##### Retorno
 
 ( string )
 
+String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _boolean_) : string
+#### _val.toJSON(valores: _[Values](../../objects/Values)_, indentacao: _int_) : string
+##### Descrição
+
+Converte o values para JSON.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-| arg1 | _boolean_ |   |
+| valores | _[Values](../../objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
+| indentacao | _int_ | Quantidade de espaços que deve ser utilizado na indentação do JSON. |
 
 ##### Retorno
 
 ( string )
 
-
----
-
-#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _boolean_, arg2: _int_) : string
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-| arg1 | _boolean_ |   |
-| arg2 | _int_ |   |
-
-##### Retorno
-
-( string )
-
-
----
-
-#### _val.toJSON(arg0: _[Values](../../objects/Values)_, arg1: _int_) : string
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-| arg1 | _int_ |   |
-
-##### Retorno
-
-( string )
-
+String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
@@ -457,31 +531,41 @@ Uma nova lista normal com os itens do objeto de valores recebido.
 
 ---
 
-#### _val.toMap(arg0: _Object_) : _Map_
+#### _val.toMap(valores: _Object_) : _Map_
+##### Descrição
+
+Transforma um objeto de valores para um mapa normal.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| valores | _Object_ | Objeto de valores no modo mapa. |
 
 ##### Retorno
 
 ( _Map_ )
 
+Uma novo mapa normal com os dados do objeto de valores recebido.
 
 ---
 
-#### _val.toMap(arg0: _[Values](../../objects/Values)_) : _Map_
+#### _val.toMap(valores: _[Values](../../objects/Values)_) : _Map_
+##### Descrição
+
+Transforma um objeto de valores para um mapa normal.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| valores | _[Values](../../objects/Values)_ | Objeto de valores no modo mapa. |
 
 ##### Retorno
 
 ( _Map_ )
 
+Uma novo mapa normal com os dados do objeto de valores recebido.
 
 ---
 
