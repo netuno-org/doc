@@ -75,6 +75,32 @@ O objeto de valores carregado com a estrutura e dados obtidos com a string JSON.
 
 ---
 
+## global
+
+---
+
+#### _val.global() : _[Values](../../objects/Values)_
+##### Descrição
+
+Instância do tipo Values para armazenar dados que ficam disponíveis apenas durante a execução do pedido HTTP, é útil para partilhar dados entre scripts.
+
+##### Como Usar
+
+```javascript
+// Define que esta sendo processado o cliente 10:
+const global = _val.global()
+global.set('clienteId', 10)
+_out.json(global)
+```
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Dados que são partilhados globalmente entre os diversos scripts durante a execução da chamada HTTP.
+
+---
+
 ## init
 
 ---

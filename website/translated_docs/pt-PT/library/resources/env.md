@@ -4,7 +4,12 @@ title: Env
 sidebar_label: Env
 ---
 
-Recurso de consulta do ambiente de desenvolvimento.
+Permite consultar o ambiente de desenvolvimento que é configurado no ficheiro `config.js` que encontra-se na raíz do Netuno.
+É utilizada a configuração da aplicação que tem o respectivo nome do ambiente.
+
+```javascript
+config.env = 'development'
+```
 
 ---
 
@@ -13,6 +18,16 @@ Recurso de consulta do ambiente de desenvolvimento.
 ---
 
 #### _env.current() : string
+##### Descrição
+
+Nome do ambiente que está configurado no Netuno.
+
+##### Como Usar
+
+```javascript
+_exec.service("outro-script-talvez-em-outro-linguagem");
+```
+
 ##### Retorno
 
 ( string )
@@ -24,12 +39,16 @@ Recurso de consulta do ambiente de desenvolvimento.
 
 ---
 
-#### _env.is(arg0: string) : _boolean_
+#### _env.is(caminho: string) : _boolean_
+##### Descrição
+
+.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminho | string | Caminho do script com origem em 'services/' a executar. |
 
 ##### Retorno
 

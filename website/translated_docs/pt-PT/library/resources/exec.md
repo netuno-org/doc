@@ -4,6 +4,7 @@ title: Exec
 sidebar_label: Exec
 ---
 
+Funcionalidades para auxiliar à execução do código.
 Realiza a execução de outros scripts, suporta também executar scripts em outras linguagens de programação.
 Executa o script indicado, retornando o seu output.
 
@@ -1243,8 +1244,8 @@ Realiza a transição de variáveis entre scripts, inclusive entre linguagens de
 ##### Como Usar
 
 ```javascript
-const minhaVarOriginal = "test";
-_exec    .bind("transitarVar", minhaVarOriginal)    .core("um-outro-script-em-outra-linguagem");
+const minhaVarOriginal = "teste";
+_exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-em-outra-linguagem");
 ```
 
 ##### Atributos
@@ -1441,14 +1442,39 @@ Execução de scripts que estão na pasta `server/core/`.
 ##### Como Usar
 
 ```javascript
-_exec.core("um-outro-script-em-outra-linguagem");
+_exec.core("outro-script-talvez-em-outro-linguagem");
 ```
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | string | Caminho do script com origem em 'core/' a executar. |
+| caminho | string | Caminho do script com origem em `core/` a executar. |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _exec.core(caminho: string, caminho: _boolean_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Execução de scripts que estão na pasta `server/core/`.
+
+##### Como Usar
+
+```javascript
+_exec.core("outro-script-talvez-em-outro-linguagem");
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| caminho | string | Caminho do script com origem em `core/` a executar. |
+| caminho | _boolean_ | Caminho do script com origem em `core/` a executar. |
 
 ##### Retorno
 
@@ -1684,7 +1710,7 @@ Executa a limpeza da memória através da execução do coletor de lixo ([JVM ga
 ##### Como Usar
 
 ```javascript
-// Libertar memória exetando o Garbage Collector:
+// Libertar memória executando o Garbage Collector:
 _exec.gc();
 ```
 
@@ -4006,7 +4032,7 @@ Execução de scripts que estão na pasta `server/services/`.
 ##### Como Usar
 
 ```javascript
-_exec.service("um-outro-script-em-outra-linguagem");
+_exec.service("outro-script-talvez-em-outro-linguagem");
 ```
 
 ##### Atributos
@@ -4014,6 +4040,31 @@ _exec.service("um-outro-script-em-outra-linguagem");
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | caminho | string | Caminho do script com origem em 'services/' a executar. |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _exec.service(caminho: string, preservarContexto: _boolean_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Execução de scripts que estão na pasta `server/services/`.
+
+##### Como Usar
+
+```javascript
+_exec.service("outro-script-talvez-em-outro-linguagem");
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| caminho | string | Caminho do script com origem em 'services/' a executar. |
+| preservarContexto | _boolean_ | Se deve manter o mesmo contexto de execução ou iniciar um novo. |
 
 ##### Retorno
 
@@ -4531,6 +4582,31 @@ _exec.sleep(3000);
 ##### Retorno
 
 ( _Spliterator_ )
+
+
+---
+
+## stop
+
+---
+
+#### _exec.stop() : _void_
+##### Descrição
+
+Realiza a paragem da execução do script atual, útil para interromper da execução.
+
+##### Como Usar
+
+```javascript
+// Para a execução:
+_out.println('Vai parar...<br>');
+_exec.stop();
+_out.println('Não chega nesta linha.');
+```
+
+##### Retorno
+
+( _void_ )
 
 
 ---

@@ -269,6 +269,18 @@ O nome do sistema operacional.
 
 ---
 
+## getWaitFor
+
+---
+
+#### _os.getWaitFor() : _long_
+##### Retorno
+
+( _long_ )
+
+
+---
+
 ## init
 
 ---
@@ -389,6 +401,30 @@ Se é ou não o sistema operacional que foi indicado.
 
 ---
 
+## isReadCommandError
+
+---
+
+#### _os.isReadCommandError() : _boolean_
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+## isReadCommandOutput
+
+---
+
+#### _os.isReadCommandOutput() : _boolean_
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
 ## isWindows
 
 ---
@@ -420,6 +456,58 @@ Obtém o nome do sistema operacional.
 ( string )
 
 O nome do sistema operacional.
+
+---
+
+## readCommandError
+
+---
+
+#### _os.readCommandError() : _boolean_
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### _os.readCommandError(arg0: _boolean_) : _OS_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Retorno
+
+( _OS_ )
+
+
+---
+
+## readCommandOutput
+
+---
+
+#### _os.readCommandOutput() : _boolean_
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### _os.readCommandOutput(arg0: _boolean_) : _OS_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Retorno
+
+( _OS_ )
+
 
 ---
 
@@ -481,6 +569,86 @@ Define o caminho onde os comandos serão executados.
 ( _OS_ )
 
 Instância do recurso de sistema operacional.
+
+---
+
+## setReadCommandError
+
+---
+
+#### _os.setReadCommandError(arg0: _boolean_) : _OS_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Retorno
+
+( _OS_ )
+
+
+---
+
+## setReadCommandOutput
+
+---
+
+#### _os.setReadCommandOutput(arg0: _boolean_) : _OS_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Retorno
+
+( _OS_ )
+
+
+---
+
+## setWaitFor
+
+---
+
+#### _os.setWaitFor(arg0: _long_) : _OS_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _long_ |   |
+
+##### Retorno
+
+( _OS_ )
+
+
+---
+
+## waitFor
+
+---
+
+#### _os.waitFor() : _long_
+##### Retorno
+
+( _long_ )
+
+
+---
+
+#### _os.waitFor(arg0: _long_) : _OS_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _long_ |   |
+
+##### Retorno
+
+( _OS_ )
+
 
 ---
 

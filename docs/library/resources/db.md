@@ -694,7 +694,6 @@ const record = _db.findFirst(
             "where",
             _val.map()
                 .set("email", "pessoa@e-mail.exemplo")
-                 )
         )
 )
 _out.json(
@@ -1165,7 +1164,7 @@ List of data obtained with the direct query to the database.
 
 ---
 
-#### _db.query(arg0: string, arg1: _Object[]_) : _List_
+#### _db.query(query: string, params: _Object[]_) : _List_
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1173,13 +1172,11 @@ Run a SQL query directly on the database. Be very careful with SQL Injection.
 ##### How To Use
 
 ```javascript
-const safeMaxAmount = _db.toFloat(_req.getString("max_amount"))
-
 _out.json(
     _db.query(`
         select * from product
-        where price < ${safeMaxAmount}
-    `)
+        where price < ?
+    `, _req.getString("max_price"))
 )
 ```
 
@@ -1187,8 +1184,8 @@ _out.json(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| query | string | Command that will be executed on the database to get records. |
+| params | _Object[]_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
@@ -1198,7 +1195,7 @@ List of data obtained with the direct query to the database.
 
 ---
 
-#### _db.query(arg0: string, arg1: _List_) : _List_
+#### _db.query(query: string, params: _List_) : _List_
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1206,13 +1203,11 @@ Run a SQL query directly on the database. Be very careful with SQL Injection.
 ##### How To Use
 
 ```javascript
-const safeMaxAmount = _db.toFloat(_req.getString("max_amount"))
-
 _out.json(
     _db.query(`
         select * from product
-        where price < ${safeMaxAmount}
-    `)
+        where price < ?
+    `, _req.getString("max_price"))
 )
 ```
 
@@ -1220,8 +1215,8 @@ _out.json(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| query | string | Command that will be executed on the database to get records. |
+| params | _List_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
@@ -1231,7 +1226,7 @@ List of data obtained with the direct query to the database.
 
 ---
 
-#### _db.query(arg0: string, arg1: _[Values](../../objects/Values)_) : _List_
+#### _db.query(query: string, params: _[Values](../../objects/Values)_) : _List_
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1239,13 +1234,11 @@ Run a SQL query directly on the database. Be very careful with SQL Injection.
 ##### How To Use
 
 ```javascript
-const safeMaxAmount = _db.toFloat(_req.getString("max_amount"))
-
 _out.json(
     _db.query(`
         select * from product
-        where price < ${safeMaxAmount}
-    `)
+        where price < ?
+    `, _req.getString("max_price"))
 )
 ```
 
@@ -1253,8 +1246,8 @@ _out.json(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| query | string | Command that will be executed on the database to get records. |
+| params | _[Values](../../objects/Values)_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
@@ -1268,62 +1261,122 @@ List of data obtained with the direct query to the database.
 
 ---
 
-#### _db.queryFirst(arg0: string) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string) : _[Values](../../objects/Values)_
+##### Description
+
+Run an SQL query directly on the database and get only the first record. Be very careful with SQL Injection.
+
+##### How To Use
+
+```javascript
+const productFound = _db.queryFirst(`
+    select * from product
+    where name like '%${_db.sanitize(_req.getString('term'))}%'
+`)
+_log.info('The first product found:', productFound)
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| query | string | Command that will be executed on the database to get the record. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+The first data record obtained with the direct database query.
 
 ---
 
-#### _db.queryFirst(arg0: string, arg1: _Object[]_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _Object[]_) : _[Values](../../objects/Values)_
+##### Description
+
+Run an SQL query directly on the database and get only the first record. Be very careful with SQL Injection.
+
+##### How To Use
+
+```javascript
+const productFound = _db.queryFirst(`
+    select * from product
+    where name like ?
+`, `%${_req.getString('term')}%`)
+_log.info('The first product found:', productFound)
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| query | string | Command that will be executed on the database to get the record. |
+| params | _Object[]_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+The first data record obtained with the direct database query.
 
 ---
 
-#### _db.queryFirst(arg0: string, arg1: _List_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _List_) : _[Values](../../objects/Values)_
+##### Description
+
+Run an SQL query directly on the database and get only the first record. Be very careful with SQL Injection.
+
+##### How To Use
+
+```javascript
+const productFound = _db.queryFirst(`
+    select * from product
+    where name like ?
+`, `%${_req.getString('term')}%`)
+_log.info('The first product found:', productFound)
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| query | string | Command that will be executed on the database to get the record. |
+| params | _List_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+The first data record obtained with the direct database query.
 
 ---
 
-#### _db.queryFirst(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Description
+
+Run an SQL query directly on the database and get only the first record. Be very careful with SQL Injection.
+
+##### How To Use
+
+```javascript
+const productFound = _db.queryFirst(`
+    select * from product
+    where name like ?
+`, `%${_req.getString('term')}%`)
+_log.info('The first product found:', productFound)
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| query | string | Command that will be executed on the database to get the record. |
+| params | _[Values](../../objects/Values)_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+The first data record obtained with the direct database query.
 
 ---
 

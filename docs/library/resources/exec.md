@@ -4,15 +4,16 @@ title: Exec
 sidebar_label: Exec
 ---
 
-Realiza a execução de outros scripts, suporta também executar scripts em outras linguagens de programação.
-Executa o script indicado, retornando o seu output.
+Functionalities to aid code execution.
+It performs the execution of other scripts, it also supports the execution of scripts in other programming languages.
+Executes the indicated script, returning its output.
 
 ```javascript
-// Executa outro script da App em `server/core/`
-const outputOutput = _exec.core("outro-script");
+// Run another App script in `server/core/`
+const outputOutput = _exec.core("other-script");
 
-// Executa outro script da App em `server/services/`
-const outputServico = _exec.service("outro-servico");
+// Run another App script in `server/services/`
+const outputService = _exec.service("other-service");
 
 ```
 
@@ -1178,7 +1179,7 @@ const outputServico = _exec.service("outro-servico");
 #### _exec.async(arg0: _Value[]_) : _[Async](../../objects/Async)_
 ##### Description
 
-Execução de funções de forma assíncrona.
+Execution of functions asynchronously.
 
 ##### Attributes
 
@@ -1235,24 +1236,24 @@ Execução de funções de forma assíncrona.
 
 ---
 
-#### _exec.bind(variavel: string, objeto: _Object_) : _Exec_
+#### _exec.bind(key: string, value: _Object_) : _Exec_
 ##### Description
 
-Realiza a transição de variáveis entre scripts, inclusive entre linguagens de programação diferentes.
+Transitions variables between scripts, including between different programming languages.
 
 ##### How To Use
 
 ```javascript
-const minhaVarOriginal = "test";
-_exec    .bind("transitarVar", minhaVarOriginal)    .core("um-outro-script-em-outra-linguagem");
+const originalVar = "test";
+_exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-another-language");
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| variavel | string | Nome da variável que estará disponível no outro script que será executado. |
-| objeto | _Object_ | Objeto a ser passado para o outro script que será executado. |
+| key | string | Variable name that will be available in the other script that will be executed. |
+| value | _Object_ | Object to be passed to the other script that will be executed. |
 
 ##### Return
 
@@ -1433,22 +1434,47 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("um-outro-script-em-ou
 
 ---
 
-#### _exec.core(caminho: string) : _[Values](../../objects/Values)_
+#### _exec.core(path: string) : _[Values](../../objects/Values)_
 ##### Description
 
-Execução de scripts que estão na pasta `server/core/`.
+Execution of scripts that are in the `server/core/` folder.
 
 ##### How To Use
 
 ```javascript
-_exec.core("um-outro-script-em-outra-linguagem");
+_exec.core("another-script-maybe-in-another-language");
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| caminho | string | Caminho do script com origem em 'core/' a executar. |
+| path | string | Script path with source in `core/` to execute. |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _exec.core(path: string, path: _boolean_) : _[Values](../../objects/Values)_
+##### Description
+
+Execution of scripts that are in the `server/core/` folder.
+
+##### How To Use
+
+```javascript
+_exec.core("another-script-maybe-in-another-language");
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| path | string | Script path with source in `core/` to execute. |
+| path | _boolean_ | Script path with source in `core/` to execute. |
 
 ##### Return
 
@@ -1679,12 +1705,12 @@ Set the security restriction on a specific directory for processed objects of th
 #### _exec.gc() : _void_
 ##### Description
 
-Executa a limpeza da memória através da execução do coletor de lixo ([JVM garbage collector](https://www.baeldung.com/jvm-garbage-collectors)).
+Performs memory cleanup by running the garbage collector ([JVM garbage collector](https://www.baeldung.com/jvm-garbage-collectors)).
 
 ##### How To Use
 
 ```javascript
-// Libertar memória exetando o Garbage Collector:
+// Free up memory by running Garbage Collector:
 _exec.gc();
 ```
 
@@ -3998,22 +4024,47 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.service(caminho: string) : _[Values](../../objects/Values)_
+#### _exec.service(path: string) : _[Values](../../objects/Values)_
 ##### Description
 
-Execução de scripts que estão na pasta `server/services/`.
+Execution of scripts that are in the `server/services/` folder.
 
 ##### How To Use
 
 ```javascript
-_exec.service("um-outro-script-em-outra-linguagem");
+_exec.service("another-script-maybe-in-another-language");
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| caminho | string | Caminho do script com origem em 'services/' a executar. |
+| path | string | Script path originating from 'services/' to be executed. |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _exec.service(path: string, preserveContext: _boolean_) : _[Values](../../objects/Values)_
+##### Description
+
+Execution of scripts that are in the `server/services/` folder.
+
+##### How To Use
+
+```javascript
+_exec.service("another-script-maybe-in-another-language");
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| path | string | Script path originating from 'services/' to be executed. |
+| preserveContext | _boolean_ | Whether to keep the same execution context or start a new one. |
 
 ##### Return
 
@@ -4466,15 +4517,15 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _exec.sleep(intervalo: _long_) : _void_
+#### _exec.sleep(interval: _long_) : _void_
 ##### Description
 
-Realiza uma pausa na execução, útil para provocar algum atraso de processamento controlado.
+Pauses execution, useful for causing some controlled processing delay.
 
 ##### How To Use
 
 ```javascript
-// Para a execução por 3 segundos:
+// Stop the execution for 3 seconds:
 _exec.sleep(3000);
 ```
 
@@ -4482,7 +4533,7 @@ _exec.sleep(3000);
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| intervalo | _long_ | Intervalo de tempo em milissegundos que deve fazer a pausa na execução. |
+| interval | _long_ | Time interval in milliseconds to pause execution. |
 
 ##### Return
 
@@ -4531,6 +4582,31 @@ _exec.sleep(3000);
 ##### Return
 
 ( _Spliterator_ )
+
+
+---
+
+## stop
+
+---
+
+#### _exec.stop() : _void_
+##### Description
+
+It stops the execution of the current script, useful for interrupting the execution.
+
+##### How To Use
+
+```javascript
+// For the execution:
+_out.println('Will stop...<br>');
+_exec.stop();
+_out.println('Not run this line.');
+```
+
+##### Return
+
+( _void_ )
 
 
 ---

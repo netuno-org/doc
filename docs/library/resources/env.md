@@ -13,6 +13,16 @@ Development environment consultation resource.
 ---
 
 #### _env.current() : string
+##### Description
+
+Execution of scripts that are in the `server/services/` folder.
+
+##### How To Use
+
+```javascript
+_exec.service("another-script-maybe-in-another-language");
+```
+
 ##### Return
 
 ( string )
@@ -24,12 +34,16 @@ Development environment consultation resource.
 
 ---
 
-#### _env.is(arg0: string) : _boolean_
+#### _env.is(env: string) : _boolean_
+##### Description
+
+Execution of scripts that are in the `server/services/` folder.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| env | string | Script path originating from 'services/' to be executed. |
 
 ##### Return
 

@@ -694,7 +694,6 @@ const record = _db.findFirst(
             "where",
             _val.map()
                 .set("email", "pessoa@e-mail.exemplo")
-                 )
         )
 )
 _out.json(
@@ -1165,7 +1164,7 @@ Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.query(arg0: string, arg1: _Object[]_) : _List_
+#### _db.query(query: string, params: _Object[]_) : _List_
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1173,13 +1172,11 @@ Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Inject
 ##### Como Usar
 
 ```javascript
-const valorMaximoSeguro = _db.toFloat(_req.getString("valor_maximo"))
-
 _out.json(
     _db.query(`
         select * from produto
-        where preco < ${valorMaximoSeguro}
-    `)
+        where preco < ?
+    `, _req.getString("preco_maximo"))
 )
 ```
 
@@ -1187,8 +1184,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| query | string | Comando que será executado na base de dados para obter registos. |
+| params | _Object[]_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1198,7 +1195,7 @@ Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.query(arg0: string, arg1: _List_) : _List_
+#### _db.query(query: string, params: _List_) : _List_
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1206,13 +1203,11 @@ Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Inject
 ##### Como Usar
 
 ```javascript
-const valorMaximoSeguro = _db.toFloat(_req.getString("valor_maximo"))
-
 _out.json(
     _db.query(`
         select * from produto
-        where preco < ${valorMaximoSeguro}
-    `)
+        where preco < ?
+    `, _req.getString("preco_maximo"))
 )
 ```
 
@@ -1220,8 +1215,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| query | string | Comando que será executado na base de dados para obter registos. |
+| params | _List_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1231,7 +1226,7 @@ Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.query(arg0: string, arg1: _[Values](../../objects/Values)_) : _List_
+#### _db.query(query: string, params: _[Values](../../objects/Values)_) : _List_
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1239,13 +1234,11 @@ Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Inject
 ##### Como Usar
 
 ```javascript
-const valorMaximoSeguro = _db.toFloat(_req.getString("valor_maximo"))
-
 _out.json(
     _db.query(`
         select * from produto
-        where preco < ${valorMaximoSeguro}
-    `)
+        where preco < ?
+    `, _req.getString("preco_maximo"))
 )
 ```
 
@@ -1253,8 +1246,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| query | string | Comando que será executado na base de dados para obter registos. |
+| params | _[Values](../../objects/Values)_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1268,62 +1261,122 @@ Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.queryFirst(arg0: string) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string) : _[Values](../../objects/Values)_
+##### Descrição
+
+Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
+
+##### Como Usar
+
+```javascript
+const produtoEncontrado = _db.queryFirst(`
+    select * from produto
+    where nome like '%${_db.sanitize(_req.getString('termo'))}%'
+`)
+_log.info('O primeiro produto encontrado:', produtoEncontrado)
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| query | string | Comando que será executado na base de dados para obter o registo. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### _db.queryFirst(arg0: string, arg1: _Object[]_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _Object[]_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
+
+##### Como Usar
+
+```javascript
+const produtoEncontrado = _db.queryFirst(`
+    select * from produto
+    where nome like ?
+`, `%${_db.sanitize(_req.getString('termo'))}%`)
+_log.info('O primeiro produto encontrado:', produtoEncontrado)
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| query | string | Comando que será executado na base de dados para obter o registo. |
+| params | _Object[]_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### _db.queryFirst(arg0: string, arg1: _List_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _List_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
+
+##### Como Usar
+
+```javascript
+const produtoEncontrado = _db.queryFirst(`
+    select * from produto
+    where nome like ?
+`, `%${_db.sanitize(_req.getString('termo'))}%`)
+_log.info('O primeiro produto encontrado:', produtoEncontrado)
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| query | string | Comando que será executado na base de dados para obter o registo. |
+| params | _List_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### _db.queryFirst(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
+
+##### Como Usar
+
+```javascript
+const produtoEncontrado = _db.queryFirst(`
+    select * from produto
+    where nome like ?
+`, `%${_db.sanitize(_req.getString('termo'))}%`)
+_log.info('O primeiro produto encontrado:', produtoEncontrado)
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| query | string | Comando que será executado na base de dados para obter o registo. |
+| params | _[Values](../../objects/Values)_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 

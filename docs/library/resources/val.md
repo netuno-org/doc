@@ -75,6 +75,32 @@ The values object loaded with the structure and data obtained with the JSON stri
 
 ---
 
+## global
+
+---
+
+#### _val.global() : _[Values](../../objects/Values)_
+##### Description
+
+Instance of type Values to store data that is only available during the execution of the HTTP request, it is useful to share data between scripts.
+
+##### How To Use
+
+```javascript
+// Defines that client 10 is being processed:
+const global = _val.global()
+global.set('clienteId', 10)
+_out.json(global)
+```
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+Data that is shared globally between the different scripts during the execution of the HTTP call.
+
+---
+
 ## init
 
 ---
