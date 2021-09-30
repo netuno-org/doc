@@ -40,7 +40,9 @@ Choose one of the following **Installation** options:
 
 ```plaintext
 
-mkdir -p netuno && cd netuno && wget https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -O netuno.jar && java -jar netuno.jar install
+mkdir -p netuno && cd netuno
+wget https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -O netuno.jar
+java -jar netuno.jar install
 
 ```
 
@@ -48,7 +50,9 @@ mkdir -p netuno && cd netuno && wget https://github.com/netuno-org/platform/rele
 
 ```plaintext
 
-mkdir -p netuno && cd netuno && curl -L https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -o netuno.jar && java -jar netuno.jar install
+mkdir -p netuno && cd netuno
+curl -L https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -o netuno.jar
+java -jar netuno.jar install
 
 ```
 
@@ -60,7 +64,9 @@ Now copy and paste the command below and follow the **Installation** steps:
 
 ```plaintext
 
-md netuno; cd netuno; Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/latest/netuno.jar" -OutFile "netuno.jar"; java -jar netuno.jar install
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/latest/netuno.jar" -OutFile "netuno.jar"
+java -jar netuno.jar install
 
 ```
 

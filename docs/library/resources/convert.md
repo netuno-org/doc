@@ -8,6 +8,90 @@ Application data type converter.
 
 ---
 
+## fromBase64
+
+---
+
+#### _convert.fromBase64(arg0: _byte[]_) : string
+##### Description
+
+Converts Base64 content to a decoded string.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _byte[]_ |   |
+
+##### Return
+
+( string )
+
+Returns the decoded string that was in Base64.
+
+---
+
+#### _convert.fromBase64(arg0: string) : string
+##### Description
+
+Converts Base64 content to a decoded string.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( string )
+
+Returns the decoded string that was in Base64.
+
+---
+
+## fromBase64AsBytes
+
+---
+
+#### _convert.fromBase64AsBytes(arg0: _byte[]_) : _byte[]_
+##### Description
+
+Converts the Base64 content to the original decoded byte array.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _byte[]_ |   |
+
+##### Return
+
+( _byte[]_ )
+
+Returns decoded bytes that were in Base64.
+
+---
+
+#### _convert.fromBase64AsBytes(arg0: string) : _byte[]_
+##### Description
+
+Converts the Base64 content to the original decoded byte array.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _byte[]_ )
+
+Returns decoded bytes that were in Base64.
+
+---
+
 ## fromHTML
 
 ---
@@ -65,6 +149,90 @@ _out.print(_convert.toJSON("\u20ACs A\u00E7\u00E3o"))
 ( string )
 
 Text with encoding of special characters in JSON transformed to normal text.
+
+---
+
+## toBase64
+
+---
+
+#### _convert.toBase64(arg0: _byte[]_) : string
+##### Description
+
+Converts the content to a Base64 encoded string.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _byte[]_ |   |
+
+##### Return
+
+( string )
+
+Returns the Base64 encoded string.
+
+---
+
+#### _convert.toBase64(arg0: string) : string
+##### Description
+
+Converts the content to a Base64 encoded string.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( string )
+
+Returns the Base64 encoded string.
+
+---
+
+## toBase64AsBytes
+
+---
+
+#### _convert.toBase64AsBytes(arg0: _byte[]_) : _byte[]_
+##### Description
+
+Convert the content into Base64 encoding.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _byte[]_ |   |
+
+##### Return
+
+( _byte[]_ )
+
+Returns Base64 encoded bytes.
+
+---
+
+#### _convert.toBase64AsBytes(arg0: string) : _byte[]_
+##### Description
+
+Convert the content into Base64 encoding.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _byte[]_ )
+
+Returns Base64 encoded bytes.
 
 ---
 
@@ -498,6 +666,29 @@ Retorna o valor recebido em **float**.
 
 ---
 
+## toHEX
+
+---
+
+#### _convert.toHEX(arg0: _byte[]_) : string
+##### Description
+
+Convert bytes to **hexadecimal** with uppercase letters.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _byte[]_ |   |
+
+##### Return
+
+( string )
+
+Return bytes received in **hexadecimal** in capital letters.
+
+---
+
 ## toHTML
 
 ---
@@ -525,6 +716,29 @@ _out.print(_convert.toHTML("€s Ação"))
 ( string )
 
 Text formatted with encoding of special characters in HTML.
+
+---
+
+## toHex
+
+---
+
+#### _convert.toHex(arg0: _byte[]_) : string
+##### Description
+
+Convert bytes to **hexadecimal** with lowercase letters.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _byte[]_ |   |
+
+##### Return
+
+( string )
+
+Return bytes received in **hexadecimal** in lowercase.
 
 ---
 

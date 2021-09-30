@@ -56,134 +56,6 @@ Data encrypted with AES256.
 
 ---
 
-## base64Decode
-
----
-
-#### _crypto.base64Decode(arg0: _byte[]_) : string
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _byte[]_ |   |
-
-##### Return
-
-( string )
-
-
----
-
-#### _crypto.base64Decode(arg0: string) : string
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-
-##### Return
-
-( string )
-
-
----
-
-## base64DecodeAsBytes
-
----
-
-#### _crypto.base64DecodeAsBytes(arg0: _byte[]_) : _byte[]_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _byte[]_ |   |
-
-##### Return
-
-( _byte[]_ )
-
-
----
-
-#### _crypto.base64DecodeAsBytes(arg0: string) : _byte[]_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-
-##### Return
-
-( _byte[]_ )
-
-
----
-
-## base64Encode
-
----
-
-#### _crypto.base64Encode(arg0: _byte[]_) : string
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _byte[]_ |   |
-
-##### Return
-
-( string )
-
-
----
-
-#### _crypto.base64Encode(arg0: string) : string
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-
-##### Return
-
-( string )
-
-
----
-
-## base64EncodeAsBytes
-
----
-
-#### _crypto.base64EncodeAsBytes(arg0: _byte[]_) : _byte[]_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _byte[]_ |   |
-
-##### Return
-
-( _byte[]_ )
-
-
----
-
-#### _crypto.base64EncodeAsBytes(arg0: string) : _byte[]_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-
-##### Return
-
-( _byte[]_ )
-
-
----
-
 ## bcryptCheck
 
 ---
@@ -263,11 +135,40 @@ Data encrypted with AES256.
 
 ---
 
-## des
+## cryptHash
 
 ---
 
-#### _crypto.des(arg0: string) : _DES_
+#### _crypto.cryptHash(arg0: _byte[]_) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _byte[]_ |   |
+
+##### Return
+
+( string )
+
+
+---
+
+#### _crypto.cryptHash(arg0: _byte[]_, arg1: string) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _byte[]_ |   |
+| arg1 | string |   |
+
+##### Return
+
+( string )
+
+
+---
+
+#### _crypto.cryptHash(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -276,7 +177,132 @@ Data encrypted with AES256.
 
 ##### Return
 
-( _DES_ )
+( string )
+
+
+---
+
+#### _crypto.cryptHash(arg0: string, arg1: string) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( string )
+
+
+---
+
+## desDecode
+
+---
+
+#### _crypto.desDecode(arg0: string, arg1: _byte[]_) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _byte[]_ |   |
+
+##### Return
+
+( string )
+
+
+---
+
+#### _crypto.desDecode(arg0: string, arg1: _byte[]_, arg2: string) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _byte[]_ |   |
+| arg2 | string |   |
+
+##### Return
+
+( string )
+
+
+---
+
+## desDecodeBase64
+
+---
+
+#### _crypto.desDecodeBase64(arg0: string, arg1: string, arg2: string) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+| arg2 | string |   |
+
+##### Return
+
+( string )
+
+
+---
+
+## desEncode
+
+---
+
+#### _crypto.desEncode(arg0: string, arg1: string) : _byte[]_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( _byte[]_ )
+
+
+---
+
+#### _crypto.desEncode(arg0: string, arg1: string, arg2: string) : _byte[]_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+| arg2 | string |   |
+
+##### Return
+
+( _byte[]_ )
+
+
+---
+
+## desEncodeBase64
+
+---
+
+#### _crypto.desEncodeBase64(arg0: string, arg1: string, arg2: string) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+| arg2 | string |   |
+
+##### Return
+
+( string )
 
 
 ---
@@ -471,31 +497,41 @@ Data encoded with HMAC256 and in hexadecimal format.
 
 ---
 
-#### _crypto.sha256(arg0: _byte[]_) : string
+#### _crypto.sha256(content: _byte[]_) : string
+##### Description
+
+Encodes data with SHA256 (SHA-2) and converts binary encryption to hexadecimal.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| content | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
 ( string )
 
+Content encrypted in SHA256 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha256(arg0: string) : string
+#### _crypto.sha256(content: string) : string
+##### Description
+
+Encodes data with SHA256 (SHA-2) and converts binary encryption to hexadecimal.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string | Content to be encrypted. |
 
 ##### Return
 
 ( string )
 
+Content encrypted in SHA256 (SHA2) and converted to hexadecimal.
 
 ---
 
@@ -503,31 +539,41 @@ Data encoded with HMAC256 and in hexadecimal format.
 
 ---
 
-#### _crypto.sha256AsBytes(arg0: _byte[]_) : _byte[]_
+#### _crypto.sha256AsBytes(content: _byte[]_) : _byte[]_
+##### Description
+
+Encodes data with SHA256 (SHA-2) and returns binary encryption.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| content | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
 ( _byte[]_ )
 
+Binary data of the content encrypted in SHA256 (SHA-2).
 
 ---
 
-#### _crypto.sha256AsBytes(arg0: string) : _byte[]_
+#### _crypto.sha256AsBytes(content: string) : _byte[]_
+##### Description
+
+Encodes data with SHA256 (SHA-2) and returns binary encryption.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string | Content to be encrypted. |
 
 ##### Return
 
 ( _byte[]_ )
 
+Binary data of the content encrypted in SHA256 (SHA-2).
 
 ---
 
@@ -535,31 +581,41 @@ Data encoded with HMAC256 and in hexadecimal format.
 
 ---
 
-#### _crypto.sha384(arg0: _byte[]_) : string
+#### _crypto.sha384(content: _byte[]_) : string
+##### Description
+
+Encodes data with SHA384 (SHA-2) and converts binary encryption to hexadecimal.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| content | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
 ( string )
 
+Content encrypted in SHA384 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha384(arg0: string) : string
+#### _crypto.sha384(content: string) : string
+##### Description
+
+Encodes data with SHA384 (SHA-2) and converts binary encryption to hexadecimal.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string | Content to be encrypted. |
 
 ##### Return
 
 ( string )
 
+Content encrypted in SHA384 (SHA2) and converted to hexadecimal.
 
 ---
 
@@ -567,31 +623,41 @@ Data encoded with HMAC256 and in hexadecimal format.
 
 ---
 
-#### _crypto.sha384AsBytes(arg0: _byte[]_) : _byte[]_
+#### _crypto.sha384AsBytes(content: _byte[]_) : _byte[]_
+##### Description
+
+Encodes data with SHA384 (SHA-2) and returns binary encryption.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| content | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
 ( _byte[]_ )
 
+Binary data of the content encrypted in SHA384 (SHA-2).
 
 ---
 
-#### _crypto.sha384AsBytes(arg0: string) : _byte[]_
+#### _crypto.sha384AsBytes(content: string) : _byte[]_
+##### Description
+
+Encodes data with SHA384 (SHA-2) and returns binary encryption.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string | Content to be encrypted. |
 
 ##### Return
 
 ( _byte[]_ )
 
+Binary data of the content encrypted in SHA384 (SHA-2).
 
 ---
 
@@ -599,31 +665,41 @@ Data encoded with HMAC256 and in hexadecimal format.
 
 ---
 
-#### _crypto.sha512(arg0: _byte[]_) : string
+#### _crypto.sha512(content: _byte[]_) : string
+##### Description
+
+Encodes data with SHA512 (SHA-2) and converts binary encryption to hexadecimal.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| content | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
 ( string )
 
+Content encrypted in SHA512 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha512(arg0: string) : string
+#### _crypto.sha512(content: string) : string
+##### Description
+
+Encodes data with SHA512 (SHA-2) and converts binary encryption to hexadecimal.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string | Content to be encrypted. |
 
 ##### Return
 
 ( string )
 
+Content encrypted in SHA512 (SHA2) and converted to hexadecimal.
 
 ---
 
@@ -631,31 +707,41 @@ Data encoded with HMAC256 and in hexadecimal format.
 
 ---
 
-#### _crypto.sha512AsBytes(arg0: _byte[]_) : _byte[]_
+#### _crypto.sha512AsBytes(content: _byte[]_) : _byte[]_
+##### Description
+
+Encodes data with SHA512 (SHA-2) and returns binary encryption.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| content | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
 ( _byte[]_ )
 
+Binary data of the content encrypted in SHA512 (SHA-2).
 
 ---
 
-#### _crypto.sha512AsBytes(arg0: string) : _byte[]_
+#### _crypto.sha512AsBytes(content: string) : _byte[]_
+##### Description
+
+Encodes data with SHA512 (SHA-2) and returns binary encryption.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string | Content to be encrypted. |
 
 ##### Return
 
 ( _byte[]_ )
 
+Binary data of the content encrypted in SHA512 (SHA-2).
 
 ---
 
