@@ -4,7 +4,13 @@ title: Env
 sidebar_label: Env
 ---
 
-Development environment consultation resource.
+Allows you to consult the development environment that is configured in the `config.js` file which is found in the root of Netuno.
+The configuration of the application that has its environment name is used.
+
+```javascript
+// Configured in $NETUNO_HOME/config.js:
+config.env = 'development'
+```
 
 ---
 
@@ -15,18 +21,19 @@ Development environment consultation resource.
 #### _env.current() : string
 ##### Description
 
-Execution of scripts that are in the `server/services/` folder.
+Name of the environment that is configured in Netuno.
 
 ##### How To Use
 
 ```javascript
-_exec.service("another-script-maybe-in-another-language");
+_out.println(`Current Environment: ${_env.current()}`)
 ```
 
 ##### Return
 
 ( string )
 
+The name of the current environment.
 
 ---
 
@@ -34,21 +41,22 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _env.is(env: string) : _boolean_
+#### _env.is(name: string) : _boolean_
 ##### Description
 
-Execution of scripts that are in the `server/services/` folder.
+Serves to check the current environment, useful in `if` conditions.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| env | string | Script path originating from 'services/' to be executed. |
+| name | string | Compares whether the configured environment name in use is the same as the value passed. |
 
 ##### Return
 
 ( _boolean_ )
 
+Whether the configured environment has the same name.
 
 ---
 
