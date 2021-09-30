@@ -51,7 +51,7 @@ java -jar netuno.jar install version=latest
 ```plaintext
 
 mkdir -p netuno-latest && cd netuno-latest
-curl https://github.com/netuno-org/platform/releases/download/latest/netuno.jar > netuno.jar
+curl -L https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -o netuno.jar
 java -jar netuno.jar install version=latest
 
 ```
