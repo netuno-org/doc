@@ -46,7 +46,7 @@ class Footer extends React.Component {
               <a href="https://twitter.com/netuno_org" className="share-icons">
                 <FaTwitter />
               </a>
-              <a href="https://www.linkedin.com/groups/9057315/" className="share-icons">
+              <a href="https://www.linkedin.com/company/netuno-org/" className="share-icons">
                 <FaLinkedin />
               </a>
               <a href="https://www.facebook.com/netuno.org/" className="share-icons">

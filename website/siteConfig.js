@@ -107,8 +107,8 @@ const siteConfig = {
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-  ogImage: 'img/netunoicon.png',
-  twitterImage: 'img/netunoicon.png',
+  ogImage: 'img/social.jpg',
+  twitterImage: 'img/social.jpg',
 
   disableHeaderTitle: true,
   docsSideNavCollapsible: true,
