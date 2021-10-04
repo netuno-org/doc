@@ -24,38 +24,6 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.broadcast(arg0: string, arg1: string, arg2: string) : _void_
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-
-##### Retorno
-
-( _void_ )
-
-
----
-
-#### _ws.broadcast(arg0: string, arg1: string, arg2: _[Values](../../objects/Values)_) : _void_
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _[Values](../../objects/Values)_ |   |
-
-##### Retorno
-
-( _void_ )
-
-
----
-
 #### _ws.broadcast(arg0: string, arg1: _[Values](../../objects/Values)_) : _void_
 ##### Atributos
 
@@ -75,56 +43,6 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.broadcastAsService(arg0: string, arg1: string, arg2: string) : _void_
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-
-##### Retorno
-
-( _void_ )
-
-
----
-
-#### _ws.broadcastAsService(arg0: string, arg1: string, arg2: string, arg3: string) : _void_
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | string |   |
-
-##### Retorno
-
-( _void_ )
-
-
----
-
-#### _ws.broadcastAsService(arg0: string, arg1: string, arg2: string, arg3: _[Values](../../objects/Values)_) : _void_
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _[Values](../../objects/Values)_ |   |
-
-##### Retorno
-
-( _void_ )
-
-
----
-
 #### _ws.broadcastAsService(arg0: string, arg1: string, arg2: _[Values](../../objects/Values)_) : _void_
 ##### Atributos
 
@@ -133,6 +51,21 @@ Gestão das conexões e comunicação com os clientes.
 | arg0 | string |   |
 | arg1 | string |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
+
+##### Retorno
+
+( _void_ )
+
+
+---
+
+#### _ws.broadcastAsService(arg0: string, arg1: _[Values](../../objects/Values)_) : _void_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 

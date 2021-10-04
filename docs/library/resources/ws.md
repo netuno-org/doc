@@ -24,38 +24,6 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.broadcast(arg0: string, arg1: string, arg2: string) : _void_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-
-##### Return
-
-( _void_ )
-
-
----
-
-#### _ws.broadcast(arg0: string, arg1: string, arg2: _[Values](../../objects/Values)_) : _void_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _[Values](../../objects/Values)_ |   |
-
-##### Return
-
-( _void_ )
-
-
----
-
 #### _ws.broadcast(arg0: string, arg1: _[Values](../../objects/Values)_) : _void_
 ##### Attributes
 
@@ -75,56 +43,6 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.broadcastAsService(arg0: string, arg1: string, arg2: string) : _void_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-
-##### Return
-
-( _void_ )
-
-
----
-
-#### _ws.broadcastAsService(arg0: string, arg1: string, arg2: string, arg3: string) : _void_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | string |   |
-
-##### Return
-
-( _void_ )
-
-
----
-
-#### _ws.broadcastAsService(arg0: string, arg1: string, arg2: string, arg3: _[Values](../../objects/Values)_) : _void_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _[Values](../../objects/Values)_ |   |
-
-##### Return
-
-( _void_ )
-
-
----
-
 #### _ws.broadcastAsService(arg0: string, arg1: string, arg2: _[Values](../../objects/Values)_) : _void_
 ##### Attributes
 
@@ -133,6 +51,21 @@ Management of connections and communication with customers.
 | arg0 | string |   |
 | arg1 | string |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+#### _ws.broadcastAsService(arg0: string, arg1: _[Values](../../objects/Values)_) : _void_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 

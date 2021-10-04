@@ -61,9 +61,17 @@
         "title": "Overview",
         "sidebar_label": "Overview"
       },
+      "academy/server/actions": {
+        "title": "Actions",
+        "sidebar_label": "Actions"
+      },
       "academy/server/cron-jobs": {
         "title": "Cron Jobs",
         "sidebar_label": "Cron Jobs"
+      },
+      "academy/server/custom-urls": {
+        "title": "Custom URLs",
+        "sidebar_label": "Custom URLs"
       },
       "academy/server/database/h2database": {
         "title": "H2 Database",
@@ -88,6 +96,9 @@
       "academy/server/monitor-alerts": {
         "title": "Monitor and Alerts",
         "sidebar_label": "Monitor and Alerts"
+      },
+      "academy/server/remote": {
+        "title": "academy/server/remote"
       },
       "academy/server/services/cors": {
         "title": "CORS",
@@ -114,12 +125,16 @@
         "sidebar_label": "Queries Programmatically"
       },
       "academy/server/services/rest": {
-        "title": "Web REST Services",
-        "sidebar_label": "Web REST Services"
+        "title": "REST Web Services",
+        "sidebar_label": "REST Web Services"
       },
       "academy/server/services/sending-emails": {
         "title": "Sending Emails",
         "sidebar_label": "Sending Emails"
+      },
+      "academy/server/services/websocket": {
+        "title": "WebSocket",
+        "sidebar_label": "WebSocket"
       },
       "academy/server/services/xls": {
         "title": "XLS - Excel",
@@ -279,6 +294,10 @@
         "title": "DataItem",
         "sidebar_label": "DataItem"
       },
+      "library/objects/DataSchema": {
+        "title": "DataSchema",
+        "sidebar_label": "DataSchema"
+      },
       "library/objects/DBBatch": {
         "title": "DBBatch",
         "sidebar_label": "DBBatch"
@@ -374,6 +393,14 @@
       "library/resources/csv": {
         "title": "CSV",
         "sidebar_label": "CSV"
+      },
+      "library/resources/dataItem": {
+        "title": "DataItem",
+        "sidebar_label": "DataItem"
+      },
+      "library/resources/dataSchema": {
+        "title": "DataSchema",
+        "sidebar_label": "DataSchema"
       },
       "library/resources/db": {
         "title": "DB",
@@ -474,6 +501,10 @@
       "library/resources/server": {
         "title": "Server",
         "sidebar_label": "Server"
+      },
+      "library/resources/service": {
+        "title": "Service",
+        "sidebar_label": "Service"
       },
       "library/resources/setup": {
         "title": "Setup",

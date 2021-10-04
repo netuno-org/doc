@@ -1,5 +1,5 @@
 ---
-id: DataItem
+id: dataItem
 title: DataItem
 sidebar_label: DataItem
 ---
@@ -18,7 +18,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getCounter() : _int_
+#### _dataItem.getCounter() : _int_
 ##### Return
 
 ( _int_ )
@@ -30,7 +30,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getErrorMessage() : string
+#### _dataItem.getErrorMessage() : string
 ##### Return
 
 ( string )
@@ -42,7 +42,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getErrorTitle() : string
+#### _dataItem.getErrorTitle() : string
 ##### Return
 
 ( string )
@@ -54,7 +54,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getField() : string
+#### _dataItem.getField() : string
 ##### Return
 
 ( string )
@@ -66,10 +66,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getFirebaseValues() : _Values_
+#### _dataItem.getFirebaseValues() : _[Values](../../objects/Values)_
 ##### Return
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -78,7 +78,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getId() : string
+#### _dataItem.getId() : string
 ##### Return
 
 ( string )
@@ -90,10 +90,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getOldRecord() : _Values_
+#### _dataItem.getOldRecord() : _[Values](../../objects/Values)_
 ##### Return
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -102,10 +102,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getRecord() : _Values_
+#### _dataItem.getRecord() : _[Values](../../objects/Values)_
 ##### Return
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -114,10 +114,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getRelationItem() : _Values_
+#### _dataItem.getRelationItem() : _[Values](../../objects/Values)_
 ##### Return
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -126,10 +126,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getRelationTable() : _Values_
+#### _dataItem.getRelationTable() : _[Values](../../objects/Values)_
 ##### Return
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -138,7 +138,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getStatus() : _Status_
+#### _dataItem.getStatus() : _Status_
 ##### Return
 
 ( _Status_ )
@@ -150,7 +150,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getStatusType() : _StatusType_
+#### _dataItem.getStatusType() : _StatusType_
 ##### Return
 
 ( _StatusType_ )
@@ -162,7 +162,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getTable() : string
+#### _dataItem.getTable() : string
 ##### Return
 
 ( string )
@@ -174,7 +174,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getUid() : string
+#### _dataItem.getUid() : string
 ##### Return
 
 ( string )
@@ -186,10 +186,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getValues() : _Values_
+#### _dataItem.getValues() : _[Values](../../objects/Values)_
 ##### Return
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -198,7 +198,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isDelete() : _boolean_
+#### _dataItem.isDelete() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -210,7 +210,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isError() : _boolean_
+#### _dataItem.isError() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -222,7 +222,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isFirebase() : _boolean_
+#### _dataItem.isFirebase() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -234,7 +234,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isInsert() : _boolean_
+#### _dataItem.isInsert() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -246,7 +246,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isNone() : _boolean_
+#### _dataItem.isNone() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -258,7 +258,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isOk() : _boolean_
+#### _dataItem.isOk() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -270,7 +270,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isProgrammatically() : _boolean_
+#### _dataItem.isProgrammatically() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -282,7 +282,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsDelete() : _boolean_
+#### _dataItem.isStatusAsDelete() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -294,7 +294,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsDeleted() : _boolean_
+#### _dataItem.isStatusAsDeleted() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -306,7 +306,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsError() : _boolean_
+#### _dataItem.isStatusAsError() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -318,7 +318,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsExists() : _boolean_
+#### _dataItem.isStatusAsExists() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -330,7 +330,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsInsert() : _boolean_
+#### _dataItem.isStatusAsInsert() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -342,7 +342,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsInserted() : _boolean_
+#### _dataItem.isStatusAsInserted() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -354,7 +354,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsNone() : _boolean_
+#### _dataItem.isStatusAsNone() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -366,7 +366,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsNotFound() : _boolean_
+#### _dataItem.isStatusAsNotFound() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -378,7 +378,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsRelations() : _boolean_
+#### _dataItem.isStatusAsRelations() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -390,7 +390,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsUpdate() : _boolean_
+#### _dataItem.isStatusAsUpdate() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -402,7 +402,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsUpdated() : _boolean_
+#### _dataItem.isStatusAsUpdated() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -414,7 +414,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusTypeAsError() : _boolean_
+#### _dataItem.isStatusTypeAsError() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -426,7 +426,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusTypeAsNone() : _boolean_
+#### _dataItem.isStatusTypeAsNone() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -438,7 +438,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusTypeAsOk() : _boolean_
+#### _dataItem.isStatusTypeAsOk() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -450,7 +450,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isUpdate() : _boolean_
+#### _dataItem.isUpdate() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -462,7 +462,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setCounter(arg0: _int_) : _DataItem_
+#### _dataItem.setCounter(arg0: _int_) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -480,7 +480,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setErrorMessage(arg0: string) : _DataItem_
+#### _dataItem.setErrorMessage(arg0: string) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -498,7 +498,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setErrorTitle(arg0: string) : _DataItem_
+#### _dataItem.setErrorTitle(arg0: string) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -516,7 +516,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setField(arg0: string) : _DataItem_
+#### _dataItem.setField(arg0: string) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -534,7 +534,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setFirebase(arg0: _boolean_) : _DataItem_
+#### _dataItem.setFirebase(arg0: _boolean_) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -552,12 +552,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setFirebaseValues(arg0: _Values_) : _DataItem_
+#### _dataItem.setFirebaseValues(arg0: _[Values](../../objects/Values)_) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -570,7 +570,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setId(arg0: string) : _DataItem_
+#### _dataItem.setId(arg0: string) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -588,7 +588,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setProgrammatically(arg0: _boolean_) : _DataItem_
+#### _dataItem.setProgrammatically(arg0: _boolean_) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -606,12 +606,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setRecord(arg0: _Values_) : _void_
+#### _dataItem.setRecord(arg0: _[Values](../../objects/Values)_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -624,12 +624,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setRelationItem(arg0: _Values_) : _DataItem_
+#### _dataItem.setRelationItem(arg0: _[Values](../../objects/Values)_) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -642,12 +642,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setRelationTable(arg0: _Values_) : _DataItem_
+#### _dataItem.setRelationTable(arg0: _[Values](../../objects/Values)_) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -660,7 +660,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setStatus(arg0: _Status_) : _DataItem_
+#### _dataItem.setStatus(arg0: _Status_) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -678,7 +678,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setStatusWithError() : _DataItem_
+#### _dataItem.setStatusWithError() : _DataItem_
 ##### Return
 
 ( _DataItem_ )
@@ -690,7 +690,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setTable(arg0: string) : _DataItem_
+#### _dataItem.setTable(arg0: string) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -708,7 +708,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setUid(arg0: string) : _DataItem_
+#### _dataItem.setUid(arg0: string) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -726,12 +726,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setValues(arg0: _Values_) : _DataItem_
+#### _dataItem.setValues(arg0: _[Values](../../objects/Values)_) : _DataItem_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 

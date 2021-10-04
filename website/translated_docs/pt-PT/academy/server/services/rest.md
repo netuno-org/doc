@@ -1,7 +1,7 @@
 ---
 id: rest
-title: Serviços Web REST
-sidebar_label: Serviços Web REST
+title: REST - Serviços Web
+sidebar_label: REST - Serviços Web
 ---
 
 ## Introdução

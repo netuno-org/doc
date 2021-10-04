@@ -164,6 +164,50 @@ Network port number of the Netuno server.
 
 ---
 
+## print
+
+---
+
+#### _server.print(message: string) : _void_
+##### Description
+
+Prints a message directly to the Netuno server terminal.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| message | string | Message that will be displayed on the server terminal. |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+## println
+
+---
+
+#### _server.println(message: string) : _void_
+##### Description
+
+Prints a line with a message directly to the Netuno server terminal.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| message | string | Message that will be displayed on the server terminal. |
+
+##### Return
+
+( _void_ )
+
+
+---
+
 ## shutdown
 
 ---

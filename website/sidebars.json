@@ -18,6 +18,8 @@
                     "library/resources/cron",
                     "library/resources/crypto",
                     "library/resources/csv",
+                    "library/resources/dataItem",
+                    "library/resources/dataSchema",
                     "library/resources/db",
                     "library/resources/env",
                     "library/resources/error",
@@ -42,6 +44,7 @@
                     "library/resources/req",
                     "library/resources/res",
                     "library/resources/server",
+                    "library/resources/service",
                     "library/resources/setup",
                     "library/resources/smtp",
                     "library/resources/storage",
@@ -65,7 +68,6 @@
                     "library/objects/Column",
                     "library/objects/DBBatch",
                     "library/objects/DBSearchResult",
-                    "library/objects/DataItem",
                     "library/objects/File",
                     "library/objects/Index",
                     "library/objects/InputStream",
@@ -160,6 +162,7 @@
                 "label": "Services",
                 "ids" : [
                     "academy/server/services/rest",
+                    "academy/server/services/websocket",
                     "academy/server/services/jwt",
                     "academy/server/services/openapi",
                     "academy/server/services/cors",
@@ -170,11 +173,12 @@
                     "academy/server/services/pdf"
                 ]
             },
-            "academy/server/custom-urls",
-            "academy/server/templates",
+            "academy/server/actions",
             "academy/server/cron-jobs",
+            "academy/server/custom-urls",
 	        "academy/server/setup",
-	        "academy/server/monitor-alerts"
+	        "academy/server/monitor-alerts",
+            "academy/server/templates"
         ],
         "Website": [
             "academy/website/create",
