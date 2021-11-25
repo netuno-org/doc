@@ -338,6 +338,10 @@
         "title": "Sequence",
         "sidebar_label": "Sequence"
       },
+      "library/objects/Service": {
+        "title": "Service",
+        "sidebar_label": "Service"
+      },
       "library/objects/SMTPConfig": {
         "title": "SMTPConfig",
         "sidebar_label": "SMTPConfig"
