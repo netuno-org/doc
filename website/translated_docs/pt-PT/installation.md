@@ -58,6 +58,9 @@ java -jar netuno.jar install
 
 ```
 
+> No MAC OS X, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
+> `sudo xattr -r -d com.apple.quarantine .`
+
 ## Windows
 
 No terminal do **PowerShell**, ou indo no menu iniciar e digitando: `powershell`
