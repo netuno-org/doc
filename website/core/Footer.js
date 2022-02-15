@@ -6,7 +6,7 @@
  */
 
 const React = require('react');
-import { FaHome, FaPhone, FaEnvelope, FaYoutube, FaGithub, FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaHome, FaPhone, FaEnvelope, FaYoutube, FaGithub, FaFacebook, FaLinkedin, FaTwitter, FaInstagram, FaDiscord } from 'react-icons/fa';
 import { RiOpenSourceFill } from 'react-icons/ri';
 
 class Footer extends React.Component {
@@ -48,6 +48,9 @@ class Footer extends React.Component {
               </a>
               <a href="https://www.linkedin.com/company/netuno-org/" className="share-icons">
                 <FaLinkedin />
+              </a>
+              <a href="https://discord.gg/4sfXG6YWFu" className="share-icons">
+                <FaDiscord />
               </a>
               <a href="https://www.facebook.com/netuno.org/" className="share-icons">
                 <FaFacebook />
