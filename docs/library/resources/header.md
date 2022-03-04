@@ -8,6 +8,47 @@ HTTP header management feature.
 
 With the Header feature, you can obtain any parameter coming in the header of the browser request, that is, obtain any information that comes in the HTTP header.
 But you can also define response parameters in the Header, for example define the response of the HTTP status code or the Content-Type, among others.
+Main functions:
+- [response](#response)
+- [status](#status)
+- [baseURL](#baseurl)
+- [uri](#uri)
+- [url](#url)
+- [rawHost](#rawhost)
+- [host](#host)
+- [port](#port)
+- [scheme](#scheme)
+- [contentType](#contenttype)
+- [contentTypePDF](#contenttypepdf)
+- [contentTypeJSON](#contenttypejson)
+- [contentTypeHTML](#contenttypehtml)
+- [contentTypePlain](#contenttypeplain)
+- [contentTypePNG](#contenttypepng)
+- [contentTypeJPG](#contenttypejpg)
+- [contentTypeCSS](#contenttypecss)
+- [contentTypeOctetStream](#contenttypeoctetstream)
+- [acceptJSON](#acceptjson)
+- [isAcceptJSON](#isacceptjson)
+- [cache](#cache)
+- [noCache](#nocache)
+- [downloadFile](#downloadfile)
+- [isDelete](#isdelete)
+- [isGet](#isget)
+- [isHead](#ishead)
+- [isOptions](#isoptions)
+- [isPost](#ispost)
+- [isPut](#isput)
+- [isTrace](#istrace)
+- [isCopy](#iscopy)
+- [isLink](#islink)
+- [isUnlink](#isunlink)
+- [isPatch](#ispatch)
+- [isPurge](#ispurge)
+- [isLock](#islock)
+- [isUnlock](#isunlock)
+- [isPropFind](#ispropfind)
+- [isView](#isview)
+
 
 ---
 
@@ -3363,11 +3404,11 @@ Whether it is in read-only mode or not.
 
 ---
 
-## isPropfind
+## isPropFind
 
 ---
 
-#### _header.isPropfind() : _boolean_
+#### _header.isPropFind() : _boolean_
 ##### Return
 
 ( _boolean_ )

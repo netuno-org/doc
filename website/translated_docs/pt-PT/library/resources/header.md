@@ -9,6 +9,47 @@ Recurso de gestão do header HTTP.
 Com o recurso Header pode obter qualquer parâmetro vindo no cabeçalho do pedido do browser, ou seja, obter qualquer informação que venha no header do HTTP.
 
 Mas também pode definir parâmetros de resposta no Header, por exemplo definir a reposta do código de status HTTP ou o Content-Type, entre outros.
+Principais funções:
+- [response](#response)
+- [status](#status)
+- [baseURL](#baseurl)
+- [uri](#uri)
+- [url](#url)
+- [rawHost](#rawhost)
+- [host](#host)
+- [port](#port)
+- [scheme](#scheme)
+- [contentType](#contenttype)
+- [contentTypePDF](#contenttypepdf)
+- [contentTypeJSON](#contenttypejson)
+- [contentTypeHTML](#contenttypehtml)
+- [contentTypePlain](#contenttypeplain)
+- [contentTypePNG](#contenttypepng)
+- [contentTypeJPG](#contenttypejpg)
+- [contentTypeCSS](#contenttypecss)
+- [contentTypeOctetStream](#contenttypeoctetstream)
+- [acceptJSON](#acceptjson)
+- [isAcceptJSON](#isacceptjson)
+- [cache](#cache)
+- [noCache](#nocache)
+- [downloadFile](#downloadfile)
+- [isDelete](#isdelete)
+- [isGet](#isget)
+- [isHead](#ishead)
+- [isOptions](#isoptions)
+- [isPost](#ispost)
+- [isPut](#isput)
+- [isTrace](#istrace)
+- [isCopy](#iscopy)
+- [isLink](#islink)
+- [isUnlink](#isunlink)
+- [isPatch](#ispatch)
+- [isPurge](#ispurge)
+- [isLock](#islock)
+- [isUnlock](#isunlock)
+- [isPropFind](#ispropfind)
+- [isView](#isview)
+
 
 ---
 
@@ -3364,11 +3405,11 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-## isPropfind
+## isPropFind
 
 ---
 
-#### _header.isPropfind() : _boolean_
+#### _header.isPropFind() : _boolean_
 ##### Retorno
 
 ( _boolean_ )
