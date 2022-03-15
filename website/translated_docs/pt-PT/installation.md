@@ -36,26 +36,38 @@ Caso precise executar novamente o comando de instalação será preciso corrigir
 
 É comum haver o comando `wget` e o `curl`, execute no terminal para verificar.
 
-Escolha uma das seguintes opções de **Instalação**:
+Para criar a pasta do Netuno, execute no **terminal**:
+
+```plaintext
+mkdir -p netuno && cd netuno
+```
+
+Escolha uma dos seguintes métodos de **download**:
 
 * Download com o *WGET*:
 
 ```plaintext
-
-mkdir -p netuno && cd netuno
 wget https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -O netuno.jar
-java -jar netuno.jar install
-
 ```
 
 * Download com o *cURL*:
 
 ```plaintext
-
-mkdir -p netuno && cd netuno
 curl -L https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -o netuno.jar
-java -jar netuno.jar install
+```
 
+Depois de realizar um dos passos anteriores, escolha um dos seguintes métodos de **instalação do Netuno**:
+
+* Instalação da versão **oficial atual e estável**:
+
+```plaintext
+java -jar netuno.jar install
+```
+
+* Instalação da versão mais recente **em desenvolvimento**:
+
+```plaintext
+java -jar netuno.jar install version=latest
 ```
 
 > No MAC OS X, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
@@ -65,14 +77,25 @@ java -jar netuno.jar install
 
 No terminal do **PowerShell**, ou indo no menu iniciar e digitando: `powershell`
 
-Agora copie e cole o commando abaixo e siga as instruções de **Instalação**:
+Agora copie e cole o commando abaixo e siga as instruções de **instalação**:
 
 ```plaintext
-
 md netuno; cd netuno
 Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/latest/netuno.jar" -OutFile "netuno.jar"
-java -jar netuno.jar install
+```
 
+Depois de realizar a **instalação** anterior, escolha uma das seguintes opções de **instalação do Netuno**:
+
+* Instalação da versão **oficial atual e estável**:
+
+```plaintext
+java -jar netuno.jar install
+```
+
+* Instalação da versão mais recente **em desenvolvimento**:
+
+```plaintext
+java -jar netuno.jar install version=latest
 ```
 
 ## Iniciar a App DEMO

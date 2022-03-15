@@ -9,9 +9,9 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.14.0"
+    "docusaurus": "^1.14.7"
   },
   "dependencies": {
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.3.1"
   }
 }
