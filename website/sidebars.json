@@ -109,6 +109,11 @@
         "Academy": [
             "academy/overview",
             "academy/introduction",
+            "academy/backoffice",
+            "academy/polyglot",
+            "academy/apps",
+            "academy/api",
+            "academy/strategy",
             {
                 "type" : "subcategory",
                 "label": "Demo Application",
@@ -127,6 +132,7 @@
             "academy/explore/configuration",
             "academy/explore/cli",
             "academy/explore/services",
+            "academy/explore/industry",
             {
                 "type" : "subcategory",
                 "label": "Graphical Interface",
@@ -150,6 +156,7 @@
                 "type" : "subcategory",
                 "label": "Database",
                 "ids" : [
+                    "academy/server/database/excel",
                     "academy/server/database/h2database",
                     "academy/server/database/mssql",
                     "academy/server/database/multiple-databases",
@@ -178,7 +185,9 @@
             "academy/server/custom-urls",
 	        "academy/server/setup",
 	        "academy/server/monitor-alerts",
-            "academy/server/templates"
+            "academy/server/templates",
+            "academy/server/development-debug-java",
+            "academy/server/nginx-integration"
         ],
         "Website": [
             "academy/website/create",
@@ -186,24 +195,6 @@
             "academy/website/ant-design",
             "academy/website/service-client",
             "academy/website/auth-client"
-        ],
-        "Infrastructure": [
-            "academy/infrastructure/nginx-integration"
-        ],
-        "Java": [
-            "academy/java/development-debug-java"
-        ]
-    },
-    "business" : {
-        "Business" : [
-            "business/overview",
-            "business/introduction",
-            "business/api",
-            "business/apps",
-            "business/backoffice",
-            "business/excel",
-            "business/industry",
-            "business/polyglot"
         ]
     },
     "installation" : {

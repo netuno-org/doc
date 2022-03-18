@@ -23,7 +23,7 @@ Descubra estas e outras vantagens que poderá obter ao utilizar o Netuno nos seu
 
 Ajudaremos a extrair o potencial do Netuno nos diferentes tipos de desafios.
 
-> Saiba que o Netuno é gratuito? [Comece já](../installation).
+> Sabia que o Netuno é gratuito? [Comece já](../installation).
 
 Cabe-lhe a si utilizar o Netuno para resolver os seus desafios, sabendo que estamos cá para o ajudar no que for preciso através dos nossos contatos diretos, redes sociais e fórum.
 

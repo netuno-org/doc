@@ -61,36 +61,22 @@ class Footer extends React.Component {
             </p>
           </div>
           <div>
-            <p className="netuno-copyright">
-              Copyright ©&nbsp;
-              <a href="https://www.sitana.pt" target="_blank">Sitana</a>&nbsp;
-              { new Date().getFullYear() }
-            </p>
             <p>
-              <FaHome className="footer-icons home-icon"/>
-              <span>
-                Rua José Joaquim Marques n.º 110<br />
-				2870-348 Montijo<br />
-                Portugal
-              </span>
-            </p>
-            <p>
-              <FaPhone className="footer-icons phone-icon"/>
-              <span>
-                (+351) 912 524 751
-              </span>
-            </p>
-            <p>
-              <FaEnvelope className="footer-icons envelope-icon"/>
+              <FaEnvelope className="footer-icons envelope-icon" />
               <span>
                 <a netuno-mail="admin" href="mailto:admin@netuno.org">admin@netuno.org</a>
               </span>
             </p>
             <p>
-              <FaEnvelope className="footer-icons envelope-icon"/>
+              <FaEnvelope className="footer-icons envelope-icon" />
               <span>
                 <a netuno-mail="support" href="mailto:support@netuno.org">support@netuno.org</a>
               </span>
+            </p>
+            <p className="netuno-copyright">
+              Copyright ©&nbsp;
+              <a href="https://www.sitana.pt" target="_blank">Sitana</a>&nbsp;
+              {new Date().getFullYear()}
             </p>
           </div>
         </section>

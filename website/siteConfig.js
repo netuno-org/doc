@@ -43,7 +43,6 @@ const siteConfig = {
     {doc: 'installation', label: 'Get Started'},
     {doc: 'academy/overview', label: 'Academy'},
     {doc: 'library/overview', label: 'Library'},
-    {doc: 'business/overview', label: 'Business'},
   ],
 
   // If you have users set above, you add it here:

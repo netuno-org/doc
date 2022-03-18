@@ -149,4 +149,4 @@ Descubra como explorar o desenvolvimento no Netuno:
 
 Para aplicar o Netuno em qualquer tipo de negócio: 
 
-<a class="button" href="/docs/pt-PT/business/introduction/">Mais Informações</a>
+<a class="button" href="/docs/pt-PT/academy/strategy/">Mais Informações</a>

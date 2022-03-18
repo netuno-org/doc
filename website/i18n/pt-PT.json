@@ -8,6 +8,30 @@
         "title": "Linha de Comandos",
         "sidebar_label": "Linha de Comandos"
       },
+      "academy/api": {
+        "title": "API",
+        "sidebar_label": "API"
+      },
+      "academy/strategy": {
+        "title": "Estratégia",
+        "sidebar_label": "Estratégia"
+      },
+      "academy/apps": {
+        "title": "Apps",
+        "sidebar_label": "Apps"
+      },
+      "academy/server/database/excel": {
+        "title": "Excel",
+        "sidebar_label": "Excel"
+      },
+      "academy/explore/industry": {
+        "title": "Indústria",
+        "sidebar_label": "Indústria"
+      },
+      "academy/backoffice": {
+        "title": "Backoffice",
+        "sidebar_label": "Backoffice"
+      },
       "academy/explore/configuration": {
         "title": "Configuração",
         "sidebar_label": "Configuração"
@@ -51,6 +75,10 @@
       "academy/introduction": {
         "title": "Introdução",
         "sidebar_label": "Introdução"
+      },
+      "academy/polyglot": {
+        "title": "Poliglota",
+        "sidebar_label": "Poliglota"
       },
       "academy/start/demonstration/config": {
         "title": "Configuração",
@@ -100,11 +128,11 @@
         "title": "Eventos do Ciclo de Vida",
         "sidebar_label": "Eventos do Ciclo de Vida"
       },
-      "academy/infrastructure/nginx-integration": {
+      "academy/server/nginx-integration": {
         "title": "Integração com NGINX",
         "sidebar_label": "Integração com NGINX"
       },
-      "academy/java/development-debug-java": {
+      "academy/server/development-debug-java": {
         "title": "Desenvolvimento e debug em Java",
         "sidebar_label": "Desenvolvimento e debug em Java"
       },
@@ -162,38 +190,6 @@
         "title": "Templates",
         "sidebar_label": "Templates"
       },
-      "business/overview": {
-        "title": "Visão Geral",
-        "sidebar_label": "Visão Geral"
-      },
-      "business/introduction": {
-        "title": "Introdução",
-        "sidebar_label": "Introdução"
-      },
-      "business/api": {
-        "title": "API",
-        "sidebar_label": "API"
-      },
-      "business/apps": {
-        "title": "Apps",
-        "sidebar_label": "Apps"
-      },
-      "business/backoffice": {
-        "title": "Backoffice",
-        "sidebar_label": "Backoffice"
-      },
-      "business/excel": {
-        "title": "Excel",
-        "sidebar_label": "Excel"
-      },
-      "business/industry": {
-        "title": "Indústria",
-        "sidebar_label": "Indústria"
-      },
-      "business/polyglot": {
-        "title": "Poliglota",
-        "sidebar_label": "Poliglota"
-      },
       "installation": {
         "title": "Instalação",
         "sidebar_label": "Instalação"
@@ -248,7 +244,6 @@
       }
     },
     "links": {
-      "Business": "Negócio",
       "Library": "Biblioteca",
       "Academy": "Academia",
       "Get Started": "Comece Já"
@@ -260,7 +255,6 @@
       "Advanced Topics": "Tópicos Avançados",
       "Start Now": "Comece Agora",
       "Explore Netuno": "Explore o Netuno",
-      "Business": "Negócio",
       "Get Started": "Comece Já"
     }
   },

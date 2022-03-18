@@ -5,6 +5,18 @@
     "previous": "Previous",
     "tagline": "Netuno",
     "docs": {
+      "academy/api": {
+        "title": "API",
+        "sidebar_label": "API"
+      },
+      "academy/apps": {
+        "title": "Apps",
+        "sidebar_label": "Apps"
+      },
+      "academy/backoffice": {
+        "title": "Backoffice",
+        "sidebar_label": "Backoffice"
+      },
       "academy/explore/cli": {
         "title": "Command Line",
         "sidebar_label": "Command Line"
@@ -37,6 +49,10 @@
         "title": "Groups and Users Interface",
         "sidebar_label": "Groups and Users Interface"
       },
+      "academy/explore/industry": {
+        "title": "Industry",
+        "sidebar_label": "Industry"
+      },
       "academy/explore/services": {
         "title": "Services",
         "sidebar_label": "Services"
@@ -61,6 +77,10 @@
         "title": "Overview",
         "sidebar_label": "Overview"
       },
+      "academy/polyglot": {
+        "title": "Polyglot",
+        "sidebar_label": "Polyglot"
+      },
       "academy/server/actions": {
         "title": "Actions",
         "sidebar_label": "Actions"
@@ -72,6 +92,10 @@
       "academy/server/custom-urls": {
         "title": "Custom URLs",
         "sidebar_label": "Custom URLs"
+      },
+      "academy/server/database/excel": {
+        "title": "Excel",
+        "sidebar_label": "Excel"
       },
       "academy/server/database/h2database": {
         "title": "H2 Database",
@@ -93,9 +117,17 @@
         "title": "PostgreSQL",
         "sidebar_label": "PostgreSQL"
       },
+      "academy/server/development-debug-java": {
+        "title": "Development and debugging in Java",
+        "sidebar_label": "Development and debugging in Java"
+      },
       "academy/server/monitor-alerts": {
         "title": "Monitor and Alerts",
         "sidebar_label": "Monitor and Alerts"
+      },
+      "academy/server/nginx-integration": {
+        "title": "Integration with NGINX",
+        "sidebar_label": "Integration with NGINX"
       },
       "academy/server/remote": {
         "title": "academy/server/remote"
@@ -179,6 +211,10 @@
       "academy/start/next-steps": {
         "title": "Next Steps",
         "sidebar_label": "Next Steps"
+      },
+      "academy/strategy": {
+        "title": "Strategy",
+        "sidebar_label": "Strategy"
       },
       "academy/ui/implementing-tables-charts": {
         "title": "Implementing tables and charts",
@@ -574,8 +610,7 @@
     "links": {
       "Get Started": "Get Started",
       "Academy": "Academy",
-      "Library": "Library",
-      "Business": "Business"
+      "Library": "Library"
     },
     "categories": {
       "Libraries": "Libraries",
@@ -588,8 +623,6 @@
       "User Interface": "User Interface",
       "Server": "Server",
       "Website": "Website",
-      "Infrastructure": "Infrastructure",
-      "Java": "Java",
       "Business": "Business",
       "Get Started": "Get Started"
     }

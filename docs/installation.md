@@ -148,4 +148,4 @@ Discover how to explore the development on _Netuno_
 
 _Netuno_ can be applied in any kind of business: 
 
-<a class="button" href="/docs/en/business/introduction/">More Information</a>
+<a class="button" href="/docs/en/academy/strategy">More Information</a>
