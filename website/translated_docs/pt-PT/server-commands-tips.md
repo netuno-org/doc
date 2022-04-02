@@ -27,8 +27,8 @@ Entre no **terminal** na pasta onde tem o Netuno instalado, e poderá executar e
 > ## `./netuno stats`
 > Apresenta o detalhe das informações de performance mais recentes e que ficam guardados em `logs/stats-*`.
 
-> ## `./update`
-> Realiza a atualização do netuno para a versão estável mais recente.
+> ## `./install-stable`
+> Realiza a atualização do Netuno para a versão estável mais recente.
 
-> ## `./netuno install version=latest`
+> ## `./install-testing`
 > Atualiza para a versão mais recente em desenvolvimento.

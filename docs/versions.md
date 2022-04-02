@@ -16,76 +16,26 @@ Follow the command below to install the specific version. Note that the user has
 For example:
 
 ```
-./netuno install version=DESIRED_VERSION_INFO
+./netuno install version=20220402.1511
 ```
+
+Or using **netuno.jar** directly:
+
+```
+java -jar netuno.jar install version=20220402.1511
+```
+
+> Change the `version`'s argument to the version that you wnat to isntall.
 
 _Netuno_ will start the upgrade process installing the indicated version.
 
 See below the list of available versions.
-
-## Latest (_in development_)
-
-To install the latest version of Netuno that is under development.
-
-#### Linux ou MacOS X
-
-Choose one of the following **Installation** options:
-
-* Download com o *WGET*:
-
-```plaintext
-
-mkdir -p netuno-latest && cd netuno-latest
-wget https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -O netuno.jar
-java -jar netuno.jar install version=latest
-
-```
-
-* Download com o *cURL*:
-
-```plaintext
-
-mkdir -p netuno-latest && cd netuno-latest
-curl -L https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -o netuno.jar
-java -jar netuno.jar install version=latest
-
-```
-
-#### Windows
-
-In Windows open the terminal of **PowerShell** and go to the start menu and type: `powershell`.
-
-Copy and paste the command below and follow the **Installation** instructions:
-
-```plaintext
-
-md netuno-latest; cd netuno-latest
-Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/latest/netuno.jar" -OutFile "netuno.jar"
-java -jar netuno.jar install version=latest
-
-```
-
-## Available Versions
-
-Here is the list of available versions for installation with the command:
-
-```
-./netuno install version=7:20210208.1437
-```
 
 ## Available Versions
 
 All Netuno versions are available in:
 
 - [github.com/netuno-org/platform/releases](https://github.com/netuno-org/platform/releases)
-
-To install a specific version run the following command:
-
-```
-./netuno install version=7:20020129.1745
-```
-
-> Change the `version`'s argument to the version that you wnat to isntall.
 
 ## Legacy versions (before open-source)
 

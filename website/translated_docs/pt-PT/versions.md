@@ -15,74 +15,26 @@ Para instalar uma versão em específico quando já tem uma instalação do Netu
 Por exemplo:
 
 ```
-./netuno install version=INDICACAO_DA_VERSAO_DESEJADA
+./netuno install version=20220402.1511
 ```
 
-Assim o Netuno iniciará o processo de atualização que instala a versão que foi indicada.
+Ou utilizando diretamente o **netuno.jar**:
+
+```
+java -jar netuno.jar install version=20220402.1511
+```
+
+> Alterar o valor do argumento `version` para a identificação da versão pretendida.
+
+Assim o Netuno iniciará o processo de instala a versão que foi indicada.
 
 Consulte mais abaixo a lista das versões disponíveis.
-
-## Versão Latest (_em desenvolvimento_)
-
-Para atualizar uma versão do Netuno já instalada para a versão **latest**, apenas execute:
-
-```
-./netuno install version=latest
-```
-
-Para instalar a versão mais recente do Netuno que está em desenvolvimento.
-
-#### Linux ou Mac OS X
-
-Escolha uma das seguintes opções de **Instalação**:
-
-* Download com o *WGET*:
-
-```plaintext
-
-mkdir -p netuno-latest && cd netuno-latest
-wget https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -O netuno.jar
-java -jar netuno.jar install version=latest
-
-```
-
-* Download com o *cURL*:
-
-```plaintext
-
-mkdir -p netuno-latest && cd netuno-latest
-curl -L https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -o netuno.jar
-java -jar netuno.jar install version=latest
-
-```
-
-#### Windows
-
-No Windows abra o terminal do **PowerShell**, indo no menu iniciar e digitando: `powershell`
-
-Agora copie e cole o commando abaixo e siga as instruções de **Instalação**:
-
-```plaintext
-
-md netuno-latest; cd netuno-latest
-Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/latest/netuno.jar" -OutFile "netuno.jar"
-java -jar netuno.jar install version=latest
-
-```
 
 ## Versões Disponíveis
 
 Todas as versões disponíveis estão em:
 
 - [github.com/netuno-org/platform/releases](https://github.com/netuno-org/platform/releases)
-
-Para realizar a instalação de uma versão específica utilize o comando:
-
-```
-./netuno install version=7:20020129.1745
-```
-
-> Alterar o valor do argumento `version` para a identificação da versão pretendida.
 
 ## Versões Legadas (Pré open-source)
 
