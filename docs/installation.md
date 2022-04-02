@@ -32,9 +32,15 @@ Running the installation command below will change the path in the terminal from
 
 If is needed to run the installation command line again you will need to correct the path and probably remove the **Netuno** folder that was created.
 
-## Linux or Mac OS X
+## Stable Version
 
-Choose one of the following **Installation** options:
+The stable release is a safe and production-ready.
+
+To install the stable version, follow the installation steps below:
+
+#### Linux or Mac OS X
+
+It is common to have `wget` and `curl` command, run in terminal to check.
 
 To create the Netuno directory, execute in the **terminal**:
 
@@ -47,43 +53,37 @@ Choose one of the following methods of **download**:
 * Download with *WGET*:
 
 ```plaintext
-wget https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -O netuno.jar
+wget https://github.com/netuno-org/platform/releases/download/stable/netuno.jar -O netuno.jar
 ```
 
 * Download with *cURL*:
 
 ```plaintext
-curl -L https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -o netuno.jar
+curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno.jar -o netuno.jar
 ```
 
-After downloading one of the previous methods, choose one of the following methods of **Netuno's installation**:
+After performing one of the previous steps, proceed to the **Netuno's installation**:
 
 * Installation of the **official and stable** version:
 
 ```plaintext
 java -jar netuno.jar install
-```
-
-* Installation of the most recent version **in development** :
-
-```plaintext
-java -jar netuno.jar install version=latest
 ```
 
 > On MAC OS X, you need to disable the quarantine, thus inside the `netuno` home folder, please run:
 > `sudo xattr -r -d com.apple.quarantine .`
 
-## Windows
+#### Windows
 
-In Windows open the terminal of **PowerShell** go to the start menu and type: `powershell`
+To install the **current stable** version in Windows, open the terminal of **PowerShell**, then go to the start menu and type: `powershell`
 
-Now copy and paste the command below and follow the **Installation** steps:
+Now copy and paste the command below and follow the **installation** steps:
 
 ```plaintext
 md netuno; cd netuno
-Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/latest/netuno.jar" -OutFile "netuno.jar"
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/stable/netuno.jar" -OutFile "netuno.jar"
 ```
-After completing the previous **installation**, choose one of the following methods of **Netuno's installation**:
+After performing the previous download, proceed to the **Netuno's installation**:
 
 * Installation of the **official and stable** version:
 
@@ -91,10 +91,63 @@ After completing the previous **installation**, choose one of the following meth
 java -jar netuno.jar install
 ```
 
-* Installation of the most recent version **in development** :
+## Testing Version
+
+The current version being tested is a development version, contains the latest features but may be unstable.
+
+To install the testing version, follow the installation steps below:
+
+#### Linux or Mac OS X
+
+It is common to have `wget` and `curl` command, run in terminal to check.
+
+To create the Netuno directory, execute in the **terminal**:
 
 ```plaintext
-java -jar netuno.jar install version=latest
+mkdir -p netuno && cd netuno
+```
+
+Choose one of the following methods of **download**:
+
+* Download with *WGET*:
+
+```plaintext
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno.jar -O netuno.jar
+```
+
+* Download with *cURL*:
+
+```plaintext
+curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno.jar -o netuno.jar
+```
+
+After performing one of the previous steps, proceed to the **Netuno's installation**:
+
+* Installation of the **testing** version:
+
+```plaintext
+java -jar netuno.jar install version=testing
+```
+
+> On MAC OS X, you need to disable the quarantine, thus inside the `netuno` home folder, please run:
+> `sudo xattr -r -d com.apple.quarantine .`
+
+#### Windows
+
+To install the **current testing** version in Windows, open the terminal of **PowerShell**, then go to the start menu and type: `powershell`
+
+Now copy and paste the command below and follow the **installation** steps:
+
+```plaintext
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/testing/netuno.jar" -OutFile "netuno.jar"
+```
+After performing the previous download, proceed to the **Netuno's installation**:
+
+* Installation of the **testing** version:
+
+```plaintext
+java -jar netuno.jar install version=testing
 ```
 
 ## Start App DEMO

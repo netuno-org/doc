@@ -32,7 +32,13 @@ Ao executar o comando de instalação abaixo será alterado o caminho no termina
 
 Caso precise executar novamente o comando de instalação será preciso corrigir o caminho e provavelmente remover a pasta do **netuno** que foi criada.
 
-## Linux ou Mac OS X
+## Versão Estável
+
+A versão estável é uma versão segura e pronta para ser utilizada em produção.
+
+Para instalar a versão estável siga os passos de instalação abaixo:
+
+#### Linux ou Mac OS X
 
 É comum haver o comando `wget` e o `curl`, execute no terminal para verificar.
 
@@ -47,44 +53,38 @@ Escolha uma dos seguintes métodos de **download**:
 * Download com o *WGET*:
 
 ```plaintext
-wget https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -O netuno.jar
+wget https://github.com/netuno-org/platform/releases/download/stable/netuno.jar -O netuno.jar
 ```
 
 * Download com o *cURL*:
 
 ```plaintext
-curl -L https://github.com/netuno-org/platform/releases/download/latest/netuno.jar -o netuno.jar
+curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno.jar -o netuno.jar
 ```
 
-Depois de realizar um dos passos anteriores, escolha um dos seguintes métodos de **instalação do Netuno**:
+Depois de realizar um dos passos anteriores, avance para a **instalação do Netuno**:
 
 * Instalação da versão **oficial atual e estável**:
 
 ```plaintext
 java -jar netuno.jar install
-```
-
-* Instalação da versão mais recente **em desenvolvimento**:
-
-```plaintext
-java -jar netuno.jar install version=latest
 ```
 
 > No MAC OS X, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
 > `sudo xattr -r -d com.apple.quarantine .`
 
-## Windows
+#### Windows
 
-No terminal do **PowerShell**, ou indo no menu iniciar e digitando: `powershell`
+Para instalar a versão **atual em teste** no terminal do **PowerShell**, ou indo no menu iniciar e digitando: `powershell`
 
 Agora copie e cole o commando abaixo e siga as instruções de **instalação**:
 
 ```plaintext
 md netuno; cd netuno
-Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/latest/netuno.jar" -OutFile "netuno.jar"
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/stable/netuno.jar" -OutFile "netuno.jar"
 ```
 
-Depois de realizar a **instalação** anterior, escolha uma das seguintes opções de **instalação do Netuno**:
+Depois de realizar o download anterior, avance para a **instalação do Netuno**:
 
 * Instalação da versão **oficial atual e estável**:
 
@@ -92,10 +92,64 @@ Depois de realizar a **instalação** anterior, escolha uma das seguintes opçõ
 java -jar netuno.jar install
 ```
 
-* Instalação da versão mais recente **em desenvolvimento**:
+## Versão Em Teste
+
+A versão atual em teste é uma versão em desenvolvimento, contém as funcionalidades mais recentes mas pode ser instável.
+
+Para instalar a versão em desenvolvimento siga os passos de instalação abaixo:
+
+#### Linux ou Mac OS X
+
+É comum haver o comando `wget` e o `curl`, execute no terminal para verificar.
+
+Para criar a pasta do Netuno, execute no **terminal**:
 
 ```plaintext
-java -jar netuno.jar install version=latest
+mkdir -p netuno && cd netuno
+```
+
+Escolha uma dos seguintes métodos de **download**:
+
+* Download com o *WGET*:
+
+```plaintext
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno.jar -O netuno.jar
+```
+
+* Download com o *cURL*:
+
+```plaintext
+curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno.jar -o netuno.jar
+```
+
+Depois de realizar um dos passos anteriores, avance para a **instalação do Netuno**:
+
+* Instalação da versão **atual em teste**:
+
+```plaintext
+java -jar netuno.jar install version=testing
+```
+
+> No MAC OS X, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
+> `sudo xattr -r -d com.apple.quarantine .`
+
+#### Windows
+
+Para instalar a versão **atual em teste** no terminal do **PowerShell**, ou indo no menu iniciar e digitando: `powershell`
+
+Agora copie e cole o commando abaixo e siga as instruções de **instalação**:
+
+```plaintext
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/testing/netuno.jar" -OutFile "netuno.jar"
+```
+
+Depois de realizar o download anterior, avance para a **instalação do Netuno**:
+
+* Instalação da versão **atual em teste**:
+
+```plaintext
+java -jar netuno.jar install version=testing
 ```
 
 ## Iniciar a App DEMO
