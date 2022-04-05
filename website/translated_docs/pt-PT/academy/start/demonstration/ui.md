@@ -38,9 +38,9 @@ Vamos alterar este código já existente.
 
 ### Preparar o `state`
 
-Logo no início da class do componente `DashboardContainer` dentro do `constructor` está a definição do seu _state_.
+Logo no início da componente `DashboardContainer` dentro da `function` está a definição do seu _state_.
 
-Adicione uma nova entrada para guardar os dados das tarefas da seguinte forma:
+Adicione uma nova entrada para guardar os dados dos trabalhadores da seguinte forma:
 
 ```jsx
             // 👇 Adicione as novas linhas de código abaixo:
@@ -48,11 +48,11 @@ Adicione uma nova entrada para guardar os dados das tarefas da seguinte forma:
             const [carregar, setCarregar] = useState(false);
 ```
 
-Ou seja, acrescente a nova linha `const [workers, setWorkers] = useState([]);` de estado.
+Ou seja, acrescente a nova linha `const [trabalhadores, setTrabalhadores] = useState([]);` de estado.
 
-### Criar Método `loadWorkers`
+### Criar Método `carregarTrabalhadores`
 
-Mais abaixo repare que existe um método chamado `loadWorkers`, este método realiza a obtenção dos dados dos trabalhadores que aparecem no dashboard atualmente.
+Mais abaixo repare que existe um método chamado `carregarTrabalhadores`, este método realiza a obtenção dos dados dos trabalhadores que aparecem no dashboard atualmente.
 
 Este método também serve para carregar os dados dos trabalhadores.
 
@@ -82,7 +82,7 @@ Insira o código abaixo:
     };
 ```
 
-O que este código acima faz é passar os dados das trabalhadores para o _state_ do componente em <a href="https://reactjs.org/" target="_blank">ReactJS</a>, isto através da execução do serviço **trabalhadores** que, ao receber os dados em <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> , armazena os mesmos no _state_ através da execução do `setWorkers`.
+O que este código acima faz é passar os dados das trabalhadores para o _state_ do componente em <a href="https://reactjs.org/" target="_blank">ReactJS</a>, isto através da execução do serviço **trabalhadores** que, ao receber os dados em <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> , armazena os mesmos no _state_ através da execução do `setTrabalhadores`.
 
 No código final os métodos deverão ficar estruturados desta forma:
 
@@ -106,7 +106,7 @@ No código final os métodos deverão ficar estruturados desta forma:
 
 Agora falta executar o nosso novo método `useEffect` quando o componente é "montado", este método é executado quando o componente é construído na apresentação visual do browser.
 
-Para isto basta, um pouco mais acima, acrescentar a linha de código `loadWorkers();` dentro do método `useEffect` desta forma:
+Para isto basta, um pouco mais acima, acrescentar a linha de código `carregarTrabalhadores();` dentro do método `useEffect` desta forma:
 
 ```jsx
     useEffect(() => {
@@ -165,7 +165,7 @@ Vamos alterá-lo adicionando apenas mais uma linha de código para conter mais u
 Repare que apenas a linha abaixo é que deve ser acrescentada:
 
 ```jsx
-<DataVisualization data={workers} />
+<DataVisualization data={trabalhadores} />
 ```
 
 Assim o `DataVisualization` vai receber os dados obtidos através do serviço **tarefas** via JSON que ficaram guardados no `state`.

@@ -39,7 +39,7 @@ Next step will be to change this existing code.
 
 ### Preparing the `state`
 
-Right at the very beginning of the `DashboardContainer` component class within the `constructor` is the definition of your _state_.
+Right at the very beginning of the `DashboardContainer` component within the `function` is the definition of your _state_.
 
 Add a new entry to save the task data, like this:
 
