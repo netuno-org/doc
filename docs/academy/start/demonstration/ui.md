@@ -21,9 +21,9 @@ The user is free to use any other technology like **VueJS**, **MaterialUI**, **S
 
 ## Service Expend
 
-As it was already created in the previous step the service **tasks** in `📂 server/services/tasks.js` through the Visual Studio Code, which provides the information in <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank">JSON</a> in the address:
+As it was already created in the previous step the service **workers** in `📂 server/services/workers.js` through the Visual Studio Code, which provides the information in <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank">JSON</a> in the address:
 
-* <a href="http://localhost:9000/services/tarefas" target="_blank">http://localhost:9000/services/tarefas</a>
+* <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/trabalhadores</a>
 
 Now the next step is to run out of it to display the data on the browser's interface.
 
@@ -44,87 +44,85 @@ Right at the very beginning of the `DashboardContainer` component class within t
 Add a new entry to save the task data, like this:
 
 ```jsx
-        this.state = {
-            workers: [], // Don't forget the comma.
-            // 👇 And add the new line of code below:
-            tasks: []
-        };
+            // 👇 Add the new line of code below:
+            const [workers, setWorkers] = useState([]);
 ```
 
-In other words, add the new `tasks : []` line and do not forget to add the "**,**" at the end of the previous line.
+In other words, add the new `const [workers, setWorkers] = useState([]);` state line.
 
-### Creating the Method `loadTasks`
+### Creating the Method `loadWorkers`
 
 Note that there is a method called `loadWorkers` this method performs the data retrieval of the workers that currently appears on the dashboard.
 
-Under this method we will create a new method called `loadTasks` which will load the task data.
+The method created above will load the task data.
 
-Insert the code below after the end of the `loadWorkers` method:
+Insert the code below:
 
 ```jsx
     /**
-    *** 🚀 Upload the Tasks data.
+    *** 🚀 Upload the Workers data.
     ***    Through the execution of the service:
-    **     http://localhost:9000/services/tasks
+    **     http://localhost:9000/services/workers
     */
-    loadTasks() {
-        netuno.service({
-            url: '/services/tasks',
-            success: (data)=> {
-                this.setState({
-                    tasks: data.json
-                });
-            },
-            fail: (data)=> {
-                console.log(data);
-                message.error("Failed to load the list of total task records.")
-            }
+    const loadWorkers = () => {
+        setWorkers([]);
+        setLoading(true);
+        _service({
+        url: intl.locale.indexOf('pt') == 0 ? '/services/trabalhadores' : '/services/workers',
+        success: (response) => {
+            setWorkers(response.json);
+            setLoading(false);
+        },
+        fail: (e) => {
+            setLoading(false);
+            console.error('Workers service failed.', e);
+            message.error(intl.formatMessage({ id: `${messages}.loading_error` }));
+        }
         });
-    }
+    };
+
+    useImperativeHandle(ref, () => ({
+        loadWorkers
+    }));
 ```
 
-What this code does is to perform the service **tasks** and with the obtained data from the <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a> stores in the _state_ of the component <a href="https://reactjs.org/" target="_blank">ReactJS</a> in **tasks**, performing the execution of `this.setState` passing the tasks data.
+What this code does is to perform the service **workers** and with the obtained data from the <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a> stores in the _state_ of the component <a href="https://reactjs.org/" target="_blank">ReactJS</a> in **workers**, performing the execution of `setWorkers` passing the workers data.
 
 In the final code the methods should be structured in this way, for example:
 
 ```jsx
-    loadWorkers() {
+    useEffect(() => {
+        ...
+    }, []);
+
+    const loadWorkers = () => {
         ...
     }
 
-    loadTasks() {
+    useImperativeHandle() {
         ...
     }
 
-    render() {
+    return ( 
         ...
-    }
+    );
 ```
 
 > Where the `...` are the various lines of code within their respective methods
 
 ### Run the new `loadTasks` method
 
-Now we need to run our new `loadTasks` method when the component is "assembled", in the `componentDidMount' method, this method is run when the component is built in the visual presentation of the browser.
+Now we need to run our new `loadWorkers` method when the component is "assembled", in the `componentDidMount' method, this method is run when the component is built in the visual presentation of the browser.
 
-To do this just on the top add the line of code `this.loadTasks();` within the `componentDidMount` method, which will look like this:
-
-```jsx
-    // 🔍 Search the existing code for:
-    componentDidMount() {
-        this.loadWorkers();
-        // 👇 And add the new line of code below:
-        this.loadTasks();
-    }
-```
-
-The line that should be added is below:
+To do this just on the top add the line of code `loadWorkers();` within the `useEffect` method, which will look like this:
 
 ```jsx
-        this.loadTasks();
+    useEffect(() => {
+        loadWorkers();
+    }, []);
 ```
 
-This will call the method that runs the service <a href="http://localhost:9000/services/tasks" target="_blank">http://localhost:9000/services/tasks</a> that was created to get the data in JSON and save it to the `state` (_status_) of the component to be presented in the render (_view_).
+This will call the method that runs the service <a href="http://localhost:9000/services/workers" target="_blank">http://localhost:9000/services/workers</a> that was created to get the data in JSON and save it to the `state` (_status_) of the component to be presented in the render (_view_).
 
 ### Compilation
 
@@ -147,34 +145,33 @@ Entrypoint main = main.js main.js.map
 
 If there is an error with the compilation then it will appear into the **terminal** with an indication issue.
 
-So far we have performed your service spend **tasks** and the obtained data is stored into the `DashboardContainer` component that will be available for use in the `render`.
+So far we have performed your service spend **tasks** and the obtained data is stored into the `DashboardContainer` component that will be available for use in the `return`.
 
 ## Present the Data
 
-To present the data on your browser should be change the `render` method, which processes the visual aspect of the components in <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
+To present the data on your browser should be change the `return` method, which processes the visual aspect of the components in <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
 
-At the end of the `DashboardContainer` code you will find the method: `render() { ... }`
+At the end of the `DashboardContainer` code you will find the method: `return ( ... );`
 
-For this step you just need to add one more line of code to contain one more `DataVisualization` component, but now to display the **tasks** data, the code should look like this:
+For this step you just need to add one more line of code to contain one more `DataVisualization` component, but now to display the **workers** data, the code should look like this:
 
 ```jsx
     // 🔍 Search the existing code for:
-    render() {
-        return (
-            <div>
-                <DataVisualization data={this.state.trabalhadores} title={"Workers"} />
-                // 👇 And add the new line of code below:
-                <DataVisualization data={this.state.tasks} title={"Tasks"} />
-                <ListServices />
-            </div>
-        );
-    }
+    return (
+    <div ref={ref}>
+      { loading == false ?
+        <DataVisualization data={workers} />
+        : <Spin/>
+      }
+      <ListServices />
+    </div>
+  );
 ```
 
 Note that only the line below should be added:
 
 ```jsx
-<DataVisualization data={this.state.tasks} title={"Tasks"} />
+<DataVisualization data={workers} />
 ```
 
 This way the `DataVisualization` will receive the obtained data through the service **tasks** via JSON and which are stored in the `state`.

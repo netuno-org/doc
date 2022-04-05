@@ -22,9 +22,9 @@ Caso pretenda utilizar outra tecnologia como VueJS, MaterialUI, Sass, Bootstrap,
 
 ## Consumir o Serviço
 
-Após ter sido criado o serviço **tarefas** em `📂 server/services/tarefas.js` através do Visual Studio Code que diponibiliza a informação em <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> no endereço:
+Após ter sido criado o serviço **trabalhadores** em `📂 server/services/trabalhadores.js` através do Visual Studio Code que diponibiliza a informação em <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> no endereço:
 
-* <a href="http://localhost:9000/services/tarefas" target="_blank">http://localhost:9000/services/tarefas</a>
+* <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/trabalhadores</a>
 
 O próximo passo é consumi-lo para apresentar os dados na inteface do browser.
 
@@ -43,81 +43,85 @@ Logo no início da class do componente `DashboardContainer` dentro do `construct
 Adicione uma nova entrada para guardar os dados das tarefas da seguinte forma:
 
 ```jsx
-        this.state = {
-            trabalhadores: [], // Não se esqueça da vírgula!
-            // 👇 E adicione a nova linha de código abaixo:
-            tarefas: []
-        };
+            // 👇 Adicione a nova linha de código abaixo:
+            const [trabalhadores, setTrabalhadores] = useState([]);
 ```
 
-Ou seja, acrescente a nova linha `tarefas: []` e não se esqueça de acrescentar a "**,**" (vírgula) no fim da linha anterior.
+Ou seja, acrescente a nova linha `const [workers, setWorkers] = useState([]);` de estado.
 
-### Criar Método `loadTarefas`
+### Criar Método `loadWorkers`
 
-Mais abaixo repare que existe um método chamado `loadTrabalhadores`, este método realiza a obtenção dos dados dos trabalhadores que aparecem no dashboard atualmente.
+Mais abaixo repare que existe um método chamado `loadWorkers`, este método realiza a obtenção dos dados dos trabalhadores que aparecem no dashboard atualmente.
 
-Por baixo deste método vamos criar um novo método chamado `loadTarefas` para carregar os dados das tarefas.
+Este método também serve para carregar os dados dos trabalhadores.
 
-Insira o código abaixo a seguir ao fim do método `loadTrabalhadores`:
+Insira o código abaixo:
 
 ```jsx
     /**
-    *** 🚀 Carrega os dados das Tarefas.
+    *** 🚀 Carrega os dados das Trabalhores.
     ***    Através da execução do serviço:
-    **     http://localhost:9000/services/tarefas
+    **     http://localhost:9000/services/trabalhadores
     */
-    loadTarefas() {
-        netuno.service({
-            url: '/services/tarefas',
-            success: (data)=> {
-                this.setState({
-                    tarefas: data.json
-                });
-            },
-            fail: (data)=> {
-                console.log(data);
-                message.error("Falha ao carregar a lista do total de registos das tarefas.")
-            }
+    const loadWorkers = () => {
+        setWorkers([]);
+        setLoading(true);
+        _service({
+        url: intl.locale.indexOf('pt') == 0 ? '/services/trabalhadores' : '/services/workers',
+        success: (response) => {
+            setWorkers(response.json);
+            setLoading(false);
+        },
+        fail: (e) => {
+            setLoading(false);
+            console.error('Workers service failed.', e);
+            message.error(intl.formatMessage({ id: `${messages}.loading_error` }));
+        }
         });
-    }
+    };
+
+    useImperativeHandle(ref, () => ({
+        loadWorkers
+    }));
 ```
 
-O que este código acima faz é passar os dados das tarefas para o _state_ do componente em <a href="https://reactjs.org/" target="_blank">ReactJS</a>, isto através da execução do serviço **tarefas** que, ao receber os dados em <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> , armazena os mesmos no _state_ através da execução do `this.setState`.
+O que este código acima faz é passar os dados das trabalhadores para o _state_ do componente em <a href="https://reactjs.org/" target="_blank">ReactJS</a>, isto através da execução do serviço **trabalhadores** que, ao receber os dados em <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> , armazena os mesmos no _state_ através da execução do `setWorkers`.
 
 No código final os métodos deverão ficar estruturados desta forma:
 
 ```jsx
-    loadTrabalhadores() {
+    useEffect(() => {
+        ...
+    }, []);
+
+    const loadWorkers = () => {
         ...
     }
 
-    loadTarefas() {
+    useImperativeHandle() {
         ...
     }
 
-    render() {
+    return ( 
         ...
-    }
+    );
 ```
 
 > Onde os `...` são as diversas linhas de código omitidas dentro dos respectivos métodos
 
-### Executar o novo método `loadTarefas`
+### Executar o novo método `useEffect`
 
-Agora falta executar o nosso novo método `loadTarefas` quando o componente é "montado", no método `componentDidMount`, este método é executado quando o componente é construído na apresentação visual do browser.
+Agora falta executar o nosso novo método `useEffect` quando o componente é "montado", este método é executado quando o componente é construído na apresentação visual do browser.
 
-Para isto basta, um pouco mais acima, acrescentar a linha de código `this.loadTarefas();` dentro do método `componentDidMount` desta forma:
+Para isto basta, um pouco mais acima, acrescentar a linha de código `loadWorkers();` dentro do método `useEffect` desta forma:
 
 ```jsx
-    // 🔍 Procure no código existente por:
-    componentDidMount() {
-        this.loadTrabalhadores();
-        // 👇 E adicione a nova linha de código abaixo:
-        this.loadTarefas();
-    }
+    useEffect(() => {
+        loadWorkers();
+    }, []);
 ```
 
-Esta nova linha de código vai chamar o método que executa o serviço <a href="http://localhost:9000/services/tarefas" target="_blank">http://localhost:9000/services/tarefas</a>, que foi criado anteriormente, para obter os dados em JSON e guardá-los no `state` (_estado_) do componente para ser apresentado no render (_visualização_).
+Esta nova linha de código vai chamar o método que executa o serviço <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/trabalhadores</a>, que foi criado anteriormente, para obter os dados em JSON e guardá-los no `state` (_estado_) do componente para ser apresentado no return (_visualização_).
 
 ### Compilação
 
@@ -140,36 +144,35 @@ Entrypoint main = main.js main.js.map
 
 Caso haja algum erro na compilação então aparecerá no **terminal** a indicação do problema.
 
-Até aqui realizámos o consumo do nosso serviço **tarefas** em que os dados obtidos ficam guardados no `state` do componente `DashboardContainer` que assim fica disponível para ser utilizado no `render`.
+Até aqui realizámos o consumo do nosso serviço **tarefas** em que os dados obtidos ficam guardados no `state` do componente `DashboardContainer` que assim fica disponível para ser utilizado no `return`.
 
 ## Apresentar os Dados
 
 Falta apresentar os dados visualmente na interface que o utilizador vê no browser.
 
-Para apresentar os dados no browser temos que alterar o método `render`, que processa o aspecto visual dos componentes em <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
+Para apresentar os dados no browser temos que alterar o método `return`, que processa o aspecto visual dos componentes em <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
 
-No fim do código do `DashboardContainer` encontrará o método: `render() { ... }`
+No fim do código do `DashboardContainer` encontrará o método: `return ( ... );`
 
-Vamos alterá-lo adicionando apenas mais uma linha de código para conter mais um componente `DataVisualization` que vai apresentar os dados referentes às **tarefas**, o código deverá ficar da seguinte forma:
+Vamos alterá-lo adicionando apenas mais uma linha de código para conter mais um componente `DataVisualization` que vai apresentar os dados referentes às **trabalhadores**, o código deverá ficar da seguinte forma:
 
 ```jsx
     // 🔍 Procure no código existente por:
-    render() {
-        return (
-            <div>
-                <DataVisualization data={this.state.trabalhadores} title={"Trabalhadores"} />
-                // 👇 E adicione a nova linha de código abaixo:
-                <DataVisualization data={this.state.tarefas} title={"Tarefas"} />
-                <ListServices />
-            </div>
-        );
-    }
+    return (
+    <div ref={ref}>
+      { loading == false ?
+        <DataVisualization data={workers} />
+        : <Spin/>
+      }
+      <ListServices />
+    </div>
+  );
 ```
 
 Repare que apenas a linha abaixo é que deve ser acrescentada:
 
 ```jsx
-<DataVisualization data={this.state.tarefas} title={"Tarefas"} />
+<DataVisualization data={workers} />
 ```
 
 Assim o `DataVisualization` vai receber os dados obtidos através do serviço **tarefas** via JSON que ficaram guardados no `state`.

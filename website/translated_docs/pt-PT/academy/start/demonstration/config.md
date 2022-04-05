@@ -29,6 +29,28 @@ Aqui está uma lista dos valores atualmente aceites:
 * ```"pt_PT" ou "pt_BR"``` - para Português (se está a ler este tutorial aconselhamos que utilize um destes dois)
 * ```"en_GB" ou "en_US"``` - para Inglês
 
+### Configuração da linguagem da Base de Dados
+
+Encontre isto no mesmo ficheiro:
+
+```
+"db": {
+        "default": {
+            "password": "",
+            "engine": "h2",
+            "port": "",
+            "host": "",
+            "name": "demo_en",
+            "username": ""
+        }
+    },
+```
+
+E mude o campo da base de dados ```"name"``` de acordo com a sua linguagem, por exemplo:
+
+* ```"name": "demo_pt"``` - para Português
+* ```"name": "demo_en"``` - para Inglês (se você está a ler este tutorial, nós recomendamos usar esta opção)
+
 ### Configuração dos comandos que executam juntamente com o Netuno
 
 O Netuno permite executar múltiplos comandos com o executar inicial do servidor que imprimimem todos para a mesma consola. Por predefinição a aplicação Demo traz consigo, mas desativado, o comando ``` npm run watch ``` que compila automaticamente qualquer alteração efetuada em ficheiros de código do backoffice.

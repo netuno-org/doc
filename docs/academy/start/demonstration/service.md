@@ -42,7 +42,7 @@ The services are processed by the server, so to create a service you must expand
 
 Now just right-click on the `📂 services` folder and choose the **New File** option.
 
-The name of the new file should be `📂 tasks.js`, we will create a service with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>.
+The name of the new file should be `📂 workers.js`, we will create a service with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>.
 
 All you need to do now is to _Code_ our service, which will be as below:
 
@@ -50,33 +50,37 @@ All you need to do now is to _Code_ our service, which will be as below:
 /**
 *** Formats the past object in JSON and performs its output.
 */
-_out.json(
-    /**
-    *** Gets a list with data objects resulting from the
-    *** query executed in the database.
-    */
-    _db.query(
-        "SELECT DISTINCT " +
-        "    task.name, " +
-        "    SUM(DATEDIFF(HOUR, record.inicio, record.fim)) AS total " +
-        "FROM task INNER JOIN record " +
-        "    ON task.id = record.task_id " +
-        "WHERE task.active = true " +
-        "    AND record.active = true " +
-        "GROUP BY task.name " +
-        "ORDER BY total ASC"
-    )
-);
+const dbRecords = _db.query(`
+    SELECT DISTINCT
+        worker.name, SUM(DATEDIFF(HOUR, record.start, record.end)) AS total
+    FROM worker INNER JOIN record
+        ON worker.id = record.worker_id
+    WHERE worker.active = true AND record.active = true
+    GROUP BY worker.name
+    ORDER BY total ASC
+`);
+
+const list = _val.list();
+
+for (const dbRecord of dbRecords) {
+    list.add(
+        _val.map()
+            .set("name", dbRecord.getString("name"))
+            .set("total", dbRecord.getInt("total"))
+    );
+}
+
+_out.json(list);
 ```
 
-The `_out.json` performs the output (_data output_) for the browser type `ContentType: application/json` and formats the past object to be structured as an object <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>.
-
 The `_db.query` receives a string with a database query and performs its execution by transforming the obtained data into a list of objects of type key/value, i.e. column/data.
+
+The `_out.json` performs the output (_data output_) for the browser type `ContentType: application/json` and formats the past object to be structured as an object <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>.
 
 ## Run the Service
 
 To run the service just open in the browser the address of the service that was created which will be:
 
-* <a href="http://localhost:9000/services/tarefas" target="_blank">http://localhost:9000/services/tarefas</a>
+* <a href="http://localhost:9000/services/workers" target="_blank">http://localhost:9000/services/workers</a>
 
 In this case we recommend the <a href="https://www.mozilla.org/" target="_blank">Firefox</a> browser because it allows a better visualization of the <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> object.
