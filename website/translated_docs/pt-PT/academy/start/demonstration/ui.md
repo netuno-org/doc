@@ -43,8 +43,9 @@ Logo no início da class do componente `DashboardContainer` dentro do `construct
 Adicione uma nova entrada para guardar os dados das tarefas da seguinte forma:
 
 ```jsx
-            // 👇 Adicione a nova linha de código abaixo:
+            // 👇 Adicione as novas linhas de código abaixo:
             const [trabalhadores, setTrabalhadores] = useState([]);
+            const [carregar, setCarregar] = useState(false);
 ```
 
 Ou seja, acrescente a nova linha `const [workers, setWorkers] = useState([]);` de estado.
@@ -59,30 +60,26 @@ Insira o código abaixo:
 
 ```jsx
     /**
-    *** 🚀 Carrega os dados das Trabalhores.
+    *** 🚀 Carrega os dados dos Trabalhores.
     ***    Através da execução do serviço:
     **     http://localhost:9000/services/trabalhadores
     */
-    const loadWorkers = () => {
-        setWorkers([]);
-        setLoading(true);
+    const carregarTrabalhadores = () => {
+        setTrabalhadores([]);
+        setCarregar(true);
         _service({
-        url: intl.locale.indexOf('pt') == 0 ? '/services/trabalhadores' : '/services/workers',
-        success: (response) => {
-            setWorkers(response.json);
-            setLoading(false);
-        },
-        fail: (e) => {
-            setLoading(false);
-            console.error('Workers service failed.', e);
-            message.error(intl.formatMessage({ id: `${messages}.loading_error` }));
-        }
+            url: intl.locale.indexOf('pt') == 0 ? '/services/trabalhadores' : '/services/workers',
+            success: (response) => {
+                setTrabalhadores(response.json);
+                setCarregar(false);
+            },
+            fail: (e) => {
+                setCarregar(false);
+                console.error('Falha no serviço dos Trabalhadores.', e);
+                message.error(intl.formatMessage({ id: `${messages}.loading_error` }));
+            }
         });
     };
-
-    useImperativeHandle(ref, () => ({
-        loadWorkers
-    }));
 ```
 
 O que este código acima faz é passar os dados das trabalhadores para o _state_ do componente em <a href="https://reactjs.org/" target="_blank">ReactJS</a>, isto através da execução do serviço **trabalhadores** que, ao receber os dados em <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> , armazena os mesmos no _state_ através da execução do `setWorkers`.
@@ -94,11 +91,7 @@ No código final os métodos deverão ficar estruturados desta forma:
         ...
     }, []);
 
-    const loadWorkers = () => {
-        ...
-    }
-
-    useImperativeHandle() {
+    const carregarTrabalhadores = () => {
         ...
     }
 
@@ -117,7 +110,7 @@ Para isto basta, um pouco mais acima, acrescentar a linha de código `loadWorker
 
 ```jsx
     useEffect(() => {
-        loadWorkers();
+        carregarTrabalhadores();
     }, []);
 ```
 
@@ -160,8 +153,8 @@ Vamos alterá-lo adicionando apenas mais uma linha de código para conter mais u
     // 🔍 Procure no código existente por:
     return (
     <div ref={ref}>
-      { loading == false ?
-        <DataVisualization data={workers} />
+      { carregar == false ?
+        <DataVisualization data={trabalhadores} />
         : <Spin/>
       }
       <ListServices />

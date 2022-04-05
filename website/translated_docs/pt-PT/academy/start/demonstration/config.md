@@ -46,7 +46,7 @@ Encontre isto no mesmo ficheiro:
     },
 ```
 
-E mude o campo da base de dados ```"name"``` de acordo com a sua linguagem, por exemplo:
+E mude o campo da base de dados ```"name"``` de acordo com o seu idioma, por exemplo:
 
 * ```"name": "demo_pt"``` - para Português
 * ```"name": "demo_en"``` - para Inglês (se você está a ler este tutorial, nós recomendamos usar esta opção)

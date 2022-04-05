@@ -44,8 +44,9 @@ Right at the very beginning of the `DashboardContainer` component class within t
 Add a new entry to save the task data, like this:
 
 ```jsx
-            // 👇 Add the new line of code below:
+            // 👇 Add the new lines of code below:
             const [workers, setWorkers] = useState([]);
+            const [loading, setLoading] = useState(false);
 ```
 
 In other words, add the new `const [workers, setWorkers] = useState([]);` state line.
@@ -68,22 +69,18 @@ Insert the code below:
         setWorkers([]);
         setLoading(true);
         _service({
-        url: intl.locale.indexOf('pt') == 0 ? '/services/trabalhadores' : '/services/workers',
-        success: (response) => {
-            setWorkers(response.json);
-            setLoading(false);
-        },
-        fail: (e) => {
-            setLoading(false);
-            console.error('Workers service failed.', e);
-            message.error(intl.formatMessage({ id: `${messages}.loading_error` }));
-        }
+            url: intl.locale.indexOf('pt') == 0 ? '/services/trabalhadores' : '/services/workers',
+            success: (response) => {
+                setWorkers(response.json);
+                setLoading(false);
+            },
+            fail: (e) => {
+                setLoading(false);
+                console.error('Workers service failed.', e);
+                message.error(intl.formatMessage({ id: `${messages}.loading_error` }));
+            }
         });
     };
-
-    useImperativeHandle(ref, () => ({
-        loadWorkers
-    }));
 ```
 
 What this code does is to perform the service **workers** and with the obtained data from the <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a> stores in the _state_ of the component <a href="https://reactjs.org/" target="_blank">ReactJS</a> in **workers**, performing the execution of `setWorkers` passing the workers data.
@@ -96,10 +93,6 @@ In the final code the methods should be structured in this way, for example:
     }, []);
 
     const loadWorkers = () => {
-        ...
-    }
-
-    useImperativeHandle() {
         ...
     }
 
