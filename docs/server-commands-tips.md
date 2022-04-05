@@ -26,8 +26,8 @@ Inside the **terminal** perform these operations:
 > ## `./netuno stats`
 > It shows the details of the most recent performance information that is stored in `logs/stats-*`.
 
-> ## `./update`
-> Upgrades Neptune to the latest version.
+> ## `./install-stable`
+> Upgrades Neptune to the latest stable version.
 
-> ## `./netuno install version=latest`
-> Updates to the latest version.
+> ## `./install-testing`
+> Updates to the latest version in development.

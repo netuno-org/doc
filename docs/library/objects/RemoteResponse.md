@@ -48,10 +48,10 @@ Object that contains the details of the response obtained through the remote con
 
 ---
 
-#### error() : string
+#### error() : _Throwable_
 ##### Return
 
-( string )
+( _Throwable_ )
 
 
 ---
@@ -108,10 +108,10 @@ Object that contains the details of the response obtained through the remote con
 
 ---
 
-#### getError() : string
+#### getError() : _Throwable_
 ##### Return
 
-( string )
+( _Throwable_ )
 
 
 ---
@@ -365,12 +365,12 @@ Remote connection submission response.
 
 ---
 
-#### setError(arg0: string) : _RemoteResponse_
+#### setError(arg0: _Throwable_) : _RemoteResponse_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| arg0 | _Throwable_ |   |
 
 ##### Return
 

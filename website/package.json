@@ -12,6 +12,7 @@
     "docusaurus": "^1.14.7"
   },
   "dependencies": {
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "minimist": "^1.2.6"
   }
 }

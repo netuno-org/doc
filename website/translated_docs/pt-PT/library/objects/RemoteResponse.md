@@ -48,10 +48,10 @@ Objeto que contém os detalhes da resposta obtida através da conexão remota, q
 
 ---
 
-#### error() : string
+#### error() : _Throwable_
 ##### Retorno
 
-( string )
+( _Throwable_ )
 
 
 ---
@@ -108,10 +108,10 @@ Objeto que contém os detalhes da resposta obtida através da conexão remota, q
 
 ---
 
-#### getError() : string
+#### getError() : _Throwable_
 ##### Retorno
 
-( string )
+( _Throwable_ )
 
 
 ---
@@ -365,12 +365,12 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### setError(arg0: string) : _RemoteResponse_
+#### setError(arg0: _Throwable_) : _RemoteResponse_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| arg0 | _Throwable_ |   |
 
 ##### Retorno
 
