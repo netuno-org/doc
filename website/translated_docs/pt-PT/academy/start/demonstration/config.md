@@ -29,7 +29,7 @@ Aqui está uma lista dos valores atualmente aceites:
 * ```"pt_PT" ou "pt_BR"``` - para Português (se está a ler este tutorial aconselhamos que utilize um destes dois)
 * ```"en_GB" ou "en_US"``` - para Inglês
 
-### Configuração da linguagem da Base de Dados
+### Configuração do idioma da Base de Dados
 
 Encontre isto no mesmo ficheiro:
 

@@ -33,7 +33,7 @@ Assuming you have Visual Studio Code or another editor open with the **Demo** ap
 
 Open the file below in the editor:
 
-`📂 ui/src/containers/DashboardContainer/index.jsx`
+`📂 ui/src/containers/DashboardContainer/index.js`
 
 Next step will be to change this existing code.
 
@@ -103,9 +103,9 @@ In the final code the methods should be structured in this way, for example:
 
 > Where the `...` are the various lines of code within their respective methods
 
-### Run the new `loadTasks` method
+### Run the new `useEffect` method
 
-Now we need to run our new `loadWorkers` method when the component is "assembled", in the `componentDidMount' method, this method is run when the component is built in the visual presentation of the browser.
+Now we need to run our new `useEffect` method when the component is "assembled", this method is run when the component is built in the visual presentation of the browser.
 
 To do this just on the top add the line of code `loadWorkers();` within the `useEffect` method, which will look like this:
 
@@ -138,7 +138,7 @@ Entrypoint main = main.js main.js.map
 
 If there is an error with the compilation then it will appear into the **terminal** with an indication issue.
 
-So far we have performed your service spend **tasks** and the obtained data is stored into the `DashboardContainer` component that will be available for use in the `return`.
+So far we have performed your service spend **workers** and the obtained data is stored into the `DashboardContainer` component that will be available for use in the `return`.
 
 ## Present the Data
 
@@ -167,7 +167,7 @@ Note that only the line below should be added:
 <DataVisualization data={workers} />
 ```
 
-This way the `DataVisualization` will receive the obtained data through the service **tasks** via JSON and which are stored in the `state`.
+This way the `DataVisualization` will receive the obtained data through the service **workers** via JSON and which are stored in the `state`.
 
 ### Final Compilation
 
@@ -188,5 +188,4 @@ Make sure there are no errors into the **terminal** output.
 Quick introduction to <a href="https://reactjs.org/" target="_blank">ReactJS</a>:
 
 * <a href="https://medium.com/rocketseat/um-guia-para-iniciantes-no-react-js-80e1ac357649" target="_blank"> A Beginner's Guide to ReactJS.
-
 * <a href="https://www.youtube.com/watch?v=Ke90Tje7VS0&t=3104s" target=" _blank"> React JS - React Tutorial for Beginners

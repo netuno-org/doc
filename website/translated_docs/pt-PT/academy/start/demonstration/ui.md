@@ -32,7 +32,7 @@ Com estes dados vamos e apresentá-los numa tabela e um gráfico.
 
 Assumindo que tem o Visual Studio Code ou outro editor de texto aberto com a aplicação de **demo**_nstração_ abra o seguinte ficheiro no editor:
 
-`📂 ui/src/containers/DashboardContainer/index.jsx`
+`📂 ui/src/containers/DashboardContainer/index.js`
 
 Vamos alterar este código já existente.
 
@@ -137,7 +137,7 @@ Entrypoint main = main.js main.js.map
 
 Caso haja algum erro na compilação então aparecerá no **terminal** a indicação do problema.
 
-Até aqui realizámos o consumo do nosso serviço **tarefas** em que os dados obtidos ficam guardados no `state` do componente `DashboardContainer` que assim fica disponível para ser utilizado no `return`.
+Até aqui realizámos o consumo do nosso serviço **trabalhadores** em que os dados obtidos ficam guardados no `state` do componente `DashboardContainer` que assim fica disponível para ser utilizado no `return`.
 
 ## Apresentar os Dados
 
@@ -168,7 +168,7 @@ Repare que apenas a linha abaixo é que deve ser acrescentada:
 <DataVisualization data={trabalhadores} />
 ```
 
-Assim o `DataVisualization` vai receber os dados obtidos através do serviço **tarefas** via JSON que ficaram guardados no `state`.
+Assim o `DataVisualization` vai receber os dados obtidos através do serviço **trabalhadores** via JSON que ficaram guardados no `state`.
 
 ### Compilação Final
 
@@ -184,7 +184,7 @@ Agora atualize a página no browser e deverá ver o resultado final, ou alternat
 >
 > Verifique na consola do **browser** nas **ferramentas do programador** se há erros.
 
-## Saber mais
+## Saber mais 👇
 
 Introdução rápida ao <a href="https://reactjs.org/" target="_blank">ReactJS</a>:
 
