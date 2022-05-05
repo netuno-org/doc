@@ -130,6 +130,7 @@
         ],
         "Explore": [
             "academy/explore/configuration",
+            "academy/explore/centralized-terminal",
             "academy/explore/cli",
             "academy/explore/services",
             "academy/explore/industry",

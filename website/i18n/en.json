@@ -17,6 +17,10 @@
         "title": "Backoffice",
         "sidebar_label": "Backoffice"
       },
+      "academy/explore/centralized-terminal": {
+        "title": "Terminal Centralizado",
+        "sidebar_label": "Terminal Centralizado"
+      },
       "academy/explore/cli": {
         "title": "Command Line",
         "sidebar_label": "Command Line"
