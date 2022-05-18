@@ -1,7 +1,7 @@
 ---
 id: centralized-terminal
-title: Terminal Centralizado
-sidebar_label: Terminal Centralizado
+title: Centralized Terminal
+sidebar_label: Centralized Terminal
 ---
 
 ## Introduction
