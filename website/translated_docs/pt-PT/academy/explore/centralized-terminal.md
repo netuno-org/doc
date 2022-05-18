@@ -6,22 +6,22 @@ sidebar_label: Terminal Centralizado
 
 ## Introdução
 
-O Netuno permite integrar a saída de dados de diversos comandos no terminal que o está sendo executado.
+O Netuno permite integrar a saída de dados de diversos comandos no mesmo terminal em que o servidor do Netuno está sendo executado.
 
-Quando uma aplicação é iniciada, de acordo com a sua configuração, pode conter diversos comandos configurados para serem iniciados automaticamente junto com a aplicação.
+Quando uma aplicação é iniciada, de acordo com a sua configuração, pode conter diversos comandos configurados para serem iniciados automaticamente em paralelo, mas consolida todos as saídas de dados nno mesmo output global.
 
-Isto quer dizer que os processo de front-end do ReactJS, Angular ou Vue, podem ser iniciados e integrados com o terminal do Netuno.
+Isto quer dizer que os processo de front-end do ReactJS, Angular, Vue, e qualquer outro, podem ser iniciados e integrados com o Netuno.
 
-Também qualquer outro tipo de processo pode ser iniciado, basta definir o seu comando, por exemplo até um outro servidor de API auxiliar em outra tecnologia pode ser iniciado junto.
+> Qualquer processo pode ser iniciado, basta definir o seu comando, por exemplo até pode ser integrado outro servidor de uma API REST auxiliar desenvolvida em qualquer outra tecnologia.
 
 
 ## Configuração
 
-Navegue dentro da aplicação que está a desenvolver até ao ficheiro de configuração de ambiente. Neste exemplo, iremos utilizar o ficheiro de ambiente de desenvolvimento localizado em:
+Dentro da aplicação que está a desenvolver, no ficheiro de configuração de ambiente. Neste exemplo será utilizado o ficheiro de ambiente de desenvolvimento, que está localizado dentro da aplicação em:
 
 - 📂 `config/_development.json`
 
-Verifique se já não existem configurações de comandos, se não existir adicione no fim do ficheiro de configuração (em formato JSON) os parâmetros de configuração dos comandos, como por exemplo:
+Verifique se já não existem configurações de comandos, se não existir então adicione no fim do ficheiro de configuração (em formato JSON), os seguintes parâmetros de configuração como exemplo:
 
 ```
 {
@@ -50,15 +50,17 @@ Verifique se já não existem configurações de comandos, se não existir adici
 
 ### env
 
-Definição das variáveis de ambiente.
+Definição das variáveis de ambiente, é um array então pode ser definidas diversas variáveis ao mesmo tempo.
 
 ### path
 
-Definição do caminho de pastas onde o comando será executado.
+Definição do caminho de pastas onde o comando será executado, relativo a raíz da aplicação.
 
 ### install
 
-Comando executado caso a pasta `node_modules` não exista, automaticamente executa o `npm install` ou `yarn install` de acordo com o comando, caso o comando em si seja respectivamente um `npm` ou `yarn`.
+Se o comando iniciar com `npm` ou `yarn`, então é verificado se ainda não existe a pasta `node_modules`, então automaticamente é executado o comando `npm install` ou `yarn install`, de acordo com o prefixo comando.
+
+De qualquer maneira o comando de instalação pode ser customizado com esta parametrização, assim sendo o comando de instalação padrão deixa de ser utilizado.
 
 ### command
 
@@ -72,6 +74,6 @@ Se o comando está ou não ativo para ser executado na inicialização da aplica
 
 De forma simples é possível integrar diversos comandos de processos auxiliares que sejam precisos para o funcionamento da aplicação, seja para desenvolvimento como para produção.
 
-Em desenvolvimento facilita muito onde é possível ver em um único terminal toda a informação centralizada, unificando todos os processos que estão em execução.
+Em desenvolvimento facilita muito, porque passa a ser possível ver em um único terminal toda a informação centralizada, unificando todos os processos que estão paralelamente em execução.
 
-Ao fechar o Netuno, concluir a sua execução, será encerrado todos os outros processos também.
+Ao parar a execução do Netuno, também será encerrado todos os outros processos.
