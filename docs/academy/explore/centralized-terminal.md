@@ -22,6 +22,8 @@ Inside the application you are developing, in the environment configuration file
 
 Check if there are no command settings already, if there are not, then add at the end of the configuration file (in JSON format), the following configuration parameters as on this example:
 
+```
+{
     ...
     "commands": [
         {
