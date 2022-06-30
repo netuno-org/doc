@@ -10,21 +10,21 @@ This tutorial will help you create forms on the Netuno platform.
 
 It is divided into two essential and mandatory steps, and a small approach to the **grouping of forms** and the **mode diagram**.
 
-![formularios1.png](assets/formularios1.png)
+![form1.png](assets/form1.png)
 
 ## 1 - Assigning a Display Name
 
 The first thing to do when creating a form is to define a display name.
 
-![formularios2.png](assets/formularios2.png)
+![form2.png](assets/form2.png)
 
 The display name is the name seen by the user. It is the title of the form, which will appear in the tab **Manage Fields**
 
-![formularios3.png](assets/formularios3.png)
+![form3.png](assets/form3.png)
 
 as in the tab **Forms**, on the display screen.
 
-![formularios4.png](assets/formularios4.png)
+![form4.png](assets/form4.png)
 
 ## 2 - Field Name
 
@@ -32,7 +32,7 @@ When you assign a name to the **Display Name**, the **Field Name** is automatica
 
 However, this name can be changed if we want.
 
-![formularios5.png](assets/formularios5.png)
+![form5.png](assets/form5.png)
 
 This is the name that will identify the form in the database.
 
@@ -46,7 +46,7 @@ For example, a form **Vehicles** could be created and be the parent form of the 
 
 The diagram mode allows the user to have an overview of the forms created as well as their fields and relationships.
 
-![formularios6.png](assets/formularios6.png)
+![form6.png](assets/form6.png)
 
 > Try creating multiple forms and multiple fields and view in diagram mode!
 
