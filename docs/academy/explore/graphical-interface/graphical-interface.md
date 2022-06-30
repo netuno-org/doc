@@ -9,7 +9,7 @@ Netuno is divided into 2 modes, the "View" mode and the "Build" mode. In **visua
 
 ### View
 
-![visualize.PNG](assets/visualize.png)  
+![visualize.png](assets/visualize.png)  
 
 #### 1 - Build
 
