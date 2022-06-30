@@ -9,7 +9,7 @@ Netuno is divided into 2 modes, the "View" mode and the "Build" mode. In **visua
 
 ### View
 
-![visualizar.png](assets/visualizar.png)  
+![visualizar.png](assets/visualize.png)  
 
 #### 1 - Build
 
@@ -33,7 +33,7 @@ In this area you can generate PDF's/ Excel's as well as use templates.
 
 ### Build
 
-![construir.png](assets/construir.png)  
+![construir.png](assets/construction.png)  
 
 #### 1 - View
 
