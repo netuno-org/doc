@@ -36,6 +36,8 @@ Também ative a opção **Não Nulo** que vai tornar o preenchimento deste campo
 
 No tipo escolha **text** que vai indicar que o nosso campo é do tipo _texto_.
 
+Por fim, clique na opção **Guardar** para salvar todo o processo.
+
 
 ## Visualizar
 
