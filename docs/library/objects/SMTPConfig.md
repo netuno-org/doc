@@ -140,6 +140,18 @@ Definição da configuração do SMTP.
 
 ---
 
+## getReplyTo
+
+---
+
+#### getReplyTo() : string
+##### Return
+
+( string )
+
+
+---
+
 ## getSocketFactoryClass
 
 ---
@@ -540,6 +552,24 @@ Definição da configuração do SMTP.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _boolean_ |   |
+
+##### Return
+
+( _SMTPConfig_ )
+
+
+---
+
+## setReplyTo
+
+---
+
+#### setReplyTo(arg0: string) : _SMTPConfig_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
 
 ##### Return
 

@@ -8,11 +8,34 @@ Conversor de tipos de dados da aplicação.
 
 ---
 
+## arrayToList
+
+---
+
+#### _convert.arrayToList(array: _Object_) : _List_
+##### Descrição
+
+Converte um array de tipos primitivos para uma lista (coleção).
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| array | _Object_ | Array que será convertido numa lista (coleção). |
+
+##### Retorno
+
+( _List_ )
+
+Nova lista com todos os elementos do array.
+
+---
+
 ## fromBase64
 
 ---
 
-#### _convert.fromBase64(arg0: _byte[]_) : string
+#### _convert.fromBase64(conteúdo: _byte[]_) : string
 ##### Descrição
 
 Converte o conteúdo com Base64 em uma string descodificada.
@@ -21,7 +44,7 @@ Converte o conteúdo com Base64 em uma string descodificada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| conteúdo | _byte[]_ | Conteúdo para ser convertido. |
 
 ##### Retorno
 
@@ -31,7 +54,7 @@ Retorna a string descodificada que estava em Base64.
 
 ---
 
-#### _convert.fromBase64(arg0: string) : string
+#### _convert.fromBase64(conteúdo: string) : string
 ##### Descrição
 
 Converte o conteúdo com Base64 em uma string descodificada.
@@ -40,7 +63,7 @@ Converte o conteúdo com Base64 em uma string descodificada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteúdo | string | Conteúdo para ser convertido. |
 
 ##### Retorno
 
@@ -54,7 +77,7 @@ Retorna a string descodificada que estava em Base64.
 
 ---
 
-#### _convert.fromBase64AsBytes(arg0: _byte[]_) : _byte[]_
+#### _convert.fromBase64AsBytes(conteúdo: _byte[]_) : _byte[]_
 ##### Descrição
 
 Converte o conteúdo em Base64 para o array de bytes original descodificado.
@@ -63,7 +86,7 @@ Converte o conteúdo em Base64 para o array de bytes original descodificado.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| conteúdo | _byte[]_ | Conteúdo para ser convertido. |
 
 ##### Retorno
 
@@ -73,7 +96,7 @@ Retorna os bytes descodificados que estavam em Base64.
 
 ---
 
-#### _convert.fromBase64AsBytes(arg0: string) : _byte[]_
+#### _convert.fromBase64AsBytes(conteúdo: string) : _byte[]_
 ##### Descrição
 
 Converte o conteúdo em Base64 para o array de bytes original descodificado.
@@ -82,7 +105,7 @@ Converte o conteúdo em Base64 para o array de bytes original descodificado.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteúdo | string | Conteúdo para ser convertido. |
 
 ##### Retorno
 
@@ -96,7 +119,7 @@ Retorna os bytes descodificados que estavam em Base64.
 
 ---
 
-#### _convert.fromHTML(arg0: string) : string
+#### _convert.fromHTML(conteúdo: string) : string
 ##### Descrição
 
 Transforma a codificação de caracteres especiais de HTML para texto normal.
@@ -112,7 +135,7 @@ _out.print(_convert.fromHTML("&euro;s A&ccedil;&atilde;o"))
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteúdo | string | Conteúdo para ser convertido. |
 
 ##### Retorno
 
@@ -126,7 +149,7 @@ Texto com códificação dos caracteres especiais em HTML tranformado para texto
 
 ---
 
-#### _convert.fromJSON(arg0: string) : string
+#### _convert.fromJSON(conteúdo: string) : string
 ##### Descrição
 
 Transforma a codificação de caracteres especiais de JSON para texto normal.
@@ -142,13 +165,13 @@ _out.print(_convert.toJSON("\u20ACs A\u00E7\u00E3o"))
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteúdo | string | Conteúdo para ser convertido. |
 
 ##### Retorno
 
 ( string )
 
-Texto com códificação dos caracteres especiais em JSON tranformado para texto normal.
+Texto com codificação dos caracteres especiais em JSON tranformado para texto normal.
 
 ---
 
@@ -156,7 +179,7 @@ Texto com códificação dos caracteres especiais em JSON tranformado para texto
 
 ---
 
-#### _convert.toBase64(arg0: _byte[]_) : string
+#### _convert.toBase64(conteúdo: _byte[]_) : string
 ##### Descrição
 
 Converte o conteúdo em uma string codificada com Base64.
@@ -165,7 +188,7 @@ Converte o conteúdo em uma string codificada com Base64.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| conteúdo | _byte[]_ | Conteúdo para ser convertido. |
 
 ##### Retorno
 
@@ -175,7 +198,7 @@ Retorna a string codificada em Base64.
 
 ---
 
-#### _convert.toBase64(arg0: string) : string
+#### _convert.toBase64(conteúdo: string) : string
 ##### Descrição
 
 Converte o conteúdo em uma string codificada com Base64.
@@ -184,7 +207,7 @@ Converte o conteúdo em uma string codificada com Base64.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteúdo | string | Conteúdo para ser convertido. |
 
 ##### Retorno
 
@@ -198,26 +221,26 @@ Retorna a string codificada em Base64.
 
 ---
 
-#### _convert.toBase64AsBytes(arg0: _byte[]_) : _byte[]_
+#### _convert.toBase64AsBytes(conteúdo: _byte[]_) : _byte[]_
 ##### Descrição
 
-Converte o conteúdo em codificação Base64.
+Converte o conteúdo em uma string codificada com Base64.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| conteúdo | _byte[]_ | Conteúdo para ser convertido. |
 
 ##### Retorno
 
 ( _byte[]_ )
 
-Retorna os bytes codificados em Base64.
+Retorna a string codificada em Base64.
 
 ---
 
-#### _convert.toBase64AsBytes(arg0: string) : _byte[]_
+#### _convert.toBase64AsBytes(conteúdo: string) : _byte[]_
 ##### Descrição
 
 Converte o conteúdo em codificação Base64.
@@ -226,7 +249,7 @@ Converte o conteúdo em codificação Base64.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteúdo | string | Conteúdo para ser convertido. |
 
 ##### Retorno
 
@@ -240,7 +263,7 @@ Retorna os bytes codificados em Base64.
 
 ---
 
-#### _convert.toByte(arg0: _int_) : _byte_
+#### _convert.toByte(valor: _int_) : _byte_
 ##### Descrição
 
 Converte o valor recebido para **byte**.
@@ -255,7 +278,7 @@ _convert.toByte(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| valor | _int_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -265,7 +288,7 @@ Retorna o valor recebido em **byte**.
 
 ---
 
-#### _convert.toByte(arg0: _long_) : _byte_
+#### _convert.toByte(valor: _long_) : _byte_
 ##### Descrição
 
 Converte o valor recebido para **byte**.
@@ -280,7 +303,7 @@ _convert.toByte(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| valor | _long_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -290,7 +313,7 @@ Retorna o valor recebido em **byte**.
 
 ---
 
-#### _convert.toByte(arg0: _short_) : _byte_
+#### _convert.toByte(valor: _short_) : _byte_
 ##### Descrição
 
 Converte o valor recebido para **byte**.
@@ -305,7 +328,7 @@ _convert.toByte(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| valor | _short_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -319,7 +342,7 @@ Retorna o valor recebido em **byte**.
 
 ---
 
-#### _convert.toDouble(arg0: _byte_) : _double_
+#### _convert.toDouble(valor: _byte_) : _double_
 ##### Descrição
 
 Converte o valor recebido para **double**.
@@ -334,7 +357,7 @@ _convert.toDouble(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte_ |   |
+| valor | _byte_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -344,7 +367,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### _convert.toDouble(arg0: _float_) : _double_
+#### _convert.toDouble(valor: _float_) : _double_
 ##### Descrição
 
 Converte o valor recebido para **double**.
@@ -359,7 +382,7 @@ _convert.toDouble(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| valor | _float_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -369,7 +392,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### _convert.toDouble(arg0: _int_) : _double_
+#### _convert.toDouble(valor: _int_) : _double_
 ##### Descrição
 
 Converte o valor recebido para **double**.
@@ -384,7 +407,7 @@ _convert.toDouble(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| valor | _int_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -394,7 +417,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### _convert.toDouble(arg0: _long_) : _double_
+#### _convert.toDouble(valor: _long_) : _double_
 ##### Descrição
 
 Converte o valor recebido para **double**.
@@ -409,7 +432,7 @@ _convert.toDouble(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| valor | _long_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -419,7 +442,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### _convert.toDouble(arg0: _short_) : _double_
+#### _convert.toDouble(valor: _short_) : _double_
 ##### Descrição
 
 Converte o valor recebido para **double**.
@@ -434,7 +457,7 @@ _convert.toDouble(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| valor | _short_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -448,7 +471,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### _convert.toError(arg0: _Object_) : _Error_
+#### _convert.toError(objeto: _Object_) : _Error_
 ##### Descrição
 
 Converte o objecto recebido em um objeto de Error.
@@ -468,7 +491,7 @@ if (_error.isError(deVoltaComoErro)) {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| objeto | _Object_ | Objeto para ser convertido. |
 
 ##### Retorno
 
@@ -482,7 +505,7 @@ Retorna o objeto convertido em Error.
 
 ---
 
-#### _convert.toException(arg0: _Object_) : _Exception_
+#### _convert.toException(objeto: _Object_) : _Exception_
 ##### Descrição
 
 Converte o objecto recebido em um objeto de Exception.
@@ -502,7 +525,7 @@ if (_error.isException(deVoltaComoExcecao)) {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| objeto | _Object_ | Objeto para ser convertido. |
 
 ##### Retorno
 
@@ -516,7 +539,7 @@ Retorna o objeto convertido em Exception.
 
 ---
 
-#### _convert.toFile(arg0: string, arg1: string, arg2: _byte[]_) : _[File](../../objects/File)_
+#### _convert.toFile(nome: string, conteúdo: string, bytes: _byte[]_) : _[File](../../objects/File)_
 ##### Descrição
 
 Inicia um objeto de ficheiro em memória com o conteúdo dos bytes recebidos.
@@ -525,15 +548,15 @@ Inicia um objeto de ficheiro em memória com o conteúdo dos bytes recebidos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _byte[]_ |   |
+| nome | string | Nome do ficheiro. |
+| conteúdo | string | Tipo de conteúdo. |
+| bytes | _byte[]_ | Bytes que representam o conteúdo do ficheiro. |
 
 ##### Retorno
 
 ( _[File](../../objects/File)_ )
 
-Objeto do ficheiro iniciado.
+Objeto do ficheiro iniciado que permite a manipulação dos bytes como ficheiro.
 
 ---
 
@@ -541,7 +564,7 @@ Objeto do ficheiro iniciado.
 
 ---
 
-#### _convert.toFloat(arg0: _byte_) : _float_
+#### _convert.toFloat(valor: _byte_) : _float_
 ##### Descrição
 
 Converte o valor recebido para **float**
@@ -556,7 +579,7 @@ _convert.toFloat(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte_ |   |
+| valor | _byte_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -566,7 +589,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toFloat(arg0: _double_) : _float_
+#### _convert.toFloat(valor: _double_) : _float_
 ##### Descrição
 
 Converte o valor recebido para **float**
@@ -581,7 +604,7 @@ _convert.toFloat(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
+| valor | _double_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -591,7 +614,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toFloat(arg0: _int_) : _float_
+#### _convert.toFloat(valor: _int_) : _float_
 ##### Descrição
 
 Converte o valor recebido para **float**
@@ -606,7 +629,7 @@ _convert.toFloat(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| valor | _int_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -616,7 +639,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toFloat(arg0: _long_) : _float_
+#### _convert.toFloat(valor: _long_) : _float_
 ##### Descrição
 
 Converte o valor recebido para **float**
@@ -631,7 +654,7 @@ _convert.toFloat(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| valor | _long_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -641,7 +664,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toFloat(arg0: _short_) : _float_
+#### _convert.toFloat(valor: _short_) : _float_
 ##### Descrição
 
 Converte o valor recebido para **float**
@@ -656,7 +679,7 @@ _convert.toFloat(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| valor | _short_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -670,7 +693,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toHEX(arg0: _byte[]_) : string
+#### _convert.toHEX(bytes: _byte[]_) : string
 ##### Descrição
 
 Converte os bytes em **hexadecimal** com letras maiúsculas.
@@ -679,7 +702,7 @@ Converte os bytes em **hexadecimal** com letras maiúsculas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| bytes | _byte[]_ | Bytes para serem convertidos. |
 
 ##### Retorno
 
@@ -693,7 +716,7 @@ Retorna os bytes recebidos em **hexadecimal** em minúsculas.
 
 ---
 
-#### _convert.toHTML(arg0: string) : string
+#### _convert.toHTML(conteúdo: string) : string
 ##### Descrição
 
 Converte os caracteres especiais no texto para garantir que são válidos em HTML.
@@ -709,7 +732,7 @@ _out.print(_convert.toHTML("€s Ação"))
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteúdo | string | Conteúdp para ser convertido. |
 
 ##### Retorno
 
@@ -723,7 +746,7 @@ Texto formatado com códificação dos caracteres especiais em HTML.
 
 ---
 
-#### _convert.toHex(arg0: _byte[]_) : string
+#### _convert.toHex(bytes: _byte[]_) : string
 ##### Descrição
 
 Converte os bytes em **hexadecimal** com letras minúsculas.
@@ -732,7 +755,7 @@ Converte os bytes em **hexadecimal** com letras minúsculas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| bytes | _byte[]_ | Bytes para serem convertidos. |
 
 ##### Retorno
 
@@ -746,7 +769,7 @@ Retorna os bytes recebidos em **hexadecimal** em minúsculas.
 
 ---
 
-#### _convert.toInt(arg0: _byte_) : _int_
+#### _convert.toInt(valor: _byte_) : _int_
 ##### Descrição
 
 Converte o valor recebido para **int**.
@@ -761,7 +784,7 @@ _convert.toInt(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte_ |   |
+| valor | _byte_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -771,7 +794,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### _convert.toInt(arg0: _double_) : _int_
+#### _convert.toInt(valor: _double_) : _int_
 ##### Descrição
 
 Converte o valor recebido para **int**.
@@ -786,7 +809,7 @@ _convert.toInt(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
+| valor | _double_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -796,7 +819,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### _convert.toInt(arg0: _float_) : _int_
+#### _convert.toInt(valor: _float_) : _int_
 ##### Descrição
 
 Converte o valor recebido para **int**.
@@ -811,7 +834,7 @@ _convert.toInt(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| valor | _float_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -821,7 +844,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### _convert.toInt(arg0: _long_) : _int_
+#### _convert.toInt(valor: _long_) : _int_
 ##### Descrição
 
 Converte o valor recebido para **int**.
@@ -836,7 +859,7 @@ _convert.toInt(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| valor | _long_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -846,7 +869,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### _convert.toInt(arg0: _short_) : _int_
+#### _convert.toInt(valor: _short_) : _int_
 ##### Descrição
 
 Converte o valor recebido para **int**.
@@ -861,7 +884,7 @@ _convert.toInt(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| valor | _short_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -875,7 +898,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### _convert.toJSON(arg0: string) : string
+#### _convert.toJSON(conteúdo: string) : string
 ##### Descrição
 
 Converte os caracteres especiais no texto para garantir que são válidos em JSON.
@@ -891,7 +914,7 @@ _out.print(_convert.toJSON("€s Ação"))
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteúdo | string | Conteúdo para ser convertido. |
 
 ##### Retorno
 
@@ -905,7 +928,7 @@ Texto formatado com códificação dos caracteres especiais em JSON.
 
 ---
 
-#### _convert.toLong(arg0: _byte_) : _long_
+#### _convert.toLong(valor: _byte_) : _long_
 ##### Descrição
 
 Converte o valor recebido para **long**.
@@ -920,7 +943,7 @@ _convert.toLong(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte_ |   |
+| valor | _byte_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -930,7 +953,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### _convert.toLong(arg0: _double_) : _long_
+#### _convert.toLong(valor: _double_) : _long_
 ##### Descrição
 
 Converte o valor recebido para **long**.
@@ -945,7 +968,7 @@ _convert.toLong(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
+| valor | _double_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -955,7 +978,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### _convert.toLong(arg0: _float_) : _long_
+#### _convert.toLong(valor: _float_) : _long_
 ##### Descrição
 
 Converte o valor recebido para **long**.
@@ -970,7 +993,7 @@ _convert.toLong(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| valor | _float_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -980,7 +1003,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### _convert.toLong(arg0: _int_) : _long_
+#### _convert.toLong(valor: _int_) : _long_
 ##### Descrição
 
 Converte o valor recebido para **long**.
@@ -995,7 +1018,7 @@ _convert.toLong(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| valor | _int_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -1005,7 +1028,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### _convert.toLong(arg0: _short_) : _long_
+#### _convert.toLong(valor: _short_) : _long_
 ##### Descrição
 
 Converte o valor recebido para **long**.
@@ -1020,7 +1043,7 @@ _convert.toLong(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| valor | _short_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -1034,7 +1057,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### _convert.toObject(arg0: _Object_) : _Object_
+#### _convert.toObject(objeto: _Object_) : _Object_
 ##### Descrição
 
 Converte o objecto recebido em um tipo de objeto genérico.
@@ -1050,7 +1073,7 @@ const objetoGenerico = _convert.toObject("Texto...")
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| objeto | _Object_ | Objeto para ser convertido. |
 
 ##### Retorno
 
@@ -1064,7 +1087,7 @@ Retorna como tipo de objeto genérico.
 
 ---
 
-#### _convert.toShort(arg0: _byte_) : _short_
+#### _convert.toShort(valor: _byte_) : _short_
 ##### Descrição
 
 Converte o valor recebido para **short**.
@@ -1079,7 +1102,7 @@ _convert.toShort(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte_ |   |
+| valor | _byte_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -1089,7 +1112,7 @@ Retorna o valor recebido em **short**.
 
 ---
 
-#### _convert.toShort(arg0: _int_) : _short_
+#### _convert.toShort(valor: _int_) : _short_
 ##### Descrição
 
 Converte o valor recebido para **short**.
@@ -1104,7 +1127,7 @@ _convert.toShort(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| valor | _int_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -1114,7 +1137,7 @@ Retorna o valor recebido em **short**.
 
 ---
 
-#### _convert.toShort(arg0: _long_) : _short_
+#### _convert.toShort(valor: _long_) : _short_
 ##### Descrição
 
 Converte o valor recebido para **short**.
@@ -1129,7 +1152,7 @@ _convert.toShort(3456)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| valor | _long_ | Valor para ser convertido. |
 
 ##### Retorno
 
@@ -1143,7 +1166,7 @@ Retorna o valor recebido em **short**.
 
 ---
 
-#### _convert.toThrowable(arg0: _Object_) : _Throwable_
+#### _convert.toThrowable(objeto: _Object_) : _Throwable_
 ##### Descrição
 
 Converte o objecto recebido em um objeto de erro do tipo Throwable.
@@ -1160,7 +1183,7 @@ _error.rise(comoThrowable)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| objeto | _Object_ | Objeto para ser convertido. |
 
 ##### Retorno
 

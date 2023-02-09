@@ -579,6 +579,27 @@ The horizontal alignment configured with the defined type.
 
 ---
 
+#### _xls.insertPicture(sheet: _HSSFSheet_, file: _[File](../../objects/File)_, anchor: _ClientAnchor_) : _Picture_
+##### Description
+
+Inserts an image associated with the anchor in a specific spreadsheet.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| sheet | _HSSFSheet_ | Spreadsheet that will be used to insert the image. |
+| file | _[File](../../objects/File)_ | Image file. |
+| anchor | _ClientAnchor_ | Anchor to associate the image. |
+
+##### Return
+
+( _Picture_ )
+
+The reference object of the inserted image.
+
+---
+
 #### _xls.insertPicture(sheet: _HSSFSheet_, storage: _Storage_, anchor: _ClientAnchor_) : _Picture_
 ##### Description
 
@@ -590,6 +611,47 @@ Inserts an image associated with the anchor in a specific spreadsheet.
 |---|---|---|
 | sheet | _HSSFSheet_ | Spreadsheet that will be used to insert the image. |
 | storage | _Storage_ | Storage reference associated with an image file. |
+| anchor | _ClientAnchor_ | Anchor to associate the image. |
+
+##### Return
+
+( _Picture_ )
+
+The reference object of the inserted image.
+
+---
+
+#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, linha: _int_, coluna: _int_) : _Picture_
+##### Description
+
+Insert the image into the specified cell.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| file | _[File](../../objects/File)_ | Image file. |
+| linha | _int_ | Line number. |
+| coluna | _int_ | Column number. |
+
+##### Return
+
+( _Picture_ )
+
+The reference object of the inserted image.
+
+---
+
+#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, anchor: _ClientAnchor_) : _Picture_
+##### Description
+
+Inserts an image associated with the anchor.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| file | _[File](../../objects/File)_ | Image file. |
 | anchor | _ClientAnchor_ | Anchor to associate the image. |
 
 ##### Return

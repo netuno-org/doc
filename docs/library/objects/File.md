@@ -4,7 +4,7 @@ title: File
 sidebar_label: File
 ---
 
-O objecto File é utilizado para interagir com ficheiros e pastas.
+O objeto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
@@ -13,6 +13,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### available() : _int_
+##### Description
+
+Returns the number of estimated bytes left to read a file
+
 ##### Return
 
 ( _int_ )
@@ -121,6 +125,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### bytes() : _byte[]_
+##### Description
+
+Returns the number of estimated bytes left to read a file
+
 ##### Return
 
 ( _byte[]_ )
@@ -132,12 +140,16 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### changeName(arg0: string) : _boolean_
+#### changeName(newName: string) : _boolean_
+##### Description
+
+Renames a file with the new name inserted
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| newName | string | New name to rename the file. |
 
 ##### Return
 
@@ -162,12 +174,16 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### copy(arg0: string) : _boolean_
+#### copy(destPath: string) : _boolean_
+##### Description
+
+Copies the file to the inserted path
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| destPath | string | Path where to copy the file/directory. |
 
 ##### Return
 
@@ -176,13 +192,17 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### copy(arg0: string, arg1: _boolean_) : _boolean_
+#### copy(destPath: string, override: _boolean_) : _boolean_
+##### Description
+
+Copies the file of the inserted path with override option if exists a file
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| destPath | string | Path where to copy the file/directory. |
+| override | _boolean_ | Override if exists a file already. |
 
 ##### Return
 
@@ -195,13 +215,17 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### copyFiles(arg0: string, arg1: string) : _boolean_
+#### copyFiles(destPath: string, extension: string) : _boolean_
+##### Description
+
+Copies the files by the inserted extension to the inserted path.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| destPath | string | Path where to copy the file/directory. |
+| extension | string | File extension. |
 
 ##### Return
 
@@ -215,6 +239,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### delete() : _boolean_
+##### Description
+
+Deletes the file of the inserted file
+
 ##### Return
 
 ( _boolean_ )
@@ -227,6 +255,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### deleteAll() : _boolean_
+##### Description
+
+Deletes a file/directory and recursive all the subs
+
 ##### Return
 
 ( _boolean_ )
@@ -235,6 +267,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### deleteAll(arg0: string) : _boolean_
+##### Description
+
+Deletes a file/directory by the file extension
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -253,6 +289,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### deleteFiles() : _boolean_
+##### Description
+
+Deletes a file/directory and recursive all the subs
+
 ##### Return
 
 ( _boolean_ )
@@ -260,12 +300,16 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### deleteFiles(arg0: string) : _boolean_
+#### deleteFiles(stringExtension: string) : _boolean_
+##### Description
+
+Deletes a file of a inserted extension and recursive all the subs
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| stringExtension | string | String extension of the file. |
 
 ##### Return
 
@@ -297,6 +341,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### exists() : _boolean_
+##### Description
+
+Returns a boolean result that verify if the inserted path exists
+
 ##### Return
 
 ( _boolean_ )
@@ -321,6 +369,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### fullPath() : string
+##### Description
+
+Allows to get the complete path of the file.
+
 ##### Return
 
 ( string )
@@ -333,6 +385,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### getBaseName() : string
+##### Description
+
+Returns the base name of the present file
+
 ##### Return
 
 ( string )
@@ -345,6 +401,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### getBytes() : _byte[]_
+##### Description
+
+Returns the number of estimated bytes left to read a file
+
 ##### Return
 
 ( _byte[]_ )
@@ -381,6 +441,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### getFullPath() : string
+##### Description
+
+Returns the full path until the present file
+
 ##### Return
 
 ( string )
@@ -393,6 +457,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### getInputStream() : _InputStream_
+##### Description
+
+Returns the number of estimated bytes
+
 ##### Return
 
 ( _InputStream_ )
@@ -405,6 +473,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### getName() : string
+##### Description
+
+Returns the name of a file
+
 ##### Return
 
 ( string )
@@ -412,12 +484,16 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### getName(arg0: string) : string
+#### getName(path: string) : string
+##### Description
+
+Returns the name of a file in the inserted path
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| path | string | Path to the file/directory. |
 
 ##### Return
 
@@ -443,6 +519,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### getPath() : string
+##### Description
+
+Returns the path
+
 ##### Return
 
 ( string )
@@ -466,13 +546,17 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### getSequenceName(arg0: _File_, arg1: string) : string
+#### getSequenceName(targetPath: _File_, fileName: string) : string
+##### Description
+
+Returns the name of the inserted file with a sequence number if the file already exists with the original name
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _File_ |   |
-| arg1 | string |   |
+| targetPath | _File_ | Path to the file/directory. |
+| fileName | string | Name of the file. |
 
 ##### Return
 
@@ -481,13 +565,17 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### getSequenceName(arg0: string, arg1: string) : string
+#### getSequenceName(targetPath: string, fileName: string) : string
+##### Description
+
+Returns the name of the inserted file with a sequence number if the file already exists with the original name
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| targetPath | string | Path to the file/directory. |
+| fileName | string | Name of the file. |
 
 ##### Return
 
@@ -543,6 +631,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### isDirectory() : _boolean_
+##### Description
+
+Returns a boolean result that verify if the inserted path is a directory
+
 ##### Return
 
 ( _boolean_ )
@@ -573,6 +665,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### isFile() : _boolean_
+##### Description
+
+Returns a boolean result that verify if the inserted path is a file
+
 ##### Return
 
 ( _boolean_ )
@@ -585,6 +681,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### isJail() : _boolean_
+##### Description
+
+Does a authentication if the file has his location limited to another folder
+
 ##### Return
 
 ( _boolean_ )
@@ -597,6 +697,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### lastModified() : _long_
+##### Description
+
+Returns the hour that the file of the inserted path was last modified
+
 ##### Return
 
 ( _long_ )
@@ -609,6 +713,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### list() : _List_
+##### Description
+
+Returns a list of all the files and directories on the inserted path
+
 ##### Return
 
 ( _List_ )
@@ -621,6 +729,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### mkdir() : _boolean_
+##### Description
+
+Creates a directory in the present path.
+
 ##### Return
 
 ( _boolean_ )
@@ -645,6 +757,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### name() : string
+##### Description
+
+Returns the name of a file
+
 ##### Return
 
 ( string )
@@ -681,10 +797,15 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### path() : string
+##### Description
+
+Returns the path of the file/directory
+
 ##### Return
 
 ( string )
 
+Returns a boolean verification of the existence of the file and tracks it folder location.
 
 ---
 
@@ -693,6 +814,10 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 ---
 
 #### physicalPath() : string
+##### Description
+
+Allows to get the path of the file.
+
 ##### Return
 
 ( string )
@@ -742,12 +867,16 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### renameTo(arg0: string) : _boolean_
+#### renameTo(destPath: string) : _boolean_
+##### Description
+
+Renames the file of the inserted file
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| destPath | string | Path to the file/directory. |
 
 ##### Return
 
@@ -760,12 +889,16 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### save(arg0: _Object_) : _void_
+#### save(path: _Object_) : _void_
+##### Description
+
+Saves the file in the inserted path
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| path | _Object_ | Path of the file. |
 
 ##### Return
 
@@ -774,12 +907,16 @@ O objecto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### save(arg0: string) : _void_
+#### save(path: string) : _void_
+##### Description
+
+Saves the file in the inserted path
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| path | string | Path where to save the file. |
 
 ##### Return
 

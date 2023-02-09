@@ -184,12 +184,12 @@ const outputService = _exec.service("other-service");
 
 ---
 
-#### _exec.asByte(arg0: _byte_) : _byte_
+#### _exec.asByte(arg0: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte_ |   |
+| arg0 | _int_ |   |
 
 ##### Return
 
@@ -436,11 +436,11 @@ const outputService = _exec.service("other-service");
 
 ---
 
-## asHtmlDecode
+## asHTMLDecode
 
 ---
 
-#### _exec.asHtmlDecode(arg0: string) : string
+#### _exec.asHTMLDecode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -454,11 +454,11 @@ const outputService = _exec.service("other-service");
 
 ---
 
-## asHtmlEncode
+## asHTMLEncode
 
 ---
 
-#### _exec.asHtmlEncode(arg0: string) : string
+#### _exec.asHTMLEncode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -571,6 +571,21 @@ const outputService = _exec.service("other-service");
 
 ---
 
+#### _exec.asList(arg0: _int_, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### _exec.asList(arg0: _int_, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -578,6 +593,22 @@ const outputService = _exec.service("other-service");
 |---|---|---|
 | arg0 | _int_ |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### _exec.asList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -600,6 +631,21 @@ const outputService = _exec.service("other-service");
 
 ---
 
+#### _exec.asList(arg0: string, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### _exec.asList(arg0: string, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -607,6 +653,22 @@ const outputService = _exec.service("other-service");
 |---|---|---|
 | arg0 | string |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### _exec.asList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -1077,6 +1139,54 @@ const outputService = _exec.service("other-service");
 
 ---
 
+## asUID
+
+---
+
+#### _exec.asUID(arg0: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _exec.asUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _exec.asUID(arg0: string, arg1: _UUID_) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _UUID_ |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
 ## asUUID
 
 ---
@@ -1087,6 +1197,21 @@ const outputService = _exec.service("other-service");
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _exec.asUUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
 
 ##### Return
 
@@ -1434,7 +1559,7 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.core(path: string) : _[Values](../../objects/Values)_
+#### _exec.core(path: string) : _ScriptResult_
 ##### Description
 
 Execution of scripts that are in the `server/core/` folder.
@@ -1453,12 +1578,12 @@ _exec.core("another-script-maybe-in-another-language");
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _ScriptResult_ )
 
 
 ---
 
-#### _exec.core(path: string, path: _boolean_) : _[Values](../../objects/Values)_
+#### _exec.core(path: string, path: _boolean_) : _ScriptResult_
 ##### Description
 
 Execution of scripts that are in the `server/core/` folder.
@@ -1478,7 +1603,7 @@ _exec.core("another-script-maybe-in-another-language");
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _ScriptResult_ )
 
 
 ---
@@ -1698,6 +1823,20 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
+#### _exec.fromJSON(arg0: _Response_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Response_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 ## gc
 
 ---
@@ -1868,12 +2007,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getByte(arg0: _byte_) : _byte_
+#### _exec.getByte(arg0: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte_ |   |
+| arg0 | _int_ |   |
 
 ##### Return
 
@@ -2158,11 +2297,11 @@ Original object converted to the type of the defined class.
 
 ---
 
-## getHtmlDecode
+## getHTMLDecode
 
 ---
 
-#### _exec.getHtmlDecode(arg0: string) : string
+#### _exec.getHTMLDecode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2176,11 +2315,11 @@ Original object converted to the type of the defined class.
 
 ---
 
-## getHtmlEncode
+## getHTMLEncode
 
 ---
 
-#### _exec.getHtmlEncode(arg0: string) : string
+#### _exec.getHTMLEncode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2319,6 +2458,21 @@ Original object converted to the type of the defined class.
 
 ---
 
+#### _exec.getList(arg0: _int_, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### _exec.getList(arg0: _int_, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -2326,6 +2480,22 @@ Original object converted to the type of the defined class.
 |---|---|---|
 | arg0 | _int_ |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### _exec.getList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -2348,6 +2518,21 @@ Original object converted to the type of the defined class.
 
 ---
 
+#### _exec.getList(arg0: string, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### _exec.getList(arg0: string, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -2355,6 +2540,22 @@ Original object converted to the type of the defined class.
 |---|---|---|
 | arg0 | string |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### _exec.getList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -2856,6 +3057,54 @@ Original object converted to the type of the defined class.
 
 ---
 
+## getUID
+
+---
+
+#### _exec.getUID(arg0: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _exec.getUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _exec.getUID(arg0: string, arg1: _UUID_) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _UUID_ |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
 ## getURLCharacterEncoding
 
 ---
@@ -2883,6 +3132,21 @@ Character encoding code.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _exec.getUUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
 
 ##### Return
 
@@ -3567,6 +3831,20 @@ Whether it is in read-only mode or not.
 
 ---
 
+#### _exec.of(arg0: _Object[]_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object[]_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 #### _exec.of(arg0: _Object_) : _Object_
 ##### Attributes
 
@@ -3577,6 +3855,70 @@ Whether it is in read-only mode or not.
 ##### Return
 
 ( _Object_ )
+
+
+---
+
+#### _exec.of(arg0: _List_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _List_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _exec.of(arg0: _Map_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Map_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## ofList
+
+---
+
+#### _exec.ofList(arg0: _Object_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## ofMap
+
+---
+
+#### _exec.ofMap(arg0: _Object_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -4024,7 +4366,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.service(path: string) : _[Values](../../objects/Values)_
+#### _exec.service(path: string) : _ScriptResult_
 ##### Description
 
 Execution of scripts that are in the `server/services/` folder.
@@ -4043,12 +4385,12 @@ _exec.service("another-script-maybe-in-another-language");
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _ScriptResult_ )
 
 
 ---
 
-#### _exec.service(path: string, preserveContext: _boolean_) : _[Values](../../objects/Values)_
+#### _exec.service(path: string, preserveContext: _boolean_) : _ScriptResult_
 ##### Description
 
 Execution of scripts that are in the `server/services/` folder.
@@ -4068,7 +4410,7 @@ _exec.service("another-script-maybe-in-another-language");
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _ScriptResult_ )
 
 
 ---
@@ -4656,6 +4998,42 @@ _out.println('Not run this line.');
 
 ---
 
+## toByteArray
+
+---
+
+#### _exec.toByteArray() : _byte[]_
+##### Return
+
+( _byte[]_ )
+
+
+---
+
+## toDoubleArray
+
+---
+
+#### _exec.toDoubleArray() : _double[]_
+##### Return
+
+( _double[]_ )
+
+
+---
+
+## toFloatArray
+
+---
+
+#### _exec.toFloatArray() : _float[]_
+##### Return
+
+( _float[]_ )
+
+
+---
+
 ## toFormMap
 
 ---
@@ -4693,6 +5071,18 @@ _out.println('Not run this line.');
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
+
+
+---
+
+## toIntArray
+
+---
+
+#### _exec.toIntArray() : _int[]_
+##### Return
+
+( _int[]_ )
 
 
 ---
@@ -4863,6 +5253,32 @@ _out.println('Not run this line.');
 
 ---
 
+#### _exec.toList(arg0: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+## toLongArray
+
+---
+
+#### _exec.toLongArray() : _long[]_
+##### Return
+
+( _long[]_ )
+
+
+---
+
 ## toMap
 
 ---
@@ -4883,6 +5299,30 @@ _out.println('Not run this line.');
 ##### Return
 
 ( string )
+
+
+---
+
+## toShortArray
+
+---
+
+#### _exec.toShortArray() : _short[]_
+##### Return
+
+( _short[]_ )
+
+
+---
+
+## toStringArray
+
+---
+
+#### _exec.toStringArray() : _String[]_
+##### Return
+
+( _String[]_ )
 
 
 ---

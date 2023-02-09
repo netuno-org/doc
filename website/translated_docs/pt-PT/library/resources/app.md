@@ -53,7 +53,7 @@ _out.println(`<p>Caminho completo do logo: ${logo.fullPath()}</p>`);
 _app.file("public/data.json").output().writeAndClose(
     _val.map()
         .set("resultado", true)
-        .toJSON(4)
+        .toJSON(2)
 )
 // Carrega o ficheiro JSON dentro da app em public/data.json:
 const jsonFicheiro = _app.file("public/data.json")
@@ -83,17 +83,22 @@ Retorna o objeto de ficheiro obtido através do caminho.
 
 ---
 
-#### _app.folder(arg0: string) : _[File](../../objects/File)_
+#### _app.folder(caminho: string) : _[File](../../objects/File)_
+##### Descrição
+
+Procura os ficheiros presentes na pasta do caminho inserido.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminho | string | Caminho do ficheiro. |
 
 ##### Retorno
 
 ( _[File](../../objects/File)_ )
 
+Retorna os os ficheiros presentes na pasta do caminho inserido.
 
 ---
 
@@ -101,17 +106,22 @@ Retorna o objeto de ficheiro obtido através do caminho.
 
 ---
 
-#### _app.isFile(arg0: string) : _boolean_
+#### _app.isFile(caminho: string) : _boolean_
+##### Descrição
+
+Verifica se um determinado ficheiro existe.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminho | string | Caminho do ficheiro. |
 
 ##### Retorno
 
 ( _boolean_ )
 
+Retorna uma verificação boolean da existência do ficheiro e localiza-o.
 
 ---
 
@@ -119,17 +129,22 @@ Retorna o objeto de ficheiro obtido através do caminho.
 
 ---
 
-#### _app.isFolder(arg0: string) : _boolean_
+#### _app.isFolder(caminho: string) : _boolean_
+##### Descrição
+
+Verifica se uma determinada pasta existe no caminho inserido.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminho | string | Caminho da pasta. |
 
 ##### Retorno
 
 ( _boolean_ )
 
+Retorna uma verificação boolean da existência do ficheiro e localiza a pasta onde se encontra.
 
 ---
 
@@ -341,6 +356,54 @@ const urlDaApp = _app.url();
 ( string )
 
 Retorna a URL da aplicação.
+
+---
+
+#### _app.url(arg0: string) : string
+##### Descrição
+
+Obtém o prefixo da URL definido na configuração, como um prefixo de URL customizado.
+
+##### Como Usar
+
+```javascript
+const urlCustom = _app.url('nome-da-minha-url-configurada');
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+
+##### Retorno
+
+( string )
+
+Retorna o prefixo da localização definida na configuração.
+
+---
+
+## urlAdmin
+
+---
+
+#### _app.urlAdmin() : string
+##### Descrição
+
+Obtém o url da aplicação para a interface de administração.
+
+##### Como Usar
+
+```javascript
+const urlAdmin = _app.urlAdmin();
+```
+
+##### Retorno
+
+( string )
+
+Retorna o prefixo da localização de administração.
 
 ---
 

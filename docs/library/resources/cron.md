@@ -199,7 +199,7 @@ Removes a service execution schedule.
 ##### How To Use
 
 ```javascript
-_cron.delete("pricesUpdate")
+_cron.remove("pricesUpdate")
 
 ```
 

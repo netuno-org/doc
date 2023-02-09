@@ -137,6 +137,25 @@ The new values object starts with the data from the passed object.
 
 ---
 
+#### _val.init(obj: _Object_) : _[Values](../../objects/Values)_
+##### Description
+
+Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| obj | _Object_ | Object to load the newly created values object. |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+The new values object starts with the data from the passed object.
+
+---
+
 #### _val.init(obj: _Map_) : _[Values](../../objects/Values)_
 ##### Description
 

@@ -186,12 +186,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### asByte(arg0: _byte_) : _byte_
+#### asByte(arg0: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte_ |   |
+| arg0 | _int_ |   |
 
 ##### Return
 
@@ -438,11 +438,11 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-## asHtmlDecode
+## asHTMLDecode
 
 ---
 
-#### asHtmlDecode(arg0: string) : string
+#### asHTMLDecode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -456,11 +456,11 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-## asHtmlEncode
+## asHTMLEncode
 
 ---
 
-#### asHtmlEncode(arg0: string) : string
+#### asHTMLEncode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -573,6 +573,21 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
+#### asList(arg0: _int_, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### asList(arg0: _int_, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -580,6 +595,22 @@ if (_dataSchema.isMethod('POST')) {
 |---|---|---|
 | arg0 | _int_ |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### asList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -602,6 +633,21 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
+#### asList(arg0: string, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### asList(arg0: string, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -609,6 +655,22 @@ if (_dataSchema.isMethod('POST')) {
 |---|---|---|
 | arg0 | string |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### asList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -1079,6 +1141,54 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
+## asUID
+
+---
+
+#### asUID(arg0: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### asUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### asUID(arg0: string, arg1: _UUID_) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _UUID_ |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
 ## asUUID
 
 ---
@@ -1089,6 +1199,21 @@ if (_dataSchema.isMethod('POST')) {
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### asUUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
 
 ##### Return
 
@@ -1557,6 +1682,20 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
+#### fromJSON(arg0: _Response_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Response_ |   |
+
+##### Return
+
+( _Values_ )
+
+
+---
+
 ## get
 
 ---
@@ -1704,12 +1843,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getByte(arg0: _byte_) : _byte_
+#### getByte(arg0: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte_ |   |
+| arg0 | _int_ |   |
 
 ##### Return
 
@@ -1994,11 +2133,11 @@ Original object converted to the type of the defined class.
 
 ---
 
-## getHtmlDecode
+## getHTMLDecode
 
 ---
 
-#### getHtmlDecode(arg0: string) : string
+#### getHTMLDecode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2012,11 +2151,11 @@ Original object converted to the type of the defined class.
 
 ---
 
-## getHtmlEncode
+## getHTMLEncode
 
 ---
 
-#### getHtmlEncode(arg0: string) : string
+#### getHTMLEncode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2155,6 +2294,21 @@ Original object converted to the type of the defined class.
 
 ---
 
+#### getList(arg0: _int_, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### getList(arg0: _int_, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -2162,6 +2316,22 @@ Original object converted to the type of the defined class.
 |---|---|---|
 | arg0 | _int_ |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### getList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -2184,6 +2354,21 @@ Original object converted to the type of the defined class.
 
 ---
 
+#### getList(arg0: string, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### getList(arg0: string, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -2191,6 +2376,22 @@ Original object converted to the type of the defined class.
 |---|---|---|
 | arg0 | string |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### getList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -2728,6 +2929,54 @@ Original object converted to the type of the defined class.
 
 ---
 
+## getUID
+
+---
+
+#### getUID(arg0: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### getUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### getUID(arg0: string, arg1: _UUID_) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _UUID_ |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
 ## getURLCharacterEncoding
 
 ---
@@ -2755,6 +3004,21 @@ Character encoding code.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### getUUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
 
 ##### Return
 
@@ -3533,6 +3797,20 @@ Whether it is in read-only mode or not.
 
 ---
 
+#### of(arg0: _Object[]_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object[]_ |   |
+
+##### Return
+
+( _Values_ )
+
+
+---
+
 #### of(arg0: _Object_) : _Object_
 ##### Attributes
 
@@ -3543,6 +3821,70 @@ Whether it is in read-only mode or not.
 ##### Return
 
 ( _Object_ )
+
+
+---
+
+#### of(arg0: _List_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _List_ |   |
+
+##### Return
+
+( _Values_ )
+
+
+---
+
+#### of(arg0: _Map_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Map_ |   |
+
+##### Return
+
+( _Values_ )
+
+
+---
+
+## ofList
+
+---
+
+#### ofList(arg0: _Object_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object_ |   |
+
+##### Return
+
+( _Values_ )
+
+
+---
+
+## ofMap
+
+---
+
+#### ofMap(arg0: _Object_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object_ |   |
+
+##### Return
+
+( _Values_ )
 
 
 ---
@@ -4683,6 +5025,42 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
+## toByteArray
+
+---
+
+#### toByteArray() : _byte[]_
+##### Return
+
+( _byte[]_ )
+
+
+---
+
+## toDoubleArray
+
+---
+
+#### toDoubleArray() : _double[]_
+##### Return
+
+( _double[]_ )
+
+
+---
+
+## toFloatArray
+
+---
+
+#### toFloatArray() : _float[]_
+##### Return
+
+( _float[]_ )
+
+
+---
+
 ## toFormMap
 
 ---
@@ -4720,6 +5098,18 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 ##### Return
 
 ( _Values_ )
+
+
+---
+
+## toIntArray
+
+---
+
+#### toIntArray() : _int[]_
+##### Return
+
+( _int[]_ )
 
 
 ---
@@ -4890,6 +5280,32 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
+#### toList(arg0: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+## toLongArray
+
+---
+
+#### toLongArray() : _long[]_
+##### Return
+
+( _long[]_ )
+
+
+---
+
 ## toMap
 
 ---
@@ -4910,6 +5326,30 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 ##### Return
 
 ( string )
+
+
+---
+
+## toShortArray
+
+---
+
+#### toShortArray() : _short[]_
+##### Return
+
+( _short[]_ )
+
+
+---
+
+## toStringArray
+
+---
+
+#### toStringArray() : _String[]_
+##### Return
+
+( _String[]_ )
 
 
 ---

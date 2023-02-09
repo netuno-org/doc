@@ -44,6 +44,37 @@ Object that contains the details of the response obtained through the remote con
 
 ---
 
+## dataSent
+
+---
+
+#### dataSent() : _Values_
+##### Description
+
+Gets the data that was sent over the remote connection.
+
+##### Return
+
+( _Values_ )
+
+All data that was sent.
+
+---
+
+#### dataSent(arg0: _Values_) : _Response_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Return
+
+( _Response_ )
+
+
+---
+
 ## error
 
 ---
@@ -64,6 +95,37 @@ Object that contains the details of the response obtained through the remote con
 ##### Return
 
 ( _File_ )
+
+
+---
+
+## formDataSent
+
+---
+
+#### formDataSent() : _Values_
+##### Description
+
+Gets the data that was sent over the remote connection.
+
+##### Return
+
+( _Values_ )
+
+All data that was sent.
+
+---
+
+#### formDataSent(arg0: _Values_) : _Response_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Return
+
+( _Response_ )
 
 
 ---
@@ -104,6 +166,18 @@ Object that contains the details of the response obtained through the remote con
 
 ---
 
+## getDataSent
+
+---
+
+#### getDataSent() : _Values_
+##### Return
+
+( _Values_ )
+
+
+---
+
 ## getError
 
 ---
@@ -124,6 +198,18 @@ Object that contains the details of the response obtained through the remote con
 ##### Return
 
 ( _File_ )
+
+
+---
+
+## getFormDataSent
+
+---
+
+#### getFormDataSent() : _Values_
+##### Return
+
+( _Values_ )
 
 
 ---
@@ -166,6 +252,30 @@ Gets the code of the HTTP method used for the remote connection.
 ( string )
 
 HTTP method code that was submitted.
+
+---
+
+## getQSSent
+
+---
+
+#### getQSSent() : _Values_
+##### Return
+
+( _Values_ )
+
+
+---
+
+## getQueryStringSent
+
+---
+
+#### getQueryStringSent() : _Values_
+##### Return
+
+( _Values_ )
+
 
 ---
 
@@ -325,6 +435,68 @@ Remote connection submission response.
 
 ---
 
+## qsSent
+
+---
+
+#### qsSent() : _Values_
+##### Description
+
+Gets the parameters of the query string that was sent on the remote connection.
+
+##### Return
+
+( _Values_ )
+
+All query string parameters that were sent.
+
+---
+
+#### qsSent(arg0: _Values_) : _Response_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Return
+
+( _Response_ )
+
+
+---
+
+## queryStringSent
+
+---
+
+#### queryStringSent() : _Values_
+##### Description
+
+Gets the parameters of the query string that was sent on the remote connection.
+
+##### Return
+
+( _Values_ )
+
+All query string parameters that were sent.
+
+---
+
+#### queryStringSent(arg0: _Values_) : _Response_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Return
+
+( _Response_ )
+
+
+---
+
 ## setBytes
 
 ---
@@ -361,6 +533,24 @@ Remote connection submission response.
 
 ---
 
+## setDataSent
+
+---
+
+#### setDataSent(arg0: _Values_) : _Response_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Return
+
+( _Response_ )
+
+
+---
+
 ## setError
 
 ---
@@ -375,6 +565,24 @@ Remote connection submission response.
 ##### Return
 
 ( _RemoteResponse_ )
+
+
+---
+
+## setFormDataSent
+
+---
+
+#### setFormDataSent(arg0: _Values_) : _Response_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Return
+
+( _Response_ )
 
 
 ---
@@ -417,6 +625,42 @@ Defines the HTTP method code that was used for the remote connection.
 ( _RemoteResponse_ )
 
 Remote connection submission response.
+
+---
+
+## setQSSent
+
+---
+
+#### setQSSent(arg0: _Values_) : _Response_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Return
+
+( _Response_ )
+
+
+---
+
+## setQueryStringSent
+
+---
+
+#### setQueryStringSent(arg0: _Values_) : _Response_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Values_ |   |
+
+##### Return
+
+( _Response_ )
+
 
 ---
 

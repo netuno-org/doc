@@ -16,16 +16,38 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-## createError
+## create
 
 ---
 
-#### _error.createError(arg0: string) : _Error_
+#### _error.create(arg0: string) : _ErrorException_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
+
+##### Retorno
+
+( _ErrorException_ )
+
+
+---
+
+## createError
+
+---
+
+#### _error.createError(mensagem: string) : _Error_
+##### Descrição
+
+Cria um erro com uma mensagem de descrição.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| mensagem | string | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -38,12 +60,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.createException(arg0: string) : _Exception_
+#### _error.createException(mensagem: string) : _Exception_
+##### Descrição
+
+Cria uma exceção com uma mensagem de descrição.".
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| mensagem | string | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -56,12 +82,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.createThrowable(arg0: string) : _Throwable_
+#### _error.createThrowable(mensagem: string) : _Throwable_
+##### Descrição
+
+Cria um throwable com uma mensagem de descrição.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| mensagem | string | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -75,6 +105,10 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 ---
 
 #### _error.data() : _[Values](../../objects/Values)_
+##### Descrição
+
+Cria uma nova classe Values com os valores que originaram o erro.
+
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -82,12 +116,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.data(arg0: _[Values](../../objects/Values)_) : _Error_
+#### _error.data(return: _[Values](../../objects/Values)_) : _Error_
+##### Descrição
+
+Cria uma nova classe Values que originaram o erro.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| return | _[Values](../../objects/Values)_ | Valores. |
 
 ##### Retorno
 
@@ -100,12 +138,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.debug(arg0: string) : _void_
+#### _error.debug(mensagem: string) : _void_
+##### Descrição
+
+Retorna uma exceção e imprime uma mensagem com a descrição da excecção e a seu objeto.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| mensagem | string | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -114,13 +156,17 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.debug(arg0: string, arg1: _Object_) : _void_
+#### _error.debug(mensagem: string, auxiliar: _Object_) : _void_
+##### Descrição
+
+Imprime uma mensagem com a descrição do debug e a sua causa.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| mensagem | string | Mensagem que será apresentada em log. |
+| auxiliar | _Object_ | Throwable alternativo para incluir na mensagem de debug. |
 
 ##### Retorno
 
@@ -129,12 +175,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.debug(arg0: string, arg1: _Throwable_) : _void_
+#### _error.debug(messagem: string, arg1: _Throwable_) : _void_
+##### Descrição
+
+Imprime uma mensagem com a descrição do debug.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| messagem | string | Mensagem que será apresentada em log. |
 | arg1 | _Throwable_ |   |
 
 ##### Retorno
@@ -148,12 +198,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.error(arg0: string) : _void_
+#### _error.error(mensagem: string) : _void_
+##### Descrição
+
+Imprime uma mensagem de erro.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| mensagem | string | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -162,13 +216,17 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.error(arg0: string, arg1: _Object_) : _void_
+#### _error.error(mensagem: string, auxiliar: _Object_) : _void_
+##### Descrição
+
+Imprime uma mensagem com a descrição do erro e a sua causa.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| mensagem | string | Mensagem que será apresentada em log. |
+| auxiliar | _Object_ | Throwable alternativo para incluir na mensagem de erro. |
 
 ##### Retorno
 
@@ -177,13 +235,17 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.error(arg0: string, arg1: _Throwable_) : _void_
+#### _error.error(mensagem: string, auxiliar: _Throwable_) : _void_
+##### Descrição
+
+Imprime uma mensagem com a um descrição de um erro e o seu objeto.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Throwable_ |   |
+| mensagem | string | Mensagem que será apresentada em log. |
+| auxiliar | _Throwable_ | Throwable alternativo para incluir na mensagem de erro. |
 
 ##### Retorno
 
@@ -196,12 +258,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.fatal(arg0: string) : _void_
+#### _error.fatal(mensagem: string) : _void_
+##### Descrição
+
+Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netuno.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| mensagem | string | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -210,13 +276,17 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.fatal(arg0: string, arg1: _Object_) : _void_
+#### _error.fatal(mensagem: string, auxiliar: _Object_) : _void_
+##### Descrição
+
+Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netuno.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| mensagem | string | Mensagem que será apresentada em log. |
+| auxiliar | _Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -225,13 +295,17 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.fatal(arg0: string, arg1: _Throwable_) : _void_
+#### _error.fatal(mensagem: string, auxiliar: _Throwable_) : _void_
+##### Descrição
+
+Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netuno.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Throwable_ |   |
+| mensagem | string | Mensagem que será apresentada em log. |
+| auxiliar | _Throwable_ | Throwable alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -244,12 +318,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.info(arg0: string) : _void_
+#### _error.info(mensagem: string) : _void_
+##### Descrição
+
+Imprime uma mensagem com a descrição do debug e a seu objeto.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| mensagem | string | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -258,13 +336,17 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.info(arg0: string, arg1: _Object_) : _void_
+#### _error.info(mensagem: string, auxiliar: _Object_) : _void_
+##### Descrição
+
+Imprime uma mensagem de informação e uma throwable.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| mensagem | string | Mensagem que será apresentada em log. |
+| auxiliar | _Object_ | Throwable alternativo para incluir na mensagem de informação. |
 
 ##### Retorno
 
@@ -273,12 +355,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.info(arg0: string, arg1: _Throwable_) : _void_
+#### _error.info(mensagem: string, arg1: _Throwable_) : _void_
+##### Descrição
+
+Imprime uma mensagem de informação.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| mensagem | string | Mensagem que será apresentada em log. |
 | arg1 | _Throwable_ |   |
 
 ##### Retorno
@@ -382,12 +468,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.trace(arg0: string) : _void_
+#### _error.trace(messagem: string) : _void_
+##### Descrição
+
+Retorna uma exceção e uma lista dos métodos que a causaram com uma mensagem de descrição.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| messagem | string | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -396,13 +486,17 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.trace(arg0: string, arg1: _Object_) : _void_
+#### _error.trace(mensagem: string, auxiliar: _Object_) : _void_
+##### Descrição
+
+Retorna um objeto e uma lista dos métodos que a causaram com uma mensagem de descrição.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| mensagem | string | Mensagem que será apresentada em log. |
+| auxiliar | _Object_ | Object alternativo para incluir na mensagem de erro. |
 
 ##### Retorno
 
@@ -411,12 +505,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.trace(arg0: string, arg1: _Throwable_) : _void_
+#### _error.trace(mensagem: string, arg1: _Throwable_) : _void_
+##### Descrição
+
+Retorna um throwable e uma lista dos métodos que a causaram com uma mensagem de descrição.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| mensagem | string | Mensagem que será apresentada em log. |
 | arg1 | _Throwable_ |   |
 
 ##### Retorno
@@ -430,12 +528,16 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.warn(arg0: string) : _void_
+#### _error.warn(mensagem: string) : _void_
+##### Descrição
+
+Imprime uma mensagem de aviso.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| mensagem | string | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -444,13 +546,17 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.warn(arg0: string, arg1: _Object_) : _void_
+#### _error.warn(mensagem: string, auxiliar: _Object_) : _void_
+##### Descrição
+
+Imprime uma mensagem com a um descrição de um aviso e o seu objeto.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| mensagem | string | Mensagem que será apresentada em log. |
+| auxiliar | _Object_ | Object alternativo para incluir na mensagem de aviso. |
 
 ##### Retorno
 
@@ -459,13 +565,17 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.warn(arg0: string, arg1: _Throwable_) : _void_
+#### _error.warn(mensagem: string, auxiliar: _Throwable_) : _void_
+##### Descrição
+
+Imprime uma mensagem com a um descrição de um aviso e a sua throwable.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Throwable_ |   |
+| mensagem | string | Mensagem que será apresentada em log. |
+| auxiliar | _Throwable_ | Throwable alternativo para incluir na mensagem de aviso. |
 
 ##### Retorno
 

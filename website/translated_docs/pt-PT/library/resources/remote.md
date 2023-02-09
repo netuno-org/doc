@@ -428,6 +428,18 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
+## getFormData
+
+---
+
+#### _remote.getFormData() : _[Values](../../objects/Values)_
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 ## getHeader
 
 ---
@@ -445,6 +457,18 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 ---
 
 #### _remote.getQS() : _[Values](../../objects/Values)_
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## getQueryString
+
+---
+
+#### _remote.getQueryString() : _[Values](../../objects/Values)_
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -1378,6 +1402,24 @@ A instância atual do Remote.
 
 ---
 
+## setFormData
+
+---
+
+#### _remote.setFormData(arg0: _[Values](../../objects/Values)_) : _Remote_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Retorno
+
+( _Remote_ )
+
+
+---
+
 ## setHeader
 
 ---
@@ -1421,6 +1463,24 @@ Define a parametrização de dados da query string, ou seja, os parâmetros com 
 ( _Remote_ )
 
 A instância atual do Remote.
+
+---
+
+## setQueryString
+
+---
+
+#### _remote.setQueryString(arg0: _[Values](../../objects/Values)_) : _Remote_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Retorno
+
+( _Remote_ )
+
 
 ---
 

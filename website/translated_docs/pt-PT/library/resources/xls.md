@@ -579,6 +579,27 @@ O alinhamento horizontal configurado com o tipo definido.
 
 ---
 
+#### _xls.insertPicture(folhaCalculos: _HSSFSheet_, file: _[File](../../objects/File)_, ancora: _ClientAnchor_) : _Picture_
+##### Descrição
+
+Insere uma imagem associada à âncora em uma folha de cálculos específica.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| folhaCalculos | _HSSFSheet_ | Folha de cálculos que será utilizada para inserir a imagem. |
+| file | _[File](../../objects/File)_ | Ficheiro de imagem. |
+| ancora | _ClientAnchor_ | Âncora para associar a imagem. |
+
+##### Retorno
+
+( _Picture_ )
+
+O objeto de referência da imagem inserida.
+
+---
+
 #### _xls.insertPicture(folhaCalculos: _HSSFSheet_, storage: _Storage_, ancora: _ClientAnchor_) : _Picture_
 ##### Descrição
 
@@ -590,6 +611,47 @@ Insere uma imagem associada à âncora em uma folha de cálculos específica.
 |---|---|---|
 | folhaCalculos | _HSSFSheet_ | Folha de cálculos que será utilizada para inserir a imagem. |
 | storage | _Storage_ | Referência do storage associado a um ficheiro de imagem. |
+| ancora | _ClientAnchor_ | Âncora para associar a imagem. |
+
+##### Retorno
+
+( _Picture_ )
+
+O objeto de referência da imagem inserida.
+
+---
+
+#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, linha: _int_, coluna: _int_) : _Picture_
+##### Descrição
+
+Insere a imagem na célula específicada.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| file | _[File](../../objects/File)_ | Ficheiro de imagem. |
+| linha | _int_ | Número da linha. |
+| coluna | _int_ | Número da coluna. |
+
+##### Retorno
+
+( _Picture_ )
+
+O objeto de referência da imagem inserida.
+
+---
+
+#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, ancora: _ClientAnchor_) : _Picture_
+##### Descrição
+
+Insere uma imagem associada à âncora.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| file | _[File](../../objects/File)_ | Ficheiro de imagem. |
 | ancora | _ClientAnchor_ | Âncora para associar a imagem. |
 
 ##### Retorno

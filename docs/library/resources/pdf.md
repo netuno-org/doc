@@ -14,38 +14,53 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 ---
 
 #### _pdf.areaBreak() : _AreaBreak_
+##### Description
+
+Creates an AreaBreak that terminates a previous area type.
+
 ##### Return
 
 ( _AreaBreak_ )
 
+Terminates the previous area and returns a new one.
 
 ---
 
-#### _pdf.areaBreak(arg0: _PageSize_) : _AreaBreak_
+#### _pdf.areaBreak(pageSize: _PageSize_) : _AreaBreak_
+##### Description
+
+Creates an AreaBreak that terminates a previous area type.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _PageSize_ |   |
+| pageSize | _PageSize_ | Size of the new content. |
 
 ##### Return
 
 ( _AreaBreak_ )
 
+Terminates the previous area and returns a new one.
 
 ---
 
-#### _pdf.areaBreak(arg0: string) : _AreaBreak_
+#### _pdf.areaBreak(type: string) : _AreaBreak_
+##### Description
+
+Creates an AreaBreak that terminates a previous area type.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| type | string | Type of the new area. |
 
 ##### Return
 
 ( _AreaBreak_ )
 
+Terminates the previous area and returns a new one.
 
 ---
 
@@ -53,407 +68,532 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 
 ---
 
-#### _pdf.border(arg0: string) : _Border_
+#### _pdf.border(border: string) : _Border_
+##### Description
+
+Creates a border type.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| border | string | Border type. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border width of the type inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _double_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _double_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _double_ | Border width. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _double_, arg3: _double_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _double_, arg3: _double_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _double_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _double_, arg3: _float_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _double_, arg3: _float_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _double_ | Border width. |
 | arg3 | _float_ |   |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _double_, arg3: _int_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _double_, arg3: _int_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _double_ | Border width. |
 | arg3 | _int_ |   |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _float_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _float_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _float_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _float_ | Border width. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _float_, arg3: _double_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _float_, arg3: _double_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _float_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _float_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _float_, arg3: _float_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _float_, opacity: _float_) : _Border_
+##### Description
+
+Creates a customized border with type, color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _float_ |   |
-| arg3 | _float_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _float_ | Border width. |
+| opacity | _float_ | Border opacity. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns the created customized border.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _float_, arg3: _int_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _float_, opacity: _int_) : _Border_
+##### Description
+
+Creates a border type, color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _float_ |   |
-| arg3 | _int_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _float_ | Border width. |
+| opacity | _int_ | Border opacity. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, color, width and opacity inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _int_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _int_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _int_ | Border width. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _int_, arg3: _double_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _int_, arg3: _double_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _int_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _int_, arg3: _float_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _int_, arg3: _float_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _int_ | Border width. |
 | arg3 | _float_ |   |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _Color_, arg2: _int_, arg3: _int_) : _Border_
+#### _pdf.border(border: string, color: _Color_, width: _int_, arg3: _int_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _int_ | Border width. |
 | arg3 | _int_ |   |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _double_) : _Border_
+#### _pdf.border(border: string, width: _double_) : _Border_
+##### Description
+
+Creates a border type with a inserted width.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| border | string | Border type. |
+| width | _double_ | Border width. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border width of the type inserted,coloured black and the width inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _double_, arg2: _double_) : _Border_
+#### _pdf.border(border: string, width: _double_, opacity: _double_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| width | _double_ | Border width. |
+| opacity | _double_ | Border opacity. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _double_, arg2: _float_) : _Border_
+#### _pdf.border(border: string, width: _double_, opacity: _float_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
-| arg2 | _float_ |   |
+| border | string | Border type. |
+| width | _double_ | Border width. |
+| opacity | _float_ | Border opacity. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _double_, arg2: _int_) : _Border_
+#### _pdf.border(border: string, width: _double_, opacity: _int_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| width | _double_ | Border width. |
+| opacity | _int_ | Border opacity. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _float_) : _Border_
+#### _pdf.border(border: string, width: _float_) : _Border_
+##### Description
+
+Creates a border type with a inserted width.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| border | string | Border type. |
+| width | _float_ | Border width. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border width of the type inserted,coloured black and the width inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _float_, arg2: _double_) : _Border_
+#### _pdf.border(border: string, width: _float_, opacity: _double_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| width | _float_ | Border width. |
+| opacity | _double_ | Border opacity. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _float_, arg2: _float_) : _Border_
+#### _pdf.border(border: string, width: _float_, opacity: _float_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
-| arg2 | _float_ |   |
+| border | string | Border type. |
+| width | _float_ | Border width. |
+| opacity | _float_ | Border opacity. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _float_, arg2: _int_) : _Border_
+#### _pdf.border(border: string, width: _float_, opacity: _int_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| width | _float_ | Border width. |
+| opacity | _int_ | Border opacity. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _int_) : _Border_
+#### _pdf.border(border: string, width: _int_) : _Border_
+##### Description
+
+Creates a border type with a inserted width.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| border | string | Border type. |
+| width | _int_ | Border width. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border width of the type inserted,coloured black and the width inserted.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _int_, arg2: _double_) : _Border_
+#### _pdf.border(border: string, width: _int_, opacity: _double_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| width | _int_ | Border width. |
+| opacity | _double_ | Border opacity. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _int_, arg2: _float_) : _Border_
+#### _pdf.border(border: string, width: _int_, opacity: _float_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
-| arg2 | _float_ |   |
+| border | string | Border type. |
+| width | _int_ | Border width. |
+| opacity | _float_ | Border opacity. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(arg0: string, arg1: _int_, arg2: _int_) : _Border_
+#### _pdf.border(border: string, width: _int_, opacity: _int_) : _Border_
+##### Description
+
+Creates a border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| width | _int_ | Border width. |
+| opacity | _int_ | Border opacity. |
 
 ##### Return
 
 ( _Border_ )
 
+Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
@@ -461,407 +601,532 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 
 ---
 
-#### _pdf.border3D(arg0: string) : _Border3D_
+#### _pdf.border3D(border: string) : _Border3D_
+##### Description
+
+Creates a 3D border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| border | string | Border type. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _double_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _double_) : _Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _double_ | Border width. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _double_, arg3: _double_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _double_, arg3: _double_) : _Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _double_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _double_, arg3: _float_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _double_, arg3: _float_) : _Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _double_ | Border width. |
 | arg3 | _float_ |   |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _double_, arg3: _int_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _double_, arg3: _int_) : _Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _double_ | Border width. |
 | arg3 | _int_ |   |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _float_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _float_) : _Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _float_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _float_ | Border width. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _float_, arg3: _double_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _float_, arg3: _double_) : _Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _float_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _float_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _float_, arg3: _float_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _float_, opacity: _float_) : _Border3D_
+##### Description
+
+Creates a customized 3D border with type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _float_ |   |
-| arg3 | _float_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _float_ | Border width. |
+| opacity | _float_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns the created customized 3D border.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _float_, arg3: _int_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _float_, opacity: _int_) : _Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _float_ |   |
-| arg3 | _int_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _float_ | Border width. |
+| opacity | _int_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type, color, width and opacity inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _int_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _int_) : _Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _int_ | Border width. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _int_, arg3: _double_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _int_, arg3: _double_) : _Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _int_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _int_, arg3: _float_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _int_, arg3: _float_) : _Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _int_ | Border width. |
 | arg3 | _float_ |   |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _Color_, arg2: _int_, arg3: _int_) : _Border3D_
+#### _pdf.border3D(border: string, color: _Color_, width: _int_, opacity: _int_) : _Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _int_ |   |
-| arg3 | _int_ |   |
+| border | string | Border type. |
+| color | _Color_ | Border color. |
+| width | _int_ | Border width. |
+| opacity | _int_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type,color,width and opacity inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _double_) : _Border3D_
+#### _pdf.border3D(border: string, width: _double_) : _Border3D_
+##### Description
+
+Creates a border type 3D with a inserted width.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| border | string | Border type. |
+| width | _double_ | Border width. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border width of the type inserted,coloured black and the width inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _double_, arg2: _double_) : _Border3D_
+#### _pdf.border3D(border: string, width: _double_, opacity: _double_) : _Border3D_
+##### Description
+
+Creates a 3D border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| width | _double_ | Border width. |
+| opacity | _double_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _double_, arg2: _float_) : _Border3D_
+#### _pdf.border3D(border: string, width: _double_, opacity: _float_) : _Border3D_
+##### Description
+
+Creates a 3D border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
-| arg2 | _float_ |   |
+| border | string | Border type. |
+| width | _double_ | Border width. |
+| opacity | _float_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _double_, arg2: _int_) : _Border3D_
+#### _pdf.border3D(border: string, width: _double_, opacity: _int_) : _Border3D_
+##### Description
+
+Creates a 3D border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| width | _double_ | Border width. |
+| opacity | _int_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _float_) : _Border3D_
+#### _pdf.border3D(border: string, width: _float_) : _Border3D_
+##### Description
+
+Creates a border type 3D with a inserted width.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| border | string | Border type. |
+| width | _float_ | Border width. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border width of the type inserted,coloured black and the width inserted.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _float_, arg2: _double_) : _Border3D_
+#### _pdf.border3D(border: string, width: _float_, opacity: _double_) : _Border3D_
+##### Description
+
+Creates a 3D border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| width | _float_ | Border width. |
+| opacity | _double_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _float_, arg2: _float_) : _Border3D_
+#### _pdf.border3D(border: string, width: _float_, opacity: _float_) : _Border3D_
+##### Description
+
+Creates a 3D border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
-| arg2 | _float_ |   |
+| border | string | Border type. |
+| width | _float_ | Border width. |
+| opacity | _float_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _float_, arg2: _int_) : _Border3D_
+#### _pdf.border3D(border: string, width: _float_, opacity: _int_) : _Border3D_
+##### Description
+
+Creates a 3D border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| width | _float_ | Border width. |
+| opacity | _int_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _int_) : _Border3D_
+#### _pdf.border3D(border: string, arg1: _int_) : _Border3D_
+##### Description
+
+Creates a border type 3D.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| border | string | Border type. |
 | arg1 | _int_ |   |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border width of the type inserted,coloured black.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _int_, arg2: _double_) : _Border3D_
+#### _pdf.border3D(border: string, width: _int_, opacity: _double_) : _Border3D_
+##### Description
+
+Creates a 3D border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
-| arg2 | _double_ |   |
+| border | string | Border type. |
+| width | _int_ | Border width. |
+| opacity | _double_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _int_, arg2: _float_) : _Border3D_
+#### _pdf.border3D(border: string, width: _int_, opacity: _float_) : _Border3D_
+##### Description
+
+Creates a 3D border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
-| arg2 | _float_ |   |
+| border | string | Border type. |
+| width | _int_ | Border width. |
+| opacity | _float_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(arg0: string, arg1: _int_, arg2: _int_) : _Border3D_
+#### _pdf.border3D(border: string, width: _int_, opacity: _int_) : _Border3D_
+##### Description
+
+Creates a 3D border type with a inserted width and opacity.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
-| arg2 | _int_ |   |
+| border | string | Border type. |
+| width | _int_ | Border width. |
+| opacity | _int_ | Border opacity. |
 
 ##### Return
 
 ( _Border3D_ )
 
+Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
@@ -870,6 +1135,10 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 ---
 
 #### _pdf.canvas(arg0: _PdfDocument_, arg1: _int_) : _PdfCanvas_
+##### Description
+
+Creates an rectangular text area.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -885,6 +1154,10 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 ---
 
 #### _pdf.canvas(arg0: _PdfPage_) : _PdfCanvas_
+##### Description
+
+Creates an rectangular text area.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -903,25 +1176,35 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 ---
 
 #### _pdf.cell() : _Cell_
+##### Description
+
+Creates a new table cell.
+
 ##### Return
 
 ( _Cell_ )
 
+Returns the created cell.
 
 ---
 
-#### _pdf.cell(arg0: _int_, arg1: _int_) : _Cell_
+#### _pdf.cell(rowspan: _int_, colspan: _int_) : _Cell_
+##### Description
+
+Creates a new table cell with rowspan or colspan.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| rowspan | _int_ | Number of rowspan. |
+| colspan | _int_ | Number of colspan. |
 
 ##### Return
 
 ( _Cell_ )
 
+Returns the created cell.
 
 ---
 
@@ -1100,31 +1383,79 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 
 ---
 
-#### _pdf.extract(arg0: _InputStream_) : _[Values](../../objects/Values)_
+#### _pdf.extract(storage: _InputStream_) : _[Values](../../objects/Values)_
+##### Description
+
+Extracts the content of PDFs.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| storage | _InputStream_ | Caminho do armazenamento. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+Returns the extracted content.
 
 ---
 
-#### _pdf.extract(arg0: _Storage_) : _[Values](../../objects/Values)_
+#### _pdf.extract(storage: _[File](../../objects/File)_) : _[Values](../../objects/Values)_
+##### Description
+
+Extracts the content of PDFs.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| storage | _[File](../../objects/File)_ | Caminho do armazenamento. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+Returns the extracted content.
+
+---
+
+#### _pdf.extract(content: _[InputStream](../../objects/InputStream)_) : _[Values](../../objects/Values)_
+##### Description
+
+Extracts the content of PDF's.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| content | _[InputStream](../../objects/InputStream)_ | Content to be extracted. |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+Returns the extracted content.
+
+---
+
+#### _pdf.extract(storage: _Storage_) : _[Values](../../objects/Values)_
+##### Description
+
+Extracts the content of PDFs.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _Storage_ | Caminho do armazenamento. |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+Returns the extracted content.
 
 ---
 
@@ -1132,77 +1463,182 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 
 ---
 
-#### _pdf.font(arg0: string) : _PdfFont_
+#### _pdf.font(storage: string) : _PdfFont_
+##### Description
+
+Creates a font.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| storage | string | Storage path. |
 
 ##### Return
 
 ( _PdfFont_ )
 
+Returns the created font.
 
 ---
 
-#### _pdf.font(arg0: _Storage_) : _PdfFont_
+#### _pdf.font(storage: _[File](../../objects/File)_) : _PdfFont_
+##### Description
+
+Creates a font.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| storage | _[File](../../objects/File)_ | Storage path. |
 
 ##### Return
 
 ( _PdfFont_ )
 
+Returns the created font.
 
 ---
 
-#### _pdf.font(arg0: _Storage_, arg1: _boolean_) : _PdfFont_
+#### _pdf.font(storage: _[File](../../objects/File)_, encoding: _boolean_) : _PdfFont_
+##### Description
+
+Creates a font.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
-| arg1 | _boolean_ |   |
+| storage | _[File](../../objects/File)_ | Storage path. |
+| encoding | _boolean_ | Font encoding. |
 
 ##### Return
 
 ( _PdfFont_ )
 
+Returns the created font.
 
 ---
 
-#### _pdf.font(arg0: _Storage_, arg1: string) : _PdfFont_
+#### _pdf.font(storage: _[File](../../objects/File)_, encoding: string) : _PdfFont_
+##### Description
+
+Creates a font.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
-| arg1 | string |   |
+| storage | _[File](../../objects/File)_ | Storage path. |
+| encoding | string | Font encoding. |
 
 ##### Return
 
 ( _PdfFont_ )
 
+Returns the created font.
 
 ---
 
-#### _pdf.font(arg0: _Storage_, arg1: string, arg2: _boolean_) : _PdfFont_
+#### _pdf.font(storage: _[File](../../objects/File)_, encoding: string, arg2: _boolean_) : _PdfFont_
+##### Description
+
+Creates a font.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
-| arg1 | string |   |
+| storage | _[File](../../objects/File)_ | Storage path. |
+| encoding | string | Font encoding. |
 | arg2 | _boolean_ |   |
 
 ##### Return
 
 ( _PdfFont_ )
 
+Returns the created font.
+
+---
+
+#### _pdf.font(storage: _Storage_) : _PdfFont_
+##### Description
+
+Creates a font.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _Storage_ | Storage path. |
+
+##### Return
+
+( _PdfFont_ )
+
+Returns the created font.
+
+---
+
+#### _pdf.font(storage: _Storage_, encoding: _boolean_) : _PdfFont_
+##### Description
+
+Creates a font.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _Storage_ | Storage path. |
+| encoding | _boolean_ | Font encoding. |
+
+##### Return
+
+( _PdfFont_ )
+
+Returns the created font.
+
+---
+
+#### _pdf.font(storage: _Storage_, encoding: string) : _PdfFont_
+##### Description
+
+Creates a font.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _Storage_ | Storage path. |
+| encoding | string | Font encoding. |
+
+##### Return
+
+( _PdfFont_ )
+
+Returns the created font.
+
+---
+
+#### _pdf.font(storage: _Storage_, encoding: string, arg2: _boolean_) : _PdfFont_
+##### Description
+
+Creates a font.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _Storage_ | Storage path. |
+| encoding | string | Font encoding. |
+| arg2 | _boolean_ |   |
+
+##### Return
+
+( _PdfFont_ )
+
+Returns the created font.
 
 ---
 
@@ -1274,6 +1710,20 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
+#### _pdf.image(arg0: _[File](../../objects/File)_) : _Image_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[File](../../objects/File)_ |   |
+
+##### Return
+
+( _Image_ )
+
+
+---
+
 #### _pdf.image(arg0: _Storage_) : _Image_
 ##### Attributes
 
@@ -1314,51 +1764,66 @@ const pdf = _pdf.init();
 
 ---
 
-#### _pdf.line(arg0: string, arg1: _Color_, arg2: _double_) : _ILineDrawer_
+#### _pdf.line(type: string, color: _Color_, width: _double_) : _ILineDrawer_
+##### Description
+
+Creates a customized border with type,color, width and opacity inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _double_ |   |
+| type | string | Line type. |
+| color | _Color_ | Line color. |
+| width | _double_ | Line width. |
 
 ##### Return
 
 ( _ILineDrawer_ )
 
+Returns the created customized border.
 
 ---
 
-#### _pdf.line(arg0: string, arg1: _Color_, arg2: _float_) : _ILineDrawer_
+#### _pdf.line(type: string, color: _Color_, width: _float_) : _ILineDrawer_
+##### Description
+
+Creates a customized line with type,color, width inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _float_ |   |
+| type | string | Line type. |
+| color | _Color_ | Line color. |
+| width | _float_ | Line width. |
 
 ##### Return
 
 ( _ILineDrawer_ )
 
+Returns the created customized line.
 
 ---
 
-#### _pdf.line(arg0: string, arg1: _Color_, arg2: _int_) : _ILineDrawer_
+#### _pdf.line(line: string, color: _Color_, width: _int_) : _ILineDrawer_
+##### Description
+
+Creates a line type with color and width inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Color_ |   |
-| arg2 | _int_ |   |
+| line | string | Line type. |
+| color | _Color_ | Line color. |
+| width | _int_ | Line width. |
 
 ##### Return
 
 ( _ILineDrawer_ )
 
+Returns the line type, color and width inserted.
 
 ---
 
@@ -1367,6 +1832,10 @@ const pdf = _pdf.init();
 ---
 
 #### _pdf.newDocument() : _Document_
+##### Description
+
+Cria um novo documento.
+
 ##### Return
 
 ( _Document_ )
@@ -1374,21 +1843,147 @@ const pdf = _pdf.init();
 
 ---
 
-#### _pdf.newDocument(arg0: _PageSize_) : _Document_
+#### _pdf.newDocument(pageSize: _PageSize_) : _Document_
+##### Description
+
+Creates a PDF document with the page size inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _PageSize_ |   |
+| pageSize | _PageSize_ | Page size. |
 
 ##### Return
 
 ( _Document_ )
 
+Returns PDF document with the page size inserted.
+
+---
+
+#### _pdf.newDocument(storage: _OutputStream_) : _Document_
+##### Description
+
+Creates a PDF document with the page size inserted.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _OutputStream_ | File path. |
+
+##### Return
+
+( _Document_ )
+
+Returns PDF document with the page size inserted.
+
+---
+
+#### _pdf.newDocument(storage: _OutputStream_, pageSize: _PageSize_) : _Document_
+##### Description
+
+Creates a PDF document with the page size inserted.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _OutputStream_ | File path. |
+| pageSize | _PageSize_ | Page size. |
+
+##### Return
+
+( _Document_ )
+
+Returns PDF document with the page size inserted.
+
+---
+
+#### _pdf.newDocument(storage: _[File](../../objects/File)_) : _Document_
+##### Description
+
+Creates a PDF document with the page size inserted.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _[File](../../objects/File)_ | File path. |
+
+##### Return
+
+( _Document_ )
+
+Returns PDF document with the page size inserted.
+
+---
+
+#### _pdf.newDocument(storage: _[File](../../objects/File)_, pageSize: _PageSize_) : _Document_
+##### Description
+
+Creates a PDF document with the page size inserted.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _[File](../../objects/File)_ | File path. |
+| pageSize | _PageSize_ | Page size. |
+
+##### Return
+
+( _Document_ )
+
+Returns PDF document with the page size inserted.
+
+---
+
+#### _pdf.newDocument(storage: _[OutputStream](../../objects/OutputStream)_) : _Document_
+##### Description
+
+Creates a PDF document with the page size inserted.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _[OutputStream](../../objects/OutputStream)_ | File path. |
+
+##### Return
+
+( _Document_ )
+
+Returns PDF document with the page size inserted.
+
+---
+
+#### _pdf.newDocument(storage: _[OutputStream](../../objects/OutputStream)_, pageSize: _PageSize_) : _Document_
+##### Description
+
+Creates a PDF document with the page size inserted.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _[OutputStream](../../objects/OutputStream)_ | File path. |
+| pageSize | _PageSize_ | Page size. |
+
+##### Return
+
+( _Document_ )
+
+Returns PDF document with the page size inserted.
 
 ---
 
 #### _pdf.newDocument(arg0: _Storage_) : _Document_
+##### Description
+
+Creates a new PDF document.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1402,18 +1997,23 @@ const pdf = _pdf.init();
 
 ---
 
-#### _pdf.newDocument(arg0: _Storage_, arg1: _PageSize_) : _Document_
+#### _pdf.newDocument(storage: _Storage_, pageSize: _PageSize_) : _Document_
+##### Description
+
+Creates a PDF document with the page size inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
-| arg1 | _PageSize_ |   |
+| storage | _Storage_ | File path. |
+| pageSize | _PageSize_ | Page size. |
 
 ##### Return
 
 ( _Document_ )
 
+Returns PDF document with the page size inserted.
 
 ---
 
@@ -1422,6 +2022,10 @@ const pdf = _pdf.init();
 ---
 
 #### _pdf.newPdfDocument() : _PdfDocument_
+##### Description
+
+Creates a PDF document.
+
 ##### Return
 
 ( _PdfDocument_ )
@@ -1429,12 +2033,70 @@ const pdf = _pdf.init();
 
 ---
 
-#### _pdf.newPdfDocument(arg0: _Storage_) : _PdfDocument_
+#### _pdf.newPdfDocument(storage: _OutputStream_) : _PdfDocument_
+##### Description
+
+Creates a PDF document.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| storage | _OutputStream_ | File path. |
+
+##### Return
+
+( _PdfDocument_ )
+
+
+---
+
+#### _pdf.newPdfDocument(storage: _[File](../../objects/File)_) : _PdfDocument_
+##### Description
+
+Creates a PDF document.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _[File](../../objects/File)_ | File path. |
+
+##### Return
+
+( _PdfDocument_ )
+
+
+---
+
+#### _pdf.newPdfDocument(storage: _[OutputStream](../../objects/OutputStream)_) : _PdfDocument_
+##### Description
+
+Creates a PDF document.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _[OutputStream](../../objects/OutputStream)_ | File path. |
+
+##### Return
+
+( _PdfDocument_ )
+
+
+---
+
+#### _pdf.newPdfDocument(storage: _Storage_) : _PdfDocument_
+##### Description
+
+Creates a PDF document.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _Storage_ | File path. |
 
 ##### Return
 
@@ -1447,17 +2109,22 @@ const pdf = _pdf.init();
 
 ---
 
-#### _pdf.openPdfDocument(arg0: string) : _PdfDocument_
+#### _pdf.openPdfDocument(path: string) : _PdfDocument_
+##### Description
+
+Opens a PDF documment corresponding to the inserted path.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| path | string | File path. |
 
 ##### Return
 
 ( _PdfDocument_ )
 
+Returns PDF document openned.
 
 ---
 
@@ -1507,6 +2174,10 @@ Obtém a definição do tamanho de página.
 ---
 
 #### _pdf.paragraph(arg0: string) : _Paragraph_
+##### Description
+
+Creates a paragraph.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1542,162 +2213,217 @@ Obtém a definição do tamanho de página.
 
 ---
 
-#### _pdf.table(arg0: _double[]_) : _Table_
+#### _pdf.table(columnWidth: _double[]_) : _Table_
+##### Description
+
+Creates a table with the columns width inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _double[]_ |   |
+| columnWidth | _double[]_ | Column widthof the table. |
 
 ##### Return
 
 ( _Table_ )
 
+Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(arg0: _double[]_, arg1: _boolean_) : _Table_
+#### _pdf.table(columnWidth: _double[]_, largeTable: _boolean_) : _Table_
+##### Description
+
+Creates a new table.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _double[]_ |   |
-| arg1 | _boolean_ |   |
+| columnWidth | _double[]_ | Columns width. |
+| largeTable | _boolean_ | Large table. |
 
 ##### Return
 
 ( _Table_ )
 
+Returns the created table.
 
 ---
 
-#### _pdf.table(arg0: _float[]_) : _Table_
+#### _pdf.table(columnWidth: _float[]_) : _Table_
+##### Description
+
+Creates a table with the columns width inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _float[]_ |   |
+| columnWidth | _float[]_ | Column widthof the table. |
 
 ##### Return
 
 ( _Table_ )
 
+Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(arg0: _float[]_, arg1: _boolean_) : _Table_
+#### _pdf.table(columnWidth: _float[]_, largeTable: _boolean_) : _Table_
+##### Description
+
+Creates a new table.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _float[]_ |   |
-| arg1 | _boolean_ |   |
+| columnWidth | _float[]_ | Columns width. |
+| largeTable | _boolean_ | Large table. |
 
 ##### Return
 
 ( _Table_ )
 
+Returns the created table.
 
 ---
 
-#### _pdf.table(arg0: _int[]_) : _Table_
+#### _pdf.table(columnWidth: _int[]_) : _Table_
+##### Description
+
+Creates a table with the columns width inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int[]_ |   |
+| columnWidth | _int[]_ | Column widthof the table. |
 
 ##### Return
 
 ( _Table_ )
 
+Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(arg0: _int[]_, arg1: _boolean_) : _Table_
+#### _pdf.table(columnWidth: _int[]_, largeTable: _boolean_) : _Table_
+##### Description
+
+Creates a new table.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int[]_ |   |
-| arg1 | _boolean_ |   |
+| columnWidth | _int[]_ | Columns width. |
+| largeTable | _boolean_ | Large table. |
 
 ##### Return
 
 ( _Table_ )
 
+Returns the created table.
 
 ---
 
-#### _pdf.table(arg0: _int_) : _Table_
+#### _pdf.table(columns: _int_) : _Table_
+##### Description
+
+Creates a new table.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| columns | _int_ | Columns number. |
 
 ##### Return
 
 ( _Table_ )
 
+Returns the created table.
 
 ---
 
-#### _pdf.table(arg0: _List_) : _Table_
+#### _pdf.table(columnWidth: _List_) : _Table_
+##### Description
+
+Creates a table with the columns width inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _List_ |   |
+| columnWidth | _List_ | Column's width of the table. |
 
 ##### Return
 
 ( _Table_ )
 
+Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(arg0: _List_, arg1: _boolean_) : _Table_
+#### _pdf.table(columnWidth: _List_, largeTable: _boolean_) : _Table_
+##### Description
+
+Creates a new table.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _List_ |   |
-| arg1 | _boolean_ |   |
+| columnWidth | _List_ | Columns width. |
+| largeTable | _boolean_ | Large table. |
 
 ##### Return
 
 ( _Table_ )
 
+Returns the created table.
 
 ---
 
-#### _pdf.table(arg0: _[Values](../../objects/Values)_) : _Table_
+#### _pdf.table(columnWidth: _[Values](../../objects/Values)_) : _Table_
+##### Description
+
+Creates a table with the columns width inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| columnWidth | _[Values](../../objects/Values)_ | Column width of the table. |
 
 ##### Return
 
 ( _Table_ )
 
+Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(arg0: _[Values](../../objects/Values)_, arg1: _boolean_) : _Table_
+#### _pdf.table(columnWidth: _[Values](../../objects/Values)_, largeTable: _boolean_) : _Table_
+##### Description
+
+Creates a new table.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-| arg1 | _boolean_ |   |
+| columnWidth | _[Values](../../objects/Values)_ | Columns width. |
+| largeTable | _boolean_ | Large table. |
 
 ##### Return
 
 ( _Table_ )
 
+Returns the created table.
 
 ---
 
@@ -1705,17 +2431,22 @@ Obtém a definição do tamanho de página.
 
 ---
 
-#### _pdf.text(arg0: string) : _Text_
+#### _pdf.text(content: string) : _Text_
+##### Description
+
+Creates new text with the inserted text.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string | Content to be created. |
 
 ##### Return
 
 ( _Text_ )
 
+Returns the text content.
 
 ---
 
@@ -1723,31 +2454,79 @@ Obtém a definição do tamanho de página.
 
 ---
 
-#### _pdf.toHTML(arg0: _InputStream_) : string
+#### _pdf.toHTML(content: _InputStream_) : string
+##### Description
+
+Converts the inserted content to HTML.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| content | _InputStream_ | Content to HTML. |
 
 ##### Return
 
 ( string )
 
+Returns the Html.
 
 ---
 
-#### _pdf.toHTML(arg0: _Storage_) : string
+#### _pdf.toHTML(content: _[File](../../objects/File)_) : string
+##### Description
+
+Converts the inserted content to HTML.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| content | _[File](../../objects/File)_ | Content to HTML. |
 
 ##### Return
 
 ( string )
 
+Returns the Html.
+
+---
+
+#### _pdf.toHTML(content: _[InputStream](../../objects/InputStream)_) : string
+##### Description
+
+Converts the inserted content to HTML.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| content | _[InputStream](../../objects/InputStream)_ | Content to HTML. |
+
+##### Return
+
+( string )
+
+Returns the Html.
+
+---
+
+#### _pdf.toHTML(content: _Storage_) : string
+##### Description
+
+Converts the inserted content to HTML.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| content | _Storage_ | Content to HTML. |
+
+##### Return
+
+( string )
+
+Returns the Html.
 
 ---
 
@@ -1755,31 +2534,79 @@ Obtém a definição do tamanho de página.
 
 ---
 
-#### _pdf.toText(arg0: _InputStream_) : string
+#### _pdf.toText(content: _InputStream_) : string
+##### Description
+
+Converts to text the inserted content.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| content | _InputStream_ | Content to text. |
 
 ##### Return
 
 ( string )
 
+Returns the Html.
 
 ---
 
-#### _pdf.toText(arg0: _Storage_) : string
+#### _pdf.toText(content: _[File](../../objects/File)_) : string
+##### Description
+
+Converts to text the inserted content.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| content | _[File](../../objects/File)_ | Content to text. |
 
 ##### Return
 
 ( string )
 
+Returns the Html.
+
+---
+
+#### _pdf.toText(content: _[InputStream](../../objects/InputStream)_) : string
+##### Description
+
+Converts to text the inserted content.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| content | _[InputStream](../../objects/InputStream)_ | Content to text. |
+
+##### Return
+
+( string )
+
+Returns the Html.
+
+---
+
+#### _pdf.toText(content: _Storage_) : string
+##### Description
+
+Converts to text the inserted content.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| content | _Storage_ | Content to text. |
+
+##### Return
+
+( string )
+
+Returns the Html.
 
 ---
 

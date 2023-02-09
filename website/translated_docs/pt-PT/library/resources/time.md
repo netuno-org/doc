@@ -563,6 +563,132 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
+## gregorianCalendar
+
+---
+
+#### _time.gregorianCalendar() : _GregorianCalendar_
+##### Retorno
+
+( _GregorianCalendar_ )
+
+
+---
+
+#### _time.gregorianCalendar(arg0: _int_, arg1: _int_, arg2: _int_) : _GregorianCalendar_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _int_ |   |
+| arg2 | _int_ |   |
+
+##### Retorno
+
+( _GregorianCalendar_ )
+
+
+---
+
+#### _time.gregorianCalendar(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _GregorianCalendar_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _int_ |   |
+| arg2 | _int_ |   |
+| arg3 | _int_ |   |
+| arg4 | _int_ |   |
+
+##### Retorno
+
+( _GregorianCalendar_ )
+
+
+---
+
+#### _time.gregorianCalendar(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_) : _GregorianCalendar_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _int_ |   |
+| arg2 | _int_ |   |
+| arg3 | _int_ |   |
+| arg4 | _int_ |   |
+| arg5 | _int_ |   |
+
+##### Retorno
+
+( _GregorianCalendar_ )
+
+
+---
+
+#### _time.gregorianCalendar(arg0: _Locale_) : _GregorianCalendar_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Locale_ |   |
+
+##### Retorno
+
+( _GregorianCalendar_ )
+
+
+---
+
+#### _time.gregorianCalendar(arg0: _TimeZone_) : _GregorianCalendar_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _TimeZone_ |   |
+
+##### Retorno
+
+( _GregorianCalendar_ )
+
+
+---
+
+#### _time.gregorianCalendar(arg0: _TimeZone_, arg1: _Locale_) : _GregorianCalendar_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _TimeZone_ |   |
+| arg1 | _Locale_ |   |
+
+##### Retorno
+
+( _GregorianCalendar_ )
+
+
+---
+
+## gregorianCalendarConstant
+
+---
+
+#### _time.gregorianCalendarConstant(arg0: string) : _int_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+
+##### Retorno
+
+( _int_ )
+
+
+---
+
 ## instant
 
 ---
@@ -1899,6 +2025,24 @@ Converte o objeeto passado para TemporalAcessor.
 ##### Retorno
 
 ( _Period_ )
+
+
+---
+
+## simpleDateFormat
+
+---
+
+#### _time.simpleDateFormat(arg0: string) : _SimpleDateFormat_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+
+##### Retorno
+
+( _SimpleDateFormat_ )
 
 
 ---

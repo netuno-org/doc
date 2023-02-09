@@ -183,12 +183,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asByte(arg0: _byte_) : _byte_
+#### _config.asByte(arg0: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte_ |   |
+| arg0 | _int_ |   |
 
 ##### Return
 
@@ -435,11 +435,11 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-## asHtmlDecode
+## asHTMLDecode
 
 ---
 
-#### _config.asHtmlDecode(arg0: string) : string
+#### _config.asHTMLDecode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -453,11 +453,11 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-## asHtmlEncode
+## asHTMLEncode
 
 ---
 
-#### _config.asHtmlEncode(arg0: string) : string
+#### _config.asHTMLEncode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -570,6 +570,21 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
+#### _config.asList(arg0: _int_, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### _config.asList(arg0: _int_, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -577,6 +592,22 @@ const adminMail = _config.getString('admin-mail');
 |---|---|---|
 | arg0 | _int_ |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### _config.asList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -599,6 +630,21 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
+#### _config.asList(arg0: string, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### _config.asList(arg0: string, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -606,6 +652,22 @@ const adminMail = _config.getString('admin-mail');
 |---|---|---|
 | arg0 | string |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### _config.asList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -1076,6 +1138,54 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
+## asUID
+
+---
+
+#### _config.asUID(arg0: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _config.asUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _config.asUID(arg0: string, arg1: _UUID_) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _UUID_ |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
 ## asUUID
 
 ---
@@ -1086,6 +1196,21 @@ const adminMail = _config.getString('admin-mail');
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _config.asUUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
 
 ##### Return
 
@@ -1554,6 +1679,20 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
+#### _config.fromJSON(arg0: _Response_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Response_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 ## get
 
 ---
@@ -1701,12 +1840,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _config.getByte(arg0: _byte_) : _byte_
+#### _config.getByte(arg0: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte_ |   |
+| arg0 | _int_ |   |
 
 ##### Return
 
@@ -1991,11 +2130,11 @@ Original object converted to the type of the defined class.
 
 ---
 
-## getHtmlDecode
+## getHTMLDecode
 
 ---
 
-#### _config.getHtmlDecode(arg0: string) : string
+#### _config.getHTMLDecode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2009,11 +2148,11 @@ Original object converted to the type of the defined class.
 
 ---
 
-## getHtmlEncode
+## getHTMLEncode
 
 ---
 
-#### _config.getHtmlEncode(arg0: string) : string
+#### _config.getHTMLEncode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2152,6 +2291,21 @@ Original object converted to the type of the defined class.
 
 ---
 
+#### _config.getList(arg0: _int_, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### _config.getList(arg0: _int_, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -2159,6 +2313,22 @@ Original object converted to the type of the defined class.
 |---|---|---|
 | arg0 | _int_ |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### _config.getList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -2181,6 +2351,21 @@ Original object converted to the type of the defined class.
 
 ---
 
+#### _config.getList(arg0: string, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
 #### _config.getList(arg0: string, arg1: _Object_) : _List_
 ##### Attributes
 
@@ -2188,6 +2373,22 @@ Original object converted to the type of the defined class.
 |---|---|---|
 | arg0 | string |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### _config.getList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -2689,6 +2890,54 @@ Original object converted to the type of the defined class.
 
 ---
 
+## getUID
+
+---
+
+#### _config.getUID(arg0: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _config.getUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _config.getUID(arg0: string, arg1: _UUID_) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _UUID_ |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
 ## getURLCharacterEncoding
 
 ---
@@ -2716,6 +2965,21 @@ Character encoding code.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### _config.getUUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
 
 ##### Return
 
@@ -3400,6 +3664,20 @@ Whether it is in read-only mode or not.
 
 ---
 
+#### _config.of(arg0: _Object[]_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object[]_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 #### _config.of(arg0: _Object_) : _Object_
 ##### Attributes
 
@@ -3410,6 +3688,70 @@ Whether it is in read-only mode or not.
 ##### Return
 
 ( _Object_ )
+
+
+---
+
+#### _config.of(arg0: _List_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _List_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _config.of(arg0: _Map_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Map_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## ofList
+
+---
+
+#### _config.ofList(arg0: _Object_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## ofMap
+
+---
+
+#### _config.ofMap(arg0: _Object_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -4382,6 +4724,42 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
+## toByteArray
+
+---
+
+#### _config.toByteArray() : _byte[]_
+##### Return
+
+( _byte[]_ )
+
+
+---
+
+## toDoubleArray
+
+---
+
+#### _config.toDoubleArray() : _double[]_
+##### Return
+
+( _double[]_ )
+
+
+---
+
+## toFloatArray
+
+---
+
+#### _config.toFloatArray() : _float[]_
+##### Return
+
+( _float[]_ )
+
+
+---
+
 ## toFormMap
 
 ---
@@ -4419,6 +4797,18 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
+
+
+---
+
+## toIntArray
+
+---
+
+#### _config.toIntArray() : _int[]_
+##### Return
+
+( _int[]_ )
 
 
 ---
@@ -4589,6 +4979,32 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
+#### _config.toList(arg0: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+## toLongArray
+
+---
+
+#### _config.toLongArray() : _long[]_
+##### Return
+
+( _long[]_ )
+
+
+---
+
 ## toMap
 
 ---
@@ -4609,6 +5025,30 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 ##### Return
 
 ( string )
+
+
+---
+
+## toShortArray
+
+---
+
+#### _config.toShortArray() : _short[]_
+##### Return
+
+( _short[]_ )
+
+
+---
+
+## toStringArray
+
+---
+
+#### _config.toStringArray() : _String[]_
+##### Return
+
+( _String[]_ )
 
 
 ---

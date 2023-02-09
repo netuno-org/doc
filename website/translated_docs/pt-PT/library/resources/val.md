@@ -137,6 +137,25 @@ O novo objeto de valores iniciado com os dados do objeto passado.
 
 ---
 
+#### _val.init(obj: _Object_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| obj | _Object_ | Objeto para carregar o novo objeto de valores criado. |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+O novo objeto de valores iniciado com os dados do objeto passado.
+
+---
+
 #### _val.init(obj: _Map_) : _[Values](../../objects/Values)_
 ##### Descrição
 

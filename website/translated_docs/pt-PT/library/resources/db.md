@@ -129,6 +129,37 @@ Gestor da execução de operações em lote.
 
 ---
 
+## config
+
+---
+
+#### _db.config() : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém a configuração de conexão à base de dados que está a ser utilizada.
+Os detalhes da conexão está definida no documento de configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](../../tutorials/multiple-databases).
+
+##### Como Usar
+
+```javascript
+_header.contentTypePlain()
+
+const db_PADRAO_Config = _db.getConfig()
+_out.print(`A conexão da db PADRÃO é: ${db_PADRAO_Config.toJSON()}\n`)
+
+const db_OUTRA_Config = _db.init("countries").getConfig()
+_out.print(`A OUTRA conexão da db é: ${db_OUTRA_Config.toJSON()}\n`)
+
+```
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Configuração da conexão à base de dados que está a ser utilizada.
+
+---
+
 ## date
 
 ---
@@ -805,6 +836,37 @@ Os dados do item encontrado ou null caso não exista.
 
 ---
 
+## getConfig
+
+---
+
+#### _db.getConfig() : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém a configuração de conexão à base de dados que está a ser utilizada.
+Os detalhes da conexão está definida no documento de configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](../../tutorials/multiple-databases).
+
+##### Como Usar
+
+```javascript
+_header.contentTypePlain()
+
+const db_PADRAO_Config = _db.getConfig()
+_out.print(`A conexão da db PADRÃO é: ${db_PADRAO_Config.toJSON()}\n`)
+
+const db_OUTRA_Config = _db.init("countries").getConfig()
+_out.print(`A OUTRA conexão da db é: ${db_OUTRA_Config.toJSON()}\n`)
+
+```
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Configuração da conexão à base de dados que está a ser utilizada.
+
+---
+
 ## getKey
 
 ---
@@ -813,7 +875,7 @@ Os dados do item encontrado ou null caso não exista.
 ##### Descrição
 
 Obtém o nome da configuração de conexão à base de dados que está a ser utilizada.
-Os detalhes da conexão deverão estar definidas no documento configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](../../tutorials/multiple-databases).
+Os detalhes da conexão deve estar definida no documento configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](../../tutorials/multiple-databases).
 
 ##### Como Usar
 
@@ -1125,6 +1187,37 @@ Verifica se a base de dados conectada é PostgreSQL.
 ( _boolean_ )
 
 Se é PostgreSQL.
+
+---
+
+## key
+
+---
+
+#### _db.key() : string
+##### Descrição
+
+Obtém o nome da configuração de conexão à base de dados que está a ser utilizada.
+Os detalhes da conexão deve estar definida no documento configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](../../tutorials/multiple-databases).
+
+##### Como Usar
+
+```javascript
+_header.contentTypePlain()
+
+const db_PADRAO_NomeConexao = _db.getKey()
+_out.print(`A conexão da db PADRÃO é: ${db_PADRAO_NomeConexao}\n`)
+
+const db_OUTRA_NomeConexao = _db.init("countries").getKey()
+_out.print(`A OUTRA conexão da db é: ${db_OUTRA_NomeConexao}\n`)
+
+```
+
+##### Retorno
+
+( string )
+
+Nome da configuração de conexão à base de dados que está a ser utilizada.
 
 ---
 

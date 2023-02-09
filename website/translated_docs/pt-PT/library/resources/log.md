@@ -8,7 +8,7 @@ Recurso de obtenção de logs da aplicação.
 
 Este recurso utiliza o Log4J para a apresentação de log do tipo WARN, ERROR e FATAL.
 
-Para analisar mensagens de log do tipo TRACE, DEBUG ou INFO, precisa alterar o level dos logs nas configurações para o nível desejado, por exemplo para passar a apresentar as mensagens de INFO basta alterar na configuração logs/log.xml onde está level="warn" basta alterar o valor warn para info, debug ou trace.
+Para analisar mensagens de log do tipo TRACE, DEBUG ou INFO, precisa alterar o level dos logs nas configurações para o nível desejado, por exemplo para passar a apresentar as mensagens de INFO basta alterar na configuração `logs/log.xml` onde está `level="warn"` basta alterar o valor `warn` para `info`, `debug` ou `trace`.
 
 ---
 

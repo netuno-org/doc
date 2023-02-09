@@ -8,7 +8,7 @@ Resource for obtaining application logs.
 
 This resource uses Log4J to present the log type WARN, ERROR and FATAL.
 
-To analyze log messages of type TRACE, DEBUG or INFO, you need to change the level of the logs in the settings to the desired level, for example, to start displaying the INFO messages, change the configuration in logs/log.xml where level="warn" just change the warn value to info, debug or trace.
+To analyze log messages of type TRACE, DEBUG or INFO, you need to change the level of the logs in the settings to the desired level, for example, to start displaying the INFO messages, change the configuration in `logs/log.xml` where `level="warn"` just change the `warn` value to `info`, `debug` or `trace`.
 
 ---
 

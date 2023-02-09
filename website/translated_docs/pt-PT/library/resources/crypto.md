@@ -99,24 +99,34 @@ Dados encriptados com AES256.
 ---
 
 #### _crypto.bcryptSalt() : string
+##### Descrição
+
+Codifica os dados com o cryptHash.
+
 ##### Retorno
 
 ( string )
 
+Dados do conteúdo encriptado em cryptHash.
 
 ---
 
-#### _crypto.bcryptSalt(arg0: _int_) : string
+#### _crypto.bcryptSalt(conteudo: _int_) : string
+##### Descrição
+
+Codifica os dados bcryptSalt.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| conteudo | _int_ | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
 ( string )
 
+Dados do conteúdo encriptado em bcryptSalt.
 
 ---
 
@@ -139,61 +149,81 @@ Dados encriptados com AES256.
 
 ---
 
-#### _crypto.cryptHash(arg0: _byte[]_) : string
+#### _crypto.cryptHash(conteúdo: _byte[]_) : string
+##### Descrição
+
+Codifica os dados com o cryptHash
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| conteúdo | _byte[]_ | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
 ( string )
 
+Dados do conteúdo encriptado cryptHash.
 
 ---
 
-#### _crypto.cryptHash(arg0: _byte[]_, arg1: string) : string
+#### _crypto.cryptHash(conteúdo: _byte[]_, arg1: string) : string
+##### Descrição
+
+Codifica os dados com o cryptHash
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| conteúdo | _byte[]_ | Conteúdo para ser encriptado. |
 | arg1 | string |   |
 
 ##### Retorno
 
 ( string )
 
+Dados do conteúdo encriptado cryptHash.
 
 ---
 
-#### _crypto.cryptHash(arg0: string) : string
+#### _crypto.cryptHash(conteúdo: string) : string
+##### Descrição
+
+Codifica os dados com o cryptHash
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteúdo | string | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
 ( string )
 
+Dados do conteúdo encriptado cryptHash.
 
 ---
 
-#### _crypto.cryptHash(arg0: string, arg1: string) : string
+#### _crypto.cryptHash(conteúdo: string, arg1: string) : string
+##### Descrição
+
+Codifica os dados com o cryptHash
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteúdo | string | Conteúdo para ser encriptado. |
 | arg1 | string |   |
 
 ##### Retorno
 
 ( string )
 
+Dados do conteúdo encriptado cryptHash.
 
 ---
 
@@ -201,18 +231,23 @@ Dados encriptados com AES256.
 
 ---
 
-#### _crypto.desDecode(arg0: string, arg1: _byte[]_) : string
+#### _crypto.desDecode(conteudo: string, arg1: _byte[]_) : string
+##### Descrição
+
+Codifica os dados com o SHA512 (SHA-2) e retorna a encriptação binária.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteudo | string | Conteúdo para ser encriptado. |
 | arg1 | _byte[]_ |   |
 
 ##### Retorno
 
 ( string )
 
+Dados binários do conteúdo encriptado em Desdecode (Des).
 
 ---
 
@@ -236,12 +271,16 @@ Dados encriptados com AES256.
 
 ---
 
-#### _crypto.desDecodeBase64(arg0: string, arg1: string, arg2: string) : string
+#### _crypto.desDecodeBase64(conteudo: string, arg1: string, arg2: string) : string
+##### Descrição
+
+Codifica os dados com o SHA512 (SHA-2) e retorna a encriptação binária.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteudo | string | Conteúdo para ser encriptado. |
 | arg1 | string |   |
 | arg2 | string |   |
 
@@ -249,6 +288,7 @@ Dados encriptados com AES256.
 
 ( string )
 
+Dados binários do conteúdo encriptado em Desdecode (Des) e convertidos em base 64.
 
 ---
 
@@ -443,17 +483,22 @@ Dados codificados com HMAC256 e em formato hexadecimal.
 
 ---
 
-#### _crypto.md5(arg0: string) : _byte[]_
+#### _crypto.md5(conteudo: string) : _byte[]_
+##### Descrição
+
+Codifica os dados com o MD5 e retorna a encriptação de 128 bit.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteudo | string | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
 ( _byte[]_ )
 
+Dados do conteúdo encriptado em MD5.
 
 ---
 
@@ -461,17 +506,22 @@ Dados codificados com HMAC256 e em formato hexadecimal.
 
 ---
 
-#### _crypto.md5Base64(arg0: string) : string
+#### _crypto.md5Base64(conteudo: string) : string
+##### Descrição
+
+Codifica os dados com o cryptHash.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteudo | string | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
 ( string )
 
+Dados do conteúdo encriptado em cryptHash.
 
 ---
 
@@ -479,17 +529,22 @@ Dados codificados com HMAC256 e em formato hexadecimal.
 
 ---
 
-#### _crypto.md5Hex(arg0: string) : string
+#### _crypto.md5Hex(conteudo: string) : string
+##### Descrição
+
+Codifica os dados com o MD5 e converte a encriptação em hexadecimal.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| conteudo | string | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
 ( string )
 
+Dados do conteúdo encriptado em MD5 e convertido hexadecimal.
 
 ---
 
@@ -729,7 +784,7 @@ Dados binários do conteúdo encriptado em SHA512 (SHA-2).
 #### _crypto.sha512AsBytes(conteudo: string) : _byte[]_
 ##### Descrição
 
-Codifica os dados com o SHA512 (SHA-2) e retorna a encriptação binária.
+Codifica os dados com o SHA512 (SHA-512).
 
 ##### Atributos
 

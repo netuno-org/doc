@@ -129,6 +129,37 @@ Batch execution manager.
 
 ---
 
+## config
+
+---
+
+#### _db.config() : _[Values](../../objects/Values)_
+##### Description
+
+Gets the connection configuration to the database being used.
+The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../tutorials/multiple-databases) tutorial.
+
+##### How To Use
+
+```javascript
+_header.contentTypePlain()
+
+const db_DEFAULT_Config = _db.getConfig()
+_out.print(`The DEFAULT DB connection is: ${db_DEFAULT_Config.toJSON()}\n`)
+
+const db_OTHER_Config = _db.init("countries").getConfig()
+_out.print(`The OTHER DB connection is: ${db_OTHER_Config.toJSON()}\n`)
+
+```
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+Configuration of the connection to the database being used.
+
+---
+
 ## date
 
 ---
@@ -805,6 +836,37 @@ The item data found or null if it does not exist.
 
 ---
 
+## getConfig
+
+---
+
+#### _db.getConfig() : _[Values](../../objects/Values)_
+##### Description
+
+Gets the connection configuration to the database being used.
+The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../tutorials/multiple-databases) tutorial.
+
+##### How To Use
+
+```javascript
+_header.contentTypePlain()
+
+const db_DEFAULT_Config = _db.getConfig()
+_out.print(`The DEFAULT DB connection is: ${db_DEFAULT_Config.toJSON()}\n`)
+
+const db_OTHER_Config = _db.init("countries").getConfig()
+_out.print(`The OTHER DB connection is: ${db_OTHER_Config.toJSON()}\n`)
+
+```
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+Configuration of the connection to the database being used.
+
+---
+
 ## getKey
 
 ---
@@ -812,8 +874,8 @@ The item data found or null if it does not exist.
 #### _db.getKey() : string
 ##### Description
 
-Starts a new DB resource for the connection name that is passed.
-The connection details must be defined in the application's environment configuration document, more information in the [Multiple Databases](../../tutorials/multiple-databases) tutorial.
+Gets the name of the database connection configuration being used.
+The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](../../tutorials/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1125,6 +1187,37 @@ Checks whether the connected database is PostgreSQL.
 ( _boolean_ )
 
 If it is PostgreSQL.
+
+---
+
+## key
+
+---
+
+#### _db.key() : string
+##### Description
+
+Gets the name of the database connection configuration being used.
+The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](../../tutorials/multiple-databases) tutorial.
+
+##### How To Use
+
+```javascript
+_header.contentTypePlain()
+
+const db_DEFAULT_ConnectionName = _db.getKey()
+_out.print(`The DEFAULT DB connection is: ${db_DEFAULT_ConnectionName}\n`)
+
+const db_OTHER_ConnectionName = _db.init("countries").getKey()
+_out.print(`The OTHER DB connection is: ${db_OTHER_ConnectionName}\n`)
+
+```
+
+##### Return
+
+( string )
+
+Name of the connection configuration to the database being used.
 
 ---
 

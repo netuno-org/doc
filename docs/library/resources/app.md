@@ -53,7 +53,7 @@ _out.println(`<p>Full logo path: ${logo.fullPath()}</p>`);
 _app.file("public/data.json").output().writeAndClose(
     _val.map()
         .set("result", true)
-        .toJSON(4)
+        .toJSON(2)
 )
 // Load the JSON file into the app at public/data.json:
 const jsonFile = _app.file("public/data.json")
@@ -83,17 +83,22 @@ Returns the file object obtained through the path.
 
 ---
 
-#### _app.folder(arg0: string) : _[File](../../objects/File)_
+#### _app.folder(path: string) : _[File](../../objects/File)_
+##### Description
+
+Tracks all the files present in the folder of the inserted path.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| path | string | Path of the file. |
 
 ##### Return
 
 ( _[File](../../objects/File)_ )
 
+Returns all files present in the folder of the inserted path.
 
 ---
 
@@ -101,17 +106,22 @@ Returns the file object obtained through the path.
 
 ---
 
-#### _app.isFile(arg0: string) : _boolean_
+#### _app.isFile(path: string) : _boolean_
+##### Description
+
+Verify if a file exists.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| path | string | Path of the file. |
 
 ##### Return
 
 ( _boolean_ )
 
+Returns a boolean verification of the existence of the file and tracks it.
 
 ---
 
@@ -119,17 +129,22 @@ Returns the file object obtained through the path.
 
 ---
 
-#### _app.isFolder(arg0: string) : _boolean_
+#### _app.isFolder(path: string) : _boolean_
+##### Description
+
+Verify if exists a folder in the inserted path.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| path | string | Path of the folder. |
 
 ##### Return
 
 ( _boolean_ )
 
+Returns a boolean verification of the existence of the file and tracks it folder location.
 
 ---
 
@@ -341,6 +356,54 @@ const urlDaApp = _app.url();
 ( string )
 
 Returns the URL of the application.
+
+---
+
+#### _app.url(arg0: string) : string
+##### Description
+
+Gets the URL prefix defined in the configuration, as a custom URL prefix.
+
+##### How To Use
+
+```javascript
+const urlCustom = _app.url('name-of-my-configured-url');
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( string )
+
+Returns the location prefix defined in the configuration.
+
+---
+
+## urlAdmin
+
+---
+
+#### _app.urlAdmin() : string
+##### Description
+
+Gets the application url for the administration interface.
+
+##### How To Use
+
+```javascript
+const adminURL = _app.urlAdmin();
+```
+
+##### Return
+
+( string )
+
+Returns the location prefix of the administration.
 
 ---
 

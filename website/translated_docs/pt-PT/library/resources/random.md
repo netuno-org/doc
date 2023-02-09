@@ -13,14 +13,23 @@ Geração de valores aleatórios.
 ---
 
 #### _random.init() : _Random_
+##### Descrição
+
+Gera toda a classe Random.
+
 ##### Retorno
 
 ( _Random_ )
 
+Retorna uma classe.
 
 ---
 
 #### _random.init(arg0: _long_) : _Random_
+##### Descrição
+
+Gera aleatoriamente uma seed.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -31,6 +40,7 @@ Geração de valores aleatórios.
 
 ( _Random_ )
 
+Retorna uma seed.
 
 ---
 
@@ -65,10 +75,15 @@ Geração de valores aleatórios.
 ---
 
 #### _random.initString() : _[RandomString](../../objects/RandomString)_
+##### Descrição
+
+Gera aleatoriamente um texto de 24 caracteres.
+
 ##### Retorno
 
 ( _[RandomString](../../objects/RandomString)_ )
 
+Retorna um texto de 24 caracteres aleatórios.
 
 ---
 

@@ -1,23 +1,10 @@
 ---
-id: dataSchema
-title: DataSchema
-sidebar_label: DataSchema
+id: Values
+title: Values
+sidebar_label: Values
 ---
 
-Manages the dynamic build of OpenAPI Schema and is used in scripts that are in `server/services/_schema`.
-
-```javascript
-if (_dataSchema.isMethod('POST')) {
-    _dataSchema.getValues('properties')
-        .set(
-            'uid',
-            _val.map()
-                .set('type', 'uid')
-        )
-    _dataSchema.getValues('required')
-        .add('uid')
-}
-```
+O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Suporta formatação em JSON e codificação para HTML e URL (query string).
 
 ---
 
@@ -25,7 +12,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.add(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### add(arg0: _int_, arg1: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -35,12 +22,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.add(arg0: _Object_) : _[Values](../../objects/Values)_
+#### add(arg0: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -49,7 +36,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -58,7 +45,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.addAll(arg0: _int_, arg1: _Collection_) : _boolean_
+#### addAll(arg0: _int_, arg1: _Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -73,7 +60,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.addAll(arg0: _Collection_) : _boolean_
+#### addAll(arg0: _Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -91,7 +78,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.as(arg0: _Object_) : _[Values](../../objects/Values)_
+#### as(arg0: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -100,12 +87,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.as(arg0: _Object_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### as(arg0: _Object_, arg1: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -115,7 +102,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -124,7 +111,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asBoolean(arg0: _int_) : _boolean_
+#### asBoolean(arg0: _int_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -138,7 +125,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asBoolean(arg0: _int_, arg1: _boolean_) : _boolean_
+#### asBoolean(arg0: _int_, arg1: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -153,7 +140,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asBoolean(arg0: string) : _boolean_
+#### asBoolean(arg0: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -167,7 +154,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asBoolean(arg0: string, arg1: _boolean_) : _boolean_
+#### asBoolean(arg0: string, arg1: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -186,12 +173,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asByte(arg0: _byte_) : _byte_
+#### asByte(arg0: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte_ |   |
+| arg0 | _int_ |   |
 
 ##### Return
 
@@ -200,7 +187,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asByte(arg0: _int_, arg1: _byte_) : _byte_
+#### asByte(arg0: _int_, arg1: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -215,7 +202,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asByte(arg0: string, arg1: _byte_) : _byte_
+#### asByte(arg0: string, arg1: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -234,7 +221,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asCalendar(arg0: string) : _Calendar_
+#### asCalendar(arg0: string) : _Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -248,7 +235,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### asCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -267,7 +254,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asDate(arg0: string) : _Date_
+#### asDate(arg0: string) : _Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -281,7 +268,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asDate(arg0: string, arg1: _Date_) : _Date_
+#### asDate(arg0: string, arg1: _Date_) : _Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -300,7 +287,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asDouble(arg0: _int_) : _double_
+#### asDouble(arg0: _int_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -314,7 +301,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asDouble(arg0: _int_, arg1: _double_) : _double_
+#### asDouble(arg0: _int_, arg1: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -329,7 +316,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asDouble(arg0: string) : _double_
+#### asDouble(arg0: string) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -343,7 +330,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asDouble(arg0: string, arg1: _double_) : _double_
+#### asDouble(arg0: string, arg1: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -362,7 +349,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asFile(arg0: string) : _[File](../../objects/File)_
+#### asFile(arg0: string) : _File_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -371,7 +358,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _File_ )
 
 
 ---
@@ -380,7 +367,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asFloat(arg0: _int_) : _float_
+#### asFloat(arg0: _int_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -394,7 +381,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asFloat(arg0: _int_, arg1: _float_) : _float_
+#### asFloat(arg0: _int_, arg1: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -409,7 +396,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asFloat(arg0: string) : _float_
+#### asFloat(arg0: string) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -423,7 +410,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asFloat(arg0: string, arg1: _float_) : _float_
+#### asFloat(arg0: string, arg1: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -438,11 +425,11 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-## asHtmlDecode
+## asHTMLDecode
 
 ---
 
-#### _dataSchema.asHtmlDecode(arg0: string) : string
+#### asHTMLDecode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -456,11 +443,11 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-## asHtmlEncode
+## asHTMLEncode
 
 ---
 
-#### _dataSchema.asHtmlEncode(arg0: string) : string
+#### asHTMLEncode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -478,7 +465,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asInstant(arg0: string) : _Instant_
+#### asInstant(arg0: string) : _Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -492,7 +479,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### asInstant(arg0: string, arg1: _Instant_) : _Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -511,7 +498,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asInt(arg0: _int_) : _int_
+#### asInt(arg0: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -525,7 +512,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asInt(arg0: _int_, arg1: _int_) : _int_
+#### asInt(arg0: _int_, arg1: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -540,7 +527,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asInt(arg0: string, arg1: _short_) : _int_
+#### asInt(arg0: string, arg1: _short_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -559,7 +546,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asList(arg0: _int_) : _List_
+#### asList(arg0: _int_) : _List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -573,7 +560,22 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asList(arg0: _int_, arg1: _Object_) : _List_
+#### asList(arg0: _int_, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### asList(arg0: _int_, arg1: _Object_) : _List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -588,7 +590,23 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asList(arg0: string) : _List_
+#### asList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### asList(arg0: string) : _List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -602,13 +620,44 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asList(arg0: string, arg1: _Object_) : _List_
+#### asList(arg0: string, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### asList(arg0: string, arg1: _Object_) : _List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### asList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -621,7 +670,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asLocalDate(arg0: string) : _LocalDate_
+#### asLocalDate(arg0: string) : _LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -635,7 +684,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### asLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -654,7 +703,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asLocalDateTime(arg0: string) : _LocalDateTime_
+#### asLocalDateTime(arg0: string) : _LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -668,7 +717,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### asLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -687,7 +736,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asLocalTime(arg0: string) : _LocalTime_
+#### asLocalTime(arg0: string) : _LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -701,7 +750,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### asLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -720,7 +769,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asLong(arg0: _int_) : _long_
+#### asLong(arg0: _int_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -734,7 +783,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asLong(arg0: _int_, arg1: _long_) : _long_
+#### asLong(arg0: _int_, arg1: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -749,7 +798,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asLong(arg0: string) : _long_
+#### asLong(arg0: string) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -763,7 +812,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asLong(arg0: string, arg1: _long_) : _long_
+#### asLong(arg0: string, arg1: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -782,7 +831,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asMap(arg0: _int_) : _Map_
+#### asMap(arg0: _int_) : _Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -796,7 +845,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asMap(arg0: _int_, arg1: _Object_) : _Map_
+#### asMap(arg0: _int_, arg1: _Object_) : _Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -811,7 +860,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asMap(arg0: string) : _Map_
+#### asMap(arg0: string) : _Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -825,7 +874,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asMap(arg0: string, arg1: _Object_) : _Map_
+#### asMap(arg0: string, arg1: _Object_) : _Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -844,7 +893,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asSQLDate(arg0: string) : _Date_
+#### asSQLDate(arg0: string) : _Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -858,7 +907,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### asSQLDate(arg0: string, arg1: _Date_) : _Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -877,7 +926,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asSQLTime(arg0: string) : _Time_
+#### asSQLTime(arg0: string) : _Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -891,7 +940,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### asSQLTime(arg0: string, arg1: _Time_) : _Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -910,7 +959,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asSQLTimestamp(arg0: string) : _Timestamp_
+#### asSQLTimestamp(arg0: string) : _Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -924,7 +973,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### asSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -943,7 +992,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asShort(arg0: _int_) : _short_
+#### asShort(arg0: _int_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -957,7 +1006,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asShort(arg0: _int_, arg1: _short_) : _short_
+#### asShort(arg0: _int_, arg1: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -972,7 +1021,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asShort(arg0: string) : _short_
+#### asShort(arg0: string) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -986,7 +1035,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asShort(arg0: string, arg1: _short_) : _short_
+#### asShort(arg0: string, arg1: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1005,7 +1054,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asString(arg0: _int_) : string
+#### asString(arg0: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1019,7 +1068,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asString(arg0: _int_, arg1: string) : string
+#### asString(arg0: _int_, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1034,7 +1083,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asString(arg0: string) : string
+#### asString(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1048,7 +1097,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asString(arg0: string, arg1: string) : string
+#### asString(arg0: string, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1063,7 +1112,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asString(arg0: string, arg1: string, arg2: string) : string
+#### asString(arg0: string, arg1: string, arg2: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1079,11 +1128,11 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-## asUUID
+## asUID
 
 ---
 
-#### _dataSchema.asUUID(arg0: string) : _UUID_
+#### asUID(arg0: string) : _UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1097,7 +1146,70 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### asUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### asUID(arg0: string, arg1: _UUID_) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _UUID_ |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+## asUUID
+
+---
+
+#### asUUID(arg0: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### asUUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### asUUID(arg0: string, arg1: _UUID_) : _UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1116,7 +1228,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.asValues(arg0: _int_) : _[Values](../../objects/Values)_
+#### asValues(arg0: _int_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1125,12 +1237,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.asValues(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### asValues(arg0: _int_, arg1: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1140,12 +1252,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.asValues(arg0: string) : _[Values](../../objects/Values)_
+#### asValues(arg0: string) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1154,12 +1266,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.asValues(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### asValues(arg0: string, arg1: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1169,7 +1281,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -1178,7 +1290,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.clear() : _void_
+#### clear() : _void_
 ##### Return
 
 ( _void_ )
@@ -1190,10 +1302,10 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.cloneJSON() : _[Values](../../objects/Values)_
+#### cloneJSON() : _Values_
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -1202,7 +1314,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.compute(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### compute(arg0: _Object_, arg1: _BiFunction_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1221,7 +1333,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.computeIfAbsent(arg0: _Object_, arg1: _Function_) : _Object_
+#### computeIfAbsent(arg0: _Object_, arg1: _Function_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1240,7 +1352,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.computeIfPresent(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### computeIfPresent(arg0: _Object_, arg1: _BiFunction_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1259,7 +1371,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.contains(arg0: _Object_) : _boolean_
+#### contains(arg0: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1273,7 +1385,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.contains(arg0: string, arg1: _Object_) : _boolean_
+#### contains(arg0: string, arg1: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1292,7 +1404,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.containsAll(arg0: _Collection_) : _boolean_
+#### containsAll(arg0: _Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1310,7 +1422,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.containsKey(arg0: _Object_) : _boolean_
+#### containsKey(arg0: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1328,7 +1440,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.containsValue(arg0: _Object_) : _boolean_
+#### containsValue(arg0: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1346,7 +1458,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### _dataSchema.ensureJail(jailPath: string) : _void_
+#### ensureJail(jailPath: string) : _void_
 ##### Description
 
 Set the security restriction on a specific directory for processed objects of the file type, it can only be set once.
@@ -1368,7 +1480,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.entrySet() : _Set_
+#### entrySet() : _Set_
 ##### Return
 
 ( _Set_ )
@@ -1380,7 +1492,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.filter(arg0: _Predicate_) : _[Values](../../objects/Values)_
+#### filter(arg0: _Predicate_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1389,12 +1501,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.filter(arg0: _Value_) : _[Values](../../objects/Values)_
+#### filter(arg0: _Value_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1403,7 +1515,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -1412,7 +1524,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.find(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### find(arg0: string, arg1: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1422,12 +1534,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.find(arg0: _Predicate_) : _Object_
+#### find(arg0: _Predicate_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1441,7 +1553,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.find(arg0: _Value_) : _Object_
+#### find(arg0: _Value_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1455,16 +1567,16 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.find(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### find(arg0: _Values_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| arg0 | _Values_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -1473,7 +1585,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.forEach(arg0: _BiConsumer_) : _void_
+#### forEach(arg0: _BiConsumer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1487,7 +1599,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.forEach(arg0: _Consumer_) : _void_
+#### forEach(arg0: _Consumer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1501,7 +1613,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.forEach(arg0: _Value_) : _void_
+#### forEach(arg0: _Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1519,10 +1631,10 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.forceList() : _[Values](../../objects/Values)_
+#### forceList() : _Values_
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -1531,10 +1643,10 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.forceMap() : _[Values](../../objects/Values)_
+#### forceMap() : _Values_
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -1543,7 +1655,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.fromJSON(arg0: string) : _[Values](../../objects/Values)_
+#### fromJSON(arg0: string) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1552,7 +1664,21 @@ Set the security restriction on a specific directory for processed objects of th
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
+
+
+---
+
+#### fromJSON(arg0: _Response_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Response_ |   |
+
+##### Return
+
+( _Values_ )
 
 
 ---
@@ -1561,7 +1687,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _dataSchema.get(key: _int_) : _Object_
+#### get(key: _int_) : _Object_
 ##### Description
 
 Gets the original object associated with the cast key for the specified class type.
@@ -1580,7 +1706,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.get(key: _Object_) : _Object_
+#### get(key: _Object_) : _Object_
 ##### Description
 
 Gets the original object associated with the cast key for the specified class type.
@@ -1599,7 +1725,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.get(key: string) : _Object_
+#### get(key: string) : _Object_
 ##### Description
 
 Gets the original object associated with the key.
@@ -1618,7 +1744,7 @@ Original object without conversions.
 
 ---
 
-#### _dataSchema.get(key: string, type: _Class_) : _Object_
+#### get(key: string, type: _Class_) : _Object_
 ##### Description
 
 Gets the original object associated with the cast key for the specified class type.
@@ -1642,7 +1768,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getBoolean(arg0: _int_) : _boolean_
+#### getBoolean(arg0: _int_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1656,7 +1782,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getBoolean(arg0: _int_, arg1: _boolean_) : _boolean_
+#### getBoolean(arg0: _int_, arg1: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1671,7 +1797,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getBoolean(arg0: string) : _boolean_
+#### getBoolean(arg0: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1685,7 +1811,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getBoolean(arg0: string, arg1: _boolean_) : _boolean_
+#### getBoolean(arg0: string, arg1: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1704,12 +1830,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getByte(arg0: _byte_) : _byte_
+#### getByte(arg0: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte_ |   |
+| arg0 | _int_ |   |
 
 ##### Return
 
@@ -1718,7 +1844,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getByte(arg0: _int_, arg1: _byte_) : _byte_
+#### getByte(arg0: _int_, arg1: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1733,7 +1859,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getByte(arg0: string) : _byte_
+#### getByte(arg0: string) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1747,7 +1873,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getByte(arg0: string, arg1: _byte_) : _byte_
+#### getByte(arg0: string, arg1: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1766,7 +1892,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getCalendar(arg0: string) : _Calendar_
+#### getCalendar(arg0: string) : _Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1780,7 +1906,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### getCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1799,7 +1925,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getDate(arg0: string) : _Date_
+#### getDate(arg0: string) : _Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1813,7 +1939,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getDate(arg0: string, arg1: _Date_) : _Date_
+#### getDate(arg0: string, arg1: _Date_) : _Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1832,7 +1958,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getDouble(arg0: _int_) : _double_
+#### getDouble(arg0: _int_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1846,7 +1972,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getDouble(arg0: _int_, arg1: _double_) : _double_
+#### getDouble(arg0: _int_, arg1: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1861,7 +1987,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getDouble(arg0: string) : _double_
+#### getDouble(arg0: string) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1875,7 +2001,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getDouble(arg0: string, arg1: _double_) : _double_
+#### getDouble(arg0: string, arg1: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1894,7 +2020,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getFile(arg0: string) : _[File](../../objects/File)_
+#### getFile(arg0: string) : _File_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1903,7 +2029,7 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _File_ )
 
 
 ---
@@ -1912,7 +2038,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getFloat(arg0: _int_) : _float_
+#### getFloat(arg0: _int_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1926,7 +2052,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getFloat(arg0: _int_, arg1: _float_) : _float_
+#### getFloat(arg0: _int_, arg1: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1941,7 +2067,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getFloat(arg0: string) : _float_
+#### getFloat(arg0: string) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1955,7 +2081,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getFloat(arg0: string, arg1: _float_) : _float_
+#### getFloat(arg0: string, arg1: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1974,7 +2100,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getForceList() : _boolean_
+#### getForceList() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -1986,7 +2112,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getForceMap() : _boolean_
+#### getForceMap() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -1994,11 +2120,11 @@ Original object converted to the type of the defined class.
 
 ---
 
-## getHtmlDecode
+## getHTMLDecode
 
 ---
 
-#### _dataSchema.getHtmlDecode(arg0: string) : string
+#### getHTMLDecode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2012,11 +2138,11 @@ Original object converted to the type of the defined class.
 
 ---
 
-## getHtmlEncode
+## getHTMLEncode
 
 ---
 
-#### _dataSchema.getHtmlEncode(arg0: string) : string
+#### getHTMLEncode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2034,7 +2160,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getInstant(arg0: string) : _Instant_
+#### getInstant(arg0: string) : _Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2048,7 +2174,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### getInstant(arg0: string, arg1: _Instant_) : _Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2067,7 +2193,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getInt(arg0: _int_) : _int_
+#### getInt(arg0: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2081,7 +2207,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getInt(arg0: _int_, arg1: _int_) : _int_
+#### getInt(arg0: _int_, arg1: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2096,7 +2222,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getInt(arg0: string) : _int_
+#### getInt(arg0: string) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2110,7 +2236,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getInt(arg0: string, arg1: _int_) : _int_
+#### getInt(arg0: string, arg1: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2129,7 +2255,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getKeys() : _Set_
+#### getKeys() : _Set_
 ##### Return
 
 ( _Set_ )
@@ -2141,7 +2267,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getList(arg0: _int_) : _List_
+#### getList(arg0: _int_) : _List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2155,7 +2281,22 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getList(arg0: _int_, arg1: _Object_) : _List_
+#### getList(arg0: _int_, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### getList(arg0: _int_, arg1: _Object_) : _List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2170,7 +2311,23 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getList(arg0: string) : _List_
+#### getList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### getList(arg0: string) : _List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2184,13 +2341,44 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getList(arg0: string, arg1: _Object_) : _List_
+#### getList(arg0: string, arg1: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### getList(arg0: string, arg1: _Object_) : _List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
 | arg1 | _Object_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+#### getList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object_ |   |
+| arg2 | _Class_ |   |
 
 ##### Return
 
@@ -2203,7 +2391,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getLocalDate(arg0: string) : _LocalDate_
+#### getLocalDate(arg0: string) : _LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2217,7 +2405,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### getLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2236,7 +2424,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getLocalDateTime(arg0: string) : _LocalDateTime_
+#### getLocalDateTime(arg0: string) : _LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2250,7 +2438,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### getLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2269,7 +2457,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getLocalTime(arg0: string) : _LocalTime_
+#### getLocalTime(arg0: string) : _LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2283,7 +2471,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### getLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2302,7 +2490,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getLong(arg0: _int_) : _long_
+#### getLong(arg0: _int_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2316,7 +2504,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getLong(arg0: _int_, arg1: _long_) : _long_
+#### getLong(arg0: _int_, arg1: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2331,7 +2519,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getLong(arg0: string) : _long_
+#### getLong(arg0: string) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2345,7 +2533,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getLong(arg0: string, arg1: _long_) : _long_
+#### getLong(arg0: string, arg1: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2364,7 +2552,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getMap(arg0: _int_) : _Map_
+#### getMap(arg0: _int_) : _Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2378,7 +2566,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getMap(arg0: _int_, arg1: _Object_) : _Map_
+#### getMap(arg0: _int_, arg1: _Object_) : _Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2393,7 +2581,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getMap(arg0: string) : _Map_
+#### getMap(arg0: string) : _Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2407,7 +2595,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getMap(arg0: string, arg1: _Object_) : _Map_
+#### getMap(arg0: string, arg1: _Object_) : _Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2418,18 +2606,6 @@ Original object converted to the type of the defined class.
 ##### Return
 
 ( _Map_ )
-
-
----
-
-## getMethod
-
----
-
-#### _dataSchema.getMethod() : string
-##### Return
-
-( string )
 
 
 ---
@@ -2438,7 +2614,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getOrDefault(arg0: _Object_, arg1: _Object_) : _Object_
+#### getOrDefault(arg0: _Object_, arg1: _Object_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2457,7 +2633,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getSQLDate(arg0: string) : _Date_
+#### getSQLDate(arg0: string) : _Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2471,7 +2647,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### getSQLDate(arg0: string, arg1: _Date_) : _Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2490,7 +2666,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getSQLTime(arg0: string) : _Time_
+#### getSQLTime(arg0: string) : _Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2504,7 +2680,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### getSQLTime(arg0: string, arg1: _Time_) : _Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2523,7 +2699,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getSQLTimestamp(arg0: string) : _Timestamp_
+#### getSQLTimestamp(arg0: string) : _Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2537,7 +2713,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### getSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2552,23 +2728,11 @@ Original object converted to the type of the defined class.
 
 ---
 
-## getService
-
----
-
-#### _dataSchema.getService() : string
-##### Return
-
-( string )
-
-
----
-
 ## getShort
 
 ---
 
-#### _dataSchema.getShort(arg0: _int_) : _short_
+#### getShort(arg0: _int_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2582,7 +2746,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getShort(arg0: _int_, arg1: _short_) : _short_
+#### getShort(arg0: _int_, arg1: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2597,7 +2761,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getShort(arg0: string) : _short_
+#### getShort(arg0: string) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2611,7 +2775,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getShort(arg0: string, arg1: _short_) : _short_
+#### getShort(arg0: string, arg1: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2630,19 +2794,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getSize() : _int_
-##### Return
-
-( _int_ )
-
-
----
-
-## getStatusCode
-
----
-
-#### _dataSchema.getStatusCode() : _int_
+#### getSize() : _int_
 ##### Return
 
 ( _int_ )
@@ -2654,7 +2806,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getString(arg0: _int_) : string
+#### getString(arg0: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2668,7 +2820,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getString(arg0: _int_, arg1: string) : string
+#### getString(arg0: _int_, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2683,7 +2835,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getString(arg0: string) : string
+#### getString(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2697,7 +2849,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getString(arg0: string, arg1: string) : string
+#### getString(arg0: string, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2712,7 +2864,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _dataSchema.getString(arg0: string, arg1: string, arg2: string) : string
+#### getString(arg0: string, arg1: string, arg2: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2728,11 +2880,59 @@ Original object converted to the type of the defined class.
 
 ---
 
+## getUID
+
+---
+
+#### getUID(arg0: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### getUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### getUID(arg0: string, arg1: _UUID_) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _UUID_ |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
 ## getURLCharacterEncoding
 
 ---
 
-#### _dataSchema.getURLCharacterEncoding() : string
+#### getURLCharacterEncoding() : string
 ##### Description
 
 Gets the character encoding to be used in formatting for URL (_QueryString_).
@@ -2749,7 +2949,7 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.getUUID(arg0: string) : _UUID_
+#### getUUID(arg0: string) : _UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2763,7 +2963,22 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.getUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### getUUID(arg0: string, arg1: string) : _UUID_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | string |   |
+
+##### Return
+
+( _UUID_ )
+
+
+---
+
+#### getUUID(arg0: string, arg1: _UUID_) : _UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2782,7 +2997,7 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.getValues() : _Collection_
+#### getValues() : _Collection_
 ##### Return
 
 ( _Collection_ )
@@ -2790,7 +3005,7 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.getValues(arg0: _int_) : _[Values](../../objects/Values)_
+#### getValues(arg0: _int_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2799,12 +3014,12 @@ Character encoding code.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.getValues(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### getValues(arg0: _int_, arg1: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2814,12 +3029,12 @@ Character encoding code.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.getValues(arg0: string) : _[Values](../../objects/Values)_
+#### getValues(arg0: string) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2828,12 +3043,12 @@ Character encoding code.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.getValues(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### getValues(arg0: string, arg1: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2843,7 +3058,7 @@ Character encoding code.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -2852,7 +3067,7 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.has(arg0: _Object_) : _boolean_
+#### has(arg0: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2866,7 +3081,7 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.has(arg0: string) : _boolean_
+#### has(arg0: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2880,7 +3095,7 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.has(arg0: string, arg1: _Object_) : _boolean_
+#### has(arg0: string, arg1: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2899,7 +3114,7 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.hasKey(arg0: string) : _boolean_
+#### hasKey(arg0: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2917,7 +3132,7 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.hasValue(arg0: _Object_) : _boolean_
+#### hasValue(arg0: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2931,37 +3146,11 @@ Character encoding code.
 
 ---
 
-## in
-
----
-
-#### _dataSchema.in() : _boolean_
-##### Return
-
-( _boolean_ )
-
-
----
-
-#### _dataSchema.in(arg0: _boolean_) : _DataSchema_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _boolean_ |   |
-
-##### Return
-
-( _DataSchema_ )
-
-
----
-
 ## indexOf
 
 ---
 
-#### _dataSchema.indexOf(arg0: _Object_) : _int_
+#### indexOf(arg0: _Object_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2979,7 +3168,7 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.is(arg0: _Object_) : _boolean_
+#### is(arg0: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2997,19 +3186,7 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.isEmpty() : _boolean_
-##### Return
-
-( _boolean_ )
-
-
----
-
-## isIn
-
----
-
-#### _dataSchema.isIn() : _boolean_
+#### isEmpty() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -3021,7 +3198,7 @@ Character encoding code.
 
 ---
 
-#### _dataSchema.isJail() : _boolean_
+#### isJail() : _boolean_
 ##### Description
 
 Check if the restriction is active for all associated files to be loaded only from a specific directory.
@@ -3038,7 +3215,7 @@ If the restriction on associated files is active.
 
 ---
 
-#### _dataSchema.isList() : _boolean_
+#### isList() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -3046,7 +3223,7 @@ If the restriction on associated files is active.
 
 ---
 
-#### _dataSchema.isList(arg0: _Object_) : _boolean_
+#### isList(arg0: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3064,7 +3241,7 @@ If the restriction on associated files is active.
 
 ---
 
-#### _dataSchema.isLockedAsReadOnly() : _boolean_
+#### isLockedAsReadOnly() : _boolean_
 ##### Description
 
 Check if it is locked in read-only mode.
@@ -3081,7 +3258,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.isMap() : _boolean_
+#### isMap() : _boolean_
 ##### Return
 
 ( _boolean_ )
@@ -3089,7 +3266,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.isMap(arg0: _Object_) : _boolean_
+#### isMap(arg0: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3107,7 +3284,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.isMergeable(arg0: _Object_) : _boolean_
+#### isMergeable(arg0: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3121,41 +3298,11 @@ Whether it is in read-only mode or not.
 
 ---
 
-## isMethod
-
----
-
-#### _dataSchema.isMethod(arg0: string) : _boolean_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-
-##### Return
-
-( _boolean_ )
-
-
----
-
-## isOut
-
----
-
-#### _dataSchema.isOut() : _boolean_
-##### Return
-
-( _boolean_ )
-
-
----
-
 ## iterator
 
 ---
 
-#### _dataSchema.iterator() : _Iterator_
+#### iterator() : _Iterator_
 ##### Return
 
 ( _Iterator_ )
@@ -3167,7 +3314,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.join(arg0: string) : string
+#### join(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3185,7 +3332,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.keySet() : _Set_
+#### keySet() : _Set_
 ##### Return
 
 ( _Set_ )
@@ -3197,7 +3344,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.keys() : _Set_
+#### keys() : _Set_
 ##### Return
 
 ( _Set_ )
@@ -3209,7 +3356,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.keysSorted() : _Set_
+#### keysSorted() : _Set_
 ##### Return
 
 ( _Set_ )
@@ -3221,7 +3368,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.keysToString(arg0: string) : string
+#### keysToString(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3235,7 +3382,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.keysToString(arg0: _Map_, arg1: string) : string
+#### keysToString(arg0: _Map_, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3254,7 +3401,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.lastIndexOf(arg0: _Object_) : _int_
+#### lastIndexOf(arg0: _Object_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3272,7 +3419,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.length() : _int_
+#### length() : _int_
 ##### Return
 
 ( _int_ )
@@ -3284,7 +3431,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.list() : _List_
+#### list() : _List_
 ##### Return
 
 ( _List_ )
@@ -3292,7 +3439,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.list(arg0: _Class_) : _List_
+#### list(arg0: _Class_) : _List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3310,7 +3457,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.listIterator() : _ListIterator_
+#### listIterator() : _ListIterator_
 ##### Return
 
 ( _ListIterator_ )
@@ -3318,7 +3465,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.listIterator(arg0: _int_) : _ListIterator_
+#### listIterator(arg0: _int_) : _ListIterator_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3336,7 +3483,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.listOfValues() : _List_
+#### listOfValues() : _List_
 ##### Return
 
 ( _List_ )
@@ -3348,7 +3495,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.loadJSON(arg0: _InputStream_) : _void_
+#### loadJSON(arg0: _InputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3362,7 +3509,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.loadJSON(arg0: _Reader_) : _void_
+#### loadJSON(arg0: _Reader_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3380,7 +3527,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.loadProperties(arg0: _InputStream_) : _void_
+#### loadProperties(arg0: _InputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3394,7 +3541,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.loadProperties(arg0: _Reader_) : _void_
+#### loadProperties(arg0: _Reader_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3408,7 +3555,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.loadProperties(arg0: _Properties_) : _void_
+#### loadProperties(arg0: _Properties_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3426,7 +3573,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.loadPropertiesFromString(arg0: string) : _void_
+#### loadPropertiesFromString(arg0: string) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3444,14 +3591,14 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.lockAsReadOnly() : _[Values](../../objects/Values)_
+#### lockAsReadOnly() : _Values_
 ##### Description
 
 Check if it is locked in read-only mode.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 Whether it is in read-only mode or not.
 
@@ -3461,7 +3608,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.map() : _Map_
+#### map() : _Map_
 ##### Return
 
 ( _Map_ )
@@ -3473,7 +3620,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.merge(arg0: _Object_) : _[Values](../../objects/Values)_
+#### merge(arg0: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3482,12 +3629,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.merge(arg0: _Object_, arg1: _Object_, arg2: _BiFunction_) : _Object_
+#### merge(arg0: _Object_, arg1: _Object_, arg2: _BiFunction_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3503,37 +3650,25 @@ Whether it is in read-only mode or not.
 
 ---
 
-## method
-
----
-
-#### _dataSchema.method() : string
-##### Return
-
-( string )
-
-
----
-
-#### _dataSchema.method(arg0: string) : _DataSchema_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-
-##### Return
-
-( _DataSchema_ )
-
-
----
-
 ## of
 
 ---
 
-#### _dataSchema.of(arg0: _Object_) : _Object_
+#### of(arg0: _Object[]_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object[]_ |   |
+
+##### Return
+
+( _Values_ )
+
+
+---
+
+#### of(arg0: _Object_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3547,37 +3682,39 @@ Whether it is in read-only mode or not.
 
 ---
 
-## out
-
----
-
-#### _dataSchema.out() : _boolean_
-##### Return
-
-( _boolean_ )
-
-
----
-
-#### _dataSchema.out(arg0: _boolean_) : _DataSchema_
+#### of(arg0: _List_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| arg0 | _List_ |   |
 
 ##### Return
 
-( _DataSchema_ )
+( _Values_ )
 
 
 ---
 
-## push
+#### of(arg0: _Map_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Map_ |   |
+
+##### Return
+
+( _Values_ )
+
 
 ---
 
-#### _dataSchema.push(arg0: _Object_) : _[Values](../../objects/Values)_
+## ofList
+
+---
+
+#### ofList(arg0: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3586,7 +3723,43 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
+
+
+---
+
+## ofMap
+
+---
+
+#### ofMap(arg0: _Object_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object_ |   |
+
+##### Return
+
+( _Values_ )
+
+
+---
+
+## push
+
+---
+
+#### push(arg0: _Object_) : _Values_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Object_ |   |
+
+##### Return
+
+( _Values_ )
 
 
 ---
@@ -3595,7 +3768,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.put(arg0: _Object_, arg1: _Object_) : _Object_
+#### put(arg0: _Object_, arg1: _Object_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3610,7 +3783,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.put(arg0: string, arg1: _Object_) : _Object_
+#### put(arg0: string, arg1: _Object_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3629,7 +3802,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.putAll(arg0: _Map_) : _void_
+#### putAll(arg0: _Map_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3647,7 +3820,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.putIfAbsent(arg0: _Object_, arg1: _Object_) : _Object_
+#### putIfAbsent(arg0: _Object_, arg1: _Object_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3666,7 +3839,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.remove(arg0: _int_) : _Object_
+#### remove(arg0: _int_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3680,7 +3853,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.remove(arg0: _Object_) : _Object_
+#### remove(arg0: _Object_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3694,7 +3867,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.remove(arg0: _Object_, arg1: _Object_) : _boolean_
+#### remove(arg0: _Object_, arg1: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3713,7 +3886,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.removeAll() : _void_
+#### removeAll() : _void_
 ##### Return
 
 ( _void_ )
@@ -3721,7 +3894,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.removeAll(arg0: _Collection_) : _boolean_
+#### removeAll(arg0: _Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3739,7 +3912,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.replace(arg0: _Object_, arg1: _Object_) : _Object_
+#### replace(arg0: _Object_, arg1: _Object_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3754,7 +3927,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.replace(arg0: _Object_, arg1: _Object_, arg2: _Object_) : _boolean_
+#### replace(arg0: _Object_, arg1: _Object_, arg2: _Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3774,7 +3947,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.replaceAll(arg0: _BiFunction_) : _void_
+#### replaceAll(arg0: _BiFunction_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3788,7 +3961,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.replaceAll(arg0: _UnaryOperator_) : _void_
+#### replaceAll(arg0: _UnaryOperator_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3802,7 +3975,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.replaceAll(arg0: _Value_) : _void_
+#### replaceAll(arg0: _Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3820,7 +3993,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.retainAll(arg0: _Collection_) : _boolean_
+#### retainAll(arg0: _Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3838,7 +4011,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.safeString(arg0: _Object_) : string
+#### safeString(arg0: _Object_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3852,7 +4025,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.safeString(arg0: _Object_, arg1: string) : string
+#### safeString(arg0: _Object_, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3871,7 +4044,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.saveJSON(arg0: _OutputStream_) : _void_
+#### saveJSON(arg0: _OutputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3885,7 +4058,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.saveJSON(arg0: _Writer_) : _void_
+#### saveJSON(arg0: _Writer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3903,7 +4076,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.saveProperties(arg0: _OutputStream_) : _void_
+#### saveProperties(arg0: _OutputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3917,7 +4090,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.saveProperties(arg0: _Writer_) : _void_
+#### saveProperties(arg0: _Writer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3935,7 +4108,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.search(arg0: string) : string
+#### search(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3949,7 +4122,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.search(arg0: string, arg1: _boolean_) : string
+#### search(arg0: string, arg1: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3964,7 +4137,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.search(arg0: string, arg1: string) : string
+#### search(arg0: string, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3979,7 +4152,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.search(arg0: string, arg1: string, arg2: _boolean_) : string
+#### search(arg0: string, arg1: string, arg2: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3995,7 +4168,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.search(arg0: _Map_, arg1: string, arg2: string, arg3: _boolean_) : string
+#### search(arg0: _Map_, arg1: string, arg2: string, arg3: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4012,37 +4185,11 @@ Whether it is in read-only mode or not.
 
 ---
 
-## service
-
----
-
-#### _dataSchema.service() : string
-##### Return
-
-( string )
-
-
----
-
-#### _dataSchema.service(arg0: string) : _DataSchema_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-
-##### Return
-
-( _DataSchema_ )
-
-
----
-
 ## set
 
 ---
 
-#### _dataSchema.set(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### set(arg0: _int_, arg1: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4052,12 +4199,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.set(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### set(arg0: string, arg1: _Object_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4067,7 +4214,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -4076,7 +4223,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.setForceList(arg0: _boolean_) : _[Values](../../objects/Values)_
+#### setForceList(arg0: _boolean_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4085,7 +4232,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -4094,7 +4241,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.setForceMap(arg0: _boolean_) : _[Values](../../objects/Values)_
+#### setForceMap(arg0: _boolean_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4103,7 +4250,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -4112,7 +4259,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.setIfFalse(arg0: string, arg1: _boolean_) : _[Values](../../objects/Values)_
+#### setIfFalse(arg0: string, arg1: _boolean_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4122,7 +4269,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -4131,7 +4278,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.setIfGreaterThanZero(arg0: string, arg1: _double_) : _[Values](../../objects/Values)_
+#### setIfGreaterThanZero(arg0: string, arg1: _double_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4141,12 +4288,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfGreaterThanZero(arg0: string, arg1: _float_) : _[Values](../../objects/Values)_
+#### setIfGreaterThanZero(arg0: string, arg1: _float_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4156,12 +4303,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfGreaterThanZero(arg0: string, arg1: _int_) : _[Values](../../objects/Values)_
+#### setIfGreaterThanZero(arg0: string, arg1: _int_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4171,12 +4318,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfGreaterThanZero(arg0: string, arg1: _long_) : _[Values](../../objects/Values)_
+#### setIfGreaterThanZero(arg0: string, arg1: _long_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4186,12 +4333,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfGreaterThanZero(arg0: string, arg1: _short_) : _[Values](../../objects/Values)_
+#### setIfGreaterThanZero(arg0: string, arg1: _short_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4201,7 +4348,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -4210,7 +4357,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.setIfLowerThanZero(arg0: string, arg1: _double_) : _[Values](../../objects/Values)_
+#### setIfLowerThanZero(arg0: string, arg1: _double_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4220,12 +4367,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfLowerThanZero(arg0: string, arg1: _float_) : _[Values](../../objects/Values)_
+#### setIfLowerThanZero(arg0: string, arg1: _float_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4235,12 +4382,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfLowerThanZero(arg0: string, arg1: _int_) : _[Values](../../objects/Values)_
+#### setIfLowerThanZero(arg0: string, arg1: _int_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4250,12 +4397,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfLowerThanZero(arg0: string, arg1: _long_) : _[Values](../../objects/Values)_
+#### setIfLowerThanZero(arg0: string, arg1: _long_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4265,12 +4412,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfLowerThanZero(arg0: string, arg1: _short_) : _[Values](../../objects/Values)_
+#### setIfLowerThanZero(arg0: string, arg1: _short_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4280,7 +4427,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -4289,7 +4436,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.setIfNotEmpty(arg0: string, arg1: string) : _[Values](../../objects/Values)_
+#### setIfNotEmpty(arg0: string, arg1: string) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4299,7 +4446,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -4308,7 +4455,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.setIfNotZero(arg0: string, arg1: _double_) : _[Values](../../objects/Values)_
+#### setIfNotZero(arg0: string, arg1: _double_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4318,12 +4465,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfNotZero(arg0: string, arg1: _float_) : _[Values](../../objects/Values)_
+#### setIfNotZero(arg0: string, arg1: _float_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4333,12 +4480,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfNotZero(arg0: string, arg1: _int_) : _[Values](../../objects/Values)_
+#### setIfNotZero(arg0: string, arg1: _int_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4348,12 +4495,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfNotZero(arg0: string, arg1: _long_) : _[Values](../../objects/Values)_
+#### setIfNotZero(arg0: string, arg1: _long_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4363,12 +4510,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.setIfNotZero(arg0: string, arg1: _short_) : _[Values](../../objects/Values)_
+#### setIfNotZero(arg0: string, arg1: _short_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4378,7 +4525,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
@@ -4387,7 +4534,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.setIfTrue(arg0: string, arg1: _boolean_) : _[Values](../../objects/Values)_
+#### setIfTrue(arg0: string, arg1: _boolean_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4397,43 +4544,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
-
-
----
-
-## setIn
-
----
-
-#### _dataSchema.setIn(arg0: _boolean_) : _DataSchema_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _boolean_ |   |
-
-##### Return
-
-( _DataSchema_ )
-
-
----
-
-## setMethod
-
----
-
-#### _dataSchema.setMethod(arg0: string) : _DataSchema_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-
-##### Return
-
-( _DataSchema_ )
+( _Values_ )
 
 
 ---
@@ -4442,7 +4553,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.setNull(arg0: string) : _[Values](../../objects/Values)_
+#### setNull(arg0: string) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4451,61 +4562,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
-
-
----
-
-## setOut
-
----
-
-#### _dataSchema.setOut(arg0: _boolean_) : _DataSchema_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _boolean_ |   |
-
-##### Return
-
-( _DataSchema_ )
-
-
----
-
-## setService
-
----
-
-#### _dataSchema.setService(arg0: string) : _DataSchema_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-
-##### Return
-
-( _DataSchema_ )
-
-
----
-
-## setStatusCode
-
----
-
-#### _dataSchema.setStatusCode(arg0: _int_) : _DataSchema_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _int_ |   |
-
-##### Return
-
-( _DataSchema_ )
+( _Values_ )
 
 
 ---
@@ -4514,7 +4571,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _dataSchema.setURLCharacterEncoding(characterEncoding: string) : _void_
+#### setURLCharacterEncoding(characterEncoding: string) : _void_
 ##### Description
 
 Defines the character encoding to be used in formatting for URL (_QueryString_).
@@ -4536,7 +4593,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.size() : _int_
+#### size() : _int_
 ##### Return
 
 ( _int_ )
@@ -4548,7 +4605,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.sizeOfList() : _int_
+#### sizeOfList() : _int_
 ##### Return
 
 ( _int_ )
@@ -4560,7 +4617,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.sizeOfMap() : _int_
+#### sizeOfMap() : _int_
 ##### Return
 
 ( _int_ )
@@ -4572,7 +4629,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.sort(arg0: _Comparator_) : _void_
+#### sort(arg0: _Comparator_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4586,7 +4643,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.sort(arg0: _Value_) : _void_
+#### sort(arg0: _Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4604,36 +4661,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.spliterator() : _Spliterator_
+#### spliterator() : _Spliterator_
 ##### Return
 
 ( _Spliterator_ )
-
-
----
-
-## statusCode
-
----
-
-#### _dataSchema.statusCode() : _int_
-##### Return
-
-( _int_ )
-
-
----
-
-#### _dataSchema.statusCode(arg0: _int_) : _DataSchema_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _int_ |   |
-
-##### Return
-
-( _DataSchema_ )
 
 
 ---
@@ -4642,7 +4673,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.subList(arg0: _int_, arg1: _int_) : _List_
+#### subList(arg0: _int_, arg1: _int_) : _List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4661,7 +4692,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toArray() : _Object[]_
+#### toArray() : _Object[]_
 ##### Return
 
 ( _Object[]_ )
@@ -4669,7 +4700,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toArray(arg0: _Object[]_) : _Object[]_
+#### toArray(arg0: _Object[]_) : _Object[]_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4683,43 +4714,91 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
+## toByteArray
+
+---
+
+#### toByteArray() : _byte[]_
+##### Return
+
+( _byte[]_ )
+
+
+---
+
+## toDoubleArray
+
+---
+
+#### toDoubleArray() : _double[]_
+##### Return
+
+( _double[]_ )
+
+
+---
+
+## toFloatArray
+
+---
+
+#### toFloatArray() : _float[]_
+##### Return
+
+( _float[]_ )
+
+
+---
+
 ## toFormMap
 
 ---
 
-#### _dataSchema.toFormMap() : _[Values](../../objects/Values)_
+#### toFormMap() : _Values_
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.toFormMap(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### toFormMap(arg0: string, arg1: _Values_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| arg1 | _Values_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
 
 
 ---
 
-#### _dataSchema.toFormMap(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### toFormMap(arg0: _Values_) : _Values_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| arg0 | _Values_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _Values_ )
+
+
+---
+
+## toIntArray
+
+---
+
+#### toIntArray() : _int[]_
+##### Return
+
+( _int[]_ )
 
 
 ---
@@ -4728,7 +4807,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toJSON() : string
+#### toJSON() : string
 ##### Return
 
 ( string )
@@ -4736,7 +4815,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toJSON(arg0: _boolean_) : string
+#### toJSON(arg0: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4750,7 +4829,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toJSON(arg0: _boolean_, arg1: _int_) : string
+#### toJSON(arg0: _boolean_, arg1: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4765,7 +4844,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toJSON(arg0: _int_) : string
+#### toJSON(arg0: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4779,7 +4858,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toJSON(arg0: _List_) : string
+#### toJSON(arg0: _List_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4793,7 +4872,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toJSON(arg0: _List_, arg1: _boolean_) : string
+#### toJSON(arg0: _List_, arg1: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4808,7 +4887,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toJSON(arg0: _List_, arg1: _boolean_, arg2: _int_) : string
+#### toJSON(arg0: _List_, arg1: _boolean_, arg2: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4824,7 +4903,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toJSON(arg0: _List_, arg1: _int_) : string
+#### toJSON(arg0: _List_, arg1: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4843,7 +4922,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toJSONObject(arg0: _Object_, arg1: _boolean_) : _Object_
+#### toJSONObject(arg0: _Object_, arg1: _boolean_) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4862,7 +4941,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toJSONString(arg0: _Object_, arg1: _boolean_, arg2: _int_) : string
+#### toJSONString(arg0: _Object_, arg1: _boolean_, arg2: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4882,10 +4961,36 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toList() : _List_
+#### toList() : _List_
 ##### Return
 
 ( _List_ )
+
+
+---
+
+#### toList(arg0: _Class_) : _List_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Class_ |   |
+
+##### Return
+
+( _List_ )
+
+
+---
+
+## toLongArray
+
+---
+
+#### toLongArray() : _long[]_
+##### Return
+
+( _long[]_ )
 
 
 ---
@@ -4894,7 +4999,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toMap() : _Map_
+#### toMap() : _Map_
 ##### Return
 
 ( _Map_ )
@@ -4906,10 +5011,34 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.toProperties() : string
+#### toProperties() : string
 ##### Return
 
 ( string )
+
+
+---
+
+## toShortArray
+
+---
+
+#### toShortArray() : _short[]_
+##### Return
+
+( _short[]_ )
+
+
+---
+
+## toStringArray
+
+---
+
+#### toStringArray() : _String[]_
+##### Return
+
+( _String[]_ )
 
 
 ---
@@ -4918,7 +5047,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.unset(arg0: string) : _Object_
+#### unset(arg0: string) : _Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4936,7 +5065,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.unsetAll() : _void_
+#### unsetAll() : _void_
 ##### Return
 
 ( _void_ )
@@ -4948,7 +5077,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.values() : _Collection_
+#### values() : _Collection_
 ##### Return
 
 ( _Collection_ )
@@ -4960,7 +5089,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.valuesToString(arg0: string) : string
+#### valuesToString(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4974,29 +5103,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.valuesToString(arg0: string, arg1: _String[]_) : string
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | _String[]_ |   |
-
-##### Return
-
-( string )
-
-
----
-
-#### _dataSchema.valuesToString(arg0: string, arg1: _String[]_, arg2: _[Values](../../objects/Values)_) : string
+#### valuesToString(arg0: string, arg1: _String[]_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
 | arg1 | _String[]_ |   |
-| arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5005,13 +5118,14 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.valuesToString(arg0: string, arg1: _[Values](../../objects/Values)_) : string
+#### valuesToString(arg0: string, arg1: _String[]_, arg2: _Values_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| arg1 | _String[]_ |   |
+| arg2 | _Values_ |   |
 
 ##### Return
 
@@ -5020,7 +5134,22 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.valuesToString(arg0: _Map_, arg1: string) : string
+#### valuesToString(arg0: string, arg1: _Values_) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Values_ |   |
+
+##### Return
+
+( string )
+
+
+---
+
+#### valuesToString(arg0: _Map_, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5035,7 +5164,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_) : string
+#### valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5051,7 +5180,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_, arg3: _[Values](../../objects/Values)_) : string
+#### valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_, arg3: _Values_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5059,7 +5188,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 | arg0 | _Map_ |   |
 | arg1 | string |   |
 | arg2 | _String[]_ |   |
-| arg3 | _[Values](../../objects/Values)_ |   |
+| arg3 | _Values_ |   |
 
 ##### Return
 
@@ -5068,14 +5197,14 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _dataSchema.valuesToString(arg0: _Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
+#### valuesToString(arg0: _Map_, arg1: string, arg2: _Values_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _Map_ |   |
 | arg1 | string |   |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| arg2 | _Values_ |   |
 
 ##### Return
 

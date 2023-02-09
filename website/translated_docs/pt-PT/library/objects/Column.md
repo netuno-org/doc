@@ -515,11 +515,23 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-## toDefinitionString
+## toDefaultDefinition
 
 ---
 
-#### toDefinitionString() : string
+#### toDefaultDefinition() : string
+##### Retorno
+
+( string )
+
+
+---
+
+## toTypeDefinition
+
+---
+
+#### toTypeDefinition() : string
 ##### Retorno
 
 ( string )

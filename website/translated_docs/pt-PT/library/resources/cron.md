@@ -139,7 +139,7 @@ Interrompe um agendamento de execução de serviço.
 ##### Como Usar
 
 ```javascript
-_cron.delete("atualizaPrecos")
+_cron.interrupt("atualizaPrecos")
 
 ```
 
@@ -199,7 +199,7 @@ Remove (apaga) um agendamento de execução de serviço.
 ##### Como Usar
 
 ```javascript
-_cron.delete("atualizaPrecos")
+_cron.remove("atualizaPrecos")
 
 ```
 

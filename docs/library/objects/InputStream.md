@@ -488,6 +488,24 @@ sidebar_label: InputStream
 
 ---
 
+## skipNBytes
+
+---
+
+#### skipNBytes(arg0: _long_) : _void_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _long_ |   |
+
+##### Return
+
+( _void_ )
+
+
+---
+
 ## transferTo
 
 ---

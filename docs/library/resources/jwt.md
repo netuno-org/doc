@@ -13,6 +13,10 @@ Recurso de geração de JSON Web Tokens.
 ---
 
 #### _jwt.accessExpires() : _int_
+##### Description
+
+Sets the time of expiration of the token to the settings in configs.
+
 ##### Return
 
 ( _int_ )
@@ -24,32 +28,42 @@ Recurso de geração de JSON Web Tokens.
 
 ---
 
-#### _jwt.accessToken(arg0: _int_, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _jwt.accessToken(userId: _int_, Values: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Description
+
+This method access to the token of a user and returns the content.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| userId | _int_ | Id of user. |
+| Values | _[Values](../../objects/Values)_ | Values of the user. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+Returns the content of the user inserted.
 
 ---
 
-#### _jwt.accessToken(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _jwt.accessToken(userId: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+##### Description
+
+This method access to the token of a user and returns the content.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| userId | _[Values](../../objects/Values)_ | Id of user. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+Returns the content of the user inserted.
 
 ---
 
@@ -58,24 +72,34 @@ Recurso de geração de JSON Web Tokens.
 ---
 
 #### _jwt.check() : _boolean_
+##### Description
+
+Verify if a token exists.
+
 ##### Return
 
 ( _boolean_ )
 
+Returns the validation.
 
 ---
 
-#### _jwt.check(arg0: string) : _boolean_
+#### _jwt.check(token: string) : _boolean_
+##### Description
+
+This method verify the token.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| token | string | Token to be verify. |
 
 ##### Return
 
 ( _boolean_ )
 
+Returns the validation.
 
 ---
 
@@ -127,17 +151,22 @@ Recurso de geração de JSON Web Tokens.
 
 ---
 
-#### _jwt.decode(arg0: string) : _[Values](../../objects/Values)_
+#### _jwt.decode(token: string) : _[Values](../../objects/Values)_
+##### Description
+
+Encodes the values of the header and body inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| token | string | Acess code. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+Returns the values decoded.
 
 ---
 
@@ -145,32 +174,42 @@ Recurso de geração de JSON Web Tokens.
 
 ---
 
-#### _jwt.encode(arg0: _[Values](../../objects/Values)_) : string
+#### _jwt.encode(body: _[Values](../../objects/Values)_) : string
+##### Description
+
+Encodes the body value inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| body | _[Values](../../objects/Values)_ | Body value. |
 
 ##### Return
 
 ( string )
 
+Returns the value enconded.
 
 ---
 
-#### _jwt.encode(arg0: _[Values](../../objects/Values)_, arg1: _[Values](../../objects/Values)_) : string
+#### _jwt.encode(header: _[Values](../../objects/Values)_, body: _[Values](../../objects/Values)_) : string
+##### Description
+
+Encodes the values of the header and body inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| header | _[Values](../../objects/Values)_ | Header value. |
+| body | _[Values](../../objects/Values)_ | Body value. |
 
 ##### Return
 
 ( string )
 
+Returns the values encoded.
 
 ---
 
@@ -224,10 +263,15 @@ Recurso de geração de JSON Web Tokens.
 ---
 
 #### _jwt.isEnabled() : _boolean_
+##### Description
+
+Verify if a token is enable.
+
 ##### Return
 
 ( _boolean_ )
 
+Returns enabled.
 
 ---
 
@@ -236,6 +280,10 @@ Recurso de geração de JSON Web Tokens.
 ---
 
 #### _jwt.refreshExpires() : _int_
+##### Description
+
+Updates the time of expiration of the token to the settings in configs.
+
 ##### Return
 
 ( _int_ )
@@ -247,17 +295,22 @@ Recurso de geração de JSON Web Tokens.
 
 ---
 
-#### _jwt.refreshToken(arg0: string) : _[Values](../../objects/Values)_
+#### _jwt.refreshToken(refreshToken: string) : _[Values](../../objects/Values)_
+##### Description
+
+Replaces an old token for the new on inserted.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| refreshToken | string | Replace token. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+Returns the updated token.
 
 ---
 
@@ -338,24 +391,34 @@ Recurso de geração de JSON Web Tokens.
 ---
 
 #### _jwt.token() : string
+##### Description
+
+Verify if exists an authenticated token.
+
 ##### Return
 
 ( string )
 
+Returns the token.
 
 ---
 
-#### _jwt.token(arg0: _[Values](../../objects/Values)_) : string
+#### _jwt.token(Values: _[Values](../../objects/Values)_) : string
+##### Description
+
+Generates a token through jwtBuilder.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| Values | _[Values](../../objects/Values)_ | Values for the jwtBuilder. |
 
 ##### Return
 
 ( string )
 
+Returns the generation.
 
 ---
 

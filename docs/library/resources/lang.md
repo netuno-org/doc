@@ -13,6 +13,10 @@ Recurso de atribuição de linguagem.
 ---
 
 #### _lang.code() : string
+##### Description
+
+Returns all the locale.
+
 ##### Return
 
 ( string )
@@ -24,17 +28,22 @@ Recurso de atribuição de linguagem.
 
 ---
 
-#### _lang.get(arg0: string) : string
+#### _lang.get(key: string) : string
+##### Description
+
+Searchs for a key.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string | Key to be searched. |
 
 ##### Return
 
 ( string )
 
+Returns the match key.
 
 ---
 
@@ -58,6 +67,10 @@ Recurso de atribuição de linguagem.
 ---
 
 #### _lang.getCode() : string
+##### Description
+
+Returns all the locale.
+
 ##### Return
 
 ( string )
@@ -70,6 +83,10 @@ Recurso de atribuição de linguagem.
 ---
 
 #### _lang.getLocale() : _Locale_
+##### Description
+
+Returns the of the locale.
+
 ##### Return
 
 ( _Locale_ )
@@ -82,6 +99,10 @@ Recurso de atribuição de linguagem.
 ---
 
 #### _lang.getName() : string
+##### Description
+
+Returns the of the locale.
+
 ##### Return
 
 ( string )
@@ -93,18 +114,23 @@ Recurso de atribuição de linguagem.
 
 ---
 
-#### _lang.getOrDefault(arg0: string, arg1: string) : string
+#### _lang.getOrDefault(key: string, text: string) : string
+##### Description
+
+Sets the default locale key with a inserted text.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string | Inserted key. |
+| text | string | Inserted text. |
 
 ##### Return
 
 ( string )
 
+Returns the key and the text inserted.
 
 ---
 
@@ -113,39 +139,54 @@ Recurso de atribuição de linguagem.
 ---
 
 #### _lang.init() : _Lang_
+##### Description
+
+Initiates the Lang resource.
+
 ##### Return
 
 ( _Lang_ )
 
+Returns the default lang.
 
 ---
 
-#### _lang.init(arg0: string) : _Lang_
+#### _lang.init(localeName: string) : _Lang_
+##### Description
+
+Sets the default locale key with a inserted text.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| localeName | string | Inserted key. |
 
 ##### Return
 
 ( _Lang_ )
 
+Returns the key and the text inserted.
 
 ---
 
-#### _lang.init(arg0: string, arg1: _boolean_) : _Lang_
+#### _lang.init(localeName: string, asDefault: _boolean_) : _Lang_
+##### Description
+
+Sets the default locale key with a inserted text.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| localeName | string | Inserted key. |
+| asDefault | _boolean_ | Sets if is default. |
 
 ##### Return
 
 ( _Lang_ )
 
+Returns the key and the text inserted.
 
 ---
 
@@ -154,6 +195,10 @@ Recurso de atribuição de linguagem.
 ---
 
 #### _lang.locale() : _Locale_
+##### Description
+
+Returns the of the locale.
+
 ##### Return
 
 ( _Locale_ )
@@ -166,6 +211,10 @@ Recurso de atribuição de linguagem.
 ---
 
 #### _lang.name() : string
+##### Description
+
+Returns the of the locale.
+
 ##### Return
 
 ( string )

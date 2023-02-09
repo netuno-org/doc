@@ -5,6 +5,7 @@ sidebar_label: CSV
 ---
 
 Processa ficheiros do tipo CSV.
+Este recurso utiliza a biblioteca [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/ "Apache Commons CSV").
 
 ---
 
@@ -210,6 +211,49 @@ O parser inicializado.
 ---
 
 ## printer
+
+---
+
+#### _csv.printer(arg0: _Writer_) : _CSVPrinter_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Writer_ |   |
+
+##### Retorno
+
+( _CSVPrinter_ )
+
+
+---
+
+#### _csv.printer(arg0: _Writer_, arg1: _CSVFormat_) : _CSVPrinter_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Writer_ |   |
+| arg1 | _CSVFormat_ |   |
+
+##### Retorno
+
+( _CSVPrinter_ )
+
+
+---
+
+#### _csv.printer(arg0: _Storage_) : _CSVPrinter_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _Storage_ |   |
+
+##### Retorno
+
+( _CSVPrinter_ )
+
 
 ---
 

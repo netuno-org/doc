@@ -78,7 +78,158 @@ Current SMTP object.
 
 ---
 
+#### _smtp.attachment(name: string, type: string, file: _Storage_) : _SMTP_
+##### Description
+
+Add attachment file to e-mail.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| name | string | The name of the attachment. |
+| type | string | The content type of the attachment, for example image/png, text/html, application/zip, and many others... |
+| file | _Storage_ | The file. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
+
+---
+
+#### _smtp.attachment(name: string, type: string, file: _Storage_, contentId: string) : _SMTP_
+##### Description
+
+Add attachment file to e-mail.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| name | string | The name of the attachment. |
+| type | string | The content type of the attachment, for example image/png, text/html, application/zip, and many others... |
+| file | _Storage_ | The file. |
+| contentId | string | The attachment ID to be used in HTML content as `<img src="cid:attachment"/>`. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
+
+---
+
+#### _smtp.attachment(name: string, type: string, file: _Storage_, contentId: string, inline: _boolean_) : _SMTP_
+##### Description
+
+Add attachment file to e-mail.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| name | string | The name of the attachment. |
+| type | string | The content type of the attachment, for example image/png, text/html, application/zip, and many others... |
+| file | _Storage_ | The file. |
+| contentId | string | The attachment ID to be used in HTML content as `<img src="cid:attachment"/>`. |
+| inline | _boolean_ | Whether or not to be injected into the content. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
+
+---
+
+## bcc
+
+---
+
+#### _smtp.bcc() : string
+##### Description
+
+Gets whoever receives a hidden copy of the e-mail.
+
+##### Return
+
+( string )
+
+The e-mail of who will receive the e-mail as a blind copy.
+
+---
+
+#### _smtp.bcc(bcc: string) : _SMTP_
+##### Description
+
+Defines who receives a hidden copy of the e-mail.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| bcc | string | The e-mail of who will receive the e-mail as a blind copy. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
+
+---
+
+## cc
+
+---
+
+#### _smtp.cc() : string
+##### Description
+
+Gets whoever receives a copy of the e-mail.
+
+##### Return
+
+( string )
+
+The e-mail of who will receive the e-mail as a copy.
+
+---
+
+#### _smtp.cc(cc: string) : _SMTP_
+##### Description
+
+Defines who receives a copy of the e-mail.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| cc | string | The e-mail of who will receive the e-mail as a copy. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
+
+---
+
 ## config
+
+---
+
+#### _smtp.config() : _[SMTPConfig](../../objects/SMTPConfig)_
+##### Description
+
+Gets the configuration that is being used.
+
+##### Return
+
+( _[SMTPConfig](../../objects/SMTPConfig)_ )
+
+Object of the active configuration.
 
 ---
 
@@ -98,6 +249,104 @@ Starts a new configuration of its own.
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
 Configuration object loaded from received data.
+
+---
+
+#### _smtp.config(config: _[SMTPConfig](../../objects/SMTPConfig)_) : _SMTP_
+##### Description
+
+Define outra configuração que deve ser utilizada.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| config | _[SMTPConfig](../../objects/SMTPConfig)_ | Definition of the new configuration. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
+
+---
+
+## emptyMail
+
+---
+
+#### _smtp.emptyMail() : _Mail_
+##### Return
+
+( _Mail_ )
+
+
+---
+
+## enabled
+
+---
+
+#### _smtp.enabled() : _boolean_
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### _smtp.enabled(enabled: _boolean_) : _SMTP_
+##### Description
+
+Sets whether it is enabled.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| enabled | _boolean_ | Whether it is active or inactive. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
+
+---
+
+## from
+
+---
+
+#### _smtp.from() : string
+##### Description
+
+Gets the sender's e-mail address.
+
+##### Return
+
+( string )
+
+The e-mail address of the sender.
+
+---
+
+#### _smtp.from(from: string) : _SMTP_
+##### Description
+
+Sets the sender's e-mail address.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| from | string | The e-mail address of the sender. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
 
 ---
 
@@ -203,6 +452,23 @@ The multipart subtype.
 
 ---
 
+## getReplyTo
+
+---
+
+#### _smtp.getReplyTo() : string
+##### Description
+
+Gets who should receive the email reply.
+
+##### Return
+
+( string )
+
+The e-mail of who will receive the e-mail as a reply.
+
+---
+
 ## getSubject
 
 ---
@@ -268,6 +534,32 @@ Gets the recipient's e-mail address.
 ( string )
 
 The recipient's e-mail address.
+
+---
+
+## html
+
+---
+
+#### _smtp.html() : string
+##### Return
+
+( string )
+
+
+---
+
+#### _smtp.html(arg0: string) : _SMTP_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _SMTP_ )
+
 
 ---
 
@@ -343,6 +635,70 @@ Result whether or not it is activated.
 
 ---
 
+## mail
+
+---
+
+#### _smtp.mail() : _Mail_
+##### Return
+
+( _Mail_ )
+
+
+---
+
+## multipartSubtype
+
+---
+
+#### _smtp.multipartSubtype() : string
+##### Return
+
+( string )
+
+
+---
+
+#### _smtp.multipartSubtype(arg0: string) : _SMTP_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _SMTP_ )
+
+
+---
+
+## replyTo
+
+---
+
+#### _smtp.replyTo() : string
+##### Return
+
+( string )
+
+
+---
+
+#### _smtp.replyTo(arg0: string) : _SMTP_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _SMTP_ )
+
+
+---
+
 ## send
 
 ---
@@ -351,6 +707,20 @@ Result whether or not it is activated.
 ##### Description
 
 Performs the sending of the e-mail.
+
+##### Return
+
+( _void_ )
+
+
+---
+
+#### _smtp.send(arg0: _Mail_) : _void_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _Mail_ |   |
 
 ##### Return
 
@@ -520,6 +890,29 @@ Current SMTP object.
 
 ---
 
+## setReplyTo
+
+---
+
+#### _smtp.setReplyTo(replyTo: string) : _SMTP_
+##### Description
+
+Defines who should be replied to the email.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| replyTo | string | The e-mail of who will receive the e-mail as a reply. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
+
+---
+
 ## setSubject
 
 ---
@@ -609,6 +1002,158 @@ Sets the recipient's e-mail address.
 ( _SMTP_ )
 
 Current SMTP object.
+
+---
+
+## subject
+
+---
+
+#### _smtp.subject() : string
+##### Description
+
+Gets the title of the email.
+
+##### Return
+
+( string )
+
+The title that will go in the e-mail.
+
+---
+
+#### _smtp.subject(subject: string) : _SMTP_
+##### Description
+
+Sets the title of the e-mail.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| subject | string | The title that will go in the e-mail. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
+
+---
+
+## subjectPrefix
+
+---
+
+#### _smtp.subjectPrefix() : string
+##### Return
+
+( string )
+
+
+---
+
+#### _smtp.subjectPrefix(arg0: string) : _SMTP_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _SMTP_ )
+
+
+---
+
+## text
+
+---
+
+#### _smtp.text() : string
+##### Description
+
+Gets the body text of the e-mail.
+
+##### Return
+
+( string )
+
+The text that will go in the e-mail.
+
+---
+
+#### _smtp.text(text: string) : _SMTP_
+##### Description
+
+Defines the body text of the e-mail.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| text | string | The text that will go in the e-mail. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
+
+---
+
+## to
+
+---
+
+#### _smtp.to() : string
+##### Description
+
+Gets the recipient's e-mail address.
+
+##### Return
+
+( string )
+
+The recipient's e-mail address.
+
+---
+
+#### _smtp.to(to: string) : _SMTP_
+##### Description
+
+Sets the recipient's e-mail address.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| to | string | The recipient's e-mail address. |
+
+##### Return
+
+( _SMTP_ )
+
+Current SMTP object.
+
+---
+
+## with
+
+---
+
+#### _smtp.with(arg0: _IMAP_) : _SMTP_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _IMAP_ |   |
+
+##### Return
+
+( _SMTP_ )
+
 
 ---
 
