@@ -53,13 +53,13 @@ Escolha uma dos seguintes métodos de **download**:
 * Download com o *WGET*:
 
 ```plaintext
-wget https://github.com/netuno-org/platform/releases/download/stable/netuno.jar -O netuno.jar
+wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
 ```
 
 * Download com o *cURL*:
 
 ```plaintext
-curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno.jar -o netuno.jar
+curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -o netuno-setup.jar
 ```
 
 Depois de realizar um dos passos anteriores, avance para a **instalação do Netuno**:
@@ -67,7 +67,7 @@ Depois de realizar um dos passos anteriores, avance para a **instalação do Net
 * Instalação da versão **oficial atual e estável**:
 
 ```plaintext
-java -jar netuno.jar install
+java -jar netuno-setup.jar install
 ```
 
 > No MAC OS X, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
@@ -81,7 +81,7 @@ Agora copie e cole o commando abaixo e siga as instruções de **instalação**:
 
 ```plaintext
 md netuno; cd netuno
-Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/stable/netuno.jar" -OutFile "netuno.jar"
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar" -OutFile "netuno-setup.jar"
 ```
 
 Depois de realizar o download anterior, avance para a **instalação do Netuno**:
@@ -89,7 +89,7 @@ Depois de realizar o download anterior, avance para a **instalação do Netuno**
 * Instalação da versão **oficial atual e estável**:
 
 ```plaintext
-java -jar netuno.jar install
+java -jar netuno-setup.jar install
 ```
 
 ## Versão Em Teste
@@ -113,13 +113,13 @@ Escolha uma dos seguintes métodos de **download**:
 * Download com o *WGET*:
 
 ```plaintext
-wget https://github.com/netuno-org/platform/releases/download/testing/netuno.jar -O netuno.jar
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
 ```
 
 * Download com o *cURL*:
 
 ```plaintext
-curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno.jar -o netuno.jar
+curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -o netuno-setup.jar
 ```
 
 Depois de realizar um dos passos anteriores, avance para a **instalação do Netuno**:
@@ -127,7 +127,7 @@ Depois de realizar um dos passos anteriores, avance para a **instalação do Net
 * Instalação da versão **atual em teste**:
 
 ```plaintext
-java -jar netuno.jar install version=testing
+java -jar netuno-setup.jar install version=testing
 ```
 
 > No MAC OS X, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
@@ -141,7 +141,7 @@ Agora copie e cole o commando abaixo e siga as instruções de **instalação**:
 
 ```plaintext
 md netuno; cd netuno
-Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/testing/netuno.jar" -OutFile "netuno.jar"
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar" -OutFile "netuno-setup.jar"
 ```
 
 Depois de realizar o download anterior, avance para a **instalação do Netuno**:
@@ -149,7 +149,7 @@ Depois de realizar o download anterior, avance para a **instalação do Netuno**
 * Instalação da versão **atual em teste**:
 
 ```plaintext
-java -jar netuno.jar install version=testing
+java -jar netuno-setup.jar install version=testing
 ```
 
 ## Iniciar a App DEMO

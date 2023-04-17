@@ -10,19 +10,30 @@ Other versions of _Netuno_ can be installed and also can be upgraded for new ver
 
 ## Version Installation
 
-Follow the command below to install the specific version. Note that the user has to add (`version`)
- to the installation command.
+All Netuno versions are available in:
+
+- [github.com/netuno-org/platform/releases](https://github.com/netuno-org/platform/releases)
+
+Pick your version and follow the steps described in the release notes.
+
+Follow the command below to update to the specific version. Note that has to add (`version`) to the installation command.
 
 For example:
 
 ```
-./netuno install version=20220402.1511
+java -jar netuno-setup.jar install version=20230417.0119
+```
+
+Or using the main executor in the current installation:
+
+```
+./netuno install version=20230417.0119
 ```
 
 Or using **netuno.jar** directly:
 
 ```
-java -jar netuno.jar install version=20220402.1511
+java -jar netuno.jar install version=20230417.0119
 ```
 
 > Change the `version`'s argument to the version that you wnat to isntall.

@@ -10,18 +10,30 @@ Pode ser instalado outras versões do Netuno e inclusive novas versões experime
 
 ## Instalação de Versão
 
-Para instalar uma versão em específico quando já tem uma instalação do Netuno acrescente no comando de instalação o parâmetro da versão (`version`).
+Todas as versões disponíveis estão em:
+
+- [github.com/netuno-org/platform/releases](https://github.com/netuno-org/platform/releases)
+
+Escolha sua versão e siga as etapas descritas nas notas da release.
+
+Para atualizar para a versão em específico quando já tem uma instalação do Netuno acrescente no comando de instalação o parâmetro da versão (`version`).
 
 Por exemplo:
 
 ```
-./netuno install version=20220402.1511
+java -jar netuno-setup.jar install version=20230417.0119
+```
+
+Ou usando o executor principal na instalação atual:
+
+```
+./netuno install version=20230417.0119
 ```
 
 Ou utilizando diretamente o **netuno.jar**:
 
 ```
-java -jar netuno.jar install version=20220402.1511
+java -jar netuno.jar install version=20230417.0119
 ```
 
 > Alterar o valor do argumento `version` para a identificação da versão pretendida.
