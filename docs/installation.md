@@ -67,7 +67,7 @@ After performing one of the previous steps, proceed to the **Netuno's installati
 * Installation of the **official and stable** version:
 
 ```plaintext
-java -jar netuno.jar install
+java -jar netuno-setup.jar install
 ```
 
 > On MAC OS X, you need to disable the quarantine, thus inside the `netuno` home folder, please run:
