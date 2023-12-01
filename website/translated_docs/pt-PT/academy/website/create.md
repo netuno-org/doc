@@ -86,9 +86,7 @@ module.exports = {
         lessLoaderOptions: {
           lessOptions: {
             modifyVars: {
-              '@primary-color': '#1178FF',
-              '@font-size-base': '16px',
-              '@border-radius-base': '20px'
+              '@my-variable-example: '#1178FF',
             },
             javascriptEnabled: true,
           },
@@ -103,7 +101,40 @@ module.exports = {
 
 Altere todos os ficheiros `.css` que estão em `website/src` para a extensão `.less`.
 
+> Não esqueça de realizar está alteração no código JS nas linhas que faz o `import` dos ficheiros `less`.
+
 O LESS pertime um desenvolvimento mais estruturado e moderno do CSS.
+
+### Customização do Tema do Ant.Design
+
+Para customizar as cores do Ant.Design utilize o componente `ConfigProvider` no `App.js`.
+
+Por exemplo:
+
+```
+import { ConfigProvider, Button } from 'antd';
+
+...
+
+function App() {
+    ...
+    return (
+        <ConfigProvider theme={{ token: { colorPrimary: '#00b96b' } }}>
+            ...
+            <Button type="primary">Meu Botão com Cor Customizada</Button>
+            ...
+        </ConfigProvider>
+    );
+}
+
+...
+
+```
+
+Assim é possível ajustar qualquer configuração de estilização do Ant.Design.
+
+
+
 
 E no seu ficheiro LESS principal, por exemplo no `App.less`, importe o CSS do Ant.Desig:
 
