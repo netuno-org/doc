@@ -32,6 +32,30 @@ Recurso de configuração dos componentes da aplicação.
 
 ---
 
+## getSecret
+
+---
+
+#### _setup.getSecret() : string
+##### Return
+
+( string )
+
+
+---
+
+## isAutoCreateSchema
+
+---
+
+#### _setup.isAutoCreateSchema() : _boolean_
+##### Return
+
+( _boolean_ )
+
+
+---
+
 ## isRunning
 
 ---
@@ -48,10 +72,10 @@ Recurso de configuração dos componentes da aplicação.
 
 ---
 
-#### _setup.run() : _void_
+#### _setup.run() : _RunResult_
 ##### Return
 
-( _void_ )
+( _RunResult_ )
 
 
 ---
@@ -64,6 +88,18 @@ Recurso de configuração dos componentes da aplicação.
 ##### Return
 
 ( _boolean_ )
+
+
+---
+
+## secret
+
+---
+
+#### _setup.secret() : string
+##### Return
+
+( string )
 
 
 ---

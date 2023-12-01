@@ -65,10 +65,15 @@ Se o ambiente configurado têm o mesmo nome.
 ---
 
 #### _env.isGraal() : _boolean_
+##### Descrição
+
+Serve para verificar se está a utilizar o Graal.
+
 ##### Retorno
 
 ( _boolean_ )
 
+Caso Graal esteja em uso será retornado true.
 
 ---
 

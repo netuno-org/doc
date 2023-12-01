@@ -65,6 +65,32 @@ Lista dos utilizadores encontrados para o código alternativo.
 
 ---
 
+## allProvidersData
+
+---
+
+#### _user.allProvidersData() : _[Values](../../objects/Values)_
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _user.allProvidersData(arg0: _int_) : _[Values](../../objects/Values)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 ## code
 
 ---
@@ -375,6 +401,39 @@ Dados do utilizador encontrado.
 
 ---
 
+## hasProvider
+
+---
+
+#### _user.hasProvider(arg0: _int_, arg1: string) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | string |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### _user.hasProvider(arg0: string) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
 ## id
 
 ---
@@ -420,6 +479,156 @@ _log.info(`Nome completo do Utilizador: ${_user.name()}`)
 ( string )
 
 Nome completo do utilizador logado.
+
+---
+
+## noPassword
+
+---
+
+#### _user.noPassword(arg0: _boolean_) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### _user.noPassword(arg0: _int_, arg1: _boolean_) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _boolean_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+## password
+
+---
+
+#### _user.password(arg0: _int_, arg1: string) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | string |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### _user.password(arg0: string) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+## providerData
+
+---
+
+#### _user.providerData(arg0: _int_, arg1: string) : _[Values](../../objects/Values)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | string |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _user.providerData(arg0: string) : _[Values](../../objects/Values)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## providerDataByUid
+
+---
+
+#### _user.providerDataByUid(arg0: string) : _[Values](../../objects/Values)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## providerLDAP
+
+---
+
+#### _user.providerLDAP(arg0: _boolean_) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### _user.providerLDAP(arg0: _int_, arg1: _boolean_) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _boolean_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
 
 ---
 
@@ -517,6 +726,105 @@ _out.json(utilizador)
 ( _[Values](../../objects/Values)_ )
 
 Dados do utilizador encontrado.
+
+---
+
+## setNoPassword
+
+---
+
+#### _user.setNoPassword(arg0: _boolean_) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### _user.setNoPassword(arg0: _int_, arg1: _boolean_) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _boolean_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+## setPassword
+
+---
+
+#### _user.setPassword(arg0: _int_, arg1: string) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | string |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### _user.setPassword(arg0: string) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+## setProviderLDAP
+
+---
+
+#### _user.setProviderLDAP(arg0: _boolean_) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### _user.setProviderLDAP(arg0: _int_, arg1: _boolean_) : _boolean_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _boolean_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
 
 ---
 
@@ -674,6 +982,30 @@ _user.update(
 ( _boolean_ )
 
 Foi atualizado com sucesso.
+
+---
+
+## user
+
+---
+
+#### _user.user() : string
+##### Descrição
+
+Obtém o nome de utilizador de quem está autenticado.
+
+##### Como Usar
+
+```javascript
+// Nome do utilizador autenticado.
+_log.info(`Nome completo do Utilizador: ${_user.name()}`)
+```
+
+##### Retorno
+
+( string )
+
+Nome de utilizador logado.
 
 ---
 

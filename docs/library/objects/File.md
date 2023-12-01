@@ -136,28 +136,6 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-## changeName
-
----
-
-#### changeName(newName: string) : _boolean_
-##### Description
-
-Renames a file with the new name inserted
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| newName | string | New name to rename the file. |
-
-##### Return
-
-( _boolean_ )
-
-
----
-
 ## contentType
 
 ---
@@ -859,6 +837,28 @@ Allows to get the path of the file.
 ##### Return
 
 ( _Reader_ )
+
+
+---
+
+## rename
+
+---
+
+#### rename(newName: string) : _boolean_
+##### Description
+
+Renames a file with the new name inserted
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| newName | string | New name to rename the file. |
+
+##### Return
+
+( _boolean_ )
 
 
 ---

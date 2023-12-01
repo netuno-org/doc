@@ -136,28 +136,6 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-## changeName
-
----
-
-#### changeName(novoNome: string) : _boolean_
-##### Descrição
-
-Renomeia um ficheiro com o novo nome inserido.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| novoNome | string | Novo nome para renomear o ficheiro. |
-
-##### Retorno
-
-( _boolean_ )
-
-
----
-
 ## contentType
 
 ---
@@ -859,6 +837,28 @@ Permite obter o caminho do ficheiro.
 ##### Retorno
 
 ( _Reader_ )
+
+
+---
+
+## rename
+
+---
+
+#### rename(novoNome: string) : _boolean_
+##### Descrição
+
+Renomeia um ficheiro com o novo nome inserido.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| novoNome | string | Novo nome para renomear o ficheiro. |
+
+##### Retorno
+
+( _boolean_ )
 
 
 ---

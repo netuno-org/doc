@@ -1621,7 +1621,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.soap11(arg0: string) : string
+#### _remote.soap11(arg0: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1630,22 +1630,22 @@ The current Remote instance.
 
 ##### Return
 
-( string )
+( _[Values](../../objects/Values)_ )
 
 
 ---
 
-#### _remote.soap11(arg0: string, arg1: string) : string
+#### _remote.soap11(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | string |   |
+| arg1 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
-( string )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -1654,7 +1654,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.soap12(arg0: string) : string
+#### _remote.soap12(arg0: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1663,22 +1663,22 @@ The current Remote instance.
 
 ##### Return
 
-( string )
+( _[Values](../../objects/Values)_ )
 
 
 ---
 
-#### _remote.soap12(arg0: string, arg1: string) : string
+#### _remote.soap12(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | string |   |
+| arg1 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
-( string )
+( _[Values](../../objects/Values)_ )
 
 
 ---

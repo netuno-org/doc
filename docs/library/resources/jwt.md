@@ -103,21 +103,22 @@ Returns the validation.
 
 ---
 
-## createAppCode
+#### _jwt.check(token: _[Values](../../objects/Values)_) : _boolean_
+##### Description
 
----
+This method verify the token.
 
-#### _jwt.createAppCode(arg0: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| token | _[Values](../../objects/Values)_ | Token to be verify. |
 
 ##### Return
 
-( string )
+( _boolean_ )
 
+Returns the validation.
 
 ---
 
@@ -134,6 +135,24 @@ Returns the validation.
 ---
 
 #### _jwt.data(arg0: string) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## dbRecord
+
+---
+
+#### _jwt.dbRecord(arg0: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -240,24 +259,6 @@ Returns the values encoded.
 
 ---
 
-## isAppCode
-
----
-
-#### _jwt.isAppCode(arg0: string) : _boolean_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | string |   |
-
-##### Return
-
-( _boolean_ )
-
-
----
-
 ## isEnabled
 
 ---
@@ -311,78 +312,6 @@ Replaces an old token for the new on inserted.
 ( _[Values](../../objects/Values)_ )
 
 Returns the updated token.
-
----
-
-## registerApp
-
----
-
-#### _jwt.registerApp(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-
-##### Return
-
-( _[Values](../../objects/Values)_ )
-
-
----
-
-## registerWebOrigin
-
----
-
-#### _jwt.registerWebOrigin(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-
-##### Return
-
-( _[Values](../../objects/Values)_ )
-
-
----
-
-## searchApp
-
----
-
-#### _jwt.searchApp(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-
-##### Return
-
-( _[Values](../../objects/Values)_ )
-
-
----
-
-## searchWebOrigin
-
----
-
-#### _jwt.searchWebOrigin(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-
-##### Return
-
-( _[Values](../../objects/Values)_ )
-
 
 ---
 

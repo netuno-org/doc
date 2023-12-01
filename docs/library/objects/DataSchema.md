@@ -1241,61 +1241,81 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### asValues(arg0: _int_) : _Values_
+#### asValues(key: _int_) : _Values_
+##### Description
+
+Gets the object associated with the key and then casts to Values (Dictionary or List).
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| key | _int_ | The key to get the associated object. |
 
 ##### Return
 
 ( _Values_ )
 
+Object converted to Values.
 
 ---
 
-#### asValues(arg0: _int_, arg1: _Object_) : _Values_
+#### asValues(key: _int_, defaultValue: _Object_) : _Values_
+##### Description
+
+Gets the object associated with the key and then casts to Values (Dictionary or List).
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| key | _int_ | The key to get the associated object. |
+| defaultValue | _Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
 
 ##### Return
 
 ( _Values_ )
 
+Object converted to Values.
 
 ---
 
-#### asValues(arg0: string) : _Values_
+#### asValues(key: string) : _Values_
+##### Description
+
+Gets the object associated with the key and then casts to Values (Dictionary or List).
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string | The key to get the associated object. |
 
 ##### Return
 
 ( _Values_ )
 
+Object converted to Values.
 
 ---
 
-#### asValues(arg0: string, arg1: _Object_) : _Values_
+#### asValues(key: string, defaultValue: _Object_) : _Values_
+##### Description
+
+Gets the object associated with the key and then casts to Values (Dictionary or List).
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| key | string | The key to get the associated object. |
+| defaultValue | _Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
 
 ##### Return
 
 ( _Values_ )
 
+Object converted to Values.
 
 ---
 
@@ -1703,13 +1723,13 @@ Set the security restriction on a specific directory for processed objects of th
 #### get(key: _int_) : _Object_
 ##### Description
 
-Gets the original object associated with the cast key for the specified class type.
+Gets the original object associated with the key, but cast for the specified class type.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _int_ | Key to get the object to associate. |
+| key | _int_ | Key to get the associated object. |
 
 ##### Return
 
@@ -1722,13 +1742,13 @@ Original object converted to the type of the defined class.
 #### get(key: _Object_) : _Object_
 ##### Description
 
-Gets the original object associated with the cast key for the specified class type.
+Gets the original object associated with the key, but cast for the specified class type.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _Object_ | Key to get the object to associate. |
+| key | _Object_ | Key to get the associated object. |
 
 ##### Return
 
@@ -1760,13 +1780,13 @@ Original object without conversions.
 #### get(key: string, type: _Class_) : _Object_
 ##### Description
 
-Gets the original object associated with the cast key for the specified class type.
+Gets the original object associated with the key, but cast for the specified class type.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Key to get the object to associate. |
+| key | string | Key to get the associated object. |
 | type | _Class_ | Class representing the type of object that should be cast. |
 
 ##### Return

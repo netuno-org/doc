@@ -405,6 +405,46 @@ A referência do endereço da área das células.
 
 ---
 
+## cellStyle
+
+---
+
+#### _xls.cellStyle() : _HSSFCellStyle_
+##### Descrição
+
+Cria um novo estilo de célula no workbook.
+
+##### Retorno
+
+( _HSSFCellStyle_ )
+
+O novo estilo de célula criado.
+
+---
+
+## cellStyleFormat
+
+---
+
+#### _xls.cellStyleFormat(formato: string) : _HSSFCellStyle_
+##### Descrição
+
+Cria um novo estilo de célula com um formato associado no workbook.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| formato | string | Definição do padrão do formato. |
+
+##### Retorno
+
+( _HSSFCellStyle_ )
+
+O novo estilo de célula criado com o formato configurado.
+
+---
+
 ## color
 
 ---
@@ -425,6 +465,48 @@ Gera o código da cor baseado em nomes pré definidos.
 ( _short_ )
 
 A referência da cor.
+
+---
+
+## columnReference
+
+---
+
+#### _xls.columnReference(index: _int_) : string
+##### Descrição
+
+Obtém a referência da coluna (letras) com base na sua posição numérico.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| index | _int_ | Número da coluna. |
+
+##### Retorno
+
+( string )
+
+Referência em letras da coluna.
+
+---
+
+#### _xls.columnReference(index: string) : _int_
+##### Descrição
+
+Obtém a posição numérica da coluna com base na referência em letras.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| index | string | Referência em letras da coluna. |
+
+##### Retorno
+
+( _int_ )
+
+Posição numérica da coluna.
 
 ---
 
@@ -507,6 +589,46 @@ Gera o padrão de preenchimento de fundo.
 ( _FillPatternType_ )
 
 O padrão de preenchimento configurado com o tipo definido.
+
+---
+
+## font
+
+---
+
+#### _xls.font() : _HSSFFont_
+##### Descrição
+
+Cria um novo estilo de fonte no workbook.
+
+##### Retorno
+
+( _HSSFFont_ )
+
+O novo estilo de fonte criado.
+
+---
+
+## format
+
+---
+
+#### _xls.format(formato: string) : _short_
+##### Descrição
+
+Cria um novo formato de célula no workbook.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| formato | string | Definição do padrão do formato. |
+
+##### Retorno
+
+( _short_ )
+
+Código identificador do novo formato.
 
 ---
 
@@ -703,6 +825,55 @@ O objeto de referência da imagem inserida.
 
 ---
 
+## mergedRegion
+
+---
+
+#### _xls.mergedRegion(primeiraLinha: _int_, ultimaLinha: _int_, primeiraColuna: _int_, ultimaColuna: _int_) : _int_
+##### Descrição
+
+Realiza a mesclagem de células na região.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| primeiraLinha | _int_ | Número da primeira linha. |
+| ultimaLinha | _int_ | Número da última linha. |
+| primeiraColuna | _int_ | Número da primeira coluna. |
+| ultimaColuna | _int_ | Número da última coluna. |
+
+##### Retorno
+
+( _int_ )
+
+A referência da região de células mesclada.
+
+---
+
+#### _xls.mergedRegion(folhaCalculos: _HSSFSheet_, primeiraLinha: _int_, ultimaLinha: _int_, primeiraColuna: _int_, ultimaColuna: _int_) : _int_
+##### Descrição
+
+Realiza a mesclagem de células na região passada em uma folha de cálculos específica.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| folhaCalculos | _HSSFSheet_ | Folha de cálculos que será mesclada as células. |
+| primeiraLinha | _int_ | Número da primeira linha. |
+| ultimaLinha | _int_ | Número da última linha. |
+| primeiraColuna | _int_ | Número da primeira coluna. |
+| ultimaColuna | _int_ | Número da última coluna. |
+
+##### Retorno
+
+( _int_ )
+
+A referência da região de células mesclada.
+
+---
+
 ## output
 
 ---
@@ -717,24 +888,6 @@ Realiza o envio de dados do ficheiro final para o cliente realizar o download.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | nomeFicheiro | string | Nome do ficheiro. |
-
-##### Retorno
-
-( _void_ )
-
-
----
-
-#### `_xls.create()`.output(storage: _Storage_) : _void_
-##### Descrição
-
-Realiza a escrita dos dados do ficheiro final para o storage interno da aplicação.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| storage | _Storage_ | Referência do storage onde o ficheiro será guardado. |
 
 ##### Retorno
 
@@ -763,7 +916,7 @@ Obtém o objeto de posicionamento.
 
 ( _[XLSPosition](../../objects/XLSPosition)_ )
 
-Referência da posição da última célula com dados inserida.
+Referência da posição com base nas coordenadas passadas.
 
 ---
 
@@ -1174,6 +1327,82 @@ Transforma o texto passado para ser um nome válido de folha de cálculos cumpri
 ( string )
 
 Nome válido para ser utilizado como nome da folha de cálculos.
+
+---
+
+## save
+
+---
+
+#### `_xls.create()`.save(output: _OutputStream_) : _void_
+##### Descrição
+
+Realiza a escrita dos dados do ficheiro final para o output.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| output | _OutputStream_ | Output onde o ficheiro será guardado. |
+
+##### Retorno
+
+( _void_ )
+
+
+---
+
+#### `_xls.create()`.save(file: _[File](../../objects/File)_) : _void_
+##### Descrição
+
+Realiza a escrita dos dados do ficheiro final.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| file | _[File](../../objects/File)_ | Ficheiro que será guardado. |
+
+##### Retorno
+
+( _void_ )
+
+
+---
+
+#### `_xls.create()`.save(output: _[OutputStream](../../objects/OutputStream)_) : _void_
+##### Descrição
+
+Realiza a escrita dos dados do ficheiro final para o output.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| output | _[OutputStream](../../objects/OutputStream)_ | Output onde o ficheiro será guardado. |
+
+##### Retorno
+
+( _void_ )
+
+
+---
+
+#### `_xls.create()`.save(storage: _Storage_) : _void_
+##### Descrição
+
+Realiza a escrita dos dados do ficheiro final para o storage interno da aplicação.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| storage | _Storage_ | Referência do storage onde o ficheiro será guardado. |
+
+##### Retorno
+
+( _void_ )
+
 
 ---
 

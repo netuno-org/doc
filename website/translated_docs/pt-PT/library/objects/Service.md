@@ -50,6 +50,18 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
+## defaultEmptyOutput
+
+---
+
+#### defaultEmptyOutput() : _void_
+##### Retorno
+
+( _void_ )
+
+
+---
+
 ## deny
 
 ---

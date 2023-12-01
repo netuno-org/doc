@@ -65,6 +65,32 @@ List of users found for the alternative code.
 
 ---
 
+## allProvidersData
+
+---
+
+#### _user.allProvidersData() : _[Values](../../objects/Values)_
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _user.allProvidersData(arg0: _int_) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 ## code
 
 ---
@@ -374,6 +400,39 @@ User data found.
 
 ---
 
+## hasProvider
+
+---
+
+#### _user.hasProvider(arg0: _int_, arg1: string) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | string |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### _user.hasProvider(arg0: string) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
 ## id
 
 ---
@@ -419,6 +478,156 @@ _log.info(`Full name of the User: ${_user.name()}`)
 ( string )
 
 Full name of the logged in user.
+
+---
+
+## noPassword
+
+---
+
+#### _user.noPassword(arg0: _boolean_) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### _user.noPassword(arg0: _int_, arg1: _boolean_) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _boolean_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## password
+
+---
+
+#### _user.password(arg0: _int_, arg1: string) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | string |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### _user.password(arg0: string) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## providerData
+
+---
+
+#### _user.providerData(arg0: _int_, arg1: string) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | string |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _user.providerData(arg0: string) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## providerDataByUid
+
+---
+
+#### _user.providerDataByUid(arg0: string) : _[Values](../../objects/Values)_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## providerLDAP
+
+---
+
+#### _user.providerLDAP(arg0: _boolean_) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### _user.providerLDAP(arg0: _int_, arg1: _boolean_) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _boolean_ |   |
+
+##### Return
+
+( _boolean_ )
+
 
 ---
 
@@ -516,6 +725,105 @@ _out.json(user)
 ( _[Values](../../objects/Values)_ )
 
 User data found.
+
+---
+
+## setNoPassword
+
+---
+
+#### _user.setNoPassword(arg0: _boolean_) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### _user.setNoPassword(arg0: _int_, arg1: _boolean_) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _boolean_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## setPassword
+
+---
+
+#### _user.setPassword(arg0: _int_, arg1: string) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | string |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### _user.setPassword(arg0: string) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## setProviderLDAP
+
+---
+
+#### _user.setProviderLDAP(arg0: _boolean_) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### _user.setProviderLDAP(arg0: _int_, arg1: _boolean_) : _boolean_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _int_ |   |
+| arg1 | _boolean_ |   |
+
+##### Return
+
+( _boolean_ )
+
 
 ---
 
@@ -673,6 +981,30 @@ _user.update(
 ( _boolean_ )
 
 It was successfully updated.
+
+---
+
+## user
+
+---
+
+#### _user.user() : string
+##### Description
+
+Gets the full username of who is authenticated.
+
+##### How To Use
+
+```javascript
+// Authenticated username.
+_log.info(`Full name of the User: ${_user.user()}`)
+```
+
+##### Return
+
+( string )
+
+Username of the logged in user.
 
 ---
 

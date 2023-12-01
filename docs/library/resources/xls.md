@@ -405,6 +405,46 @@ The cell area address reference.
 
 ---
 
+## cellStyle
+
+---
+
+#### _xls.cellStyle() : _HSSFCellStyle_
+##### Description
+
+Creates a new cell style in the workbook.
+
+##### Return
+
+( _HSSFCellStyle_ )
+
+The new cell style created.
+
+---
+
+## cellStyleFormat
+
+---
+
+#### _xls.cellStyleFormat(format: string) : _HSSFCellStyle_
+##### Description
+
+Creates a new cell style with an associated format in the workbook.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| format | string | Format standard definition. |
+
+##### Return
+
+( _HSSFCellStyle_ )
+
+The new cell style created with the configured format.
+
+---
+
 ## color
 
 ---
@@ -425,6 +465,48 @@ Generates the color code based on predefined names.
 ( _short_ )
 
 The color reference.
+
+---
+
+## columnReference
+
+---
+
+#### _xls.columnReference(index: _int_) : string
+##### Description
+
+Gets the column reference (letters) based on its numeric position.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| index | _int_ | Column number. |
+
+##### Return
+
+( string )
+
+Reference in column letters.
+
+---
+
+#### _xls.columnReference(index: string) : _int_
+##### Description
+
+Gets the numeric position of the column based on the letter reference.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| index | string | Reference in column letters. |
+
+##### Return
+
+( _int_ )
+
+Numeric position of the column.
 
 ---
 
@@ -507,6 +589,46 @@ Generates the background fill pattern.
 ( _FillPatternType_ )
 
 The fill pattern configured with the defined type.
+
+---
+
+## font
+
+---
+
+#### _xls.font() : _HSSFFont_
+##### Description
+
+Creates a new font style in the workbook.
+
+##### Return
+
+( _HSSFFont_ )
+
+The new font style created.
+
+---
+
+## format
+
+---
+
+#### _xls.format(format: string) : _short_
+##### Description
+
+Creates a new cell format in the workbook.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| format | string | Format standard definition. |
+
+##### Return
+
+( _short_ )
+
+Identifier code for the new format.
 
 ---
 
@@ -703,6 +825,55 @@ The reference object of the inserted image.
 
 ---
 
+## mergedRegion
+
+---
+
+#### _xls.mergedRegion(firstRow: _int_, lastRow: _int_, firstCol: _int_, lastCol: _int_) : _int_
+##### Description
+
+Performs the merging of cells in the region.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| firstRow | _int_ | First line number. |
+| lastRow | _int_ | Last line number. |
+| firstCol | _int_ | First column number. |
+| lastCol | _int_ | Last column number. |
+
+##### Return
+
+( _int_ )
+
+The reference of the merged cell region.
+
+---
+
+#### _xls.mergedRegion(sheet: _HSSFSheet_, firstRow: _int_, lastRow: _int_, firstCol: _int_, lastCol: _int_) : _int_
+##### Description
+
+Performs the merging of cells in the passed region in a specific worksheet.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| sheet | _HSSFSheet_ | Spreadsheet that will be merged the cells. |
+| firstRow | _int_ | First line number. |
+| lastRow | _int_ | Last line number. |
+| firstCol | _int_ | First column number. |
+| lastCol | _int_ | Last column number. |
+
+##### Return
+
+( _int_ )
+
+The reference of the merged cell region.
+
+---
+
 ## output
 
 ---
@@ -717,24 +888,6 @@ Performs the sending of data from the final file to the client to download it.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | fileName | string | Name of the file. |
-
-##### Return
-
-( _void_ )
-
-
----
-
-#### `_xls.create()`.output(storage: _Storage_) : _void_
-##### Description
-
-Writes the data from the final file to the internal storage of the application.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| storage | _Storage_ | Storage reference where the file will be saved. |
 
 ##### Return
 
@@ -763,7 +916,7 @@ Gets the positioning object.
 
 ( _[XLSPosition](../../objects/XLSPosition)_ )
 
-Reference of the position of the last cell with data entered.
+Position reference based on passed coordinates.
 
 ---
 
@@ -1174,6 +1327,82 @@ Transforms the passed text to be a valid spreadsheet name while complying with E
 ( string )
 
 Valid name to be used as the name of the spreadsheet.
+
+---
+
+## save
+
+---
+
+#### `_xls.create()`.save(output: _OutputStream_) : _void_
+##### Description
+
+Writes the data from the final file to the output.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| output | _OutputStream_ | Output where the file will be saved. |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+#### `_xls.create()`.save(file: _[File](../../objects/File)_) : _void_
+##### Description
+
+Writes the data to the final file.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| file | _[File](../../objects/File)_ | File that will be saved. |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+#### `_xls.create()`.save(output: _[OutputStream](../../objects/OutputStream)_) : _void_
+##### Description
+
+Writes the data from the final file to the output.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| output | _[OutputStream](../../objects/OutputStream)_ | Output where the file will be saved. |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+#### `_xls.create()`.save(storage: _Storage_) : _void_
+##### Description
+
+Writes the data from the final file to the internal storage of the application.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _Storage_ | Storage reference where the file will be saved. |
+
+##### Return
+
+( _void_ )
+
 
 ---
 

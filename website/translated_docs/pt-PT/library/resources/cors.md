@@ -13,16 +13,16 @@ Permite gerir as múltiplas origens e os respectivos cabeçalhos.
 
 ---
 
-#### _cors.add(origem: string) : _CORS_
+#### _cors.add(config: _[Values](../../objects/Values)_) : _CORS_
 ##### Descrição
 
-Adiciona as configurações para uma nova origem.
+Adiciona as configurações para uma definição de CORS.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| origem | string | Origem que vem no cabeçalho HTTP. |
+| config | _[Values](../../objects/Values)_ | A nova configuração de CORS. |
 
 ##### Retorno
 
@@ -32,101 +32,48 @@ Atual instância do CORS.
 
 ---
 
-#### _cors.add(origem: string, cabecalho: _[Values](../../objects/Values)_) : _CORS_
+## all
+
+---
+
+#### _cors.all() : _[Values](../../objects/Values)_
 ##### Descrição
 
-Adiciona as configurações para uma nova origem.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| origem | string | Origem que vem no cabeçalho HTTP. |
-| cabecalho | _[Values](../../objects/Values)_ | Definição do cabeçalho que será carregado para a origem. |
+Obtém todas as configurações de CORS.
 
 ##### Retorno
 
-( _CORS_ )
+( _[Values](../../objects/Values)_ )
 
-Atual instância do CORS.
+Todas as definições de CORS configuradas.
 
 ---
 
-#### _cors.add(origem: string, cabecalho: _[Values](../../objects/Values)_, ativa: _boolean_) : _CORS_
+## getAll
+
+---
+
+#### _cors.getAll() : _[Values](../../objects/Values)_
 ##### Descrição
 
-Adiciona as configurações para uma nova origem.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| origem | string | Origem que vem no cabeçalho HTTP. |
-| cabecalho | _[Values](../../objects/Values)_ | Definição do cabeçalho que será carregado para a origem. |
-| ativa | _boolean_ | Define se está origem está ativada. |
+Obtém todas as configurações de CORS.
 
 ##### Retorno
 
-( _CORS_ )
+( _[Values](../../objects/Values)_ )
 
-Atual instância do CORS.
-
----
-
-## disable
+Todas as definições de CORS configuradas.
 
 ---
 
-#### _cors.disable(origem: string) : _boolean_
+## isOriginEnabled
+
+---
+
+#### _cors.isOriginEnabled(origem: string) : _boolean_
 ##### Descrição
 
-Desativa uma origem que já foi definida.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| origem | string | Origem que vem no cabeçalho HTTP. |
-
-##### Retorno
-
-( _boolean_ )
-
-Se a origem foi desativada com sucesso.
-
----
-
-## enable
-
----
-
-#### _cors.enable(origem: string) : _boolean_
-##### Descrição
-
-Ativa uma origem que já foi definida.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| origem | string | Origem que vem no cabeçalho HTTP. |
-
-##### Retorno
-
-( _boolean_ )
-
-Se a origem foi ativada com sucesso.
-
----
-
-## isEnabled
-
----
-
-#### _cors.isEnabled(origem: string) : _boolean_
-##### Descrição
-
-Verifica se uma origem que já foi definida está ativa.
+Verifica se uma origem já foi definida e se está ativa.
 
 ##### Atributos
 
@@ -156,6 +103,29 @@ Executa a verificação da origem e realiza as definições de cabeçalho na res
 ( _CORS_ )
 
 Atual instância do CORS.
+
+---
+
+## removeOrigin
+
+---
+
+#### _cors.removeOrigin(origem: string) : _CORS_
+##### Descrição
+
+Remove a origem em todas as configuração que ela existir.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| origem | string | Origem que vem no cabeçalho HTTP. |
+
+##### Retorno
+
+( _CORS_ )
+
+Se a origem foi desativada com sucesso.
 
 ---
 

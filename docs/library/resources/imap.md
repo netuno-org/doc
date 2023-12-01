@@ -71,7 +71,7 @@ Define outra configuração que deve ser utilizada.
 
 ( _IMAP_ )
 
-Current SMTP object.
+Current IMAP object.
 
 ---
 
@@ -126,7 +126,7 @@ Sets whether it is enabled.
 
 ( _IMAP_ )
 
-Current SMTP object.
+Current IMAP object.
 
 ---
 
@@ -211,39 +211,39 @@ Object of the active configuration.
 #### _imap.init() : _IMAP_
 ##### Description
 
-Starts a new instance of SMTP using the STMP configuration of the `default` key.
+Starts a new instance of IMAP using the IMAP configuration of the `default` key.
 
 ##### Return
 
 ( _IMAP_ )
 
-The new instance of the SMTP resource based on the `default` STMP configuration.
+The new instance of the IMAP resource based on the `default` IMAP configuration.
 
 ---
 
 #### _imap.init(configKey: string) : _IMAP_
 ##### Description
 
-Starts a new instance of SMTP from a specific configuration.
+Starts a new instance of IMAP from a specific configuration.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| configKey | string | Key of the SMTP configuration that will be used. |
+| configKey | string | Key of the IMAP configuration that will be used. |
 
 ##### Return
 
 ( _IMAP_ )
 
-The new instance of the SMTP resource based on the specified SMTP configuration.
+The new instance of the IMAP resource based on the specified IMAP configuration.
 
 ---
 
 #### _imap.init(config: _[IMAPConfig](../../objects/IMAPConfig)_) : _IMAP_
 ##### Description
 
-Starts a new instance of SMTP from a configuration that is defined in its own configuration object.
+Starts a new instance of IMAP from a configuration that is defined in its own configuration object.
 
 ##### Attributes
 
@@ -255,7 +255,7 @@ Starts a new instance of SMTP from a configuration that is defined in its own co
 
 ( _IMAP_ )
 
-The new instance of the SMTP resource based on the defined configuration.
+The new instance of the IMAP resource based on the defined configuration.
 
 ---
 
@@ -385,7 +385,7 @@ Define outra configuração que deve ser utilizada.
 
 ( _IMAP_ )
 
-Current SMTP object.
+Current IMAP object.
 
 ---
 
@@ -408,7 +408,7 @@ Sets whether it is enabled.
 
 ( _IMAP_ )
 
-Current SMTP object.
+Current IMAP object.
 
 ---
 

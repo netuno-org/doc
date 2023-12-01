@@ -214,61 +214,81 @@ The parser initialized.
 
 ---
 
-#### _csv.printer(arg0: _Writer_) : _CSVPrinter_
+#### _csv.printer(writer: _Writer_) : _CSVPrinter_
+##### Description
+
+Gets the CSV printer.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| writer | _Writer_ | Writer for the CSV file. |
 
 ##### Return
 
 ( _CSVPrinter_ )
 
+The printer initialized.
 
 ---
 
-#### _csv.printer(arg0: _Writer_, arg1: _CSVFormat_) : _CSVPrinter_
+#### _csv.printer(writer: _Writer_, format: _CSVFormat_) : _CSVPrinter_
+##### Description
+
+Gets the CSV printer.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Writer_ |   |
-| arg1 | _CSVFormat_ |   |
+| writer | _Writer_ | Writer for the CSV file. |
+| format | _CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
 ( _CSVPrinter_ )
 
+The printer initialized.
 
 ---
 
-#### _csv.printer(arg0: _Storage_) : _CSVPrinter_
+#### _csv.printer(writer: _Storage_) : _CSVPrinter_
+##### Description
+
+Gets the CSV printer.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| writer | _Storage_ | Writer for the CSV file. |
 
 ##### Return
 
 ( _CSVPrinter_ )
 
+The printer initialized.
 
 ---
 
-#### _csv.printer(arg0: _Storage_, arg1: _CSVFormat_) : _CSVPrinter_
+#### _csv.printer(writer: _Storage_, format: _CSVFormat_) : _CSVPrinter_
+##### Description
+
+Gets the CSV printer.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
-| arg1 | _CSVFormat_ |   |
+| writer | _Storage_ | Writer for the CSV file. |
+| format | _CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
 ( _CSVPrinter_ )
 
+The printer initialized.
 
 ---
 

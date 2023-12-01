@@ -13,16 +13,16 @@ Allows you to manage multiple origins and their headers.
 
 ---
 
-#### _cors.add(origin: string) : _CORS_
+#### _cors.add(config: _[Values](../../objects/Values)_) : _CORS_
 ##### Description
 
-Adds the settings for a new source.
+Adds the settings for a new CORS definition.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| origin | string | Origin that comes in the HTTP header. |
+| config | _[Values](../../objects/Values)_ | The new CORS configuration |
 
 ##### Return
 
@@ -32,101 +32,48 @@ Current CORS instance.
 
 ---
 
-#### _cors.add(origin: string, header: _[Values](../../objects/Values)_) : _CORS_
+## all
+
+---
+
+#### _cors.all() : _[Values](../../objects/Values)_
 ##### Description
 
-Adds the settings for a new source.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| origin | string | Origin that comes in the HTTP header. |
-| header | _[Values](../../objects/Values)_ | Definition of the header that will be loaded to the source. |
+Gets all CORS settings.
 
 ##### Return
 
-( _CORS_ )
+( _[Values](../../objects/Values)_ )
 
-Current CORS instance.
+All CORS settings configured.
 
 ---
 
-#### _cors.add(origin: string, header: _[Values](../../objects/Values)_, enabled: _boolean_) : _CORS_
+## getAll
+
+---
+
+#### _cors.getAll() : _[Values](../../objects/Values)_
 ##### Description
 
-Adds the settings for a new source.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| origin | string | Origin that comes in the HTTP header. |
-| header | _[Values](../../objects/Values)_ | Definition of the header that will be loaded to the source. |
-| enabled | _boolean_ | Defines whether this source is enabled. |
+Gets all CORS settings.
 
 ##### Return
 
-( _CORS_ )
+( _[Values](../../objects/Values)_ )
 
-Current CORS instance.
-
----
-
-## disable
+All CORS settings configured.
 
 ---
 
-#### _cors.disable(origin: string) : _boolean_
+## isOriginEnabled
+
+---
+
+#### _cors.isOriginEnabled(origin: string) : _boolean_
 ##### Description
 
-Disable a origin that has already been defined.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| origin | string | Origin that comes in the HTTP header. |
-
-##### Return
-
-( _boolean_ )
-
-If the origin was successfully disabled.
-
----
-
-## enable
-
----
-
-#### _cors.enable(origin: string) : _boolean_
-##### Description
-
-Enables a origin that has already been defined.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| origin | string | Origin that comes in the HTTP header. |
-
-##### Return
-
-( _boolean_ )
-
-If the origin was successfully enabled.
-
----
-
-## isEnabled
-
----
-
-#### _cors.isEnabled(origin: string) : _boolean_
-##### Description
-
-Enables a source that has already been defined.
+Checks if a origin has already been defined and is active.d.
 
 ##### Attributes
 
@@ -156,6 +103,29 @@ Performs source verification and makes header definitions in the HTTP request re
 ( _CORS_ )
 
 Current CORS instance.
+
+---
+
+## removeOrigin
+
+---
+
+#### _cors.removeOrigin(origin: string) : _CORS_
+##### Description
+
+Removes the origin in every configuration it exists.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| origin | string | Origin that comes in the HTTP header. |
+
+##### Return
+
+( _CORS_ )
+
+If the origin was successfully disabled.
 
 ---
 

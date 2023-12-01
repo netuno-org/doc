@@ -575,6 +575,25 @@ Current data output.
 
 ---
 
+## printf
+
+---
+
+#### _out.printf(arg0: string, arg1: _Object[]_) : _Out_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object[]_ |   |
+
+##### Return
+
+( _Out_ )
+
+
+---
+
 ## println
 
 ---

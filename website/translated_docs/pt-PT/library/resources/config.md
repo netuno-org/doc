@@ -1238,61 +1238,81 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asValues(arg0: _int_) : _[Values](../../objects/Values)_
+#### _config.asValues(chave: _int_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| chave | _int_ | A chave para obter o objeto associado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _config.asValues(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _config.asValues(chave: _int_, valorPadrao: _Object_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| chave | _int_ | A chave para obter o objeto associado. |
+| valorPadrao | _Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _config.asValues(arg0: string) : _[Values](../../objects/Values)_
+#### _config.asValues(chave: string) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| chave | string | A chave para obter o objeto associado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _config.asValues(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _config.asValues(chave: string, valorPadrao: _Object_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| chave | string | A chave para obter o objeto associado. |
+| valorPadrao | _Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
@@ -1700,13 +1720,13 @@ Define a restrição de segurança em um diretório específico para os objetos 
 #### _config.get(chave: _int_) : _Object_
 ##### Descrição
 
-Obtém o objeto original associado a chave convertido para o tipo da classe especificada.
+Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | Chave para obter o objeto para associado. |
+| chave | _int_ | Chave para obter o objeto associado. |
 
 ##### Retorno
 
@@ -1719,13 +1739,13 @@ Objeto original convertido para o tipo da classe definida.
 #### _config.get(chave: _Object_) : _Object_
 ##### Descrição
 
-Obtém o objeto original associado a chave convertido para o tipo da classe especificada.
+Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _Object_ | Chave para obter o objeto para associado. |
+| chave | _Object_ | Chave para obter o objeto associado. |
 
 ##### Retorno
 
@@ -1757,13 +1777,13 @@ Objeto original sem conversões.
 #### _config.get(chave: string, tipo: _Class_) : _Object_
 ##### Descrição
 
-Obtém o objeto original associado a chave convertido para o tipo da classe especificada.
+Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Chave para obter o objeto para associado. |
+| chave | string | Chave para obter o objeto associado. |
 | tipo | _Class_ | Classe que representa o tipo de objeto que deve ser convertido (_cast_). |
 
 ##### Retorno

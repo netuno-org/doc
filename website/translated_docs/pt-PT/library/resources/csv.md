@@ -214,61 +214,81 @@ O parser inicializado.
 
 ---
 
-#### _csv.printer(arg0: _Writer_) : _CSVPrinter_
+#### _csv.printer(writer: _Writer_) : _CSVPrinter_
+##### Descrição
+
+Obtém o printer do CSV.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| writer | _Writer_ | Escritor para o ficheiro CSV. |
 
 ##### Retorno
 
 ( _CSVPrinter_ )
 
+O printer inicializado.
 
 ---
 
-#### _csv.printer(arg0: _Writer_, arg1: _CSVFormat_) : _CSVPrinter_
+#### _csv.printer(writer: _Writer_, nomeFormato: _CSVFormat_) : _CSVPrinter_
+##### Descrição
+
+Obtém o printer do CSV.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Writer_ |   |
-| arg1 | _CSVFormat_ |   |
+| writer | _Writer_ | Escritor para o ficheiro CSV. |
+| nomeFormato | _CSVFormat_ | Nome do formato que será utilizado. |
 
 ##### Retorno
 
 ( _CSVPrinter_ )
 
+O printer inicializado.
 
 ---
 
-#### _csv.printer(arg0: _Storage_) : _CSVPrinter_
+#### _csv.printer(writer: _Storage_) : _CSVPrinter_
+##### Descrição
+
+Obtém o printer do CSV.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| writer | _Storage_ | Escritor para o ficheiro CSV. |
 
 ##### Retorno
 
 ( _CSVPrinter_ )
 
+O printer inicializado.
 
 ---
 
-#### _csv.printer(arg0: _Storage_, arg1: _CSVFormat_) : _CSVPrinter_
+#### _csv.printer(writer: _Storage_, nomeFormato: _CSVFormat_) : _CSVPrinter_
+##### Descrição
+
+Obtém o printer do CSV.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Storage_ |   |
-| arg1 | _CSVFormat_ |   |
+| writer | _Storage_ | Escritor para o ficheiro CSV. |
+| nomeFormato | _CSVFormat_ | Nome do formato que será utilizado. |
 
 ##### Retorno
 
 ( _CSVPrinter_ )
 
+O printer inicializado.
 
 ---
 

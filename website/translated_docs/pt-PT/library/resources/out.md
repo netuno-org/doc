@@ -575,6 +575,25 @@ Saída de dados atual.
 
 ---
 
+## printf
+
+---
+
+#### _out.printf(arg0: string, arg1: _Object[]_) : _Out_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object[]_ |   |
+
+##### Retorno
+
+( _Out_ )
+
+
+---
+
 ## println
 
 ---

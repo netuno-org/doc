@@ -34,6 +34,33 @@ Returns a structure with the configuration parameters.
 
 ---
 
+## configReloaded
+
+---
+
+#### _app.configReloaded() : _boolean_
+##### Description
+
+Checks whether the application configuration has been changed.
+
+##### How To Use
+
+```javascript
+// Validates whether the configuration has been changed.
+
+if (_app.configReloaded()) {
+  _out.println(`App config is up to date.`);
+}
+```
+
+##### Return
+
+( _boolean_ )
+
+Returns whether the configuration was changed and reloaded.
+
+---
+
 ## file
 
 ---
@@ -99,6 +126,378 @@ Tracks all the files present in the folder of the inserted path.
 ( _[File](../../objects/File)_ )
 
 Returns all files present in the folder of the inserted path.
+
+---
+
+## getConfig
+
+---
+
+#### _app.getConfig() : _[Values](../../objects/Values)_
+##### Description
+
+Obtains the application configuration data present in the file in the config folder.
+
+##### How To Use
+
+```javascript
+// Returns the name of the app configured in config/_[environment].json
+
+const appName = _app.config().getString("name");
+_out.println(`App Name: ${appName}`);
+```
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+Returns a structure with the configuration parameters.
+
+---
+
+## getFile
+
+---
+
+#### _app.getFile(path: string) : _[File](../../objects/File)_
+##### Description
+
+Processes files within the application.
+
+##### How To Use
+
+```javascript
+// Load the full path of the Logo:
+const logo = _app.file("public/images/logo.png");
+_out.println(`<p>Full logo path: ${logo.fullPath()}</p>`);
+// Creates the JSON file within the app at public/data.json:
+_app.file("public/data.json").output().writeAndClose(
+    _val.map()
+        .set("result", true)
+        .toJSON(2)
+)
+// Load the JSON file into the app at public/data.json:
+const jsonFile = _app.file("public/data.json")
+if (jsonFile.exists()) {
+    const data = _val.fromJSON(
+        jsonFile.input().readAllAndClose()
+    )
+    _out.println(`<p>JSON Result: ${data.getString("result")}</p>`)
+}
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| path | string | Relative file path within the application. |
+
+##### Return
+
+( _[File](../../objects/File)_ )
+
+Returns the file object obtained through the path.
+
+---
+
+## getFolder
+
+---
+
+#### _app.getFolder(path: string) : _[File](../../objects/File)_
+##### Description
+
+Tracks all the files present in the folder of the inserted path.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| path | string | Path of the file. |
+
+##### Return
+
+( _[File](../../objects/File)_ )
+
+Returns all files present in the folder of the inserted path.
+
+---
+
+## getName
+
+---
+
+#### _app.getName() : string
+##### Description
+
+Gets the name of the application.
+
+##### How To Use
+
+```javascript
+const appName = _app.name();
+```
+
+##### Return
+
+( string )
+
+Returns the name of the application.
+
+---
+
+## getPathBase
+
+---
+
+#### _app.getPathBase() : string
+##### Return
+
+( string )
+
+
+---
+
+## getPathConfig
+
+---
+
+#### _app.getPathConfig() : string
+##### Return
+
+( string )
+
+
+---
+
+## getPathHome
+
+---
+
+#### _app.getPathHome() : string
+##### Return
+
+( string )
+
+
+---
+
+## getPathPublic
+
+---
+
+#### _app.getPathPublic() : string
+##### Return
+
+( string )
+
+
+---
+
+## getPathServer
+
+---
+
+#### _app.getPathServer() : string
+##### Return
+
+( string )
+
+
+---
+
+## getPathStorage
+
+---
+
+#### _app.getPathStorage() : string
+##### Return
+
+( string )
+
+
+---
+
+## getSettings
+
+---
+
+#### _app.getSettings() : _[Values](../../objects/Values)_
+##### Description
+
+Obtains the application settings data present in the file of the config.
+
+##### How To Use
+
+```javascript
+// Returns the custom settings that are in config/_[environment].json
+// in ... "settings": { "maxTickets": 8 } 
+
+const maxTickets = _app.settings().getString("maxTickets");
+_out.println(`The maximum limit for tickets is: ${maxTickets}`);
+```
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+Returns the custom settings.
+
+---
+
+## getUrl
+
+---
+
+#### _app.getUrl() : string
+##### Description
+
+Gets the URL prefix defined in the configuration, as a custom URL prefix.
+
+##### How To Use
+
+```javascript
+const urlCustom = _app.url('name-of-my-configured-url');
+```
+
+##### Return
+
+( string )
+
+Returns the location prefix defined in the configuration.
+
+---
+
+#### _app.getUrl(key: string) : string
+##### Description
+
+Gets the URL prefix defined in the configuration, as a custom URL prefix.
+
+##### How To Use
+
+```javascript
+const urlCustom = _app.url('name-of-my-configured-url');
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| key | string | Name of the configured url. |
+
+##### Return
+
+( string )
+
+Returns the location prefix defined in the configuration.
+
+---
+
+## getUrlAdmin
+
+---
+
+#### _app.getUrlAdmin() : string
+##### Return
+
+( string )
+
+
+---
+
+## getUrlFileSystem
+
+---
+
+#### _app.getUrlFileSystem() : string
+##### Return
+
+( string )
+
+
+---
+
+## getUrlFileSystemPrivate
+
+---
+
+#### _app.getUrlFileSystemPrivate() : string
+##### Return
+
+( string )
+
+
+---
+
+## getUrlFileSystemPublic
+
+---
+
+#### _app.getUrlFileSystemPublic() : string
+##### Return
+
+( string )
+
+
+---
+
+## getUrlFileSystemServer
+
+---
+
+#### _app.getUrlFileSystemServer() : string
+##### Return
+
+( string )
+
+
+---
+
+## getUrlPublic
+
+---
+
+#### _app.getUrlPublic() : string
+##### Return
+
+( string )
+
+
+---
+
+## getUrlServices
+
+---
+
+#### _app.getUrlServices() : string
+##### Return
+
+( string )
+
+
+---
+
+## getUrlStorage
+
+---
+
+#### _app.getUrlStorage() : string
+##### Return
+
+( string )
+
+
+---
+
+## isConfigReloaded
+
+---
+
+#### _app.isConfigReloaded() : _boolean_
+##### Return
+
+( _boolean_ )
+
 
 ---
 
@@ -359,7 +758,7 @@ Returns the URL of the application.
 
 ---
 
-#### _app.url(arg0: string) : string
+#### _app.url(key: string) : string
 ##### Description
 
 Gets the URL prefix defined in the configuration, as a custom URL prefix.
@@ -374,7 +773,7 @@ const urlCustom = _app.url('name-of-my-configured-url');
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string | Name of the configured url. |
 
 ##### Return
 

@@ -20,12 +20,16 @@ Generating general application errors and categorizing the severity of the error
 
 ---
 
-#### _error.create(arg0: string) : _ErrorException_
+#### _error.create(message: string) : _ErrorException_
+##### Description
+
+Creates an error with an description message
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| message | string | Message that will be presented in the log. |
 
 ##### Return
 
@@ -175,7 +179,7 @@ Print a message with the description of the debug and it's cause
 
 ---
 
-#### _error.debug(message: string, arg1: _Throwable_) : _void_
+#### _error.debug(message: string, cause: _Throwable_) : _void_
 ##### Description
 
 Print a message with the description of the debug
@@ -185,7 +189,7 @@ Print a message with the description of the debug
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in the log. |
-| arg1 | _Throwable_ |   |
+| cause | _Throwable_ | Alternative throwable to include in the debug message. |
 
 ##### Return
 
@@ -201,7 +205,7 @@ Print a message with the description of the debug
 #### _error.error(message: string) : _void_
 ##### Description
 
-Print a message of erro
+Print a message of error.
 
 ##### Attributes
 
@@ -355,7 +359,7 @@ Print a message of information and a throable
 
 ---
 
-#### _error.info(message: string, arg1: _Throwable_) : _void_
+#### _error.info(message: string, cause: _Throwable_) : _void_
 ##### Description
 
 Print a message of information
@@ -365,7 +369,7 @@ Print a message of information
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in the log. |
-| arg1 | _Throwable_ |   |
+| cause | _Throwable_ | Alternative throwable to include in the info message. |
 
 ##### Return
 
@@ -378,17 +382,22 @@ Print a message of information
 
 ---
 
-#### _error.is(arg0: _Object_) : _boolean_
+#### _error.is(object: _Object_) : _boolean_
+##### Description
+
+Checks if an object is from type Error, Exception or Throwable.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| object | _Object_ | Object that will be checked. |
 
 ##### Return
 
 ( _boolean_ )
 
+Returns **true** if the object is of type Error, Exception or Throwable.
 
 ---
 
@@ -396,17 +405,22 @@ Print a message of information
 
 ---
 
-#### _error.isError(arg0: _Object_) : _boolean_
+#### _error.isError(object: _Object_) : _boolean_
+##### Description
+
+Checks if an object is from type Error.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| object | _Object_ | Object that will be checked. |
 
 ##### Return
 
 ( _boolean_ )
 
+Returns **true** if the object is of type Error.
 
 ---
 
@@ -414,17 +428,22 @@ Print a message of information
 
 ---
 
-#### _error.isException(arg0: _Object_) : _boolean_
+#### _error.isException(object: _Object_) : _boolean_
+##### Description
+
+Checks if an object is from type Exception.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| object | _Object_ | Object that will be checked. |
 
 ##### Return
 
 ( _boolean_ )
 
+Returns **true** if the object is of type Exception.
 
 ---
 
@@ -432,17 +451,22 @@ Print a message of information
 
 ---
 
-#### _error.isThrowable(arg0: _Object_) : _boolean_
+#### _error.isThrowable(object: _Object_) : _boolean_
+##### Description
+
+Checks if an object is from type Throwable.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| object | _Object_ | Object that will be checked. |
 
 ##### Return
 
 ( _boolean_ )
 
+Returns **true** if the object is of type Throwable.
 
 ---
 
@@ -450,12 +474,16 @@ Print a message of information
 
 ---
 
-#### _error.raise(arg0: _Object_) : _void_
+#### _error.raise(object: _Object_) : _void_
+##### Description
+
+Throws an error according to the type of object passed (Error, Exception or Throwable).
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| object | _Object_ | Error object. |
 
 ##### Return
 
@@ -505,7 +533,7 @@ Returns an object and a list of methods that caused them with an description men
 
 ---
 
-#### _error.trace(message: string, arg1: _Throwable_) : _void_
+#### _error.trace(message: string, throwable: _Throwable_) : _void_
 ##### Description
 
 Returns an throwable and a list of methods that caused them with an description mensagem.
@@ -515,7 +543,7 @@ Returns an throwable and a list of methods that caused them with an description 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| arg1 | _Throwable_ |   |
+| throwable | _Throwable_ | Alternative throwable to include in the log message. |
 
 ##### Return
 

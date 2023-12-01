@@ -31,17 +31,28 @@ const OK = _db.query(
 
 ---
 
-#### _db.all(arg0: string) : _List_
+#### _db.all(tabela: string) : _List_
+##### Descrição
+
+Seleciona todos os dados de uma tabela.
+
+##### Como Usar
+
+```javascript
+_db.all('cliente');
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| tabela | string | Nome da tabela de onde será executada a query. |
 
 ##### Retorno
 
 ( _List_ )
 
+Os dados encontrados na tabela ou null caso não exista.
 
 ---
 
@@ -110,6 +121,22 @@ Gestor da execução de operações em lote.
 ---
 
 #### _db.checkExists() : _[CheckExists](../../objects/CheckExists)_
+##### Descrição
+
+Verifica se sequências, tabelas, colunas e indexes existem na base de dados.
+
+##### Como Usar
+
+```javascript
+if (!_db.checkExists().table("client")) {
+    _db.table().create(
+        "client",
+        _db.column().setName("id").setType("int").setPrimaryKey(true),
+        _db.column().setName("name").setType("varchar").setNotNull(true).setDefault()
+    );
+}
+```
+
 ##### Retorno
 
 ( _[CheckExists](../../objects/CheckExists)_ )
@@ -122,6 +149,22 @@ Gestor da execução de operações em lote.
 ---
 
 #### _db.column() : _[Column](../../objects/Column)_
+##### Descrição
+
+Realiza a manipulação de colunas em base de dados.
+
+##### Como Usar
+
+```javascript
+if (!_db.checkExists().column("client", "description")) {
+    _db.column().rename(
+        "client", // Tabela
+        "description", // Nome Antigo
+        "name" // Novo Nome
+    );
+}
+```
+
 ##### Retorno
 
 ( _[Column](../../objects/Column)_ )
@@ -405,48 +448,111 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.deleteMany(arg0: string, arg1: _Object[]_) : _int[]_
+#### _db.deleteMany(tabela: string, listaDados: _Object[]_) : _int[]_
+##### Descrição
+
+Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
+
+##### Como Usar
+
+```javascript
+var dadosEliminados = _db.deleteMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+        )
+        .add(_val.map()
+            .set('id', 2)
+        )
+);
+_out.json({dadosEliminados: dadosEliminados})
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| listaDados | _Object[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
 ( _int[]_ )
 
+Array com a quantidade de registos afetados pela eliminação para cada objeto dentro da lista.
 
 ---
 
-#### _db.deleteMany(arg0: string, arg1: _List_) : _int[]_
+#### _db.deleteMany(tabela: string, listaDados: _List_) : _int[]_
+##### Descrição
+
+Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
+
+##### Como Usar
+
+```javascript
+var dadosEliminados = _db.deleteMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+        )
+        .add(_val.map()
+            .set('id', 2)
+        )
+);
+_out.json({dadosEliminados: dadosEliminados})
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| listaDados | _List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
 ( _int[]_ )
 
+Array com a quantidade de registos afetados pela eliminação para cada objeto dentro da lista.
 
 ---
 
-#### _db.deleteMany(arg0: string, arg1: _[Values](../../objects/Values)_) : _int[]_
+#### _db.deleteMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _int[]_
+##### Descrição
+
+Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
+
+##### Como Usar
+
+```javascript
+var dadosEliminados = _db.deleteMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+        )
+        .add(_val.map()
+            .set('id', 2)
+        )
+);
+_out.json({dadosEliminados: dadosEliminados})
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| listaDados | _[Values](../../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
 ( _int[]_ )
 
+Array com a quantidade de registos afetados pela eliminação para cada objeto dentro da lista.
 
 ---
 
@@ -751,18 +857,41 @@ Dados da linha de registo encontrado.
 
 ---
 
-#### _db.findQuery(arg0: string, arg1: _[Values](../../objects/Values)_) : string
+#### _db.findQuery(tabela: string, params: _[Values](../../objects/Values)_) : string
+##### Descrição
+
+A partir de um objeto que tem a estrutura parecida com uma consulta SQL, gera uma query para ser efectuado um select.
+Constrói a query compatível com qualquer tipo de base de dados.
+Permite condições, ordenação, evita SQL Injection, entre outros.
+Exemplo que demonstra como define as colunas, as condições, ordenação e paginação:
+
+##### Como Usar
+
+```javascript
+const record = _db.findQuery(
+    "pessoa",
+    _val.map()
+        .set(
+            "where",
+            _val.map()
+                .set("email", "pessoa@e-mail.exemplo")
+        )
+)
+
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| tabela | string | Nome tabela. |
+| params | _[Values](../../objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
 
 ##### Retorno
 
 ( string )
 
+A query com os parâmetros pronta a ser utilizada.
 
 ---
 
@@ -903,6 +1032,21 @@ Nome da configuração de conexão à base de dados que está a ser utilizada.
 ---
 
 #### _db.index() : _[Index](../../objects/Index)_
+##### Descrição
+
+Realiza a manipulação de indexes em base de dados.
+
+##### Como Usar
+
+```javascript
+if (!_db.checkExists().index("client", "name")) {
+   _db.index().create(
+       "client", // Nome da Tabela
+       "name" // Nome da Coluna
+   ); // O index client_name_idx será criado criado.
+}
+```
+
 ##### Retorno
 
 ( _[Index](../../objects/Index)_ )
@@ -1026,33 +1170,65 @@ _out.json(
 
 ---
 
-#### _db.insertIfNotExists(arg0: string, arg1: _Map_) : _int_
+#### _db.insertIfNotExists(tabela: string, dados: _Map_) : _int_
+##### Descrição
+
+Executa a inserção de um valor caso ele não exista ou retorna o ID caso já exista.
+
+##### Como Usar
+
+```javascript
+var dadosInseridos = _db.insertIfNotExists(
+    'worker',
+    _val.map()
+        .set('name','Netuno')
+);
+_out.json({dadosInseridos: dadosInseridos})
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Map_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| dados | _Map_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
 ( _int_ )
 
+ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
-#### _db.insertIfNotExists(arg0: string, arg1: _[Values](../../objects/Values)_) : _int_
+#### _db.insertIfNotExists(tabela: string, dados: _[Values](../../objects/Values)_) : _int_
+##### Descrição
+
+Executa a inserção de um valor caso ele não exista ou retorna o ID caso já exista.
+
+##### Como Usar
+
+```javascript
+var dadosInseridos = _db.insertIfNotExists(
+    'worker',
+    _val.map()
+        .set('name','Netuno')
+);
+_out.json({dadosInseridos: dadosInseridos})
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
 ( _int_ )
 
+ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
@@ -1060,48 +1236,108 @@ _out.json(
 
 ---
 
-#### _db.insertMany(arg0: string, arg1: _Object[]_) : _int[]_
+#### _db.insertMany(tabela: string, listaDados: _Object[]_) : _int[]_
+##### Descrição
+
+Executa a inserção várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores.
+
+##### Como Usar
+
+```javascript
+_db.insertMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('name','Sitana')
+        )
+);
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| listaDados | _Object[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
 ( _int[]_ )
 
+Array com os IDs dos dados inseridos.
 
 ---
 
-#### _db.insertMany(arg0: string, arg1: _List_) : _int[]_
+#### _db.insertMany(tabela: string, listaDados: _List_) : _int[]_
+##### Descrição
+
+Executa a inserção várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores.
+
+##### Como Usar
+
+```javascript
+_db.insertMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('name','Sitana')
+        )
+);
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| listaDados | _List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
 ( _int[]_ )
 
+Array com os IDs dos dados inseridos.
 
 ---
 
-#### _db.insertMany(arg0: string, arg1: _[Values](../../objects/Values)_) : _int[]_
+#### _db.insertMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _int[]_
+##### Descrição
+
+Executa a inserção várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores.
+
+##### Como Usar
+
+```javascript
+_db.insertMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('name','Sitana')
+        )
+);
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| listaDados | _[Values](../../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
 ( _int[]_ )
 
+Array com os IDs dos dados inseridos.
 
 ---
 
@@ -1218,6 +1454,24 @@ _out.print(`A OUTRA conexão da db é: ${db_OUTRA_NomeConexao}\n`)
 ( string )
 
 Nome da configuração de conexão à base de dados que está a ser utilizada.
+
+---
+
+## param
+
+---
+
+#### _db.param(arg0: string) : string
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+
+##### Retorno
+
+( string )
+
 
 ---
 
@@ -1615,67 +1869,155 @@ Conteúdo como caminho (tabela.nome) seguro para utilizar diretamente em queries
 
 ---
 
-#### _db.save(arg0: string, arg1: _int_, arg2: _Map_) : _int_
+#### _db.save(tabela: string, uid: _int_, arg2: _Map_) : _int_
+##### Descrição
+
+Executa a inserção ou atualização de um registo na base de dados baseado no UID.
+
+##### Como Usar
+
+```javascript
+// Executa a adição através do UID
+
+const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
+
+const result = _db.delete(
+    "cliente",
+    uid
+);
+
+_out.json(
+    "result": result
+);
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| tabela | string | Nome da tabela na base de dados. |
+| uid | _int_ | UID do registo a eliminar. |
 | arg2 | _Map_ |   |
 
 ##### Retorno
 
 ( _int_ )
 
+Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.save(arg0: string, arg1: _int_, arg2: _[Values](../../objects/Values)_) : _int_
+#### _db.save(tabela: string, uid: _int_, arg2: _[Values](../../objects/Values)_) : _int_
+##### Descrição
+
+Executa a inserção ou atualização de um registo na base de dados baseado no UID.
+
+##### Como Usar
+
+```javascript
+// Executa a adição através do UID
+
+const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
+
+const result = _db.delete(
+    "cliente",
+    uid
+);
+
+_out.json(
+    "result": result
+);
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| tabela | string | Nome da tabela na base de dados. |
+| uid | _int_ | UID do registo a eliminar. |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
 ( _int_ )
 
+Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.save(arg0: string, arg1: string, arg2: _Map_) : _int_
+#### _db.save(tabela: string, uid: string, arg2: _Map_) : _int_
+##### Descrição
+
+Executa a inserção ou atualização de um registo na base de dados baseado no UID.
+
+##### Como Usar
+
+```javascript
+// Executa a adição através do UID
+
+const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
+
+const result = _db.delete(
+    "cliente",
+    uid
+);
+
+_out.json(
+    "result": result
+);
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| tabela | string | Nome da tabela na base de dados. |
+| uid | string | UID do registo a eliminar. |
 | arg2 | _Map_ |   |
 
 ##### Retorno
 
 ( _int_ )
 
+Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.save(arg0: string, arg1: string, arg2: _[Values](../../objects/Values)_) : _int_
+#### _db.save(tabela: string, uid: string, arg2: _[Values](../../objects/Values)_) : _int_
+##### Descrição
+
+Executa a inserção ou atualização de um registo na base de dados baseado no UID.
+
+##### Como Usar
+
+```javascript
+// Executa a adição através do UID
+
+const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
+
+const result = _db.delete(
+    "cliente",
+    uid
+);
+
+_out.json(
+    "result": result
+);
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| tabela | string | Nome da tabela na base de dados. |
+| uid | string | UID do registo a eliminar. |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
 ( _int_ )
 
+Quantidade de registos afetados pela eliminação.
 
 ---
 
@@ -1683,18 +2025,34 @@ Conteúdo como caminho (tabela.nome) seguro para utilizar diretamente em queries
 
 ---
 
-#### _db.search(arg0: string, arg1: _Map_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(tabela: string, dados: _Map_) : _[DBSearchResult](../../objects/DBSearchResult)_
+##### Descrição
+
+Executa uma pesquisa a uma tabela retornando um objeto do tipo DBSearchResult.
+
+##### Como Usar
+
+```javascript
+var query = _db.search(
+   'worker',
+   _val.map()
+       .set('active','1'));
+
+_out.json({data: query.getResults(),total: query.getTotal()});
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Map_ |   |
+| tabela | string | Nome da tabela na base de dados que deve obter os dados. |
+| dados | _Map_ | Dados para se efectuar a pesquisa. |
 
 ##### Retorno
 
 ( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
+Objeto do tipo DBSearchResult.
 
 ---
 
@@ -1714,18 +2072,34 @@ Conteúdo como caminho (tabela.nome) seguro para utilizar diretamente em queries
 
 ---
 
-#### _db.search(arg0: string, arg1: _[Values](../../objects/Values)_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(tabela: string, dados: _[Values](../../objects/Values)_) : _[DBSearchResult](../../objects/DBSearchResult)_
+##### Descrição
+
+Executa uma pesquisa a uma tabela retornando um objeto do tipo DBSearchResult.
+
+##### Como Usar
+
+```javascript
+var query = _db.search(
+   'worker',
+   _val.map()
+       .set('active','1'));
+
+_out.json({data: query.getResults(),total: query.getTotal()});
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| tabela | string | Nome da tabela na base de dados que deve obter os dados. |
+| dados | _[Values](../../objects/Values)_ | Dados para se efectuar a pesquisa. |
 
 ##### Retorno
 
 ( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
+Objeto do tipo DBSearchResult.
 
 ---
 
@@ -1750,6 +2124,21 @@ Conteúdo como caminho (tabela.nome) seguro para utilizar diretamente em queries
 ---
 
 #### _db.sequence() : _[Sequence](../../objects/Sequence)_
+##### Descrição
+
+Realiza a manipulação de sequências em base de dados.
+
+##### Como Usar
+
+```javascript
+if (!_db.checkExists().sequence("client", "name")) {
+   _db.index().create(
+       "client", // Nome da Tabela
+       "name" // Nome da Coluna
+   ); // O index client_name_idx será criado criado.
+}
+```
+
 ##### Retorno
 
 ( _[Sequence](../../objects/Sequence)_ )
@@ -1761,33 +2150,65 @@ Conteúdo como caminho (tabela.nome) seguro para utilizar diretamente em queries
 
 ---
 
-#### _db.store(arg0: string, arg1: _Map_) : _int_
+#### _db.store(tabela: string, dados: _Map_) : _int_
+##### Descrição
+
+Executa a atualização de um valor caso ele exista baseando-se numa chave primária ou uma inserção quando nenhum dado existe com a mesma chave primária. Este tipo de operação é útil quando não é possível utilizar IDs em determinadas operações.
+
+##### Como Usar
+
+```javascript
+// Se existir algum dado na tabela worker com o campo name (a chave primária nesta tabela)// igual ao inserido na query todos os dados serão atualizados// Se não existir algum dado a informação será inserida na tabelavar dadosStore = _db.store(
+    'worker',
+    _val.map()
+        .set('name','Netuno')
+);
+_out.json({dadosStore: dadosStore})
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Map_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| dados | _Map_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
 ( _int_ )
 
+ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
-#### _db.store(arg0: string, arg1: _[Values](../../objects/Values)_) : _int_
+#### _db.store(tabela: string, dados: _[Values](../../objects/Values)_) : _int_
+##### Descrição
+
+Executa a atualização de um valor caso ele exista baseando-se numa chave primária ou uma inserção quando nenhum dado existe com a mesma chave primária. Este tipo de operação é útil quando não é possível utilizar IDs em determinadas operações.
+
+##### Como Usar
+
+```javascript
+// Se existir algum dado na tabela worker com o campo name (a chave primária nesta tabela)// igual ao inserido na query todos os dados serão atualizados// Se não existir algum dado a informação será inserida na tabelavar dadosStore = _db.store(
+    'worker',
+    _val.map()
+        .set('name','Netuno')
+);
+_out.json({dadosStore: dadosStore})
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
 ( _int_ )
 
+ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
@@ -1796,6 +2217,22 @@ Conteúdo como caminho (tabela.nome) seguro para utilizar diretamente em queries
 ---
 
 #### _db.table() : _[Table](../../objects/Table)_
+##### Descrição
+
+Verifica se sequências, tabelas, colunas e indexes existem na base de dados.
+
+##### Como Usar
+
+```javascript
+if (!_db.checkExists().table("client")) {
+    _db.table().create(
+        "client",
+        _db.column().setName("id").setType("int").setPrimaryKey(true),
+        _db.column().setName("name").setType("varchar").setNotNull(true).setDefault()
+    );
+}
+```
+
 ##### Retorno
 
 ( _[Table](../../objects/Table)_ )
@@ -1993,7 +2430,7 @@ Novo objeto do tipo: _java.sql.Timestamp_
 
 ---
 
-#### _db.toFloat(arg0: string) : string
+#### _db.toFloat(texto: string) : string
 ##### Descrição
 
 Garante que é um número com casas decimais válido para ser utilizado diretamente numa query evitando SQL Injection.
@@ -2015,7 +2452,7 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| texto | string | Número que será verificado se é float para utilizar na query. |
 
 ##### Retorno
 
@@ -2029,7 +2466,7 @@ Conteúdo que é seguro utilizar diretamente em query como número com casas dec
 
 ---
 
-#### _db.toInt(arg0: string) : string
+#### _db.toInt(texto: string) : string
 ##### Descrição
 
 Garante que é um número inteiro válido para ser utilizado diretamente numa query evitando SQL Injection.
@@ -2051,7 +2488,7 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| texto | string | Número que será verificado se é inteiro para utilizar na query. |
 
 ##### Retorno
 
@@ -2065,7 +2502,7 @@ Conteúdo que é seguro utilizar diretamente em query como número/inteiro.
 
 ---
 
-#### _db.toIntSequence(arg0: string) : string
+#### _db.toIntSequence(texto: string) : string
 ##### Descrição
 
 Garante que é uma sequência de números separados por vírgula para ser utilizado diretamente numa query evitando SQL Injection.
@@ -2088,7 +2525,7 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| texto | string | Números que serão verificados se são inteiros para utilizar na query. |
 
 ##### Retorno
 
@@ -2102,17 +2539,23 @@ Conteúdo sequêncial numérico que é seguro utilizar diretamente em query.
 
 ---
 
-#### _db.toRawName(arg0: string) : string
+#### _db.toRawName(texto: string) : string
 ##### Descrição
 
 Certifica que o conteúdo passado é um nome válido para ser utilizado em queries diretas à base de dados, se não for então retorna um erro.
 Por exemplo válida se o nome está no formato para ser um nome de `nome_da_tabela` ou de `nome_da_coluna`.
 
+##### Como Usar
+
+```javascript
+var toRawName = _db.toRawName('worker')
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| texto | string | Nome que será verificado se pode ser utilizado como nome de tabela ou nome de coluna. |
 
 ##### Retorno
 
@@ -2126,17 +2569,23 @@ Retorna o nome que é seguro utilizar diretamente em queries.
 
 ---
 
-#### _db.toRawPath(arg0: string) : string
+#### _db.toRawPath(texto: string) : string
 ##### Descrição
 
 Certifica que o conteúdo passado é um caminho válido para ser utilizado em queries diretas à base de dados, se não for então retorna um erro.
 Por exemplo válida se o caminho é compatível com `nome_da_tabela`.`nome_da_coluna`.
 
+##### Como Usar
+
+```javascript
+var rawPath = _db.toRawPath('worker.name')
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| texto | string | String que será verificada para utilizar como caminho em queries à BD. |
 
 ##### Retorno
 
@@ -2178,7 +2627,7 @@ Conteúdo que é seguro utilizar diretamente em query como string/varchar/texto.
 
 ---
 
-#### _db.toString(arg0: string) : string
+#### _db.toString(texto: string) : string
 ##### Descrição
 
 Garante que é uma string válida para ser utilizada diretamente numa query evitando SQL Injection.
@@ -2202,7 +2651,7 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| texto | string | String que será verificada para utilizar diretamente em queries à BD. |
 
 ##### Retorno
 
@@ -2446,48 +2895,117 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.updateMany(arg0: string, arg1: _Object[]_) : _int[]_
+#### _db.updateMany(tabela: string, listaDados: _Object[]_) : _int[]_
+##### Descrição
+
+Executa a atualização várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
+
+##### Como Usar
+
+```javascript
+var dadosAlterados = _db.updateMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('id', 2)
+            .set('name','Sitana')
+        )
+);
+_out.json({dados: dadosAlterados})
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| listaDados | _Object[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
 ( _int[]_ )
 
+Array com a quantidade de registos alterados para cada objeto dentro da lista.
 
 ---
 
-#### _db.updateMany(arg0: string, arg1: _List_) : _int[]_
+#### _db.updateMany(tabela: string, listaDados: _List_) : _int[]_
+##### Descrição
+
+Executa a atualização várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
+
+##### Como Usar
+
+```javascript
+var dadosAlterados = _db.updateMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('id', 2)
+            .set('name','Sitana')
+        )
+);
+_out.json({dados: dadosAlterados})
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| listaDados | _List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
 ( _int[]_ )
 
+Array com a quantidade de registos alterados para cada objeto dentro da lista.
 
 ---
 
-#### _db.updateMany(arg0: string, arg1: _[Values](../../objects/Values)_) : _int[]_
+#### _db.updateMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _int[]_
+##### Descrição
+
+Executa a atualização várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
+
+##### Como Usar
+
+```javascript
+var dadosAlterados = _db.updateMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('id', 2)
+            .set('name','Sitana')
+        )
+);
+_out.json({dados: dadosAlterados})
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| listaDados | _[Values](../../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
 ( _int[]_ )
 
+Array com a quantidade de registos alterados para cada objeto dentro da lista.
 
 ---
 

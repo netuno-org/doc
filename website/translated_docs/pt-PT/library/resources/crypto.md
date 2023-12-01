@@ -60,18 +60,29 @@ Dados encriptados com AES256.
 
 ---
 
-#### _crypto.bcryptCheck(arg0: string, arg1: string) : _boolean_
+#### _crypto.bcryptCheck(texto: string, hash: string) : _boolean_
+##### Descrição
+
+Verifica se uma String e um Salt Hash são iguais.
+
+##### Como Usar
+
+```javascript
+_out.println(_crypto.bcryptCheck('texto', _crypto.bcryptHash('texto',_crypto.bcryptSalt(10))))
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| texto | string | Texto que será verificado. |
+| hash | string | Conteúdo encriptado. |
 
 ##### Retorno
 
 ( _boolean_ )
 
+Resultado da verificação, retornando true caso a string e o hash sejam iguais.
 
 ---
 
@@ -79,18 +90,29 @@ Dados encriptados com AES256.
 
 ---
 
-#### _crypto.bcryptHash(arg0: string, arg1: string) : string
+#### _crypto.bcryptHash(senha: string, salt: string) : string
+##### Descrição
+
+Gera um hash com a string e o salt.
+
+##### Como Usar
+
+```javascript
+let hash = _crypto.bcryptHash('netuno',_crypto.bcryptSalt(10))
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| senha | string | Senha ou string que será encriptada. |
+| salt | string | Conteúdo encriptado com bcryptSalt. |
 
 ##### Retorno
 
 ( string )
 
+Resultado da encriptação da String.
 
 ---
 
@@ -130,18 +152,23 @@ Dados do conteúdo encriptado em bcryptSalt.
 
 ---
 
-#### _crypto.bcryptSalt(arg0: _int_, arg1: _SecureRandom_) : string
+#### _crypto.bcryptSalt(conteudo: _int_, secureRandom: _SecureRandom_) : string
+##### Descrição
+
+Codifica os dados bcryptSalt.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _SecureRandom_ |   |
+| conteudo | _int_ | Conteúdo para ser encriptado. |
+| secureRandom | _SecureRandom_ | Valor aleatório gerado com initSecure. |
 
 ##### Retorno
 
 ( string )
 
+Dados do conteúdo encriptado em bcryptSalt.
 
 ---
 
@@ -168,7 +195,7 @@ Dados do conteúdo encriptado cryptHash.
 
 ---
 
-#### _crypto.cryptHash(conteúdo: _byte[]_, arg1: string) : string
+#### _crypto.cryptHash(conteúdo: _byte[]_, salt: string) : string
 ##### Descrição
 
 Codifica os dados com o cryptHash
@@ -178,7 +205,7 @@ Codifica os dados com o cryptHash
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | conteúdo | _byte[]_ | Conteúdo para ser encriptado. |
-| arg1 | string |   |
+| salt | string | Salt Hash para ser utilizado na encriptação. |
 
 ##### Retorno
 
@@ -207,7 +234,7 @@ Dados do conteúdo encriptado cryptHash.
 
 ---
 
-#### _crypto.cryptHash(conteúdo: string, arg1: string) : string
+#### _crypto.cryptHash(conteúdo: string, salt: string) : string
 ##### Descrição
 
 Codifica os dados com o cryptHash
@@ -217,7 +244,7 @@ Codifica os dados com o cryptHash
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | conteúdo | string | Conteúdo para ser encriptado. |
-| arg1 | string |   |
+| salt | string | Salt Hash para ser utilizado na encriptação. |
 
 ##### Retorno
 
@@ -231,17 +258,17 @@ Dados do conteúdo encriptado cryptHash.
 
 ---
 
-#### _crypto.desDecode(conteudo: string, arg1: _byte[]_) : string
+#### _crypto.desDecode(conteudo: string, dados: _byte[]_) : string
 ##### Descrição
 
-Codifica os dados com o SHA512 (SHA-2) e retorna a encriptação binária.
+Codifica os dados com o Desdecode (Des).
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | conteudo | string | Conteúdo para ser encriptado. |
-| arg1 | _byte[]_ |   |
+| dados | _byte[]_ | Dados para serem encriptados. |
 
 ##### Retorno
 
@@ -251,27 +278,7 @@ Dados binários do conteúdo encriptado em Desdecode (Des).
 
 ---
 
-#### _crypto.desDecode(arg0: string, arg1: _byte[]_, arg2: string) : string
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| arg0 | string |   |
-| arg1 | _byte[]_ |   |
-| arg2 | string |   |
-
-##### Retorno
-
-( string )
-
-
----
-
-## desDecodeBase64
-
----
-
-#### _crypto.desDecodeBase64(conteudo: string, arg1: string, arg2: string) : string
+#### _crypto.desDecode(conteudo: string, dados: _byte[]_, charset: string) : string
 ##### Descrição
 
 Codifica os dados com o SHA512 (SHA-2) e retorna a encriptação binária.
@@ -281,8 +288,33 @@ Codifica os dados com o SHA512 (SHA-2) e retorna a encriptação binária.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | conteudo | string | Conteúdo para ser encriptado. |
-| arg1 | string |   |
-| arg2 | string |   |
+| dados | _byte[]_ | Dados para serem encriptados. |
+| charset | string | Conjunto de caracteres. |
+
+##### Retorno
+
+( string )
+
+Dados binários do conteúdo encriptado em Desdecode (Des).
+
+---
+
+## desDecodeBase64
+
+---
+
+#### _crypto.desDecodeBase64(conteudo: string, dados: string, charset: string) : string
+##### Descrição
+
+Codifica os dados com o SHA512 (SHA-2) e retorna a encriptação binária.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| conteudo | string | Conteúdo para ser encriptado. |
+| dados | string | Dados para serem encriptados. |
+| charset | string | Conjunto de caracteres. |
 
 ##### Retorno
 
@@ -296,18 +328,23 @@ Dados binários do conteúdo encriptado em Desdecode (Des) e convertidos em base
 
 ---
 
-#### _crypto.desEncode(arg0: string, arg1: string) : _byte[]_
+#### _crypto.desEncode(chave: string, conteudo: string) : _byte[]_
+##### Descrição
+
+Codifica os dados com o desEncode.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| chave | string | Chave secreta para a codificação. |
+| conteudo | string | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
 ( _byte[]_ )
 
+Dados binários do conteúdo encriptado em desEncode.
 
 ---
 
@@ -331,19 +368,24 @@ Dados binários do conteúdo encriptado em Desdecode (Des) e convertidos em base
 
 ---
 
-#### _crypto.desEncodeBase64(arg0: string, arg1: string, arg2: string) : string
+#### _crypto.desEncodeBase64(chave: string, conteudo: string, charset: string) : string
+##### Descrição
+
+Codifica os dados com o desEncode.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| chave | string | Chave secreta para a codificação. |
+| conteudo | string | Conteúdo para ser encriptado. |
+| charset | string | Conjunto de caracteres. |
 
 ##### Retorno
 
 ( string )
 
+String do conteúdo encriptado em desEncode.
 
 ---
 

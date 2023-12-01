@@ -31,17 +31,28 @@ const OK = _db.query(
 
 ---
 
-#### _db.all(arg0: string) : _List_
+#### _db.all(table: string) : _List_
+##### Description
+
+Selects all the data from a table.
+
+##### How To Use
+
+```javascript
+_db.all('client');
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| table | string | Table's name where the query is going to be executed. |
 
 ##### Return
 
 ( _List_ )
 
+The data found on the table or null if it does not exist.
 
 ---
 
@@ -110,6 +121,22 @@ Batch execution manager.
 ---
 
 #### _db.checkExists() : _[CheckExists](../../objects/CheckExists)_
+##### Description
+
+Checks if sequences, tables, columns and indexes exist in the database.
+
+##### How To Use
+
+```javascript
+if (!_db.checkExists().table("client")) {
+    _db.table().create(
+        "client",
+        _db.column().setName("id").setType("int").setPrimaryKey(true),
+        _db.column().setName("name").setType("varchar").setNotNull(true).setDefault()
+    );
+}
+```
+
 ##### Return
 
 ( _[CheckExists](../../objects/CheckExists)_ )
@@ -122,6 +149,22 @@ Batch execution manager.
 ---
 
 #### _db.column() : _[Column](../../objects/Column)_
+##### Description
+
+Performs the manipulation of columns in the database.
+
+##### How To Use
+
+```javascript
+if (!_db.checkExists().column("client", "description")) {
+    _db.column().rename(
+        "client", // Table
+        "description", // Old Name
+        "name" // New Name
+    );
+}
+```
+
 ##### Return
 
 ( _[Column](../../objects/Column)_ )
@@ -405,48 +448,111 @@ Number of records affected by deletion.
 
 ---
 
-#### _db.deleteMany(arg0: string, arg1: _Object[]_) : _int[]_
+#### _db.deleteMany(table: string, dataItems: _Object[]_) : _int[]_
+##### Description
+
+Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
+
+##### How To Use
+
+```javascript
+var deletedData = _db.deleteMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+        )
+        .add(_val.map()
+            .set('id', 2)
+        )
+);
+_out.json({deletedData: deletedData})
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| dataItems | _Object[]_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
 ( _int[]_ )
 
+Array with number of records affected by the deletion for each object inside the list.
 
 ---
 
-#### _db.deleteMany(arg0: string, arg1: _List_) : _int[]_
+#### _db.deleteMany(table: string, dataItems: _List_) : _int[]_
+##### Description
+
+Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
+
+##### How To Use
+
+```javascript
+var deletedData = _db.deleteMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+        )
+        .add(_val.map()
+            .set('id', 2)
+        )
+);
+_out.json({deletedData: deletedData})
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| dataItems | _List_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
 ( _int[]_ )
 
+Array with number of records affected by the deletion for each object inside the list.
 
 ---
 
-#### _db.deleteMany(arg0: string, arg1: _[Values](../../objects/Values)_) : _int[]_
+#### _db.deleteMany(table: string, dataItems: _[Values](../../objects/Values)_) : _int[]_
+##### Description
+
+Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
+
+##### How To Use
+
+```javascript
+var deletedData = _db.deleteMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+        )
+        .add(_val.map()
+            .set('id', 2)
+        )
+);
+_out.json({deletedData: deletedData})
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| dataItems | _[Values](../../objects/Values)_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
 ( _int[]_ )
 
+Array with number of records affected by the deletion for each object inside the list.
 
 ---
 
@@ -751,18 +857,41 @@ Record line data found.
 
 ---
 
-#### _db.findQuery(arg0: string, arg1: _[Values](../../objects/Values)_) : string
+#### _db.findQuery(table: string, params: _[Values](../../objects/Values)_) : string
+##### Description
+
+From an object that has the structure similar to an SQL query, it generates a query to make a selection.
+Build the query compatible with any type of database.
+Allows conditions, ordering, avoids SQL Injection, among others.
+Example that demonstrates how to define columns, conditions, ordering and pagination:
+
+##### How To Use
+
+```javascript
+const record = _db.findQuery(
+    "pessoa",
+    _val.map()
+        .set(
+            "where",
+            _val.map()
+                .set("email", "pessoa@e-mail.exemplo")
+        )
+)
+
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| table | string | Table name. |
+| params | _[Values](../../objects/Values)_ | Query definition, supports limiting columns (_columns_), adding conditions (_where_), ordering (_order_), among others. |
 
 ##### Return
 
 ( string )
 
+The query with the parameters ready to be used.
 
 ---
 
@@ -903,6 +1032,21 @@ Name of the connection configuration to the database being used.
 ---
 
 #### _db.index() : _[Index](../../objects/Index)_
+##### Description
+
+Performs the manipulation of indexes in the database.
+
+##### How To Use
+
+```javascript
+if (!_db.checkExists().index("client", "name")) {
+   _db.index().create(
+       "client", // Table Name
+       "name" // Column Name
+   ); // The index client_name_idx will be created.
+}
+```
+
 ##### Return
 
 ( _[Index](../../objects/Index)_ )
@@ -1026,33 +1170,65 @@ _out.json(
 
 ---
 
-#### _db.insertIfNotExists(arg0: string, arg1: _Map_) : _int_
+#### _db.insertIfNotExists(table: string, data: _Map_) : _int_
+##### Description
+
+Executes the insertion of a value if it does not exist or returns the ID if it already exists.
+
+##### How To Use
+
+```javascript
+var insertedData = _db.insertIfNotExists(
+    'worker',
+    _val.map()
+        .set('name','Netuno')
+);
+_out.json({insertedData: insertedData})
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Map_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| data | _Map_ | Object with the data structure to be inserted. |
 
 ##### Return
 
 ( _int_ )
 
+ID of the data that was inserted or ID of the existing data.
 
 ---
 
-#### _db.insertIfNotExists(arg0: string, arg1: _[Values](../../objects/Values)_) : _int_
+#### _db.insertIfNotExists(table: string, data: _[Values](../../objects/Values)_) : _int_
+##### Description
+
+Executes the insertion of a value if it does not exist or returns the ID if it already exists.
+
+##### How To Use
+
+```javascript
+var insertedData = _db.insertIfNotExists(
+    'worker',
+    _val.map()
+        .set('name','Netuno')
+);
+_out.json({insertedData: insertedData})
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| data | _[Values](../../objects/Values)_ | Object with the data structure to be inserted. |
 
 ##### Return
 
 ( _int_ )
 
+ID of the data that was inserted or ID of the existing data.
 
 ---
 
@@ -1060,48 +1236,108 @@ _out.json(
 
 ---
 
-#### _db.insertMany(arg0: string, arg1: _Object[]_) : _int[]_
+#### _db.insertMany(table: string, dataItems: _Object[]_) : _int[]_
+##### Description
+
+Executes the insertion of multiple rows into a table of an Array of Objects or a List of Values.
+
+##### How To Use
+
+```javascript
+_db.insertMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('name','Sitana')
+        )
+);
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| dataItems | _Object[]_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
 ( _int[]_ )
 
+An array with the IDs to the inserted data.
 
 ---
 
-#### _db.insertMany(arg0: string, arg1: _List_) : _int[]_
+#### _db.insertMany(table: string, dataItems: _List_) : _int[]_
+##### Description
+
+Executes the insertion of multiple rows into a table of an Array of Objects or a List of Values.
+
+##### How To Use
+
+```javascript
+_db.insertMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('name','Sitana')
+        )
+);
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| dataItems | _List_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
 ( _int[]_ )
 
+An array with the IDs to the inserted data.
 
 ---
 
-#### _db.insertMany(arg0: string, arg1: _[Values](../../objects/Values)_) : _int[]_
+#### _db.insertMany(table: string, dataItems: _[Values](../../objects/Values)_) : _int[]_
+##### Description
+
+Executes the insertion of multiple rows into a table of an Array of Objects or a List of Values.
+
+##### How To Use
+
+```javascript
+_db.insertMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('name','Sitana')
+        )
+);
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| dataItems | _[Values](../../objects/Values)_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
 ( _int[]_ )
 
+An array with the IDs to the inserted data.
 
 ---
 
@@ -1218,6 +1454,24 @@ _out.print(`The OTHER DB connection is: ${db_OTHER_ConnectionName}\n`)
 ( string )
 
 Name of the connection configuration to the database being used.
+
+---
+
+## param
+
+---
+
+#### _db.param(arg0: string) : string
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | string |   |
+
+##### Return
+
+( string )
+
 
 ---
 
@@ -1615,67 +1869,155 @@ Content as a safe path (table.name) to use directly in queries.
 
 ---
 
-#### _db.save(arg0: string, arg1: _int_, arg2: _Map_) : _int_
+#### _db.save(table: string, uid: _int_, arg2: _Map_) : _int_
+##### Description
+
+Performs the deletion of records in the database based on the UID.
+
+##### How To Use
+
+```javascript
+// Executa a eliminação através do uid
+
+const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
+
+const result = _db.delete(
+    "client",
+    uid
+);
+
+_out.json(
+    "result": result
+);
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| table | string | Table's name in the database. |
+| uid | _int_ | Record's UID to be deleted. |
 | arg2 | _Map_ |   |
 
 ##### Return
 
 ( _int_ )
 
+Number of records affected by the deletion.
 
 ---
 
-#### _db.save(arg0: string, arg1: _int_, arg2: _[Values](../../objects/Values)_) : _int_
+#### _db.save(table: string, uid: _int_, arg2: _[Values](../../objects/Values)_) : _int_
+##### Description
+
+Performs the deletion of records in the database based on the UID.
+
+##### How To Use
+
+```javascript
+// Executa a eliminação através do uid
+
+const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
+
+const result = _db.delete(
+    "client",
+    uid
+);
+
+_out.json(
+    "result": result
+);
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| table | string | Table's name in the database. |
+| uid | _int_ | Record's UID to be deleted. |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
 ( _int_ )
 
+Number of records affected by the deletion.
 
 ---
 
-#### _db.save(arg0: string, arg1: string, arg2: _Map_) : _int_
+#### _db.save(table: string, uid: string, arg2: _Map_) : _int_
+##### Description
+
+Performs the deletion of records in the database based on the UID.
+
+##### How To Use
+
+```javascript
+// Executa a eliminação através do uid
+
+const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
+
+const result = _db.delete(
+    "client",
+    uid
+);
+
+_out.json(
+    "result": result
+);
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| table | string | Table's name in the database. |
+| uid | string | Record's UID to be deleted. |
 | arg2 | _Map_ |   |
 
 ##### Return
 
 ( _int_ )
 
+Number of records affected by the deletion.
 
 ---
 
-#### _db.save(arg0: string, arg1: string, arg2: _[Values](../../objects/Values)_) : _int_
+#### _db.save(table: string, uid: string, arg2: _[Values](../../objects/Values)_) : _int_
+##### Description
+
+Performs the deletion of records in the database based on the UID.
+
+##### How To Use
+
+```javascript
+// Executa a eliminação através do uid
+
+const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
+
+const result = _db.delete(
+    "client",
+    uid
+);
+
+_out.json(
+    "result": result
+);
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| table | string | Table's name in the database. |
+| uid | string | Record's UID to be deleted. |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
 ( _int_ )
 
+Number of records affected by the deletion.
 
 ---
 
@@ -1683,18 +2025,34 @@ Content as a safe path (table.name) to use directly in queries.
 
 ---
 
-#### _db.search(arg0: string, arg1: _Map_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(table: string, data: _Map_) : _[DBSearchResult](../../objects/DBSearchResult)_
+##### Description
+
+Performs a search on a table returning an object of type DBSearchResult.
+
+##### How To Use
+
+```javascript
+var query = _db.search(
+   'worker',
+   _val.map()
+       .set('active','1'));
+
+_out.json({data: query.getResults(),total: query.getTotal()});
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Map_ |   |
+| table | string | Name of the table in the database that should obtain the data. |
+| data | _Map_ | Data to carry out the search. |
 
 ##### Return
 
 ( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
+Object of type DBSearchResult.
 
 ---
 
@@ -1714,18 +2072,34 @@ Content as a safe path (table.name) to use directly in queries.
 
 ---
 
-#### _db.search(arg0: string, arg1: _[Values](../../objects/Values)_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(table: string, data: _[Values](../../objects/Values)_) : _[DBSearchResult](../../objects/DBSearchResult)_
+##### Description
+
+Performs a search on a table returning an object of type DBSearchResult.
+
+##### How To Use
+
+```javascript
+var query = _db.search(
+   'worker',
+   _val.map()
+       .set('active','1'));
+
+_out.json({data: query.getResults(),total: query.getTotal()});
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| table | string | Name of the table in the database that should obtain the data. |
+| data | _[Values](../../objects/Values)_ | Data to carry out the search. |
 
 ##### Return
 
 ( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
+Object of type DBSearchResult.
 
 ---
 
@@ -1750,6 +2124,21 @@ Content as a safe path (table.name) to use directly in queries.
 ---
 
 #### _db.sequence() : _[Sequence](../../objects/Sequence)_
+##### Description
+
+Performs the manipulation of sequences in a database.
+
+##### How To Use
+
+```javascript
+if (!_db.checkExists().sequence("client", "name")) {
+   _db.index().create(
+       "client", // Table's name
+       "name" // Table's name
+   ); // The index client_name_idx will be created.
+}
+```
+
 ##### Return
 
 ( _[Sequence](../../objects/Sequence)_ )
@@ -1761,33 +2150,67 @@ Content as a safe path (table.name) to use directly in queries.
 
 ---
 
-#### _db.store(arg0: string, arg1: _Map_) : _int_
+#### _db.store(table: string, data: _Map_) : _int_
+##### Description
+
+
+Performs an update of a value if it exists based on a primary key or an insert when no data exists with the same primary key. This type of operation is useful when it is not possible to use IDs in certain operations.
+
+##### How To Use
+
+```javascript
+// If there is some data on table worker with the name field (the primary key on this table) // equal to the added all the data will be updated// If there isn't it will instead be insertedvar storedData = _db.store(
+    'worker',
+    _val.map()
+        .set('name','Netuno')
+);
+_out.json({storedData: storedData})
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Map_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| data | _Map_ | Object with the data structure to be inserted. |
 
 ##### Return
 
 ( _int_ )
 
+ID of the data that was inserted or ID of the existing data.
 
 ---
 
-#### _db.store(arg0: string, arg1: _[Values](../../objects/Values)_) : _int_
+#### _db.store(table: string, data: _[Values](../../objects/Values)_) : _int_
+##### Description
+
+
+Performs an update of a value if it exists based on a primary key or an insert when no data exists with the same primary key. This type of operation is useful when it is not possible to use IDs in certain operations.
+
+##### How To Use
+
+```javascript
+// If there is some data on table worker with the name field (the primary key on this table) // equal to the added all the data will be updated// If there isn't it will instead be insertedvar storedData = _db.store(
+    'worker',
+    _val.map()
+        .set('name','Netuno')
+);
+_out.json({storedData: storedData})
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| data | _[Values](../../objects/Values)_ | Object with the data structure to be inserted. |
 
 ##### Return
 
 ( _int_ )
 
+ID of the data that was inserted or ID of the existing data.
 
 ---
 
@@ -1796,6 +2219,22 @@ Content as a safe path (table.name) to use directly in queries.
 ---
 
 #### _db.table() : _[Table](../../objects/Table)_
+##### Description
+
+Checks if sequences, tables, columns and indexes exist in the database.
+
+##### How To Use
+
+```javascript
+if (!_db.checkExists().table("client")) {
+    _db.table().create(
+        "client",
+        _db.column().setName("id").setType("int").setPrimaryKey(true),
+        _db.column().setName("name").setType("varchar").setNotNull(true).setDefault()
+    );
+}
+```
+
 ##### Return
 
 ( _[Table](../../objects/Table)_ )
@@ -1993,7 +2432,7 @@ New object of type: _java.sql.Timestamp_
 
 ---
 
-#### _db.toFloat(arg0: string) : string
+#### _db.toFloat(text: string) : string
 ##### Description
 
 Ensures that it is a valid number with decimal places to be used directly in a query avoiding SQL Injection.
@@ -2015,7 +2454,7 @@ _out.json(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| text | string | Number that will be checked if it's float to use in the query. |
 
 ##### Return
 
@@ -2029,7 +2468,7 @@ Content that is safe to use directly in query as a number with decimal places (_
 
 ---
 
-#### _db.toInt(arg0: string) : string
+#### _db.toInt(text: string) : string
 ##### Description
 
 Ensures that it is a valid integer to be used directly in a query avoiding SQL Injection.
@@ -2051,7 +2490,7 @@ _out.json(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| text | string | Number that will be checked if it's integer to use in the query. |
 
 ##### Return
 
@@ -2065,7 +2504,7 @@ Content that is safe to use directly in query as number/integer.
 
 ---
 
-#### _db.toIntSequence(arg0: string) : string
+#### _db.toIntSequence(text: string) : string
 ##### Description
 
 It ensures that it is a sequence of numbers separated by commas to be used directly in a query avoiding SQL Injection.
@@ -2088,7 +2527,7 @@ _out.json(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| text | string | Numbers that will be checked if they are integers to use in the query. |
 
 ##### Return
 
@@ -2102,17 +2541,23 @@ Sequential numeric content that is safe to use directly in query.
 
 ---
 
-#### _db.toRawName(arg0: string) : string
+#### _db.toRawName(text: string) : string
 ##### Description
 
 It certifies that the content passed is a valid name to be used in direct queries to the database, if it is not then an error is returned.
 For example valid if the name is in the format to be a name of `table_name` or of` column_name`.
 
+##### How To Use
+
+```javascript
+var toRawName = _db.toRawName('worker.name')
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| text | string | Name that will be checked to be used as table name or column name. |
 
 ##### Return
 
@@ -2126,17 +2571,23 @@ Returns the name that is safe to use directly in queries.
 
 ---
 
-#### _db.toRawPath(arg0: string) : string
+#### _db.toRawPath(text: string) : string
 ##### Description
 
 It certifies that the content passed is a valid path to be used in direct queries to the database, if it is not then an error is returned.
 For example, valid if the path is compatible with `table_name`.`column_name`.
 
+##### How To Use
+
+```javascript
+var rawPath = _db.toRawPath('worker.name')
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| text | string | String that will be checked to be used as path in queries to the DB. |
 
 ##### Return
 
@@ -2178,7 +2629,7 @@ Content that is safe to use directly in query as string/varchar/text.
 
 ---
 
-#### _db.toString(arg0: string) : string
+#### _db.toString(text: string) : string
 ##### Description
 
 Ensures that it is a valid string to be used directly in a query avoiding SQL Injection.
@@ -2202,7 +2653,7 @@ _out.json(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| text | string | String that will be verified to be used directly in queries to the DB. |
 
 ##### Return
 
@@ -2446,48 +2897,117 @@ Number of records affected by the update.
 
 ---
 
-#### _db.updateMany(arg0: string, arg1: _Object[]_) : _int[]_
+#### _db.updateMany(table: string, dataItems: _Object[]_) : _int[]_
+##### Description
+
+Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
+
+##### How To Use
+
+```javascript
+var updatedData = _db.updateMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('id', 2)
+            .set('name','Sitana')
+        )
+);
+_out.json({updatedData: updatedData})
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| dataItems | _Object[]_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
 ( _int[]_ )
 
+Array with number of records affected by the update for each object inside the list.
 
 ---
 
-#### _db.updateMany(arg0: string, arg1: _List_) : _int[]_
+#### _db.updateMany(table: string, dataItems: _List_) : _int[]_
+##### Description
+
+Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
+
+##### How To Use
+
+```javascript
+var updatedData = _db.updateMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('id', 2)
+            .set('name','Sitana')
+        )
+);
+_out.json({updatedData: updatedData})
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _List_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| dataItems | _List_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
 ( _int[]_ )
 
+Array with number of records affected by the update for each object inside the list.
 
 ---
 
-#### _db.updateMany(arg0: string, arg1: _[Values](../../objects/Values)_) : _int[]_
+#### _db.updateMany(table: string, dataItems: _[Values](../../objects/Values)_) : _int[]_
+##### Description
+
+Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
+
+##### How To Use
+
+```javascript
+var updatedData = _db.updateMany(
+    'worker',
+    _val.list()
+        .add(_val.map()
+            .set('id', 1)
+            .set('name','Netuno')
+        )
+        .add(_val.map()
+            .set('id', 2)
+            .set('name','Sitana')
+        )
+);
+_out.json({updatedData: updatedData})
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| table | string | Name of the table in the database that should receive the data to be entered. |
+| dataItems | _[Values](../../objects/Values)_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
 ( _int[]_ )
 
+Array with number of records affected by the update for each object inside the list.
 
 ---
 

@@ -92,6 +92,18 @@ sidebar_label: OutputStream
 
 ---
 
+## isEmpty
+
+---
+
+#### isEmpty() : _boolean_
+##### Return
+
+( _boolean_ )
+
+
+---
+
 ## isEnabled
 
 ---

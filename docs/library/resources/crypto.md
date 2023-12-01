@@ -60,18 +60,29 @@ Data encrypted with AES256.
 
 ---
 
-#### _crypto.bcryptCheck(arg0: string, arg1: string) : _boolean_
+#### _crypto.bcryptCheck(plaintext: string, hashed: string) : _boolean_
+##### Description
+
+Checks if a String and a Salt Hash are the same.
+
+##### How To Use
+
+```javascript
+_out.println(_crypto.bcryptCheck('text', _crypto.bcryptHash('text',_crypto.bcryptSalt(10))))
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| plaintext | string | Text that will be verified. |
+| hashed | string | Encrypted content. |
 
 ##### Return
 
 ( _boolean_ )
 
+Verification result, returning true if string and hash are the same.
 
 ---
 
@@ -79,18 +90,29 @@ Data encrypted with AES256.
 
 ---
 
-#### _crypto.bcryptHash(arg0: string, arg1: string) : string
+#### _crypto.bcryptHash(password: string, salt: string) : string
+##### Description
+
+Hash the string and salt.
+
+##### How To Use
+
+```javascript
+let hash = _crypto.bcryptHash('netuno',_crypto.bcryptSalt(10))
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| password | string | Password or string that will be encrypted. |
+| salt | string | Encrypted content with bcryptSalt. |
 
 ##### Return
 
 ( string )
 
+Result of String encryption.
 
 ---
 
@@ -130,18 +152,23 @@ Data of the content encrypted in bcryptSalt.
 
 ---
 
-#### _crypto.bcryptSalt(arg0: _int_, arg1: _SecureRandom_) : string
+#### _crypto.bcryptSalt(content: _int_, secureRandom: _SecureRandom_) : string
+##### Description
+
+Encodes data with bcryptSalt.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _SecureRandom_ |   |
+| content | _int_ | Content to be encrypted. |
+| secureRandom | _SecureRandom_ | Random value generated with initSecure. |
 
 ##### Return
 
 ( string )
 
+Data of the content encrypted in bcryptSalt.
 
 ---
 
@@ -168,7 +195,7 @@ Data of the content encrypted cryptHash.
 
 ---
 
-#### _crypto.cryptHash(content: _byte[]_, arg1: string) : string
+#### _crypto.cryptHash(content: _byte[]_, salt: string) : string
 ##### Description
 
 Encodes data with cryptHash.
@@ -178,7 +205,7 @@ Encodes data with cryptHash.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | content | _byte[]_ | Content to be encrypted. |
-| arg1 | string |   |
+| salt | string | Salt Hash to be used in encryption. |
 
 ##### Return
 
@@ -207,7 +234,7 @@ Data of the content encrypted cryptHash.
 
 ---
 
-#### _crypto.cryptHash(content: string, arg1: string) : string
+#### _crypto.cryptHash(content: string, salt: string) : string
 ##### Description
 
 Encodes data with cryptHash.
@@ -217,7 +244,7 @@ Encodes data with cryptHash.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | content | string | Content to be encrypted. |
-| arg1 | string |   |
+| salt | string | Salt Hash to be used in encryption. |
 
 ##### Return
 
@@ -231,7 +258,7 @@ Data of the content encrypted cryptHash.
 
 ---
 
-#### _crypto.desDecode(content: string, arg1: _byte[]_) : string
+#### _crypto.desDecode(content: string, data: _byte[]_) : string
 ##### Description
 
 Encodes data with Desdecode (Des).
@@ -241,7 +268,7 @@ Encodes data with Desdecode (Des).
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | content | string | Content to be encrypted. |
-| arg1 | _byte[]_ |   |
+| data | _byte[]_ | Data to be encrypted. |
 
 ##### Return
 
@@ -251,19 +278,24 @@ Binary data of the content encrypted in Desdecode (Des).
 
 ---
 
-#### _crypto.desDecode(arg0: string, arg1: _byte[]_, arg2: string) : string
+#### _crypto.desDecode(content: string, data: _byte[]_, charset: string) : string
+##### Description
+
+Encodes data with Desdecode (Des).
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _byte[]_ |   |
-| arg2 | string |   |
+| content | string | Content to be encrypted. |
+| data | _byte[]_ | Data to be encrypted. |
+| charset | string | Charset. |
 
 ##### Return
 
 ( string )
 
+Binary data of the content encrypted in Desdecode (Des).
 
 ---
 
@@ -271,7 +303,7 @@ Binary data of the content encrypted in Desdecode (Des).
 
 ---
 
-#### _crypto.desDecodeBase64(content: string, arg1: string, arg2: string) : string
+#### _crypto.desDecodeBase64(content: string, data: string, charset: string) : string
 ##### Description
 
 Encodes data with Desdecode (Des) e convertido em base 64.
@@ -281,8 +313,8 @@ Encodes data with Desdecode (Des) e convertido em base 64.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | content | string | Content to be encrypted. |
-| arg1 | string |   |
-| arg2 | string |   |
+| data | string | Data to be encrypted. |
+| charset | string | Charset. |
 
 ##### Return
 
@@ -296,18 +328,23 @@ Binary data of the content encrypted in Desdecode (Des) and coverted in base 64.
 
 ---
 
-#### _crypto.desEncode(arg0: string, arg1: string) : _byte[]_
+#### _crypto.desEncode(key: string, content: string) : _byte[]_
+##### Description
+
+Encodes data with desEncode and returns binary encryption.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string | Secret key for encryption. |
+| content | string | Content to be encrypted. |
 
 ##### Return
 
 ( _byte[]_ )
 
+Binary data of the content encrypted in desEncode.
 
 ---
 
@@ -331,19 +368,24 @@ Binary data of the content encrypted in Desdecode (Des) and coverted in base 64.
 
 ---
 
-#### _crypto.desEncodeBase64(arg0: string, arg1: string, arg2: string) : string
+#### _crypto.desEncodeBase64(key: string, content: string, charset: string) : string
+##### Description
+
+Encodes data with desEncode and returns string encryption.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| key | string | Secret key for encryption. |
+| content | string | Content to be encrypted. |
+| charset | string | Charset. |
 
 ##### Return
 
 ( string )
 
+String data of the content encrypted in desEncode.
 
 ---
 

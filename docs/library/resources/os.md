@@ -143,6 +143,32 @@ Instance of the operating system resource.
 
 ---
 
+## env
+
+---
+
+#### _os.env() : _[Values](../../objects/Values)_
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### _os.env(arg0: _[Values](../../objects/Values)_) : _OS_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _OS_ )
+
+
+---
+
 ## file
 
 ---
@@ -206,6 +232,18 @@ The location where the command will be executed.
 
 ---
 
+## getEnv
+
+---
+
+#### _os.getEnv() : _[Values](../../objects/Values)_
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 ## getFile
 
 ---
@@ -266,6 +304,18 @@ Gets the name of the operating system.
 ( string )
 
 The name of the operating system.
+
+---
+
+## getShell
+
+---
+
+#### _os.getShell() : _boolean_
+##### Return
+
+( _boolean_ )
+
 
 ---
 
@@ -572,6 +622,24 @@ Instance of the operating system resource.
 
 ---
 
+## setEnv
+
+---
+
+#### _os.setEnv(arg0: _[Values](../../objects/Values)_) : _OS_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _OS_ )
+
+
+---
+
 ## setReadCommandError
 
 ---
@@ -608,6 +676,24 @@ Instance of the operating system resource.
 
 ---
 
+## setShell
+
+---
+
+#### _os.setShell(arg0: _boolean_) : _OS_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _boolean_ |   |
+
+##### Return
+
+( _OS_ )
+
+
+---
+
 ## setWaitFor
 
 ---
@@ -618,6 +704,32 @@ Instance of the operating system resource.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _long_ |   |
+
+##### Return
+
+( _OS_ )
+
+
+---
+
+## shell
+
+---
+
+#### _os.shell() : _boolean_
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### _os.shell(arg0: _boolean_) : _OS_
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _boolean_ |   |
 
 ##### Return
 
