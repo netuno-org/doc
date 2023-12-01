@@ -18,8 +18,8 @@
         "sidebar_label": "Backoffice"
       },
       "academy/explore/centralized-terminal": {
-        "title": "Terminal Centralizado",
-        "sidebar_label": "Terminal Centralizado"
+        "title": "Centralized Terminal",
+        "sidebar_label": "Centralized Terminal"
       },
       "academy/explore/cli": {
         "title": "Command Line",
@@ -326,10 +326,6 @@
         "title": "Column",
         "sidebar_label": "Column"
       },
-      "library/objects/Command": {
-        "title": "Command",
-        "sidebar_label": "Command"
-      },
       "library/objects/DataItem": {
         "title": "DataItem",
         "sidebar_label": "DataItem"
@@ -349,6 +345,10 @@
       "library/objects/File": {
         "title": "File",
         "sidebar_label": "File"
+      },
+      "library/objects/IMAPConfig": {
+        "title": "IMAPConfig",
+        "sidebar_label": "IMAPConfig"
       },
       "library/objects/Index": {
         "title": "Index",
@@ -438,14 +438,6 @@
         "title": "CSV",
         "sidebar_label": "CSV"
       },
-      "library/resources/dataItem": {
-        "title": "DataItem",
-        "sidebar_label": "DataItem"
-      },
-      "library/resources/dataSchema": {
-        "title": "DataSchema",
-        "sidebar_label": "DataSchema"
-      },
       "library/resources/db": {
         "title": "DB",
         "sidebar_label": "DB"
@@ -481,6 +473,14 @@
       "library/resources/html": {
         "title": "HTML",
         "sidebar_label": "HTML"
+      },
+      "library/resources/image": {
+        "title": "Image",
+        "sidebar_label": "Image"
+      },
+      "library/resources/imap": {
+        "title": "IMAP",
+        "sidebar_label": "IMAP"
       },
       "library/resources/jasper": {
         "title": "Jasper",
@@ -538,17 +538,9 @@
         "title": "Res",
         "sidebar_label": "Res"
       },
-      "library/resources/security": {
-        "title": "Security",
-        "sidebar_label": "Security"
-      },
       "library/resources/server": {
         "title": "Server",
         "sidebar_label": "Server"
-      },
-      "library/resources/service": {
-        "title": "Service",
-        "sidebar_label": "Service"
       },
       "library/resources/setup": {
         "title": "Setup",
