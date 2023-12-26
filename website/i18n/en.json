@@ -346,6 +346,10 @@
         "title": "File",
         "sidebar_label": "File"
       },
+      "library/objects/FTPFile": {
+        "title": "FTPFile",
+        "sidebar_label": "FTPFile"
+      },
       "library/objects/IMAPConfig": {
         "title": "IMAPConfig",
         "sidebar_label": "IMAPConfig"
@@ -374,6 +378,10 @@
         "title": "RemoteResponse",
         "sidebar_label": "RemoteResponse"
       },
+      "library/objects/SCPClient": {
+        "title": "SCPClient",
+        "sidebar_label": "SCPClient"
+      },
       "library/objects/Sequence": {
         "title": "Sequence",
         "sidebar_label": "Sequence"
@@ -382,9 +390,45 @@
         "title": "Service",
         "sidebar_label": "Service"
       },
+      "library/objects/SFTPClient": {
+        "title": "SFTPClient",
+        "sidebar_label": "SFTPClient"
+      },
       "library/objects/SMTPConfig": {
         "title": "SMTPConfig",
         "sidebar_label": "SMTPConfig"
+      },
+      "library/objects/SSHClientSession": {
+        "title": "SSHClientSession",
+        "sidebar_label": "SSHClientSession"
+      },
+      "library/objects/SSHCommandResult": {
+        "title": "SSHCommandResult",
+        "sidebar_label": "SSHCommandResult"
+      },
+      "library/objects/SSHConfig": {
+        "title": "SSHConfig",
+        "sidebar_label": "SSHConfig"
+      },
+      "library/objects/SSHExecResult": {
+        "title": "SSHExecResult",
+        "sidebar_label": "SSHExecResult"
+      },
+      "library/objects/SSHFile": {
+        "title": "SSHFile",
+        "sidebar_label": "SSHFile"
+      },
+      "library/objects/SSHSCP": {
+        "title": "SSHSCP",
+        "sidebar_label": "SSHSCP"
+      },
+      "library/objects/SSHSession": {
+        "title": "SSHSession",
+        "sidebar_label": "SSHSession"
+      },
+      "library/objects/SSHSFTP": {
+        "title": "SSHSFTP",
+        "sidebar_label": "SSHSFTP"
       },
       "library/objects/Table": {
         "title": "Table",
@@ -461,6 +505,10 @@
       "library/resources/form": {
         "title": "Form",
         "sidebar_label": "Form"
+      },
+      "library/resources/ftp": {
+        "title": "FTP",
+        "sidebar_label": "FTP"
       },
       "library/resources/group": {
         "title": "Group",
@@ -549,6 +597,10 @@
       "library/resources/smtp": {
         "title": "SMTP",
         "sidebar_label": "SMTP"
+      },
+      "library/resources/ssh": {
+        "title": "SSH",
+        "sidebar_label": "SSH"
       },
       "library/resources/storage": {
         "title": "Storage",

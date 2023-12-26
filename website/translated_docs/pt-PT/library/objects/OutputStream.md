@@ -360,6 +360,44 @@ sidebar_label: OutputStream
 
 ---
 
+## printf
+
+---
+
+#### printf(arg0: string, arg1: _Object[]_) : _OutputStream_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object[]_ |   |
+
+##### Retorno
+
+( _OutputStream_ )
+
+
+---
+
+## printfAndClose
+
+---
+
+#### printfAndClose(arg0: string, arg1: _Object[]_) : _OutputStream_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | string |   |
+| arg1 | _Object[]_ |   |
+
+##### Retorno
+
+( _OutputStream_ )
+
+
+---
+
 ## println
 
 ---
