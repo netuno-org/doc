@@ -94,12 +94,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isH2(arg0: _Builder_) : _boolean_
+#### isH2(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Builder_ |   |
+| arg0 | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -120,12 +120,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isMSSQL(arg0: _Builder_) : _boolean_
+#### isMSSQL(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Builder_ |   |
+| arg0 | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -146,12 +146,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isMariaDB(arg0: _Builder_) : _boolean_
+#### isMariaDB(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Builder_ |   |
+| arg0 | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -172,12 +172,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isPostgreSQL(arg0: _Builder_) : _boolean_
+#### isPostgreSQL(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Builder_ |   |
+| arg0 | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 

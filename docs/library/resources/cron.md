@@ -251,7 +251,7 @@ Whether it was possible to continue the scheduled service.
 
 ---
 
-#### _cron.schedule(key: string, config: string, url: string) : _Cron_
+#### _cron.schedule(key: string, config: string, url: string) : _[Cron](../../resources/Cron)_
 ##### Description
 
 Creates a service execution schedule.
@@ -276,13 +276,13 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 
 ##### Return
 
-( _Cron_ )
+( _[Cron](../../resources/Cron)_ )
 
 The current Cron instance.
 
 ---
 
-#### _cron.schedule(key: string, config: string, url: string, params: _[Values](../../objects/Values)_) : _Cron_
+#### _cron.schedule(key: string, config: string, url: string, params: _[Values](../../objects/Values)_) : _[Cron](../../resources/Cron)_
 ##### Description
 
 Creates a service execution schedule.
@@ -308,7 +308,7 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 
 ##### Return
 
-( _Cron_ )
+( _[Cron](../../resources/Cron)_ )
 
 The current Cron instance.
 

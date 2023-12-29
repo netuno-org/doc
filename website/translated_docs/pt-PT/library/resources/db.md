@@ -31,7 +31,7 @@ const OK = _db.query(
 
 ---
 
-#### _db.all(tabela: string) : _List_
+#### _db.all(tabela: string) : _java.util.List_
 ##### Descrição
 
 Seleciona todos os dados de uma tabela.
@@ -50,7 +50,7 @@ _db.all('cliente');
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Os dados encontrados na tabela ou null caso não exista.
 
@@ -207,20 +207,20 @@ Configuração da conexão à base de dados que está a ser utilizada.
 
 ---
 
-#### _db.date() : _Date_
+#### _db.date() : _java.sql.Date_
 ##### Descrição
 
 Obtém a data atual para ser utilizada em operações de base de dados.
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 Data atual.
 
 ---
 
-#### _db.date(time: _Long_) : _Date_
+#### _db.date(time: _java.lang.Long_) : _java.sql.Date_
 ##### Descrição
 
 Através do número longo que identifica a data exata, cria um novo objeto Date para ser utilizado em operações de base de dados.
@@ -229,17 +229,17 @@ Através do número longo que identifica a data exata, cria um novo objeto Date 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| time | _Long_ | Número longo referente a data exata. |
+| time | _java.lang.Long_ | Número longo referente a data exata. |
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 Novo objeto do tipo: _java.sql.Date_
 
 ---
 
-#### _db.date(texto: string) : _Date_
+#### _db.date(texto: string) : _java.sql.Date_
 ##### Descrição
 
 Com o conteúdo de texto obtém o objeto de data para ser utilizada em operações de base de dados.
@@ -252,13 +252,13 @@ Com o conteúdo de texto obtém o objeto de data para ser utilizada em operaçõ
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 Data obtida do texto.
 
 ---
 
-#### _db.date(instant: _Instant_) : _Date_
+#### _db.date(instant: _java.time.Instant_) : _java.util.Date_
 ##### Descrição
 
 Através do objeto Instant cria um novo objeto Date com java.sql.**Date.from**, para ser utilizado em operações de base de dados.
@@ -267,17 +267,17 @@ Através do objeto Instant cria um novo objeto Date com java.sql.**Date.from**, 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| instant | _Instant_ | Objeto do tipo: _java.time.Instant_ |
+| instant | _java.time.Instant_ | Objeto do tipo: _java.time.Instant_ |
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 Novo objeto do tipo: _java.util.Date_
 
 ---
 
-#### _db.date(localDateTime: _LocalDate_) : _Date_
+#### _db.date(localDateTime: _java.time.LocalDate_) : _java.sql.Date_
 ##### Descrição
 
 Através do objeto LocalDateTime cria um novo objeto Date para ser utilizado em operações de base de dados.
@@ -286,11 +286,11 @@ Através do objeto LocalDateTime cria um novo objeto Date para ser utilizado em 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| localDateTime | _LocalDate_ | Objeto do tipo: _java.time.LocalDateTime_ |
+| localDateTime | _java.time.LocalDate_ | Objeto do tipo: _java.time.LocalDateTime_ |
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 Novo objeto do tipo: _java.sql.Date_
 
@@ -374,7 +374,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.delete(tabela: string, dados: _Map_) : _int_
+#### _db.delete(tabela: string, dados: _java.util.Map_) : _int_
 ##### Descrição
 
 Executa a eliminação de registos na base de dados baseado no ID ou UID passado no objeto de dados.
@@ -399,7 +399,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados. |
-| dados | _Map_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
+| dados | _java.util.Map_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
 
 ##### Retorno
 
@@ -448,7 +448,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.deleteMany(tabela: string, listaDados: _Object[]_) : _int[]_
+#### _db.deleteMany(tabela: string, listaDados: _[Ljava.lang.Object;_) : _[I_
 ##### Descrição
 
 Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -474,17 +474,17 @@ _out.json({dadosEliminados: dadosEliminados})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _Object[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| listaDados | _[Ljava.lang.Object;_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 Array com a quantidade de registos afetados pela eliminação para cada objeto dentro da lista.
 
 ---
 
-#### _db.deleteMany(tabela: string, listaDados: _List_) : _int[]_
+#### _db.deleteMany(tabela: string, listaDados: _java.util.List_) : _[I_
 ##### Descrição
 
 Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -510,17 +510,17 @@ _out.json({dadosEliminados: dadosEliminados})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| listaDados | _java.util.List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 Array com a quantidade de registos afetados pela eliminação para cada objeto dentro da lista.
 
 ---
 
-#### _db.deleteMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _int[]_
+#### _db.deleteMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _[I_
 ##### Descrição
 
 Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -550,7 +550,7 @@ _out.json({dadosEliminados: dadosEliminados})
 
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 Array com a quantidade de registos afetados pela eliminação para cada objeto dentro da lista.
 
@@ -645,7 +645,7 @@ Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### _db.execute(comandoSQL: string, parametros: _Object[]_) : _int_
+#### _db.execute(comandoSQL: string, parametros: _[Ljava.lang.Object;_) : _int_
 ##### Descrição
 
 Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
@@ -664,7 +664,7 @@ const linhasAfetadas = _db.execute(`
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | comandoSQL | string | Comando SQL que será executado diretamente na base de dados. |
-| parametros | _Object[]_ | Sequência de valores dos parâmetros que são injetados no comando. |
+| parametros | _[Ljava.lang.Object;_ | Sequência de valores dos parâmetros que são injetados no comando. |
 
 ##### Retorno
 
@@ -674,7 +674,7 @@ Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### _db.execute(comandoSQL: string, parametros: _List_) : _int_
+#### _db.execute(comandoSQL: string, parametros: _java.util.List_) : _int_
 ##### Descrição
 
 Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
@@ -697,7 +697,7 @@ const linhasAfetadas = _db.execute(`
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | comandoSQL | string | Comando SQL que será executado diretamente na base de dados. |
-| parametros | _List_ | Lista dos valores dos parâmetros que são injetados no comando. |
+| parametros | _java.util.List_ | Lista dos valores dos parâmetros que são injetados no comando. |
 
 ##### Retorno
 
@@ -744,7 +744,7 @@ Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### _db.find(tabela: string, params: _[Values](../../objects/Values)_) : _List_
+#### _db.find(tabela: string, params: _[Values](../../objects/Values)_) : _java.util.List_
 ##### Descrição
 
 A partir de um objeto que tem a estrutura parecida com uma consulta SQL, obtém uma lista dos dados encontrados nas condições de pesquisa.
@@ -803,7 +803,7 @@ _out.json(
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Lista dos registos de dados encontrados.
 
@@ -1058,7 +1058,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### _db.init(chave: string) : _DB_
+#### _db.init(chave: string) : _[DB](../../resources/DB)_
 ##### Descrição
 
 Inicia um novo recurso de DB para o nome de conexão que é passada.
@@ -1084,7 +1084,7 @@ _out.json(paises)
 
 ##### Retorno
 
-( _DB_ )
+( _[DB](../../resources/DB)_ )
 
 O novo recurso de base de dados que utiliza uma outra base de dados.
 
@@ -1094,7 +1094,7 @@ O novo recurso de base de dados que utiliza uma outra base de dados.
 
 ---
 
-#### _db.insert(tabela: string, dados: _Map_) : _int_
+#### _db.insert(tabela: string, dados: _java.util.Map_) : _int_
 ##### Descrição
 
 Executa a inserção de novos dados na base de dados e retorna o id dos mesmos.
@@ -1121,7 +1121,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| dados | _Map_ | Objeto com a estrutura de dados que será inserido. |
+| dados | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1170,7 +1170,7 @@ _out.json(
 
 ---
 
-#### _db.insertIfNotExists(tabela: string, dados: _Map_) : _int_
+#### _db.insertIfNotExists(tabela: string, dados: _java.util.Map_) : _int_
 ##### Descrição
 
 Executa a inserção de um valor caso ele não exista ou retorna o ID caso já exista.
@@ -1191,7 +1191,7 @@ _out.json({dadosInseridos: dadosInseridos})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| dados | _Map_ | Objeto com a estrutura de dados que será inserido. |
+| dados | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1236,7 +1236,7 @@ ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
-#### _db.insertMany(tabela: string, listaDados: _Object[]_) : _int[]_
+#### _db.insertMany(tabela: string, listaDados: _[Ljava.lang.Object;_) : _[I_
 ##### Descrição
 
 Executa a inserção várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores.
@@ -1261,17 +1261,17 @@ _db.insertMany(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _Object[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| listaDados | _[Ljava.lang.Object;_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 Array com os IDs dos dados inseridos.
 
 ---
 
-#### _db.insertMany(tabela: string, listaDados: _List_) : _int[]_
+#### _db.insertMany(tabela: string, listaDados: _java.util.List_) : _[I_
 ##### Descrição
 
 Executa a inserção várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores.
@@ -1296,17 +1296,17 @@ _db.insertMany(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| listaDados | _java.util.List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 Array com os IDs dos dados inseridos.
 
 ---
 
-#### _db.insertMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _int[]_
+#### _db.insertMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _[I_
 ##### Descrição
 
 Executa a inserção várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores.
@@ -1335,7 +1335,7 @@ _db.insertMany(
 
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 Array com os IDs dos dados inseridos.
 
@@ -1479,7 +1479,7 @@ Nome da configuração de conexão à base de dados que está a ser utilizada.
 
 ---
 
-#### _db.query(arg0: string) : _List_
+#### _db.query(query: string) : _java.util.List_
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1501,17 +1501,17 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| query | string | Comando que será executado na base de dados para obter registos. |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.query(query: string, params: _Object[]_) : _List_
+#### _db.query(query: string, params: _[Ljava.lang.Object;_) : _java.util.List_
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1532,17 +1532,17 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | query | string | Comando que será executado na base de dados para obter registos. |
-| params | _Object[]_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| params | _[Ljava.lang.Object;_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.query(query: string, params: _List_) : _List_
+#### _db.query(query: string, params: _java.util.List_) : _java.util.List_
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1563,17 +1563,17 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | query | string | Comando que será executado na base de dados para obter registos. |
-| params | _List_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| params | _java.util.List_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.query(query: string, params: _[Values](../../objects/Values)_) : _List_
+#### _db.query(query: string, params: _[Values](../../objects/Values)_) : _java.util.List_
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1598,7 +1598,7 @@ _out.json(
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Lista de dados obtidos com a query direta à base de dados.
 
@@ -1637,7 +1637,7 @@ O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### _db.queryFirst(query: string, params: _Object[]_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _[Ljava.lang.Object;_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
@@ -1657,7 +1657,7 @@ _log.info('O primeiro produto encontrado:', produtoEncontrado)
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | query | string | Comando que será executado na base de dados para obter o registo. |
-| params | _Object[]_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| params | _[Ljava.lang.Object;_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1667,7 +1667,7 @@ O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### _db.queryFirst(query: string, params: _List_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _java.util.List_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
@@ -1687,7 +1687,7 @@ _log.info('O primeiro produto encontrado:', produtoEncontrado)
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | query | string | Comando que será executado na base de dados para obter o registo. |
-| params | _List_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| params | _java.util.List_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1869,7 +1869,7 @@ Conteúdo como caminho (tabela.nome) seguro para utilizar diretamente em queries
 
 ---
 
-#### _db.save(tabela: string, uid: _int_, arg2: _Map_) : _int_
+#### _db.save(tabela: string, uid: _int_, dados: _java.util.Map_) : _int_
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -1881,9 +1881,12 @@ Executa a inserção ou atualização de um registo na base de dados baseado no 
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
-const result = _db.delete(
+const result = _db.save(
     "cliente",
-    uid
+    uid,
+    _val.map()
+        .set("name", "nome")
+        .set("mail", "mail@netuno.org")
 );
 
 _out.json(
@@ -1897,7 +1900,7 @@ _out.json(
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados. |
 | uid | _int_ | UID do registo a eliminar. |
-| arg2 | _Map_ |   |
+| dados | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -1907,7 +1910,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.save(tabela: string, uid: _int_, arg2: _[Values](../../objects/Values)_) : _int_
+#### _db.save(tabela: string, uid: _int_, dados: _[Values](../../objects/Values)_) : _int_
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -1919,9 +1922,12 @@ Executa a inserção ou atualização de um registo na base de dados baseado no 
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
-const result = _db.delete(
+const result = _db.save(
     "cliente",
-    uid
+    uid,
+    _val.map()
+        .set("name", "nome")
+        .set("mail", "mail@netuno.org")
 );
 
 _out.json(
@@ -1935,7 +1941,7 @@ _out.json(
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados. |
 | uid | _int_ | UID do registo a eliminar. |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -1945,7 +1951,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.save(tabela: string, uid: string, arg2: _Map_) : _int_
+#### _db.save(tabela: string, uid: string, dados: _java.util.Map_) : _int_
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -1957,9 +1963,12 @@ Executa a inserção ou atualização de um registo na base de dados baseado no 
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
-const result = _db.delete(
+const result = _db.save(
     "cliente",
-    uid
+    uid,
+    _val.map()
+        .set("name", "nome")
+        .set("mail", "mail@netuno.org")
 );
 
 _out.json(
@@ -1973,7 +1982,7 @@ _out.json(
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados. |
 | uid | string | UID do registo a eliminar. |
-| arg2 | _Map_ |   |
+| dados | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -1983,7 +1992,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.save(tabela: string, uid: string, arg2: _[Values](../../objects/Values)_) : _int_
+#### _db.save(tabela: string, uid: string, dados: _[Values](../../objects/Values)_) : _int_
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -1995,9 +2004,12 @@ Executa a inserção ou atualização de um registo na base de dados baseado no 
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
-const result = _db.delete(
+const result = _db.save(
     "cliente",
-    uid
+    uid,
+    _val.map()
+        .set("name", "nome")
+        .set("mail", "mail@netuno.org")
 );
 
 _out.json(
@@ -2011,7 +2023,7 @@ _out.json(
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados. |
 | uid | string | UID do registo a eliminar. |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2025,7 +2037,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.search(tabela: string, dados: _Map_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(tabela: string, dados: _java.util.Map_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Descrição
 
 Executa uma pesquisa a uma tabela retornando um objeto do tipo DBSearchResult.
@@ -2046,7 +2058,7 @@ _out.json({data: query.getResults(),total: query.getTotal()});
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve obter os dados. |
-| dados | _Map_ | Dados para se efectuar a pesquisa. |
+| dados | _java.util.Map_ | Dados para se efectuar a pesquisa. |
 
 ##### Retorno
 
@@ -2056,13 +2068,13 @@ Objeto do tipo DBSearchResult.
 
 ---
 
-#### _db.search(arg0: string, arg1: _Map_, arg2: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(arg0: string, arg1: _java.util.Map_, arg2: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Map_ |   |
+| arg1 | _java.util.Map_ |   |
 | arg2 | _boolean_ |   |
 
 ##### Retorno
@@ -2150,7 +2162,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### _db.store(tabela: string, dados: _Map_) : _int_
+#### _db.store(tabela: string, dados: _java.util.Map_) : _int_
 ##### Descrição
 
 Executa a atualização de um valor caso ele exista baseando-se numa chave primária ou uma inserção quando nenhum dado existe com a mesma chave primária. Este tipo de operação é útil quando não é possível utilizar IDs em determinadas operações.
@@ -2171,7 +2183,7 @@ _out.json({dadosStore: dadosStore})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| dados | _Map_ | Objeto com a estrutura de dados que será inserido. |
+| dados | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -2244,20 +2256,20 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### _db.time() : _Time_
+#### _db.time() : _java.sql.Time_
 ##### Descrição
 
 Obtém a hora atual para ser utilizada em operações de base de dados.
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 Hora atual.
 
 ---
 
-#### _db.time(time: _Long_) : _Time_
+#### _db.time(time: _java.lang.Long_) : _java.sql.Time_
 ##### Descrição
 
 Através do número longo que identifica a hora exata, cria um novo objeto Time para ser utilizado em operações de base de dados.
@@ -2266,17 +2278,17 @@ Através do número longo que identifica a hora exata, cria um novo objeto Time 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| time | _Long_ | Número longo referente a hora exato. |
+| time | _java.lang.Long_ | Número longo referente a hora exato. |
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 Novo objeto do tipo: _java.sql.Time_
 
 ---
 
-#### _db.time(texto: string) : _Time_
+#### _db.time(texto: string) : _java.sql.Time_
 ##### Descrição
 
 Com o conteúdo de texto obtém o objeto de hora para ser utilizada em operações de base de dados.
@@ -2289,13 +2301,13 @@ Com o conteúdo de texto obtém o objeto de hora para ser utilizada em operaçõ
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 Hora obtida do texto.
 
 ---
 
-#### _db.time(instant: _Instant_) : _Date_
+#### _db.time(instant: _java.time.Instant_) : _java.util.Date_
 ##### Descrição
 
 Através do objeto Instant cria um novo objeto Date com java.sql.**Time.from**, para ser utilizado em operações de base de dados.
@@ -2304,17 +2316,17 @@ Através do objeto Instant cria um novo objeto Date com java.sql.**Time.from**, 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| instant | _Instant_ | Objeto do tipo: _java.time.Instant_ |
+| instant | _java.time.Instant_ | Objeto do tipo: _java.time.Instant_ |
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 Novo objeto do tipo: _java.util.Date_
 
 ---
 
-#### _db.time(localDateTime: _LocalTime_) : _Time_
+#### _db.time(localDateTime: _java.time.LocalTime_) : _java.sql.Time_
 ##### Descrição
 
 Através do objeto LocalDateTime cria um novo objeto Time para ser utilizado em operações de base de dados.
@@ -2323,11 +2335,11 @@ Através do objeto LocalDateTime cria um novo objeto Time para ser utilizado em 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| localDateTime | _LocalTime_ | Objeto do tipo: _java.time.LocalDateTime_ |
+| localDateTime | _java.time.LocalTime_ | Objeto do tipo: _java.time.LocalDateTime_ |
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 Novo objeto do tipo: _java.sql.Time_
 
@@ -2337,20 +2349,20 @@ Novo objeto do tipo: _java.sql.Time_
 
 ---
 
-#### _db.timestamp() : _Timestamp_
+#### _db.timestamp() : _java.sql.Timestamp_
 ##### Descrição
 
 Obtém a data e hora atual para ser utilizada em operações de base de dados.
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 Data e hora atual.
 
 ---
 
-#### _db.timestamp(time: _Long_) : _Timestamp_
+#### _db.timestamp(time: _java.lang.Long_) : _java.sql.Timestamp_
 ##### Descrição
 
 Através do número longo que identifica o tempo exato, cria um novo objeto Timestamp para ser utilizado em operações de base de dados.
@@ -2359,17 +2371,17 @@ Através do número longo que identifica o tempo exato, cria um novo objeto Time
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| time | _Long_ | Número longo referente ao tempo exato. |
+| time | _java.lang.Long_ | Número longo referente ao tempo exato. |
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 Novo objeto do tipo: _java.sql.Timestamp_
 
 ---
 
-#### _db.timestamp(texto: string) : _Timestamp_
+#### _db.timestamp(texto: string) : _java.sql.Timestamp_
 ##### Descrição
 
 Com o conteúdo de texto obtém o objeto de data e hora para ser utilizada em operações de base de dados.
@@ -2382,13 +2394,13 @@ Com o conteúdo de texto obtém o objeto de data e hora para ser utilizada em op
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 Data e hora obtida do texto.
 
 ---
 
-#### _db.timestamp(instant: _Instant_) : _Timestamp_
+#### _db.timestamp(instant: _java.time.Instant_) : _java.sql.Timestamp_
 ##### Descrição
 
 Através do objeto Instant cria um novo objeto Timestamp para ser utilizado em operações de base de dados.
@@ -2397,17 +2409,17 @@ Através do objeto Instant cria um novo objeto Timestamp para ser utilizado em o
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| instant | _Instant_ | Objeto do tipo: _java.time.Instant_ |
+| instant | _java.time.Instant_ | Objeto do tipo: _java.time.Instant_ |
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 Novo objeto do tipo: _java.sql.Timestamp_
 
 ---
 
-#### _db.timestamp(localDateTime: _LocalDateTime_) : _Timestamp_
+#### _db.timestamp(localDateTime: _java.time.LocalDateTime_) : _java.sql.Timestamp_
 ##### Descrição
 
 Através do objeto LocalDateTime cria um novo objeto Timestamp para ser utilizado em operações de base de dados.
@@ -2416,11 +2428,11 @@ Através do objeto LocalDateTime cria um novo objeto Timestamp para ser utilizad
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| localDateTime | _LocalDateTime_ | Objeto do tipo: _java.time.LocalDateTime_ |
+| localDateTime | _java.time.LocalDateTime_ | Objeto do tipo: _java.time.LocalDateTime_ |
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 Novo objeto do tipo: _java.sql.Timestamp_
 
@@ -2665,7 +2677,7 @@ Conteúdo que é seguro utilizar diretamente em query como string/varchar/texto.
 
 ---
 
-#### _db.update(tabela: string, id: _int_, dados: _Map_) : _int_
+#### _db.update(tabela: string, id: _int_, dados: _java.util.Map_) : _int_
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -2692,7 +2704,7 @@ _out.json(
 |---|---|---|
 | tabela | string | Nome da tabela que contém os registos que devem ser atualizados. |
 | id | _int_ | ID do registo que será afetado pela atualização. |
-| dados | _Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| dados | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2702,21 +2714,19 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.update(tabela: string, uid: _int_, dados: _[Values](../../objects/Values)_) : _int_
+#### _db.update(tabela: string, id: _int_, dados: _[Values](../../objects/Values)_) : _int_
 ##### Descrição
 
-Executa a atualização de dados existentes de acordo com um id específico.
+Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
 
 ##### Como Usar
 
 ```javascript
-var uid = "98502cff-d1e1-4efc-8efe-840320925316";
-
 var result = _db.update(
     "cliente",
-    uid,
+    1, // ID do registo que será afetado.
     _val.map()
-        .set("nome", "Sitana")
+        .set("name", "Sitana")
         .set("mail", "admin@sitana.pt")
 );
 
@@ -2730,7 +2740,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela que contém os registos que devem ser atualizados. |
-| uid | _int_ | UID do registo que será afetado pela atualização. |
+| id | _int_ | ID do registo que será afetado pela atualização. |
 | dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
@@ -2741,7 +2751,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.update(tabela: string, uid: string, dados: _Map_) : _int_
+#### _db.update(tabela: string, uid: string, dados: _java.util.Map_) : _int_
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com um id específico.
@@ -2770,7 +2780,7 @@ _out.json(
 |---|---|---|
 | tabela | string | Nome da tabela que contém os registos que devem ser atualizados. |
 | uid | string | UID do registo que será afetado pela atualização. |
-| dados | _Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| dados | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2819,7 +2829,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.update(tabela: string, dados: _Map_) : _int_
+#### _db.update(tabela: string, dados: _java.util.Map_) : _int_
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -2845,7 +2855,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela que contém os registos que devem ser atualizados. |
-| dados | _Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| dados | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2895,7 +2905,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.updateMany(tabela: string, listaDados: _Object[]_) : _int[]_
+#### _db.updateMany(tabela: string, listaDados: _[Ljava.lang.Object;_) : _[I_
 ##### Descrição
 
 Executa a atualização várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -2923,17 +2933,17 @@ _out.json({dados: dadosAlterados})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _Object[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| listaDados | _[Ljava.lang.Object;_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 Array com a quantidade de registos alterados para cada objeto dentro da lista.
 
 ---
 
-#### _db.updateMany(tabela: string, listaDados: _List_) : _int[]_
+#### _db.updateMany(tabela: string, listaDados: _java.util.List_) : _[I_
 ##### Descrição
 
 Executa a atualização várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -2961,17 +2971,17 @@ _out.json({dados: dadosAlterados})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| listaDados | _java.util.List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 Array com a quantidade de registos alterados para cada objeto dentro da lista.
 
 ---
 
-#### _db.updateMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _int[]_
+#### _db.updateMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _[I_
 ##### Descrição
 
 Executa a atualização várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -3003,7 +3013,7 @@ _out.json({dados: dadosAlterados})
 
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 Array com a quantidade de registos alterados para cada objeto dentro da lista.
 

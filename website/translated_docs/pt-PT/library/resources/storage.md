@@ -29,7 +29,7 @@ O caminho absoluto do storage.
 
 ---
 
-#### _storage.database(tabela: string) : _Storage_
+#### _storage.database(tabela: string) : _[Storage](../../resources/Storage)_
 ##### Descrição
 
 Inicia um novo storage para a pasta onde ficam os ficheiros de uma tabela que representa um formulário.
@@ -42,13 +42,13 @@ Inicia um novo storage para a pasta onde ficam os ficheiros de uma tabela que re
 
 ##### Retorno
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 Novo storage iniciado para a tabela de base de dados.
 
 ---
 
-#### _storage.database(tabela: string, coluna: string) : _Storage_
+#### _storage.database(tabela: string, coluna: string) : _[Storage](../../resources/Storage)_
 ##### Descrição
 
 Inicia um novo storage para a pasta onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
@@ -62,13 +62,13 @@ Inicia um novo storage para a pasta onde ficam os ficheiros de uma coluna espec�
 
 ##### Retorno
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 Novo storage iniciado para a coluna de uma tabela de base de dados.
 
 ---
 
-#### _storage.database(tabela: string, coluna: string, caminho: string) : _Storage_
+#### _storage.database(tabela: string, coluna: string, caminho: string) : _[Storage](../../resources/Storage)_
 ##### Descrição
 
 Inicia um novo storage para um caminho específico onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
@@ -83,13 +83,13 @@ Inicia um novo storage para um caminho específico onde ficam os ficheiros de um
 
 ##### Retorno
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 Novo storage iniciado para o caminho específico a partir de uma coluna em uma tabela de base de dados.
 
 ---
 
-#### _storage.database(tabela: string, coluna: string, caminho: string, nomeFicheiro: string) : _Storage_
+#### _storage.database(tabela: string, coluna: string, caminho: string, nomeFicheiro: string) : _[Storage](../../resources/Storage)_
 ##### Descrição
 
 Inicia um novo storage para um caminho específico onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
@@ -105,7 +105,7 @@ Inicia um novo storage para um caminho específico onde ficam os ficheiros de um
 
 ##### Retorno
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 Novo storage iniciado para o caminho específico a partir de uma coluna em uma tabela de base de dados.
 
@@ -115,10 +115,10 @@ Novo storage iniciado para o caminho específico a partir de uma coluna em uma t
 
 ---
 
-#### _storage.ensurePath() : _Storage_
+#### _storage.ensurePath() : _[Storage](../../resources/Storage)_
 ##### Retorno
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 
 ---
@@ -161,7 +161,7 @@ Permite interagir com o ficheiro fisicamente.
 
 ---
 
-#### _storage.filesystem(pasta: string, caminho: string) : _Storage_
+#### _storage.filesystem(pasta: string, caminho: string) : _[Storage](../../resources/Storage)_
 ##### Descrição
 
 Inicia um novo storage para um caminho específico do filesystem dentro do storage.
@@ -175,13 +175,13 @@ Inicia um novo storage para um caminho específico do filesystem dentro do stora
 
 ##### Retorno
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 Novo storage iniciado para o caminho específico a partir do filesystem do storage.
 
 ---
 
-#### _storage.filesystem(pasta: string, caminho: string, nomeFicheiro: string) : _Storage_
+#### _storage.filesystem(pasta: string, caminho: string, nomeFicheiro: string) : _[Storage](../../resources/Storage)_
 ##### Descrição
 
 Inicia um novo storage para um caminho específico do filesystem dentro do storage.
@@ -196,7 +196,7 @@ Inicia um novo storage para um caminho específico do filesystem dentro do stora
 
 ##### Retorno
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 Novo storage iniciado para o caminho específico a partir do filesystem do storage.
 
@@ -274,14 +274,14 @@ Objeto de entrada de dados do Netuno para o storage em uso.
 
 ---
 
-#### _storage.inputStream() : _InputStream_
+#### _storage.inputStream() : _java.io.InputStream_
 ##### Descrição
 
 Obtém o objeto de entrada de dados do Java para o storage que está sendo utilizado.
 
 ##### Retorno
 
-( _InputStream_ )
+( _java.io.InputStream_ )
 
 Objeto de entrada de dados do Java para o storage em uso.
 
@@ -433,7 +433,7 @@ Se é uma pasta.
 
 ---
 
-#### _storage.newRandomFile(charset: string) : _Storage_
+#### _storage.newRandomFile(charset: string) : _[Storage](../../resources/Storage)_
 ##### Descrição
 
 Gera um novo storage a partir do storage atual mas para um ficheiro com um nome randómico e que ainda não exista e assim possa ser guardado sem conflitos.
@@ -446,7 +446,7 @@ Gera um novo storage a partir do storage atual mas para um ficheiro com um nome 
 
 ##### Retorno
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 Novo storage para um novo ficheiro com um nome randómico inexistente.
 
@@ -473,14 +473,14 @@ Objeto de saída de dados do Netuno para o storage em uso.
 
 ---
 
-#### _storage.outputStream() : _OutputStream_
+#### _storage.outputStream() : _java.io.OutputStream_
 ##### Descrição
 
 Obtém o objeto de saída de dados do Java para o storage que está sendo utilizado.
 
 ##### Retorno
 
-( _OutputStream_ )
+( _java.io.OutputStream_ )
 
 Objeto de saída de dados do Java para o storage em uso.
 
@@ -507,14 +507,14 @@ O caminho do storage.
 
 ---
 
-#### _storage.reader() : _Reader_
+#### _storage.reader() : _java.io.Reader_
 ##### Descrição
 
 Obtém o objeto de entrada de dados como texto do Java para o storage que está sendo utilizado.
 
 ##### Retorno
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 Objeto de entrada de dados como texto do Java para o storage em uso.
 
@@ -524,20 +524,20 @@ Objeto de entrada de dados como texto do Java para o storage em uso.
 
 ---
 
-#### _storage.readerBOM() : _Reader_
+#### _storage.readerBOM() : _java.io.Reader_
 ##### Descrição
 
 Obtém o objeto de entrada de dados como texto BOM (marca de ordem de byte) do Java para o storage que está sendo utilizado.
 
 ##### Retorno
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 Objeto de entrada de dados como texto (_BOM_) do Java para o storage em uso.
 
 ---
 
-#### _storage.readerBOM(charset: string) : _Reader_
+#### _storage.readerBOM(charset: string) : _java.io.Reader_
 ##### Descrição
 
 Obtém o objeto de entrada de dados como texto BOM (marca de ordem de byte) do Java para o storage que está sendo utilizado.
@@ -556,7 +556,7 @@ Obtém o objeto de entrada de dados como texto BOM (marca de ordem de byte) do J
 
 ##### Retorno
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 Objeto de entrada de dados como texto (_BOM_) do Java para o storage em uso.
 
@@ -628,14 +628,14 @@ A URL para o storage.
 
 ---
 
-#### _storage.writer() : _Writer_
+#### _storage.writer() : _java.io.Writer_
 ##### Descrição
 
 Obtém o objeto de saída de dados como texto do Java para o storage que está sendo utilizado.
 
 ##### Retorno
 
-( _Writer_ )
+( _java.io.Writer_ )
 
 Objeto de saída de dados como texto do Java para o storage em uso.
 

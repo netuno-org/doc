@@ -30,10 +30,10 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.download() : _Download_
+#### _url.download() : _org.netuno.proteu.Download_
 ##### Return
 
-( _Download_ )
+( _org.netuno.proteu.Download_ )
 
 
 ---
@@ -138,13 +138,13 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.replace(arg0: _CharSequence_, arg1: _CharSequence_) : string
+#### _url.replace(arg0: _java.lang.CharSequence_, arg1: _java.lang.CharSequence_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _CharSequence_ |   |
-| arg1 | _CharSequence_ |   |
+| arg0 | _java.lang.CharSequence_ |   |
+| arg1 | _java.lang.CharSequence_ |   |
 
 ##### Return
 
@@ -200,7 +200,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.split(arg0: string) : _String[]_
+#### _url.split(arg0: string) : _[Ljava.lang.String;_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -209,7 +209,7 @@ Recurso de gestão de URLs da aplicação.
 
 ##### Return
 
-( _String[]_ )
+( _[Ljava.lang.String;_ )
 
 
 ---
@@ -255,7 +255,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.to(arg0: string) : _URL_
+#### _url.to(arg0: string) : _[URL](../../resources/URL)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -264,7 +264,7 @@ Recurso de gestão de URLs da aplicação.
 
 ##### Return
 
-( _URL_ )
+( _[URL](../../resources/URL)_ )
 
 
 ---

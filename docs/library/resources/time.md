@@ -12,16 +12,16 @@ Gestão de dados temporal baseada no **java.time**.
 
 ---
 
-#### _time.castToChronoLocalDate(arg0: _Object_) : _ChronoLocalDate_
+#### _time.castToChronoLocalDate(arg0: _java.lang.Object_) : _java.time.chrono.ChronoLocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _ChronoLocalDate_ )
+( _java.time.chrono.ChronoLocalDate_ )
 
 
 ---
@@ -30,16 +30,16 @@ Gestão de dados temporal baseada no **java.time**.
 
 ---
 
-#### _time.castToTemporal(arg0: _Object_) : _Temporal_
+#### _time.castToTemporal(arg0: _java.lang.Object_) : _java.time.temporal.Temporal_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Temporal_ )
+( _java.time.temporal.Temporal_ )
 
 
 ---
@@ -48,7 +48,7 @@ Gestão de dados temporal baseada no **java.time**.
 
 ---
 
-#### _time.castToTemporalAcessor(arg0: _Object_) : _TemporalAccessor_
+#### _time.castToTemporalAcessor(arg0: _java.lang.Object_) : _java.time.temporal.TemporalAccessor_
 ##### Description
 
 Converte o objeeto passado para TemporalAcessor.
@@ -57,11 +57,11 @@ Converte o objeeto passado para TemporalAcessor.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _TemporalAccessor_ )
+( _java.time.temporal.TemporalAccessor_ )
 
 
 ---
@@ -70,7 +70,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.chronoField(arg0: string) : _ChronoField_
+#### _time.chronoField(arg0: string) : _java.time.temporal.ChronoField_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -79,7 +79,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ChronoField_ )
+( _java.time.temporal.ChronoField_ )
 
 
 ---
@@ -88,7 +88,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.chronoUnit(arg0: string) : _ChronoUnit_
+#### _time.chronoUnit(arg0: string) : _java.time.temporal.ChronoUnit_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -97,7 +97,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ChronoUnit_ )
+( _java.time.temporal.ChronoUnit_ )
 
 
 ---
@@ -106,10 +106,10 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.clock() : _Clock_
+#### _time.clock() : _java.time.Clock_
 ##### Return
 
-( _Clock_ )
+( _java.time.Clock_ )
 
 
 ---
@@ -118,17 +118,17 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.clockFixed(arg0: _Instant_, arg1: _ZoneId_) : _Clock_
+#### _time.clockFixed(arg0: _java.time.Instant_, arg1: _java.time.ZoneId_) : _java.time.Clock_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Instant_ |   |
-| arg1 | _ZoneId_ |   |
+| arg0 | _java.time.Instant_ |   |
+| arg1 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _Clock_ )
+( _java.time.Clock_ )
 
 
 ---
@@ -137,17 +137,17 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.clockOffset(arg0: _Clock_, arg1: _Duration_) : _Clock_
+#### _time.clockOffset(arg0: _java.time.Clock_, arg1: _java.time.Duration_) : _java.time.Clock_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Clock_ |   |
-| arg1 | _Duration_ |   |
+| arg0 | _java.time.Clock_ |   |
+| arg1 | _java.time.Duration_ |   |
 
 ##### Return
 
-( _Clock_ )
+( _java.time.Clock_ )
 
 
 ---
@@ -156,16 +156,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.clockSystem(arg0: _ZoneId_) : _Clock_
+#### _time.clockSystem(arg0: _java.time.ZoneId_) : _java.time.Clock_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _ZoneId_ |   |
+| arg0 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _Clock_ )
+( _java.time.Clock_ )
 
 
 ---
@@ -174,10 +174,10 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.clockSystemUTC() : _Clock_
+#### _time.clockSystemUTC() : _java.time.Clock_
 ##### Return
 
-( _Clock_ )
+( _java.time.Clock_ )
 
 
 ---
@@ -186,17 +186,17 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.clockTick(arg0: _Clock_, arg1: _Duration_) : _Clock_
+#### _time.clockTick(arg0: _java.time.Clock_, arg1: _java.time.Duration_) : _java.time.Clock_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Clock_ |   |
-| arg1 | _Duration_ |   |
+| arg0 | _java.time.Clock_ |   |
+| arg1 | _java.time.Duration_ |   |
 
 ##### Return
 
-( _Clock_ )
+( _java.time.Clock_ )
 
 
 ---
@@ -205,16 +205,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.clockTickMinutes(arg0: _ZoneId_) : _Clock_
+#### _time.clockTickMinutes(arg0: _java.time.ZoneId_) : _java.time.Clock_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _ZoneId_ |   |
+| arg0 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _Clock_ )
+( _java.time.Clock_ )
 
 
 ---
@@ -223,16 +223,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.clockTickSeconds(arg0: _ZoneId_) : _Clock_
+#### _time.clockTickSeconds(arg0: _java.time.ZoneId_) : _java.time.Clock_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _ZoneId_ |   |
+| arg0 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _Clock_ )
+( _java.time.Clock_ )
 
 
 ---
@@ -253,10 +253,10 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.date() : _Date_
+#### _time.date() : _java.util.Date_
 ##### Return
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -265,16 +265,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.dateFrom(arg0: _Instant_) : _Date_
+#### _time.dateFrom(arg0: _java.time.Instant_) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Instant_ |   |
+| arg0 | _java.time.Instant_ |   |
 
 ##### Return
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -283,15 +283,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.dateTimeFormatter() : _DateTimeFormatter_
+#### _time.dateTimeFormatter() : _java.time.format.DateTimeFormatter_
 ##### Return
 
-( _DateTimeFormatter_ )
+( _java.time.format.DateTimeFormatter_ )
 
 
 ---
 
-#### _time.dateTimeFormatter(arg0: string) : _DateTimeFormatter_
+#### _time.dateTimeFormatter(arg0: string) : _java.time.format.DateTimeFormatter_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -300,22 +300,22 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _DateTimeFormatter_ )
+( _java.time.format.DateTimeFormatter_ )
 
 
 ---
 
-#### _time.dateTimeFormatter(arg0: string, arg1: _Locale_) : _DateTimeFormatter_
+#### _time.dateTimeFormatter(arg0: string, arg1: _java.util.Locale_) : _java.time.format.DateTimeFormatter_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Locale_ |   |
+| arg1 | _java.util.Locale_ |   |
 
 ##### Return
 
-( _DateTimeFormatter_ )
+( _java.time.format.DateTimeFormatter_ )
 
 
 ---
@@ -324,10 +324,10 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.dateTimeFormatterBuilder() : _DateTimeFormatterBuilder_
+#### _time.dateTimeFormatterBuilder() : _java.time.format.DateTimeFormatterBuilder_
 ##### Return
 
-( _DateTimeFormatterBuilder_ )
+( _java.time.format.DateTimeFormatterBuilder_ )
 
 
 ---
@@ -336,15 +336,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.decimalStyle() : _DecimalStyle_
+#### _time.decimalStyle() : _java.time.format.DecimalStyle_
 ##### Return
 
-( _DecimalStyle_ )
+( _java.time.format.DecimalStyle_ )
 
 
 ---
 
-#### _time.decimalStyle(arg0: string) : _DecimalStyle_
+#### _time.decimalStyle(arg0: string) : _java.time.format.DecimalStyle_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -353,7 +353,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _DecimalStyle_ )
+( _java.time.format.DecimalStyle_ )
 
 
 ---
@@ -362,15 +362,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.duration() : _Duration_
+#### _time.duration() : _java.time.Duration_
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
 
-#### _time.duration(arg0: string) : _Duration_
+#### _time.duration(arg0: string) : _java.time.Duration_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -379,7 +379,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
@@ -388,17 +388,17 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.durationBetween(arg0: _Temporal_, arg1: _Temporal_) : _Duration_
+#### _time.durationBetween(arg0: _java.time.temporal.Temporal_, arg1: _java.time.temporal.Temporal_) : _java.time.Duration_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Temporal_ |   |
-| arg1 | _Temporal_ |   |
+| arg0 | _java.time.temporal.Temporal_ |   |
+| arg1 | _java.time.temporal.Temporal_ |   |
 
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
@@ -407,16 +407,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.durationFrom(arg0: _TemporalAmount_) : _Duration_
+#### _time.durationFrom(arg0: _java.time.temporal.TemporalAmount_) : _java.time.Duration_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAmount_ |   |
+| arg0 | _java.time.temporal.TemporalAmount_ |   |
 
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
@@ -425,17 +425,17 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.durationOf(arg0: _long_, arg1: _TemporalUnit_) : _Duration_
+#### _time.durationOf(arg0: _long_, arg1: _java.time.temporal.TemporalUnit_) : _java.time.Duration_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _long_ |   |
-| arg1 | _TemporalUnit_ |   |
+| arg1 | _java.time.temporal.TemporalUnit_ |   |
 
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
@@ -444,7 +444,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.durationOfDays(arg0: _long_) : _Duration_
+#### _time.durationOfDays(arg0: _long_) : _java.time.Duration_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -453,7 +453,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
@@ -462,7 +462,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.durationOfHours(arg0: _long_) : _Duration_
+#### _time.durationOfHours(arg0: _long_) : _java.time.Duration_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -471,7 +471,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
@@ -480,7 +480,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.durationOfMillis(arg0: _long_) : _Duration_
+#### _time.durationOfMillis(arg0: _long_) : _java.time.Duration_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -489,7 +489,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
@@ -498,7 +498,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.durationOfMinutes(arg0: _long_) : _Duration_
+#### _time.durationOfMinutes(arg0: _long_) : _java.time.Duration_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -507,7 +507,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
@@ -516,7 +516,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.durationOfNanos(arg0: _long_) : _Duration_
+#### _time.durationOfNanos(arg0: _long_) : _java.time.Duration_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -525,7 +525,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
@@ -534,7 +534,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.durationOfSeconds(arg0: _long_) : _Duration_
+#### _time.durationOfSeconds(arg0: _long_) : _java.time.Duration_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -543,12 +543,12 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
 
-#### _time.durationOfSeconds(arg0: _long_, arg1: _long_) : _Duration_
+#### _time.durationOfSeconds(arg0: _long_, arg1: _long_) : _java.time.Duration_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -558,7 +558,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Duration_ )
+( _java.time.Duration_ )
 
 
 ---
@@ -567,15 +567,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.gregorianCalendar() : _GregorianCalendar_
+#### _time.gregorianCalendar() : _java.util.GregorianCalendar_
 ##### Return
 
-( _GregorianCalendar_ )
+( _java.util.GregorianCalendar_ )
 
 
 ---
 
-#### _time.gregorianCalendar(arg0: _int_, arg1: _int_, arg2: _int_) : _GregorianCalendar_
+#### _time.gregorianCalendar(arg0: _int_, arg1: _int_, arg2: _int_) : _java.util.GregorianCalendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -586,12 +586,12 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _GregorianCalendar_ )
+( _java.util.GregorianCalendar_ )
 
 
 ---
 
-#### _time.gregorianCalendar(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _GregorianCalendar_
+#### _time.gregorianCalendar(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _java.util.GregorianCalendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -604,12 +604,12 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _GregorianCalendar_ )
+( _java.util.GregorianCalendar_ )
 
 
 ---
 
-#### _time.gregorianCalendar(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_) : _GregorianCalendar_
+#### _time.gregorianCalendar(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_) : _java.util.GregorianCalendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -623,50 +623,50 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _GregorianCalendar_ )
+( _java.util.GregorianCalendar_ )
 
 
 ---
 
-#### _time.gregorianCalendar(arg0: _Locale_) : _GregorianCalendar_
+#### _time.gregorianCalendar(arg0: _java.util.Locale_) : _java.util.GregorianCalendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Locale_ |   |
+| arg0 | _java.util.Locale_ |   |
 
 ##### Return
 
-( _GregorianCalendar_ )
+( _java.util.GregorianCalendar_ )
 
 
 ---
 
-#### _time.gregorianCalendar(arg0: _TimeZone_) : _GregorianCalendar_
+#### _time.gregorianCalendar(arg0: _java.util.TimeZone_) : _java.util.GregorianCalendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TimeZone_ |   |
+| arg0 | _java.util.TimeZone_ |   |
 
 ##### Return
 
-( _GregorianCalendar_ )
+( _java.util.GregorianCalendar_ )
 
 
 ---
 
-#### _time.gregorianCalendar(arg0: _TimeZone_, arg1: _Locale_) : _GregorianCalendar_
+#### _time.gregorianCalendar(arg0: _java.util.TimeZone_, arg1: _java.util.Locale_) : _java.util.GregorianCalendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TimeZone_ |   |
-| arg1 | _Locale_ |   |
+| arg0 | _java.util.TimeZone_ |   |
+| arg1 | _java.util.Locale_ |   |
 
 ##### Return
 
-( _GregorianCalendar_ )
+( _java.util.GregorianCalendar_ )
 
 
 ---
@@ -693,15 +693,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.instant() : _Instant_
+#### _time.instant() : _java.time.Instant_
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _time.instant(arg0: string) : _Instant_
+#### _time.instant(arg0: string) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -710,21 +710,21 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _time.instant(arg0: _Clock_) : _Instant_
+#### _time.instant(arg0: _java.time.Clock_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Clock_ |   |
+| arg0 | _java.time.Clock_ |   |
 
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -733,16 +733,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.instantFrom(arg0: _TemporalAccessor_) : _Instant_
+#### _time.instantFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -751,7 +751,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.instantOfEpochMilli(arg0: _long_) : _Instant_
+#### _time.instantOfEpochMilli(arg0: _long_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -760,7 +760,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -769,7 +769,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.instantOfEpochSecond(arg0: _long_) : _Instant_
+#### _time.instantOfEpochSecond(arg0: _long_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -778,12 +778,12 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _time.instantOfEpochSecond(arg0: _long_, arg1: _long_) : _Instant_
+#### _time.instantOfEpochSecond(arg0: _long_, arg1: _long_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -793,7 +793,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -802,16 +802,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.instantParse(arg0: _CharSequence_) : _Instant_
+#### _time.instantParse(arg0: _java.lang.CharSequence_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _CharSequence_ |   |
+| arg0 | _java.lang.CharSequence_ |   |
 
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -820,7 +820,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.isoFields(arg0: string) : _IsoFields_
+#### _time.isoFields(arg0: string) : _java.time.temporal.IsoFields_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -829,7 +829,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _IsoFields_ )
+( _java.time.temporal.IsoFields_ )
 
 
 ---
@@ -838,7 +838,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.julianFields(arg0: string) : _JulianFields_
+#### _time.julianFields(arg0: string) : _java.time.temporal.JulianFields_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -847,7 +847,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _JulianFields_ )
+( _java.time.temporal.JulianFields_ )
 
 
 ---
@@ -856,15 +856,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDate() : _LocalDate_
+#### _time.localDate() : _java.time.LocalDate_
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _time.localDate(arg0: string) : _LocalDate_
+#### _time.localDate(arg0: string) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -873,35 +873,35 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _time.localDate(arg0: _Clock_) : _LocalDate_
+#### _time.localDate(arg0: _java.time.Clock_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Clock_ |   |
+| arg0 | _java.time.Clock_ |   |
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _time.localDate(arg0: _ZoneId_) : _LocalDate_
+#### _time.localDate(arg0: _java.time.ZoneId_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _ZoneId_ |   |
+| arg0 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -910,16 +910,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDateFrom(arg0: _TemporalAccessor_) : _LocalDate_
+#### _time.localDateFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -928,7 +928,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDateOf(arg0: _int_, arg1: _int_, arg2: _int_) : _LocalDate_
+#### _time.localDateOf(arg0: _int_, arg1: _int_, arg2: _int_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -939,23 +939,23 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _time.localDateOf(arg0: _int_, arg1: _Month_, arg2: _int_) : _LocalDate_
+#### _time.localDateOf(arg0: _int_, arg1: _java.time.Month_, arg2: _int_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Month_ |   |
+| arg1 | _java.time.Month_ |   |
 | arg2 | _int_ |   |
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -964,7 +964,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDateOfEpochDay(arg0: _long_) : _LocalDate_
+#### _time.localDateOfEpochDay(arg0: _long_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -973,7 +973,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -982,7 +982,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDateOfYearDay(arg0: _int_, arg1: _int_) : _LocalDate_
+#### _time.localDateOfYearDay(arg0: _int_, arg1: _int_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -992,7 +992,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -1001,31 +1001,31 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDateParse(arg0: _CharSequence_) : _LocalDate_
+#### _time.localDateParse(arg0: _java.lang.CharSequence_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _CharSequence_ |   |
+| arg0 | _java.lang.CharSequence_ |   |
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _time.localDateParse(arg0: _CharSequence_, arg1: _DateTimeFormatter_) : _LocalDate_
+#### _time.localDateParse(arg0: _java.lang.CharSequence_, arg1: _java.time.format.DateTimeFormatter_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _CharSequence_ |   |
-| arg1 | _DateTimeFormatter_ |   |
+| arg0 | _java.lang.CharSequence_ |   |
+| arg1 | _java.time.format.DateTimeFormatter_ |   |
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -1034,15 +1034,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDateTime() : _LocalDateTime_
+#### _time.localDateTime() : _java.time.LocalDateTime_
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _time.localDateTime(arg0: string) : _LocalDateTime_
+#### _time.localDateTime(arg0: string) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1051,35 +1051,35 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _time.localDateTime(arg0: _Clock_) : _LocalDateTime_
+#### _time.localDateTime(arg0: _java.time.Clock_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Clock_ |   |
+| arg0 | _java.time.Clock_ |   |
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _time.localDateTime(arg0: _ZoneId_) : _LocalDateTime_
+#### _time.localDateTime(arg0: _java.time.ZoneId_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _ZoneId_ |   |
+| arg0 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -1088,16 +1088,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDateTimeFrom(arg0: _TemporalAccessor_) : _LocalDateTime_
+#### _time.localDateTimeFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -1106,7 +1106,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDateTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _LocalDateTime_
+#### _time.localDateTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1119,12 +1119,12 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _time.localDateTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_) : _LocalDateTime_
+#### _time.localDateTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1138,12 +1138,12 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _time.localDateTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _LocalDateTime_
+#### _time.localDateTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1158,36 +1158,36 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _time.localDateTimeOf(arg0: _int_, arg1: _Month_, arg2: _int_, arg3: _int_, arg4: _int_) : _LocalDateTime_
+#### _time.localDateTimeOf(arg0: _int_, arg1: _java.time.Month_, arg2: _int_, arg3: _int_, arg4: _int_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Month_ |   |
+| arg1 | _java.time.Month_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
 | arg4 | _int_ |   |
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _time.localDateTimeOf(arg0: _int_, arg1: _Month_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_) : _LocalDateTime_
+#### _time.localDateTimeOf(arg0: _int_, arg1: _java.time.Month_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Month_ |   |
+| arg1 | _java.time.Month_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
 | arg4 | _int_ |   |
@@ -1195,18 +1195,18 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _time.localDateTimeOf(arg0: _int_, arg1: _Month_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _LocalDateTime_
+#### _time.localDateTimeOf(arg0: _int_, arg1: _java.time.Month_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Month_ |   |
+| arg1 | _java.time.Month_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
 | arg4 | _int_ |   |
@@ -1215,22 +1215,22 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _time.localDateTimeOf(arg0: _LocalDate_, arg1: _LocalTime_) : _LocalDateTime_
+#### _time.localDateTimeOf(arg0: _java.time.LocalDate_, arg1: _java.time.LocalTime_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _LocalDate_ |   |
-| arg1 | _LocalTime_ |   |
+| arg0 | _java.time.LocalDate_ |   |
+| arg1 | _java.time.LocalTime_ |   |
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -1239,18 +1239,18 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDateTimeOfEpochSecond(arg0: _long_, arg1: _int_, arg2: _ZoneOffset_) : _LocalDateTime_
+#### _time.localDateTimeOfEpochSecond(arg0: _long_, arg1: _int_, arg2: _java.time.ZoneOffset_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _long_ |   |
 | arg1 | _int_ |   |
-| arg2 | _ZoneOffset_ |   |
+| arg2 | _java.time.ZoneOffset_ |   |
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -1259,17 +1259,17 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDateTimeOfInstant(arg0: _Instant_, arg1: _ZoneId_) : _LocalDateTime_
+#### _time.localDateTimeOfInstant(arg0: _java.time.Instant_, arg1: _java.time.ZoneId_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Instant_ |   |
-| arg1 | _ZoneId_ |   |
+| arg0 | _java.time.Instant_ |   |
+| arg1 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -1278,31 +1278,31 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localDateTimeParse(arg0: _CharSequence_) : _LocalDateTime_
+#### _time.localDateTimeParse(arg0: _java.lang.CharSequence_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _CharSequence_ |   |
+| arg0 | _java.lang.CharSequence_ |   |
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _time.localDateTimeParse(arg0: _CharSequence_, arg1: _DateTimeFormatter_) : _LocalDateTime_
+#### _time.localDateTimeParse(arg0: _java.lang.CharSequence_, arg1: _java.time.format.DateTimeFormatter_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _CharSequence_ |   |
-| arg1 | _DateTimeFormatter_ |   |
+| arg0 | _java.lang.CharSequence_ |   |
+| arg1 | _java.time.format.DateTimeFormatter_ |   |
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -1311,15 +1311,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localTime() : _LocalTime_
+#### _time.localTime() : _java.time.LocalTime_
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _time.localTime(arg0: string) : _LocalTime_
+#### _time.localTime(arg0: string) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1328,35 +1328,35 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _time.localTime(arg0: _Clock_) : _LocalTime_
+#### _time.localTime(arg0: _java.time.Clock_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Clock_ |   |
+| arg0 | _java.time.Clock_ |   |
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _time.localTime(arg0: _ZoneId_) : _LocalTime_
+#### _time.localTime(arg0: _java.time.ZoneId_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _ZoneId_ |   |
+| arg0 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -1365,16 +1365,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localTimeFrom(arg0: _TemporalAccessor_) : _LocalTime_
+#### _time.localTimeFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -1383,7 +1383,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localTimeOf(arg0: _int_, arg1: _int_) : _LocalTime_
+#### _time.localTimeOf(arg0: _int_, arg1: _int_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1393,12 +1393,12 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _time.localTimeOf(arg0: _int_, arg1: _int_, arg2: _int_) : _LocalTime_
+#### _time.localTimeOf(arg0: _int_, arg1: _int_, arg2: _int_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1409,12 +1409,12 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _time.localTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_) : _LocalTime_
+#### _time.localTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1426,7 +1426,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -1435,7 +1435,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localTimeOfNanoOfDay(arg0: _long_) : _LocalTime_
+#### _time.localTimeOfNanoOfDay(arg0: _long_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1444,7 +1444,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -1453,7 +1453,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localTimeOfSecondOfDay(arg0: _long_) : _LocalTime_
+#### _time.localTimeOfSecondOfDay(arg0: _long_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1462,7 +1462,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -1471,31 +1471,31 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.localTimeParse(arg0: _CharSequence_) : _LocalTime_
+#### _time.localTimeParse(arg0: _java.lang.CharSequence_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _CharSequence_ |   |
+| arg0 | _java.lang.CharSequence_ |   |
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _time.localTimeParse(arg0: _CharSequence_, arg1: _DateTimeFormatter_) : _LocalTime_
+#### _time.localTimeParse(arg0: _java.lang.CharSequence_, arg1: _java.time.format.DateTimeFormatter_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _CharSequence_ |   |
-| arg1 | _DateTimeFormatter_ |   |
+| arg0 | _java.lang.CharSequence_ |   |
+| arg1 | _java.time.format.DateTimeFormatter_ |   |
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -1504,7 +1504,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.month(arg0: string) : _Month_
+#### _time.month(arg0: string) : _java.time.Month_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1513,7 +1513,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Month_ )
+( _java.time.Month_ )
 
 
 ---
@@ -1522,38 +1522,38 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.monthDay() : _MonthDay_
+#### _time.monthDay() : _java.time.MonthDay_
 ##### Return
 
-( _MonthDay_ )
+( _java.time.MonthDay_ )
 
 
 ---
 
-#### _time.monthDay(arg0: _Clock_) : _MonthDay_
+#### _time.monthDay(arg0: _java.time.Clock_) : _java.time.MonthDay_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Clock_ |   |
+| arg0 | _java.time.Clock_ |   |
 
 ##### Return
 
-( _MonthDay_ )
+( _java.time.MonthDay_ )
 
 
 ---
 
-#### _time.monthDay(arg0: _ZoneId_) : _MonthDay_
+#### _time.monthDay(arg0: _java.time.ZoneId_) : _java.time.MonthDay_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _ZoneId_ |   |
+| arg0 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _MonthDay_ )
+( _java.time.MonthDay_ )
 
 
 ---
@@ -1562,16 +1562,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.monthDayFrom(arg0: _TemporalAccessor_) : _MonthDay_
+#### _time.monthDayFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.MonthDay_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _MonthDay_ )
+( _java.time.MonthDay_ )
 
 
 ---
@@ -1580,7 +1580,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.monthDayOf(arg0: _int_, arg1: _int_) : _MonthDay_
+#### _time.monthDayOf(arg0: _int_, arg1: _int_) : _java.time.MonthDay_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1590,22 +1590,22 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _MonthDay_ )
+( _java.time.MonthDay_ )
 
 
 ---
 
-#### _time.monthDayOf(arg0: _Month_, arg1: _int_) : _MonthDay_
+#### _time.monthDayOf(arg0: _java.time.Month_, arg1: _int_) : _java.time.MonthDay_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Month_ |   |
+| arg0 | _java.time.Month_ |   |
 | arg1 | _int_ |   |
 
 ##### Return
 
-( _MonthDay_ )
+( _java.time.MonthDay_ )
 
 
 ---
@@ -1614,7 +1614,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.monthOf(arg0: _int_) : _Month_
+#### _time.monthOf(arg0: _int_) : _java.time.Month_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1623,7 +1623,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Month_ )
+( _java.time.Month_ )
 
 
 ---
@@ -1632,7 +1632,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.monthValueOf(arg0: string) : _Month_
+#### _time.monthValueOf(arg0: string) : _java.time.Month_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1641,7 +1641,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Month_ )
+( _java.time.Month_ )
 
 
 ---
@@ -1650,15 +1650,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.offsetDateTime() : _OffsetDateTime_
+#### _time.offsetDateTime() : _java.time.OffsetDateTime_
 ##### Return
 
-( _OffsetDateTime_ )
+( _java.time.OffsetDateTime_ )
 
 
 ---
 
-#### _time.offsetDateTime(arg0: string) : _OffsetDateTime_
+#### _time.offsetDateTime(arg0: string) : _java.time.OffsetDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1667,7 +1667,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _OffsetDateTime_ )
+( _java.time.OffsetDateTime_ )
 
 
 ---
@@ -1676,16 +1676,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.offsetDateTimeFrom(arg0: _TemporalAccessor_) : _OffsetDateTime_
+#### _time.offsetDateTimeFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.OffsetDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _OffsetDateTime_ )
+( _java.time.OffsetDateTime_ )
 
 
 ---
@@ -1694,7 +1694,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.offsetDateTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _ZoneOffset_) : _OffsetDateTime_
+#### _time.offsetDateTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _java.time.ZoneOffset_) : _java.time.OffsetDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1706,42 +1706,42 @@ Converte o objeeto passado para TemporalAcessor.
 | arg4 | _int_ |   |
 | arg5 | _int_ |   |
 | arg6 | _int_ |   |
-| arg7 | _ZoneOffset_ |   |
+| arg7 | _java.time.ZoneOffset_ |   |
 
 ##### Return
 
-( _OffsetDateTime_ )
+( _java.time.OffsetDateTime_ )
 
 
 ---
 
-#### _time.offsetDateTimeOf(arg0: _LocalDate_, arg1: _LocalTime_, arg2: _ZoneOffset_) : _OffsetDateTime_
+#### _time.offsetDateTimeOf(arg0: _java.time.LocalDate_, arg1: _java.time.LocalTime_, arg2: _java.time.ZoneOffset_) : _java.time.OffsetDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _LocalDate_ |   |
-| arg1 | _LocalTime_ |   |
-| arg2 | _ZoneOffset_ |   |
+| arg0 | _java.time.LocalDate_ |   |
+| arg1 | _java.time.LocalTime_ |   |
+| arg2 | _java.time.ZoneOffset_ |   |
 
 ##### Return
 
-( _OffsetDateTime_ )
+( _java.time.OffsetDateTime_ )
 
 
 ---
 
-#### _time.offsetDateTimeOf(arg0: _LocalDateTime_, arg1: _ZoneOffset_) : _OffsetDateTime_
+#### _time.offsetDateTimeOf(arg0: _java.time.LocalDateTime_, arg1: _java.time.ZoneOffset_) : _java.time.OffsetDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _LocalDateTime_ |   |
-| arg1 | _ZoneOffset_ |   |
+| arg0 | _java.time.LocalDateTime_ |   |
+| arg1 | _java.time.ZoneOffset_ |   |
 
 ##### Return
 
-( _OffsetDateTime_ )
+( _java.time.OffsetDateTime_ )
 
 
 ---
@@ -1750,17 +1750,17 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.offsetDateTimeOfInstant(arg0: _Instant_, arg1: _ZoneOffset_) : _OffsetDateTime_
+#### _time.offsetDateTimeOfInstant(arg0: _java.time.Instant_, arg1: _java.time.ZoneOffset_) : _java.time.OffsetDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Instant_ |   |
-| arg1 | _ZoneOffset_ |   |
+| arg0 | _java.time.Instant_ |   |
+| arg1 | _java.time.ZoneOffset_ |   |
 
 ##### Return
 
-( _OffsetDateTime_ )
+( _java.time.OffsetDateTime_ )
 
 
 ---
@@ -1769,15 +1769,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.offsetTime() : _OffsetTime_
+#### _time.offsetTime() : _java.time.OffsetTime_
 ##### Return
 
-( _OffsetTime_ )
+( _java.time.OffsetTime_ )
 
 
 ---
 
-#### _time.offsetTime(arg0: string) : _OffsetTime_
+#### _time.offsetTime(arg0: string) : _java.time.OffsetTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1786,35 +1786,35 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _OffsetTime_ )
+( _java.time.OffsetTime_ )
 
 
 ---
 
-#### _time.offsetTime(arg0: _Clock_) : _OffsetTime_
+#### _time.offsetTime(arg0: _java.time.Clock_) : _java.time.OffsetTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Clock_ |   |
+| arg0 | _java.time.Clock_ |   |
 
 ##### Return
 
-( _OffsetTime_ )
+( _java.time.OffsetTime_ )
 
 
 ---
 
-#### _time.offsetTime(arg0: _ZoneId_) : _OffsetTime_
+#### _time.offsetTime(arg0: _java.time.ZoneId_) : _java.time.OffsetTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _ZoneId_ |   |
+| arg0 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _OffsetTime_ )
+( _java.time.OffsetTime_ )
 
 
 ---
@@ -1823,16 +1823,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.offsetTimeFrom(arg0: _TemporalAccessor_) : _OffsetTime_
+#### _time.offsetTimeFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.OffsetTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _OffsetTime_ )
+( _java.time.OffsetTime_ )
 
 
 ---
@@ -1841,7 +1841,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.offsetTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _ZoneOffset_) : _OffsetTime_
+#### _time.offsetTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _java.time.ZoneOffset_) : _java.time.OffsetTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1850,26 +1850,26 @@ Converte o objeeto passado para TemporalAcessor.
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
-| arg4 | _ZoneOffset_ |   |
+| arg4 | _java.time.ZoneOffset_ |   |
 
 ##### Return
 
-( _OffsetTime_ )
+( _java.time.OffsetTime_ )
 
 
 ---
 
-#### _time.offsetTimeOf(arg0: _LocalTime_, arg1: _ZoneOffset_) : _OffsetTime_
+#### _time.offsetTimeOf(arg0: _java.time.LocalTime_, arg1: _java.time.ZoneOffset_) : _java.time.OffsetTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _LocalTime_ |   |
-| arg1 | _ZoneOffset_ |   |
+| arg0 | _java.time.LocalTime_ |   |
+| arg1 | _java.time.ZoneOffset_ |   |
 
 ##### Return
 
-( _OffsetTime_ )
+( _java.time.OffsetTime_ )
 
 
 ---
@@ -1878,17 +1878,17 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.offsetTimeOfInstant(arg0: _Instant_, arg1: _ZoneId_) : _OffsetTime_
+#### _time.offsetTimeOfInstant(arg0: _java.time.Instant_, arg1: _java.time.ZoneId_) : _java.time.OffsetTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Instant_ |   |
-| arg1 | _ZoneId_ |   |
+| arg0 | _java.time.Instant_ |   |
+| arg1 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _OffsetTime_ )
+( _java.time.OffsetTime_ )
 
 
 ---
@@ -1897,15 +1897,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.period() : _Period_
+#### _time.period() : _java.time.Period_
 ##### Return
 
-( _Period_ )
+( _java.time.Period_ )
 
 
 ---
 
-#### _time.period(arg0: string) : _Period_
+#### _time.period(arg0: string) : _java.time.Period_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1914,7 +1914,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Period_ )
+( _java.time.Period_ )
 
 
 ---
@@ -1923,16 +1923,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.periodFrom(arg0: _TemporalAmount_) : _Period_
+#### _time.periodFrom(arg0: _java.time.temporal.TemporalAmount_) : _java.time.Period_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAmount_ |   |
+| arg0 | _java.time.temporal.TemporalAmount_ |   |
 
 ##### Return
 
-( _Period_ )
+( _java.time.Period_ )
 
 
 ---
@@ -1941,7 +1941,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.periodOf(arg0: _int_, arg1: _int_, arg2: _int_) : _Period_
+#### _time.periodOf(arg0: _int_, arg1: _int_, arg2: _int_) : _java.time.Period_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1952,7 +1952,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Period_ )
+( _java.time.Period_ )
 
 
 ---
@@ -1961,7 +1961,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.periodOfDays(arg0: _int_) : _Period_
+#### _time.periodOfDays(arg0: _int_) : _java.time.Period_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1970,7 +1970,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Period_ )
+( _java.time.Period_ )
 
 
 ---
@@ -1979,7 +1979,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.periodOfMonths(arg0: _int_) : _Period_
+#### _time.periodOfMonths(arg0: _int_) : _java.time.Period_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1988,7 +1988,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Period_ )
+( _java.time.Period_ )
 
 
 ---
@@ -1997,7 +1997,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.periodOfWeeks(arg0: _int_) : _Period_
+#### _time.periodOfWeeks(arg0: _int_) : _java.time.Period_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2006,7 +2006,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Period_ )
+( _java.time.Period_ )
 
 
 ---
@@ -2015,7 +2015,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.periodOfYears(arg0: _int_) : _Period_
+#### _time.periodOfYears(arg0: _int_) : _java.time.Period_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2024,7 +2024,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Period_ )
+( _java.time.Period_ )
 
 
 ---
@@ -2033,7 +2033,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.simpleDateFormat(arg0: string) : _SimpleDateFormat_
+#### _time.simpleDateFormat(arg0: string) : _java.text.SimpleDateFormat_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2042,7 +2042,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _SimpleDateFormat_ )
+( _java.text.SimpleDateFormat_ )
 
 
 ---
@@ -2051,7 +2051,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.unit(arg0: string) : _TimeUnit_
+#### _time.unit(arg0: string) : _java.util.concurrent.TimeUnit_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2060,7 +2060,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _TimeUnit_ )
+( _java.util.concurrent.TimeUnit_ )
 
 
 ---
@@ -2069,7 +2069,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.valueRangeOf(arg0: _long_, arg1: _long_) : _ValueRange_
+#### _time.valueRangeOf(arg0: _long_, arg1: _long_) : _java.time.temporal.ValueRange_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2079,12 +2079,12 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ValueRange_ )
+( _java.time.temporal.ValueRange_ )
 
 
 ---
 
-#### _time.valueRangeOf(arg0: _long_, arg1: _long_, arg2: _long_) : _ValueRange_
+#### _time.valueRangeOf(arg0: _long_, arg1: _long_, arg2: _long_) : _java.time.temporal.ValueRange_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2095,12 +2095,12 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ValueRange_ )
+( _java.time.temporal.ValueRange_ )
 
 
 ---
 
-#### _time.valueRangeOf(arg0: _long_, arg1: _long_, arg2: _long_, arg3: _long_) : _ValueRange_
+#### _time.valueRangeOf(arg0: _long_, arg1: _long_, arg2: _long_, arg3: _long_) : _java.time.temporal.ValueRange_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2112,7 +2112,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ValueRange_ )
+( _java.time.temporal.ValueRange_ )
 
 
 ---
@@ -2121,15 +2121,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.year() : _Year_
+#### _time.year() : _java.time.Year_
 ##### Return
 
-( _Year_ )
+( _java.time.Year_ )
 
 
 ---
 
-#### _time.year(arg0: string) : _Year_
+#### _time.year(arg0: string) : _java.time.Year_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2138,35 +2138,35 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Year_ )
+( _java.time.Year_ )
 
 
 ---
 
-#### _time.year(arg0: _Clock_) : _Year_
+#### _time.year(arg0: _java.time.Clock_) : _java.time.Year_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Clock_ |   |
+| arg0 | _java.time.Clock_ |   |
 
 ##### Return
 
-( _Year_ )
+( _java.time.Year_ )
 
 
 ---
 
-#### _time.year(arg0: _ZoneId_) : _Year_
+#### _time.year(arg0: _java.time.ZoneId_) : _java.time.Year_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _ZoneId_ |   |
+| arg0 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _Year_ )
+( _java.time.Year_ )
 
 
 ---
@@ -2175,16 +2175,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.yearFrom(arg0: _TemporalAccessor_) : _Year_
+#### _time.yearFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.Year_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _Year_ )
+( _java.time.Year_ )
 
 
 ---
@@ -2193,38 +2193,38 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.yearMonth() : _YearMonth_
+#### _time.yearMonth() : _java.time.YearMonth_
 ##### Return
 
-( _YearMonth_ )
+( _java.time.YearMonth_ )
 
 
 ---
 
-#### _time.yearMonth(arg0: _Clock_) : _YearMonth_
+#### _time.yearMonth(arg0: _java.time.Clock_) : _java.time.YearMonth_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Clock_ |   |
+| arg0 | _java.time.Clock_ |   |
 
 ##### Return
 
-( _YearMonth_ )
+( _java.time.YearMonth_ )
 
 
 ---
 
-#### _time.yearMonth(arg0: _ZoneId_) : _YearMonth_
+#### _time.yearMonth(arg0: _java.time.ZoneId_) : _java.time.YearMonth_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _ZoneId_ |   |
+| arg0 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _YearMonth_ )
+( _java.time.YearMonth_ )
 
 
 ---
@@ -2233,16 +2233,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.yearMonthFrom(arg0: _TemporalAccessor_) : _YearMonth_
+#### _time.yearMonthFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.YearMonth_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _YearMonth_ )
+( _java.time.YearMonth_ )
 
 
 ---
@@ -2251,7 +2251,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.yearMonthOf(arg0: _int_, arg1: _int_) : _YearMonth_
+#### _time.yearMonthOf(arg0: _int_, arg1: _int_) : _java.time.YearMonth_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2261,22 +2261,22 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _YearMonth_ )
+( _java.time.YearMonth_ )
 
 
 ---
 
-#### _time.yearMonthOf(arg0: _int_, arg1: _Month_) : _YearMonth_
+#### _time.yearMonthOf(arg0: _int_, arg1: _java.time.Month_) : _java.time.YearMonth_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Month_ |   |
+| arg1 | _java.time.Month_ |   |
 
 ##### Return
 
-( _YearMonth_ )
+( _java.time.YearMonth_ )
 
 
 ---
@@ -2285,7 +2285,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.yearOf(arg0: _int_) : _Year_
+#### _time.yearOf(arg0: _int_) : _java.time.Year_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2294,7 +2294,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _Year_ )
+( _java.time.Year_ )
 
 
 ---
@@ -2303,10 +2303,10 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneId() : _ZoneId_
+#### _time.zoneId() : _java.time.ZoneId_
 ##### Return
 
-( _ZoneId_ )
+( _java.time.ZoneId_ )
 
 
 ---
@@ -2315,16 +2315,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneIdFrom(arg0: _TemporalAccessor_) : _ZoneId_
+#### _time.zoneIdFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.ZoneId_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _ZoneId_ )
+( _java.time.ZoneId_ )
 
 
 ---
@@ -2333,7 +2333,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneIdOf(arg0: string) : _ZoneId_
+#### _time.zoneIdOf(arg0: string) : _java.time.ZoneId_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2342,22 +2342,22 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ZoneId_ )
+( _java.time.ZoneId_ )
 
 
 ---
 
-#### _time.zoneIdOf(arg0: string, arg1: _Map_) : _ZoneId_
+#### _time.zoneIdOf(arg0: string, arg1: _java.util.Map_) : _java.time.ZoneId_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Map_ |   |
+| arg1 | _java.util.Map_ |   |
 
 ##### Return
 
-( _ZoneId_ )
+( _java.time.ZoneId_ )
 
 
 ---
@@ -2366,17 +2366,17 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneIdOfOffset(arg0: string, arg1: _ZoneOffset_) : _ZoneId_
+#### _time.zoneIdOfOffset(arg0: string, arg1: _java.time.ZoneOffset_) : _java.time.ZoneId_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _ZoneOffset_ |   |
+| arg1 | _java.time.ZoneOffset_ |   |
 
 ##### Return
 
-( _ZoneId_ )
+( _java.time.ZoneId_ )
 
 
 ---
@@ -2385,15 +2385,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneOffset() : _ZoneOffset_
+#### _time.zoneOffset() : _java.time.ZoneOffset_
 ##### Return
 
-( _ZoneOffset_ )
+( _java.time.ZoneOffset_ )
 
 
 ---
 
-#### _time.zoneOffset(arg0: string) : _ZoneOffset_
+#### _time.zoneOffset(arg0: string) : _java.time.ZoneOffset_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2402,7 +2402,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ZoneOffset_ )
+( _java.time.ZoneOffset_ )
 
 
 ---
@@ -2411,16 +2411,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneOffsetFrom(arg0: _TemporalAccessor_) : _ZoneOffset_
+#### _time.zoneOffsetFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.ZoneOffset_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _ZoneOffset_ )
+( _java.time.ZoneOffset_ )
 
 
 ---
@@ -2429,7 +2429,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneOffsetOf(arg0: string) : _ZoneOffset_
+#### _time.zoneOffsetOf(arg0: string) : _java.time.ZoneOffset_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2438,22 +2438,22 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ZoneOffset_ )
+( _java.time.ZoneOffset_ )
 
 
 ---
 
-#### _time.zoneOffsetOf(arg0: string, arg1: _Map_) : _ZoneId_
+#### _time.zoneOffsetOf(arg0: string, arg1: _java.util.Map_) : _java.time.ZoneId_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Map_ |   |
+| arg1 | _java.util.Map_ |   |
 
 ##### Return
 
-( _ZoneId_ )
+( _java.time.ZoneId_ )
 
 
 ---
@@ -2462,7 +2462,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneOffsetOfHours(arg0: _int_) : _ZoneOffset_
+#### _time.zoneOffsetOfHours(arg0: _int_) : _java.time.ZoneOffset_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2471,7 +2471,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ZoneOffset_ )
+( _java.time.ZoneOffset_ )
 
 
 ---
@@ -2480,7 +2480,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneOffsetOfHoursMinutes(arg0: _int_, arg1: _int_) : _ZoneOffset_
+#### _time.zoneOffsetOfHoursMinutes(arg0: _int_, arg1: _int_) : _java.time.ZoneOffset_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2490,7 +2490,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ZoneOffset_ )
+( _java.time.ZoneOffset_ )
 
 
 ---
@@ -2499,7 +2499,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneOffsetOfHoursMinutesSeconds(arg0: _int_, arg1: _int_, arg2: _int_) : _ZoneOffset_
+#### _time.zoneOffsetOfHoursMinutesSeconds(arg0: _int_, arg1: _int_, arg2: _int_) : _java.time.ZoneOffset_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2510,7 +2510,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ZoneOffset_ )
+( _java.time.ZoneOffset_ )
 
 
 ---
@@ -2519,17 +2519,17 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneOffsetOfOffset(arg0: string, arg1: _ZoneOffset_) : _ZoneId_
+#### _time.zoneOffsetOfOffset(arg0: string, arg1: _java.time.ZoneOffset_) : _java.time.ZoneId_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _ZoneOffset_ |   |
+| arg1 | _java.time.ZoneOffset_ |   |
 
 ##### Return
 
-( _ZoneId_ )
+( _java.time.ZoneId_ )
 
 
 ---
@@ -2538,7 +2538,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zoneOffsetOfTotalSeconds(arg0: _int_) : _ZoneOffset_
+#### _time.zoneOffsetOfTotalSeconds(arg0: _int_) : _java.time.ZoneOffset_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2547,7 +2547,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ZoneOffset_ )
+( _java.time.ZoneOffset_ )
 
 
 ---
@@ -2556,15 +2556,15 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zonedDateTime() : _ZonedDateTime_
+#### _time.zonedDateTime() : _java.time.ZonedDateTime_
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
 
-#### _time.zonedDateTime(arg0: string) : _ZonedDateTime_
+#### _time.zonedDateTime(arg0: string) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2573,35 +2573,35 @@ Converte o objeeto passado para TemporalAcessor.
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
 
-#### _time.zonedDateTime(arg0: _Clock_) : _ZonedDateTime_
+#### _time.zonedDateTime(arg0: _java.time.Clock_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Clock_ |   |
+| arg0 | _java.time.Clock_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
 
-#### _time.zonedDateTime(arg0: _ZoneId_) : _ZonedDateTime_
+#### _time.zonedDateTime(arg0: _java.time.ZoneId_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _ZoneId_ |   |
+| arg0 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
@@ -2610,16 +2610,16 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zonedDateTimeFrom(arg0: _TemporalAccessor_) : _ZonedDateTime_
+#### _time.zonedDateTimeFrom(arg0: _java.time.temporal.TemporalAccessor_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _TemporalAccessor_ |   |
+| arg0 | _java.time.temporal.TemporalAccessor_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
@@ -2628,7 +2628,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zonedDateTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _ZoneId_) : _ZonedDateTime_
+#### _time.zonedDateTimeOf(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _java.time.ZoneId_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2640,42 +2640,42 @@ Converte o objeeto passado para TemporalAcessor.
 | arg4 | _int_ |   |
 | arg5 | _int_ |   |
 | arg6 | _int_ |   |
-| arg7 | _ZoneId_ |   |
+| arg7 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
 
-#### _time.zonedDateTimeOf(arg0: _LocalDate_, arg1: _LocalTime_, arg2: _ZoneId_) : _ZonedDateTime_
+#### _time.zonedDateTimeOf(arg0: _java.time.LocalDate_, arg1: _java.time.LocalTime_, arg2: _java.time.ZoneId_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _LocalDate_ |   |
-| arg1 | _LocalTime_ |   |
-| arg2 | _ZoneId_ |   |
+| arg0 | _java.time.LocalDate_ |   |
+| arg1 | _java.time.LocalTime_ |   |
+| arg2 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
 
-#### _time.zonedDateTimeOf(arg0: _LocalDateTime_, arg1: _ZoneId_) : _ZonedDateTime_
+#### _time.zonedDateTimeOf(arg0: _java.time.LocalDateTime_, arg1: _java.time.ZoneId_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _LocalDateTime_ |   |
-| arg1 | _ZoneId_ |   |
+| arg0 | _java.time.LocalDateTime_ |   |
+| arg1 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
@@ -2684,33 +2684,33 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zonedDateTimeOfInstant(arg0: _Instant_, arg1: _ZoneId_) : _ZonedDateTime_
+#### _time.zonedDateTimeOfInstant(arg0: _java.time.Instant_, arg1: _java.time.ZoneId_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Instant_ |   |
-| arg1 | _ZoneId_ |   |
+| arg0 | _java.time.Instant_ |   |
+| arg1 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
 
-#### _time.zonedDateTimeOfInstant(arg0: _LocalDateTime_, arg1: _ZoneOffset_, arg2: _ZoneId_) : _ZonedDateTime_
+#### _time.zonedDateTimeOfInstant(arg0: _java.time.LocalDateTime_, arg1: _java.time.ZoneOffset_, arg2: _java.time.ZoneId_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _LocalDateTime_ |   |
-| arg1 | _ZoneOffset_ |   |
-| arg2 | _ZoneId_ |   |
+| arg0 | _java.time.LocalDateTime_ |   |
+| arg1 | _java.time.ZoneOffset_ |   |
+| arg2 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
@@ -2719,34 +2719,34 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zonedDateTimeOfLocal(arg0: _LocalDateTime_, arg1: _ZoneId_, arg2: _ZoneOffset_) : _ZonedDateTime_
+#### _time.zonedDateTimeOfLocal(arg0: _java.time.LocalDateTime_, arg1: _java.time.ZoneId_, arg2: _java.time.ZoneOffset_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _LocalDateTime_ |   |
-| arg1 | _ZoneId_ |   |
-| arg2 | _ZoneOffset_ |   |
+| arg0 | _java.time.LocalDateTime_ |   |
+| arg1 | _java.time.ZoneId_ |   |
+| arg2 | _java.time.ZoneOffset_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
 
-#### _time.zonedDateTimeOfLocal(arg0: _LocalDateTime_, arg1: _ZoneOffset_, arg2: _ZoneId_) : _ZonedDateTime_
+#### _time.zonedDateTimeOfLocal(arg0: _java.time.LocalDateTime_, arg1: _java.time.ZoneOffset_, arg2: _java.time.ZoneId_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _LocalDateTime_ |   |
-| arg1 | _ZoneOffset_ |   |
-| arg2 | _ZoneId_ |   |
+| arg0 | _java.time.LocalDateTime_ |   |
+| arg1 | _java.time.ZoneOffset_ |   |
+| arg2 | _java.time.ZoneId_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
@@ -2755,31 +2755,31 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### _time.zonedDateTimeParse(arg0: _CharSequence_) : _ZonedDateTime_
+#### _time.zonedDateTimeParse(arg0: _java.lang.CharSequence_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _CharSequence_ |   |
+| arg0 | _java.lang.CharSequence_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---
 
-#### _time.zonedDateTimeParse(arg0: _CharSequence_, arg1: _DateTimeFormatter_) : _ZonedDateTime_
+#### _time.zonedDateTimeParse(arg0: _java.lang.CharSequence_, arg1: _java.time.format.DateTimeFormatter_) : _java.time.ZonedDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _CharSequence_ |   |
-| arg1 | _DateTimeFormatter_ |   |
+| arg0 | _java.lang.CharSequence_ |   |
+| arg1 | _java.time.format.DateTimeFormatter_ |   |
 
 ##### Return
 
-( _ZonedDateTime_ )
+( _java.time.ZonedDateTime_ )
 
 
 ---

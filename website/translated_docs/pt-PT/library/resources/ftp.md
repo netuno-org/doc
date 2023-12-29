@@ -12,10 +12,10 @@ Recurso cliente de FTP.
 
 ---
 
-#### _ftp.abort() : _FTP_
+#### _ftp.abort() : _[FTP](../../resources/FTP)_
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -24,10 +24,10 @@ Recurso cliente de FTP.
 
 ---
 
-#### _ftp.changeToParentDirectory() : _FTP_
+#### _ftp.changeToParentDirectory() : _[FTP](../../resources/FTP)_
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -36,7 +36,7 @@ Recurso cliente de FTP.
 
 ---
 
-#### _ftp.changeWorkingDirectory(arg0: string) : _FTP_
+#### _ftp.changeWorkingDirectory(arg0: string) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -45,7 +45,7 @@ Recurso cliente de FTP.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -66,20 +66,20 @@ Recurso cliente de FTP.
 
 ---
 
-#### _ftp.config() : _FTPConfig_
+#### _ftp.config() : _org.netuno.psamata.ftp.FTPConfig_
 ##### Descrição
 
-Obtém a configuração que está a ser utilizada.
+Inicia uma nova configuração própria.
 
 ##### Retorno
 
-( _FTPConfig_ )
+( _org.netuno.psamata.ftp.FTPConfig_ )
 
-Objeto da configuração ativa.
+Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### _ftp.config(config: _[Values](../../objects/Values)_) : _FTPConfig_
+#### _ftp.config(config: _[Values](../../objects/Values)_) : _org.netuno.psamata.ftp.FTPConfig_
 ##### Descrição
 
 Inicia uma nova configuração própria.
@@ -92,13 +92,13 @@ Inicia uma nova configuração própria.
 
 ##### Retorno
 
-( _FTPConfig_ )
+( _org.netuno.psamata.ftp.FTPConfig_ )
 
 Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### _ftp.config(config: _FTPConfig_) : _FTP_
+#### _ftp.config(config: _org.netuno.psamata.ftp.FTPConfig_) : _[FTP](../../resources/FTP)_
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -107,11 +107,11 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _FTPConfig_ | Definição da nova configuração. |
+| config | _org.netuno.psamata.ftp.FTPConfig_ | Definição da nova configuração. |
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 Objeto FTP atual.
 
@@ -121,10 +121,10 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.connect() : _FTP_
+#### _ftp.connect() : _[FTP](../../resources/FTP)_
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -133,7 +133,7 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.createDirectory(arg0: string) : _FTP_
+#### _ftp.createDirectory(arg0: string) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -142,7 +142,7 @@ Objeto FTP atual.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -151,7 +151,7 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.deleteDirectory(arg0: string) : _FTP_
+#### _ftp.deleteDirectory(arg0: string) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -160,7 +160,7 @@ Objeto FTP atual.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -169,7 +169,7 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.deleteFile(arg0: string) : _FTP_
+#### _ftp.deleteFile(arg0: string) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -178,7 +178,7 @@ Objeto FTP atual.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -187,10 +187,10 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.disconnect() : _FTP_
+#### _ftp.disconnect() : _[FTP](../../resources/FTP)_
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -199,22 +199,22 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.download(arg0: string, arg1: _OutputStream_) : _FTP_
+#### _ftp.download(arg0: string, arg1: _java.io.OutputStream_) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _OutputStream_ |   |
+| arg1 | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
 
-#### _ftp.download(arg0: string, arg1: _[File](../../objects/File)_) : _FTP_
+#### _ftp.download(arg0: string, arg1: _[File](../../objects/File)_) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -224,7 +224,7 @@ Objeto FTP atual.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -233,7 +233,7 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.downloadBytes(arg0: string) : _byte[]_
+#### _ftp.downloadBytes(arg0: string) : _[B_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -242,7 +242,7 @@ Objeto FTP atual.
 
 ##### Retorno
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -292,7 +292,7 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.enabled(ativo: _boolean_) : _FTP_
+#### _ftp.enabled(ativo: _boolean_) : _[FTP](../../resources/FTP)_
 ##### Descrição
 
 Define se está habilitado.
@@ -305,7 +305,7 @@ Define se está habilitado.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 Objeto FTP atual.
 
@@ -315,10 +315,10 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.getClient() : _FTPClient_
+#### _ftp.getClient() : _org.netuno.psamata.ftp.FTPClient_
 ##### Retorno
 
-( _FTPClient_ )
+( _org.netuno.psamata.ftp.FTPClient_ )
 
 
 ---
@@ -327,14 +327,14 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.getConfig() : _FTPConfig_
+#### _ftp.getConfig() : _org.netuno.psamata.ftp.FTPConfig_
 ##### Descrição
 
 Obtém a configuração que está a ser utilizada.
 
 ##### Retorno
 
-( _FTPConfig_ )
+( _org.netuno.psamata.ftp.FTPConfig_ )
 
 Objeto da configuração ativa.
 
@@ -356,20 +356,20 @@ Objeto da configuração ativa.
 
 ---
 
-#### _ftp.init() : _FTP_
+#### _ftp.init() : _[FTP](../../resources/FTP)_
 ##### Descrição
 
 Inicia uma nova instância do FTP utilizando a configuração do FTP da chave `default`.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 A nova instância do recurso FTP com base na configuração do FTP `default`.
 
 ---
 
-#### _ftp.init(configKey: string) : _FTP_
+#### _ftp.init(configKey: string) : _[FTP](../../resources/FTP)_
 ##### Descrição
 
 Inicia uma nova instância do FTP a partir de uma configuração específica.
@@ -382,13 +382,13 @@ Inicia uma nova instância do FTP a partir de uma configuração específica.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 A nova instância do recurso FTP com base na configuração do FTP especificada.
 
 ---
 
-#### _ftp.init(config: _FTPConfig_) : _FTP_
+#### _ftp.init(config: _org.netuno.psamata.ftp.FTPConfig_) : _[FTP](../../resources/FTP)_
 ##### Descrição
 
 Inicia uma nova instância do FTP a partir de uma configuração que é definida em um objeto de configuração própria.
@@ -397,11 +397,11 @@ Inicia uma nova instância do FTP a partir de uma configuração que é definida
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _FTPConfig_ | Configuração que será utilizada. |
+| config | _org.netuno.psamata.ftp.FTPConfig_ | Configuração que será utilizada. |
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 A nova instância do recurso FTP com base na configuração definida.
 
@@ -428,7 +428,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _ftp.list(arg0: string) : _List_
+#### _ftp.list(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -437,7 +437,7 @@ Resultado se está ou não ativado.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -446,7 +446,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _ftp.rename(arg0: string, arg1: string) : _FTP_
+#### _ftp.rename(arg0: string, arg1: string) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -456,7 +456,7 @@ Resultado se está ou não ativado.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -498,7 +498,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _ftp.sendSiteCommand(arg0: string) : _FTP_
+#### _ftp.sendSiteCommand(arg0: string) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -507,7 +507,7 @@ Resultado se está ou não ativado.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -516,7 +516,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _ftp.setConfig(config: _FTPConfig_) : _FTP_
+#### _ftp.setConfig(config: _org.netuno.psamata.ftp.FTPConfig_) : _[FTP](../../resources/FTP)_
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -525,11 +525,11 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _FTPConfig_ | Definição da nova configuração. |
+| config | _org.netuno.psamata.ftp.FTPConfig_ | Definição da nova configuração. |
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 Objeto FTP atual.
 
@@ -539,7 +539,7 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.setEnabled(ativo: _boolean_) : _FTP_
+#### _ftp.setEnabled(ativo: _boolean_) : _[FTP](../../resources/FTP)_
 ##### Descrição
 
 Define se está habilitado.
@@ -552,7 +552,7 @@ Define se está habilitado.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 Objeto FTP atual.
 
@@ -562,22 +562,22 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.upload(arg0: string, arg1: _InputStream_) : _FTP_
+#### _ftp.upload(arg0: string, arg1: _java.io.InputStream_) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _InputStream_ |   |
+| arg1 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
 
-#### _ftp.upload(arg0: string, arg1: _[File](../../objects/File)_) : _FTP_
+#### _ftp.upload(arg0: string, arg1: _[File](../../objects/File)_) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -587,7 +587,7 @@ Objeto FTP atual.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -596,17 +596,17 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.uploadBytes(arg0: string, arg1: _byte[]_) : _FTP_
+#### _ftp.uploadBytes(arg0: string, arg1: _[B_) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _byte[]_ |   |
+| arg1 | _[B_ |   |
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
@@ -615,7 +615,7 @@ Objeto FTP atual.
 
 ---
 
-#### _ftp.uploadText(arg0: string, arg1: string) : _FTP_
+#### _ftp.uploadText(arg0: string, arg1: string) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -625,12 +625,12 @@ Objeto FTP atual.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---
 
-#### _ftp.uploadText(arg0: string, arg1: string, arg2: string) : _FTP_
+#### _ftp.uploadText(arg0: string, arg1: string, arg2: string) : _[FTP](../../resources/FTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -641,7 +641,7 @@ Objeto FTP atual.
 
 ##### Retorno
 
-( _FTP_ )
+( _[FTP](../../resources/FTP)_ )
 
 
 ---

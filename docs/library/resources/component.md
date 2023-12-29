@@ -121,10 +121,10 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.getConfiguration() : _Configuration_
+#### _component.getConfiguration() : _org.netuno.tritao.com.Configuration_
 ##### Return
 
-( _Configuration_ )
+( _org.netuno.tritao.com.Configuration_ )
 
 
 ---
@@ -133,10 +133,10 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.getDataStructure() : _List_
+#### _component.getDataStructure() : _java.util.List_
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---

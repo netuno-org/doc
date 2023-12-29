@@ -24,7 +24,7 @@ Sessão SSH para executar comandos.
 
 ---
 
-#### exec(arg0: string) : _SSHExecResult_
+#### exec(arg0: string) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -33,12 +33,12 @@ Sessão SSH para executar comandos.
 
 ##### Return
 
-( _SSHExecResult_ )
+( _[SSHExecResult](../../objects/SSHExecResult)_ )
 
 
 ---
 
-#### exec(arg0: string, arg1: _int_) : _SSHExecResult_
+#### exec(arg0: string, arg1: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -48,7 +48,7 @@ Sessão SSH para executar comandos.
 
 ##### Return
 
-( _SSHExecResult_ )
+( _[SSHExecResult](../../objects/SSHExecResult)_ )
 
 
 ---

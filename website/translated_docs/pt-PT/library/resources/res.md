@@ -12,13 +12,13 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.add(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _res.add(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -27,12 +27,12 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.add(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _res.add(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -45,13 +45,13 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.addAll(arg0: _int_, arg1: _Collection_) : _boolean_
+#### _res.addAll(arg0: _int_, arg1: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Collection_ |   |
+| arg1 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -60,12 +60,12 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.addAll(arg0: _Collection_) : _boolean_
+#### _res.addAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -78,12 +78,12 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.as(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _res.as(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -92,13 +92,13 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.as(arg0: _Object_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _res.as(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -221,7 +221,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asCalendar(arg0: string) : _Calendar_
+#### _res.asCalendar(arg0: string) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -230,22 +230,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
 
-#### _res.asCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### _res.asCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Calendar_ |   |
+| arg1 | _java.util.Calendar_ |   |
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
@@ -254,7 +254,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asDate(arg0: string) : _Date_
+#### _res.asDate(arg0: string) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -263,22 +263,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
 
-#### _res.asDate(arg0: string, arg1: _Date_) : _Date_
+#### _res.asDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.util.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -465,7 +465,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asInstant(arg0: string) : _Instant_
+#### _res.asInstant(arg0: string) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -474,22 +474,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _res.asInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### _res.asInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Instant_ |   |
+| arg1 | _java.time.Instant_ |   |
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -546,7 +546,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asList(arg0: _int_) : _List_
+#### _res.asList(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -555,58 +555,58 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.asList(arg0: _int_, arg1: _Class_) : _List_
+#### _res.asList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.asList(arg0: _int_, arg1: _Object_) : _List_
+#### _res.asList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.asList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+#### _res.asList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.asList(arg0: string) : _List_
+#### _res.asList(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -615,53 +615,53 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.asList(arg0: string, arg1: _Class_) : _List_
+#### _res.asList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.asList(arg0: string, arg1: _Object_) : _List_
+#### _res.asList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.asList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+#### _res.asList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -670,7 +670,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asLocalDate(arg0: string) : _LocalDate_
+#### _res.asLocalDate(arg0: string) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -679,22 +679,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _res.asLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### _res.asLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDate_ |   |
+| arg1 | _java.time.LocalDate_ |   |
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -703,7 +703,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asLocalDateTime(arg0: string) : _LocalDateTime_
+#### _res.asLocalDateTime(arg0: string) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -712,22 +712,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _res.asLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### _res.asLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDateTime_ |   |
+| arg1 | _java.time.LocalDateTime_ |   |
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -736,7 +736,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asLocalTime(arg0: string) : _LocalTime_
+#### _res.asLocalTime(arg0: string) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -745,22 +745,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _res.asLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### _res.asLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalTime_ |   |
+| arg1 | _java.time.LocalTime_ |   |
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -831,7 +831,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asMap(arg0: _int_) : _Map_
+#### _res.asMap(arg0: _int_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -840,27 +840,27 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _res.asMap(arg0: _int_, arg1: _Object_) : _Map_
+#### _res.asMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _res.asMap(arg0: string) : _Map_
+#### _res.asMap(arg0: string) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -869,22 +869,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _res.asMap(arg0: string, arg1: _Object_) : _Map_
+#### _res.asMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -893,7 +893,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asSQLDate(arg0: string) : _Date_
+#### _res.asSQLDate(arg0: string) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -902,22 +902,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
 
-#### _res.asSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### _res.asSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.sql.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
@@ -926,7 +926,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asSQLTime(arg0: string) : _Time_
+#### _res.asSQLTime(arg0: string) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -935,22 +935,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
 
-#### _res.asSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### _res.asSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Time_ |   |
+| arg1 | _java.sql.Time_ |   |
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
@@ -959,7 +959,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asSQLTimestamp(arg0: string) : _Timestamp_
+#### _res.asSQLTimestamp(arg0: string) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -968,22 +968,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
 
-#### _res.asSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### _res.asSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Timestamp_ |   |
+| arg1 | _java.sql.Timestamp_ |   |
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
@@ -1132,7 +1132,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asUID(arg0: string) : _UUID_
+#### _res.asUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1141,12 +1141,12 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _res.asUID(arg0: string, arg1: string) : _UUID_
+#### _res.asUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1156,22 +1156,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _res.asUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _res.asUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -1180,7 +1180,7 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asUUID(arg0: string) : _UUID_
+#### _res.asUUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1189,12 +1189,12 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _res.asUUID(arg0: string, arg1: string) : _UUID_
+#### _res.asUUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1204,22 +1204,22 @@ Recurso de manipulação da resposta HTTP.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _res.asUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _res.asUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -1228,16 +1228,16 @@ Recurso de manipulação da resposta HTTP.
 
 ---
 
-#### _res.asValues(chave: _int_) : _[Values](../../objects/Values)_
+#### _res.asValues(indice: _int_) : _[Values](../../objects/Values)_
 ##### Descrição
 
-Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | A chave para obter o objeto associado. |
+| indice | _int_ | Índex para obter o objeto associado. |
 
 ##### Retorno
 
@@ -1247,17 +1247,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.asValues(chave: _int_, valorPadrao: _Object_) : _[Values](../../objects/Values)_
+#### _res.asValues(indice: _int_, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Descrição
 
-Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | A chave para obter o objeto associado. |
-| valorPadrao | _Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| indice | _int_ | Índex para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -1286,7 +1286,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.asValues(chave: string, valorPadrao: _Object_) : _[Values](../../objects/Values)_
+#### _res.asValues(chave: string, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -1296,7 +1296,7 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | chave | string | A chave para obter o objeto associado. |
-| valorPadrao | _Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -1310,7 +1310,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.cache(arg0: _int_) : _Res_
+#### _res.cache(arg0: _int_) : _[Res](../../resources/Res)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1319,7 +1319,7 @@ Objeto convertido para Values.
 
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1352,17 +1352,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.compute(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### _res.compute(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1371,17 +1371,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.computeIfAbsent(arg0: _Object_, arg1: _Function_) : _Object_
+#### _res.computeIfAbsent(arg0: _java.lang.Object_, arg1: _java.util.function.Function_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Function_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.Function_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1390,17 +1390,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.computeIfPresent(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### _res.computeIfPresent(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1409,12 +1409,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contains(arg0: _Object_) : _boolean_
+#### _res.contains(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1423,13 +1423,13 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contains(arg0: string, arg1: _Object_) : _boolean_
+#### _res.contains(arg0: string, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1442,12 +1442,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.containsAll(arg0: _Collection_) : _boolean_
+#### _res.containsAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -1460,12 +1460,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.containsKey(arg0: _Object_) : _boolean_
+#### _res.containsKey(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1478,12 +1478,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.containsValue(arg0: _Object_) : _boolean_
+#### _res.containsValue(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1504,7 +1504,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contentType(arg0: string) : _Res_
+#### _res.contentType(arg0: string) : _[Res](../../resources/Res)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1513,7 +1513,7 @@ Objeto convertido para Values.
 
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1522,10 +1522,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contentTypeCSS() : _Res_
+#### _res.contentTypeCSS() : _[Res](../../resources/Res)_
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1534,10 +1534,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contentTypeHTML() : _Res_
+#### _res.contentTypeHTML() : _[Res](../../resources/Res)_
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1546,10 +1546,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contentTypeJPG() : _Res_
+#### _res.contentTypeJPG() : _[Res](../../resources/Res)_
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1558,10 +1558,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contentTypeJS() : _Res_
+#### _res.contentTypeJS() : _[Res](../../resources/Res)_
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1570,10 +1570,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contentTypeJSON() : _Res_
+#### _res.contentTypeJSON() : _[Res](../../resources/Res)_
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1582,10 +1582,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contentTypeOctetStream() : _Res_
+#### _res.contentTypeOctetStream() : _[Res](../../resources/Res)_
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1594,10 +1594,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contentTypePDF() : _Res_
+#### _res.contentTypePDF() : _[Res](../../resources/Res)_
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1606,10 +1606,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contentTypePNG() : _Res_
+#### _res.contentTypePNG() : _[Res](../../resources/Res)_
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1618,10 +1618,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.contentTypePlain() : _Res_
+#### _res.contentTypePlain() : _[Res](../../resources/Res)_
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1642,7 +1642,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _res.downloadFile(arg0: string) : _Res_
+#### _res.downloadFile(arg0: string) : _[Res](../../resources/Res)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1651,7 +1651,7 @@ Objeto convertido para Values.
 
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -1682,10 +1682,10 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _res.entrySet() : _Set_
+#### _res.entrySet() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -1694,12 +1694,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _res.filter(arg0: _Predicate_) : _[Values](../../objects/Values)_
+#### _res.filter(arg0: _java.util.function.Predicate_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Predicate_ |   |
+| arg0 | _java.util.function.Predicate_ |   |
 
 ##### Retorno
 
@@ -1708,12 +1708,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _res.filter(arg0: _Value_) : _[Values](../../objects/Values)_
+#### _res.filter(arg0: _org.graalvm.polyglot.Value_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1726,13 +1726,13 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _res.find(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _res.find(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1741,30 +1741,30 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _res.find(arg0: _Predicate_) : _Object_
+#### _res.find(arg0: _java.util.function.Predicate_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Predicate_ |   |
+| arg0 | _java.util.function.Predicate_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _res.find(arg0: _Value_) : _Object_
+#### _res.find(arg0: _org.graalvm.polyglot.Value_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1787,12 +1787,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _res.forEach(arg0: _BiConsumer_) : _void_
+#### _res.forEach(arg0: _java.util.function.BiConsumer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BiConsumer_ |   |
+| arg0 | _java.util.function.BiConsumer_ |   |
 
 ##### Retorno
 
@@ -1801,12 +1801,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _res.forEach(arg0: _Consumer_) : _void_
+#### _res.forEach(arg0: _java.util.function.Consumer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Consumer_ |   |
+| arg0 | _java.util.function.Consumer_ |   |
 
 ##### Retorno
 
@@ -1815,12 +1815,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _res.forEach(arg0: _Value_) : _void_
+#### _res.forEach(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1871,12 +1871,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _res.fromJSON(arg0: _Response_) : _[Values](../../objects/Values)_
+#### _res.fromJSON(arg0: _org.netuno.psamata.net.Remote$Response_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Response_ |   |
+| arg0 | _org.netuno.psamata.net.Remote$Response_ |   |
 
 ##### Retorno
 
@@ -1889,45 +1889,45 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _res.get(chave: _int_) : _Object_
+#### _res.get(chave: _int_) : _java.lang.Object_
 ##### Descrição
 
-Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
+Obtém o objeto original associado a chave.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | Chave para obter o objeto associado. |
+| chave | _int_ | Chave para obter o objeto para associado. |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
-Objeto original convertido para o tipo da classe definida.
+Objeto original sem conversões.
 
 ---
 
-#### _res.get(chave: _Object_) : _Object_
+#### _res.get(chave: _java.lang.Object_) : _java.lang.Object_
 ##### Descrição
 
-Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
+Obtém o objeto original associado a chave.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _Object_ | Chave para obter o objeto associado. |
+| chave | _java.lang.Object_ | Chave para obter o objeto para associado. |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
-Objeto original convertido para o tipo da classe definida.
+Objeto original sem conversões.
 
 ---
 
-#### _res.get(chave: string) : _Object_
+#### _res.get(chave: string) : _java.lang.Object_
 ##### Descrição
 
 Obtém o objeto original associado a chave.
@@ -1940,13 +1940,13 @@ Obtém o objeto original associado a chave.
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 Objeto original sem conversões.
 
 ---
 
-#### _res.get(chave: string, tipo: _Class_) : _Object_
+#### _res.get(chave: string, tipo: _java.lang.Class_) : _java.lang.Object_
 ##### Descrição
 
 Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
@@ -1956,11 +1956,11 @@ Obtém o objeto original associado a chave, mas convertido para o tipo da classe
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | chave | string | Chave para obter o objeto associado. |
-| tipo | _Class_ | Classe que representa o tipo de objeto que deve ser convertido (_cast_). |
+| tipo | _java.lang.Class_ | Classe que representa o tipo de objeto que deve ser convertido (_cast_). |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 Objeto original convertido para o tipo da classe definida.
 
@@ -2094,7 +2094,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getCalendar(arg0: string) : _Calendar_
+#### _res.getCalendar(arg0: string) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2103,22 +2103,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
 
-#### _res.getCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### _res.getCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Calendar_ |   |
+| arg1 | _java.util.Calendar_ |   |
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
@@ -2127,7 +2127,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getDate(arg0: string) : _Date_
+#### _res.getDate(arg0: string) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2136,22 +2136,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
 
-#### _res.getDate(arg0: string, arg1: _Date_) : _Date_
+#### _res.getDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.util.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -2362,7 +2362,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getInstant(arg0: string) : _Instant_
+#### _res.getInstant(arg0: string) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2371,22 +2371,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _res.getInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### _res.getInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Instant_ |   |
+| arg1 | _java.time.Instant_ |   |
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -2457,10 +2457,10 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getKeys() : _Set_
+#### _res.getKeys() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -2469,7 +2469,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getList(arg0: _int_) : _List_
+#### _res.getList(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2478,58 +2478,58 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.getList(arg0: _int_, arg1: _Class_) : _List_
+#### _res.getList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.getList(arg0: _int_, arg1: _Object_) : _List_
+#### _res.getList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.getList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+#### _res.getList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.getList(arg0: string) : _List_
+#### _res.getList(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2538,53 +2538,53 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.getList(arg0: string, arg1: _Class_) : _List_
+#### _res.getList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.getList(arg0: string, arg1: _Object_) : _List_
+#### _res.getList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.getList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+#### _res.getList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -2593,7 +2593,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getLocalDate(arg0: string) : _LocalDate_
+#### _res.getLocalDate(arg0: string) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2602,22 +2602,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _res.getLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### _res.getLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDate_ |   |
+| arg1 | _java.time.LocalDate_ |   |
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -2626,7 +2626,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getLocalDateTime(arg0: string) : _LocalDateTime_
+#### _res.getLocalDateTime(arg0: string) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2635,22 +2635,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _res.getLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### _res.getLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDateTime_ |   |
+| arg1 | _java.time.LocalDateTime_ |   |
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -2659,7 +2659,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getLocalTime(arg0: string) : _LocalTime_
+#### _res.getLocalTime(arg0: string) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2668,22 +2668,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _res.getLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### _res.getLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalTime_ |   |
+| arg1 | _java.time.LocalTime_ |   |
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -2754,7 +2754,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getMap(arg0: _int_) : _Map_
+#### _res.getMap(arg0: _int_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2763,27 +2763,27 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _res.getMap(arg0: _int_, arg1: _Object_) : _Map_
+#### _res.getMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _res.getMap(arg0: string) : _Map_
+#### _res.getMap(arg0: string) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2792,22 +2792,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _res.getMap(arg0: string, arg1: _Object_) : _Map_
+#### _res.getMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -2816,17 +2816,17 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getOrDefault(arg0: _Object_, arg1: _Object_) : _Object_
+#### _res.getOrDefault(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -2835,7 +2835,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getSQLDate(arg0: string) : _Date_
+#### _res.getSQLDate(arg0: string) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2844,22 +2844,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
 
-#### _res.getSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### _res.getSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.sql.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
@@ -2868,7 +2868,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getSQLTime(arg0: string) : _Time_
+#### _res.getSQLTime(arg0: string) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2877,22 +2877,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
 
-#### _res.getSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### _res.getSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Time_ |   |
+| arg1 | _java.sql.Time_ |   |
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
@@ -2901,7 +2901,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getSQLTimestamp(arg0: string) : _Timestamp_
+#### _res.getSQLTimestamp(arg0: string) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2910,22 +2910,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
 
-#### _res.getSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### _res.getSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Timestamp_ |   |
+| arg1 | _java.sql.Timestamp_ |   |
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
@@ -3086,7 +3086,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _res.getUID(arg0: string) : _UUID_
+#### _res.getUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3095,12 +3095,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _res.getUID(arg0: string, arg1: string) : _UUID_
+#### _res.getUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3110,22 +3110,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _res.getUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _res.getUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -3151,7 +3151,7 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _res.getUUID(arg0: string) : _UUID_
+#### _res.getUUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3160,12 +3160,12 @@ Código da codificação dos caracteres.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _res.getUUID(arg0: string, arg1: string) : _UUID_
+#### _res.getUUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3175,22 +3175,22 @@ Código da codificação dos caracteres.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _res.getUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _res.getUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -3199,69 +3199,94 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _res.getValues() : _Collection_
+#### _res.getValues() : _java.util.Collection_
+##### Descrição
+
+Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
+
 ##### Retorno
 
-( _Collection_ )
+( _java.util.Collection_ )
 
+Lista de todos os valores obtidos.
 
 ---
 
-#### _res.getValues(arg0: _int_) : _[Values](../../objects/Values)_
+#### _res.getValues(indice: _int_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| indice | _int_ | Índice para obter o objeto associado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _res.getValues(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _res.getValues(indice: _int_, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| indice | _int_ | Índice para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _res.getValues(arg0: string) : _[Values](../../objects/Values)_
+#### _res.getValues(chave: string) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| chave | string | A chave para obter o objeto associado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _res.getValues(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _res.getValues(chave: string, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| chave | string | A chave para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
@@ -3269,12 +3294,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _res.has(arg0: _Object_) : _boolean_
+#### _res.has(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3297,13 +3322,13 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _res.has(arg0: string, arg1: _Object_) : _boolean_
+#### _res.has(arg0: string, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3334,12 +3359,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _res.hasValue(arg0: _Object_) : _boolean_
+#### _res.hasValue(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3364,12 +3389,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _res.indexOf(arg0: _Object_) : _int_
+#### _res.indexOf(arg0: _java.lang.Object_) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3382,12 +3407,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _res.is(arg0: _Object_) : _boolean_
+#### _res.is(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3437,12 +3462,12 @@ Se está ativo a restrição aos ficheiros associados.
 
 ---
 
-#### _res.isList(arg0: _Object_) : _boolean_
+#### _res.isList(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3480,12 +3505,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.isMap(arg0: _Object_) : _boolean_
+#### _res.isMap(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3498,12 +3523,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.isMergeable(arg0: _Object_) : _boolean_
+#### _res.isMergeable(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3516,10 +3541,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.iterator() : _Iterator_
+#### _res.iterator() : _java.util.Iterator_
 ##### Retorno
 
-( _Iterator_ )
+( _java.util.Iterator_ )
 
 
 ---
@@ -3546,10 +3571,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.keySet() : _Set_
+#### _res.keySet() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3558,10 +3583,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.keys() : _Set_
+#### _res.keys() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3570,10 +3595,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.keysSorted() : _Set_
+#### _res.keysSorted() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3596,12 +3621,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.keysToString(arg0: _Map_, arg1: string) : string
+#### _res.keysToString(arg0: _java.util.Map_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -3615,12 +3640,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.lastIndexOf(arg0: _Object_) : _int_
+#### _res.lastIndexOf(arg0: _java.lang.Object_) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3645,24 +3670,24 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.list() : _List_
+#### _res.list() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.list(arg0: _Class_) : _List_
+#### _res.list(arg0: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Class_ |   |
+| arg0 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -3671,15 +3696,15 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.listIterator() : _ListIterator_
+#### _res.listIterator() : _java.util.ListIterator_
 ##### Retorno
 
-( _ListIterator_ )
+( _java.util.ListIterator_ )
 
 
 ---
 
-#### _res.listIterator(arg0: _int_) : _ListIterator_
+#### _res.listIterator(arg0: _int_) : _java.util.ListIterator_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3688,7 +3713,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _ListIterator_ )
+( _java.util.ListIterator_ )
 
 
 ---
@@ -3697,10 +3722,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.listOfValues() : _List_
+#### _res.listOfValues() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -3709,12 +3734,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.loadJSON(arg0: _InputStream_) : _void_
+#### _res.loadJSON(arg0: _java.io.InputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -3723,12 +3748,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.loadJSON(arg0: _Reader_) : _void_
+#### _res.loadJSON(arg0: _java.io.Reader_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Reader_ |   |
+| arg0 | _java.io.Reader_ |   |
 
 ##### Retorno
 
@@ -3741,12 +3766,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.loadProperties(arg0: _InputStream_) : _void_
+#### _res.loadProperties(arg0: _java.io.InputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -3755,12 +3780,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.loadProperties(arg0: _Reader_) : _void_
+#### _res.loadProperties(arg0: _java.io.Reader_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Reader_ |   |
+| arg0 | _java.io.Reader_ |   |
 
 ##### Retorno
 
@@ -3769,12 +3794,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.loadProperties(arg0: _Properties_) : _void_
+#### _res.loadProperties(arg0: _java.util.Properties_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Properties_ |   |
+| arg0 | _java.util.Properties_ |   |
 
 ##### Retorno
 
@@ -3822,10 +3847,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.map() : _Map_
+#### _res.map() : _java.util.Map_
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -3834,12 +3859,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.merge(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _res.merge(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3848,18 +3873,18 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.merge(arg0: _Object_, arg1: _Object_, arg2: _BiFunction_) : _Object_
+#### _res.merge(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -3868,10 +3893,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.noCache() : _Res_
+#### _res.noCache() : _[Res](../../resources/Res)_
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -3880,12 +3905,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.of(arg0: _Object[]_) : _[Values](../../objects/Values)_
+#### _res.of(arg0: _[Ljava.lang.Object;_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Retorno
 
@@ -3894,26 +3919,26 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.of(arg0: _Object_) : _Object_
+#### _res.of(arg0: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _res.of(arg0: _List_) : _[Values](../../objects/Values)_
+#### _res.of(arg0: _java.util.List_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -3922,12 +3947,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.of(arg0: _Map_) : _[Values](../../objects/Values)_
+#### _res.of(arg0: _java.util.Map_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -3940,12 +3965,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.ofList(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _res.ofList(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3958,12 +3983,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.ofMap(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _res.ofMap(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3976,10 +4001,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.out() : _Out_
+#### _res.out() : _[Out](../../resources/Out)_
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -3988,12 +4013,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.push(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _res.push(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4006,32 +4031,32 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.put(arg0: _Object_, arg1: _Object_) : _Object_
+#### _res.put(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _res.put(arg0: string, arg1: _Object_) : _Object_
+#### _res.put(arg0: string, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -4040,12 +4065,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.putAll(arg0: _Map_) : _void_
+#### _res.putAll(arg0: _java.util.Map_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -4058,17 +4083,17 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.putIfAbsent(arg0: _Object_, arg1: _Object_) : _Object_
+#### _res.putIfAbsent(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -4077,7 +4102,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.remove(arg0: _int_) : _Object_
+#### _res.remove(arg0: _int_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4086,32 +4111,32 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _res.remove(arg0: _Object_) : _Object_
+#### _res.remove(arg0: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _res.remove(arg0: _Object_, arg1: _Object_) : _boolean_
+#### _res.remove(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4132,12 +4157,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.removeAll(arg0: _Collection_) : _boolean_
+#### _res.removeAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -4150,29 +4175,29 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.replace(arg0: _Object_, arg1: _Object_) : _Object_
+#### _res.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _res.replace(arg0: _Object_, arg1: _Object_, arg2: _Object_) : _boolean_
+#### _res.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4185,12 +4210,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.replaceAll(arg0: _BiFunction_) : _void_
+#### _res.replaceAll(arg0: _java.util.function.BiFunction_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BiFunction_ |   |
+| arg0 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
@@ -4199,12 +4224,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.replaceAll(arg0: _UnaryOperator_) : _void_
+#### _res.replaceAll(arg0: _java.util.function.UnaryOperator_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _UnaryOperator_ |   |
+| arg0 | _java.util.function.UnaryOperator_ |   |
 
 ##### Retorno
 
@@ -4213,12 +4238,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.replaceAll(arg0: _Value_) : _void_
+#### _res.replaceAll(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -4231,12 +4256,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.retainAll(arg0: _Collection_) : _boolean_
+#### _res.retainAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -4249,12 +4274,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.safeString(arg0: _Object_) : string
+#### _res.safeString(arg0: _java.lang.Object_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4263,12 +4288,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.safeString(arg0: _Object_, arg1: string) : string
+#### _res.safeString(arg0: _java.lang.Object_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -4282,12 +4307,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.saveJSON(arg0: _OutputStream_) : _void_
+#### _res.saveJSON(arg0: _java.io.OutputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _OutputStream_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -4296,12 +4321,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.saveJSON(arg0: _Writer_) : _void_
+#### _res.saveJSON(arg0: _java.io.Writer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| arg0 | _java.io.Writer_ |   |
 
 ##### Retorno
 
@@ -4314,12 +4339,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.saveProperties(arg0: _OutputStream_) : _void_
+#### _res.saveProperties(arg0: _java.io.OutputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _OutputStream_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -4328,12 +4353,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.saveProperties(arg0: _Writer_) : _void_
+#### _res.saveProperties(arg0: _java.io.Writer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| arg0 | _java.io.Writer_ |   |
 
 ##### Retorno
 
@@ -4406,12 +4431,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.search(arg0: _Map_, arg1: string, arg2: string, arg3: _boolean_) : string
+#### _res.search(arg0: _java.util.Map_, arg1: string, arg2: string, arg3: _boolean_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 | arg2 | string |   |
 | arg3 | _boolean_ |   |
@@ -4427,13 +4452,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.set(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _res.set(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4442,13 +4467,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _res.set(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _res.set(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4867,12 +4892,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.sort(arg0: _Comparator_) : _void_
+#### _res.sort(arg0: _java.util.Comparator_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Comparator_ |   |
+| arg0 | _java.util.Comparator_ |   |
 
 ##### Retorno
 
@@ -4881,12 +4906,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.sort(arg0: _Value_) : _void_
+#### _res.sort(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -4899,10 +4924,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.spliterator() : _Spliterator_
+#### _res.spliterator() : _java.util.Spliterator_
 ##### Retorno
 
-( _Spliterator_ )
+( _java.util.Spliterator_ )
 
 
 ---
@@ -4919,7 +4944,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.status(arg0: _int_) : _Res_
+#### _res.status(arg0: _int_) : _[Res](../../resources/Res)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4928,21 +4953,21 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
 
-#### _res.status(arg0: _HTTPStatus_) : _Res_
+#### _res.status(arg0: _org.netuno.proteu.Proteu$HTTPStatus_) : _[Res](../../resources/Res)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _HTTPStatus_ |   |
+| arg0 | _org.netuno.proteu.Proteu$HTTPStatus_ |   |
 
 ##### Retorno
 
-( _Res_ )
+( _[Res](../../resources/Res)_ )
 
 
 ---
@@ -4951,7 +4976,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.subList(arg0: _int_, arg1: _int_) : _List_
+#### _res.subList(arg0: _int_, arg1: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4961,7 +4986,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -4970,24 +4995,24 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toArray() : _Object[]_
+#### _res.toArray() : _[Ljava.lang.Object;_
 ##### Retorno
 
-( _Object[]_ )
+( _[Ljava.lang.Object;_ )
 
 
 ---
 
-#### _res.toArray(arg0: _Object[]_) : _Object[]_
+#### _res.toArray(arg0: _[Ljava.lang.Object;_) : _[Ljava.lang.Object;_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Retorno
 
-( _Object[]_ )
+( _[Ljava.lang.Object;_ )
 
 
 ---
@@ -4996,10 +5021,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toByteArray() : _byte[]_
+#### _res.toByteArray() : _[B_
 ##### Retorno
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -5008,10 +5033,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toDoubleArray() : _double[]_
+#### _res.toDoubleArray() : _[D_
 ##### Retorno
 
-( _double[]_ )
+( _[D_ )
 
 
 ---
@@ -5020,10 +5045,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toFloatArray() : _float[]_
+#### _res.toFloatArray() : _[F_
 ##### Retorno
 
-( _float[]_ )
+( _[F_ )
 
 
 ---
@@ -5073,10 +5098,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toIntArray() : _int[]_
+#### _res.toIntArray() : _[I_
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 
 ---
@@ -5136,12 +5161,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toJSON(arg0: _List_) : string
+#### _res.toJSON(arg0: _java.util.List_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -5150,12 +5175,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toJSON(arg0: _List_, arg1: _boolean_) : string
+#### _res.toJSON(arg0: _java.util.List_, arg1: _boolean_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _boolean_ |   |
 
 ##### Retorno
@@ -5165,12 +5190,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toJSON(arg0: _List_, arg1: _boolean_, arg2: _int_) : string
+#### _res.toJSON(arg0: _java.util.List_, arg1: _boolean_, arg2: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _boolean_ |   |
 | arg2 | _int_ |   |
 
@@ -5181,12 +5206,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toJSON(arg0: _List_, arg1: _int_) : string
+#### _res.toJSON(arg0: _java.util.List_, arg1: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _int_ |   |
 
 ##### Retorno
@@ -5200,17 +5225,17 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toJSONObject(arg0: _Object_, arg1: _boolean_) : _Object_
+#### _res.toJSONObject(arg0: _java.lang.Object_, arg1: _boolean_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | _boolean_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -5219,12 +5244,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toJSONString(arg0: _Object_, arg1: _boolean_, arg2: _int_) : string
+#### _res.toJSONString(arg0: _java.lang.Object_, arg1: _boolean_, arg2: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | _boolean_ |   |
 | arg2 | _int_ |   |
 
@@ -5239,24 +5264,24 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toList() : _List_
+#### _res.toList() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _res.toList(arg0: _Class_) : _List_
+#### _res.toList(arg0: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Class_ |   |
+| arg0 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -5265,10 +5290,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toLongArray() : _long[]_
+#### _res.toLongArray() : _[J_
 ##### Retorno
 
-( _long[]_ )
+( _[J_ )
 
 
 ---
@@ -5277,10 +5302,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toMap() : _Map_
+#### _res.toMap() : _java.util.Map_
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -5301,10 +5326,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toShortArray() : _short[]_
+#### _res.toShortArray() : _[S_
 ##### Retorno
 
-( _short[]_ )
+( _[S_ )
 
 
 ---
@@ -5313,10 +5338,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.toStringArray() : _String[]_
+#### _res.toStringArray() : _[Ljava.lang.String;_
 ##### Retorno
 
-( _String[]_ )
+( _[Ljava.lang.String;_ )
 
 
 ---
@@ -5325,7 +5350,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.unset(arg0: string) : _Object_
+#### _res.unset(arg0: string) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5334,7 +5359,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -5355,11 +5380,16 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.values() : _Collection_
+#### _res.values() : _java.util.Collection_
+##### Descrição
+
+Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
+
 ##### Retorno
 
-( _Collection_ )
+( _java.util.Collection_ )
 
+Lista de todos os valores obtidos.
 
 ---
 
@@ -5381,13 +5411,13 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.valuesToString(arg0: string, arg1: _String[]_) : string
+#### _res.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _String[]_ |   |
+| arg1 | _[Ljava.lang.String;_ |   |
 
 ##### Retorno
 
@@ -5396,13 +5426,13 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.valuesToString(arg0: string, arg1: _String[]_, arg2: _[Values](../../objects/Values)_) : string
+#### _res.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_, arg2: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _String[]_ |   |
+| arg1 | _[Ljava.lang.String;_ |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
@@ -5427,12 +5457,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.valuesToString(arg0: _Map_, arg1: string) : string
+#### _res.valuesToString(arg0: _java.util.Map_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -5442,14 +5472,14 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_) : string
+#### _res.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
-| arg2 | _String[]_ |   |
+| arg2 | _[Ljava.lang.String;_ |   |
 
 ##### Retorno
 
@@ -5458,14 +5488,14 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_, arg3: _[Values](../../objects/Values)_) : string
+#### _res.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_, arg3: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
-| arg2 | _String[]_ |   |
+| arg2 | _[Ljava.lang.String;_ |   |
 | arg3 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
@@ -5475,12 +5505,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _res.valuesToString(arg0: _Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
+#### _res.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 

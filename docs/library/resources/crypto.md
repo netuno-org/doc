@@ -152,7 +152,7 @@ Data of the content encrypted in bcryptSalt.
 
 ---
 
-#### _crypto.bcryptSalt(content: _int_, secureRandom: _SecureRandom_) : string
+#### _crypto.bcryptSalt(content: _int_, secureRandom: _java.security.SecureRandom_) : string
 ##### Description
 
 Encodes data with bcryptSalt.
@@ -162,7 +162,7 @@ Encodes data with bcryptSalt.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | content | _int_ | Content to be encrypted. |
-| secureRandom | _SecureRandom_ | Random value generated with initSecure. |
+| secureRandom | _java.security.SecureRandom_ | Random value generated with initSecure. |
 
 ##### Return
 
@@ -176,7 +176,7 @@ Data of the content encrypted in bcryptSalt.
 
 ---
 
-#### _crypto.cryptHash(content: _byte[]_) : string
+#### _crypto.cryptHash(content: _[B_) : string
 ##### Description
 
 Encodes data with cryptHash.
@@ -185,7 +185,7 @@ Encodes data with cryptHash.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| content | _[B_ | Content to be encrypted. |
 
 ##### Return
 
@@ -195,7 +195,7 @@ Data of the content encrypted cryptHash.
 
 ---
 
-#### _crypto.cryptHash(content: _byte[]_, salt: string) : string
+#### _crypto.cryptHash(content: _[B_, salt: string) : string
 ##### Description
 
 Encodes data with cryptHash.
@@ -204,7 +204,7 @@ Encodes data with cryptHash.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| content | _[B_ | Content to be encrypted. |
 | salt | string | Salt Hash to be used in encryption. |
 
 ##### Return
@@ -258,7 +258,7 @@ Data of the content encrypted cryptHash.
 
 ---
 
-#### _crypto.desDecode(content: string, data: _byte[]_) : string
+#### _crypto.desDecode(content: string, data: _[B_) : string
 ##### Description
 
 Encodes data with Desdecode (Des).
@@ -268,7 +268,7 @@ Encodes data with Desdecode (Des).
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | content | string | Content to be encrypted. |
-| data | _byte[]_ | Data to be encrypted. |
+| data | _[B_ | Data to be encrypted. |
 
 ##### Return
 
@@ -278,7 +278,7 @@ Binary data of the content encrypted in Desdecode (Des).
 
 ---
 
-#### _crypto.desDecode(content: string, data: _byte[]_, charset: string) : string
+#### _crypto.desDecode(content: string, data: _[B_, charset: string) : string
 ##### Description
 
 Encodes data with Desdecode (Des).
@@ -288,7 +288,7 @@ Encodes data with Desdecode (Des).
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | content | string | Content to be encrypted. |
-| data | _byte[]_ | Data to be encrypted. |
+| data | _[B_ | Data to be encrypted. |
 | charset | string | Charset. |
 
 ##### Return
@@ -328,7 +328,7 @@ Binary data of the content encrypted in Desdecode (Des) and coverted in base 64.
 
 ---
 
-#### _crypto.desEncode(key: string, content: string) : _byte[]_
+#### _crypto.desEncode(key: string, content: string) : _[B_
 ##### Description
 
 Encodes data with desEncode and returns binary encryption.
@@ -342,25 +342,30 @@ Encodes data with desEncode and returns binary encryption.
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Binary data of the content encrypted in desEncode.
 
 ---
 
-#### _crypto.desEncode(arg0: string, arg1: string, arg2: string) : _byte[]_
+#### _crypto.desEncode(key: string, content: string, charset: string) : _[B_
+##### Description
+
+Encodes data with desEncode and returns binary encryption.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| key | string | Secret key for encryption. |
+| content | string | Content to be encrypted. |
+| charset | string | Charset. |
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
+Binary data of the content encrypted in desEncode.
 
 ---
 
@@ -393,7 +398,7 @@ String data of the content encrypted in desEncode.
 
 ---
 
-#### _crypto.hmac256(key: _byte[]_, content: _byte[]_) : _byte[]_
+#### _crypto.hmac256(key: _[B_, content: _[B_) : _[B_
 ##### Description
 
 It encodes the data with HMAC256, which serves to guarantee integrity and authenticity.
@@ -402,18 +407,18 @@ It encodes the data with HMAC256, which serves to guarantee integrity and authen
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _byte[]_ | Secret key for encryption. |
-| content | _byte[]_ | Content to be encoded with HMAC256. |
+| key | _[B_ | Secret key for encryption. |
+| content | _[B_ | Content to be encoded with HMAC256. |
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Data encoded with HMAC256.
 
 ---
 
-#### _crypto.hmac256(key: string, content: string) : _byte[]_
+#### _crypto.hmac256(key: string, content: string) : _[B_
 ##### Description
 
 It encodes the data with HMAC256, which serves to guarantee integrity and authenticity.
@@ -427,7 +432,7 @@ It encodes the data with HMAC256, which serves to guarantee integrity and authen
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Data encoded with HMAC256.
 
@@ -437,7 +442,7 @@ Data encoded with HMAC256.
 
 ---
 
-#### _crypto.hmac256Base64(key: _byte[]_, content: _byte[]_) : string
+#### _crypto.hmac256Base64(key: _[B_, content: _[B_) : string
 ##### Description
 
 Encodes data with HMAC256 and converts to Base64, which serves to guarantee integrity and authenticity.
@@ -446,8 +451,8 @@ Encodes data with HMAC256 and converts to Base64, which serves to guarantee inte
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _byte[]_ | Secret key for encryption. |
-| content | _byte[]_ | Content to be encoded with HMAC256. |
+| key | _[B_ | Secret key for encryption. |
+| content | _[B_ | Content to be encoded with HMAC256. |
 
 ##### Return
 
@@ -481,7 +486,7 @@ Data encoded with HMAC256 and in Base64 format.
 
 ---
 
-#### _crypto.hmac256Hex(key: _byte[]_, content: _byte[]_) : string
+#### _crypto.hmac256Hex(key: _[B_, content: _[B_) : string
 ##### Description
 
 Encodes data with HMAC256 and converts to hexadecimal, which serves to guarantee integrity and authenticity.
@@ -490,8 +495,8 @@ Encodes data with HMAC256 and converts to hexadecimal, which serves to guarantee
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _byte[]_ | Secret key for encryption. |
-| content | _byte[]_ | Content to be encoded with HMAC256. |
+| key | _[B_ | Secret key for encryption. |
+| content | _[B_ | Content to be encoded with HMAC256. |
 
 ##### Return
 
@@ -525,7 +530,7 @@ Data encoded with HMAC256 and in hexadecimal format.
 
 ---
 
-#### _crypto.md5(content: string) : _byte[]_
+#### _crypto.md5(content: string) : _[B_
 ##### Description
 
 Encodes data with MD5 and returns 128-bit encryption.
@@ -538,7 +543,7 @@ Encodes data with MD5 and returns 128-bit encryption.
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Data of the content encrypted in MD5.
 
@@ -594,7 +599,7 @@ Data of the content encrypted in MD5 and converted in hexadecimal format.
 
 ---
 
-#### _crypto.sha256(content: _byte[]_) : string
+#### _crypto.sha256(content: _[B_) : string
 ##### Description
 
 Encodes data with SHA256 (SHA-2) and converts binary encryption to hexadecimal.
@@ -603,7 +608,7 @@ Encodes data with SHA256 (SHA-2) and converts binary encryption to hexadecimal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| content | _[B_ | Content to be encrypted. |
 
 ##### Return
 
@@ -636,7 +641,7 @@ Content encrypted in SHA256 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha256AsBytes(content: _byte[]_) : _byte[]_
+#### _crypto.sha256AsBytes(content: _[B_) : _[B_
 ##### Description
 
 Encodes data with SHA256 (SHA-2) and returns binary encryption.
@@ -645,17 +650,17 @@ Encodes data with SHA256 (SHA-2) and returns binary encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| content | _[B_ | Content to be encrypted. |
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Binary data of the content encrypted in SHA256 (SHA-2).
 
 ---
 
-#### _crypto.sha256AsBytes(content: string) : _byte[]_
+#### _crypto.sha256AsBytes(content: string) : _[B_
 ##### Description
 
 Encodes data with SHA256 (SHA-2) and returns binary encryption.
@@ -668,7 +673,7 @@ Encodes data with SHA256 (SHA-2) and returns binary encryption.
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Binary data of the content encrypted in SHA256 (SHA-2).
 
@@ -678,7 +683,7 @@ Binary data of the content encrypted in SHA256 (SHA-2).
 
 ---
 
-#### _crypto.sha384(content: _byte[]_) : string
+#### _crypto.sha384(content: _[B_) : string
 ##### Description
 
 Encodes data with SHA384 (SHA-2) and converts binary encryption to hexadecimal.
@@ -687,7 +692,7 @@ Encodes data with SHA384 (SHA-2) and converts binary encryption to hexadecimal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| content | _[B_ | Content to be encrypted. |
 
 ##### Return
 
@@ -720,7 +725,7 @@ Content encrypted in SHA384 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha384AsBytes(content: _byte[]_) : _byte[]_
+#### _crypto.sha384AsBytes(content: _[B_) : _[B_
 ##### Description
 
 Encodes data with SHA384 (SHA-2) and returns binary encryption.
@@ -729,17 +734,17 @@ Encodes data with SHA384 (SHA-2) and returns binary encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| content | _[B_ | Content to be encrypted. |
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Binary data of the content encrypted in SHA384 (SHA-2).
 
 ---
 
-#### _crypto.sha384AsBytes(content: string) : _byte[]_
+#### _crypto.sha384AsBytes(content: string) : _[B_
 ##### Description
 
 Encodes data with SHA384 (SHA-2) and returns binary encryption.
@@ -752,7 +757,7 @@ Encodes data with SHA384 (SHA-2) and returns binary encryption.
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Binary data of the content encrypted in SHA384 (SHA-2).
 
@@ -762,7 +767,7 @@ Binary data of the content encrypted in SHA384 (SHA-2).
 
 ---
 
-#### _crypto.sha512(content: _byte[]_) : string
+#### _crypto.sha512(content: _[B_) : string
 ##### Description
 
 Encodes data with SHA512 (SHA-2) and converts binary encryption to hexadecimal.
@@ -771,7 +776,7 @@ Encodes data with SHA512 (SHA-2) and converts binary encryption to hexadecimal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| content | _[B_ | Content to be encrypted. |
 
 ##### Return
 
@@ -804,7 +809,7 @@ Content encrypted in SHA512 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha512AsBytes(content: _byte[]_) : _byte[]_
+#### _crypto.sha512AsBytes(content: _[B_) : _[B_
 ##### Description
 
 Encodes data with SHA512 (SHA-2) and returns binary encryption.
@@ -813,17 +818,17 @@ Encodes data with SHA512 (SHA-2) and returns binary encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| content | _[B_ | Content to be encrypted. |
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Binary data of the content encrypted in SHA512 (SHA-2).
 
 ---
 
-#### _crypto.sha512AsBytes(content: string) : _byte[]_
+#### _crypto.sha512AsBytes(content: string) : _[B_
 ##### Description
 
 Encodes data with SHA512 (SHA-512) and returns binary encryption.
@@ -836,7 +841,7 @@ Encodes data with SHA512 (SHA-512) and returns binary encryption.
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Binary data of the content encrypted in SHA512 (SHA-2).
 

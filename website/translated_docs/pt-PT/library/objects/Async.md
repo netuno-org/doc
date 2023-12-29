@@ -38,15 +38,15 @@ Orquestra os modos de execução assíncrona.
 
 ---
 
-#### invokeAll() : _List_
+#### invokeAll() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### invokeAll(arg0: _long_) : _List_
+#### invokeAll(arg0: _long_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -55,7 +55,7 @@ Orquestra os modos de execução assíncrona.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -64,15 +64,15 @@ Orquestra os modos de execução assíncrona.
 
 ---
 
-#### invokeAny() : _Object_
+#### invokeAny() : _java.lang.Object_
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### invokeAny(arg0: _long_) : _Object_
+#### invokeAny(arg0: _long_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -81,7 +81,7 @@ Orquestra os modos de execução assíncrona.
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -90,10 +90,10 @@ Orquestra os modos de execução assíncrona.
 
 ---
 
-#### start() : _Async_
+#### start() : _[Async](../../objects/Async)_
 ##### Retorno
 
-( _Async_ )
+( _[Async](../../objects/Async)_ )
 
 
 ---
@@ -102,10 +102,10 @@ Orquestra os modos de execução assíncrona.
 
 ---
 
-#### stop() : _Async_
+#### stop() : _[Async](../../objects/Async)_
 ##### Retorno
 
-( _Async_ )
+( _[Async](../../objects/Async)_ )
 
 
 ---

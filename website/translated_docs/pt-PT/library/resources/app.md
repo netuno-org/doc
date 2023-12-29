@@ -352,19 +352,19 @@ Retorna as definições customizadas.
 #### _app.getUrl() : string
 ##### Descrição
 
-Obtém o prefixo da URL definido na configuração, como um prefixo de URL customizado.
+Obtém o url da aplicação.
 
 ##### Como Usar
 
 ```javascript
-const urlCustom = _app.url('nome-da-minha-url-configurada');
+const urlDaApp = _app.url();
 ```
 
 ##### Retorno
 
 ( string )
 
-Retorna o prefixo da localização definida na configuração.
+Retorna a URL da aplicação.
 
 ---
 

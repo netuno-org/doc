@@ -40,15 +40,15 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### bufferedReader() : _BufferedReader_
+#### bufferedReader() : _java.io.BufferedReader_
 ##### Return
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
 
-#### bufferedReader(arg0: _int_) : _BufferedReader_
+#### bufferedReader(arg0: _int_) : _java.io.BufferedReader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -57,12 +57,12 @@ Returns the number of estimated bytes left to read a file
 
 ##### Return
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
 
-#### bufferedReader(arg0: _int_, arg1: string) : _BufferedReader_
+#### bufferedReader(arg0: _int_, arg1: string) : _java.io.BufferedReader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -72,27 +72,27 @@ Returns the number of estimated bytes left to read a file
 
 ##### Return
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
 
-#### bufferedReader(arg0: _int_, arg1: _Charset_) : _BufferedReader_
+#### bufferedReader(arg0: _int_, arg1: _java.nio.charset.Charset_) : _java.io.BufferedReader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Charset_ |   |
+| arg1 | _java.nio.charset.Charset_ |   |
 
 ##### Return
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
 
-#### bufferedReader(arg0: string) : _BufferedReader_
+#### bufferedReader(arg0: string) : _java.io.BufferedReader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -101,21 +101,21 @@ Returns the number of estimated bytes left to read a file
 
 ##### Return
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
 
-#### bufferedReader(arg0: _Charset_) : _BufferedReader_
+#### bufferedReader(arg0: _java.nio.charset.Charset_) : _java.io.BufferedReader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Charset_ |   |
+| arg0 | _java.nio.charset.Charset_ |   |
 
 ##### Return
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
@@ -124,14 +124,14 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### bytes() : _byte[]_
+#### bytes() : _[B_
 ##### Description
 
 Returns the number of estimated bytes left to read a file
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -300,7 +300,7 @@ Deletes a file of a inserted extension and recursive all the subs
 
 ---
 
-#### ensureJail(arg0: string) : _File_
+#### ensureJail(arg0: string) : _[File](../../objects/File)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -309,7 +309,7 @@ Deletes a file of a inserted extension and recursive all the subs
 
 ##### Return
 
-( _File_ )
+( _[File](../../objects/File)_ )
 
 
 ---
@@ -378,14 +378,14 @@ Returns the base name of the present file
 
 ---
 
-#### getBytes() : _byte[]_
+#### getBytes() : _[B_
 ##### Description
 
 Returns the number of estimated bytes left to read a file
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -434,14 +434,14 @@ Returns the full path until the present file
 
 ---
 
-#### getInputStream() : _InputStream_
+#### getInputStream() : _java.io.InputStream_
 ##### Description
 
 Returns the number of estimated bytes
 
 ##### Return
 
-( _InputStream_ )
+( _java.io.InputStream_ )
 
 
 ---
@@ -484,10 +484,10 @@ Returns the name of a file in the inserted path
 
 ---
 
-#### getOutputStream() : _OutputStream_
+#### getOutputStream() : _java.io.OutputStream_
 ##### Return
 
-( _OutputStream_ )
+( _java.io.OutputStream_ )
 
 
 ---
@@ -524,7 +524,7 @@ Returns the path
 
 ---
 
-#### getSequenceName(targetPath: _File_, fileName: string) : string
+#### getSequenceName(targetPath: _java.io.File_, fileName: string) : string
 ##### Description
 
 Returns the name of the inserted file with a sequence number if the file already exists with the original name
@@ -533,7 +533,7 @@ Returns the name of the inserted file with a sequence number if the file already
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| targetPath | _File_ | Path to the file/directory. |
+| targetPath | _java.io.File_ | Path to the file/directory. |
 | fileName | string | Name of the file. |
 
 ##### Return
@@ -566,10 +566,10 @@ Returns the name of the inserted file with a sequence number if the file already
 
 ---
 
-#### input() : _InputStream_
+#### input() : _[InputStream](../../objects/InputStream)_
 ##### Return
 
-( _InputStream_ )
+( _[InputStream](../../objects/InputStream)_ )
 
 
 ---
@@ -578,10 +578,10 @@ Returns the name of the inserted file with a sequence number if the file already
 
 ---
 
-#### inputStream() : _InputStream_
+#### inputStream() : _java.io.InputStream_
 ##### Return
 
-( _InputStream_ )
+( _java.io.InputStream_ )
 
 
 ---
@@ -690,14 +690,14 @@ Returns the hour that the file of the inserted path was last modified
 
 ---
 
-#### list() : _List_
+#### list() : _java.util.List_
 ##### Description
 
 Returns a list of all the files and directories on the inserted path
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -750,10 +750,10 @@ Returns the name of a file
 
 ---
 
-#### output() : _OutputStream_
+#### output() : _[OutputStream](../../objects/OutputStream)_
 ##### Return
 
-( _OutputStream_ )
+( _[OutputStream](../../objects/OutputStream)_ )
 
 
 ---
@@ -762,10 +762,10 @@ Returns the name of a file
 
 ---
 
-#### outputStream() : _OutputStream_
+#### outputStream() : _java.io.OutputStream_
 ##### Return
 
-( _OutputStream_ )
+( _java.io.OutputStream_ )
 
 
 ---
@@ -807,10 +807,10 @@ Allows to get the path of the file.
 
 ---
 
-#### reader() : _Reader_
+#### reader() : _java.io.Reader_
 ##### Return
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 
 ---
@@ -819,15 +819,15 @@ Allows to get the path of the file.
 
 ---
 
-#### readerBOM() : _Reader_
+#### readerBOM() : _java.io.Reader_
 ##### Return
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 
 ---
 
-#### readerBOM(arg0: string) : _Reader_
+#### readerBOM(arg0: string) : _java.io.Reader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -836,7 +836,7 @@ Allows to get the path of the file.
 
 ##### Return
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 
 ---
@@ -889,7 +889,7 @@ Renames the file of the inserted file
 
 ---
 
-#### save(path: _Object_) : _void_
+#### save(path: _java.lang.Object_) : _void_
 ##### Description
 
 Saves the file in the inserted path
@@ -898,7 +898,7 @@ Saves the file in the inserted path
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | _Object_ | Path of the file. |
+| path | _java.lang.Object_ | Path of the file. |
 
 ##### Return
 
@@ -929,12 +929,12 @@ Saves the file in the inserted path
 
 ---
 
-#### sequenceName(arg0: _File_, arg1: string) : string
+#### sequenceName(arg0: _java.io.File_, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _File_ |   |
+| arg0 | _java.io.File_ |   |
 | arg1 | string |   |
 
 ##### Return
@@ -963,10 +963,10 @@ Saves the file in the inserted path
 
 ---
 
-#### writer() : _Writer_
+#### writer() : _java.io.Writer_
 ##### Return
 
-( _Writer_ )
+( _java.io.Writer_ )
 
 
 ---

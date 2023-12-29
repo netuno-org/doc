@@ -13,7 +13,7 @@ Allows you to manage multiple origins and their headers.
 
 ---
 
-#### _cors.add(config: _[Values](../../objects/Values)_) : _CORS_
+#### _cors.add(config: _[Values](../../objects/Values)_) : _[CORS](../../resources/CORS)_
 ##### Description
 
 Adds the settings for a new CORS definition.
@@ -26,7 +26,7 @@ Adds the settings for a new CORS definition.
 
 ##### Return
 
-( _CORS_ )
+( _[CORS](../../resources/CORS)_ )
 
 Current CORS instance.
 
@@ -93,14 +93,14 @@ If the origin is enabled.
 
 ---
 
-#### _cors.load() : _CORS_
+#### _cors.load() : _[CORS](../../resources/CORS)_
 ##### Description
 
 Performs source verification and makes header definitions in the HTTP request response.
 
 ##### Return
 
-( _CORS_ )
+( _[CORS](../../resources/CORS)_ )
 
 Current CORS instance.
 
@@ -110,7 +110,7 @@ Current CORS instance.
 
 ---
 
-#### _cors.removeOrigin(origin: string) : _CORS_
+#### _cors.removeOrigin(origin: string) : _[CORS](../../resources/CORS)_
 ##### Description
 
 Removes the origin in every configuration it exists.
@@ -123,7 +123,7 @@ Removes the origin in every configuration it exists.
 
 ##### Return
 
-( _CORS_ )
+( _[CORS](../../resources/CORS)_ )
 
 If the origin was successfully disabled.
 

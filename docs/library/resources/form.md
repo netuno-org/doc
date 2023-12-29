@@ -12,10 +12,10 @@ Application form generator programmatically.
 
 ---
 
-#### _form.all() : _List_
+#### _form.all() : _java.util.List_
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -174,7 +174,7 @@ Application form generator programmatically.
 
 ---
 
-#### _form.getAllComponents(arg0: _int_) : _List_
+#### _form.getAllComponents(arg0: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -183,12 +183,12 @@ Application form generator programmatically.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _form.getAllComponents(arg0: string) : _List_
+#### _form.getAllComponents(arg0: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -197,7 +197,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -300,7 +300,7 @@ Application form generator programmatically.
 
 ---
 
-#### _form.notNulls(arg0: _int_) : _List_
+#### _form.notNulls(arg0: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -309,12 +309,12 @@ Application form generator programmatically.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _form.notNulls(arg0: string) : _List_
+#### _form.notNulls(arg0: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -323,7 +323,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -332,7 +332,7 @@ Application form generator programmatically.
 
 ---
 
-#### _form.primaryKeys(arg0: _int_) : _List_
+#### _form.primaryKeys(arg0: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -341,12 +341,12 @@ Application form generator programmatically.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _form.primaryKeys(arg0: string) : _List_
+#### _form.primaryKeys(arg0: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -355,7 +355,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---

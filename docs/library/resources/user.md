@@ -12,7 +12,7 @@ Management of the users of the application and obtaining the data of the authent
 
 ---
 
-#### _user.all() : _List_
+#### _user.all() : _java.util.List_
 ##### Description
 
 Gets the list of data for all users.
@@ -26,7 +26,7 @@ _out.json(_user.all())
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 List of all data for all users.
 
@@ -36,7 +36,7 @@ List of all data for all users.
 
 ---
 
-#### _user.allByCode(code: string) : _List_
+#### _user.allByCode(code: string) : _java.util.List_
 ##### Description
 
 Gets all users from the alternative code.
@@ -59,7 +59,7 @@ for (const user of users) {
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 List of users found for the alternative code.
 
@@ -668,7 +668,7 @@ It was successfully deleted.
 
 ---
 
-#### _user.search(term: string) : _List_
+#### _user.search(term: string) : _java.util.List_
 ##### Description
 
 Searches for users who have an occurrence in the data with the past search text.
@@ -691,7 +691,7 @@ for (const user of users) {
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 List of user data found.
 
@@ -855,10 +855,10 @@ UUID (universal unique identifier) of the logged in user.
 
 ---
 
-#### _user.update(userData: _int_, changePassword: _[Values](../../objects/Values)_) : _boolean_
+#### _user.update(id: _int_, userData: _[Values](../../objects/Values)_) : _boolean_
 ##### Description
 
-Updates user data for the ID defined in the passed data structure.
+Updates user data for the past ID.
 
 ##### How To Use
 
@@ -867,6 +867,7 @@ Updates user data for the ID defined in the passed data structure.
 const userData = _user.firstByMail("user.mail@example.com")
 userData.set("pass", "NewSecretPassword123")
 _user.update(
+    userData.getInt("id"),
     userData,
     true
 )
@@ -876,8 +877,8 @@ _user.update(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| userData | _int_ | User data to update the information stored in the database. |
-| changePassword | _[Values](../../objects/Values)_ | Whether to change the password or password. |
+| id | _int_ | The user's ID (numeric identifier). |
+| userData | _[Values](../../objects/Values)_ | User data to update the information stored in the database. |
 
 ##### Return
 

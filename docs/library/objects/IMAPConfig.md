@@ -192,7 +192,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setAuthMechanisms(arg0: string) : _IMAPConfig_
+#### setAuthMechanisms(arg0: string) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -201,7 +201,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -210,7 +210,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setAuthNTLMDomain(arg0: string) : _IMAPConfig_
+#### setAuthNTLMDomain(arg0: string) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -219,7 +219,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -228,7 +228,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setDebug(arg0: _boolean_) : _IMAPConfig_
+#### setDebug(arg0: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -237,7 +237,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -246,7 +246,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setEnabled(arg0: _boolean_) : _IMAPConfig_
+#### setEnabled(arg0: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -255,7 +255,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -264,7 +264,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setHost(arg0: string) : _IMAPConfig_
+#### setHost(arg0: string) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -273,7 +273,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -282,7 +282,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setPassword(arg0: string) : _IMAPConfig_
+#### setPassword(arg0: string) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -291,7 +291,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -300,7 +300,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setPort(arg0: _int_) : _IMAPConfig_
+#### setPort(arg0: _int_) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -309,7 +309,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -318,7 +318,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setProtocol(arg0: string) : _IMAPConfig_
+#### setProtocol(arg0: string) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -327,7 +327,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -336,7 +336,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setQuitWait(arg0: _boolean_) : _IMAPConfig_
+#### setQuitWait(arg0: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -345,7 +345,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -354,7 +354,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setSSL(arg0: _boolean_) : _IMAPConfig_
+#### setSSL(arg0: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -363,7 +363,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -372,7 +372,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setSocketFactoryClass(arg0: string) : _IMAPConfig_
+#### setSocketFactoryClass(arg0: string) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -381,7 +381,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -390,7 +390,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setSocketFactoryFallback(arg0: _boolean_) : _IMAPConfig_
+#### setSocketFactoryFallback(arg0: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -399,7 +399,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -408,7 +408,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setSocketFactoryPort(arg0: _int_) : _IMAPConfig_
+#### setSocketFactoryPort(arg0: _int_) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -417,7 +417,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -426,7 +426,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setTLS(arg0: _boolean_) : _IMAPConfig_
+#### setTLS(arg0: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -435,7 +435,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---
@@ -444,7 +444,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setUsername(arg0: string) : _IMAPConfig_
+#### setUsername(arg0: string) : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -453,7 +453,7 @@ Definição da configuração do IMAP.
 
 ##### Return
 
-( _IMAPConfig_ )
+( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 
 ---

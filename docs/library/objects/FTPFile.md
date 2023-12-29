@@ -84,10 +84,10 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### getTimestamp() : _Calendar_
+#### getTimestamp() : _java.util.Calendar_
 ##### Return
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
@@ -96,10 +96,10 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### getTimestampInstant() : _Instant_
+#### getTimestampInstant() : _java.time.Instant_
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -288,7 +288,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroup(arg0: string) : _FTPFile_
+#### setGroup(arg0: string) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -297,7 +297,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -306,7 +306,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroupExecutable(arg0: _boolean_) : _FTPFile_
+#### setGroupExecutable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -315,7 +315,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -324,7 +324,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroupReadable(arg0: _boolean_) : _FTPFile_
+#### setGroupReadable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -333,7 +333,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -342,7 +342,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroupWritable(arg0: _boolean_) : _FTPFile_
+#### setGroupWritable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -351,7 +351,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -360,7 +360,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setHardLinkCount(arg0: _int_) : _FTPFile_
+#### setHardLinkCount(arg0: _int_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -369,7 +369,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -378,7 +378,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setLink(arg0: string) : _FTPFile_
+#### setLink(arg0: string) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -387,7 +387,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -396,7 +396,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setName(arg0: string) : _FTPFile_
+#### setName(arg0: string) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -405,7 +405,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -414,7 +414,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setRawListing(arg0: string) : _FTPFile_
+#### setRawListing(arg0: string) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -423,7 +423,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -432,7 +432,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setSize(arg0: _long_) : _FTPFile_
+#### setSize(arg0: _long_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -441,7 +441,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -450,16 +450,16 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setTimestamp(arg0: _Calendar_) : _FTPFile_
+#### setTimestamp(arg0: _java.util.Calendar_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Calendar_ |   |
+| arg0 | _java.util.Calendar_ |   |
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -468,7 +468,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUser(arg0: string) : _FTPFile_
+#### setUser(arg0: string) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -477,7 +477,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -486,7 +486,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUserExecutable(arg0: _boolean_) : _FTPFile_
+#### setUserExecutable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -495,7 +495,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -504,7 +504,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUserReadable(arg0: _boolean_) : _FTPFile_
+#### setUserReadable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -513,7 +513,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -522,7 +522,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUserWritable(arg0: _boolean_) : _FTPFile_
+#### setUserWritable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -531,7 +531,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -540,7 +540,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setWorldExecutable(arg0: _boolean_) : _FTPFile_
+#### setWorldExecutable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -549,7 +549,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -558,7 +558,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setWorldReadable(arg0: _boolean_) : _FTPFile_
+#### setWorldReadable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -567,7 +567,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -576,7 +576,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setWorldWritable(arg0: _boolean_) : _FTPFile_
+#### setWorldWritable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -585,7 +585,7 @@ Os dados referente a um ficheiro FTP.
 
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -594,10 +594,10 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### toDirectory() : _FTPFile_
+#### toDirectory() : _[FTPFile](../../objects/FTPFile)_
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -606,10 +606,10 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### toFile() : _FTPFile_
+#### toFile() : _[FTPFile](../../objects/FTPFile)_
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -644,10 +644,10 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### toSymbolicLink() : _FTPFile_
+#### toSymbolicLink() : _[FTPFile](../../objects/FTPFile)_
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---
@@ -656,10 +656,10 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### toUnknown() : _FTPFile_
+#### toUnknown() : _[FTPFile](../../objects/FTPFile)_
 ##### Return
 
-( _FTPFile_ )
+( _[FTPFile](../../objects/FTPFile)_ )
 
 
 ---

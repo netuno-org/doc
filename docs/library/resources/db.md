@@ -31,7 +31,7 @@ const OK = _db.query(
 
 ---
 
-#### _db.all(table: string) : _List_
+#### _db.all(table: string) : _java.util.List_
 ##### Description
 
 Selects all the data from a table.
@@ -50,7 +50,7 @@ _db.all('client');
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 The data found on the table or null if it does not exist.
 
@@ -207,20 +207,20 @@ Configuration of the connection to the database being used.
 
 ---
 
-#### _db.date() : _Date_
+#### _db.date() : _java.sql.Date_
 ##### Description
 
 Gets the current date to be used in database operations.
 
 ##### Return
 
-( _Date_ )
+( _java.sql.Date_ )
 
 Current date.
 
 ---
 
-#### _db.date(time: _Long_) : _Date_
+#### _db.date(time: _java.lang.Long_) : _java.sql.Date_
 ##### Description
 
 Through the long number that identifies the exact date, it creates a new Date object to be used in database operations.
@@ -229,17 +229,17 @@ Through the long number that identifies the exact date, it creates a new Date ob
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| time | _Long_ | Long number for the exact date. |
+| time | _java.lang.Long_ | Long number for the exact date. |
 
 ##### Return
 
-( _Date_ )
+( _java.sql.Date_ )
 
 New object of type: _java.sql.Date_
 
 ---
 
-#### _db.date(text: string) : _Date_
+#### _db.date(text: string) : _java.sql.Date_
 ##### Description
 
 With the text content you get the date object to be used in database operations.
@@ -252,13 +252,13 @@ With the text content you get the date object to be used in database operations.
 
 ##### Return
 
-( _Date_ )
+( _java.sql.Date_ )
 
 Date obtained from the text.
 
 ---
 
-#### _db.date(instant: _Instant_) : _Date_
+#### _db.date(instant: _java.time.Instant_) : _java.util.Date_
 ##### Description
 
 Using the Instant object, it creates a new Date object with java.sql.**Date.from**, to be used in database operations.
@@ -267,17 +267,17 @@ Using the Instant object, it creates a new Date object with java.sql.**Date.from
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| instant | _Instant_ | Object of type: _java.time.Instant_ |
+| instant | _java.time.Instant_ | Object of type: _java.time.Instant_ |
 
 ##### Return
 
-( _Date_ )
+( _java.util.Date_ )
 
 New object of type: _java.util.Date_
 
 ---
 
-#### _db.date(localDateTime: _LocalDate_) : _Date_
+#### _db.date(localDateTime: _java.time.LocalDate_) : _java.sql.Date_
 ##### Description
 
 Using the LocalDateTime object, it creates a new Date object to be used in database operations.
@@ -286,11 +286,11 @@ Using the LocalDateTime object, it creates a new Date object to be used in datab
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| localDateTime | _LocalDate_ | Object of type: _java.time.LocalDateTime_ |
+| localDateTime | _java.time.LocalDate_ | Object of type: _java.time.LocalDateTime_ |
 
 ##### Return
 
-( _Date_ )
+( _java.sql.Date_ )
 
 New object of type: _java.sql.Date_
 
@@ -374,7 +374,7 @@ Number of records affected by the deletion.
 
 ---
 
-#### _db.delete(table: string, data: _Map_) : _int_
+#### _db.delete(table: string, data: _java.util.Map_) : _int_
 ##### Description
 
 Performs the deletion of records in the database based on the ID or UID passed on the data object.
@@ -399,7 +399,7 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Table name in the database. |
-| data | _Map_ | Data structure that should be deleted based on your ID or UID. |
+| data | _java.util.Map_ | Data structure that should be deleted based on your ID or UID. |
 
 ##### Return
 
@@ -448,7 +448,7 @@ Number of records affected by deletion.
 
 ---
 
-#### _db.deleteMany(table: string, dataItems: _Object[]_) : _int[]_
+#### _db.deleteMany(table: string, dataItems: _[Ljava.lang.Object;_) : _[I_
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -474,17 +474,17 @@ _out.json({deletedData: deletedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| dataItems | _Object[]_ | Array or list of objects with the data structure to be inserted. |
+| dataItems | _[Ljava.lang.Object;_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
-( _int[]_ )
+( _[I_ )
 
 Array with number of records affected by the deletion for each object inside the list.
 
 ---
 
-#### _db.deleteMany(table: string, dataItems: _List_) : _int[]_
+#### _db.deleteMany(table: string, dataItems: _java.util.List_) : _[I_
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -510,17 +510,17 @@ _out.json({deletedData: deletedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| dataItems | _List_ | Array or list of objects with the data structure to be inserted. |
+| dataItems | _java.util.List_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
-( _int[]_ )
+( _[I_ )
 
 Array with number of records affected by the deletion for each object inside the list.
 
 ---
 
-#### _db.deleteMany(table: string, dataItems: _[Values](../../objects/Values)_) : _int[]_
+#### _db.deleteMany(table: string, dataItems: _[Values](../../objects/Values)_) : _[I_
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -550,7 +550,7 @@ _out.json({deletedData: deletedData})
 
 ##### Return
 
-( _int[]_ )
+( _[I_ )
 
 Array with number of records affected by the deletion for each object inside the list.
 
@@ -645,7 +645,7 @@ Number of lines affected by the executed command.
 
 ---
 
-#### _db.execute(sqlCommand: string, params: _Object[]_) : _int_
+#### _db.execute(sqlCommand: string, params: _[Ljava.lang.Object;_) : _int_
 ##### Description
 
 Execute commands directly on the database, commands such as inserts and updates can be executed as required.
@@ -664,7 +664,7 @@ const rowsAffected = _db.execute(`
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | sqlCommand | string | SQL command that will be executed directly on the database. |
-| params | _Object[]_ | The sequence of parameter values that are injected into the command. |
+| params | _[Ljava.lang.Object;_ | The sequence of parameter values that are injected into the command. |
 
 ##### Return
 
@@ -674,7 +674,7 @@ Number of lines affected by the executed command.
 
 ---
 
-#### _db.execute(sqlCommand: string, params: _List_) : _int_
+#### _db.execute(sqlCommand: string, params: _java.util.List_) : _int_
 ##### Description
 
 Execute commands directly on the database, commands such as inserts and updates can be executed as required.
@@ -697,7 +697,7 @@ const rowsAffected = _db.execute(`
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | sqlCommand | string | SQL command that will be executed directly on the database. |
-| params | _List_ | List of parameter values that are injected into the command. |
+| params | _java.util.List_ | List of parameter values that are injected into the command. |
 
 ##### Return
 
@@ -744,7 +744,7 @@ Number of lines affected by the executed command.
 
 ---
 
-#### _db.find(table: string, params: _[Values](../../objects/Values)_) : _List_
+#### _db.find(table: string, params: _[Values](../../objects/Values)_) : _java.util.List_
 ##### Description
 
 From an object that has the structure similar to an SQL query, you get a list of the data found in the search conditions.
@@ -803,7 +803,7 @@ _out.json(
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 List of data records found.
 
@@ -1058,7 +1058,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### _db.init(key: string) : _DB_
+#### _db.init(key: string) : _[DB](../../resources/DB)_
 ##### Description
 
 Starts a new DB resource for the connection name that is passed.
@@ -1084,7 +1084,7 @@ _out.json(countries)
 
 ##### Return
 
-( _DB_ )
+( _[DB](../../resources/DB)_ )
 
 The new database feature that uses another database.
 
@@ -1094,7 +1094,7 @@ The new database feature that uses another database.
 
 ---
 
-#### _db.insert(table: string, data: _Map_) : _int_
+#### _db.insert(table: string, data: _java.util.Map_) : _int_
 ##### Description
 
 Executes the insertion of new data in the database and returns the id of the same.
@@ -1121,7 +1121,7 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| data | _Map_ | Object with the data structure to be inserted. |
+| data | _java.util.Map_ | Object with the data structure to be inserted. |
 
 ##### Return
 
@@ -1170,7 +1170,7 @@ _out.json(
 
 ---
 
-#### _db.insertIfNotExists(table: string, data: _Map_) : _int_
+#### _db.insertIfNotExists(table: string, data: _java.util.Map_) : _int_
 ##### Description
 
 Executes the insertion of a value if it does not exist or returns the ID if it already exists.
@@ -1191,7 +1191,7 @@ _out.json({insertedData: insertedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| data | _Map_ | Object with the data structure to be inserted. |
+| data | _java.util.Map_ | Object with the data structure to be inserted. |
 
 ##### Return
 
@@ -1236,7 +1236,7 @@ ID of the data that was inserted or ID of the existing data.
 
 ---
 
-#### _db.insertMany(table: string, dataItems: _Object[]_) : _int[]_
+#### _db.insertMany(table: string, dataItems: _[Ljava.lang.Object;_) : _[I_
 ##### Description
 
 Executes the insertion of multiple rows into a table of an Array of Objects or a List of Values.
@@ -1261,17 +1261,17 @@ _db.insertMany(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| dataItems | _Object[]_ | Array or list of objects with the data structure to be inserted. |
+| dataItems | _[Ljava.lang.Object;_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
-( _int[]_ )
+( _[I_ )
 
 An array with the IDs to the inserted data.
 
 ---
 
-#### _db.insertMany(table: string, dataItems: _List_) : _int[]_
+#### _db.insertMany(table: string, dataItems: _java.util.List_) : _[I_
 ##### Description
 
 Executes the insertion of multiple rows into a table of an Array of Objects or a List of Values.
@@ -1296,17 +1296,17 @@ _db.insertMany(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| dataItems | _List_ | Array or list of objects with the data structure to be inserted. |
+| dataItems | _java.util.List_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
-( _int[]_ )
+( _[I_ )
 
 An array with the IDs to the inserted data.
 
 ---
 
-#### _db.insertMany(table: string, dataItems: _[Values](../../objects/Values)_) : _int[]_
+#### _db.insertMany(table: string, dataItems: _[Values](../../objects/Values)_) : _[I_
 ##### Description
 
 Executes the insertion of multiple rows into a table of an Array of Objects or a List of Values.
@@ -1335,7 +1335,7 @@ _db.insertMany(
 
 ##### Return
 
-( _int[]_ )
+( _[I_ )
 
 An array with the IDs to the inserted data.
 
@@ -1479,7 +1479,7 @@ Name of the connection configuration to the database being used.
 
 ---
 
-#### _db.query(arg0: string) : _List_
+#### _db.query(query: string) : _java.util.List_
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1501,17 +1501,17 @@ _out.json(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| query | string | Command that will be executed on the database to get records. |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 List of data obtained with the direct query to the database.
 
 ---
 
-#### _db.query(query: string, params: _Object[]_) : _List_
+#### _db.query(query: string, params: _[Ljava.lang.Object;_) : _java.util.List_
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1532,17 +1532,17 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | query | string | Command that will be executed on the database to get records. |
-| params | _Object[]_ | List of parameter values that will be injected into the database query. |
+| params | _[Ljava.lang.Object;_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 List of data obtained with the direct query to the database.
 
 ---
 
-#### _db.query(query: string, params: _List_) : _List_
+#### _db.query(query: string, params: _java.util.List_) : _java.util.List_
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1563,17 +1563,17 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | query | string | Command that will be executed on the database to get records. |
-| params | _List_ | List of parameter values that will be injected into the database query. |
+| params | _java.util.List_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 List of data obtained with the direct query to the database.
 
 ---
 
-#### _db.query(query: string, params: _[Values](../../objects/Values)_) : _List_
+#### _db.query(query: string, params: _[Values](../../objects/Values)_) : _java.util.List_
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1598,7 +1598,7 @@ _out.json(
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 List of data obtained with the direct query to the database.
 
@@ -1637,7 +1637,7 @@ The first data record obtained with the direct database query.
 
 ---
 
-#### _db.queryFirst(query: string, params: _Object[]_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _[Ljava.lang.Object;_) : _[Values](../../objects/Values)_
 ##### Description
 
 Run an SQL query directly on the database and get only the first record. Be very careful with SQL Injection.
@@ -1657,7 +1657,7 @@ _log.info('The first product found:', productFound)
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | query | string | Command that will be executed on the database to get the record. |
-| params | _Object[]_ | List of parameter values that will be injected into the database query. |
+| params | _[Ljava.lang.Object;_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
@@ -1667,7 +1667,7 @@ The first data record obtained with the direct database query.
 
 ---
 
-#### _db.queryFirst(query: string, params: _List_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _java.util.List_) : _[Values](../../objects/Values)_
 ##### Description
 
 Run an SQL query directly on the database and get only the first record. Be very careful with SQL Injection.
@@ -1687,7 +1687,7 @@ _log.info('The first product found:', productFound)
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | query | string | Command that will be executed on the database to get the record. |
-| params | _List_ | List of parameter values that will be injected into the database query. |
+| params | _java.util.List_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
@@ -1869,10 +1869,10 @@ Content as a safe path (table.name) to use directly in queries.
 
 ---
 
-#### _db.save(table: string, uid: _int_, arg2: _Map_) : _int_
+#### _db.save(table: string, uid: _int_, data: _java.util.Map_) : _int_
 ##### Description
 
-Performs the deletion of records in the database based on the UID.
+Executes the insertion or update of a record in the database based on the UID.
 
 ##### How To Use
 
@@ -1881,9 +1881,12 @@ Performs the deletion of records in the database based on the UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
-const result = _db.delete(
+const result = _db.save(
     "client",
-    uid
+    uid,
+    _val.map()
+        .set("name", "nome")
+        .set("mail", "mail@netuno.org")
 );
 
 _out.json(
@@ -1897,7 +1900,7 @@ _out.json(
 |---|---|---|
 | table | string | Table's name in the database. |
 | uid | _int_ | Record's UID to be deleted. |
-| arg2 | _Map_ |   |
+| data | _java.util.Map_ | Object with data structure that should be maintained. |
 
 ##### Return
 
@@ -1907,10 +1910,10 @@ Number of records affected by the deletion.
 
 ---
 
-#### _db.save(table: string, uid: _int_, arg2: _[Values](../../objects/Values)_) : _int_
+#### _db.save(table: string, uid: _int_, data: _[Values](../../objects/Values)_) : _int_
 ##### Description
 
-Performs the deletion of records in the database based on the UID.
+Executes the insertion or update of a record in the database based on the UID.
 
 ##### How To Use
 
@@ -1919,9 +1922,12 @@ Performs the deletion of records in the database based on the UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
-const result = _db.delete(
+const result = _db.save(
     "client",
-    uid
+    uid,
+    _val.map()
+        .set("name", "nome")
+        .set("mail", "mail@netuno.org")
 );
 
 _out.json(
@@ -1935,7 +1941,7 @@ _out.json(
 |---|---|---|
 | table | string | Table's name in the database. |
 | uid | _int_ | Record's UID to be deleted. |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| data | _[Values](../../objects/Values)_ | Object with data structure that should be maintained. |
 
 ##### Return
 
@@ -1945,10 +1951,10 @@ Number of records affected by the deletion.
 
 ---
 
-#### _db.save(table: string, uid: string, arg2: _Map_) : _int_
+#### _db.save(table: string, uid: string, data: _java.util.Map_) : _int_
 ##### Description
 
-Performs the deletion of records in the database based on the UID.
+Executes the insertion or update of a record in the database based on the UID.
 
 ##### How To Use
 
@@ -1957,9 +1963,12 @@ Performs the deletion of records in the database based on the UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
-const result = _db.delete(
+const result = _db.save(
     "client",
-    uid
+    uid,
+    _val.map()
+        .set("name", "nome")
+        .set("mail", "mail@netuno.org")
 );
 
 _out.json(
@@ -1973,7 +1982,7 @@ _out.json(
 |---|---|---|
 | table | string | Table's name in the database. |
 | uid | string | Record's UID to be deleted. |
-| arg2 | _Map_ |   |
+| data | _java.util.Map_ | Object with data structure that should be maintained. |
 
 ##### Return
 
@@ -1983,10 +1992,10 @@ Number of records affected by the deletion.
 
 ---
 
-#### _db.save(table: string, uid: string, arg2: _[Values](../../objects/Values)_) : _int_
+#### _db.save(table: string, uid: string, data: _[Values](../../objects/Values)_) : _int_
 ##### Description
 
-Performs the deletion of records in the database based on the UID.
+Executes the insertion or update of a record in the database based on the UID.
 
 ##### How To Use
 
@@ -1995,9 +2004,12 @@ Performs the deletion of records in the database based on the UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
-const result = _db.delete(
+const result = _db.save(
     "client",
-    uid
+    uid,
+    _val.map()
+        .set("name", "nome")
+        .set("mail", "mail@netuno.org")
 );
 
 _out.json(
@@ -2011,7 +2023,7 @@ _out.json(
 |---|---|---|
 | table | string | Table's name in the database. |
 | uid | string | Record's UID to be deleted. |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| data | _[Values](../../objects/Values)_ | Object with data structure that should be maintained. |
 
 ##### Return
 
@@ -2025,7 +2037,7 @@ Number of records affected by the deletion.
 
 ---
 
-#### _db.search(table: string, data: _Map_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(table: string, data: _java.util.Map_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Description
 
 Performs a search on a table returning an object of type DBSearchResult.
@@ -2046,7 +2058,7 @@ _out.json({data: query.getResults(),total: query.getTotal()});
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should obtain the data. |
-| data | _Map_ | Data to carry out the search. |
+| data | _java.util.Map_ | Data to carry out the search. |
 
 ##### Return
 
@@ -2056,13 +2068,13 @@ Object of type DBSearchResult.
 
 ---
 
-#### _db.search(arg0: string, arg1: _Map_, arg2: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(arg0: string, arg1: _java.util.Map_, arg2: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Map_ |   |
+| arg1 | _java.util.Map_ |   |
 | arg2 | _boolean_ |   |
 
 ##### Return
@@ -2150,7 +2162,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### _db.store(table: string, data: _Map_) : _int_
+#### _db.store(table: string, data: _java.util.Map_) : _int_
 ##### Description
 
 
@@ -2172,7 +2184,7 @@ _out.json({storedData: storedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| data | _Map_ | Object with the data structure to be inserted. |
+| data | _java.util.Map_ | Object with the data structure to be inserted. |
 
 ##### Return
 
@@ -2246,20 +2258,20 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### _db.time() : _Time_
+#### _db.time() : _java.sql.Time_
 ##### Description
 
 Gets the current time to be used in database operations.
 
 ##### Return
 
-( _Time_ )
+( _java.sql.Time_ )
 
 Current time.
 
 ---
 
-#### _db.time(time: _Long_) : _Time_
+#### _db.time(time: _java.lang.Long_) : _java.sql.Time_
 ##### Description
 
 Through the long number that identifies the exact time, it creates a new Time object to be used in database operations.
@@ -2268,17 +2280,17 @@ Through the long number that identifies the exact time, it creates a new Time ob
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| time | _Long_ | Long number referring to the exact time. |
+| time | _java.lang.Long_ | Long number referring to the exact time. |
 
 ##### Return
 
-( _Time_ )
+( _java.sql.Time_ )
 
 New object of type: _java.sql.Time_
 
 ---
 
-#### _db.time(text: string) : _Time_
+#### _db.time(text: string) : _java.sql.Time_
 ##### Description
 
 With the text content you get the time object to be used in database operations.
@@ -2291,13 +2303,13 @@ With the text content you get the time object to be used in database operations.
 
 ##### Return
 
-( _Time_ )
+( _java.sql.Time_ )
 
 Time obtained from the text.
 
 ---
 
-#### _db.time(instant: _Instant_) : _Date_
+#### _db.time(instant: _java.time.Instant_) : _java.util.Date_
 ##### Description
 
 Using the Instant object, it creates a new Date object with java.sql.**Time.from**, to be used in database operations.
@@ -2306,17 +2318,17 @@ Using the Instant object, it creates a new Date object with java.sql.**Time.from
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| instant | _Instant_ | Object of type: _java.time.Instant_ |
+| instant | _java.time.Instant_ | Object of type: _java.time.Instant_ |
 
 ##### Return
 
-( _Date_ )
+( _java.util.Date_ )
 
 New object of type: _java.util.Date_
 
 ---
 
-#### _db.time(localDateTime: _LocalTime_) : _Time_
+#### _db.time(localDateTime: _java.time.LocalTime_) : _java.sql.Time_
 ##### Description
 
 Using the LocalDateTime object, it creates a new Time object to be used in database operations.
@@ -2325,11 +2337,11 @@ Using the LocalDateTime object, it creates a new Time object to be used in datab
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| localDateTime | _LocalTime_ | Object of type: _java.time.LocalDateTime_ |
+| localDateTime | _java.time.LocalTime_ | Object of type: _java.time.LocalDateTime_ |
 
 ##### Return
 
-( _Time_ )
+( _java.sql.Time_ )
 
 New object of type: _java.sql.Time_
 
@@ -2339,20 +2351,20 @@ New object of type: _java.sql.Time_
 
 ---
 
-#### _db.timestamp() : _Timestamp_
+#### _db.timestamp() : _java.sql.Timestamp_
 ##### Description
 
 Gets the current date and time to be used in database operations.
 
 ##### Return
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 Current date and time.
 
 ---
 
-#### _db.timestamp(time: _Long_) : _Timestamp_
+#### _db.timestamp(time: _java.lang.Long_) : _java.sql.Timestamp_
 ##### Description
 
 Through the long number that identifies the exact time, it creates a new Timestamp object to be used in database operations.
@@ -2361,17 +2373,17 @@ Through the long number that identifies the exact time, it creates a new Timesta
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| time | _Long_ | Long number referring to the exact time. |
+| time | _java.lang.Long_ | Long number referring to the exact time. |
 
 ##### Return
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 New object of type: _java.sql.Timestamp_
 
 ---
 
-#### _db.timestamp(text: string) : _Timestamp_
+#### _db.timestamp(text: string) : _java.sql.Timestamp_
 ##### Description
 
 With the text content you get the date and time object to be used in database operations.
@@ -2384,13 +2396,13 @@ With the text content you get the date and time object to be used in database op
 
 ##### Return
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 Date and time obtained from the text.
 
 ---
 
-#### _db.timestamp(instant: _Instant_) : _Timestamp_
+#### _db.timestamp(instant: _java.time.Instant_) : _java.sql.Timestamp_
 ##### Description
 
 Using the Instant object, it creates a new Timestamp object to be used in database operations.
@@ -2399,17 +2411,17 @@ Using the Instant object, it creates a new Timestamp object to be used in databa
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| instant | _Instant_ | Object of type: _java.time.Instant_ |
+| instant | _java.time.Instant_ | Object of type: _java.time.Instant_ |
 
 ##### Return
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 New object of type: _java.sql.Timestamp_
 
 ---
 
-#### _db.timestamp(localDateTime: _LocalDateTime_) : _Timestamp_
+#### _db.timestamp(localDateTime: _java.time.LocalDateTime_) : _java.sql.Timestamp_
 ##### Description
 
 Using the LocalDateTime object, it creates a new Timestamp object to be used in database operations.
@@ -2418,11 +2430,11 @@ Using the LocalDateTime object, it creates a new Timestamp object to be used in 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| localDateTime | _LocalDateTime_ | Object of type: _java.time.LocalDateTime_ |
+| localDateTime | _java.time.LocalDateTime_ | Object of type: _java.time.LocalDateTime_ |
 
 ##### Return
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 New object of type: _java.sql.Timestamp_
 
@@ -2667,7 +2679,7 @@ Content that is safe to use directly in query as string/varchar/text.
 
 ---
 
-#### _db.update(table: string, id: _int_, data: _Map_) : _int_
+#### _db.update(table: string, id: _int_, data: _java.util.Map_) : _int_
 ##### Description
 
 Performs the update of existing data according to the id that comes in the data that is passed.
@@ -2694,7 +2706,7 @@ _out.json(
 |---|---|---|
 | table | string | Name of the table containing the records that must be updated. |
 | id | _int_ | ID of the registry that will be affected by the update. |
-| data | _Map_ | Object with the data structure that is to be maintained. |
+| data | _java.util.Map_ | Object with the data structure that is to be maintained. |
 
 ##### Return
 
@@ -2704,7 +2716,7 @@ Number of records affected by the update.
 
 ---
 
-#### _db.update(table: string, uid: _int_, data: _[Values](../../objects/Values)_) : _int_
+#### _db.update(table: string, id: _int_, data: _[Values](../../objects/Values)_) : _int_
 ##### Description
 
 Performs the update of existing data according to the id that comes in the data that is passed.
@@ -2712,14 +2724,12 @@ Performs the update of existing data according to the id that comes in the data 
 ##### How To Use
 
 ```javascript
-var uid = "98502cff-d1e1-4efc-8efe-840320925316";
-
 var result = _db.update(
     "client",
-    uid,
+    1, // ID of the registry that will be affected.
     _val.map()
-        .set("name", "nome")
-        .set("mail", "mail@netuno.org")
+        .set("name", "Sitana")
+        .set("mail", "admin@sitana.pt")
 );
 
 _out.json(
@@ -2732,8 +2742,8 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table containing the records that must be updated. |
-| uid | _int_ | UID of the record that will be affected by the update. |
-| data | _[Values](../../objects/Values)_ | Object with data structure that should be maintained. |
+| id | _int_ | ID of the registry that will be affected by the update. |
+| data | _[Values](../../objects/Values)_ | Object with the data structure that is to be maintained. |
 
 ##### Return
 
@@ -2743,7 +2753,7 @@ Number of records affected by the update.
 
 ---
 
-#### _db.update(table: string, uid: string, data: _Map_) : _int_
+#### _db.update(table: string, uid: string, data: _java.util.Map_) : _int_
 ##### Description
 
 Performs the update of existing data according to the id that comes in the data that is passed.
@@ -2772,7 +2782,7 @@ _out.json(
 |---|---|---|
 | table | string | Name of the table containing the records that must be updated. |
 | uid | string | UID of the record that will be affected by the update. |
-| data | _Map_ | Object with data structure that should be maintained. |
+| data | _java.util.Map_ | Object with data structure that should be maintained. |
 
 ##### Return
 
@@ -2821,7 +2831,7 @@ Number of records affected by the update.
 
 ---
 
-#### _db.update(table: string, data: _Map_) : _int_
+#### _db.update(table: string, data: _java.util.Map_) : _int_
 ##### Description
 
 Performs the update of existing data according to the id that comes in the data that is passed.
@@ -2847,7 +2857,7 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table containing the records that must be updated. |
-| data | _Map_ | Object with the data structure that is to be maintained. |
+| data | _java.util.Map_ | Object with the data structure that is to be maintained. |
 
 ##### Return
 
@@ -2897,7 +2907,7 @@ Number of records affected by the update.
 
 ---
 
-#### _db.updateMany(table: string, dataItems: _Object[]_) : _int[]_
+#### _db.updateMany(table: string, dataItems: _[Ljava.lang.Object;_) : _[I_
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -2925,17 +2935,17 @@ _out.json({updatedData: updatedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| dataItems | _Object[]_ | Array or list of objects with the data structure to be inserted. |
+| dataItems | _[Ljava.lang.Object;_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
-( _int[]_ )
+( _[I_ )
 
 Array with number of records affected by the update for each object inside the list.
 
 ---
 
-#### _db.updateMany(table: string, dataItems: _List_) : _int[]_
+#### _db.updateMany(table: string, dataItems: _java.util.List_) : _[I_
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -2963,17 +2973,17 @@ _out.json({updatedData: updatedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| dataItems | _List_ | Array or list of objects with the data structure to be inserted. |
+| dataItems | _java.util.List_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
-( _int[]_ )
+( _[I_ )
 
 Array with number of records affected by the update for each object inside the list.
 
 ---
 
-#### _db.updateMany(table: string, dataItems: _[Values](../../objects/Values)_) : _int[]_
+#### _db.updateMany(table: string, dataItems: _[Values](../../objects/Values)_) : _[I_
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -3005,7 +3015,7 @@ _out.json({updatedData: updatedData})
 
 ##### Return
 
-( _int[]_ )
+( _[I_ )
 
 Array with number of records affected by the update for each object inside the list.
 

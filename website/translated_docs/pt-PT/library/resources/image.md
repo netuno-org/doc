@@ -12,29 +12,29 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.affineTransform() : _AffineTransform_
+#### _image.affineTransform() : _java.awt.geom.AffineTransform_
 ##### Retorno
 
-( _AffineTransform_ )
+( _java.awt.geom.AffineTransform_ )
 
 
 ---
 
-#### _image.affineTransform(arg0: _double[]_) : _AffineTransform_
+#### _image.affineTransform(arg0: _[D_) : _java.awt.geom.AffineTransform_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double[]_ |   |
+| arg0 | _[D_ |   |
 
 ##### Retorno
 
-( _AffineTransform_ )
+( _java.awt.geom.AffineTransform_ )
 
 
 ---
 
-#### _image.affineTransform(arg0: _double_, arg1: _double_, arg2: _double_, arg3: _double_, arg4: _double_, arg5: _double_) : _AffineTransform_
+#### _image.affineTransform(arg0: _double_, arg1: _double_, arg2: _double_, arg3: _double_, arg4: _double_, arg5: _double_) : _java.awt.geom.AffineTransform_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -48,40 +48,40 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _AffineTransform_ )
+( _java.awt.geom.AffineTransform_ )
 
 
 ---
 
-#### _image.affineTransform(arg0: _AffineTransform_) : _AffineTransform_
+#### _image.affineTransform(arg0: _java.awt.geom.AffineTransform_) : _java.awt.geom.AffineTransform_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _AffineTransform_ |   |
+| arg0 | _java.awt.geom.AffineTransform_ |   |
 
 ##### Retorno
 
-( _AffineTransform_ )
+( _java.awt.geom.AffineTransform_ )
 
 
 ---
 
-#### _image.affineTransform(arg0: _List_) : _AffineTransform_
+#### _image.affineTransform(arg0: _java.util.List_) : _java.awt.geom.AffineTransform_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Retorno
 
-( _AffineTransform_ )
+( _java.awt.geom.AffineTransform_ )
 
 
 ---
 
-#### _image.affineTransform(arg0: _[Values](../../objects/Values)_) : _AffineTransform_
+#### _image.affineTransform(arg0: _[Values](../../objects/Values)_) : _java.awt.geom.AffineTransform_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -90,7 +90,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _AffineTransform_ )
+( _java.awt.geom.AffineTransform_ )
 
 
 ---
@@ -117,22 +117,22 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.attributedString(arg0: string, arg1: _Map_) : _AttributedString_
+#### _image.attributedString(arg0: string, arg1: _java.util.Map_) : _java.text.AttributedString_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Map_ |   |
+| arg1 | _java.util.Map_ |   |
 
 ##### Retorno
 
-( _AttributedString_ )
+( _java.text.AttributedString_ )
 
 
 ---
 
-#### _image.attributedString(arg0: string, arg1: _[Values](../../objects/Values)_) : _AttributedString_
+#### _image.attributedString(arg0: string, arg1: _[Values](../../objects/Values)_) : _java.text.AttributedString_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -142,7 +142,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _AttributedString_ )
+( _java.text.AttributedString_ )
 
 
 ---
@@ -151,10 +151,10 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.bufferedImage() : _BufferedImage_
+#### _image.bufferedImage() : _java.awt.image.BufferedImage_
 ##### Retorno
 
-( _BufferedImage_ )
+( _java.awt.image.BufferedImage_ )
 
 
 ---
@@ -175,7 +175,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.color(arg0: _float_, arg1: _float_, arg2: _float_) : _Color_
+#### _image.color(arg0: _float_, arg1: _float_, arg2: _float_) : _java.awt.Color_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -186,12 +186,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Color_ )
+( _java.awt.Color_ )
 
 
 ---
 
-#### _image.color(arg0: _float_, arg1: _float_, arg2: _float_, arg3: _float_) : _Color_
+#### _image.color(arg0: _float_, arg1: _float_, arg2: _float_, arg3: _float_) : _java.awt.Color_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -203,12 +203,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Color_ )
+( _java.awt.Color_ )
 
 
 ---
 
-#### _image.color(arg0: _int_, arg1: _int_, arg2: _int_) : _Color_
+#### _image.color(arg0: _int_, arg1: _int_, arg2: _int_) : _java.awt.Color_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -219,12 +219,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Color_ )
+( _java.awt.Color_ )
 
 
 ---
 
-#### _image.color(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_) : _Color_
+#### _image.color(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_) : _java.awt.Color_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -236,12 +236,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Color_ )
+( _java.awt.Color_ )
 
 
 ---
 
-#### _image.color(arg0: string) : _Color_
+#### _image.color(arg0: string) : _java.awt.Color_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -250,7 +250,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Color_ )
+( _java.awt.Color_ )
 
 
 ---
@@ -259,7 +259,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.colorDecode(arg0: string) : _Color_
+#### _image.colorDecode(arg0: string) : _java.awt.Color_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -268,7 +268,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Color_ )
+( _java.awt.Color_ )
 
 
 ---
@@ -277,24 +277,24 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.convertRGBAToIndexed() : _BufferedImage_
+#### _image.convertRGBAToIndexed() : _java.awt.image.BufferedImage_
 ##### Retorno
 
-( _BufferedImage_ )
+( _java.awt.image.BufferedImage_ )
 
 
 ---
 
-#### _image.convertRGBAToIndexed(arg0: _BufferedImage_) : _BufferedImage_
+#### _image.convertRGBAToIndexed(arg0: _java.awt.image.BufferedImage_) : _java.awt.image.BufferedImage_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BufferedImage_ |   |
+| arg0 | _java.awt.image.BufferedImage_ |   |
 
 ##### Retorno
 
-( _BufferedImage_ )
+( _java.awt.image.BufferedImage_ )
 
 
 ---
@@ -303,7 +303,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.crop(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_) : _Image_
+#### _image.crop(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -315,7 +315,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -324,12 +324,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.drawArc(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _Image_
+#### _image.drawArc(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -339,7 +339,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -348,16 +348,16 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.drawBackground(arg0: _Color_) : _Image_
+#### _image.drawBackground(arg0: _java.awt.Color_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -366,45 +366,45 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_) : _Image_
+#### _image.drawImage(arg0: _java.awt.Image_, arg1: _int_, arg2: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.Image_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _double_) : _Image_
+#### _image.drawImage(arg0: _java.awt.Image_, arg1: _int_, arg2: _int_, arg3: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.Image_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _double_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _Image_
+#### _image.drawImage(arg0: _java.awt.Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.Image_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -412,17 +412,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _double_) : _Image_
+#### _image.drawImage(arg0: _java.awt.Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.Image_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -431,17 +431,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _int_, arg8: _int_) : _Image_
+#### _image.drawImage(arg0: _java.awt.Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _int_, arg8: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.Image_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -453,17 +453,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _int_, arg8: _int_, arg9: _Color_) : _Image_
+#### _image.drawImage(arg0: _java.awt.Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _int_, arg8: _int_, arg9: _java.awt.Color_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.Image_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -472,176 +472,176 @@ Recurso manipulação de imagens.
 | arg6 | _int_ |   |
 | arg7 | _int_ |   |
 | arg8 | _int_ |   |
-| arg9 | _Color_ |   |
+| arg9 | _java.awt.Color_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _Color_) : _Image_
+#### _image.drawImage(arg0: _java.awt.Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _java.awt.Color_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.Image_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
 | arg4 | _int_ |   |
-| arg5 | _Color_ |   |
+| arg5 | _java.awt.Color_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _Color_, arg6: _double_) : _Image_
+#### _image.drawImage(arg0: _java.awt.Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _java.awt.Color_, arg6: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.Image_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
 | arg4 | _int_ |   |
-| arg5 | _Color_ |   |
+| arg5 | _java.awt.Color_ |   |
 | arg6 | _double_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _Color_) : _Image_
+#### _image.drawImage(arg0: _java.awt.Image_, arg1: _int_, arg2: _int_, arg3: _java.awt.Color_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.Image_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
-| arg3 | _Color_ |   |
+| arg3 | _java.awt.Color_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _Color_, arg4: _double_) : _Image_
+#### _image.drawImage(arg0: _java.awt.Image_, arg1: _int_, arg2: _int_, arg3: _java.awt.Color_, arg4: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.Image_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
-| arg3 | _Color_ |   |
+| arg3 | _java.awt.Color_ |   |
 | arg4 | _double_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _AffineTransform_) : _Image_
+#### _image.drawImage(arg0: _java.awt.Image_, arg1: _java.awt.geom.AffineTransform_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
-| arg1 | _AffineTransform_ |   |
+| arg0 | _java.awt.Image_ |   |
+| arg1 | _java.awt.geom.AffineTransform_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _BufferedImage_, arg1: _int_, arg2: _int_) : _Image_
+#### _image.drawImage(arg0: _java.awt.image.BufferedImage_, arg1: _int_, arg2: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BufferedImage_ |   |
+| arg0 | _java.awt.image.BufferedImage_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _BufferedImage_, arg1: _int_, arg2: _int_, arg3: _double_) : _Image_
+#### _image.drawImage(arg0: _java.awt.image.BufferedImage_, arg1: _int_, arg2: _int_, arg3: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BufferedImage_ |   |
-| arg1 | _int_ |   |
-| arg2 | _int_ |   |
-| arg3 | _double_ |   |
-
-##### Retorno
-
-( _Image_ )
-
-
----
-
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_) : _Image_
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| arg0 | _Image_ |   |
-| arg1 | _int_ |   |
-| arg2 | _int_ |   |
-
-##### Retorno
-
-( _Image_ )
-
-
----
-
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _double_) : _Image_
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.image.BufferedImage_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _double_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _Image_
+#### _image.drawImage(arg0: _[Image](../../resources/Image)_, arg1: _int_, arg2: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _[Image](../../resources/Image)_ |   |
+| arg1 | _int_ |   |
+| arg2 | _int_ |   |
+
+##### Retorno
+
+( _[Image](../../resources/Image)_ )
+
+
+---
+
+#### _image.drawImage(arg0: _[Image](../../resources/Image)_, arg1: _int_, arg2: _int_, arg3: _double_) : _[Image](../../resources/Image)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Image](../../resources/Image)_ |   |
+| arg1 | _int_ |   |
+| arg2 | _int_ |   |
+| arg3 | _double_ |   |
+
+##### Retorno
+
+( _[Image](../../resources/Image)_ )
+
+
+---
+
+#### _image.drawImage(arg0: _[Image](../../resources/Image)_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _[Image](../../resources/Image)_
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| arg0 | _[Image](../../resources/Image)_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -649,17 +649,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _double_) : _Image_
+#### _image.drawImage(arg0: _[Image](../../resources/Image)_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _[Image](../../resources/Image)_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -668,17 +668,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _int_, arg8: _int_) : _Image_
+#### _image.drawImage(arg0: _[Image](../../resources/Image)_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _int_, arg8: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _[Image](../../resources/Image)_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -690,17 +690,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _int_, arg8: _int_, arg9: _Color_) : _Image_
+#### _image.drawImage(arg0: _[Image](../../resources/Image)_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _int_, arg8: _int_, arg9: _java.awt.Color_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _[Image](../../resources/Image)_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -709,100 +709,100 @@ Recurso manipulação de imagens.
 | arg6 | _int_ |   |
 | arg7 | _int_ |   |
 | arg8 | _int_ |   |
-| arg9 | _Color_ |   |
+| arg9 | _java.awt.Color_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _Color_) : _Image_
+#### _image.drawImage(arg0: _[Image](../../resources/Image)_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _java.awt.Color_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _[Image](../../resources/Image)_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
 | arg4 | _int_ |   |
-| arg5 | _Color_ |   |
+| arg5 | _java.awt.Color_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _Color_, arg6: _double_) : _Image_
+#### _image.drawImage(arg0: _[Image](../../resources/Image)_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _java.awt.Color_, arg6: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _[Image](../../resources/Image)_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
 | arg4 | _int_ |   |
-| arg5 | _Color_ |   |
+| arg5 | _java.awt.Color_ |   |
 | arg6 | _double_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _Color_) : _Image_
+#### _image.drawImage(arg0: _[Image](../../resources/Image)_, arg1: _int_, arg2: _int_, arg3: _java.awt.Color_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _[Image](../../resources/Image)_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
-| arg3 | _Color_ |   |
+| arg3 | _java.awt.Color_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _int_, arg2: _int_, arg3: _Color_, arg4: _double_) : _Image_
+#### _image.drawImage(arg0: _[Image](../../resources/Image)_, arg1: _int_, arg2: _int_, arg3: _java.awt.Color_, arg4: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _[Image](../../resources/Image)_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
-| arg3 | _Color_ |   |
+| arg3 | _java.awt.Color_ |   |
 | arg4 | _double_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawImage(arg0: _Image_, arg1: _AffineTransform_) : _Image_
+#### _image.drawImage(arg0: _[Image](../../resources/Image)_, arg1: _java.awt.geom.AffineTransform_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
-| arg1 | _AffineTransform_ |   |
+| arg0 | _[Image](../../resources/Image)_ |   |
+| arg1 | _java.awt.geom.AffineTransform_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -811,12 +811,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.drawLine(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _Image_
+#### _image.drawLine(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -824,7 +824,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -833,12 +833,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.drawOval(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _Image_
+#### _image.drawOval(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -846,7 +846,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -855,85 +855,85 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.drawPolygon(arg0: _Color_, arg1: _int[]_, arg2: _int[]_, arg3: _int_) : _Image_
+#### _image.drawPolygon(arg0: _java.awt.Color_, arg1: _[I_, arg2: _[I_, arg3: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
-| arg1 | _int[]_ |   |
-| arg2 | _int[]_ |   |
+| arg0 | _java.awt.Color_ |   |
+| arg1 | _[I_ |   |
+| arg2 | _[I_ |   |
 | arg3 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawPolygon(arg0: _Color_, arg1: _List_, arg2: _List_) : _Image_
+#### _image.drawPolygon(arg0: _java.awt.Color_, arg1: _java.util.List_, arg2: _java.util.List_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
-| arg1 | _List_ |   |
-| arg2 | _List_ |   |
+| arg0 | _java.awt.Color_ |   |
+| arg1 | _java.util.List_ |   |
+| arg2 | _java.util.List_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawPolygon(arg0: _Color_, arg1: _List_, arg2: _List_, arg3: _int_) : _Image_
+#### _image.drawPolygon(arg0: _java.awt.Color_, arg1: _java.util.List_, arg2: _java.util.List_, arg3: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
-| arg1 | _List_ |   |
-| arg2 | _List_ |   |
+| arg0 | _java.awt.Color_ |   |
+| arg1 | _java.util.List_ |   |
+| arg2 | _java.util.List_ |   |
 | arg3 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawPolygon(arg0: _Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_) : _Image_
+#### _image.drawPolygon(arg0: _java.awt.Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _[Values](../../objects/Values)_ |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawPolygon(arg0: _Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_, arg3: _int_) : _Image_
+#### _image.drawPolygon(arg0: _java.awt.Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_, arg3: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _[Values](../../objects/Values)_ |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 | arg3 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -942,85 +942,85 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.drawPolyline(arg0: _Color_, arg1: _int[]_, arg2: _int[]_, arg3: _int_) : _Image_
+#### _image.drawPolyline(arg0: _java.awt.Color_, arg1: _[I_, arg2: _[I_, arg3: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
-| arg1 | _int[]_ |   |
-| arg2 | _int[]_ |   |
+| arg0 | _java.awt.Color_ |   |
+| arg1 | _[I_ |   |
+| arg2 | _[I_ |   |
 | arg3 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawPolyline(arg0: _Color_, arg1: _List_, arg2: _List_) : _Image_
+#### _image.drawPolyline(arg0: _java.awt.Color_, arg1: _java.util.List_, arg2: _java.util.List_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
-| arg1 | _List_ |   |
-| arg2 | _List_ |   |
+| arg0 | _java.awt.Color_ |   |
+| arg1 | _java.util.List_ |   |
+| arg2 | _java.util.List_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawPolyline(arg0: _Color_, arg1: _List_, arg2: _List_, arg3: _int_) : _Image_
+#### _image.drawPolyline(arg0: _java.awt.Color_, arg1: _java.util.List_, arg2: _java.util.List_, arg3: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
-| arg1 | _List_ |   |
-| arg2 | _List_ |   |
+| arg0 | _java.awt.Color_ |   |
+| arg1 | _java.util.List_ |   |
+| arg2 | _java.util.List_ |   |
 | arg3 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawPolyline(arg0: _Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_) : _Image_
+#### _image.drawPolyline(arg0: _java.awt.Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _[Values](../../objects/Values)_ |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawPolyline(arg0: _Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_, arg3: _int_) : _Image_
+#### _image.drawPolyline(arg0: _java.awt.Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_, arg3: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _[Values](../../objects/Values)_ |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 | arg3 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -1029,12 +1029,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.drawRect(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _Image_
+#### _image.drawRect(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -1042,17 +1042,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawRect(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _double_) : _Image_
+#### _image.drawRect(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -1061,7 +1061,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -1070,12 +1070,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.drawRoundRect(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _Image_
+#### _image.drawRoundRect(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -1085,17 +1085,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawRoundRect(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _double_) : _Image_
+#### _image.drawRoundRect(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -1106,7 +1106,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -1115,108 +1115,108 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.drawText(arg0: string, arg1: _Font_, arg2: _Color_, arg3: _int_, arg4: _int_) : _Image_
+#### _image.drawText(arg0: string, arg1: _java.awt.Font_, arg2: _java.awt.Color_, arg3: _int_, arg4: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Font_ |   |
-| arg2 | _Color_ |   |
+| arg1 | _java.awt.Font_ |   |
+| arg2 | _java.awt.Color_ |   |
 | arg3 | _int_ |   |
 | arg4 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawText(arg0: string, arg1: _Font_, arg2: _Color_, arg3: _int_, arg4: _int_, arg5: _double_) : _Image_
+#### _image.drawText(arg0: string, arg1: _java.awt.Font_, arg2: _java.awt.Color_, arg3: _int_, arg4: _int_, arg5: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Font_ |   |
-| arg2 | _Color_ |   |
+| arg1 | _java.awt.Font_ |   |
+| arg2 | _java.awt.Color_ |   |
 | arg3 | _int_ |   |
 | arg4 | _int_ |   |
 | arg5 | _double_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawText(arg0: string, arg1: _Font_, arg2: _Color_, arg3: _int_, arg4: _int_, arg5: _AffineTransform_) : _Image_
+#### _image.drawText(arg0: string, arg1: _java.awt.Font_, arg2: _java.awt.Color_, arg3: _int_, arg4: _int_, arg5: _java.awt.geom.AffineTransform_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Font_ |   |
-| arg2 | _Color_ |   |
+| arg1 | _java.awt.Font_ |   |
+| arg2 | _java.awt.Color_ |   |
 | arg3 | _int_ |   |
 | arg4 | _int_ |   |
-| arg5 | _AffineTransform_ |   |
+| arg5 | _java.awt.geom.AffineTransform_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawText(arg0: _AttributedString_, arg1: _int_, arg2: _int_) : _Image_
+#### _image.drawText(arg0: _java.text.AttributedString_, arg1: _int_, arg2: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _AttributedString_ |   |
+| arg0 | _java.text.AttributedString_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawText(arg0: _AttributedString_, arg1: _int_, arg2: _int_, arg3: _double_) : _Image_
+#### _image.drawText(arg0: _java.text.AttributedString_, arg1: _int_, arg2: _int_, arg3: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _AttributedString_ |   |
+| arg0 | _java.text.AttributedString_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _double_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.drawText(arg0: _AttributedString_, arg1: _int_, arg2: _int_, arg3: _AffineTransform_) : _Image_
+#### _image.drawText(arg0: _java.text.AttributedString_, arg1: _int_, arg2: _int_, arg3: _java.awt.geom.AffineTransform_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _AttributedString_ |   |
+| arg0 | _java.text.AttributedString_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
-| arg3 | _AffineTransform_ |   |
+| arg3 | _java.awt.geom.AffineTransform_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -1244,12 +1244,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.fillArc(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _Image_
+#### _image.fillArc(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -1259,7 +1259,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -1268,12 +1268,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.fillOval(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _Image_
+#### _image.fillOval(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -1281,7 +1281,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -1290,85 +1290,85 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.fillPolygon(arg0: _Color_, arg1: _int[]_, arg2: _int[]_, arg3: _int_) : _Image_
+#### _image.fillPolygon(arg0: _java.awt.Color_, arg1: _[I_, arg2: _[I_, arg3: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
-| arg1 | _int[]_ |   |
-| arg2 | _int[]_ |   |
+| arg0 | _java.awt.Color_ |   |
+| arg1 | _[I_ |   |
+| arg2 | _[I_ |   |
 | arg3 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.fillPolygon(arg0: _Color_, arg1: _List_, arg2: _List_) : _Image_
+#### _image.fillPolygon(arg0: _java.awt.Color_, arg1: _java.util.List_, arg2: _java.util.List_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
-| arg1 | _List_ |   |
-| arg2 | _List_ |   |
+| arg0 | _java.awt.Color_ |   |
+| arg1 | _java.util.List_ |   |
+| arg2 | _java.util.List_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.fillPolygon(arg0: _Color_, arg1: _List_, arg2: _List_, arg3: _int_) : _Image_
+#### _image.fillPolygon(arg0: _java.awt.Color_, arg1: _java.util.List_, arg2: _java.util.List_, arg3: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
-| arg1 | _List_ |   |
-| arg2 | _List_ |   |
+| arg0 | _java.awt.Color_ |   |
+| arg1 | _java.util.List_ |   |
+| arg2 | _java.util.List_ |   |
 | arg3 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.fillPolygon(arg0: _Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_) : _Image_
+#### _image.fillPolygon(arg0: _java.awt.Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _[Values](../../objects/Values)_ |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.fillPolygon(arg0: _Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_, arg3: _int_) : _Image_
+#### _image.fillPolygon(arg0: _java.awt.Color_, arg1: _[Values](../../objects/Values)_, arg2: _[Values](../../objects/Values)_, arg3: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _[Values](../../objects/Values)_ |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 | arg3 | _int_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -1377,12 +1377,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.fillRect(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _Image_
+#### _image.fillRect(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -1390,17 +1390,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.fillRect(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _double_) : _Image_
+#### _image.fillRect(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -1409,7 +1409,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -1418,12 +1418,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.fillRoundRect(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _Image_
+#### _image.fillRoundRect(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -1433,17 +1433,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.fillRoundRect(arg0: _Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _double_) : _Image_
+#### _image.fillRoundRect(arg0: _java.awt.Color_, arg1: _int_, arg2: _int_, arg3: _int_, arg4: _int_, arg5: _int_, arg6: _int_, arg7: _double_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Color_ |   |
+| arg0 | _java.awt.Color_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 | arg3 | _int_ |   |
@@ -1454,7 +1454,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -1463,7 +1463,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.font(arg0: _int_, arg1: _[File](../../objects/File)_) : _Font_
+#### _image.font(arg0: _int_, arg1: _[File](../../objects/File)_) : _java.awt.Font_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1473,12 +1473,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Font_ )
+( _java.awt.Font_ )
 
 
 ---
 
-#### _image.font(arg0: _int_, arg1: _[File](../../objects/File)_, arg2: _int_, arg3: _float_) : _Font_
+#### _image.font(arg0: _int_, arg1: _[File](../../objects/File)_, arg2: _int_, arg3: _float_) : _java.awt.Font_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1490,44 +1490,44 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Font_ )
+( _java.awt.Font_ )
 
 
 ---
 
-#### _image.font(arg0: _int_, arg1: _Storage_) : _Font_
+#### _image.font(arg0: _int_, arg1: _[Storage](../../resources/Storage)_) : _java.awt.Font_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Storage_ |   |
+| arg1 | _[Storage](../../resources/Storage)_ |   |
 
 ##### Retorno
 
-( _Font_ )
+( _java.awt.Font_ )
 
 
 ---
 
-#### _image.font(arg0: _int_, arg1: _Storage_, arg2: _int_, arg3: _float_) : _Font_
+#### _image.font(arg0: _int_, arg1: _[Storage](../../resources/Storage)_, arg2: _int_, arg3: _float_) : _java.awt.Font_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Storage_ |   |
+| arg1 | _[Storage](../../resources/Storage)_ |   |
 | arg2 | _int_ |   |
 | arg3 | _float_ |   |
 
 ##### Retorno
 
-( _Font_ )
+( _java.awt.Font_ )
 
 
 ---
 
-#### _image.font(arg0: string, arg1: _int_, arg2: _int_) : _Font_
+#### _image.font(arg0: string, arg1: _int_, arg2: _int_) : _java.awt.Font_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1538,12 +1538,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Font_ )
+( _java.awt.Font_ )
 
 
 ---
 
-#### _image.font(arg0: _[File](../../objects/File)_) : _Font_
+#### _image.font(arg0: _[File](../../objects/File)_) : _java.awt.Font_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1552,12 +1552,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Font_ )
+( _java.awt.Font_ )
 
 
 ---
 
-#### _image.font(arg0: _[File](../../objects/File)_, arg1: _float_) : _Font_
+#### _image.font(arg0: _[File](../../objects/File)_, arg1: _float_) : _java.awt.Font_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1567,12 +1567,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Font_ )
+( _java.awt.Font_ )
 
 
 ---
 
-#### _image.font(arg0: _[File](../../objects/File)_, arg1: _int_, arg2: _float_) : _Font_
+#### _image.font(arg0: _[File](../../objects/File)_, arg1: _int_, arg2: _float_) : _java.awt.Font_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1583,52 +1583,52 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Font_ )
+( _java.awt.Font_ )
 
 
 ---
 
-#### _image.font(arg0: _Storage_) : _Font_
+#### _image.font(arg0: _[Storage](../../resources/Storage)_) : _java.awt.Font_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| arg0 | _[Storage](../../resources/Storage)_ |   |
 
 ##### Retorno
 
-( _Font_ )
+( _java.awt.Font_ )
 
 
 ---
 
-#### _image.font(arg0: _Storage_, arg1: _float_) : _Font_
+#### _image.font(arg0: _[Storage](../../resources/Storage)_, arg1: _float_) : _java.awt.Font_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| arg0 | _[Storage](../../resources/Storage)_ |   |
 | arg1 | _float_ |   |
 
 ##### Retorno
 
-( _Font_ )
+( _java.awt.Font_ )
 
 
 ---
 
-#### _image.font(arg0: _Storage_, arg1: _int_, arg2: _float_) : _Font_
+#### _image.font(arg0: _[Storage](../../resources/Storage)_, arg1: _int_, arg2: _float_) : _java.awt.Font_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| arg0 | _[Storage](../../resources/Storage)_ |   |
 | arg1 | _int_ |   |
 | arg2 | _float_ |   |
 
 ##### Retorno
 
-( _Font_ )
+( _java.awt.Font_ )
 
 
 ---
@@ -1655,16 +1655,16 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.fontMetrics(arg0: _Font_) : _FontMetrics_
+#### _image.fontMetrics(arg0: _java.awt.Font_) : _java.awt.FontMetrics_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Font_ |   |
+| arg0 | _java.awt.Font_ |   |
 
 ##### Retorno
 
-( _FontMetrics_ )
+( _java.awt.FontMetrics_ )
 
 
 ---
@@ -1673,17 +1673,17 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.fontStringBounds(arg0: string, arg1: _Font_) : _Rectangle2D_
+#### _image.fontStringBounds(arg0: string, arg1: _java.awt.Font_) : _java.awt.geom.Rectangle2D_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Font_ |   |
+| arg1 | _java.awt.Font_ |   |
 
 ##### Retorno
 
-( _Rectangle2D_ )
+( _java.awt.geom.Rectangle2D_ )
 
 
 ---
@@ -1692,10 +1692,10 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.getBufferedImage() : _BufferedImage_
+#### _image.getBufferedImage() : _java.awt.image.BufferedImage_
 ##### Retorno
 
-( _BufferedImage_ )
+( _java.awt.image.BufferedImage_ )
 
 
 ---
@@ -1723,10 +1723,10 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.getGraphics() : _Graphics2D_
+#### _image.getGraphics() : _java.awt.Graphics2D_
 ##### Retorno
 
-( _Graphics2D_ )
+( _java.awt.Graphics2D_ )
 
 
 ---
@@ -1747,10 +1747,10 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.getImage() : _Image_
+#### _image.getImage() : _java.awt.Image_
 ##### Retorno
 
-( _Image_ )
+( _java.awt.Image_ )
 
 
 ---
@@ -1783,10 +1783,10 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.graphics() : _Graphics2D_
+#### _image.graphics() : _java.awt.Graphics2D_
 ##### Retorno
 
-( _Graphics2D_ )
+( _java.awt.Graphics2D_ )
 
 
 ---
@@ -1807,10 +1807,10 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.image() : _Image_
+#### _image.image() : _java.awt.Image_
 ##### Retorno
 
-( _Image_ )
+( _java.awt.Image_ )
 
 
 ---
@@ -1819,7 +1819,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.init(arg0: _int_, arg1: _int_) : _Image_
+#### _image.init(arg0: _int_, arg1: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1829,54 +1829,54 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.init(arg0: _Image_) : _Image_
+#### _image.init(arg0: _java.awt.Image_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Image_ |   |
+| arg0 | _java.awt.Image_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.init(arg0: _InputStream_) : _Image_
+#### _image.init(arg0: _java.io.InputStream_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.init(arg0: _ImageInputStream_) : _Image_
+#### _image.init(arg0: _javax.imageio.stream.ImageInputStream_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _ImageInputStream_ |   |
+| arg0 | _javax.imageio.stream.ImageInputStream_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.init(arg0: _[File](../../objects/File)_) : _Image_
+#### _image.init(arg0: _[File](../../objects/File)_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1885,12 +1885,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.init(arg0: _[InputStream](../../objects/InputStream)_) : _Image_
+#### _image.init(arg0: _[InputStream](../../objects/InputStream)_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1899,21 +1899,21 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.init(arg0: _Storage_) : _Image_
+#### _image.init(arg0: _[Storage](../../resources/Storage)_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| arg0 | _[Storage](../../resources/Storage)_ |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -1930,7 +1930,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.jpegCompression(arg0: _float_) : _Image_
+#### _image.jpegCompression(arg0: _float_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1939,7 +1939,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -1948,7 +1948,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.makeTransparent(arg0: _int_, arg1: _int_) : _BufferedImage_
+#### _image.makeTransparent(arg0: _int_, arg1: _int_) : _java.awt.image.BufferedImage_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1958,23 +1958,23 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _BufferedImage_ )
+( _java.awt.image.BufferedImage_ )
 
 
 ---
 
-#### _image.makeTransparent(arg0: _BufferedImage_, arg1: _int_, arg2: _int_) : _BufferedImage_
+#### _image.makeTransparent(arg0: _java.awt.image.BufferedImage_, arg1: _int_, arg2: _int_) : _java.awt.image.BufferedImage_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BufferedImage_ |   |
+| arg0 | _java.awt.image.BufferedImage_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 
 ##### Retorno
 
-( _BufferedImage_ )
+( _java.awt.image.BufferedImage_ )
 
 
 ---
@@ -1983,7 +1983,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.output(arg0: string) : _Image_
+#### _image.output(arg0: string) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1992,7 +1992,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -2001,17 +2001,17 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.renderingHints(arg0: _Key_, arg1: _Object_) : _RenderingHints_
+#### _image.renderingHints(arg0: _java.awt.RenderingHints$Key_, arg1: _java.lang.Object_) : _java.awt.RenderingHints_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Key_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.awt.RenderingHints$Key_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _RenderingHints_ )
+( _java.awt.RenderingHints_ )
 
 
 ---
@@ -2020,7 +2020,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.renderingHintsKey(arg0: string) : _Key_
+#### _image.renderingHintsKey(arg0: string) : _java.awt.RenderingHints$Key_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2029,7 +2029,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Key_ )
+( _java.awt.RenderingHints$Key_ )
 
 
 ---
@@ -2038,10 +2038,10 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.resetGraphics() : _Image_
+#### _image.resetGraphics() : _[Image](../../resources/Image)_
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -2050,7 +2050,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.resize(arg0: _int_, arg1: _int_) : _Image_
+#### _image.resize(arg0: _int_, arg1: _int_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2060,7 +2060,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -2069,37 +2069,37 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.save(arg0: _OutputStream_, arg1: string) : _Image_
+#### _image.save(arg0: _java.io.OutputStream_, arg1: string) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _OutputStream_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 | arg1 | string |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.save(arg0: _ImageOutputStream_, arg1: string) : _Image_
+#### _image.save(arg0: _javax.imageio.stream.ImageOutputStream_, arg1: string) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _ImageOutputStream_ |   |
+| arg0 | _javax.imageio.stream.ImageOutputStream_ |   |
 | arg1 | string |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.save(arg0: _[File](../../objects/File)_, arg1: string) : _Image_
+#### _image.save(arg0: _[File](../../objects/File)_, arg1: string) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2109,12 +2109,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.save(arg0: _[OutputStream](../../objects/OutputStream)_, arg1: string) : _Image_
+#### _image.save(arg0: _[OutputStream](../../objects/OutputStream)_, arg1: string) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2124,22 +2124,22 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
 
-#### _image.save(arg0: _Storage_, arg1: string) : _Image_
+#### _image.save(arg0: _[Storage](../../resources/Storage)_, arg1: string) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| arg0 | _[Storage](../../resources/Storage)_ |   |
 | arg1 | string |   |
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---
@@ -2148,7 +2148,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### _image.setJPEGCompression(arg0: _float_) : _Image_
+#### _image.setJPEGCompression(arg0: _float_) : _[Image](../../resources/Image)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2157,7 +2157,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _Image_ )
+( _[Image](../../resources/Image)_ )
 
 
 ---

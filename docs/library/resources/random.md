@@ -12,20 +12,20 @@ Geração de valores aleatórios.
 
 ---
 
-#### _random.init() : _Random_
+#### _random.init() : _java.util.Random_
 ##### Description
 
 Generates the all Random class.
 
 ##### Return
 
-( _Random_ )
+( _java.util.Random_ )
 
 Returns a class.
 
 ---
 
-#### _random.init(arg0: _long_) : _Random_
+#### _random.init(arg0: _long_) : _java.util.Random_
 ##### Description
 
 Generates a random seed.
@@ -38,7 +38,7 @@ Generates a random seed.
 
 ##### Return
 
-( _Random_ )
+( _java.util.Random_ )
 
 Returns a seed.
 
@@ -48,24 +48,24 @@ Returns a seed.
 
 ---
 
-#### _random.initSecure() : _SecureRandom_
+#### _random.initSecure() : _java.security.SecureRandom_
 ##### Return
 
-( _SecureRandom_ )
+( _java.security.SecureRandom_ )
 
 
 ---
 
-#### _random.initSecure(arg0: _byte[]_) : _SecureRandom_
+#### _random.initSecure(arg0: _[B_) : _java.security.SecureRandom_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| arg0 | _[B_ |   |
 
 ##### Return
 
-( _SecureRandom_ )
+( _java.security.SecureRandom_ )
 
 
 ---
@@ -116,13 +116,13 @@ Returns a 24 characters random string.
 
 ---
 
-#### _random.initString(arg0: _int_, arg1: _Random_) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(arg0: _int_, arg1: _java.util.Random_) : _[RandomString](../../objects/RandomString)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Random_ |   |
+| arg1 | _java.util.Random_ |   |
 
 ##### Return
 
@@ -131,13 +131,13 @@ Returns a 24 characters random string.
 
 ---
 
-#### _random.initString(arg0: _int_, arg1: _Random_, arg2: string) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(arg0: _int_, arg1: _java.util.Random_, arg2: string) : _[RandomString](../../objects/RandomString)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Random_ |   |
+| arg1 | _java.util.Random_ |   |
 | arg2 | string |   |
 
 ##### Return

@@ -48,10 +48,10 @@ Result of the research carried out on the database.
 
 ---
 
-#### getResults() : _List_
+#### getResults() : _java.util.List_
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -72,7 +72,7 @@ Result of the research carried out on the database.
 
 ---
 
-#### setFullTotal(arg0: _int_) : _DBSearchResult_
+#### setFullTotal(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -81,7 +81,7 @@ Result of the research carried out on the database.
 
 ##### Return
 
-( _DBSearchResult_ )
+( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
 
 ---
@@ -90,7 +90,7 @@ Result of the research carried out on the database.
 
 ---
 
-#### setLength(arg0: _int_) : _DBSearchResult_
+#### setLength(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -99,7 +99,7 @@ Result of the research carried out on the database.
 
 ##### Return
 
-( _DBSearchResult_ )
+( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
 
 ---
@@ -108,7 +108,7 @@ Result of the research carried out on the database.
 
 ---
 
-#### setOffset(arg0: _int_) : _DBSearchResult_
+#### setOffset(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -117,7 +117,7 @@ Result of the research carried out on the database.
 
 ##### Return
 
-( _DBSearchResult_ )
+( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
 
 ---
@@ -126,16 +126,16 @@ Result of the research carried out on the database.
 
 ---
 
-#### setResults(arg0: _List_) : _DBSearchResult_
+#### setResults(arg0: _java.util.List_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Return
 
-( _DBSearchResult_ )
+( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
 
 ---
@@ -144,7 +144,7 @@ Result of the research carried out on the database.
 
 ---
 
-#### setTotal(arg0: _int_) : _DBSearchResult_
+#### setTotal(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -153,7 +153,7 @@ Result of the research carried out on the database.
 
 ##### Return
 
-( _DBSearchResult_ )
+( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
 
 ---

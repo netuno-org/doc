@@ -13,14 +13,14 @@ O Remote facilita esta integração e torna simples a integração com web servi
 
 ---
 
-#### _remote.acceptJSON() : _Remote_
+#### _remote.acceptJSON() : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define que o conteúdo será recebido no formato application/json.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -30,14 +30,14 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.alwaysBodyData() : _Remote_
+#### _remote.alwaysBodyData() : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Força os dados irem no corpo do cabeçalho HTTP, até mesmo no caso do método <code>GET</code>.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -47,14 +47,14 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.asBinary() : _Remote_
+#### _remote.asBinary() : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define que os dados do conteúdo recebido pela conexão remota estão no formato binário, como download de ficheiros, imagens, zip, etc...
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -64,14 +64,14 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.asForm() : _Remote_
+#### _remote.asForm() : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define que o conteúdo de dados será submetido no formato application/x-www-form-urlencoded.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -81,14 +81,14 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.asJSON() : _Remote_
+#### _remote.asJSON() : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define que o conteúdo de dados será submetido no formato application/json.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -98,14 +98,14 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.asMultipartFormData() : _Remote_
+#### _remote.asMultipartFormData() : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define que o conteúdo de dados será submetido no formato multipart/form-data.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -115,14 +115,14 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.asText() : _Remote_
+#### _remote.asText() : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define que o conteúdo de dados será submetido no formato text/plain.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -164,7 +164,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.delete(endereco: string, dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.delete(endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método DELETE.
@@ -174,7 +174,7 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | endereco | string | Endereço que será submetido. |
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -204,7 +204,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.delete(dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.delete(dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método DELETE.
@@ -213,7 +213,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -278,7 +278,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.get(endereco: string, dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.get(endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método GET.
@@ -288,7 +288,7 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | endereco | string | Endereço que será submetido. |
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -318,7 +318,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.get(dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.get(dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método GET.
@@ -327,7 +327,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -564,20 +564,20 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.init() : _Remote_
+#### _remote.init() : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Inicia um novo Remote.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 Nova instância do Remote.
 
 ---
 
-#### _remote.init(nomeConfig: string) : _Remote_
+#### _remote.init(nomeConfig: string) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Inicia um novo Remote com base na chave de configuração.
@@ -590,13 +590,13 @@ Inicia um novo Remote com base na chave de configuração.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 Nova instância do Remote.
 
 ---
 
-#### _remote.init(nomeConfig: _[Values](../../objects/Values)_) : _Remote_
+#### _remote.init(nomeConfig: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Inicia um novo Remote com base na chave de configuração.
@@ -609,7 +609,7 @@ Inicia um novo Remote com base na chave de configuração.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 Nova instância do Remote.
 
@@ -744,7 +744,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.json(metodo: string, endereco: string, dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.json(metodo: string, endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Através do método HTTP, endereço e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -755,7 +755,7 @@ Através do método HTTP, endereço e mapa de dados atribuído submete os dados 
 |---|---|---|
 | metodo | string | Código do método HTTP. |
 | endereco | string | Endereço que será submetido. |
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -822,7 +822,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.patch(endereco: string, dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.patch(endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método PATCH.
@@ -832,7 +832,7 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | endereco | string | Endereço que será submetido. |
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -862,7 +862,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.patch(dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.patch(dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método PATCH.
@@ -871,7 +871,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -983,7 +983,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.post(endereco: string, dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.post(endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método POST.
@@ -993,7 +993,7 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | endereco | string | Endereço que será submetido. |
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1023,7 +1023,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.post(dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.post(dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método POST.
@@ -1032,7 +1032,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1097,7 +1097,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.put(endereco: string, dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.put(endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método PUT.
@@ -1107,7 +1107,7 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | endereco | string | Endereço que será submetido. |
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1137,7 +1137,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.put(dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.put(dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método PUT.
@@ -1146,7 +1146,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1179,7 +1179,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.setAlwaysBodyData(sempreCorpoData: _boolean_) : _Remote_
+#### _remote.setAlwaysBodyData(sempreCorpoData: _boolean_) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Força os dados irem no corpo do cabeçalho HTTP, até mesmo no caso do método <code>GET</code>.
@@ -1192,7 +1192,7 @@ Força os dados irem no corpo do cabeçalho HTTP, até mesmo no caso do método 
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1202,7 +1202,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setAuthorization(autorizacao: string) : _Remote_
+#### _remote.setAuthorization(autorizacao: string) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define o conteúdo exato da autorização que vai cabeçalho da comunicação que será enviada na conexão remota.
@@ -1215,13 +1215,13 @@ Define o conteúdo exato da autorização que vai cabeçalho da comunicação qu
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
 ---
 
-#### _remote.setAuthorization(usuario: string, senha: string) : _Remote_
+#### _remote.setAuthorization(usuario: string, senha: string) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define o conteúdo da autorização básica com utilizador e password que vai cabeçalho da comunicação que será enviada na conexão remota.
@@ -1235,7 +1235,7 @@ Define o conteúdo da autorização básica com utilizador e password que vai ca
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1245,7 +1245,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setBinary(binario: _boolean_) : _Remote_
+#### _remote.setBinary(binario: _boolean_) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define que os dados do conteúdo recebido pela conexão remota estão no formato binário, como download de ficheiros, imagens, zip, etc...
@@ -1258,7 +1258,7 @@ Define que os dados do conteúdo recebido pela conexão remota estão no formato
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1268,7 +1268,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setCharset(codificacaoCaracteres: string) : _Remote_
+#### _remote.setCharset(codificacaoCaracteres: string) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define a codificação de caracteres que deve ser utilizada na conexão remota.
@@ -1281,7 +1281,7 @@ Define a codificação de caracteres que deve ser utilizada na conexão remota.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1291,7 +1291,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setConnectTimeout(tempoLimite: _int_) : _Remote_
+#### _remote.setConnectTimeout(tempoLimite: _int_) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define o o tempo limite para estabilizar a conexão remota.
@@ -1304,7 +1304,7 @@ Define o o tempo limite para estabilizar a conexão remota.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1314,7 +1314,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setContentType(tipoConteudo: string) : _Remote_
+#### _remote.setContentType(tipoConteudo: string) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define o tipo de conteúdo que deve ser utilizada na conexão remota.
@@ -1327,7 +1327,7 @@ Define o tipo de conteúdo que deve ser utilizada na conexão remota.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1337,7 +1337,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setData(dados: _[Values](../../objects/Values)_) : _Remote_
+#### _remote.setData(dados: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define a parametrização dos dados que serão enviados como conteúdo da conexão remota, via POST ou PUT.
@@ -1350,7 +1350,7 @@ Define a parametrização dos dados que serão enviados como conteúdo da conex�
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1360,7 +1360,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setDefaultSubmitData(cabecalhoDoPedido: string) : _Remote_
+#### _remote.setDefaultSubmitData(cabecalhoDoPedido: string) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define os dados padrão caso não haja outros dados definidos para ser enviados na conexão remota.
@@ -1373,7 +1373,7 @@ Define os dados padrão caso não haja outros dados definidos para ser enviados 
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1383,7 +1383,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setFollowRedirects(seguirRedirects: _boolean_) : _Remote_
+#### _remote.setFollowRedirects(seguirRedirects: _boolean_) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define se deve seguir redirecionamentos na conexão remota.
@@ -1396,7 +1396,7 @@ Define se deve seguir redirecionamentos na conexão remota.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1406,7 +1406,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setFormData(arg0: _[Values](../../objects/Values)_) : _Remote_
+#### _remote.setFormData(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1415,7 +1415,7 @@ A instância atual do Remote.
 
 ##### Retorno
 
-( _Remote_ )
+( _org.netuno.psamata.net.Remote_ )
 
 
 ---
@@ -1424,7 +1424,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setHeader(cabecalhoDoPedido: _[Values](../../objects/Values)_) : _Remote_
+#### _remote.setHeader(cabecalhoDoPedido: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define o cabeçalho do pedido que é submetido na conexão remota.
@@ -1437,7 +1437,7 @@ Define o cabeçalho do pedido que é submetido na conexão remota.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1447,7 +1447,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setQS(dados: _[Values](../../objects/Values)_) : _Remote_
+#### _remote.setQS(dados: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define a parametrização de dados da query string, ou seja, os parâmetros com dados passados no endereço da conexão remota.
@@ -1460,7 +1460,7 @@ Define a parametrização de dados da query string, ou seja, os parâmetros com 
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1470,7 +1470,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setQueryString(arg0: _[Values](../../objects/Values)_) : _Remote_
+#### _remote.setQueryString(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1479,7 +1479,7 @@ A instância atual do Remote.
 
 ##### Retorno
 
-( _Remote_ )
+( _org.netuno.psamata.net.Remote_ )
 
 
 ---
@@ -1488,7 +1488,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setReadTimeout(tempoLimite: _int_) : _Remote_
+#### _remote.setReadTimeout(tempoLimite: _int_) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define o o tempo limite para leitura de dados.
@@ -1501,7 +1501,7 @@ Define o o tempo limite para leitura de dados.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1511,7 +1511,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setSOAPAction(acaoSOAP: string) : _Remote_
+#### _remote.setSOAPAction(acaoSOAP: string) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define a "ação" (operação, método, etc.) SOAP da conexão remota.
@@ -1524,7 +1524,7 @@ Define a "ação" (operação, método, etc.) SOAP da conexão remota.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1534,7 +1534,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setSOAPNS(nsSOAP: string) : _Remote_
+#### _remote.setSOAPNS(nsSOAP: string) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define o namespace do SOAP na conexão remota.
@@ -1547,7 +1547,7 @@ Define o namespace do SOAP na conexão remota.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1557,7 +1557,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setSOAPURL(enderecoSOAP: string) : _Remote_
+#### _remote.setSOAPURL(enderecoSOAP: string) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define o endereço SOAP da conexão remota.
@@ -1570,7 +1570,7 @@ Define o endereço SOAP da conexão remota.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1580,7 +1580,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setURL(endereco: string) : _Remote_
+#### _remote.setURL(endereco: string) : _[Remote](../../resources/Remote)_
 ##### Descrição
 
 Define o endereço da conexão remota.
@@ -1593,7 +1593,7 @@ Define o endereço da conexão remota.
 
 ##### Retorno
 
-( _Remote_ )
+( _[Remote](../../resources/Remote)_ )
 
 A instância atual do Remote.
 
@@ -1603,7 +1603,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setURLPrefix(arg0: string) : _Remote_
+#### _remote.setURLPrefix(arg0: string) : _org.netuno.psamata.net.Remote_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1612,7 +1612,7 @@ A instância atual do Remote.
 
 ##### Retorno
 
-( _Remote_ )
+( _org.netuno.psamata.net.Remote_ )
 
 
 ---
@@ -1728,7 +1728,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submit(metodo: string, endereco: string, querystring: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.submit(metodo: string, endereco: string, querystring: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Através do método HTTP, endereço, query string, tipo de conteúdo e dados atribuídos, submete para a conexão remota.
@@ -1739,7 +1739,7 @@ Através do método HTTP, endereço, query string, tipo de conteúdo e dados atr
 |---|---|---|
 | metodo | string | Código do método HTTP. |
 | endereco | string | Endereço que será submetido. |
-| querystring | _Map_ | Dados para a querystring. |
+| querystring | _java.util.Map_ | Dados para a querystring. |
 
 ##### Retorno
 
@@ -1749,7 +1749,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submit(metodo: string, endereco: string, querystring: _Map_, tipoConteudo: string, dados: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.submit(metodo: string, endereco: string, querystring: _java.util.Map_, tipoConteudo: string, dados: string) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Através do método HTTP, endereço, query string, tipo de conteúdo e dados atribuídos, submete para a conexão remota.
@@ -1760,7 +1760,7 @@ Através do método HTTP, endereço, query string, tipo de conteúdo e dados atr
 |---|---|---|
 | metodo | string | Código do método HTTP. |
 | endereco | string | Endereço que será submetido. |
-| querystring | _Map_ | Dados para a querystring. |
+| querystring | _java.util.Map_ | Dados para a querystring. |
 | tipoConteudo | string | Código do tipo de conteúdo. |
 | dados | string | Dados que serão submetido. |
 
@@ -1820,7 +1820,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitForm(metodo: string, endereco: string, dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.submitForm(metodo: string, endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como formulário para a conexão remota.
@@ -1831,7 +1831,7 @@ Através do método HTTP e mapa de dados atribuído submete os dados como formul
 |---|---|---|
 | metodo | string | Código do método HTTP. |
 | endereco | string | Endereço que será submetido. |
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1862,7 +1862,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitForm(metodo: string, dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.submitForm(metodo: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como formulário para a conexão remota.
@@ -1872,7 +1872,7 @@ Através do método HTTP e mapa de dados atribuído submete os dados como formul
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | metodo | string | Código do método HTTP. |
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1906,7 +1906,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitJSON(metodo: string, endereco: string, dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.submitJSON(metodo: string, endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Através do método HTTP, endereço e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -1917,7 +1917,7 @@ Através do método HTTP, endereço e mapa de dados atribuído submete os dados 
 |---|---|---|
 | metodo | string | Código do método HTTP. |
 | endereco | string | Endereço que será submetido. |
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1948,7 +1948,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitJSON(metodo: string, dados: _Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### _remote.submitJSON(metodo: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -1958,7 +1958,7 @@ Através do método HTTP e mapa de dados atribuído submete os dados como JSON p
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | metodo | string | Código do método HTTP. |
-| dados | _Map_ | Mapa de dados que serão submetido. |
+| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 

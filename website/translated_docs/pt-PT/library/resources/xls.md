@@ -48,7 +48,7 @@ excel.output("idades.xls");
 
 ---
 
-#### `_xls.create()`.activeSheet(index: _int_) : _HSSFSheet_
+#### `_xls.create()`.activeSheet(index: _int_) : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Descrição
 
 Define a folha de cálculos que fica ativa.
@@ -61,7 +61,7 @@ Define a folha de cálculos que fica ativa.
 
 ##### Retorno
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Folha de cálculos ativa.
 
@@ -71,7 +71,7 @@ Folha de cálculos ativa.
 
 ---
 
-#### _xls.add(linha: _int_, coluna: _int_, dados: _Map_) : _XLS_
+#### _xls.add(linha: _int_, coluna: _int_, dados: _java.util.Map_) : _[XLS](../../resources/XLS)_
 ##### Descrição
 
 Insere dados numa célula específica.
@@ -82,17 +82,17 @@ Insere dados numa célula específica.
 |---|---|---|
 | linha | _int_ | Número da linha. |
 | coluna | _int_ | Número da coluna. |
-| dados | _Map_ | Dados que serão inseridos. |
+| dados | _java.util.Map_ | Dados que serão inseridos. |
 
 ##### Retorno
 
-( _XLS_ )
+( _[XLS](../../resources/XLS)_ )
 
 A instância atual do recurso XLS.
 
 ---
 
-#### _xls.add(celula: _HSSFCell_, dados: _Map_) : _XLS_
+#### _xls.add(celula: _org.apache.poi.hssf.usermodel.HSSFCell_, dados: _java.util.Map_) : _[XLS](../../resources/XLS)_
 ##### Descrição
 
 Insere dados numa célula específica.
@@ -101,18 +101,18 @@ Insere dados numa célula específica.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| celula | _HSSFCell_ | Objeto da célula. |
-| dados | _Map_ | Dados que serão inseridos. |
+| celula | _org.apache.poi.hssf.usermodel.HSSFCell_ | Objeto da célula. |
+| dados | _java.util.Map_ | Dados que serão inseridos. |
 
 ##### Retorno
 
-( _XLS_ )
+( _[XLS](../../resources/XLS)_ )
 
 A instância atual do recurso XLS.
 
 ---
 
-#### _xls.add(celula: _HSSFCell_, dados: _[Values](../../objects/Values)_) : _XLS_
+#### _xls.add(celula: _org.apache.poi.hssf.usermodel.HSSFCell_, dados: _[Values](../../objects/Values)_) : _[XLS](../../resources/XLS)_
 ##### Descrição
 
 Insere dados numa célula específica.
@@ -121,12 +121,12 @@ Insere dados numa célula específica.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| celula | _HSSFCell_ | Objeto da célula. |
+| celula | _org.apache.poi.hssf.usermodel.HSSFCell_ | Objeto da célula. |
 | dados | _[Values](../../objects/Values)_ | Dados que serão inseridos. |
 
 ##### Retorno
 
-( _XLS_ )
+( _[XLS](../../resources/XLS)_ )
 
 A instância atual do recurso XLS.
 
@@ -136,7 +136,7 @@ A instância atual do recurso XLS.
 
 ---
 
-#### `_xls.create()`.addDataTable(linha: _int_, coluna: _int_, dados: _List_) : _[XLSPosition](../../objects/XLSPosition)_
+#### `_xls.create()`.addDataTable(linha: _int_, coluna: _int_, dados: _java.util.List_) : _[XLSPosition](../../objects/XLSPosition)_
 ##### Descrição
 
 Adiciona uma tabela de dados na folha de cálculos.
@@ -147,7 +147,7 @@ Adiciona uma tabela de dados na folha de cálculos.
 |---|---|---|
 | linha | _int_ | Número da linha. |
 | coluna | _int_ | Número da coluna. |
-| dados | _List_ | Lista de dados que serão inseridos. |
+| dados | _java.util.List_ | Lista de dados que serão inseridos. |
 
 ##### Retorno
 
@@ -157,7 +157,7 @@ Referência da posição da última célula com dados inserida.
 
 ---
 
-#### `_xls.create()`.addDataTable(linha: _int_, coluna: _int_, dados: _List_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
+#### `_xls.create()`.addDataTable(linha: _int_, coluna: _int_, dados: _java.util.List_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
 ##### Descrição
 
 Adiciona uma tabela de dados na folha de cálculos.
@@ -168,7 +168,7 @@ Adiciona uma tabela de dados na folha de cálculos.
 |---|---|---|
 | linha | _int_ | Número da linha. |
 | coluna | _int_ | Número da coluna. |
-| dados | _List_ | Lista de dados que serão inseridos. |
+| dados | _java.util.List_ | Lista de dados que serão inseridos. |
 | vertical | _boolean_ | Inserir dados na vertical. |
 
 ##### Retorno
@@ -179,7 +179,7 @@ Referência da posição da última célula com dados inserida.
 
 ---
 
-#### `_xls.create()`.addDataTable(folhaCalculos: _int_, linha: _int_, coluna: _[Values](../../objects/Values)_) : _[XLSPosition](../../objects/XLSPosition)_
+#### `_xls.create()`.addDataTable(linha: _int_, coluna: _int_, dados: _[Values](../../objects/Values)_) : _[XLSPosition](../../objects/XLSPosition)_
 ##### Descrição
 
 Adiciona uma tabela de dados na folha de cálculos.
@@ -188,73 +188,73 @@ Adiciona uma tabela de dados na folha de cálculos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| folhaCalculos | _int_ | Objeto da folha de cálculos. |
-| linha | _int_ | Número da linha. |
-| coluna | _[Values](../../objects/Values)_ | Número da coluna. |
-
-##### Retorno
-
-( _[XLSPosition](../../objects/XLSPosition)_ )
-
-Referência da posição da última célula com dados inserida.
-
----
-
-#### `_xls.create()`.addDataTable(folhaCalculos: _int_, linha: _int_, coluna: _[Values](../../objects/Values)_, dados: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
-##### Descrição
-
-Adiciona uma tabela de dados na folha de cálculos.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| folhaCalculos | _int_ | Objeto da folha de cálculos. |
-| linha | _int_ | Número da linha. |
-| coluna | _[Values](../../objects/Values)_ | Número da coluna. |
-| dados | _boolean_ | Lista de dados que serão inseridos. |
-
-##### Retorno
-
-( _[XLSPosition](../../objects/XLSPosition)_ )
-
-Referência da posição da última célula com dados inserida.
-
----
-
-#### `_xls.create()`.addDataTable(config: _Map_, dados: _List_) : _[XLSPosition](../../objects/XLSPosition)_
-##### Descrição
-
-Adiciona uma tabela de dados na folha de cálculos.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| config | _Map_ | Configuração da tabela de dados. |
-| dados | _List_ | Lista de dados que serão inseridos. |
-
-##### Retorno
-
-( _[XLSPosition](../../objects/XLSPosition)_ )
-
-Referência da posição da última célula com dados inserida.
-
----
-
-#### `_xls.create()`.addDataTable(folhaCalculos: _HSSFSheet_, linha: _int_, coluna: _int_, dados: _List_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
-##### Descrição
-
-Adiciona uma tabela de dados na folha de cálculos.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| folhaCalculos | _HSSFSheet_ | Objeto da folha de cálculos. |
 | linha | _int_ | Número da linha. |
 | coluna | _int_ | Número da coluna. |
-| dados | _List_ | Lista de dados que serão inseridos. |
+| dados | _[Values](../../objects/Values)_ | Lista de dados que serão inseridos. |
+
+##### Retorno
+
+( _[XLSPosition](../../objects/XLSPosition)_ )
+
+Referência da posição da última célula com dados inserida.
+
+---
+
+#### `_xls.create()`.addDataTable(linha: _int_, coluna: _int_, dados: _[Values](../../objects/Values)_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
+##### Descrição
+
+Adiciona uma tabela de dados na folha de cálculos.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| linha | _int_ | Número da linha. |
+| coluna | _int_ | Número da coluna. |
+| dados | _[Values](../../objects/Values)_ | Lista de dados que serão inseridos. |
+| vertical | _boolean_ | Inserir dados na vertical. |
+
+##### Retorno
+
+( _[XLSPosition](../../objects/XLSPosition)_ )
+
+Referência da posição da última célula com dados inserida.
+
+---
+
+#### `_xls.create()`.addDataTable(config: _java.util.Map_, dados: _java.util.List_) : _[XLSPosition](../../objects/XLSPosition)_
+##### Descrição
+
+Adiciona uma tabela de dados na folha de cálculos.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| config | _java.util.Map_ | Configuração da tabela de dados. |
+| dados | _java.util.List_ | Lista de dados que serão inseridos. |
+
+##### Retorno
+
+( _[XLSPosition](../../objects/XLSPosition)_ )
+
+Referência da posição da última célula com dados inserida.
+
+---
+
+#### `_xls.create()`.addDataTable(folhaCalculos: _org.apache.poi.hssf.usermodel.HSSFSheet_, linha: _int_, coluna: _int_, dados: _java.util.List_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
+##### Descrição
+
+Adiciona uma tabela de dados na folha de cálculos.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| folhaCalculos | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Objeto da folha de cálculos. |
+| linha | _int_ | Número da linha. |
+| coluna | _int_ | Número da coluna. |
+| dados | _java.util.List_ | Lista de dados que serão inseridos. |
 | vertical | _boolean_ | Inserir os dados na vertical. |
 
 ##### Retorno
@@ -265,7 +265,7 @@ Referência da posição da última célula com dados inserida.
 
 ---
 
-#### `_xls.create()`.addDataTable(folhaCalculos: _HSSFSheet_, linha: _int_, coluna: _int_, dados: _[Values](../../objects/Values)_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
+#### `_xls.create()`.addDataTable(folhaCalculos: _org.apache.poi.hssf.usermodel.HSSFSheet_, linha: _int_, coluna: _int_, dados: _[Values](../../objects/Values)_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
 ##### Descrição
 
 Adiciona uma tabela de dados na folha de cálculos.
@@ -274,7 +274,7 @@ Adiciona uma tabela de dados na folha de cálculos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| folhaCalculos | _HSSFSheet_ | Objeto da folha de cálculos. |
+| folhaCalculos | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Objeto da folha de cálculos. |
 | linha | _int_ | Número da linha. |
 | coluna | _int_ | Número da coluna. |
 | dados | _[Values](../../objects/Values)_ | Lista de dados que serão inseridos. |
@@ -292,7 +292,7 @@ Referência da posição da última célula com dados inserida.
 
 ---
 
-#### _xls.anchorType(tipo: string) : _AnchorType_
+#### _xls.anchorType(tipo: string) : _org.apache.poi.ss.usermodel.ClientAnchor$AnchorType_
 ##### Descrição
 
 Gera o tipo de âncora.
@@ -305,7 +305,7 @@ Gera o tipo de âncora.
 
 ##### Retorno
 
-( _AnchorType_ )
+( _org.apache.poi.ss.usermodel.ClientAnchor$AnchorType_ )
 
 O tipo de âncora configurado com o tipo definido.
 
@@ -315,7 +315,7 @@ O tipo de âncora configurado com o tipo definido.
 
 ---
 
-#### _xls.borderStyle(tipo: string) : _BorderStyle_
+#### _xls.borderStyle(tipo: string) : _org.apache.poi.ss.usermodel.BorderStyle_
 ##### Descrição
 
 Gera o estilo de contorno das bordas das células.
@@ -328,7 +328,7 @@ Gera o estilo de contorno das bordas das células.
 
 ##### Retorno
 
-( _BorderStyle_ )
+( _org.apache.poi.ss.usermodel.BorderStyle_ )
 
 O estilo de contorno de borda configurado com o tipo definido.
 
@@ -338,7 +338,7 @@ O estilo de contorno de borda configurado com o tipo definido.
 
 ---
 
-#### `_xls.create()`.cell(linha: _int_, coluna: _int_) : _HSSFCell_
+#### `_xls.create()`.cell(linha: _int_, coluna: _int_) : _org.apache.poi.hssf.usermodel.HSSFCell_
 ##### Descrição
 
 Obtém uma célula da folha de cálculos e caso não exista então será criada.
@@ -352,13 +352,13 @@ Obtém uma célula da folha de cálculos e caso não exista então será criada.
 
 ##### Retorno
 
-( _HSSFCell_ )
+( _org.apache.poi.hssf.usermodel.HSSFCell_ )
 
 Objeto de representação da célula.
 
 ---
 
-#### `_xls.create()`.cell(linha: _HSSFSheet_, linha: _int_, coluna: _int_) : _HSSFCell_
+#### `_xls.create()`.cell(linha: _org.apache.poi.hssf.usermodel.HSSFSheet_, linha: _int_, coluna: _int_) : _org.apache.poi.hssf.usermodel.HSSFCell_
 ##### Descrição
 
 Obtém uma célula da folha de cálculos e caso não exista então será criada.
@@ -367,13 +367,13 @@ Obtém uma célula da folha de cálculos e caso não exista então será criada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| linha | _HSSFSheet_ | Objeto da folha de cálculos. |
+| linha | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Objeto da folha de cálculos. |
 | linha | _int_ | Número da linha da folha. |
 | coluna | _int_ | Número da coluna. |
 
 ##### Retorno
 
-( _HSSFCell_ )
+( _org.apache.poi.hssf.usermodel.HSSFCell_ )
 
 Objeto de representação da célula.
 
@@ -383,7 +383,7 @@ Objeto de representação da célula.
 
 ---
 
-#### _xls.cellRangeAddress(primeiraLinha: _int_, ultimaLinha: _int_, primeiraColuna: _int_, ultimaColuna: _int_) : _CellRangeAddress_
+#### _xls.cellRangeAddress(primeiraLinha: _int_, ultimaLinha: _int_, primeiraColuna: _int_, ultimaColuna: _int_) : _org.apache.poi.ss.util.CellRangeAddress_
 ##### Descrição
 
 Gera o endereço de região da área das células.
@@ -399,7 +399,7 @@ Gera o endereço de região da área das células.
 
 ##### Retorno
 
-( _CellRangeAddress_ )
+( _org.apache.poi.ss.util.CellRangeAddress_ )
 
 A referência do endereço da área das células.
 
@@ -409,14 +409,14 @@ A referência do endereço da área das células.
 
 ---
 
-#### _xls.cellStyle() : _HSSFCellStyle_
+#### _xls.cellStyle() : _org.apache.poi.hssf.usermodel.HSSFCellStyle_
 ##### Descrição
 
 Cria um novo estilo de célula no workbook.
 
 ##### Retorno
 
-( _HSSFCellStyle_ )
+( _org.apache.poi.hssf.usermodel.HSSFCellStyle_ )
 
 O novo estilo de célula criado.
 
@@ -426,7 +426,7 @@ O novo estilo de célula criado.
 
 ---
 
-#### _xls.cellStyleFormat(formato: string) : _HSSFCellStyle_
+#### _xls.cellStyleFormat(formato: string) : _org.apache.poi.hssf.usermodel.HSSFCellStyle_
 ##### Descrição
 
 Cria um novo estilo de célula com um formato associado no workbook.
@@ -439,7 +439,7 @@ Cria um novo estilo de célula com um formato associado no workbook.
 
 ##### Retorno
 
-( _HSSFCellStyle_ )
+( _org.apache.poi.hssf.usermodel.HSSFCellStyle_ )
 
 O novo estilo de célula criado com o formato configurado.
 
@@ -514,7 +514,7 @@ Posição numérica da coluna.
 
 ---
 
-#### _xls.create() : _XLS_
+#### _xls.create() : _[XLS](../../resources/XLS)_
 ##### Descrição
 
 Cria um novo documento Excel.
@@ -527,7 +527,7 @@ const excel = _xls.create();
 
 ##### Retorno
 
-( _XLS_ )
+( _[XLS](../../resources/XLS)_ )
 
 Nova instância do recurso XLS.
 
@@ -537,20 +537,20 @@ Nova instância do recurso XLS.
 
 ---
 
-#### `_xls.create()`.createSheet() : _HSSFSheet_
+#### `_xls.create()`.createSheet() : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Descrição
 
 Cria uma nova folha de cálculos.
 
 ##### Retorno
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Folha de cálculos criada.
 
 ---
 
-#### `_xls.create()`.createSheet(nome: string) : _HSSFSheet_
+#### `_xls.create()`.createSheet(nome: string) : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Descrição
 
 Cria uma nova folha de cálculos e define o seu nome.
@@ -563,7 +563,7 @@ Cria uma nova folha de cálculos e define o seu nome.
 
 ##### Retorno
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Folha de cálculos criada.
 
@@ -573,7 +573,7 @@ Folha de cálculos criada.
 
 ---
 
-#### _xls.fillPattern(tipo: string) : _FillPatternType_
+#### _xls.fillPattern(tipo: string) : _org.apache.poi.ss.usermodel.FillPatternType_
 ##### Descrição
 
 Gera o padrão de preenchimento de fundo.
@@ -586,7 +586,7 @@ Gera o padrão de preenchimento de fundo.
 
 ##### Retorno
 
-( _FillPatternType_ )
+( _org.apache.poi.ss.usermodel.FillPatternType_ )
 
 O padrão de preenchimento configurado com o tipo definido.
 
@@ -596,14 +596,14 @@ O padrão de preenchimento configurado com o tipo definido.
 
 ---
 
-#### _xls.font() : _HSSFFont_
+#### _xls.font() : _org.apache.poi.hssf.usermodel.HSSFFont_
 ##### Descrição
 
 Cria um novo estilo de fonte no workbook.
 
 ##### Retorno
 
-( _HSSFFont_ )
+( _org.apache.poi.hssf.usermodel.HSSFFont_ )
 
 O novo estilo de fonte criado.
 
@@ -636,7 +636,7 @@ Código identificador do novo formato.
 
 ---
 
-#### `_xls.create()`.getSheet(index: _int_) : _HSSFSheet_
+#### `_xls.create()`.getSheet(index: _int_) : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Descrição
 
 Obtém a folha de cálculos através do número (index).
@@ -649,13 +649,13 @@ Obtém a folha de cálculos através do número (index).
 
 ##### Retorno
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Folha de cálculos referente ao número (index).
 
 ---
 
-#### `_xls.create()`.getSheet(nome: string) : _HSSFSheet_
+#### `_xls.create()`.getSheet(nome: string) : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Descrição
 
 Obtém a folha de cálculos através do nome.
@@ -668,7 +668,7 @@ Obtém a folha de cálculos através do nome.
 
 ##### Retorno
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Folha de cálculos referente ao nome.
 
@@ -678,7 +678,7 @@ Folha de cálculos referente ao nome.
 
 ---
 
-#### _xls.horizontalAlignment(tipo: string) : _HorizontalAlignment_
+#### _xls.horizontalAlignment(tipo: string) : _org.apache.poi.ss.usermodel.HorizontalAlignment_
 ##### Descrição
 
 Gera o alinhamento horizontal.
@@ -691,7 +691,7 @@ Gera o alinhamento horizontal.
 
 ##### Retorno
 
-( _HorizontalAlignment_ )
+( _org.apache.poi.ss.usermodel.HorizontalAlignment_ )
 
 O alinhamento horizontal configurado com o tipo definido.
 
@@ -701,7 +701,7 @@ O alinhamento horizontal configurado com o tipo definido.
 
 ---
 
-#### _xls.insertPicture(folhaCalculos: _HSSFSheet_, file: _[File](../../objects/File)_, ancora: _ClientAnchor_) : _Picture_
+#### _xls.insertPicture(folhaCalculos: _org.apache.poi.hssf.usermodel.HSSFSheet_, file: _[File](../../objects/File)_, ancora: _org.apache.poi.ss.usermodel.ClientAnchor_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Descrição
 
 Insere uma imagem associada à âncora em uma folha de cálculos específica.
@@ -710,19 +710,19 @@ Insere uma imagem associada à âncora em uma folha de cálculos específica.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| folhaCalculos | _HSSFSheet_ | Folha de cálculos que será utilizada para inserir a imagem. |
+| folhaCalculos | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Folha de cálculos que será utilizada para inserir a imagem. |
 | file | _[File](../../objects/File)_ | Ficheiro de imagem. |
-| ancora | _ClientAnchor_ | Âncora para associar a imagem. |
+| ancora | _org.apache.poi.ss.usermodel.ClientAnchor_ | Âncora para associar a imagem. |
 
 ##### Retorno
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 O objeto de referência da imagem inserida.
 
 ---
 
-#### _xls.insertPicture(folhaCalculos: _HSSFSheet_, storage: _Storage_, ancora: _ClientAnchor_) : _Picture_
+#### _xls.insertPicture(folhaCalculos: _org.apache.poi.hssf.usermodel.HSSFSheet_, storage: _[Storage](../../resources/Storage)_, ancora: _org.apache.poi.ss.usermodel.ClientAnchor_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Descrição
 
 Insere uma imagem associada à âncora em uma folha de cálculos específica.
@@ -731,19 +731,19 @@ Insere uma imagem associada à âncora em uma folha de cálculos específica.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| folhaCalculos | _HSSFSheet_ | Folha de cálculos que será utilizada para inserir a imagem. |
-| storage | _Storage_ | Referência do storage associado a um ficheiro de imagem. |
-| ancora | _ClientAnchor_ | Âncora para associar a imagem. |
+| folhaCalculos | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Folha de cálculos que será utilizada para inserir a imagem. |
+| storage | _[Storage](../../resources/Storage)_ | Referência do storage associado a um ficheiro de imagem. |
+| ancora | _org.apache.poi.ss.usermodel.ClientAnchor_ | Âncora para associar a imagem. |
 
 ##### Retorno
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 O objeto de referência da imagem inserida.
 
 ---
 
-#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, linha: _int_, coluna: _int_) : _Picture_
+#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, linha: _int_, coluna: _int_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Descrição
 
 Insere a imagem na célula específicada.
@@ -758,13 +758,13 @@ Insere a imagem na célula específicada.
 
 ##### Retorno
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 O objeto de referência da imagem inserida.
 
 ---
 
-#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, ancora: _ClientAnchor_) : _Picture_
+#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, ancora: _org.apache.poi.ss.usermodel.ClientAnchor_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Descrição
 
 Insere uma imagem associada à âncora.
@@ -774,17 +774,17 @@ Insere uma imagem associada à âncora.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | file | _[File](../../objects/File)_ | Ficheiro de imagem. |
-| ancora | _ClientAnchor_ | Âncora para associar a imagem. |
+| ancora | _org.apache.poi.ss.usermodel.ClientAnchor_ | Âncora para associar a imagem. |
 
 ##### Retorno
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 O objeto de referência da imagem inserida.
 
 ---
 
-#### `_xls.create()`.insertPicture(storage: _Storage_, linha: _int_, coluna: _int_) : _Picture_
+#### `_xls.create()`.insertPicture(storage: _[Storage](../../resources/Storage)_, linha: _int_, coluna: _int_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Descrição
 
 Insere a imagem na célula específicada.
@@ -793,19 +793,19 @@ Insere a imagem na célula específicada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| storage | _Storage_ | Referência do storage associado a um ficheiro de imagem. |
+| storage | _[Storage](../../resources/Storage)_ | Referência do storage associado a um ficheiro de imagem. |
 | linha | _int_ | Número da linha. |
 | coluna | _int_ | Número da coluna. |
 
 ##### Retorno
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 O objeto de referência da imagem inserida.
 
 ---
 
-#### `_xls.create()`.insertPicture(storage: _Storage_, ancora: _ClientAnchor_) : _Picture_
+#### `_xls.create()`.insertPicture(storage: _[Storage](../../resources/Storage)_, ancora: _org.apache.poi.ss.usermodel.ClientAnchor_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Descrição
 
 Insere uma imagem associada à âncora.
@@ -814,12 +814,12 @@ Insere uma imagem associada à âncora.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| storage | _Storage_ | Referência do storage associado a um ficheiro de imagem. |
-| ancora | _ClientAnchor_ | Âncora para associar a imagem. |
+| storage | _[Storage](../../resources/Storage)_ | Referência do storage associado a um ficheiro de imagem. |
+| ancora | _org.apache.poi.ss.usermodel.ClientAnchor_ | Âncora para associar a imagem. |
 
 ##### Retorno
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 O objeto de referência da imagem inserida.
 
@@ -851,7 +851,7 @@ A referência da região de células mesclada.
 
 ---
 
-#### _xls.mergedRegion(folhaCalculos: _HSSFSheet_, primeiraLinha: _int_, ultimaLinha: _int_, primeiraColuna: _int_, ultimaColuna: _int_) : _int_
+#### _xls.mergedRegion(folhaCalculos: _org.apache.poi.hssf.usermodel.HSSFSheet_, primeiraLinha: _int_, ultimaLinha: _int_, primeiraColuna: _int_, ultimaColuna: _int_) : _int_
 ##### Descrição
 
 Realiza a mesclagem de células na região passada em uma folha de cálculos específica.
@@ -860,7 +860,7 @@ Realiza a mesclagem de células na região passada em uma folha de cálculos esp
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| folhaCalculos | _HSSFSheet_ | Folha de cálculos que será mesclada as células. |
+| folhaCalculos | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Folha de cálculos que será mesclada as células. |
 | primeiraLinha | _int_ | Número da primeira linha. |
 | ultimaLinha | _int_ | Número da última linha. |
 | primeiraColuna | _int_ | Número da primeira coluna. |
@@ -924,7 +924,7 @@ Referência da posição com base nas coordenadas passadas.
 
 ---
 
-#### _xls.read(input: _InputStream_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _java.io.InputStream_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -933,7 +933,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| input | _InputStream_ | Referência do ficheiro Excel. |
+| input | _java.io.InputStream_ | Referência do ficheiro Excel. |
 
 ##### Retorno
 
@@ -943,7 +943,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### _xls.read(input: _InputStream_, numero: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _java.io.InputStream_, escondidas: _boolean_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -952,8 +952,8 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| input | _InputStream_ | Referência do ficheiro Excel. |
-| numero | _boolean_ | Número da folha de cálculos. |
+| input | _java.io.InputStream_ | Referência do ficheiro Excel. |
+| escondidas | _boolean_ | Processa também folhas de cálculos escondidas. |
 
 ##### Retorno
 
@@ -963,7 +963,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### _xls.read(input: _InputStream_, numero: _int_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _java.io.InputStream_, numero: _int_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -972,7 +972,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| input | _InputStream_ | Referência do ficheiro Excel. |
+| input | _java.io.InputStream_ | Referência do ficheiro Excel. |
 | numero | _int_ | Número da folha de cálculos. |
 
 ##### Retorno
@@ -983,7 +983,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### _xls.read(input: _InputStream_, numero: _int_, escondidas: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _java.io.InputStream_, numero: _int_, escondidas: _boolean_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -992,7 +992,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| input | _InputStream_ | Referência do ficheiro Excel. |
+| input | _java.io.InputStream_ | Referência do ficheiro Excel. |
 | numero | _int_ | Número da folha de cálculos. |
 | escondidas | _boolean_ | Processa também folhas de cálculos escondidas. |
 
@@ -1023,7 +1023,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### _xls.read(input: _[File](../../objects/File)_, numero: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[File](../../objects/File)_, escondidas: _boolean_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1033,7 +1033,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | input | _[File](../../objects/File)_ | Referência do ficheiro Excel. |
-| numero | _boolean_ | Número da folha de cálculos. |
+| escondidas | _boolean_ | Processa também folhas de cálculos escondidas. |
 
 ##### Retorno
 
@@ -1103,7 +1103,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### _xls.read(input: _[InputStream](../../objects/InputStream)_, numero: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[InputStream](../../objects/InputStream)_, escondidas: _boolean_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1113,7 +1113,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | input | _[InputStream](../../objects/InputStream)_ | Referência do ficheiro Excel. |
-| numero | _boolean_ | Número da folha de cálculos. |
+| escondidas | _boolean_ | Processa também folhas de cálculos escondidas. |
 
 ##### Retorno
 
@@ -1164,7 +1164,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### _xls.read(input: _Storage_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[Storage](../../resources/Storage)_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1173,7 +1173,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| input | _Storage_ | Referência do ficheiro Excel. |
+| input | _[Storage](../../resources/Storage)_ | Referência do ficheiro Excel. |
 
 ##### Retorno
 
@@ -1183,7 +1183,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### _xls.read(input: _Storage_, escondidas: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[Storage](../../resources/Storage)_, escondidas: _boolean_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1192,7 +1192,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| input | _Storage_ | Referência do ficheiro Excel. |
+| input | _[Storage](../../resources/Storage)_ | Referência do ficheiro Excel. |
 | escondidas | _boolean_ | Processa também folhas de cálculos escondidas. |
 
 ##### Retorno
@@ -1203,7 +1203,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### _xls.read(input: _Storage_, numero: _int_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[Storage](../../resources/Storage)_, numero: _int_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1212,7 +1212,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| input | _Storage_ | Referência do ficheiro Excel. |
+| input | _[Storage](../../resources/Storage)_ | Referência do ficheiro Excel. |
 | numero | _int_ | Número da folha de cálculos. |
 
 ##### Retorno
@@ -1223,7 +1223,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### _xls.read(input: _Storage_, numero: _int_, escondidas: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[Storage](../../resources/Storage)_, numero: _int_, escondidas: _boolean_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1232,7 +1232,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| input | _Storage_ | Referência do ficheiro Excel. |
+| input | _[Storage](../../resources/Storage)_ | Referência do ficheiro Excel. |
 | numero | _int_ | Número da folha de cálculos. |
 | escondidas | _boolean_ | Processa também folhas de cálculos escondidas. |
 
@@ -1248,7 +1248,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### `_xls.create()`.row(linha: _int_) : _HSSFRow_
+#### `_xls.create()`.row(linha: _int_) : _org.apache.poi.hssf.usermodel.HSSFRow_
 ##### Descrição
 
 Obtém uma linha da folha de cálculos e caso não exista então será criada.
@@ -1261,13 +1261,13 @@ Obtém uma linha da folha de cálculos e caso não exista então será criada.
 
 ##### Retorno
 
-( _HSSFRow_ )
+( _org.apache.poi.hssf.usermodel.HSSFRow_ )
 
 Objeto de representação da linha.
 
 ---
 
-#### `_xls.create()`.row(folhaCalculos: _HSSFSheet_, linha: _int_) : _HSSFRow_
+#### `_xls.create()`.row(folhaCalculos: _org.apache.poi.hssf.usermodel.HSSFSheet_, linha: _int_) : _org.apache.poi.hssf.usermodel.HSSFRow_
 ##### Descrição
 
 Obtém uma linha da folha de cálculos e caso não exista então será criada.
@@ -1276,12 +1276,12 @@ Obtém uma linha da folha de cálculos e caso não exista então será criada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| folhaCalculos | _HSSFSheet_ | Objeto de folha de cálculos. |
+| folhaCalculos | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Objeto de folha de cálculos. |
 | linha | _int_ | Número da linha. |
 
 ##### Retorno
 
-( _HSSFRow_ )
+( _org.apache.poi.hssf.usermodel.HSSFRow_ )
 
 Objeto de representação da linha.
 
@@ -1334,7 +1334,7 @@ Nome válido para ser utilizado como nome da folha de cálculos.
 
 ---
 
-#### `_xls.create()`.save(output: _OutputStream_) : _void_
+#### `_xls.create()`.save(output: _java.io.OutputStream_) : _void_
 ##### Descrição
 
 Realiza a escrita dos dados do ficheiro final para o output.
@@ -1343,7 +1343,7 @@ Realiza a escrita dos dados do ficheiro final para o output.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| output | _OutputStream_ | Output onde o ficheiro será guardado. |
+| output | _java.io.OutputStream_ | Output onde o ficheiro será guardado. |
 
 ##### Retorno
 
@@ -1388,7 +1388,7 @@ Realiza a escrita dos dados do ficheiro final para o output.
 
 ---
 
-#### `_xls.create()`.save(storage: _Storage_) : _void_
+#### `_xls.create()`.save(storage: _[Storage](../../resources/Storage)_) : _void_
 ##### Descrição
 
 Realiza a escrita dos dados do ficheiro final para o storage interno da aplicação.
@@ -1397,7 +1397,7 @@ Realiza a escrita dos dados do ficheiro final para o storage interno da aplicaç
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| storage | _Storage_ | Referência do storage onde o ficheiro será guardado. |
+| storage | _[Storage](../../resources/Storage)_ | Referência do storage onde o ficheiro será guardado. |
 
 ##### Retorno
 
@@ -1410,7 +1410,7 @@ Realiza a escrita dos dados do ficheiro final para o storage interno da aplicaç
 
 ---
 
-#### `_xls.create()`.sheet() : _HSSFSheet_
+#### `_xls.create()`.sheet() : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Descrição
 
 Para obter a folha de cálculos atual que está sendo utilizada para manipular os dados.
@@ -1423,7 +1423,7 @@ const folhaDeCalculos = _xls.create().sheet();
 
 ##### Retorno
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Obtém a folha de cálculos atual.
 
@@ -1433,14 +1433,14 @@ Obtém a folha de cálculos atual.
 
 ---
 
-#### _xls.units() : _Class_
+#### _xls.units() : _java.lang.Class_
 ##### Descrição
 
 Obtém os tipos de unidades pré definidos no Excel, útil para realizar a conversão entre pixeis e pontos.
 
 ##### Retorno
 
-( _Class_ )
+( _java.lang.Class_ )
 
 A classe do Apache POI que ajuda a manipular as unidades do Excel.
 
@@ -1473,7 +1473,7 @@ Se é válido para ser utilizado como nome da folha de cálculos.
 
 ---
 
-#### _xls.verticalAlignment(tipo: string) : _VerticalAlignment_
+#### _xls.verticalAlignment(tipo: string) : _org.apache.poi.ss.usermodel.VerticalAlignment_
 ##### Descrição
 
 Gera o alinhamento vertical.
@@ -1486,7 +1486,7 @@ Gera o alinhamento vertical.
 
 ##### Retorno
 
-( _VerticalAlignment_ )
+( _org.apache.poi.ss.usermodel.VerticalAlignment_ )
 
 O alinhamento vertical configurado com o tipo definido.
 
@@ -1496,7 +1496,7 @@ O alinhamento vertical configurado com o tipo definido.
 
 ---
 
-#### `_xls.create()`.workbook() : _HSSFWorkbook_
+#### `_xls.create()`.workbook() : _org.apache.poi.hssf.usermodel.HSSFWorkbook_
 ##### Descrição
 
 Cria um novo documento Excel.
@@ -1509,7 +1509,7 @@ const workbook = _xls.create().workbook();
 
 ##### Retorno
 
-( _HSSFWorkbook_ )
+( _org.apache.poi.hssf.usermodel.HSSFWorkbook_ )
 
 Obtém o workbook.
 

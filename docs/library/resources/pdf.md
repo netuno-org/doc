@@ -13,20 +13,20 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 
 ---
 
-#### _pdf.areaBreak() : _AreaBreak_
+#### _pdf.areaBreak() : _com.itextpdf.layout.element.AreaBreak_
 ##### Description
 
 Creates an AreaBreak that terminates a previous area type.
 
 ##### Return
 
-( _AreaBreak_ )
+( _com.itextpdf.layout.element.AreaBreak_ )
 
 Terminates the previous area and returns a new one.
 
 ---
 
-#### _pdf.areaBreak(pageSize: _PageSize_) : _AreaBreak_
+#### _pdf.areaBreak(pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.element.AreaBreak_
 ##### Description
 
 Creates an AreaBreak that terminates a previous area type.
@@ -35,17 +35,17 @@ Creates an AreaBreak that terminates a previous area type.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| pageSize | _PageSize_ | Size of the new content. |
+| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Size of the new content. |
 
 ##### Return
 
-( _AreaBreak_ )
+( _com.itextpdf.layout.element.AreaBreak_ )
 
 Terminates the previous area and returns a new one.
 
 ---
 
-#### _pdf.areaBreak(type: string) : _AreaBreak_
+#### _pdf.areaBreak(type: string) : _com.itextpdf.layout.element.AreaBreak_
 ##### Description
 
 Creates an AreaBreak that terminates a previous area type.
@@ -58,7 +58,7 @@ Creates an AreaBreak that terminates a previous area type.
 
 ##### Return
 
-( _AreaBreak_ )
+( _com.itextpdf.layout.element.AreaBreak_ )
 
 Terminates the previous area and returns a new one.
 
@@ -68,7 +68,7 @@ Terminates the previous area and returns a new one.
 
 ---
 
-#### _pdf.border(border: string) : _Border_
+#### _pdf.border(border: string) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type.
@@ -81,13 +81,13 @@ Creates a border type.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border width of the type inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _double_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -97,18 +97,18 @@ Creates a border type with a inserted width and opacity.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _double_ | Border width. |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _double_, arg3: _double_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, arg3: _double_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -118,19 +118,19 @@ Creates a border type with a inserted width and opacity.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _double_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _double_, arg3: _float_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, arg3: _float_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -140,19 +140,19 @@ Creates a border type with a inserted width and opacity.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _double_ | Border width. |
 | arg3 | _float_ |   |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _double_, arg3: _int_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, arg3: _int_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -162,19 +162,19 @@ Creates a border type with a inserted width and opacity.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _double_ | Border width. |
 | arg3 | _int_ |   |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _float_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -184,18 +184,18 @@ Creates a border type with a inserted width and opacity.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _float_ | Border width. |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _float_, arg3: _double_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, arg3: _double_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -205,19 +205,19 @@ Creates a border type with a inserted width and opacity.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _float_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _float_, opacity: _float_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a customized border with type, color, width and opacity inserted.
@@ -227,19 +227,19 @@ Creates a customized border with type, color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _float_ | Border width. |
 | opacity | _float_ | Border opacity. |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns the created customized border.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _float_, opacity: _int_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type, color, width and opacity inserted.
@@ -249,19 +249,19 @@ Creates a border type, color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _float_ | Border width. |
 | opacity | _int_ | Border opacity. |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, color, width and opacity inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _int_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -271,18 +271,18 @@ Creates a border type with a inserted width and opacity.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _int_ | Border width. |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _int_, arg3: _double_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, arg3: _double_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -292,19 +292,19 @@ Creates a border type with a inserted width and opacity.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _int_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _int_, arg3: _float_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, arg3: _float_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -314,19 +314,19 @@ Creates a border type with a inserted width and opacity.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _int_ | Border width. |
 | arg3 | _float_ |   |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _Color_, width: _int_, arg3: _int_) : _Border_
+#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, arg3: _int_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -336,19 +336,19 @@ Creates a border type with a inserted width and opacity.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _int_ | Border width. |
 | arg3 | _int_ |   |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, width: _double_) : _Border_
+#### _pdf.border(border: string, width: _double_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width.
@@ -362,13 +362,13 @@ Creates a border type with a inserted width.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border width of the type inserted,coloured black and the width inserted.
 
 ---
 
-#### _pdf.border(border: string, width: _double_, opacity: _double_) : _Border_
+#### _pdf.border(border: string, width: _double_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -383,13 +383,13 @@ Creates a border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _double_, opacity: _float_) : _Border_
+#### _pdf.border(border: string, width: _double_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -404,13 +404,13 @@ Creates a border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _double_, opacity: _int_) : _Border_
+#### _pdf.border(border: string, color: _double_, width: _int_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -420,18 +420,18 @@ Creates a border type with a inserted width and opacity.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| width | _double_ | Border width. |
-| opacity | _int_ | Border opacity. |
+| color | _double_ | Border color. |
+| width | _int_ | Border width. |
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
-Returns a border type, the width and opacity inserted, coloured black.
+Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, width: _float_) : _Border_
+#### _pdf.border(border: string, width: _float_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width.
@@ -445,13 +445,13 @@ Creates a border type with a inserted width.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border width of the type inserted,coloured black and the width inserted.
 
 ---
 
-#### _pdf.border(border: string, width: _float_, opacity: _double_) : _Border_
+#### _pdf.border(border: string, width: _float_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -466,13 +466,13 @@ Creates a border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _float_, opacity: _float_) : _Border_
+#### _pdf.border(border: string, width: _float_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -487,13 +487,13 @@ Creates a border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _float_, opacity: _int_) : _Border_
+#### _pdf.border(border: string, width: _float_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -508,13 +508,13 @@ Creates a border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _int_) : _Border_
+#### _pdf.border(border: string, width: _int_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width.
@@ -528,13 +528,13 @@ Creates a border type with a inserted width.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border width of the type inserted,coloured black and the width inserted.
 
 ---
 
-#### _pdf.border(border: string, width: _int_, opacity: _double_) : _Border_
+#### _pdf.border(border: string, width: _int_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -549,13 +549,13 @@ Creates a border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _int_, opacity: _float_) : _Border_
+#### _pdf.border(border: string, width: _int_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -570,13 +570,13 @@ Creates a border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _int_, opacity: _int_) : _Border_
+#### _pdf.border(border: string, width: _int_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -591,7 +591,7 @@ Creates a border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border_ )
+( _com.itextpdf.layout.borders.Border_ )
 
 Returns a border type, the width and opacity inserted, coloured black.
 
@@ -601,26 +601,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string) : _Border3D_
-##### Description
-
-Creates a 3D border type with a inserted width and opacity.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| border | string | Border type. |
-
-##### Return
-
-( _Border3D_ )
-
-Returns a 3D border type, the width and opacity inserted, coloured black.
-
----
-
-#### _pdf.border3D(border: string, color: _Color_, width: _double_) : _Border3D_
+#### _pdf.border3D(border: string) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -630,18 +611,16 @@ Creates a 3D border type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
-| width | _double_ | Border width. |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _Color_, width: _double_, arg3: _double_) : _Border3D_
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -651,19 +630,40 @@ Creates a 3D border type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| width | _double_ | Border width. |
+
+##### Return
+
+( _com.itextpdf.layout.borders.Border3D_ )
+
+Returns a 3D border type,color,width inserted.
+
+---
+
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, arg3: _double_) : _com.itextpdf.layout.borders.Border3D_
+##### Description
+
+Creates a 3D border type,color, width and opacity inserted.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| border | string | Border type. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _double_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _Color_, width: _double_, arg3: _float_) : _Border3D_
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, arg3: _float_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -673,19 +673,19 @@ Creates a 3D border type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _double_ | Border width. |
 | arg3 | _float_ |   |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _Color_, width: _double_, arg3: _int_) : _Border3D_
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, arg3: _int_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -695,19 +695,19 @@ Creates a 3D border type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _double_ | Border width. |
 | arg3 | _int_ |   |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _Color_, width: _float_) : _Border3D_
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -717,18 +717,18 @@ Creates a 3D border type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _float_ | Border width. |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _Color_, width: _float_, arg3: _double_) : _Border3D_
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, arg3: _double_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -738,19 +738,19 @@ Creates a 3D border type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _float_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _Color_, width: _float_, opacity: _float_) : _Border3D_
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a customized 3D border with type,color, width and opacity inserted.
@@ -760,19 +760,19 @@ Creates a customized 3D border with type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _float_ | Border width. |
 | opacity | _float_ | Border opacity. |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns the created customized 3D border.
 
 ---
 
-#### _pdf.border3D(border: string, color: _Color_, width: _float_, opacity: _int_) : _Border3D_
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -782,19 +782,19 @@ Creates a 3D border type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _float_ | Border width. |
 | opacity | _int_ | Border opacity. |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type, color, width and opacity inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _Color_, width: _int_) : _Border3D_
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -804,18 +804,18 @@ Creates a 3D border type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _int_ | Border width. |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _Color_, width: _int_, arg3: _double_) : _Border3D_
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, arg3: _double_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -825,19 +825,19 @@ Creates a 3D border type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _int_ | Border width. |
 | arg3 | _double_ |   |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _Color_, width: _int_, arg3: _float_) : _Border3D_
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, arg3: _float_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -847,19 +847,19 @@ Creates a 3D border type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _int_ | Border width. |
 | arg3 | _float_ |   |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _Color_, width: _int_, opacity: _int_) : _Border3D_
+#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -869,19 +869,19 @@ Creates a 3D border type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | border | string | Border type. |
-| color | _Color_ | Border color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
 | width | _int_ | Border width. |
 | opacity | _int_ | Border opacity. |
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type,color,width and opacity inserted.
 
 ---
 
-#### _pdf.border3D(border: string, width: _double_) : _Border3D_
+#### _pdf.border3D(border: string, width: _double_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a border type 3D with a inserted width.
@@ -895,13 +895,13 @@ Creates a border type 3D with a inserted width.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border width of the type inserted,coloured black and the width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, width: _double_, opacity: _double_) : _Border3D_
+#### _pdf.border3D(border: string, width: _double_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -916,13 +916,13 @@ Creates a 3D border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _double_, opacity: _float_) : _Border3D_
+#### _pdf.border3D(border: string, width: _double_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -937,13 +937,13 @@ Creates a 3D border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _double_, opacity: _int_) : _Border3D_
+#### _pdf.border3D(border: string, width: _double_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -958,13 +958,13 @@ Creates a 3D border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _float_) : _Border3D_
+#### _pdf.border3D(border: string, width: _float_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a border type 3D with a inserted width.
@@ -978,13 +978,13 @@ Creates a border type 3D with a inserted width.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border width of the type inserted,coloured black and the width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, width: _float_, opacity: _double_) : _Border3D_
+#### _pdf.border3D(border: string, width: _float_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -999,13 +999,13 @@ Creates a 3D border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _float_, opacity: _float_) : _Border3D_
+#### _pdf.border3D(border: string, width: _float_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1020,13 +1020,13 @@ Creates a 3D border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _float_, opacity: _int_) : _Border3D_
+#### _pdf.border3D(border: string, width: _float_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1041,13 +1041,13 @@ Creates a 3D border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, arg1: _int_) : _Border3D_
+#### _pdf.border3D(border: string, arg1: _int_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a border type 3D.
@@ -1061,13 +1061,13 @@ Creates a border type 3D.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border width of the type inserted,coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _int_, opacity: _double_) : _Border3D_
+#### _pdf.border3D(border: string, width: _int_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1082,13 +1082,13 @@ Creates a 3D border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _int_, opacity: _float_) : _Border3D_
+#### _pdf.border3D(border: string, width: _int_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1103,13 +1103,13 @@ Creates a 3D border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _int_, opacity: _int_) : _Border3D_
+#### _pdf.border3D(border: string, width: _int_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1124,7 +1124,7 @@ Creates a 3D border type with a inserted width and opacity.
 
 ##### Return
 
-( _Border3D_ )
+( _com.itextpdf.layout.borders.Border3D_ )
 
 Returns a 3D border type, the width and opacity inserted, coloured black.
 
@@ -1134,7 +1134,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.canvas(arg0: _PdfDocument_, arg1: _int_) : _PdfCanvas_
+#### _pdf.canvas(arg0: _com.itextpdf.kernel.pdf.PdfDocument_, arg1: _int_) : _com.itextpdf.kernel.pdf.canvas.PdfCanvas_
 ##### Description
 
 Creates an rectangular text area.
@@ -1143,17 +1143,17 @@ Creates an rectangular text area.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _PdfDocument_ |   |
+| arg0 | _com.itextpdf.kernel.pdf.PdfDocument_ |   |
 | arg1 | _int_ |   |
 
 ##### Return
 
-( _PdfCanvas_ )
+( _com.itextpdf.kernel.pdf.canvas.PdfCanvas_ )
 
 
 ---
 
-#### _pdf.canvas(arg0: _PdfPage_) : _PdfCanvas_
+#### _pdf.canvas(arg0: _com.itextpdf.kernel.pdf.PdfPage_) : _com.itextpdf.kernel.pdf.canvas.PdfCanvas_
 ##### Description
 
 Creates an rectangular text area.
@@ -1162,11 +1162,11 @@ Creates an rectangular text area.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _PdfPage_ |   |
+| arg0 | _com.itextpdf.kernel.pdf.PdfPage_ |   |
 
 ##### Return
 
-( _PdfCanvas_ )
+( _com.itextpdf.kernel.pdf.canvas.PdfCanvas_ )
 
 
 ---
@@ -1175,20 +1175,20 @@ Creates an rectangular text area.
 
 ---
 
-#### _pdf.cell() : _Cell_
+#### _pdf.cell() : _com.itextpdf.layout.element.Cell_
 ##### Description
 
 Creates a new table cell.
 
 ##### Return
 
-( _Cell_ )
+( _com.itextpdf.layout.element.Cell_ )
 
 Returns the created cell.
 
 ---
 
-#### _pdf.cell(rowspan: _int_, colspan: _int_) : _Cell_
+#### _pdf.cell(rowspan: _int_, colspan: _int_) : _com.itextpdf.layout.element.Cell_
 ##### Description
 
 Creates a new table cell with rowspan or colspan.
@@ -1202,7 +1202,7 @@ Creates a new table cell with rowspan or colspan.
 
 ##### Return
 
-( _Cell_ )
+( _com.itextpdf.layout.element.Cell_ )
 
 Returns the created cell.
 
@@ -1212,7 +1212,7 @@ Returns the created cell.
 
 ---
 
-#### _pdf.color(arg0: string) : _Color_
+#### _pdf.color(arg0: string) : _com.itextpdf.kernel.colors.Color_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1221,7 +1221,7 @@ Returns the created cell.
 
 ##### Return
 
-( _Color_ )
+( _com.itextpdf.kernel.colors.Color_ )
 
 
 ---
@@ -1230,7 +1230,7 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorCMYK(arg0: _double_, arg1: _double_, arg2: _double_, arg3: _double_) : _DeviceCmyk_
+#### _pdf.colorCMYK(arg0: _double_, arg1: _double_, arg2: _double_, arg3: _double_) : _com.itextpdf.kernel.colors.DeviceCmyk_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1242,12 +1242,12 @@ Returns the created cell.
 
 ##### Return
 
-( _DeviceCmyk_ )
+( _com.itextpdf.kernel.colors.DeviceCmyk_ )
 
 
 ---
 
-#### _pdf.colorCMYK(arg0: _float_, arg1: _float_, arg2: _float_, arg3: _float_) : _DeviceCmyk_
+#### _pdf.colorCMYK(arg0: _float_, arg1: _float_, arg2: _float_, arg3: _float_) : _com.itextpdf.kernel.colors.DeviceCmyk_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1259,12 +1259,12 @@ Returns the created cell.
 
 ##### Return
 
-( _DeviceCmyk_ )
+( _com.itextpdf.kernel.colors.DeviceCmyk_ )
 
 
 ---
 
-#### _pdf.colorCMYK(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_) : _DeviceCmyk_
+#### _pdf.colorCMYK(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_) : _com.itextpdf.kernel.colors.DeviceCmyk_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1276,7 +1276,7 @@ Returns the created cell.
 
 ##### Return
 
-( _DeviceCmyk_ )
+( _com.itextpdf.kernel.colors.DeviceCmyk_ )
 
 
 ---
@@ -1285,7 +1285,7 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorGray(arg0: _double_) : _DeviceGray_
+#### _pdf.colorGray(arg0: _double_) : _com.itextpdf.kernel.colors.DeviceGray_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1294,12 +1294,12 @@ Returns the created cell.
 
 ##### Return
 
-( _DeviceGray_ )
+( _com.itextpdf.kernel.colors.DeviceGray_ )
 
 
 ---
 
-#### _pdf.colorGray(arg0: _float_) : _DeviceGray_
+#### _pdf.colorGray(arg0: _float_) : _com.itextpdf.kernel.colors.DeviceGray_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1308,12 +1308,12 @@ Returns the created cell.
 
 ##### Return
 
-( _DeviceGray_ )
+( _com.itextpdf.kernel.colors.DeviceGray_ )
 
 
 ---
 
-#### _pdf.colorGray(arg0: _int_) : _DeviceGray_
+#### _pdf.colorGray(arg0: _int_) : _com.itextpdf.kernel.colors.DeviceGray_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1322,7 +1322,7 @@ Returns the created cell.
 
 ##### Return
 
-( _DeviceGray_ )
+( _com.itextpdf.kernel.colors.DeviceGray_ )
 
 
 ---
@@ -1331,7 +1331,7 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorRGB(arg0: _double_, arg1: _double_, arg2: _double_) : _DeviceRgb_
+#### _pdf.colorRGB(arg0: _double_, arg1: _double_, arg2: _double_) : _com.itextpdf.kernel.colors.DeviceRgb_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1342,12 +1342,12 @@ Returns the created cell.
 
 ##### Return
 
-( _DeviceRgb_ )
+( _com.itextpdf.kernel.colors.DeviceRgb_ )
 
 
 ---
 
-#### _pdf.colorRGB(arg0: _float_, arg1: _float_, arg2: _float_) : _DeviceRgb_
+#### _pdf.colorRGB(arg0: _float_, arg1: _float_, arg2: _float_) : _com.itextpdf.kernel.colors.DeviceRgb_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1358,12 +1358,12 @@ Returns the created cell.
 
 ##### Return
 
-( _DeviceRgb_ )
+( _com.itextpdf.kernel.colors.DeviceRgb_ )
 
 
 ---
 
-#### _pdf.colorRGB(arg0: _int_, arg1: _int_, arg2: _int_) : _DeviceRgb_
+#### _pdf.colorRGB(arg0: _int_, arg1: _int_, arg2: _int_) : _com.itextpdf.kernel.colors.DeviceRgb_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1374,7 +1374,7 @@ Returns the created cell.
 
 ##### Return
 
-( _DeviceRgb_ )
+( _com.itextpdf.kernel.colors.DeviceRgb_ )
 
 
 ---
@@ -1383,16 +1383,16 @@ Returns the created cell.
 
 ---
 
-#### _pdf.extract(storage: _InputStream_) : _[Values](../../objects/Values)_
+#### _pdf.extract(content: _java.io.InputStream_) : _[Values](../../objects/Values)_
 ##### Description
 
-Extracts the content of PDFs.
+Extracts the content of PDF's.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _InputStream_ | Caminho do armazenamento. |
+| content | _java.io.InputStream_ | Content to be extracted. |
 
 ##### Return
 
@@ -1402,16 +1402,16 @@ Returns the extracted content.
 
 ---
 
-#### _pdf.extract(storage: _[File](../../objects/File)_) : _[Values](../../objects/Values)_
+#### _pdf.extract(content: _[File](../../objects/File)_) : _[Values](../../objects/Values)_
 ##### Description
 
-Extracts the content of PDFs.
+Extracts the content of PDF's.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[File](../../objects/File)_ | Caminho do armazenamento. |
+| content | _[File](../../objects/File)_ | Content to be extracted. |
 
 ##### Return
 
@@ -1440,7 +1440,7 @@ Returns the extracted content.
 
 ---
 
-#### _pdf.extract(storage: _Storage_) : _[Values](../../objects/Values)_
+#### _pdf.extract(storage: _[Storage](../../resources/Storage)_) : _[Values](../../objects/Values)_
 ##### Description
 
 Extracts the content of PDFs.
@@ -1449,7 +1449,7 @@ Extracts the content of PDFs.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Caminho do armazenamento. |
+| storage | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
 
 ##### Return
 
@@ -1463,7 +1463,7 @@ Returns the extracted content.
 
 ---
 
-#### _pdf.font(storage: string) : _PdfFont_
+#### _pdf.font(storage: string) : _com.itextpdf.kernel.font.PdfFont_
 ##### Description
 
 Creates a font.
@@ -1476,13 +1476,13 @@ Creates a font.
 
 ##### Return
 
-( _PdfFont_ )
+( _com.itextpdf.kernel.font.PdfFont_ )
 
 Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[File](../../objects/File)_) : _PdfFont_
+#### _pdf.font(storage: _[File](../../objects/File)_) : _com.itextpdf.kernel.font.PdfFont_
 ##### Description
 
 Creates a font.
@@ -1495,13 +1495,13 @@ Creates a font.
 
 ##### Return
 
-( _PdfFont_ )
+( _com.itextpdf.kernel.font.PdfFont_ )
 
 Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[File](../../objects/File)_, encoding: _boolean_) : _PdfFont_
+#### _pdf.font(storage: _[File](../../objects/File)_, encoding: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
 ##### Description
 
 Creates a font.
@@ -1515,13 +1515,13 @@ Creates a font.
 
 ##### Return
 
-( _PdfFont_ )
+( _com.itextpdf.kernel.font.PdfFont_ )
 
 Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[File](../../objects/File)_, encoding: string) : _PdfFont_
+#### _pdf.font(storage: _[File](../../objects/File)_, encoding: string) : _com.itextpdf.kernel.font.PdfFont_
 ##### Description
 
 Creates a font.
@@ -1535,13 +1535,13 @@ Creates a font.
 
 ##### Return
 
-( _PdfFont_ )
+( _com.itextpdf.kernel.font.PdfFont_ )
 
 Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[File](../../objects/File)_, encoding: string, arg2: _boolean_) : _PdfFont_
+#### _pdf.font(storage: _[File](../../objects/File)_, encoding: string, arg2: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
 ##### Description
 
 Creates a font.
@@ -1556,13 +1556,13 @@ Creates a font.
 
 ##### Return
 
-( _PdfFont_ )
+( _com.itextpdf.kernel.font.PdfFont_ )
 
 Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _Storage_) : _PdfFont_
+#### _pdf.font(storage: _[Storage](../../resources/Storage)_) : _com.itextpdf.kernel.font.PdfFont_
 ##### Description
 
 Creates a font.
@@ -1571,17 +1571,17 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Storage path. |
+| storage | _[Storage](../../resources/Storage)_ | Storage path. |
 
 ##### Return
 
-( _PdfFont_ )
+( _com.itextpdf.kernel.font.PdfFont_ )
 
 Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _Storage_, encoding: _boolean_) : _PdfFont_
+#### _pdf.font(storage: _[Storage](../../resources/Storage)_, encoding: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
 ##### Description
 
 Creates a font.
@@ -1590,18 +1590,18 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Storage path. |
+| storage | _[Storage](../../resources/Storage)_ | Storage path. |
 | encoding | _boolean_ | Font encoding. |
 
 ##### Return
 
-( _PdfFont_ )
+( _com.itextpdf.kernel.font.PdfFont_ )
 
 Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _Storage_, encoding: string) : _PdfFont_
+#### _pdf.font(storage: _[Storage](../../resources/Storage)_, encoding: string) : _com.itextpdf.kernel.font.PdfFont_
 ##### Description
 
 Creates a font.
@@ -1610,18 +1610,18 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Storage path. |
+| storage | _[Storage](../../resources/Storage)_ | Storage path. |
 | encoding | string | Font encoding. |
 
 ##### Return
 
-( _PdfFont_ )
+( _com.itextpdf.kernel.font.PdfFont_ )
 
 Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _Storage_, encoding: string, arg2: _boolean_) : _PdfFont_
+#### _pdf.font(storage: _[Storage](../../resources/Storage)_, encoding: string, arg2: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
 ##### Description
 
 Creates a font.
@@ -1630,13 +1630,13 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Storage path. |
+| storage | _[Storage](../../resources/Storage)_ | Storage path. |
 | encoding | string | Font encoding. |
 | arg2 | _boolean_ |   |
 
 ##### Return
 
-( _PdfFont_ )
+( _com.itextpdf.kernel.font.PdfFont_ )
 
 Returns the created font.
 
@@ -1646,14 +1646,14 @@ Returns the created font.
 
 ---
 
-#### _pdf.getDocument() : _Document_
+#### _pdf.getDocument() : _com.itextpdf.layout.Document_
 ##### Description
 
 Obtém o objecto Document do iText para a estrutura do documento PDF.
 
 ##### Return
 
-( _Document_ )
+( _com.itextpdf.layout.Document_ )
 
 
 ---
@@ -1662,14 +1662,14 @@ Obtém o objecto Document do iText para a estrutura do documento PDF.
 
 ---
 
-#### _pdf.getPdfDocument() : _PdfDocument_
+#### _pdf.getPdfDocument() : _com.itextpdf.kernel.pdf.PdfDocument_
 ##### Description
 
 Obtém o objecto PdfDocument do iText para a construção do documento PDF.
 
 ##### Return
 
-( _PdfDocument_ )
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
 
 
 ---
@@ -1678,14 +1678,14 @@ Obtém o objecto PdfDocument do iText para a construção do documento PDF.
 
 ---
 
-#### _pdf.getPdfReader() : _PdfReader_
+#### _pdf.getPdfReader() : _com.itextpdf.kernel.pdf.PdfReader_
 ##### Description
 
 Obtém o objecto PdfReader do iText para a leitura do documento PDF.
 
 ##### Return
 
-( _PdfReader_ )
+( _com.itextpdf.kernel.pdf.PdfReader_ )
 
 
 ---
@@ -1694,14 +1694,14 @@ Obtém o objecto PdfReader do iText para a leitura do documento PDF.
 
 ---
 
-#### _pdf.getPdfWriter() : _PdfWriter_
+#### _pdf.getPdfWriter() : _com.itextpdf.kernel.pdf.PdfWriter_
 ##### Description
 
 Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ##### Return
 
-( _PdfWriter_ )
+( _com.itextpdf.kernel.pdf.PdfWriter_ )
 
 
 ---
@@ -1710,7 +1710,7 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### _pdf.image(arg0: _[File](../../objects/File)_) : _Image_
+#### _pdf.image(arg0: _[File](../../objects/File)_) : _com.itextpdf.layout.element.Image_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1719,21 +1719,21 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ##### Return
 
-( _Image_ )
+( _com.itextpdf.layout.element.Image_ )
 
 
 ---
 
-#### _pdf.image(arg0: _Storage_) : _Image_
+#### _pdf.image(arg0: _[Storage](../../resources/Storage)_) : _com.itextpdf.layout.element.Image_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| arg0 | _[Storage](../../resources/Storage)_ |   |
 
 ##### Return
 
-( _Image_ )
+( _com.itextpdf.layout.element.Image_ )
 
 
 ---
@@ -1742,7 +1742,7 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### _pdf.init() : _PDF_
+#### _pdf.init() : _[PDF](../../resources/PDF)_
 ##### Description
 
 Cria um novo objeto de recurso para a construção de PDFs.
@@ -1755,7 +1755,7 @@ const pdf = _pdf.init();
 
 ##### Return
 
-( _PDF_ )
+( _[PDF](../../resources/PDF)_ )
 
 
 ---
@@ -1764,7 +1764,7 @@ const pdf = _pdf.init();
 
 ---
 
-#### _pdf.line(type: string, color: _Color_, width: _double_) : _ILineDrawer_
+#### _pdf.line(type: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_) : _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_
 ##### Description
 
 Creates a customized border with type,color, width and opacity inserted.
@@ -1774,18 +1774,18 @@ Creates a customized border with type,color, width and opacity inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | type | string | Line type. |
-| color | _Color_ | Line color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Line color. |
 | width | _double_ | Line width. |
 
 ##### Return
 
-( _ILineDrawer_ )
+( _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_ )
 
 Returns the created customized border.
 
 ---
 
-#### _pdf.line(type: string, color: _Color_, width: _float_) : _ILineDrawer_
+#### _pdf.line(type: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_) : _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_
 ##### Description
 
 Creates a customized line with type,color, width inserted.
@@ -1795,18 +1795,18 @@ Creates a customized line with type,color, width inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | type | string | Line type. |
-| color | _Color_ | Line color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Line color. |
 | width | _float_ | Line width. |
 
 ##### Return
 
-( _ILineDrawer_ )
+( _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_ )
 
 Returns the created customized line.
 
 ---
 
-#### _pdf.line(line: string, color: _Color_, width: _int_) : _ILineDrawer_
+#### _pdf.line(line: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_) : _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_
 ##### Description
 
 Creates a line type with color and width inserted.
@@ -1816,12 +1816,12 @@ Creates a line type with color and width inserted.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | line | string | Line type. |
-| color | _Color_ | Line color. |
+| color | _com.itextpdf.kernel.colors.Color_ | Line color. |
 | width | _int_ | Line width. |
 
 ##### Return
 
-( _ILineDrawer_ )
+( _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_ )
 
 Returns the line type, color and width inserted.
 
@@ -1831,19 +1831,19 @@ Returns the line type, color and width inserted.
 
 ---
 
-#### _pdf.newDocument() : _Document_
+#### _pdf.newDocument() : _com.itextpdf.layout.Document_
 ##### Description
 
 Cria um novo documento.
 
 ##### Return
 
-( _Document_ )
+( _com.itextpdf.layout.Document_ )
 
 
 ---
 
-#### _pdf.newDocument(pageSize: _PageSize_) : _Document_
+#### _pdf.newDocument(pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
 ##### Description
 
 Creates a PDF document with the page size inserted.
@@ -1852,134 +1852,17 @@ Creates a PDF document with the page size inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| pageSize | _PageSize_ | Page size. |
+| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
 
-( _Document_ )
+( _com.itextpdf.layout.Document_ )
 
 Returns PDF document with the page size inserted.
 
 ---
 
-#### _pdf.newDocument(storage: _OutputStream_) : _Document_
-##### Description
-
-Creates a PDF document with the page size inserted.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| storage | _OutputStream_ | File path. |
-
-##### Return
-
-( _Document_ )
-
-Returns PDF document with the page size inserted.
-
----
-
-#### _pdf.newDocument(storage: _OutputStream_, pageSize: _PageSize_) : _Document_
-##### Description
-
-Creates a PDF document with the page size inserted.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| storage | _OutputStream_ | File path. |
-| pageSize | _PageSize_ | Page size. |
-
-##### Return
-
-( _Document_ )
-
-Returns PDF document with the page size inserted.
-
----
-
-#### _pdf.newDocument(storage: _[File](../../objects/File)_) : _Document_
-##### Description
-
-Creates a PDF document with the page size inserted.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| storage | _[File](../../objects/File)_ | File path. |
-
-##### Return
-
-( _Document_ )
-
-Returns PDF document with the page size inserted.
-
----
-
-#### _pdf.newDocument(storage: _[File](../../objects/File)_, pageSize: _PageSize_) : _Document_
-##### Description
-
-Creates a PDF document with the page size inserted.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| storage | _[File](../../objects/File)_ | File path. |
-| pageSize | _PageSize_ | Page size. |
-
-##### Return
-
-( _Document_ )
-
-Returns PDF document with the page size inserted.
-
----
-
-#### _pdf.newDocument(storage: _[OutputStream](../../objects/OutputStream)_) : _Document_
-##### Description
-
-Creates a PDF document with the page size inserted.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| storage | _[OutputStream](../../objects/OutputStream)_ | File path. |
-
-##### Return
-
-( _Document_ )
-
-Returns PDF document with the page size inserted.
-
----
-
-#### _pdf.newDocument(storage: _[OutputStream](../../objects/OutputStream)_, pageSize: _PageSize_) : _Document_
-##### Description
-
-Creates a PDF document with the page size inserted.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| storage | _[OutputStream](../../objects/OutputStream)_ | File path. |
-| pageSize | _PageSize_ | Page size. |
-
-##### Return
-
-( _Document_ )
-
-Returns PDF document with the page size inserted.
-
----
-
-#### _pdf.newDocument(arg0: _Storage_) : _Document_
+#### _pdf.newDocument(arg0: _java.io.OutputStream_) : _com.itextpdf.layout.Document_
 ##### Description
 
 Creates a new PDF document.
@@ -1988,16 +1871,16 @@ Creates a new PDF document.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 
 ##### Return
 
-( _Document_ )
+( _com.itextpdf.layout.Document_ )
 
 
 ---
 
-#### _pdf.newDocument(storage: _Storage_, pageSize: _PageSize_) : _Document_
+#### _pdf.newDocument(storage: _java.io.OutputStream_, pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
 ##### Description
 
 Creates a PDF document with the page size inserted.
@@ -2006,12 +1889,126 @@ Creates a PDF document with the page size inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | File path. |
-| pageSize | _PageSize_ | Page size. |
+| storage | _java.io.OutputStream_ | File path. |
+| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
 
-( _Document_ )
+( _com.itextpdf.layout.Document_ )
+
+Returns PDF document with the page size inserted.
+
+---
+
+#### _pdf.newDocument(arg0: _[File](../../objects/File)_) : _com.itextpdf.layout.Document_
+##### Description
+
+Creates a new PDF document.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[File](../../objects/File)_ |   |
+
+##### Return
+
+( _com.itextpdf.layout.Document_ )
+
+
+---
+
+#### _pdf.newDocument(storage: _[File](../../objects/File)_, pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+##### Description
+
+Creates a PDF document with the page size inserted.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _[File](../../objects/File)_ | File path. |
+| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
+
+##### Return
+
+( _com.itextpdf.layout.Document_ )
+
+Returns PDF document with the page size inserted.
+
+---
+
+#### _pdf.newDocument(arg0: _[OutputStream](../../objects/OutputStream)_) : _com.itextpdf.layout.Document_
+##### Description
+
+Creates a new PDF document.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[OutputStream](../../objects/OutputStream)_ |   |
+
+##### Return
+
+( _com.itextpdf.layout.Document_ )
+
+
+---
+
+#### _pdf.newDocument(storage: _[OutputStream](../../objects/OutputStream)_, pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+##### Description
+
+Creates a PDF document with the page size inserted.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _[OutputStream](../../objects/OutputStream)_ | File path. |
+| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
+
+##### Return
+
+( _com.itextpdf.layout.Document_ )
+
+Returns PDF document with the page size inserted.
+
+---
+
+#### _pdf.newDocument(arg0: _[Storage](../../resources/Storage)_) : _com.itextpdf.layout.Document_
+##### Description
+
+Creates a new PDF document.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| arg0 | _[Storage](../../resources/Storage)_ |   |
+
+##### Return
+
+( _com.itextpdf.layout.Document_ )
+
+
+---
+
+#### _pdf.newDocument(storage: _[Storage](../../resources/Storage)_, pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+##### Description
+
+Creates a PDF document with the page size inserted.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| storage | _[Storage](../../resources/Storage)_ | File path. |
+| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
+
+##### Return
+
+( _com.itextpdf.layout.Document_ )
 
 Returns PDF document with the page size inserted.
 
@@ -2021,19 +2018,19 @@ Returns PDF document with the page size inserted.
 
 ---
 
-#### _pdf.newPdfDocument() : _PdfDocument_
+#### _pdf.newPdfDocument() : _com.itextpdf.kernel.pdf.PdfDocument_
 ##### Description
 
 Creates a PDF document.
 
 ##### Return
 
-( _PdfDocument_ )
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
 
 
 ---
 
-#### _pdf.newPdfDocument(storage: _OutputStream_) : _PdfDocument_
+#### _pdf.newPdfDocument(storage: _java.io.OutputStream_) : _com.itextpdf.kernel.pdf.PdfDocument_
 ##### Description
 
 Creates a PDF document.
@@ -2042,16 +2039,16 @@ Creates a PDF document.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _OutputStream_ | File path. |
+| storage | _java.io.OutputStream_ | File path. |
 
 ##### Return
 
-( _PdfDocument_ )
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
 
 
 ---
 
-#### _pdf.newPdfDocument(storage: _[File](../../objects/File)_) : _PdfDocument_
+#### _pdf.newPdfDocument(storage: _[File](../../objects/File)_) : _com.itextpdf.kernel.pdf.PdfDocument_
 ##### Description
 
 Creates a PDF document.
@@ -2064,12 +2061,12 @@ Creates a PDF document.
 
 ##### Return
 
-( _PdfDocument_ )
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
 
 
 ---
 
-#### _pdf.newPdfDocument(storage: _[OutputStream](../../objects/OutputStream)_) : _PdfDocument_
+#### _pdf.newPdfDocument(storage: _[OutputStream](../../objects/OutputStream)_) : _com.itextpdf.kernel.pdf.PdfDocument_
 ##### Description
 
 Creates a PDF document.
@@ -2082,12 +2079,12 @@ Creates a PDF document.
 
 ##### Return
 
-( _PdfDocument_ )
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
 
 
 ---
 
-#### _pdf.newPdfDocument(storage: _Storage_) : _PdfDocument_
+#### _pdf.newPdfDocument(storage: _[Storage](../../resources/Storage)_) : _com.itextpdf.kernel.pdf.PdfDocument_
 ##### Description
 
 Creates a PDF document.
@@ -2096,11 +2093,11 @@ Creates a PDF document.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | File path. |
+| storage | _[Storage](../../resources/Storage)_ | File path. |
 
 ##### Return
 
-( _PdfDocument_ )
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
 
 
 ---
@@ -2109,7 +2106,7 @@ Creates a PDF document.
 
 ---
 
-#### _pdf.openPdfDocument(path: string) : _PdfDocument_
+#### _pdf.openPdfDocument(path: string) : _com.itextpdf.kernel.pdf.PdfDocument_
 ##### Description
 
 Opens a PDF documment corresponding to the inserted path.
@@ -2122,7 +2119,7 @@ Opens a PDF documment corresponding to the inserted path.
 
 ##### Return
 
-( _PdfDocument_ )
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
 
 Returns PDF document openned.
 
@@ -2132,7 +2129,7 @@ Returns PDF document openned.
 
 ---
 
-#### _pdf.pageSize(arg0: _float_, arg1: _float_) : _PageSize_
+#### _pdf.pageSize(arg0: _float_, arg1: _float_) : _com.itextpdf.kernel.geom.PageSize_
 ##### Description
 
 Obtém a definição do tamanho da página atráves da largura e altura.
@@ -2146,12 +2143,12 @@ Obtém a definição do tamanho da página atráves da largura e altura.
 
 ##### Return
 
-( _PageSize_ )
+( _com.itextpdf.kernel.geom.PageSize_ )
 
 
 ---
 
-#### _pdf.pageSize(arg0: string) : _PageSize_
+#### _pdf.pageSize(arg0: string) : _com.itextpdf.kernel.geom.PageSize_
 ##### Description
 
 Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</li><li>A2</li><li>A3</li><li>A4</li><li>A5</li><li>A6</li><li>A7</li><li>A8</li><li>A9</li><li>A10</li><li>B0</li><li>B1</li><li>B2</li><li>B3</li><li>B4</li><li>B5</li><li>B6</li><li>B7</li><li>B8</li><li>B9</li><li>B10</li><li>default</li><li>executive</li><li>ledger</li><li>legal</li><li>letter</li><li>tabloid</li></ul>
@@ -2164,7 +2161,7 @@ Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</l
 
 ##### Return
 
-( _PageSize_ )
+( _com.itextpdf.kernel.geom.PageSize_ )
 
 
 ---
@@ -2173,7 +2170,7 @@ Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</l
 
 ---
 
-#### _pdf.paragraph(arg0: string) : _Paragraph_
+#### _pdf.paragraph(arg0: string) : _com.itextpdf.layout.element.Paragraph_
 ##### Description
 
 Creates a paragraph.
@@ -2186,7 +2183,7 @@ Creates a paragraph.
 
 ##### Return
 
-( _Paragraph_ )
+( _com.itextpdf.layout.element.Paragraph_ )
 
 
 ---
@@ -2195,16 +2192,16 @@ Creates a paragraph.
 
 ---
 
-#### _pdf.setDocument(arg0: _Document_) : _PDF_
+#### _pdf.setDocument(arg0: _com.itextpdf.layout.Document_) : _[PDF](../../resources/PDF)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Document_ |   |
+| arg0 | _com.itextpdf.layout.Document_ |   |
 
 ##### Return
 
-( _PDF_ )
+( _[PDF](../../resources/PDF)_ )
 
 
 ---
@@ -2213,7 +2210,7 @@ Creates a paragraph.
 
 ---
 
-#### _pdf.table(columnWidth: _double[]_) : _Table_
+#### _pdf.table(columnWidth: _[D_) : _com.itextpdf.layout.element.Table_
 ##### Description
 
 Creates a table with the columns width inserted.
@@ -2222,17 +2219,17 @@ Creates a table with the columns width inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _double[]_ | Column widthof the table. |
+| columnWidth | _[D_ | Column widthof the table. |
 
 ##### Return
 
-( _Table_ )
+( _com.itextpdf.layout.element.Table_ )
 
 Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(columnWidth: _double[]_, largeTable: _boolean_) : _Table_
+#### _pdf.table(columnWidth: _[D_, largeTable: _boolean_) : _com.itextpdf.layout.element.Table_
 ##### Description
 
 Creates a new table.
@@ -2241,18 +2238,18 @@ Creates a new table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _double[]_ | Columns width. |
+| columnWidth | _[D_ | Columns width. |
 | largeTable | _boolean_ | Large table. |
 
 ##### Return
 
-( _Table_ )
+( _com.itextpdf.layout.element.Table_ )
 
 Returns the created table.
 
 ---
 
-#### _pdf.table(columnWidth: _float[]_) : _Table_
+#### _pdf.table(columnWidth: _[F_) : _com.itextpdf.layout.element.Table_
 ##### Description
 
 Creates a table with the columns width inserted.
@@ -2261,17 +2258,17 @@ Creates a table with the columns width inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _float[]_ | Column widthof the table. |
+| columnWidth | _[F_ | Column widthof the table. |
 
 ##### Return
 
-( _Table_ )
+( _com.itextpdf.layout.element.Table_ )
 
 Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(columnWidth: _float[]_, largeTable: _boolean_) : _Table_
+#### _pdf.table(columnWidth: _[F_, largeTable: _boolean_) : _com.itextpdf.layout.element.Table_
 ##### Description
 
 Creates a new table.
@@ -2280,18 +2277,18 @@ Creates a new table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _float[]_ | Columns width. |
+| columnWidth | _[F_ | Columns width. |
 | largeTable | _boolean_ | Large table. |
 
 ##### Return
 
-( _Table_ )
+( _com.itextpdf.layout.element.Table_ )
 
 Returns the created table.
 
 ---
 
-#### _pdf.table(columnWidth: _int[]_) : _Table_
+#### _pdf.table(columnWidth: _[I_) : _com.itextpdf.layout.element.Table_
 ##### Description
 
 Creates a table with the columns width inserted.
@@ -2300,17 +2297,17 @@ Creates a table with the columns width inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _int[]_ | Column widthof the table. |
+| columnWidth | _[I_ | Column widthof the table. |
 
 ##### Return
 
-( _Table_ )
+( _com.itextpdf.layout.element.Table_ )
 
 Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(columnWidth: _int[]_, largeTable: _boolean_) : _Table_
+#### _pdf.table(columnWidth: _[I_, largeTable: _boolean_) : _com.itextpdf.layout.element.Table_
 ##### Description
 
 Creates a new table.
@@ -2319,18 +2316,18 @@ Creates a new table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _int[]_ | Columns width. |
+| columnWidth | _[I_ | Columns width. |
 | largeTable | _boolean_ | Large table. |
 
 ##### Return
 
-( _Table_ )
+( _com.itextpdf.layout.element.Table_ )
 
 Returns the created table.
 
 ---
 
-#### _pdf.table(columns: _int_) : _Table_
+#### _pdf.table(columns: _int_) : _com.itextpdf.layout.element.Table_
 ##### Description
 
 Creates a new table.
@@ -2343,13 +2340,13 @@ Creates a new table.
 
 ##### Return
 
-( _Table_ )
+( _com.itextpdf.layout.element.Table_ )
 
 Returns the created table.
 
 ---
 
-#### _pdf.table(columnWidth: _List_) : _Table_
+#### _pdf.table(columnWidth: _java.util.List_) : _com.itextpdf.layout.element.Table_
 ##### Description
 
 Creates a table with the columns width inserted.
@@ -2358,17 +2355,17 @@ Creates a table with the columns width inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _List_ | Column's width of the table. |
+| columnWidth | _java.util.List_ | Column's width of the table. |
 
 ##### Return
 
-( _Table_ )
+( _com.itextpdf.layout.element.Table_ )
 
 Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(columnWidth: _List_, largeTable: _boolean_) : _Table_
+#### _pdf.table(columnWidth: _java.util.List_, largeTable: _boolean_) : _com.itextpdf.layout.element.Table_
 ##### Description
 
 Creates a new table.
@@ -2377,18 +2374,18 @@ Creates a new table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _List_ | Columns width. |
+| columnWidth | _java.util.List_ | Columns width. |
 | largeTable | _boolean_ | Large table. |
 
 ##### Return
 
-( _Table_ )
+( _com.itextpdf.layout.element.Table_ )
 
 Returns the created table.
 
 ---
 
-#### _pdf.table(columnWidth: _[Values](../../objects/Values)_) : _Table_
+#### _pdf.table(columnWidth: _[Values](../../objects/Values)_) : _com.itextpdf.layout.element.Table_
 ##### Description
 
 Creates a table with the columns width inserted.
@@ -2401,13 +2398,13 @@ Creates a table with the columns width inserted.
 
 ##### Return
 
-( _Table_ )
+( _com.itextpdf.layout.element.Table_ )
 
 Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(columnWidth: _[Values](../../objects/Values)_, largeTable: _boolean_) : _Table_
+#### _pdf.table(columnWidth: _[Values](../../objects/Values)_, largeTable: _boolean_) : _com.itextpdf.layout.element.Table_
 ##### Description
 
 Creates a new table.
@@ -2421,7 +2418,7 @@ Creates a new table.
 
 ##### Return
 
-( _Table_ )
+( _com.itextpdf.layout.element.Table_ )
 
 Returns the created table.
 
@@ -2431,7 +2428,7 @@ Returns the created table.
 
 ---
 
-#### _pdf.text(content: string) : _Text_
+#### _pdf.text(content: string) : _com.itextpdf.layout.element.Text_
 ##### Description
 
 Creates new text with the inserted text.
@@ -2444,7 +2441,7 @@ Creates new text with the inserted text.
 
 ##### Return
 
-( _Text_ )
+( _com.itextpdf.layout.element.Text_ )
 
 Returns the text content.
 
@@ -2454,7 +2451,7 @@ Returns the text content.
 
 ---
 
-#### _pdf.toHTML(content: _InputStream_) : string
+#### _pdf.toHTML(content: _java.io.InputStream_) : string
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2463,7 +2460,7 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _InputStream_ | Content to HTML. |
+| content | _java.io.InputStream_ | Content to HTML. |
 
 ##### Return
 
@@ -2511,7 +2508,7 @@ Returns the Html.
 
 ---
 
-#### _pdf.toHTML(content: _Storage_) : string
+#### _pdf.toHTML(content: _[Storage](../../resources/Storage)_) : string
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2520,7 +2517,7 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _Storage_ | Content to HTML. |
+| content | _[Storage](../../resources/Storage)_ | Content to HTML. |
 
 ##### Return
 
@@ -2534,7 +2531,7 @@ Returns the Html.
 
 ---
 
-#### _pdf.toText(content: _InputStream_) : string
+#### _pdf.toText(content: _java.io.InputStream_) : string
 ##### Description
 
 Converts to text the inserted content.
@@ -2543,7 +2540,7 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _InputStream_ | Content to text. |
+| content | _java.io.InputStream_ | Content to text. |
 
 ##### Return
 
@@ -2591,7 +2588,7 @@ Returns the Html.
 
 ---
 
-#### _pdf.toText(content: _Storage_) : string
+#### _pdf.toText(content: _[Storage](../../resources/Storage)_) : string
 ##### Description
 
 Converts to text the inserted content.
@@ -2600,7 +2597,7 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _Storage_ | Content to text. |
+| content | _[Storage](../../resources/Storage)_ | Content to text. |
 
 ##### Return
 

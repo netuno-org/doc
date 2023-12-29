@@ -138,7 +138,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### setConnectTimeout(arg0: _int_) : _SSHConfig_
+#### setConnectTimeout(arg0: _int_) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -147,7 +147,7 @@ Definição da configuração do SSH.
 
 ##### Retorno
 
-( _SSHConfig_ )
+( _[SSHConfig](../../objects/SSHConfig)_ )
 
 
 ---
@@ -156,7 +156,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### setDebug(arg0: _boolean_) : _SSHConfig_
+#### setDebug(arg0: _boolean_) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -165,7 +165,7 @@ Definição da configuração do SSH.
 
 ##### Retorno
 
-( _SSHConfig_ )
+( _[SSHConfig](../../objects/SSHConfig)_ )
 
 
 ---
@@ -174,7 +174,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### setEnabled(arg0: _boolean_) : _SSHConfig_
+#### setEnabled(arg0: _boolean_) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -183,7 +183,7 @@ Definição da configuração do SSH.
 
 ##### Retorno
 
-( _SSHConfig_ )
+( _[SSHConfig](../../objects/SSHConfig)_ )
 
 
 ---
@@ -192,7 +192,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### setHost(arg0: string) : _SSHConfig_
+#### setHost(arg0: string) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -201,7 +201,7 @@ Definição da configuração do SSH.
 
 ##### Retorno
 
-( _SSHConfig_ )
+( _[SSHConfig](../../objects/SSHConfig)_ )
 
 
 ---
@@ -210,7 +210,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### setPassword(arg0: string) : _SSHConfig_
+#### setPassword(arg0: string) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -219,7 +219,7 @@ Definição da configuração do SSH.
 
 ##### Retorno
 
-( _SSHConfig_ )
+( _[SSHConfig](../../objects/SSHConfig)_ )
 
 
 ---
@@ -228,7 +228,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### setPort(arg0: _int_) : _SSHConfig_
+#### setPort(arg0: _int_) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -237,7 +237,7 @@ Definição da configuração do SSH.
 
 ##### Retorno
 
-( _SSHConfig_ )
+( _[SSHConfig](../../objects/SSHConfig)_ )
 
 
 ---
@@ -264,7 +264,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### setUsername(arg0: string) : _SSHConfig_
+#### setUsername(arg0: string) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -273,7 +273,7 @@ Definição da configuração do SSH.
 
 ##### Retorno
 
-( _SSHConfig_ )
+( _[SSHConfig](../../objects/SSHConfig)_ )
 
 
 ---

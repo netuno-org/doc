@@ -385,10 +385,10 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getMessage() : _WSMessage_
+#### _ws.getMessage() : _org.netuno.tritao.resource.WS$WSMessage_
 ##### Retorno
 
-( _WSMessage_ )
+( _org.netuno.tritao.resource.WS$WSMessage_ )
 
 
 ---
@@ -435,15 +435,15 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getSession() : _Session_
+#### _ws.getSession() : _javax.websocket.Session_
 ##### Retorno
 
-( _Session_ )
+( _javax.websocket.Session_ )
 
 
 ---
 
-#### _ws.getSession(arg0: string) : _Session_
+#### _ws.getSession(arg0: string) : _javax.websocket.Session_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -452,7 +452,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ##### Retorno
 
-( _Session_ )
+( _javax.websocket.Session_ )
 
 
 ---
@@ -523,10 +523,10 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.message() : _WSMessage_
+#### _ws.message() : _org.netuno.tritao.resource.WS$WSMessage_
 ##### Retorno
 
-( _WSMessage_ )
+( _org.netuno.tritao.resource.WS$WSMessage_ )
 
 
 ---
@@ -769,15 +769,15 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.session() : _Session_
+#### _ws.session() : _javax.websocket.Session_
 ##### Retorno
 
-( _Session_ )
+( _javax.websocket.Session_ )
 
 
 ---
 
-#### _ws.session(arg0: string) : _Session_
+#### _ws.session(arg0: string) : _javax.websocket.Session_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -786,7 +786,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ##### Retorno
 
-( _Session_ )
+( _javax.websocket.Session_ )
 
 
 ---

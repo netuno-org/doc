@@ -13,7 +13,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.basicConsume(arg0: _[Values](../../objects/Values)_) : _RabbitMQ_
+#### _rabbitMQ.basicConsume(arg0: _[Values](../../objects/Values)_) : _[RabbitMQ](../../resources/RabbitMQ)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -22,7 +22,7 @@ Permite enviar e receber mensagens.
 
 ##### Retorno
 
-( _RabbitMQ_ )
+( _[RabbitMQ](../../resources/RabbitMQ)_ )
 
 
 ---
@@ -31,10 +31,10 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.channel() : _Channel_
+#### _rabbitMQ.channel() : _com.rabbitmq.client.Channel_
 ##### Retorno
 
-( _Channel_ )
+( _com.rabbitmq.client.Channel_ )
 
 
 ---
@@ -43,10 +43,10 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.connection() : _Connection_
+#### _rabbitMQ.connection() : _com.rabbitmq.client.Connection_
 ##### Retorno
 
-( _Connection_ )
+( _com.rabbitmq.client.Connection_ )
 
 
 ---
@@ -55,10 +55,10 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.connectionFactory() : _ConnectionFactory_
+#### _rabbitMQ.connectionFactory() : _com.rabbitmq.client.ConnectionFactory_
 ##### Retorno
 
-( _ConnectionFactory_ )
+( _com.rabbitmq.client.ConnectionFactory_ )
 
 
 ---
@@ -67,7 +67,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.init(arg0: string) : _RabbitMQ_
+#### _rabbitMQ.init(arg0: string) : _[RabbitMQ](../../resources/RabbitMQ)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -76,12 +76,12 @@ Permite enviar e receber mensagens.
 
 ##### Retorno
 
-( _RabbitMQ_ )
+( _[RabbitMQ](../../resources/RabbitMQ)_ )
 
 
 ---
 
-#### _rabbitMQ.init(arg0: string, arg1: string) : _RabbitMQ_
+#### _rabbitMQ.init(arg0: string, arg1: string) : _[RabbitMQ](../../resources/RabbitMQ)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -91,12 +91,12 @@ Permite enviar e receber mensagens.
 
 ##### Retorno
 
-( _RabbitMQ_ )
+( _[RabbitMQ](../../resources/RabbitMQ)_ )
 
 
 ---
 
-#### _rabbitMQ.init(arg0: string, arg1: string, arg2: string) : _RabbitMQ_
+#### _rabbitMQ.init(arg0: string, arg1: string, arg2: string) : _[RabbitMQ](../../resources/RabbitMQ)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -107,7 +107,7 @@ Permite enviar e receber mensagens.
 
 ##### Retorno
 
-( _RabbitMQ_ )
+( _[RabbitMQ](../../resources/RabbitMQ)_ )
 
 
 ---
@@ -116,7 +116,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.rpcConsume(arg0: _[Values](../../objects/Values)_) : _RabbitMQ_
+#### _rabbitMQ.rpcConsume(arg0: _[Values](../../objects/Values)_) : _[RabbitMQ](../../resources/RabbitMQ)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -125,7 +125,7 @@ Permite enviar e receber mensagens.
 
 ##### Retorno
 
-( _RabbitMQ_ )
+( _[RabbitMQ](../../resources/RabbitMQ)_ )
 
 
 ---

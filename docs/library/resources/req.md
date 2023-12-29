@@ -12,13 +12,13 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.add(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _req.add(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -27,12 +27,12 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.add(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _req.add(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -45,13 +45,13 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.addAll(arg0: _int_, arg1: _Collection_) : _boolean_
+#### _req.addAll(arg0: _int_, arg1: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Collection_ |   |
+| arg1 | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -60,12 +60,12 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.addAll(arg0: _Collection_) : _boolean_
+#### _req.addAll(arg0: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -90,12 +90,12 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.as(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _req.as(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -104,13 +104,13 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.as(arg0: _Object_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _req.as(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -233,7 +233,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asCalendar(arg0: string) : _Calendar_
+#### _req.asCalendar(arg0: string) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -242,22 +242,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
 
-#### _req.asCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### _req.asCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Calendar_ |   |
+| arg1 | _java.util.Calendar_ |   |
 
 ##### Return
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
@@ -266,7 +266,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asDate(arg0: string) : _Date_
+#### _req.asDate(arg0: string) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -275,22 +275,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
 
-#### _req.asDate(arg0: string, arg1: _Date_) : _Date_
+#### _req.asDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.util.Date_ |   |
 
 ##### Return
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -477,7 +477,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asInstant(arg0: string) : _Instant_
+#### _req.asInstant(arg0: string) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -486,22 +486,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _req.asInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### _req.asInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Instant_ |   |
+| arg1 | _java.time.Instant_ |   |
 
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -558,7 +558,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asList(arg0: _int_) : _List_
+#### _req.asList(arg0: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -567,58 +567,58 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.asList(arg0: _int_, arg1: _Class_) : _List_
+#### _req.asList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.asList(arg0: _int_, arg1: _Object_) : _List_
+#### _req.asList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.asList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+#### _req.asList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.asList(arg0: string) : _List_
+#### _req.asList(arg0: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -627,53 +627,53 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.asList(arg0: string, arg1: _Class_) : _List_
+#### _req.asList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.asList(arg0: string, arg1: _Object_) : _List_
+#### _req.asList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.asList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+#### _req.asList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -682,7 +682,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asLocalDate(arg0: string) : _LocalDate_
+#### _req.asLocalDate(arg0: string) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -691,22 +691,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _req.asLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### _req.asLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDate_ |   |
+| arg1 | _java.time.LocalDate_ |   |
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -715,7 +715,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asLocalDateTime(arg0: string) : _LocalDateTime_
+#### _req.asLocalDateTime(arg0: string) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -724,22 +724,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _req.asLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### _req.asLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDateTime_ |   |
+| arg1 | _java.time.LocalDateTime_ |   |
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -748,7 +748,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asLocalTime(arg0: string) : _LocalTime_
+#### _req.asLocalTime(arg0: string) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -757,22 +757,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _req.asLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### _req.asLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalTime_ |   |
+| arg1 | _java.time.LocalTime_ |   |
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -843,7 +843,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asMap(arg0: _int_) : _Map_
+#### _req.asMap(arg0: _int_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -852,27 +852,27 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _req.asMap(arg0: _int_, arg1: _Object_) : _Map_
+#### _req.asMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _req.asMap(arg0: string) : _Map_
+#### _req.asMap(arg0: string) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -881,22 +881,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _req.asMap(arg0: string, arg1: _Object_) : _Map_
+#### _req.asMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -905,7 +905,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asSQLDate(arg0: string) : _Date_
+#### _req.asSQLDate(arg0: string) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -914,22 +914,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
 
-#### _req.asSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### _req.asSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.sql.Date_ |   |
 
 ##### Return
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
@@ -938,7 +938,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asSQLTime(arg0: string) : _Time_
+#### _req.asSQLTime(arg0: string) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -947,22 +947,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
 
-#### _req.asSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### _req.asSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Time_ |   |
+| arg1 | _java.sql.Time_ |   |
 
 ##### Return
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
@@ -971,7 +971,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asSQLTimestamp(arg0: string) : _Timestamp_
+#### _req.asSQLTimestamp(arg0: string) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -980,22 +980,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
 
-#### _req.asSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### _req.asSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Timestamp_ |   |
+| arg1 | _java.sql.Timestamp_ |   |
 
 ##### Return
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
@@ -1144,7 +1144,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asUID(arg0: string) : _UUID_
+#### _req.asUID(arg0: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1153,12 +1153,12 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _req.asUID(arg0: string, arg1: string) : _UUID_
+#### _req.asUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1168,22 +1168,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _req.asUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _req.asUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -1192,7 +1192,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asUUID(arg0: string) : _UUID_
+#### _req.asUUID(arg0: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1201,12 +1201,12 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _req.asUUID(arg0: string, arg1: string) : _UUID_
+#### _req.asUUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1216,22 +1216,22 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _req.asUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _req.asUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -1240,16 +1240,16 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### _req.asValues(key: _int_) : _[Values](../../objects/Values)_
+#### _req.asValues(index: _int_) : _[Values](../../objects/Values)_
 ##### Description
 
-Gets the object associated with the key and then casts to Values (Dictionary or List).
+Gets the object associated with the index and then casts to Values (Dictionary or List).
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _int_ | The key to get the associated object. |
+| index | _int_ | The index to get the associated object. |
 
 ##### Return
 
@@ -1259,17 +1259,17 @@ Object converted to Values.
 
 ---
 
-#### _req.asValues(key: _int_, defaultValue: _Object_) : _[Values](../../objects/Values)_
+#### _req.asValues(index: _int_, defaultValue: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Description
 
-Gets the object associated with the key and then casts to Values (Dictionary or List).
+Gets the object associated with the index and then casts to Values (Dictionary or List).
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _int_ | The key to get the associated object. |
-| defaultValue | _Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
+| index | _int_ | The index to get the associated object. |
+| defaultValue | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
 
 ##### Return
 
@@ -1298,7 +1298,7 @@ Object converted to Values.
 
 ---
 
-#### _req.asValues(key: string, defaultValue: _Object_) : _[Values](../../objects/Values)_
+#### _req.asValues(key: string, defaultValue: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Description
 
 Gets the object associated with the key and then casts to Values (Dictionary or List).
@@ -1308,7 +1308,7 @@ Gets the object associated with the key and then casts to Values (Dictionary or 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | key | string | The key to get the associated object. |
-| defaultValue | _Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
+| defaultValue | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
 
 ##### Return
 
@@ -1346,17 +1346,17 @@ Object converted to Values.
 
 ---
 
-#### _req.compute(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### _req.compute(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.BiFunction_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1365,17 +1365,17 @@ Object converted to Values.
 
 ---
 
-#### _req.computeIfAbsent(arg0: _Object_, arg1: _Function_) : _Object_
+#### _req.computeIfAbsent(arg0: _java.lang.Object_, arg1: _java.util.function.Function_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Function_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.Function_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1384,17 +1384,17 @@ Object converted to Values.
 
 ---
 
-#### _req.computeIfPresent(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### _req.computeIfPresent(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.BiFunction_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1403,12 +1403,12 @@ Object converted to Values.
 
 ---
 
-#### _req.contains(arg0: _Object_) : _boolean_
+#### _req.contains(arg0: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1417,13 +1417,13 @@ Object converted to Values.
 
 ---
 
-#### _req.contains(arg0: string, arg1: _Object_) : _boolean_
+#### _req.contains(arg0: string, arg1: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1436,12 +1436,12 @@ Object converted to Values.
 
 ---
 
-#### _req.containsAll(arg0: _Collection_) : _boolean_
+#### _req.containsAll(arg0: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -1454,12 +1454,12 @@ Object converted to Values.
 
 ---
 
-#### _req.containsKey(arg0: _Object_) : _boolean_
+#### _req.containsKey(arg0: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1472,12 +1472,12 @@ Object converted to Values.
 
 ---
 
-#### _req.containsValue(arg0: _Object_) : _boolean_
+#### _req.containsValue(arg0: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1512,10 +1512,10 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _req.entrySet() : _Set_
+#### _req.entrySet() : _java.util.Set_
 ##### Return
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -1524,12 +1524,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _req.filter(arg0: _Predicate_) : _[Values](../../objects/Values)_
+#### _req.filter(arg0: _java.util.function.Predicate_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Predicate_ |   |
+| arg0 | _java.util.function.Predicate_ |   |
 
 ##### Return
 
@@ -1538,12 +1538,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _req.filter(arg0: _Value_) : _[Values](../../objects/Values)_
+#### _req.filter(arg0: _org.graalvm.polyglot.Value_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1556,13 +1556,13 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _req.find(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _req.find(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1571,30 +1571,30 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _req.find(arg0: _Predicate_) : _Object_
+#### _req.find(arg0: _java.util.function.Predicate_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Predicate_ |   |
+| arg0 | _java.util.function.Predicate_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _req.find(arg0: _Value_) : _Object_
+#### _req.find(arg0: _org.graalvm.polyglot.Value_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1617,12 +1617,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _req.forEach(arg0: _BiConsumer_) : _void_
+#### _req.forEach(arg0: _java.util.function.BiConsumer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _BiConsumer_ |   |
+| arg0 | _java.util.function.BiConsumer_ |   |
 
 ##### Return
 
@@ -1631,12 +1631,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _req.forEach(arg0: _Consumer_) : _void_
+#### _req.forEach(arg0: _java.util.function.Consumer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Consumer_ |   |
+| arg0 | _java.util.function.Consumer_ |   |
 
 ##### Return
 
@@ -1645,12 +1645,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _req.forEach(arg0: _Value_) : _void_
+#### _req.forEach(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1701,12 +1701,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _req.fromJSON(arg0: _Response_) : _[Values](../../objects/Values)_
+#### _req.fromJSON(arg0: _org.netuno.psamata.net.Remote$Response_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Response_ |   |
+| arg0 | _org.netuno.psamata.net.Remote$Response_ |   |
 
 ##### Return
 
@@ -1727,45 +1727,45 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _req.get(key: _int_) : _Object_
+#### _req.get(key: _int_) : _java.lang.Object_
 ##### Description
 
-Gets the original object associated with the key, but cast for the specified class type.
+Gets the original object associated with the key.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _int_ | Key to get the associated object. |
+| key | _int_ | Key to get the object to associate. |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
-Original object converted to the type of the defined class.
+Original object without conversions.
 
 ---
 
-#### _req.get(key: _Object_) : _Object_
+#### _req.get(key: _java.lang.Object_) : _java.lang.Object_
 ##### Description
 
-Gets the original object associated with the key, but cast for the specified class type.
+Gets the original object associated with the key.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _Object_ | Key to get the associated object. |
+| key | _java.lang.Object_ | Key to get the object to associate. |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
-Original object converted to the type of the defined class.
+Original object without conversions.
 
 ---
 
-#### _req.get(key: string) : _Object_
+#### _req.get(key: string) : _java.lang.Object_
 ##### Description
 
 Gets the original object associated with the key.
@@ -1778,13 +1778,13 @@ Gets the original object associated with the key.
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 Original object without conversions.
 
 ---
 
-#### _req.get(key: string, type: _Class_) : _Object_
+#### _req.get(key: string, type: _java.lang.Class_) : _java.lang.Object_
 ##### Description
 
 Gets the original object associated with the key, but cast for the specified class type.
@@ -1794,11 +1794,11 @@ Gets the original object associated with the key, but cast for the specified cla
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | key | string | Key to get the associated object. |
-| type | _Class_ | Class representing the type of object that should be cast. |
+| type | _java.lang.Class_ | Class representing the type of object that should be cast. |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 Original object converted to the type of the defined class.
 
@@ -1932,7 +1932,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getCalendar(arg0: string) : _Calendar_
+#### _req.getCalendar(arg0: string) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1941,22 +1941,22 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
 
-#### _req.getCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### _req.getCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Calendar_ |   |
+| arg1 | _java.util.Calendar_ |   |
 
 ##### Return
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
@@ -1965,7 +1965,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getDate(arg0: string) : _Date_
+#### _req.getDate(arg0: string) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1974,22 +1974,22 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
 
-#### _req.getDate(arg0: string, arg1: _Date_) : _Date_
+#### _req.getDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.util.Date_ |   |
 
 ##### Return
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -2200,7 +2200,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getInstant(arg0: string) : _Instant_
+#### _req.getInstant(arg0: string) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2209,22 +2209,22 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _req.getInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### _req.getInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Instant_ |   |
+| arg1 | _java.time.Instant_ |   |
 
 ##### Return
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -2295,10 +2295,10 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getKeys() : _Set_
+#### _req.getKeys() : _java.util.Set_
 ##### Return
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -2307,7 +2307,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getList(arg0: _int_) : _List_
+#### _req.getList(arg0: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2316,58 +2316,58 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.getList(arg0: _int_, arg1: _Class_) : _List_
+#### _req.getList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.getList(arg0: _int_, arg1: _Object_) : _List_
+#### _req.getList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.getList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+#### _req.getList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.getList(arg0: string) : _List_
+#### _req.getList(arg0: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2376,53 +2376,53 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.getList(arg0: string, arg1: _Class_) : _List_
+#### _req.getList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.getList(arg0: string, arg1: _Object_) : _List_
+#### _req.getList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.getList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+#### _req.getList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -2431,7 +2431,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getLocalDate(arg0: string) : _LocalDate_
+#### _req.getLocalDate(arg0: string) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2440,22 +2440,22 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _req.getLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### _req.getLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDate_ |   |
+| arg1 | _java.time.LocalDate_ |   |
 
 ##### Return
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -2464,7 +2464,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getLocalDateTime(arg0: string) : _LocalDateTime_
+#### _req.getLocalDateTime(arg0: string) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2473,22 +2473,22 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _req.getLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### _req.getLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDateTime_ |   |
+| arg1 | _java.time.LocalDateTime_ |   |
 
 ##### Return
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -2497,7 +2497,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getLocalTime(arg0: string) : _LocalTime_
+#### _req.getLocalTime(arg0: string) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2506,22 +2506,22 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _req.getLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### _req.getLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalTime_ |   |
+| arg1 | _java.time.LocalTime_ |   |
 
 ##### Return
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -2592,7 +2592,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getMap(arg0: _int_) : _Map_
+#### _req.getMap(arg0: _int_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2601,27 +2601,27 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _req.getMap(arg0: _int_, arg1: _Object_) : _Map_
+#### _req.getMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _req.getMap(arg0: string) : _Map_
+#### _req.getMap(arg0: string) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2630,22 +2630,22 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _req.getMap(arg0: string, arg1: _Object_) : _Map_
+#### _req.getMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -2654,17 +2654,17 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getOrDefault(arg0: _Object_, arg1: _Object_) : _Object_
+#### _req.getOrDefault(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -2673,7 +2673,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getSQLDate(arg0: string) : _Date_
+#### _req.getSQLDate(arg0: string) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2682,22 +2682,22 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
 
-#### _req.getSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### _req.getSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.sql.Date_ |   |
 
 ##### Return
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
@@ -2706,7 +2706,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getSQLTime(arg0: string) : _Time_
+#### _req.getSQLTime(arg0: string) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2715,22 +2715,22 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
 
-#### _req.getSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### _req.getSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Time_ |   |
+| arg1 | _java.sql.Time_ |   |
 
 ##### Return
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
@@ -2739,7 +2739,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getSQLTimestamp(arg0: string) : _Timestamp_
+#### _req.getSQLTimestamp(arg0: string) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2748,22 +2748,22 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
 
-#### _req.getSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### _req.getSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Timestamp_ |   |
+| arg1 | _java.sql.Timestamp_ |   |
 
 ##### Return
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
@@ -2924,7 +2924,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _req.getUID(arg0: string) : _UUID_
+#### _req.getUID(arg0: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2933,12 +2933,12 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _req.getUID(arg0: string, arg1: string) : _UUID_
+#### _req.getUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2948,22 +2948,22 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _req.getUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _req.getUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -2989,7 +2989,7 @@ Character encoding code.
 
 ---
 
-#### _req.getUUID(arg0: string) : _UUID_
+#### _req.getUUID(arg0: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2998,12 +2998,12 @@ Character encoding code.
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _req.getUUID(arg0: string, arg1: string) : _UUID_
+#### _req.getUUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3013,22 +3013,22 @@ Character encoding code.
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _req.getUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _req.getUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -3037,69 +3037,94 @@ Character encoding code.
 
 ---
 
-#### _req.getValues() : _Collection_
+#### _req.getValues() : _java.util.Collection_
+##### Description
+
+Gets all object values stored in both dictionary and list mode.
+
 ##### Return
 
-( _Collection_ )
+( _java.util.Collection_ )
 
+List of all obtained values.
 
 ---
 
-#### _req.getValues(arg0: _int_) : _[Values](../../objects/Values)_
+#### _req.getValues(index: _int_) : _[Values](../../objects/Values)_
+##### Description
+
+Gets the object associated with the index and then casts to Values (Dictionary or List).
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ | The index to get the associated object. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+Object converted to Values.
 
 ---
 
-#### _req.getValues(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _req.getValues(index: _int_, defaultValue: _java.lang.Object_) : _[Values](../../objects/Values)_
+##### Description
+
+Gets the object associated with the index and then casts to Values (Dictionary or List).
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| index | _int_ | The index to get the associated object. |
+| defaultValue | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+Object converted to Values.
 
 ---
 
-#### _req.getValues(arg0: string) : _[Values](../../objects/Values)_
+#### _req.getValues(key: string) : _[Values](../../objects/Values)_
+##### Description
+
+Gets the object associated with the key and then casts to Values (Dictionary or List).
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string | The key to get the associated object. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+Object converted to Values.
 
 ---
 
-#### _req.getValues(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _req.getValues(key: string, defaultValue: _java.lang.Object_) : _[Values](../../objects/Values)_
+##### Description
+
+Gets the object associated with the key and then casts to Values (Dictionary or List).
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| key | string | The key to get the associated object. |
+| defaultValue | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
 
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
 
+Object converted to Values.
 
 ---
 
@@ -3107,12 +3132,12 @@ Character encoding code.
 
 ---
 
-#### _req.has(arg0: _Object_) : _boolean_
+#### _req.has(arg0: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3135,13 +3160,13 @@ Character encoding code.
 
 ---
 
-#### _req.has(arg0: string, arg1: _Object_) : _boolean_
+#### _req.has(arg0: string, arg1: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3172,12 +3197,12 @@ Character encoding code.
 
 ---
 
-#### _req.hasValue(arg0: _Object_) : _boolean_
+#### _req.hasValue(arg0: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3190,12 +3215,12 @@ Character encoding code.
 
 ---
 
-#### _req.indexOf(arg0: _Object_) : _int_
+#### _req.indexOf(arg0: _java.lang.Object_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3208,12 +3233,12 @@ Character encoding code.
 
 ---
 
-#### _req.is(arg0: _Object_) : _boolean_
+#### _req.is(arg0: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3263,12 +3288,12 @@ If the restriction on associated files is active.
 
 ---
 
-#### _req.isList(arg0: _Object_) : _boolean_
+#### _req.isList(arg0: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3306,12 +3331,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.isMap(arg0: _Object_) : _boolean_
+#### _req.isMap(arg0: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3324,12 +3349,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.isMergeable(arg0: _Object_) : _boolean_
+#### _req.isMergeable(arg0: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3342,10 +3367,10 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.iterator() : _Iterator_
+#### _req.iterator() : _java.util.Iterator_
 ##### Return
 
-( _Iterator_ )
+( _java.util.Iterator_ )
 
 
 ---
@@ -3372,10 +3397,10 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.keySet() : _Set_
+#### _req.keySet() : _java.util.Set_
 ##### Return
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3384,10 +3409,10 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.keys() : _Set_
+#### _req.keys() : _java.util.Set_
 ##### Return
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3396,10 +3421,10 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.keysSorted() : _Set_
+#### _req.keysSorted() : _java.util.Set_
 ##### Return
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3422,12 +3447,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.keysToString(arg0: _Map_, arg1: string) : string
+#### _req.keysToString(arg0: _java.util.Map_, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 
 ##### Return
@@ -3441,12 +3466,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.lastIndexOf(arg0: _Object_) : _int_
+#### _req.lastIndexOf(arg0: _java.lang.Object_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3471,24 +3496,24 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.list() : _List_
+#### _req.list() : _java.util.List_
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.list(arg0: _Class_) : _List_
+#### _req.list(arg0: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Class_ |   |
+| arg0 | _java.lang.Class_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -3497,15 +3522,15 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.listIterator() : _ListIterator_
+#### _req.listIterator() : _java.util.ListIterator_
 ##### Return
 
-( _ListIterator_ )
+( _java.util.ListIterator_ )
 
 
 ---
 
-#### _req.listIterator(arg0: _int_) : _ListIterator_
+#### _req.listIterator(arg0: _int_) : _java.util.ListIterator_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3514,7 +3539,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _ListIterator_ )
+( _java.util.ListIterator_ )
 
 
 ---
@@ -3523,10 +3548,10 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.listOfValues() : _List_
+#### _req.listOfValues() : _java.util.List_
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -3535,12 +3560,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.loadJSON(arg0: _InputStream_) : _void_
+#### _req.loadJSON(arg0: _java.io.InputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Return
 
@@ -3549,12 +3574,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.loadJSON(arg0: _Reader_) : _void_
+#### _req.loadJSON(arg0: _java.io.Reader_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Reader_ |   |
+| arg0 | _java.io.Reader_ |   |
 
 ##### Return
 
@@ -3567,12 +3592,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.loadProperties(arg0: _InputStream_) : _void_
+#### _req.loadProperties(arg0: _java.io.InputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Return
 
@@ -3581,12 +3606,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.loadProperties(arg0: _Reader_) : _void_
+#### _req.loadProperties(arg0: _java.io.Reader_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Reader_ |   |
+| arg0 | _java.io.Reader_ |   |
 
 ##### Return
 
@@ -3595,12 +3620,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.loadProperties(arg0: _Properties_) : _void_
+#### _req.loadProperties(arg0: _java.util.Properties_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Properties_ |   |
+| arg0 | _java.util.Properties_ |   |
 
 ##### Return
 
@@ -3648,10 +3673,10 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.map() : _Map_
+#### _req.map() : _java.util.Map_
 ##### Return
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -3660,12 +3685,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.merge(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _req.merge(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3674,18 +3699,18 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.merge(arg0: _Object_, arg1: _Object_, arg2: _BiFunction_) : _Object_
+#### _req.merge(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.util.function.BiFunction_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -3694,12 +3719,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.of(arg0: _Object[]_) : _[Values](../../objects/Values)_
+#### _req.of(arg0: _[Ljava.lang.Object;_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Return
 
@@ -3708,26 +3733,26 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.of(arg0: _Object_) : _Object_
+#### _req.of(arg0: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _req.of(arg0: _List_) : _[Values](../../objects/Values)_
+#### _req.of(arg0: _java.util.List_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Return
 
@@ -3736,12 +3761,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.of(arg0: _Map_) : _[Values](../../objects/Values)_
+#### _req.of(arg0: _java.util.Map_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 
 ##### Return
 
@@ -3754,12 +3779,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.ofList(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _req.ofList(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3772,12 +3797,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.ofMap(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _req.ofMap(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3802,12 +3827,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.push(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _req.push(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3820,32 +3845,32 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.put(arg0: _Object_, arg1: _Object_) : _Object_
+#### _req.put(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _req.put(arg0: string, arg1: _Object_) : _Object_
+#### _req.put(arg0: string, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -3854,12 +3879,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.putAll(arg0: _Map_) : _void_
+#### _req.putAll(arg0: _java.util.Map_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 
 ##### Return
 
@@ -3872,17 +3897,17 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.putIfAbsent(arg0: _Object_, arg1: _Object_) : _Object_
+#### _req.putIfAbsent(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -3891,7 +3916,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.remove(arg0: _int_) : _Object_
+#### _req.remove(arg0: _int_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3900,32 +3925,32 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _req.remove(arg0: _Object_) : _Object_
+#### _req.remove(arg0: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _req.remove(arg0: _Object_, arg1: _Object_) : _boolean_
+#### _req.remove(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3946,12 +3971,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.removeAll(arg0: _Collection_) : _boolean_
+#### _req.removeAll(arg0: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -3964,29 +3989,29 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.replace(arg0: _Object_, arg1: _Object_) : _Object_
+#### _req.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _req.replace(arg0: _Object_, arg1: _Object_, arg2: _Object_) : _boolean_
+#### _req.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3999,12 +4024,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.replaceAll(arg0: _BiFunction_) : _void_
+#### _req.replaceAll(arg0: _java.util.function.BiFunction_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _BiFunction_ |   |
+| arg0 | _java.util.function.BiFunction_ |   |
 
 ##### Return
 
@@ -4013,12 +4038,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.replaceAll(arg0: _UnaryOperator_) : _void_
+#### _req.replaceAll(arg0: _java.util.function.UnaryOperator_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _UnaryOperator_ |   |
+| arg0 | _java.util.function.UnaryOperator_ |   |
 
 ##### Return
 
@@ -4027,12 +4052,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.replaceAll(arg0: _Value_) : _void_
+#### _req.replaceAll(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -4045,12 +4070,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.retainAll(arg0: _Collection_) : _boolean_
+#### _req.retainAll(arg0: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -4063,12 +4088,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.safeString(arg0: _Object_) : string
+#### _req.safeString(arg0: _java.lang.Object_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4077,12 +4102,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.safeString(arg0: _Object_, arg1: string) : string
+#### _req.safeString(arg0: _java.lang.Object_, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | string |   |
 
 ##### Return
@@ -4096,12 +4121,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.saveJSON(arg0: _OutputStream_) : _void_
+#### _req.saveJSON(arg0: _java.io.OutputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _OutputStream_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 
 ##### Return
 
@@ -4110,12 +4135,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.saveJSON(arg0: _Writer_) : _void_
+#### _req.saveJSON(arg0: _java.io.Writer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| arg0 | _java.io.Writer_ |   |
 
 ##### Return
 
@@ -4128,12 +4153,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.saveProperties(arg0: _OutputStream_) : _void_
+#### _req.saveProperties(arg0: _java.io.OutputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _OutputStream_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 
 ##### Return
 
@@ -4142,12 +4167,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.saveProperties(arg0: _Writer_) : _void_
+#### _req.saveProperties(arg0: _java.io.Writer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| arg0 | _java.io.Writer_ |   |
 
 ##### Return
 
@@ -4220,12 +4245,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.search(arg0: _Map_, arg1: string, arg2: string, arg3: _boolean_) : string
+#### _req.search(arg0: _java.util.Map_, arg1: string, arg2: string, arg3: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 | arg2 | string |   |
 | arg3 | _boolean_ |   |
@@ -4241,13 +4266,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.set(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _req.set(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4256,13 +4281,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _req.set(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _req.set(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4681,12 +4706,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.sort(arg0: _Comparator_) : _void_
+#### _req.sort(arg0: _java.util.Comparator_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Comparator_ |   |
+| arg0 | _java.util.Comparator_ |   |
 
 ##### Return
 
@@ -4695,12 +4720,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.sort(arg0: _Value_) : _void_
+#### _req.sort(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -4713,10 +4738,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.spliterator() : _Spliterator_
+#### _req.spliterator() : _java.util.Spliterator_
 ##### Return
 
-( _Spliterator_ )
+( _java.util.Spliterator_ )
 
 
 ---
@@ -4725,7 +4750,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.subList(arg0: _int_, arg1: _int_) : _List_
+#### _req.subList(arg0: _int_, arg1: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4735,7 +4760,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -4744,24 +4769,24 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toArray() : _Object[]_
+#### _req.toArray() : _[Ljava.lang.Object;_
 ##### Return
 
-( _Object[]_ )
+( _[Ljava.lang.Object;_ )
 
 
 ---
 
-#### _req.toArray(arg0: _Object[]_) : _Object[]_
+#### _req.toArray(arg0: _[Ljava.lang.Object;_) : _[Ljava.lang.Object;_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Return
 
-( _Object[]_ )
+( _[Ljava.lang.Object;_ )
 
 
 ---
@@ -4770,10 +4795,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toByteArray() : _byte[]_
+#### _req.toByteArray() : _[B_
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -4782,10 +4807,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toDoubleArray() : _double[]_
+#### _req.toDoubleArray() : _[D_
 ##### Return
 
-( _double[]_ )
+( _[D_ )
 
 
 ---
@@ -4794,10 +4819,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toFloatArray() : _float[]_
+#### _req.toFloatArray() : _[F_
 ##### Return
 
-( _float[]_ )
+( _[F_ )
 
 
 ---
@@ -4847,10 +4872,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toIntArray() : _int[]_
+#### _req.toIntArray() : _[I_
 ##### Return
 
-( _int[]_ )
+( _[I_ )
 
 
 ---
@@ -4910,12 +4935,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toJSON(arg0: _List_) : string
+#### _req.toJSON(arg0: _java.util.List_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Return
 
@@ -4924,12 +4949,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toJSON(arg0: _List_, arg1: _boolean_) : string
+#### _req.toJSON(arg0: _java.util.List_, arg1: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _boolean_ |   |
 
 ##### Return
@@ -4939,12 +4964,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toJSON(arg0: _List_, arg1: _boolean_, arg2: _int_) : string
+#### _req.toJSON(arg0: _java.util.List_, arg1: _boolean_, arg2: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _boolean_ |   |
 | arg2 | _int_ |   |
 
@@ -4955,12 +4980,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toJSON(arg0: _List_, arg1: _int_) : string
+#### _req.toJSON(arg0: _java.util.List_, arg1: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _int_ |   |
 
 ##### Return
@@ -4974,17 +4999,17 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toJSONObject(arg0: _Object_, arg1: _boolean_) : _Object_
+#### _req.toJSONObject(arg0: _java.lang.Object_, arg1: _boolean_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | _boolean_ |   |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -4993,12 +5018,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toJSONString(arg0: _Object_, arg1: _boolean_, arg2: _int_) : string
+#### _req.toJSONString(arg0: _java.lang.Object_, arg1: _boolean_, arg2: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | _boolean_ |   |
 | arg2 | _int_ |   |
 
@@ -5013,24 +5038,24 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toList() : _List_
+#### _req.toList() : _java.util.List_
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _req.toList(arg0: _Class_) : _List_
+#### _req.toList(arg0: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Class_ |   |
+| arg0 | _java.lang.Class_ |   |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -5039,10 +5064,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toLongArray() : _long[]_
+#### _req.toLongArray() : _[J_
 ##### Return
 
-( _long[]_ )
+( _[J_ )
 
 
 ---
@@ -5051,10 +5076,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toMap() : _Map_
+#### _req.toMap() : _java.util.Map_
 ##### Return
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -5075,10 +5100,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toShortArray() : _short[]_
+#### _req.toShortArray() : _[S_
 ##### Return
 
-( _short[]_ )
+( _[S_ )
 
 
 ---
@@ -5087,10 +5112,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.toStringArray() : _String[]_
+#### _req.toStringArray() : _[Ljava.lang.String;_
 ##### Return
 
-( _String[]_ )
+( _[Ljava.lang.String;_ )
 
 
 ---
@@ -5099,7 +5124,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.unset(arg0: string) : _Object_
+#### _req.unset(arg0: string) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5108,7 +5133,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -5129,11 +5154,16 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.values() : _Collection_
+#### _req.values() : _java.util.Collection_
+##### Description
+
+Gets all object values stored in both dictionary and list mode.
+
 ##### Return
 
-( _Collection_ )
+( _java.util.Collection_ )
 
+List of all obtained values.
 
 ---
 
@@ -5155,13 +5185,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.valuesToString(arg0: string, arg1: _String[]_) : string
+#### _req.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _String[]_ |   |
+| arg1 | _[Ljava.lang.String;_ |   |
 
 ##### Return
 
@@ -5170,13 +5200,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.valuesToString(arg0: string, arg1: _String[]_, arg2: _[Values](../../objects/Values)_) : string
+#### _req.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_, arg2: _[Values](../../objects/Values)_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _String[]_ |   |
+| arg1 | _[Ljava.lang.String;_ |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
@@ -5201,12 +5231,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.valuesToString(arg0: _Map_, arg1: string) : string
+#### _req.valuesToString(arg0: _java.util.Map_, arg1: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 
 ##### Return
@@ -5216,14 +5246,14 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_) : string
+#### _req.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
-| arg2 | _String[]_ |   |
+| arg2 | _[Ljava.lang.String;_ |   |
 
 ##### Return
 
@@ -5232,14 +5262,14 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_, arg3: _[Values](../../objects/Values)_) : string
+#### _req.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_, arg3: _[Values](../../objects/Values)_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
-| arg2 | _String[]_ |   |
+| arg2 | _[Ljava.lang.String;_ |   |
 | arg3 | _[Values](../../objects/Values)_ |   |
 
 ##### Return
@@ -5249,12 +5279,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _req.valuesToString(arg0: _Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
+#### _req.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 

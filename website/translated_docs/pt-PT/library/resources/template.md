@@ -27,13 +27,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.get(arg0: string, arg1: _Map_) : string
+#### _template.get(arg0: string, arg1: _java.util.Map_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Map_ |   |
+| arg1 | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -75,13 +75,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.getOutput(arg0: string, arg1: _Map_) : string
+#### _template.getOutput(arg0: string, arg1: _java.util.Map_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Map_ |   |
+| arg1 | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -109,10 +109,10 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.init() : _Template_
+#### _template.init() : _[Template](../../resources/Template)_
 ##### Retorno
 
-( _Template_ )
+( _[Template](../../resources/Template)_ )
 
 
 ---
@@ -121,10 +121,10 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.initCore() : _Template_
+#### _template.initCore() : _[Template](../../resources/Template)_
 ##### Retorno
 
-( _Template_ )
+( _[Template](../../resources/Template)_ )
 
 
 ---
@@ -147,13 +147,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.out(arg0: string, arg1: _Map_) : _void_
+#### _template.out(arg0: string, arg1: _java.util.Map_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Map_ |   |
+| arg1 | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -195,13 +195,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.output(arg0: string, arg1: _Map_) : _void_
+#### _template.output(arg0: string, arg1: _java.util.Map_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Map_ |   |
+| arg1 | _java.util.Map_ |   |
 
 ##### Retorno
 

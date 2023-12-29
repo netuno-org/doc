@@ -39,7 +39,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### create(arg0: string) : _Sequence_
+#### create(arg0: string) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -48,12 +48,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Retorno
 
-( _Sequence_ )
+( _[Sequence](../../objects/Sequence)_ )
 
 
 ---
 
-#### create(arg0: string, arg1: _int_) : _Sequence_
+#### create(arg0: string, arg1: _int_) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -63,7 +63,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Retorno
 
-( _Sequence_ )
+( _[Sequence](../../objects/Sequence)_ )
 
 
 ---
@@ -72,7 +72,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### drop(arg0: string) : _Sequence_
+#### drop(arg0: string) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -81,7 +81,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Retorno
 
-( _Sequence_ )
+( _[Sequence](../../objects/Sequence)_ )
 
 
 ---
@@ -128,12 +128,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isH2(arg0: _Builder_) : _boolean_
+#### isH2(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Builder_ |   |
+| arg0 | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -154,12 +154,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isMSSQL(arg0: _Builder_) : _boolean_
+#### isMSSQL(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Builder_ |   |
+| arg0 | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -180,12 +180,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isMariaDB(arg0: _Builder_) : _boolean_
+#### isMariaDB(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Builder_ |   |
+| arg0 | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -206,12 +206,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isPostgreSQL(arg0: _Builder_) : _boolean_
+#### isPostgreSQL(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Builder_ |   |
+| arg0 | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -224,7 +224,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### rename(arg0: string, arg1: string) : _Sequence_
+#### rename(arg0: string, arg1: string) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -234,7 +234,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Retorno
 
-( _Sequence_ )
+( _[Sequence](../../objects/Sequence)_ )
 
 
 ---
@@ -243,7 +243,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### renameIfExists(arg0: string, arg1: string) : _Sequence_
+#### renameIfExists(arg0: string, arg1: string) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -253,7 +253,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Retorno
 
-( _Sequence_ )
+( _[Sequence](../../objects/Sequence)_ )
 
 
 ---
@@ -262,7 +262,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### restart(arg0: string, arg1: _int_) : _Sequence_
+#### restart(arg0: string, arg1: _int_) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -272,12 +272,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Retorno
 
-( _Sequence_ )
+( _[Sequence](../../objects/Sequence)_ )
 
 
 ---
 
-#### restart(arg0: string, arg1: string, arg2: string) : _Sequence_
+#### restart(arg0: string, arg1: string, arg2: string) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -288,7 +288,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Retorno
 
-( _Sequence_ )
+( _[Sequence](../../objects/Sequence)_ )
 
 
 ---

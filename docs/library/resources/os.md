@@ -12,7 +12,7 @@ Performs the execution of commands in the operating system, manipulation of file
 
 ---
 
-#### _os.command(command: _String[]_) : _[OSCommand](../../objects/OSCommand)_
+#### _os.command(command: _[Ljava.lang.String;_) : _[OSCommand](../../objects/OSCommand)_
 ##### Description
 
 Executes a command in the operating system and obtains the result of the execution, the first item is the command and the following are parameters.
@@ -21,7 +21,7 @@ Executes a command in the operating system and obtains the result of the executi
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| command | _String[]_ | The command and optional parameters that will be executed. |
+| command | _[Ljava.lang.String;_ | The command and optional parameters that will be executed. |
 
 ##### Return
 
@@ -31,7 +31,7 @@ Result of executing the command in the operating system, including the output.
 
 ---
 
-#### _os.command(command: _List_) : _[OSCommand](../../objects/OSCommand)_
+#### _os.command(command: _java.util.List_) : _[OSCommand](../../objects/OSCommand)_
 ##### Description
 
 Executes a command in the operating system and obtains the result of the execution, the first item is the command and the following are parameters.
@@ -40,7 +40,7 @@ Executes a command in the operating system and obtains the result of the executi
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| command | _List_ | The command and optional parameters that will be executed. |
+| command | _java.util.List_ | The command and optional parameters that will be executed. |
 
 ##### Return
 
@@ -86,7 +86,7 @@ The location where the command will be executed.
 
 ---
 
-#### _os.directory(directory: string) : _OS_
+#### _os.directory(directory: string) : _[OS](../../resources/OS)_
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -99,13 +99,13 @@ Defines the path where the commands will be executed.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 Instance of the operating system resource.
 
 ---
 
-#### _os.directory(directory: _[File](../../objects/File)_) : _OS_
+#### _os.directory(directory: _[File](../../objects/File)_) : _[OS](../../resources/OS)_
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -118,13 +118,13 @@ Defines the path where the commands will be executed.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 Instance of the operating system resource.
 
 ---
 
-#### _os.directory(directory: _Storage_) : _OS_
+#### _os.directory(directory: _[Storage](../../resources/Storage)_) : _[OS](../../resources/OS)_
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -133,11 +133,11 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| directory | _Storage_ | The location where the command will be executed. |
+| directory | _[Storage](../../resources/Storage)_ | The location where the command will be executed. |
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 Instance of the operating system resource.
 
@@ -155,7 +155,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.env(arg0: _[Values](../../objects/Values)_) : _OS_
+#### _os.env(arg0: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -164,7 +164,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 
 ---
@@ -335,14 +335,14 @@ The name of the operating system.
 
 ---
 
-#### _os.init() : _OS_
+#### _os.init() : _[OS](../../resources/OS)_
 ##### Description
 
 Starts a new instance of the OS.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 The new instance of the OS resource.
 
@@ -521,7 +521,7 @@ The name of the operating system.
 
 ---
 
-#### _os.readCommandError(arg0: _boolean_) : _OS_
+#### _os.readCommandError(arg0: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -530,7 +530,7 @@ The name of the operating system.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 
 ---
@@ -547,7 +547,7 @@ The name of the operating system.
 
 ---
 
-#### _os.readCommandOutput(arg0: _boolean_) : _OS_
+#### _os.readCommandOutput(arg0: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -556,7 +556,7 @@ The name of the operating system.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 
 ---
@@ -565,7 +565,7 @@ The name of the operating system.
 
 ---
 
-#### _os.setDirectory(directory: string) : _OS_
+#### _os.setDirectory(directory: string) : _[OS](../../resources/OS)_
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -578,13 +578,13 @@ Defines the path where the commands will be executed.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 Instance of the operating system resource.
 
 ---
 
-#### _os.setDirectory(directory: _[File](../../objects/File)_) : _OS_
+#### _os.setDirectory(directory: _[File](../../objects/File)_) : _[OS](../../resources/OS)_
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -597,13 +597,13 @@ Defines the path where the commands will be executed.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 Instance of the operating system resource.
 
 ---
 
-#### _os.setDirectory(directory: _Storage_) : _OS_
+#### _os.setDirectory(directory: _[Storage](../../resources/Storage)_) : _[OS](../../resources/OS)_
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -612,11 +612,11 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| directory | _Storage_ | The location where the command will be executed. |
+| directory | _[Storage](../../resources/Storage)_ | The location where the command will be executed. |
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 Instance of the operating system resource.
 
@@ -626,7 +626,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setEnv(arg0: _[Values](../../objects/Values)_) : _OS_
+#### _os.setEnv(arg0: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -635,7 +635,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 
 ---
@@ -644,7 +644,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setReadCommandError(arg0: _boolean_) : _OS_
+#### _os.setReadCommandError(arg0: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -653,7 +653,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 
 ---
@@ -662,7 +662,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setReadCommandOutput(arg0: _boolean_) : _OS_
+#### _os.setReadCommandOutput(arg0: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -671,7 +671,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 
 ---
@@ -680,7 +680,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setShell(arg0: _boolean_) : _OS_
+#### _os.setShell(arg0: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -689,7 +689,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 
 ---
@@ -698,7 +698,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setWaitFor(arg0: _long_) : _OS_
+#### _os.setWaitFor(arg0: _long_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -707,7 +707,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 
 ---
@@ -724,7 +724,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.shell(arg0: _boolean_) : _OS_
+#### _os.shell(arg0: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -733,7 +733,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 
 ---
@@ -750,7 +750,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.waitFor(arg0: _long_) : _OS_
+#### _os.waitFor(arg0: _long_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -759,7 +759,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _OS_ )
+( _[OS](../../resources/OS)_ )
 
 
 ---

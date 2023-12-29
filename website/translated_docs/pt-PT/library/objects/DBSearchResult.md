@@ -48,10 +48,10 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### getResults() : _List_
+#### getResults() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -72,7 +72,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### setFullTotal(arg0: _int_) : _DBSearchResult_
+#### setFullTotal(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -81,7 +81,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ##### Retorno
 
-( _DBSearchResult_ )
+( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
 
 ---
@@ -90,7 +90,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### setLength(arg0: _int_) : _DBSearchResult_
+#### setLength(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -99,7 +99,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ##### Retorno
 
-( _DBSearchResult_ )
+( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
 
 ---
@@ -108,7 +108,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### setOffset(arg0: _int_) : _DBSearchResult_
+#### setOffset(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -117,7 +117,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ##### Retorno
 
-( _DBSearchResult_ )
+( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
 
 ---
@@ -126,16 +126,16 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### setResults(arg0: _List_) : _DBSearchResult_
+#### setResults(arg0: _java.util.List_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Retorno
 
-( _DBSearchResult_ )
+( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
 
 ---
@@ -144,7 +144,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### setTotal(arg0: _int_) : _DBSearchResult_
+#### setTotal(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -153,7 +153,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ##### Retorno
 
-( _DBSearchResult_ )
+( _[DBSearchResult](../../objects/DBSearchResult)_ )
 
 
 ---

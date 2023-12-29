@@ -29,7 +29,7 @@ The absolute storage path.
 
 ---
 
-#### _storage.database(table: string) : _Storage_
+#### _storage.database(table: string) : _[Storage](../../resources/Storage)_
 ##### Description
 
 Starts a new storage for the folder where the files of a table that represent a form are.
@@ -42,13 +42,13 @@ Starts a new storage for the folder where the files of a table that represent a 
 
 ##### Return
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 New storage started for the database table.
 
 ---
 
-#### _storage.database(table: string, field: string) : _Storage_
+#### _storage.database(table: string, field: string) : _[Storage](../../resources/Storage)_
 ##### Description
 
 Starts a new storage for the folder where the files of a specific column of a table are located that represents a field of a form.
@@ -62,13 +62,13 @@ Starts a new storage for the folder where the files of a specific column of a ta
 
 ##### Return
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 New storage started for a database table column.
 
 ---
 
-#### _storage.database(table: string, field: string, path: string) : _Storage_
+#### _storage.database(table: string, field: string, path: string) : _[Storage](../../resources/Storage)_
 ##### Description
 
 Starts a new storage for a specific path where the files for a specific column of a table are located that represent a field on a form.
@@ -83,13 +83,13 @@ Starts a new storage for a specific path where the files for a specific column o
 
 ##### Return
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 New storage started for the specific path from a column in a database table.
 
 ---
 
-#### _storage.database(table: string, field: string, path: string, fileName: string) : _Storage_
+#### _storage.database(table: string, field: string, path: string, fileName: string) : _[Storage](../../resources/Storage)_
 ##### Description
 
 Starts a new storage for a specific path where the files for a specific column of a table are located that represent a field on a form.
@@ -105,7 +105,7 @@ Starts a new storage for a specific path where the files for a specific column o
 
 ##### Return
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 New storage started for the specific path from a column in a database table.
 
@@ -115,10 +115,10 @@ New storage started for the specific path from a column in a database table.
 
 ---
 
-#### _storage.ensurePath() : _Storage_
+#### _storage.ensurePath() : _[Storage](../../resources/Storage)_
 ##### Return
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 
 ---
@@ -161,7 +161,7 @@ It allows to interact with the file physically.
 
 ---
 
-#### _storage.filesystem(folder: string, path: string) : _Storage_
+#### _storage.filesystem(folder: string, path: string) : _[Storage](../../resources/Storage)_
 ##### Description
 
 Starts a new storage for a specific filesystem path within the storage.
@@ -175,13 +175,13 @@ Starts a new storage for a specific filesystem path within the storage.
 
 ##### Return
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 New storage started for the specific path from the storage filesystem.
 
 ---
 
-#### _storage.filesystem(folder: string, path: string, fileName: string) : _Storage_
+#### _storage.filesystem(folder: string, path: string, fileName: string) : _[Storage](../../resources/Storage)_
 ##### Description
 
 Starts a new storage for a specific filesystem path within the storage.
@@ -196,7 +196,7 @@ Starts a new storage for a specific filesystem path within the storage.
 
 ##### Return
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 New storage started for the specific path from the storage filesystem.
 
@@ -274,14 +274,14 @@ Data input object from Netuno to the storage in use.
 
 ---
 
-#### _storage.inputStream() : _InputStream_
+#### _storage.inputStream() : _java.io.InputStream_
 ##### Description
 
 Gets the Java input object for the storage being used.
 
 ##### Return
 
-( _InputStream_ )
+( _java.io.InputStream_ )
 
 Java data input object for the storage in use.
 
@@ -433,7 +433,7 @@ If it is a folder.
 
 ---
 
-#### _storage.newRandomFile(charset: string) : _Storage_
+#### _storage.newRandomFile(charset: string) : _[Storage](../../resources/Storage)_
 ##### Description
 
 Generates a new storage from the current storage but for a file with a random name that does not yet exist and thus can be saved without conflicts.
@@ -446,7 +446,7 @@ Generates a new storage from the current storage but for a file with a random na
 
 ##### Return
 
-( _Storage_ )
+( _[Storage](../../resources/Storage)_ )
 
 New storage for a new file with a non-existent random name.
 
@@ -473,14 +473,14 @@ Data output object from Netuno to the storage in use.
 
 ---
 
-#### _storage.outputStream() : _OutputStream_
+#### _storage.outputStream() : _java.io.OutputStream_
 ##### Description
 
 Gets the Java output object for the storage being used.
 
 ##### Return
 
-( _OutputStream_ )
+( _java.io.OutputStream_ )
 
 Java data output object for the storage in use.
 
@@ -507,14 +507,14 @@ The path of the storage.
 
 ---
 
-#### _storage.reader() : _Reader_
+#### _storage.reader() : _java.io.Reader_
 ##### Description
 
 Gets the input object as Java text for the storage being used.
 
 ##### Return
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 Input object as Java text for the storage in use.
 
@@ -524,20 +524,20 @@ Input object as Java text for the storage in use.
 
 ---
 
-#### _storage.readerBOM() : _Reader_
+#### _storage.readerBOM() : _java.io.Reader_
 ##### Description
 
 Gets the data entry object as BOM text (byte order mark) from Java for the storage being used.
 
 ##### Return
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 Java text input object (_BOM_) for the storage in use.
 
 ---
 
-#### _storage.readerBOM(charset: string) : _Reader_
+#### _storage.readerBOM(charset: string) : _java.io.Reader_
 ##### Description
 
 Gets the data entry object as BOM text (byte order mark) from Java for the storage being used.
@@ -556,7 +556,7 @@ Gets the data entry object as BOM text (byte order mark) from Java for the stora
 
 ##### Return
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 Java text input object (_BOM_) for the storage in use.
 
@@ -628,14 +628,14 @@ The URL for the storage.
 
 ---
 
-#### _storage.writer() : _Writer_
+#### _storage.writer() : _java.io.Writer_
 ##### Description
 
 Gets the output object as Java text for the storage being used.
 
 ##### Return
 
-( _Writer_ )
+( _java.io.Writer_ )
 
 Output object as Java text for the storage in use.
 

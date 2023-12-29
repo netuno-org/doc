@@ -12,7 +12,7 @@ Recurso de envio de e-mail por SMTP.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[File](../../objects/File)_) : _SMTP_
+#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[File](../../objects/File)_) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -27,13 +27,13 @@ Adiciona ficheiro de anexo ao e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[File](../../objects/File)_, idConteudo: string) : _SMTP_
+#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[File](../../objects/File)_, idConteudo: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -49,13 +49,13 @@ Adiciona ficheiro de anexo ao e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[File](../../objects/File)_, idConteudo: string, emLinha: _boolean_) : _SMTP_
+#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[File](../../objects/File)_, idConteudo: string, emLinha: _boolean_) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -72,13 +72,13 @@ Adiciona ficheiro de anexo ao e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _Storage_) : _SMTP_
+#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[Storage](../../resources/Storage)_) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -89,17 +89,17 @@ Adiciona ficheiro de anexo ao e-mail.
 |---|---|---|
 | nome | string | O nome do anexo. |
 | tipo | string | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| ficheiro | _Storage_ | O ficheiro. |
+| ficheiro | _[Storage](../../resources/Storage)_ | O ficheiro. |
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _Storage_, idConteudo: string) : _SMTP_
+#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[Storage](../../resources/Storage)_, idConteudo: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -110,18 +110,18 @@ Adiciona ficheiro de anexo ao e-mail.
 |---|---|---|
 | nome | string | O nome do anexo. |
 | tipo | string | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| ficheiro | _Storage_ | O ficheiro. |
+| ficheiro | _[Storage](../../resources/Storage)_ | O ficheiro. |
 | idConteudo | string | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _Storage_, idConteudo: string, emLinha: _boolean_) : _SMTP_
+#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[Storage](../../resources/Storage)_, idConteudo: string, emLinha: _boolean_) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -132,13 +132,13 @@ Adiciona ficheiro de anexo ao e-mail.
 |---|---|---|
 | nome | string | O nome do anexo. |
 | tipo | string | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| ficheiro | _Storage_ | O ficheiro. |
+| ficheiro | _[Storage](../../resources/Storage)_ | O ficheiro. |
 | idConteudo | string | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
 | emLinha | _boolean_ | Se é ou não para ser injetado no conteúdo. |
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -161,7 +161,7 @@ O e-mail de quem vai receber o e-mail como cópia oculta.
 
 ---
 
-#### _smtp.bcc(bcc: string) : _SMTP_
+#### _smtp.bcc(bcc: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define quem recebe uma cópia escondida do e-mail.
@@ -174,7 +174,7 @@ Define quem recebe uma cópia escondida do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -197,7 +197,7 @@ O e-mail de quem vai receber o e-mail como cópia.
 
 ---
 
-#### _smtp.cc(cc: string) : _SMTP_
+#### _smtp.cc(cc: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define quem recebe uma cópia do e-mail.
@@ -210,7 +210,7 @@ Define quem recebe uma cópia do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -223,13 +223,13 @@ Objeto SMTP atual.
 #### _smtp.config() : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Descrição
 
-Obtém a configuração que está a ser utilizada.
+Inicia uma nova configuração própria.
 
 ##### Retorno
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
-Objeto da configuração ativa.
+Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
@@ -252,7 +252,7 @@ Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### _smtp.config(config: _[SMTPConfig](../../objects/SMTPConfig)_) : _SMTP_
+#### _smtp.config(config: _[SMTPConfig](../../objects/SMTPConfig)_) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -265,7 +265,7 @@ Define outra configuração que deve ser utilizada.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -275,10 +275,10 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.emptyMail() : _Mail_
+#### _smtp.emptyMail() : _org.netuno.psamata.mail.Mail_
 ##### Retorno
 
-( _Mail_ )
+( _org.netuno.psamata.mail.Mail_ )
 
 
 ---
@@ -295,7 +295,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.enabled(ativo: _boolean_) : _SMTP_
+#### _smtp.enabled(ativo: _boolean_) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define se está habilitado.
@@ -308,7 +308,7 @@ Define se está habilitado.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -331,7 +331,7 @@ O endereço de e-mail de quem envia.
 
 ---
 
-#### _smtp.from(de: string) : _SMTP_
+#### _smtp.from(de: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define o endereço do remetente do e-mail.
@@ -344,7 +344,7 @@ Define o endereço do remetente do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -549,7 +549,7 @@ O endereço de e-mail de quem recebe.
 
 ---
 
-#### _smtp.html(arg0: string) : _SMTP_
+#### _smtp.html(arg0: string) : _[SMTP](../../resources/SMTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -558,7 +558,7 @@ O endereço de e-mail de quem recebe.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 
 ---
@@ -567,20 +567,20 @@ O endereço de e-mail de quem recebe.
 
 ---
 
-#### _smtp.init() : _SMTP_
+#### _smtp.init() : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Inicia uma nova instância do SMTP utilizando a configuração do STMP da chave `default`.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _smtp.init(configKey: string) : _SMTP_
+#### _smtp.init(configKey: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Inicia uma nova instância do SMTP a partir de uma configuração específica.
@@ -593,13 +593,13 @@ Inicia uma nova instância do SMTP a partir de uma configuração específica.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 A nova instância do recurso SMTP com base na configuração do SMTP especificada.
 
 ---
 
-#### _smtp.init(config: _[SMTPConfig](../../objects/SMTPConfig)_) : _SMTP_
+#### _smtp.init(config: _[SMTPConfig](../../objects/SMTPConfig)_) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Inicia uma nova instância do SMTP a partir de uma configuração que é definida em um objeto de configuração própria.
@@ -612,7 +612,7 @@ Inicia uma nova instância do SMTP a partir de uma configuração que é definid
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 A nova instância do recurso SMTP com base na configuração definida.
 
@@ -639,10 +639,10 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _smtp.mail() : _Mail_
+#### _smtp.mail() : _org.netuno.psamata.mail.Mail_
 ##### Retorno
 
-( _Mail_ )
+( _org.netuno.psamata.mail.Mail_ )
 
 
 ---
@@ -659,7 +659,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _smtp.multipartSubtype(arg0: string) : _SMTP_
+#### _smtp.multipartSubtype(arg0: string) : _[SMTP](../../resources/SMTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -668,7 +668,7 @@ Resultado se está ou não ativado.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 
 ---
@@ -685,7 +685,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _smtp.replyTo(arg0: string) : _SMTP_
+#### _smtp.replyTo(arg0: string) : _[SMTP](../../resources/SMTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -694,7 +694,7 @@ Resultado se está ou não ativado.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 
 ---
@@ -715,12 +715,12 @@ Realiza o envio do e-mail.
 
 ---
 
-#### _smtp.send(arg0: _Mail_) : _void_
+#### _smtp.send(arg0: _org.netuno.psamata.mail.Mail_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Mail_ |   |
+| arg0 | _org.netuno.psamata.mail.Mail_ |   |
 
 ##### Retorno
 
@@ -733,7 +733,7 @@ Realiza o envio do e-mail.
 
 ---
 
-#### _smtp.setBcc(bcc: string) : _SMTP_
+#### _smtp.setBcc(bcc: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define quem recebe uma cópia escondida do e-mail.
@@ -746,7 +746,7 @@ Define quem recebe uma cópia escondida do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -756,7 +756,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setCc(cc: string) : _SMTP_
+#### _smtp.setCc(cc: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define quem recebe uma cópia do e-mail.
@@ -769,7 +769,7 @@ Define quem recebe uma cópia do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -779,7 +779,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setConfig(config: _[SMTPConfig](../../objects/SMTPConfig)_) : _SMTP_
+#### _smtp.setConfig(config: _[SMTPConfig](../../objects/SMTPConfig)_) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -792,7 +792,7 @@ Define outra configuração que deve ser utilizada.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -802,7 +802,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setEnabled(ativo: _boolean_) : _SMTP_
+#### _smtp.setEnabled(ativo: _boolean_) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define se está habilitado.
@@ -815,7 +815,7 @@ Define se está habilitado.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -825,7 +825,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setFrom(de: string) : _SMTP_
+#### _smtp.setFrom(de: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define o endereço do remetente do e-mail.
@@ -838,7 +838,7 @@ Define o endereço do remetente do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -848,7 +848,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setHTML(html: string) : _SMTP_
+#### _smtp.setHTML(html: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define o HTML do corpo do e-mail.
@@ -861,7 +861,7 @@ Define o HTML do corpo do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -871,7 +871,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setMultipartSubtype(multipartSubtipo: string) : _SMTP_
+#### _smtp.setMultipartSubtype(multipartSubtipo: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define o subtipo do multipart como por exemplo `mixed`, `alternative`, `digest` e `parallel`.
@@ -884,7 +884,7 @@ Define o subtipo do multipart como por exemplo `mixed`, `alternative`, `digest` 
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -894,7 +894,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setReplyTo(replyTo: string) : _SMTP_
+#### _smtp.setReplyTo(replyTo: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define quem deve ser respondido ao e-mail.
@@ -907,7 +907,7 @@ Define quem deve ser respondido ao e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -917,7 +917,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setSubject(titulo: string) : _SMTP_
+#### _smtp.setSubject(titulo: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define o título do e-mail.
@@ -930,7 +930,7 @@ Define o título do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -940,7 +940,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setSubjectPrefix(tituloPrefixo: string) : _SMTP_
+#### _smtp.setSubjectPrefix(tituloPrefixo: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define o prefixo do título do e-mail.
@@ -953,7 +953,7 @@ Define o prefixo do título do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -963,7 +963,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setText(texto: string) : _SMTP_
+#### _smtp.setText(texto: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define o texto do corpo do e-mail.
@@ -976,7 +976,7 @@ Define o texto do corpo do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -986,7 +986,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setTo(para: string) : _SMTP_
+#### _smtp.setTo(para: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define o endereço do destinatário do e-mail.
@@ -999,7 +999,7 @@ Define o endereço do destinatário do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -1022,7 +1022,7 @@ O título que vai ir no e-mail.
 
 ---
 
-#### _smtp.subject(titulo: string) : _SMTP_
+#### _smtp.subject(titulo: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define o título do e-mail.
@@ -1035,7 +1035,7 @@ Define o título do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -1053,7 +1053,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.subjectPrefix(arg0: string) : _SMTP_
+#### _smtp.subjectPrefix(arg0: string) : _[SMTP](../../resources/SMTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1062,7 +1062,7 @@ Objeto SMTP atual.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 
 ---
@@ -1084,7 +1084,7 @@ O texto que vai ir no e-mail.
 
 ---
 
-#### _smtp.text(texto: string) : _SMTP_
+#### _smtp.text(texto: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define o texto do corpo do e-mail.
@@ -1097,7 +1097,7 @@ Define o texto do corpo do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -1120,7 +1120,7 @@ O endereço de e-mail de quem recebe.
 
 ---
 
-#### _smtp.to(para: string) : _SMTP_
+#### _smtp.to(para: string) : _[SMTP](../../resources/SMTP)_
 ##### Descrição
 
 Define o endereço do destinatário do e-mail.
@@ -1133,7 +1133,7 @@ Define o endereço do destinatário do e-mail.
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 Objeto SMTP atual.
 
@@ -1143,16 +1143,16 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.with(arg0: _IMAP_) : _SMTP_
+#### _smtp.with(arg0: _[IMAP](../../resources/IMAP)_) : _[SMTP](../../resources/SMTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _IMAP_ |   |
+| arg0 | _[IMAP](../../resources/IMAP)_ |   |
 
 ##### Retorno
 
-( _SMTP_ )
+( _[SMTP](../../resources/SMTP)_ )
 
 
 ---

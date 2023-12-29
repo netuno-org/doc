@@ -72,10 +72,10 @@ Recurso de configuração dos componentes da aplicação.
 
 ---
 
-#### _setup.run() : _RunResult_
+#### _setup.run() : _org.netuno.tritao.resource.Setup$RunResult_
 ##### Retorno
 
-( _RunResult_ )
+( _org.netuno.tritao.resource.Setup$RunResult_ )
 
 
 ---

@@ -96,16 +96,16 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### getInstance(arg0: _Proteu_) : _Service_
+#### getInstance(arg0: _org.netuno.proteu.Proteu_) : _[Service](../../objects/Service)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Proteu_ |   |
+| arg0 | _org.netuno.proteu.Proteu_ |   |
 
 ##### Retorno
 
-( _Service_ )
+( _[Service](../../objects/Service)_ )
 
 
 ---
@@ -126,10 +126,10 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### getMethods() : _List_
+#### getMethods() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -278,10 +278,10 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### wasCancelled() : _Boolean_
+#### wasCancelled() : _java.lang.Boolean_
 ##### Retorno
 
-( _Boolean_ )
+( _java.lang.Boolean_ )
 
 
 ---

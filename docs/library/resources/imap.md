@@ -27,13 +27,13 @@ Mailbox query capability through IMAP.
 #### _imap.config() : _[IMAPConfig](../../objects/IMAPConfig)_
 ##### Description
 
-Gets the configuration that is being used.
+Starts a new configuration of its own.
 
 ##### Return
 
 ( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
-Object of the active configuration.
+Configuration object loaded from received data.
 
 ---
 
@@ -56,7 +56,7 @@ Configuration object loaded from received data.
 
 ---
 
-#### _imap.config(config: _[IMAPConfig](../../objects/IMAPConfig)_) : _IMAP_
+#### _imap.config(config: _[IMAPConfig](../../objects/IMAPConfig)_) : _[IMAP](../../resources/IMAP)_
 ##### Description
 
 Define outra configuração que deve ser utilizada.
@@ -69,7 +69,7 @@ Define outra configuração que deve ser utilizada.
 
 ##### Return
 
-( _IMAP_ )
+( _[IMAP](../../resources/IMAP)_ )
 
 Current IMAP object.
 
@@ -79,10 +79,10 @@ Current IMAP object.
 
 ---
 
-#### _imap.connect() : _IMAP_
+#### _imap.connect() : _[IMAP](../../resources/IMAP)_
 ##### Return
 
-( _IMAP_ )
+( _[IMAP](../../resources/IMAP)_ )
 
 
 ---
@@ -111,7 +111,7 @@ Current IMAP object.
 
 ---
 
-#### _imap.enabled(enabled: _boolean_) : _IMAP_
+#### _imap.enabled(enabled: _boolean_) : _[IMAP](../../resources/IMAP)_
 ##### Description
 
 Sets whether it is enabled.
@@ -124,7 +124,7 @@ Sets whether it is enabled.
 
 ##### Return
 
-( _IMAP_ )
+( _[IMAP](../../resources/IMAP)_ )
 
 Current IMAP object.
 
@@ -134,10 +134,10 @@ Current IMAP object.
 
 ---
 
-#### _imap.getClient() : _IMAPClient_
+#### _imap.getClient() : _org.netuno.psamata.mail.IMAPClient_
 ##### Return
 
-( _IMAPClient_ )
+( _org.netuno.psamata.mail.IMAPClient_ )
 
 
 ---
@@ -163,7 +163,7 @@ Object of the active configuration.
 
 ---
 
-#### _imap.getMail(arg0: _int_) : _Mail_
+#### _imap.getMail(arg0: _int_) : _org.netuno.psamata.mail.Mail_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -172,7 +172,7 @@ Object of the active configuration.
 
 ##### Return
 
-( _Mail_ )
+( _org.netuno.psamata.mail.Mail_ )
 
 
 ---
@@ -181,15 +181,15 @@ Object of the active configuration.
 
 ---
 
-#### _imap.getMails() : _List_
+#### _imap.getMails() : _java.util.List_
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _imap.getMails(arg0: _int_, arg1: _int_) : _List_
+#### _imap.getMails(arg0: _int_, arg1: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -199,7 +199,7 @@ Object of the active configuration.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -208,20 +208,20 @@ Object of the active configuration.
 
 ---
 
-#### _imap.init() : _IMAP_
+#### _imap.init() : _[IMAP](../../resources/IMAP)_
 ##### Description
 
 Starts a new instance of IMAP using the IMAP configuration of the `default` key.
 
 ##### Return
 
-( _IMAP_ )
+( _[IMAP](../../resources/IMAP)_ )
 
 The new instance of the IMAP resource based on the `default` IMAP configuration.
 
 ---
 
-#### _imap.init(configKey: string) : _IMAP_
+#### _imap.init(configKey: string) : _[IMAP](../../resources/IMAP)_
 ##### Description
 
 Starts a new instance of IMAP from a specific configuration.
@@ -234,13 +234,13 @@ Starts a new instance of IMAP from a specific configuration.
 
 ##### Return
 
-( _IMAP_ )
+( _[IMAP](../../resources/IMAP)_ )
 
 The new instance of the IMAP resource based on the specified IMAP configuration.
 
 ---
 
-#### _imap.init(config: _[IMAPConfig](../../objects/IMAPConfig)_) : _IMAP_
+#### _imap.init(config: _[IMAPConfig](../../objects/IMAPConfig)_) : _[IMAP](../../resources/IMAP)_
 ##### Description
 
 Starts a new instance of IMAP from a configuration that is defined in its own configuration object.
@@ -253,7 +253,7 @@ Starts a new instance of IMAP from a configuration that is defined in its own co
 
 ##### Return
 
-( _IMAP_ )
+( _[IMAP](../../resources/IMAP)_ )
 
 The new instance of the IMAP resource based on the defined configuration.
 
@@ -280,7 +280,7 @@ Result whether or not it is activated.
 
 ---
 
-#### _imap.mail(arg0: _int_) : _Mail_
+#### _imap.mail(arg0: _int_) : _org.netuno.psamata.mail.Mail_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -289,7 +289,7 @@ Result whether or not it is activated.
 
 ##### Return
 
-( _Mail_ )
+( _org.netuno.psamata.mail.Mail_ )
 
 
 ---
@@ -298,15 +298,15 @@ Result whether or not it is activated.
 
 ---
 
-#### _imap.mails() : _List_
+#### _imap.mails() : _java.util.List_
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _imap.mails(arg0: _int_, arg1: _int_) : _List_
+#### _imap.mails(arg0: _int_, arg1: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -316,7 +316,7 @@ Result whether or not it is activated.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -337,7 +337,7 @@ Result whether or not it is activated.
 
 ---
 
-#### _imap.openFolder(arg0: string) : _IMAP_
+#### _imap.openFolder(arg0: string) : _[IMAP](../../resources/IMAP)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -346,12 +346,12 @@ Result whether or not it is activated.
 
 ##### Return
 
-( _IMAP_ )
+( _[IMAP](../../resources/IMAP)_ )
 
 
 ---
 
-#### _imap.openFolder(arg0: string, arg1: _boolean_) : _IMAP_
+#### _imap.openFolder(arg0: string, arg1: _boolean_) : _[IMAP](../../resources/IMAP)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -361,7 +361,7 @@ Result whether or not it is activated.
 
 ##### Return
 
-( _IMAP_ )
+( _[IMAP](../../resources/IMAP)_ )
 
 
 ---
@@ -370,7 +370,7 @@ Result whether or not it is activated.
 
 ---
 
-#### _imap.setConfig(config: _[IMAPConfig](../../objects/IMAPConfig)_) : _IMAP_
+#### _imap.setConfig(config: _[IMAPConfig](../../objects/IMAPConfig)_) : _[IMAP](../../resources/IMAP)_
 ##### Description
 
 Define outra configuração que deve ser utilizada.
@@ -383,7 +383,7 @@ Define outra configuração que deve ser utilizada.
 
 ##### Return
 
-( _IMAP_ )
+( _[IMAP](../../resources/IMAP)_ )
 
 Current IMAP object.
 
@@ -393,7 +393,7 @@ Current IMAP object.
 
 ---
 
-#### _imap.setEnabled(enabled: _boolean_) : _IMAP_
+#### _imap.setEnabled(enabled: _boolean_) : _[IMAP](../../resources/IMAP)_
 ##### Description
 
 Sets whether it is enabled.
@@ -406,7 +406,7 @@ Sets whether it is enabled.
 
 ##### Return
 
-( _IMAP_ )
+( _[IMAP](../../resources/IMAP)_ )
 
 Current IMAP object.
 
@@ -440,16 +440,16 @@ Current IMAP object.
 
 ---
 
-#### _imap.with(arg0: _SMTP_) : _IMAP_
+#### _imap.with(arg0: _[SMTP](../../resources/SMTP)_) : _[IMAP](../../resources/IMAP)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _SMTP_ |   |
+| arg0 | _[SMTP](../../resources/SMTP)_ |   |
 
 ##### Return
 
-( _IMAP_ )
+( _[IMAP](../../resources/IMAP)_ )
 
 
 ---

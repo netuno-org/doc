@@ -24,32 +24,32 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### download(arg0: string, arg1: _OutputStream_) : _SSHSCP_
+#### download(arg0: string, arg1: _java.io.OutputStream_) : _[SSHSCP](../../objects/SSHSCP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _OutputStream_ |   |
+| arg1 | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
-( _SSHSCP_ )
+( _[SSHSCP](../../objects/SSHSCP)_ )
 
 
 ---
 
-#### download(arg0: string, arg1: _File_) : _SSHSCP_
+#### download(arg0: string, arg1: _[File](../../objects/File)_) : _[SSHSCP](../../objects/SSHSCP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _File_ |   |
+| arg1 | _[File](../../objects/File)_ |   |
 
 ##### Retorno
 
-( _SSHSCP_ )
+( _[SSHSCP](../../objects/SSHSCP)_ )
 
 
 ---
@@ -58,7 +58,7 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### downloadBytes(arg0: string) : _byte[]_
+#### downloadBytes(arg0: string) : _[B_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -67,7 +67,7 @@ Cliente SCP utilizado com o SSH.
 
 ##### Retorno
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -109,32 +109,32 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### upload(arg0: string, arg1: _InputStream_) : _SSHSCP_
+#### upload(arg0: string, arg1: _java.io.InputStream_) : _[SSHSCP](../../objects/SSHSCP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _InputStream_ |   |
+| arg1 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
-( _SSHSCP_ )
+( _[SSHSCP](../../objects/SSHSCP)_ )
 
 
 ---
 
-#### upload(arg0: string, arg1: _File_) : _SSHSCP_
+#### upload(arg0: string, arg1: _[File](../../objects/File)_) : _[SSHSCP](../../objects/SSHSCP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _File_ |   |
+| arg1 | _[File](../../objects/File)_ |   |
 
 ##### Retorno
 
-( _SSHSCP_ )
+( _[SSHSCP](../../objects/SSHSCP)_ )
 
 
 ---
@@ -143,17 +143,17 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### uploadBytes(arg0: string, arg1: _byte[]_) : _SSHSCP_
+#### uploadBytes(arg0: string, arg1: _[B_) : _[SSHSCP](../../objects/SSHSCP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _byte[]_ |   |
+| arg1 | _[B_ |   |
 
 ##### Retorno
 
-( _SSHSCP_ )
+( _[SSHSCP](../../objects/SSHSCP)_ )
 
 
 ---
@@ -162,7 +162,7 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### uploadText(arg0: string, arg1: string) : _SSHSCP_
+#### uploadText(arg0: string, arg1: string) : _[SSHSCP](../../objects/SSHSCP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -172,12 +172,12 @@ Cliente SCP utilizado com o SSH.
 
 ##### Retorno
 
-( _SSHSCP_ )
+( _[SSHSCP](../../objects/SSHSCP)_ )
 
 
 ---
 
-#### uploadText(arg0: string, arg1: string, arg2: string) : _SSHSCP_
+#### uploadText(arg0: string, arg1: string, arg2: string) : _[SSHSCP](../../objects/SSHSCP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -188,7 +188,7 @@ Cliente SCP utilizado com o SSH.
 
 ##### Retorno
 
-( _SSHSCP_ )
+( _[SSHSCP](../../objects/SSHSCP)_ )
 
 
 ---

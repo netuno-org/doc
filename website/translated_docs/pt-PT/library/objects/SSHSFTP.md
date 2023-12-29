@@ -24,7 +24,7 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### createDirectories(arg0: string) : _SSHSFTP_
+#### createDirectories(arg0: string) : _[SSHSFTP](../../objects/SSHSFTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -33,7 +33,7 @@ Cliente SFTP utilizado com o SSH.
 
 ##### Retorno
 
-( _SSHSFTP_ )
+( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
 
 ---
@@ -42,7 +42,7 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### createDirectory(arg0: string) : _SSHSFTP_
+#### createDirectory(arg0: string) : _[SSHSFTP](../../objects/SSHSFTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -51,7 +51,7 @@ Cliente SFTP utilizado com o SSH.
 
 ##### Retorno
 
-( _SSHSFTP_ )
+( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
 
 ---
@@ -60,7 +60,7 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### deleteDirectory(arg0: string) : _SSHSFTP_
+#### deleteDirectory(arg0: string) : _[SSHSFTP](../../objects/SSHSFTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -69,7 +69,7 @@ Cliente SFTP utilizado com o SSH.
 
 ##### Retorno
 
-( _SSHSFTP_ )
+( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
 
 ---
@@ -78,7 +78,7 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### deleteFile(arg0: string) : _SSHSFTP_
+#### deleteFile(arg0: string) : _[SSHSFTP](../../objects/SSHSFTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -87,7 +87,7 @@ Cliente SFTP utilizado com o SSH.
 
 ##### Retorno
 
-( _SSHSFTP_ )
+( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
 
 ---
@@ -96,32 +96,32 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### download(arg0: string, arg1: _OutputStream_) : _SSHSFTP_
+#### download(arg0: string, arg1: _java.io.OutputStream_) : _[SSHSFTP](../../objects/SSHSFTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _OutputStream_ |   |
+| arg1 | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
-( _SSHSFTP_ )
+( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
 
 ---
 
-#### download(arg0: string, arg1: _File_) : _SSHSFTP_
+#### download(arg0: string, arg1: _[File](../../objects/File)_) : _[SSHSFTP](../../objects/SSHSFTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _File_ |   |
+| arg1 | _[File](../../objects/File)_ |   |
 
 ##### Retorno
 
-( _SSHSFTP_ )
+( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
 
 ---
@@ -130,7 +130,7 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### downloadBytes(arg0: string) : _byte[]_
+#### downloadBytes(arg0: string) : _[B_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -139,7 +139,7 @@ Cliente SFTP utilizado com o SSH.
 
 ##### Retorno
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -181,7 +181,7 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### list(arg0: string) : _List_
+#### list(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -190,7 +190,7 @@ Cliente SFTP utilizado com o SSH.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -217,32 +217,32 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### upload(arg0: string, arg1: _InputStream_) : _SSHSFTP_
+#### upload(arg0: string, arg1: _java.io.InputStream_) : _[SSHSFTP](../../objects/SSHSFTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _InputStream_ |   |
+| arg1 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
-( _SSHSFTP_ )
+( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
 
 ---
 
-#### upload(arg0: string, arg1: _File_) : _SSHSFTP_
+#### upload(arg0: string, arg1: _[File](../../objects/File)_) : _[SSHSFTP](../../objects/SSHSFTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _File_ |   |
+| arg1 | _[File](../../objects/File)_ |   |
 
 ##### Retorno
 
-( _SSHSFTP_ )
+( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
 
 ---
@@ -251,17 +251,17 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### uploadBytes(arg0: string, arg1: _byte[]_) : _SSHSFTP_
+#### uploadBytes(arg0: string, arg1: _[B_) : _[SSHSFTP](../../objects/SSHSFTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _byte[]_ |   |
+| arg1 | _[B_ |   |
 
 ##### Retorno
 
-( _SSHSFTP_ )
+( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
 
 ---
@@ -270,7 +270,7 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### uploadText(arg0: string, arg1: string) : _SSHSFTP_
+#### uploadText(arg0: string, arg1: string) : _[SSHSFTP](../../objects/SSHSFTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -280,12 +280,12 @@ Cliente SFTP utilizado com o SSH.
 
 ##### Retorno
 
-( _SSHSFTP_ )
+( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
 
 ---
 
-#### uploadText(arg0: string, arg1: string, arg2: string) : _SSHSFTP_
+#### uploadText(arg0: string, arg1: string, arg2: string) : _[SSHSFTP](../../objects/SSHSFTP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -296,7 +296,7 @@ Cliente SFTP utilizado com o SSH.
 
 ##### Retorno
 
-( _SSHSFTP_ )
+( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
 
 ---

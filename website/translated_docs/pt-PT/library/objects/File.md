@@ -40,15 +40,15 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bufferedReader() : _BufferedReader_
+#### bufferedReader() : _java.io.BufferedReader_
 ##### Retorno
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
 
-#### bufferedReader(arg0: _int_) : _BufferedReader_
+#### bufferedReader(arg0: _int_) : _java.io.BufferedReader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -57,12 +57,12 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ##### Retorno
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
 
-#### bufferedReader(arg0: _int_, arg1: string) : _BufferedReader_
+#### bufferedReader(arg0: _int_, arg1: string) : _java.io.BufferedReader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -72,27 +72,27 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ##### Retorno
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
 
-#### bufferedReader(arg0: _int_, arg1: _Charset_) : _BufferedReader_
+#### bufferedReader(arg0: _int_, arg1: _java.nio.charset.Charset_) : _java.io.BufferedReader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Charset_ |   |
+| arg1 | _java.nio.charset.Charset_ |   |
 
 ##### Retorno
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
 
-#### bufferedReader(arg0: string) : _BufferedReader_
+#### bufferedReader(arg0: string) : _java.io.BufferedReader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -101,21 +101,21 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ##### Retorno
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
 
-#### bufferedReader(arg0: _Charset_) : _BufferedReader_
+#### bufferedReader(arg0: _java.nio.charset.Charset_) : _java.io.BufferedReader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Charset_ |   |
+| arg0 | _java.nio.charset.Charset_ |   |
 
 ##### Retorno
 
-( _BufferedReader_ )
+( _java.io.BufferedReader_ )
 
 
 ---
@@ -124,14 +124,14 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bytes() : _byte[]_
+#### bytes() : _[B_
 ##### Descrição
 
 Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ##### Retorno
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -300,7 +300,7 @@ Apaga ficheiros designados pela extensão inserida e recursivamente nas subpasta
 
 ---
 
-#### ensureJail(arg0: string) : _File_
+#### ensureJail(arg0: string) : _[File](../../objects/File)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -309,7 +309,7 @@ Apaga ficheiros designados pela extensão inserida e recursivamente nas subpasta
 
 ##### Retorno
 
-( _File_ )
+( _[File](../../objects/File)_ )
 
 
 ---
@@ -378,14 +378,14 @@ Retorna o nome base do presente ficheiro.
 
 ---
 
-#### getBytes() : _byte[]_
+#### getBytes() : _[B_
 ##### Descrição
 
 Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ##### Retorno
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -434,14 +434,14 @@ Retorna o caminho completo até ao presente ficheiro.
 
 ---
 
-#### getInputStream() : _InputStream_
+#### getInputStream() : _java.io.InputStream_
 ##### Descrição
 
 Retorna o número estimado de bytes.
 
 ##### Retorno
 
-( _InputStream_ )
+( _java.io.InputStream_ )
 
 
 ---
@@ -484,10 +484,10 @@ Retorna o nome do ficheiro do caminho inserido.
 
 ---
 
-#### getOutputStream() : _OutputStream_
+#### getOutputStream() : _java.io.OutputStream_
 ##### Retorno
 
-( _OutputStream_ )
+( _java.io.OutputStream_ )
 
 
 ---
@@ -524,7 +524,7 @@ Retorna o caminho.
 
 ---
 
-#### getSequenceName(caminhoDestino: _File_, nomeFicheiro: string) : string
+#### getSequenceName(caminhoDestino: _java.io.File_, nomeFicheiro: string) : string
 ##### Descrição
 
 Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro já existir com o nome original.
@@ -533,7 +533,7 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoDestino | _File_ | Caminho onde guardar o ficheiro. |
+| caminhoDestino | _java.io.File_ | Caminho onde guardar o ficheiro. |
 | nomeFicheiro | string | Nome do Ficheiro. |
 
 ##### Retorno
@@ -566,10 +566,10 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 ---
 
-#### input() : _InputStream_
+#### input() : _[InputStream](../../objects/InputStream)_
 ##### Retorno
 
-( _InputStream_ )
+( _[InputStream](../../objects/InputStream)_ )
 
 
 ---
@@ -578,10 +578,10 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 ---
 
-#### inputStream() : _InputStream_
+#### inputStream() : _java.io.InputStream_
 ##### Retorno
 
-( _InputStream_ )
+( _java.io.InputStream_ )
 
 
 ---
@@ -690,14 +690,14 @@ Retorna a hora que o ficheiro do caminho indicado foi modificado pela ultima vez
 
 ---
 
-#### list() : _List_
+#### list() : _java.util.List_
 ##### Descrição
 
 Retorna uma lista de todos os ficheiros e pastas presentes no caminho inserido.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -750,10 +750,10 @@ Retorna o nome do ficheiro.
 
 ---
 
-#### output() : _OutputStream_
+#### output() : _[OutputStream](../../objects/OutputStream)_
 ##### Retorno
 
-( _OutputStream_ )
+( _[OutputStream](../../objects/OutputStream)_ )
 
 
 ---
@@ -762,10 +762,10 @@ Retorna o nome do ficheiro.
 
 ---
 
-#### outputStream() : _OutputStream_
+#### outputStream() : _java.io.OutputStream_
 ##### Retorno
 
-( _OutputStream_ )
+( _java.io.OutputStream_ )
 
 
 ---
@@ -807,10 +807,10 @@ Permite obter o caminho do ficheiro.
 
 ---
 
-#### reader() : _Reader_
+#### reader() : _java.io.Reader_
 ##### Retorno
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 
 ---
@@ -819,15 +819,15 @@ Permite obter o caminho do ficheiro.
 
 ---
 
-#### readerBOM() : _Reader_
+#### readerBOM() : _java.io.Reader_
 ##### Retorno
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 
 ---
 
-#### readerBOM(arg0: string) : _Reader_
+#### readerBOM(arg0: string) : _java.io.Reader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -836,7 +836,7 @@ Permite obter o caminho do ficheiro.
 
 ##### Retorno
 
-( _Reader_ )
+( _java.io.Reader_ )
 
 
 ---
@@ -889,7 +889,7 @@ Renomeia o ficheiro do caminho inserido.
 
 ---
 
-#### save(caminho: _Object_) : _void_
+#### save(caminho: _java.lang.Object_) : _void_
 ##### Descrição
 
 Guarda o ficheiro no determinado caminho inserido.
@@ -898,7 +898,7 @@ Guarda o ficheiro no determinado caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | _Object_ | Caminho do ficheiro. |
+| caminho | _java.lang.Object_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -929,12 +929,12 @@ Guarda o ficheiro no caminho inserido.
 
 ---
 
-#### sequenceName(arg0: _File_, arg1: string) : string
+#### sequenceName(arg0: _java.io.File_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _File_ |   |
+| arg0 | _java.io.File_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -963,10 +963,10 @@ Guarda o ficheiro no caminho inserido.
 
 ---
 
-#### writer() : _Writer_
+#### writer() : _java.io.Writer_
 ##### Retorno
 
-( _Writer_ )
+( _java.io.Writer_ )
 
 
 ---

@@ -48,7 +48,7 @@ excel.output("ages.xls");
 
 ---
 
-#### `_xls.create()`.activeSheet(index: _int_) : _HSSFSheet_
+#### `_xls.create()`.activeSheet(index: _int_) : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Description
 
 Sets the spreadsheet that is active.
@@ -61,7 +61,7 @@ Sets the spreadsheet that is active.
 
 ##### Return
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Active spreadsheet.
 
@@ -71,7 +71,7 @@ Active spreadsheet.
 
 ---
 
-#### _xls.add(row: _int_, col: _int_, data: _Map_) : _XLS_
+#### _xls.add(row: _int_, col: _int_, data: _java.util.Map_) : _[XLS](../../resources/XLS)_
 ##### Description
 
 Insert data in a specific cell.
@@ -82,17 +82,17 @@ Insert data in a specific cell.
 |---|---|---|
 | row | _int_ | Line number. |
 | col | _int_ | Column number. |
-| data | _Map_ | Data to be inserted. |
+| data | _java.util.Map_ | Data to be inserted. |
 
 ##### Return
 
-( _XLS_ )
+( _[XLS](../../resources/XLS)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### _xls.add(cell: _HSSFCell_, data: _Map_) : _XLS_
+#### _xls.add(cell: _org.apache.poi.hssf.usermodel.HSSFCell_, data: _java.util.Map_) : _[XLS](../../resources/XLS)_
 ##### Description
 
 Insert data in a specific cell.
@@ -101,18 +101,18 @@ Insert data in a specific cell.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| cell | _HSSFCell_ | Cell object. |
-| data | _Map_ | Data to be inserted. |
+| cell | _org.apache.poi.hssf.usermodel.HSSFCell_ | Cell object. |
+| data | _java.util.Map_ | Data to be inserted. |
 
 ##### Return
 
-( _XLS_ )
+( _[XLS](../../resources/XLS)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### _xls.add(cell: _HSSFCell_, data: _[Values](../../objects/Values)_) : _XLS_
+#### _xls.add(cell: _org.apache.poi.hssf.usermodel.HSSFCell_, data: _[Values](../../objects/Values)_) : _[XLS](../../resources/XLS)_
 ##### Description
 
 Insert data in a specific cell.
@@ -121,12 +121,12 @@ Insert data in a specific cell.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| cell | _HSSFCell_ | Cell object. |
+| cell | _org.apache.poi.hssf.usermodel.HSSFCell_ | Cell object. |
 | data | _[Values](../../objects/Values)_ | Data to be inserted. |
 
 ##### Return
 
-( _XLS_ )
+( _[XLS](../../resources/XLS)_ )
 
 The current instance of the XLS resource.
 
@@ -136,7 +136,7 @@ The current instance of the XLS resource.
 
 ---
 
-#### `_xls.create()`.addDataTable(rowIndex: _int_, colIndex: _int_, data: _List_) : _[XLSPosition](../../objects/XLSPosition)_
+#### `_xls.create()`.addDataTable(rowIndex: _int_, colIndex: _int_, data: _java.util.List_) : _[XLSPosition](../../objects/XLSPosition)_
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -147,7 +147,7 @@ Adds a data table to the spreadsheet.
 |---|---|---|
 | rowIndex | _int_ | Line number. |
 | colIndex | _int_ | Column number. |
-| data | _List_ | List of data to be inserted. |
+| data | _java.util.List_ | List of data to be inserted. |
 
 ##### Return
 
@@ -157,7 +157,7 @@ Reference of the position of the last cell with data entered.
 
 ---
 
-#### `_xls.create()`.addDataTable(rowIndex: _int_, colIndex: _int_, data: _List_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
+#### `_xls.create()`.addDataTable(rowIndex: _int_, colIndex: _int_, data: _java.util.List_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -168,7 +168,7 @@ Adds a data table to the spreadsheet.
 |---|---|---|
 | rowIndex | _int_ | Line number. |
 | colIndex | _int_ | Column number. |
-| data | _List_ | List of data to be inserted. |
+| data | _java.util.List_ | List of data to be inserted. |
 | vertical | _boolean_ | Insert data vertically. |
 
 ##### Return
@@ -179,7 +179,7 @@ Reference of the position of the last cell with data entered.
 
 ---
 
-#### `_xls.create()`.addDataTable(sheet: _int_, rowIndex: _int_, colIndex: _[Values](../../objects/Values)_) : _[XLSPosition](../../objects/XLSPosition)_
+#### `_xls.create()`.addDataTable(rowIndex: _int_, colIndex: _int_, data: _[Values](../../objects/Values)_) : _[XLSPosition](../../objects/XLSPosition)_
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -188,73 +188,73 @@ Adds a data table to the spreadsheet.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| sheet | _int_ | Spreadsheet object. |
-| rowIndex | _int_ | Line number. |
-| colIndex | _[Values](../../objects/Values)_ | Column number. |
-
-##### Return
-
-( _[XLSPosition](../../objects/XLSPosition)_ )
-
-Reference of the position of the last cell with data entered.
-
----
-
-#### `_xls.create()`.addDataTable(sheet: _int_, rowIndex: _int_, colIndex: _[Values](../../objects/Values)_, data: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
-##### Description
-
-Adds a data table to the spreadsheet.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| sheet | _int_ | Spreadsheet object. |
-| rowIndex | _int_ | Line number. |
-| colIndex | _[Values](../../objects/Values)_ | Column number. |
-| data | _boolean_ | List of data to be inserted. |
-
-##### Return
-
-( _[XLSPosition](../../objects/XLSPosition)_ )
-
-Reference of the position of the last cell with data entered.
-
----
-
-#### `_xls.create()`.addDataTable(config: _Map_, data: _List_) : _[XLSPosition](../../objects/XLSPosition)_
-##### Description
-
-Adds a data table to the spreadsheet.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| config | _Map_ | Configuration of the data table. |
-| data | _List_ | List of data to be inserted. |
-
-##### Return
-
-( _[XLSPosition](../../objects/XLSPosition)_ )
-
-Reference of the position of the last cell with data entered.
-
----
-
-#### `_xls.create()`.addDataTable(sheet: _HSSFSheet_, rowIndex: _int_, colIndex: _int_, data: _List_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
-##### Description
-
-Adds a data table to the spreadsheet.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| sheet | _HSSFSheet_ | Spreadsheet object. |
 | rowIndex | _int_ | Line number. |
 | colIndex | _int_ | Column number. |
-| data | _List_ | List of data to be inserted. |
+| data | _[Values](../../objects/Values)_ | List of data to be inserted. |
+
+##### Return
+
+( _[XLSPosition](../../objects/XLSPosition)_ )
+
+Reference of the position of the last cell with data entered.
+
+---
+
+#### `_xls.create()`.addDataTable(rowIndex: _int_, colIndex: _int_, data: _[Values](../../objects/Values)_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
+##### Description
+
+Adds a data table to the spreadsheet.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| rowIndex | _int_ | Line number. |
+| colIndex | _int_ | Column number. |
+| data | _[Values](../../objects/Values)_ | List of data to be inserted. |
+| vertical | _boolean_ | Insert data vertically. |
+
+##### Return
+
+( _[XLSPosition](../../objects/XLSPosition)_ )
+
+Reference of the position of the last cell with data entered.
+
+---
+
+#### `_xls.create()`.addDataTable(config: _java.util.Map_, data: _java.util.List_) : _[XLSPosition](../../objects/XLSPosition)_
+##### Description
+
+Adds a data table to the spreadsheet.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| config | _java.util.Map_ | Configuration of the data table. |
+| data | _java.util.List_ | List of data to be inserted. |
+
+##### Return
+
+( _[XLSPosition](../../objects/XLSPosition)_ )
+
+Reference of the position of the last cell with data entered.
+
+---
+
+#### `_xls.create()`.addDataTable(sheet: _org.apache.poi.hssf.usermodel.HSSFSheet_, rowIndex: _int_, colIndex: _int_, data: _java.util.List_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
+##### Description
+
+Adds a data table to the spreadsheet.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| sheet | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Spreadsheet object. |
+| rowIndex | _int_ | Line number. |
+| colIndex | _int_ | Column number. |
+| data | _java.util.List_ | List of data to be inserted. |
 | vertical | _boolean_ | Insert the data vertically. |
 
 ##### Return
@@ -265,7 +265,7 @@ Reference of the position of the last cell with data entered.
 
 ---
 
-#### `_xls.create()`.addDataTable(sheet: _HSSFSheet_, rowIndex: _int_, colIndex: _int_, data: _[Values](../../objects/Values)_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
+#### `_xls.create()`.addDataTable(sheet: _org.apache.poi.hssf.usermodel.HSSFSheet_, rowIndex: _int_, colIndex: _int_, data: _[Values](../../objects/Values)_, vertical: _boolean_) : _[XLSPosition](../../objects/XLSPosition)_
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -274,7 +274,7 @@ Adds a data table to the spreadsheet.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| sheet | _HSSFSheet_ | Spreadsheet object. |
+| sheet | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Spreadsheet object. |
 | rowIndex | _int_ | Line number. |
 | colIndex | _int_ | Column number. |
 | data | _[Values](../../objects/Values)_ | List of data to be inserted. |
@@ -292,7 +292,7 @@ Reference of the position of the last cell with data entered.
 
 ---
 
-#### _xls.anchorType(type: string) : _AnchorType_
+#### _xls.anchorType(type: string) : _org.apache.poi.ss.usermodel.ClientAnchor$AnchorType_
 ##### Description
 
 Generates the type of anchor.
@@ -305,7 +305,7 @@ Generates the type of anchor.
 
 ##### Return
 
-( _AnchorType_ )
+( _org.apache.poi.ss.usermodel.ClientAnchor$AnchorType_ )
 
 The anchor type configured with the defined type.
 
@@ -315,7 +315,7 @@ The anchor type configured with the defined type.
 
 ---
 
-#### _xls.borderStyle(type: string) : _BorderStyle_
+#### _xls.borderStyle(type: string) : _org.apache.poi.ss.usermodel.BorderStyle_
 ##### Description
 
 Generates the outline style of the cell borders.
@@ -328,7 +328,7 @@ Generates the outline style of the cell borders.
 
 ##### Return
 
-( _BorderStyle_ )
+( _org.apache.poi.ss.usermodel.BorderStyle_ )
 
 The border outline style configured with the defined type.
 
@@ -338,7 +338,7 @@ The border outline style configured with the defined type.
 
 ---
 
-#### `_xls.create()`.cell(rowIndex: _int_, colIndex: _int_) : _HSSFCell_
+#### `_xls.create()`.cell(rowIndex: _int_, colIndex: _int_) : _org.apache.poi.hssf.usermodel.HSSFCell_
 ##### Description
 
 Gets a spreadsheet cell and if it does not exist then it will be created.
@@ -352,13 +352,13 @@ Gets a spreadsheet cell and if it does not exist then it will be created.
 
 ##### Return
 
-( _HSSFCell_ )
+( _org.apache.poi.hssf.usermodel.HSSFCell_ )
 
 Cell representation object.
 
 ---
 
-#### `_xls.create()`.cell(sheet: _HSSFSheet_, rowIndex: _int_, colIndex: _int_) : _HSSFCell_
+#### `_xls.create()`.cell(sheet: _org.apache.poi.hssf.usermodel.HSSFSheet_, rowIndex: _int_, colIndex: _int_) : _org.apache.poi.hssf.usermodel.HSSFCell_
 ##### Description
 
 Gets a spreadsheet cell and if it does not exist then it will be created.
@@ -367,13 +367,13 @@ Gets a spreadsheet cell and if it does not exist then it will be created.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| sheet | _HSSFSheet_ | Spreadsheet object. |
+| sheet | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Spreadsheet object. |
 | rowIndex | _int_ | Line number of the sheet. |
 | colIndex | _int_ | Column number. |
 
 ##### Return
 
-( _HSSFCell_ )
+( _org.apache.poi.hssf.usermodel.HSSFCell_ )
 
 Cell representation object.
 
@@ -383,7 +383,7 @@ Cell representation object.
 
 ---
 
-#### _xls.cellRangeAddress(firstRow: _int_, lastRow: _int_, firstCol: _int_, lastCol: _int_) : _CellRangeAddress_
+#### _xls.cellRangeAddress(firstRow: _int_, lastRow: _int_, firstCol: _int_, lastCol: _int_) : _org.apache.poi.ss.util.CellRangeAddress_
 ##### Description
 
 Generates the region address of the cell area.
@@ -399,7 +399,7 @@ Generates the region address of the cell area.
 
 ##### Return
 
-( _CellRangeAddress_ )
+( _org.apache.poi.ss.util.CellRangeAddress_ )
 
 The cell area address reference.
 
@@ -409,14 +409,14 @@ The cell area address reference.
 
 ---
 
-#### _xls.cellStyle() : _HSSFCellStyle_
+#### _xls.cellStyle() : _org.apache.poi.hssf.usermodel.HSSFCellStyle_
 ##### Description
 
 Creates a new cell style in the workbook.
 
 ##### Return
 
-( _HSSFCellStyle_ )
+( _org.apache.poi.hssf.usermodel.HSSFCellStyle_ )
 
 The new cell style created.
 
@@ -426,7 +426,7 @@ The new cell style created.
 
 ---
 
-#### _xls.cellStyleFormat(format: string) : _HSSFCellStyle_
+#### _xls.cellStyleFormat(format: string) : _org.apache.poi.hssf.usermodel.HSSFCellStyle_
 ##### Description
 
 Creates a new cell style with an associated format in the workbook.
@@ -439,7 +439,7 @@ Creates a new cell style with an associated format in the workbook.
 
 ##### Return
 
-( _HSSFCellStyle_ )
+( _org.apache.poi.hssf.usermodel.HSSFCellStyle_ )
 
 The new cell style created with the configured format.
 
@@ -514,7 +514,7 @@ Numeric position of the column.
 
 ---
 
-#### _xls.create() : _XLS_
+#### _xls.create() : _[XLS](../../resources/XLS)_
 ##### Description
 
 Creates a new Excel document.
@@ -527,7 +527,7 @@ const excel = _xls.create();
 
 ##### Return
 
-( _XLS_ )
+( _[XLS](../../resources/XLS)_ )
 
 New XLS resource instance.
 
@@ -537,20 +537,20 @@ New XLS resource instance.
 
 ---
 
-#### `_xls.create()`.createSheet() : _HSSFSheet_
+#### `_xls.create()`.createSheet() : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Description
 
 Creates a new spreadsheet.
 
 ##### Return
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Spreadsheet created.
 
 ---
 
-#### `_xls.create()`.createSheet(name: string) : _HSSFSheet_
+#### `_xls.create()`.createSheet(name: string) : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Description
 
 Create a new spreadsheet and define its name.
@@ -563,7 +563,7 @@ Create a new spreadsheet and define its name.
 
 ##### Return
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Spreadsheet created.
 
@@ -573,7 +573,7 @@ Spreadsheet created.
 
 ---
 
-#### _xls.fillPattern(type: string) : _FillPatternType_
+#### _xls.fillPattern(type: string) : _org.apache.poi.ss.usermodel.FillPatternType_
 ##### Description
 
 Generates the background fill pattern.
@@ -586,7 +586,7 @@ Generates the background fill pattern.
 
 ##### Return
 
-( _FillPatternType_ )
+( _org.apache.poi.ss.usermodel.FillPatternType_ )
 
 The fill pattern configured with the defined type.
 
@@ -596,14 +596,14 @@ The fill pattern configured with the defined type.
 
 ---
 
-#### _xls.font() : _HSSFFont_
+#### _xls.font() : _org.apache.poi.hssf.usermodel.HSSFFont_
 ##### Description
 
 Creates a new font style in the workbook.
 
 ##### Return
 
-( _HSSFFont_ )
+( _org.apache.poi.hssf.usermodel.HSSFFont_ )
 
 The new font style created.
 
@@ -636,7 +636,7 @@ Identifier code for the new format.
 
 ---
 
-#### `_xls.create()`.getSheet(index: _int_) : _HSSFSheet_
+#### `_xls.create()`.getSheet(index: _int_) : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Description
 
 Get the spreadsheet by number (index).
@@ -649,13 +649,13 @@ Get the spreadsheet by number (index).
 
 ##### Return
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Spreadsheet referring to the number (index).
 
 ---
 
-#### `_xls.create()`.getSheet(name: string) : _HSSFSheet_
+#### `_xls.create()`.getSheet(name: string) : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Description
 
 Gets the spreadsheet by name.
@@ -668,7 +668,7 @@ Gets the spreadsheet by name.
 
 ##### Return
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Spreadsheet for the name.
 
@@ -678,7 +678,7 @@ Spreadsheet for the name.
 
 ---
 
-#### _xls.horizontalAlignment(type: string) : _HorizontalAlignment_
+#### _xls.horizontalAlignment(type: string) : _org.apache.poi.ss.usermodel.HorizontalAlignment_
 ##### Description
 
 Generates horizontal alignment.
@@ -691,7 +691,7 @@ Generates horizontal alignment.
 
 ##### Return
 
-( _HorizontalAlignment_ )
+( _org.apache.poi.ss.usermodel.HorizontalAlignment_ )
 
 The horizontal alignment configured with the defined type.
 
@@ -701,7 +701,7 @@ The horizontal alignment configured with the defined type.
 
 ---
 
-#### _xls.insertPicture(sheet: _HSSFSheet_, file: _[File](../../objects/File)_, anchor: _ClientAnchor_) : _Picture_
+#### _xls.insertPicture(sheet: _org.apache.poi.hssf.usermodel.HSSFSheet_, file: _[File](../../objects/File)_, anchor: _org.apache.poi.ss.usermodel.ClientAnchor_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Description
 
 Inserts an image associated with the anchor in a specific spreadsheet.
@@ -710,19 +710,19 @@ Inserts an image associated with the anchor in a specific spreadsheet.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| sheet | _HSSFSheet_ | Spreadsheet that will be used to insert the image. |
+| sheet | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Spreadsheet that will be used to insert the image. |
 | file | _[File](../../objects/File)_ | Image file. |
-| anchor | _ClientAnchor_ | Anchor to associate the image. |
+| anchor | _org.apache.poi.ss.usermodel.ClientAnchor_ | Anchor to associate the image. |
 
 ##### Return
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 The reference object of the inserted image.
 
 ---
 
-#### _xls.insertPicture(sheet: _HSSFSheet_, storage: _Storage_, anchor: _ClientAnchor_) : _Picture_
+#### _xls.insertPicture(sheet: _org.apache.poi.hssf.usermodel.HSSFSheet_, storage: _[Storage](../../resources/Storage)_, anchor: _org.apache.poi.ss.usermodel.ClientAnchor_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Description
 
 Inserts an image associated with the anchor in a specific spreadsheet.
@@ -731,19 +731,19 @@ Inserts an image associated with the anchor in a specific spreadsheet.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| sheet | _HSSFSheet_ | Spreadsheet that will be used to insert the image. |
-| storage | _Storage_ | Storage reference associated with an image file. |
-| anchor | _ClientAnchor_ | Anchor to associate the image. |
+| sheet | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Spreadsheet that will be used to insert the image. |
+| storage | _[Storage](../../resources/Storage)_ | Storage reference associated with an image file. |
+| anchor | _org.apache.poi.ss.usermodel.ClientAnchor_ | Anchor to associate the image. |
 
 ##### Return
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 The reference object of the inserted image.
 
 ---
 
-#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, linha: _int_, coluna: _int_) : _Picture_
+#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, linha: _int_, coluna: _int_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Description
 
 Insert the image into the specified cell.
@@ -758,13 +758,13 @@ Insert the image into the specified cell.
 
 ##### Return
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 The reference object of the inserted image.
 
 ---
 
-#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, anchor: _ClientAnchor_) : _Picture_
+#### `_xls.create()`.insertPicture(file: _[File](../../objects/File)_, anchor: _org.apache.poi.ss.usermodel.ClientAnchor_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Description
 
 Inserts an image associated with the anchor.
@@ -774,17 +774,17 @@ Inserts an image associated with the anchor.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | file | _[File](../../objects/File)_ | Image file. |
-| anchor | _ClientAnchor_ | Anchor to associate the image. |
+| anchor | _org.apache.poi.ss.usermodel.ClientAnchor_ | Anchor to associate the image. |
 
 ##### Return
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 The reference object of the inserted image.
 
 ---
 
-#### `_xls.create()`.insertPicture(storage: _Storage_, linha: _int_, coluna: _int_) : _Picture_
+#### `_xls.create()`.insertPicture(storage: _[Storage](../../resources/Storage)_, linha: _int_, coluna: _int_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Description
 
 Insert the image into the specified cell.
@@ -793,19 +793,19 @@ Insert the image into the specified cell.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Storage reference associated with an image file. |
+| storage | _[Storage](../../resources/Storage)_ | Storage reference associated with an image file. |
 | linha | _int_ | Line number. |
 | coluna | _int_ | Column number. |
 
 ##### Return
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 The reference object of the inserted image.
 
 ---
 
-#### `_xls.create()`.insertPicture(storage: _Storage_, anchor: _ClientAnchor_) : _Picture_
+#### `_xls.create()`.insertPicture(storage: _[Storage](../../resources/Storage)_, anchor: _org.apache.poi.ss.usermodel.ClientAnchor_) : _org.apache.poi.ss.usermodel.Picture_
 ##### Description
 
 Inserts an image associated with the anchor.
@@ -814,12 +814,12 @@ Inserts an image associated with the anchor.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Storage reference associated with an image file. |
-| anchor | _ClientAnchor_ | Anchor to associate the image. |
+| storage | _[Storage](../../resources/Storage)_ | Storage reference associated with an image file. |
+| anchor | _org.apache.poi.ss.usermodel.ClientAnchor_ | Anchor to associate the image. |
 
 ##### Return
 
-( _Picture_ )
+( _org.apache.poi.ss.usermodel.Picture_ )
 
 The reference object of the inserted image.
 
@@ -851,7 +851,7 @@ The reference of the merged cell region.
 
 ---
 
-#### _xls.mergedRegion(sheet: _HSSFSheet_, firstRow: _int_, lastRow: _int_, firstCol: _int_, lastCol: _int_) : _int_
+#### _xls.mergedRegion(sheet: _org.apache.poi.hssf.usermodel.HSSFSheet_, firstRow: _int_, lastRow: _int_, firstCol: _int_, lastCol: _int_) : _int_
 ##### Description
 
 Performs the merging of cells in the passed region in a specific worksheet.
@@ -860,7 +860,7 @@ Performs the merging of cells in the passed region in a specific worksheet.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| sheet | _HSSFSheet_ | Spreadsheet that will be merged the cells. |
+| sheet | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Spreadsheet that will be merged the cells. |
 | firstRow | _int_ | First line number. |
 | lastRow | _int_ | Last line number. |
 | firstCol | _int_ | First column number. |
@@ -924,7 +924,7 @@ Position reference based on passed coordinates.
 
 ---
 
-#### _xls.read(input: _InputStream_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _java.io.InputStream_) : _[Values](../../objects/Values)_
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -933,7 +933,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| input | _InputStream_ | Excel file reference. |
+| input | _java.io.InputStream_ | Excel file reference. |
 
 ##### Return
 
@@ -943,7 +943,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### _xls.read(input: _InputStream_, sheetNumber: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _java.io.InputStream_, hiddenSheets: _boolean_) : _[Values](../../objects/Values)_
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -952,8 +952,8 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| input | _InputStream_ | Excel file reference. |
-| sheetNumber | _boolean_ | Spreadsheet number. |
+| input | _java.io.InputStream_ | Excel file reference. |
+| hiddenSheets | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
@@ -963,7 +963,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### _xls.read(input: _InputStream_, sheetNumber: _int_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _java.io.InputStream_, sheetNumber: _int_) : _[Values](../../objects/Values)_
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -972,7 +972,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| input | _InputStream_ | Excel file reference. |
+| input | _java.io.InputStream_ | Excel file reference. |
 | sheetNumber | _int_ | Spreadsheet number. |
 
 ##### Return
@@ -983,7 +983,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### _xls.read(input: _InputStream_, sheetNumber: _int_, hiddenSheets: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _java.io.InputStream_, sheetNumber: _int_, hiddenSheets: _boolean_) : _[Values](../../objects/Values)_
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -992,7 +992,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| input | _InputStream_ | Excel file reference. |
+| input | _java.io.InputStream_ | Excel file reference. |
 | sheetNumber | _int_ | Spreadsheet number. |
 | hiddenSheets | _boolean_ | It also processes hidden spreadsheets. |
 
@@ -1023,7 +1023,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### _xls.read(input: _[File](../../objects/File)_, sheetNumber: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[File](../../objects/File)_, hiddenSheets: _boolean_) : _[Values](../../objects/Values)_
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1033,7 +1033,7 @@ Reads an Excel file, obtains all data.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | input | _[File](../../objects/File)_ | Excel file reference. |
-| sheetNumber | _boolean_ | Spreadsheet number. |
+| hiddenSheets | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
@@ -1103,7 +1103,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### _xls.read(input: _[InputStream](../../objects/InputStream)_, sheetNumber: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[InputStream](../../objects/InputStream)_, hiddenSheets: _boolean_) : _[Values](../../objects/Values)_
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1113,7 +1113,7 @@ Reads an Excel file, obtains all data.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | input | _[InputStream](../../objects/InputStream)_ | Excel file reference. |
-| sheetNumber | _boolean_ | Spreadsheet number. |
+| hiddenSheets | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
@@ -1164,7 +1164,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### _xls.read(input: _Storage_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[Storage](../../resources/Storage)_) : _[Values](../../objects/Values)_
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1173,7 +1173,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| input | _Storage_ | Excel file reference. |
+| input | _[Storage](../../resources/Storage)_ | Excel file reference. |
 
 ##### Return
 
@@ -1183,7 +1183,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### _xls.read(input: _Storage_, hiddenSheets: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[Storage](../../resources/Storage)_, hiddenSheets: _boolean_) : _[Values](../../objects/Values)_
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1192,7 +1192,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| input | _Storage_ | Excel file reference. |
+| input | _[Storage](../../resources/Storage)_ | Excel file reference. |
 | hiddenSheets | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
@@ -1203,7 +1203,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### _xls.read(input: _Storage_, sheetNumber: _int_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[Storage](../../resources/Storage)_, sheetNumber: _int_) : _[Values](../../objects/Values)_
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1212,7 +1212,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| input | _Storage_ | Excel file reference. |
+| input | _[Storage](../../resources/Storage)_ | Excel file reference. |
 | sheetNumber | _int_ | Spreadsheet number. |
 
 ##### Return
@@ -1223,7 +1223,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### _xls.read(input: _Storage_, sheetNumber: _int_, hiddenSheets: _boolean_) : _[Values](../../objects/Values)_
+#### _xls.read(input: _[Storage](../../resources/Storage)_, sheetNumber: _int_, hiddenSheets: _boolean_) : _[Values](../../objects/Values)_
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1232,7 +1232,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| input | _Storage_ | Excel file reference. |
+| input | _[Storage](../../resources/Storage)_ | Excel file reference. |
 | sheetNumber | _int_ | Spreadsheet number. |
 | hiddenSheets | _boolean_ | It also processes hidden spreadsheets. |
 
@@ -1248,7 +1248,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### `_xls.create()`.row(rowIndex: _int_) : _HSSFRow_
+#### `_xls.create()`.row(rowIndex: _int_) : _org.apache.poi.hssf.usermodel.HSSFRow_
 ##### Description
 
 Gets a row from the spreadsheet and if it does not exist then it will be created.
@@ -1261,13 +1261,13 @@ Gets a row from the spreadsheet and if it does not exist then it will be created
 
 ##### Return
 
-( _HSSFRow_ )
+( _org.apache.poi.hssf.usermodel.HSSFRow_ )
 
 Line representation object.
 
 ---
 
-#### `_xls.create()`.row(sheet: _HSSFSheet_, rowIndex: _int_) : _HSSFRow_
+#### `_xls.create()`.row(sheet: _org.apache.poi.hssf.usermodel.HSSFSheet_, rowIndex: _int_) : _org.apache.poi.hssf.usermodel.HSSFRow_
 ##### Description
 
 Gets a row from the spreadsheet and if it does not exist then it will be created.
@@ -1276,12 +1276,12 @@ Gets a row from the spreadsheet and if it does not exist then it will be created
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| sheet | _HSSFSheet_ | Spreadsheet object. |
+| sheet | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Spreadsheet object. |
 | rowIndex | _int_ | Line number. |
 
 ##### Return
 
-( _HSSFRow_ )
+( _org.apache.poi.hssf.usermodel.HSSFRow_ )
 
 Line representation object.
 
@@ -1334,7 +1334,7 @@ Valid name to be used as the name of the spreadsheet.
 
 ---
 
-#### `_xls.create()`.save(output: _OutputStream_) : _void_
+#### `_xls.create()`.save(output: _java.io.OutputStream_) : _void_
 ##### Description
 
 Writes the data from the final file to the output.
@@ -1343,7 +1343,7 @@ Writes the data from the final file to the output.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| output | _OutputStream_ | Output where the file will be saved. |
+| output | _java.io.OutputStream_ | Output where the file will be saved. |
 
 ##### Return
 
@@ -1388,7 +1388,7 @@ Writes the data from the final file to the output.
 
 ---
 
-#### `_xls.create()`.save(storage: _Storage_) : _void_
+#### `_xls.create()`.save(storage: _[Storage](../../resources/Storage)_) : _void_
 ##### Description
 
 Writes the data from the final file to the internal storage of the application.
@@ -1397,7 +1397,7 @@ Writes the data from the final file to the internal storage of the application.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Storage reference where the file will be saved. |
+| storage | _[Storage](../../resources/Storage)_ | Storage reference where the file will be saved. |
 
 ##### Return
 
@@ -1410,7 +1410,7 @@ Writes the data from the final file to the internal storage of the application.
 
 ---
 
-#### `_xls.create()`.sheet() : _HSSFSheet_
+#### `_xls.create()`.sheet() : _org.apache.poi.hssf.usermodel.HSSFSheet_
 ##### Description
 
 To obtain the current spreadsheet that is being used to manipulate the data.
@@ -1423,7 +1423,7 @@ const spreadsheet = _xls.create().sheet();
 
 ##### Return
 
-( _HSSFSheet_ )
+( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
 
 Gets the current spreadsheet.
 
@@ -1433,14 +1433,14 @@ Gets the current spreadsheet.
 
 ---
 
-#### _xls.units() : _Class_
+#### _xls.units() : _java.lang.Class_
 ##### Description
 
 It obtains the types of units predefined in Excel, useful to perform the conversion between pixels and points.
 
 ##### Return
 
-( _Class_ )
+( _java.lang.Class_ )
 
 The Apache POI class that helps you manipulate Excel units.
 
@@ -1473,7 +1473,7 @@ Whether it is valid to be used as a spreadsheet name.
 
 ---
 
-#### _xls.verticalAlignment(type: string) : _VerticalAlignment_
+#### _xls.verticalAlignment(type: string) : _org.apache.poi.ss.usermodel.VerticalAlignment_
 ##### Description
 
 Generates vertical alignment.
@@ -1486,7 +1486,7 @@ Generates vertical alignment.
 
 ##### Return
 
-( _VerticalAlignment_ )
+( _org.apache.poi.ss.usermodel.VerticalAlignment_ )
 
 The vertical alignment configured with the defined type.
 
@@ -1496,7 +1496,7 @@ The vertical alignment configured with the defined type.
 
 ---
 
-#### `_xls.create()`.workbook() : _HSSFWorkbook_
+#### `_xls.create()`.workbook() : _org.apache.poi.hssf.usermodel.HSSFWorkbook_
 ##### Description
 
 Creates a new Excel document.
@@ -1509,7 +1509,7 @@ const workbook = _xls.create().workbook();
 
 ##### Return
 
-( _HSSFWorkbook_ )
+( _org.apache.poi.hssf.usermodel.HSSFWorkbook_ )
 
 Gets the workbook.
 

@@ -47,13 +47,13 @@ Retorna a chave correspondente.
 
 ---
 
-#### _lang.get(arg0: string, arg1: _Object[]_) : string
+#### _lang.get(arg0: string, arg1: _[Ljava.lang.Object;_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| arg1 | _[Ljava.lang.Object;_ |   |
 
 ##### Retorno
 
@@ -82,14 +82,14 @@ Retorna todos os locale.
 
 ---
 
-#### _lang.getLocale() : _Locale_
+#### _lang.getLocale() : _java.util.Locale_
 ##### Descrição
 
 Retorna o nome do locale.
 
 ##### Retorno
 
-( _Locale_ )
+( _java.util.Locale_ )
 
 
 ---
@@ -138,20 +138,20 @@ Retorna a chave e o texto inseridos.
 
 ---
 
-#### _lang.init() : _Lang_
+#### _lang.init() : _[Lang](../../resources/Lang)_
 ##### Descrição
 
 Inicia o recurso Lang .
 
 ##### Retorno
 
-( _Lang_ )
+( _[Lang](../../resources/Lang)_ )
 
 Retorna o lang por definição.
 
 ---
 
-#### _lang.init(chave: string) : _Lang_
+#### _lang.init(chave: string) : _[Lang](../../resources/Lang)_
 ##### Descrição
 
 Define a chave do locale de predefinição com um texto inserido.
@@ -164,13 +164,13 @@ Define a chave do locale de predefinição com um texto inserido.
 
 ##### Retorno
 
-( _Lang_ )
+( _[Lang](../../resources/Lang)_ )
 
 Retorna a chave e o texto inseridos.
 
 ---
 
-#### _lang.init(chave: string, porDefeito: _boolean_) : _Lang_
+#### _lang.init(chave: string, porDefeito: _boolean_) : _[Lang](../../resources/Lang)_
 ##### Descrição
 
 Define a chave do locale de predefinição com um texto inserido.
@@ -184,7 +184,7 @@ Define a chave do locale de predefinição com um texto inserido.
 
 ##### Retorno
 
-( _Lang_ )
+( _[Lang](../../resources/Lang)_ )
 
 Retorna a chave e o texto inseridos.
 
@@ -194,14 +194,14 @@ Retorna a chave e o texto inseridos.
 
 ---
 
-#### _lang.locale() : _Locale_
+#### _lang.locale() : _java.util.Locale_
 ##### Descrição
 
 Retorna o nome do locale.
 
 ##### Retorno
 
-( _Locale_ )
+( _java.util.Locale_ )
 
 
 ---

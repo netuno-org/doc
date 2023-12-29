@@ -320,7 +320,7 @@ If the user is authenticated with JSON Web Token returns _true_.
 
 ---
 
-#### _auth.load() : _Auth_
+#### _auth.load() : _[Auth](../../resources/Auth)_
 ##### Description
 
 Processes authentication settings.
@@ -334,7 +334,7 @@ _auth.load()
 
 ##### Return
 
-( _Auth_ )
+( _[Auth](../../resources/Auth)_ )
 
 Returns the default Auth resource.
 
@@ -344,7 +344,7 @@ Returns the default Auth resource.
 
 ---
 
-#### _auth.logout() : _Auth_
+#### _auth.logout() : _[Auth](../../resources/Auth)_
 ##### Description
 
 Signs out the user authenticated.
@@ -359,7 +359,7 @@ _auth.logout()
 
 ##### Return
 
-( _Auth_ )
+( _[Auth](../../resources/Auth)_ )
 
 Returns the default Auth resource.
 

@@ -12,7 +12,7 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### add(arg0: string) : _DBBatch_
+#### add(arg0: string) : _[DBBatch](../../objects/DBBatch)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -21,7 +21,7 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ##### Retorno
 
-( _DBBatch_ )
+( _[DBBatch](../../objects/DBBatch)_ )
 
 
 ---
@@ -54,10 +54,10 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### execute() : _int[]_
+#### execute() : _[I_
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 
 ---
@@ -66,16 +66,16 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### put(arg0: _Object[]_) : _DBBatch_
+#### put(arg0: _[Ljava.lang.Object;_) : _[DBBatch](../../objects/DBBatch)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Retorno
 
-( _DBBatch_ )
+( _[DBBatch](../../objects/DBBatch)_ )
 
 
 ---

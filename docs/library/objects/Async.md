@@ -38,15 +38,15 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### invokeAll() : _List_
+#### invokeAll() : _java.util.List_
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### invokeAll(arg0: _long_) : _List_
+#### invokeAll(arg0: _long_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -55,7 +55,7 @@ Orchestrates asynchronous execution modes.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -64,15 +64,15 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### invokeAny() : _Object_
+#### invokeAny() : _java.lang.Object_
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### invokeAny(arg0: _long_) : _Object_
+#### invokeAny(arg0: _long_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -81,7 +81,7 @@ Orchestrates asynchronous execution modes.
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -90,10 +90,10 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### start() : _Async_
+#### start() : _[Async](../../objects/Async)_
 ##### Return
 
-( _Async_ )
+( _[Async](../../objects/Async)_ )
 
 
 ---
@@ -102,10 +102,10 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### stop() : _Async_
+#### stop() : _[Async](../../objects/Async)_
 ##### Return
 
-( _Async_ )
+( _[Async](../../objects/Async)_ )
 
 
 ---

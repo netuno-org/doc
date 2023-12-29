@@ -27,13 +27,13 @@ Feature to connect, transfer files and execute commands via SSH.
 #### _ssh.config() : _[SSHConfig](../../objects/SSHConfig)_
 ##### Description
 
-Gets the configuration that is being used.
+Starts a new configuration of its own.
 
 ##### Return
 
 ( _[SSHConfig](../../objects/SSHConfig)_ )
 
-Object of the active configuration.
+Configuration object loaded from received data.
 
 ---
 
@@ -56,7 +56,7 @@ Configuration object loaded from received data.
 
 ---
 
-#### _ssh.config(config: _[SSHConfig](../../objects/SSHConfig)_) : _SSH_
+#### _ssh.config(config: _[SSHConfig](../../objects/SSHConfig)_) : _[SSH](../../resources/SSH)_
 ##### Description
 
 Define outra configuração que deve ser utilizada.
@@ -69,7 +69,7 @@ Define outra configuração que deve ser utilizada.
 
 ##### Return
 
-( _SSH_ )
+( _[SSH](../../resources/SSH)_ )
 
 Current FTP object.
 
@@ -79,10 +79,10 @@ Current FTP object.
 
 ---
 
-#### _ssh.connect() : _SSH_
+#### _ssh.connect() : _[SSH](../../resources/SSH)_
 ##### Return
 
-( _SSH_ )
+( _[SSH](../../resources/SSH)_ )
 
 
 ---
@@ -91,10 +91,10 @@ Current FTP object.
 
 ---
 
-#### _ssh.disconnect() : _SSH_
+#### _ssh.disconnect() : _[SSH](../../resources/SSH)_
 ##### Return
 
-( _SSH_ )
+( _[SSH](../../resources/SSH)_ )
 
 
 ---
@@ -111,7 +111,7 @@ Current FTP object.
 
 ---
 
-#### _ssh.enabled(enabled: _boolean_) : _SSH_
+#### _ssh.enabled(enabled: _boolean_) : _[SSH](../../resources/SSH)_
 ##### Description
 
 Sets whether it is enabled.
@@ -124,7 +124,7 @@ Sets whether it is enabled.
 
 ##### Return
 
-( _SSH_ )
+( _[SSH](../../resources/SSH)_ )
 
 Current FTP object.
 
@@ -134,10 +134,10 @@ Current FTP object.
 
 ---
 
-#### _ssh.getClient() : _SSHClient_
+#### _ssh.getClient() : _org.netuno.psamata.ssh.SSHClient_
 ##### Return
 
-( _SSHClient_ )
+( _org.netuno.psamata.ssh.SSHClient_ )
 
 
 ---
@@ -163,20 +163,20 @@ Object of the active configuration.
 
 ---
 
-#### _ssh.init() : _SSH_
+#### _ssh.init() : _[SSH](../../resources/SSH)_
 ##### Description
 
 Starts a new instance of SSH using the SSH configuration of the `default` key.
 
 ##### Return
 
-( _SSH_ )
+( _[SSH](../../resources/SSH)_ )
 
 The new instance of the SSH resource based on the `default` SSH configuration.
 
 ---
 
-#### _ssh.init(configKey: string) : _SSH_
+#### _ssh.init(configKey: string) : _[SSH](../../resources/SSH)_
 ##### Description
 
 Starts a new instance of SSH from a specific configuration.
@@ -189,13 +189,13 @@ Starts a new instance of SSH from a specific configuration.
 
 ##### Return
 
-( _SSH_ )
+( _[SSH](../../resources/SSH)_ )
 
 The new instance of the SSH resource based on the specified SSH configuration.
 
 ---
 
-#### _ssh.init(config: _[SSHConfig](../../objects/SSHConfig)_) : _SSH_
+#### _ssh.init(config: _[SSHConfig](../../objects/SSHConfig)_) : _[SSH](../../resources/SSH)_
 ##### Description
 
 Starts a new instance of SSH from a configuration that is defined in its own configuration object.
@@ -208,7 +208,7 @@ Starts a new instance of SSH from a configuration that is defined in its own con
 
 ##### Return
 
-( _SSH_ )
+( _[SSH](../../resources/SSH)_ )
 
 The new instance of the SSH resource based on the defined configuration.
 
@@ -271,7 +271,7 @@ Result whether or not it is activated.
 
 ---
 
-#### _ssh.setConfig(config: _[SSHConfig](../../objects/SSHConfig)_) : _SSH_
+#### _ssh.setConfig(config: _[SSHConfig](../../objects/SSHConfig)_) : _[SSH](../../resources/SSH)_
 ##### Description
 
 Define outra configuração que deve ser utilizada.
@@ -284,7 +284,7 @@ Define outra configuração que deve ser utilizada.
 
 ##### Return
 
-( _SSH_ )
+( _[SSH](../../resources/SSH)_ )
 
 Current FTP object.
 
@@ -294,7 +294,7 @@ Current FTP object.
 
 ---
 
-#### _ssh.setEnabled(enabled: _boolean_) : _SSH_
+#### _ssh.setEnabled(enabled: _boolean_) : _[SSH](../../resources/SSH)_
 ##### Description
 
 Sets whether it is enabled.
@@ -307,7 +307,7 @@ Sets whether it is enabled.
 
 ##### Return
 
-( _SSH_ )
+( _[SSH](../../resources/SSH)_ )
 
 Current FTP object.
 

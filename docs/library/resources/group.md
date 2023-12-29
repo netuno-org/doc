@@ -12,7 +12,7 @@ Management of the application groups and obtaining the authenticated user's grou
 
 ---
 
-#### _group.all() : _List_
+#### _group.all() : _java.util.List_
 ##### Description
 
 Obtém a lista de dados de todos os grupo.
@@ -26,7 +26,7 @@ _out.json(_group.all())
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 Lista de todos os dados de todos os grupos.
 
@@ -36,7 +36,7 @@ Lista de todos os dados de todos os grupos.
 
 ---
 
-#### _group.allByCode(codigo: string) : _List_
+#### _group.allByCode(codigo: string) : _java.util.List_
 ##### Description
 
 Obtém todos os grupos a partir do código alternativo.
@@ -59,7 +59,7 @@ for (const grupo of grupos) {
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 Lista dos utilizadores encontrados para o código alternativo.
 
@@ -421,7 +421,7 @@ It was successfully deleted.
 
 ---
 
-#### _group.search(termo: string) : _List_
+#### _group.search(termo: string) : _java.util.List_
 ##### Description
 
 Pesquisa os grupos que tem alguma ocorrência nos dados com o texto de pesquisa passado.
@@ -444,7 +444,7 @@ for (const grupo of grupos) {
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 Lista de dados dos grupos encontrados.
 

@@ -12,14 +12,14 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.clean(arg0: string, arg1: string, arg2: _Safelist_) : string
+#### _html.clean(arg0: string, arg1: string, arg2: _org.jsoup.safety.Safelist_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
 | arg1 | string |   |
-| arg2 | _Safelist_ |   |
+| arg2 | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 
@@ -28,15 +28,15 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.clean(arg0: string, arg1: string, arg2: _Safelist_, arg3: _OutputSettings_) : string
+#### _html.clean(arg0: string, arg1: string, arg2: _org.jsoup.safety.Safelist_, arg3: _org.jsoup.nodes.Document$OutputSettings_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
 | arg1 | string |   |
-| arg2 | _Safelist_ |   |
-| arg3 | _OutputSettings_ |   |
+| arg2 | _org.jsoup.safety.Safelist_ |   |
+| arg3 | _org.jsoup.nodes.Document$OutputSettings_ |   |
 
 ##### Retorno
 
@@ -45,13 +45,13 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.clean(arg0: string, arg1: _Safelist_) : string
+#### _html.clean(arg0: string, arg1: _org.jsoup.safety.Safelist_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Safelist_ |   |
+| arg1 | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 
@@ -64,7 +64,7 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.connect(arg0: string) : _Connection_
+#### _html.connect(arg0: string) : _org.jsoup.Connection_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -73,7 +73,7 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ##### Retorno
 
-( _Connection_ )
+( _org.jsoup.Connection_ )
 
 
 ---
@@ -82,10 +82,10 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.documentOutputSettings() : _OutputSettings_
+#### _html.documentOutputSettings() : _org.jsoup.nodes.Document$OutputSettings_
 ##### Retorno
 
-( _OutputSettings_ )
+( _org.jsoup.nodes.Document$OutputSettings_ )
 
 
 ---
@@ -94,13 +94,13 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.isValid(arg0: string, arg1: _Safelist_) : _boolean_
+#### _html.isValid(arg0: string, arg1: _org.jsoup.safety.Safelist_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Safelist_ |   |
+| arg1 | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 
@@ -113,10 +113,10 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.newSession() : _Connection_
+#### _html.newSession() : _org.jsoup.Connection_
 ##### Retorno
 
-( _Connection_ )
+( _org.jsoup.Connection_ )
 
 
 ---
@@ -125,7 +125,7 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.parse(input: _InputStream_, baseUri: string, charset: string) : _Document_
+#### _html.parse(input: _java.io.InputStream_, baseUri: string, charset: string) : _org.jsoup.nodes.Document_
 ##### Descrição
 
 Realiza a interpretação dum conteúdo e retorna-o em HTML.
@@ -134,19 +134,19 @@ Realiza a interpretação dum conteúdo e retorna-o em HTML.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| input | _InputStream_ | Conteúdo de um ficheiro HTML a ser processado. |
+| input | _java.io.InputStream_ | Conteúdo de um ficheiro HTML a ser processado. |
 | baseUri | string | Url base para resolver links relativos. |
 | charset | string | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
 
 ##### Retorno
 
-( _Document_ )
+( _org.jsoup.nodes.Document_ )
 
 Conteúdo processado em HTML.
 
 ---
 
-#### _html.parse(content: string) : _Document_
+#### _html.parse(content: string) : _org.jsoup.nodes.Document_
 ##### Descrição
 
 Através do código HTML é realiza a interpretação e retorna o objeto de manipulação.
@@ -159,13 +159,13 @@ Através do código HTML é realiza a interpretação e retorna o objeto de mani
 
 ##### Retorno
 
-( _Document_ )
+( _org.jsoup.nodes.Document_ )
 
 Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTML.
 
 ---
 
-#### _html.parse(ficheiro: _[File](../../objects/File)_, baseUri: string, charset: string) : _Document_
+#### _html.parse(ficheiro: _[File](../../objects/File)_, baseUri: string, charset: string) : _org.jsoup.nodes.Document_
 ##### Descrição
 
 Realiza a interpretação do conteúdo dum ficheiro e retorna-o em HTML.
@@ -180,13 +180,13 @@ Realiza a interpretação do conteúdo dum ficheiro e retorna-o em HTML.
 
 ##### Retorno
 
-( _Document_ )
+( _org.jsoup.nodes.Document_ )
 
 Conteúdo do ficheiro em HTML.
 
 ---
 
-#### _html.parse(storage: _Storage_, baseUri: string, charset: string) : _Document_
+#### _html.parse(storage: _[Storage](../../resources/Storage)_, baseUri: string, charset: string) : _org.jsoup.nodes.Document_
 ##### Descrição
 
 Realiza a interpretação dum conteúdo e retorna-o em HTML.
@@ -195,13 +195,13 @@ Realiza a interpretação dum conteúdo e retorna-o em HTML.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| storage | _Storage_ | Caminho do ficheiro em storage que deverá ser processado. |
+| storage | _[Storage](../../resources/Storage)_ | Caminho do ficheiro em storage que deverá ser processado. |
 | baseUri | string | Url base para resolver links relativos. |
 | charset | string | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
 
 ##### Retorno
 
-( _Document_ )
+( _org.jsoup.nodes.Document_ )
 
 Conteúdo processado em HTML.
 
@@ -211,7 +211,7 @@ Conteúdo processado em HTML.
 
 ---
 
-#### _html.parseBodyFragment(arg0: string) : _Document_
+#### _html.parseBodyFragment(arg0: string) : _org.jsoup.nodes.Document_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -220,12 +220,12 @@ Conteúdo processado em HTML.
 
 ##### Retorno
 
-( _Document_ )
+( _org.jsoup.nodes.Document_ )
 
 
 ---
 
-#### _html.parseBodyFragment(arg0: string, arg1: string) : _Document_
+#### _html.parseBodyFragment(arg0: string, arg1: string) : _org.jsoup.nodes.Document_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -235,7 +235,7 @@ Conteúdo processado em HTML.
 
 ##### Retorno
 
-( _Document_ )
+( _org.jsoup.nodes.Document_ )
 
 
 ---
@@ -244,7 +244,7 @@ Conteúdo processado em HTML.
 
 ---
 
-#### _html.parseURL(url: string) : _Document_
+#### _html.parseURL(url: string) : _org.jsoup.nodes.Document_
 ##### Descrição
 
 Obtém o HTML através de um endereço web (URL), realiza a interpretação e retorna o objeto de manipulação.
@@ -257,13 +257,13 @@ Obtém o HTML através de um endereço web (URL), realiza a interpretação e re
 
 ##### Retorno
 
-( _Document_ )
+( _org.jsoup.nodes.Document_ )
 
 Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTML.
 
 ---
 
-#### _html.parseURL(arg0: string, arg1: _int_) : _Document_
+#### _html.parseURL(arg0: string, arg1: _int_) : _org.jsoup.nodes.Document_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -273,7 +273,7 @@ Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTM
 
 ##### Retorno
 
-( _Document_ )
+( _org.jsoup.nodes.Document_ )
 
 
 ---
@@ -282,24 +282,24 @@ Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTM
 
 ---
 
-#### _html.safelist() : _Safelist_
+#### _html.safelist() : _org.jsoup.safety.Safelist_
 ##### Retorno
 
-( _Safelist_ )
+( _org.jsoup.safety.Safelist_ )
 
 
 ---
 
-#### _html.safelist(arg0: _Safelist_) : _Safelist_
+#### _html.safelist(arg0: _org.jsoup.safety.Safelist_) : _org.jsoup.safety.Safelist_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Safelist_ |   |
+| arg0 | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 
-( _Safelist_ )
+( _org.jsoup.safety.Safelist_ )
 
 
 ---

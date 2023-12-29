@@ -13,7 +13,7 @@ This feature uses the [Apache Commons CSV](https://commons.apache.org/proper/com
 
 ---
 
-#### _csv.format(formatName: string) : _CSVFormat_
+#### _csv.format(formatName: string) : _org.apache.commons.csv.CSVFormat_
 ##### Description
 
 Gets the CSV formatter, supports:<ul><li>default</li><li>excel</li><li>informix-unload</li><li>informix-unload-csv</li><li>mysql</li><li>oracle</li><li>postgresql-csv</li><li>postgresql-text</li><li>rfc4180</li></ul>
@@ -26,7 +26,7 @@ Gets the CSV formatter, supports:<ul><li>default</li><li>excel</li><li>informix-
 
 ##### Return
 
-( _CSVFormat_ )
+( _org.apache.commons.csv.CSVFormat_ )
 
 The type of format to be used.
 
@@ -36,7 +36,7 @@ The type of format to be used.
 
 ---
 
-#### _csv.parser(storage: _Reader_) : _CSVParser_
+#### _csv.parser(reader: _java.io.Reader_) : _org.apache.commons.csv.CSVParser_
 ##### Description
 
 Gets the CSV parser.
@@ -45,17 +45,17 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Reader_ | Path of the file in storage that is to be processed. |
+| reader | _java.io.Reader_ | Data stream that will be processed. |
 
 ##### Return
 
-( _CSVParser_ )
+( _org.apache.commons.csv.CSVParser_ )
 
 The parser initialized.
 
 ---
 
-#### _csv.parser(reader: _Reader_, format: _CSVFormat_) : _CSVParser_
+#### _csv.parser(reader: _java.io.Reader_, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVParser_
 ##### Description
 
 Gets the CSV parser.
@@ -64,18 +64,18 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| reader | _Reader_ | Data stream that will be processed. |
-| format | _CSVFormat_ | Name of the format to be used. |
+| reader | _java.io.Reader_ | Data stream that will be processed. |
+| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
-( _CSVParser_ )
+( _org.apache.commons.csv.CSVParser_ )
 
 The parser initialized.
 
 ---
 
-#### _csv.parser(content: string, format: _CSVFormat_) : _CSVParser_
+#### _csv.parser(content: string, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVParser_
 ##### Description
 
 Gets the CSV parser.
@@ -85,17 +85,17 @@ Gets the CSV parser.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | content | string | Text content that must be processed. |
-| format | _CSVFormat_ | Name of the format to be used. |
+| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
-( _CSVParser_ )
+( _org.apache.commons.csv.CSVParser_ )
 
 The parser initialized.
 
 ---
 
-#### _csv.parser(storage: _Storage_) : _CSVParser_
+#### _csv.parser(storage: _[Storage](../../resources/Storage)_) : _org.apache.commons.csv.CSVParser_
 ##### Description
 
 Gets the CSV parser.
@@ -104,17 +104,17 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Path of the file in storage that is to be processed. |
+| storage | _[Storage](../../resources/Storage)_ | Path of the file in storage that is to be processed. |
 
 ##### Return
 
-( _CSVParser_ )
+( _org.apache.commons.csv.CSVParser_ )
 
 The parser initialized.
 
 ---
 
-#### _csv.parser(storage: _Storage_, charset: string) : _CSVParser_
+#### _csv.parser(storage: _[Storage](../../resources/Storage)_, charset: string) : _org.apache.commons.csv.CSVParser_
 ##### Description
 
 Gets the CSV parser.
@@ -123,7 +123,7 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Path of the file in storage that is to be processed. |
+| storage | _[Storage](../../resources/Storage)_ | Path of the file in storage that is to be processed. |
 | charset | string | Character encoding type code such as: |
 |   |   | - US-ASCII |
 |   |   | - ISO-8859-1 |
@@ -134,13 +134,13 @@ Gets the CSV parser.
 
 ##### Return
 
-( _CSVParser_ )
+( _org.apache.commons.csv.CSVParser_ )
 
 The parser initialized.
 
 ---
 
-#### _csv.parser(storage: _Storage_, charset: string, format: _CSVFormat_) : _CSVParser_
+#### _csv.parser(storage: _[Storage](../../resources/Storage)_, charset: string, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVParser_
 ##### Description
 
 Gets the CSV parser.
@@ -149,7 +149,7 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Path of the file in storage that is to be processed. |
+| storage | _[Storage](../../resources/Storage)_ | Path of the file in storage that is to be processed. |
 | charset | string | Character encoding type code such as: |
 |   |   | - US-ASCII |
 |   |   | - ISO-8859-1 |
@@ -157,17 +157,17 @@ Gets the CSV parser.
 |   |   | - UTF-16BE |
 |   |   | - UTF-16LE |
 |   |   | - UTF-16 |
-| format | _CSVFormat_ | Name of the format to be used. |
+| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
-( _CSVParser_ )
+( _org.apache.commons.csv.CSVParser_ )
 
 The parser initialized.
 
 ---
 
-#### _csv.parser(storage: _Storage_, charset: _CSVFormat_) : _CSVParser_
+#### _csv.parser(reader: _[Storage](../../resources/Storage)_, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVParser_
 ##### Description
 
 Gets the CSV parser.
@@ -176,36 +176,30 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _Storage_ | Path of the file in storage that is to be processed. |
-| charset | _CSVFormat_ | Character encoding type code such as: |
-|   |   | - US-ASCII |
-|   |   | - ISO-8859-1 |
-|   |   | - UTF-8 |
-|   |   | - UTF-16BE |
-|   |   | - UTF-16LE |
-|   |   | - UTF-16 |
+| reader | _[Storage](../../resources/Storage)_ | Data stream that will be processed. |
+| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
-( _CSVParser_ )
+( _org.apache.commons.csv.CSVParser_ )
 
 The parser initialized.
 
 ---
 
-#### _csv.parser(arg0: _Storage_, arg1: _CSVFormat_, arg2: _long_, arg3: _long_) : _CSVParser_
+#### _csv.parser(arg0: _[Storage](../../resources/Storage)_, arg1: _org.apache.commons.csv.CSVFormat_, arg2: _long_, arg3: _long_) : _org.apache.commons.csv.CSVParser_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Storage_ |   |
-| arg1 | _CSVFormat_ |   |
+| arg0 | _[Storage](../../resources/Storage)_ |   |
+| arg1 | _org.apache.commons.csv.CSVFormat_ |   |
 | arg2 | _long_ |   |
 | arg3 | _long_ |   |
 
 ##### Return
 
-( _CSVParser_ )
+( _org.apache.commons.csv.CSVParser_ )
 
 
 ---
@@ -214,7 +208,7 @@ The parser initialized.
 
 ---
 
-#### _csv.printer(writer: _Writer_) : _CSVPrinter_
+#### _csv.printer(writer: _java.io.Writer_) : _org.apache.commons.csv.CSVPrinter_
 ##### Description
 
 Gets the CSV printer.
@@ -223,17 +217,17 @@ Gets the CSV printer.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| writer | _Writer_ | Writer for the CSV file. |
+| writer | _java.io.Writer_ | Writer for the CSV file. |
 
 ##### Return
 
-( _CSVPrinter_ )
+( _org.apache.commons.csv.CSVPrinter_ )
 
 The printer initialized.
 
 ---
 
-#### _csv.printer(writer: _Writer_, format: _CSVFormat_) : _CSVPrinter_
+#### _csv.printer(writer: _java.io.Writer_, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVPrinter_
 ##### Description
 
 Gets the CSV printer.
@@ -242,18 +236,18 @@ Gets the CSV printer.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| writer | _Writer_ | Writer for the CSV file. |
-| format | _CSVFormat_ | Name of the format to be used. |
+| writer | _java.io.Writer_ | Writer for the CSV file. |
+| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
-( _CSVPrinter_ )
+( _org.apache.commons.csv.CSVPrinter_ )
 
 The printer initialized.
 
 ---
 
-#### _csv.printer(writer: _Storage_) : _CSVPrinter_
+#### _csv.printer(writer: _[Storage](../../resources/Storage)_) : _org.apache.commons.csv.CSVPrinter_
 ##### Description
 
 Gets the CSV printer.
@@ -262,17 +256,17 @@ Gets the CSV printer.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| writer | _Storage_ | Writer for the CSV file. |
+| writer | _[Storage](../../resources/Storage)_ | Writer for the CSV file. |
 
 ##### Return
 
-( _CSVPrinter_ )
+( _org.apache.commons.csv.CSVPrinter_ )
 
 The printer initialized.
 
 ---
 
-#### _csv.printer(writer: _Storage_, format: _CSVFormat_) : _CSVPrinter_
+#### _csv.printer(writer: _[Storage](../../resources/Storage)_, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVPrinter_
 ##### Description
 
 Gets the CSV printer.
@@ -281,12 +275,12 @@ Gets the CSV printer.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| writer | _Storage_ | Writer for the CSV file. |
-| format | _CSVFormat_ | Name of the format to be used. |
+| writer | _[Storage](../../resources/Storage)_ | Writer for the CSV file. |
+| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
-( _CSVPrinter_ )
+( _org.apache.commons.csv.CSVPrinter_ )
 
 The printer initialized.
 

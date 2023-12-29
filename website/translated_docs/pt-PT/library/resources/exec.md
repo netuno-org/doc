@@ -7,6 +7,14 @@ sidebar_label: Exec
 Funcionalidades para auxiliar à execução do código.
 Realiza a execução de outros scripts, suporta também executar scripts em outras linguagens de programação.
 Executa o script indicado, retornando o seu output.
+Principais funções:
+- [bind](#bind)
+- [core](#core)
+- [service](#service)
+- [sleep](#sleep)
+- [stop](#stop)
+- [gc](#gc)
+
 
 ```javascript
 // Executa outro script da App em `server/core/`
@@ -14,6 +22,12 @@ const outputOutput = _exec.core("outro-script");
 
 // Executa outro script da App em `server/services/`
 const outputServico = _exec.service("outro-servico");
+
+// Pausa por 2 segundos:`
+_exec.sleep(2000);
+
+// Para a execução:`
+_exec.stop();
 
 ```
 
@@ -23,13 +37,13 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.add(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _exec.add(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -38,12 +52,12 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.add(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _exec.add(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -56,13 +70,13 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.addAll(arg0: _int_, arg1: _Collection_) : _boolean_
+#### _exec.addAll(arg0: _int_, arg1: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Collection_ |   |
+| arg1 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -71,12 +85,12 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.addAll(arg0: _Collection_) : _boolean_
+#### _exec.addAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -89,12 +103,12 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.as(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _exec.as(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -103,13 +117,13 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.as(arg0: _Object_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _exec.as(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -232,7 +246,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asCalendar(arg0: string) : _Calendar_
+#### _exec.asCalendar(arg0: string) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -241,22 +255,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
 
-#### _exec.asCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### _exec.asCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Calendar_ |   |
+| arg1 | _java.util.Calendar_ |   |
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
@@ -265,7 +279,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asDate(arg0: string) : _Date_
+#### _exec.asDate(arg0: string) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -274,22 +288,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
 
-#### _exec.asDate(arg0: string, arg1: _Date_) : _Date_
+#### _exec.asDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.util.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -476,7 +490,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asInstant(arg0: string) : _Instant_
+#### _exec.asInstant(arg0: string) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -485,22 +499,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _exec.asInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### _exec.asInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Instant_ |   |
+| arg1 | _java.time.Instant_ |   |
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -557,7 +571,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asList(arg0: _int_) : _List_
+#### _exec.asList(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -566,58 +580,58 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.asList(arg0: _int_, arg1: _Class_) : _List_
+#### _exec.asList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.asList(arg0: _int_, arg1: _Object_) : _List_
+#### _exec.asList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.asList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+#### _exec.asList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.asList(arg0: string) : _List_
+#### _exec.asList(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -626,53 +640,53 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.asList(arg0: string, arg1: _Class_) : _List_
+#### _exec.asList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.asList(arg0: string, arg1: _Object_) : _List_
+#### _exec.asList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.asList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+#### _exec.asList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -681,7 +695,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asLocalDate(arg0: string) : _LocalDate_
+#### _exec.asLocalDate(arg0: string) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -690,22 +704,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _exec.asLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### _exec.asLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDate_ |   |
+| arg1 | _java.time.LocalDate_ |   |
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -714,7 +728,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asLocalDateTime(arg0: string) : _LocalDateTime_
+#### _exec.asLocalDateTime(arg0: string) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -723,22 +737,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _exec.asLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### _exec.asLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDateTime_ |   |
+| arg1 | _java.time.LocalDateTime_ |   |
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -747,7 +761,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asLocalTime(arg0: string) : _LocalTime_
+#### _exec.asLocalTime(arg0: string) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -756,22 +770,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _exec.asLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### _exec.asLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalTime_ |   |
+| arg1 | _java.time.LocalTime_ |   |
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -842,7 +856,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asMap(arg0: _int_) : _Map_
+#### _exec.asMap(arg0: _int_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -851,27 +865,27 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _exec.asMap(arg0: _int_, arg1: _Object_) : _Map_
+#### _exec.asMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _exec.asMap(arg0: string) : _Map_
+#### _exec.asMap(arg0: string) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -880,22 +894,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _exec.asMap(arg0: string, arg1: _Object_) : _Map_
+#### _exec.asMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -904,7 +918,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asSQLDate(arg0: string) : _Date_
+#### _exec.asSQLDate(arg0: string) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -913,22 +927,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
 
-#### _exec.asSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### _exec.asSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.sql.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
@@ -937,7 +951,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asSQLTime(arg0: string) : _Time_
+#### _exec.asSQLTime(arg0: string) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -946,22 +960,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
 
-#### _exec.asSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### _exec.asSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Time_ |   |
+| arg1 | _java.sql.Time_ |   |
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
@@ -970,7 +984,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asSQLTimestamp(arg0: string) : _Timestamp_
+#### _exec.asSQLTimestamp(arg0: string) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -979,22 +993,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
 
-#### _exec.asSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### _exec.asSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Timestamp_ |   |
+| arg1 | _java.sql.Timestamp_ |   |
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
@@ -1143,7 +1157,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asUID(arg0: string) : _UUID_
+#### _exec.asUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1152,12 +1166,12 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _exec.asUID(arg0: string, arg1: string) : _UUID_
+#### _exec.asUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1167,22 +1181,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _exec.asUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _exec.asUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -1191,7 +1205,7 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asUUID(arg0: string) : _UUID_
+#### _exec.asUUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1200,12 +1214,12 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _exec.asUUID(arg0: string, arg1: string) : _UUID_
+#### _exec.asUUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1215,22 +1229,22 @@ const outputServico = _exec.service("outro-servico");
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _exec.asUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _exec.asUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -1239,16 +1253,16 @@ const outputServico = _exec.service("outro-servico");
 
 ---
 
-#### _exec.asValues(chave: _int_) : _[Values](../../objects/Values)_
+#### _exec.asValues(indice: _int_) : _[Values](../../objects/Values)_
 ##### Descrição
 
-Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | A chave para obter o objeto associado. |
+| indice | _int_ | Índex para obter o objeto associado. |
 
 ##### Retorno
 
@@ -1258,17 +1272,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _exec.asValues(chave: _int_, valorPadrao: _Object_) : _[Values](../../objects/Values)_
+#### _exec.asValues(indice: _int_, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Descrição
 
-Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | A chave para obter o objeto associado. |
-| valorPadrao | _Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| indice | _int_ | Índex para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -1297,7 +1311,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _exec.asValues(chave: string, valorPadrao: _Object_) : _[Values](../../objects/Values)_
+#### _exec.asValues(chave: string, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -1307,7 +1321,7 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | chave | string | A chave para obter o objeto associado. |
-| valorPadrao | _Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -1321,7 +1335,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _exec.async(arg0: _Value[]_) : _[Async](../../objects/Async)_
+#### _exec.async(arg0: _[Lorg.graalvm.polyglot.Value;_) : _[Async](../../objects/Async)_
 ##### Descrição
 
 Execução de funções de forma assíncrona.
@@ -1330,7 +1344,7 @@ Execução de funções de forma assíncrona.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value[]_ |   |
+| arg0 | _[Lorg.graalvm.polyglot.Value;_ |   |
 
 ##### Retorno
 
@@ -1343,13 +1357,13 @@ Execução de funções de forma assíncrona.
 
 ---
 
-#### _exec.asyncData(arg0: _Object_, arg1: _Value[]_) : _[Async](../../objects/Async)_
+#### _exec.asyncData(arg0: _java.lang.Object_, arg1: _[Lorg.graalvm.polyglot.Value;_) : _[Async](../../objects/Async)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Value[]_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _[Lorg.graalvm.polyglot.Value;_ |   |
 
 ##### Retorno
 
@@ -1362,13 +1376,13 @@ Execução de funções de forma assíncrona.
 
 ---
 
-#### _exec.asyncList(arg0: _[Values](../../objects/Values)_, arg1: _Value_) : _[Async](../../objects/Async)_
+#### _exec.asyncList(arg0: _[Values](../../objects/Values)_, arg1: _org.graalvm.polyglot.Value_) : _[Async](../../objects/Async)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _[Values](../../objects/Values)_ |   |
-| arg1 | _Value_ |   |
+| arg1 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1381,7 +1395,7 @@ Execução de funções de forma assíncrona.
 
 ---
 
-#### _exec.bind(variavel: string, objeto: _Object_) : _Exec_
+#### _exec.bind(variavel: string, objeto: _java.lang.Object_) : _[Exec](../../resources/Exec)_
 ##### Descrição
 
 Realiza a transição de variáveis entre scripts, inclusive entre linguagens de programação diferentes.
@@ -1398,11 +1412,11 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-e
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | variavel | string | Nome da variável que estará disponível no outro script que será executado. |
-| objeto | _Object_ | Objeto a ser passado para o outro script que será executado. |
+| objeto | _java.lang.Object_ | Objeto a ser passado para o outro script que será executado. |
 
 ##### Retorno
 
-( _Exec_ )
+( _[Exec](../../resources/Exec)_ )
 
 
 ---
@@ -1435,17 +1449,17 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-e
 
 ---
 
-#### _exec.compute(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### _exec.compute(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1454,17 +1468,17 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-e
 
 ---
 
-#### _exec.computeIfAbsent(arg0: _Object_, arg1: _Function_) : _Object_
+#### _exec.computeIfAbsent(arg0: _java.lang.Object_, arg1: _java.util.function.Function_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Function_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.Function_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1473,17 +1487,17 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-e
 
 ---
 
-#### _exec.computeIfPresent(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### _exec.computeIfPresent(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1492,12 +1506,12 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-e
 
 ---
 
-#### _exec.contains(arg0: _Object_) : _boolean_
+#### _exec.contains(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1506,13 +1520,13 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-e
 
 ---
 
-#### _exec.contains(arg0: string, arg1: _Object_) : _boolean_
+#### _exec.contains(arg0: string, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1525,12 +1539,12 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-e
 
 ---
 
-#### _exec.containsAll(arg0: _Collection_) : _boolean_
+#### _exec.containsAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -1543,12 +1557,12 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-e
 
 ---
 
-#### _exec.containsKey(arg0: _Object_) : _boolean_
+#### _exec.containsKey(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1561,12 +1575,12 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-e
 
 ---
 
-#### _exec.containsValue(arg0: _Object_) : _boolean_
+#### _exec.containsValue(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1579,7 +1593,7 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-e
 
 ---
 
-#### _exec.core(caminho: string) : _ScriptResult_
+#### _exec.core(caminho: string) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Descrição
 
 Execução de scripts que estão na pasta `server/core/`.
@@ -1598,12 +1612,12 @@ _exec.core("outro-script-talvez-em-outro-linguagem");
 
 ##### Retorno
 
-( _ScriptResult_ )
+( _[ScriptResult](../../objects/ScriptResult)_ )
 
 
 ---
 
-#### _exec.core(caminho: string, caminho: _boolean_) : _ScriptResult_
+#### _exec.core(caminho: string, caminho: _boolean_) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Descrição
 
 Execução de scripts que estão na pasta `server/core/`.
@@ -1623,7 +1637,7 @@ _exec.core("outro-script-talvez-em-outro-linguagem");
 
 ##### Retorno
 
-( _ScriptResult_ )
+( _[ScriptResult](../../objects/ScriptResult)_ )
 
 
 ---
@@ -1654,10 +1668,10 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _exec.entrySet() : _Set_
+#### _exec.entrySet() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -1666,12 +1680,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _exec.filter(arg0: _Predicate_) : _[Values](../../objects/Values)_
+#### _exec.filter(arg0: _java.util.function.Predicate_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Predicate_ |   |
+| arg0 | _java.util.function.Predicate_ |   |
 
 ##### Retorno
 
@@ -1680,12 +1694,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _exec.filter(arg0: _Value_) : _[Values](../../objects/Values)_
+#### _exec.filter(arg0: _org.graalvm.polyglot.Value_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1698,13 +1712,13 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _exec.find(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _exec.find(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1713,30 +1727,30 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _exec.find(arg0: _Predicate_) : _Object_
+#### _exec.find(arg0: _java.util.function.Predicate_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Predicate_ |   |
+| arg0 | _java.util.function.Predicate_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _exec.find(arg0: _Value_) : _Object_
+#### _exec.find(arg0: _org.graalvm.polyglot.Value_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1759,12 +1773,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _exec.forEach(arg0: _BiConsumer_) : _void_
+#### _exec.forEach(arg0: _java.util.function.BiConsumer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BiConsumer_ |   |
+| arg0 | _java.util.function.BiConsumer_ |   |
 
 ##### Retorno
 
@@ -1773,12 +1787,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _exec.forEach(arg0: _Consumer_) : _void_
+#### _exec.forEach(arg0: _java.util.function.Consumer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Consumer_ |   |
+| arg0 | _java.util.function.Consumer_ |   |
 
 ##### Retorno
 
@@ -1787,12 +1801,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _exec.forEach(arg0: _Value_) : _void_
+#### _exec.forEach(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1843,12 +1857,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _exec.fromJSON(arg0: _Response_) : _[Values](../../objects/Values)_
+#### _exec.fromJSON(arg0: _org.netuno.psamata.net.Remote$Response_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Response_ |   |
+| arg0 | _org.netuno.psamata.net.Remote$Response_ |   |
 
 ##### Retorno
 
@@ -1884,45 +1898,45 @@ _exec.gc();
 
 ---
 
-#### _exec.get(chave: _int_) : _Object_
+#### _exec.get(chave: _int_) : _java.lang.Object_
 ##### Descrição
 
-Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
+Obtém o objeto original associado a chave.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | Chave para obter o objeto associado. |
+| chave | _int_ | Chave para obter o objeto para associado. |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
-Objeto original convertido para o tipo da classe definida.
+Objeto original sem conversões.
 
 ---
 
-#### _exec.get(chave: _Object_) : _Object_
+#### _exec.get(chave: _java.lang.Object_) : _java.lang.Object_
 ##### Descrição
 
-Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
+Obtém o objeto original associado a chave.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _Object_ | Chave para obter o objeto associado. |
+| chave | _java.lang.Object_ | Chave para obter o objeto para associado. |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
-Objeto original convertido para o tipo da classe definida.
+Objeto original sem conversões.
 
 ---
 
-#### _exec.get(chave: string) : _Object_
+#### _exec.get(chave: string) : _java.lang.Object_
 ##### Descrição
 
 Obtém o objeto original associado a chave.
@@ -1935,13 +1949,13 @@ Obtém o objeto original associado a chave.
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 Objeto original sem conversões.
 
 ---
 
-#### _exec.get(chave: string, tipo: _Class_) : _Object_
+#### _exec.get(chave: string, tipo: _java.lang.Class_) : _java.lang.Object_
 ##### Descrição
 
 Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
@@ -1951,11 +1965,11 @@ Obtém o objeto original associado a chave, mas convertido para o tipo da classe
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | chave | string | Chave para obter o objeto associado. |
-| tipo | _Class_ | Classe que representa o tipo de objeto que deve ser convertido (_cast_). |
+| tipo | _java.lang.Class_ | Classe que representa o tipo de objeto que deve ser convertido (_cast_). |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 Objeto original convertido para o tipo da classe definida.
 
@@ -2089,7 +2103,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getCalendar(arg0: string) : _Calendar_
+#### _exec.getCalendar(arg0: string) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2098,22 +2112,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
 
-#### _exec.getCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### _exec.getCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Calendar_ |   |
+| arg1 | _java.util.Calendar_ |   |
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
@@ -2122,7 +2136,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getDate(arg0: string) : _Date_
+#### _exec.getDate(arg0: string) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2131,22 +2145,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
 
-#### _exec.getDate(arg0: string, arg1: _Date_) : _Date_
+#### _exec.getDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.util.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -2357,7 +2371,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getInstant(arg0: string) : _Instant_
+#### _exec.getInstant(arg0: string) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2366,22 +2380,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _exec.getInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### _exec.getInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Instant_ |   |
+| arg1 | _java.time.Instant_ |   |
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -2452,10 +2466,10 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getKeys() : _Set_
+#### _exec.getKeys() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -2464,7 +2478,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getList(arg0: _int_) : _List_
+#### _exec.getList(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2473,58 +2487,58 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.getList(arg0: _int_, arg1: _Class_) : _List_
+#### _exec.getList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.getList(arg0: _int_, arg1: _Object_) : _List_
+#### _exec.getList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.getList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+#### _exec.getList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.getList(arg0: string) : _List_
+#### _exec.getList(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2533,53 +2547,53 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.getList(arg0: string, arg1: _Class_) : _List_
+#### _exec.getList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.getList(arg0: string, arg1: _Object_) : _List_
+#### _exec.getList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.getList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+#### _exec.getList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -2588,7 +2602,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getLocalDate(arg0: string) : _LocalDate_
+#### _exec.getLocalDate(arg0: string) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2597,22 +2611,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _exec.getLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### _exec.getLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDate_ |   |
+| arg1 | _java.time.LocalDate_ |   |
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -2621,7 +2635,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getLocalDateTime(arg0: string) : _LocalDateTime_
+#### _exec.getLocalDateTime(arg0: string) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2630,22 +2644,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _exec.getLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### _exec.getLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDateTime_ |   |
+| arg1 | _java.time.LocalDateTime_ |   |
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -2654,7 +2668,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getLocalTime(arg0: string) : _LocalTime_
+#### _exec.getLocalTime(arg0: string) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2663,22 +2677,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _exec.getLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### _exec.getLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalTime_ |   |
+| arg1 | _java.time.LocalTime_ |   |
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -2749,7 +2763,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getMap(arg0: _int_) : _Map_
+#### _exec.getMap(arg0: _int_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2758,27 +2772,27 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _exec.getMap(arg0: _int_, arg1: _Object_) : _Map_
+#### _exec.getMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _exec.getMap(arg0: string) : _Map_
+#### _exec.getMap(arg0: string) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2787,22 +2801,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _exec.getMap(arg0: string, arg1: _Object_) : _Map_
+#### _exec.getMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -2811,17 +2825,17 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getOrDefault(arg0: _Object_, arg1: _Object_) : _Object_
+#### _exec.getOrDefault(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -2830,7 +2844,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getSQLDate(arg0: string) : _Date_
+#### _exec.getSQLDate(arg0: string) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2839,22 +2853,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
 
-#### _exec.getSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### _exec.getSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.sql.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
@@ -2863,7 +2877,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getSQLTime(arg0: string) : _Time_
+#### _exec.getSQLTime(arg0: string) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2872,22 +2886,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
 
-#### _exec.getSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### _exec.getSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Time_ |   |
+| arg1 | _java.sql.Time_ |   |
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
@@ -2896,7 +2910,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getSQLTimestamp(arg0: string) : _Timestamp_
+#### _exec.getSQLTimestamp(arg0: string) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2905,22 +2919,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
 
-#### _exec.getSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### _exec.getSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Timestamp_ |   |
+| arg1 | _java.sql.Timestamp_ |   |
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
@@ -3081,7 +3095,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _exec.getUID(arg0: string) : _UUID_
+#### _exec.getUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3090,12 +3104,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _exec.getUID(arg0: string, arg1: string) : _UUID_
+#### _exec.getUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3105,22 +3119,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _exec.getUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _exec.getUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -3146,7 +3160,7 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _exec.getUUID(arg0: string) : _UUID_
+#### _exec.getUUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3155,12 +3169,12 @@ Código da codificação dos caracteres.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _exec.getUUID(arg0: string, arg1: string) : _UUID_
+#### _exec.getUUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3170,22 +3184,22 @@ Código da codificação dos caracteres.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _exec.getUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _exec.getUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -3194,69 +3208,94 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _exec.getValues() : _Collection_
+#### _exec.getValues() : _java.util.Collection_
+##### Descrição
+
+Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
+
 ##### Retorno
 
-( _Collection_ )
+( _java.util.Collection_ )
 
+Lista de todos os valores obtidos.
 
 ---
 
-#### _exec.getValues(arg0: _int_) : _[Values](../../objects/Values)_
+#### _exec.getValues(indice: _int_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| indice | _int_ | Índice para obter o objeto associado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _exec.getValues(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _exec.getValues(indice: _int_, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| indice | _int_ | Índice para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _exec.getValues(arg0: string) : _[Values](../../objects/Values)_
+#### _exec.getValues(chave: string) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| chave | string | A chave para obter o objeto associado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _exec.getValues(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _exec.getValues(chave: string, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| chave | string | A chave para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
@@ -3264,12 +3303,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _exec.has(arg0: _Object_) : _boolean_
+#### _exec.has(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3292,13 +3331,13 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _exec.has(arg0: string, arg1: _Object_) : _boolean_
+#### _exec.has(arg0: string, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3329,12 +3368,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _exec.hasValue(arg0: _Object_) : _boolean_
+#### _exec.hasValue(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3347,12 +3386,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _exec.indexOf(arg0: _Object_) : _int_
+#### _exec.indexOf(arg0: _java.lang.Object_) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3365,12 +3404,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _exec.is(arg0: _Object_) : _boolean_
+#### _exec.is(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3420,12 +3459,12 @@ Se está ativo a restrição aos ficheiros associados.
 
 ---
 
-#### _exec.isList(arg0: _Object_) : _boolean_
+#### _exec.isList(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3463,12 +3502,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.isMap(arg0: _Object_) : _boolean_
+#### _exec.isMap(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3481,12 +3520,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.isMergeable(arg0: _Object_) : _boolean_
+#### _exec.isMergeable(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3499,10 +3538,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.iterator() : _Iterator_
+#### _exec.iterator() : _java.util.Iterator_
 ##### Retorno
 
-( _Iterator_ )
+( _java.util.Iterator_ )
 
 
 ---
@@ -3529,10 +3568,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.keySet() : _Set_
+#### _exec.keySet() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3541,10 +3580,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.keys() : _Set_
+#### _exec.keys() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3553,10 +3592,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.keysSorted() : _Set_
+#### _exec.keysSorted() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3579,12 +3618,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.keysToString(arg0: _Map_, arg1: string) : string
+#### _exec.keysToString(arg0: _java.util.Map_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -3598,12 +3637,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.lastIndexOf(arg0: _Object_) : _int_
+#### _exec.lastIndexOf(arg0: _java.lang.Object_) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3628,24 +3667,24 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.list() : _List_
+#### _exec.list() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.list(arg0: _Class_) : _List_
+#### _exec.list(arg0: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Class_ |   |
+| arg0 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -3654,15 +3693,15 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.listIterator() : _ListIterator_
+#### _exec.listIterator() : _java.util.ListIterator_
 ##### Retorno
 
-( _ListIterator_ )
+( _java.util.ListIterator_ )
 
 
 ---
 
-#### _exec.listIterator(arg0: _int_) : _ListIterator_
+#### _exec.listIterator(arg0: _int_) : _java.util.ListIterator_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3671,7 +3710,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _ListIterator_ )
+( _java.util.ListIterator_ )
 
 
 ---
@@ -3680,10 +3719,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.listOfValues() : _List_
+#### _exec.listOfValues() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -3692,12 +3731,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.loadJSON(arg0: _InputStream_) : _void_
+#### _exec.loadJSON(arg0: _java.io.InputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -3706,12 +3745,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.loadJSON(arg0: _Reader_) : _void_
+#### _exec.loadJSON(arg0: _java.io.Reader_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Reader_ |   |
+| arg0 | _java.io.Reader_ |   |
 
 ##### Retorno
 
@@ -3724,12 +3763,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.loadProperties(arg0: _InputStream_) : _void_
+#### _exec.loadProperties(arg0: _java.io.InputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -3738,12 +3777,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.loadProperties(arg0: _Reader_) : _void_
+#### _exec.loadProperties(arg0: _java.io.Reader_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Reader_ |   |
+| arg0 | _java.io.Reader_ |   |
 
 ##### Retorno
 
@@ -3752,12 +3791,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.loadProperties(arg0: _Properties_) : _void_
+#### _exec.loadProperties(arg0: _java.util.Properties_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Properties_ |   |
+| arg0 | _java.util.Properties_ |   |
 
 ##### Retorno
 
@@ -3805,10 +3844,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.map() : _Map_
+#### _exec.map() : _java.util.Map_
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -3817,12 +3856,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.merge(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _exec.merge(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3831,18 +3870,18 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.merge(arg0: _Object_, arg1: _Object_, arg2: _BiFunction_) : _Object_
+#### _exec.merge(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -3851,12 +3890,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.of(arg0: _Object[]_) : _[Values](../../objects/Values)_
+#### _exec.of(arg0: _[Ljava.lang.Object;_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Retorno
 
@@ -3865,26 +3904,26 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.of(arg0: _Object_) : _Object_
+#### _exec.of(arg0: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _exec.of(arg0: _List_) : _[Values](../../objects/Values)_
+#### _exec.of(arg0: _java.util.List_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -3893,12 +3932,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.of(arg0: _Map_) : _[Values](../../objects/Values)_
+#### _exec.of(arg0: _java.util.Map_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -3911,12 +3950,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.ofList(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _exec.ofList(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3929,12 +3968,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.ofMap(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _exec.ofMap(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3947,12 +3986,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.push(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _exec.push(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3965,32 +4004,32 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.put(arg0: _Object_, arg1: _Object_) : _Object_
+#### _exec.put(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _exec.put(arg0: string, arg1: _Object_) : _Object_
+#### _exec.put(arg0: string, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -3999,12 +4038,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.putAll(arg0: _Map_) : _void_
+#### _exec.putAll(arg0: _java.util.Map_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -4017,17 +4056,17 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.putIfAbsent(arg0: _Object_, arg1: _Object_) : _Object_
+#### _exec.putIfAbsent(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -4036,7 +4075,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.remove(arg0: _int_) : _Object_
+#### _exec.remove(arg0: _int_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4045,32 +4084,32 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _exec.remove(arg0: _Object_) : _Object_
+#### _exec.remove(arg0: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _exec.remove(arg0: _Object_, arg1: _Object_) : _boolean_
+#### _exec.remove(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4091,12 +4130,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.removeAll(arg0: _Collection_) : _boolean_
+#### _exec.removeAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -4109,29 +4148,29 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.replace(arg0: _Object_, arg1: _Object_) : _Object_
+#### _exec.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _exec.replace(arg0: _Object_, arg1: _Object_, arg2: _Object_) : _boolean_
+#### _exec.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4144,12 +4183,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.replaceAll(arg0: _BiFunction_) : _void_
+#### _exec.replaceAll(arg0: _java.util.function.BiFunction_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BiFunction_ |   |
+| arg0 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
@@ -4158,12 +4197,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.replaceAll(arg0: _UnaryOperator_) : _void_
+#### _exec.replaceAll(arg0: _java.util.function.UnaryOperator_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _UnaryOperator_ |   |
+| arg0 | _java.util.function.UnaryOperator_ |   |
 
 ##### Retorno
 
@@ -4172,12 +4211,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.replaceAll(arg0: _Value_) : _void_
+#### _exec.replaceAll(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -4190,12 +4229,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.retainAll(arg0: _Collection_) : _boolean_
+#### _exec.retainAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -4208,12 +4247,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.safeString(arg0: _Object_) : string
+#### _exec.safeString(arg0: _java.lang.Object_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4222,12 +4261,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.safeString(arg0: _Object_, arg1: string) : string
+#### _exec.safeString(arg0: _java.lang.Object_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -4241,12 +4280,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.saveJSON(arg0: _OutputStream_) : _void_
+#### _exec.saveJSON(arg0: _java.io.OutputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _OutputStream_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -4255,12 +4294,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.saveJSON(arg0: _Writer_) : _void_
+#### _exec.saveJSON(arg0: _java.io.Writer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| arg0 | _java.io.Writer_ |   |
 
 ##### Retorno
 
@@ -4273,12 +4312,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.saveProperties(arg0: _OutputStream_) : _void_
+#### _exec.saveProperties(arg0: _java.io.OutputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _OutputStream_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -4287,12 +4326,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.saveProperties(arg0: _Writer_) : _void_
+#### _exec.saveProperties(arg0: _java.io.Writer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| arg0 | _java.io.Writer_ |   |
 
 ##### Retorno
 
@@ -4365,12 +4404,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.search(arg0: _Map_, arg1: string, arg2: string, arg3: _boolean_) : string
+#### _exec.search(arg0: _java.util.Map_, arg1: string, arg2: string, arg3: _boolean_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 | arg2 | string |   |
 | arg3 | _boolean_ |   |
@@ -4386,7 +4425,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _exec.service(caminho: string) : _ScriptResult_
+#### _exec.service(caminho: string) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Descrição
 
 Execução de scripts que estão na pasta `server/services/`.
@@ -4405,12 +4444,12 @@ _exec.service("outro-script-talvez-em-outro-linguagem");
 
 ##### Retorno
 
-( _ScriptResult_ )
+( _[ScriptResult](../../objects/ScriptResult)_ )
 
 
 ---
 
-#### _exec.service(caminho: string, preservarContexto: _boolean_) : _ScriptResult_
+#### _exec.service(caminho: string, preservarContexto: _boolean_) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Descrição
 
 Execução de scripts que estão na pasta `server/services/`.
@@ -4430,7 +4469,7 @@ _exec.service("outro-script-talvez-em-outro-linguagem");
 
 ##### Retorno
 
-( _ScriptResult_ )
+( _[ScriptResult](../../objects/ScriptResult)_ )
 
 
 ---
@@ -4439,13 +4478,13 @@ _exec.service("outro-script-talvez-em-outro-linguagem");
 
 ---
 
-#### _exec.set(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _exec.set(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4454,13 +4493,13 @@ _exec.service("outro-script-talvez-em-outro-linguagem");
 
 ---
 
-#### _exec.set(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _exec.set(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4908,12 +4947,12 @@ _exec.sleep(3000);
 
 ---
 
-#### _exec.sort(arg0: _Comparator_) : _void_
+#### _exec.sort(arg0: _java.util.Comparator_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Comparator_ |   |
+| arg0 | _java.util.Comparator_ |   |
 
 ##### Retorno
 
@@ -4922,12 +4961,12 @@ _exec.sleep(3000);
 
 ---
 
-#### _exec.sort(arg0: _Value_) : _void_
+#### _exec.sort(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -4940,10 +4979,10 @@ _exec.sleep(3000);
 
 ---
 
-#### _exec.spliterator() : _Spliterator_
+#### _exec.spliterator() : _java.util.Spliterator_
 ##### Retorno
 
-( _Spliterator_ )
+( _java.util.Spliterator_ )
 
 
 ---
@@ -4977,7 +5016,7 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.subList(arg0: _int_, arg1: _int_) : _List_
+#### _exec.subList(arg0: _int_, arg1: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4987,7 +5026,7 @@ _out.println('Não chega nesta linha.');
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -4996,24 +5035,24 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toArray() : _Object[]_
+#### _exec.toArray() : _[Ljava.lang.Object;_
 ##### Retorno
 
-( _Object[]_ )
+( _[Ljava.lang.Object;_ )
 
 
 ---
 
-#### _exec.toArray(arg0: _Object[]_) : _Object[]_
+#### _exec.toArray(arg0: _[Ljava.lang.Object;_) : _[Ljava.lang.Object;_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Retorno
 
-( _Object[]_ )
+( _[Ljava.lang.Object;_ )
 
 
 ---
@@ -5022,10 +5061,10 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toByteArray() : _byte[]_
+#### _exec.toByteArray() : _[B_
 ##### Retorno
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -5034,10 +5073,10 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toDoubleArray() : _double[]_
+#### _exec.toDoubleArray() : _[D_
 ##### Retorno
 
-( _double[]_ )
+( _[D_ )
 
 
 ---
@@ -5046,10 +5085,10 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toFloatArray() : _float[]_
+#### _exec.toFloatArray() : _[F_
 ##### Retorno
 
-( _float[]_ )
+( _[F_ )
 
 
 ---
@@ -5099,10 +5138,10 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toIntArray() : _int[]_
+#### _exec.toIntArray() : _[I_
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 
 ---
@@ -5162,12 +5201,12 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toJSON(arg0: _List_) : string
+#### _exec.toJSON(arg0: _java.util.List_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -5176,12 +5215,12 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toJSON(arg0: _List_, arg1: _boolean_) : string
+#### _exec.toJSON(arg0: _java.util.List_, arg1: _boolean_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _boolean_ |   |
 
 ##### Retorno
@@ -5191,12 +5230,12 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toJSON(arg0: _List_, arg1: _boolean_, arg2: _int_) : string
+#### _exec.toJSON(arg0: _java.util.List_, arg1: _boolean_, arg2: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _boolean_ |   |
 | arg2 | _int_ |   |
 
@@ -5207,12 +5246,12 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toJSON(arg0: _List_, arg1: _int_) : string
+#### _exec.toJSON(arg0: _java.util.List_, arg1: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _int_ |   |
 
 ##### Retorno
@@ -5226,17 +5265,17 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toJSONObject(arg0: _Object_, arg1: _boolean_) : _Object_
+#### _exec.toJSONObject(arg0: _java.lang.Object_, arg1: _boolean_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | _boolean_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -5245,12 +5284,12 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toJSONString(arg0: _Object_, arg1: _boolean_, arg2: _int_) : string
+#### _exec.toJSONString(arg0: _java.lang.Object_, arg1: _boolean_, arg2: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | _boolean_ |   |
 | arg2 | _int_ |   |
 
@@ -5265,24 +5304,24 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toList() : _List_
+#### _exec.toList() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _exec.toList(arg0: _Class_) : _List_
+#### _exec.toList(arg0: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Class_ |   |
+| arg0 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -5291,10 +5330,10 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toLongArray() : _long[]_
+#### _exec.toLongArray() : _[J_
 ##### Retorno
 
-( _long[]_ )
+( _[J_ )
 
 
 ---
@@ -5303,10 +5342,10 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toMap() : _Map_
+#### _exec.toMap() : _java.util.Map_
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -5327,10 +5366,10 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toShortArray() : _short[]_
+#### _exec.toShortArray() : _[S_
 ##### Retorno
 
-( _short[]_ )
+( _[S_ )
 
 
 ---
@@ -5339,10 +5378,10 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.toStringArray() : _String[]_
+#### _exec.toStringArray() : _[Ljava.lang.String;_
 ##### Retorno
 
-( _String[]_ )
+( _[Ljava.lang.String;_ )
 
 
 ---
@@ -5351,7 +5390,7 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.unset(arg0: string) : _Object_
+#### _exec.unset(arg0: string) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5360,7 +5399,7 @@ _out.println('Não chega nesta linha.');
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -5381,11 +5420,16 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.values() : _Collection_
+#### _exec.values() : _java.util.Collection_
+##### Descrição
+
+Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
+
 ##### Retorno
 
-( _Collection_ )
+( _java.util.Collection_ )
 
+Lista de todos os valores obtidos.
 
 ---
 
@@ -5407,13 +5451,13 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.valuesToString(arg0: string, arg1: _String[]_) : string
+#### _exec.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _String[]_ |   |
+| arg1 | _[Ljava.lang.String;_ |   |
 
 ##### Retorno
 
@@ -5422,13 +5466,13 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.valuesToString(arg0: string, arg1: _String[]_, arg2: _[Values](../../objects/Values)_) : string
+#### _exec.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_, arg2: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _String[]_ |   |
+| arg1 | _[Ljava.lang.String;_ |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
@@ -5453,12 +5497,12 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.valuesToString(arg0: _Map_, arg1: string) : string
+#### _exec.valuesToString(arg0: _java.util.Map_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -5468,14 +5512,14 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_) : string
+#### _exec.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
-| arg2 | _String[]_ |   |
+| arg2 | _[Ljava.lang.String;_ |   |
 
 ##### Retorno
 
@@ -5484,14 +5528,14 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_, arg3: _[Values](../../objects/Values)_) : string
+#### _exec.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_, arg3: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
-| arg2 | _String[]_ |   |
+| arg2 | _[Ljava.lang.String;_ |   |
 | arg3 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
@@ -5501,12 +5545,12 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### _exec.valuesToString(arg0: _Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
+#### _exec.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 

@@ -12,20 +12,20 @@ Geração de valores aleatórios.
 
 ---
 
-#### _random.init() : _Random_
+#### _random.init() : _java.util.Random_
 ##### Descrição
 
 Gera toda a classe Random.
 
 ##### Retorno
 
-( _Random_ )
+( _java.util.Random_ )
 
 Retorna uma classe.
 
 ---
 
-#### _random.init(arg0: _long_) : _Random_
+#### _random.init(arg0: _long_) : _java.util.Random_
 ##### Descrição
 
 Gera aleatoriamente uma seed.
@@ -38,7 +38,7 @@ Gera aleatoriamente uma seed.
 
 ##### Retorno
 
-( _Random_ )
+( _java.util.Random_ )
 
 Retorna uma seed.
 
@@ -48,24 +48,24 @@ Retorna uma seed.
 
 ---
 
-#### _random.initSecure() : _SecureRandom_
+#### _random.initSecure() : _java.security.SecureRandom_
 ##### Retorno
 
-( _SecureRandom_ )
+( _java.security.SecureRandom_ )
 
 
 ---
 
-#### _random.initSecure(arg0: _byte[]_) : _SecureRandom_
+#### _random.initSecure(arg0: _[B_) : _java.security.SecureRandom_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| arg0 | _[B_ |   |
 
 ##### Retorno
 
-( _SecureRandom_ )
+( _java.security.SecureRandom_ )
 
 
 ---
@@ -116,13 +116,13 @@ Retorna um texto de 24 caracteres aleatórios.
 
 ---
 
-#### _random.initString(arg0: _int_, arg1: _Random_) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(arg0: _int_, arg1: _java.util.Random_) : _[RandomString](../../objects/RandomString)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Random_ |   |
+| arg1 | _java.util.Random_ |   |
 
 ##### Retorno
 
@@ -131,13 +131,13 @@ Retorna um texto de 24 caracteres aleatórios.
 
 ---
 
-#### _random.initString(arg0: _int_, arg1: _Random_, arg2: string) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(arg0: _int_, arg1: _java.util.Random_, arg2: string) : _[RandomString](../../objects/RandomString)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Random_ |   |
+| arg1 | _java.util.Random_ |   |
 | arg2 | string |   |
 
 ##### Retorno

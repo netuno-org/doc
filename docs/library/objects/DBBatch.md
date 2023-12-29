@@ -12,7 +12,7 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### add(arg0: string) : _DBBatch_
+#### add(arg0: string) : _[DBBatch](../../objects/DBBatch)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -21,7 +21,7 @@ Manages the execution of massive batch commands to the database.
 
 ##### Return
 
-( _DBBatch_ )
+( _[DBBatch](../../objects/DBBatch)_ )
 
 
 ---
@@ -54,10 +54,10 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### execute() : _int[]_
+#### execute() : _[I_
 ##### Return
 
-( _int[]_ )
+( _[I_ )
 
 
 ---
@@ -66,16 +66,16 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### put(arg0: _Object[]_) : _DBBatch_
+#### put(arg0: _[Ljava.lang.Object;_) : _[DBBatch](../../objects/DBBatch)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Return
 
-( _DBBatch_ )
+( _[DBBatch](../../objects/DBBatch)_ )
 
 
 ---

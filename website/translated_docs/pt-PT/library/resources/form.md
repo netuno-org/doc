@@ -12,10 +12,10 @@ Gerador do formulário da aplicação programaticamente.
 
 ---
 
-#### _form.all() : _List_
+#### _form.all() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -174,7 +174,7 @@ Gerador do formulário da aplicação programaticamente.
 
 ---
 
-#### _form.getAllComponents(arg0: _int_) : _List_
+#### _form.getAllComponents(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -183,12 +183,12 @@ Gerador do formulário da aplicação programaticamente.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _form.getAllComponents(arg0: string) : _List_
+#### _form.getAllComponents(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -197,7 +197,7 @@ Gerador do formulário da aplicação programaticamente.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -300,7 +300,7 @@ Gerador do formulário da aplicação programaticamente.
 
 ---
 
-#### _form.notNulls(arg0: _int_) : _List_
+#### _form.notNulls(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -309,12 +309,12 @@ Gerador do formulário da aplicação programaticamente.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _form.notNulls(arg0: string) : _List_
+#### _form.notNulls(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -323,7 +323,7 @@ Gerador do formulário da aplicação programaticamente.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -332,7 +332,7 @@ Gerador do formulário da aplicação programaticamente.
 
 ---
 
-#### _form.primaryKeys(arg0: _int_) : _List_
+#### _form.primaryKeys(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -341,12 +341,12 @@ Gerador do formulário da aplicação programaticamente.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _form.primaryKeys(arg0: string) : _List_
+#### _form.primaryKeys(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -355,7 +355,7 @@ Gerador do formulário da aplicação programaticamente.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---

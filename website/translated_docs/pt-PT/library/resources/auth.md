@@ -320,7 +320,7 @@ Se o utilizador está autenticado com JSON Web Token retorna _true_.
 
 ---
 
-#### _auth.load() : _Auth_
+#### _auth.load() : _[Auth](../../resources/Auth)_
 ##### Descrição
 
 Processa as configurações de autenticação.
@@ -335,7 +335,7 @@ _auth.load()
 
 ##### Retorno
 
-( _Auth_ )
+( _[Auth](../../resources/Auth)_ )
 
 Retorna o recurso Auth padrão.
 
@@ -345,7 +345,7 @@ Retorna o recurso Auth padrão.
 
 ---
 
-#### _auth.logout() : _Auth_
+#### _auth.logout() : _[Auth](../../resources/Auth)_
 ##### Descrição
 
 Desconecta o usuário autenticado.
@@ -360,7 +360,7 @@ _auth.logout()
 
 ##### Retorno
 
-( _Auth_ )
+( _[Auth](../../resources/Auth)_ )
 
 Retorna o recurso Auth padrão.
 

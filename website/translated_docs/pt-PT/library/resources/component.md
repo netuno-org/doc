@@ -121,10 +121,10 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### _component.getConfiguration() : _Configuration_
+#### _component.getConfiguration() : _org.netuno.tritao.com.Configuration_
 ##### Retorno
 
-( _Configuration_ )
+( _org.netuno.tritao.com.Configuration_ )
 
 
 ---
@@ -133,10 +133,10 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### _component.getDataStructure() : _List_
+#### _component.getDataStructure() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---

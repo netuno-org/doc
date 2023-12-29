@@ -20,7 +20,7 @@ Generating general application errors and categorizing the severity of the error
 
 ---
 
-#### _error.create(message: string) : _ErrorException_
+#### _error.create(message: string) : _[ErrorException](../../objects/ErrorException)_
 ##### Description
 
 Creates an error with an description message
@@ -33,7 +33,7 @@ Creates an error with an description message
 
 ##### Return
 
-( _ErrorException_ )
+( _[ErrorException](../../objects/ErrorException)_ )
 
 
 ---
@@ -42,7 +42,7 @@ Creates an error with an description message
 
 ---
 
-#### _error.createError(message: string) : _Error_
+#### _error.createError(message: string) : _java.lang.Error_
 ##### Description
 
 Creates an error with an description message
@@ -55,7 +55,7 @@ Creates an error with an description message
 
 ##### Return
 
-( _Error_ )
+( _java.lang.Error_ )
 
 
 ---
@@ -64,7 +64,7 @@ Creates an error with an description message
 
 ---
 
-#### _error.createException(message: string) : _Exception_
+#### _error.createException(message: string) : _java.lang.Exception_
 ##### Description
 
 Creates a exception with an description message
@@ -77,7 +77,7 @@ Creates a exception with an description message
 
 ##### Return
 
-( _Exception_ )
+( _java.lang.Exception_ )
 
 
 ---
@@ -86,7 +86,7 @@ Creates a exception with an description message
 
 ---
 
-#### _error.createThrowable(message: string) : _Throwable_
+#### _error.createThrowable(message: string) : _java.lang.Throwable_
 ##### Description
 
 Creates a throwable with an description message
@@ -99,7 +99,7 @@ Creates a throwable with an description message
 
 ##### Return
 
-( _Throwable_ )
+( _java.lang.Throwable_ )
 
 
 ---
@@ -120,7 +120,7 @@ Creates a new class Values that results from the error.
 
 ---
 
-#### _error.data(retorno: _[Values](../../objects/Values)_) : _Error_
+#### _error.data(retorno: _[Values](../../objects/Values)_) : _[Error](../../resources/Error)_
 ##### Description
 
 Creates a new class Values that results from the error.
@@ -133,7 +133,7 @@ Creates a new class Values that results from the error.
 
 ##### Return
 
-( _Error_ )
+( _[Error](../../resources/Error)_ )
 
 
 ---
@@ -160,7 +160,7 @@ Return an exception and print a message with the description of the exception an
 
 ---
 
-#### _error.debug(message: string, throwable: _Object_) : _void_
+#### _error.debug(message: string, throwable: _java.lang.Object_) : _void_
 ##### Description
 
 Print a message with the description of the debug and it's cause
@@ -170,7 +170,7 @@ Print a message with the description of the debug and it's cause
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Object_ | Alternative throwable to include in the debug message. |
+| throwable | _java.lang.Object_ | Alternative throwable to include in the debug message. |
 
 ##### Return
 
@@ -179,7 +179,7 @@ Print a message with the description of the debug and it's cause
 
 ---
 
-#### _error.debug(message: string, cause: _Throwable_) : _void_
+#### _error.debug(message: string, cause: _java.lang.Throwable_) : _void_
 ##### Description
 
 Print a message with the description of the debug
@@ -189,7 +189,7 @@ Print a message with the description of the debug
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in the log. |
-| cause | _Throwable_ | Alternative throwable to include in the debug message. |
+| cause | _java.lang.Throwable_ | Alternative throwable to include in the debug message. |
 
 ##### Return
 
@@ -220,7 +220,7 @@ Print a message of error.
 
 ---
 
-#### _error.error(message: string, throwable: _Object_) : _void_
+#### _error.error(message: string, throwable: _java.lang.Object_) : _void_
 ##### Description
 
 Print a message with the description of the error and it's cause
@@ -230,7 +230,7 @@ Print a message with the description of the error and it's cause
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Object_ | Alternative throwable to include in the error message. |
+| throwable | _java.lang.Object_ | Alternative throwable to include in the error message. |
 
 ##### Return
 
@@ -239,7 +239,7 @@ Print a message with the description of the error and it's cause
 
 ---
 
-#### _error.error(message: string, throwable: _Throwable_) : _void_
+#### _error.error(message: string, throwable: _java.lang.Throwable_) : _void_
 ##### Description
 
 Print a message with the description of the error and it's object
@@ -249,7 +249,7 @@ Print a message with the description of the error and it's object
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Throwable_ | Alternative throwable to include in the error message. |
+| throwable | _java.lang.Throwable_ | Alternative throwable to include in the error message. |
 
 ##### Return
 
@@ -280,7 +280,7 @@ Print a message of type **FATAL** in the log file and in the terminal of Netuno.
 
 ---
 
-#### _error.fatal(message: string, throwable: _Object_) : _void_
+#### _error.fatal(message: string, throwable: _java.lang.Object_) : _void_
 ##### Description
 
 Print a message of type **FATAL** in the log file and in the terminal of Netuno.
@@ -290,7 +290,7 @@ Print a message of type **FATAL** in the log file and in the terminal of Netuno.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Object_ | Alternative object to include in the log message. |
+| throwable | _java.lang.Object_ | Alternative object to include in the log message. |
 
 ##### Return
 
@@ -299,7 +299,7 @@ Print a message of type **FATAL** in the log file and in the terminal of Netuno.
 
 ---
 
-#### _error.fatal(message: string, throwable: _Throwable_) : _void_
+#### _error.fatal(message: string, throwable: _java.lang.Throwable_) : _void_
 ##### Description
 
 Print a message of type **FATAL** in the log file and in the terminal of Netuno.
@@ -309,7 +309,7 @@ Print a message of type **FATAL** in the log file and in the terminal of Netuno.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Throwable_ | Alternative throwable to include in the log message. |
+| throwable | _java.lang.Throwable_ | Alternative throwable to include in the log message. |
 
 ##### Return
 
@@ -340,7 +340,7 @@ Print a message with the description of the debug and it's object
 
 ---
 
-#### _error.info(message: string, throwable: _Object_) : _void_
+#### _error.info(message: string, throwable: _java.lang.Object_) : _void_
 ##### Description
 
 Print a message of information and a throable
@@ -350,7 +350,7 @@ Print a message of information and a throable
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Object_ | Alternative throwable to include in the information message. |
+| throwable | _java.lang.Object_ | Alternative throwable to include in the information message. |
 
 ##### Return
 
@@ -359,7 +359,7 @@ Print a message of information and a throable
 
 ---
 
-#### _error.info(message: string, cause: _Throwable_) : _void_
+#### _error.info(message: string, cause: _java.lang.Throwable_) : _void_
 ##### Description
 
 Print a message of information
@@ -369,7 +369,7 @@ Print a message of information
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in the log. |
-| cause | _Throwable_ | Alternative throwable to include in the info message. |
+| cause | _java.lang.Throwable_ | Alternative throwable to include in the info message. |
 
 ##### Return
 
@@ -382,7 +382,7 @@ Print a message of information
 
 ---
 
-#### _error.is(object: _Object_) : _boolean_
+#### _error.is(object: _java.lang.Object_) : _boolean_
 ##### Description
 
 Checks if an object is from type Error, Exception or Throwable.
@@ -391,7 +391,7 @@ Checks if an object is from type Error, Exception or Throwable.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _Object_ | Object that will be checked. |
+| object | _java.lang.Object_ | Object that will be checked. |
 
 ##### Return
 
@@ -405,7 +405,7 @@ Returns **true** if the object is of type Error, Exception or Throwable.
 
 ---
 
-#### _error.isError(object: _Object_) : _boolean_
+#### _error.isError(object: _java.lang.Object_) : _boolean_
 ##### Description
 
 Checks if an object is from type Error.
@@ -414,7 +414,7 @@ Checks if an object is from type Error.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _Object_ | Object that will be checked. |
+| object | _java.lang.Object_ | Object that will be checked. |
 
 ##### Return
 
@@ -428,7 +428,7 @@ Returns **true** if the object is of type Error.
 
 ---
 
-#### _error.isException(object: _Object_) : _boolean_
+#### _error.isException(object: _java.lang.Object_) : _boolean_
 ##### Description
 
 Checks if an object is from type Exception.
@@ -437,7 +437,7 @@ Checks if an object is from type Exception.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _Object_ | Object that will be checked. |
+| object | _java.lang.Object_ | Object that will be checked. |
 
 ##### Return
 
@@ -451,7 +451,7 @@ Returns **true** if the object is of type Exception.
 
 ---
 
-#### _error.isThrowable(object: _Object_) : _boolean_
+#### _error.isThrowable(object: _java.lang.Object_) : _boolean_
 ##### Description
 
 Checks if an object is from type Throwable.
@@ -460,7 +460,7 @@ Checks if an object is from type Throwable.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _Object_ | Object that will be checked. |
+| object | _java.lang.Object_ | Object that will be checked. |
 
 ##### Return
 
@@ -474,7 +474,7 @@ Returns **true** if the object is of type Throwable.
 
 ---
 
-#### _error.raise(object: _Object_) : _void_
+#### _error.raise(object: _java.lang.Object_) : _void_
 ##### Description
 
 Throws an error according to the type of object passed (Error, Exception or Throwable).
@@ -483,7 +483,7 @@ Throws an error according to the type of object passed (Error, Exception or Thro
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _Object_ | Error object. |
+| object | _java.lang.Object_ | Error object. |
 
 ##### Return
 
@@ -514,7 +514,7 @@ Returns an exception and a list of methods that caused them with an description 
 
 ---
 
-#### _error.trace(message: string, object: _Object_) : _void_
+#### _error.trace(message: string, object: _java.lang.Object_) : _void_
 ##### Description
 
 Returns an object and a list of methods that caused them with an description mensagem.
@@ -524,7 +524,7 @@ Returns an object and a list of methods that caused them with an description men
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| object | _Object_ | Alternative object to include in the error message. |
+| object | _java.lang.Object_ | Alternative object to include in the error message. |
 
 ##### Return
 
@@ -533,7 +533,7 @@ Returns an object and a list of methods that caused them with an description men
 
 ---
 
-#### _error.trace(message: string, throwable: _Throwable_) : _void_
+#### _error.trace(message: string, throwable: _java.lang.Throwable_) : _void_
 ##### Description
 
 Returns an throwable and a list of methods that caused them with an description mensagem.
@@ -543,7 +543,7 @@ Returns an throwable and a list of methods that caused them with an description 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Throwable_ | Alternative throwable to include in the log message. |
+| throwable | _java.lang.Throwable_ | Alternative throwable to include in the log message. |
 
 ##### Return
 
@@ -574,7 +574,7 @@ Print a message of warning
 
 ---
 
-#### _error.warn(message: string, object: _Object_) : _void_
+#### _error.warn(message: string, object: _java.lang.Object_) : _void_
 ##### Description
 
 Print a message with the description of the warning and it's object
@@ -584,7 +584,7 @@ Print a message with the description of the warning and it's object
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| object | _Object_ | Alternative object to include in the warning message. |
+| object | _java.lang.Object_ | Alternative object to include in the warning message. |
 
 ##### Return
 
@@ -593,7 +593,7 @@ Print a message with the description of the warning and it's object
 
 ---
 
-#### _error.warn(message: string, throwable: _Throwable_) : _void_
+#### _error.warn(message: string, throwable: _java.lang.Throwable_) : _void_
 ##### Description
 
 Print a message with the description of the warning and it's throwable
@@ -603,7 +603,7 @@ Print a message with the description of the warning and it's throwable
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Throwable_ | Alternative throwable to include in the warning message. |
+| throwable | _java.lang.Throwable_ | Alternative throwable to include in the warning message. |
 
 ##### Return
 

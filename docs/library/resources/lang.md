@@ -47,13 +47,13 @@ Returns the match key.
 
 ---
 
-#### _lang.get(arg0: string, arg1: _Object[]_) : string
+#### _lang.get(arg0: string, arg1: _[Ljava.lang.Object;_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| arg1 | _[Ljava.lang.Object;_ |   |
 
 ##### Return
 
@@ -82,14 +82,14 @@ Returns all the locale.
 
 ---
 
-#### _lang.getLocale() : _Locale_
+#### _lang.getLocale() : _java.util.Locale_
 ##### Description
 
 Returns the of the locale.
 
 ##### Return
 
-( _Locale_ )
+( _java.util.Locale_ )
 
 
 ---
@@ -138,20 +138,20 @@ Returns the key and the text inserted.
 
 ---
 
-#### _lang.init() : _Lang_
+#### _lang.init() : _[Lang](../../resources/Lang)_
 ##### Description
 
 Initiates the Lang resource.
 
 ##### Return
 
-( _Lang_ )
+( _[Lang](../../resources/Lang)_ )
 
 Returns the default lang.
 
 ---
 
-#### _lang.init(localeName: string) : _Lang_
+#### _lang.init(localeName: string) : _[Lang](../../resources/Lang)_
 ##### Description
 
 Sets the default locale key with a inserted text.
@@ -164,13 +164,13 @@ Sets the default locale key with a inserted text.
 
 ##### Return
 
-( _Lang_ )
+( _[Lang](../../resources/Lang)_ )
 
 Returns the key and the text inserted.
 
 ---
 
-#### _lang.init(localeName: string, asDefault: _boolean_) : _Lang_
+#### _lang.init(localeName: string, asDefault: _boolean_) : _[Lang](../../resources/Lang)_
 ##### Description
 
 Sets the default locale key with a inserted text.
@@ -184,7 +184,7 @@ Sets the default locale key with a inserted text.
 
 ##### Return
 
-( _Lang_ )
+( _[Lang](../../resources/Lang)_ )
 
 Returns the key and the text inserted.
 
@@ -194,14 +194,14 @@ Returns the key and the text inserted.
 
 ---
 
-#### _lang.locale() : _Locale_
+#### _lang.locale() : _java.util.Locale_
 ##### Description
 
 Returns the of the locale.
 
 ##### Return
 
-( _Locale_ )
+( _java.util.Locale_ )
 
 
 ---

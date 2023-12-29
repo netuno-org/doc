@@ -69,13 +69,13 @@ Principais funções:
 
 ---
 
-#### _header.add(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _header.add(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -84,12 +84,12 @@ Principais funções:
 
 ---
 
-#### _header.add(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _header.add(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -102,13 +102,13 @@ Principais funções:
 
 ---
 
-#### _header.addAll(arg0: _int_, arg1: _Collection_) : _boolean_
+#### _header.addAll(arg0: _int_, arg1: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Collection_ |   |
+| arg1 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -117,12 +117,12 @@ Principais funções:
 
 ---
 
-#### _header.addAll(arg0: _Collection_) : _boolean_
+#### _header.addAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -135,12 +135,12 @@ Principais funções:
 
 ---
 
-#### _header.as(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _header.as(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -149,13 +149,13 @@ Principais funções:
 
 ---
 
-#### _header.as(arg0: _Object_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _header.as(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -278,7 +278,7 @@ Principais funções:
 
 ---
 
-#### _header.asCalendar(arg0: string) : _Calendar_
+#### _header.asCalendar(arg0: string) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -287,22 +287,22 @@ Principais funções:
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
 
-#### _header.asCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### _header.asCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Calendar_ |   |
+| arg1 | _java.util.Calendar_ |   |
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
@@ -311,7 +311,7 @@ Principais funções:
 
 ---
 
-#### _header.asDate(arg0: string) : _Date_
+#### _header.asDate(arg0: string) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -320,22 +320,22 @@ Principais funções:
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
 
-#### _header.asDate(arg0: string, arg1: _Date_) : _Date_
+#### _header.asDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.util.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -522,7 +522,7 @@ Principais funções:
 
 ---
 
-#### _header.asInstant(arg0: string) : _Instant_
+#### _header.asInstant(arg0: string) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -531,22 +531,22 @@ Principais funções:
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _header.asInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### _header.asInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Instant_ |   |
+| arg1 | _java.time.Instant_ |   |
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -603,7 +603,7 @@ Principais funções:
 
 ---
 
-#### _header.asList(arg0: _int_) : _List_
+#### _header.asList(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -612,58 +612,58 @@ Principais funções:
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.asList(arg0: _int_, arg1: _Class_) : _List_
+#### _header.asList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.asList(arg0: _int_, arg1: _Object_) : _List_
+#### _header.asList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.asList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+#### _header.asList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.asList(arg0: string) : _List_
+#### _header.asList(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -672,53 +672,53 @@ Principais funções:
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.asList(arg0: string, arg1: _Class_) : _List_
+#### _header.asList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.asList(arg0: string, arg1: _Object_) : _List_
+#### _header.asList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.asList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+#### _header.asList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -727,7 +727,7 @@ Principais funções:
 
 ---
 
-#### _header.asLocalDate(arg0: string) : _LocalDate_
+#### _header.asLocalDate(arg0: string) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -736,22 +736,22 @@ Principais funções:
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _header.asLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### _header.asLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDate_ |   |
+| arg1 | _java.time.LocalDate_ |   |
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -760,7 +760,7 @@ Principais funções:
 
 ---
 
-#### _header.asLocalDateTime(arg0: string) : _LocalDateTime_
+#### _header.asLocalDateTime(arg0: string) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -769,22 +769,22 @@ Principais funções:
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _header.asLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### _header.asLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDateTime_ |   |
+| arg1 | _java.time.LocalDateTime_ |   |
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -793,7 +793,7 @@ Principais funções:
 
 ---
 
-#### _header.asLocalTime(arg0: string) : _LocalTime_
+#### _header.asLocalTime(arg0: string) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -802,22 +802,22 @@ Principais funções:
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _header.asLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### _header.asLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalTime_ |   |
+| arg1 | _java.time.LocalTime_ |   |
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -888,7 +888,7 @@ Principais funções:
 
 ---
 
-#### _header.asMap(arg0: _int_) : _Map_
+#### _header.asMap(arg0: _int_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -897,27 +897,27 @@ Principais funções:
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _header.asMap(arg0: _int_, arg1: _Object_) : _Map_
+#### _header.asMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _header.asMap(arg0: string) : _Map_
+#### _header.asMap(arg0: string) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -926,22 +926,22 @@ Principais funções:
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _header.asMap(arg0: string, arg1: _Object_) : _Map_
+#### _header.asMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -950,7 +950,7 @@ Principais funções:
 
 ---
 
-#### _header.asSQLDate(arg0: string) : _Date_
+#### _header.asSQLDate(arg0: string) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -959,22 +959,22 @@ Principais funções:
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
 
-#### _header.asSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### _header.asSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.sql.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
@@ -983,7 +983,7 @@ Principais funções:
 
 ---
 
-#### _header.asSQLTime(arg0: string) : _Time_
+#### _header.asSQLTime(arg0: string) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -992,22 +992,22 @@ Principais funções:
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
 
-#### _header.asSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### _header.asSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Time_ |   |
+| arg1 | _java.sql.Time_ |   |
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
@@ -1016,7 +1016,7 @@ Principais funções:
 
 ---
 
-#### _header.asSQLTimestamp(arg0: string) : _Timestamp_
+#### _header.asSQLTimestamp(arg0: string) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1025,22 +1025,22 @@ Principais funções:
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
 
-#### _header.asSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### _header.asSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Timestamp_ |   |
+| arg1 | _java.sql.Timestamp_ |   |
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
@@ -1189,7 +1189,7 @@ Principais funções:
 
 ---
 
-#### _header.asUID(arg0: string) : _UUID_
+#### _header.asUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1198,12 +1198,12 @@ Principais funções:
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _header.asUID(arg0: string, arg1: string) : _UUID_
+#### _header.asUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1213,22 +1213,22 @@ Principais funções:
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _header.asUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _header.asUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -1237,7 +1237,7 @@ Principais funções:
 
 ---
 
-#### _header.asUUID(arg0: string) : _UUID_
+#### _header.asUUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1246,12 +1246,12 @@ Principais funções:
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _header.asUUID(arg0: string, arg1: string) : _UUID_
+#### _header.asUUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1261,22 +1261,22 @@ Principais funções:
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _header.asUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _header.asUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -1285,16 +1285,16 @@ Principais funções:
 
 ---
 
-#### _header.asValues(chave: _int_) : _[Values](../../objects/Values)_
+#### _header.asValues(indice: _int_) : _[Values](../../objects/Values)_
 ##### Descrição
 
-Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | A chave para obter o objeto associado. |
+| indice | _int_ | Índex para obter o objeto associado. |
 
 ##### Retorno
 
@@ -1304,17 +1304,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.asValues(chave: _int_, valorPadrao: _Object_) : _[Values](../../objects/Values)_
+#### _header.asValues(indice: _int_, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Descrição
 
-Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | A chave para obter o objeto associado. |
-| valorPadrao | _Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| indice | _int_ | Índex para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -1343,7 +1343,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.asValues(chave: string, valorPadrao: _Object_) : _[Values](../../objects/Values)_
+#### _header.asValues(chave: string, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -1353,7 +1353,7 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | chave | string | A chave para obter o objeto associado. |
-| valorPadrao | _Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -1379,7 +1379,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.cache(arg0: _int_) : _Header_
+#### _header.cache(arg0: _int_) : _[Header](../../resources/Header)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1388,7 +1388,7 @@ Objeto convertido para Values.
 
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1421,17 +1421,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.compute(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### _header.compute(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1440,17 +1440,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.computeIfAbsent(arg0: _Object_, arg1: _Function_) : _Object_
+#### _header.computeIfAbsent(arg0: _java.lang.Object_, arg1: _java.util.function.Function_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Function_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.Function_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1459,17 +1459,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.computeIfPresent(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### _header.computeIfPresent(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1478,12 +1478,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contains(arg0: _Object_) : _boolean_
+#### _header.contains(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1492,13 +1492,13 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contains(arg0: string, arg1: _Object_) : _boolean_
+#### _header.contains(arg0: string, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1511,12 +1511,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.containsAll(arg0: _Collection_) : _boolean_
+#### _header.containsAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -1529,12 +1529,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.containsKey(arg0: _Object_) : _boolean_
+#### _header.containsKey(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1547,12 +1547,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.containsValue(arg0: _Object_) : _boolean_
+#### _header.containsValue(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1573,7 +1573,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contentType(arg0: string) : _Header_
+#### _header.contentType(arg0: string) : _[Header](../../resources/Header)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1582,7 +1582,7 @@ Objeto convertido para Values.
 
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1591,10 +1591,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contentTypeCSS() : _Header_
+#### _header.contentTypeCSS() : _[Header](../../resources/Header)_
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1603,10 +1603,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contentTypeHTML() : _Header_
+#### _header.contentTypeHTML() : _[Header](../../resources/Header)_
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1615,10 +1615,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contentTypeJPG() : _Header_
+#### _header.contentTypeJPG() : _[Header](../../resources/Header)_
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1627,10 +1627,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contentTypeJS() : _Header_
+#### _header.contentTypeJS() : _[Header](../../resources/Header)_
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1639,10 +1639,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contentTypeJSON() : _Header_
+#### _header.contentTypeJSON() : _[Header](../../resources/Header)_
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1651,10 +1651,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contentTypeOctetStream() : _Header_
+#### _header.contentTypeOctetStream() : _[Header](../../resources/Header)_
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1663,10 +1663,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contentTypePDF() : _Header_
+#### _header.contentTypePDF() : _[Header](../../resources/Header)_
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1675,10 +1675,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contentTypePNG() : _Header_
+#### _header.contentTypePNG() : _[Header](../../resources/Header)_
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1687,10 +1687,10 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.contentTypePlain() : _Header_
+#### _header.contentTypePlain() : _[Header](../../resources/Header)_
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1699,7 +1699,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _header.downloadFile(arg0: string) : _Header_
+#### _header.downloadFile(arg0: string) : _[Header](../../resources/Header)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1708,7 +1708,7 @@ Objeto convertido para Values.
 
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -1739,10 +1739,10 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _header.entrySet() : _Set_
+#### _header.entrySet() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -1751,12 +1751,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _header.filter(arg0: _Predicate_) : _[Values](../../objects/Values)_
+#### _header.filter(arg0: _java.util.function.Predicate_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Predicate_ |   |
+| arg0 | _java.util.function.Predicate_ |   |
 
 ##### Retorno
 
@@ -1765,12 +1765,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _header.filter(arg0: _Value_) : _[Values](../../objects/Values)_
+#### _header.filter(arg0: _org.graalvm.polyglot.Value_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1783,13 +1783,13 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _header.find(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _header.find(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1798,30 +1798,30 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _header.find(arg0: _Predicate_) : _Object_
+#### _header.find(arg0: _java.util.function.Predicate_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Predicate_ |   |
+| arg0 | _java.util.function.Predicate_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _header.find(arg0: _Value_) : _Object_
+#### _header.find(arg0: _org.graalvm.polyglot.Value_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1844,12 +1844,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _header.forEach(arg0: _BiConsumer_) : _void_
+#### _header.forEach(arg0: _java.util.function.BiConsumer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BiConsumer_ |   |
+| arg0 | _java.util.function.BiConsumer_ |   |
 
 ##### Retorno
 
@@ -1858,12 +1858,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _header.forEach(arg0: _Consumer_) : _void_
+#### _header.forEach(arg0: _java.util.function.Consumer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Consumer_ |   |
+| arg0 | _java.util.function.Consumer_ |   |
 
 ##### Retorno
 
@@ -1872,12 +1872,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _header.forEach(arg0: _Value_) : _void_
+#### _header.forEach(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1928,12 +1928,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _header.fromJSON(arg0: _Response_) : _[Values](../../objects/Values)_
+#### _header.fromJSON(arg0: _org.netuno.psamata.net.Remote$Response_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Response_ |   |
+| arg0 | _org.netuno.psamata.net.Remote$Response_ |   |
 
 ##### Retorno
 
@@ -1946,45 +1946,45 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _header.get(chave: _int_) : _Object_
+#### _header.get(chave: _int_) : _java.lang.Object_
 ##### Descrição
 
-Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
+Obtém o objeto original associado a chave.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | Chave para obter o objeto associado. |
+| chave | _int_ | Chave para obter o objeto para associado. |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
-Objeto original convertido para o tipo da classe definida.
+Objeto original sem conversões.
 
 ---
 
-#### _header.get(chave: _Object_) : _Object_
+#### _header.get(chave: _java.lang.Object_) : _java.lang.Object_
 ##### Descrição
 
-Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
+Obtém o objeto original associado a chave.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _Object_ | Chave para obter o objeto associado. |
+| chave | _java.lang.Object_ | Chave para obter o objeto para associado. |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
-Objeto original convertido para o tipo da classe definida.
+Objeto original sem conversões.
 
 ---
 
-#### _header.get(chave: string) : _Object_
+#### _header.get(chave: string) : _java.lang.Object_
 ##### Descrição
 
 Obtém o objeto original associado a chave.
@@ -1997,13 +1997,13 @@ Obtém o objeto original associado a chave.
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 Objeto original sem conversões.
 
 ---
 
-#### _header.get(chave: string, tipo: _Class_) : _Object_
+#### _header.get(chave: string, tipo: _java.lang.Class_) : _java.lang.Object_
 ##### Descrição
 
 Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
@@ -2013,11 +2013,11 @@ Obtém o objeto original associado a chave, mas convertido para o tipo da classe
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | chave | string | Chave para obter o objeto associado. |
-| tipo | _Class_ | Classe que representa o tipo de objeto que deve ser convertido (_cast_). |
+| tipo | _java.lang.Class_ | Classe que representa o tipo de objeto que deve ser convertido (_cast_). |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 Objeto original convertido para o tipo da classe definida.
 
@@ -2151,7 +2151,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getCalendar(arg0: string) : _Calendar_
+#### _header.getCalendar(arg0: string) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2160,22 +2160,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
 
-#### _header.getCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### _header.getCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Calendar_ |   |
+| arg1 | _java.util.Calendar_ |   |
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
@@ -2184,7 +2184,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getDate(arg0: string) : _Date_
+#### _header.getDate(arg0: string) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2193,22 +2193,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
 
-#### _header.getDate(arg0: string, arg1: _Date_) : _Date_
+#### _header.getDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.util.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -2419,7 +2419,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getInstant(arg0: string) : _Instant_
+#### _header.getInstant(arg0: string) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2428,22 +2428,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _header.getInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### _header.getInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Instant_ |   |
+| arg1 | _java.time.Instant_ |   |
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -2514,10 +2514,10 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getKeys() : _Set_
+#### _header.getKeys() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -2526,7 +2526,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getList(arg0: _int_) : _List_
+#### _header.getList(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2535,58 +2535,58 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.getList(arg0: _int_, arg1: _Class_) : _List_
+#### _header.getList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.getList(arg0: _int_, arg1: _Object_) : _List_
+#### _header.getList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.getList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+#### _header.getList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.getList(arg0: string) : _List_
+#### _header.getList(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2595,53 +2595,53 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.getList(arg0: string, arg1: _Class_) : _List_
+#### _header.getList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.getList(arg0: string, arg1: _Object_) : _List_
+#### _header.getList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.getList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+#### _header.getList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -2650,7 +2650,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getLocalDate(arg0: string) : _LocalDate_
+#### _header.getLocalDate(arg0: string) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2659,22 +2659,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _header.getLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### _header.getLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDate_ |   |
+| arg1 | _java.time.LocalDate_ |   |
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -2683,7 +2683,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getLocalDateTime(arg0: string) : _LocalDateTime_
+#### _header.getLocalDateTime(arg0: string) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2692,22 +2692,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _header.getLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### _header.getLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDateTime_ |   |
+| arg1 | _java.time.LocalDateTime_ |   |
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -2716,7 +2716,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getLocalTime(arg0: string) : _LocalTime_
+#### _header.getLocalTime(arg0: string) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2725,22 +2725,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _header.getLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### _header.getLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalTime_ |   |
+| arg1 | _java.time.LocalTime_ |   |
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -2811,7 +2811,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getMap(arg0: _int_) : _Map_
+#### _header.getMap(arg0: _int_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2820,27 +2820,27 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _header.getMap(arg0: _int_, arg1: _Object_) : _Map_
+#### _header.getMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _header.getMap(arg0: string) : _Map_
+#### _header.getMap(arg0: string) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2849,22 +2849,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _header.getMap(arg0: string, arg1: _Object_) : _Map_
+#### _header.getMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -2873,17 +2873,17 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getOrDefault(arg0: _Object_, arg1: _Object_) : _Object_
+#### _header.getOrDefault(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -2892,7 +2892,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getSQLDate(arg0: string) : _Date_
+#### _header.getSQLDate(arg0: string) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2901,22 +2901,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
 
-#### _header.getSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### _header.getSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.sql.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
@@ -2925,7 +2925,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getSQLTime(arg0: string) : _Time_
+#### _header.getSQLTime(arg0: string) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2934,22 +2934,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
 
-#### _header.getSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### _header.getSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Time_ |   |
+| arg1 | _java.sql.Time_ |   |
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
@@ -2958,7 +2958,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getSQLTimestamp(arg0: string) : _Timestamp_
+#### _header.getSQLTimestamp(arg0: string) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2967,22 +2967,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
 
-#### _header.getSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### _header.getSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Timestamp_ |   |
+| arg1 | _java.sql.Timestamp_ |   |
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
@@ -3143,7 +3143,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _header.getUID(arg0: string) : _UUID_
+#### _header.getUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3152,12 +3152,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _header.getUID(arg0: string, arg1: string) : _UUID_
+#### _header.getUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3167,22 +3167,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _header.getUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _header.getUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -3208,7 +3208,7 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _header.getUUID(arg0: string) : _UUID_
+#### _header.getUUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3217,12 +3217,12 @@ Código da codificação dos caracteres.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _header.getUUID(arg0: string, arg1: string) : _UUID_
+#### _header.getUUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3232,22 +3232,22 @@ Código da codificação dos caracteres.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _header.getUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _header.getUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -3256,69 +3256,94 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _header.getValues() : _Collection_
+#### _header.getValues() : _java.util.Collection_
+##### Descrição
+
+Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
+
 ##### Retorno
 
-( _Collection_ )
+( _java.util.Collection_ )
 
+Lista de todos os valores obtidos.
 
 ---
 
-#### _header.getValues(arg0: _int_) : _[Values](../../objects/Values)_
+#### _header.getValues(indice: _int_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| indice | _int_ | Índice para obter o objeto associado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _header.getValues(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _header.getValues(indice: _int_, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| indice | _int_ | Índice para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _header.getValues(arg0: string) : _[Values](../../objects/Values)_
+#### _header.getValues(chave: string) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| chave | string | A chave para obter o objeto associado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _header.getValues(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _header.getValues(chave: string, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| chave | string | A chave para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
@@ -3326,12 +3351,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _header.has(arg0: _Object_) : _boolean_
+#### _header.has(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3354,13 +3379,13 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _header.has(arg0: string, arg1: _Object_) : _boolean_
+#### _header.has(arg0: string, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3391,12 +3416,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _header.hasValue(arg0: _Object_) : _boolean_
+#### _header.hasValue(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3421,12 +3446,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _header.indexOf(arg0: _Object_) : _int_
+#### _header.indexOf(arg0: _java.lang.Object_) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3439,12 +3464,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _header.is(arg0: _Object_) : _boolean_
+#### _header.is(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3566,12 +3591,12 @@ Se está ativo a restrição aos ficheiros associados.
 
 ---
 
-#### _header.isList(arg0: _Object_) : _boolean_
+#### _header.isList(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3621,12 +3646,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.isMap(arg0: _Object_) : _boolean_
+#### _header.isMap(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3639,12 +3664,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.isMergeable(arg0: _Object_) : _boolean_
+#### _header.isMergeable(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3777,10 +3802,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.iterator() : _Iterator_
+#### _header.iterator() : _java.util.Iterator_
 ##### Retorno
 
-( _Iterator_ )
+( _java.util.Iterator_ )
 
 
 ---
@@ -3807,10 +3832,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.keySet() : _Set_
+#### _header.keySet() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3819,10 +3844,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.keys() : _Set_
+#### _header.keys() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3831,10 +3856,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.keysSorted() : _Set_
+#### _header.keysSorted() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3857,12 +3882,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.keysToString(arg0: _Map_, arg1: string) : string
+#### _header.keysToString(arg0: _java.util.Map_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -3876,12 +3901,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.lastIndexOf(arg0: _Object_) : _int_
+#### _header.lastIndexOf(arg0: _java.lang.Object_) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3906,24 +3931,24 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.list() : _List_
+#### _header.list() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.list(arg0: _Class_) : _List_
+#### _header.list(arg0: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Class_ |   |
+| arg0 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -3932,15 +3957,15 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.listIterator() : _ListIterator_
+#### _header.listIterator() : _java.util.ListIterator_
 ##### Retorno
 
-( _ListIterator_ )
+( _java.util.ListIterator_ )
 
 
 ---
 
-#### _header.listIterator(arg0: _int_) : _ListIterator_
+#### _header.listIterator(arg0: _int_) : _java.util.ListIterator_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3949,7 +3974,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _ListIterator_ )
+( _java.util.ListIterator_ )
 
 
 ---
@@ -3958,10 +3983,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.listOfValues() : _List_
+#### _header.listOfValues() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -3970,12 +3995,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.loadJSON(arg0: _InputStream_) : _void_
+#### _header.loadJSON(arg0: _java.io.InputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -3984,12 +4009,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.loadJSON(arg0: _Reader_) : _void_
+#### _header.loadJSON(arg0: _java.io.Reader_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Reader_ |   |
+| arg0 | _java.io.Reader_ |   |
 
 ##### Retorno
 
@@ -4002,12 +4027,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.loadProperties(arg0: _InputStream_) : _void_
+#### _header.loadProperties(arg0: _java.io.InputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -4016,12 +4041,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.loadProperties(arg0: _Reader_) : _void_
+#### _header.loadProperties(arg0: _java.io.Reader_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Reader_ |   |
+| arg0 | _java.io.Reader_ |   |
 
 ##### Retorno
 
@@ -4030,12 +4055,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.loadProperties(arg0: _Properties_) : _void_
+#### _header.loadProperties(arg0: _java.util.Properties_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Properties_ |   |
+| arg0 | _java.util.Properties_ |   |
 
 ##### Retorno
 
@@ -4083,10 +4108,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.map() : _Map_
+#### _header.map() : _java.util.Map_
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -4095,12 +4120,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.merge(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _header.merge(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4109,18 +4134,18 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.merge(arg0: _Object_, arg1: _Object_, arg2: _BiFunction_) : _Object_
+#### _header.merge(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -4141,10 +4166,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.noCache() : _Header_
+#### _header.noCache() : _[Header](../../resources/Header)_
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -4153,12 +4178,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.of(arg0: _Object[]_) : _[Values](../../objects/Values)_
+#### _header.of(arg0: _[Ljava.lang.Object;_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Retorno
 
@@ -4167,26 +4192,26 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.of(arg0: _Object_) : _Object_
+#### _header.of(arg0: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _header.of(arg0: _List_) : _[Values](../../objects/Values)_
+#### _header.of(arg0: _java.util.List_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -4195,12 +4220,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.of(arg0: _Map_) : _[Values](../../objects/Values)_
+#### _header.of(arg0: _java.util.Map_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -4213,12 +4238,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.ofList(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _header.ofList(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4231,12 +4256,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.ofMap(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _header.ofMap(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4261,12 +4286,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.push(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _header.push(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4279,32 +4304,32 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.put(arg0: _Object_, arg1: _Object_) : _Object_
+#### _header.put(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _header.put(arg0: string, arg1: _Object_) : _Object_
+#### _header.put(arg0: string, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -4313,12 +4338,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.putAll(arg0: _Map_) : _void_
+#### _header.putAll(arg0: _java.util.Map_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -4331,17 +4356,17 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.putIfAbsent(arg0: _Object_, arg1: _Object_) : _Object_
+#### _header.putIfAbsent(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -4362,7 +4387,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.remove(arg0: _int_) : _Object_
+#### _header.remove(arg0: _int_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4371,32 +4396,32 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _header.remove(arg0: _Object_) : _Object_
+#### _header.remove(arg0: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _header.remove(arg0: _Object_, arg1: _Object_) : _boolean_
+#### _header.remove(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4417,12 +4442,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.removeAll(arg0: _Collection_) : _boolean_
+#### _header.removeAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -4435,29 +4460,29 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.replace(arg0: _Object_, arg1: _Object_) : _Object_
+#### _header.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _header.replace(arg0: _Object_, arg1: _Object_, arg2: _Object_) : _boolean_
+#### _header.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4470,12 +4495,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.replaceAll(arg0: _BiFunction_) : _void_
+#### _header.replaceAll(arg0: _java.util.function.BiFunction_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BiFunction_ |   |
+| arg0 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
@@ -4484,12 +4509,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.replaceAll(arg0: _UnaryOperator_) : _void_
+#### _header.replaceAll(arg0: _java.util.function.UnaryOperator_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _UnaryOperator_ |   |
+| arg0 | _java.util.function.UnaryOperator_ |   |
 
 ##### Retorno
 
@@ -4498,12 +4523,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _header.replaceAll(arg0: _Value_) : _void_
+#### _header.replaceAll(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -4533,12 +4558,12 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _header.retainAll(arg0: _Collection_) : _boolean_
+#### _header.retainAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -4551,12 +4576,12 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _header.safeString(arg0: _Object_) : string
+#### _header.safeString(arg0: _java.lang.Object_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4565,12 +4590,12 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _header.safeString(arg0: _Object_, arg1: string) : string
+#### _header.safeString(arg0: _java.lang.Object_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -4584,12 +4609,12 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _header.saveJSON(arg0: _OutputStream_) : _void_
+#### _header.saveJSON(arg0: _java.io.OutputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _OutputStream_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -4598,12 +4623,12 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _header.saveJSON(arg0: _Writer_) : _void_
+#### _header.saveJSON(arg0: _java.io.Writer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| arg0 | _java.io.Writer_ |   |
 
 ##### Retorno
 
@@ -4616,12 +4641,12 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _header.saveProperties(arg0: _OutputStream_) : _void_
+#### _header.saveProperties(arg0: _java.io.OutputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _OutputStream_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -4630,12 +4655,12 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _header.saveProperties(arg0: _Writer_) : _void_
+#### _header.saveProperties(arg0: _java.io.Writer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| arg0 | _java.io.Writer_ |   |
 
 ##### Retorno
 
@@ -4720,12 +4745,12 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _header.search(arg0: _Map_, arg1: string, arg2: string, arg3: _boolean_) : string
+#### _header.search(arg0: _java.util.Map_, arg1: string, arg2: string, arg3: _boolean_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 | arg2 | string |   |
 | arg3 | _boolean_ |   |
@@ -4741,13 +4766,13 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _header.set(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _header.set(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4756,13 +4781,13 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _header.set(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _header.set(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -5181,12 +5206,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.sort(arg0: _Comparator_) : _void_
+#### _header.sort(arg0: _java.util.Comparator_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Comparator_ |   |
+| arg0 | _java.util.Comparator_ |   |
 
 ##### Retorno
 
@@ -5195,12 +5220,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.sort(arg0: _Value_) : _void_
+#### _header.sort(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -5213,10 +5238,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.spliterator() : _Spliterator_
+#### _header.spliterator() : _java.util.Spliterator_
 ##### Retorno
 
-( _Spliterator_ )
+( _java.util.Spliterator_ )
 
 
 ---
@@ -5233,7 +5258,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.status(arg0: _int_) : _Header_
+#### _header.status(arg0: _int_) : _[Header](../../resources/Header)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5242,21 +5267,21 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
 
-#### _header.status(arg0: _HTTPStatus_) : _Header_
+#### _header.status(arg0: _org.netuno.proteu.Proteu$HTTPStatus_) : _[Header](../../resources/Header)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _HTTPStatus_ |   |
+| arg0 | _org.netuno.proteu.Proteu$HTTPStatus_ |   |
 
 ##### Retorno
 
-( _Header_ )
+( _[Header](../../resources/Header)_ )
 
 
 ---
@@ -5265,7 +5290,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.subList(arg0: _int_, arg1: _int_) : _List_
+#### _header.subList(arg0: _int_, arg1: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5275,7 +5300,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -5284,24 +5309,24 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toArray() : _Object[]_
+#### _header.toArray() : _[Ljava.lang.Object;_
 ##### Retorno
 
-( _Object[]_ )
+( _[Ljava.lang.Object;_ )
 
 
 ---
 
-#### _header.toArray(arg0: _Object[]_) : _Object[]_
+#### _header.toArray(arg0: _[Ljava.lang.Object;_) : _[Ljava.lang.Object;_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Retorno
 
-( _Object[]_ )
+( _[Ljava.lang.Object;_ )
 
 
 ---
@@ -5310,10 +5335,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toByteArray() : _byte[]_
+#### _header.toByteArray() : _[B_
 ##### Retorno
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -5322,10 +5347,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toDoubleArray() : _double[]_
+#### _header.toDoubleArray() : _[D_
 ##### Retorno
 
-( _double[]_ )
+( _[D_ )
 
 
 ---
@@ -5334,10 +5359,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toFloatArray() : _float[]_
+#### _header.toFloatArray() : _[F_
 ##### Retorno
 
-( _float[]_ )
+( _[F_ )
 
 
 ---
@@ -5387,10 +5412,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toIntArray() : _int[]_
+#### _header.toIntArray() : _[I_
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 
 ---
@@ -5450,12 +5475,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toJSON(arg0: _List_) : string
+#### _header.toJSON(arg0: _java.util.List_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -5464,12 +5489,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toJSON(arg0: _List_, arg1: _boolean_) : string
+#### _header.toJSON(arg0: _java.util.List_, arg1: _boolean_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _boolean_ |   |
 
 ##### Retorno
@@ -5479,12 +5504,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toJSON(arg0: _List_, arg1: _boolean_, arg2: _int_) : string
+#### _header.toJSON(arg0: _java.util.List_, arg1: _boolean_, arg2: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _boolean_ |   |
 | arg2 | _int_ |   |
 
@@ -5495,12 +5520,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toJSON(arg0: _List_, arg1: _int_) : string
+#### _header.toJSON(arg0: _java.util.List_, arg1: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _int_ |   |
 
 ##### Retorno
@@ -5514,17 +5539,17 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toJSONObject(arg0: _Object_, arg1: _boolean_) : _Object_
+#### _header.toJSONObject(arg0: _java.lang.Object_, arg1: _boolean_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | _boolean_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -5533,12 +5558,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toJSONString(arg0: _Object_, arg1: _boolean_, arg2: _int_) : string
+#### _header.toJSONString(arg0: _java.lang.Object_, arg1: _boolean_, arg2: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | _boolean_ |   |
 | arg2 | _int_ |   |
 
@@ -5553,24 +5578,24 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toList() : _List_
+#### _header.toList() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _header.toList(arg0: _Class_) : _List_
+#### _header.toList(arg0: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Class_ |   |
+| arg0 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -5579,10 +5604,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toLongArray() : _long[]_
+#### _header.toLongArray() : _[J_
 ##### Retorno
 
-( _long[]_ )
+( _[J_ )
 
 
 ---
@@ -5591,10 +5616,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toMap() : _Map_
+#### _header.toMap() : _java.util.Map_
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -5615,10 +5640,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toShortArray() : _short[]_
+#### _header.toShortArray() : _[S_
 ##### Retorno
 
-( _short[]_ )
+( _[S_ )
 
 
 ---
@@ -5627,10 +5652,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.toStringArray() : _String[]_
+#### _header.toStringArray() : _[Ljava.lang.String;_
 ##### Retorno
 
-( _String[]_ )
+( _[Ljava.lang.String;_ )
 
 
 ---
@@ -5639,7 +5664,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.unset(arg0: string) : _Object_
+#### _header.unset(arg0: string) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5648,7 +5673,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -5693,11 +5718,16 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.values() : _Collection_
+#### _header.values() : _java.util.Collection_
+##### Descrição
+
+Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
+
 ##### Retorno
 
-( _Collection_ )
+( _java.util.Collection_ )
 
+Lista de todos os valores obtidos.
 
 ---
 
@@ -5719,13 +5749,13 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.valuesToString(arg0: string, arg1: _String[]_) : string
+#### _header.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _String[]_ |   |
+| arg1 | _[Ljava.lang.String;_ |   |
 
 ##### Retorno
 
@@ -5734,13 +5764,13 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.valuesToString(arg0: string, arg1: _String[]_, arg2: _[Values](../../objects/Values)_) : string
+#### _header.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_, arg2: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _String[]_ |   |
+| arg1 | _[Ljava.lang.String;_ |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
@@ -5765,12 +5795,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.valuesToString(arg0: _Map_, arg1: string) : string
+#### _header.valuesToString(arg0: _java.util.Map_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -5780,14 +5810,14 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_) : string
+#### _header.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
-| arg2 | _String[]_ |   |
+| arg2 | _[Ljava.lang.String;_ |   |
 
 ##### Retorno
 
@@ -5796,14 +5826,14 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_, arg3: _[Values](../../objects/Values)_) : string
+#### _header.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_, arg3: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
-| arg2 | _String[]_ |   |
+| arg2 | _[Ljava.lang.String;_ |   |
 | arg3 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
@@ -5813,12 +5843,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _header.valuesToString(arg0: _Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
+#### _header.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 

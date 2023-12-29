@@ -12,7 +12,7 @@ Application data type converter.
 
 ---
 
-#### _convert.arrayToList(array: _Object_) : _List_
+#### _convert.arrayToList(array: _java.lang.Object_) : _java.util.List_
 ##### Description
 
 Converts an array of primitive types to a list (collection).
@@ -21,11 +21,11 @@ Converts an array of primitive types to a list (collection).
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| array | _Object_ | Array that will be converted into a list (collection). |
+| array | _java.lang.Object_ | Array that will be converted into a list (collection). |
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 New list with all array elements.
 
@@ -35,7 +35,7 @@ New list with all array elements.
 
 ---
 
-#### _convert.fromBase64(content: _byte[]_) : string
+#### _convert.fromBase64(content: _[B_) : string
 ##### Description
 
 Converts Base64 content to a decoded string.
@@ -44,7 +44,7 @@ Converts Base64 content to a decoded string.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be converted. |
+| content | _[B_ | Content to be converted. |
 
 ##### Return
 
@@ -77,7 +77,7 @@ Returns the decoded string that was in Base64.
 
 ---
 
-#### _convert.fromBase64AsBytes(content: _byte[]_) : _byte[]_
+#### _convert.fromBase64AsBytes(content: _[B_) : _[B_
 ##### Description
 
 Converts the Base64 content to the original decoded byte array.
@@ -86,17 +86,17 @@ Converts the Base64 content to the original decoded byte array.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be converted. |
+| content | _[B_ | Content to be converted. |
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Returns decoded bytes that were in Base64.
 
 ---
 
-#### _convert.fromBase64AsBytes(content: string) : _byte[]_
+#### _convert.fromBase64AsBytes(content: string) : _[B_
 ##### Description
 
 Converts the Base64 content to the original decoded byte array.
@@ -109,7 +109,7 @@ Converts the Base64 content to the original decoded byte array.
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Returns decoded bytes that were in Base64.
 
@@ -179,7 +179,7 @@ Text with encoding of special characters in JSON transformed to normal text.
 
 ---
 
-#### _convert.toBase64(content: _byte[]_) : string
+#### _convert.toBase64(content: _[B_) : string
 ##### Description
 
 Converts the content to a Base64 encoded string.
@@ -188,7 +188,7 @@ Converts the content to a Base64 encoded string.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be converted. |
+| content | _[B_ | Content to be converted. |
 
 ##### Return
 
@@ -221,7 +221,7 @@ Returns the encoded string in Base64.
 
 ---
 
-#### _convert.toBase64AsBytes(content: _byte[]_) : _byte[]_
+#### _convert.toBase64AsBytes(content: _[B_) : _[B_
 ##### Description
 
 Converts the content to a Base64 encoded string.
@@ -230,17 +230,17 @@ Converts the content to a Base64 encoded string.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be converted. |
+| content | _[B_ | Content to be converted. |
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Returns the encoded string in Base64.
 
 ---
 
-#### _convert.toBase64AsBytes(content: string) : _byte[]_
+#### _convert.toBase64AsBytes(content: string) : _[B_
 ##### Description
 
 Convert the content into Base64 encoding.
@@ -253,7 +253,7 @@ Convert the content into Base64 encoding.
 
 ##### Return
 
-( _byte[]_ )
+( _[B_ )
 
 Returns Base64 encoded bytes.
 
@@ -471,7 +471,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### _convert.toError(object: _Object_) : _Error_
+#### _convert.toError(object: _java.lang.Object_) : _java.lang.Error_
 ##### Description
 
 Converts the received object to an Error object.
@@ -491,11 +491,11 @@ if (_error.isError(backAsError)) {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _Object_ | Object to be converted. |
+| object | _java.lang.Object_ | Object to be converted. |
 
 ##### Return
 
-( _Error_ )
+( _java.lang.Error_ )
 
 Returns the object converted as Error.
 
@@ -505,7 +505,7 @@ Returns the object converted as Error.
 
 ---
 
-#### _convert.toException(object: _Object_) : _Exception_
+#### _convert.toException(object: _java.lang.Object_) : _java.lang.Exception_
 ##### Description
 
 Converts the received object to an Exception object.
@@ -525,11 +525,11 @@ if (_error.isException(backAsException)) {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _Object_ | Object to be converted. |
+| object | _java.lang.Object_ | Object to be converted. |
 
 ##### Return
 
-( _Exception_ )
+( _java.lang.Exception_ )
 
 Returns the object converted as Exception.
 
@@ -539,7 +539,7 @@ Returns the object converted as Exception.
 
 ---
 
-#### _convert.toFile(fileName: string, contentType: string, bytes: _byte[]_) : _[File](../../objects/File)_
+#### _convert.toFile(fileName: string, contentType: string, bytes: _[B_) : _[File](../../objects/File)_
 ##### Description
 
 Starts a file object in memory with the contents of the received bytes.
@@ -550,7 +550,7 @@ Starts a file object in memory with the contents of the received bytes.
 |---|---|---|
 | fileName | string | Name of the file. |
 | contentType | string | Type of content. |
-| bytes | _byte[]_ | Bytes that represent the file content. |
+| bytes | _[B_ | Bytes that represent the file content. |
 
 ##### Return
 
@@ -693,7 +693,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toHEX(bytes: _byte[]_) : string
+#### _convert.toHEX(bytes: _[B_) : string
 ##### Description
 
 Convert bytes to **hexadecimal** with uppercase letters.
@@ -702,7 +702,7 @@ Convert bytes to **hexadecimal** with uppercase letters.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _byte[]_ | Bytes to be converted. |
+| bytes | _[B_ | Bytes to be converted. |
 
 ##### Return
 
@@ -746,7 +746,7 @@ Text formatted with encoding of special characters in HTML.
 
 ---
 
-#### _convert.toHex(bytes: _byte[]_) : string
+#### _convert.toHex(bytes: _[B_) : string
 ##### Description
 
 Convert bytes to **hexadecimal** with lowercase letters.
@@ -755,7 +755,7 @@ Convert bytes to **hexadecimal** with lowercase letters.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _byte[]_ | Bytes to be converted. |
+| bytes | _[B_ | Bytes to be converted. |
 
 ##### Return
 
@@ -1057,7 +1057,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### _convert.toObject(object: _Object_) : _Object_
+#### _convert.toObject(object: _java.lang.Object_) : _java.lang.Object_
 ##### Description
 
 Converts the received object to a generic object type.
@@ -1073,11 +1073,11 @@ const genericObject = _convert.toObject("Text...")
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _Object_ | Object to be converted. |
+| object | _java.lang.Object_ | Object to be converted. |
 
 ##### Return
 
-( _Object_ )
+( _java.lang.Object_ )
 
 Returns as type of generic object.
 
@@ -1166,7 +1166,7 @@ Returns the value received in **short**.
 
 ---
 
-#### _convert.toThrowable(object: _Object_) : _Throwable_
+#### _convert.toThrowable(object: _java.lang.Object_) : _java.lang.Throwable_
 ##### Description
 
 Converts the received object into a Throwable type error.
@@ -1183,11 +1183,11 @@ _error.rise(asThrowable)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _Object_ | Object to be converted. |
+| object | _java.lang.Object_ | Object to be converted. |
 
 ##### Return
 
-( _Throwable_ )
+( _java.lang.Throwable_ )
 
 Returns the Throwable type error.
 
@@ -1197,7 +1197,7 @@ Returns the Throwable type error.
 
 ---
 
-#### _convert.toUUID(value: string) : _UUID_
+#### _convert.toUUID(value: string) : _java.util.UUID_
 ##### Description
 
 Inicia um objeto de UUID com o conteúdo recebido.
@@ -1210,7 +1210,7 @@ Inicia um objeto de UUID com o conteúdo recebido.
 
 ##### Return
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 Object of the started UUID.
 

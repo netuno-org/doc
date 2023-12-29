@@ -45,52 +45,52 @@ Se fechou a resposta do pedido HTTP.
 
 ---
 
-#### _out.copy(arg0: _InputStream_) : _Out_
+#### _out.copy(arg0: _java.io.InputStream_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.copy(arg0: _InputStream_, arg1: _long_) : _Out_
+#### _out.copy(arg0: _java.io.InputStream_, arg1: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 | arg1 | _long_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.copy(arg0: _InputStream_, arg1: _long_, arg2: _long_) : _Out_
+#### _out.copy(arg0: _java.io.InputStream_, arg1: _long_, arg2: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 | arg1 | _long_ |   |
 | arg2 | _long_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.copy(arg0: _[File](../../objects/File)_) : _Out_
+#### _out.copy(arg0: _[File](../../objects/File)_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -99,12 +99,12 @@ Se fechou a resposta do pedido HTTP.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.copy(arg0: _[File](../../objects/File)_, arg1: _long_) : _Out_
+#### _out.copy(arg0: _[File](../../objects/File)_, arg1: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -114,12 +114,12 @@ Se fechou a resposta do pedido HTTP.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.copy(arg0: _[File](../../objects/File)_, arg1: _long_, arg2: _long_) : _Out_
+#### _out.copy(arg0: _[File](../../objects/File)_, arg1: _long_, arg2: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -130,52 +130,52 @@ Se fechou a resposta do pedido HTTP.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.copy(arg0: _Storage_) : _Out_
+#### _out.copy(arg0: _[Storage](../../resources/Storage)_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| arg0 | _[Storage](../../resources/Storage)_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.copy(arg0: _Storage_, arg1: _long_) : _Out_
+#### _out.copy(arg0: _[Storage](../../resources/Storage)_, arg1: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| arg0 | _[Storage](../../resources/Storage)_ |   |
 | arg1 | _long_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.copy(arg0: _Storage_, arg1: _long_, arg2: _long_) : _Out_
+#### _out.copy(arg0: _[Storage](../../resources/Storage)_, arg1: _long_, arg2: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Storage_ |   |
+| arg0 | _[Storage](../../resources/Storage)_ |   |
 | arg1 | _long_ |   |
 | arg2 | _long_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -212,14 +212,14 @@ Realiza o envio do que estiver pendente acumulado em buffer.
 
 ---
 
-#### _out.getMirrors() : _List_
+#### _out.getMirrors() : _java.util.List_
 ##### Descrição
 
 Obtém as réplicas de saída de dados.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Lista de réplicas.
 
@@ -229,14 +229,14 @@ Lista de réplicas.
 
 ---
 
-#### _out.init() : _Out_
+#### _out.init() : _[Out](../../resources/Out)_
 ##### Descrição
 
 Inicia uma nova instância de saída de dados.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 A nova instância do recurso de Output.
 
@@ -270,21 +270,21 @@ A nova instância do recurso de Output.
 
 ---
 
-#### _out.json(arg0: _Object_) : _Out_
+#### _out.json(arg0: _java.lang.Object_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.json(arg0: string) : _Out_
+#### _out.json(arg0: string) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -293,40 +293,40 @@ A nova instância do recurso de Output.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.json(arg0: _List_) : _Out_
+#### _out.json(arg0: _java.util.List_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.json(arg0: _Map_) : _Out_
+#### _out.json(arg0: _java.util.Map_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.json(arg0: _[Values](../../objects/Values)_) : _Out_
+#### _out.json(arg0: _[Values](../../objects/Values)_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -335,7 +335,7 @@ A nova instância do recurso de Output.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -352,7 +352,7 @@ A nova instância do recurso de Output.
 
 ---
 
-#### _out.jsonHTMLEscape(arg0: _boolean_) : _Out_
+#### _out.jsonHTMLEscape(arg0: _boolean_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -361,7 +361,7 @@ A nova instância do recurso de Output.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -370,14 +370,14 @@ A nova instância do recurso de Output.
 
 ---
 
-#### _out.mirrors() : _List_
+#### _out.mirrors() : _java.util.List_
 ##### Descrição
 
 Obtém as réplicas de saída de dados.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Lista de réplicas.
 
@@ -387,14 +387,14 @@ Lista de réplicas.
 
 ---
 
-#### _out.output() : _OutputStream_
+#### _out.output() : _java.io.OutputStream_
 ##### Descrição
 
 Fornece o fluxo de saída de dados original.
 
 ##### Retorno
 
-( _OutputStream_ )
+( _java.io.OutputStream_ )
 
 O fluxo de saída de dados original.
 
@@ -404,7 +404,7 @@ O fluxo de saída de dados original.
 
 ---
 
-#### _out.print(bool: _boolean_) : _Out_
+#### _out.print(bool: _boolean_) : _[Out](../../resources/Out)_
 ##### Descrição
 
 Envia o resultado booleano.
@@ -417,13 +417,13 @@ Envia o resultado booleano.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.print(carater: _char_) : _Out_
+#### _out.print(carater: _char_) : _[Out](../../resources/Out)_
 ##### Descrição
 
 Envia o caráter.
@@ -436,51 +436,51 @@ Envia o caráter.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.print(texto: _double_) : _Out_
+#### _out.print(bool: _double_) : _[Out](../../resources/Out)_
 ##### Descrição
 
-Envia o conteúdo de texto.
+Envia o resultado booleano.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | _double_ | Conteúdo que será enviado. |
+| bool | _double_ | Valor booleano que será enviado. |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.print(texto: _float_) : _Out_
+#### _out.print(bool: _float_) : _[Out](../../resources/Out)_
 ##### Descrição
 
-Envia o conteúdo de texto.
+Envia o resultado booleano.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | _float_ | Conteúdo que será enviado. |
+| bool | _float_ | Valor booleano que será enviado. |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.print(numero: _int_) : _Out_
+#### _out.print(numero: _int_) : _[Out](../../resources/Out)_
 ##### Descrição
 
 Envia o número.
@@ -493,13 +493,13 @@ Envia o número.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.print(obj: _Object_) : _Out_
+#### _out.print(obj: _java.lang.Object_) : _[Out](../../resources/Out)_
 ##### Descrição
 
 Converte o objeto para texto e envia.
@@ -508,17 +508,17 @@ Converte o objeto para texto e envia.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| obj | _Object_ | Objeto que será convertido em texto e enviado. |
+| obj | _java.lang.Object_ | Objeto que será convertido em texto e enviado. |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.print(texto: string) : _Out_
+#### _out.print(texto: string) : _[Out](../../resources/Out)_
 ##### Descrição
 
 Envia o conteúdo de texto.
@@ -531,45 +531,45 @@ Envia o conteúdo de texto.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.print(texto: _long_) : _Out_
+#### _out.print(bool: _long_) : _[Out](../../resources/Out)_
 ##### Descrição
 
-Envia o conteúdo de texto.
+Envia o resultado booleano.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | _long_ | Conteúdo que será enviado. |
+| bool | _long_ | Valor booleano que será enviado. |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.print(texto: _short_) : _Out_
+#### _out.print(bool: _short_) : _[Out](../../resources/Out)_
 ##### Descrição
 
-Envia o conteúdo de texto.
+Envia o resultado booleano.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | _short_ | Conteúdo que será enviado. |
+| bool | _short_ | Valor booleano que será enviado. |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
@@ -579,17 +579,17 @@ Saída de dados atual.
 
 ---
 
-#### _out.printf(arg0: string, arg1: _Object[]_) : _Out_
+#### _out.printf(arg0: string, arg1: _[Ljava.lang.Object;_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object[]_ |   |
+| arg1 | _[Ljava.lang.Object;_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -598,20 +598,20 @@ Saída de dados atual.
 
 ---
 
-#### _out.println() : _Out_
+#### _out.println() : _[Out](../../resources/Out)_
 ##### Descrição
 
 Envia uma quebra de linha.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.println(bool: _boolean_) : _Out_
+#### _out.println(bool: _boolean_) : _[Out](../../resources/Out)_
 ##### Descrição
 
 Envia o resultado booleano com uma quebra de linha.
@@ -624,13 +624,13 @@ Envia o resultado booleano com uma quebra de linha.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.println(carater: _char_) : _Out_
+#### _out.println(carater: _char_) : _[Out](../../resources/Out)_
 ##### Descrição
 
 Envia o caráter com uma quebra de linha.
@@ -643,51 +643,51 @@ Envia o caráter com uma quebra de linha.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.println(texto: _double_) : _Out_
+#### _out.println(bool: _double_) : _[Out](../../resources/Out)_
 ##### Descrição
 
-Envia o conteúdo de texto com uma quebra de linha.
+Envia o resultado booleano com uma quebra de linha.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | _double_ | Conteúdo que será enviado com a quebra de linha. |
+| bool | _double_ | Valor booleano que será enviado com a quebra de linha. |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.println(texto: _float_) : _Out_
+#### _out.println(bool: _float_) : _[Out](../../resources/Out)_
 ##### Descrição
 
-Envia o conteúdo de texto com uma quebra de linha.
+Envia o resultado booleano com uma quebra de linha.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | _float_ | Conteúdo que será enviado com a quebra de linha. |
+| bool | _float_ | Valor booleano que será enviado com a quebra de linha. |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.println(numero: _int_) : _Out_
+#### _out.println(numero: _int_) : _[Out](../../resources/Out)_
 ##### Descrição
 
 Envia o número com uma quebra de linha.
@@ -700,13 +700,13 @@ Envia o número com uma quebra de linha.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.println(obj: _Object_) : _Out_
+#### _out.println(obj: _java.lang.Object_) : _[Out](../../resources/Out)_
 ##### Descrição
 
 Converte o objeto para texto e envia com uma quebra de linha.
@@ -715,17 +715,17 @@ Converte o objeto para texto e envia com uma quebra de linha.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| obj | _Object_ | Objeto que será convertido em texto e enviado com a quebra de linha. |
+| obj | _java.lang.Object_ | Objeto que será convertido em texto e enviado com a quebra de linha. |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.println(texto: string) : _Out_
+#### _out.println(texto: string) : _[Out](../../resources/Out)_
 ##### Descrição
 
 Envia o conteúdo de texto com uma quebra de linha.
@@ -738,45 +738,45 @@ Envia o conteúdo de texto com uma quebra de linha.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.println(texto: _long_) : _Out_
+#### _out.println(bool: _long_) : _[Out](../../resources/Out)_
 ##### Descrição
 
-Envia o conteúdo de texto com uma quebra de linha.
+Envia o resultado booleano com uma quebra de linha.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | _long_ | Conteúdo que será enviado com a quebra de linha. |
+| bool | _long_ | Valor booleano que será enviado com a quebra de linha. |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### _out.println(texto: _short_) : _Out_
+#### _out.println(bool: _short_) : _[Out](../../resources/Out)_
 ##### Descrição
 
-Envia o conteúdo de texto com uma quebra de linha.
+Envia o resultado booleano com uma quebra de linha.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | _short_ | Conteúdo que será enviado com a quebra de linha. |
+| bool | _short_ | Valor booleano que será enviado com a quebra de linha. |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 Saída de dados atual.
 
@@ -786,7 +786,7 @@ Saída de dados atual.
 
 ---
 
-#### _out.setJSONHTMLEscape(arg0: _boolean_) : _Out_
+#### _out.setJSONHTMLEscape(arg0: _boolean_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -795,7 +795,7 @@ Saída de dados atual.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -837,37 +837,37 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.write(arg0: _byte[]_) : _Out_
+#### _out.write(arg0: _[B_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| arg0 | _[B_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.write(arg0: _byte[]_, arg1: _int_, arg2: _int_) : _Out_
+#### _out.write(arg0: _[B_, arg1: _int_, arg2: _int_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| arg0 | _[B_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
 
-#### _out.write(arg0: _int_) : _Out_
+#### _out.write(arg0: _int_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -876,7 +876,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -885,7 +885,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeBoolean(arg0: _boolean_) : _Out_
+#### _out.writeBoolean(arg0: _boolean_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -894,7 +894,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -903,7 +903,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeByte(arg0: _int_) : _Out_
+#### _out.writeByte(arg0: _int_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -912,7 +912,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -921,7 +921,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeChar(arg0: _char_) : _Out_
+#### _out.writeChar(arg0: _char_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -930,7 +930,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -939,7 +939,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeDouble(arg0: _double_) : _Out_
+#### _out.writeDouble(arg0: _double_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -948,7 +948,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -957,7 +957,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeFloat(arg0: _float_) : _Out_
+#### _out.writeFloat(arg0: _float_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -966,7 +966,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -975,7 +975,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeInt(arg0: _int_) : _Out_
+#### _out.writeInt(arg0: _int_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -984,7 +984,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -993,7 +993,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeLong(arg0: _long_) : _Out_
+#### _out.writeLong(arg0: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1002,7 +1002,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---
@@ -1011,7 +1011,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeShort(arg0: _short_) : _Out_
+#### _out.writeShort(arg0: _short_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1020,7 +1020,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _Out_ )
+( _[Out](../../resources/Out)_ )
 
 
 ---

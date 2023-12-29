@@ -236,15 +236,15 @@ Retorna os valores codificados.
 
 ---
 
-#### _jwt.init() : _JWT_
+#### _jwt.init() : _[JWT](../../resources/JWT)_
 ##### Retorno
 
-( _JWT_ )
+( _[JWT](../../resources/JWT)_ )
 
 
 ---
 
-#### _jwt.init(arg0: string, arg1: string) : _JWT_
+#### _jwt.init(arg0: string, arg1: string) : _[JWT](../../resources/JWT)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -254,7 +254,7 @@ Retorna os valores codificados.
 
 ##### Retorno
 
-( _JWT_ )
+( _[JWT](../../resources/JWT)_ )
 
 
 ---

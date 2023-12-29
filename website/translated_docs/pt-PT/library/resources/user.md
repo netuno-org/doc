@@ -12,7 +12,7 @@ Gestão dos utilizadores da aplicação e obtenção dos dados do utilizador aut
 
 ---
 
-#### _user.all() : _List_
+#### _user.all() : _java.util.List_
 ##### Descrição
 
 Obtém a lista de dados de todos os utilizadores.
@@ -26,7 +26,7 @@ _out.json(_user.all())
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Lista de todos os dados de todos os utilizadores.
 
@@ -36,7 +36,7 @@ Lista de todos os dados de todos os utilizadores.
 
 ---
 
-#### _user.allByCode(codigo: string) : _List_
+#### _user.allByCode(codigo: string) : _java.util.List_
 ##### Descrição
 
 Obtém todos os utilizadores a partir do código alternativo.
@@ -59,7 +59,7 @@ for (const utilizador of utilizadores) {
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Lista dos utilizadores encontrados para o código alternativo.
 
@@ -669,7 +669,7 @@ Foi apagado com sucesso.
 
 ---
 
-#### _user.search(termo: string) : _List_
+#### _user.search(termo: string) : _java.util.List_
 ##### Descrição
 
 Pesquisa os utilizadores que tem alguma ocorrência nos dados com o texto de pesquisa passado.
@@ -692,7 +692,7 @@ for (const utilizador of utilizadores) {
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Lista de dados dos utilizadores encontrados.
 
@@ -856,10 +856,10 @@ UUID (identificador único universal) do utilizador logado.
 
 ---
 
-#### _user.update(dadosUtilizador: _int_, alterarPassword: _[Values](../../objects/Values)_) : _boolean_
+#### _user.update(id: _int_, dadosUtilizador: _[Values](../../objects/Values)_) : _boolean_
 ##### Descrição
 
-Atualiza os dados do utilizador referente ao ID definido na estrutura de dados passada.
+Atualiza os dados do utilizador referente ao ID passado.
 
 ##### Como Usar
 
@@ -868,6 +868,7 @@ Atualiza os dados do utilizador referente ao ID definido na estrutura de dados p
 const utilizador = _user.firstByMail("utilizador@exemplo.com")
 utilizador.set("pass", "NovaPasswordSecreta123")
 _user.update(
+    utilizador.getInt("id"),
     utilizador,
     true
 )
@@ -877,8 +878,8 @@ _user.update(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dadosUtilizador | _int_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
-| alterarPassword | _[Values](../../objects/Values)_ | Se deve realizar a alteração da palavra-passe ou senha. |
+| id | _int_ | O ID (identificador numérico) do utilizador. |
+| dadosUtilizador | _[Values](../../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
 
 ##### Retorno
 

@@ -12,10 +12,10 @@ Objeto que contém os detalhes da resposta obtida através da conexão remota, q
 
 ---
 
-#### bytes() : _byte[]_
+#### bytes() : _[B_
 ##### Retorno
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -24,10 +24,10 @@ Objeto que contém os detalhes da resposta obtida através da conexão remota, q
 
 ---
 
-#### content() : _Object_
+#### content() : _java.lang.Object_
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -48,29 +48,29 @@ Objeto que contém os detalhes da resposta obtida através da conexão remota, q
 
 ---
 
-#### dataSent() : _Values_
+#### dataSent() : _[Values](../../objects/Values)_
 ##### Descrição
 
 Obtém os dados que foram enviados na conexão remota.
 
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 Todos os dados que foram enviados.
 
 ---
 
-#### dataSent(arg0: _Values_) : _Response_
+#### dataSent(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _Response_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
 
 ---
@@ -79,10 +79,10 @@ Todos os dados que foram enviados.
 
 ---
 
-#### error() : _Throwable_
+#### error() : _java.lang.Throwable_
 ##### Retorno
 
-( _Throwable_ )
+( _java.lang.Throwable_ )
 
 
 ---
@@ -91,10 +91,10 @@ Todos os dados que foram enviados.
 
 ---
 
-#### file() : _File_
+#### file() : _[File](../../objects/File)_
 ##### Retorno
 
-( _File_ )
+( _[File](../../objects/File)_ )
 
 
 ---
@@ -103,29 +103,29 @@ Todos os dados que foram enviados.
 
 ---
 
-#### formDataSent() : _Values_
+#### formDataSent() : _[Values](../../objects/Values)_
 ##### Descrição
 
 Obtém os dados que foram enviados na conexão remota.
 
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 Todos os dados que foram enviados.
 
 ---
 
-#### formDataSent(arg0: _Values_) : _Response_
+#### formDataSent(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _Response_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
 
 ---
@@ -134,10 +134,10 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getBytes() : _byte[]_
+#### getBytes() : _[B_
 ##### Retorno
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -146,10 +146,10 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getContent() : _Object_
+#### getContent() : _java.lang.Object_
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -170,10 +170,10 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getDataSent() : _Values_
+#### getDataSent() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -182,10 +182,10 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getError() : _Throwable_
+#### getError() : _java.lang.Throwable_
 ##### Retorno
 
-( _Throwable_ )
+( _java.lang.Throwable_ )
 
 
 ---
@@ -194,10 +194,10 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getFile() : _File_
+#### getFile() : _[File](../../objects/File)_
 ##### Retorno
 
-( _File_ )
+( _[File](../../objects/File)_ )
 
 
 ---
@@ -206,10 +206,10 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getFormDataSent() : _Values_
+#### getFormDataSent() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -218,10 +218,10 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getHeader() : _Values_
+#### getHeader() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -230,10 +230,10 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getJSON() : _Values_
+#### getJSON() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -259,10 +259,10 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### getQSSent() : _Values_
+#### getQSSent() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -271,10 +271,10 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### getQueryStringSent() : _Values_
+#### getQueryStringSent() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -307,10 +307,10 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### header() : _Values_
+#### header() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -379,10 +379,10 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### json() : _Values_
+#### json() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -404,7 +404,7 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### method(metodo: string) : _RemoteResponse_
+#### method(metodo: string) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Define o código do método HTTP que foi utilizado na conexão remota.
@@ -417,7 +417,7 @@ Define o código do método HTTP que foi utilizado na conexão remota.
 
 ##### Retorno
 
-( _RemoteResponse_ )
+( _[RemoteResponse](../../objects/RemoteResponse)_ )
 
 Resposta da submissão da conexão remota.
 
@@ -439,29 +439,29 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### qsSent() : _Values_
+#### qsSent() : _[Values](../../objects/Values)_
 ##### Descrição
 
 Obtém os parâmetros de query string que foi enviada na conexão remota.
 
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### qsSent(arg0: _Values_) : _Response_
+#### qsSent(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _Response_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
 
 ---
@@ -470,29 +470,29 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### queryStringSent() : _Values_
+#### queryStringSent() : _[Values](../../objects/Values)_
 ##### Descrição
 
 Obtém os parâmetros de query string que foi enviada na conexão remota.
 
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### queryStringSent(arg0: _Values_) : _Response_
+#### queryStringSent(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _Response_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
 
 ---
@@ -501,16 +501,16 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setBytes(arg0: _byte[]_) : _RemoteResponse_
+#### setBytes(arg0: _[B_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| arg0 | _[B_ |   |
 
 ##### Retorno
 
-( _RemoteResponse_ )
+( _[RemoteResponse](../../objects/RemoteResponse)_ )
 
 
 ---
@@ -519,16 +519,16 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setContent(arg0: _Object_) : _RemoteResponse_
+#### setContent(arg0: _java.lang.Object_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _RemoteResponse_ )
+( _[RemoteResponse](../../objects/RemoteResponse)_ )
 
 
 ---
@@ -537,16 +537,16 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setDataSent(arg0: _Values_) : _Response_
+#### setDataSent(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _Response_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
 
 ---
@@ -555,16 +555,16 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setError(arg0: _Throwable_) : _RemoteResponse_
+#### setError(arg0: _java.lang.Throwable_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Throwable_ |   |
+| arg0 | _java.lang.Throwable_ |   |
 
 ##### Retorno
 
-( _RemoteResponse_ )
+( _[RemoteResponse](../../objects/RemoteResponse)_ )
 
 
 ---
@@ -573,16 +573,16 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setFormDataSent(arg0: _Values_) : _Response_
+#### setFormDataSent(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _Response_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
 
 ---
@@ -591,16 +591,16 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setHeader(arg0: _Values_) : _RemoteResponse_
+#### setHeader(arg0: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _RemoteResponse_ )
+( _[RemoteResponse](../../objects/RemoteResponse)_ )
 
 
 ---
@@ -609,7 +609,7 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setMethod(metodo: string) : _RemoteResponse_
+#### setMethod(metodo: string) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Descrição
 
 Define o código do método HTTP que foi utilizado na conexão remota.
@@ -622,7 +622,7 @@ Define o código do método HTTP que foi utilizado na conexão remota.
 
 ##### Retorno
 
-( _RemoteResponse_ )
+( _[RemoteResponse](../../objects/RemoteResponse)_ )
 
 Resposta da submissão da conexão remota.
 
@@ -632,16 +632,16 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### setQSSent(arg0: _Values_) : _Response_
+#### setQSSent(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _Response_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
 
 ---
@@ -650,16 +650,16 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### setQueryStringSent(arg0: _Values_) : _Response_
+#### setQueryStringSent(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _Response_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
 
 ---
@@ -668,7 +668,7 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### setStatusCode(arg0: _int_) : _RemoteResponse_
+#### setStatusCode(arg0: _int_) : _[RemoteResponse](../../objects/RemoteResponse)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -677,7 +677,7 @@ Resposta da submissão da conexão remota.
 
 ##### Retorno
 
-( _RemoteResponse_ )
+( _[RemoteResponse](../../objects/RemoteResponse)_ )
 
 
 ---
@@ -686,7 +686,7 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### setURL(arg0: string) : _Response_
+#### setURL(arg0: string) : _org.netuno.psamata.net.Remote$Response_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -695,7 +695,7 @@ Resposta da submissão da conexão remota.
 
 ##### Retorno
 
-( _Response_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
 
 ---

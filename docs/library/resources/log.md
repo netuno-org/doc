@@ -34,7 +34,7 @@ Print a message of type **DEBUG** in the log file and in the terminal of Netuno.
 
 ---
 
-#### _log.debug(message: string, throwable: _Object_) : _void_
+#### _log.debug(message: string, throwable: _java.lang.Object_) : _void_
 ##### Description
 
 Print a message of type **DEBUG** in the log file and in the terminal of Netuno.
@@ -44,7 +44,7 @@ Print a message of type **DEBUG** in the log file and in the terminal of Netuno.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Object_ | Alternative object to include in the log message. |
+| throwable | _java.lang.Object_ | Alternative object to include in the log message. |
 
 ##### Return
 
@@ -75,7 +75,7 @@ Print a message of type **ERROR** in the log file and in the terminal of Netuno.
 
 ---
 
-#### _log.error(message: string, throwable: _Object_) : _void_
+#### _log.error(message: string, throwable: _java.lang.Object_) : _void_
 ##### Description
 
 Print a message of type **ERROR** in the log file and in the terminal of Netuno.
@@ -85,7 +85,7 @@ Print a message of type **ERROR** in the log file and in the terminal of Netuno.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Object_ | Alternative object to include in the log message. |
+| throwable | _java.lang.Object_ | Alternative object to include in the log message. |
 
 ##### Return
 
@@ -116,7 +116,7 @@ Print a message of type **FATAL** in the log file and in the terminal of Netuno.
 
 ---
 
-#### _log.fatal(message: string, throwable: _Object_) : _void_
+#### _log.fatal(message: string, throwable: _java.lang.Object_) : _void_
 ##### Description
 
 Print a message of type **FATAL** in the log file and in the terminal of Netuno.
@@ -126,7 +126,7 @@ Print a message of type **FATAL** in the log file and in the terminal of Netuno.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Object_ | Alternative object to include in the log message. |
+| throwable | _java.lang.Object_ | Alternative object to include in the log message. |
 
 ##### Return
 
@@ -157,7 +157,7 @@ Print a message of type **INFORMATION** in the log file and in the terminal of N
 
 ---
 
-#### _log.info(message: string, throwable: _Object_) : _void_
+#### _log.info(message: string, throwable: _java.lang.Object_) : _void_
 ##### Description
 
 Print a message of type **INFORMATION** in the log file and in the terminal of Netuno.
@@ -167,7 +167,7 @@ Print a message of type **INFORMATION** in the log file and in the terminal of N
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Object_ | Alternative object to include in the log message. |
+| throwable | _java.lang.Object_ | Alternative object to include in the log message. |
 
 ##### Return
 
@@ -180,7 +180,7 @@ Print a message of type **INFORMATION** in the log file and in the terminal of N
 
 ---
 
-#### _log.print(content: _char[]_) : _void_
+#### _log.print(content: _[C_) : _void_
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -189,7 +189,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _char[]_ | Content that will be displayed. |
+| content | _[C_ | Content that will be displayed. |
 
 ##### Return
 
@@ -288,7 +288,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### _log.print(content: _Object_) : _void_
+#### _log.print(content: _java.lang.Object_) : _void_
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -297,7 +297,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _Object_ | Content that will be displayed. |
+| content | _java.lang.Object_ | Content that will be displayed. |
 
 ##### Return
 
@@ -346,7 +346,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### _log.println(content: _char[]_) : _void_
+#### _log.println(content: _[C_) : _void_
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -355,7 +355,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _char[]_ | Content that will be displayed. |
+| content | _[C_ | Content that will be displayed. |
 
 ##### Return
 
@@ -454,7 +454,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 ---
 
-#### _log.println(content: _Object_) : _void_
+#### _log.println(content: _java.lang.Object_) : _void_
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -463,7 +463,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _Object_ | Content that will be displayed. |
+| content | _java.lang.Object_ | Content that will be displayed. |
 
 ##### Return
 
@@ -530,7 +530,7 @@ Print a message of type **TRACE** in the log file and in the terminal of Netuno.
 
 ---
 
-#### _log.trace(message: string, throwable: _Object_) : _void_
+#### _log.trace(message: string, throwable: _java.lang.Object_) : _void_
 ##### Description
 
 Print a message of type **TRACE** in the log file and in the terminal of Netuno.
@@ -540,7 +540,7 @@ Print a message of type **TRACE** in the log file and in the terminal of Netuno.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Object_ | Alternative object to include in the log message. |
+| throwable | _java.lang.Object_ | Alternative object to include in the log message. |
 
 ##### Return
 
@@ -571,7 +571,7 @@ Print a message of type **WARNING** in the log file and in the terminal of Netun
 
 ---
 
-#### _log.warn(message: string, throwable: _Object_) : _void_
+#### _log.warn(message: string, throwable: _java.lang.Object_) : _void_
 ##### Description
 
 Print a message of type **WARNING** in the log file and in the terminal of Netuno.
@@ -581,7 +581,7 @@ Print a message of type **WARNING** in the log file and in the terminal of Netun
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | message | string | Message that will be presented in log. |
-| throwable | _Object_ | Alternative object to include in the log message. |
+| throwable | _java.lang.Object_ | Alternative object to include in the log message. |
 
 ##### Return
 

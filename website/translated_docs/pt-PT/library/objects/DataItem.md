@@ -66,10 +66,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getFirebaseValues() : _Values_
+#### getFirebaseValues() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -90,10 +90,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getOldRecord() : _Values_
+#### getOldRecord() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -102,10 +102,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getRecord() : _Values_
+#### getRecord() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -114,10 +114,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getRelationItem() : _Values_
+#### getRelationItem() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -126,10 +126,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getRelationTable() : _Values_
+#### getRelationTable() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -138,10 +138,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getStatus() : _Status_
+#### getStatus() : _org.netuno.tritao.db.DataItem$Status_
 ##### Retorno
 
-( _Status_ )
+( _org.netuno.tritao.db.DataItem$Status_ )
 
 
 ---
@@ -150,10 +150,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getStatusType() : _StatusType_
+#### getStatusType() : _org.netuno.tritao.db.DataItem$StatusType_
 ##### Retorno
 
-( _StatusType_ )
+( _org.netuno.tritao.db.DataItem$StatusType_ )
 
 
 ---
@@ -186,10 +186,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getValues() : _Values_
+#### getValues() : _[Values](../../objects/Values)_
 ##### Retorno
 
-( _Values_ )
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -462,7 +462,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setCounter(arg0: _int_) : _DataItem_
+#### setCounter(arg0: _int_) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -471,7 +471,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -480,7 +480,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setErrorMessage(arg0: string) : _DataItem_
+#### setErrorMessage(arg0: string) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -489,7 +489,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -498,7 +498,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setErrorTitle(arg0: string) : _DataItem_
+#### setErrorTitle(arg0: string) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -507,7 +507,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -516,7 +516,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setField(arg0: string) : _DataItem_
+#### setField(arg0: string) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -525,7 +525,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -534,7 +534,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setFirebase(arg0: _boolean_) : _DataItem_
+#### setFirebase(arg0: _boolean_) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -543,7 +543,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -552,16 +552,16 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setFirebaseValues(arg0: _Values_) : _DataItem_
+#### setFirebaseValues(arg0: _[Values](../../objects/Values)_) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -570,7 +570,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setId(arg0: string) : _DataItem_
+#### setId(arg0: string) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -579,7 +579,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -588,7 +588,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setProgrammatically(arg0: _boolean_) : _DataItem_
+#### setProgrammatically(arg0: _boolean_) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -597,7 +597,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -606,12 +606,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setRecord(arg0: _Values_) : _void_
+#### setRecord(arg0: _[Values](../../objects/Values)_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -624,16 +624,16 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setRelationItem(arg0: _Values_) : _DataItem_
+#### setRelationItem(arg0: _[Values](../../objects/Values)_) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -642,16 +642,16 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setRelationTable(arg0: _Values_) : _DataItem_
+#### setRelationTable(arg0: _[Values](../../objects/Values)_) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -660,16 +660,16 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setStatus(arg0: _Status_) : _DataItem_
+#### setStatus(arg0: _org.netuno.tritao.db.DataItem$Status_) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Status_ |   |
+| arg0 | _org.netuno.tritao.db.DataItem$Status_ |   |
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -678,10 +678,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setStatusWithError() : _DataItem_
+#### setStatusWithError() : _[DataItem](../../objects/DataItem)_
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -690,7 +690,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setTable(arg0: string) : _DataItem_
+#### setTable(arg0: string) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -699,7 +699,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -708,7 +708,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setUid(arg0: string) : _DataItem_
+#### setUid(arg0: string) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -717,7 +717,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---
@@ -726,16 +726,16 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setValues(arg0: _Values_) : _DataItem_
+#### setValues(arg0: _[Values](../../objects/Values)_) : _[DataItem](../../objects/DataItem)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Values_ |   |
+| arg0 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( _DataItem_ )
+( _[DataItem](../../objects/DataItem)_ )
 
 
 ---

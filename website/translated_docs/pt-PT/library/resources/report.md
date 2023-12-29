@@ -12,10 +12,10 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.all() : _List_
+#### _report.all() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -174,7 +174,7 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getAllComponents(arg0: _int_) : _List_
+#### _report.getAllComponents(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -183,12 +183,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _report.getAllComponents(arg0: string) : _List_
+#### _report.getAllComponents(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -197,7 +197,7 @@ Gerador de Reports da aplicação programaticamente.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -300,7 +300,7 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.notNulls(arg0: _int_) : _List_
+#### _report.notNulls(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -309,12 +309,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _report.notNulls(arg0: string) : _List_
+#### _report.notNulls(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -323,7 +323,7 @@ Gerador de Reports da aplicação programaticamente.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---

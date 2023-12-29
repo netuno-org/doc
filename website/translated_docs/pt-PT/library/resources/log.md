@@ -34,7 +34,7 @@ Imprime uma mensagem do tipo **DEPURAÇÃO** (_DEBUG_) no ficheiro de log e no t
 
 ---
 
-#### _log.debug(mensagem: string, auxiliar: _Object_) : _void_
+#### _log.debug(mensagem: string, auxiliar: _java.lang.Object_) : _void_
 ##### Descrição
 
 Imprime uma mensagem do tipo **DEPURAÇÃO** (_DEBUG_) no ficheiro de log e no terminal do Netuno.
@@ -44,7 +44,7 @@ Imprime uma mensagem do tipo **DEPURAÇÃO** (_DEBUG_) no ficheiro de log e no t
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _Object_ | Objeto alternativo para incluir na mensagem de log. |
+| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -75,7 +75,7 @@ Imprime uma mensagem do tipo **ERRO** (_ERROR_) no ficheiro de log e no terminal
 
 ---
 
-#### _log.error(mensagem: string, auxiliar: _Object_) : _void_
+#### _log.error(mensagem: string, auxiliar: _java.lang.Object_) : _void_
 ##### Descrição
 
 Imprime uma mensagem do tipo **ERRO** (_ERROR_) no ficheiro de log e no terminal do Netuno.
@@ -85,7 +85,7 @@ Imprime uma mensagem do tipo **ERRO** (_ERROR_) no ficheiro de log e no terminal
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _Object_ | Objeto alternativo para incluir na mensagem de log. |
+| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -116,7 +116,7 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 
 ---
 
-#### _log.fatal(mensagem: string, auxiliar: _Object_) : _void_
+#### _log.fatal(mensagem: string, auxiliar: _java.lang.Object_) : _void_
 ##### Descrição
 
 Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netuno.
@@ -126,7 +126,7 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _Object_ | Objeto alternativo para incluir na mensagem de log. |
+| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -157,7 +157,7 @@ Imprime uma mensagem do tipo **INFORMAÇÃO** (_INFORMATION_) no ficheiro de log
 
 ---
 
-#### _log.info(mensagem: string, auxiliar: _Object_) : _void_
+#### _log.info(mensagem: string, auxiliar: _java.lang.Object_) : _void_
 ##### Descrição
 
 Imprime uma mensagem do tipo **INFORMAÇÃO** (_INFORMATION_) no ficheiro de log e no terminal do Netuno.
@@ -167,7 +167,7 @@ Imprime uma mensagem do tipo **INFORMAÇÃO** (_INFORMATION_) no ficheiro de log
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _Object_ | Objeto alternativo para incluir na mensagem de log. |
+| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -180,7 +180,7 @@ Imprime uma mensagem do tipo **INFORMAÇÃO** (_INFORMATION_) no ficheiro de log
 
 ---
 
-#### _log.print(conteudo: _char[]_) : _void_
+#### _log.print(conteudo: _[C_) : _void_
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -189,7 +189,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _char[]_ | Conteúdo que será apresentado. |
+| conteudo | _[C_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -288,7 +288,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.print(conteudo: _Object_) : _void_
+#### _log.print(conteudo: _java.lang.Object_) : _void_
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -297,7 +297,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _Object_ | Conteúdo que será apresentado. |
+| conteudo | _java.lang.Object_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -346,7 +346,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.println(conteudo: _char[]_) : _void_
+#### _log.println(conteudo: _[C_) : _void_
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -355,7 +355,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _char[]_ | Conteúdo que será apresentado. |
+| conteudo | _[C_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -454,7 +454,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 ---
 
-#### _log.println(conteudo: _Object_) : _void_
+#### _log.println(conteudo: _java.lang.Object_) : _void_
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -463,7 +463,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _Object_ | Conteúdo que será apresentado. |
+| conteudo | _java.lang.Object_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -530,7 +530,7 @@ Imprime uma mensagem do tipo **VESTÍGIO** (_TRACE_) no ficheiro de log e no ter
 
 ---
 
-#### _log.trace(mensagem: string, auxiliar: _Object_) : _void_
+#### _log.trace(mensagem: string, auxiliar: _java.lang.Object_) : _void_
 ##### Descrição
 
 Imprime uma mensagem do tipo **VESTÍGIO** (_TRACE_) no ficheiro de log e no terminal do Netuno.
@@ -540,7 +540,7 @@ Imprime uma mensagem do tipo **VESTÍGIO** (_TRACE_) no ficheiro de log e no ter
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _Object_ | Objeto alternativo para incluir na mensagem de log. |
+| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -571,7 +571,7 @@ Imprime uma mensagem do tipo **AVISO** (_WARNING_) no ficheiro de log e no termi
 
 ---
 
-#### _log.warn(mensagem: string, auxiliar: _Object_) : _void_
+#### _log.warn(mensagem: string, auxiliar: _java.lang.Object_) : _void_
 ##### Descrição
 
 Imprime uma mensagem do tipo **AVISO** (_WARNING_) no ficheiro de log e no terminal do Netuno.
@@ -581,7 +581,7 @@ Imprime uma mensagem do tipo **AVISO** (_WARNING_) no ficheiro de log e no termi
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _Object_ | Objeto alternativo para incluir na mensagem de log. |
+| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 

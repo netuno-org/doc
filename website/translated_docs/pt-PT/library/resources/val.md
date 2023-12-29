@@ -33,7 +33,7 @@ for (const linha of listaDeDados) {
 
 ---
 
-#### _val.cast(obj: _Object_) : _[Values](../../objects/Values)_
+#### _val.cast(obj: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Transforma um objeto em valores se possível.
@@ -42,7 +42,7 @@ Transforma um objeto em valores se possível.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| obj | _Object_ | Objeto para ser convertido. |
+| obj | _java.lang.Object_ | Objeto para ser convertido. |
 
 ##### Retorno
 
@@ -118,7 +118,7 @@ O novo objeto de valores genérico.
 
 ---
 
-#### _val.init(obj: _Iterable_) : _[Values](../../objects/Values)_
+#### _val.init(obj: _java.lang.Iterable_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
@@ -127,7 +127,7 @@ Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| obj | _Iterable_ | Objeto para carregar o novo objeto de valores criado. |
+| obj | _java.lang.Iterable_ | Objeto para carregar o novo objeto de valores criado. |
 
 ##### Retorno
 
@@ -137,7 +137,7 @@ O novo objeto de valores iniciado com os dados do objeto passado.
 
 ---
 
-#### _val.init(obj: _Object_) : _[Values](../../objects/Values)_
+#### _val.init(obj: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
@@ -146,7 +146,7 @@ Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| obj | _Object_ | Objeto para carregar o novo objeto de valores criado. |
+| obj | _java.lang.Object_ | Objeto para carregar o novo objeto de valores criado. |
 
 ##### Retorno
 
@@ -156,7 +156,7 @@ O novo objeto de valores iniciado com os dados do objeto passado.
 
 ---
 
-#### _val.init(obj: _Map_) : _[Values](../../objects/Values)_
+#### _val.init(obj: _java.util.Map_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
@@ -165,7 +165,7 @@ Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| obj | _Map_ | Objeto para carregar o novo objeto de valores criado. |
+| obj | _java.util.Map_ | Objeto para carregar o novo objeto de valores criado. |
 
 ##### Retorno
 
@@ -179,7 +179,7 @@ O novo objeto de valores iniciado com os dados do objeto passado.
 
 ---
 
-#### _val.is(obj: _Object_) : _boolean_
+#### _val.is(obj: _java.lang.Object_) : _boolean_
 ##### Descrição
 
 Verifica se o objeto é do tipo de valores.
@@ -188,7 +188,7 @@ Verifica se o objeto é do tipo de valores.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| obj | _Object_ | Objeto para ser validado se é do tipo de valores. |
+| obj | _java.lang.Object_ | Objeto para ser validado se é do tipo de valores. |
 
 ##### Retorno
 
@@ -215,7 +215,7 @@ O novo objeto de valores iniciado como lista.
 
 ---
 
-#### _val.list(valores: _Object_) : _List_
+#### _val.list(valores: _java.lang.Object_) : _java.util.List_
 ##### Descrição
 
 Transforma um objeto de valores para uma lista normal.
@@ -224,17 +224,17 @@ Transforma um objeto de valores para uma lista normal.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| valores | _Object_ | Objeto de valores no modo lista. |
+| valores | _java.lang.Object_ | Objeto de valores no modo lista. |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Uma nova lista normal com os itens do objeto de valores recebido.
 
 ---
 
-#### _val.list(valores: _[Values](../../objects/Values)_) : _List_
+#### _val.list(valores: _[Values](../../objects/Values)_) : _java.util.List_
 ##### Descrição
 
 Transforma um objeto de valores para uma lista normal.
@@ -247,7 +247,7 @@ Transforma um objeto de valores para uma lista normal.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Uma nova lista normal com os itens do objeto de valores recebido.
 
@@ -270,7 +270,7 @@ O novo objeto de valores iniciado como mapa.
 
 ---
 
-#### _val.map(valores: _Object_) : _Map_
+#### _val.map(valores: _java.lang.Object_) : _java.util.Map_
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -279,17 +279,17 @@ Transforma um objeto de valores para um mapa normal.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| valores | _Object_ | Objeto de valores no modo mapa. |
+| valores | _java.lang.Object_ | Objeto de valores no modo mapa. |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 
 ---
 
-#### _val.map(valores: _[Values](../../objects/Values)_) : _Map_
+#### _val.map(valores: _[Values](../../objects/Values)_) : _java.util.Map_
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -302,7 +302,7 @@ Transforma um objeto de valores para um mapa normal.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 
@@ -338,7 +338,7 @@ Dados que são mantidos em memória e que estão disponíveis para todas as soli
 
 ---
 
-#### _val.toJSON(valores: _List_) : string
+#### _val.toJSON(valores: _java.util.List_) : string
 ##### Descrição
 
 Converte o values para JSON.
@@ -347,7 +347,7 @@ Converte o values para JSON.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| valores | _List_ | Objeto de valores para ser transformado no formato JSON. |
+| valores | _java.util.List_ | Objeto de valores para ser transformado no formato JSON. |
 
 ##### Retorno
 
@@ -357,7 +357,7 @@ String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### _val.toJSON(valores: _List_, indentacao: _boolean_) : string
+#### _val.toJSON(valores: _java.util.List_, emHTML: _boolean_) : string
 ##### Descrição
 
 Converte o values para JSON.
@@ -366,8 +366,8 @@ Converte o values para JSON.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| valores | _List_ | Objeto de valores para ser transformado no formato JSON. |
-| indentacao | _boolean_ | Quantidade de espaços que deve ser utilizado na indentação do JSON. |
+| valores | _java.util.List_ | Objeto de valores para ser transformado no formato JSON. |
+| emHTML | _boolean_ | Ativa a formatação automática em HTML dos caracteres especiais que estão nos valores de texto, útil para a transformação de acentos. |
 
 ##### Retorno
 
@@ -377,7 +377,7 @@ String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### _val.toJSON(valores: _List_, emHTML: _boolean_, indentacao: _int_) : string
+#### _val.toJSON(valores: _java.util.List_, emHTML: _boolean_, indentacao: _int_) : string
 ##### Descrição
 
 Converte o values para JSON.
@@ -402,7 +402,7 @@ _out.println(`${mapaString}<br/>`)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| valores | _List_ | Objeto de valores para ser transformado no formato JSON. |
+| valores | _java.util.List_ | Objeto de valores para ser transformado no formato JSON. |
 | emHTML | _boolean_ | Ativa a formatação automática em HTML dos caracteres especiais que estão nos valores de texto, útil para a transformação de acentos. |
 | indentacao | _int_ | Quantidade de espaços que deve ser utilizado na indentação do JSON. |
 
@@ -414,7 +414,7 @@ String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### _val.toJSON(valores: _List_, indentacao: _int_) : string
+#### _val.toJSON(valores: _java.util.List_, indentacao: _int_) : string
 ##### Descrição
 
 Converte o values para JSON.
@@ -423,7 +423,7 @@ Converte o values para JSON.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| valores | _List_ | Objeto de valores para ser transformado no formato JSON. |
+| valores | _java.util.List_ | Objeto de valores para ser transformado no formato JSON. |
 | indentacao | _int_ | Quantidade de espaços que deve ser utilizado na indentação do JSON. |
 
 ##### Retorno
@@ -534,7 +534,7 @@ String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### _val.toList(valores: _Object_) : _List_
+#### _val.toList(valores: _java.lang.Object_) : _java.util.List_
 ##### Descrição
 
 Transforma um objeto de valores para uma lista normal.
@@ -543,17 +543,17 @@ Transforma um objeto de valores para uma lista normal.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| valores | _Object_ | Objeto de valores no modo lista. |
+| valores | _java.lang.Object_ | Objeto de valores no modo lista. |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Uma nova lista normal com os itens do objeto de valores recebido.
 
 ---
 
-#### _val.toList(valores: _[Values](../../objects/Values)_) : _List_
+#### _val.toList(valores: _[Values](../../objects/Values)_) : _java.util.List_
 ##### Descrição
 
 Transforma um objeto de valores para uma lista normal.
@@ -566,7 +566,7 @@ Transforma um objeto de valores para uma lista normal.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 Uma nova lista normal com os itens do objeto de valores recebido.
 
@@ -576,7 +576,7 @@ Uma nova lista normal com os itens do objeto de valores recebido.
 
 ---
 
-#### _val.toMap(valores: _Object_) : _Map_
+#### _val.toMap(valores: _java.lang.Object_) : _java.util.Map_
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -585,17 +585,17 @@ Transforma um objeto de valores para um mapa normal.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| valores | _Object_ | Objeto de valores no modo mapa. |
+| valores | _java.lang.Object_ | Objeto de valores no modo mapa. |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 
 ---
 
-#### _val.toMap(valores: _[Values](../../objects/Values)_) : _Map_
+#### _val.toMap(valores: _[Values](../../objects/Values)_) : _java.util.Map_
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -608,7 +608,7 @@ Transforma um objeto de valores para um mapa normal.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 

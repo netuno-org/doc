@@ -251,7 +251,7 @@ Se foi possível continuar o serviço agendado.
 
 ---
 
-#### _cron.schedule(chave: string, config: string, url: string) : _Cron_
+#### _cron.schedule(chave: string, config: string, url: string) : _[Cron](../../resources/Cron)_
 ##### Descrição
 
 Cria um agendamento de execução de serviço.
@@ -276,13 +276,13 @@ _cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos"
 
 ##### Retorno
 
-( _Cron_ )
+( _[Cron](../../resources/Cron)_ )
 
 A instância atual do Cron.
 
 ---
 
-#### _cron.schedule(chave: string, config: string, url: string, params: _[Values](../../objects/Values)_) : _Cron_
+#### _cron.schedule(chave: string, config: string, url: string, params: _[Values](../../objects/Values)_) : _[Cron](../../resources/Cron)_
 ##### Descrição
 
 Cria um agendamento de execução de serviço.
@@ -308,7 +308,7 @@ _cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos"
 
 ##### Retorno
 
-( _Cron_ )
+( _[Cron](../../resources/Cron)_ )
 
 A instância atual do Cron.
 

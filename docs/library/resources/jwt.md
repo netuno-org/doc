@@ -236,15 +236,15 @@ Returns the values encoded.
 
 ---
 
-#### _jwt.init() : _JWT_
+#### _jwt.init() : _[JWT](../../resources/JWT)_
 ##### Return
 
-( _JWT_ )
+( _[JWT](../../resources/JWT)_ )
 
 
 ---
 
-#### _jwt.init(arg0: string, arg1: string) : _JWT_
+#### _jwt.init(arg0: string, arg1: string) : _[JWT](../../resources/JWT)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -254,7 +254,7 @@ Returns the values encoded.
 
 ##### Return
 
-( _JWT_ )
+( _[JWT](../../resources/JWT)_ )
 
 
 ---

@@ -22,13 +22,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.add(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _config.add(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -37,12 +37,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.add(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _config.add(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -55,13 +55,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.addAll(arg0: _int_, arg1: _Collection_) : _boolean_
+#### _config.addAll(arg0: _int_, arg1: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Collection_ |   |
+| arg1 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -70,12 +70,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.addAll(arg0: _Collection_) : _boolean_
+#### _config.addAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -88,12 +88,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.as(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _config.as(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -102,13 +102,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.as(arg0: _Object_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _config.as(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -231,7 +231,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asCalendar(arg0: string) : _Calendar_
+#### _config.asCalendar(arg0: string) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -240,22 +240,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
 
-#### _config.asCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### _config.asCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Calendar_ |   |
+| arg1 | _java.util.Calendar_ |   |
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
@@ -264,7 +264,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asDate(arg0: string) : _Date_
+#### _config.asDate(arg0: string) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -273,22 +273,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
 
-#### _config.asDate(arg0: string, arg1: _Date_) : _Date_
+#### _config.asDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.util.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -475,7 +475,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asInstant(arg0: string) : _Instant_
+#### _config.asInstant(arg0: string) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -484,22 +484,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _config.asInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### _config.asInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Instant_ |   |
+| arg1 | _java.time.Instant_ |   |
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -556,7 +556,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asList(arg0: _int_) : _List_
+#### _config.asList(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -565,58 +565,58 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.asList(arg0: _int_, arg1: _Class_) : _List_
+#### _config.asList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.asList(arg0: _int_, arg1: _Object_) : _List_
+#### _config.asList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.asList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+#### _config.asList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.asList(arg0: string) : _List_
+#### _config.asList(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -625,53 +625,53 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.asList(arg0: string, arg1: _Class_) : _List_
+#### _config.asList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.asList(arg0: string, arg1: _Object_) : _List_
+#### _config.asList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.asList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+#### _config.asList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -680,7 +680,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLocalDate(arg0: string) : _LocalDate_
+#### _config.asLocalDate(arg0: string) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -689,22 +689,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _config.asLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### _config.asLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDate_ |   |
+| arg1 | _java.time.LocalDate_ |   |
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -713,7 +713,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLocalDateTime(arg0: string) : _LocalDateTime_
+#### _config.asLocalDateTime(arg0: string) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -722,22 +722,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _config.asLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### _config.asLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDateTime_ |   |
+| arg1 | _java.time.LocalDateTime_ |   |
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -746,7 +746,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLocalTime(arg0: string) : _LocalTime_
+#### _config.asLocalTime(arg0: string) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -755,22 +755,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _config.asLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### _config.asLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalTime_ |   |
+| arg1 | _java.time.LocalTime_ |   |
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -841,7 +841,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asMap(arg0: _int_) : _Map_
+#### _config.asMap(arg0: _int_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -850,27 +850,27 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _config.asMap(arg0: _int_, arg1: _Object_) : _Map_
+#### _config.asMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _config.asMap(arg0: string) : _Map_
+#### _config.asMap(arg0: string) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -879,22 +879,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _config.asMap(arg0: string, arg1: _Object_) : _Map_
+#### _config.asMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -903,7 +903,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asSQLDate(arg0: string) : _Date_
+#### _config.asSQLDate(arg0: string) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -912,22 +912,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
 
-#### _config.asSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### _config.asSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.sql.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
@@ -936,7 +936,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asSQLTime(arg0: string) : _Time_
+#### _config.asSQLTime(arg0: string) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -945,22 +945,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
 
-#### _config.asSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### _config.asSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Time_ |   |
+| arg1 | _java.sql.Time_ |   |
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
@@ -969,7 +969,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asSQLTimestamp(arg0: string) : _Timestamp_
+#### _config.asSQLTimestamp(arg0: string) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -978,22 +978,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
 
-#### _config.asSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### _config.asSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Timestamp_ |   |
+| arg1 | _java.sql.Timestamp_ |   |
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
@@ -1142,7 +1142,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asUID(arg0: string) : _UUID_
+#### _config.asUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1151,12 +1151,12 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _config.asUID(arg0: string, arg1: string) : _UUID_
+#### _config.asUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1166,22 +1166,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _config.asUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _config.asUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -1190,7 +1190,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asUUID(arg0: string) : _UUID_
+#### _config.asUUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1199,12 +1199,12 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _config.asUUID(arg0: string, arg1: string) : _UUID_
+#### _config.asUUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1214,22 +1214,22 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _config.asUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _config.asUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -1238,16 +1238,16 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asValues(chave: _int_) : _[Values](../../objects/Values)_
+#### _config.asValues(indice: _int_) : _[Values](../../objects/Values)_
 ##### Descrição
 
-Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | A chave para obter o objeto associado. |
+| indice | _int_ | Índex para obter o objeto associado. |
 
 ##### Retorno
 
@@ -1257,17 +1257,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.asValues(chave: _int_, valorPadrao: _Object_) : _[Values](../../objects/Values)_
+#### _config.asValues(indice: _int_, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Descrição
 
-Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | A chave para obter o objeto associado. |
-| valorPadrao | _Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| indice | _int_ | Índex para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -1296,7 +1296,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.asValues(chave: string, valorPadrao: _Object_) : _[Values](../../objects/Values)_
+#### _config.asValues(chave: string, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -1306,7 +1306,7 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | chave | string | A chave para obter o objeto associado. |
-| valorPadrao | _Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -1344,17 +1344,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.compute(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### _config.compute(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1363,17 +1363,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.computeIfAbsent(arg0: _Object_, arg1: _Function_) : _Object_
+#### _config.computeIfAbsent(arg0: _java.lang.Object_, arg1: _java.util.function.Function_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Function_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.Function_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1382,17 +1382,17 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.computeIfPresent(arg0: _Object_, arg1: _BiFunction_) : _Object_
+#### _config.computeIfPresent(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1401,12 +1401,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.contains(arg0: _Object_) : _boolean_
+#### _config.contains(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1415,13 +1415,13 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.contains(arg0: string, arg1: _Object_) : _boolean_
+#### _config.contains(arg0: string, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1434,12 +1434,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.containsAll(arg0: _Collection_) : _boolean_
+#### _config.containsAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -1452,12 +1452,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.containsKey(arg0: _Object_) : _boolean_
+#### _config.containsKey(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1470,12 +1470,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.containsValue(arg0: _Object_) : _boolean_
+#### _config.containsValue(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1510,10 +1510,10 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.entrySet() : _Set_
+#### _config.entrySet() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -1522,12 +1522,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.filter(arg0: _Predicate_) : _[Values](../../objects/Values)_
+#### _config.filter(arg0: _java.util.function.Predicate_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Predicate_ |   |
+| arg0 | _java.util.function.Predicate_ |   |
 
 ##### Retorno
 
@@ -1536,12 +1536,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.filter(arg0: _Value_) : _[Values](../../objects/Values)_
+#### _config.filter(arg0: _org.graalvm.polyglot.Value_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1554,13 +1554,13 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.find(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _config.find(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1569,30 +1569,30 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.find(arg0: _Predicate_) : _Object_
+#### _config.find(arg0: _java.util.function.Predicate_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Predicate_ |   |
+| arg0 | _java.util.function.Predicate_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _config.find(arg0: _Value_) : _Object_
+#### _config.find(arg0: _org.graalvm.polyglot.Value_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -1615,12 +1615,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.forEach(arg0: _BiConsumer_) : _void_
+#### _config.forEach(arg0: _java.util.function.BiConsumer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BiConsumer_ |   |
+| arg0 | _java.util.function.BiConsumer_ |   |
 
 ##### Retorno
 
@@ -1629,12 +1629,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.forEach(arg0: _Consumer_) : _void_
+#### _config.forEach(arg0: _java.util.function.Consumer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Consumer_ |   |
+| arg0 | _java.util.function.Consumer_ |   |
 
 ##### Retorno
 
@@ -1643,12 +1643,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.forEach(arg0: _Value_) : _void_
+#### _config.forEach(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1699,12 +1699,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.fromJSON(arg0: _Response_) : _[Values](../../objects/Values)_
+#### _config.fromJSON(arg0: _org.netuno.psamata.net.Remote$Response_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Response_ |   |
+| arg0 | _org.netuno.psamata.net.Remote$Response_ |   |
 
 ##### Retorno
 
@@ -1717,45 +1717,45 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.get(chave: _int_) : _Object_
+#### _config.get(chave: _int_) : _java.lang.Object_
 ##### Descrição
 
-Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
+Obtém o objeto original associado a chave.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | Chave para obter o objeto associado. |
+| chave | _int_ | Chave para obter o objeto para associado. |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
-Objeto original convertido para o tipo da classe definida.
+Objeto original sem conversões.
 
 ---
 
-#### _config.get(chave: _Object_) : _Object_
+#### _config.get(chave: _java.lang.Object_) : _java.lang.Object_
 ##### Descrição
 
-Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
+Obtém o objeto original associado a chave.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _Object_ | Chave para obter o objeto associado. |
+| chave | _java.lang.Object_ | Chave para obter o objeto para associado. |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
-Objeto original convertido para o tipo da classe definida.
+Objeto original sem conversões.
 
 ---
 
-#### _config.get(chave: string) : _Object_
+#### _config.get(chave: string) : _java.lang.Object_
 ##### Descrição
 
 Obtém o objeto original associado a chave.
@@ -1768,13 +1768,13 @@ Obtém o objeto original associado a chave.
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 Objeto original sem conversões.
 
 ---
 
-#### _config.get(chave: string, tipo: _Class_) : _Object_
+#### _config.get(chave: string, tipo: _java.lang.Class_) : _java.lang.Object_
 ##### Descrição
 
 Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
@@ -1784,11 +1784,11 @@ Obtém o objeto original associado a chave, mas convertido para o tipo da classe
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | chave | string | Chave para obter o objeto associado. |
-| tipo | _Class_ | Classe que representa o tipo de objeto que deve ser convertido (_cast_). |
+| tipo | _java.lang.Class_ | Classe que representa o tipo de objeto que deve ser convertido (_cast_). |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 Objeto original convertido para o tipo da classe definida.
 
@@ -1922,7 +1922,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getCalendar(arg0: string) : _Calendar_
+#### _config.getCalendar(arg0: string) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1931,22 +1931,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
 
-#### _config.getCalendar(arg0: string, arg1: _Calendar_) : _Calendar_
+#### _config.getCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Calendar_ |   |
+| arg1 | _java.util.Calendar_ |   |
 
 ##### Retorno
 
-( _Calendar_ )
+( _java.util.Calendar_ )
 
 
 ---
@@ -1955,7 +1955,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getDate(arg0: string) : _Date_
+#### _config.getDate(arg0: string) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1964,22 +1964,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
 
-#### _config.getDate(arg0: string, arg1: _Date_) : _Date_
+#### _config.getDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.util.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.util.Date_ )
 
 
 ---
@@ -2190,7 +2190,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getInstant(arg0: string) : _Instant_
+#### _config.getInstant(arg0: string) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2199,22 +2199,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
 
-#### _config.getInstant(arg0: string, arg1: _Instant_) : _Instant_
+#### _config.getInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Instant_ |   |
+| arg1 | _java.time.Instant_ |   |
 
 ##### Retorno
 
-( _Instant_ )
+( _java.time.Instant_ )
 
 
 ---
@@ -2285,10 +2285,10 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getKeys() : _Set_
+#### _config.getKeys() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -2297,7 +2297,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getList(arg0: _int_) : _List_
+#### _config.getList(arg0: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2306,58 +2306,58 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.getList(arg0: _int_, arg1: _Class_) : _List_
+#### _config.getList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.getList(arg0: _int_, arg1: _Object_) : _List_
+#### _config.getList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.getList(arg0: _int_, arg1: _Object_, arg2: _Class_) : _List_
+#### _config.getList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.getList(arg0: string) : _List_
+#### _config.getList(arg0: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2366,53 +2366,53 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.getList(arg0: string, arg1: _Class_) : _List_
+#### _config.getList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Class_ |   |
+| arg1 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.getList(arg0: string, arg1: _Object_) : _List_
+#### _config.getList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.getList(arg0: string, arg1: _Object_, arg2: _Class_) : _List_
+#### _config.getList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
-| arg2 | _Class_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -2421,7 +2421,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLocalDate(arg0: string) : _LocalDate_
+#### _config.getLocalDate(arg0: string) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2430,22 +2430,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
 
-#### _config.getLocalDate(arg0: string, arg1: _LocalDate_) : _LocalDate_
+#### _config.getLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDate_ |   |
+| arg1 | _java.time.LocalDate_ |   |
 
 ##### Retorno
 
-( _LocalDate_ )
+( _java.time.LocalDate_ )
 
 
 ---
@@ -2454,7 +2454,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLocalDateTime(arg0: string) : _LocalDateTime_
+#### _config.getLocalDateTime(arg0: string) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2463,22 +2463,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
 
-#### _config.getLocalDateTime(arg0: string, arg1: _LocalDateTime_) : _LocalDateTime_
+#### _config.getLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalDateTime_ |   |
+| arg1 | _java.time.LocalDateTime_ |   |
 
 ##### Retorno
 
-( _LocalDateTime_ )
+( _java.time.LocalDateTime_ )
 
 
 ---
@@ -2487,7 +2487,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLocalTime(arg0: string) : _LocalTime_
+#### _config.getLocalTime(arg0: string) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2496,22 +2496,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
 
-#### _config.getLocalTime(arg0: string, arg1: _LocalTime_) : _LocalTime_
+#### _config.getLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _LocalTime_ |   |
+| arg1 | _java.time.LocalTime_ |   |
 
 ##### Retorno
 
-( _LocalTime_ )
+( _java.time.LocalTime_ )
 
 
 ---
@@ -2582,7 +2582,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getMap(arg0: _int_) : _Map_
+#### _config.getMap(arg0: _int_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2591,27 +2591,27 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _config.getMap(arg0: _int_, arg1: _Object_) : _Map_
+#### _config.getMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _config.getMap(arg0: string) : _Map_
+#### _config.getMap(arg0: string) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2620,22 +2620,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
 
-#### _config.getMap(arg0: string, arg1: _Object_) : _Map_
+#### _config.getMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -2644,17 +2644,17 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getOrDefault(arg0: _Object_, arg1: _Object_) : _Object_
+#### _config.getOrDefault(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -2663,7 +2663,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getSQLDate(arg0: string) : _Date_
+#### _config.getSQLDate(arg0: string) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2672,22 +2672,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
 
-#### _config.getSQLDate(arg0: string, arg1: _Date_) : _Date_
+#### _config.getSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Date_ |   |
+| arg1 | _java.sql.Date_ |   |
 
 ##### Retorno
 
-( _Date_ )
+( _java.sql.Date_ )
 
 
 ---
@@ -2696,7 +2696,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getSQLTime(arg0: string) : _Time_
+#### _config.getSQLTime(arg0: string) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2705,22 +2705,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
 
-#### _config.getSQLTime(arg0: string, arg1: _Time_) : _Time_
+#### _config.getSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Time_ |   |
+| arg1 | _java.sql.Time_ |   |
 
 ##### Retorno
 
-( _Time_ )
+( _java.sql.Time_ )
 
 
 ---
@@ -2729,7 +2729,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getSQLTimestamp(arg0: string) : _Timestamp_
+#### _config.getSQLTimestamp(arg0: string) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2738,22 +2738,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
 
-#### _config.getSQLTimestamp(arg0: string, arg1: _Timestamp_) : _Timestamp_
+#### _config.getSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Timestamp_ |   |
+| arg1 | _java.sql.Timestamp_ |   |
 
 ##### Retorno
 
-( _Timestamp_ )
+( _java.sql.Timestamp_ )
 
 
 ---
@@ -2914,7 +2914,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getUID(arg0: string) : _UUID_
+#### _config.getUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2923,12 +2923,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _config.getUID(arg0: string, arg1: string) : _UUID_
+#### _config.getUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2938,22 +2938,22 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _config.getUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _config.getUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -2979,7 +2979,7 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _config.getUUID(arg0: string) : _UUID_
+#### _config.getUUID(arg0: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2988,12 +2988,12 @@ Código da codificação dos caracteres.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _config.getUUID(arg0: string, arg1: string) : _UUID_
+#### _config.getUUID(arg0: string, arg1: string) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3003,22 +3003,22 @@ Código da codificação dos caracteres.
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
 
-#### _config.getUUID(arg0: string, arg1: _UUID_) : _UUID_
+#### _config.getUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _UUID_ |   |
+| arg1 | _java.util.UUID_ |   |
 
 ##### Retorno
 
-( _UUID_ )
+( _java.util.UUID_ )
 
 
 ---
@@ -3027,69 +3027,94 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _config.getValues() : _Collection_
+#### _config.getValues() : _java.util.Collection_
+##### Descrição
+
+Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
+
 ##### Retorno
 
-( _Collection_ )
+( _java.util.Collection_ )
 
+Lista de todos os valores obtidos.
 
 ---
 
-#### _config.getValues(arg0: _int_) : _[Values](../../objects/Values)_
+#### _config.getValues(indice: _int_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| indice | _int_ | Índice para obter o objeto associado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _config.getValues(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _config.getValues(indice: _int_, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| indice | _int_ | Índice para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _config.getValues(arg0: string) : _[Values](../../objects/Values)_
+#### _config.getValues(chave: string) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| chave | string | A chave para obter o objeto associado. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
-#### _config.getValues(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _config.getValues(chave: string, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+##### Descrição
+
+Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _Object_ |   |
+| chave | string | A chave para obter o objeto associado. |
+| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
+Objeto convertido para Values.
 
 ---
 
@@ -3097,12 +3122,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _config.has(arg0: _Object_) : _boolean_
+#### _config.has(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3125,13 +3150,13 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _config.has(arg0: string, arg1: _Object_) : _boolean_
+#### _config.has(arg0: string, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3162,12 +3187,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _config.hasValue(arg0: _Object_) : _boolean_
+#### _config.hasValue(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3180,12 +3205,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _config.indexOf(arg0: _Object_) : _int_
+#### _config.indexOf(arg0: _java.lang.Object_) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3198,12 +3223,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _config.is(arg0: _Object_) : _boolean_
+#### _config.is(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3253,12 +3278,12 @@ Se está ativo a restrição aos ficheiros associados.
 
 ---
 
-#### _config.isList(arg0: _Object_) : _boolean_
+#### _config.isList(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3296,12 +3321,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.isMap(arg0: _Object_) : _boolean_
+#### _config.isMap(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3314,12 +3339,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.isMergeable(arg0: _Object_) : _boolean_
+#### _config.isMergeable(arg0: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3332,10 +3357,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.iterator() : _Iterator_
+#### _config.iterator() : _java.util.Iterator_
 ##### Retorno
 
-( _Iterator_ )
+( _java.util.Iterator_ )
 
 
 ---
@@ -3362,10 +3387,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.keySet() : _Set_
+#### _config.keySet() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3374,10 +3399,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.keys() : _Set_
+#### _config.keys() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3386,10 +3411,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.keysSorted() : _Set_
+#### _config.keysSorted() : _java.util.Set_
 ##### Retorno
 
-( _Set_ )
+( _java.util.Set_ )
 
 
 ---
@@ -3412,12 +3437,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.keysToString(arg0: _Map_, arg1: string) : string
+#### _config.keysToString(arg0: _java.util.Map_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -3431,12 +3456,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.lastIndexOf(arg0: _Object_) : _int_
+#### _config.lastIndexOf(arg0: _java.lang.Object_) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3461,24 +3486,24 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.list() : _List_
+#### _config.list() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.list(arg0: _Class_) : _List_
+#### _config.list(arg0: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Class_ |   |
+| arg0 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -3487,15 +3512,15 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.listIterator() : _ListIterator_
+#### _config.listIterator() : _java.util.ListIterator_
 ##### Retorno
 
-( _ListIterator_ )
+( _java.util.ListIterator_ )
 
 
 ---
 
-#### _config.listIterator(arg0: _int_) : _ListIterator_
+#### _config.listIterator(arg0: _int_) : _java.util.ListIterator_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3504,7 +3529,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _ListIterator_ )
+( _java.util.ListIterator_ )
 
 
 ---
@@ -3513,10 +3538,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.listOfValues() : _List_
+#### _config.listOfValues() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -3525,12 +3550,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.loadJSON(arg0: _InputStream_) : _void_
+#### _config.loadJSON(arg0: _java.io.InputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -3539,12 +3564,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.loadJSON(arg0: _Reader_) : _void_
+#### _config.loadJSON(arg0: _java.io.Reader_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Reader_ |   |
+| arg0 | _java.io.Reader_ |   |
 
 ##### Retorno
 
@@ -3557,12 +3582,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.loadProperties(arg0: _InputStream_) : _void_
+#### _config.loadProperties(arg0: _java.io.InputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _InputStream_ |   |
+| arg0 | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -3571,12 +3596,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.loadProperties(arg0: _Reader_) : _void_
+#### _config.loadProperties(arg0: _java.io.Reader_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Reader_ |   |
+| arg0 | _java.io.Reader_ |   |
 
 ##### Retorno
 
@@ -3585,12 +3610,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.loadProperties(arg0: _Properties_) : _void_
+#### _config.loadProperties(arg0: _java.util.Properties_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Properties_ |   |
+| arg0 | _java.util.Properties_ |   |
 
 ##### Retorno
 
@@ -3638,10 +3663,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.map() : _Map_
+#### _config.map() : _java.util.Map_
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -3650,12 +3675,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.merge(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _config.merge(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3664,18 +3689,18 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.merge(arg0: _Object_, arg1: _Object_, arg2: _BiFunction_) : _Object_
+#### _config.merge(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.util.function.BiFunction_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _BiFunction_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -3684,12 +3709,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.of(arg0: _Object[]_) : _[Values](../../objects/Values)_
+#### _config.of(arg0: _[Ljava.lang.Object;_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Retorno
 
@@ -3698,26 +3723,26 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.of(arg0: _Object_) : _Object_
+#### _config.of(arg0: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _config.of(arg0: _List_) : _[Values](../../objects/Values)_
+#### _config.of(arg0: _java.util.List_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -3726,12 +3751,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.of(arg0: _Map_) : _[Values](../../objects/Values)_
+#### _config.of(arg0: _java.util.Map_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -3744,12 +3769,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.ofList(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _config.ofList(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3762,12 +3787,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.ofMap(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _config.ofMap(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3780,12 +3805,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.push(arg0: _Object_) : _[Values](../../objects/Values)_
+#### _config.push(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3798,32 +3823,32 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.put(arg0: _Object_, arg1: _Object_) : _Object_
+#### _config.put(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _config.put(arg0: string, arg1: _Object_) : _Object_
+#### _config.put(arg0: string, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -3832,12 +3857,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.putAll(arg0: _Map_) : _void_
+#### _config.putAll(arg0: _java.util.Map_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -3850,17 +3875,17 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.putIfAbsent(arg0: _Object_, arg1: _Object_) : _Object_
+#### _config.putIfAbsent(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -3869,7 +3894,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.remove(arg0: _int_) : _Object_
+#### _config.remove(arg0: _int_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3878,32 +3903,32 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _config.remove(arg0: _Object_) : _Object_
+#### _config.remove(arg0: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _config.remove(arg0: _Object_, arg1: _Object_) : _boolean_
+#### _config.remove(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3924,12 +3949,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.removeAll(arg0: _Collection_) : _boolean_
+#### _config.removeAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -3942,29 +3967,29 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.replace(arg0: _Object_, arg1: _Object_) : _Object_
+#### _config.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
 
-#### _config.replace(arg0: _Object_, arg1: _Object_, arg2: _Object_) : _boolean_
+#### _config.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.lang.Object_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
-| arg1 | _Object_ |   |
-| arg2 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
+| arg1 | _java.lang.Object_ |   |
+| arg2 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3977,12 +4002,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.replaceAll(arg0: _BiFunction_) : _void_
+#### _config.replaceAll(arg0: _java.util.function.BiFunction_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _BiFunction_ |   |
+| arg0 | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
@@ -3991,12 +4016,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.replaceAll(arg0: _UnaryOperator_) : _void_
+#### _config.replaceAll(arg0: _java.util.function.UnaryOperator_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _UnaryOperator_ |   |
+| arg0 | _java.util.function.UnaryOperator_ |   |
 
 ##### Retorno
 
@@ -4005,12 +4030,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.replaceAll(arg0: _Value_) : _void_
+#### _config.replaceAll(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -4023,12 +4048,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.retainAll(arg0: _Collection_) : _boolean_
+#### _config.retainAll(arg0: _java.util.Collection_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Collection_ |   |
+| arg0 | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -4041,12 +4066,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.safeString(arg0: _Object_) : string
+#### _config.safeString(arg0: _java.lang.Object_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4055,12 +4080,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.safeString(arg0: _Object_, arg1: string) : string
+#### _config.safeString(arg0: _java.lang.Object_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -4074,12 +4099,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.saveJSON(arg0: _OutputStream_) : _void_
+#### _config.saveJSON(arg0: _java.io.OutputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _OutputStream_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -4088,12 +4113,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.saveJSON(arg0: _Writer_) : _void_
+#### _config.saveJSON(arg0: _java.io.Writer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| arg0 | _java.io.Writer_ |   |
 
 ##### Retorno
 
@@ -4106,12 +4131,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.saveProperties(arg0: _OutputStream_) : _void_
+#### _config.saveProperties(arg0: _java.io.OutputStream_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _OutputStream_ |   |
+| arg0 | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -4120,12 +4145,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.saveProperties(arg0: _Writer_) : _void_
+#### _config.saveProperties(arg0: _java.io.Writer_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Writer_ |   |
+| arg0 | _java.io.Writer_ |   |
 
 ##### Retorno
 
@@ -4198,12 +4223,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.search(arg0: _Map_, arg1: string, arg2: string, arg3: _boolean_) : string
+#### _config.search(arg0: _java.util.Map_, arg1: string, arg2: string, arg3: _boolean_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 | arg2 | string |   |
 | arg3 | _boolean_ |   |
@@ -4219,13 +4244,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.set(arg0: _int_, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _config.set(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | _int_ |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4234,13 +4259,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.set(arg0: string, arg1: _Object_) : _[Values](../../objects/Values)_
+#### _config.set(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _Object_ |   |
+| arg1 | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4659,12 +4684,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.sort(arg0: _Comparator_) : _void_
+#### _config.sort(arg0: _java.util.Comparator_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Comparator_ |   |
+| arg0 | _java.util.Comparator_ |   |
 
 ##### Retorno
 
@@ -4673,12 +4698,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.sort(arg0: _Value_) : _void_
+#### _config.sort(arg0: _org.graalvm.polyglot.Value_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Value_ |   |
+| arg0 | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -4691,10 +4716,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.spliterator() : _Spliterator_
+#### _config.spliterator() : _java.util.Spliterator_
 ##### Retorno
 
-( _Spliterator_ )
+( _java.util.Spliterator_ )
 
 
 ---
@@ -4703,7 +4728,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.subList(arg0: _int_, arg1: _int_) : _List_
+#### _config.subList(arg0: _int_, arg1: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4713,7 +4738,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -4722,24 +4747,24 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toArray() : _Object[]_
+#### _config.toArray() : _[Ljava.lang.Object;_
 ##### Retorno
 
-( _Object[]_ )
+( _[Ljava.lang.Object;_ )
 
 
 ---
 
-#### _config.toArray(arg0: _Object[]_) : _Object[]_
+#### _config.toArray(arg0: _[Ljava.lang.Object;_) : _[Ljava.lang.Object;_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object[]_ |   |
+| arg0 | _[Ljava.lang.Object;_ |   |
 
 ##### Retorno
 
-( _Object[]_ )
+( _[Ljava.lang.Object;_ )
 
 
 ---
@@ -4748,10 +4773,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toByteArray() : _byte[]_
+#### _config.toByteArray() : _[B_
 ##### Retorno
 
-( _byte[]_ )
+( _[B_ )
 
 
 ---
@@ -4760,10 +4785,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toDoubleArray() : _double[]_
+#### _config.toDoubleArray() : _[D_
 ##### Retorno
 
-( _double[]_ )
+( _[D_ )
 
 
 ---
@@ -4772,10 +4797,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toFloatArray() : _float[]_
+#### _config.toFloatArray() : _[F_
 ##### Retorno
 
-( _float[]_ )
+( _[F_ )
 
 
 ---
@@ -4825,10 +4850,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toIntArray() : _int[]_
+#### _config.toIntArray() : _[I_
 ##### Retorno
 
-( _int[]_ )
+( _[I_ )
 
 
 ---
@@ -4888,12 +4913,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toJSON(arg0: _List_) : string
+#### _config.toJSON(arg0: _java.util.List_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -4902,12 +4927,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toJSON(arg0: _List_, arg1: _boolean_) : string
+#### _config.toJSON(arg0: _java.util.List_, arg1: _boolean_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _boolean_ |   |
 
 ##### Retorno
@@ -4917,12 +4942,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toJSON(arg0: _List_, arg1: _boolean_, arg2: _int_) : string
+#### _config.toJSON(arg0: _java.util.List_, arg1: _boolean_, arg2: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _boolean_ |   |
 | arg2 | _int_ |   |
 
@@ -4933,12 +4958,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toJSON(arg0: _List_, arg1: _int_) : string
+#### _config.toJSON(arg0: _java.util.List_, arg1: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _List_ |   |
+| arg0 | _java.util.List_ |   |
 | arg1 | _int_ |   |
 
 ##### Retorno
@@ -4952,17 +4977,17 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toJSONObject(arg0: _Object_, arg1: _boolean_) : _Object_
+#### _config.toJSONObject(arg0: _java.lang.Object_, arg1: _boolean_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | _boolean_ |   |
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -4971,12 +4996,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toJSONString(arg0: _Object_, arg1: _boolean_, arg2: _int_) : string
+#### _config.toJSONString(arg0: _java.lang.Object_, arg1: _boolean_, arg2: _int_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Object_ |   |
+| arg0 | _java.lang.Object_ |   |
 | arg1 | _boolean_ |   |
 | arg2 | _int_ |   |
 
@@ -4991,24 +5016,24 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toList() : _List_
+#### _config.toList() : _java.util.List_
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _config.toList(arg0: _Class_) : _List_
+#### _config.toList(arg0: _java.lang.Class_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Class_ |   |
+| arg0 | _java.lang.Class_ |   |
 
 ##### Retorno
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -5017,10 +5042,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toLongArray() : _long[]_
+#### _config.toLongArray() : _[J_
 ##### Retorno
 
-( _long[]_ )
+( _[J_ )
 
 
 ---
@@ -5029,10 +5054,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toMap() : _Map_
+#### _config.toMap() : _java.util.Map_
 ##### Retorno
 
-( _Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -5053,10 +5078,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toShortArray() : _short[]_
+#### _config.toShortArray() : _[S_
 ##### Retorno
 
-( _short[]_ )
+( _[S_ )
 
 
 ---
@@ -5065,10 +5090,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toStringArray() : _String[]_
+#### _config.toStringArray() : _[Ljava.lang.String;_
 ##### Retorno
 
-( _String[]_ )
+( _[Ljava.lang.String;_ )
 
 
 ---
@@ -5077,7 +5102,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.unset(arg0: string) : _Object_
+#### _config.unset(arg0: string) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5086,7 +5111,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ##### Retorno
 
-( _Object_ )
+( _java.lang.Object_ )
 
 
 ---
@@ -5107,11 +5132,16 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.values() : _Collection_
+#### _config.values() : _java.util.Collection_
+##### Descrição
+
+Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
+
 ##### Retorno
 
-( _Collection_ )
+( _java.util.Collection_ )
 
+Lista de todos os valores obtidos.
 
 ---
 
@@ -5133,13 +5163,13 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.valuesToString(arg0: string, arg1: _String[]_) : string
+#### _config.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _String[]_ |   |
+| arg1 | _[Ljava.lang.String;_ |   |
 
 ##### Retorno
 
@@ -5148,13 +5178,13 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.valuesToString(arg0: string, arg1: _String[]_, arg2: _[Values](../../objects/Values)_) : string
+#### _config.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_, arg2: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | arg0 | string |   |
-| arg1 | _String[]_ |   |
+| arg1 | _[Ljava.lang.String;_ |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
@@ -5179,12 +5209,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.valuesToString(arg0: _Map_, arg1: string) : string
+#### _config.valuesToString(arg0: _java.util.Map_, arg1: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 
 ##### Retorno
@@ -5194,14 +5224,14 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_) : string
+#### _config.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
-| arg2 | _String[]_ |   |
+| arg2 | _[Ljava.lang.String;_ |   |
 
 ##### Retorno
 
@@ -5210,14 +5240,14 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.valuesToString(arg0: _Map_, arg1: string, arg2: _String[]_, arg3: _[Values](../../objects/Values)_) : string
+#### _config.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_, arg3: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
-| arg2 | _String[]_ |   |
+| arg2 | _[Ljava.lang.String;_ |   |
 | arg3 | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
@@ -5227,12 +5257,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.valuesToString(arg0: _Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
+#### _config.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _Map_ |   |
+| arg0 | _java.util.Map_ |   |
 | arg1 | string |   |
 | arg2 | _[Values](../../objects/Values)_ |   |
 

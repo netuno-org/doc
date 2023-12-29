@@ -12,10 +12,10 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.all() : _List_
+#### _report.all() : _java.util.List_
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -174,7 +174,7 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.getAllComponents(arg0: _int_) : _List_
+#### _report.getAllComponents(arg0: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -183,12 +183,12 @@ Application reports generator programmatically.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _report.getAllComponents(arg0: string) : _List_
+#### _report.getAllComponents(arg0: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -197,7 +197,7 @@ Application reports generator programmatically.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
@@ -300,7 +300,7 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.notNulls(arg0: _int_) : _List_
+#### _report.notNulls(arg0: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -309,12 +309,12 @@ Application reports generator programmatically.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
 
-#### _report.notNulls(arg0: string) : _List_
+#### _report.notNulls(arg0: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -323,7 +323,7 @@ Application reports generator programmatically.
 
 ##### Return
 
-( _List_ )
+( _java.util.List_ )
 
 
 ---
