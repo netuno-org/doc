@@ -13,6 +13,10 @@ Cliente SCP utilizado com o SSH.
 ---
 
 #### close() : _void_
+##### Description
+
+Closes the SCP current session.
+
 ##### Return
 
 ( _void_ )
@@ -20,37 +24,64 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
+## closed
+
+---
+
+#### closed() : _boolean_
+##### Description
+
+Checks if the SCP session is still open.
+
+##### Return
+
+( _boolean_ )
+
+True if it is open.
+
+---
+
 ## download
 
 ---
 
-#### download(arg0: string, arg1: _java.io.OutputStream_) : _[SSHSCP](../../objects/SSHSCP)_
+#### download(remotePath: string, destination: _java.io.OutputStream_) : _[SSHSCP](../../objects/SSHSCP)_
+##### Description
+
+Copies a server file to a local file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.io.OutputStream_ |   |
+| remotePath | string | File path in the server. |
+| destination | _java.io.OutputStream_ | Local file of destination to store the remote content. |
 
 ##### Return
 
 ( _[SSHSCP](../../objects/SSHSCP)_ )
 
+The current SFTP client.
 
 ---
 
-#### download(arg0: string, arg1: _[File](../../objects/File)_) : _[SSHSCP](../../objects/SSHSCP)_
+#### download(remotePath: string, destination: _[File](../../objects/File)_) : _[SSHSCP](../../objects/SSHSCP)_
+##### Description
+
+Copies a server file to a local file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[File](../../objects/File)_ |   |
+| remotePath | string | File path in the server. |
+| destination | _[File](../../objects/File)_ | Local file of destination to store the remote content. |
 
 ##### Return
 
 ( _[SSHSCP](../../objects/SSHSCP)_ )
 
+The current SFTP client.
 
 ---
 
@@ -58,17 +89,22 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### downloadBytes(arg0: string) : _[B_
+#### downloadBytes(remotePath: string) : _[B_
+##### Description
+
+Obtain a byte array as content from a file server.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| remotePath | string | File path in the server. |
 
 ##### Return
 
 ( _[B_ )
 
+Byte array with the remote file content in the server.
 
 ---
 
@@ -76,31 +112,53 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### downloadText(arg0: string) : string
+#### downloadText(remotePath: string) : string
+##### Description
+
+Obtain a text content of a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| remotePath | string | File path in the server. |
 
 ##### Return
 
 ( string )
 
+Text content of the remote file in the server.
 
 ---
 
-#### downloadText(arg0: string, arg1: string) : string
+#### downloadText(remotePath: string, charset: string) : string
+##### Description
+
+Obtain a text content of a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| remotePath | string | File path in the server. |
+| charset | string | Encoding code of the characters. |
 
 ##### Return
 
 ( string )
+
+Text content of the remote file in the server.
+
+---
+
+## isClosed
+
+---
+
+#### isClosed() : _boolean_
+##### Return
+
+( _boolean_ )
 
 
 ---
@@ -109,33 +167,43 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### upload(arg0: string, arg1: _java.io.InputStream_) : _[SSHSCP](../../objects/SSHSCP)_
+#### upload(remotePath: string, source: _java.io.InputStream_) : _[SSHSCP](../../objects/SSHSCP)_
+##### Description
+
+Sends the file data to be saved in a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.io.InputStream_ |   |
+| remotePath | string | File path in the server. |
+| source | _java.io.InputStream_ | Local file as the source. |
 
 ##### Return
 
 ( _[SSHSCP](../../objects/SSHSCP)_ )
 
+The current SFTP client.
 
 ---
 
-#### upload(arg0: string, arg1: _[File](../../objects/File)_) : _[SSHSCP](../../objects/SSHSCP)_
+#### upload(remotePath: string, source: _[File](../../objects/File)_) : _[SSHSCP](../../objects/SSHSCP)_
+##### Description
+
+Sends the file data to be saved in a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[File](../../objects/File)_ |   |
+| remotePath | string | File path in the server. |
+| source | _[File](../../objects/File)_ | Local file as the source. |
 
 ##### Return
 
 ( _[SSHSCP](../../objects/SSHSCP)_ )
 
+The current SFTP client.
 
 ---
 
@@ -143,18 +211,23 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### uploadBytes(arg0: string, arg1: _[B_) : _[SSHSCP](../../objects/SSHSCP)_
+#### uploadBytes(remotePath: string, bytes: _[B_) : _[SSHSCP](../../objects/SSHSCP)_
+##### Description
+
+Sends a byte array to be saved in a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[B_ |   |
+| remotePath | string | File path in the server. |
+| bytes | _[B_ | Array of bytes. |
 
 ##### Return
 
 ( _[SSHSCP](../../objects/SSHSCP)_ )
 
+The current SFTP client.
 
 ---
 
@@ -162,34 +235,44 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### uploadText(arg0: string, arg1: string) : _[SSHSCP](../../objects/SSHSCP)_
+#### uploadText(remotePath: string, text: string) : _[SSHSCP](../../objects/SSHSCP)_
+##### Description
+
+Sends a text content to be saved in a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| remotePath | string | File path in the server. |
+| text | string | Text content. |
 
 ##### Return
 
 ( _[SSHSCP](../../objects/SSHSCP)_ )
 
+The current SFTP client.
 
 ---
 
-#### uploadText(arg0: string, arg1: string, arg2: string) : _[SSHSCP](../../objects/SSHSCP)_
+#### uploadText(remotePath: string, text: string, charset: string) : _[SSHSCP](../../objects/SSHSCP)_
+##### Description
+
+Sends a text content to be saved in a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| remotePath | string | File path in the server. |
+| text | string | Text content. |
+| charset | string | Encoding code of the characters. |
 
 ##### Return
 
 ( _[SSHSCP](../../objects/SSHSCP)_ )
 
+The current SFTP client.
 
 ---
 

@@ -13,10 +13,15 @@ Feature to connect, transfer files and execute commands via SSH.
 ---
 
 #### _ssh.close() : _void_
+##### Description
+
+Closes all open sessions and performs SSH disconnection from the server.
+
 ##### Return
 
 ( _void_ )
 
+Current SSH object.
 
 ---
 
@@ -71,7 +76,7 @@ Define outra configuração que deve ser utilizada.
 
 ( _[SSH](../../resources/SSH)_ )
 
-Current FTP object.
+Current SSH resource.
 
 ---
 
@@ -80,10 +85,15 @@ Current FTP object.
 ---
 
 #### _ssh.connect() : _[SSH](../../resources/SSH)_
+##### Description
+
+Starts connecting to the server via SSH.
+
 ##### Return
 
 ( _[SSH](../../resources/SSH)_ )
 
+Current SSH resource.
 
 ---
 
@@ -92,10 +102,15 @@ Current FTP object.
 ---
 
 #### _ssh.disconnect() : _[SSH](../../resources/SSH)_
+##### Description
+
+Closes all open sessions and performs SSH disconnection from the server.
+
 ##### Return
 
 ( _[SSH](../../resources/SSH)_ )
 
+Current SSH resource.
 
 ---
 
@@ -126,7 +141,7 @@ Sets whether it is enabled.
 
 ( _[SSH](../../resources/SSH)_ )
 
-Current FTP object.
+Current SSH resource.
 
 ---
 
@@ -135,10 +150,15 @@ Current FTP object.
 ---
 
 #### _ssh.getClient() : _org.netuno.psamata.ssh.SSHClient_
+##### Description
+
+Gets the base SSH client.
+
 ##### Return
 
 ( _org.netuno.psamata.ssh.SSHClient_ )
 
+Original base SSH client
 
 ---
 
@@ -219,10 +239,15 @@ The new instance of the SSH resource based on the defined configuration.
 ---
 
 #### _ssh.initSCP() : _[SSHSCP](../../objects/SSHSCP)_
+##### Description
+
+Starts SCP session to manage folders and transfer files.
+
 ##### Return
 
 ( _[SSHSCP](../../objects/SSHSCP)_ )
 
+The SCP session started to execute commands.
 
 ---
 
@@ -231,10 +256,15 @@ The new instance of the SSH resource based on the defined configuration.
 ---
 
 #### _ssh.initSFTP() : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Description
+
+Starts SFTP session to manage folders and transfer files.
+
 ##### Return
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+The SFTP session started to execute commands.
 
 ---
 
@@ -243,10 +273,15 @@ The new instance of the SSH resource based on the defined configuration.
 ---
 
 #### _ssh.initSession() : _[SSHSession](../../objects/SSHSession)_
+##### Description
+
+Starts SSH session to execute commands.
+
 ##### Return
 
 ( _[SSHSession](../../objects/SSHSession)_ )
 
+The session started to execute commands.
 
 ---
 
@@ -286,7 +321,7 @@ Define outra configuração que deve ser utilizada.
 
 ( _[SSH](../../resources/SSH)_ )
 
-Current FTP object.
+Current SSH resource.
 
 ---
 
@@ -309,7 +344,7 @@ Sets whether it is enabled.
 
 ( _[SSH](../../resources/SSH)_ )
 
-Current FTP object.
+Current SSH resource.
 
 ---
 

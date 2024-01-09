@@ -13,6 +13,10 @@ Cliente SFTP utilizado com o SSH.
 ---
 
 #### close() : _void_
+##### Descrição
+
+Fecha a sessão atual de SFTP.
+
 ##### Retorno
 
 ( _void_ )
@@ -20,21 +24,43 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
+## closed
+
+---
+
+#### closed() : _boolean_
+##### Descrição
+
+Verifica se a sessão SFTP ainda está aberta.
+
+##### Retorno
+
+( _boolean_ )
+
+Verdadeiro se estiver aberta
+
+---
+
 ## createDirectories
 
 ---
 
-#### createDirectories(arg0: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+#### createDirectories(caminhoRemoto: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Cria o caminho de pastas no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminhoRemoto | string | Caminho no servidor onde a estrutura de pastas será criada. |
 
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+O cliente SFTP atual.
 
 ---
 
@@ -42,17 +68,22 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### createDirectory(arg0: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+#### createDirectory(caminhoRemoto: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Cria uma pastas no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminhoRemoto | string | Caminho no servidor onde a pasta será criada. |
 
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+O cliente SFTP atual.
 
 ---
 
@@ -60,17 +91,22 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### deleteDirectory(arg0: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+#### deleteDirectory(caminhoRemoto: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Remove uma pasta no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminhoRemoto | string | Caminho no servidor a pasta será removida. |
 
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+O cliente SFTP atual.
 
 ---
 
@@ -78,17 +114,22 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### deleteFile(arg0: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+#### deleteFile(caminhoRemoto: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Remove um arquivo no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminhoRemoto | string | Caminho no servidor o arquivo será removido. |
 
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+O cliente SFTP atual.
 
 ---
 
@@ -96,33 +137,43 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### download(arg0: string, arg1: _java.io.OutputStream_) : _[SSHSFTP](../../objects/SSHSFTP)_
+#### download(caminhoRemoto: string, destino: _java.io.OutputStream_) : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Copia um arquivo no servidor para um arquivo local.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.io.OutputStream_ |   |
+| caminhoRemoto | string | Caminho do arquivo no servidor. |
+| destino | _java.io.OutputStream_ | Arquivo local de destino para armazenar o conteúdo remoto. |
 
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+O cliente SFTP atual.
 
 ---
 
-#### download(arg0: string, arg1: _[File](../../objects/File)_) : _[SSHSFTP](../../objects/SSHSFTP)_
+#### download(caminhoRemoto: string, destino: _[File](../../objects/File)_) : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Copia um arquivo no servidor para um arquivo local.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[File](../../objects/File)_ |   |
+| caminhoRemoto | string | Caminho do arquivo no servidor. |
+| destino | _[File](../../objects/File)_ | Arquivo local de destino para armazenar o conteúdo remoto. |
 
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+O cliente SFTP atual.
 
 ---
 
@@ -130,17 +181,22 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### downloadBytes(arg0: string) : _[B_
+#### downloadBytes(caminhoRemoto: string) : _[B_
+##### Descrição
+
+Obtém um array de bytes do conteúdo de um arquivo no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminhoRemoto | string | Caminho do arquivo no servidor. |
 
 ##### Retorno
 
 ( _[B_ )
 
+Array de bytes com o conteúdo do arquivo remoto no servidor.
 
 ---
 
@@ -148,31 +204,53 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### downloadText(arg0: string) : string
+#### downloadText(caminhoRemoto: string) : string
+##### Descrição
+
+Obtém um conteúdo de texto de um arquivo no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminhoRemoto | string | Caminho do arquivo no servidor. |
 
 ##### Retorno
 
 ( string )
 
+Conteúdo de texto do arquivo remoto no servidor.
 
 ---
 
-#### downloadText(arg0: string, arg1: string) : string
+#### downloadText(caminhoRemoto: string, encodificacao: string) : string
+##### Descrição
+
+Obtém um conteúdo de texto de um arquivo no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| caminhoRemoto | string | Caminho do arquivo no servidor. |
+| encodificacao | string | Código de encodificação dos caractéres. |
 
 ##### Retorno
 
 ( string )
+
+Conteúdo de texto do arquivo remoto no servidor.
+
+---
+
+## isClosed
+
+---
+
+#### isClosed() : _boolean_
+##### Retorno
+
+( _boolean_ )
 
 
 ---
@@ -181,17 +259,22 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### list(arg0: string) : _java.util.List_
+#### list(caminhoRemoto: string) : _java.util.List_
+##### Descrição
+
+Lista os itens da pasta no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminhoRemoto | string | Caminho da pasta no servidor. |
 
 ##### Retorno
 
 ( _java.util.List_ )
 
+A lista de itens que está caminho do servidor.
 
 ---
 
@@ -199,17 +282,22 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### size(arg0: string) : _long_
+#### size(caminhoRemoto: string) : _long_
+##### Descrição
+
+Obtém o tamanho de um arquivo no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| caminhoRemoto | string | Caminho no servidor onde o arquivo está. |
 
 ##### Retorno
 
 ( _long_ )
 
+O tamanho do arquivo.
 
 ---
 
@@ -217,33 +305,43 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### upload(arg0: string, arg1: _java.io.InputStream_) : _[SSHSFTP](../../objects/SSHSFTP)_
+#### upload(caminhoRemoto: string, origem: _java.io.InputStream_) : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Envia os dados de um arquivo para ser salvo no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.io.InputStream_ |   |
+| caminhoRemoto | string | Caminho do arquivo no servidor. |
+| origem | _java.io.InputStream_ | Arquivo local de origem. |
 
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+O cliente SFTP atual.
 
 ---
 
-#### upload(arg0: string, arg1: _[File](../../objects/File)_) : _[SSHSFTP](../../objects/SSHSFTP)_
+#### upload(caminhoRemoto: string, origem: _[File](../../objects/File)_) : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Envia os dados de um arquivo para ser salvo no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[File](../../objects/File)_ |   |
+| caminhoRemoto | string | Caminho do arquivo no servidor. |
+| origem | _[File](../../objects/File)_ | Arquivo local de origem. |
 
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+O cliente SFTP atual.
 
 ---
 
@@ -251,18 +349,23 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### uploadBytes(arg0: string, arg1: _[B_) : _[SSHSFTP](../../objects/SSHSFTP)_
+#### uploadBytes(caminhoRemoto: string, bytes: _[B_) : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Envia um array de bytes para serem salvos em um arquivo no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[B_ |   |
+| caminhoRemoto | string | Caminho do arquivo no servidor. |
+| bytes | _[B_ | Array de bytes. |
 
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+O cliente SFTP atual.
 
 ---
 
@@ -270,34 +373,44 @@ Cliente SFTP utilizado com o SSH.
 
 ---
 
-#### uploadText(arg0: string, arg1: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+#### uploadText(caminhoRemoto: string, texto: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Envia um conteúdo de texto para ser salvado em um arquivo no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| caminhoRemoto | string | Caminho do arquivo no servidor. |
+| texto | string | Conteúdo de texto. |
 
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+O cliente SFTP atual.
 
 ---
 
-#### uploadText(arg0: string, arg1: string, arg2: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+#### uploadText(caminhoRemoto: string, texto: string, encodificacao: string) : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Envia um conteúdo de texto para ser salvado em um arquivo no servidor.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| caminhoRemoto | string | Caminho do arquivo no servidor. |
+| texto | string | Conteúdo de texto. |
+| encodificacao | string | Código de encodificação dos caractéres. |
 
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+O cliente SFTP atual.
 
 ---
 

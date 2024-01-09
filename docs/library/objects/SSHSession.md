@@ -13,6 +13,10 @@ Sessão SSH para executar comandos.
 ---
 
 #### close() : _void_
+##### Description
+
+Closes the current session.
+
 ##### Return
 
 ( _void_ )
@@ -20,35 +24,74 @@ Sessão SSH para executar comandos.
 
 ---
 
+## closed
+
+---
+
+#### closed() : _boolean_
+##### Description
+
+Checks if the session is still open.
+
+##### Return
+
+( _boolean_ )
+
+True if it is open.
+
+---
+
 ## exec
 
 ---
 
-#### exec(arg0: string) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### exec(command: string) : _[SSHExecResult](../../objects/SSHExecResult)_
+##### Description
+
+Execute commands remotely via SSH on the server.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| command | string | Server path where the folder should be created. |
 
 ##### Return
 
 ( _[SSHExecResult](../../objects/SSHExecResult)_ )
 
+Command execution result.
 
 ---
 
-#### exec(arg0: string, arg1: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### exec(command: string, timeout: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
+##### Description
+
+Execute commands remotely via SSH on the server.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| command | string | Server path where the folder should be created. |
+| timeout | _int_ | Command execution timeout. |
 
 ##### Return
 
 ( _[SSHExecResult](../../objects/SSHExecResult)_ )
+
+Command execution result.
+
+---
+
+## isClosed
+
+---
+
+#### isClosed() : _boolean_
+##### Return
+
+( _boolean_ )
 
 
 ---

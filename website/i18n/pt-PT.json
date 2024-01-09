@@ -178,6 +178,14 @@
       "academy/server/services/pdf": {
         "title": "PDF"
       },
+      "academy/server/services/ftp": {
+        "title": "FTP - Cliente",
+        "sidebar_label": "FTP - Cliente"
+      },
+      "academy/server/services/ssh": {
+        "title": "SSH - Cliente",
+        "sidebar_label": "SSH - Cliente"
+      },
       "academy/server/monitor-alerts": {
         "title": "Monitor e Alertas",
         "sidebar_label": "Monitor e Alertas"

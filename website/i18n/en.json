@@ -140,6 +140,10 @@
         "title": "CORS",
         "sidebar_label": "CORS"
       },
+      "academy/server/services/ftp": {
+        "title": "FTP Client",
+        "sidebar_label": "FTP Client"
+      },
       "academy/server/services/generate-uid-guid": {
         "title": "Generate Unique ID's (UID/GUID)",
         "sidebar_label": "Generate Unique ID's (UID/GUID)"
@@ -167,6 +171,10 @@
       "academy/server/services/sending-emails": {
         "title": "Sending Emails",
         "sidebar_label": "Sending Emails"
+      },
+      "academy/server/services/ssh": {
+        "title": "SSH Client",
+        "sidebar_label": "SSH Client"
       },
       "academy/server/services/websocket": {
         "title": "WebSocket",
@@ -342,6 +350,10 @@
         "title": "DBSearchResult",
         "sidebar_label": "DBSearchResult"
       },
+      "library/objects/ErrorException": {
+        "title": "ErrorException",
+        "sidebar_label": "ErrorException"
+      },
       "library/objects/File": {
         "title": "File",
         "sidebar_label": "File"
@@ -381,6 +393,10 @@
       "library/objects/SCPClient": {
         "title": "SCPClient",
         "sidebar_label": "SCPClient"
+      },
+      "library/objects/ScriptResult": {
+        "title": "ScriptResult",
+        "sidebar_label": "ScriptResult"
       },
       "library/objects/Sequence": {
         "title": "Sequence",

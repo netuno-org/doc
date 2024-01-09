@@ -13,10 +13,15 @@ Recurso para conectar, transferir arquivos e executar comandos via SSH.
 ---
 
 #### _ssh.close() : _void_
+##### Descrição
+
+Fecha todas as sessões abertas e realiza a desconexão SSH com o servidor.
+
 ##### Retorno
 
 ( _void_ )
 
+Objeto SSH atual.
 
 ---
 
@@ -71,7 +76,7 @@ Define outra configuração que deve ser utilizada.
 
 ( _[SSH](../../resources/SSH)_ )
 
-Objeto FTP atual.
+Recurso SSH atual.
 
 ---
 
@@ -80,10 +85,15 @@ Objeto FTP atual.
 ---
 
 #### _ssh.connect() : _[SSH](../../resources/SSH)_
+##### Descrição
+
+Inicia a conexão com o servidor através do SSH.
+
 ##### Retorno
 
 ( _[SSH](../../resources/SSH)_ )
 
+Recurso SSH atual.
 
 ---
 
@@ -92,10 +102,15 @@ Objeto FTP atual.
 ---
 
 #### _ssh.disconnect() : _[SSH](../../resources/SSH)_
+##### Descrição
+
+Fecha todas as sessões abertas e realiza a desconexão SSH com o servidor.
+
 ##### Retorno
 
 ( _[SSH](../../resources/SSH)_ )
 
+Recurso SSH atual.
 
 ---
 
@@ -126,7 +141,7 @@ Define se está habilitado.
 
 ( _[SSH](../../resources/SSH)_ )
 
-Objeto FTP atual.
+Recurso SSH atual.
 
 ---
 
@@ -135,10 +150,15 @@ Objeto FTP atual.
 ---
 
 #### _ssh.getClient() : _org.netuno.psamata.ssh.SSHClient_
+##### Descrição
+
+Obtém o cliente SSH base.
+
 ##### Retorno
 
 ( _org.netuno.psamata.ssh.SSHClient_ )
 
+Cliente SSH original de base.
 
 ---
 
@@ -219,10 +239,15 @@ A nova instância do recurso SSH com base na configuração definida.
 ---
 
 #### _ssh.initSCP() : _[SSHSCP](../../objects/SSHSCP)_
+##### Descrição
+
+Inicia a sessão SCP para gerir pastas e transferir arquivos.
+
 ##### Retorno
 
 ( _[SSHSCP](../../objects/SSHSCP)_ )
 
+A sessão SCP iniciada para executar comandos.
 
 ---
 
@@ -231,10 +256,15 @@ A nova instância do recurso SSH com base na configuração definida.
 ---
 
 #### _ssh.initSFTP() : _[SSHSFTP](../../objects/SSHSFTP)_
+##### Descrição
+
+Inicia a sessão SFTP para gerir pastas e transferir arquivos.
+
 ##### Retorno
 
 ( _[SSHSFTP](../../objects/SSHSFTP)_ )
 
+A sessão SFTP iniciada para executar comandos.
 
 ---
 
@@ -243,10 +273,15 @@ A nova instância do recurso SSH com base na configuração definida.
 ---
 
 #### _ssh.initSession() : _[SSHSession](../../objects/SSHSession)_
+##### Descrição
+
+Inicia a sessão SSH para executar comandos.
+
 ##### Retorno
 
 ( _[SSHSession](../../objects/SSHSession)_ )
 
+A sessão iniciada para executar comandos.
 
 ---
 
@@ -286,7 +321,7 @@ Define outra configuração que deve ser utilizada.
 
 ( _[SSH](../../resources/SSH)_ )
 
-Objeto FTP atual.
+Recurso SSH atual.
 
 ---
 
@@ -309,7 +344,7 @@ Define se está habilitado.
 
 ( _[SSH](../../resources/SSH)_ )
 
-Objeto FTP atual.
+Recurso SSH atual.
 
 ---
 
