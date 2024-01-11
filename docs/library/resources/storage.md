@@ -12,14 +12,14 @@ Recursos de gestão de ficheiros da aplicação.
 
 ---
 
-#### _storage.absolutePath() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">absolutePath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Gets the absolute path to the storage being used.
 
 ##### Return
 
-( string )
+( _string_ )
 
 The absolute storage path.
 
@@ -29,7 +29,7 @@ The absolute storage path.
 
 ---
 
-#### _storage.database(table: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Description
 
 Starts a new storage for the folder where the files of a table that represent a form are.
@@ -38,7 +38,7 @@ Starts a new storage for the folder where the files of a table that represent a 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| table | string | Name of the table that is also the name of the form. |
+| **table** | _string_ | Name of the table that is also the name of the form. |
 
 ##### Return
 
@@ -48,7 +48,7 @@ New storage started for the database table.
 
 ---
 
-#### _storage.database(table: string, field: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Description
 
 Starts a new storage for the folder where the files of a specific column of a table are located that represents a field of a form.
@@ -57,8 +57,8 @@ Starts a new storage for the folder where the files of a specific column of a ta
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| table | string | Name of the table that is also the name of the form. |
-| field | string | Column name which is also the same as the field name on the form. |
+| **table** | _string_ | Name of the table that is also the name of the form. |
+| **field** | _string_ | Column name which is also the same as the field name on the form. |
 
 ##### Return
 
@@ -68,7 +68,7 @@ New storage started for a database table column.
 
 ---
 
-#### _storage.database(table: string, field: string, path: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Description
 
 Starts a new storage for a specific path where the files for a specific column of a table are located that represent a field on a form.
@@ -77,9 +77,9 @@ Starts a new storage for a specific path where the files for a specific column o
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| table | string | Name of the table that is also the name of the form. |
-| field | string | Column name which is also the same as the field name on the form. |
-| path | string | Relative additional path, usually the name of the file, but it can be a more complex path. |
+| **table** | _string_ | Name of the table that is also the name of the form. |
+| **field** | _string_ | Column name which is also the same as the field name on the form. |
+| **path** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
 
 ##### Return
 
@@ -89,7 +89,7 @@ New storage started for the specific path from a column in a database table.
 
 ---
 
-#### _storage.database(table: string, field: string, path: string, fileName: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Description
 
 Starts a new storage for a specific path where the files for a specific column of a table are located that represent a field on a form.
@@ -98,10 +98,10 @@ Starts a new storage for a specific path where the files for a specific column o
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| table | string | Name of the table that is also the name of the form. |
-| field | string | Column name which is also the same as the field name on the form. |
-| path | string | Relative additional path, usually the name of the file, but it can be a more complex path. |
-| fileName | string | Possibility to add the file name separately if there is a very complex, very unusual path structure. |
+| **table** | _string_ | Name of the table that is also the name of the form. |
+| **field** | _string_ | Column name which is also the same as the field name on the form. |
+| **path** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
+| **fileName** | _string_ | Possibility to add the file name separately if there is a very complex, very unusual path structure. |
 
 ##### Return
 
@@ -115,7 +115,7 @@ New storage started for the specific path from a column in a database table.
 
 ---
 
-#### _storage.ensurePath() : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">ensurePath</span>() : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Return
 
 ( _[Storage](../../resources/Storage)_ )
@@ -127,14 +127,14 @@ New storage started for the specific path from a column in a database table.
 
 ---
 
-#### _storage.extension() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">extension</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Gets the file extension.
 
 ##### Return
 
-( string )
+( _string_ )
 
 The file extension.
 
@@ -144,7 +144,7 @@ The file extension.
 
 ---
 
-#### _storage.file() : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">file</span>() : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Description
 
 File manipulation object of the storage being used.
@@ -161,7 +161,7 @@ It allows to interact with the file physically.
 
 ---
 
-#### _storage.filesystem(folder: string, path: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">folder</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Description
 
 Starts a new storage for a specific filesystem path within the storage.
@@ -170,8 +170,8 @@ Starts a new storage for a specific filesystem path within the storage.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| folder | string | Name of the folder inside the `storage/filesystem`, it will usually be public, private or server. |
-| path | string | Relative additional path, usually the name of the file, but it can be a more complex path. |
+| **folder** | _string_ | Name of the folder inside the `storage/filesystem`, it will usually be public, private or server. |
+| **path** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
 
 ##### Return
 
@@ -181,7 +181,7 @@ New storage started for the specific path from the storage filesystem.
 
 ---
 
-#### _storage.filesystem(folder: string, path: string, fileName: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">folder</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Description
 
 Starts a new storage for a specific filesystem path within the storage.
@@ -190,9 +190,9 @@ Starts a new storage for a specific filesystem path within the storage.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| folder | string | Name of the folder inside the `storage/filesystem`, it will usually be public, private or server. |
-| path | string | Relative additional path, usually the name of the file, but it can be a more complex path. |
-| fileName | string | Possibility to add the file name separately if there is a very complex path structure. |
+| **folder** | _string_ | Name of the folder inside the `storage/filesystem`, it will usually be public, private or server. |
+| **path** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
+| **fileName** | _string_ | Possibility to add the file name separately if there is a very complex path structure. |
 
 ##### Return
 
@@ -206,7 +206,7 @@ New storage started for the specific path from the storage filesystem.
 
 ---
 
-#### _storage.folder() : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">folder</span>() : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Description
 
 Folder manipulation object of the storage being used.
@@ -223,14 +223,14 @@ It allows to interact with the folder physically.
 
 ---
 
-#### _storage.fullPath() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">fullPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Gets the full path to the storage being used.
 
 ##### Return
 
-( string )
+( _string_ )
 
 The full storage path.
 
@@ -240,14 +240,14 @@ The full storage path.
 
 ---
 
-#### _storage.getBase() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getBase</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Gets the base path of the storage being used.
 
 ##### Return
 
-( string )
+( _string_ )
 
 The base path of the storage.
 
@@ -257,7 +257,7 @@ The base path of the storage.
 
 ---
 
-#### _storage.input() : _[InputStream](../../objects/InputStream)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">input</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Description
 
 Gets the input object from Netuno for the storage being used.
@@ -274,7 +274,7 @@ Data input object from Netuno to the storage in use.
 
 ---
 
-#### _storage.inputStream() : _java.io.InputStream_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
 ##### Description
 
 Gets the Java input object for the storage being used.
@@ -291,7 +291,7 @@ Java data input object for the storage in use.
 
 ---
 
-#### _storage.isDatabase() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isDatabase</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Whether storage is defined in the database folder.
@@ -308,7 +308,7 @@ If you are using the database folder.
 
 ---
 
-#### _storage.isExtension(charset: string) : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isExtension</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether the file name contains the extension.
@@ -317,7 +317,7 @@ Checks whether the file name contains the extension.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| charset | string | File name extension. |
+| **charset** | _string_ | File name extension. |
 
 ##### Return
 
@@ -331,7 +331,7 @@ Whether the file contains the defined extension.
 
 ---
 
-#### _storage.isFile() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFile</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether it is a file.
@@ -348,7 +348,7 @@ If it is a file.
 
 ---
 
-#### _storage.isFileSystem() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFileSystem</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Whether storage is defined in the filesystem folder.
@@ -365,7 +365,7 @@ If you are using the filesystem folder.
 
 ---
 
-#### _storage.isFileSystemPrivate() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFileSystemPrivate</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Whether storage is defined in the filesystem's private folder.
@@ -382,7 +382,7 @@ If you are using the filesystem's private folder.
 
 ---
 
-#### _storage.isFileSystemPublic() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFileSystemPublic</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Whether storage is defined in the filesystem's public folder.
@@ -399,7 +399,7 @@ If you are using the filesystem's public folder.
 
 ---
 
-#### _storage.isFileSystemServer() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFileSystemServer</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Whether storage is defined in the filesystem's server folder.
@@ -416,7 +416,7 @@ If you are using the filesystem server folder.
 
 ---
 
-#### _storage.isFolder() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFolder</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether it is a folder.
@@ -433,7 +433,7 @@ If it is a folder.
 
 ---
 
-#### _storage.newRandomFile(charset: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">newRandomFile</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Description
 
 Generates a new storage from the current storage but for a file with a random name that does not yet exist and thus can be saved without conflicts.
@@ -442,7 +442,7 @@ Generates a new storage from the current storage but for a file with a random na
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| charset | string | File name extension. |
+| **charset** | _string_ | File name extension. |
 
 ##### Return
 
@@ -456,7 +456,7 @@ New storage for a new file with a non-existent random name.
 
 ---
 
-#### _storage.output() : _[OutputStream](../../objects/OutputStream)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">output</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Description
 
 Gets the output object from Netuno for the storage being used.
@@ -473,7 +473,7 @@ Data output object from Netuno to the storage in use.
 
 ---
 
-#### _storage.outputStream() : _java.io.OutputStream_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
 ##### Description
 
 Gets the Java output object for the storage being used.
@@ -490,14 +490,14 @@ Java data output object for the storage in use.
 
 ---
 
-#### _storage.path() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">path</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Gets the path of the storage being used.
 
 ##### Return
 
-( string )
+( _string_ )
 
 The path of the storage.
 
@@ -507,7 +507,7 @@ The path of the storage.
 
 ---
 
-#### _storage.reader() : _java.io.Reader_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">reader</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
 ##### Description
 
 Gets the input object as Java text for the storage being used.
@@ -524,7 +524,7 @@ Input object as Java text for the storage in use.
 
 ---
 
-#### _storage.readerBOM() : _java.io.Reader_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">readerBOM</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
 ##### Description
 
 Gets the data entry object as BOM text (byte order mark) from Java for the storage being used.
@@ -537,7 +537,7 @@ Java text input object (_BOM_) for the storage in use.
 
 ---
 
-#### _storage.readerBOM(charset: string) : _java.io.Reader_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">readerBOM</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
 ##### Description
 
 Gets the data entry object as BOM text (byte order mark) from Java for the storage being used.
@@ -546,7 +546,7 @@ Gets the data entry object as BOM text (byte order mark) from Java for the stora
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| charset | string | Character encoding type code such as: |
+| **charset** | _string_ | Character encoding type code such as: |
 |   |   | - US-ASCII |
 |   |   | - ISO-8859-1 |
 |   |   | - UTF-8 |
@@ -566,7 +566,7 @@ Java text input object (_BOM_) for the storage in use.
 
 ---
 
-#### _storage.saveFile(file: _[File](../../objects/File)_) : _void_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">saveFile</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Save the file in the current storage path.
@@ -575,7 +575,7 @@ Save the file in the current storage path.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | _[File](../../objects/File)_ | File that will be saved in the current storage. |
+| **file** | _[File](../../objects/File)_ | File that will be saved in the current storage. |
 
 ##### Return
 
@@ -588,7 +588,7 @@ Save the file in the current storage path.
 
 ---
 
-#### _storage.setBase(base: string) : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">setBase</span>(<span style="color: #FF8000">base</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Defines the base path of the storage to be used.
@@ -597,7 +597,7 @@ Defines the base path of the storage to be used.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| base | string | The base path of the storage. |
+| **base** | _string_ | The base path of the storage. |
 
 ##### Return
 
@@ -611,14 +611,14 @@ Whether the path is valid and has been defined.
 
 ---
 
-#### _storage.url() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">url</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Gets the URL of the storage being used.
 
 ##### Return
 
-( string )
+( _string_ )
 
 The URL for the storage.
 
@@ -628,7 +628,7 @@ The URL for the storage.
 
 ---
 
-#### _storage.writer() : _java.io.Writer_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">writer</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>
 ##### Description
 
 Gets the output object as Java text for the storage being used.

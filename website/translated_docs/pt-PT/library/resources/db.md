@@ -31,7 +31,7 @@ const OK = _db.query(
 
 ---
 
-#### _db.all(tabela: string) : _java.util.List_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">all</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Seleciona todos os dados de uma tabela.
@@ -46,7 +46,7 @@ _db.all('cliente');
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela de onde será executada a query. |
+| **tabela** | _string_ | Nome da tabela de onde será executada a query. |
 
 ##### Retorno
 
@@ -60,7 +60,7 @@ Os dados encontrados na tabela ou null caso não exista.
 
 ---
 
-#### _db.batch() : _[DBBatch](../../objects/DBBatch)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">batch</span>() : <span style="font-weight: normal; font-style: italic;">[DBBatch](../../objects/DBBatch)</span>
 ##### Descrição
 
 Inicia o processamento em lote de execuções em base de dados.
@@ -85,7 +85,7 @@ Gestor da execução de operações em lote.
 
 ---
 
-#### _db.batch(comandoSQL: string) : _[DBBatch](../../objects/DBBatch)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">batch</span>(<span style="color: #FF8000">comandoSQL</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DBBatch](../../objects/DBBatch)</span>
 ##### Descrição
 
 Inicia o processamento em lote de execuções em base de dados, com base em um único comando que será executado múltiplas vezes com variação dos dados.
@@ -106,7 +106,7 @@ const resultados = batchComParametros.execute()
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| comandoSQL | string | Comando SQL que será utilizado como base para todas as interações. |
+| **comandoSQL** | _string_ | Comando SQL que será utilizado como base para todas as interações. |
 
 ##### Retorno
 
@@ -120,7 +120,7 @@ Gestor da execução de operações em lote.
 
 ---
 
-#### _db.checkExists() : _[CheckExists](../../objects/CheckExists)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">checkExists</span>() : <span style="font-weight: normal; font-style: italic;">[CheckExists](../../objects/CheckExists)</span>
 ##### Descrição
 
 Verifica se sequências, tabelas, colunas e indexes existem na base de dados.
@@ -148,7 +148,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### _db.column() : _[Column](../../objects/Column)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">column</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Descrição
 
 Realiza a manipulação de colunas em base de dados.
@@ -176,7 +176,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### _db.config() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém a configuração de conexão à base de dados que está a ser utilizada.
@@ -207,7 +207,7 @@ Configuração da conexão à base de dados que está a ser utilizada.
 
 ---
 
-#### _db.date() : _java.sql.Date_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">date</span>() : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Descrição
 
 Obtém a data atual para ser utilizada em operações de base de dados.
@@ -220,7 +220,7 @@ Data atual.
 
 ---
 
-#### _db.date(time: _java.lang.Long_) : _java.sql.Date_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">date</span>(<span style="color: #FF8000">time</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Long</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Descrição
 
 Através do número longo que identifica a data exata, cria um novo objeto Date para ser utilizado em operações de base de dados.
@@ -229,7 +229,7 @@ Através do número longo que identifica a data exata, cria um novo objeto Date 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| time | _java.lang.Long_ | Número longo referente a data exata. |
+| **time** | _java.lang.Long_ | Número longo referente a data exata. |
 
 ##### Retorno
 
@@ -239,7 +239,7 @@ Novo objeto do tipo: _java.sql.Date_
 
 ---
 
-#### _db.date(texto: string) : _java.sql.Date_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">date</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Descrição
 
 Com o conteúdo de texto obtém o objeto de data para ser utilizada em operações de base de dados.
@@ -248,7 +248,7 @@ Com o conteúdo de texto obtém o objeto de data para ser utilizada em operaçõ
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | string | Texto que contém data no formato: `yyyy-MM-dd` |
+| **texto** | _string_ | Texto que contém data no formato: `yyyy-MM-dd` |
 
 ##### Retorno
 
@@ -258,7 +258,7 @@ Data obtida do texto.
 
 ---
 
-#### _db.date(instant: _java.time.Instant_) : _java.util.Date_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">date</span>(<span style="color: #FF8000">instant</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
 ##### Descrição
 
 Através do objeto Instant cria um novo objeto Date com java.sql.**Date.from**, para ser utilizado em operações de base de dados.
@@ -267,7 +267,7 @@ Através do objeto Instant cria um novo objeto Date com java.sql.**Date.from**, 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| instant | _java.time.Instant_ | Objeto do tipo: _java.time.Instant_ |
+| **instant** | _java.time.Instant_ | Objeto do tipo: _java.time.Instant_ |
 
 ##### Retorno
 
@@ -277,7 +277,7 @@ Novo objeto do tipo: _java.util.Date_
 
 ---
 
-#### _db.date(localDateTime: _java.time.LocalDate_) : _java.sql.Date_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">date</span>(<span style="color: #FF8000">localDateTime</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Descrição
 
 Através do objeto LocalDateTime cria um novo objeto Date para ser utilizado em operações de base de dados.
@@ -286,7 +286,7 @@ Através do objeto LocalDateTime cria um novo objeto Date para ser utilizado em 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| localDateTime | _java.time.LocalDate_ | Objeto do tipo: _java.time.LocalDateTime_ |
+| **localDateTime** | _java.time.LocalDate_ | Objeto do tipo: _java.time.LocalDateTime_ |
 
 ##### Retorno
 
@@ -300,7 +300,7 @@ Novo objeto do tipo: _java.sql.Date_
 
 ---
 
-#### _db.delete(tabela: string, id: _int_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a eliminação de registos na base de dados baseado no ID.
@@ -326,8 +326,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados. |
-| id | _int_ | ID do registo a eliminar. |
+| **tabela** | _string_ | Nome da tabela na base de dados. |
+| **id** | _int_ | ID do registo a eliminar. |
 
 ##### Retorno
 
@@ -337,7 +337,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.delete(tabela: string, uid: string) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a eliminação de registos na base de dados baseado no UID.
@@ -363,8 +363,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados. |
-| uid | string | UID do registo a eliminar. |
+| **tabela** | _string_ | Nome da tabela na base de dados. |
+| **uid** | _string_ | UID do registo a eliminar. |
 
 ##### Retorno
 
@@ -374,7 +374,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.delete(tabela: string, dados: _java.util.Map_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a eliminação de registos na base de dados baseado no ID ou UID passado no objeto de dados.
@@ -398,8 +398,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados. |
-| dados | _java.util.Map_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
+| **tabela** | _string_ | Nome da tabela na base de dados. |
+| **dados** | _java.util.Map_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
 
 ##### Retorno
 
@@ -409,7 +409,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.delete(tabela: string, dados: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a eliminação de registos na base de dados baseado no ID ou UID passado no objeto de dados.
@@ -433,8 +433,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados. |
-| dados | _[Values](../../objects/Values)_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
+| **tabela** | _string_ | Nome da tabela na base de dados. |
+| **dados** | _[Values](../../objects/Values)_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
 
 ##### Retorno
 
@@ -448,7 +448,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.deleteMany(tabela: string, listaDados: _[Ljava.lang.Object;[]_) : _[I_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">deleteMany</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">listaDados</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Descrição
 
 Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -473,8 +473,8 @@ _out.json({dadosEliminados: dadosEliminados})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _[Ljava.lang.Object;[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **listaDados** | _[Ljava.lang.Object;[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -484,7 +484,7 @@ Array com a quantidade de registos afetados pela eliminação para cada objeto d
 
 ---
 
-#### _db.deleteMany(tabela: string, listaDados: _java.util.List_) : _[I_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">deleteMany</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">listaDados</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Descrição
 
 Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -509,8 +509,8 @@ _out.json({dadosEliminados: dadosEliminados})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _java.util.List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **listaDados** | _java.util.List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -520,7 +520,7 @@ Array com a quantidade de registos afetados pela eliminação para cada objeto d
 
 ---
 
-#### _db.deleteMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _[I_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">deleteMany</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">listaDados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Descrição
 
 Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -545,8 +545,8 @@ _out.json({dadosEliminados: dadosEliminados})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _[Values](../../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **listaDados** | _[Values](../../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -560,7 +560,7 @@ Array com a quantidade de registos afetados pela eliminação para cada objeto d
 
 ---
 
-#### _db.escape(dados: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">escape</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Garante a codificação para definir nomes em base de dados, normalmente aspas (**"**).
@@ -569,11 +569,11 @@ Garante a codificação para definir nomes em base de dados, normalmente aspas (
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | string | Nome que precisa ser utilizado em base de dados, como nome de tabela ou coluna. |
+| **dados** | _string_ | Nome que precisa ser utilizado em base de dados, como nome de tabela ou coluna. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Nome seguro para utilizar em base de dados, como em tabelas e colunas.
 
@@ -583,14 +583,14 @@ Nome seguro para utilizar em base de dados, como em tabelas e colunas.
 
 ---
 
-#### _db.escapeEnd() : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">escapeEnd</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém a codificação de fim para definir nomes em base de dados, normalmente aspas (**"**).
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Fim de nomes em base de dados.
 
@@ -600,14 +600,14 @@ Fim de nomes em base de dados.
 
 ---
 
-#### _db.escapeStart() : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">escapeStart</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém a codificação de início para definir nomes em base de dados, normalmente aspas (**"**).
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Início de nomes em base de dados.
 
@@ -617,7 +617,7 @@ Início de nomes em base de dados.
 
 ---
 
-#### _db.execute(comandoSQL: string) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">execute</span>(<span style="color: #FF8000">comandoSQL</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
@@ -635,7 +635,7 @@ const linhasAfetadas = _db.execute(`
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| comandoSQL | string | Comando SQL que será executado diretamente na base de dados. |
+| **comandoSQL** | _string_ | Comando SQL que será executado diretamente na base de dados. |
 
 ##### Retorno
 
@@ -645,7 +645,7 @@ Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### _db.execute(comandoSQL: string, parametros: _[Ljava.lang.Object;[]_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">execute</span>(<span style="color: #FF8000">comandoSQL</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">parametros</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
@@ -663,8 +663,8 @@ const linhasAfetadas = _db.execute(`
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| comandoSQL | string | Comando SQL que será executado diretamente na base de dados. |
-| parametros | _[Ljava.lang.Object;[]_ | Sequência de valores dos parâmetros que são injetados no comando. |
+| **comandoSQL** | _string_ | Comando SQL que será executado diretamente na base de dados. |
+| **parametros** | _[Ljava.lang.Object;[]_ | Sequência de valores dos parâmetros que são injetados no comando. |
 
 ##### Retorno
 
@@ -674,7 +674,7 @@ Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### _db.execute(comandoSQL: string, parametros: _java.util.List_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">execute</span>(<span style="color: #FF8000">comandoSQL</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">parametros</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
@@ -696,8 +696,8 @@ const linhasAfetadas = _db.execute(`
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| comandoSQL | string | Comando SQL que será executado diretamente na base de dados. |
-| parametros | _java.util.List_ | Lista dos valores dos parâmetros que são injetados no comando. |
+| **comandoSQL** | _string_ | Comando SQL que será executado diretamente na base de dados. |
+| **parametros** | _java.util.List_ | Lista dos valores dos parâmetros que são injetados no comando. |
 
 ##### Retorno
 
@@ -707,7 +707,7 @@ Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### _db.execute(comandoSQL: string, parametros: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">execute</span>(<span style="color: #FF8000">comandoSQL</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">parametros</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
@@ -729,8 +729,8 @@ const linhasAfetadas = _db.execute(`
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| comandoSQL | string | Comando SQL que será executado diretamente na base de dados. |
-| parametros | _[Values](../../objects/Values)_ | Lista dos valores dos parâmetros que são injetados no comando. |
+| **comandoSQL** | _string_ | Comando SQL que será executado diretamente na base de dados. |
+| **parametros** | _[Values](../../objects/Values)_ | Lista dos valores dos parâmetros que são injetados no comando. |
 
 ##### Retorno
 
@@ -744,7 +744,7 @@ Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### _db.find(tabela: string, params: _[Values](../../objects/Values)_) : _java.util.List_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">find</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 A partir de um objeto que tem a estrutura parecida com uma consulta SQL, obtém uma lista dos dados encontrados nas condições de pesquisa.
@@ -798,8 +798,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome tabela. |
-| params | _[Values](../../objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
+| **tabela** | _string_ | Nome tabela. |
+| **params** | _[Values](../../objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
 
 ##### Retorno
 
@@ -813,7 +813,7 @@ Lista dos registos de dados encontrados.
 
 ---
 
-#### _db.findFirst(tabela: string, params: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">findFirst</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 A partir de um objeto que tem a estrutura parecida com uma consulta SQL, obtém uma lista dos dados encontrados nas condições de pesquisa.
@@ -842,8 +842,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome tabela. |
-| params | _[Values](../../objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
+| **tabela** | _string_ | Nome tabela. |
+| **params** | _[Values](../../objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
 
 ##### Retorno
 
@@ -857,7 +857,7 @@ Dados da linha de registo encontrado.
 
 ---
 
-#### _db.findQuery(tabela: string, params: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">findQuery</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 A partir de um objeto que tem a estrutura parecida com uma consulta SQL, gera uma query para ser efectuado um select.
@@ -884,12 +884,12 @@ const record = _db.findQuery(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome tabela. |
-| params | _[Values](../../objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
+| **tabela** | _string_ | Nome tabela. |
+| **params** | _[Values](../../objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 A query com os parâmetros pronta a ser utilizada.
 
@@ -899,7 +899,7 @@ A query com os parâmetros pronta a ser utilizada.
 
 ---
 
-#### _db.get(tabela: string, id: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados do registo na base de dados, através do nome da tabela e do ID.
@@ -921,8 +921,8 @@ _out.json(dbRegistoCliente);
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve obter os dados. |
-| id | _int_ | ID do registo que deve obter os dados. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve obter os dados. |
+| **id** | _int_ | ID do registo que deve obter os dados. |
 
 ##### Retorno
 
@@ -932,7 +932,7 @@ Os dados do item encontrado ou null caso não exista.
 
 ---
 
-#### _db.get(tabela: string, uid: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados do registo na base de dados, através do nome da tabela e do UID.
@@ -954,8 +954,8 @@ _out.json(dbRegistoCliente);
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve obter os dados. |
-| uid | string | UID do registo que deve obter os dados. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve obter os dados. |
+| **uid** | _string_ | UID do registo que deve obter os dados. |
 
 ##### Retorno
 
@@ -969,7 +969,7 @@ Os dados do item encontrado ou null caso não exista.
 
 ---
 
-#### _db.getConfig() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém a configuração de conexão à base de dados que está a ser utilizada.
@@ -1000,7 +1000,7 @@ Configuração da conexão à base de dados que está a ser utilizada.
 
 ---
 
-#### _db.getKey() : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">getKey</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o nome da configuração de conexão à base de dados que está a ser utilizada.
@@ -1021,7 +1021,7 @@ _out.print(`A OUTRA conexão da db é: ${db_OUTRA_NomeConexao}\n`)
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Nome da configuração de conexão à base de dados que está a ser utilizada.
 
@@ -1031,7 +1031,7 @@ Nome da configuração de conexão à base de dados que está a ser utilizada.
 
 ---
 
-#### _db.index() : _[Index](../../objects/Index)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">index</span>() : <span style="font-weight: normal; font-style: italic;">[Index](../../objects/Index)</span>
 ##### Descrição
 
 Realiza a manipulação de indexes em base de dados.
@@ -1058,7 +1058,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### _db.init(chave: string) : _[DB](../../resources/DB)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DB](../../resources/DB)</span>
 ##### Descrição
 
 Inicia um novo recurso de DB para o nome de conexão que é passada.
@@ -1080,7 +1080,7 @@ _out.json(paises)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Nome da conexão da base definida nas configurações de ambiente da aplicação. |
+| **chave** | _string_ | Nome da conexão da base definida nas configurações de ambiente da aplicação. |
 
 ##### Retorno
 
@@ -1094,7 +1094,7 @@ O novo recurso de base de dados que utiliza uma outra base de dados.
 
 ---
 
-#### _db.insert(tabela: string, dados: _java.util.Map_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insert</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção de novos dados na base de dados e retorna o id dos mesmos.
@@ -1120,8 +1120,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| dados | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1130,7 +1130,7 @@ _out.json(
 
 ---
 
-#### _db.insert(tabela: string, dados: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insert</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção de novos dados na base de dados e retorna o id dos mesmos.
@@ -1156,8 +1156,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **dados** | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1170,7 +1170,7 @@ _out.json(
 
 ---
 
-#### _db.insertIfNotExists(tabela: string, dados: _java.util.Map_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertIfNotExists</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção de um valor caso ele não exista ou retorna o ID caso já exista.
@@ -1190,8 +1190,8 @@ _out.json({dadosInseridos: dadosInseridos})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| dados | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1201,7 +1201,7 @@ ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
-#### _db.insertIfNotExists(tabela: string, dados: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertIfNotExists</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção de um valor caso ele não exista ou retorna o ID caso já exista.
@@ -1221,8 +1221,8 @@ _out.json({dadosInseridos: dadosInseridos})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **dados** | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1236,7 +1236,7 @@ ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
-#### _db.insertMany(tabela: string, listaDados: _[Ljava.lang.Object;[]_) : _[I_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertMany</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">listaDados</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Descrição
 
 Executa a inserção várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores.
@@ -1260,8 +1260,8 @@ _db.insertMany(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _[Ljava.lang.Object;[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **listaDados** | _[Ljava.lang.Object;[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -1271,7 +1271,7 @@ Array com os IDs dos dados inseridos.
 
 ---
 
-#### _db.insertMany(tabela: string, listaDados: _java.util.List_) : _[I_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertMany</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">listaDados</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Descrição
 
 Executa a inserção várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores.
@@ -1295,8 +1295,8 @@ _db.insertMany(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _java.util.List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **listaDados** | _java.util.List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -1306,7 +1306,7 @@ Array com os IDs dos dados inseridos.
 
 ---
 
-#### _db.insertMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _[I_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertMany</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">listaDados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Descrição
 
 Executa a inserção várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores.
@@ -1330,8 +1330,8 @@ _db.insertMany(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _[Values](../../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **listaDados** | _[Values](../../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -1345,7 +1345,7 @@ Array com os IDs dos dados inseridos.
 
 ---
 
-#### _db.isH2() : _boolean_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">isH2</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se a base de dados conectada é H2 Database.
@@ -1362,7 +1362,7 @@ Se é H2 Database.
 
 ---
 
-#### _db.isH2DataBase() : _boolean_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">isH2DataBase</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se a base de dados conectada é H2 Database.
@@ -1379,7 +1379,7 @@ Se é H2 Database.
 
 ---
 
-#### _db.isMariaDB() : _boolean_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">isMariaDB</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se a base de dados conectada é MariaDB.
@@ -1396,7 +1396,7 @@ Se é MariaDB.
 
 ---
 
-#### _db.isPG() : _boolean_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">isPG</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se a base de dados conectada é PostgreSQL.
@@ -1413,7 +1413,7 @@ Se é PostgreSQL.
 
 ---
 
-#### _db.isPostgreSQL() : _boolean_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">isPostgreSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se a base de dados conectada é PostgreSQL.
@@ -1430,7 +1430,7 @@ Se é PostgreSQL.
 
 ---
 
-#### _db.key() : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">key</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o nome da configuração de conexão à base de dados que está a ser utilizada.
@@ -1451,7 +1451,7 @@ _out.print(`A OUTRA conexão da db é: ${db_OUTRA_NomeConexao}\n`)
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Nome da configuração de conexão à base de dados que está a ser utilizada.
 
@@ -1461,16 +1461,16 @@ Nome da configuração de conexão à base de dados que está a ser utilizada.
 
 ---
 
-#### _db.param(type: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">param</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| type | string |   |
+| **type** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -1479,7 +1479,7 @@ Nome da configuração de conexão à base de dados que está a ser utilizada.
 
 ---
 
-#### _db.query(query: string) : _java.util.List_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">query</span>(<span style="color: #FF8000">query</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1501,7 +1501,7 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| query | string | Comando que será executado na base de dados para obter registos. |
+| **query** | _string_ | Comando que será executado na base de dados para obter registos. |
 
 ##### Retorno
 
@@ -1511,7 +1511,7 @@ Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.query(query: string, params: _[Ljava.lang.Object;[]_) : _java.util.List_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">query</span>(<span style="color: #FF8000">query</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1531,8 +1531,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| query | string | Comando que será executado na base de dados para obter registos. |
-| params | _[Ljava.lang.Object;[]_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| **query** | _string_ | Comando que será executado na base de dados para obter registos. |
+| **params** | _[Ljava.lang.Object;[]_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1542,7 +1542,7 @@ Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.query(query: string, params: _java.util.List_) : _java.util.List_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">query</span>(<span style="color: #FF8000">query</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1562,8 +1562,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| query | string | Comando que será executado na base de dados para obter registos. |
-| params | _java.util.List_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| **query** | _string_ | Comando que será executado na base de dados para obter registos. |
+| **params** | _java.util.List_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1573,7 +1573,7 @@ Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.query(query: string, params: _[Values](../../objects/Values)_) : _java.util.List_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">query</span>(<span style="color: #FF8000">query</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1593,8 +1593,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| query | string | Comando que será executado na base de dados para obter registos. |
-| params | _[Values](../../objects/Values)_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| **query** | _string_ | Comando que será executado na base de dados para obter registos. |
+| **params** | _[Values](../../objects/Values)_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1608,7 +1608,7 @@ Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.queryFirst(query: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">queryFirst</span>(<span style="color: #FF8000">query</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
@@ -1627,7 +1627,7 @@ _log.info('O primeiro produto encontrado:', produtoEncontrado)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| query | string | Comando que será executado na base de dados para obter o registo. |
+| **query** | _string_ | Comando que será executado na base de dados para obter o registo. |
 
 ##### Retorno
 
@@ -1637,7 +1637,7 @@ O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### _db.queryFirst(query: string, params: _[Ljava.lang.Object;[]_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">queryFirst</span>(<span style="color: #FF8000">query</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
@@ -1656,8 +1656,8 @@ _log.info('O primeiro produto encontrado:', produtoEncontrado)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| query | string | Comando que será executado na base de dados para obter o registo. |
-| params | _[Ljava.lang.Object;[]_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| **query** | _string_ | Comando que será executado na base de dados para obter o registo. |
+| **params** | _[Ljava.lang.Object;[]_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1667,7 +1667,7 @@ O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### _db.queryFirst(query: string, params: _java.util.List_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">queryFirst</span>(<span style="color: #FF8000">query</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
@@ -1686,8 +1686,8 @@ _log.info('O primeiro produto encontrado:', produtoEncontrado)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| query | string | Comando que será executado na base de dados para obter o registo. |
-| params | _java.util.List_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| **query** | _string_ | Comando que será executado na base de dados para obter o registo. |
+| **params** | _java.util.List_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1697,7 +1697,7 @@ O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### _db.queryFirst(query: string, params: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">queryFirst</span>(<span style="color: #FF8000">query</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
@@ -1716,8 +1716,8 @@ _log.info('O primeiro produto encontrado:', produtoEncontrado)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| query | string | Comando que será executado na base de dados para obter o registo. |
-| params | _[Values](../../objects/Values)_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| **query** | _string_ | Comando que será executado na base de dados para obter o registo. |
+| **params** | _[Values](../../objects/Values)_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1731,7 +1731,7 @@ O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### _db.sanitize(dados: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">sanitize</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Certifica que o conteúdo é seguro para injetar numa query direto à base de dados, previne ataques de SQL Injection.
@@ -1740,11 +1740,11 @@ Certifica que o conteúdo é seguro para injetar numa query direto à base de da
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | string | Informação que precisa ser utilizada em base de dados com risco de SQL Injection. |
+| **dados** | _string_ | Informação que precisa ser utilizada em base de dados com risco de SQL Injection. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo seguro para utilizar diretamente em queries.
 
@@ -1754,7 +1754,7 @@ Conteúdo seguro para utilizar diretamente em queries.
 
 ---
 
-#### _db.sanitizeBoolean(dados: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">sanitizeBoolean</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Certifica que o conteúdo é seguro para injetar como boleano (verdadeiro ou falso) numa query direto à base de dados, previne ataques de SQL Injection.
@@ -1763,11 +1763,11 @@ Certifica que o conteúdo é seguro para injetar como boleano (verdadeiro ou fal
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | string | Informação que precisa ser utilizada como boleano (verdadeiro ou falso) em base de dados com risco de SQL Injection. |
+| **dados** | _string_ | Informação que precisa ser utilizada como boleano (verdadeiro ou falso) em base de dados com risco de SQL Injection. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo como boleano (verdadeiro ou falso) seguro para utilizar diretamente em queries.
 
@@ -1777,7 +1777,7 @@ Conteúdo como boleano (verdadeiro ou falso) seguro para utilizar diretamente em
 
 ---
 
-#### _db.sanitizeFloat(dados: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">sanitizeFloat</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Certifica que o conteúdo é seguro para injetar como número decimal numa query direto à base de dados, previne ataques de SQL Injection.
@@ -1786,11 +1786,11 @@ Certifica que o conteúdo é seguro para injetar como número decimal numa query
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | string | Informação que precisa ser utilizada como número decimal em base de dados com risco de SQL Injection. |
+| **dados** | _string_ | Informação que precisa ser utilizada como número decimal em base de dados com risco de SQL Injection. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo como número decimal seguro para utilizar diretamente em queries.
 
@@ -1800,7 +1800,7 @@ Conteúdo como número decimal seguro para utilizar diretamente em queries.
 
 ---
 
-#### _db.sanitizeInt(dados: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">sanitizeInt</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Certifica que o conteúdo é seguro para injetar como número inteiro numa query direto à base de dados, previne ataques de SQL Injection.
@@ -1809,11 +1809,11 @@ Certifica que o conteúdo é seguro para injetar como número inteiro numa query
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | string | Informação que precisa ser utilizada como número inteiro em base de dados com risco de SQL Injection. |
+| **dados** | _string_ | Informação que precisa ser utilizada como número inteiro em base de dados com risco de SQL Injection. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo como número inteiro seguro para utilizar diretamente em queries.
 
@@ -1823,7 +1823,7 @@ Conteúdo como número inteiro seguro para utilizar diretamente em queries.
 
 ---
 
-#### _db.sanitizeName(dados: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">sanitizeName</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Certifica que o conteúdo é seguro para injetar como um nome de tabela ou coluna numa query direto à base de dados, previne ataques de SQL Injection.
@@ -1832,11 +1832,11 @@ Certifica que o conteúdo é seguro para injetar como um nome de tabela ou colun
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | string | Informação que precisa ser utilizada como nome de tabela ou coluna em base de dados com risco de SQL Injection. |
+| **dados** | _string_ | Informação que precisa ser utilizada como nome de tabela ou coluna em base de dados com risco de SQL Injection. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo como nome de tabela ou coluna seguro para utilizar diretamente em queries.
 
@@ -1846,7 +1846,7 @@ Conteúdo como nome de tabela ou coluna seguro para utilizar diretamente em quer
 
 ---
 
-#### _db.sanitizePath(dados: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">sanitizePath</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Certifica que o conteúdo é seguro para injetar como um caminho do nome da tabela seguido por um ponto e então o nome da coluna (tabela.coluna), em query direto à base de dados, previne ataques de SQL Injection.
@@ -1855,11 +1855,11 @@ Certifica que o conteúdo é seguro para injetar como um caminho do nome da tabe
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | string | Informação que precisa ser utilizada como caminho (tabela.nome) em base de dados com risco de SQL Injection. |
+| **dados** | _string_ | Informação que precisa ser utilizada como caminho (tabela.nome) em base de dados com risco de SQL Injection. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo como caminho (tabela.nome) seguro para utilizar diretamente em queries.
 
@@ -1869,7 +1869,7 @@ Conteúdo como caminho (tabela.nome) seguro para utilizar diretamente em queries
 
 ---
 
-#### _db.save(tabela: string, uid: _int_, dados: _java.util.Map_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -1898,9 +1898,9 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados. |
-| uid | _int_ | UID do registo a eliminar. |
-| dados | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **tabela** | _string_ | Nome da tabela na base de dados. |
+| **uid** | _int_ | UID do registo a eliminar. |
+| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -1910,7 +1910,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.save(tabela: string, uid: _int_, dados: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -1939,9 +1939,9 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados. |
-| uid | _int_ | UID do registo a eliminar. |
-| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **tabela** | _string_ | Nome da tabela na base de dados. |
+| **uid** | _int_ | UID do registo a eliminar. |
+| **dados** | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -1951,7 +1951,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.save(tabela: string, uid: string, dados: _java.util.Map_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -1980,9 +1980,9 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados. |
-| uid | string | UID do registo a eliminar. |
-| dados | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **tabela** | _string_ | Nome da tabela na base de dados. |
+| **uid** | _string_ | UID do registo a eliminar. |
+| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -1992,7 +1992,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.save(tabela: string, uid: string, dados: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -2021,9 +2021,9 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados. |
-| uid | string | UID do registo a eliminar. |
-| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **tabela** | _string_ | Nome da tabela na base de dados. |
+| **uid** | _string_ | UID do registo a eliminar. |
+| **dados** | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2037,7 +2037,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.search(tabela: string, dados: _java.util.Map_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Descrição
 
 Executa uma pesquisa a uma tabela retornando um objeto do tipo DBSearchResult.
@@ -2057,8 +2057,8 @@ _out.json({data: query.getResults(),total: query.getTotal()});
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve obter os dados. |
-| dados | _java.util.Map_ | Dados para se efectuar a pesquisa. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve obter os dados. |
+| **dados** | _java.util.Map_ | Dados para se efectuar a pesquisa. |
 
 ##### Retorno
 
@@ -2068,14 +2068,14 @@ Objeto do tipo DBSearchResult.
 
 ---
 
-#### _db.search(table: string, data: _java.util.Map_, wildcards: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">wildcards</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| table | string |   |
-| data | _java.util.Map_ |   |
-| wildcards | _boolean_ |   |
+| **table** | _string_ |   |
+| **data** | _java.util.Map_ |   |
+| **wildcards** | _boolean_ |   |
 
 ##### Retorno
 
@@ -2084,7 +2084,7 @@ Objeto do tipo DBSearchResult.
 
 ---
 
-#### _db.search(tabela: string, dados: _[Values](../../objects/Values)_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Descrição
 
 Executa uma pesquisa a uma tabela retornando um objeto do tipo DBSearchResult.
@@ -2104,8 +2104,8 @@ _out.json({data: query.getResults(),total: query.getTotal()});
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve obter os dados. |
-| dados | _[Values](../../objects/Values)_ | Dados para se efectuar a pesquisa. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve obter os dados. |
+| **dados** | _[Values](../../objects/Values)_ | Dados para se efectuar a pesquisa. |
 
 ##### Retorno
 
@@ -2115,14 +2115,14 @@ Objeto do tipo DBSearchResult.
 
 ---
 
-#### _db.search(table: string, data: _[Values](../../objects/Values)_, wildcards: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">wildcards</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| table | string |   |
-| data | _[Values](../../objects/Values)_ |   |
-| wildcards | _boolean_ |   |
+| **table** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
+| **wildcards** | _boolean_ |   |
 
 ##### Retorno
 
@@ -2135,7 +2135,7 @@ Objeto do tipo DBSearchResult.
 
 ---
 
-#### _db.sequence() : _[Sequence](../../objects/Sequence)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">sequence</span>() : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
 ##### Descrição
 
 Realiza a manipulação de sequências em base de dados.
@@ -2162,7 +2162,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### _db.store(tabela: string, dados: _java.util.Map_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">store</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de um valor caso ele exista baseando-se numa chave primária ou uma inserção quando nenhum dado existe com a mesma chave primária. Este tipo de operação é útil quando não é possível utilizar IDs em determinadas operações.
@@ -2182,8 +2182,8 @@ _out.json({dadosStore: dadosStore})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| dados | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -2193,7 +2193,7 @@ ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
-#### _db.store(tabela: string, dados: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">store</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de um valor caso ele exista baseando-se numa chave primária ou uma inserção quando nenhum dado existe com a mesma chave primária. Este tipo de operação é útil quando não é possível utilizar IDs em determinadas operações.
@@ -2213,8 +2213,8 @@ _out.json({dadosStore: dadosStore})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **dados** | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -2228,7 +2228,7 @@ ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
-#### _db.table() : _[Table](../../objects/Table)_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">table</span>() : <span style="font-weight: normal; font-style: italic;">[Table](../../objects/Table)</span>
 ##### Descrição
 
 Verifica se sequências, tabelas, colunas e indexes existem na base de dados.
@@ -2256,7 +2256,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### _db.time() : _java.sql.Time_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">time</span>() : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Descrição
 
 Obtém a hora atual para ser utilizada em operações de base de dados.
@@ -2269,7 +2269,7 @@ Hora atual.
 
 ---
 
-#### _db.time(time: _java.lang.Long_) : _java.sql.Time_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">time</span>(<span style="color: #FF8000">time</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Long</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Descrição
 
 Através do número longo que identifica a hora exata, cria um novo objeto Time para ser utilizado em operações de base de dados.
@@ -2278,7 +2278,7 @@ Através do número longo que identifica a hora exata, cria um novo objeto Time 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| time | _java.lang.Long_ | Número longo referente a hora exato. |
+| **time** | _java.lang.Long_ | Número longo referente a hora exato. |
 
 ##### Retorno
 
@@ -2288,7 +2288,7 @@ Novo objeto do tipo: _java.sql.Time_
 
 ---
 
-#### _db.time(texto: string) : _java.sql.Time_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">time</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Descrição
 
 Com o conteúdo de texto obtém o objeto de hora para ser utilizada em operações de base de dados.
@@ -2297,7 +2297,7 @@ Com o conteúdo de texto obtém o objeto de hora para ser utilizada em operaçõ
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | string | Texto que contém hora no formato: `HH:mm:ss` |
+| **texto** | _string_ | Texto que contém hora no formato: `HH:mm:ss` |
 
 ##### Retorno
 
@@ -2307,7 +2307,7 @@ Hora obtida do texto.
 
 ---
 
-#### _db.time(instant: _java.time.Instant_) : _java.util.Date_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">time</span>(<span style="color: #FF8000">instant</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
 ##### Descrição
 
 Através do objeto Instant cria um novo objeto Date com java.sql.**Time.from**, para ser utilizado em operações de base de dados.
@@ -2316,7 +2316,7 @@ Através do objeto Instant cria um novo objeto Date com java.sql.**Time.from**, 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| instant | _java.time.Instant_ | Objeto do tipo: _java.time.Instant_ |
+| **instant** | _java.time.Instant_ | Objeto do tipo: _java.time.Instant_ |
 
 ##### Retorno
 
@@ -2326,7 +2326,7 @@ Novo objeto do tipo: _java.util.Date_
 
 ---
 
-#### _db.time(localDateTime: _java.time.LocalTime_) : _java.sql.Time_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">time</span>(<span style="color: #FF8000">localDateTime</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Descrição
 
 Através do objeto LocalDateTime cria um novo objeto Time para ser utilizado em operações de base de dados.
@@ -2335,7 +2335,7 @@ Através do objeto LocalDateTime cria um novo objeto Time para ser utilizado em 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| localDateTime | _java.time.LocalTime_ | Objeto do tipo: _java.time.LocalDateTime_ |
+| **localDateTime** | _java.time.LocalTime_ | Objeto do tipo: _java.time.LocalDateTime_ |
 
 ##### Retorno
 
@@ -2349,7 +2349,7 @@ Novo objeto do tipo: _java.sql.Time_
 
 ---
 
-#### _db.timestamp() : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">timestamp</span>() : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Descrição
 
 Obtém a data e hora atual para ser utilizada em operações de base de dados.
@@ -2362,7 +2362,7 @@ Data e hora atual.
 
 ---
 
-#### _db.timestamp(time: _java.lang.Long_) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">timestamp</span>(<span style="color: #FF8000">time</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Long</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Descrição
 
 Através do número longo que identifica o tempo exato, cria um novo objeto Timestamp para ser utilizado em operações de base de dados.
@@ -2371,7 +2371,7 @@ Através do número longo que identifica o tempo exato, cria um novo objeto Time
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| time | _java.lang.Long_ | Número longo referente ao tempo exato. |
+| **time** | _java.lang.Long_ | Número longo referente ao tempo exato. |
 
 ##### Retorno
 
@@ -2381,7 +2381,7 @@ Novo objeto do tipo: _java.sql.Timestamp_
 
 ---
 
-#### _db.timestamp(texto: string) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">timestamp</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Descrição
 
 Com o conteúdo de texto obtém o objeto de data e hora para ser utilizada em operações de base de dados.
@@ -2390,7 +2390,7 @@ Com o conteúdo de texto obtém o objeto de data e hora para ser utilizada em op
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | string | Texto que contém data e hora no formato: `yyyy-MM-dd HH:mm:ss` |
+| **texto** | _string_ | Texto que contém data e hora no formato: `yyyy-MM-dd HH:mm:ss` |
 
 ##### Retorno
 
@@ -2400,7 +2400,7 @@ Data e hora obtida do texto.
 
 ---
 
-#### _db.timestamp(instant: _java.time.Instant_) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">timestamp</span>(<span style="color: #FF8000">instant</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Descrição
 
 Através do objeto Instant cria um novo objeto Timestamp para ser utilizado em operações de base de dados.
@@ -2409,7 +2409,7 @@ Através do objeto Instant cria um novo objeto Timestamp para ser utilizado em o
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| instant | _java.time.Instant_ | Objeto do tipo: _java.time.Instant_ |
+| **instant** | _java.time.Instant_ | Objeto do tipo: _java.time.Instant_ |
 
 ##### Retorno
 
@@ -2419,7 +2419,7 @@ Novo objeto do tipo: _java.sql.Timestamp_
 
 ---
 
-#### _db.timestamp(localDateTime: _java.time.LocalDateTime_) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">timestamp</span>(<span style="color: #FF8000">localDateTime</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Descrição
 
 Através do objeto LocalDateTime cria um novo objeto Timestamp para ser utilizado em operações de base de dados.
@@ -2428,7 +2428,7 @@ Através do objeto LocalDateTime cria um novo objeto Timestamp para ser utilizad
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| localDateTime | _java.time.LocalDateTime_ | Objeto do tipo: _java.time.LocalDateTime_ |
+| **localDateTime** | _java.time.LocalDateTime_ | Objeto do tipo: _java.time.LocalDateTime_ |
 
 ##### Retorno
 
@@ -2442,7 +2442,7 @@ Novo objeto do tipo: _java.sql.Timestamp_
 
 ---
 
-#### _db.toFloat(texto: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">toFloat</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Garante que é um número com casas decimais válido para ser utilizado diretamente numa query evitando SQL Injection.
@@ -2464,11 +2464,11 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | string | Número que será verificado se é float para utilizar na query. |
+| **texto** | _string_ | Número que será verificado se é float para utilizar na query. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo que é seguro utilizar diretamente em query como número com casas decimais (_float_).
 
@@ -2478,7 +2478,7 @@ Conteúdo que é seguro utilizar diretamente em query como número com casas dec
 
 ---
 
-#### _db.toInt(texto: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">toInt</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Garante que é um número inteiro válido para ser utilizado diretamente numa query evitando SQL Injection.
@@ -2500,11 +2500,11 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | string | Número que será verificado se é inteiro para utilizar na query. |
+| **texto** | _string_ | Número que será verificado se é inteiro para utilizar na query. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo que é seguro utilizar diretamente em query como número/inteiro.
 
@@ -2514,7 +2514,7 @@ Conteúdo que é seguro utilizar diretamente em query como número/inteiro.
 
 ---
 
-#### _db.toIntSequence(texto: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">toIntSequence</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Garante que é uma sequência de números separados por vírgula para ser utilizado diretamente numa query evitando SQL Injection.
@@ -2537,11 +2537,11 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | string | Números que serão verificados se são inteiros para utilizar na query. |
+| **texto** | _string_ | Números que serão verificados se são inteiros para utilizar na query. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo sequêncial numérico que é seguro utilizar diretamente em query.
 
@@ -2551,7 +2551,7 @@ Conteúdo sequêncial numérico que é seguro utilizar diretamente em query.
 
 ---
 
-#### _db.toRawName(texto: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">toRawName</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Certifica que o conteúdo passado é um nome válido para ser utilizado em queries diretas à base de dados, se não for então retorna um erro.
@@ -2567,11 +2567,11 @@ var toRawName = _db.toRawName('worker')
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | string | Nome que será verificado se pode ser utilizado como nome de tabela ou nome de coluna. |
+| **texto** | _string_ | Nome que será verificado se pode ser utilizado como nome de tabela ou nome de coluna. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o nome que é seguro utilizar diretamente em queries.
 
@@ -2581,7 +2581,7 @@ Retorna o nome que é seguro utilizar diretamente em queries.
 
 ---
 
-#### _db.toRawPath(texto: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">toRawPath</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Certifica que o conteúdo passado é um caminho válido para ser utilizado em queries diretas à base de dados, se não for então retorna um erro.
@@ -2597,11 +2597,11 @@ var rawPath = _db.toRawPath('worker.name')
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | string | String que será verificada para utilizar como caminho em queries à BD. |
+| **texto** | _string_ | String que será verificada para utilizar como caminho em queries à BD. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o caminho que é seguro utilizar diretamente em queries.
 
@@ -2611,7 +2611,7 @@ Retorna o caminho que é seguro utilizar diretamente em queries.
 
 ---
 
-#### _db.toString() : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">toString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Garante que é uma string válida para ser utilizada diretamente numa query evitando SQL Injection.
@@ -2633,13 +2633,13 @@ _out.json(
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo que é seguro utilizar diretamente em query como string/varchar/texto.
 
 ---
 
-#### _db.toString(texto: string) : string
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">toString</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Garante que é uma string válida para ser utilizada diretamente numa query evitando SQL Injection.
@@ -2663,11 +2663,11 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | string | String que será verificada para utilizar diretamente em queries à BD. |
+| **texto** | _string_ | String que será verificada para utilizar diretamente em queries à BD. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo que é seguro utilizar diretamente em query como string/varchar/texto.
 
@@ -2677,7 +2677,7 @@ Conteúdo que é seguro utilizar diretamente em query como string/varchar/texto.
 
 ---
 
-#### _db.update(tabela: string, id: _int_, dados: _java.util.Map_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -2702,9 +2702,9 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela que contém os registos que devem ser atualizados. |
-| id | _int_ | ID do registo que será afetado pela atualização. |
-| dados | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
+| **id** | _int_ | ID do registo que será afetado pela atualização. |
+| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2714,7 +2714,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.update(tabela: string, id: _int_, dados: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -2739,9 +2739,9 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela que contém os registos que devem ser atualizados. |
-| id | _int_ | ID do registo que será afetado pela atualização. |
-| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
+| **id** | _int_ | ID do registo que será afetado pela atualização. |
+| **dados** | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2751,7 +2751,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.update(tabela: string, uid: string, dados: _java.util.Map_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com um id específico.
@@ -2778,9 +2778,9 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela que contém os registos que devem ser atualizados. |
-| uid | string | UID do registo que será afetado pela atualização. |
-| dados | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
+| **uid** | _string_ | UID do registo que será afetado pela atualização. |
+| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2790,7 +2790,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.update(tabela: string, uid: string, dados: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com um id específico.
@@ -2817,9 +2817,9 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela que contém os registos que devem ser atualizados. |
-| uid | string | UID do registo que será afetado pela atualização. |
-| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
+| **uid** | _string_ | UID do registo que será afetado pela atualização. |
+| **dados** | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2829,7 +2829,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.update(tabela: string, dados: _java.util.Map_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -2854,8 +2854,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela que contém os registos que devem ser atualizados. |
-| dados | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
+| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2865,7 +2865,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.update(tabela: string, dados: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -2890,8 +2890,8 @@ _out.json(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela que contém os registos que devem ser atualizados. |
-| dados | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
+| **dados** | _[Values](../../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2905,7 +2905,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.updateMany(tabela: string, listaDados: _[Ljava.lang.Object;[]_) : _[I_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">updateMany</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">listaDados</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Descrição
 
 Executa a atualização várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -2932,8 +2932,8 @@ _out.json({dados: dadosAlterados})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _[Ljava.lang.Object;[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **listaDados** | _[Ljava.lang.Object;[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -2943,7 +2943,7 @@ Array com a quantidade de registos alterados para cada objeto dentro da lista.
 
 ---
 
-#### _db.updateMany(tabela: string, listaDados: _java.util.List_) : _[I_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">updateMany</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">listaDados</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Descrição
 
 Executa a atualização várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -2970,8 +2970,8 @@ _out.json({dados: dadosAlterados})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _java.util.List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **listaDados** | _java.util.List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -2981,7 +2981,7 @@ Array com a quantidade de registos alterados para cada objeto dentro da lista.
 
 ---
 
-#### _db.updateMany(tabela: string, listaDados: _[Values](../../objects/Values)_) : _[I_
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">updateMany</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">listaDados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Descrição
 
 Executa a atualização várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -3008,8 +3008,8 @@ _out.json({dados: dadosAlterados})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _[Values](../../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
+| **listaDados** | _[Values](../../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 

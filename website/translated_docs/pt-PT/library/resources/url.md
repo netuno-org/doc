@@ -12,12 +12,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.contains(string: string) : _boolean_
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">contains</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| string | string |   |
+| **string** | _string_ |   |
 
 ##### Retorno
 
@@ -30,7 +30,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.download() : _org.netuno.proteu.Download_
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">download</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.Download</span>
 ##### Retorno
 
 ( _org.netuno.proteu.Download_ )
@@ -42,12 +42,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.endsWith(string: string) : _boolean_
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">endsWith</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| string | string |   |
+| **string** | _string_ |   |
 
 ##### Retorno
 
@@ -60,12 +60,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.equalsIgnoreCase(string: string) : _boolean_
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">equalsIgnoreCase</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| string | string |   |
+| **string** | _string_ |   |
 
 ##### Retorno
 
@@ -78,12 +78,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.indexOf(string: string) : _int_
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">indexOf</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| string | string |   |
+| **string** | _string_ |   |
 
 ##### Retorno
 
@@ -96,7 +96,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.isDownloadable() : _boolean_
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">isDownloadable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -108,7 +108,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.isEmpty() : _boolean_
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">isEmpty</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -120,12 +120,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.lastIndexOf(string: string) : _int_
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">lastIndexOf</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| string | string |   |
+| **string** | _string_ |   |
 
 ##### Retorno
 
@@ -138,17 +138,17 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.replace(_old: _java.lang.CharSequence_, _new: _java.lang.CharSequence_) : string
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">replace</span>(<span style="color: #FF8000">_old</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>, <span style="color: #FF8000">_new</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| _old | _java.lang.CharSequence_ |   |
-| _new | _java.lang.CharSequence_ |   |
+| **_old** | _java.lang.CharSequence_ |   |
+| **_new** | _java.lang.CharSequence_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -157,17 +157,17 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.replaceAll(_old: string, _new: string) : string
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">replaceAll</span>(<span style="color: #FF8000">_old</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">_new</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| _old | string |   |
-| _new | string |   |
+| **_old** | _string_ |   |
+| **_new** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -176,10 +176,10 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.request() : string
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">request</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -188,10 +188,10 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.scheme() : string
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">scheme</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -200,12 +200,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.split(regex: string) : _[Ljava.lang.String;[]_
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">split</span>(<span style="color: #FF8000">regex</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| regex | string |   |
+| **regex** | _string_ |   |
 
 ##### Retorno
 
@@ -218,12 +218,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.startsWith(string: string) : _boolean_
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">startsWith</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| string | string |   |
+| **string** | _string_ |   |
 
 ##### Retorno
 
@@ -236,17 +236,17 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.substring(start: _int_, end: _int_) : string
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">substring</span>(<span style="color: #FF8000">start</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">end</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| start | _int_ |   |
-| end | _int_ |   |
+| **start** | _int_ |   |
+| **end** | _int_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -255,12 +255,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.to(url: string) : _[URL](../../resources/URL)_
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">to</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[URL](../../resources/URL)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| url | string |   |
+| **url** | _string_ |   |
 
 ##### Retorno
 
@@ -273,10 +273,10 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.uri() : string
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">uri</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -285,10 +285,10 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.url() : string
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">url</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---

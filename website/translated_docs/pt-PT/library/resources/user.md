@@ -12,7 +12,7 @@ Gestão dos utilizadores da aplicação e obtenção dos dados do utilizador aut
 
 ---
 
-#### _user.all() : _java.util.List_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">all</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Obtém a lista de dados de todos os utilizadores.
@@ -36,7 +36,7 @@ Lista de todos os dados de todos os utilizadores.
 
 ---
 
-#### _user.allByCode(codigo: string) : _java.util.List_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">allByCode</span>(<span style="color: #FF8000">codigo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Obtém todos os utilizadores a partir do código alternativo.
@@ -55,7 +55,7 @@ for (const utilizador of utilizadores) {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| codigo | string | Código alternativo que os utilizadores podem ter associado. |
+| **codigo** | _string_ | Código alternativo que os utilizadores podem ter associado. |
 
 ##### Retorno
 
@@ -69,7 +69,7 @@ Lista dos utilizadores encontrados para o código alternativo.
 
 ---
 
-#### _user.allProvidersData() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">allProvidersData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -77,12 +77,12 @@ Lista dos utilizadores encontrados para o código alternativo.
 
 ---
 
-#### _user.allProvidersData(userId: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">allProvidersData</span>(<span style="color: #FF8000">userId</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| userId | _int_ |   |
+| **userId** | _int_ |   |
 
 ##### Retorno
 
@@ -95,7 +95,7 @@ Lista dos utilizadores encontrados para o código alternativo.
 
 ---
 
-#### _user.code() : string
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">code</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o código alternativo do utilizador que está autenticado.
@@ -109,7 +109,7 @@ _log.info(`Código do Utilizador: ${_user.code()}`)
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Código auxiliar do utilizador logado.
 
@@ -119,7 +119,7 @@ Código auxiliar do utilizador logado.
 
 ---
 
-#### _user.create(dadosUtilizador: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">create</span>(<span style="color: #FF8000">dadosUtilizador</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Cria o novo utilizador.
@@ -145,7 +145,7 @@ _user.create(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dadosUtilizador | _[Values](../../objects/Values)_ | Dados do utilizador que vai ser criado. |
+| **dadosUtilizador** | _[Values](../../objects/Values)_ | Dados do utilizador que vai ser criado. |
 
 ##### Retorno
 
@@ -159,7 +159,7 @@ ID do utilizador que foi criado.
 
 ---
 
-#### _user.createIfNotExists(dadosUtilizador: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">createIfNotExists</span>(<span style="color: #FF8000">dadosUtilizador</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Cria o utilizador caso não exista ainda.
@@ -185,7 +185,7 @@ _user.createIfNotExists(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dadosUtilizador | _[Values](../../objects/Values)_ | Dados do utilizador que vai ser criado caso não exista ainda. |
+| **dadosUtilizador** | _[Values](../../objects/Values)_ | Dados do utilizador que vai ser criado caso não exista ainda. |
 
 ##### Retorno
 
@@ -199,7 +199,7 @@ Foi criado com sucesso.
 
 ---
 
-#### _user.data() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">data</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém toda a informação de dados do utilizador que está autenticado.
@@ -223,7 +223,7 @@ Todos os dados do utilizador logado.
 
 ---
 
-#### _user.firstByCode(codigo: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">firstByCode</span>(<span style="color: #FF8000">codigo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do código alternativo.
@@ -240,7 +240,7 @@ _out.json(utilizador)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| codigo | string | Código alternativo que o utilizador pode ter associado. |
+| **codigo** | _string_ | Código alternativo que o utilizador pode ter associado. |
 
 ##### Retorno
 
@@ -254,7 +254,7 @@ Dados do utilizador encontrado com o código alternativo.
 
 ---
 
-#### _user.firstByMail(mail: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">firstByMail</span>(<span style="color: #FF8000">mail</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do e-mail.
@@ -271,7 +271,7 @@ _out.json(utilizador)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mail | string | E-mail do utilizador. |
+| **mail** | _string_ | E-mail do utilizador. |
 
 ##### Retorno
 
@@ -285,7 +285,7 @@ Dados do utilizador encontrado com o e-mail.
 
 ---
 
-#### _user.firstByName(nome: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">firstByName</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do nome completo.
@@ -302,7 +302,7 @@ _out.json(utilizador)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nome | string | Nome completo do utilizador. |
+| **nome** | _string_ | Nome completo do utilizador. |
 
 ##### Retorno
 
@@ -316,7 +316,7 @@ Dados do utilizador encontrado com o nome completo.
 
 ---
 
-#### _user.firstByUser(utilizador: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">firstByUser</span>(<span style="color: #FF8000">utilizador</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do nome de utilizador, mesmo nome utilizado no login.
@@ -333,7 +333,7 @@ _out.json(utilizador)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| utilizador | string | Username do utilizador. |
+| **utilizador** | _string_ | Username do utilizador. |
 
 ##### Retorno
 
@@ -347,7 +347,7 @@ Dados do utilizador encontrado com o nome de utilizador.
 
 ---
 
-#### _user.get(id: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do ID (identificador numérico).
@@ -364,7 +364,7 @@ _out.json(utilizador)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ | Identificador numérico do utilizador. |
+| **id** | _int_ | Identificador numérico do utilizador. |
 
 ##### Retorno
 
@@ -374,7 +374,7 @@ Dados do utilizador encontrado.
 
 ---
 
-#### _user.get(idOuUidOuUsername: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">idOuUidOuUsername</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do ID (identificador numérico), ou do UUID (identificador único universal) ou ainda o nome de utilizador.
@@ -391,7 +391,7 @@ _out.json(utilizador)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| idOuUidOuUsername | string | Tanto pode ser um ID, ou um UID, ou ainda o username. |
+| **idOuUidOuUsername** | _string_ | Tanto pode ser um ID, ou um UID, ou ainda o username. |
 
 ##### Retorno
 
@@ -405,13 +405,13 @@ Dados do utilizador encontrado.
 
 ---
 
-#### _user.hasProvider(userId: _int_, providerCode: string) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">hasProvider</span>(<span style="color: #FF8000">userId</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">providerCode</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| userId | _int_ |   |
-| providerCode | string |   |
+| **userId** | _int_ |   |
+| **providerCode** | _string_ |   |
 
 ##### Retorno
 
@@ -420,12 +420,12 @@ Dados do utilizador encontrado.
 
 ---
 
-#### _user.hasProvider(providerCode: string) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">hasProvider</span>(<span style="color: #FF8000">providerCode</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| providerCode | string |   |
+| **providerCode** | _string_ |   |
 
 ##### Retorno
 
@@ -438,7 +438,7 @@ Dados do utilizador encontrado.
 
 ---
 
-#### _user.id() : _int_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">id</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Obtém o identificador numérico de quem está autenticado.
@@ -462,7 +462,7 @@ ID (identificador númerico) do utilizador logado.
 
 ---
 
-#### _user.name() : string
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o nome completo do utilizador que está autenticado.
@@ -476,7 +476,7 @@ _log.info(`Nome completo do Utilizador: ${_user.name()}`)
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Nome completo do utilizador logado.
 
@@ -486,12 +486,12 @@ Nome completo do utilizador logado.
 
 ---
 
-#### _user.noPassword(active: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">noPassword</span>(<span style="color: #FF8000">active</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| active | _boolean_ |   |
+| **active** | _boolean_ |   |
 
 ##### Retorno
 
@@ -500,13 +500,13 @@ Nome completo do utilizador logado.
 
 ---
 
-#### _user.noPassword(id: _int_, active: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">noPassword</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">active</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ |   |
-| active | _boolean_ |   |
+| **id** | _int_ |   |
+| **active** | _boolean_ |   |
 
 ##### Retorno
 
@@ -519,13 +519,13 @@ Nome completo do utilizador logado.
 
 ---
 
-#### _user.password(id: _int_, password: string) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">password</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ |   |
-| password | string |   |
+| **id** | _int_ |   |
+| **password** | _string_ |   |
 
 ##### Retorno
 
@@ -534,12 +534,12 @@ Nome completo do utilizador logado.
 
 ---
 
-#### _user.password(password: string) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">password</span>(<span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| password | string |   |
+| **password** | _string_ |   |
 
 ##### Retorno
 
@@ -552,13 +552,13 @@ Nome completo do utilizador logado.
 
 ---
 
-#### _user.providerData(userId: _int_, providerCode: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">providerData</span>(<span style="color: #FF8000">userId</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">providerCode</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| userId | _int_ |   |
-| providerCode | string |   |
+| **userId** | _int_ |   |
+| **providerCode** | _string_ |   |
 
 ##### Retorno
 
@@ -567,12 +567,12 @@ Nome completo do utilizador logado.
 
 ---
 
-#### _user.providerData(providerCode: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">providerData</span>(<span style="color: #FF8000">providerCode</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| providerCode | string |   |
+| **providerCode** | _string_ |   |
 
 ##### Retorno
 
@@ -585,12 +585,12 @@ Nome completo do utilizador logado.
 
 ---
 
-#### _user.providerDataByUid(uid: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">providerDataByUid</span>(<span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| uid | string |   |
+| **uid** | _string_ |   |
 
 ##### Retorno
 
@@ -603,12 +603,12 @@ Nome completo do utilizador logado.
 
 ---
 
-#### _user.providerLDAP(active: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">providerLDAP</span>(<span style="color: #FF8000">active</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| active | _boolean_ |   |
+| **active** | _boolean_ |   |
 
 ##### Retorno
 
@@ -617,13 +617,13 @@ Nome completo do utilizador logado.
 
 ---
 
-#### _user.providerLDAP(id: _int_, active: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">providerLDAP</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">active</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ |   |
-| active | _boolean_ |   |
+| **id** | _int_ |   |
+| **active** | _boolean_ |   |
 
 ##### Retorno
 
@@ -636,7 +636,7 @@ Nome completo do utilizador logado.
 
 ---
 
-#### _user.remove(id: _int_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">remove</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Remove o utilizador refente ao ID passado.
@@ -655,7 +655,7 @@ _user.remove(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ | O ID (identificador númerico) do utilizador. |
+| **id** | _int_ | O ID (identificador númerico) do utilizador. |
 
 ##### Retorno
 
@@ -669,7 +669,7 @@ Foi apagado com sucesso.
 
 ---
 
-#### _user.search(termo: string) : _java.util.List_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">termo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Pesquisa os utilizadores que tem alguma ocorrência nos dados com o texto de pesquisa passado.
@@ -688,7 +688,7 @@ for (const utilizador of utilizadores) {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| termo | string | Chave de pesquisa. |
+| **termo** | _string_ | Chave de pesquisa. |
 
 ##### Retorno
 
@@ -702,7 +702,7 @@ Lista de dados dos utilizadores encontrados.
 
 ---
 
-#### _user.searchFirst(termo: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">searchFirst</span>(<span style="color: #FF8000">termo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 O primeiro resultado da pesquisa de utilizadores que tem alguma ocorrência nos dados do termo passado.
@@ -719,7 +719,7 @@ _out.json(utilizador)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| termo | string | Chave de pesquisa. |
+| **termo** | _string_ | Chave de pesquisa. |
 
 ##### Retorno
 
@@ -733,12 +733,12 @@ Dados do utilizador encontrado.
 
 ---
 
-#### _user.setNoPassword(active: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">setNoPassword</span>(<span style="color: #FF8000">active</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| active | _boolean_ |   |
+| **active** | _boolean_ |   |
 
 ##### Retorno
 
@@ -747,13 +747,13 @@ Dados do utilizador encontrado.
 
 ---
 
-#### _user.setNoPassword(id: _int_, active: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">setNoPassword</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">active</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ |   |
-| active | _boolean_ |   |
+| **id** | _int_ |   |
+| **active** | _boolean_ |   |
 
 ##### Retorno
 
@@ -766,13 +766,13 @@ Dados do utilizador encontrado.
 
 ---
 
-#### _user.setPassword(id: _int_, password: string) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">setPassword</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ |   |
-| password | string |   |
+| **id** | _int_ |   |
+| **password** | _string_ |   |
 
 ##### Retorno
 
@@ -781,12 +781,12 @@ Dados do utilizador encontrado.
 
 ---
 
-#### _user.setPassword(password: string) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">setPassword</span>(<span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| password | string |   |
+| **password** | _string_ |   |
 
 ##### Retorno
 
@@ -799,12 +799,12 @@ Dados do utilizador encontrado.
 
 ---
 
-#### _user.setProviderLDAP(active: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">setProviderLDAP</span>(<span style="color: #FF8000">active</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| active | _boolean_ |   |
+| **active** | _boolean_ |   |
 
 ##### Retorno
 
@@ -813,13 +813,13 @@ Dados do utilizador encontrado.
 
 ---
 
-#### _user.setProviderLDAP(id: _int_, active: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">setProviderLDAP</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">active</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ |   |
-| active | _boolean_ |   |
+| **id** | _int_ |   |
+| **active** | _boolean_ |   |
 
 ##### Retorno
 
@@ -832,7 +832,7 @@ Dados do utilizador encontrado.
 
 ---
 
-#### _user.uid() : string
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">uid</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o identificador único universal de quem está autenticado.
@@ -846,7 +846,7 @@ _log.info(`UID do Utilizador: ${_user.uid()}`)
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 UUID (identificador único universal) do utilizador logado.
 
@@ -856,7 +856,7 @@ UUID (identificador único universal) do utilizador logado.
 
 ---
 
-#### _user.update(id: _int_, dadosUtilizador: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dadosUtilizador</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Atualiza os dados do utilizador referente ao ID passado.
@@ -878,8 +878,8 @@ _user.update(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ | O ID (identificador numérico) do utilizador. |
-| dadosUtilizador | _[Values](../../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
+| **id** | _int_ | O ID (identificador numérico) do utilizador. |
+| **dadosUtilizador** | _[Values](../../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
 
 ##### Retorno
 
@@ -889,7 +889,7 @@ Foi atualizado com sucesso.
 
 ---
 
-#### _user.update(id: _int_, dadosUtilizador: _[Values](../../objects/Values)_, alterarPassword: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dadosUtilizador</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">alterarPassword</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Atualiza os dados do utilizador referente ao ID passado.
@@ -911,9 +911,9 @@ _user.update(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ | O ID (identificador numérico) do utilizador. |
-| dadosUtilizador | _[Values](../../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
-| alterarPassword | _boolean_ | Se deve realizar a alteração da palavra-passe ou senha. |
+| **id** | _int_ | O ID (identificador numérico) do utilizador. |
+| **dadosUtilizador** | _[Values](../../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
+| **alterarPassword** | _boolean_ | Se deve realizar a alteração da palavra-passe ou senha. |
 
 ##### Retorno
 
@@ -923,7 +923,7 @@ Foi atualizado com sucesso.
 
 ---
 
-#### _user.update(dadosUtilizador: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">dadosUtilizador</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Atualiza os dados do utilizador referente ao ID definido na estrutura de dados passada.
@@ -944,7 +944,7 @@ _user.update(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dadosUtilizador | _[Values](../../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
+| **dadosUtilizador** | _[Values](../../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
 
 ##### Retorno
 
@@ -954,7 +954,7 @@ Foi atualizado com sucesso.
 
 ---
 
-#### _user.update(dadosUtilizador: _[Values](../../objects/Values)_, alterarPassword: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">dadosUtilizador</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">alterarPassword</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Atualiza os dados do utilizador referente ao ID definido na estrutura de dados passada.
@@ -975,8 +975,8 @@ _user.update(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dadosUtilizador | _[Values](../../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
-| alterarPassword | _boolean_ | Se deve realizar a alteração da palavra-passe ou senha. |
+| **dadosUtilizador** | _[Values](../../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
+| **alterarPassword** | _boolean_ | Se deve realizar a alteração da palavra-passe ou senha. |
 
 ##### Retorno
 
@@ -990,7 +990,7 @@ Foi atualizado com sucesso.
 
 ---
 
-#### _user.user() : string
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">user</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o nome de utilizador de quem está autenticado.
@@ -1004,7 +1004,7 @@ _log.info(`Nome completo do Utilizador: ${_user.name()}`)
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Nome de utilizador logado.
 

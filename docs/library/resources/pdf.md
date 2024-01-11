@@ -13,7 +13,7 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 
 ---
 
-#### _pdf.areaBreak() : _com.itextpdf.layout.element.AreaBreak_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">areaBreak</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.AreaBreak</span>
 ##### Description
 
 Creates an AreaBreak that terminates a previous area type.
@@ -26,7 +26,7 @@ Terminates the previous area and returns a new one.
 
 ---
 
-#### _pdf.areaBreak(pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.element.AreaBreak_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">areaBreak</span>(<span style="color: #FF8000">pageSize</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.AreaBreak</span>
 ##### Description
 
 Creates an AreaBreak that terminates a previous area type.
@@ -35,7 +35,7 @@ Creates an AreaBreak that terminates a previous area type.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Size of the new content. |
+| **pageSize** | _com.itextpdf.kernel.geom.PageSize_ | Size of the new content. |
 
 ##### Return
 
@@ -45,7 +45,7 @@ Terminates the previous area and returns a new one.
 
 ---
 
-#### _pdf.areaBreak(type: string) : _com.itextpdf.layout.element.AreaBreak_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">areaBreak</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.AreaBreak</span>
 ##### Description
 
 Creates an AreaBreak that terminates a previous area type.
@@ -54,7 +54,7 @@ Creates an AreaBreak that terminates a previous area type.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| type | string | Type of the new area. |
+| **type** | _string_ | Type of the new area. |
 
 ##### Return
 
@@ -68,7 +68,7 @@ Terminates the previous area and returns a new one.
 
 ---
 
-#### _pdf.border(border: string) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type.
@@ -77,7 +77,7 @@ Creates a border type.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
+| **border** | _string_ | Border type. |
 
 ##### Return
 
@@ -87,7 +87,7 @@ Returns a border width of the type inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -96,9 +96,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _double_ | Border width. |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _double_ | Border width. |
 
 ##### Return
 
@@ -108,7 +108,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -117,10 +117,10 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _double_ | Border width. |
-| opacity | _double_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _double_ | Border width. |
+| **opacity** | _double_ |   |
 
 ##### Return
 
@@ -130,7 +130,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -139,10 +139,10 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _double_ | Border width. |
-| opacity | _float_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _double_ | Border width. |
+| **opacity** | _float_ |   |
 
 ##### Return
 
@@ -152,7 +152,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -161,10 +161,10 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _double_ | Border width. |
-| opacity | _int_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _double_ | Border width. |
+| **opacity** | _int_ |   |
 
 ##### Return
 
@@ -174,7 +174,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -183,9 +183,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _float_ | Border width. |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _float_ | Border width. |
 
 ##### Return
 
@@ -195,7 +195,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -204,10 +204,10 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _float_ | Border width. |
-| opacity | _double_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _float_ | Border width. |
+| **opacity** | _double_ |   |
 
 ##### Return
 
@@ -217,7 +217,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a customized border with type, color, width and opacity inserted.
@@ -226,10 +226,10 @@ Creates a customized border with type, color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _float_ | Border width. |
-| opacity | _float_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _float_ | Border width. |
+| **opacity** | _float_ | Border opacity. |
 
 ##### Return
 
@@ -239,7 +239,7 @@ Returns the created customized border.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type, color, width and opacity inserted.
@@ -248,10 +248,10 @@ Creates a border type, color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _float_ | Border width. |
-| opacity | _int_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _float_ | Border width. |
+| **opacity** | _int_ | Border opacity. |
 
 ##### Return
 
@@ -261,7 +261,7 @@ Returns a border type, color, width and opacity inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -270,9 +270,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _int_ | Border width. |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _int_ | Border width. |
 
 ##### Return
 
@@ -282,7 +282,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -291,10 +291,10 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _int_ | Border width. |
-| opacity | _double_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _int_ | Border width. |
+| **opacity** | _double_ |   |
 
 ##### Return
 
@@ -304,7 +304,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -313,10 +313,10 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _int_ | Border width. |
-| opacity | _float_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _int_ | Border width. |
+| **opacity** | _float_ |   |
 
 ##### Return
 
@@ -326,7 +326,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -335,10 +335,10 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _int_ | Border width. |
-| opacity | _int_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _int_ | Border width. |
+| **opacity** | _int_ |   |
 
 ##### Return
 
@@ -348,7 +348,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, width: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width.
@@ -357,8 +357,8 @@ Creates a border type with a inserted width.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _double_ | Border width. |
+| **border** | _string_ | Border type. |
+| **width** | _double_ | Border width. |
 
 ##### Return
 
@@ -368,7 +368,7 @@ Returns a border width of the type inserted,coloured black and the width inserte
 
 ---
 
-#### _pdf.border(border: string, width: _double_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -377,9 +377,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _double_ | Border width. |
-| opacity | _double_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _double_ | Border width. |
+| **opacity** | _double_ | Border opacity. |
 
 ##### Return
 
@@ -389,7 +389,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _double_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -398,9 +398,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _double_ | Border width. |
-| opacity | _float_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _double_ | Border width. |
+| **opacity** | _float_ | Border opacity. |
 
 ##### Return
 
@@ -410,7 +410,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, color: _double_, width: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -419,9 +419,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _double_ | Border color. |
-| width | _int_ | Border width. |
+| **border** | _string_ | Border type. |
+| **color** | _double_ | Border color. |
+| **width** | _int_ | Border width. |
 
 ##### Return
 
@@ -431,7 +431,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### _pdf.border(border: string, width: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width.
@@ -440,8 +440,8 @@ Creates a border type with a inserted width.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _float_ | Border width. |
+| **border** | _string_ | Border type. |
+| **width** | _float_ | Border width. |
 
 ##### Return
 
@@ -451,7 +451,7 @@ Returns a border width of the type inserted,coloured black and the width inserte
 
 ---
 
-#### _pdf.border(border: string, width: _float_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -460,9 +460,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _float_ | Border width. |
-| opacity | _double_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _float_ | Border width. |
+| **opacity** | _double_ | Border opacity. |
 
 ##### Return
 
@@ -472,7 +472,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _float_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -481,9 +481,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _float_ | Border width. |
-| opacity | _float_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _float_ | Border width. |
+| **opacity** | _float_ | Border opacity. |
 
 ##### Return
 
@@ -493,7 +493,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _float_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -502,9 +502,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _float_ | Border width. |
-| opacity | _int_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _float_ | Border width. |
+| **opacity** | _int_ | Border opacity. |
 
 ##### Return
 
@@ -514,7 +514,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width.
@@ -523,8 +523,8 @@ Creates a border type with a inserted width.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _int_ | Border width. |
+| **border** | _string_ | Border type. |
+| **width** | _int_ | Border width. |
 
 ##### Return
 
@@ -534,7 +534,7 @@ Returns a border width of the type inserted,coloured black and the width inserte
 
 ---
 
-#### _pdf.border(border: string, width: _int_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -543,9 +543,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _int_ | Border width. |
-| opacity | _double_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _int_ | Border width. |
+| **opacity** | _double_ | Border opacity. |
 
 ##### Return
 
@@ -555,7 +555,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _int_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -564,9 +564,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _int_ | Border width. |
-| opacity | _float_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _int_ | Border width. |
+| **opacity** | _float_ | Border opacity. |
 
 ##### Return
 
@@ -576,7 +576,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border(border: string, width: _int_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -585,9 +585,9 @@ Creates a border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _int_ | Border width. |
-| opacity | _int_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _int_ | Border width. |
+| **opacity** | _int_ | Border opacity. |
 
 ##### Return
 
@@ -601,7 +601,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -610,7 +610,7 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
+| **border** | _string_ | Border type. |
 
 ##### Return
 
@@ -620,7 +620,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -629,9 +629,9 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _double_ | Border width. |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _double_ | Border width. |
 
 ##### Return
 
@@ -641,7 +641,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -650,10 +650,10 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _double_ | Border width. |
-| opacity | _double_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _double_ | Border width. |
+| **opacity** | _double_ |   |
 
 ##### Return
 
@@ -663,7 +663,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -672,10 +672,10 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _double_ | Border width. |
-| opacity | _float_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _double_ | Border width. |
+| **opacity** | _float_ |   |
 
 ##### Return
 
@@ -685,7 +685,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -694,10 +694,10 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _double_ | Border width. |
-| opacity | _int_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _double_ | Border width. |
+| **opacity** | _int_ |   |
 
 ##### Return
 
@@ -707,7 +707,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -716,9 +716,9 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _float_ | Border width. |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _float_ | Border width. |
 
 ##### Return
 
@@ -728,7 +728,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -737,10 +737,10 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _float_ | Border width. |
-| opacity | _double_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _float_ | Border width. |
+| **opacity** | _double_ |   |
 
 ##### Return
 
@@ -750,7 +750,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a customized 3D border with type,color, width and opacity inserted.
@@ -759,10 +759,10 @@ Creates a customized 3D border with type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _float_ | Border width. |
-| opacity | _float_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _float_ | Border width. |
+| **opacity** | _float_ | Border opacity. |
 
 ##### Return
 
@@ -772,7 +772,7 @@ Returns the created customized 3D border.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -781,10 +781,10 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _float_ | Border width. |
-| opacity | _int_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _float_ | Border width. |
+| **opacity** | _int_ | Border opacity. |
 
 ##### Return
 
@@ -794,7 +794,7 @@ Returns a 3D border type, color, width and opacity inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -803,9 +803,9 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _int_ | Border width. |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _int_ | Border width. |
 
 ##### Return
 
@@ -815,7 +815,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -824,10 +824,10 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _int_ | Border width. |
-| opacity | _double_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _int_ | Border width. |
+| **opacity** | _double_ |   |
 
 ##### Return
 
@@ -837,7 +837,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -846,10 +846,10 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _int_ | Border width. |
-| opacity | _float_ |   |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _int_ | Border width. |
+| **opacity** | _float_ |   |
 
 ##### Return
 
@@ -859,7 +859,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### _pdf.border3D(border: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -868,10 +868,10 @@ Creates a 3D border type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Border color. |
-| width | _int_ | Border width. |
-| opacity | _int_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Border color. |
+| **width** | _int_ | Border width. |
+| **opacity** | _int_ | Border opacity. |
 
 ##### Return
 
@@ -881,7 +881,7 @@ Returns a 3D border type,color,width and opacity inserted.
 
 ---
 
-#### _pdf.border3D(border: string, width: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a border type 3D with a inserted width.
@@ -890,8 +890,8 @@ Creates a border type 3D with a inserted width.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _double_ | Border width. |
+| **border** | _string_ | Border type. |
+| **width** | _double_ | Border width. |
 
 ##### Return
 
@@ -901,7 +901,7 @@ Returns a 3D border width of the type inserted,coloured black and the width inse
 
 ---
 
-#### _pdf.border3D(border: string, width: _double_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -910,9 +910,9 @@ Creates a 3D border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _double_ | Border width. |
-| opacity | _double_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _double_ | Border width. |
+| **opacity** | _double_ | Border opacity. |
 
 ##### Return
 
@@ -922,7 +922,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _double_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -931,9 +931,9 @@ Creates a 3D border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _double_ | Border width. |
-| opacity | _float_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _double_ | Border width. |
+| **opacity** | _float_ | Border opacity. |
 
 ##### Return
 
@@ -943,7 +943,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _double_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -952,9 +952,9 @@ Creates a 3D border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _double_ | Border width. |
-| opacity | _int_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _double_ | Border width. |
+| **opacity** | _int_ | Border opacity. |
 
 ##### Return
 
@@ -964,7 +964,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a border type 3D with a inserted width.
@@ -973,8 +973,8 @@ Creates a border type 3D with a inserted width.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _float_ | Border width. |
+| **border** | _string_ | Border type. |
+| **width** | _float_ | Border width. |
 
 ##### Return
 
@@ -984,7 +984,7 @@ Returns a 3D border width of the type inserted,coloured black and the width inse
 
 ---
 
-#### _pdf.border3D(border: string, width: _float_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -993,9 +993,9 @@ Creates a 3D border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _float_ | Border width. |
-| opacity | _double_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _float_ | Border width. |
+| **opacity** | _double_ | Border opacity. |
 
 ##### Return
 
@@ -1005,7 +1005,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _float_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1014,9 +1014,9 @@ Creates a 3D border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _float_ | Border width. |
-| opacity | _float_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _float_ | Border width. |
+| **opacity** | _float_ | Border opacity. |
 
 ##### Return
 
@@ -1026,7 +1026,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _float_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1035,9 +1035,9 @@ Creates a 3D border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _float_ | Border width. |
-| opacity | _int_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _float_ | Border width. |
+| **opacity** | _int_ | Border opacity. |
 
 ##### Return
 
@@ -1047,7 +1047,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a border type 3D.
@@ -1056,8 +1056,8 @@ Creates a border type 3D.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _int_ |   |
+| **border** | _string_ | Border type. |
+| **width** | _int_ |   |
 
 ##### Return
 
@@ -1067,7 +1067,7 @@ Returns a 3D border width of the type inserted,coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _int_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1076,9 +1076,9 @@ Creates a 3D border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _int_ | Border width. |
-| opacity | _double_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _int_ | Border width. |
+| **opacity** | _double_ | Border opacity. |
 
 ##### Return
 
@@ -1088,7 +1088,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _int_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1097,9 +1097,9 @@ Creates a 3D border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _int_ | Border width. |
-| opacity | _float_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _int_ | Border width. |
+| **opacity** | _float_ | Border opacity. |
 
 ##### Return
 
@@ -1109,7 +1109,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.border3D(border: string, width: _int_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1118,9 +1118,9 @@ Creates a 3D border type with a inserted width and opacity.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| border | string | Border type. |
-| width | _int_ | Border width. |
-| opacity | _int_ | Border opacity. |
+| **border** | _string_ | Border type. |
+| **width** | _int_ | Border width. |
+| **opacity** | _int_ | Border opacity. |
 
 ##### Return
 
@@ -1134,7 +1134,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### _pdf.canvas(doc: _com.itextpdf.kernel.pdf.PdfDocument_, pageNum: _int_) : _com.itextpdf.kernel.pdf.canvas.PdfCanvas_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">canvas</span>(<span style="color: #FF8000">doc</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>, <span style="color: #FF8000">pageNum</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.PdfCanvas</span>
 ##### Description
 
 Creates an rectangular text area.
@@ -1143,8 +1143,8 @@ Creates an rectangular text area.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| doc | _com.itextpdf.kernel.pdf.PdfDocument_ |   |
-| pageNum | _int_ |   |
+| **doc** | _com.itextpdf.kernel.pdf.PdfDocument_ |   |
+| **pageNum** | _int_ |   |
 
 ##### Return
 
@@ -1153,7 +1153,7 @@ Creates an rectangular text area.
 
 ---
 
-#### _pdf.canvas(page: _com.itextpdf.kernel.pdf.PdfPage_) : _com.itextpdf.kernel.pdf.canvas.PdfCanvas_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">canvas</span>(<span style="color: #FF8000">page</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfPage</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.PdfCanvas</span>
 ##### Description
 
 Creates an rectangular text area.
@@ -1162,7 +1162,7 @@ Creates an rectangular text area.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| page | _com.itextpdf.kernel.pdf.PdfPage_ |   |
+| **page** | _com.itextpdf.kernel.pdf.PdfPage_ |   |
 
 ##### Return
 
@@ -1175,7 +1175,7 @@ Creates an rectangular text area.
 
 ---
 
-#### _pdf.cell() : _com.itextpdf.layout.element.Cell_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">cell</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Cell</span>
 ##### Description
 
 Creates a new table cell.
@@ -1188,7 +1188,7 @@ Returns the created cell.
 
 ---
 
-#### _pdf.cell(rowspan: _int_, colspan: _int_) : _com.itextpdf.layout.element.Cell_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">cell</span>(<span style="color: #FF8000">rowspan</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colspan</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Cell</span>
 ##### Description
 
 Creates a new table cell with rowspan or colspan.
@@ -1197,8 +1197,8 @@ Creates a new table cell with rowspan or colspan.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| rowspan | _int_ | Number of rowspan. |
-| colspan | _int_ | Number of colspan. |
+| **rowspan** | _int_ | Number of rowspan. |
+| **colspan** | _int_ | Number of colspan. |
 
 ##### Return
 
@@ -1212,12 +1212,12 @@ Returns the created cell.
 
 ---
 
-#### _pdf.color(color: string) : _com.itextpdf.kernel.colors.Color_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">color</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| color | string |   |
+| **color** | _string_ |   |
 
 ##### Return
 
@@ -1230,15 +1230,15 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorCMYK(cyan: _double_, magenta: _double_, yellow: _double_, black: _double_) : _com.itextpdf.kernel.colors.DeviceCmyk_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorCMYK</span>(<span style="color: #FF8000">cyan</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">magenta</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">yellow</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">black</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceCmyk</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| cyan | _double_ |   |
-| magenta | _double_ |   |
-| yellow | _double_ |   |
-| black | _double_ |   |
+| **cyan** | _double_ |   |
+| **magenta** | _double_ |   |
+| **yellow** | _double_ |   |
+| **black** | _double_ |   |
 
 ##### Return
 
@@ -1247,15 +1247,15 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorCMYK(cyan: _float_, magenta: _float_, yellow: _float_, black: _float_) : _com.itextpdf.kernel.colors.DeviceCmyk_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorCMYK</span>(<span style="color: #FF8000">cyan</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">magenta</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">yellow</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">black</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceCmyk</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| cyan | _float_ |   |
-| magenta | _float_ |   |
-| yellow | _float_ |   |
-| black | _float_ |   |
+| **cyan** | _float_ |   |
+| **magenta** | _float_ |   |
+| **yellow** | _float_ |   |
+| **black** | _float_ |   |
 
 ##### Return
 
@@ -1264,15 +1264,15 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorCMYK(cyan: _int_, magenta: _int_, yellow: _int_, black: _int_) : _com.itextpdf.kernel.colors.DeviceCmyk_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorCMYK</span>(<span style="color: #FF8000">cyan</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">magenta</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">yellow</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">black</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceCmyk</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| cyan | _int_ |   |
-| magenta | _int_ |   |
-| yellow | _int_ |   |
-| black | _int_ |   |
+| **cyan** | _int_ |   |
+| **magenta** | _int_ |   |
+| **yellow** | _int_ |   |
+| **black** | _int_ |   |
 
 ##### Return
 
@@ -1285,12 +1285,12 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorGray(value: _double_) : _com.itextpdf.kernel.colors.DeviceGray_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorGray</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceGray</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _double_ |   |
+| **value** | _double_ |   |
 
 ##### Return
 
@@ -1299,12 +1299,12 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorGray(value: _float_) : _com.itextpdf.kernel.colors.DeviceGray_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorGray</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceGray</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _float_ |   |
+| **value** | _float_ |   |
 
 ##### Return
 
@@ -1313,12 +1313,12 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorGray(value: _int_) : _com.itextpdf.kernel.colors.DeviceGray_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorGray</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceGray</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _int_ |   |
+| **value** | _int_ |   |
 
 ##### Return
 
@@ -1331,14 +1331,14 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorRGB(red: _double_, green: _double_, blue: _double_) : _com.itextpdf.kernel.colors.DeviceRgb_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorRGB</span>(<span style="color: #FF8000">red</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">green</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">blue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceRgb</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| red | _double_ |   |
-| green | _double_ |   |
-| blue | _double_ |   |
+| **red** | _double_ |   |
+| **green** | _double_ |   |
+| **blue** | _double_ |   |
 
 ##### Return
 
@@ -1347,14 +1347,14 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorRGB(red: _float_, green: _float_, blue: _float_) : _com.itextpdf.kernel.colors.DeviceRgb_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorRGB</span>(<span style="color: #FF8000">red</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">green</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">blue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceRgb</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| red | _float_ |   |
-| green | _float_ |   |
-| blue | _float_ |   |
+| **red** | _float_ |   |
+| **green** | _float_ |   |
+| **blue** | _float_ |   |
 
 ##### Return
 
@@ -1363,14 +1363,14 @@ Returns the created cell.
 
 ---
 
-#### _pdf.colorRGB(red: _int_, green: _int_, blue: _int_) : _com.itextpdf.kernel.colors.DeviceRgb_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorRGB</span>(<span style="color: #FF8000">red</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">green</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">blue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceRgb</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| red | _int_ |   |
-| green | _int_ |   |
-| blue | _int_ |   |
+| **red** | _int_ |   |
+| **green** | _int_ |   |
+| **blue** | _int_ |   |
 
 ##### Return
 
@@ -1383,7 +1383,7 @@ Returns the created cell.
 
 ---
 
-#### _pdf.extract(content: _java.io.InputStream_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Extracts the content of PDF's.
@@ -1392,7 +1392,7 @@ Extracts the content of PDF's.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _java.io.InputStream_ | Content to be extracted. |
+| **content** | _java.io.InputStream_ | Content to be extracted. |
 
 ##### Return
 
@@ -1402,7 +1402,7 @@ Returns the extracted content.
 
 ---
 
-#### _pdf.extract(content: _[File](../../objects/File)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Extracts the content of PDF's.
@@ -1411,7 +1411,7 @@ Extracts the content of PDF's.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[File](../../objects/File)_ | Content to be extracted. |
+| **content** | _[File](../../objects/File)_ | Content to be extracted. |
 
 ##### Return
 
@@ -1421,7 +1421,7 @@ Returns the extracted content.
 
 ---
 
-#### _pdf.extract(content: _[InputStream](../../objects/InputStream)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Extracts the content of PDF's.
@@ -1430,7 +1430,7 @@ Extracts the content of PDF's.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[InputStream](../../objects/InputStream)_ | Content to be extracted. |
+| **content** | _[InputStream](../../objects/InputStream)_ | Content to be extracted. |
 
 ##### Return
 
@@ -1440,7 +1440,7 @@ Returns the extracted content.
 
 ---
 
-#### _pdf.extract(storage: _[Storage](../../resources/Storage)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Extracts the content of PDFs.
@@ -1449,7 +1449,7 @@ Extracts the content of PDFs.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
+| **storage** | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
 
 ##### Return
 
@@ -1463,7 +1463,7 @@ Returns the extracted content.
 
 ---
 
-#### _pdf.font(storage: string) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1472,7 +1472,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | string | Storage path. |
+| **storage** | _string_ | Storage path. |
 
 ##### Return
 
@@ -1482,7 +1482,7 @@ Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[File](../../objects/File)_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1491,7 +1491,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[File](../../objects/File)_ | Storage path. |
+| **storage** | _[File](../../objects/File)_ | Storage path. |
 
 ##### Return
 
@@ -1501,7 +1501,7 @@ Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[File](../../objects/File)_, encoding: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1510,8 +1510,8 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[File](../../objects/File)_ | Storage path. |
-| encoding | _boolean_ | Font encoding. |
+| **storage** | _[File](../../objects/File)_ | Storage path. |
+| **encoding** | _boolean_ | Font encoding. |
 
 ##### Return
 
@@ -1521,7 +1521,7 @@ Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[File](../../objects/File)_, encoding: string) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1530,8 +1530,8 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[File](../../objects/File)_ | Storage path. |
-| encoding | string | Font encoding. |
+| **storage** | _[File](../../objects/File)_ | Storage path. |
+| **encoding** | _string_ | Font encoding. |
 
 ##### Return
 
@@ -1541,7 +1541,7 @@ Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[File](../../objects/File)_, encoding: string, embedded: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">embedded</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1550,9 +1550,9 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[File](../../objects/File)_ | Storage path. |
-| encoding | string | Font encoding. |
-| embedded | _boolean_ |   |
+| **storage** | _[File](../../objects/File)_ | Storage path. |
+| **encoding** | _string_ | Font encoding. |
+| **embedded** | _boolean_ |   |
 
 ##### Return
 
@@ -1562,7 +1562,7 @@ Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[Storage](../../resources/Storage)_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1571,7 +1571,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ | Storage path. |
+| **storage** | _[Storage](../../resources/Storage)_ | Storage path. |
 
 ##### Return
 
@@ -1581,7 +1581,7 @@ Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[Storage](../../resources/Storage)_, encoding: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1590,8 +1590,8 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ | Storage path. |
-| encoding | _boolean_ | Font encoding. |
+| **storage** | _[Storage](../../resources/Storage)_ | Storage path. |
+| **encoding** | _boolean_ | Font encoding. |
 
 ##### Return
 
@@ -1601,7 +1601,7 @@ Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[Storage](../../resources/Storage)_, encoding: string) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1610,8 +1610,8 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ | Storage path. |
-| encoding | string | Font encoding. |
+| **storage** | _[Storage](../../resources/Storage)_ | Storage path. |
+| **encoding** | _string_ | Font encoding. |
 
 ##### Return
 
@@ -1621,7 +1621,7 @@ Returns the created font.
 
 ---
 
-#### _pdf.font(storage: _[Storage](../../resources/Storage)_, encoding: string, embedded: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">embedded</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1630,9 +1630,9 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ | Storage path. |
-| encoding | string | Font encoding. |
-| embedded | _boolean_ |   |
+| **storage** | _[Storage](../../resources/Storage)_ | Storage path. |
+| **encoding** | _string_ | Font encoding. |
+| **embedded** | _boolean_ |   |
 
 ##### Return
 
@@ -1646,7 +1646,7 @@ Returns the created font.
 
 ---
 
-#### _pdf.getDocument() : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Description
 
 Obtém o objecto Document do iText para a estrutura do documento PDF.
@@ -1662,7 +1662,7 @@ Obtém o objecto Document do iText para a estrutura do documento PDF.
 
 ---
 
-#### _pdf.getPdfDocument() : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getPdfDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Description
 
 Obtém o objecto PdfDocument do iText para a construção do documento PDF.
@@ -1678,7 +1678,7 @@ Obtém o objecto PdfDocument do iText para a construção do documento PDF.
 
 ---
 
-#### _pdf.getPdfReader() : _com.itextpdf.kernel.pdf.PdfReader_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getPdfReader</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfReader</span>
 ##### Description
 
 Obtém o objecto PdfReader do iText para a leitura do documento PDF.
@@ -1694,7 +1694,7 @@ Obtém o objecto PdfReader do iText para a leitura do documento PDF.
 
 ---
 
-#### _pdf.getPdfWriter() : _com.itextpdf.kernel.pdf.PdfWriter_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getPdfWriter</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfWriter</span>
 ##### Description
 
 Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
@@ -1710,12 +1710,12 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### _pdf.image(file: _[File](../../objects/File)_) : _com.itextpdf.layout.element.Image_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">image</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Image</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | _[File](../../objects/File)_ |   |
+| **file** | _[File](../../objects/File)_ |   |
 
 ##### Return
 
@@ -1724,12 +1724,12 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### _pdf.image(storage: _[Storage](../../resources/Storage)_) : _com.itextpdf.layout.element.Image_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">image</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Image</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/Storage)_ |   |
 
 ##### Return
 
@@ -1742,7 +1742,7 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### _pdf.init() : _[PDF](../../resources/PDF)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[PDF](../../resources/PDF)</span>
 ##### Description
 
 Cria um novo objeto de recurso para a construção de PDFs.
@@ -1764,7 +1764,7 @@ const pdf = _pdf.init();
 
 ---
 
-#### _pdf.line(type: string, color: _com.itextpdf.kernel.colors.Color_, width: _double_) : _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">line</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
 ##### Description
 
 Creates a customized border with type,color, width and opacity inserted.
@@ -1773,9 +1773,9 @@ Creates a customized border with type,color, width and opacity inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| type | string | Line type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Line color. |
-| width | _double_ | Line width. |
+| **type** | _string_ | Line type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Line color. |
+| **width** | _double_ | Line width. |
 
 ##### Return
 
@@ -1785,7 +1785,7 @@ Returns the created customized border.
 
 ---
 
-#### _pdf.line(type: string, color: _com.itextpdf.kernel.colors.Color_, width: _float_) : _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">line</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
 ##### Description
 
 Creates a customized line with type,color, width inserted.
@@ -1794,9 +1794,9 @@ Creates a customized line with type,color, width inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| type | string | Line type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Line color. |
-| width | _float_ | Line width. |
+| **type** | _string_ | Line type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Line color. |
+| **width** | _float_ | Line width. |
 
 ##### Return
 
@@ -1806,7 +1806,7 @@ Returns the created customized line.
 
 ---
 
-#### _pdf.line(line: string, color: _com.itextpdf.kernel.colors.Color_, width: _int_) : _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">line</span>(<span style="color: #FF8000">line</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
 ##### Description
 
 Creates a line type with color and width inserted.
@@ -1815,9 +1815,9 @@ Creates a line type with color and width inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| line | string | Line type. |
-| color | _com.itextpdf.kernel.colors.Color_ | Line color. |
-| width | _int_ | Line width. |
+| **line** | _string_ | Line type. |
+| **color** | _com.itextpdf.kernel.colors.Color_ | Line color. |
+| **width** | _int_ | Line width. |
 
 ##### Return
 
@@ -1831,7 +1831,7 @@ Returns the line type, color and width inserted.
 
 ---
 
-#### _pdf.newDocument() : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Description
 
 Cria um novo documento.
@@ -1843,7 +1843,7 @@ Cria um novo documento.
 
 ---
 
-#### _pdf.newDocument(pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">pageSize</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a PDF document with the page size inserted.
@@ -1852,7 +1852,7 @@ Creates a PDF document with the page size inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
+| **pageSize** | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
 
@@ -1862,7 +1862,7 @@ Returns PDF document with the page size inserted.
 
 ---
 
-#### _pdf.newDocument(out: _java.io.OutputStream_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a new PDF document.
@@ -1871,7 +1871,7 @@ Creates a new PDF document.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| out | _java.io.OutputStream_ |   |
+| **out** | _java.io.OutputStream_ |   |
 
 ##### Return
 
@@ -1880,7 +1880,7 @@ Creates a new PDF document.
 
 ---
 
-#### _pdf.newDocument(storage: _java.io.OutputStream_, pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>, <span style="color: #FF8000">pageSize</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a PDF document with the page size inserted.
@@ -1889,8 +1889,8 @@ Creates a PDF document with the page size inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _java.io.OutputStream_ | File path. |
-| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
+| **storage** | _java.io.OutputStream_ | File path. |
+| **pageSize** | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
 
@@ -1900,7 +1900,7 @@ Returns PDF document with the page size inserted.
 
 ---
 
-#### _pdf.newDocument(file: _[File](../../objects/File)_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a new PDF document.
@@ -1909,7 +1909,7 @@ Creates a new PDF document.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | _[File](../../objects/File)_ |   |
+| **file** | _[File](../../objects/File)_ |   |
 
 ##### Return
 
@@ -1918,7 +1918,7 @@ Creates a new PDF document.
 
 ---
 
-#### _pdf.newDocument(storage: _[File](../../objects/File)_, pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">pageSize</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a PDF document with the page size inserted.
@@ -1927,8 +1927,8 @@ Creates a PDF document with the page size inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[File](../../objects/File)_ | File path. |
-| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
+| **storage** | _[File](../../objects/File)_ | File path. |
+| **pageSize** | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
 
@@ -1938,7 +1938,7 @@ Returns PDF document with the page size inserted.
 
 ---
 
-#### _pdf.newDocument(out: _[OutputStream](../../objects/OutputStream)_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a new PDF document.
@@ -1947,7 +1947,7 @@ Creates a new PDF document.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| out | _[OutputStream](../../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -1956,7 +1956,7 @@ Creates a new PDF document.
 
 ---
 
-#### _pdf.newDocument(storage: _[OutputStream](../../objects/OutputStream)_, pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">pageSize</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a PDF document with the page size inserted.
@@ -1965,8 +1965,8 @@ Creates a PDF document with the page size inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[OutputStream](../../objects/OutputStream)_ | File path. |
-| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
+| **storage** | _[OutputStream](../../objects/OutputStream)_ | File path. |
+| **pageSize** | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
 
@@ -1976,7 +1976,7 @@ Returns PDF document with the page size inserted.
 
 ---
 
-#### _pdf.newDocument(storage: _[Storage](../../resources/Storage)_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a new PDF document.
@@ -1985,7 +1985,7 @@ Creates a new PDF document.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/Storage)_ |   |
 
 ##### Return
 
@@ -1994,7 +1994,7 @@ Creates a new PDF document.
 
 ---
 
-#### _pdf.newDocument(storage: _[Storage](../../resources/Storage)_, pageSize: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">pageSize</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a PDF document with the page size inserted.
@@ -2003,8 +2003,8 @@ Creates a PDF document with the page size inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ | File path. |
-| pageSize | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
+| **storage** | _[Storage](../../resources/Storage)_ | File path. |
+| **pageSize** | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
 
@@ -2018,7 +2018,7 @@ Returns PDF document with the page size inserted.
 
 ---
 
-#### _pdf.newPdfDocument() : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Description
 
 Creates a PDF document.
@@ -2030,7 +2030,7 @@ Creates a PDF document.
 
 ---
 
-#### _pdf.newPdfDocument(storage: _java.io.OutputStream_) : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Description
 
 Creates a PDF document.
@@ -2039,7 +2039,7 @@ Creates a PDF document.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _java.io.OutputStream_ | File path. |
+| **storage** | _java.io.OutputStream_ | File path. |
 
 ##### Return
 
@@ -2048,7 +2048,7 @@ Creates a PDF document.
 
 ---
 
-#### _pdf.newPdfDocument(storage: _[File](../../objects/File)_) : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Description
 
 Creates a PDF document.
@@ -2057,7 +2057,7 @@ Creates a PDF document.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[File](../../objects/File)_ | File path. |
+| **storage** | _[File](../../objects/File)_ | File path. |
 
 ##### Return
 
@@ -2066,7 +2066,7 @@ Creates a PDF document.
 
 ---
 
-#### _pdf.newPdfDocument(storage: _[OutputStream](../../objects/OutputStream)_) : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Description
 
 Creates a PDF document.
@@ -2075,7 +2075,7 @@ Creates a PDF document.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[OutputStream](../../objects/OutputStream)_ | File path. |
+| **storage** | _[OutputStream](../../objects/OutputStream)_ | File path. |
 
 ##### Return
 
@@ -2084,7 +2084,7 @@ Creates a PDF document.
 
 ---
 
-#### _pdf.newPdfDocument(storage: _[Storage](../../resources/Storage)_) : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Description
 
 Creates a PDF document.
@@ -2093,7 +2093,7 @@ Creates a PDF document.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ | File path. |
+| **storage** | _[Storage](../../resources/Storage)_ | File path. |
 
 ##### Return
 
@@ -2106,7 +2106,7 @@ Creates a PDF document.
 
 ---
 
-#### _pdf.openPdfDocument(path: string) : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Description
 
 Opens a PDF documment corresponding to the inserted path.
@@ -2115,7 +2115,7 @@ Opens a PDF documment corresponding to the inserted path.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string | File path. |
+| **path** | _string_ | File path. |
 
 ##### Return
 
@@ -2129,7 +2129,7 @@ Returns PDF document openned.
 
 ---
 
-#### _pdf.pageSize(width: _float_, height: _float_) : _com.itextpdf.kernel.geom.PageSize_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">pageSize</span>(<span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>
 ##### Description
 
 Obtém a definição do tamanho da página atráves da largura e altura.
@@ -2138,8 +2138,8 @@ Obtém a definição do tamanho da página atráves da largura e altura.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| width | _float_ |   |
-| height | _float_ |   |
+| **width** | _float_ |   |
+| **height** | _float_ |   |
 
 ##### Return
 
@@ -2148,7 +2148,7 @@ Obtém a definição do tamanho da página atráves da largura e altura.
 
 ---
 
-#### _pdf.pageSize(page: string) : _com.itextpdf.kernel.geom.PageSize_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">pageSize</span>(<span style="color: #FF8000">page</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>
 ##### Description
 
 Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</li><li>A2</li><li>A3</li><li>A4</li><li>A5</li><li>A6</li><li>A7</li><li>A8</li><li>A9</li><li>A10</li><li>B0</li><li>B1</li><li>B2</li><li>B3</li><li>B4</li><li>B5</li><li>B6</li><li>B7</li><li>B8</li><li>B9</li><li>B10</li><li>default</li><li>executive</li><li>ledger</li><li>legal</li><li>letter</li><li>tabloid</li></ul>
@@ -2157,7 +2157,7 @@ Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</l
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| page | string |   |
+| **page** | _string_ |   |
 
 ##### Return
 
@@ -2170,7 +2170,7 @@ Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</l
 
 ---
 
-#### _pdf.paragraph(text: string) : _com.itextpdf.layout.element.Paragraph_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">paragraph</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Paragraph</span>
 ##### Description
 
 Creates a paragraph.
@@ -2179,7 +2179,7 @@ Creates a paragraph.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| text | string |   |
+| **text** | _string_ |   |
 
 ##### Return
 
@@ -2192,12 +2192,12 @@ Creates a paragraph.
 
 ---
 
-#### _pdf.setDocument(document: _com.itextpdf.layout.Document_) : _[PDF](../../resources/PDF)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">setDocument</span>(<span style="color: #FF8000">document</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>) : <span style="font-weight: normal; font-style: italic;">[PDF](../../resources/PDF)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| document | _com.itextpdf.layout.Document_ |   |
+| **document** | _com.itextpdf.layout.Document_ |   |
 
 ##### Return
 
@@ -2210,7 +2210,7 @@ Creates a paragraph.
 
 ---
 
-#### _pdf.table(columnWidth: _double[]_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">double[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width inserted.
@@ -2219,7 +2219,7 @@ Creates a table with the columns width inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _double[]_ | Column widthof the table. |
+| **columnWidth** | _double[]_ | Column widthof the table. |
 
 ##### Return
 
@@ -2229,7 +2229,7 @@ Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(columnWidth: _double[]_, largeTable: _boolean_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">double[]</span>, <span style="color: #FF8000">largeTable</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a new table.
@@ -2238,8 +2238,8 @@ Creates a new table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _double[]_ | Columns width. |
-| largeTable | _boolean_ | Large table. |
+| **columnWidth** | _double[]_ | Columns width. |
+| **largeTable** | _boolean_ | Large table. |
 
 ##### Return
 
@@ -2249,7 +2249,7 @@ Returns the created table.
 
 ---
 
-#### _pdf.table(columnWidth: _float[]_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">float[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width inserted.
@@ -2258,7 +2258,7 @@ Creates a table with the columns width inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _float[]_ | Column widthof the table. |
+| **columnWidth** | _float[]_ | Column widthof the table. |
 
 ##### Return
 
@@ -2268,7 +2268,7 @@ Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(columnWidth: _float[]_, largeTable: _boolean_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">float[]</span>, <span style="color: #FF8000">largeTable</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a new table.
@@ -2277,8 +2277,8 @@ Creates a new table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _float[]_ | Columns width. |
-| largeTable | _boolean_ | Large table. |
+| **columnWidth** | _float[]_ | Columns width. |
+| **largeTable** | _boolean_ | Large table. |
 
 ##### Return
 
@@ -2288,7 +2288,7 @@ Returns the created table.
 
 ---
 
-#### _pdf.table(columnWidth: _[I_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">[I</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width inserted.
@@ -2297,7 +2297,7 @@ Creates a table with the columns width inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _[I_ | Column widthof the table. |
+| **columnWidth** | _[I_ | Column widthof the table. |
 
 ##### Return
 
@@ -2307,7 +2307,7 @@ Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(columnWidth: _[I_, largeTable: _boolean_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">[I</span>, <span style="color: #FF8000">largeTable</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a new table.
@@ -2316,8 +2316,8 @@ Creates a new table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _[I_ | Columns width. |
-| largeTable | _boolean_ | Large table. |
+| **columnWidth** | _[I_ | Columns width. |
+| **largeTable** | _boolean_ | Large table. |
 
 ##### Return
 
@@ -2327,7 +2327,7 @@ Returns the created table.
 
 ---
 
-#### _pdf.table(columns: _int_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columns</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a new table.
@@ -2336,7 +2336,7 @@ Creates a new table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columns | _int_ | Columns number. |
+| **columns** | _int_ | Columns number. |
 
 ##### Return
 
@@ -2346,7 +2346,7 @@ Returns the created table.
 
 ---
 
-#### _pdf.table(columnWidth: _java.util.List_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width inserted.
@@ -2355,7 +2355,7 @@ Creates a table with the columns width inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _java.util.List_ | Column's width of the table. |
+| **columnWidth** | _java.util.List_ | Column's width of the table. |
 
 ##### Return
 
@@ -2365,7 +2365,7 @@ Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(columnWidth: _java.util.List_, largeTable: _boolean_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">largeTable</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a new table.
@@ -2374,8 +2374,8 @@ Creates a new table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _java.util.List_ | Columns width. |
-| largeTable | _boolean_ | Large table. |
+| **columnWidth** | _java.util.List_ | Columns width. |
+| **largeTable** | _boolean_ | Large table. |
 
 ##### Return
 
@@ -2385,7 +2385,7 @@ Returns the created table.
 
 ---
 
-#### _pdf.table(columnWidth: _[Values](../../objects/Values)_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width inserted.
@@ -2394,7 +2394,7 @@ Creates a table with the columns width inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _[Values](../../objects/Values)_ | Column width of the table. |
+| **columnWidth** | _[Values](../../objects/Values)_ | Column width of the table. |
 
 ##### Return
 
@@ -2404,7 +2404,7 @@ Returns a table with the columns width inserted.
 
 ---
 
-#### _pdf.table(columnWidth: _[Values](../../objects/Values)_, largeTable: _boolean_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">largeTable</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a new table.
@@ -2413,8 +2413,8 @@ Creates a new table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| columnWidth | _[Values](../../objects/Values)_ | Columns width. |
-| largeTable | _boolean_ | Large table. |
+| **columnWidth** | _[Values](../../objects/Values)_ | Columns width. |
+| **largeTable** | _boolean_ | Large table. |
 
 ##### Return
 
@@ -2428,7 +2428,7 @@ Returns the created table.
 
 ---
 
-#### _pdf.text(content: string) : _com.itextpdf.layout.element.Text_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">text</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Text</span>
 ##### Description
 
 Creates new text with the inserted text.
@@ -2437,7 +2437,7 @@ Creates new text with the inserted text.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be created. |
+| **content** | _string_ | Content to be created. |
 
 ##### Return
 
@@ -2451,7 +2451,7 @@ Returns the text content.
 
 ---
 
-#### _pdf.toHTML(content: _java.io.InputStream_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2460,17 +2460,17 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _java.io.InputStream_ | Content to HTML. |
+| **content** | _java.io.InputStream_ | Content to HTML. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the Html.
 
 ---
 
-#### _pdf.toHTML(content: _[File](../../objects/File)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2479,17 +2479,17 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[File](../../objects/File)_ | Content to HTML. |
+| **content** | _[File](../../objects/File)_ | Content to HTML. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the Html.
 
 ---
 
-#### _pdf.toHTML(content: _[InputStream](../../objects/InputStream)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2498,17 +2498,17 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[InputStream](../../objects/InputStream)_ | Content to HTML. |
+| **content** | _[InputStream](../../objects/InputStream)_ | Content to HTML. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the Html.
 
 ---
 
-#### _pdf.toHTML(content: _[Storage](../../resources/Storage)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2517,11 +2517,11 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[Storage](../../resources/Storage)_ | Content to HTML. |
+| **content** | _[Storage](../../resources/Storage)_ | Content to HTML. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the Html.
 
@@ -2531,7 +2531,7 @@ Returns the Html.
 
 ---
 
-#### _pdf.toText(content: _java.io.InputStream_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -2540,17 +2540,17 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _java.io.InputStream_ | Content to text. |
+| **content** | _java.io.InputStream_ | Content to text. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the Html.
 
 ---
 
-#### _pdf.toText(content: _[File](../../objects/File)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -2559,17 +2559,17 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[File](../../objects/File)_ | Content to text. |
+| **content** | _[File](../../objects/File)_ | Content to text. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the Html.
 
 ---
 
-#### _pdf.toText(content: _[InputStream](../../objects/InputStream)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -2578,17 +2578,17 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[InputStream](../../objects/InputStream)_ | Content to text. |
+| **content** | _[InputStream](../../objects/InputStream)_ | Content to text. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the Html.
 
 ---
 
-#### _pdf.toText(content: _[Storage](../../resources/Storage)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -2597,11 +2597,11 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[Storage](../../resources/Storage)_ | Content to text. |
+| **content** | _[Storage](../../resources/Storage)_ | Content to text. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the Html.
 

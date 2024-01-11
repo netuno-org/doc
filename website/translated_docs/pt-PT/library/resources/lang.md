@@ -12,14 +12,14 @@ Recurso de atribuição de linguagem.
 
 ---
 
-#### _lang.code() : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">code</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna todos os locale.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -28,7 +28,7 @@ Retorna todos os locale.
 
 ---
 
-#### _lang.get(chave: string) : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Pesquisa a chave.
@@ -37,27 +37,27 @@ Pesquisa a chave.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Chave a ser procurada. |
+| **chave** | _string_ | Chave a ser procurada. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a chave correspondente.
 
 ---
 
-#### _lang.get(key: string, formats: _[Ljava.lang.Object;[]_) : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">formats</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| formats | _[Ljava.lang.Object;[]_ |   |
+| **key** | _string_ |   |
+| **formats** | _[Ljava.lang.Object;[]_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -66,14 +66,14 @@ Retorna a chave correspondente.
 
 ---
 
-#### _lang.getCode() : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getCode</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna todos os locale.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -82,7 +82,7 @@ Retorna todos os locale.
 
 ---
 
-#### _lang.getLocale() : _java.util.Locale_
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getLocale</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Locale</span>
 ##### Descrição
 
 Retorna o nome do locale.
@@ -98,14 +98,14 @@ Retorna o nome do locale.
 
 ---
 
-#### _lang.getName() : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna o nome do locale.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -114,7 +114,7 @@ Retorna o nome do locale.
 
 ---
 
-#### _lang.getOrDefault(chave: string, texto: string) : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getOrDefault</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Define a chave do locale de predefinição com um texto inserido.
@@ -123,12 +123,12 @@ Define a chave do locale de predefinição com um texto inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Chave inserida. |
-| texto | string | Texto inserido. |
+| **chave** | _string_ | Chave inserida. |
+| **texto** | _string_ | Texto inserido. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a chave e o texto inseridos.
 
@@ -138,7 +138,7 @@ Retorna a chave e o texto inseridos.
 
 ---
 
-#### _lang.init() : _[Lang](../../resources/Lang)_
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/Lang)</span>
 ##### Descrição
 
 Inicia o recurso Lang .
@@ -151,7 +151,7 @@ Retorna o lang por definição.
 
 ---
 
-#### _lang.init(chave: string) : _[Lang](../../resources/Lang)_
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/Lang)</span>
 ##### Descrição
 
 Define a chave do locale de predefinição com um texto inserido.
@@ -160,7 +160,7 @@ Define a chave do locale de predefinição com um texto inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Chave inserida. |
+| **chave** | _string_ | Chave inserida. |
 
 ##### Retorno
 
@@ -170,7 +170,7 @@ Retorna a chave e o texto inseridos.
 
 ---
 
-#### _lang.init(chave: string, porDefeito: _boolean_) : _[Lang](../../resources/Lang)_
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">porDefeito</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/Lang)</span>
 ##### Descrição
 
 Define a chave do locale de predefinição com um texto inserido.
@@ -179,8 +179,8 @@ Define a chave do locale de predefinição com um texto inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Chave inserida. |
-| porDefeito | _boolean_ | Definir se é para predefinição. |
+| **chave** | _string_ | Chave inserida. |
+| **porDefeito** | _boolean_ | Definir se é para predefinição. |
 
 ##### Retorno
 
@@ -194,7 +194,7 @@ Retorna a chave e o texto inseridos.
 
 ---
 
-#### _lang.locale() : _java.util.Locale_
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">locale</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Locale</span>
 ##### Descrição
 
 Retorna o nome do locale.
@@ -210,14 +210,14 @@ Retorna o nome do locale.
 
 ---
 
-#### _lang.name() : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna o nome do locale.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---

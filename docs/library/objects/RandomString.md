@@ -12,7 +12,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### getRandom() : _java.util.Random_
+#### <span style="color: #008000">getRandom</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Random</span>
 ##### Return
 
 ( _java.util.Random_ )
@@ -24,7 +24,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### getSymbols() : _char[]_
+#### <span style="color: #008000">getSymbols</span>() : <span style="font-weight: normal; font-style: italic;">char[]</span>
 ##### Return
 
 ( _char[]_ )
@@ -36,10 +36,10 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### getSymbolsString() : string
+#### <span style="color: #008000">getSymbolsString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -48,10 +48,10 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### next() : string
+#### <span style="color: #008000">next</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -60,10 +60,10 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### nextString() : string
+#### <span style="color: #008000">nextString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -72,7 +72,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### random() : _java.util.Random_
+#### <span style="color: #008000">random</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Random</span>
 ##### Return
 
 ( _java.util.Random_ )
@@ -84,12 +84,12 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### setRandom(random: _java.util.Random_) : _[RandomString](../../objects/RandomString)_
+#### <span style="color: #008000">setRandom</span>(<span style="color: #FF8000">random</span>: <span style="font-weight: normal; font-style: italic;">java.util.Random</span>) : <span style="font-weight: normal; font-style: italic;">[RandomString](../../objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| random | _java.util.Random_ |   |
+| **random** | _java.util.Random_ |   |
 
 ##### Return
 
@@ -102,12 +102,12 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### setSymbols(symbols: _char[]_) : _[RandomString](../../objects/RandomString)_
+#### <span style="color: #008000">setSymbols</span>(<span style="color: #FF8000">symbols</span>: <span style="font-weight: normal; font-style: italic;">char[]</span>) : <span style="font-weight: normal; font-style: italic;">[RandomString](../../objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| symbols | _char[]_ |   |
+| **symbols** | _char[]_ |   |
 
 ##### Return
 
@@ -116,12 +116,12 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### setSymbols(symbols: string) : _[RandomString](../../objects/RandomString)_
+#### <span style="color: #008000">setSymbols</span>(<span style="color: #FF8000">symbols</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RandomString](../../objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| symbols | string |   |
+| **symbols** | _string_ |   |
 
 ##### Return
 
@@ -134,7 +134,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### symbols() : _char[]_
+#### <span style="color: #008000">symbols</span>() : <span style="font-weight: normal; font-style: italic;">char[]</span>
 ##### Return
 
 ( _char[]_ )
@@ -146,10 +146,10 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### symbolsString() : string
+#### <span style="color: #008000">symbolsString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---

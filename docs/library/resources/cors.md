@@ -13,7 +13,7 @@ Allows you to manage multiple origins and their headers.
 
 ---
 
-#### _cors.add(config: _[Values](../../objects/Values)_) : _[CORS](../../resources/CORS)_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">add</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/CORS)</span>
 ##### Description
 
 Adds the settings for a new CORS definition.
@@ -22,7 +22,7 @@ Adds the settings for a new CORS definition.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| config | _[Values](../../objects/Values)_ | The new CORS configuration |
+| **config** | _[Values](../../objects/Values)_ | The new CORS configuration |
 
 ##### Return
 
@@ -36,7 +36,7 @@ Current CORS instance.
 
 ---
 
-#### _cors.all() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">all</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets all CORS settings.
@@ -53,7 +53,7 @@ All CORS settings configured.
 
 ---
 
-#### _cors.getAll() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">getAll</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets all CORS settings.
@@ -70,7 +70,7 @@ All CORS settings configured.
 
 ---
 
-#### _cors.isOriginEnabled(origin: string) : _boolean_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">isOriginEnabled</span>(<span style="color: #FF8000">origin</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks if a origin has already been defined and is active.d.
@@ -79,7 +79,7 @@ Checks if a origin has already been defined and is active.d.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| origin | string | Origin that comes in the HTTP header. |
+| **origin** | _string_ | Origin that comes in the HTTP header. |
 
 ##### Return
 
@@ -93,7 +93,7 @@ If the origin is enabled.
 
 ---
 
-#### _cors.load() : _[CORS](../../resources/CORS)_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/CORS)</span>
 ##### Description
 
 Performs source verification and makes header definitions in the HTTP request response.
@@ -110,7 +110,7 @@ Current CORS instance.
 
 ---
 
-#### _cors.removeOrigin(origin: string) : _[CORS](../../resources/CORS)_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">removeOrigin</span>(<span style="color: #FF8000">origin</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/CORS)</span>
 ##### Description
 
 Removes the origin in every configuration it exists.
@@ -119,7 +119,7 @@ Removes the origin in every configuration it exists.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| origin | string | Origin that comes in the HTTP header. |
+| **origin** | _string_ | Origin that comes in the HTTP header. |
 
 ##### Return
 

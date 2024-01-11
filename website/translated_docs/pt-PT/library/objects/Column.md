@@ -22,12 +22,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### changeType(table: string) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">changeType</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| table | string |   |
+| **table** | _string_ |   |
 
 ##### Retorno
 
@@ -40,13 +40,13 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### drop(table: string, column: string) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">drop</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| table | string |   |
-| column | string |   |
+| **table** | _string_ |   |
+| **column** | _string_ |   |
 
 ##### Retorno
 
@@ -59,10 +59,10 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### getDefault() : string
+#### <span style="color: #008000">getDefault</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -71,10 +71,10 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### getKey() : string
+#### <span style="color: #008000">getKey</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -83,7 +83,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### getMaxLength() : _int_
+#### <span style="color: #008000">getMaxLength</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -95,10 +95,10 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### getName() : string
+#### <span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -107,7 +107,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### getType() : _org.netuno.tritao.db.manager.Column$Type_
+#### <span style="color: #008000">getType</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.manager.Column$Type</span>
 ##### Retorno
 
 ( _org.netuno.tritao.db.manager.Column$Type_ )
@@ -119,7 +119,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isH2() : _boolean_
+#### <span style="color: #008000">isH2</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -127,12 +127,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isH2(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isH2</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -145,7 +145,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isMSSQL() : _boolean_
+#### <span style="color: #008000">isMSSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -153,12 +153,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isMSSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isMSSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -171,7 +171,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isMariaDB() : _boolean_
+#### <span style="color: #008000">isMariaDB</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -179,12 +179,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isMariaDB(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isMariaDB</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -197,7 +197,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isNotNull() : _boolean_
+#### <span style="color: #008000">isNotNull</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -209,7 +209,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isPostgreSQL() : _boolean_
+#### <span style="color: #008000">isPostgreSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -217,12 +217,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isPostgreSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isPostgreSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -235,7 +235,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isPrimaryKey() : _boolean_
+#### <span style="color: #008000">isPrimaryKey</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -247,14 +247,14 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### rename(table: string, oldName: string, newName: string) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">rename</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">oldName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">newName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| table | string |   |
-| oldName | string |   |
-| newName | string |   |
+| **table** | _string_ |   |
+| **oldName** | _string_ |   |
+| **newName** | _string_ |   |
 
 ##### Retorno
 
@@ -267,14 +267,14 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### renameIfExists(table: string, oldName: string, newName: string) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">renameIfExists</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">oldName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">newName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| table | string |   |
-| oldName | string |   |
-| newName | string |   |
+| **table** | _string_ |   |
+| **oldName** | _string_ |   |
+| **newName** | _string_ |   |
 
 ##### Retorno
 
@@ -287,7 +287,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### sequence() : _boolean_
+#### <span style="color: #008000">sequence</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -299,7 +299,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefault() : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setDefault</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Retorno
 
 ( _[Column](../../objects/Column)_ )
@@ -307,26 +307,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefault(_default: _boolean_) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setDefault</span>(<span style="color: #FF8000">_default</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| _default | _boolean_ |   |
-
-##### Retorno
-
-( _[Column](../../objects/Column)_ )
-
-
----
-
-#### setDefault(_default: _float_) : _[Column](../../objects/Column)_
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| _default | _float_ |   |
+| **_default** | _boolean_ |   |
 
 ##### Retorno
 
@@ -335,12 +321,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefault(_default: _int_) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setDefault</span>(<span style="color: #FF8000">_default</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| _default | _int_ |   |
+| **_default** | _float_ |   |
 
 ##### Retorno
 
@@ -349,12 +335,26 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefault(_default: string) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setDefault</span>(<span style="color: #FF8000">_default</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| _default | string |   |
+| **_default** | _int_ |   |
+
+##### Retorno
+
+( _[Column](../../objects/Column)_ )
+
+
+---
+
+#### <span style="color: #008000">setDefault</span>(<span style="color: #FF8000">_default</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **_default** | _string_ |   |
 
 ##### Retorno
 
@@ -367,7 +367,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefaultAsCurrentDate() : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setDefaultAsCurrentDate</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Retorno
 
 ( _[Column](../../objects/Column)_ )
@@ -379,7 +379,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefaultAsCurrentTime() : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setDefaultAsCurrentTime</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Retorno
 
 ( _[Column](../../objects/Column)_ )
@@ -391,7 +391,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefaultAsCurrentTimeStamp() : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setDefaultAsCurrentTimeStamp</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Retorno
 
 ( _[Column](../../objects/Column)_ )
@@ -403,7 +403,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefaultAsNewUUID() : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setDefaultAsNewUUID</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Retorno
 
 ( _[Column](../../objects/Column)_ )
@@ -415,12 +415,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setMaxLength(maxLength: _int_) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setMaxLength</span>(<span style="color: #FF8000">maxLength</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| maxLength | _int_ |   |
+| **maxLength** | _int_ |   |
 
 ##### Retorno
 
@@ -433,12 +433,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setName(name: string) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setName</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Retorno
 
@@ -451,12 +451,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setNotNull(notNull: _boolean_) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setNotNull</span>(<span style="color: #FF8000">notNull</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| notNull | _boolean_ |   |
+| **notNull** | _boolean_ |   |
 
 ##### Retorno
 
@@ -469,12 +469,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setPrimaryKey(primaryKey: _boolean_) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setPrimaryKey</span>(<span style="color: #FF8000">primaryKey</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| primaryKey | _boolean_ |   |
+| **primaryKey** | _boolean_ |   |
 
 ##### Retorno
 
@@ -487,12 +487,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setType(typeName: string) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setType</span>(<span style="color: #FF8000">typeName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| typeName | string |   |
+| **typeName** | _string_ |   |
 
 ##### Retorno
 
@@ -501,12 +501,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setType(type: _org.netuno.tritao.db.manager.Column$Type_) : _[Column](../../objects/Column)_
+#### <span style="color: #008000">setType</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.manager.Column$Type</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| type | _org.netuno.tritao.db.manager.Column$Type_ |   |
+| **type** | _org.netuno.tritao.db.manager.Column$Type_ |   |
 
 ##### Retorno
 
@@ -519,10 +519,10 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### toDefaultDefinition() : string
+#### <span style="color: #008000">toDefaultDefinition</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -531,10 +531,10 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### toTypeDefinition() : string
+#### <span style="color: #008000">toTypeDefinition</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---

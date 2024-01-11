@@ -18,7 +18,7 @@ config.env = 'development'
 
 ---
 
-#### _env.current() : string
+#### <span style="font-weight: normal">_env</span>.<span style="color: #008000">current</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Name of the environment that is configured in Netuno.
@@ -31,7 +31,7 @@ _out.println(`Current Environment: ${_env.current()}`)
 
 ##### Return
 
-( string )
+( _string_ )
 
 The name of the current environment.
 
@@ -41,7 +41,7 @@ The name of the current environment.
 
 ---
 
-#### _env.is(name: string) : _boolean_
+#### <span style="font-weight: normal">_env</span>.<span style="color: #008000">is</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Serves to check the current environment, useful in `if` conditions.
@@ -50,7 +50,7 @@ Serves to check the current environment, useful in `if` conditions.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string | Compares whether the configured environment name in use is the same as the value passed. |
+| **name** | _string_ | Compares whether the configured environment name in use is the same as the value passed. |
 
 ##### Return
 
@@ -64,7 +64,7 @@ Whether the configured environment has the same name.
 
 ---
 
-#### _env.isGraal() : _boolean_
+#### <span style="font-weight: normal">_env</span>.<span style="color: #008000">isGraal</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Serves to check if you are using Graal.

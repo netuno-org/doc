@@ -12,7 +12,7 @@ O objeto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### available() : _int_
+#### <span style="color: #008000">available</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
@@ -28,10 +28,10 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### baseName() : string
+#### <span style="color: #008000">baseName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -40,7 +40,7 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bufferedReader() : _java.io.BufferedReader_
+#### <span style="color: #008000">bufferedReader</span>() : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
 ##### Retorno
 
 ( _java.io.BufferedReader_ )
@@ -48,27 +48,12 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bufferedReader(bufferSize: _int_) : _java.io.BufferedReader_
+#### <span style="color: #008000">bufferedReader</span>(<span style="color: #FF8000">bufferSize</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| bufferSize | _int_ |   |
-
-##### Retorno
-
-( _java.io.BufferedReader_ )
-
-
----
-
-#### bufferedReader(bufferSize: _int_, charset: string) : _java.io.BufferedReader_
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| bufferSize | _int_ |   |
-| charset | string |   |
+| **bufferSize** | _int_ |   |
 
 ##### Retorno
 
@@ -77,13 +62,13 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bufferedReader(bufferSize: _int_, charset: _java.nio.charset.Charset_) : _java.io.BufferedReader_
+#### <span style="color: #008000">bufferedReader</span>(<span style="color: #FF8000">bufferSize</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| bufferSize | _int_ |   |
-| charset | _java.nio.charset.Charset_ |   |
+| **bufferSize** | _int_ |   |
+| **charset** | _string_ |   |
 
 ##### Retorno
 
@@ -92,12 +77,13 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bufferedReader(charset: string) : _java.io.BufferedReader_
+#### <span style="color: #008000">bufferedReader</span>(<span style="color: #FF8000">bufferSize</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">java.nio.charset.Charset</span>) : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| charset | string |   |
+| **bufferSize** | _int_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
 
 ##### Retorno
 
@@ -106,12 +92,26 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bufferedReader(charset: _java.nio.charset.Charset_) : _java.io.BufferedReader_
+#### <span style="color: #008000">bufferedReader</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| charset | _java.nio.charset.Charset_ |   |
+| **charset** | _string_ |   |
+
+##### Retorno
+
+( _java.io.BufferedReader_ )
+
+
+---
+
+#### <span style="color: #008000">bufferedReader</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">java.nio.charset.Charset</span>) : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _java.nio.charset.Charset_ |   |
 
 ##### Retorno
 
@@ -124,7 +124,7 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bytes() : _byte[]_
+#### <span style="color: #008000">bytes</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Descrição
 
 Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
@@ -140,10 +140,10 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### contentType() : string
+#### <span style="color: #008000">contentType</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -152,7 +152,7 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### copy(caminhoDestino: string) : _boolean_
+#### <span style="color: #008000">copy</span>(<span style="color: #FF8000">caminhoDestino</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Copia o ficheiro para o caminho indicado.
@@ -161,7 +161,7 @@ Copia o ficheiro para o caminho indicado.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoDestino | string | Caminho para onde copiar o ficheiro. |
+| **caminhoDestino** | _string_ | Caminho para onde copiar o ficheiro. |
 
 ##### Retorno
 
@@ -170,7 +170,7 @@ Copia o ficheiro para o caminho indicado.
 
 ---
 
-#### copy(caminhoDestino: string, reescrever: _boolean_) : _boolean_
+#### <span style="color: #008000">copy</span>(<span style="color: #FF8000">caminhoDestino</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">reescrever</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Copia o ficheiro do caminho indicado com indicação de escrita por cima de um existente.
@@ -179,8 +179,8 @@ Copia o ficheiro do caminho indicado com indicação de escrita por cima de um e
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoDestino | string | Caminho para onde copiar o ficheiro. |
-| reescrever | _boolean_ | Escreve por cima se já existir um ficheiro. |
+| **caminhoDestino** | _string_ | Caminho para onde copiar o ficheiro. |
+| **reescrever** | _boolean_ | Escreve por cima se já existir um ficheiro. |
 
 ##### Retorno
 
@@ -193,7 +193,7 @@ Copia o ficheiro do caminho indicado com indicação de escrita por cima de um e
 
 ---
 
-#### copyFiles(caminhoDestino: string, extensao: string) : _boolean_
+#### <span style="color: #008000">copyFiles</span>(<span style="color: #FF8000">caminhoDestino</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">extensao</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Copia os ficheiros indicados pela extensão inserida para o caminho indicado.
@@ -202,8 +202,8 @@ Copia os ficheiros indicados pela extensão inserida para o caminho indicado.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoDestino | string | Caminho para onde copiar o ficheiro. |
-| extensao | string | Extensão do ficheiro. |
+| **caminhoDestino** | _string_ | Caminho para onde copiar o ficheiro. |
+| **extensao** | _string_ | Extensão do ficheiro. |
 
 ##### Retorno
 
@@ -216,7 +216,7 @@ Copia os ficheiros indicados pela extensão inserida para o caminho indicado.
 
 ---
 
-#### delete() : _boolean_
+#### <span style="color: #008000">delete</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Apaga o ficheiro do caminho inserido.
@@ -232,7 +232,7 @@ Apaga o ficheiro do caminho inserido.
 
 ---
 
-#### deleteAll() : _boolean_
+#### <span style="color: #008000">deleteAll</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Apaga um determinado ficheiro/diretorio e recursivamente todos os subs.
@@ -244,7 +244,7 @@ Apaga um determinado ficheiro/diretorio e recursivamente todos os subs.
 
 ---
 
-#### deleteAll(extension: string) : _boolean_
+#### <span style="color: #008000">deleteAll</span>(<span style="color: #FF8000">extension</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Apaga um determinado ficheiro/diretorio pela extensão do ficheiro.
@@ -253,7 +253,7 @@ Apaga um determinado ficheiro/diretorio pela extensão do ficheiro.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| extension | string |   |
+| **extension** | _string_ |   |
 
 ##### Retorno
 
@@ -266,7 +266,7 @@ Apaga um determinado ficheiro/diretorio pela extensão do ficheiro.
 
 ---
 
-#### deleteFiles() : _boolean_
+#### <span style="color: #008000">deleteFiles</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Apaga um determinado ficheiro/diretório e recursivamente todos os subs.
@@ -278,7 +278,7 @@ Apaga um determinado ficheiro/diretório e recursivamente todos os subs.
 
 ---
 
-#### deleteFiles(extensao: string) : _boolean_
+#### <span style="color: #008000">deleteFiles</span>(<span style="color: #FF8000">extensao</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Apaga ficheiros designados pela extensão inserida e recursivamente nas subpastas.
@@ -287,7 +287,7 @@ Apaga ficheiros designados pela extensão inserida e recursivamente nas subpasta
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| extensao | string | Extensão do ficheiro. |
+| **extensao** | _string_ | Extensão do ficheiro. |
 
 ##### Retorno
 
@@ -300,12 +300,12 @@ Apaga ficheiros designados pela extensão inserida e recursivamente nas subpasta
 
 ---
 
-#### ensureJail(jailPath: string) : _[File](../../objects/File)_
+#### <span style="color: #008000">ensureJail</span>(<span style="color: #FF8000">jailPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| jailPath | string |   |
+| **jailPath** | _string_ |   |
 
 ##### Retorno
 
@@ -318,7 +318,7 @@ Apaga ficheiros designados pela extensão inserida e recursivamente nas subpasta
 
 ---
 
-#### exists() : _boolean_
+#### <span style="color: #008000">exists</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Retorna um resultado booleano que verifica se o caminho indicado existe.
@@ -334,10 +334,10 @@ Retorna um resultado booleano que verifica se o caminho indicado existe.
 
 ---
 
-#### extension() : string
+#### <span style="color: #008000">extension</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -346,14 +346,14 @@ Retorna um resultado booleano que verifica se o caminho indicado existe.
 
 ---
 
-#### fullPath() : string
+#### <span style="color: #008000">fullPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Permite obter o caminho completo do ficheiro.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -362,14 +362,14 @@ Permite obter o caminho completo do ficheiro.
 
 ---
 
-#### getBaseName() : string
+#### <span style="color: #008000">getBaseName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna o nome base do presente ficheiro.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -378,7 +378,7 @@ Retorna o nome base do presente ficheiro.
 
 ---
 
-#### getBytes() : _byte[]_
+#### <span style="color: #008000">getBytes</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Descrição
 
 Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
@@ -394,10 +394,10 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### getContentType() : string
+#### <span style="color: #008000">getContentType</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -406,10 +406,10 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### getExtension() : string
+#### <span style="color: #008000">getExtension</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -418,14 +418,14 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### getFullPath() : string
+#### <span style="color: #008000">getFullPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna o caminho completo até ao presente ficheiro.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -434,7 +434,7 @@ Retorna o caminho completo até ao presente ficheiro.
 
 ---
 
-#### getInputStream() : _java.io.InputStream_
+#### <span style="color: #008000">getInputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
 ##### Descrição
 
 Retorna o número estimado de bytes.
@@ -450,19 +450,19 @@ Retorna o número estimado de bytes.
 
 ---
 
-#### getName() : string
+#### <span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna o nome do ficheiro.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### getName(caminho: string) : string
+#### <span style="color: #008000">getName</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna o nome do ficheiro do caminho inserido.
@@ -471,11 +471,11 @@ Retorna o nome do ficheiro do caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | string | Caminho para a pasta/diretorio. |
+| **caminho** | _string_ | Caminho para a pasta/diretorio. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -484,7 +484,7 @@ Retorna o nome do ficheiro do caminho inserido.
 
 ---
 
-#### getOutputStream() : _java.io.OutputStream_
+#### <span style="color: #008000">getOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
 ##### Retorno
 
 ( _java.io.OutputStream_ )
@@ -496,14 +496,14 @@ Retorna o nome do ficheiro do caminho inserido.
 
 ---
 
-#### getPath() : string
+#### <span style="color: #008000">getPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna o caminho.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -512,10 +512,10 @@ Retorna o caminho.
 
 ---
 
-#### getPhysicalPath() : string
+#### <span style="color: #008000">getPhysicalPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -524,7 +524,7 @@ Retorna o caminho.
 
 ---
 
-#### getSequenceName(caminhoDestino: _java.io.File_, nomeFicheiro: string) : string
+#### <span style="color: #008000">getSequenceName</span>(<span style="color: #FF8000">caminhoDestino</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>, <span style="color: #FF8000">nomeFicheiro</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro já existir com o nome original.
@@ -533,17 +533,17 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoDestino | _java.io.File_ | Caminho onde guardar o ficheiro. |
-| nomeFicheiro | string | Nome do Ficheiro. |
+| **caminhoDestino** | _java.io.File_ | Caminho onde guardar o ficheiro. |
+| **nomeFicheiro** | _string_ | Nome do Ficheiro. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### getSequenceName(caminhoDestino: string, nomeFicheiro: string) : string
+#### <span style="color: #008000">getSequenceName</span>(<span style="color: #FF8000">caminhoDestino</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">nomeFicheiro</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro já existir com o nome original.
@@ -552,12 +552,12 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoDestino | string | Caminho onde guardar o ficheiro. |
-| nomeFicheiro | string | Nome do Ficheiro. |
+| **caminhoDestino** | _string_ | Caminho onde guardar o ficheiro. |
+| **nomeFicheiro** | _string_ | Nome do Ficheiro. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -566,7 +566,7 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 ---
 
-#### input() : _[InputStream](../../objects/InputStream)_
+#### <span style="color: #008000">input</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Retorno
 
 ( _[InputStream](../../objects/InputStream)_ )
@@ -578,7 +578,7 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 ---
 
-#### inputStream() : _java.io.InputStream_
+#### <span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
 ##### Retorno
 
 ( _java.io.InputStream_ )
@@ -590,12 +590,12 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 ---
 
-#### isBaseName(baseName: string) : _boolean_
+#### <span style="color: #008000">isBaseName</span>(<span style="color: #FF8000">baseName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| baseName | string |   |
+| **baseName** | _string_ |   |
 
 ##### Retorno
 
@@ -608,7 +608,7 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 ---
 
-#### isDirectory() : _boolean_
+#### <span style="color: #008000">isDirectory</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Retorna um resultado booleano que verifica se o caminho indicado é uma pasta.
@@ -624,12 +624,12 @@ Retorna um resultado booleano que verifica se o caminho indicado é uma pasta.
 
 ---
 
-#### isExtension(extension: string) : _boolean_
+#### <span style="color: #008000">isExtension</span>(<span style="color: #FF8000">extension</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| extension | string |   |
+| **extension** | _string_ |   |
 
 ##### Retorno
 
@@ -642,7 +642,7 @@ Retorna um resultado booleano que verifica se o caminho indicado é uma pasta.
 
 ---
 
-#### isFile() : _boolean_
+#### <span style="color: #008000">isFile</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Retorna um resultado booleano que verifica se o caminho indicado é um ficheiro.
@@ -658,7 +658,7 @@ Retorna um resultado booleano que verifica se o caminho indicado é um ficheiro.
 
 ---
 
-#### isJail() : _boolean_
+#### <span style="color: #008000">isJail</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Efetua uma verificação se o ficheiro tem a sua localização limitada a um outro diretório .
@@ -674,7 +674,7 @@ Efetua uma verificação se o ficheiro tem a sua localização limitada a um out
 
 ---
 
-#### lastModified() : _long_
+#### <span style="color: #008000">lastModified</span>() : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Descrição
 
 Retorna a hora que o ficheiro do caminho indicado foi modificado pela ultima vez.
@@ -690,7 +690,7 @@ Retorna a hora que o ficheiro do caminho indicado foi modificado pela ultima vez
 
 ---
 
-#### list() : _java.util.List_
+#### <span style="color: #008000">list</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Retorna uma lista de todos os ficheiros e pastas presentes no caminho inserido.
@@ -706,7 +706,7 @@ Retorna uma lista de todos os ficheiros e pastas presentes no caminho inserido.
 
 ---
 
-#### mkdir() : _boolean_
+#### <span style="color: #008000">mkdir</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Cria uma pasta no caminho atual.
@@ -722,7 +722,7 @@ Cria uma pasta no caminho atual.
 
 ---
 
-#### mkdirs() : _boolean_
+#### <span style="color: #008000">mkdirs</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -734,14 +734,14 @@ Cria uma pasta no caminho atual.
 
 ---
 
-#### name() : string
+#### <span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna o nome do ficheiro.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -750,7 +750,7 @@ Retorna o nome do ficheiro.
 
 ---
 
-#### output() : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">output</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Retorno
 
 ( _[OutputStream](../../objects/OutputStream)_ )
@@ -762,7 +762,7 @@ Retorna o nome do ficheiro.
 
 ---
 
-#### outputStream() : _java.io.OutputStream_
+#### <span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
 ##### Retorno
 
 ( _java.io.OutputStream_ )
@@ -774,14 +774,14 @@ Retorna o nome do ficheiro.
 
 ---
 
-#### path() : string
+#### <span style="color: #008000">path</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Retorna o caminho do ficheiro/pasta.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna uma verificação boolean da existência do ficheiro e localiza a pasta onde se encontra.
 
@@ -791,14 +791,14 @@ Retorna uma verificação boolean da existência do ficheiro e localiza a pasta 
 
 ---
 
-#### physicalPath() : string
+#### <span style="color: #008000">physicalPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Permite obter o caminho do ficheiro.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -807,7 +807,7 @@ Permite obter o caminho do ficheiro.
 
 ---
 
-#### reader() : _java.io.Reader_
+#### <span style="color: #008000">reader</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
 ##### Retorno
 
 ( _java.io.Reader_ )
@@ -819,7 +819,7 @@ Permite obter o caminho do ficheiro.
 
 ---
 
-#### readerBOM() : _java.io.Reader_
+#### <span style="color: #008000">readerBOM</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
 ##### Retorno
 
 ( _java.io.Reader_ )
@@ -827,12 +827,12 @@ Permite obter o caminho do ficheiro.
 
 ---
 
-#### readerBOM(charsetName: string) : _java.io.Reader_
+#### <span style="color: #008000">readerBOM</span>(<span style="color: #FF8000">charsetName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| charsetName | string |   |
+| **charsetName** | _string_ |   |
 
 ##### Retorno
 
@@ -845,7 +845,7 @@ Permite obter o caminho do ficheiro.
 
 ---
 
-#### rename(novoNome: string) : _boolean_
+#### <span style="color: #008000">rename</span>(<span style="color: #FF8000">novoNome</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Renomeia um ficheiro com o novo nome inserido.
@@ -854,7 +854,7 @@ Renomeia um ficheiro com o novo nome inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| novoNome | string | Novo nome para renomear o ficheiro. |
+| **novoNome** | _string_ | Novo nome para renomear o ficheiro. |
 
 ##### Retorno
 
@@ -867,7 +867,7 @@ Renomeia um ficheiro com o novo nome inserido.
 
 ---
 
-#### renameTo(caminhoDestino: string) : _boolean_
+#### <span style="color: #008000">renameTo</span>(<span style="color: #FF8000">caminhoDestino</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Renomeia o ficheiro do caminho inserido.
@@ -876,7 +876,7 @@ Renomeia o ficheiro do caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoDestino | string | Caminho para o ficheiro. |
+| **caminhoDestino** | _string_ | Caminho para o ficheiro. |
 
 ##### Retorno
 
@@ -889,7 +889,7 @@ Renomeia o ficheiro do caminho inserido.
 
 ---
 
-#### save(caminho: _java.lang.Object_) : _void_
+#### <span style="color: #008000">save</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Guarda o ficheiro no determinado caminho inserido.
@@ -898,7 +898,7 @@ Guarda o ficheiro no determinado caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | _java.lang.Object_ | Caminho do ficheiro. |
+| **caminho** | _java.lang.Object_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -907,7 +907,7 @@ Guarda o ficheiro no determinado caminho inserido.
 
 ---
 
-#### save(caminho: string) : _void_
+#### <span style="color: #008000">save</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Guarda o ficheiro no caminho inserido.
@@ -916,7 +916,7 @@ Guarda o ficheiro no caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | string | Caminho onde guarda o ficheiro. |
+| **caminho** | _string_ | Caminho onde guarda o ficheiro. |
 
 ##### Retorno
 
@@ -929,32 +929,32 @@ Guarda o ficheiro no caminho inserido.
 
 ---
 
-#### sequenceName(targetPath: _java.io.File_, fileName: string) : string
+#### <span style="color: #008000">sequenceName</span>(<span style="color: #FF8000">targetPath</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| targetPath | _java.io.File_ |   |
-| fileName | string |   |
+| **targetPath** | _java.io.File_ |   |
+| **fileName** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### sequenceName(targetPath: string, fileName: string) : string
+#### <span style="color: #008000">sequenceName</span>(<span style="color: #FF8000">targetPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| targetPath | string |   |
-| fileName | string |   |
+| **targetPath** | _string_ |   |
+| **fileName** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -963,7 +963,7 @@ Guarda o ficheiro no caminho inserido.
 
 ---
 
-#### writer() : _java.io.Writer_
+#### <span style="color: #008000">writer</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>
 ##### Retorno
 
 ( _java.io.Writer_ )

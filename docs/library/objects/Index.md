@@ -21,13 +21,13 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### create(table: string, column: string) : _[Index](../../objects/Index)_
+#### <span style="color: #008000">create</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Index](../../objects/Index)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| table | string |   |
-| column | string |   |
+| **table** | _string_ |   |
+| **column** | _string_ |   |
 
 ##### Return
 
@@ -40,10 +40,10 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### getKey() : string
+#### <span style="color: #008000">getKey</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -52,7 +52,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isH2() : _boolean_
+#### <span style="color: #008000">isH2</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -60,12 +60,12 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isH2(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isH2</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -78,7 +78,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isMSSQL() : _boolean_
+#### <span style="color: #008000">isMSSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -86,12 +86,12 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isMSSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isMSSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -104,7 +104,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isMariaDB() : _boolean_
+#### <span style="color: #008000">isMariaDB</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -112,12 +112,12 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isMariaDB(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isMariaDB</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -130,7 +130,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isPostgreSQL() : _boolean_
+#### <span style="color: #008000">isPostgreSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -138,12 +138,12 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isPostgreSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isPostgreSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -156,7 +156,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### sequence() : _boolean_
+#### <span style="color: #008000">sequence</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )

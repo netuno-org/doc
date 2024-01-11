@@ -12,7 +12,7 @@ Recurso de configuração dos componentes da aplicação.
 
 ---
 
-#### _setup.autoCreateSchema() : _boolean_
+#### <span style="font-weight: normal">_setup</span>.<span style="color: #008000">autoCreateSchema</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -24,7 +24,7 @@ Recurso de configuração dos componentes da aplicação.
 
 ---
 
-#### _setup.createSchema() : _boolean_
+#### <span style="font-weight: normal">_setup</span>.<span style="color: #008000">createSchema</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -36,10 +36,10 @@ Recurso de configuração dos componentes da aplicação.
 
 ---
 
-#### _setup.getSecret() : string
+#### <span style="font-weight: normal">_setup</span>.<span style="color: #008000">getSecret</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -48,7 +48,7 @@ Recurso de configuração dos componentes da aplicação.
 
 ---
 
-#### _setup.isAutoCreateSchema() : _boolean_
+#### <span style="font-weight: normal">_setup</span>.<span style="color: #008000">isAutoCreateSchema</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -60,7 +60,7 @@ Recurso de configuração dos componentes da aplicação.
 
 ---
 
-#### _setup.isRunning() : _boolean_
+#### <span style="font-weight: normal">_setup</span>.<span style="color: #008000">isRunning</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -72,7 +72,7 @@ Recurso de configuração dos componentes da aplicação.
 
 ---
 
-#### _setup.run() : _org.netuno.tritao.resource.Setup$RunResult_
+#### <span style="font-weight: normal">_setup</span>.<span style="color: #008000">run</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.resource.Setup$RunResult</span>
 ##### Return
 
 ( _org.netuno.tritao.resource.Setup$RunResult_ )
@@ -84,7 +84,7 @@ Recurso de configuração dos componentes da aplicação.
 
 ---
 
-#### _setup.running() : _boolean_
+#### <span style="font-weight: normal">_setup</span>.<span style="color: #008000">running</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -96,10 +96,10 @@ Recurso de configuração dos componentes da aplicação.
 
 ---
 
-#### _setup.secret() : string
+#### <span style="font-weight: normal">_setup</span>.<span style="color: #008000">secret</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---

@@ -12,7 +12,7 @@ Geração de valores aleatórios.
 
 ---
 
-#### _random.init() : _java.util.Random_
+#### <span style="font-weight: normal">_random</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Random</span>
 ##### Description
 
 Generates the all Random class.
@@ -25,7 +25,7 @@ Returns a class.
 
 ---
 
-#### _random.init(seed: _long_) : _java.util.Random_
+#### <span style="font-weight: normal">_random</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">seed</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Random</span>
 ##### Description
 
 Generates a random seed.
@@ -34,7 +34,7 @@ Generates a random seed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| seed | _long_ |   |
+| **seed** | _long_ |   |
 
 ##### Return
 
@@ -48,7 +48,7 @@ Returns a seed.
 
 ---
 
-#### _random.initSecure() : _java.security.SecureRandom_
+#### <span style="font-weight: normal">_random</span>.<span style="color: #008000">initSecure</span>() : <span style="font-weight: normal; font-style: italic;">java.security.SecureRandom</span>
 ##### Return
 
 ( _java.security.SecureRandom_ )
@@ -56,12 +56,12 @@ Returns a seed.
 
 ---
 
-#### _random.initSecure(seed: _byte[]_) : _java.security.SecureRandom_
+#### <span style="font-weight: normal">_random</span>.<span style="color: #008000">initSecure</span>(<span style="color: #FF8000">seed</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">java.security.SecureRandom</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| seed | _byte[]_ |   |
+| **seed** | _byte[]_ |   |
 
 ##### Return
 
@@ -74,7 +74,7 @@ Returns a seed.
 
 ---
 
-#### _random.initString() : _[RandomString](../../objects/RandomString)_
+#### <span style="font-weight: normal">_random</span>.<span style="color: #008000">initString</span>() : <span style="font-weight: normal; font-style: italic;">[RandomString](../../objects/RandomString)</span>
 ##### Description
 
 Generates a random text of 24 caracteres.
@@ -87,12 +87,12 @@ Returns a 24 characters random string.
 
 ---
 
-#### _random.initString(length: _int_) : _[RandomString](../../objects/RandomString)_
+#### <span style="font-weight: normal">_random</span>.<span style="color: #008000">initString</span>(<span style="color: #FF8000">length</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[RandomString](../../objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| length | _int_ |   |
+| **length** | _int_ |   |
 
 ##### Return
 
@@ -101,13 +101,13 @@ Returns a 24 characters random string.
 
 ---
 
-#### _random.initString(length: _int_, symbols: string) : _[RandomString](../../objects/RandomString)_
+#### <span style="font-weight: normal">_random</span>.<span style="color: #008000">initString</span>(<span style="color: #FF8000">length</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">symbols</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RandomString](../../objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| length | _int_ |   |
-| symbols | string |   |
+| **length** | _int_ |   |
+| **symbols** | _string_ |   |
 
 ##### Return
 
@@ -116,13 +116,13 @@ Returns a 24 characters random string.
 
 ---
 
-#### _random.initString(length: _int_, random: _java.util.Random_) : _[RandomString](../../objects/RandomString)_
+#### <span style="font-weight: normal">_random</span>.<span style="color: #008000">initString</span>(<span style="color: #FF8000">length</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">random</span>: <span style="font-weight: normal; font-style: italic;">java.util.Random</span>) : <span style="font-weight: normal; font-style: italic;">[RandomString](../../objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| length | _int_ |   |
-| random | _java.util.Random_ |   |
+| **length** | _int_ |   |
+| **random** | _java.util.Random_ |   |
 
 ##### Return
 
@@ -131,14 +131,14 @@ Returns a 24 characters random string.
 
 ---
 
-#### _random.initString(length: _int_, random: _java.util.Random_, symbols: string) : _[RandomString](../../objects/RandomString)_
+#### <span style="font-weight: normal">_random</span>.<span style="color: #008000">initString</span>(<span style="color: #FF8000">length</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">random</span>: <span style="font-weight: normal; font-style: italic;">java.util.Random</span>, <span style="color: #FF8000">symbols</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RandomString](../../objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| length | _int_ |   |
-| random | _java.util.Random_ |   |
-| symbols | string |   |
+| **length** | _int_ |   |
+| **random** | _java.util.Random_ |   |
+| **symbols** | _string_ |   |
 
 ##### Return
 

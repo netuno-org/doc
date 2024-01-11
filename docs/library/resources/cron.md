@@ -53,7 +53,7 @@ Below are indications of how the configuration should be performed.
 
 ---
 
-#### _cron.checkExists(key: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">checkExists</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks if the scheduled service key exists.
@@ -71,7 +71,7 @@ if (_cron.checkExists("pricesUpdate")) {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Job ID key name. |
+| **key** | _string_ | Job ID key name. |
 
 ##### Return
 
@@ -85,7 +85,7 @@ Whether the scheduled service was found.
 
 ---
 
-#### _cron.config() : _void_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Configures periodic scheduling by importing the configuration file.
@@ -101,7 +101,7 @@ Configures periodic scheduling by importing the configuration file.
 
 ---
 
-#### _cron.delete(key: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Removes a service execution schedule.
@@ -117,7 +117,7 @@ _cron.delete("pricesUpdate")
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Job ID key name. |
+| **key** | _string_ | Job ID key name. |
 
 ##### Return
 
@@ -131,7 +131,7 @@ Whether it was possible to delete the scheduled service.
 
 ---
 
-#### _cron.interrupt(key: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">interrupt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Interrupts a service execution schedule.
@@ -147,7 +147,7 @@ _cron.interrupt("pricesUpdate")
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Job ID key name. |
+| **key** | _string_ | Job ID key name. |
 
 ##### Return
 
@@ -161,7 +161,7 @@ Whether it was possible to stop the scheduled service.
 
 ---
 
-#### _cron.pause(key: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">pause</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Changes the execution state to **pause**, in this state the associated service is not executed.
@@ -177,7 +177,7 @@ _cron.pause("pricesUpdate")
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Job ID key name. |
+| **key** | _string_ | Job ID key name. |
 
 ##### Return
 
@@ -191,7 +191,7 @@ Whether it was possible to pause the scheduled service.
 
 ---
 
-#### _cron.remove(key: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">remove</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Removes a service execution schedule.
@@ -207,7 +207,7 @@ _cron.remove("pricesUpdate")
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Job ID key name. |
+| **key** | _string_ | Job ID key name. |
 
 ##### Return
 
@@ -221,7 +221,7 @@ Whether it was possible to delete the scheduled service.
 
 ---
 
-#### _cron.resume(key: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">resume</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Changes the execution state to **resume**, after a schedule is in the _pause_ state, it can be reactivated via _resume_.
@@ -237,7 +237,7 @@ _cron.resume("pricesUpdate")
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Job ID key name. |
+| **key** | _string_ | Job ID key name. |
 
 ##### Return
 
@@ -251,7 +251,7 @@ Whether it was possible to continue the scheduled service.
 
 ---
 
-#### _cron.schedule(key: string, config: string, url: string) : _[Cron](../../resources/Cron)_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/Cron)</span>
 ##### Description
 
 Creates a service execution schedule.
@@ -270,9 +270,9 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Job ID key name. |
-| config | string | Cron Scheduling Time Expression, see table above. |
-| url | string | URL to be run by the job. |
+| **key** | _string_ | Job ID key name. |
+| **config** | _string_ | Cron Scheduling Time Expression, see table above. |
+| **url** | _string_ | URL to be run by the job. |
 
 ##### Return
 
@@ -282,7 +282,7 @@ The current Cron instance.
 
 ---
 
-#### _cron.schedule(key: string, config: string, url: string, params: _[Values](../../objects/Values)_) : _[Cron](../../resources/Cron)_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/Cron)</span>
 ##### Description
 
 Creates a service execution schedule.
@@ -301,10 +301,10 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Job ID key name. |
-| config | string | Cron Scheduling Time Expression, see table above. |
-| url | string | URL to be run by the job. |
-| params | _[Values](../../objects/Values)_ | Data to pass as a parameter to service. |
+| **key** | _string_ | Job ID key name. |
+| **config** | _string_ | Cron Scheduling Time Expression, see table above. |
+| **url** | _string_ | URL to be run by the job. |
+| **params** | _[Values](../../objects/Values)_ | Data to pass as a parameter to service. |
 
 ##### Return
 
@@ -318,7 +318,7 @@ The current Cron instance.
 
 ---
 
-#### _cron.schedules() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedules</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 List of all application service schedules.

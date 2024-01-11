@@ -13,7 +13,7 @@ This feature uses the [Apache Commons CSV](https://commons.apache.org/proper/com
 
 ---
 
-#### _csv.format(formatName: string) : _org.apache.commons.csv.CSVFormat_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">format</span>(<span style="color: #FF8000">formatName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVFormat</span>
 ##### Description
 
 Gets the CSV formatter, supports:<ul><li>default</li><li>excel</li><li>informix-unload</li><li>informix-unload-csv</li><li>mysql</li><li>oracle</li><li>postgresql-csv</li><li>postgresql-text</li><li>rfc4180</li></ul>
@@ -22,7 +22,7 @@ Gets the CSV formatter, supports:<ul><li>default</li><li>excel</li><li>informix-
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| formatName | string | Name of the format to be used. |
+| **formatName** | _string_ | Name of the format to be used. |
 
 ##### Return
 
@@ -36,7 +36,7 @@ The type of format to be used.
 
 ---
 
-#### _csv.parser(reader: _java.io.Reader_) : _org.apache.commons.csv.CSVParser_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">parser</span>(<span style="color: #FF8000">reader</span>: <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVParser</span>
 ##### Description
 
 Gets the CSV parser.
@@ -45,7 +45,7 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| reader | _java.io.Reader_ | Data stream that will be processed. |
+| **reader** | _java.io.Reader_ | Data stream that will be processed. |
 
 ##### Return
 
@@ -55,7 +55,7 @@ The parser initialized.
 
 ---
 
-#### _csv.parser(reader: _java.io.Reader_, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVParser_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">parser</span>(<span style="color: #FF8000">reader</span>: <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>, <span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVFormat</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVParser</span>
 ##### Description
 
 Gets the CSV parser.
@@ -64,8 +64,8 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| reader | _java.io.Reader_ | Data stream that will be processed. |
-| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
+| **reader** | _java.io.Reader_ | Data stream that will be processed. |
+| **format** | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
@@ -75,7 +75,7 @@ The parser initialized.
 
 ---
 
-#### _csv.parser(content: string, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVParser_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">parser</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVFormat</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVParser</span>
 ##### Description
 
 Gets the CSV parser.
@@ -84,8 +84,8 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Text content that must be processed. |
-| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
+| **content** | _string_ | Text content that must be processed. |
+| **format** | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
@@ -95,7 +95,7 @@ The parser initialized.
 
 ---
 
-#### _csv.parser(storage: _[Storage](../../resources/Storage)_) : _org.apache.commons.csv.CSVParser_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">parser</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVParser</span>
 ##### Description
 
 Gets the CSV parser.
@@ -104,7 +104,7 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ | Path of the file in storage that is to be processed. |
+| **storage** | _[Storage](../../resources/Storage)_ | Path of the file in storage that is to be processed. |
 
 ##### Return
 
@@ -114,7 +114,7 @@ The parser initialized.
 
 ---
 
-#### _csv.parser(storage: _[Storage](../../resources/Storage)_, charset: string) : _org.apache.commons.csv.CSVParser_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">parser</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVParser</span>
 ##### Description
 
 Gets the CSV parser.
@@ -123,8 +123,8 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ | Path of the file in storage that is to be processed. |
-| charset | string | Character encoding type code such as: |
+| **storage** | _[Storage](../../resources/Storage)_ | Path of the file in storage that is to be processed. |
+| **charset** | _string_ | Character encoding type code such as: |
 |   |   | - US-ASCII |
 |   |   | - ISO-8859-1 |
 |   |   | - UTF-8 |
@@ -140,7 +140,7 @@ The parser initialized.
 
 ---
 
-#### _csv.parser(storage: _[Storage](../../resources/Storage)_, charset: string, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVParser_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">parser</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVFormat</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVParser</span>
 ##### Description
 
 Gets the CSV parser.
@@ -149,15 +149,15 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ | Path of the file in storage that is to be processed. |
-| charset | string | Character encoding type code such as: |
+| **storage** | _[Storage](../../resources/Storage)_ | Path of the file in storage that is to be processed. |
+| **charset** | _string_ | Character encoding type code such as: |
 |   |   | - US-ASCII |
 |   |   | - ISO-8859-1 |
 |   |   | - UTF-8 |
 |   |   | - UTF-16BE |
 |   |   | - UTF-16LE |
 |   |   | - UTF-16 |
-| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
+| **format** | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
@@ -167,7 +167,7 @@ The parser initialized.
 
 ---
 
-#### _csv.parser(reader: _[Storage](../../resources/Storage)_, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVParser_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">parser</span>(<span style="color: #FF8000">reader</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVFormat</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVParser</span>
 ##### Description
 
 Gets the CSV parser.
@@ -176,8 +176,8 @@ Gets the CSV parser.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| reader | _[Storage](../../resources/Storage)_ | Data stream that will be processed. |
-| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
+| **reader** | _[Storage](../../resources/Storage)_ | Data stream that will be processed. |
+| **format** | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
@@ -187,15 +187,15 @@ The parser initialized.
 
 ---
 
-#### _csv.parser(storage: _[Storage](../../resources/Storage)_, format: _org.apache.commons.csv.CSVFormat_, characterOffset: _long_, recordNumber: _long_) : _org.apache.commons.csv.CSVParser_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">parser</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVFormat</span>, <span style="color: #FF8000">characterOffset</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">recordNumber</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVParser</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ |   |
-| format | _org.apache.commons.csv.CSVFormat_ |   |
-| characterOffset | _long_ |   |
-| recordNumber | _long_ |   |
+| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **format** | _org.apache.commons.csv.CSVFormat_ |   |
+| **characterOffset** | _long_ |   |
+| **recordNumber** | _long_ |   |
 
 ##### Return
 
@@ -208,7 +208,7 @@ The parser initialized.
 
 ---
 
-#### _csv.printer(writer: _java.io.Writer_) : _org.apache.commons.csv.CSVPrinter_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">printer</span>(<span style="color: #FF8000">writer</span>: <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVPrinter</span>
 ##### Description
 
 Gets the CSV printer.
@@ -217,7 +217,7 @@ Gets the CSV printer.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| writer | _java.io.Writer_ | Writer for the CSV file. |
+| **writer** | _java.io.Writer_ | Writer for the CSV file. |
 
 ##### Return
 
@@ -227,7 +227,7 @@ The printer initialized.
 
 ---
 
-#### _csv.printer(writer: _java.io.Writer_, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVPrinter_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">printer</span>(<span style="color: #FF8000">writer</span>: <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>, <span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVFormat</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVPrinter</span>
 ##### Description
 
 Gets the CSV printer.
@@ -236,8 +236,8 @@ Gets the CSV printer.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| writer | _java.io.Writer_ | Writer for the CSV file. |
-| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
+| **writer** | _java.io.Writer_ | Writer for the CSV file. |
+| **format** | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 
@@ -247,7 +247,7 @@ The printer initialized.
 
 ---
 
-#### _csv.printer(writer: _[Storage](../../resources/Storage)_) : _org.apache.commons.csv.CSVPrinter_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">printer</span>(<span style="color: #FF8000">writer</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVPrinter</span>
 ##### Description
 
 Gets the CSV printer.
@@ -256,7 +256,7 @@ Gets the CSV printer.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| writer | _[Storage](../../resources/Storage)_ | Writer for the CSV file. |
+| **writer** | _[Storage](../../resources/Storage)_ | Writer for the CSV file. |
 
 ##### Return
 
@@ -266,7 +266,7 @@ The printer initialized.
 
 ---
 
-#### _csv.printer(writer: _[Storage](../../resources/Storage)_, format: _org.apache.commons.csv.CSVFormat_) : _org.apache.commons.csv.CSVPrinter_
+#### <span style="font-weight: normal">_csv</span>.<span style="color: #008000">printer</span>(<span style="color: #FF8000">writer</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVFormat</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.commons.csv.CSVPrinter</span>
 ##### Description
 
 Gets the CSV printer.
@@ -275,8 +275,8 @@ Gets the CSV printer.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| writer | _[Storage](../../resources/Storage)_ | Writer for the CSV file. |
-| format | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
+| **writer** | _[Storage](../../resources/Storage)_ | Writer for the CSV file. |
+| **format** | _org.apache.commons.csv.CSVFormat_ | Name of the format to be used. |
 
 ##### Return
 

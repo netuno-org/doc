@@ -19,7 +19,7 @@ if (_auth.isJWT() && _auth.isAdmin()) {
 
 ---
 
-#### _auth.allProvidersConfig() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">allProvidersConfig</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém todas as configurações dos provedores de autenticação.
@@ -45,7 +45,7 @@ Todas as configurações dos provedores de autenticação.
 
 ---
 
-#### _auth.check(senha: string) : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">check</span>(<span style="color: #FF8000">senha</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se a password é válida para o utilizador autenticado.
@@ -65,7 +65,7 @@ if (_auth.check(_req.getString('pass'))) {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| senha | string | Senha. |
+| **senha** | _string_ | Senha. |
 
 ##### Retorno
 
@@ -75,7 +75,7 @@ Retorna o resultado da validação dos dados de autenticação.
 
 ---
 
-#### _auth.check(utilizador: string, senha: string) : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">check</span>(<span style="color: #FF8000">utilizador</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">senha</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se os dados de autenticação, utilizador e senha, são válidos.
@@ -95,8 +95,8 @@ if (_auth.check(_req.getString('user'), _req.getString('pass'))) {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| utilizador | string | Utilizador. |
-| senha | string | Senha. |
+| **utilizador** | _string_ | Utilizador. |
+| **senha** | _string_ | Senha. |
 
 ##### Retorno
 
@@ -110,7 +110,7 @@ Retorna o resultado da validação dos dados de autenticação.
 
 ---
 
-#### _auth.crypt(utilizador: string, senha: string) : string
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">crypt</span>(<span style="color: #FF8000">utilizador</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">senha</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Gera uma password segura encriptada para um determinado utilizador.
@@ -127,12 +127,12 @@ _log.info('Senha segura: '+ _auth.crypt('meu-utilizador', 'minha-senha'))
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| utilizador | string | Utilizador. |
-| senha | string | Senha. |
+| **utilizador** | _string_ | Utilizador. |
+| **senha** | _string_ | Senha. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a encriptação da password segura.
 
@@ -142,7 +142,7 @@ Retorna a encriptação da password segura.
 
 ---
 
-#### _auth.getAllProvidersConfig() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">getAllProvidersConfig</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -154,12 +154,12 @@ Retorna a encriptação da password segura.
 
 ---
 
-#### _auth.getProviderConfig(providerCode: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">getProviderConfig</span>(<span style="color: #FF8000">providerCode</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| providerCode | string |   |
+| **providerCode** | _string_ |   |
 
 ##### Retorno
 
@@ -172,7 +172,7 @@ Retorna a encriptação da password segura.
 
 ---
 
-#### _auth.isAdmin() : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isAdmin</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se o utilizador que está autenticado é **admin**_istrator_.
@@ -198,7 +198,7 @@ Se o utilizador que está autenticado é **admin** (administrador) então retorn
 
 ---
 
-#### _auth.isAuthenticated() : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isAuthenticated</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Indica se há alguém autenticado processando o pedido.
@@ -224,7 +224,7 @@ Se há alguém autenticado retorna _true_.
 
 ---
 
-#### _auth.isDev() : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isDev</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se o utilizador que está autenticado é **dev**_eloper_.
@@ -250,7 +250,7 @@ Se o utilizador que está autenticado é **dev** (desenvolvedor) então retorna 
 
 ---
 
-#### _auth.isJWT() : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isJWT</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Indica se o utilizador está autenticado com JSON Web Token.
@@ -276,12 +276,12 @@ Se o utilizador está autenticado com JSON Web Token retorna _true_.
 
 ---
 
-#### _auth.isProviderEnabled(providerCode: string) : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isProviderEnabled</span>(<span style="color: #FF8000">providerCode</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| providerCode | string |   |
+| **providerCode** | _string_ |   |
 
 ##### Retorno
 
@@ -294,7 +294,7 @@ Se o utilizador está autenticado com JSON Web Token retorna _true_.
 
 ---
 
-#### _auth.isSession() : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isSession</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Indica se o utilizador está autenticado com sessão.
@@ -320,7 +320,7 @@ Se o utilizador está autenticado com JSON Web Token retorna _true_.
 
 ---
 
-#### _auth.load() : _[Auth](../../resources/Auth)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/Auth)</span>
 ##### Descrição
 
 Processa as configurações de autenticação.
@@ -345,7 +345,7 @@ Retorna o recurso Auth padrão.
 
 ---
 
-#### _auth.logout() : _[Auth](../../resources/Auth)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">logout</span>() : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/Auth)</span>
 ##### Descrição
 
 Desconecta o usuário autenticado.
@@ -370,7 +370,7 @@ Retorna o recurso Auth padrão.
 
 ---
 
-#### _auth.providerConfig(codigoProvedor: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">providerConfig</span>(<span style="color: #FF8000">codigoProvedor</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém uma configuração específica de provedor de autenticação.
@@ -390,7 +390,7 @@ _log.info('LDAP Provider Configuration', _auth.providerConfig('ldap'))
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| codigoProvedor | string | Nome da chave de configuração do provedor, podendo ser: |
+| **codigoProvedor** | _string_ | Nome da chave de configuração do provedor, podendo ser: |
 |   |   | - google |
 |   |   | - github |
 |   |   | - discord |
@@ -408,7 +408,7 @@ A configuração do provedor de autenticação.
 
 ---
 
-#### _auth.providerEnabled(codigoProvedor: string) : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">providerEnabled</span>(<span style="color: #FF8000">codigoProvedor</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se o provedor de autenticação está ativo.
@@ -428,7 +428,7 @@ _log.info('LDAP Provider Enabled', _auth.providerEnabled('ldap'))
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| codigoProvedor | string | Nome da chave de configuração do provedor, podendo ser: |
+| **codigoProvedor** | _string_ | Nome da chave de configuração do provedor, podendo ser: |
 |   |   | - google |
 |   |   | - github |
 |   |   | - discord |

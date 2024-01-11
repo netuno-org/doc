@@ -37,13 +37,13 @@ _exec.stop();
 
 ---
 
-#### _exec.add(index: _int_, element: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">add</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">element</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| element | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **element** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -52,12 +52,12 @@ _exec.stop();
 
 ---
 
-#### _exec.add(o: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">add</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -70,13 +70,13 @@ _exec.stop();
 
 ---
 
-#### _exec.addAll(index: _int_, c: _java.util.Collection_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">addAll</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| c | _java.util.Collection_ |   |
+| **index** | _int_ |   |
+| **c** | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -85,12 +85,12 @@ _exec.stop();
 
 ---
 
-#### _exec.addAll(c: _java.util.Collection_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">addAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| c | _java.util.Collection_ |   |
+| **c** | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -103,12 +103,12 @@ _exec.stop();
 
 ---
 
-#### _exec.as(o: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">as</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -117,13 +117,13 @@ _exec.stop();
 
 ---
 
-#### _exec.as(o: _java.lang.Object_, oDefault: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">as</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">oDefault</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
-| oDefault | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
+| **oDefault** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -136,12 +136,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asBoolean(index: _int_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -150,13 +150,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asBoolean(index: _int_, defaultValue: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _boolean_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _boolean_ |   |
 
 ##### Return
 
@@ -165,12 +165,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asBoolean(key: string) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -179,13 +179,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asBoolean(key: string, defaultValue: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _boolean_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _boolean_ |   |
 
 ##### Return
 
@@ -198,12 +198,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asByte(index: _int_) : _byte_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -212,13 +212,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asByte(index: _int_, defaultValue: _byte_) : _byte_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _byte_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _byte_ |   |
 
 ##### Return
 
@@ -227,13 +227,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asByte(key: string, defaultValue: _byte_) : _byte_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asByte</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _byte_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _byte_ |   |
 
 ##### Return
 
@@ -246,12 +246,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asCalendar(key: string) : _java.util.Calendar_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -260,13 +260,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asCalendar(key: string, defaultValue: _java.util.Calendar_) : _java.util.Calendar_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.Calendar_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.Calendar_ |   |
 
 ##### Return
 
@@ -279,12 +279,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asDate(key: string) : _java.util.Date_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -293,13 +293,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asDate(key: string, defaultValue: _java.util.Date_) : _java.util.Date_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.Date_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.Date_ |   |
 
 ##### Return
 
@@ -312,12 +312,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asDouble(index: _int_) : _double_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -326,13 +326,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asDouble(index: _int_, defaultValue: _double_) : _double_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _double_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _double_ |   |
 
 ##### Return
 
@@ -341,12 +341,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asDouble(key: string) : _double_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -355,13 +355,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asDouble(key: string, defaultValue: _double_) : _double_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _double_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _double_ |   |
 
 ##### Return
 
@@ -374,12 +374,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asFile(key: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asFile</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -392,12 +392,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asFloat(index: _int_) : _float_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -406,13 +406,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asFloat(index: _int_, defaultValue: _float_) : _float_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _float_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _float_ |   |
 
 ##### Return
 
@@ -421,12 +421,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asFloat(key: string) : _float_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -435,13 +435,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asFloat(key: string, defaultValue: _float_) : _float_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _float_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _float_ |   |
 
 ##### Return
 
@@ -454,16 +454,16 @@ _exec.stop();
 
 ---
 
-#### _exec.asHTMLDecode(key: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asHTMLDecode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -472,16 +472,16 @@ _exec.stop();
 
 ---
 
-#### _exec.asHTMLEncode(key: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asHTMLEncode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -490,12 +490,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asInstant(key: string) : _java.time.Instant_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -504,13 +504,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asInstant(key: string, defaultValue: _java.time.Instant_) : _java.time.Instant_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.Instant_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.Instant_ |   |
 
 ##### Return
 
@@ -523,12 +523,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asInt(index: _int_) : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -537,13 +537,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asInt(index: _int_, defaultValue: _int_) : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _int_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _int_ |   |
 
 ##### Return
 
@@ -552,13 +552,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asInt(key: string, defaultValue: _short_) : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asInt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _short_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _short_ |   |
 
 ##### Return
 
@@ -571,12 +571,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asList(index: _int_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -585,13 +585,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asList(index: _int_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| claz | _java.lang.Class_ |   |
+| **index** | _int_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -600,13 +600,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asList(index: _int_, defaultValue: _java.lang.Object_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -615,14 +615,14 @@ _exec.stop();
 
 ---
 
-#### _exec.asList(index: _int_, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
-| claz | _java.lang.Class_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -631,12 +631,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asList(key: string) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -645,13 +645,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asList(key: string, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| claz | _java.lang.Class_ |   |
+| **key** | _string_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -660,13 +660,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asList(key: string, defaultValue: _java.lang.Object_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -675,14 +675,14 @@ _exec.stop();
 
 ---
 
-#### _exec.asList(key: string, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
-| claz | _java.lang.Class_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -695,12 +695,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asLocalDate(key: string) : _java.time.LocalDate_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -709,13 +709,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asLocalDate(key: string, defaultValue: _java.time.LocalDate_) : _java.time.LocalDate_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalDate_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalDate_ |   |
 
 ##### Return
 
@@ -728,12 +728,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asLocalDateTime(key: string) : _java.time.LocalDateTime_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -742,13 +742,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asLocalDateTime(key: string, defaultValue: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalDateTime_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalDateTime_ |   |
 
 ##### Return
 
@@ -761,12 +761,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asLocalTime(key: string) : _java.time.LocalTime_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -775,13 +775,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asLocalTime(key: string, defaultValue: _java.time.LocalTime_) : _java.time.LocalTime_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalTime_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalTime_ |   |
 
 ##### Return
 
@@ -794,12 +794,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asLong(index: _int_) : _long_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -808,13 +808,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asLong(index: _int_, defaultValue: _long_) : _long_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _long_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _long_ |   |
 
 ##### Return
 
@@ -823,12 +823,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asLong(key: string) : _long_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -837,13 +837,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asLong(key: string, defaultValue: _long_) : _long_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _long_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _long_ |   |
 
 ##### Return
 
@@ -856,12 +856,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asMap(index: _int_) : _java.util.Map_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -870,13 +870,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asMap(index: _int_, defaultValue: _java.lang.Object_) : _java.util.Map_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -885,12 +885,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asMap(key: string) : _java.util.Map_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -899,13 +899,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asMap(key: string, defaultValue: _java.lang.Object_) : _java.util.Map_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -918,12 +918,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asSQLDate(key: string) : _java.sql.Date_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -932,13 +932,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asSQLDate(key: string, defaultValue: _java.sql.Date_) : _java.sql.Date_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Date_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Date_ |   |
 
 ##### Return
 
@@ -951,12 +951,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asSQLTime(key: string) : _java.sql.Time_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -965,13 +965,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asSQLTime(key: string, defaultValue: _java.sql.Time_) : _java.sql.Time_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Time_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Time_ |   |
 
 ##### Return
 
@@ -984,12 +984,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asSQLTimestamp(key: string) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -998,13 +998,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asSQLTimestamp(key: string, defaultValue: _java.sql.Timestamp_) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Timestamp_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Timestamp_ |   |
 
 ##### Return
 
@@ -1017,12 +1017,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asShort(index: _int_) : _short_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -1031,13 +1031,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asShort(index: _int_, defaultValue: _short_) : _short_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _short_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _short_ |   |
 
 ##### Return
 
@@ -1046,12 +1046,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asShort(key: string) : _short_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -1060,13 +1060,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asShort(key: string, defaultValue: _short_) : _short_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _short_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _short_ |   |
 
 ##### Return
 
@@ -1079,76 +1079,76 @@ _exec.stop();
 
 ---
 
-#### _exec.asString(index: _int_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.asString(index: _int_, defaultValue: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | string |   |
+| **index** | _int_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.asString(key: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.asString(key: string, defaultValue: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.asString(key: string, defaultValue: string, charsetName: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charsetName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
-| charsetName | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
+| **charsetName** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -1157,12 +1157,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asUID(key: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -1171,13 +1171,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asUID(key: string, defaultValue: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Return
 
@@ -1186,13 +1186,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.UUID_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -1205,12 +1205,12 @@ _exec.stop();
 
 ---
 
-#### _exec.asUUID(key: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -1219,13 +1219,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asUUID(key: string, defaultValue: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Return
 
@@ -1234,13 +1234,13 @@ _exec.stop();
 
 ---
 
-#### _exec.asUUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.UUID_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -1253,7 +1253,7 @@ _exec.stop();
 
 ---
 
-#### _exec.asValues(index: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asValues</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the index and then casts to Values (Dictionary or List).
@@ -1262,7 +1262,7 @@ Gets the object associated with the index and then casts to Values (Dictionary o
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ | The index to get the associated object. |
+| **index** | _int_ | The index to get the associated object. |
 
 ##### Return
 
@@ -1272,7 +1272,7 @@ Object converted to Values.
 
 ---
 
-#### _exec.asValues(index: _int_, defaultValue: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asValues</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the index and then casts to Values (Dictionary or List).
@@ -1281,8 +1281,8 @@ Gets the object associated with the index and then casts to Values (Dictionary o
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ | The index to get the associated object. |
-| defaultValue | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
+| **index** | _int_ | The index to get the associated object. |
+| **defaultValue** | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
 
 ##### Return
 
@@ -1292,7 +1292,7 @@ Object converted to Values.
 
 ---
 
-#### _exec.asValues(key: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asValues</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the key and then casts to Values (Dictionary or List).
@@ -1301,7 +1301,7 @@ Gets the object associated with the key and then casts to Values (Dictionary or 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | The key to get the associated object. |
+| **key** | _string_ | The key to get the associated object. |
 
 ##### Return
 
@@ -1311,7 +1311,7 @@ Object converted to Values.
 
 ---
 
-#### _exec.asValues(key: string, defaultValue: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asValues</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the key and then casts to Values (Dictionary or List).
@@ -1320,8 +1320,8 @@ Gets the object associated with the key and then casts to Values (Dictionary or 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | The key to get the associated object. |
-| defaultValue | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
+| **key** | _string_ | The key to get the associated object. |
+| **defaultValue** | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
 
 ##### Return
 
@@ -1335,7 +1335,7 @@ Object converted to Values.
 
 ---
 
-#### _exec.async(functions: _[Lorg.graalvm.polyglot.Value;[]_) : _[Async](../../objects/Async)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">async</span>(<span style="color: #FF8000">functions</span>: <span style="font-weight: normal; font-style: italic;">[Lorg.graalvm.polyglot.Value;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Async](../../objects/Async)</span>
 ##### Description
 
 Execution of functions asynchronously.
@@ -1344,7 +1344,7 @@ Execution of functions asynchronously.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| functions | _[Lorg.graalvm.polyglot.Value;[]_ |   |
+| **functions** | _[Lorg.graalvm.polyglot.Value;[]_ |   |
 
 ##### Return
 
@@ -1357,13 +1357,13 @@ Execution of functions asynchronously.
 
 ---
 
-#### _exec.asyncData(data: _java.lang.Object_, functions: _[Lorg.graalvm.polyglot.Value;[]_) : _[Async](../../objects/Async)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asyncData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">functions</span>: <span style="font-weight: normal; font-style: italic;">[Lorg.graalvm.polyglot.Value;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Async](../../objects/Async)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _java.lang.Object_ |   |
-| functions | _[Lorg.graalvm.polyglot.Value;[]_ |   |
+| **data** | _java.lang.Object_ |   |
+| **functions** | _[Lorg.graalvm.polyglot.Value;[]_ |   |
 
 ##### Return
 
@@ -1376,13 +1376,13 @@ Execution of functions asynchronously.
 
 ---
 
-#### _exec.asyncList(list: _[Values](../../objects/Values)_, function: _org.graalvm.polyglot.Value_) : _[Async](../../objects/Async)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asyncList</span>(<span style="color: #FF8000">list</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">[Async](../../objects/Async)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| list | _[Values](../../objects/Values)_ |   |
-| function | _org.graalvm.polyglot.Value_ |   |
+| **list** | _[Values](../../objects/Values)_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1395,7 +1395,7 @@ Execution of functions asynchronously.
 
 ---
 
-#### _exec.bind(key: string, value: _java.lang.Object_) : _[Exec](../../resources/Exec)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">bind</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Exec](../../resources/Exec)</span>
 ##### Description
 
 Transitions variables between scripts, including between different programming languages.
@@ -1411,8 +1411,8 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Variable name that will be available in the other script that will be executed. |
-| value | _java.lang.Object_ | Object to be passed to the other script that will be executed. |
+| **key** | _string_ | Variable name that will be available in the other script that will be executed. |
+| **value** | _java.lang.Object_ | Object to be passed to the other script that will be executed. |
 
 ##### Return
 
@@ -1425,7 +1425,7 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.clear() : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">clear</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Return
 
 ( _void_ )
@@ -1437,7 +1437,7 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.cloneJSON() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">cloneJSON</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -1449,13 +1449,13 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.compute(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">compute</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.util.function.BiFunction_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.util.function.BiFunction_ |   |
 
 ##### Return
 
@@ -1468,13 +1468,13 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.computeIfAbsent(arg0: _java.lang.Object_, arg1: _java.util.function.Function_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">computeIfAbsent</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Function</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.util.function.Function_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.util.function.Function_ |   |
 
 ##### Return
 
@@ -1487,13 +1487,13 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.computeIfPresent(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">computeIfPresent</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.util.function.BiFunction_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.util.function.BiFunction_ |   |
 
 ##### Return
 
@@ -1506,12 +1506,12 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.contains(o: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">contains</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1520,13 +1520,13 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.contains(key: string, value: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">contains</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1539,12 +1539,12 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.containsAll(c: _java.util.Collection_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">containsAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| c | _java.util.Collection_ |   |
+| **c** | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -1557,12 +1557,12 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.containsKey(key: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">containsKey</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _java.lang.Object_ |   |
+| **key** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1575,12 +1575,12 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.containsValue(value: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">containsValue</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1593,7 +1593,7 @@ _exec    .bind("transitVar", originalVar)    .core("another-script-maybe-in-anot
 
 ---
 
-#### _exec.core(path: string) : _[ScriptResult](../../objects/ScriptResult)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">core</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[ScriptResult](../../objects/ScriptResult)</span>
 ##### Description
 
 Execution of scripts that are in the `server/core/` folder.
@@ -1608,7 +1608,7 @@ _exec.core("another-script-maybe-in-another-language");
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string | Script path with source in `core/` to execute. |
+| **path** | _string_ | Script path with source in `core/` to execute. |
 
 ##### Return
 
@@ -1617,7 +1617,7 @@ _exec.core("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.core(path: string, path: _boolean_) : _[ScriptResult](../../objects/ScriptResult)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">core</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[ScriptResult](../../objects/ScriptResult)</span>
 ##### Description
 
 Execution of scripts that are in the `server/core/` folder.
@@ -1632,8 +1632,8 @@ _exec.core("another-script-maybe-in-another-language");
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string | Script path with source in `core/` to execute. |
-| path | _boolean_ | Script path with source in `core/` to execute. |
+| **path** | _string_ | Script path with source in `core/` to execute. |
+| **path** | _boolean_ | Script path with source in `core/` to execute. |
 
 ##### Return
 
@@ -1646,7 +1646,7 @@ _exec.core("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.ensureJail(jailPath: string) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">ensureJail</span>(<span style="color: #FF8000">jailPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Set the security restriction on a specific directory for processed objects of the file type, it can only be set once.
@@ -1655,7 +1655,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| jailPath | string | Path where files will be restricted. |
+| **jailPath** | _string_ | Path where files will be restricted. |
 
 ##### Return
 
@@ -1668,7 +1668,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.entrySet() : _java.util.Set_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">entrySet</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
 ##### Return
 
 ( _java.util.Set_ )
@@ -1680,12 +1680,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.filter(p: _java.util.function.Predicate_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">filter</span>(<span style="color: #FF8000">p</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Predicate</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| p | _java.util.function.Predicate_ |   |
+| **p** | _java.util.function.Predicate_ |   |
 
 ##### Return
 
@@ -1694,12 +1694,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.filter(function: _org.graalvm.polyglot.Value_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">filter</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1712,13 +1712,13 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.find(key: string, value: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">find</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1727,12 +1727,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.find(p: _java.util.function.Predicate_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">find</span>(<span style="color: #FF8000">p</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Predicate</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| p | _java.util.function.Predicate_ |   |
+| **p** | _java.util.function.Predicate_ |   |
 
 ##### Return
 
@@ -1741,12 +1741,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.find(function: _org.graalvm.polyglot.Value_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">find</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1755,12 +1755,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.find(filter: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">find</span>(<span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| filter | _[Values](../../objects/Values)_ |   |
+| **filter** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -1773,12 +1773,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.forEach(action: _java.util.function.BiConsumer_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">forEach</span>(<span style="color: #FF8000">action</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiConsumer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| action | _java.util.function.BiConsumer_ |   |
+| **action** | _java.util.function.BiConsumer_ |   |
 
 ##### Return
 
@@ -1787,12 +1787,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.forEach(action: _java.util.function.Consumer_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">forEach</span>(<span style="color: #FF8000">action</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Consumer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| action | _java.util.function.Consumer_ |   |
+| **action** | _java.util.function.Consumer_ |   |
 
 ##### Return
 
@@ -1801,12 +1801,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.forEach(function: _org.graalvm.polyglot.Value_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">forEach</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1819,7 +1819,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.forceList() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">forceList</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -1831,7 +1831,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.forceMap() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">forceMap</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -1843,12 +1843,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.fromJSON(content: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">fromJSON</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string |   |
+| **content** | _string_ |   |
 
 ##### Return
 
@@ -1857,12 +1857,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.fromJSON(content: _org.netuno.psamata.net.Remote$Response_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">fromJSON</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _org.netuno.psamata.net.Remote$Response_ |   |
+| **content** | _org.netuno.psamata.net.Remote$Response_ |   |
 
 ##### Return
 
@@ -1875,7 +1875,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _exec.gc() : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">gc</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Performs memory cleanup by running the garbage collector ([JVM garbage collector](https://www.baeldung.com/jvm-garbage-collectors)).
@@ -1898,7 +1898,7 @@ _exec.gc();
 
 ---
 
-#### _exec.get(key: _int_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Description
 
 Gets the original object associated with the key.
@@ -1907,7 +1907,7 @@ Gets the original object associated with the key.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _int_ | Key to get the object to associate. |
+| **key** | _int_ | Key to get the object to associate. |
 
 ##### Return
 
@@ -1917,7 +1917,7 @@ Original object without conversions.
 
 ---
 
-#### _exec.get(key: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Description
 
 Gets the original object associated with the key.
@@ -1926,7 +1926,7 @@ Gets the original object associated with the key.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _java.lang.Object_ | Key to get the object to associate. |
+| **key** | _java.lang.Object_ | Key to get the object to associate. |
 
 ##### Return
 
@@ -1936,7 +1936,7 @@ Original object without conversions.
 
 ---
 
-#### _exec.get(key: string) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Description
 
 Gets the original object associated with the key.
@@ -1945,7 +1945,7 @@ Gets the original object associated with the key.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Key to get the object to associate. |
+| **key** | _string_ | Key to get the object to associate. |
 
 ##### Return
 
@@ -1955,7 +1955,7 @@ Original object without conversions.
 
 ---
 
-#### _exec.get(key: string, type: _java.lang.Class_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Description
 
 Gets the original object associated with the key, but cast for the specified class type.
@@ -1964,8 +1964,8 @@ Gets the original object associated with the key, but cast for the specified cla
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Key to get the associated object. |
-| type | _java.lang.Class_ | Class representing the type of object that should be cast. |
+| **key** | _string_ | Key to get the associated object. |
+| **type** | _java.lang.Class_ | Class representing the type of object that should be cast. |
 
 ##### Return
 
@@ -1979,12 +1979,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getBoolean(index: _int_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -1993,13 +1993,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getBoolean(index: _int_, defaultValue: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _boolean_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _boolean_ |   |
 
 ##### Return
 
@@ -2008,12 +2008,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getBoolean(key: string) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2022,13 +2022,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getBoolean(key: string, defaultValue: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _boolean_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _boolean_ |   |
 
 ##### Return
 
@@ -2041,12 +2041,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getByte(index: _int_) : _byte_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -2055,13 +2055,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getByte(index: _int_, defaultValue: _byte_) : _byte_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _byte_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _byte_ |   |
 
 ##### Return
 
@@ -2070,12 +2070,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getByte(key: string) : _byte_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getByte</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2084,13 +2084,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getByte(key: string, defaultValue: _byte_) : _byte_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getByte</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _byte_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _byte_ |   |
 
 ##### Return
 
@@ -2103,12 +2103,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getCalendar(key: string) : _java.util.Calendar_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2117,13 +2117,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getCalendar(key: string, defaultValue: _java.util.Calendar_) : _java.util.Calendar_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.Calendar_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.Calendar_ |   |
 
 ##### Return
 
@@ -2136,12 +2136,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getDate(key: string) : _java.util.Date_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2150,13 +2150,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getDate(key: string, defaultValue: _java.util.Date_) : _java.util.Date_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.Date_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.Date_ |   |
 
 ##### Return
 
@@ -2169,12 +2169,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getDouble(index: _int_) : _double_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -2183,13 +2183,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getDouble(index: _int_, defaultValue: _double_) : _double_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _double_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _double_ |   |
 
 ##### Return
 
@@ -2198,12 +2198,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getDouble(key: string) : _double_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2212,13 +2212,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getDouble(key: string, defaultValue: _double_) : _double_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _double_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _double_ |   |
 
 ##### Return
 
@@ -2231,12 +2231,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getFile(key: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getFile</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2249,12 +2249,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getFloat(index: _int_) : _float_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -2263,13 +2263,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getFloat(index: _int_, defaultValue: _float_) : _float_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _float_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _float_ |   |
 
 ##### Return
 
@@ -2278,12 +2278,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getFloat(key: string) : _float_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2292,13 +2292,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getFloat(key: string, defaultValue: _float_) : _float_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _float_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _float_ |   |
 
 ##### Return
 
@@ -2311,7 +2311,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getForceList() : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getForceList</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -2323,7 +2323,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getForceMap() : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getForceMap</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -2335,16 +2335,16 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getHTMLDecode(key: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getHTMLDecode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -2353,16 +2353,16 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getHTMLEncode(key: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getHTMLEncode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -2371,12 +2371,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getInstant(key: string) : _java.time.Instant_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2385,13 +2385,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getInstant(key: string, defaultValue: _java.time.Instant_) : _java.time.Instant_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.Instant_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.Instant_ |   |
 
 ##### Return
 
@@ -2404,12 +2404,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getInt(index: _int_) : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -2418,13 +2418,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getInt(index: _int_, defaultValue: _int_) : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _int_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _int_ |   |
 
 ##### Return
 
@@ -2433,12 +2433,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getInt(key: string) : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getInt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2447,13 +2447,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getInt(key: string, defaultValue: _int_) : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getInt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _int_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _int_ |   |
 
 ##### Return
 
@@ -2466,7 +2466,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getKeys() : _java.util.Set_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getKeys</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
 ##### Return
 
 ( _java.util.Set_ )
@@ -2478,12 +2478,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getList(index: _int_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -2492,13 +2492,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getList(index: _int_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| claz | _java.lang.Class_ |   |
+| **index** | _int_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2507,13 +2507,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getList(index: _int_, defaultValue: _java.lang.Object_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2522,14 +2522,14 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getList(index: _int_, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
-| claz | _java.lang.Class_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2538,12 +2538,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getList(key: string) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2552,13 +2552,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getList(key: string, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| claz | _java.lang.Class_ |   |
+| **key** | _string_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2567,13 +2567,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getList(key: string, defaultValue: _java.lang.Object_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2582,14 +2582,14 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getList(key: string, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
-| claz | _java.lang.Class_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2602,12 +2602,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getLocalDate(key: string) : _java.time.LocalDate_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2616,13 +2616,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getLocalDate(key: string, defaultValue: _java.time.LocalDate_) : _java.time.LocalDate_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalDate_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalDate_ |   |
 
 ##### Return
 
@@ -2635,12 +2635,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getLocalDateTime(key: string) : _java.time.LocalDateTime_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2649,13 +2649,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getLocalDateTime(key: string, defaultValue: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalDateTime_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalDateTime_ |   |
 
 ##### Return
 
@@ -2668,12 +2668,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getLocalTime(key: string) : _java.time.LocalTime_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2682,13 +2682,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getLocalTime(key: string, defaultValue: _java.time.LocalTime_) : _java.time.LocalTime_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalTime_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalTime_ |   |
 
 ##### Return
 
@@ -2701,12 +2701,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getLong(index: _int_) : _long_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -2715,13 +2715,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getLong(index: _int_, defaultValue: _long_) : _long_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _long_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _long_ |   |
 
 ##### Return
 
@@ -2730,12 +2730,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getLong(key: string) : _long_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2744,13 +2744,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getLong(key: string, defaultValue: _long_) : _long_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _long_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _long_ |   |
 
 ##### Return
 
@@ -2763,12 +2763,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getMap(index: _int_) : _java.util.Map_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -2777,13 +2777,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getMap(index: _int_, defaultValue: _java.lang.Object_) : _java.util.Map_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2792,12 +2792,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getMap(key: string) : _java.util.Map_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2806,13 +2806,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getMap(key: string, defaultValue: _java.lang.Object_) : _java.util.Map_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2825,13 +2825,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getOrDefault(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getOrDefault</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2844,12 +2844,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getSQLDate(key: string) : _java.sql.Date_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2858,13 +2858,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getSQLDate(key: string, defaultValue: _java.sql.Date_) : _java.sql.Date_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Date_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Date_ |   |
 
 ##### Return
 
@@ -2877,12 +2877,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getSQLTime(key: string) : _java.sql.Time_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2891,13 +2891,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getSQLTime(key: string, defaultValue: _java.sql.Time_) : _java.sql.Time_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Time_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Time_ |   |
 
 ##### Return
 
@@ -2910,12 +2910,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getSQLTimestamp(key: string) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2924,13 +2924,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getSQLTimestamp(key: string, defaultValue: _java.sql.Timestamp_) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Timestamp_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Timestamp_ |   |
 
 ##### Return
 
@@ -2943,12 +2943,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getShort(index: _int_) : _short_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -2957,13 +2957,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getShort(index: _int_, defaultValue: _short_) : _short_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _short_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _short_ |   |
 
 ##### Return
 
@@ -2972,12 +2972,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getShort(key: string) : _short_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -2986,13 +2986,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getShort(key: string, defaultValue: _short_) : _short_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _short_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _short_ |   |
 
 ##### Return
 
@@ -3005,7 +3005,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getSize() : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -3017,76 +3017,76 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getString(index: _int_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.getString(index: _int_, defaultValue: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | string |   |
+| **index** | _int_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.getString(key: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.getString(key: string, defaultValue: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.getString(key: string, defaultValue: string, charsetName: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charsetName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
-| charsetName | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
+| **charsetName** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -3095,12 +3095,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getUID(key: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -3109,13 +3109,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getUID(key: string, defaultValue: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Return
 
@@ -3124,13 +3124,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.UUID_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -3143,14 +3143,14 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _exec.getURLCharacterEncoding() : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getURLCharacterEncoding</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Gets the character encoding to be used in formatting for URL (_QueryString_).
 
 ##### Return
 
-( string )
+( _string_ )
 
 Character encoding code.
 
@@ -3160,12 +3160,12 @@ Character encoding code.
 
 ---
 
-#### _exec.getUUID(key: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -3174,13 +3174,13 @@ Character encoding code.
 
 ---
 
-#### _exec.getUUID(key: string, defaultValue: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Return
 
@@ -3189,13 +3189,13 @@ Character encoding code.
 
 ---
 
-#### _exec.getUUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.UUID_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -3208,7 +3208,7 @@ Character encoding code.
 
 ---
 
-#### _exec.getValues() : _java.util.Collection_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getValues</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>
 ##### Description
 
 Gets all object values stored in both dictionary and list mode.
@@ -3221,7 +3221,7 @@ List of all obtained values.
 
 ---
 
-#### _exec.getValues(index: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getValues</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the index and then casts to Values (Dictionary or List).
@@ -3230,7 +3230,7 @@ Gets the object associated with the index and then casts to Values (Dictionary o
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ | The index to get the associated object. |
+| **index** | _int_ | The index to get the associated object. |
 
 ##### Return
 
@@ -3240,7 +3240,7 @@ Object converted to Values.
 
 ---
 
-#### _exec.getValues(index: _int_, defaultValue: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getValues</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the index and then casts to Values (Dictionary or List).
@@ -3249,8 +3249,8 @@ Gets the object associated with the index and then casts to Values (Dictionary o
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ | The index to get the associated object. |
-| defaultValue | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
+| **index** | _int_ | The index to get the associated object. |
+| **defaultValue** | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
 
 ##### Return
 
@@ -3260,7 +3260,7 @@ Object converted to Values.
 
 ---
 
-#### _exec.getValues(key: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getValues</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the key and then casts to Values (Dictionary or List).
@@ -3269,7 +3269,7 @@ Gets the object associated with the key and then casts to Values (Dictionary or 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | The key to get the associated object. |
+| **key** | _string_ | The key to get the associated object. |
 
 ##### Return
 
@@ -3279,7 +3279,7 @@ Object converted to Values.
 
 ---
 
-#### _exec.getValues(key: string, defaultValue: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getValues</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the key and then casts to Values (Dictionary or List).
@@ -3288,8 +3288,8 @@ Gets the object associated with the key and then casts to Values (Dictionary or 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | The key to get the associated object. |
-| defaultValue | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
+| **key** | _string_ | The key to get the associated object. |
+| **defaultValue** | _java.lang.Object_ | If it fails to get the value as an object in Values then it returns this default value instead. |
 
 ##### Return
 
@@ -3303,12 +3303,12 @@ Object converted to Values.
 
 ---
 
-#### _exec.has(o: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">has</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3317,12 +3317,12 @@ Object converted to Values.
 
 ---
 
-#### _exec.has(key: string) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">has</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -3331,13 +3331,13 @@ Object converted to Values.
 
 ---
 
-#### _exec.has(key: string, value: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">has</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3350,12 +3350,12 @@ Object converted to Values.
 
 ---
 
-#### _exec.hasKey(key: string) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">hasKey</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -3368,12 +3368,12 @@ Object converted to Values.
 
 ---
 
-#### _exec.hasValue(value: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">hasValue</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3386,12 +3386,12 @@ Object converted to Values.
 
 ---
 
-#### _exec.indexOf(o: _java.lang.Object_) : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">indexOf</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3404,12 +3404,12 @@ Object converted to Values.
 
 ---
 
-#### _exec.is(o: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">is</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3422,7 +3422,7 @@ Object converted to Values.
 
 ---
 
-#### _exec.isEmpty() : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">isEmpty</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -3434,7 +3434,7 @@ Object converted to Values.
 
 ---
 
-#### _exec.isJail() : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">isJail</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Check if the restriction is active for all associated files to be loaded only from a specific directory.
@@ -3451,7 +3451,7 @@ If the restriction on associated files is active.
 
 ---
 
-#### _exec.isList() : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">isList</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -3459,12 +3459,12 @@ If the restriction on associated files is active.
 
 ---
 
-#### _exec.isList(o: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">isList</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3477,7 +3477,7 @@ If the restriction on associated files is active.
 
 ---
 
-#### _exec.isLockedAsReadOnly() : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">isLockedAsReadOnly</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Check if it is locked in read-only mode.
@@ -3494,7 +3494,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.isMap() : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">isMap</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -3502,12 +3502,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.isMap(o: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">isMap</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3520,12 +3520,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.isMergeable(object: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">isMergeable</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _java.lang.Object_ |   |
+| **object** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3538,7 +3538,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.iterator() : _java.util.Iterator_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">iterator</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Iterator</span>
 ##### Return
 
 ( _java.util.Iterator_ )
@@ -3550,16 +3550,16 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.join(splitter: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">join</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| splitter | string |   |
+| **splitter** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -3568,7 +3568,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.keySet() : _java.util.Set_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">keySet</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
 ##### Return
 
 ( _java.util.Set_ )
@@ -3580,7 +3580,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.keys() : _java.util.Set_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">keys</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
 ##### Return
 
 ( _java.util.Set_ )
@@ -3592,7 +3592,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.keysSorted() : _java.util.Set_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">keysSorted</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
 ##### Return
 
 ( _java.util.Set_ )
@@ -3604,31 +3604,31 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.keysToString(splitter: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">keysToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| splitter | string |   |
+| **splitter** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.keysToString(map: _java.util.Map_, splitter: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">keysToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| splitter | string |   |
+| **map** | _java.util.Map_ |   |
+| **splitter** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -3637,12 +3637,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.lastIndexOf(o: _java.lang.Object_) : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">lastIndexOf</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3655,7 +3655,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.length() : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">length</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -3667,7 +3667,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.list() : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">list</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -3675,12 +3675,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.list(cls: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">list</span>(<span style="color: #FF8000">cls</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| cls | _java.lang.Class_ |   |
+| **cls** | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -3693,7 +3693,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.listIterator() : _java.util.ListIterator_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">listIterator</span>() : <span style="font-weight: normal; font-style: italic;">java.util.ListIterator</span>
 ##### Return
 
 ( _java.util.ListIterator_ )
@@ -3701,12 +3701,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.listIterator(index: _int_) : _java.util.ListIterator_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">listIterator</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.ListIterator</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Return
 
@@ -3719,7 +3719,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.listOfValues() : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">listOfValues</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -3731,12 +3731,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.loadJSON(in: _java.io.InputStream_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">loadJSON</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| in | _java.io.InputStream_ |   |
+| **in** | _java.io.InputStream_ |   |
 
 ##### Return
 
@@ -3745,12 +3745,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.loadJSON(in: _java.io.Reader_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">loadJSON</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| in | _java.io.Reader_ |   |
+| **in** | _java.io.Reader_ |   |
 
 ##### Return
 
@@ -3763,12 +3763,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.loadProperties(in: _java.io.InputStream_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">loadProperties</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| in | _java.io.InputStream_ |   |
+| **in** | _java.io.InputStream_ |   |
 
 ##### Return
 
@@ -3777,12 +3777,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.loadProperties(in: _java.io.Reader_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">loadProperties</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| in | _java.io.Reader_ |   |
+| **in** | _java.io.Reader_ |   |
 
 ##### Return
 
@@ -3791,12 +3791,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.loadProperties(properties: _java.util.Properties_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">loadProperties</span>(<span style="color: #FF8000">properties</span>: <span style="font-weight: normal; font-style: italic;">java.util.Properties</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| properties | _java.util.Properties_ |   |
+| **properties** | _java.util.Properties_ |   |
 
 ##### Return
 
@@ -3809,12 +3809,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.loadPropertiesFromString(data: string) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">loadPropertiesFromString</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | string |   |
+| **data** | _string_ |   |
 
 ##### Return
 
@@ -3827,7 +3827,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.lockAsReadOnly() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">lockAsReadOnly</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Check if it is locked in read-only mode.
@@ -3844,7 +3844,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.map() : _java.util.Map_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">map</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Return
 
 ( _java.util.Map_ )
@@ -3856,12 +3856,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.merge(object: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">merge</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _java.lang.Object_ |   |
+| **object** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3870,14 +3870,14 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.merge(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.util.function.BiFunction_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">merge</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg2</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.util.function.BiFunction_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
+| **arg2** | _java.util.function.BiFunction_ |   |
 
 ##### Return
 
@@ -3890,12 +3890,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.of(array: _[Ljava.lang.Object;[]_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">of</span>(<span style="color: #FF8000">array</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| array | _[Ljava.lang.Object;[]_ |   |
+| **array** | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 
@@ -3904,12 +3904,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.of(o: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">of</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3918,12 +3918,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.of(list: _java.util.List_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">of</span>(<span style="color: #FF8000">list</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| list | _java.util.List_ |   |
+| **list** | _java.util.List_ |   |
 
 ##### Return
 
@@ -3932,12 +3932,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.of(map: _java.util.Map_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">of</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| map | _java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 
 ##### Return
 
@@ -3950,12 +3950,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.ofList(o: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">ofList</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3968,12 +3968,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.ofMap(o: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">ofMap</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3986,12 +3986,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.push(o: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">push</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4004,13 +4004,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.put(key: _java.lang.Object_, value: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _java.lang.Object_ |   |
-| value | _java.lang.Object_ |   |
+| **key** | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4019,13 +4019,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.put(key: string, value: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4038,12 +4038,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.putAll(m: _java.util.Map_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">putAll</span>(<span style="color: #FF8000">m</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| m | _java.util.Map_ |   |
+| **m** | _java.util.Map_ |   |
 
 ##### Return
 
@@ -4056,13 +4056,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.putIfAbsent(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">putIfAbsent</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4075,12 +4075,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.remove(i: _int_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">remove</span>(<span style="color: #FF8000">i</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| i | _int_ |   |
+| **i** | _int_ |   |
 
 ##### Return
 
@@ -4089,12 +4089,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.remove(o: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">remove</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4103,13 +4103,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.remove(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">remove</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4122,7 +4122,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.removeAll() : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">removeAll</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Return
 
 ( _void_ )
@@ -4130,12 +4130,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.removeAll(c: _java.util.Collection_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">removeAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| c | _java.util.Collection_ |   |
+| **c** | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -4148,13 +4148,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">replace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4163,14 +4163,14 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">replace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg2</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.lang.Object_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
+| **arg2** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4183,12 +4183,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.replaceAll(arg0: _java.util.function.BiFunction_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">replaceAll</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.BiFunction_ |   |
+| **arg0** | _java.util.function.BiFunction_ |   |
 
 ##### Return
 
@@ -4197,12 +4197,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.replaceAll(operator: _java.util.function.UnaryOperator_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">replaceAll</span>(<span style="color: #FF8000">operator</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.UnaryOperator</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| operator | _java.util.function.UnaryOperator_ |   |
+| **operator** | _java.util.function.UnaryOperator_ |   |
 
 ##### Return
 
@@ -4211,12 +4211,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.replaceAll(function: _org.graalvm.polyglot.Value_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">replaceAll</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -4229,12 +4229,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.retainAll(c: _java.util.Collection_) : _boolean_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">retainAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| c | _java.util.Collection_ |   |
+| **c** | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -4247,31 +4247,31 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.safeString(object: _java.lang.Object_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">safeString</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _java.lang.Object_ |   |
+| **object** | _java.lang.Object_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.safeString(object: _java.lang.Object_, defaultValue: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">safeString</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _java.lang.Object_ |   |
-| defaultValue | string |   |
+| **object** | _java.lang.Object_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -4280,12 +4280,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.saveJSON(out: _java.io.OutputStream_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">saveJSON</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| out | _java.io.OutputStream_ |   |
+| **out** | _java.io.OutputStream_ |   |
 
 ##### Return
 
@@ -4294,12 +4294,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.saveJSON(out: _java.io.Writer_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">saveJSON</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| out | _java.io.Writer_ |   |
+| **out** | _java.io.Writer_ |   |
 
 ##### Return
 
@@ -4312,12 +4312,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.saveProperties(out: _java.io.OutputStream_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">saveProperties</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| out | _java.io.OutputStream_ |   |
+| **out** | _java.io.OutputStream_ |   |
 
 ##### Return
 
@@ -4326,12 +4326,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.saveProperties(out: _java.io.Writer_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">saveProperties</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| out | _java.io.Writer_ |   |
+| **out** | _java.io.Writer_ |   |
 
 ##### Return
 
@@ -4344,79 +4344,79 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.search(content: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string |   |
+| **content** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.search(content: string, ignoreCase: _boolean_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ignoreCase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string |   |
-| ignoreCase | _boolean_ |   |
+| **content** | _string_ |   |
+| **ignoreCase** | _boolean_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.search(content: string, splitter: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string |   |
-| splitter | string |   |
+| **content** | _string_ |   |
+| **splitter** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.search(content: string, splitter: string, ignoreCase: _boolean_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ignoreCase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string |   |
-| splitter | string |   |
-| ignoreCase | _boolean_ |   |
+| **content** | _string_ |   |
+| **splitter** | _string_ |   |
+| **ignoreCase** | _boolean_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.search(map: _java.util.Map_, content: string, splitter: string, ignoreCase: _boolean_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ignoreCase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| content | string |   |
-| splitter | string |   |
-| ignoreCase | _boolean_ |   |
+| **map** | _java.util.Map_ |   |
+| **content** | _string_ |   |
+| **splitter** | _string_ |   |
+| **ignoreCase** | _boolean_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -4425,7 +4425,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _exec.service(path: string) : _[ScriptResult](../../objects/ScriptResult)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">service</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[ScriptResult](../../objects/ScriptResult)</span>
 ##### Description
 
 Execution of scripts that are in the `server/services/` folder.
@@ -4440,7 +4440,7 @@ _exec.service("another-script-maybe-in-another-language");
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string | Script path originating from 'services/' to be executed. |
+| **path** | _string_ | Script path originating from 'services/' to be executed. |
 
 ##### Return
 
@@ -4449,7 +4449,7 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.service(path: string, preserveContext: _boolean_) : _[ScriptResult](../../objects/ScriptResult)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">service</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">preserveContext</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[ScriptResult](../../objects/ScriptResult)</span>
 ##### Description
 
 Execution of scripts that are in the `server/services/` folder.
@@ -4464,8 +4464,8 @@ _exec.service("another-script-maybe-in-another-language");
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string | Script path originating from 'services/' to be executed. |
-| preserveContext | _boolean_ | Whether to keep the same execution context or start a new one. |
+| **path** | _string_ | Script path originating from 'services/' to be executed. |
+| **preserveContext** | _boolean_ | Whether to keep the same execution context or start a new one. |
 
 ##### Return
 
@@ -4478,13 +4478,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.set(index: _int_, element: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">set</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">element</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | _int_ |   |
-| element | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **element** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4493,13 +4493,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.set(key: string, value: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">set</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4512,12 +4512,12 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setForceList(forceList: _boolean_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setForceList</span>(<span style="color: #FF8000">forceList</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| forceList | _boolean_ |   |
+| **forceList** | _boolean_ |   |
 
 ##### Return
 
@@ -4530,12 +4530,12 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setForceMap(forceMap: _boolean_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setForceMap</span>(<span style="color: #FF8000">forceMap</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| forceMap | _boolean_ |   |
+| **forceMap** | _boolean_ |   |
 
 ##### Return
 
@@ -4548,13 +4548,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfFalse(key: string, value: _boolean_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfFalse</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _boolean_ |   |
+| **key** | _string_ |   |
+| **value** | _boolean_ |   |
 
 ##### Return
 
@@ -4567,13 +4567,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfGreaterThanZero(key: string, value: _double_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _double_ |   |
+| **key** | _string_ |   |
+| **value** | _double_ |   |
 
 ##### Return
 
@@ -4582,13 +4582,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfGreaterThanZero(key: string, value: _float_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _float_ |   |
+| **key** | _string_ |   |
+| **value** | _float_ |   |
 
 ##### Return
 
@@ -4597,13 +4597,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfGreaterThanZero(key: string, value: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _int_ |   |
+| **key** | _string_ |   |
+| **value** | _int_ |   |
 
 ##### Return
 
@@ -4612,13 +4612,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfGreaterThanZero(key: string, value: _long_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _long_ |   |
+| **key** | _string_ |   |
+| **value** | _long_ |   |
 
 ##### Return
 
@@ -4627,13 +4627,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfGreaterThanZero(key: string, value: _short_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _short_ |   |
+| **key** | _string_ |   |
+| **value** | _short_ |   |
 
 ##### Return
 
@@ -4646,13 +4646,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfLowerThanZero(key: string, value: _double_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _double_ |   |
+| **key** | _string_ |   |
+| **value** | _double_ |   |
 
 ##### Return
 
@@ -4661,13 +4661,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfLowerThanZero(key: string, value: _float_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _float_ |   |
+| **key** | _string_ |   |
+| **value** | _float_ |   |
 
 ##### Return
 
@@ -4676,13 +4676,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfLowerThanZero(key: string, value: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _int_ |   |
+| **key** | _string_ |   |
+| **value** | _int_ |   |
 
 ##### Return
 
@@ -4691,13 +4691,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfLowerThanZero(key: string, value: _long_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _long_ |   |
+| **key** | _string_ |   |
+| **value** | _long_ |   |
 
 ##### Return
 
@@ -4706,13 +4706,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfLowerThanZero(key: string, value: _short_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _short_ |   |
+| **key** | _string_ |   |
+| **value** | _short_ |   |
 
 ##### Return
 
@@ -4725,13 +4725,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfNotEmpty(key: string, value: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfNotEmpty</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | string |   |
+| **key** | _string_ |   |
+| **value** | _string_ |   |
 
 ##### Return
 
@@ -4744,13 +4744,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfNotZero(key: string, value: _double_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _double_ |   |
+| **key** | _string_ |   |
+| **value** | _double_ |   |
 
 ##### Return
 
@@ -4759,13 +4759,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfNotZero(key: string, value: _float_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _float_ |   |
+| **key** | _string_ |   |
+| **value** | _float_ |   |
 
 ##### Return
 
@@ -4774,13 +4774,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfNotZero(key: string, value: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _int_ |   |
+| **key** | _string_ |   |
+| **value** | _int_ |   |
 
 ##### Return
 
@@ -4789,13 +4789,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfNotZero(key: string, value: _long_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _long_ |   |
+| **key** | _string_ |   |
+| **value** | _long_ |   |
 
 ##### Return
 
@@ -4804,13 +4804,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfNotZero(key: string, value: _short_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _short_ |   |
+| **key** | _string_ |   |
+| **value** | _short_ |   |
 
 ##### Return
 
@@ -4823,13 +4823,13 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setIfTrue(key: string, value: _boolean_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setIfTrue</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| value | _boolean_ |   |
+| **key** | _string_ |   |
+| **value** | _boolean_ |   |
 
 ##### Return
 
@@ -4842,12 +4842,12 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setNull(key: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setNull</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -4860,7 +4860,7 @@ _exec.service("another-script-maybe-in-another-language");
 
 ---
 
-#### _exec.setURLCharacterEncoding(characterEncoding: string) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">setURLCharacterEncoding</span>(<span style="color: #FF8000">characterEncoding</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Defines the character encoding to be used in formatting for URL (_QueryString_).
@@ -4869,7 +4869,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| characterEncoding | string | Character encoding code. |
+| **characterEncoding** | _string_ | Character encoding code. |
 
 ##### Return
 
@@ -4882,7 +4882,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _exec.size() : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">size</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -4894,7 +4894,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _exec.sizeOfList() : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">sizeOfList</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -4906,7 +4906,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _exec.sizeOfMap() : _int_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">sizeOfMap</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -4918,7 +4918,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _exec.sleep(interval: _long_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">sleep</span>(<span style="color: #FF8000">interval</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Pauses execution, useful for causing some controlled processing delay.
@@ -4934,7 +4934,7 @@ _exec.sleep(3000);
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| interval | _long_ | Time interval in milliseconds to pause execution. |
+| **interval** | _long_ | Time interval in milliseconds to pause execution. |
 
 ##### Return
 
@@ -4947,12 +4947,12 @@ _exec.sleep(3000);
 
 ---
 
-#### _exec.sort(c: _java.util.Comparator_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">sort</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Comparator</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| c | _java.util.Comparator_ |   |
+| **c** | _java.util.Comparator_ |   |
 
 ##### Return
 
@@ -4961,12 +4961,12 @@ _exec.sleep(3000);
 
 ---
 
-#### _exec.sort(function: _org.graalvm.polyglot.Value_) : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">sort</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -4979,7 +4979,7 @@ _exec.sleep(3000);
 
 ---
 
-#### _exec.spliterator() : _java.util.Spliterator_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">spliterator</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Spliterator</span>
 ##### Return
 
 ( _java.util.Spliterator_ )
@@ -4991,7 +4991,7 @@ _exec.sleep(3000);
 
 ---
 
-#### _exec.stop() : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">stop</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 It stops the execution of the current script, useful for interrupting the execution.
@@ -5016,13 +5016,13 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.subList(fromIndex: _int_, toIndex: _int_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">subList</span>(<span style="color: #FF8000">fromIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">toIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| fromIndex | _int_ |   |
-| toIndex | _int_ |   |
+| **fromIndex** | _int_ |   |
+| **toIndex** | _int_ |   |
 
 ##### Return
 
@@ -5035,7 +5035,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toArray() : _[Ljava.lang.Object;[]_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toArray</span>() : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>
 ##### Return
 
 ( _[Ljava.lang.Object;[]_ )
@@ -5043,12 +5043,12 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toArray(a: _[Ljava.lang.Object;[]_) : _[Ljava.lang.Object;[]_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toArray</span>(<span style="color: #FF8000">a</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| a | _[Ljava.lang.Object;[]_ |   |
+| **a** | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 
@@ -5061,7 +5061,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toByteArray() : _byte[]_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toByteArray</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Return
 
 ( _byte[]_ )
@@ -5073,7 +5073,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toDoubleArray() : _double[]_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toDoubleArray</span>() : <span style="font-weight: normal; font-style: italic;">double[]</span>
 ##### Return
 
 ( _double[]_ )
@@ -5085,7 +5085,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toFloatArray() : _float[]_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toFloatArray</span>() : <span style="font-weight: normal; font-style: italic;">float[]</span>
 ##### Return
 
 ( _float[]_ )
@@ -5097,7 +5097,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toFormMap() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toFormMap</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -5105,13 +5105,13 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toFormMap(key: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toFormMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **key** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5120,12 +5120,12 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toFormMap(data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toFormMap</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5138,7 +5138,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toIntArray() : _[I_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toIntArray</span>() : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Return
 
 ( _[I_ )
@@ -5150,113 +5150,113 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toJSON() : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toJSON</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.toJSON(htmlEscape: _boolean_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| htmlEscape | _boolean_ |   |
+| **htmlEscape** | _boolean_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.toJSON(htmlEscape: _boolean_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| htmlEscape | _boolean_ |   |
-| indentFactor | _int_ |   |
+| **htmlEscape** | _boolean_ |   |
+| **indentFactor** | _int_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.toJSON(indentFactor: _int_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| indentFactor | _int_ |   |
+| **indentFactor** | _int_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.toJSON(values: _java.util.List_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.util.List_ |   |
+| **values** | _java.util.List_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.toJSON(values: _java.util.List_, htmlEscape: _boolean_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.util.List_ |   |
-| htmlEscape | _boolean_ |   |
+| **values** | _java.util.List_ |   |
+| **htmlEscape** | _boolean_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.toJSON(values: _java.util.List_, htmlEscape: _boolean_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.util.List_ |   |
-| htmlEscape | _boolean_ |   |
-| indentFactor | _int_ |   |
+| **values** | _java.util.List_ |   |
+| **htmlEscape** | _boolean_ |   |
+| **indentFactor** | _int_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.toJSON(values: _java.util.List_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.util.List_ |   |
-| indentFactor | _int_ |   |
+| **values** | _java.util.List_ |   |
+| **indentFactor** | _int_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -5265,13 +5265,13 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toJSONObject(object: _java.lang.Object_, htmlEscape: _boolean_) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toJSONObject</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _java.lang.Object_ |   |
-| htmlEscape | _boolean_ |   |
+| **object** | _java.lang.Object_ |   |
+| **htmlEscape** | _boolean_ |   |
 
 ##### Return
 
@@ -5284,18 +5284,18 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toJSONString(object: _java.lang.Object_, htmlEscape: _boolean_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toJSONString</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _java.lang.Object_ |   |
-| htmlEscape | _boolean_ |   |
-| indentFactor | _int_ |   |
+| **object** | _java.lang.Object_ |   |
+| **htmlEscape** | _boolean_ |   |
+| **indentFactor** | _int_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -5304,7 +5304,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toList() : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toList</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -5312,12 +5312,12 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toList(cls: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toList</span>(<span style="color: #FF8000">cls</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| cls | _java.lang.Class_ |   |
+| **cls** | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -5330,7 +5330,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toLongArray() : _long[]_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toLongArray</span>() : <span style="font-weight: normal; font-style: italic;">long[]</span>
 ##### Return
 
 ( _long[]_ )
@@ -5342,7 +5342,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toMap() : _java.util.Map_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toMap</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Return
 
 ( _java.util.Map_ )
@@ -5354,10 +5354,10 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toProperties() : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toProperties</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -5366,7 +5366,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toShortArray() : _short[]_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toShortArray</span>() : <span style="font-weight: normal; font-style: italic;">short[]</span>
 ##### Return
 
 ( _short[]_ )
@@ -5378,7 +5378,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.toStringArray() : _[Ljava.lang.String;[]_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toStringArray</span>() : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>
 ##### Return
 
 ( _[Ljava.lang.String;[]_ )
@@ -5390,12 +5390,12 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.unset(key: string) : _java.lang.Object_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">unset</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Return
 
@@ -5408,7 +5408,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.unsetAll() : _void_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">unsetAll</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Return
 
 ( _void_ )
@@ -5420,7 +5420,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### _exec.values() : _java.util.Collection_
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">values</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>
 ##### Description
 
 Gets all object values stored in both dictionary and list mode.
@@ -5437,126 +5437,126 @@ List of all obtained values.
 
 ---
 
-#### _exec.valuesToString(splitter: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| splitter | string |   |
+| **splitter** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.valuesToString(splitter: string, excludes: _[Ljava.lang.String;[]_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| splitter | string |   |
-| excludes | _[Ljava.lang.String;[]_ |   |
+| **splitter** | _string_ |   |
+| **excludes** | _[Ljava.lang.String;[]_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.valuesToString(splitter: string, excludes: _[Ljava.lang.String;[]_, config: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| splitter | string |   |
-| excludes | _[Ljava.lang.String;[]_ |   |
-| config | _[Values](../../objects/Values)_ |   |
+| **splitter** | _string_ |   |
+| **excludes** | _[Ljava.lang.String;[]_ |   |
+| **config** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.valuesToString(splitter: string, config: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| splitter | string |   |
-| config | _[Values](../../objects/Values)_ |   |
+| **splitter** | _string_ |   |
+| **config** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.valuesToString(map: _java.util.Map_, splitter: string) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| splitter | string |   |
+| **map** | _java.util.Map_ |   |
+| **splitter** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.valuesToString(map: _java.util.Map_, splitter: string, excludes: _[Ljava.lang.String;[]_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| splitter | string |   |
-| excludes | _[Ljava.lang.String;[]_ |   |
+| **map** | _java.util.Map_ |   |
+| **splitter** | _string_ |   |
+| **excludes** | _[Ljava.lang.String;[]_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.valuesToString(map: _java.util.Map_, splitter: string, excludes: _[Ljava.lang.String;[]_, config: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| splitter | string |   |
-| excludes | _[Ljava.lang.String;[]_ |   |
-| config | _[Values](../../objects/Values)_ |   |
+| **map** | _java.util.Map_ |   |
+| **splitter** | _string_ |   |
+| **excludes** | _[Ljava.lang.String;[]_ |   |
+| **config** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _exec.valuesToString(map: _java.util.Map_, splitter: string, config: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| splitter | string |   |
-| config | _[Values](../../objects/Values)_ |   |
+| **map** | _java.util.Map_ |   |
+| **splitter** | _string_ |   |
+| **config** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---

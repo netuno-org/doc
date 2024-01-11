@@ -13,7 +13,7 @@ O Remote facilita esta integração e torna simples a integração com web servi
 
 ---
 
-#### _remote.acceptJSON() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">acceptJSON</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define que o conteúdo será recebido no formato application/json.
@@ -30,7 +30,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.alwaysBodyData() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">alwaysBodyData</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Força os dados irem no corpo do cabeçalho HTTP, até mesmo no caso do método <code>GET</code>.
@@ -47,7 +47,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.asBinary() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asBinary</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define que os dados do conteúdo recebido pela conexão remota estão no formato binário, como download de ficheiros, imagens, zip, etc...
@@ -64,7 +64,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.asForm() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asForm</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define que o conteúdo de dados será submetido no formato application/x-www-form-urlencoded.
@@ -81,7 +81,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.asJSON() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asJSON</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define que o conteúdo de dados será submetido no formato application/json.
@@ -98,7 +98,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.asMultipartFormData() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asMultipartFormData</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define que o conteúdo de dados será submetido no formato multipart/form-data.
@@ -115,7 +115,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.asText() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asText</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define que o conteúdo de dados será submetido no formato text/plain.
@@ -132,7 +132,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.delete() : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Submete o pedido para a conexão remota através do método DELETE.
@@ -145,7 +145,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.delete(endereco: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço atríbudo submete o pedido para a conexão remota através do método DELETE.
@@ -154,7 +154,7 @@ Com o endereço atríbudo submete o pedido para a conexão remota através do m�
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
 
 ##### Retorno
 
@@ -164,7 +164,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.delete(endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método DELETE.
@@ -173,8 +173,8 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -184,7 +184,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.delete(endereco: string, dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método DELETE.
@@ -193,8 +193,8 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -204,7 +204,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.delete(dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método DELETE.
@@ -213,7 +213,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -223,7 +223,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.delete(dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método DELETE.
@@ -232,7 +232,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -246,7 +246,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.get() : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Submete o pedido para a conexão remota através do método GET.
@@ -259,7 +259,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.get(endereco: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço atríbudo submete o pedido para a conexão remota através do método GET.
@@ -268,7 +268,7 @@ Com o endereço atríbudo submete o pedido para a conexão remota através do m�
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
 
 ##### Retorno
 
@@ -278,7 +278,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.get(endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método GET.
@@ -287,8 +287,8 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -298,7 +298,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.get(endereco: string, dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método GET.
@@ -307,8 +307,8 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -318,7 +318,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.get(dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método GET.
@@ -327,7 +327,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -337,7 +337,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.get(dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método GET.
@@ -346,7 +346,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -360,10 +360,10 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getAuthorization() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getAuthorization</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -372,10 +372,10 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getCharset() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getCharset</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -384,7 +384,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getConnectTimeout() : _int_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getConnectTimeout</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -396,10 +396,10 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getContentType() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getContentType</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -408,7 +408,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getData() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -420,10 +420,10 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getDefaultSubmitData() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getDefaultSubmitData</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -432,7 +432,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getFormData() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getFormData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -444,7 +444,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getHeader() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getHeader</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -456,7 +456,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getQS() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getQS</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -468,7 +468,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getQueryString() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getQueryString</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -480,7 +480,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getReadTimeout() : _int_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getReadTimeout</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -492,10 +492,10 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getSOAPAction() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getSOAPAction</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -504,10 +504,10 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getSOAPNS() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getSOAPNS</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -516,10 +516,10 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getSOAPURL() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getSOAPURL</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -528,7 +528,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getStatusCode() : _int_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getStatusCode</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -540,10 +540,10 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getURL() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getURL</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -552,10 +552,10 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.getURLPrefix() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getURLPrefix</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -564,7 +564,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.init() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Inicia um novo Remote.
@@ -577,7 +577,7 @@ Nova instância do Remote.
 
 ---
 
-#### _remote.init(nomeConfig: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">nomeConfig</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Inicia um novo Remote com base na chave de configuração.
@@ -586,7 +586,7 @@ Inicia um novo Remote com base na chave de configuração.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nomeConfig | string | Nome da configuração que será utilizada. |
+| **nomeConfig** | _string_ | Nome da configuração que será utilizada. |
 
 ##### Retorno
 
@@ -596,7 +596,7 @@ Nova instância do Remote.
 
 ---
 
-#### _remote.init(nomeConfig: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">nomeConfig</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Inicia um novo Remote com base na chave de configuração.
@@ -605,7 +605,7 @@ Inicia um novo Remote com base na chave de configuração.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nomeConfig | _[Values](../../objects/Values)_ | Nome da configuração que será utilizada. |
+| **nomeConfig** | _[Values](../../objects/Values)_ | Nome da configuração que será utilizada. |
 
 ##### Retorno
 
@@ -619,7 +619,7 @@ Nova instância do Remote.
 
 ---
 
-#### _remote.isAlwaysDataBody() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isAlwaysDataBody</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -631,7 +631,7 @@ Nova instância do Remote.
 
 ---
 
-#### _remote.isBinary() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isBinary</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -643,7 +643,7 @@ Nova instância do Remote.
 
 ---
 
-#### _remote.isFollowRedirects() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isFollowRedirects</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -655,7 +655,7 @@ Nova instância do Remote.
 
 ---
 
-#### _remote.isForm() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isForm</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -667,7 +667,7 @@ Nova instância do Remote.
 
 ---
 
-#### _remote.isJSON() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isJSON</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -679,7 +679,7 @@ Nova instância do Remote.
 
 ---
 
-#### _remote.isMultipartFormData() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isMultipartFormData</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -691,7 +691,7 @@ Nova instância do Remote.
 
 ---
 
-#### _remote.isText() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isText</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -703,7 +703,7 @@ Nova instância do Remote.
 
 ---
 
-#### _remote.json(metodo: string, endereco: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP e endereço atribuído submete como JSON para a conexão remota.
@@ -712,8 +712,8 @@ Através do método HTTP e endereço atribuído submete como JSON para a conexã
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
 
 ##### Retorno
 
@@ -723,7 +723,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.json(metodo: string, endereco: string, dados: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -732,9 +732,9 @@ Através do método HTTP, endereço e mapa de dados atribuído submete os dados 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| dados | string | Mapa de dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _string_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -744,7 +744,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.json(metodo: string, endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -753,9 +753,9 @@ Através do método HTTP, endereço e mapa de dados atribuído submete os dados 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -765,7 +765,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.json(metodo: string, endereco: string, dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -774,9 +774,9 @@ Através do método HTTP, endereço e mapa de dados atribuído submete os dados 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -790,7 +790,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.patch() : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Submete o pedido para a conexão remota através do método PATCH.
@@ -803,7 +803,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.patch(endereco: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço atríbudo submete o pedido para a conexão remota através do método PATCH.
@@ -812,7 +812,7 @@ Com o endereço atríbudo submete o pedido para a conexão remota através do m�
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
 
 ##### Retorno
 
@@ -822,7 +822,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.patch(endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método PATCH.
@@ -831,8 +831,8 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -842,7 +842,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.patch(endereco: string, dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método PATCH.
@@ -851,8 +851,8 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -862,7 +862,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.patch(dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método PATCH.
@@ -871,7 +871,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -881,7 +881,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.patch(dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método PATCH.
@@ -890,7 +890,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -904,7 +904,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.ping(servidor: string) : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">ping</span>(<span style="color: #FF8000">servidor</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se o nome de servidor ou IP está disponível.
@@ -913,7 +913,7 @@ Verifica se o nome de servidor ou IP está disponível.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| servidor | string | Nome ou IP do servidor. |
+| **servidor** | _string_ | Nome ou IP do servidor. |
 
 ##### Retorno
 
@@ -927,7 +927,7 @@ Resultado se endereço está disponível.
 
 ---
 
-#### _remote.portListening(servidor: string, porto: _int_) : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">portListening</span>(<span style="color: #FF8000">servidor</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">porto</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se a porta está disponível para um nome ou IP de servidor.
@@ -936,8 +936,8 @@ Verifica se a porta está disponível para um nome ou IP de servidor.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| servidor | string | Nome ou IP do servidor. |
-| porto | _int_ | Número do porto. |
+| **servidor** | _string_ | Nome ou IP do servidor. |
+| **porto** | _int_ | Número do porto. |
 
 ##### Retorno
 
@@ -951,7 +951,7 @@ Resultado se a porta está disponível.
 
 ---
 
-#### _remote.post() : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Submete o pedido para a conexão remota através do método POST.
@@ -964,7 +964,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.post(endereco: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço atríbudo submete o pedido para a conexão remota através do método POST.
@@ -973,7 +973,7 @@ Com o endereço atríbudo submete o pedido para a conexão remota através do m�
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
 
 ##### Retorno
 
@@ -983,7 +983,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.post(endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método POST.
@@ -992,8 +992,8 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1003,7 +1003,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.post(endereco: string, dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método POST.
@@ -1012,8 +1012,8 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1023,7 +1023,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.post(dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método POST.
@@ -1032,7 +1032,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1042,7 +1042,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.post(dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método POST.
@@ -1051,7 +1051,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1065,7 +1065,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.put() : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Submete o pedido para a conexão remota através do método PUT.
@@ -1078,7 +1078,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.put(endereco: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço atríbudo submete o pedido para a conexão remota através do método PUT.
@@ -1087,7 +1087,7 @@ Com o endereço atríbudo submete o pedido para a conexão remota através do m�
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
 
 ##### Retorno
 
@@ -1097,7 +1097,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.put(endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método PUT.
@@ -1106,8 +1106,8 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1117,7 +1117,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.put(endereco: string, dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método PUT.
@@ -1126,8 +1126,8 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1137,7 +1137,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.put(dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método PUT.
@@ -1146,7 +1146,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1156,7 +1156,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.put(dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método PUT.
@@ -1165,7 +1165,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1179,7 +1179,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.setAlwaysBodyData(sempreCorpoData: _boolean_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setAlwaysBodyData</span>(<span style="color: #FF8000">sempreCorpoData</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Força os dados irem no corpo do cabeçalho HTTP, até mesmo no caso do método <code>GET</code>.
@@ -1188,7 +1188,7 @@ Força os dados irem no corpo do cabeçalho HTTP, até mesmo no caso do método 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sempreCorpoData | _boolean_ | Define se os dados devem ir sempre no corpo do cabeçalho da comunicação HTTP que será enviada na conexão remota. |
+| **sempreCorpoData** | _boolean_ | Define se os dados devem ir sempre no corpo do cabeçalho da comunicação HTTP que será enviada na conexão remota. |
 
 ##### Retorno
 
@@ -1202,7 +1202,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setAuthorization(autorizacao: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setAuthorization</span>(<span style="color: #FF8000">autorizacao</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define o conteúdo exato da autorização que vai cabeçalho da comunicação que será enviada na conexão remota.
@@ -1211,7 +1211,7 @@ Define o conteúdo exato da autorização que vai cabeçalho da comunicação qu
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| autorizacao | string | Conteúdo da autorização que será submetida. |
+| **autorizacao** | _string_ | Conteúdo da autorização que será submetida. |
 
 ##### Retorno
 
@@ -1221,7 +1221,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setAuthorization(usuario: string, senha: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setAuthorization</span>(<span style="color: #FF8000">usuario</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">senha</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define o conteúdo da autorização básica com utilizador e password que vai cabeçalho da comunicação que será enviada na conexão remota.
@@ -1230,8 +1230,8 @@ Define o conteúdo da autorização básica com utilizador e password que vai ca
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| usuario | string | Usuário da autorização que será submetida. |
-| senha | string | Senha da autorização que será submetida. |
+| **usuario** | _string_ | Usuário da autorização que será submetida. |
+| **senha** | _string_ | Senha da autorização que será submetida. |
 
 ##### Retorno
 
@@ -1245,7 +1245,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setBinary(binario: _boolean_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setBinary</span>(<span style="color: #FF8000">binario</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define que os dados do conteúdo recebido pela conexão remota estão no formato binário, como download de ficheiros, imagens, zip, etc...
@@ -1254,7 +1254,7 @@ Define que os dados do conteúdo recebido pela conexão remota estão no formato
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| binario | _boolean_ | Será o download de arquivos. |
+| **binario** | _boolean_ | Será o download de arquivos. |
 
 ##### Retorno
 
@@ -1268,7 +1268,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setCharset(codificacaoCaracteres: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setCharset</span>(<span style="color: #FF8000">codificacaoCaracteres</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define a codificação de caracteres que deve ser utilizada na conexão remota.
@@ -1277,7 +1277,7 @@ Define a codificação de caracteres que deve ser utilizada na conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| codificacaoCaracteres | string | Código da codificação de caracteres. |
+| **codificacaoCaracteres** | _string_ | Código da codificação de caracteres. |
 
 ##### Retorno
 
@@ -1291,7 +1291,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setConnectTimeout(tempoLimite: _int_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setConnectTimeout</span>(<span style="color: #FF8000">tempoLimite</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define o o tempo limite para estabilizar a conexão remota.
@@ -1300,7 +1300,7 @@ Define o o tempo limite para estabilizar a conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tempoLimite | _int_ | Tempo limite em milissegundos. |
+| **tempoLimite** | _int_ | Tempo limite em milissegundos. |
 
 ##### Retorno
 
@@ -1314,7 +1314,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setContentType(tipoConteudo: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setContentType</span>(<span style="color: #FF8000">tipoConteudo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define o tipo de conteúdo que deve ser utilizada na conexão remota.
@@ -1323,7 +1323,7 @@ Define o tipo de conteúdo que deve ser utilizada na conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tipoConteudo | string | Código do tipo de conteúdo. |
+| **tipoConteudo** | _string_ | Código do tipo de conteúdo. |
 
 ##### Retorno
 
@@ -1337,7 +1337,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setData(dados: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setData</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define a parametrização dos dados que serão enviados como conteúdo da conexão remota, via POST ou PUT.
@@ -1346,7 +1346,7 @@ Define a parametrização dos dados que serão enviados como conteúdo da conex�
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _[Values](../../objects/Values)_ | Mapa de parâmetros com dados para serem submetidos. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de parâmetros com dados para serem submetidos. |
 
 ##### Retorno
 
@@ -1360,7 +1360,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setDefaultSubmitData(cabecalhoDoPedido: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setDefaultSubmitData</span>(<span style="color: #FF8000">cabecalhoDoPedido</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define os dados padrão caso não haja outros dados definidos para ser enviados na conexão remota.
@@ -1369,7 +1369,7 @@ Define os dados padrão caso não haja outros dados definidos para ser enviados 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| cabecalhoDoPedido | string | Dados padrão que vão ser submetidos caso não haja outros dados definidos. |
+| **cabecalhoDoPedido** | _string_ | Dados padrão que vão ser submetidos caso não haja outros dados definidos. |
 
 ##### Retorno
 
@@ -1383,7 +1383,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setFollowRedirects(seguirRedirects: _boolean_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setFollowRedirects</span>(<span style="color: #FF8000">seguirRedirects</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define se deve seguir redirecionamentos na conexão remota.
@@ -1392,7 +1392,7 @@ Define se deve seguir redirecionamentos na conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| seguirRedirects | _boolean_ | Se deve ou não seguir os redirecionamentos. |
+| **seguirRedirects** | _boolean_ | Se deve ou não seguir os redirecionamentos. |
 
 ##### Retorno
 
@@ -1406,12 +1406,12 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setFormData(data: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setFormData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -1424,7 +1424,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setHeader(cabecalhoDoPedido: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setHeader</span>(<span style="color: #FF8000">cabecalhoDoPedido</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define o cabeçalho do pedido que é submetido na conexão remota.
@@ -1433,7 +1433,7 @@ Define o cabeçalho do pedido que é submetido na conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| cabecalhoDoPedido | _[Values](../../objects/Values)_ | Dados do cabeçalho do pedido que será submetido. |
+| **cabecalhoDoPedido** | _[Values](../../objects/Values)_ | Dados do cabeçalho do pedido que será submetido. |
 
 ##### Retorno
 
@@ -1447,7 +1447,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setQS(dados: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setQS</span>(<span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define a parametrização de dados da query string, ou seja, os parâmetros com dados passados no endereço da conexão remota.
@@ -1456,7 +1456,7 @@ Define a parametrização de dados da query string, ou seja, os parâmetros com 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dados | _[Values](../../objects/Values)_ | Mapa de parâmetros com dados para serem passados na URL. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de parâmetros com dados para serem passados na URL. |
 
 ##### Retorno
 
@@ -1470,12 +1470,12 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setQueryString(qs: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setQueryString</span>(<span style="color: #FF8000">qs</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| qs | _[Values](../../objects/Values)_ |   |
+| **qs** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -1488,7 +1488,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setReadTimeout(tempoLimite: _int_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setReadTimeout</span>(<span style="color: #FF8000">tempoLimite</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define o o tempo limite para leitura de dados.
@@ -1497,7 +1497,7 @@ Define o o tempo limite para leitura de dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tempoLimite | _int_ | Tempo limite em milissegundos. |
+| **tempoLimite** | _int_ | Tempo limite em milissegundos. |
 
 ##### Retorno
 
@@ -1511,7 +1511,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setSOAPAction(acaoSOAP: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setSOAPAction</span>(<span style="color: #FF8000">acaoSOAP</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define a "ação" (operação, método, etc.) SOAP da conexão remota.
@@ -1520,7 +1520,7 @@ Define a "ação" (operação, método, etc.) SOAP da conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| acaoSOAP | string | Ação (operação ou método) SOAP que será invocado na submissão. |
+| **acaoSOAP** | _string_ | Ação (operação ou método) SOAP que será invocado na submissão. |
 
 ##### Retorno
 
@@ -1534,7 +1534,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setSOAPNS(nsSOAP: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setSOAPNS</span>(<span style="color: #FF8000">nsSOAP</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define o namespace do SOAP na conexão remota.
@@ -1543,7 +1543,7 @@ Define o namespace do SOAP na conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nsSOAP | string | Namespace do SOAP para a submissão. |
+| **nsSOAP** | _string_ | Namespace do SOAP para a submissão. |
 
 ##### Retorno
 
@@ -1557,7 +1557,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setSOAPURL(enderecoSOAP: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setSOAPURL</span>(<span style="color: #FF8000">enderecoSOAP</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define o endereço SOAP da conexão remota.
@@ -1566,7 +1566,7 @@ Define o endereço SOAP da conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| enderecoSOAP | string | Endereço SOAP que será submetido. |
+| **enderecoSOAP** | _string_ | Endereço SOAP que será submetido. |
 
 ##### Retorno
 
@@ -1580,7 +1580,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setURL(endereco: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setURL</span>(<span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Descrição
 
 Define o endereço da conexão remota.
@@ -1589,7 +1589,7 @@ Define o endereço da conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endereco | string | Endereço que será submetido. |
+| **endereco** | _string_ | Endereço que será submetido. |
 
 ##### Retorno
 
@@ -1603,12 +1603,12 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.setURLPrefix(urlPrefix: string) : _org.netuno.psamata.net.Remote_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setURLPrefix</span>(<span style="color: #FF8000">urlPrefix</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| urlPrefix | string |   |
+| **urlPrefix** | _string_ |   |
 
 ##### Retorno
 
@@ -1621,12 +1621,12 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.soap11(soapMethod: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap11</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| soapMethod | string |   |
+| **soapMethod** | _string_ |   |
 
 ##### Retorno
 
@@ -1635,13 +1635,13 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.soap11(soapMethod: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap11</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| soapMethod | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **soapMethod** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -1654,12 +1654,12 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.soap12(soapMethod: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap12</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| soapMethod | string |   |
+| **soapMethod** | _string_ |   |
 
 ##### Retorno
 
@@ -1668,13 +1668,13 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.soap12(soapMethod: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap12</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| soapMethod | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **soapMethod** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -1687,7 +1687,7 @@ A instância atual do Remote.
 
 ---
 
-#### _remote.submit(metodo: string, endereco: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP e endereço atribuído submete para a conexão remota.
@@ -1696,8 +1696,8 @@ Através do método HTTP e endereço atribuído submete para a conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
 
 ##### Retorno
 
@@ -1707,7 +1707,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submit(metodo: string, endereco: string, dados: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço e dados atribuídos, submete para a conexão remota.
@@ -1716,9 +1716,9 @@ Através do método HTTP, endereço e dados atribuídos, submete para a conexão
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| dados | string | Dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _string_ | Dados que serão submetido. |
 
 ##### Retorno
 
@@ -1728,7 +1728,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submit(metodo: string, endereco: string, querystring: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço, query string, tipo de conteúdo e dados atribuídos, submete para a conexão remota.
@@ -1737,9 +1737,9 @@ Através do método HTTP, endereço, query string, tipo de conteúdo e dados atr
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| querystring | _java.util.Map_ | Dados para a querystring. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **querystring** | _java.util.Map_ | Dados para a querystring. |
 
 ##### Retorno
 
@@ -1749,7 +1749,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submit(metodo: string, endereco: string, querystring: _java.util.Map_, tipoConteudo: string, dados: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">tipoConteudo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço, query string, tipo de conteúdo e dados atribuídos, submete para a conexão remota.
@@ -1758,11 +1758,11 @@ Através do método HTTP, endereço, query string, tipo de conteúdo e dados atr
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| querystring | _java.util.Map_ | Dados para a querystring. |
-| tipoConteudo | string | Código do tipo de conteúdo. |
-| dados | string | Dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **querystring** | _java.util.Map_ | Dados para a querystring. |
+| **tipoConteudo** | _string_ | Código do tipo de conteúdo. |
+| **dados** | _string_ | Dados que serão submetido. |
 
 ##### Retorno
 
@@ -1772,7 +1772,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submit(metodo: string, endereco: string, querystring: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço, query string, tipo de conteúdo e dados atribuídos, submete para a conexão remota.
@@ -1781,9 +1781,9 @@ Através do método HTTP, endereço, query string, tipo de conteúdo e dados atr
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| querystring | _[Values](../../objects/Values)_ | Dados para a querystring. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **querystring** | _[Values](../../objects/Values)_ | Dados para a querystring. |
 
 ##### Retorno
 
@@ -1793,7 +1793,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submit(metodo: string, endereco: string, querystring: _[Values](../../objects/Values)_, tipoConteudo: string, dados: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">tipoConteudo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço, query string, tipo de conteúdo e dados atribuídos, submete para a conexão remota.
@@ -1802,11 +1802,11 @@ Através do método HTTP, endereço, query string, tipo de conteúdo e dados atr
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| querystring | _[Values](../../objects/Values)_ | Dados para a querystring. |
-| tipoConteudo | string | Código do tipo de conteúdo. |
-| dados | string | Dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **querystring** | _[Values](../../objects/Values)_ | Dados para a querystring. |
+| **tipoConteudo** | _string_ | Código do tipo de conteúdo. |
+| **dados** | _string_ | Dados que serão submetido. |
 
 ##### Retorno
 
@@ -1820,7 +1820,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitForm(metodo: string, endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como formulário para a conexão remota.
@@ -1829,9 +1829,9 @@ Através do método HTTP e mapa de dados atribuído submete os dados como formul
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1841,7 +1841,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitForm(metodo: string, endereco: string, dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como formulário para a conexão remota.
@@ -1850,9 +1850,9 @@ Através do método HTTP e mapa de dados atribuído submete os dados como formul
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1862,7 +1862,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitForm(metodo: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como formulário para a conexão remota.
@@ -1871,8 +1871,8 @@ Através do método HTTP e mapa de dados atribuído submete os dados como formul
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1882,7 +1882,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitForm(metodo: string, dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como formulário para a conexão remota.
@@ -1891,8 +1891,8 @@ Através do método HTTP e mapa de dados atribuído submete os dados como formul
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1906,7 +1906,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitJSON(metodo: string, endereco: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -1915,9 +1915,9 @@ Através do método HTTP, endereço e mapa de dados atribuído submete os dados 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1927,7 +1927,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitJSON(metodo: string, endereco: string, dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">endereco</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -1936,9 +1936,9 @@ Através do método HTTP, endereço e mapa de dados atribuído submete os dados 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| endereco | string | Endereço que será submetido. |
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **endereco** | _string_ | Endereço que será submetido. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1948,7 +1948,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitJSON(metodo: string, dados: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -1957,8 +1957,8 @@ Através do método HTTP e mapa de dados atribuído submete os dados como JSON p
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| dados | _java.util.Map_ | Mapa de dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **dados** | _java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1968,7 +1968,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### _remote.submitJSON(metodo: string, dados: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -1977,8 +1977,8 @@ Através do método HTTP e mapa de dados atribuído submete os dados como JSON p
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
-| dados | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
+| **metodo** | _string_ | Código do método HTTP. |
+| **dados** | _[Values](../../objects/Values)_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 

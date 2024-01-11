@@ -12,7 +12,7 @@ Application data type converter.
 
 ---
 
-#### _convert.arrayToList(array: _java.lang.Object_) : _java.util.List_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">arrayToList</span>(<span style="color: #FF8000">array</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Description
 
 Converts an array of primitive types to a list (collection).
@@ -21,7 +21,7 @@ Converts an array of primitive types to a list (collection).
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| array | _java.lang.Object_ | Array that will be converted into a list (collection). |
+| **array** | _java.lang.Object_ | Array that will be converted into a list (collection). |
 
 ##### Return
 
@@ -35,7 +35,7 @@ New list with all array elements.
 
 ---
 
-#### _convert.fromBase64(content: _byte[]_) : string
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromBase64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts Base64 content to a decoded string.
@@ -44,17 +44,17 @@ Converts Base64 content to a decoded string.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be converted. |
+| **content** | _byte[]_ | Content to be converted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the decoded string that was in Base64.
 
 ---
 
-#### _convert.fromBase64(content: string) : string
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromBase64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts Base64 content to a decoded string.
@@ -63,11 +63,11 @@ Converts Base64 content to a decoded string.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be converted. |
+| **content** | _string_ | Content to be converted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the decoded string that was in Base64.
 
@@ -77,7 +77,7 @@ Returns the decoded string that was in Base64.
 
 ---
 
-#### _convert.fromBase64AsBytes(content: _byte[]_) : _byte[]_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromBase64AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Converts the Base64 content to the original decoded byte array.
@@ -86,7 +86,7 @@ Converts the Base64 content to the original decoded byte array.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be converted. |
+| **content** | _byte[]_ | Content to be converted. |
 
 ##### Return
 
@@ -96,7 +96,7 @@ Returns decoded bytes that were in Base64.
 
 ---
 
-#### _convert.fromBase64AsBytes(content: string) : _byte[]_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromBase64AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Converts the Base64 content to the original decoded byte array.
@@ -105,7 +105,7 @@ Converts the Base64 content to the original decoded byte array.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be converted. |
+| **content** | _string_ | Content to be converted. |
 
 ##### Return
 
@@ -119,7 +119,7 @@ Returns decoded bytes that were in Base64.
 
 ---
 
-#### _convert.fromHTML(content: string) : string
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Transforms the encoding of special HTML characters to plain text.
@@ -135,11 +135,11 @@ _out.print(_convert.fromHTML("&euro;s A&ccedil;&atilde;o"))
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be converted. |
+| **content** | _string_ | Content to be converted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Text with encoding of special characters in HTML transformed to normal text.
 
@@ -149,7 +149,7 @@ Text with encoding of special characters in HTML transformed to normal text.
 
 ---
 
-#### _convert.fromJSON(content: string) : string
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromJSON</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Transforms the encoding of special characters from JSON to normal text.
@@ -165,11 +165,11 @@ _out.print(_convert.toJSON("\u20ACs A\u00E7\u00E3o"))
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be converted. |
+| **content** | _string_ | Content to be converted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Text with encoding of special characters in JSON transformed to normal text.
 
@@ -179,7 +179,7 @@ Text with encoding of special characters in JSON transformed to normal text.
 
 ---
 
-#### _convert.toBase64(content: _byte[]_) : string
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toBase64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts the content to a Base64 encoded string.
@@ -188,17 +188,17 @@ Converts the content to a Base64 encoded string.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be converted. |
+| **content** | _byte[]_ | Content to be converted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the encoded string in Base64.
 
 ---
 
-#### _convert.toBase64(content: string) : string
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toBase64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts the content to a Base64 encoded string.
@@ -207,11 +207,11 @@ Converts the content to a Base64 encoded string.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be converted. |
+| **content** | _string_ | Content to be converted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the encoded string in Base64.
 
@@ -221,7 +221,7 @@ Returns the encoded string in Base64.
 
 ---
 
-#### _convert.toBase64AsBytes(content: _byte[]_) : _byte[]_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toBase64AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Converts the content to a Base64 encoded string.
@@ -230,7 +230,7 @@ Converts the content to a Base64 encoded string.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be converted. |
+| **content** | _byte[]_ | Content to be converted. |
 
 ##### Return
 
@@ -240,7 +240,7 @@ Returns the encoded string in Base64.
 
 ---
 
-#### _convert.toBase64AsBytes(content: string) : _byte[]_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toBase64AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Convert the content into Base64 encoding.
@@ -249,7 +249,7 @@ Convert the content into Base64 encoding.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be converted. |
+| **content** | _string_ | Content to be converted. |
 
 ##### Return
 
@@ -263,7 +263,7 @@ Returns Base64 encoded bytes.
 
 ---
 
-#### _convert.toByte(value: _int_) : _byte_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toByte</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Description
 
 Converts the received value to **byte**.
@@ -278,7 +278,7 @@ _convert.toByte(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _int_ | Value to be converted. |
+| **value** | _int_ | Value to be converted. |
 
 ##### Return
 
@@ -288,7 +288,7 @@ Returns the value received in **byte**.
 
 ---
 
-#### _convert.toByte(value: _long_) : _byte_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toByte</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Description
 
 Converts the received value to **byte**.
@@ -303,7 +303,7 @@ _convert.toByte(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _long_ | Value to be converted. |
+| **value** | _long_ | Value to be converted. |
 
 ##### Return
 
@@ -313,7 +313,7 @@ Returns the value received in **byte**.
 
 ---
 
-#### _convert.toByte(value: _short_) : _byte_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toByte</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Description
 
 Converts the received value to **byte**.
@@ -328,7 +328,7 @@ _convert.toByte(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _short_ | Value to be converted. |
+| **value** | _short_ | Value to be converted. |
 
 ##### Return
 
@@ -342,7 +342,7 @@ Returns the value received in **byte**.
 
 ---
 
-#### _convert.toDouble(value: _byte_) : _double_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toDouble</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Description
 
 Converts the received value to **double**.
@@ -357,7 +357,7 @@ _convert.toDouble(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _byte_ | Value to be converted. |
+| **value** | _byte_ | Value to be converted. |
 
 ##### Return
 
@@ -367,7 +367,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### _convert.toDouble(value: _float_) : _double_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toDouble</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Description
 
 Converts the received value to **double**.
@@ -382,7 +382,7 @@ _convert.toDouble(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _float_ | Value to be converted. |
+| **value** | _float_ | Value to be converted. |
 
 ##### Return
 
@@ -392,7 +392,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### _convert.toDouble(value: _int_) : _double_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toDouble</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Description
 
 Converts the received value to **double**.
@@ -407,7 +407,7 @@ _convert.toDouble(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _int_ | Value to be converted. |
+| **value** | _int_ | Value to be converted. |
 
 ##### Return
 
@@ -417,7 +417,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### _convert.toDouble(value: _long_) : _double_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toDouble</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Description
 
 Converts the received value to **double**.
@@ -432,7 +432,7 @@ _convert.toDouble(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _long_ | Value to be converted. |
+| **value** | _long_ | Value to be converted. |
 
 ##### Return
 
@@ -442,7 +442,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### _convert.toDouble(value: _short_) : _double_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toDouble</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Description
 
 Converts the received value to **double**.
@@ -457,7 +457,7 @@ _convert.toDouble(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _short_ | Value to be converted. |
+| **value** | _short_ | Value to be converted. |
 
 ##### Return
 
@@ -471,7 +471,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### _convert.toError(object: _java.lang.Object_) : _java.lang.Error_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toError</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Error</span>
 ##### Description
 
 Converts the received object to an Error object.
@@ -491,7 +491,7 @@ if (_error.isError(backAsError)) {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _java.lang.Object_ | Object to be converted. |
+| **object** | _java.lang.Object_ | Object to be converted. |
 
 ##### Return
 
@@ -505,7 +505,7 @@ Returns the object converted as Error.
 
 ---
 
-#### _convert.toException(object: _java.lang.Object_) : _java.lang.Exception_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toException</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Exception</span>
 ##### Description
 
 Converts the received object to an Exception object.
@@ -525,7 +525,7 @@ if (_error.isException(backAsException)) {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _java.lang.Object_ | Object to be converted. |
+| **object** | _java.lang.Object_ | Object to be converted. |
 
 ##### Return
 
@@ -539,7 +539,7 @@ Returns the object converted as Exception.
 
 ---
 
-#### _convert.toFile(fileName: string, contentType: string, bytes: _byte[]_) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFile</span>(<span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Description
 
 Starts a file object in memory with the contents of the received bytes.
@@ -548,9 +548,9 @@ Starts a file object in memory with the contents of the received bytes.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| fileName | string | Name of the file. |
-| contentType | string | Type of content. |
-| bytes | _byte[]_ | Bytes that represent the file content. |
+| **fileName** | _string_ | Name of the file. |
+| **contentType** | _string_ | Type of content. |
+| **bytes** | _byte[]_ | Bytes that represent the file content. |
 
 ##### Return
 
@@ -564,7 +564,7 @@ Object of the started file that allows the manipulation of bytes as a file.
 
 ---
 
-#### _convert.toFloat(value: _byte_) : _float_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFloat</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Description
 
 Converts the received value to **float**.
@@ -579,7 +579,7 @@ _convert.toFloat(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _byte_ | Value to be converted. |
+| **value** | _byte_ | Value to be converted. |
 
 ##### Return
 
@@ -589,7 +589,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toFloat(value: _double_) : _float_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFloat</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Description
 
 Converts the received value to **float**.
@@ -604,7 +604,7 @@ _convert.toFloat(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _double_ | Value to be converted. |
+| **value** | _double_ | Value to be converted. |
 
 ##### Return
 
@@ -614,7 +614,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toFloat(value: _int_) : _float_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFloat</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Description
 
 Converts the received value to **float**.
@@ -629,7 +629,7 @@ _convert.toFloat(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _int_ | Value to be converted. |
+| **value** | _int_ | Value to be converted. |
 
 ##### Return
 
@@ -639,7 +639,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toFloat(value: _long_) : _float_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFloat</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Description
 
 Converts the received value to **float**.
@@ -654,7 +654,7 @@ _convert.toFloat(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _long_ | Value to be converted. |
+| **value** | _long_ | Value to be converted. |
 
 ##### Return
 
@@ -664,7 +664,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toFloat(value: _short_) : _float_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFloat</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Description
 
 Converts the received value to **float**.
@@ -679,7 +679,7 @@ _convert.toFloat(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _short_ | Value to be converted. |
+| **value** | _short_ | Value to be converted. |
 
 ##### Return
 
@@ -693,7 +693,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toHEX(bytes: _byte[]_) : string
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toHEX</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Convert bytes to **hexadecimal** with uppercase letters.
@@ -702,11 +702,11 @@ Convert bytes to **hexadecimal** with uppercase letters.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _byte[]_ | Bytes to be converted. |
+| **bytes** | _byte[]_ | Bytes to be converted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Return bytes received in **hexadecimal** in capital letters.
 
@@ -716,7 +716,7 @@ Return bytes received in **hexadecimal** in capital letters.
 
 ---
 
-#### _convert.toHTML(content: string) : string
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts special characters in the text to ensure that they are valid in HTML.
@@ -732,11 +732,11 @@ _out.print(_convert.toHTML("€s Ação"))
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be converted. |
+| **content** | _string_ | Content to be converted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Text formatted with encoding of special characters in HTML.
 
@@ -746,7 +746,7 @@ Text formatted with encoding of special characters in HTML.
 
 ---
 
-#### _convert.toHex(bytes: _byte[]_) : string
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toHex</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Convert bytes to **hexadecimal** with lowercase letters.
@@ -755,11 +755,11 @@ Convert bytes to **hexadecimal** with lowercase letters.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _byte[]_ | Bytes to be converted. |
+| **bytes** | _byte[]_ | Bytes to be converted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Return bytes received in **hexadecimal** in lowercase.
 
@@ -769,7 +769,7 @@ Return bytes received in **hexadecimal** in lowercase.
 
 ---
 
-#### _convert.toInt(value: _byte_) : _int_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toInt</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Converts the received value to **int**.
@@ -784,7 +784,7 @@ _convert.toInt(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _byte_ | Value to be converted. |
+| **value** | _byte_ | Value to be converted. |
 
 ##### Return
 
@@ -794,7 +794,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### _convert.toInt(value: _double_) : _int_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toInt</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Converts the received value to **int**.
@@ -809,7 +809,7 @@ _convert.toInt(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _double_ | Value to be converted. |
+| **value** | _double_ | Value to be converted. |
 
 ##### Return
 
@@ -819,7 +819,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### _convert.toInt(value: _float_) : _int_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toInt</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Converts the received value to **int**.
@@ -834,7 +834,7 @@ _convert.toInt(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _float_ | Value to be converted. |
+| **value** | _float_ | Value to be converted. |
 
 ##### Return
 
@@ -844,7 +844,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### _convert.toInt(value: _long_) : _int_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toInt</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Converts the received value to **int**.
@@ -859,7 +859,7 @@ _convert.toInt(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _long_ | Value to be converted. |
+| **value** | _long_ | Value to be converted. |
 
 ##### Return
 
@@ -869,7 +869,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### _convert.toInt(value: _short_) : _int_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toInt</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Converts the received value to **int**.
@@ -884,7 +884,7 @@ _convert.toInt(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _short_ | Value to be converted. |
+| **value** | _short_ | Value to be converted. |
 
 ##### Return
 
@@ -898,7 +898,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### _convert.toJSON(content: string) : string
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Converts special characters in the text to ensure that they are valid in JSON.
@@ -914,11 +914,11 @@ _out.print(_convert.toJSON("€s Ação"))
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be converted. |
+| **content** | _string_ | Content to be converted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Text formatted with encoding of special characters in JSON.
 
@@ -928,7 +928,7 @@ Text formatted with encoding of special characters in JSON.
 
 ---
 
-#### _convert.toLong(value: _byte_) : _long_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toLong</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Description
 
 Converts the received value to **long**.
@@ -943,7 +943,7 @@ _convert.toLong(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _byte_ | Value to be converted. |
+| **value** | _byte_ | Value to be converted. |
 
 ##### Return
 
@@ -953,7 +953,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### _convert.toLong(value: _double_) : _long_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toLong</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Description
 
 Converts the received value to **long**.
@@ -968,7 +968,7 @@ _convert.toLong(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _double_ | Value to be converted. |
+| **value** | _double_ | Value to be converted. |
 
 ##### Return
 
@@ -978,7 +978,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### _convert.toLong(value: _float_) : _long_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toLong</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Description
 
 Converts the received value to **long**.
@@ -993,7 +993,7 @@ _convert.toLong(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _float_ | Value to be converted. |
+| **value** | _float_ | Value to be converted. |
 
 ##### Return
 
@@ -1003,7 +1003,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### _convert.toLong(value: _int_) : _long_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toLong</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Description
 
 Converts the received value to **long**.
@@ -1018,7 +1018,7 @@ _convert.toLong(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _int_ | Value to be converted. |
+| **value** | _int_ | Value to be converted. |
 
 ##### Return
 
@@ -1028,7 +1028,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### _convert.toLong(value: _short_) : _long_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toLong</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Description
 
 Converts the received value to **long**.
@@ -1043,7 +1043,7 @@ _convert.toLong(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _short_ | Value to be converted. |
+| **value** | _short_ | Value to be converted. |
 
 ##### Return
 
@@ -1057,7 +1057,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### _convert.toObject(object: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toObject</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Description
 
 Converts the received object to a generic object type.
@@ -1073,7 +1073,7 @@ const genericObject = _convert.toObject("Text...")
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _java.lang.Object_ | Object to be converted. |
+| **object** | _java.lang.Object_ | Object to be converted. |
 
 ##### Return
 
@@ -1087,7 +1087,7 @@ Returns as type of generic object.
 
 ---
 
-#### _convert.toShort(value: _byte_) : _short_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toShort</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Description
 
 Converts the received value to **short**.
@@ -1102,7 +1102,7 @@ _convert.toShort(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _byte_ | Value to be converted. |
+| **value** | _byte_ | Value to be converted. |
 
 ##### Return
 
@@ -1112,7 +1112,7 @@ Returns the value received in **short**.
 
 ---
 
-#### _convert.toShort(value: _int_) : _short_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toShort</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Description
 
 Converts the received value to **short**.
@@ -1127,7 +1127,7 @@ _convert.toShort(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _int_ | Value to be converted. |
+| **value** | _int_ | Value to be converted. |
 
 ##### Return
 
@@ -1137,7 +1137,7 @@ Returns the value received in **short**.
 
 ---
 
-#### _convert.toShort(value: _long_) : _short_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toShort</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Description
 
 Converts the received value to **short**.
@@ -1152,7 +1152,7 @@ _convert.toShort(3456)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | _long_ | Value to be converted. |
+| **value** | _long_ | Value to be converted. |
 
 ##### Return
 
@@ -1166,7 +1166,7 @@ Returns the value received in **short**.
 
 ---
 
-#### _convert.toThrowable(object: _java.lang.Object_) : _java.lang.Throwable_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toThrowable</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
 ##### Description
 
 Converts the received object into a Throwable type error.
@@ -1183,7 +1183,7 @@ _error.rise(asThrowable)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| object | _java.lang.Object_ | Object to be converted. |
+| **object** | _java.lang.Object_ | Object to be converted. |
 
 ##### Return
 
@@ -1197,7 +1197,7 @@ Returns the Throwable type error.
 
 ---
 
-#### _convert.toUUID(value: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toUUID</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Description
 
 Inicia um objeto de UUID com o conteúdo recebido.
@@ -1206,7 +1206,7 @@ Inicia um objeto de UUID com o conteúdo recebido.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| value | string | String with content in the UUID format. |
+| **value** | _string_ | String with content in the UUID format. |
 
 ##### Return
 

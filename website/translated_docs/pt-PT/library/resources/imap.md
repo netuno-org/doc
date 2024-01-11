@@ -12,7 +12,7 @@ Recurso de consulta da caixa de e-mails através do IMAP.
 
 ---
 
-#### _imap.close() : _void_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -24,7 +24,7 @@ Recurso de consulta da caixa de e-mails através do IMAP.
 
 ---
 
-#### _imap.config() : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
@@ -37,7 +37,7 @@ Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### _imap.config(config: _[Values](../../objects/Values)_) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
@@ -46,7 +46,7 @@ Inicia uma nova configuração própria.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[Values](../../objects/Values)_ | Estrutura de dados da definição da configuração. |
+| **config** | _[Values](../../objects/Values)_ | Estrutura de dados da definição da configuração. |
 
 ##### Retorno
 
@@ -56,7 +56,7 @@ Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### _imap.config(config: _[IMAPConfig](../../objects/IMAPConfig)_) : _[IMAP](../../resources/IMAP)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -65,7 +65,7 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[IMAPConfig](../../objects/IMAPConfig)_ | Definição da nova configuração. |
+| **config** | _[IMAPConfig](../../objects/IMAPConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 
@@ -79,7 +79,7 @@ Objeto IMAP atual.
 
 ---
 
-#### _imap.connect() : _[IMAP](../../resources/IMAP)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">connect</span>() : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
 ##### Retorno
 
 ( _[IMAP](../../resources/IMAP)_ )
@@ -91,7 +91,7 @@ Objeto IMAP atual.
 
 ---
 
-#### _imap.deletedSize() : _int_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">deletedSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -103,7 +103,7 @@ Objeto IMAP atual.
 
 ---
 
-#### _imap.enabled() : _boolean_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">enabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -111,7 +111,7 @@ Objeto IMAP atual.
 
 ---
 
-#### _imap.enabled(ativo: _boolean_) : _[IMAP](../../resources/IMAP)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -120,7 +120,7 @@ Define se está habilitado.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ativo | _boolean_ | Se fica ativo ou inactivo. |
+| **ativo** | _boolean_ | Se fica ativo ou inactivo. |
 
 ##### Retorno
 
@@ -134,7 +134,7 @@ Objeto IMAP atual.
 
 ---
 
-#### _imap.getClient() : _org.netuno.psamata.mail.IMAPClient_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">getClient</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.mail.IMAPClient</span>
 ##### Retorno
 
 ( _org.netuno.psamata.mail.IMAPClient_ )
@@ -146,7 +146,7 @@ Objeto IMAP atual.
 
 ---
 
-#### _imap.getConfig() : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Descrição
 
 Obtém a configuração que está a ser utilizada.
@@ -163,12 +163,12 @@ Objeto da configuração ativa.
 
 ---
 
-#### _imap.getMail(position: _int_) : _org.netuno.psamata.mail.Mail_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">getMail</span>(<span style="color: #FF8000">position</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.mail.Mail</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| position | _int_ |   |
+| **position** | _int_ |   |
 
 ##### Retorno
 
@@ -181,7 +181,7 @@ Objeto da configuração ativa.
 
 ---
 
-#### _imap.getMails() : _java.util.List_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">getMails</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -189,13 +189,13 @@ Objeto da configuração ativa.
 
 ---
 
-#### _imap.getMails(start: _int_, end: _int_) : _java.util.List_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">getMails</span>(<span style="color: #FF8000">start</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">end</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| start | _int_ |   |
-| end | _int_ |   |
+| **start** | _int_ |   |
+| **end** | _int_ |   |
 
 ##### Retorno
 
@@ -208,7 +208,7 @@ Objeto da configuração ativa.
 
 ---
 
-#### _imap.init() : _[IMAP](../../resources/IMAP)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
 ##### Descrição
 
 Inicia uma nova instância do IMAP utilizando a configuração do IMAP da chave `default`.
@@ -221,7 +221,7 @@ A nova instância do recurso IMAP com base na configuração do IMAP `default`.
 
 ---
 
-#### _imap.init(configKey: string) : _[IMAP](../../resources/IMAP)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configKey</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
 ##### Descrição
 
 Inicia uma nova instância do IMAP a partir de uma configuração específica.
@@ -230,7 +230,7 @@ Inicia uma nova instância do IMAP a partir de uma configuração específica.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| configKey | string | Chave da configuração IMAP que será utilizada. |
+| **configKey** | _string_ | Chave da configuração IMAP que será utilizada. |
 
 ##### Retorno
 
@@ -240,7 +240,7 @@ A nova instância do recurso IMAP com base na configuração do IMAP especificad
 
 ---
 
-#### _imap.init(config: _[IMAPConfig](../../objects/IMAPConfig)_) : _[IMAP](../../resources/IMAP)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
 ##### Descrição
 
 Inicia uma nova instância do IMAP a partir de uma configuração que é definida em um objeto de configuração própria.
@@ -249,7 +249,7 @@ Inicia uma nova instância do IMAP a partir de uma configuração que é definid
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[IMAPConfig](../../objects/IMAPConfig)_ | Configuração que será utilizada. |
+| **config** | _[IMAPConfig](../../objects/IMAPConfig)_ | Configuração que será utilizada. |
 
 ##### Retorno
 
@@ -263,7 +263,7 @@ A nova instância do recurso IMAP com base na configuração definida.
 
 ---
 
-#### _imap.isEnabled() : _boolean_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">isEnabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se está habilitado.
@@ -280,12 +280,12 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _imap.mail(position: _int_) : _org.netuno.psamata.mail.Mail_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">mail</span>(<span style="color: #FF8000">position</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.mail.Mail</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| position | _int_ |   |
+| **position** | _int_ |   |
 
 ##### Retorno
 
@@ -298,7 +298,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _imap.mails() : _java.util.List_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">mails</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -306,13 +306,13 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _imap.mails(start: _int_, end: _int_) : _java.util.List_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">mails</span>(<span style="color: #FF8000">start</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">end</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| start | _int_ |   |
-| end | _int_ |   |
+| **start** | _int_ |   |
+| **end** | _int_ |   |
 
 ##### Retorno
 
@@ -325,7 +325,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _imap.newSize() : _int_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">newSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -337,12 +337,12 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _imap.openFolder(name: string) : _[IMAP](../../resources/IMAP)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">openFolder</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Retorno
 
@@ -351,13 +351,13 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _imap.openFolder(name: string, write: _boolean_) : _[IMAP](../../resources/IMAP)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">openFolder</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">write</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| name | string |   |
-| write | _boolean_ |   |
+| **name** | _string_ |   |
+| **write** | _boolean_ |   |
 
 ##### Retorno
 
@@ -370,7 +370,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _imap.setConfig(config: _[IMAPConfig](../../objects/IMAPConfig)_) : _[IMAP](../../resources/IMAP)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -379,7 +379,7 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[IMAPConfig](../../objects/IMAPConfig)_ | Definição da nova configuração. |
+| **config** | _[IMAPConfig](../../objects/IMAPConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 
@@ -393,7 +393,7 @@ Objeto IMAP atual.
 
 ---
 
-#### _imap.setEnabled(ativo: _boolean_) : _[IMAP](../../resources/IMAP)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -402,7 +402,7 @@ Define se está habilitado.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ativo | _boolean_ | Se fica ativo ou inactivo. |
+| **ativo** | _boolean_ | Se fica ativo ou inactivo. |
 
 ##### Retorno
 
@@ -416,7 +416,7 @@ Objeto IMAP atual.
 
 ---
 
-#### _imap.size() : _int_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">size</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -428,7 +428,7 @@ Objeto IMAP atual.
 
 ---
 
-#### _imap.unreadSize() : _int_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">unreadSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -440,12 +440,12 @@ Objeto IMAP atual.
 
 ---
 
-#### _imap.with(smtp: _[SMTP](../../resources/SMTP)_) : _[IMAP](../../resources/IMAP)_
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">with</span>(<span style="color: #FF8000">smtp</span>: <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| smtp | _[SMTP](../../resources/SMTP)_ |   |
+| **smtp** | _[SMTP](../../resources/SMTP)_ |   |
 
 ##### Retorno
 

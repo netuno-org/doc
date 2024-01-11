@@ -19,7 +19,7 @@ if (_auth.isJWT() && _auth.isAdmin()) {
 
 ---
 
-#### _auth.allProvidersConfig() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">allProvidersConfig</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets all the authentication providers configuration.
@@ -45,7 +45,7 @@ All authentication providers settings.
 
 ---
 
-#### _auth.check(password: string) : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">check</span>(<span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks if the password is valid for the authenticated user.
@@ -65,7 +65,7 @@ if (_auth.check(_req.getString('pass'))) {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| password | string | Password. |
+| **password** | _string_ | Password. |
 
 ##### Return
 
@@ -75,7 +75,7 @@ Returns the result of validating authentication data.
 
 ---
 
-#### _auth.check(username: string, password: string) : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">check</span>(<span style="color: #FF8000">username</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks if the authentication data, user and password, are valid.
@@ -95,8 +95,8 @@ if (_auth.check(_req.getString('user'), _req.getString('pass'))) {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| username | string | Username. |
-| password | string | Password. |
+| **username** | _string_ | Username. |
+| **password** | _string_ | Password. |
 
 ##### Return
 
@@ -110,7 +110,7 @@ Returns the result of the validating authentication data.
 
 ---
 
-#### _auth.crypt(username: string, password: string) : string
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">crypt</span>(<span style="color: #FF8000">username</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Generates a secure encrypted password for a given user.
@@ -127,12 +127,12 @@ _log.info('Secure Password: '+ _auth.crypt('my-user', 'my-pass'))
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| username | string | Username. |
-| password | string | Password. |
+| **username** | _string_ | Username. |
+| **password** | _string_ | Password. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns strong password encryption.
 
@@ -142,7 +142,7 @@ Returns strong password encryption.
 
 ---
 
-#### _auth.getAllProvidersConfig() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">getAllProvidersConfig</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -154,12 +154,12 @@ Returns strong password encryption.
 
 ---
 
-#### _auth.getProviderConfig(providerCode: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">getProviderConfig</span>(<span style="color: #FF8000">providerCode</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| providerCode | string |   |
+| **providerCode** | _string_ |   |
 
 ##### Return
 
@@ -172,7 +172,7 @@ Returns strong password encryption.
 
 ---
 
-#### _auth.isAdmin() : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isAdmin</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks if the user that is authenticated is **admin**_istrator_.
@@ -198,7 +198,7 @@ If the user that is authenticated is an **admin** (administrator) returns _true_
 
 ---
 
-#### _auth.isAuthenticated() : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isAuthenticated</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Indicates whether there is someone authenticated processing the request.
@@ -224,7 +224,7 @@ If someone is authenticated, it returns _true_.
 
 ---
 
-#### _auth.isDev() : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isDev</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks if the user authenticated is a **dev**_eloper_.
@@ -250,7 +250,7 @@ if the user authenticated is a **dev** (developer) returns _true_.
 
 ---
 
-#### _auth.isJWT() : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isJWT</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Indicates whether the user is authenticated with JSON Web Token.
@@ -276,12 +276,12 @@ If the user is authenticated with JSON Web Token returns _true_.
 
 ---
 
-#### _auth.isProviderEnabled(providerCode: string) : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isProviderEnabled</span>(<span style="color: #FF8000">providerCode</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| providerCode | string |   |
+| **providerCode** | _string_ |   |
 
 ##### Return
 
@@ -294,7 +294,7 @@ If the user is authenticated with JSON Web Token returns _true_.
 
 ---
 
-#### _auth.isSession() : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isSession</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Indicates whether the user is authenticated with session.
@@ -320,7 +320,7 @@ If the user is authenticated with JSON Web Token returns _true_.
 
 ---
 
-#### _auth.load() : _[Auth](../../resources/Auth)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/Auth)</span>
 ##### Description
 
 Processes authentication settings.
@@ -344,7 +344,7 @@ Returns the default Auth resource.
 
 ---
 
-#### _auth.logout() : _[Auth](../../resources/Auth)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">logout</span>() : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/Auth)</span>
 ##### Description
 
 Signs out the user authenticated.
@@ -369,7 +369,7 @@ Returns the default Auth resource.
 
 ---
 
-#### _auth.providerConfig(providerCode: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">providerConfig</span>(<span style="color: #FF8000">providerCode</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets one specific authentication provider configuration.
@@ -389,7 +389,7 @@ _log.info('LDAP Provider Configuration', _auth.providerConfig('ldap'))
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| providerCode | string | Name of the provider configuration key, which can be: |
+| **providerCode** | _string_ | Name of the provider configuration key, which can be: |
 |   |   | - google |
 |   |   | - github |
 |   |   | - discord |
@@ -407,7 +407,7 @@ The authentication provider configuration.
 
 ---
 
-#### _auth.providerEnabled(providerCode: string) : _boolean_
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">providerEnabled</span>(<span style="color: #FF8000">providerCode</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether the authentication provider is active.
@@ -427,7 +427,7 @@ _log.info('LDAP Provider Enabled', _auth.providerEnabled('ldap'))
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| providerCode | string | Name of the provider configuration key, which can be: |
+| **providerCode** | _string_ | Name of the provider configuration key, which can be: |
 |   |   | - google |
 |   |   | - github |
 |   |   | - discord |

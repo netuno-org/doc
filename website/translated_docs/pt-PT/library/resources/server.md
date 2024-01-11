@@ -12,7 +12,7 @@ Interage com o servidor e obtém parâmetros de configurações especificados no
 
 ---
 
-#### _server.getHost() : string
+#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">getHost</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o hostname de rede ou ip configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
@@ -28,7 +28,7 @@ _log.info(
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Hostname de rede ou IP do servidor do Netuno.
 
@@ -38,7 +38,7 @@ Hostname de rede ou IP do servidor do Netuno.
 
 ---
 
-#### _server.getName() : string
+#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o nome do servidor do Netuno, especificado no config.js na pasta raíz do Netuno.
@@ -54,7 +54,7 @@ _log.info(
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Nome do servidor do Netuno.
 
@@ -64,7 +64,7 @@ Nome do servidor do Netuno.
 
 ---
 
-#### _server.getPort() : _int_
+#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">getPort</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Obtém o porto de rede configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
@@ -90,7 +90,7 @@ Número do porto de rede do servidor do Netuno.
 
 ---
 
-#### _server.host() : string
+#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">host</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o hostname de rede ou ip configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
@@ -106,7 +106,7 @@ _log.info(
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Hostname de rede ou IP do servidor do Netuno.
 
@@ -116,7 +116,7 @@ Hostname de rede ou IP do servidor do Netuno.
 
 ---
 
-#### _server.name() : string
+#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o nome do servidor do Netuno, especificado no config.js na pasta raíz do Netuno.
@@ -132,7 +132,7 @@ _out.print(
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Nome do servidor do Netuno.
 
@@ -142,7 +142,7 @@ Nome do servidor do Netuno.
 
 ---
 
-#### _server.port() : _int_
+#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">port</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Obtém o porto de rede configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
@@ -168,7 +168,7 @@ Número do porto de rede do servidor do Netuno.
 
 ---
 
-#### _server.print(mensagem: string) : _void_
+#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem diretamente no terminal do servidor do Netuno.
@@ -177,7 +177,7 @@ Imprime uma mensagem diretamente no terminal do servidor do Netuno.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada no terminal do servidor. |
+| **mensagem** | _string_ | Mensagem que será apresentada no terminal do servidor. |
 
 ##### Retorno
 
@@ -190,7 +190,7 @@ Imprime uma mensagem diretamente no terminal do servidor do Netuno.
 
 ---
 
-#### _server.println(mensagem: string) : _void_
+#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma linha com uma mensagem diretamente no terminal do servidor do Netuno.
@@ -199,7 +199,7 @@ Imprime uma linha com uma mensagem diretamente no terminal do servidor do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada no terminal do servidor. |
+| **mensagem** | _string_ | Mensagem que será apresentada no terminal do servidor. |
 
 ##### Retorno
 
@@ -212,7 +212,7 @@ Imprime uma linha com uma mensagem diretamente no terminal do servidor do Netuno
 
 ---
 
-#### _server.shutdown() : _void_
+#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">shutdown</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Desliga o servidor do Netuno.
@@ -231,7 +231,7 @@ _server.shutdown()
 
 ---
 
-#### _server.shutdown(intervalo: _int_) : _void_
+#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">shutdown</span>(<span style="color: #FF8000">intervalo</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Desliga o servidor do Netuno depois de alguns tempo.
@@ -247,7 +247,7 @@ _server.shutdown(10000)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| intervalo | _int_ | Tempo de atraso para desligar o servidor. |
+| **intervalo** | _int_ | Tempo de atraso para desligar o servidor. |
 
 ##### Retorno
 

@@ -12,7 +12,7 @@ Algoritmos de encriptação de dados.
 
 ---
 
-#### _crypto.aes256Decrypt(key: string, content: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">aes256Decrypt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Decrypts AES256-encoded content.
@@ -21,12 +21,12 @@ Decrypts AES256-encoded content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Key used in encryption. |
-| content | string | Data content encrypted with AES256. |
+| **key** | _string_ | Key used in encryption. |
+| **content** | _string_ | Data content encrypted with AES256. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Decrypted original content.
 
@@ -36,7 +36,7 @@ Decrypted original content.
 
 ---
 
-#### _crypto.aes256Encrypt(key: string, content: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">aes256Encrypt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encrypts data with AES256.
@@ -45,12 +45,12 @@ Encrypts data with AES256.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Secret key for encryption. |
-| content | string | Content to be encrypted with AES256. |
+| **key** | _string_ | Secret key for encryption. |
+| **content** | _string_ | Content to be encrypted with AES256. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data encrypted with AES256.
 
@@ -60,7 +60,7 @@ Data encrypted with AES256.
 
 ---
 
-#### _crypto.bcryptCheck(plaintext: string, hashed: string) : _boolean_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">bcryptCheck</span>(<span style="color: #FF8000">plaintext</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hashed</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks if a String and a Salt Hash are the same.
@@ -75,8 +75,8 @@ _out.println(_crypto.bcryptCheck('text', _crypto.bcryptHash('text',_crypto.bcryp
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| plaintext | string | Text that will be verified. |
-| hashed | string | Encrypted content. |
+| **plaintext** | _string_ | Text that will be verified. |
+| **hashed** | _string_ | Encrypted content. |
 
 ##### Return
 
@@ -90,7 +90,7 @@ Verification result, returning true if string and hash are the same.
 
 ---
 
-#### _crypto.bcryptHash(password: string, salt: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">bcryptHash</span>(<span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">salt</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Hash the string and salt.
@@ -105,12 +105,12 @@ let hash = _crypto.bcryptHash('netuno',_crypto.bcryptSalt(10))
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| password | string | Password or string that will be encrypted. |
-| salt | string | Encrypted content with bcryptSalt. |
+| **password** | _string_ | Password or string that will be encrypted. |
+| **salt** | _string_ | Encrypted content with bcryptSalt. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Result of String encryption.
 
@@ -120,20 +120,20 @@ Result of String encryption.
 
 ---
 
-#### _crypto.bcryptSalt() : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">bcryptSalt</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with cryptHash.
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data of the content encrypted in cryptHash.
 
 ---
 
-#### _crypto.bcryptSalt(content: _int_) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">bcryptSalt</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with bcryptSalt.
@@ -142,17 +142,17 @@ Encodes data with bcryptSalt.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _int_ | Content to be encrypted. |
+| **content** | _int_ | Content to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data of the content encrypted in bcryptSalt.
 
 ---
 
-#### _crypto.bcryptSalt(content: _int_, secureRandom: _java.security.SecureRandom_) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">bcryptSalt</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">secureRandom</span>: <span style="font-weight: normal; font-style: italic;">java.security.SecureRandom</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with bcryptSalt.
@@ -161,12 +161,12 @@ Encodes data with bcryptSalt.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _int_ | Content to be encrypted. |
-| secureRandom | _java.security.SecureRandom_ | Random value generated with initSecure. |
+| **content** | _int_ | Content to be encrypted. |
+| **secureRandom** | _java.security.SecureRandom_ | Random value generated with initSecure. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data of the content encrypted in bcryptSalt.
 
@@ -176,7 +176,7 @@ Data of the content encrypted in bcryptSalt.
 
 ---
 
-#### _crypto.cryptHash(content: _byte[]_) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">cryptHash</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with cryptHash.
@@ -185,17 +185,17 @@ Encodes data with cryptHash.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| **content** | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data of the content encrypted cryptHash.
 
 ---
 
-#### _crypto.cryptHash(content: _byte[]_, salt: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">cryptHash</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">salt</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with cryptHash.
@@ -204,18 +204,18 @@ Encodes data with cryptHash.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
-| salt | string | Salt Hash to be used in encryption. |
+| **content** | _byte[]_ | Content to be encrypted. |
+| **salt** | _string_ | Salt Hash to be used in encryption. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data of the content encrypted cryptHash.
 
 ---
 
-#### _crypto.cryptHash(content: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">cryptHash</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with cryptHash.
@@ -224,17 +224,17 @@ Encodes data with cryptHash.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
+| **content** | _string_ | Content to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data of the content encrypted cryptHash.
 
 ---
 
-#### _crypto.cryptHash(content: string, salt: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">cryptHash</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">salt</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with cryptHash.
@@ -243,12 +243,12 @@ Encodes data with cryptHash.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
-| salt | string | Salt Hash to be used in encryption. |
+| **content** | _string_ | Content to be encrypted. |
+| **salt** | _string_ | Salt Hash to be used in encryption. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data of the content encrypted cryptHash.
 
@@ -258,7 +258,7 @@ Data of the content encrypted cryptHash.
 
 ---
 
-#### _crypto.desDecode(content: string, data: _byte[]_) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desDecode</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with Desdecode (Des).
@@ -267,18 +267,18 @@ Encodes data with Desdecode (Des).
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
-| data | _byte[]_ | Data to be encrypted. |
+| **content** | _string_ | Content to be encrypted. |
+| **data** | _byte[]_ | Data to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Binary data of the content encrypted in Desdecode (Des).
 
 ---
 
-#### _crypto.desDecode(content: string, data: _byte[]_, charset: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desDecode</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with Desdecode (Des).
@@ -287,13 +287,13 @@ Encodes data with Desdecode (Des).
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
-| data | _byte[]_ | Data to be encrypted. |
-| charset | string | Charset. |
+| **content** | _string_ | Content to be encrypted. |
+| **data** | _byte[]_ | Data to be encrypted. |
+| **charset** | _string_ | Charset. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Binary data of the content encrypted in Desdecode (Des).
 
@@ -303,7 +303,7 @@ Binary data of the content encrypted in Desdecode (Des).
 
 ---
 
-#### _crypto.desDecodeBase64(content: string, data: string, charset: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desDecodeBase64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with Desdecode (Des) e convertido em base 64.
@@ -312,13 +312,13 @@ Encodes data with Desdecode (Des) e convertido em base 64.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
-| data | string | Data to be encrypted. |
-| charset | string | Charset. |
+| **content** | _string_ | Content to be encrypted. |
+| **data** | _string_ | Data to be encrypted. |
+| **charset** | _string_ | Charset. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Binary data of the content encrypted in Desdecode (Des) and coverted in base 64.
 
@@ -328,7 +328,7 @@ Binary data of the content encrypted in Desdecode (Des) and coverted in base 64.
 
 ---
 
-#### _crypto.desEncode(key: string, content: string) : _byte[]_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desEncode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Encodes data with desEncode and returns binary encryption.
@@ -337,8 +337,8 @@ Encodes data with desEncode and returns binary encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Secret key for encryption. |
-| content | string | Content to be encrypted. |
+| **key** | _string_ | Secret key for encryption. |
+| **content** | _string_ | Content to be encrypted. |
 
 ##### Return
 
@@ -348,7 +348,7 @@ Binary data of the content encrypted in desEncode.
 
 ---
 
-#### _crypto.desEncode(key: string, content: string, charset: string) : _byte[]_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desEncode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Encodes data with desEncode and returns binary encryption.
@@ -357,9 +357,9 @@ Encodes data with desEncode and returns binary encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Secret key for encryption. |
-| content | string | Content to be encrypted. |
-| charset | string | Charset. |
+| **key** | _string_ | Secret key for encryption. |
+| **content** | _string_ | Content to be encrypted. |
+| **charset** | _string_ | Charset. |
 
 ##### Return
 
@@ -373,7 +373,7 @@ Binary data of the content encrypted in desEncode.
 
 ---
 
-#### _crypto.desEncodeBase64(key: string, content: string, charset: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desEncodeBase64</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with desEncode and returns string encryption.
@@ -382,13 +382,13 @@ Encodes data with desEncode and returns string encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Secret key for encryption. |
-| content | string | Content to be encrypted. |
-| charset | string | Charset. |
+| **key** | _string_ | Secret key for encryption. |
+| **content** | _string_ | Content to be encrypted. |
+| **charset** | _string_ | Charset. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 String data of the content encrypted in desEncode.
 
@@ -398,7 +398,7 @@ String data of the content encrypted in desEncode.
 
 ---
 
-#### _crypto.hmac256(key: _byte[]_, content: _byte[]_) : _byte[]_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 It encodes the data with HMAC256, which serves to guarantee integrity and authenticity.
@@ -407,8 +407,8 @@ It encodes the data with HMAC256, which serves to guarantee integrity and authen
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _byte[]_ | Secret key for encryption. |
-| content | _byte[]_ | Content to be encoded with HMAC256. |
+| **key** | _byte[]_ | Secret key for encryption. |
+| **content** | _byte[]_ | Content to be encoded with HMAC256. |
 
 ##### Return
 
@@ -418,7 +418,7 @@ Data encoded with HMAC256.
 
 ---
 
-#### _crypto.hmac256(key: string, content: string) : _byte[]_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 It encodes the data with HMAC256, which serves to guarantee integrity and authenticity.
@@ -427,8 +427,8 @@ It encodes the data with HMAC256, which serves to guarantee integrity and authen
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Secret key for encryption. |
-| content | string | Content to be encoded with HMAC256. |
+| **key** | _string_ | Secret key for encryption. |
+| **content** | _string_ | Content to be encoded with HMAC256. |
 
 ##### Return
 
@@ -442,7 +442,7 @@ Data encoded with HMAC256.
 
 ---
 
-#### _crypto.hmac256Base64(key: _byte[]_, content: _byte[]_) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256Base64</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with HMAC256 and converts to Base64, which serves to guarantee integrity and authenticity.
@@ -451,18 +451,18 @@ Encodes data with HMAC256 and converts to Base64, which serves to guarantee inte
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _byte[]_ | Secret key for encryption. |
-| content | _byte[]_ | Content to be encoded with HMAC256. |
+| **key** | _byte[]_ | Secret key for encryption. |
+| **content** | _byte[]_ | Content to be encoded with HMAC256. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data encoded with HMAC256 and in Base64 format.
 
 ---
 
-#### _crypto.hmac256Base64(key: string, content: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256Base64</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with HMAC256 and converts to Base64, which serves to guarantee integrity and authenticity.
@@ -471,12 +471,12 @@ Encodes data with HMAC256 and converts to Base64, which serves to guarantee inte
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Secret key for encryption. |
-| content | string | Content to be encoded with HMAC256. |
+| **key** | _string_ | Secret key for encryption. |
+| **content** | _string_ | Content to be encoded with HMAC256. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data encoded with HMAC256 and in Base64 format.
 
@@ -486,7 +486,7 @@ Data encoded with HMAC256 and in Base64 format.
 
 ---
 
-#### _crypto.hmac256Hex(key: _byte[]_, content: _byte[]_) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256Hex</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with HMAC256 and converts to hexadecimal, which serves to guarantee integrity and authenticity.
@@ -495,18 +495,18 @@ Encodes data with HMAC256 and converts to hexadecimal, which serves to guarantee
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | _byte[]_ | Secret key for encryption. |
-| content | _byte[]_ | Content to be encoded with HMAC256. |
+| **key** | _byte[]_ | Secret key for encryption. |
+| **content** | _byte[]_ | Content to be encoded with HMAC256. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data encoded with HMAC256 and in hexadecimal format.
 
 ---
 
-#### _crypto.hmac256Hex(key: string, content: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256Hex</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with HMAC256 and converts to hexadecimal, which serves to guarantee integrity and authenticity.
@@ -515,12 +515,12 @@ Encodes data with HMAC256 and converts to hexadecimal, which serves to guarantee
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Secret key for encryption. |
-| content | string | Content to be encoded with HMAC256. |
+| **key** | _string_ | Secret key for encryption. |
+| **content** | _string_ | Content to be encoded with HMAC256. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data encoded with HMAC256 and in hexadecimal format.
 
@@ -530,7 +530,7 @@ Data encoded with HMAC256 and in hexadecimal format.
 
 ---
 
-#### _crypto.md5(content: string) : _byte[]_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">md5</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Encodes data with MD5 and returns 128-bit encryption.
@@ -539,7 +539,7 @@ Encodes data with MD5 and returns 128-bit encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
+| **content** | _string_ | Content to be encrypted. |
 
 ##### Return
 
@@ -553,7 +553,7 @@ Data of the content encrypted in MD5.
 
 ---
 
-#### _crypto.md5Base64(content: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">md5Base64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with cryptHash.
@@ -562,11 +562,11 @@ Encodes data with cryptHash.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
+| **content** | _string_ | Content to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data of the content encrypted in cryptHash.
 
@@ -576,7 +576,7 @@ Data of the content encrypted in cryptHash.
 
 ---
 
-#### _crypto.md5Hex(content: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">md5Hex</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with MD5 and converts the encryption to hexadecimal
@@ -585,11 +585,11 @@ Encodes data with MD5 and converts the encryption to hexadecimal
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
+| **content** | _string_ | Content to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Data of the content encrypted in MD5 and converted in hexadecimal format.
 
@@ -599,7 +599,7 @@ Data of the content encrypted in MD5 and converted in hexadecimal format.
 
 ---
 
-#### _crypto.sha256(content: _byte[]_) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha256</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with SHA256 (SHA-2) and converts binary encryption to hexadecimal.
@@ -608,17 +608,17 @@ Encodes data with SHA256 (SHA-2) and converts binary encryption to hexadecimal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| **content** | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Content encrypted in SHA256 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha256(content: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha256</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with SHA256 (SHA-2) and converts binary encryption to hexadecimal.
@@ -627,11 +627,11 @@ Encodes data with SHA256 (SHA-2) and converts binary encryption to hexadecimal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
+| **content** | _string_ | Content to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Content encrypted in SHA256 (SHA2) and converted to hexadecimal.
 
@@ -641,7 +641,7 @@ Content encrypted in SHA256 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha256AsBytes(content: _byte[]_) : _byte[]_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha256AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Encodes data with SHA256 (SHA-2) and returns binary encryption.
@@ -650,7 +650,7 @@ Encodes data with SHA256 (SHA-2) and returns binary encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| **content** | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
@@ -660,7 +660,7 @@ Binary data of the content encrypted in SHA256 (SHA-2).
 
 ---
 
-#### _crypto.sha256AsBytes(content: string) : _byte[]_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha256AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Encodes data with SHA256 (SHA-2) and returns binary encryption.
@@ -669,7 +669,7 @@ Encodes data with SHA256 (SHA-2) and returns binary encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
+| **content** | _string_ | Content to be encrypted. |
 
 ##### Return
 
@@ -683,7 +683,7 @@ Binary data of the content encrypted in SHA256 (SHA-2).
 
 ---
 
-#### _crypto.sha384(content: _byte[]_) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha384</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with SHA384 (SHA-2) and converts binary encryption to hexadecimal.
@@ -692,17 +692,17 @@ Encodes data with SHA384 (SHA-2) and converts binary encryption to hexadecimal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| **content** | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Content encrypted in SHA384 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha384(content: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha384</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with SHA384 (SHA-2) and converts binary encryption to hexadecimal.
@@ -711,11 +711,11 @@ Encodes data with SHA384 (SHA-2) and converts binary encryption to hexadecimal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
+| **content** | _string_ | Content to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Content encrypted in SHA384 (SHA2) and converted to hexadecimal.
 
@@ -725,7 +725,7 @@ Content encrypted in SHA384 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha384AsBytes(content: _byte[]_) : _byte[]_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha384AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Encodes data with SHA384 (SHA-2) and returns binary encryption.
@@ -734,7 +734,7 @@ Encodes data with SHA384 (SHA-2) and returns binary encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| **content** | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
@@ -744,7 +744,7 @@ Binary data of the content encrypted in SHA384 (SHA-2).
 
 ---
 
-#### _crypto.sha384AsBytes(content: string) : _byte[]_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha384AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Encodes data with SHA384 (SHA-2) and returns binary encryption.
@@ -753,7 +753,7 @@ Encodes data with SHA384 (SHA-2) and returns binary encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
+| **content** | _string_ | Content to be encrypted. |
 
 ##### Return
 
@@ -767,7 +767,7 @@ Binary data of the content encrypted in SHA384 (SHA-2).
 
 ---
 
-#### _crypto.sha512(content: _byte[]_) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha512</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with SHA512 (SHA-2) and converts binary encryption to hexadecimal.
@@ -776,17 +776,17 @@ Encodes data with SHA512 (SHA-2) and converts binary encryption to hexadecimal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| **content** | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Content encrypted in SHA512 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha512(content: string) : string
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha512</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes data with SHA512 (SHA-2) and converts binary encryption to hexadecimal.
@@ -795,11 +795,11 @@ Encodes data with SHA512 (SHA-2) and converts binary encryption to hexadecimal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
+| **content** | _string_ | Content to be encrypted. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Content encrypted in SHA512 (SHA2) and converted to hexadecimal.
 
@@ -809,7 +809,7 @@ Content encrypted in SHA512 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### _crypto.sha512AsBytes(content: _byte[]_) : _byte[]_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha512AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Encodes data with SHA512 (SHA-2) and returns binary encryption.
@@ -818,7 +818,7 @@ Encodes data with SHA512 (SHA-2) and returns binary encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _byte[]_ | Content to be encrypted. |
+| **content** | _byte[]_ | Content to be encrypted. |
 
 ##### Return
 
@@ -828,7 +828,7 @@ Binary data of the content encrypted in SHA512 (SHA-2).
 
 ---
 
-#### _crypto.sha512AsBytes(content: string) : _byte[]_
+#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha512AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Encodes data with SHA512 (SHA-512) and returns binary encryption.
@@ -837,7 +837,7 @@ Encodes data with SHA512 (SHA-512) and returns binary encryption.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string | Content to be encrypted. |
+| **content** | _string_ | Content to be encrypted. |
 
 ##### Return
 

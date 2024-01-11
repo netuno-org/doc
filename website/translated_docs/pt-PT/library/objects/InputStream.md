@@ -12,7 +12,7 @@ sidebar_label: InputStream
 
 ---
 
-#### available() : _int_
+#### <span style="color: #008000">available</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -24,7 +24,7 @@ sidebar_label: InputStream
 
 ---
 
-#### close() : _void_
+#### <span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -36,12 +36,12 @@ sidebar_label: InputStream
 
 ---
 
-#### mark(arg0: _int_) : _void_
+#### <span style="color: #008000">mark</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| **arg0** | _int_ |   |
 
 ##### Retorno
 
@@ -54,7 +54,7 @@ sidebar_label: InputStream
 
 ---
 
-#### markSupported() : _boolean_
+#### <span style="color: #008000">markSupported</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -66,7 +66,7 @@ sidebar_label: InputStream
 
 ---
 
-#### nullInputStream() : _java.io.InputStream_
+#### <span style="color: #008000">nullInputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
 ##### Retorno
 
 ( _java.io.InputStream_ )
@@ -78,7 +78,7 @@ sidebar_label: InputStream
 
 ---
 
-#### read() : _int_
+#### <span style="color: #008000">read</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -86,12 +86,12 @@ sidebar_label: InputStream
 
 ---
 
-#### read(arg0: _byte[]_) : _int_
+#### <span style="color: #008000">read</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
+| **arg0** | _byte[]_ |   |
 
 ##### Retorno
 
@@ -100,14 +100,14 @@ sidebar_label: InputStream
 
 ---
 
-#### read(arg0: _byte[]_, arg1: _int_, arg2: _int_) : _int_
+#### <span style="color: #008000">read</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arg2</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
-| arg1 | _int_ |   |
-| arg2 | _int_ |   |
+| **arg0** | _byte[]_ |   |
+| **arg1** | _int_ |   |
+| **arg2** | _int_ |   |
 
 ##### Retorno
 
@@ -120,53 +120,53 @@ sidebar_label: InputStream
 
 ---
 
-#### readAll() : string
+#### <span style="color: #008000">readAll</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### readAll(in: _java.io.InputStream_) : string
+#### <span style="color: #008000">readAll</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| in | _java.io.InputStream_ |   |
+| **in** | _java.io.InputStream_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### readAll(in: _java.io.InputStream_, charset: string) : string
+#### <span style="color: #008000">readAll</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| in | _java.io.InputStream_ |   |
-| charset | string |   |
+| **in** | _java.io.InputStream_ |   |
+| **charset** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### readAll(r: _java.io.Reader_) : string
+#### <span style="color: #008000">readAll</span>(<span style="color: #FF8000">r</span>: <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| r | _java.io.Reader_ |   |
+| **r** | _java.io.Reader_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -175,10 +175,10 @@ sidebar_label: InputStream
 
 ---
 
-#### readAllAndClose() : string
+#### <span style="color: #008000">readAllAndClose</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -187,7 +187,7 @@ sidebar_label: InputStream
 
 ---
 
-#### readAllBytes() : _byte[]_
+#### <span style="color: #008000">readAllBytes</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Retorno
 
 ( _byte[]_ )
@@ -195,12 +195,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readAllBytes(in: _java.io.InputStream_) : _byte[]_
+#### <span style="color: #008000">readAllBytes</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| in | _java.io.InputStream_ |   |
+| **in** | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -213,12 +213,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readAllBytesFromFile(file: _java.io.File_) : _byte[]_
+#### <span style="color: #008000">readAllBytesFromFile</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| file | _java.io.File_ |   |
+| **file** | _java.io.File_ |   |
 
 ##### Retorno
 
@@ -227,12 +227,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readAllBytesFromFile(file: string) : _byte[]_
+#### <span style="color: #008000">readAllBytesFromFile</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| file | string |   |
+| **file** | _string_ |   |
 
 ##### Retorno
 
@@ -241,12 +241,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readAllBytesFromFile(file: _java.nio.file.Path_) : _byte[]_
+#### <span style="color: #008000">readAllBytesFromFile</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">java.nio.file.Path</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| file | _java.nio.file.Path_ |   |
+| **file** | _java.nio.file.Path_ |   |
 
 ##### Retorno
 
@@ -259,89 +259,89 @@ sidebar_label: InputStream
 
 ---
 
-#### readFromFile(path: _java.io.File_) : string
+#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | _java.io.File_ |   |
+| **path** | _java.io.File_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### readFromFile(path: _java.io.File_, charset: string) : string
+#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | _java.io.File_ |   |
-| charset | string |   |
+| **path** | _java.io.File_ |   |
+| **charset** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### readFromFile(path: string) : string
+#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
+| **path** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### readFromFile(path: string, charset: string) : string
+#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
-| charset | string |   |
+| **path** | _string_ |   |
+| **charset** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### readFromFile(path: _java.nio.file.Path_) : string
+#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.nio.file.Path</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | _java.nio.file.Path_ |   |
+| **path** | _java.nio.file.Path_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### readFromFile(path: _java.nio.file.Path_, charset: string) : string
+#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.nio.file.Path</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | _java.nio.file.Path_ |   |
-| charset | string |   |
+| **path** | _java.nio.file.Path_ |   |
+| **charset** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -350,24 +350,24 @@ sidebar_label: InputStream
 
 ---
 
-#### readLine() : string
+#### <span style="color: #008000">readLine</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### readLine(in: _java.io.InputStream_) : string
+#### <span style="color: #008000">readLine</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| in | _java.io.InputStream_ |   |
+| **in** | _java.io.InputStream_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -376,14 +376,14 @@ sidebar_label: InputStream
 
 ---
 
-#### readNBytes(arg0: _byte[]_, arg1: _int_, arg2: _int_) : _int_
+#### <span style="color: #008000">readNBytes</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arg2</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _byte[]_ |   |
-| arg1 | _int_ |   |
-| arg2 | _int_ |   |
+| **arg0** | _byte[]_ |   |
+| **arg1** | _int_ |   |
+| **arg2** | _int_ |   |
 
 ##### Retorno
 
@@ -392,12 +392,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readNBytes(arg0: _int_) : _byte[]_
+#### <span style="color: #008000">readNBytes</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| **arg0** | _int_ |   |
 
 ##### Retorno
 
@@ -410,24 +410,24 @@ sidebar_label: InputStream
 
 ---
 
-#### readString() : string
+#### <span style="color: #008000">readString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### readString(charset: _java.nio.charset.Charset_) : string
+#### <span style="color: #008000">readString</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">java.nio.charset.Charset</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| charset | _java.nio.charset.Charset_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -436,24 +436,24 @@ sidebar_label: InputStream
 
 ---
 
-#### readStringAndClose() : string
+#### <span style="color: #008000">readStringAndClose</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### readStringAndClose(charset: _java.nio.charset.Charset_) : string
+#### <span style="color: #008000">readStringAndClose</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">java.nio.charset.Charset</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| charset | _java.nio.charset.Charset_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -462,7 +462,7 @@ sidebar_label: InputStream
 
 ---
 
-#### reset() : _void_
+#### <span style="color: #008000">reset</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -474,12 +474,12 @@ sidebar_label: InputStream
 
 ---
 
-#### skip(arg0: _long_) : _long_
+#### <span style="color: #008000">skip</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| **arg0** | _long_ |   |
 
 ##### Retorno
 
@@ -492,12 +492,12 @@ sidebar_label: InputStream
 
 ---
 
-#### skipNBytes(arg0: _long_) : _void_
+#### <span style="color: #008000">skipNBytes</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| **arg0** | _long_ |   |
 
 ##### Retorno
 
@@ -510,12 +510,12 @@ sidebar_label: InputStream
 
 ---
 
-#### transferTo(arg0: _java.io.OutputStream_) : _long_
+#### <span style="color: #008000">transferTo</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.OutputStream_ |   |
+| **arg0** | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -528,12 +528,12 @@ sidebar_label: InputStream
 
 ---
 
-#### writeTo(out: _[OutputStream](../../objects/OutputStream)_) : _[InputStream](../../objects/InputStream)_
+#### <span style="color: #008000">writeTo</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| out | _[OutputStream](../../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -546,12 +546,12 @@ sidebar_label: InputStream
 
 ---
 
-#### writeToAndClose(out: _[OutputStream](../../objects/OutputStream)_) : _[InputStream](../../objects/InputStream)_
+#### <span style="color: #008000">writeToAndClose</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| out | _[OutputStream](../../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 

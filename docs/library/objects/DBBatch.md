@@ -12,12 +12,12 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### add(sql: string) : _[DBBatch](../../objects/DBBatch)_
+#### <span style="color: #008000">add</span>(<span style="color: #FF8000">sql</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DBBatch](../../objects/DBBatch)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| sql | string |   |
+| **sql** | _string_ |   |
 
 ##### Return
 
@@ -30,7 +30,7 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### clear() : _void_
+#### <span style="color: #008000">clear</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Return
 
 ( _void_ )
@@ -42,7 +42,7 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### close() : _void_
+#### <span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Return
 
 ( _void_ )
@@ -54,7 +54,7 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### execute() : _[I_
+#### <span style="color: #008000">execute</span>() : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Return
 
 ( _[I_ )
@@ -66,12 +66,12 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### put(params: _[Ljava.lang.Object;[]_) : _[DBBatch](../../objects/DBBatch)_
+#### <span style="color: #008000">put</span>(<span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[DBBatch](../../objects/DBBatch)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| params | _[Ljava.lang.Object;[]_ |   |
+| **params** | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 

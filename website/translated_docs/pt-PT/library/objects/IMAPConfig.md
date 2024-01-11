@@ -12,10 +12,10 @@ Definição da configuração do IMAP.
 
 ---
 
-#### getAuthMechanisms() : string
+#### <span style="color: #008000">getAuthMechanisms</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -24,10 +24,10 @@ Definição da configuração do IMAP.
 
 ---
 
-#### getAuthNTLMDomain() : string
+#### <span style="color: #008000">getAuthNTLMDomain</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -36,10 +36,10 @@ Definição da configuração do IMAP.
 
 ---
 
-#### getHost() : string
+#### <span style="color: #008000">getHost</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -48,10 +48,10 @@ Definição da configuração do IMAP.
 
 ---
 
-#### getPassword() : string
+#### <span style="color: #008000">getPassword</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -60,7 +60,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### getPort() : _int_
+#### <span style="color: #008000">getPort</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -72,10 +72,10 @@ Definição da configuração do IMAP.
 
 ---
 
-#### getProtocol() : string
+#### <span style="color: #008000">getProtocol</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -84,10 +84,10 @@ Definição da configuração do IMAP.
 
 ---
 
-#### getSocketFactoryClass() : string
+#### <span style="color: #008000">getSocketFactoryClass</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -96,7 +96,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### getSocketFactoryPort() : _int_
+#### <span style="color: #008000">getSocketFactoryPort</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -108,10 +108,10 @@ Definição da configuração do IMAP.
 
 ---
 
-#### getUsername() : string
+#### <span style="color: #008000">getUsername</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -120,7 +120,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### isDebug() : _boolean_
+#### <span style="color: #008000">isDebug</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -132,7 +132,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### isEnabled() : _boolean_
+#### <span style="color: #008000">isEnabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -144,7 +144,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### isQuitWait() : _boolean_
+#### <span style="color: #008000">isQuitWait</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -156,7 +156,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### isSSL() : _boolean_
+#### <span style="color: #008000">isSSL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -168,7 +168,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### isSocketFactoryFallback() : _boolean_
+#### <span style="color: #008000">isSocketFactoryFallback</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -180,7 +180,7 @@ Definição da configuração do IMAP.
 
 ---
 
-#### isTLS() : _boolean_
+#### <span style="color: #008000">isTLS</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -192,12 +192,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setAuthMechanisms(authMechanisms: string) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setAuthMechanisms</span>(<span style="color: #FF8000">authMechanisms</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| authMechanisms | string |   |
+| **authMechanisms** | _string_ |   |
 
 ##### Retorno
 
@@ -210,12 +210,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setAuthNTLMDomain(authNTLMDomain: string) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setAuthNTLMDomain</span>(<span style="color: #FF8000">authNTLMDomain</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| authNTLMDomain | string |   |
+| **authNTLMDomain** | _string_ |   |
 
 ##### Retorno
 
@@ -228,12 +228,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setDebug(debug: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setDebug</span>(<span style="color: #FF8000">debug</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| debug | _boolean_ |   |
+| **debug** | _boolean_ |   |
 
 ##### Retorno
 
@@ -246,12 +246,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setEnabled(enabled: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| enabled | _boolean_ |   |
+| **enabled** | _boolean_ |   |
 
 ##### Retorno
 
@@ -264,12 +264,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setHost(host: string) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setHost</span>(<span style="color: #FF8000">host</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| host | string |   |
+| **host** | _string_ |   |
 
 ##### Retorno
 
@@ -282,12 +282,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setPassword(password: string) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setPassword</span>(<span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| password | string |   |
+| **password** | _string_ |   |
 
 ##### Retorno
 
@@ -300,12 +300,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setPort(port: _int_) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setPort</span>(<span style="color: #FF8000">port</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| port | _int_ |   |
+| **port** | _int_ |   |
 
 ##### Retorno
 
@@ -318,12 +318,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setProtocol(protocol: string) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setProtocol</span>(<span style="color: #FF8000">protocol</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| protocol | string |   |
+| **protocol** | _string_ |   |
 
 ##### Retorno
 
@@ -336,12 +336,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setQuitWait(quitWait: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setQuitWait</span>(<span style="color: #FF8000">quitWait</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| quitWait | _boolean_ |   |
+| **quitWait** | _boolean_ |   |
 
 ##### Retorno
 
@@ -354,12 +354,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setSSL(ssl: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setSSL</span>(<span style="color: #FF8000">ssl</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ssl | _boolean_ |   |
+| **ssl** | _boolean_ |   |
 
 ##### Retorno
 
@@ -372,12 +372,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setSocketFactoryClass(socketFactoryClass: string) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setSocketFactoryClass</span>(<span style="color: #FF8000">socketFactoryClass</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| socketFactoryClass | string |   |
+| **socketFactoryClass** | _string_ |   |
 
 ##### Retorno
 
@@ -390,12 +390,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setSocketFactoryFallback(socketFactoryFallback: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setSocketFactoryFallback</span>(<span style="color: #FF8000">socketFactoryFallback</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| socketFactoryFallback | _boolean_ |   |
+| **socketFactoryFallback** | _boolean_ |   |
 
 ##### Retorno
 
@@ -408,12 +408,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setSocketFactoryPort(socketFactoryPort: _int_) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setSocketFactoryPort</span>(<span style="color: #FF8000">socketFactoryPort</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| socketFactoryPort | _int_ |   |
+| **socketFactoryPort** | _int_ |   |
 
 ##### Retorno
 
@@ -426,12 +426,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setTLS(tls: _boolean_) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setTLS</span>(<span style="color: #FF8000">tls</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tls | _boolean_ |   |
+| **tls** | _boolean_ |   |
 
 ##### Retorno
 
@@ -444,12 +444,12 @@ Definição da configuração do IMAP.
 
 ---
 
-#### setUsername(username: string) : _[IMAPConfig](../../objects/IMAPConfig)_
+#### <span style="color: #008000">setUsername</span>(<span style="color: #FF8000">username</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| username | string |   |
+| **username** | _string_ |   |
 
 ##### Retorno
 

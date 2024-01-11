@@ -12,7 +12,7 @@ Script execution results if an error occurred or was successful.
 
 ---
 
-#### isError() : _boolean_
+#### <span style="color: #008000">isError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -24,7 +24,7 @@ Script execution results if an error occurred or was successful.
 
 ---
 
-#### isSuccess() : _boolean_
+#### <span style="color: #008000">isSuccess</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -36,12 +36,12 @@ Script execution results if an error occurred or was successful.
 
 ---
 
-#### whenError(func: _java.util.function.Consumer_) : _[ScriptResult](../../objects/ScriptResult)_
+#### <span style="color: #008000">whenError</span>(<span style="color: #FF8000">func</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Consumer</span>) : <span style="font-weight: normal; font-style: italic;">[ScriptResult](../../objects/ScriptResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| func | _java.util.function.Consumer_ |   |
+| **func** | _java.util.function.Consumer_ |   |
 
 ##### Return
 
@@ -50,12 +50,12 @@ Script execution results if an error occurred or was successful.
 
 ---
 
-#### whenError(function: _org.graalvm.polyglot.Value_) : _[ScriptResult](../../objects/ScriptResult)_
+#### <span style="color: #008000">whenError</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">[ScriptResult](../../objects/ScriptResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -68,12 +68,12 @@ Script execution results if an error occurred or was successful.
 
 ---
 
-#### whenSucceed(func: _java.lang.Runnable_) : _[ScriptResult](../../objects/ScriptResult)_
+#### <span style="color: #008000">whenSucceed</span>(<span style="color: #FF8000">func</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Runnable</span>) : <span style="font-weight: normal; font-style: italic;">[ScriptResult](../../objects/ScriptResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| func | _java.lang.Runnable_ |   |
+| **func** | _java.lang.Runnable_ |   |
 
 ##### Return
 
@@ -82,12 +82,12 @@ Script execution results if an error occurred or was successful.
 
 ---
 
-#### whenSucceed(function: _org.graalvm.polyglot.Value_) : _[ScriptResult](../../objects/ScriptResult)_
+#### <span style="color: #008000">whenSucceed</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">[ScriptResult](../../objects/ScriptResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 

@@ -12,10 +12,10 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### getGroup() : string
+#### <span style="color: #008000">getGroup</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -24,7 +24,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### getHardLinkCount() : _int_
+#### <span style="color: #008000">getHardLinkCount</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -36,10 +36,10 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### getLink() : string
+#### <span style="color: #008000">getLink</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -48,10 +48,10 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### getName() : string
+#### <span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -60,10 +60,10 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### getRawListing() : string
+#### <span style="color: #008000">getRawListing</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -72,7 +72,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### getSize() : _long_
+#### <span style="color: #008000">getSize</span>() : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Return
 
 ( _long_ )
@@ -84,7 +84,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### getTimestamp() : _java.util.Calendar_
+#### <span style="color: #008000">getTimestamp</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
 ##### Return
 
 ( _java.util.Calendar_ )
@@ -96,7 +96,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### getTimestampInstant() : _java.time.Instant_
+#### <span style="color: #008000">getTimestampInstant</span>() : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
 ##### Return
 
 ( _java.time.Instant_ )
@@ -108,10 +108,10 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### getUser() : string
+#### <span style="color: #008000">getUser</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -120,7 +120,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isDirectory() : _boolean_
+#### <span style="color: #008000">isDirectory</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -132,7 +132,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isFile() : _boolean_
+#### <span style="color: #008000">isFile</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -144,7 +144,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isGroupExecutable() : _boolean_
+#### <span style="color: #008000">isGroupExecutable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -156,7 +156,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isGroupReadable() : _boolean_
+#### <span style="color: #008000">isGroupReadable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -168,7 +168,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isGroupWritable() : _boolean_
+#### <span style="color: #008000">isGroupWritable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -180,7 +180,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isSymbolicLink() : _boolean_
+#### <span style="color: #008000">isSymbolicLink</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -192,7 +192,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isUnknown() : _boolean_
+#### <span style="color: #008000">isUnknown</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -204,7 +204,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isUserExecutable() : _boolean_
+#### <span style="color: #008000">isUserExecutable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -216,7 +216,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isUserReadable() : _boolean_
+#### <span style="color: #008000">isUserReadable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -228,7 +228,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isUserWritable() : _boolean_
+#### <span style="color: #008000">isUserWritable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -240,7 +240,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isValid() : _boolean_
+#### <span style="color: #008000">isValid</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -252,7 +252,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isWorldExecutable() : _boolean_
+#### <span style="color: #008000">isWorldExecutable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -264,7 +264,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isWorldReadable() : _boolean_
+#### <span style="color: #008000">isWorldReadable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -276,7 +276,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### isWorldWritable() : _boolean_
+#### <span style="color: #008000">isWorldWritable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -288,12 +288,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroup(group: string) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setGroup</span>(<span style="color: #FF8000">group</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| group | string |   |
+| **group** | _string_ |   |
 
 ##### Return
 
@@ -306,12 +306,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroupExecutable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setGroupExecutable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| access | _boolean_ |   |
+| **access** | _boolean_ |   |
 
 ##### Return
 
@@ -324,12 +324,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroupReadable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setGroupReadable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| access | _boolean_ |   |
+| **access** | _boolean_ |   |
 
 ##### Return
 
@@ -342,12 +342,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroupWritable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setGroupWritable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| access | _boolean_ |   |
+| **access** | _boolean_ |   |
 
 ##### Return
 
@@ -360,12 +360,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setHardLinkCount(links: _int_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setHardLinkCount</span>(<span style="color: #FF8000">links</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| links | _int_ |   |
+| **links** | _int_ |   |
 
 ##### Return
 
@@ -378,12 +378,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setLink(link: string) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setLink</span>(<span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| link | string |   |
+| **link** | _string_ |   |
 
 ##### Return
 
@@ -396,12 +396,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setName(name: string) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setName</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Return
 
@@ -414,12 +414,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setRawListing(rawListing: string) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setRawListing</span>(<span style="color: #FF8000">rawListing</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| rawListing | string |   |
+| **rawListing** | _string_ |   |
 
 ##### Return
 
@@ -432,12 +432,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setSize(size: _long_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setSize</span>(<span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| size | _long_ |   |
+| **size** | _long_ |   |
 
 ##### Return
 
@@ -450,12 +450,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setTimestamp(date: _java.util.Calendar_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setTimestamp</span>(<span style="color: #FF8000">date</span>: <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| date | _java.util.Calendar_ |   |
+| **date** | _java.util.Calendar_ |   |
 
 ##### Return
 
@@ -468,12 +468,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUser(user: string) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setUser</span>(<span style="color: #FF8000">user</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| user | string |   |
+| **user** | _string_ |   |
 
 ##### Return
 
@@ -486,12 +486,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUserExecutable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setUserExecutable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| access | _boolean_ |   |
+| **access** | _boolean_ |   |
 
 ##### Return
 
@@ -504,12 +504,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUserReadable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setUserReadable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| access | _boolean_ |   |
+| **access** | _boolean_ |   |
 
 ##### Return
 
@@ -522,12 +522,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUserWritable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setUserWritable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| access | _boolean_ |   |
+| **access** | _boolean_ |   |
 
 ##### Return
 
@@ -540,12 +540,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setWorldExecutable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setWorldExecutable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| access | _boolean_ |   |
+| **access** | _boolean_ |   |
 
 ##### Return
 
@@ -558,12 +558,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setWorldReadable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setWorldReadable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| access | _boolean_ |   |
+| **access** | _boolean_ |   |
 
 ##### Return
 
@@ -576,12 +576,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setWorldWritable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">setWorldWritable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| access | _boolean_ |   |
+| **access** | _boolean_ |   |
 
 ##### Return
 
@@ -594,7 +594,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### toDirectory() : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">toDirectory</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
@@ -606,7 +606,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### toFile() : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">toFile</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
@@ -618,24 +618,24 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### toFormattedString() : string
+#### <span style="color: #008000">toFormattedString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### toFormattedString(timezone: string) : string
+#### <span style="color: #008000">toFormattedString</span>(<span style="color: #FF8000">timezone</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| timezone | string |   |
+| **timezone** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -644,7 +644,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### toSymbolicLink() : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">toSymbolicLink</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
@@ -656,7 +656,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### toUnknown() : _[FTPFile](../../objects/FTPFile)_
+#### <span style="color: #008000">toUnknown</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )

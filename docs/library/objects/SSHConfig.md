@@ -12,7 +12,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### getConnectTimeout() : _int_
+#### <span style="color: #008000">getConnectTimeout</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -24,10 +24,10 @@ Definição da configuração do SSH.
 
 ---
 
-#### getHost() : string
+#### <span style="color: #008000">getHost</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -36,10 +36,10 @@ Definição da configuração do SSH.
 
 ---
 
-#### getPassword() : string
+#### <span style="color: #008000">getPassword</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -48,7 +48,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### getPort() : _int_
+#### <span style="color: #008000">getPort</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -60,10 +60,10 @@ Definição da configuração do SSH.
 
 ---
 
-#### getPublicKey() : string
+#### <span style="color: #008000">getPublicKey</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -72,10 +72,10 @@ Definição da configuração do SSH.
 
 ---
 
-#### getUsername() : string
+#### <span style="color: #008000">getUsername</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -84,7 +84,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### isCompression() : _boolean_
+#### <span style="color: #008000">isCompression</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -96,7 +96,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### isDebug() : _boolean_
+#### <span style="color: #008000">isDebug</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -108,7 +108,7 @@ Definição da configuração do SSH.
 
 ---
 
-#### isEnabled() : _boolean_
+#### <span style="color: #008000">isEnabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -120,12 +120,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setCompression(compression: _boolean_) : _void_
+#### <span style="color: #008000">setCompression</span>(<span style="color: #FF8000">compression</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| compression | _boolean_ |   |
+| **compression** | _boolean_ |   |
 
 ##### Return
 
@@ -138,12 +138,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setConnectTimeout(connectTimeout: _int_) : _[SSHConfig](../../objects/SSHConfig)_
+#### <span style="color: #008000">setConnectTimeout</span>(<span style="color: #FF8000">connectTimeout</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| connectTimeout | _int_ |   |
+| **connectTimeout** | _int_ |   |
 
 ##### Return
 
@@ -156,12 +156,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setDebug(debug: _boolean_) : _[SSHConfig](../../objects/SSHConfig)_
+#### <span style="color: #008000">setDebug</span>(<span style="color: #FF8000">debug</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| debug | _boolean_ |   |
+| **debug** | _boolean_ |   |
 
 ##### Return
 
@@ -174,12 +174,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setEnabled(enabled: _boolean_) : _[SSHConfig](../../objects/SSHConfig)_
+#### <span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| enabled | _boolean_ |   |
+| **enabled** | _boolean_ |   |
 
 ##### Return
 
@@ -192,12 +192,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setHost(host: string) : _[SSHConfig](../../objects/SSHConfig)_
+#### <span style="color: #008000">setHost</span>(<span style="color: #FF8000">host</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| host | string |   |
+| **host** | _string_ |   |
 
 ##### Return
 
@@ -210,12 +210,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setPassword(password: string) : _[SSHConfig](../../objects/SSHConfig)_
+#### <span style="color: #008000">setPassword</span>(<span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| password | string |   |
+| **password** | _string_ |   |
 
 ##### Return
 
@@ -228,12 +228,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setPort(port: _int_) : _[SSHConfig](../../objects/SSHConfig)_
+#### <span style="color: #008000">setPort</span>(<span style="color: #FF8000">port</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| port | _int_ |   |
+| **port** | _int_ |   |
 
 ##### Return
 
@@ -246,12 +246,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setPublicKey(publicKey: string) : _void_
+#### <span style="color: #008000">setPublicKey</span>(<span style="color: #FF8000">publicKey</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| publicKey | string |   |
+| **publicKey** | _string_ |   |
 
 ##### Return
 
@@ -264,12 +264,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setUsername(username: string) : _[SSHConfig](../../objects/SSHConfig)_
+#### <span style="color: #008000">setUsername</span>(<span style="color: #FF8000">username</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| username | string |   |
+| **username** | _string_ |   |
 
 ##### Return
 

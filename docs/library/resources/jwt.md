@@ -12,7 +12,7 @@ Recurso de geração de JSON Web Tokens.
 
 ---
 
-#### _jwt.accessExpires() : _int_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">accessExpires</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Sets the time of expiration of the token to the settings in configs.
@@ -28,7 +28,7 @@ Sets the time of expiration of the token to the settings in configs.
 
 ---
 
-#### _jwt.accessToken(userId: _int_, Values: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">accessToken</span>(<span style="color: #FF8000">userId</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">Values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 This method access to the token of a user and returns the content.
@@ -37,8 +37,8 @@ This method access to the token of a user and returns the content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| userId | _int_ | Id of user. |
-| Values | _[Values](../../objects/Values)_ | Values of the user. |
+| **userId** | _int_ | Id of user. |
+| **Values** | _[Values](../../objects/Values)_ | Values of the user. |
 
 ##### Return
 
@@ -48,7 +48,7 @@ Returns the content of the user inserted.
 
 ---
 
-#### _jwt.accessToken(userId: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">accessToken</span>(<span style="color: #FF8000">userId</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 This method access to the token of a user and returns the content.
@@ -57,7 +57,7 @@ This method access to the token of a user and returns the content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| userId | _[Values](../../objects/Values)_ | Id of user. |
+| **userId** | _[Values](../../objects/Values)_ | Id of user. |
 
 ##### Return
 
@@ -71,7 +71,7 @@ Returns the content of the user inserted.
 
 ---
 
-#### _jwt.check() : _boolean_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">check</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Verify if a token exists.
@@ -84,7 +84,7 @@ Returns the validation.
 
 ---
 
-#### _jwt.check(token: string) : _boolean_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">check</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 This method verify the token.
@@ -93,7 +93,7 @@ This method verify the token.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| token | string | Token to be verify. |
+| **token** | _string_ | Token to be verify. |
 
 ##### Return
 
@@ -103,7 +103,7 @@ Returns the validation.
 
 ---
 
-#### _jwt.check(token: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">check</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 This method verify the token.
@@ -112,7 +112,7 @@ This method verify the token.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| token | _[Values](../../objects/Values)_ | Token to be verify. |
+| **token** | _[Values](../../objects/Values)_ | Token to be verify. |
 
 ##### Return
 
@@ -126,7 +126,7 @@ Returns the validation.
 
 ---
 
-#### _jwt.data() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">data</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -134,12 +134,12 @@ Returns the validation.
 
 ---
 
-#### _jwt.data(token: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">data</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| token | string |   |
+| **token** | _string_ |   |
 
 ##### Return
 
@@ -152,12 +152,12 @@ Returns the validation.
 
 ---
 
-#### _jwt.dbRecord(token: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">dbRecord</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| token | string |   |
+| **token** | _string_ |   |
 
 ##### Return
 
@@ -170,7 +170,7 @@ Returns the validation.
 
 ---
 
-#### _jwt.decode(token: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">decode</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Encodes the values of the header and body inserted.
@@ -179,7 +179,7 @@ Encodes the values of the header and body inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| token | string | Acess code. |
+| **token** | _string_ | Acess code. |
 
 ##### Return
 
@@ -193,7 +193,7 @@ Returns the values decoded.
 
 ---
 
-#### _jwt.encode(body: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">encode</span>(<span style="color: #FF8000">body</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes the body value inserted.
@@ -202,17 +202,17 @@ Encodes the body value inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| body | _[Values](../../objects/Values)_ | Body value. |
+| **body** | _[Values](../../objects/Values)_ | Body value. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the value enconded.
 
 ---
 
-#### _jwt.encode(header: _[Values](../../objects/Values)_, body: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">encode</span>(<span style="color: #FF8000">header</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">body</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Encodes the values of the header and body inserted.
@@ -221,12 +221,12 @@ Encodes the values of the header and body inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| header | _[Values](../../objects/Values)_ | Header value. |
-| body | _[Values](../../objects/Values)_ | Body value. |
+| **header** | _[Values](../../objects/Values)_ | Header value. |
+| **body** | _[Values](../../objects/Values)_ | Body value. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the values encoded.
 
@@ -236,7 +236,7 @@ Returns the values encoded.
 
 ---
 
-#### _jwt.init() : _[JWT](../../resources/JWT)_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
 ##### Return
 
 ( _[JWT](../../resources/JWT)_ )
@@ -244,13 +244,13 @@ Returns the values encoded.
 
 ---
 
-#### _jwt.init(secret: string, algorithm: string) : _[JWT](../../resources/JWT)_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">secret</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">algorithm</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| secret | string |   |
-| algorithm | string |   |
+| **secret** | _string_ |   |
+| **algorithm** | _string_ |   |
 
 ##### Return
 
@@ -263,7 +263,7 @@ Returns the values encoded.
 
 ---
 
-#### _jwt.isEnabled() : _boolean_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">isEnabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Verify if a token is enable.
@@ -280,7 +280,7 @@ Returns enabled.
 
 ---
 
-#### _jwt.refreshExpires() : _int_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">refreshExpires</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Updates the time of expiration of the token to the settings in configs.
@@ -296,7 +296,7 @@ Updates the time of expiration of the token to the settings in configs.
 
 ---
 
-#### _jwt.refreshToken(refreshToken: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">refreshToken</span>(<span style="color: #FF8000">refreshToken</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Replaces an old token for the new on inserted.
@@ -305,7 +305,7 @@ Replaces an old token for the new on inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| refreshToken | string | Replace token. |
+| **refreshToken** | _string_ | Replace token. |
 
 ##### Return
 
@@ -319,20 +319,20 @@ Returns the updated token.
 
 ---
 
-#### _jwt.token() : string
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">token</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Verify if exists an authenticated token.
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the token.
 
 ---
 
-#### _jwt.token(Values: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">token</span>(<span style="color: #FF8000">Values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Generates a token through jwtBuilder.
@@ -341,11 +341,11 @@ Generates a token through jwtBuilder.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| Values | _[Values](../../objects/Values)_ | Values for the jwtBuilder. |
+| **Values** | _[Values](../../objects/Values)_ | Values for the jwtBuilder. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the generation.
 

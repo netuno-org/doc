@@ -12,7 +12,7 @@ Permite obter os dados de performance.
 
 ---
 
-#### _monitor.performanceData() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_monitor</span>.<span style="color: #008000">performanceData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de performance como utilização do CPU, Memória e Disco do processo do servidor do Netuno como do computador no geral.
@@ -41,7 +41,7 @@ Dados de performance como CPU, Memória e Disco.
 
 ---
 
-#### _monitor.stats() : _void_
+#### <span style="font-weight: normal">_monitor</span>.<span style="color: #008000">stats</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Apresenta as informações estatísticas de performance, como os dados do CPU, Memória e Disco, no terminal e nos logs.

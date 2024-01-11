@@ -12,10 +12,10 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### getName() : string
+#### <span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -24,10 +24,10 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### getParent() : string
+#### <span style="color: #008000">getParent</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -36,10 +36,10 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### getPath() : string
+#### <span style="color: #008000">getPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -48,7 +48,7 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### isDirectory() : _boolean_
+#### <span style="color: #008000">isDirectory</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -60,7 +60,7 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### isRegularFile() : _boolean_
+#### <span style="color: #008000">isRegularFile</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -72,12 +72,12 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### setDirectory(directory: _boolean_) : _void_
+#### <span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| directory | _boolean_ |   |
+| **directory** | _boolean_ |   |
 
 ##### Return
 
@@ -90,12 +90,12 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### setName(name: string) : _void_
+#### <span style="color: #008000">setName</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Return
 
@@ -108,12 +108,12 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### setParent(parent: string) : _void_
+#### <span style="color: #008000">setParent</span>(<span style="color: #FF8000">parent</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| parent | string |   |
+| **parent** | _string_ |   |
 
 ##### Return
 
@@ -126,12 +126,12 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### setPath(path: string) : _void_
+#### <span style="color: #008000">setPath</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string |   |
+| **path** | _string_ |   |
 
 ##### Return
 
@@ -144,12 +144,12 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### setRegularFile(regularFile: _boolean_) : _void_
+#### <span style="color: #008000">setRegularFile</span>(<span style="color: #FF8000">regularFile</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| regularFile | _boolean_ |   |
+| **regularFile** | _boolean_ |   |
 
 ##### Return
 

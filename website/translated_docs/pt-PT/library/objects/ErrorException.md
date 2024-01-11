@@ -12,12 +12,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### addSuppressed(arg0: _java.lang.Throwable_) : _void_
+#### <span style="color: #008000">addSuppressed</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Throwable_ |   |
+| **arg0** | _java.lang.Throwable_ |   |
 
 ##### Retorno
 
@@ -30,7 +30,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### fillInStackTrace() : _java.lang.Throwable_
+#### <span style="color: #008000">fillInStackTrace</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
 ##### Retorno
 
 ( _java.lang.Throwable_ )
@@ -42,7 +42,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getCause() : _java.lang.Throwable_
+#### <span style="color: #008000">getCause</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
 ##### Retorno
 
 ( _java.lang.Throwable_ )
@@ -54,10 +54,10 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getLocalizedMessage() : string
+#### <span style="color: #008000">getLocalizedMessage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -66,10 +66,10 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getLogDebug() : string
+#### <span style="color: #008000">getLogDebug</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -78,10 +78,10 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getLogError() : string
+#### <span style="color: #008000">getLogError</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -90,10 +90,10 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getLogFatal() : string
+#### <span style="color: #008000">getLogFatal</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -102,10 +102,10 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getLogInfo() : string
+#### <span style="color: #008000">getLogInfo</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -114,10 +114,10 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getLogMessage() : string
+#### <span style="color: #008000">getLogMessage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -126,10 +126,10 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getLogTrace() : string
+#### <span style="color: #008000">getLogTrace</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -138,10 +138,10 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getLogWarn() : string
+#### <span style="color: #008000">getLogWarn</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -150,10 +150,10 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getMessage() : string
+#### <span style="color: #008000">getMessage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -162,7 +162,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getStackTrace() : _[Ljava.lang.StackTraceElement;[]_
+#### <span style="color: #008000">getStackTrace</span>() : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.StackTraceElement;[]</span>
 ##### Retorno
 
 ( _[Ljava.lang.StackTraceElement;[]_ )
@@ -174,7 +174,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getSuppressed() : _[Ljava.lang.Throwable;[]_
+#### <span style="color: #008000">getSuppressed</span>() : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Throwable;[]</span>
 ##### Retorno
 
 ( _[Ljava.lang.Throwable;[]_ )
@@ -186,12 +186,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### initCause(arg0: _java.lang.Throwable_) : _java.lang.Throwable_
+#### <span style="color: #008000">initCause</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Throwable_ |   |
+| **arg0** | _java.lang.Throwable_ |   |
 
 ##### Retorno
 
@@ -204,7 +204,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### isAppendError() : _boolean_
+#### <span style="color: #008000">isAppendError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -216,7 +216,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### isLogDebug() : _boolean_
+#### <span style="color: #008000">isLogDebug</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -228,7 +228,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### isLogError() : _boolean_
+#### <span style="color: #008000">isLogError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -240,7 +240,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### isLogFatal() : _boolean_
+#### <span style="color: #008000">isLogFatal</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -252,7 +252,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### isLogInfo() : _boolean_
+#### <span style="color: #008000">isLogInfo</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -264,7 +264,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### isLogTrace() : _boolean_
+#### <span style="color: #008000">isLogTrace</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -276,7 +276,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### isLogWarn() : _boolean_
+#### <span style="color: #008000">isLogWarn</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -288,7 +288,7 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### printStackTrace() : _void_
+#### <span style="color: #008000">printStackTrace</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -296,12 +296,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### printStackTrace(arg0: _java.io.PrintStream_) : _void_
+#### <span style="color: #008000">printStackTrace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.io.PrintStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.PrintStream_ |   |
+| **arg0** | _java.io.PrintStream_ |   |
 
 ##### Retorno
 
@@ -310,12 +310,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### printStackTrace(arg0: _java.io.PrintWriter_) : _void_
+#### <span style="color: #008000">printStackTrace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.io.PrintWriter</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.PrintWriter_ |   |
+| **arg0** | _java.io.PrintWriter_ |   |
 
 ##### Retorno
 
@@ -328,12 +328,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setAppendError(arg0: _boolean_) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setAppendError</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| **arg0** | _boolean_ |   |
 
 ##### Retorno
 
@@ -346,12 +346,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogDebug(arg0: _boolean_) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogDebug</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| **arg0** | _boolean_ |   |
 
 ##### Retorno
 
@@ -360,12 +360,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogDebug(arg0: string) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogDebug</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| **arg0** | _string_ |   |
 
 ##### Retorno
 
@@ -378,12 +378,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogError(arg0: _boolean_) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogError</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| **arg0** | _boolean_ |   |
 
 ##### Retorno
 
@@ -392,12 +392,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogError(arg0: string) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogError</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| **arg0** | _string_ |   |
 
 ##### Retorno
 
@@ -410,12 +410,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogFatal(arg0: _boolean_) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogFatal</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| **arg0** | _boolean_ |   |
 
 ##### Retorno
 
@@ -424,12 +424,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogFatal(arg0: string) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogFatal</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| **arg0** | _string_ |   |
 
 ##### Retorno
 
@@ -442,12 +442,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogInfo(arg0: _boolean_) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogInfo</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| **arg0** | _boolean_ |   |
 
 ##### Retorno
 
@@ -456,12 +456,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogInfo(arg0: string) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogInfo</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| **arg0** | _string_ |   |
 
 ##### Retorno
 
@@ -474,12 +474,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogTrace(arg0: _boolean_) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogTrace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| **arg0** | _boolean_ |   |
 
 ##### Retorno
 
@@ -488,12 +488,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogTrace(arg0: string) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogTrace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| **arg0** | _string_ |   |
 
 ##### Retorno
 
@@ -506,12 +506,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogWarn(arg0: _boolean_) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogWarn</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| **arg0** | _boolean_ |   |
 
 ##### Retorno
 
@@ -520,12 +520,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setLogWarn(arg0: string) : _org.netuno.proteu.ProteuError_
+#### <span style="color: #008000">setLogWarn</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| **arg0** | _string_ |   |
 
 ##### Retorno
 
@@ -538,12 +538,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setStackTrace(arg0: _[Ljava.lang.StackTraceElement;[]_) : _void_
+#### <span style="color: #008000">setStackTrace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.StackTraceElement;[]</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Ljava.lang.StackTraceElement;[]_ |   |
+| **arg0** | _[Ljava.lang.StackTraceElement;[]_ |   |
 
 ##### Retorno
 

@@ -12,7 +12,7 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### close() : _void_
+#### <span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Closes the SCP current session.
@@ -28,7 +28,7 @@ Closes the SCP current session.
 
 ---
 
-#### closed() : _boolean_
+#### <span style="color: #008000">closed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks if the SCP session is still open.
@@ -45,7 +45,7 @@ True if it is open.
 
 ---
 
-#### download(remotePath: string, destination: _java.io.OutputStream_) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">download</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destination</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Description
 
 Copies a server file to a local file.
@@ -54,8 +54,8 @@ Copies a server file to a local file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| remotePath | string | File path in the server. |
-| destination | _java.io.OutputStream_ | Local file of destination to store the remote content. |
+| **remotePath** | _string_ | File path in the server. |
+| **destination** | _java.io.OutputStream_ | Local file of destination to store the remote content. |
 
 ##### Return
 
@@ -65,7 +65,7 @@ The current SFTP client.
 
 ---
 
-#### download(remotePath: string, destination: _[File](../../objects/File)_) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">download</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destination</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Description
 
 Copies a server file to a local file.
@@ -74,8 +74,8 @@ Copies a server file to a local file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| remotePath | string | File path in the server. |
-| destination | _[File](../../objects/File)_ | Local file of destination to store the remote content. |
+| **remotePath** | _string_ | File path in the server. |
+| **destination** | _[File](../../objects/File)_ | Local file of destination to store the remote content. |
 
 ##### Return
 
@@ -89,7 +89,7 @@ The current SFTP client.
 
 ---
 
-#### downloadBytes(remotePath: string) : _byte[]_
+#### <span style="color: #008000">downloadBytes</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Description
 
 Obtain a byte array as content from a file server.
@@ -98,7 +98,7 @@ Obtain a byte array as content from a file server.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| remotePath | string | File path in the server. |
+| **remotePath** | _string_ | File path in the server. |
 
 ##### Return
 
@@ -112,7 +112,7 @@ Byte array with the remote file content in the server.
 
 ---
 
-#### downloadText(remotePath: string) : string
+#### <span style="color: #008000">downloadText</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Obtain a text content of a server file.
@@ -121,17 +121,17 @@ Obtain a text content of a server file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| remotePath | string | File path in the server. |
+| **remotePath** | _string_ | File path in the server. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Text content of the remote file in the server.
 
 ---
 
-#### downloadText(remotePath: string, charset: string) : string
+#### <span style="color: #008000">downloadText</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Obtain a text content of a server file.
@@ -140,12 +140,12 @@ Obtain a text content of a server file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| remotePath | string | File path in the server. |
-| charset | string | Encoding code of the characters. |
+| **remotePath** | _string_ | File path in the server. |
+| **charset** | _string_ | Encoding code of the characters. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Text content of the remote file in the server.
 
@@ -155,7 +155,7 @@ Text content of the remote file in the server.
 
 ---
 
-#### isClosed() : _boolean_
+#### <span style="color: #008000">isClosed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -167,7 +167,7 @@ Text content of the remote file in the server.
 
 ---
 
-#### upload(remotePath: string, source: _java.io.InputStream_) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">upload</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">source</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Description
 
 Sends the file data to be saved in a server file.
@@ -176,8 +176,8 @@ Sends the file data to be saved in a server file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| remotePath | string | File path in the server. |
-| source | _java.io.InputStream_ | Local file as the source. |
+| **remotePath** | _string_ | File path in the server. |
+| **source** | _java.io.InputStream_ | Local file as the source. |
 
 ##### Return
 
@@ -187,7 +187,7 @@ The current SFTP client.
 
 ---
 
-#### upload(remotePath: string, source: _[File](../../objects/File)_) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">upload</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">source</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Description
 
 Sends the file data to be saved in a server file.
@@ -196,8 +196,8 @@ Sends the file data to be saved in a server file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| remotePath | string | File path in the server. |
-| source | _[File](../../objects/File)_ | Local file as the source. |
+| **remotePath** | _string_ | File path in the server. |
+| **source** | _[File](../../objects/File)_ | Local file as the source. |
 
 ##### Return
 
@@ -211,7 +211,7 @@ The current SFTP client.
 
 ---
 
-#### uploadBytes(remotePath: string, bytes: _byte[]_) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">uploadBytes</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Description
 
 Sends a byte array to be saved in a server file.
@@ -220,8 +220,8 @@ Sends a byte array to be saved in a server file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| remotePath | string | File path in the server. |
-| bytes | _byte[]_ | Array of bytes. |
+| **remotePath** | _string_ | File path in the server. |
+| **bytes** | _byte[]_ | Array of bytes. |
 
 ##### Return
 
@@ -235,7 +235,7 @@ The current SFTP client.
 
 ---
 
-#### uploadText(remotePath: string, text: string) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">uploadText</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Description
 
 Sends a text content to be saved in a server file.
@@ -244,8 +244,8 @@ Sends a text content to be saved in a server file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| remotePath | string | File path in the server. |
-| text | string | Text content. |
+| **remotePath** | _string_ | File path in the server. |
+| **text** | _string_ | Text content. |
 
 ##### Return
 
@@ -255,7 +255,7 @@ The current SFTP client.
 
 ---
 
-#### uploadText(remotePath: string, text: string, charset: string) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">uploadText</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Description
 
 Sends a text content to be saved in a server file.
@@ -264,9 +264,9 @@ Sends a text content to be saved in a server file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| remotePath | string | File path in the server. |
-| text | string | Text content. |
-| charset | string | Encoding code of the characters. |
+| **remotePath** | _string_ | File path in the server. |
+| **text** | _string_ | Text content. |
+| **charset** | _string_ | Encoding code of the characters. |
 
 ##### Return
 

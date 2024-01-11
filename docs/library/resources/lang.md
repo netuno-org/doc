@@ -12,14 +12,14 @@ Recurso de atribuição de linguagem.
 
 ---
 
-#### _lang.code() : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">code</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Returns all the locale.
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -28,7 +28,7 @@ Returns all the locale.
 
 ---
 
-#### _lang.get(key: string) : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Searchs for a key.
@@ -37,27 +37,27 @@ Searchs for a key.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Key to be searched. |
+| **key** | _string_ | Key to be searched. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the match key.
 
 ---
 
-#### _lang.get(key: string, formats: _[Ljava.lang.Object;[]_) : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">formats</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string |   |
-| formats | _[Ljava.lang.Object;[]_ |   |
+| **key** | _string_ |   |
+| **formats** | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -66,14 +66,14 @@ Returns the match key.
 
 ---
 
-#### _lang.getCode() : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getCode</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Returns all the locale.
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -82,7 +82,7 @@ Returns all the locale.
 
 ---
 
-#### _lang.getLocale() : _java.util.Locale_
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getLocale</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Locale</span>
 ##### Description
 
 Returns the of the locale.
@@ -98,14 +98,14 @@ Returns the of the locale.
 
 ---
 
-#### _lang.getName() : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Returns the of the locale.
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -114,7 +114,7 @@ Returns the of the locale.
 
 ---
 
-#### _lang.getOrDefault(key: string, text: string) : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getOrDefault</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Sets the default locale key with a inserted text.
@@ -123,12 +123,12 @@ Sets the default locale key with a inserted text.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| key | string | Inserted key. |
-| text | string | Inserted text. |
+| **key** | _string_ | Inserted key. |
+| **text** | _string_ | Inserted text. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 Returns the key and the text inserted.
 
@@ -138,7 +138,7 @@ Returns the key and the text inserted.
 
 ---
 
-#### _lang.init() : _[Lang](../../resources/Lang)_
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/Lang)</span>
 ##### Description
 
 Initiates the Lang resource.
@@ -151,7 +151,7 @@ Returns the default lang.
 
 ---
 
-#### _lang.init(localeName: string) : _[Lang](../../resources/Lang)_
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">localeName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/Lang)</span>
 ##### Description
 
 Sets the default locale key with a inserted text.
@@ -160,7 +160,7 @@ Sets the default locale key with a inserted text.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| localeName | string | Inserted key. |
+| **localeName** | _string_ | Inserted key. |
 
 ##### Return
 
@@ -170,7 +170,7 @@ Returns the key and the text inserted.
 
 ---
 
-#### _lang.init(localeName: string, asDefault: _boolean_) : _[Lang](../../resources/Lang)_
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">localeName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">asDefault</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/Lang)</span>
 ##### Description
 
 Sets the default locale key with a inserted text.
@@ -179,8 +179,8 @@ Sets the default locale key with a inserted text.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| localeName | string | Inserted key. |
-| asDefault | _boolean_ | Sets if is default. |
+| **localeName** | _string_ | Inserted key. |
+| **asDefault** | _boolean_ | Sets if is default. |
 
 ##### Return
 
@@ -194,7 +194,7 @@ Returns the key and the text inserted.
 
 ---
 
-#### _lang.locale() : _java.util.Locale_
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">locale</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Locale</span>
 ##### Description
 
 Returns the of the locale.
@@ -210,14 +210,14 @@ Returns the of the locale.
 
 ---
 
-#### _lang.name() : string
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Returns the of the locale.
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---

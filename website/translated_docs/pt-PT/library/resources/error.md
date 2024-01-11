@@ -20,7 +20,7 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### _error.create(mensagem: string) : _[ErrorException](../../objects/ErrorException)_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">create</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[ErrorException](../../objects/ErrorException)</span>
 ##### Descrição
 
 Cria um erro com uma mensagem de descrição.
@@ -29,7 +29,7 @@ Cria um erro com uma mensagem de descrição.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -42,7 +42,7 @@ Cria um erro com uma mensagem de descrição.
 
 ---
 
-#### _error.createError(mensagem: string) : _java.lang.Error_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">createError</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Error</span>
 ##### Descrição
 
 Cria um erro com uma mensagem de descrição.
@@ -51,7 +51,7 @@ Cria um erro com uma mensagem de descrição.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -64,7 +64,7 @@ Cria um erro com uma mensagem de descrição.
 
 ---
 
-#### _error.createException(mensagem: string) : _java.lang.Exception_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">createException</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Exception</span>
 ##### Descrição
 
 Cria uma exceção com uma mensagem de descrição.".
@@ -73,7 +73,7 @@ Cria uma exceção com uma mensagem de descrição.".
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -86,7 +86,7 @@ Cria uma exceção com uma mensagem de descrição.".
 
 ---
 
-#### _error.createThrowable(mensagem: string) : _java.lang.Throwable_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">createThrowable</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
 ##### Descrição
 
 Cria um throwable com uma mensagem de descrição.
@@ -95,7 +95,7 @@ Cria um throwable com uma mensagem de descrição.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -108,7 +108,7 @@ Cria um throwable com uma mensagem de descrição.
 
 ---
 
-#### _error.data() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">data</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Cria uma nova classe Values com os valores que originaram o erro.
@@ -120,7 +120,7 @@ Cria uma nova classe Values com os valores que originaram o erro.
 
 ---
 
-#### _error.data(return: _[Values](../../objects/Values)_) : _[Error](../../resources/Error)_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">data</span>(<span style="color: #FF8000">return</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Error](../../resources/Error)</span>
 ##### Descrição
 
 Cria uma nova classe Values que originaram o erro.
@@ -129,7 +129,7 @@ Cria uma nova classe Values que originaram o erro.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| return | _[Values](../../objects/Values)_ | Valores. |
+| **return** | _[Values](../../objects/Values)_ | Valores. |
 
 ##### Retorno
 
@@ -142,7 +142,7 @@ Cria uma nova classe Values que originaram o erro.
 
 ---
 
-#### _error.debug(mensagem: string) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">debug</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Retorna uma exceção e imprime uma mensagem com a descrição da excecção e a seu objeto.
@@ -151,7 +151,7 @@ Retorna uma exceção e imprime uma mensagem com a descrição da excecção e a
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -160,7 +160,7 @@ Retorna uma exceção e imprime uma mensagem com a descrição da excecção e a
 
 ---
 
-#### _error.debug(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">debug</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem com a descrição do debug e a sua causa.
@@ -169,8 +169,8 @@ Imprime uma mensagem com a descrição do debug e a sua causa.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Throwable alternativo para incluir na mensagem de debug. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Throwable alternativo para incluir na mensagem de debug. |
 
 ##### Retorno
 
@@ -179,7 +179,7 @@ Imprime uma mensagem com a descrição do debug e a sua causa.
 
 ---
 
-#### _error.debug(messagem: string, causa: _java.lang.Throwable_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">debug</span>(<span style="color: #FF8000">messagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">causa</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem com a descrição do debug.
@@ -188,8 +188,8 @@ Imprime uma mensagem com a descrição do debug.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| messagem | string | Mensagem que será apresentada em log. |
-| causa | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de debug. |
+| **messagem** | _string_ | Mensagem que será apresentada em log. |
+| **causa** | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de debug. |
 
 ##### Retorno
 
@@ -202,7 +202,7 @@ Imprime uma mensagem com a descrição do debug.
 
 ---
 
-#### _error.error(mensagem: string) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">error</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem de erro.
@@ -211,7 +211,7 @@ Imprime uma mensagem de erro.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -220,7 +220,7 @@ Imprime uma mensagem de erro.
 
 ---
 
-#### _error.error(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">error</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem com a descrição do erro e a sua causa.
@@ -229,8 +229,8 @@ Imprime uma mensagem com a descrição do erro e a sua causa.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Throwable alternativo para incluir na mensagem de erro. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Throwable alternativo para incluir na mensagem de erro. |
 
 ##### Retorno
 
@@ -239,7 +239,7 @@ Imprime uma mensagem com a descrição do erro e a sua causa.
 
 ---
 
-#### _error.error(mensagem: string, auxiliar: _java.lang.Throwable_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">error</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem com a um descrição de um erro e o seu objeto.
@@ -248,8 +248,8 @@ Imprime uma mensagem com a um descrição de um erro e o seu objeto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de erro. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de erro. |
 
 ##### Retorno
 
@@ -262,7 +262,7 @@ Imprime uma mensagem com a um descrição de um erro e o seu objeto.
 
 ---
 
-#### _error.fatal(mensagem: string) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">fatal</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netuno.
@@ -271,7 +271,7 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -280,7 +280,7 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 
 ---
 
-#### _error.fatal(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">fatal</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netuno.
@@ -289,8 +289,8 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -299,7 +299,7 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 
 ---
 
-#### _error.fatal(mensagem: string, auxiliar: _java.lang.Throwable_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">fatal</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netuno.
@@ -308,8 +308,8 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -322,7 +322,7 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 
 ---
 
-#### _error.info(mensagem: string) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">info</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem com a descrição do debug e a seu objeto.
@@ -331,7 +331,7 @@ Imprime uma mensagem com a descrição do debug e a seu objeto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -340,7 +340,7 @@ Imprime uma mensagem com a descrição do debug e a seu objeto.
 
 ---
 
-#### _error.info(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">info</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem de informação e uma throwable.
@@ -349,8 +349,8 @@ Imprime uma mensagem de informação e uma throwable.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Throwable alternativo para incluir na mensagem de informação. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Throwable alternativo para incluir na mensagem de informação. |
 
 ##### Retorno
 
@@ -359,7 +359,7 @@ Imprime uma mensagem de informação e uma throwable.
 
 ---
 
-#### _error.info(mensagem: string, causa: _java.lang.Throwable_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">info</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">causa</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem de informação.
@@ -368,8 +368,8 @@ Imprime uma mensagem de informação.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| causa | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **causa** | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -382,7 +382,7 @@ Imprime uma mensagem de informação.
 
 ---
 
-#### _error.is(objeto: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">is</span>(<span style="color: #FF8000">objeto</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se um objeto é de tipo Error, Exception ou Throwable.
@@ -391,7 +391,7 @@ Verifica se um objeto é de tipo Error, Exception ou Throwable.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| objeto | _java.lang.Object_ | Objeto que será verificado. |
+| **objeto** | _java.lang.Object_ | Objeto que será verificado. |
 
 ##### Retorno
 
@@ -405,7 +405,7 @@ Retorna **true** caso o objeto seja do tipo Error, Exception ou Throwable.
 
 ---
 
-#### _error.isError(objeto: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">isError</span>(<span style="color: #FF8000">objeto</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se um objeto é de tipo Error.
@@ -414,7 +414,7 @@ Verifica se um objeto é de tipo Error.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| objeto | _java.lang.Object_ | Objeto que será verificado. |
+| **objeto** | _java.lang.Object_ | Objeto que será verificado. |
 
 ##### Retorno
 
@@ -428,7 +428,7 @@ Retorna **true** caso o objeto seja do tipo Error.
 
 ---
 
-#### _error.isException(objeto: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">isException</span>(<span style="color: #FF8000">objeto</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se um objeto é de tipo Exception.
@@ -437,7 +437,7 @@ Verifica se um objeto é de tipo Exception.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| objeto | _java.lang.Object_ | Objeto que será verificado. |
+| **objeto** | _java.lang.Object_ | Objeto que será verificado. |
 
 ##### Retorno
 
@@ -451,7 +451,7 @@ Retorna **true** caso o objeto seja do tipo Exception.
 
 ---
 
-#### _error.isThrowable(objeto: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">isThrowable</span>(<span style="color: #FF8000">objeto</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se um objeto é de tipo Throwable.
@@ -460,7 +460,7 @@ Verifica se um objeto é de tipo Throwable.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| objeto | _java.lang.Object_ | Objeto que será verificado. |
+| **objeto** | _java.lang.Object_ | Objeto que será verificado. |
 
 ##### Retorno
 
@@ -474,7 +474,7 @@ Retorna **true** caso o objeto seja do tipo Throwable.
 
 ---
 
-#### _error.raise(objeto: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">raise</span>(<span style="color: #FF8000">objeto</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Lança um erro de acordo com o tipo de objeto passado (Error, Exception ou Throwable).
@@ -483,7 +483,7 @@ Lança um erro de acordo com o tipo de objeto passado (Error, Exception ou Throw
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| objeto | _java.lang.Object_ | Objeto de erro. |
+| **objeto** | _java.lang.Object_ | Objeto de erro. |
 
 ##### Retorno
 
@@ -496,7 +496,7 @@ Lança um erro de acordo com o tipo de objeto passado (Error, Exception ou Throw
 
 ---
 
-#### _error.trace(messagem: string) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">trace</span>(<span style="color: #FF8000">messagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Retorna uma exceção e uma lista dos métodos que a causaram com uma mensagem de descrição.
@@ -505,7 +505,7 @@ Retorna uma exceção e uma lista dos métodos que a causaram com uma mensagem d
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| messagem | string | Mensagem que será apresentada em log. |
+| **messagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -514,7 +514,7 @@ Retorna uma exceção e uma lista dos métodos que a causaram com uma mensagem d
 
 ---
 
-#### _error.trace(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">trace</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Retorna um objeto e uma lista dos métodos que a causaram com uma mensagem de descrição.
@@ -523,8 +523,8 @@ Retorna um objeto e uma lista dos métodos que a causaram com uma mensagem de de
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Object alternativo para incluir na mensagem de erro. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Object alternativo para incluir na mensagem de erro. |
 
 ##### Retorno
 
@@ -533,7 +533,7 @@ Retorna um objeto e uma lista dos métodos que a causaram com uma mensagem de de
 
 ---
 
-#### _error.trace(mensagem: string, auxiliar: _java.lang.Throwable_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">trace</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Retorna um throwable e uma lista dos métodos que a causaram com uma mensagem de descrição.
@@ -542,8 +542,8 @@ Retorna um throwable e uma lista dos métodos que a causaram com uma mensagem de
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -556,7 +556,7 @@ Retorna um throwable e uma lista dos métodos que a causaram com uma mensagem de
 
 ---
 
-#### _error.warn(mensagem: string) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">warn</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem de aviso.
@@ -565,7 +565,7 @@ Imprime uma mensagem de aviso.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -574,7 +574,7 @@ Imprime uma mensagem de aviso.
 
 ---
 
-#### _error.warn(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">warn</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem com a um descrição de um aviso e o seu objeto.
@@ -583,8 +583,8 @@ Imprime uma mensagem com a um descrição de um aviso e o seu objeto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Object alternativo para incluir na mensagem de aviso. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Object alternativo para incluir na mensagem de aviso. |
 
 ##### Retorno
 
@@ -593,7 +593,7 @@ Imprime uma mensagem com a um descrição de um aviso e o seu objeto.
 
 ---
 
-#### _error.warn(mensagem: string, auxiliar: _java.lang.Throwable_) : _void_
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">warn</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem com a um descrição de um aviso e a sua throwable.
@@ -602,8 +602,8 @@ Imprime uma mensagem com a um descrição de um aviso e a sua throwable.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de aviso. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Throwable_ | Throwable alternativo para incluir na mensagem de aviso. |
 
 ##### Retorno
 

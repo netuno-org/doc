@@ -12,7 +12,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### getFullTotal() : _int_
+#### <span style="color: #008000">getFullTotal</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -24,7 +24,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### getLength() : _int_
+#### <span style="color: #008000">getLength</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -36,7 +36,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### getOffset() : _int_
+#### <span style="color: #008000">getOffset</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -48,7 +48,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### getResults() : _java.util.List_
+#### <span style="color: #008000">getResults</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -60,7 +60,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### getTotal() : _int_
+#### <span style="color: #008000">getTotal</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -72,12 +72,12 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### setFullTotal(fullTotal: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="color: #008000">setFullTotal</span>(<span style="color: #FF8000">fullTotal</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| fullTotal | _int_ |   |
+| **fullTotal** | _int_ |   |
 
 ##### Retorno
 
@@ -90,12 +90,12 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### setLength(length: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="color: #008000">setLength</span>(<span style="color: #FF8000">length</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| length | _int_ |   |
+| **length** | _int_ |   |
 
 ##### Retorno
 
@@ -108,12 +108,12 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### setOffset(offset: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="color: #008000">setOffset</span>(<span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| offset | _int_ |   |
+| **offset** | _int_ |   |
 
 ##### Retorno
 
@@ -126,12 +126,12 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### setResults(results: _java.util.List_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="color: #008000">setResults</span>(<span style="color: #FF8000">results</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| results | _java.util.List_ |   |
+| **results** | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -144,12 +144,12 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### setTotal(total: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="color: #008000">setTotal</span>(<span style="color: #FF8000">total</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| total | _int_ |   |
+| **total** | _int_ |   |
 
 ##### Retorno
 

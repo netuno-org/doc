@@ -16,7 +16,7 @@ Para analisar mensagens de log do tipo TRACE, DEBUG ou INFO, precisa alterar o l
 
 ---
 
-#### _log.debug(mensagem: string) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">debug</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **DEPURAÇÃO** (_DEBUG_) no ficheiro de log e no terminal do Netuno.
@@ -25,7 +25,7 @@ Imprime uma mensagem do tipo **DEPURAÇÃO** (_DEBUG_) no ficheiro de log e no t
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -34,7 +34,7 @@ Imprime uma mensagem do tipo **DEPURAÇÃO** (_DEBUG_) no ficheiro de log e no t
 
 ---
 
-#### _log.debug(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">debug</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **DEPURAÇÃO** (_DEBUG_) no ficheiro de log e no terminal do Netuno.
@@ -43,8 +43,8 @@ Imprime uma mensagem do tipo **DEPURAÇÃO** (_DEBUG_) no ficheiro de log e no t
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -57,7 +57,7 @@ Imprime uma mensagem do tipo **DEPURAÇÃO** (_DEBUG_) no ficheiro de log e no t
 
 ---
 
-#### _log.error(mensagem: string) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">error</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **ERRO** (_ERROR_) no ficheiro de log e no terminal do Netuno.
@@ -66,7 +66,7 @@ Imprime uma mensagem do tipo **ERRO** (_ERROR_) no ficheiro de log e no terminal
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -75,7 +75,7 @@ Imprime uma mensagem do tipo **ERRO** (_ERROR_) no ficheiro de log e no terminal
 
 ---
 
-#### _log.error(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">error</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **ERRO** (_ERROR_) no ficheiro de log e no terminal do Netuno.
@@ -84,8 +84,8 @@ Imprime uma mensagem do tipo **ERRO** (_ERROR_) no ficheiro de log e no terminal
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -98,7 +98,7 @@ Imprime uma mensagem do tipo **ERRO** (_ERROR_) no ficheiro de log e no terminal
 
 ---
 
-#### _log.fatal(mensagem: string) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">fatal</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netuno.
@@ -107,7 +107,7 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -116,7 +116,7 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 
 ---
 
-#### _log.fatal(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">fatal</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netuno.
@@ -125,8 +125,8 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -139,7 +139,7 @@ Imprime uma mensagem do tipo **FATAL** no ficheiro de log e no terminal do Netun
 
 ---
 
-#### _log.info(mensagem: string) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">info</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **INFORMAÇÃO** (_INFORMATION_) no ficheiro de log e no terminal do Netuno.
@@ -148,7 +148,7 @@ Imprime uma mensagem do tipo **INFORMAÇÃO** (_INFORMATION_) no ficheiro de log
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -157,7 +157,7 @@ Imprime uma mensagem do tipo **INFORMAÇÃO** (_INFORMATION_) no ficheiro de log
 
 ---
 
-#### _log.info(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">info</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **INFORMAÇÃO** (_INFORMATION_) no ficheiro de log e no terminal do Netuno.
@@ -166,8 +166,8 @@ Imprime uma mensagem do tipo **INFORMAÇÃO** (_INFORMATION_) no ficheiro de log
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -180,7 +180,7 @@ Imprime uma mensagem do tipo **INFORMAÇÃO** (_INFORMATION_) no ficheiro de log
 
 ---
 
-#### _log.print(conteudo: _char[]_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">char[]</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -189,7 +189,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _char[]_ | Conteúdo que será apresentado. |
+| **conteudo** | _char[]_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -198,7 +198,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.print(conteudo: _boolean_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -207,7 +207,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _boolean_ | Conteúdo que será apresentado. |
+| **conteudo** | _boolean_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -216,7 +216,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.print(conteudo: _char_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -225,7 +225,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _char_ | Conteúdo que será apresentado. |
+| **conteudo** | _char_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -234,7 +234,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.print(conteudo: _double_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -243,7 +243,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _double_ | Conteúdo que será apresentado. |
+| **conteudo** | _double_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -252,7 +252,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.print(conteudo: _float_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -261,7 +261,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _float_ | Conteúdo que será apresentado. |
+| **conteudo** | _float_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -270,7 +270,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.print(conteudo: _int_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -279,7 +279,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _int_ | Conteúdo que será apresentado. |
+| **conteudo** | _int_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -288,7 +288,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.print(conteudo: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -297,7 +297,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _java.lang.Object_ | Conteúdo que será apresentado. |
+| **conteudo** | _java.lang.Object_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -306,7 +306,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.print(conteudo: string) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -315,7 +315,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | string | Conteúdo que será apresentado. |
+| **conteudo** | _string_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -324,7 +324,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.print(conteudo: _long_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -333,7 +333,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _long_ | Conteúdo que será apresentado. |
+| **conteudo** | _long_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -346,7 +346,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.println(conteudo: _char[]_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">char[]</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -355,7 +355,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _char[]_ | Conteúdo que será apresentado. |
+| **conteudo** | _char[]_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -364,7 +364,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 ---
 
-#### _log.println(conteudo: _boolean_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -373,7 +373,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _boolean_ | Conteúdo que será apresentado. |
+| **conteudo** | _boolean_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -382,7 +382,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 ---
 
-#### _log.println(conteudo: _char_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -391,7 +391,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _char_ | Conteúdo que será apresentado. |
+| **conteudo** | _char_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -400,7 +400,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 ---
 
-#### _log.println(conteudo: _double_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -409,7 +409,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _double_ | Conteúdo que será apresentado. |
+| **conteudo** | _double_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -418,7 +418,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 ---
 
-#### _log.println(conteudo: _float_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -427,7 +427,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _float_ | Conteúdo que será apresentado. |
+| **conteudo** | _float_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -436,7 +436,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 ---
 
-#### _log.println(conteudo: _int_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -445,7 +445,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _int_ | Conteúdo que será apresentado. |
+| **conteudo** | _int_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -454,7 +454,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 ---
 
-#### _log.println(conteudo: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -463,7 +463,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _java.lang.Object_ | Conteúdo que será apresentado. |
+| **conteudo** | _java.lang.Object_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -472,7 +472,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 ---
 
-#### _log.println(conteudo: string) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -481,7 +481,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | string | Conteúdo que será apresentado. |
+| **conteudo** | _string_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -490,7 +490,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 ---
 
-#### _log.println(conteudo: _long_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">conteudo</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -499,7 +499,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _long_ | Conteúdo que será apresentado. |
+| **conteudo** | _long_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -512,7 +512,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 ---
 
-#### _log.trace(mensagem: string) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">trace</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **VESTÍGIO** (_TRACE_) no ficheiro de log e no terminal do Netuno.
@@ -521,7 +521,7 @@ Imprime uma mensagem do tipo **VESTÍGIO** (_TRACE_) no ficheiro de log e no ter
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -530,7 +530,7 @@ Imprime uma mensagem do tipo **VESTÍGIO** (_TRACE_) no ficheiro de log e no ter
 
 ---
 
-#### _log.trace(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">trace</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **VESTÍGIO** (_TRACE_) no ficheiro de log e no terminal do Netuno.
@@ -539,8 +539,8 @@ Imprime uma mensagem do tipo **VESTÍGIO** (_TRACE_) no ficheiro de log e no ter
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 
@@ -553,7 +553,7 @@ Imprime uma mensagem do tipo **VESTÍGIO** (_TRACE_) no ficheiro de log e no ter
 
 ---
 
-#### _log.warn(mensagem: string) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">warn</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **AVISO** (_WARNING_) no ficheiro de log e no terminal do Netuno.
@@ -562,7 +562,7 @@ Imprime uma mensagem do tipo **AVISO** (_WARNING_) no ficheiro de log e no termi
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
 
 ##### Retorno
 
@@ -571,7 +571,7 @@ Imprime uma mensagem do tipo **AVISO** (_WARNING_) no ficheiro de log e no termi
 
 ---
 
-#### _log.warn(mensagem: string, auxiliar: _java.lang.Object_) : _void_
+#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">warn</span>(<span style="color: #FF8000">mensagem</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">auxiliar</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Imprime uma mensagem do tipo **AVISO** (_WARNING_) no ficheiro de log e no terminal do Netuno.
@@ -580,8 +580,8 @@ Imprime uma mensagem do tipo **AVISO** (_WARNING_) no ficheiro de log e no termi
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mensagem | string | Mensagem que será apresentada em log. |
-| auxiliar | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
+| **mensagem** | _string_ | Mensagem que será apresentada em log. |
+| **auxiliar** | _java.lang.Object_ | Objeto alternativo para incluir na mensagem de log. |
 
 ##### Retorno
 

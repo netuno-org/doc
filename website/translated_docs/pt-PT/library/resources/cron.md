@@ -53,7 +53,7 @@ Abaixo segue indicações de como a configuração deve ser realizada.
 
 ---
 
-#### _cron.checkExists(chave: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">checkExists</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se a chave do serviço agendado existe.
@@ -71,7 +71,7 @@ if (_cron.checkExists("atualizaPrecos")) {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Nome chave de identificação do job. |
+| **chave** | _string_ | Nome chave de identificação do job. |
 
 ##### Retorno
 
@@ -85,7 +85,7 @@ Se o serviço agendado foi encontrado.
 
 ---
 
-#### _cron.config() : _void_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Configura o agendamento periódico pela importação do ficheiro de configuração.
@@ -101,7 +101,7 @@ Configura o agendamento periódico pela importação do ficheiro de configuraç�
 
 ---
 
-#### _cron.delete(chave: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Remove (apaga) um agendamento de execução de serviço.
@@ -117,7 +117,7 @@ _cron.delete("atualizaPrecos")
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Nome chave de identificação do job. |
+| **chave** | _string_ | Nome chave de identificação do job. |
 
 ##### Retorno
 
@@ -131,7 +131,7 @@ Se foi possível apagar o serviço agendado.
 
 ---
 
-#### _cron.interrupt(chave: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">interrupt</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Interrompe um agendamento de execução de serviço.
@@ -147,7 +147,7 @@ _cron.interrupt("atualizaPrecos")
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Nome chave de identificação do job. |
+| **chave** | _string_ | Nome chave de identificação do job. |
 
 ##### Retorno
 
@@ -161,7 +161,7 @@ Se foi possível interromper o serviço agendado.
 
 ---
 
-#### _cron.pause(chave: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">pause</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Muda o estado de execução para **pause**, neste estado não é executado o serviço associado.
@@ -177,7 +177,7 @@ _cron.pause("atualizaPrecos")
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Nome chave de identificação do job. |
+| **chave** | _string_ | Nome chave de identificação do job. |
 
 ##### Retorno
 
@@ -191,7 +191,7 @@ Se foi possível pausar o serviço agendado.
 
 ---
 
-#### _cron.remove(chave: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">remove</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Remove (apaga) um agendamento de execução de serviço.
@@ -207,7 +207,7 @@ _cron.remove("atualizaPrecos")
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Nome chave de identificação do job. |
+| **chave** | _string_ | Nome chave de identificação do job. |
 
 ##### Retorno
 
@@ -221,7 +221,7 @@ Se foi possível apagar o serviço agendado.
 
 ---
 
-#### _cron.resume(chave: string) : _boolean_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">resume</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Muda o estado de execução para **resume**, após um agendamento estar no estado _pause_, este pode ser reativado por via de _resume_
@@ -237,7 +237,7 @@ _cron.resume("atualizaPrecos")
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Nome chave de identificação do job. |
+| **chave** | _string_ | Nome chave de identificação do job. |
 
 ##### Retorno
 
@@ -251,7 +251,7 @@ Se foi possível continuar o serviço agendado.
 
 ---
 
-#### _cron.schedule(chave: string, config: string, url: string) : _[Cron](../../resources/Cron)_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/Cron)</span>
 ##### Descrição
 
 Cria um agendamento de execução de serviço.
@@ -270,9 +270,9 @@ _cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos"
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Nome chave de identificação do job. |
-| config | string | Expressão horária de agendamento do Cron, ver tabela acima. |
-| url | string | URL a ser executada pelo job. |
+| **chave** | _string_ | Nome chave de identificação do job. |
+| **config** | _string_ | Expressão horária de agendamento do Cron, ver tabela acima. |
+| **url** | _string_ | URL a ser executada pelo job. |
 
 ##### Retorno
 
@@ -282,7 +282,7 @@ A instância atual do Cron.
 
 ---
 
-#### _cron.schedule(chave: string, config: string, url: string, params: _[Values](../../objects/Values)_) : _[Cron](../../resources/Cron)_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/Cron)</span>
 ##### Descrição
 
 Cria um agendamento de execução de serviço.
@@ -301,10 +301,10 @@ _cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos"
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Nome chave de identificação do job. |
-| config | string | Expressão horária de agendamento do Cron, ver tabela acima. |
-| url | string | URL a ser executada pelo job. |
-| params | _[Values](../../objects/Values)_ | Dados a passar como parametro ao serviço. |
+| **chave** | _string_ | Nome chave de identificação do job. |
+| **config** | _string_ | Expressão horária de agendamento do Cron, ver tabela acima. |
+| **url** | _string_ | URL a ser executada pelo job. |
+| **params** | _[Values](../../objects/Values)_ | Dados a passar como parametro ao serviço. |
 
 ##### Retorno
 
@@ -318,7 +318,7 @@ A instância atual do Cron.
 
 ---
 
-#### _cron.schedules() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedules</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Lista de todos os agendamentos de serviços da aplicação.

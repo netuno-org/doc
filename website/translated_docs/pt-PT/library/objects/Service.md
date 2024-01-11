@@ -12,7 +12,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### allow() : _void_
+#### <span style="color: #008000">allow</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -24,7 +24,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### cancel() : _void_
+#### <span style="color: #008000">cancel</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -36,12 +36,12 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### core(file: string) : _boolean_
+#### <span style="color: #008000">core</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| file | string |   |
+| **file** | _string_ |   |
 
 ##### Retorno
 
@@ -54,7 +54,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### defaultEmptyOutput() : _void_
+#### <span style="color: #008000">defaultEmptyOutput</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -66,7 +66,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### deny() : _void_
+#### <span style="color: #008000">deny</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -78,12 +78,12 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### execute(file: string) : _boolean_
+#### <span style="color: #008000">execute</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| file | string |   |
+| **file** | _string_ |   |
 
 ##### Retorno
 
@@ -96,12 +96,12 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### getInstance(proteu: _org.netuno.proteu.Proteu_) : _[Service](../../objects/Service)_
+#### <span style="color: #008000">getInstance</span>(<span style="color: #FF8000">proteu</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.Proteu</span>) : <span style="font-weight: normal; font-style: italic;">[Service](../../objects/Service)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| proteu | _org.netuno.proteu.Proteu_ |   |
+| **proteu** | _org.netuno.proteu.Proteu_ |   |
 
 ##### Retorno
 
@@ -114,10 +114,10 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### getMethod() : string
+#### <span style="color: #008000">getMethod</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -126,7 +126,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### getMethods() : _java.util.List_
+#### <span style="color: #008000">getMethods</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -138,10 +138,10 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### getPath() : string
+#### <span style="color: #008000">getPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -150,7 +150,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### isAllowed() : _boolean_
+#### <span style="color: #008000">isAllowed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -162,7 +162,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### isDenied() : _boolean_
+#### <span style="color: #008000">isDenied</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -174,7 +174,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### isGeneratingOpenAPIDefinition() : _boolean_
+#### <span style="color: #008000">isGeneratingOpenAPIDefinition</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -186,7 +186,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### isMethod() : _boolean_
+#### <span style="color: #008000">isMethod</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -198,7 +198,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### isNotFoundDefaultError() : _boolean_
+#### <span style="color: #008000">isNotFoundDefaultError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -210,10 +210,10 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### method() : string
+#### <span style="color: #008000">method</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -222,7 +222,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### notFoundDefaultError() : _boolean_
+#### <span style="color: #008000">notFoundDefaultError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -230,12 +230,12 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### notFoundDefaultError(value: _boolean_) : _void_
+#### <span style="color: #008000">notFoundDefaultError</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| value | _boolean_ |   |
+| **value** | _boolean_ |   |
 
 ##### Retorno
 
@@ -248,10 +248,10 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### path() : string
+#### <span style="color: #008000">path</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -260,12 +260,12 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### setNotFoundDefaultError(value: _boolean_) : _void_
+#### <span style="color: #008000">setNotFoundDefaultError</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| value | _boolean_ |   |
+| **value** | _boolean_ |   |
 
 ##### Retorno
 
@@ -278,7 +278,7 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### wasCancelled() : _java.lang.Boolean_
+#### <span style="color: #008000">wasCancelled</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Boolean</span>
 ##### Retorno
 
 ( _java.lang.Boolean_ )

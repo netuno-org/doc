@@ -12,14 +12,14 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(name: string, type: string, size: _int_) : _void_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| type | string |   |
-| size | _int_ |   |
+| **name** | _string_ |   |
+| **type** | _string_ |   |
+| **size** | _int_ |   |
 
 ##### Return
 
@@ -28,15 +28,15 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(name: string, type: string, size: _int_, readonly: _boolean_) : _void_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">readonly</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| type | string |   |
-| size | _int_ |   |
-| readonly | _boolean_ |   |
+| **name** | _string_ |   |
+| **type** | _string_ |   |
+| **size** | _int_ |   |
+| **readonly** | _boolean_ |   |
 
 ##### Return
 
@@ -45,16 +45,16 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(name: string, type: string, size: _int_, readonly: _boolean_, index: _boolean_) : _void_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">readonly</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| type | string |   |
-| size | _int_ |   |
-| readonly | _boolean_ |   |
-| index | _boolean_ |   |
+| **name** | _string_ |   |
+| **type** | _string_ |   |
+| **size** | _int_ |   |
+| **readonly** | _boolean_ |   |
+| **index** | _boolean_ |   |
 
 ##### Return
 
@@ -63,15 +63,15 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(name: string, type: string, filter: string, size: _int_) : _void_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| type | string |   |
-| filter | string |   |
-| size | _int_ |   |
+| **name** | _string_ |   |
+| **type** | _string_ |   |
+| **filter** | _string_ |   |
+| **size** | _int_ |   |
 
 ##### Return
 
@@ -80,16 +80,16 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(name: string, type: string, filter: string, size: _int_, readonly: _boolean_) : _void_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">readonly</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| type | string |   |
-| filter | string |   |
-| size | _int_ |   |
-| readonly | _boolean_ |   |
+| **name** | _string_ |   |
+| **type** | _string_ |   |
+| **filter** | _string_ |   |
+| **size** | _int_ |   |
+| **readonly** | _boolean_ |   |
 
 ##### Return
 
@@ -98,17 +98,17 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(name: string, type: string, filter: string, size: _int_, readonly: _boolean_, index: _boolean_) : _void_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">readonly</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| type | string |   |
-| filter | string |   |
-| size | _int_ |   |
-| readonly | _boolean_ |   |
-| index | _boolean_ |   |
+| **name** | _string_ |   |
+| **type** | _string_ |   |
+| **filter** | _string_ |   |
+| **size** | _int_ |   |
+| **readonly** | _boolean_ |   |
+| **index** | _boolean_ |   |
 
 ##### Return
 
@@ -121,7 +121,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.getConfiguration() : _org.netuno.tritao.com.Configuration_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getConfiguration</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.com.Configuration</span>
 ##### Return
 
 ( _org.netuno.tritao.com.Configuration_ )
@@ -133,7 +133,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.getDataStructure() : _java.util.List_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getDataStructure</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -145,7 +145,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.getDesignData() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getDesignData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -157,10 +157,10 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.getMode() : string
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getMode</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -169,7 +169,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.getProperties() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getProperties</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -181,7 +181,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.getTableData() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getTableData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -193,10 +193,10 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.getType() : string
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getType</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -205,7 +205,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.getValues() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getValues</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -217,7 +217,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.isModeEdit() : _boolean_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isModeEdit</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -229,7 +229,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.isModeEditRestore() : _boolean_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isModeEditRestore</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -241,7 +241,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.isRenderEdit() : _boolean_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isRenderEdit</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -253,7 +253,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.isRenderReportForm() : _boolean_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isRenderReportForm</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -265,7 +265,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.isRenderSearchForm() : _boolean_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isRenderSearchForm</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -277,7 +277,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.isRenderSearchResults() : _boolean_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isRenderSearchResults</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -289,7 +289,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.isRenderView() : _boolean_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isRenderView</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -301,7 +301,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.renderDisplayName() : _void_
+#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">renderDisplayName</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Return
 
 ( _void_ )

@@ -12,7 +12,7 @@ Recurso para conectar, transferir arquivos e executar comandos via SSH.
 
 ---
 
-#### _ssh.close() : _void_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Fecha todas as sessões abertas e realiza a desconexão SSH com o servidor.
@@ -29,7 +29,7 @@ Objeto SSH atual.
 
 ---
 
-#### _ssh.config() : _[SSHConfig](../../objects/SSHConfig)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
@@ -42,7 +42,7 @@ Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### _ssh.config(config: _[Values](../../objects/Values)_) : _[SSHConfig](../../objects/SSHConfig)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
@@ -51,7 +51,7 @@ Inicia uma nova configuração própria.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[Values](../../objects/Values)_ | Estrutura de dados da definição da configuração. |
+| **config** | _[Values](../../objects/Values)_ | Estrutura de dados da definição da configuração. |
 
 ##### Retorno
 
@@ -61,7 +61,7 @@ Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### _ssh.config(config: _[SSHConfig](../../objects/SSHConfig)_) : _[SSH](../../resources/SSH)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -70,7 +70,7 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[SSHConfig](../../objects/SSHConfig)_ | Definição da nova configuração. |
+| **config** | _[SSHConfig](../../objects/SSHConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 
@@ -84,7 +84,7 @@ Recurso SSH atual.
 
 ---
 
-#### _ssh.connect() : _[SSH](../../resources/SSH)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">connect</span>() : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
 ##### Descrição
 
 Inicia a conexão com o servidor através do SSH.
@@ -101,7 +101,7 @@ Recurso SSH atual.
 
 ---
 
-#### _ssh.disconnect() : _[SSH](../../resources/SSH)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">disconnect</span>() : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
 ##### Descrição
 
 Fecha todas as sessões abertas e realiza a desconexão SSH com o servidor.
@@ -118,7 +118,7 @@ Recurso SSH atual.
 
 ---
 
-#### _ssh.enabled() : _boolean_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">enabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -126,7 +126,7 @@ Recurso SSH atual.
 
 ---
 
-#### _ssh.enabled(ativo: _boolean_) : _[SSH](../../resources/SSH)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -135,7 +135,7 @@ Define se está habilitado.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ativo | _boolean_ | Se fica ativo ou inactivo. |
+| **ativo** | _boolean_ | Se fica ativo ou inactivo. |
 
 ##### Retorno
 
@@ -149,7 +149,7 @@ Recurso SSH atual.
 
 ---
 
-#### _ssh.getClient() : _org.netuno.psamata.ssh.SSHClient_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">getClient</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ssh.SSHClient</span>
 ##### Descrição
 
 Obtém o cliente SSH base.
@@ -166,7 +166,7 @@ Cliente SSH original de base.
 
 ---
 
-#### _ssh.getConfig() : _[SSHConfig](../../objects/SSHConfig)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>
 ##### Descrição
 
 Obtém a configuração que está a ser utilizada.
@@ -183,7 +183,7 @@ Objeto da configuração ativa.
 
 ---
 
-#### _ssh.init() : _[SSH](../../resources/SSH)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
 ##### Descrição
 
 Inicia uma nova instância do SSH utilizando a configuração do SSH da chave `default`.
@@ -196,7 +196,7 @@ A nova instância do recurso SSH com base na configuração do SSH `default`.
 
 ---
 
-#### _ssh.init(configKey: string) : _[SSH](../../resources/SSH)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configKey</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
 ##### Descrição
 
 Inicia uma nova instância do SSH a partir de uma configuração específica.
@@ -205,7 +205,7 @@ Inicia uma nova instância do SSH a partir de uma configuração específica.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| configKey | string | Chave da configuração SSH que será utilizada. |
+| **configKey** | _string_ | Chave da configuração SSH que será utilizada. |
 
 ##### Retorno
 
@@ -215,7 +215,7 @@ A nova instância do recurso SSH com base na configuração do SSH especificada.
 
 ---
 
-#### _ssh.init(config: _[SSHConfig](../../objects/SSHConfig)_) : _[SSH](../../resources/SSH)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
 ##### Descrição
 
 Inicia uma nova instância do SSH a partir de uma configuração que é definida em um objeto de configuração própria.
@@ -224,7 +224,7 @@ Inicia uma nova instância do SSH a partir de uma configuração que é definida
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[SSHConfig](../../objects/SSHConfig)_ | Configuração que será utilizada. |
+| **config** | _[SSHConfig](../../objects/SSHConfig)_ | Configuração que será utilizada. |
 
 ##### Retorno
 
@@ -238,7 +238,7 @@ A nova instância do recurso SSH com base na configuração definida.
 
 ---
 
-#### _ssh.initSCP() : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">initSCP</span>() : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Descrição
 
 Inicia a sessão SCP para gerir pastas e transferir arquivos.
@@ -255,7 +255,7 @@ A sessão SCP iniciada para executar comandos.
 
 ---
 
-#### _ssh.initSFTP() : _[SSHSFTP](../../objects/SSHSFTP)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">initSFTP</span>() : <span style="font-weight: normal; font-style: italic;">[SSHSFTP](../../objects/SSHSFTP)</span>
 ##### Descrição
 
 Inicia a sessão SFTP para gerir pastas e transferir arquivos.
@@ -272,7 +272,7 @@ A sessão SFTP iniciada para executar comandos.
 
 ---
 
-#### _ssh.initSession() : _[SSHSession](../../objects/SSHSession)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">initSession</span>() : <span style="font-weight: normal; font-style: italic;">[SSHSession](../../objects/SSHSession)</span>
 ##### Descrição
 
 Inicia a sessão SSH para executar comandos.
@@ -289,7 +289,7 @@ A sessão iniciada para executar comandos.
 
 ---
 
-#### _ssh.isEnabled() : _boolean_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">isEnabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se está habilitado.
@@ -306,7 +306,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _ssh.setConfig(config: _[SSHConfig](../../objects/SSHConfig)_) : _[SSH](../../resources/SSH)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -315,7 +315,7 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[SSHConfig](../../objects/SSHConfig)_ | Definição da nova configuração. |
+| **config** | _[SSHConfig](../../objects/SSHConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 
@@ -329,7 +329,7 @@ Recurso SSH atual.
 
 ---
 
-#### _ssh.setEnabled(ativo: _boolean_) : _[SSH](../../resources/SSH)_
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -338,7 +338,7 @@ Define se está habilitado.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ativo | _boolean_ | Se fica ativo ou inactivo. |
+| **ativo** | _boolean_ | Se fica ativo ou inactivo. |
 
 ##### Retorno
 

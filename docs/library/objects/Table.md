@@ -21,13 +21,13 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### create(name: string, columns: _[Lorg.netuno.tritao.db.manager.Column;[]_) : _[Table](../../objects/Table)_
+#### <span style="color: #008000">create</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">columns</span>: <span style="font-weight: normal; font-style: italic;">[Lorg.netuno.tritao.db.manager.Column;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Table](../../objects/Table)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| columns | _[Lorg.netuno.tritao.db.manager.Column;[]_ |   |
+| **name** | _string_ |   |
+| **columns** | _[Lorg.netuno.tritao.db.manager.Column;[]_ |   |
 
 ##### Return
 
@@ -40,12 +40,12 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### drop(name: string) : _[Table](../../objects/Table)_
+#### <span style="color: #008000">drop</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Table](../../objects/Table)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Return
 
@@ -58,10 +58,10 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### getKey() : string
+#### <span style="color: #008000">getKey</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -70,7 +70,7 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### isH2() : _boolean_
+#### <span style="color: #008000">isH2</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -78,12 +78,12 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### isH2(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isH2</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -96,7 +96,7 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### isMSSQL() : _boolean_
+#### <span style="color: #008000">isMSSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -104,12 +104,12 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### isMSSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isMSSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -122,7 +122,7 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### isMariaDB() : _boolean_
+#### <span style="color: #008000">isMariaDB</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -130,12 +130,12 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### isMariaDB(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isMariaDB</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -148,7 +148,7 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### isPostgreSQL() : _boolean_
+#### <span style="color: #008000">isPostgreSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -156,12 +156,12 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### isPostgreSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isPostgreSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -174,7 +174,7 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### newColumn() : _[Column](../../objects/Column)_
+#### <span style="color: #008000">newColumn</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
 ##### Return
 
 ( _[Column](../../objects/Column)_ )
@@ -186,13 +186,13 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### rename(oldName: string, newName: string) : _[Table](../../objects/Table)_
+#### <span style="color: #008000">rename</span>(<span style="color: #FF8000">oldName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">newName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Table](../../objects/Table)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| oldName | string |   |
-| newName | string |   |
+| **oldName** | _string_ |   |
+| **newName** | _string_ |   |
 
 ##### Return
 
@@ -205,13 +205,13 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### renameIfExists(oldName: string, newName: string) : _[Table](../../objects/Table)_
+#### <span style="color: #008000">renameIfExists</span>(<span style="color: #FF8000">oldName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">newName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Table](../../objects/Table)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| oldName | string |   |
-| newName | string |   |
+| **oldName** | _string_ |   |
+| **newName** | _string_ |   |
 
 ##### Return
 
@@ -224,7 +224,7 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### sequence() : _boolean_
+#### <span style="color: #008000">sequence</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )

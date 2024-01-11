@@ -22,13 +22,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.add(index: _int_, element: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">add</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">element</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| element | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **element** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -37,12 +37,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.add(o: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">add</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -55,13 +55,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.addAll(index: _int_, c: _java.util.Collection_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">addAll</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| c | _java.util.Collection_ |   |
+| **index** | _int_ |   |
+| **c** | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -70,12 +70,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.addAll(c: _java.util.Collection_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">addAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| c | _java.util.Collection_ |   |
+| **c** | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -88,12 +88,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.as(o: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">as</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -102,13 +102,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.as(o: _java.lang.Object_, oDefault: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">as</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">oDefault</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
-| oDefault | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
+| **oDefault** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -121,12 +121,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asBoolean(index: _int_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -135,13 +135,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asBoolean(index: _int_, defaultValue: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _boolean_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _boolean_ |   |
 
 ##### Retorno
 
@@ -150,12 +150,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asBoolean(key: string) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -164,13 +164,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asBoolean(key: string, defaultValue: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _boolean_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _boolean_ |   |
 
 ##### Retorno
 
@@ -183,12 +183,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asByte(index: _int_) : _byte_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -197,13 +197,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asByte(index: _int_, defaultValue: _byte_) : _byte_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _byte_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _byte_ |   |
 
 ##### Retorno
 
@@ -212,13 +212,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asByte(key: string, defaultValue: _byte_) : _byte_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asByte</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _byte_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _byte_ |   |
 
 ##### Retorno
 
@@ -231,12 +231,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asCalendar(key: string) : _java.util.Calendar_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -245,13 +245,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asCalendar(key: string, defaultValue: _java.util.Calendar_) : _java.util.Calendar_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.Calendar_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.Calendar_ |   |
 
 ##### Retorno
 
@@ -264,12 +264,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asDate(key: string) : _java.util.Date_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -278,13 +278,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asDate(key: string, defaultValue: _java.util.Date_) : _java.util.Date_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.Date_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.Date_ |   |
 
 ##### Retorno
 
@@ -297,12 +297,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asDouble(index: _int_) : _double_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -311,13 +311,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asDouble(index: _int_, defaultValue: _double_) : _double_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _double_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _double_ |   |
 
 ##### Retorno
 
@@ -326,12 +326,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asDouble(key: string) : _double_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -340,13 +340,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asDouble(key: string, defaultValue: _double_) : _double_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _double_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _double_ |   |
 
 ##### Retorno
 
@@ -359,12 +359,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asFile(key: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asFile</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -377,12 +377,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asFloat(index: _int_) : _float_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -391,13 +391,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asFloat(index: _int_, defaultValue: _float_) : _float_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _float_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _float_ |   |
 
 ##### Retorno
 
@@ -406,12 +406,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asFloat(key: string) : _float_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -420,13 +420,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asFloat(key: string, defaultValue: _float_) : _float_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _float_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _float_ |   |
 
 ##### Retorno
 
@@ -439,16 +439,16 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asHTMLDecode(key: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asHTMLDecode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -457,16 +457,16 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asHTMLEncode(key: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asHTMLEncode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -475,12 +475,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asInstant(key: string) : _java.time.Instant_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -489,13 +489,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asInstant(key: string, defaultValue: _java.time.Instant_) : _java.time.Instant_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.Instant_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.Instant_ |   |
 
 ##### Retorno
 
@@ -508,12 +508,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asInt(index: _int_) : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -522,13 +522,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asInt(index: _int_, defaultValue: _int_) : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _int_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _int_ |   |
 
 ##### Retorno
 
@@ -537,13 +537,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asInt(key: string, defaultValue: _short_) : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asInt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _short_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _short_ |   |
 
 ##### Retorno
 
@@ -556,12 +556,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asList(index: _int_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -570,13 +570,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asList(index: _int_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| claz | _java.lang.Class_ |   |
+| **index** | _int_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Retorno
 
@@ -585,13 +585,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asList(index: _int_, defaultValue: _java.lang.Object_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -600,14 +600,14 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asList(index: _int_, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
-| claz | _java.lang.Class_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Retorno
 
@@ -616,12 +616,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asList(key: string) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -630,13 +630,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asList(key: string, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| claz | _java.lang.Class_ |   |
+| **key** | _string_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Retorno
 
@@ -645,13 +645,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asList(key: string, defaultValue: _java.lang.Object_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -660,14 +660,14 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asList(key: string, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
-| claz | _java.lang.Class_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Retorno
 
@@ -680,12 +680,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLocalDate(key: string) : _java.time.LocalDate_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -694,13 +694,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLocalDate(key: string, defaultValue: _java.time.LocalDate_) : _java.time.LocalDate_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalDate_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalDate_ |   |
 
 ##### Retorno
 
@@ -713,12 +713,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLocalDateTime(key: string) : _java.time.LocalDateTime_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -727,13 +727,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLocalDateTime(key: string, defaultValue: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalDateTime_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalDateTime_ |   |
 
 ##### Retorno
 
@@ -746,12 +746,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLocalTime(key: string) : _java.time.LocalTime_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -760,13 +760,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLocalTime(key: string, defaultValue: _java.time.LocalTime_) : _java.time.LocalTime_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalTime_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalTime_ |   |
 
 ##### Retorno
 
@@ -779,12 +779,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLong(index: _int_) : _long_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -793,13 +793,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLong(index: _int_, defaultValue: _long_) : _long_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _long_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _long_ |   |
 
 ##### Retorno
 
@@ -808,12 +808,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLong(key: string) : _long_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -822,13 +822,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asLong(key: string, defaultValue: _long_) : _long_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _long_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _long_ |   |
 
 ##### Retorno
 
@@ -841,12 +841,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asMap(index: _int_) : _java.util.Map_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -855,13 +855,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asMap(index: _int_, defaultValue: _java.lang.Object_) : _java.util.Map_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -870,12 +870,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asMap(key: string) : _java.util.Map_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -884,13 +884,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asMap(key: string, defaultValue: _java.lang.Object_) : _java.util.Map_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -903,12 +903,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asSQLDate(key: string) : _java.sql.Date_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -917,13 +917,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asSQLDate(key: string, defaultValue: _java.sql.Date_) : _java.sql.Date_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Date_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Date_ |   |
 
 ##### Retorno
 
@@ -936,12 +936,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asSQLTime(key: string) : _java.sql.Time_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -950,13 +950,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asSQLTime(key: string, defaultValue: _java.sql.Time_) : _java.sql.Time_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Time_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Time_ |   |
 
 ##### Retorno
 
@@ -969,12 +969,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asSQLTimestamp(key: string) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -983,13 +983,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asSQLTimestamp(key: string, defaultValue: _java.sql.Timestamp_) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Timestamp_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Timestamp_ |   |
 
 ##### Retorno
 
@@ -1002,12 +1002,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asShort(index: _int_) : _short_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -1016,13 +1016,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asShort(index: _int_, defaultValue: _short_) : _short_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _short_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _short_ |   |
 
 ##### Retorno
 
@@ -1031,12 +1031,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asShort(key: string) : _short_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -1045,13 +1045,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asShort(key: string, defaultValue: _short_) : _short_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _short_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _short_ |   |
 
 ##### Retorno
 
@@ -1064,76 +1064,76 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asString(index: _int_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.asString(index: _int_, defaultValue: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | string |   |
+| **index** | _int_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.asString(key: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.asString(key: string, defaultValue: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.asString(key: string, defaultValue: string, charsetName: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charsetName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
-| charsetName | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
+| **charsetName** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -1142,12 +1142,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asUID(key: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -1156,13 +1156,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asUID(key: string, defaultValue: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Retorno
 
@@ -1171,13 +1171,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.UUID_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.UUID_ |   |
 
 ##### Retorno
 
@@ -1190,12 +1190,12 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asUUID(key: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -1204,13 +1204,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asUUID(key: string, defaultValue: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Retorno
 
@@ -1219,13 +1219,13 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asUUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.UUID_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.UUID_ |   |
 
 ##### Retorno
 
@@ -1238,7 +1238,7 @@ const adminMail = _config.getString('admin-mail');
 
 ---
 
-#### _config.asValues(indice: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asValues</span>(<span style="color: #FF8000">indice</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
@@ -1247,7 +1247,7 @@ Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lis
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| indice | _int_ | Índex para obter o objeto associado. |
+| **indice** | _int_ | Índex para obter o objeto associado. |
 
 ##### Retorno
 
@@ -1257,7 +1257,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.asValues(indice: _int_, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asValues</span>(<span style="color: #FF8000">indice</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">valorPadrao</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
@@ -1266,8 +1266,8 @@ Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lis
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| indice | _int_ | Índex para obter o objeto associado. |
-| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| **indice** | _int_ | Índex para obter o objeto associado. |
+| **valorPadrao** | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -1277,7 +1277,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.asValues(chave: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asValues</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -1286,7 +1286,7 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | A chave para obter o objeto associado. |
+| **chave** | _string_ | A chave para obter o objeto associado. |
 
 ##### Retorno
 
@@ -1296,7 +1296,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.asValues(chave: string, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">asValues</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">valorPadrao</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -1305,8 +1305,8 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | A chave para obter o objeto associado. |
-| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| **chave** | _string_ | A chave para obter o objeto associado. |
+| **valorPadrao** | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -1320,7 +1320,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.clear() : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">clear</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -1332,7 +1332,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.cloneJSON() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">cloneJSON</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -1344,13 +1344,13 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.compute(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">compute</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.util.function.BiFunction_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
@@ -1363,13 +1363,13 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.computeIfAbsent(arg0: _java.lang.Object_, arg1: _java.util.function.Function_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">computeIfAbsent</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Function</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.util.function.Function_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.util.function.Function_ |   |
 
 ##### Retorno
 
@@ -1382,13 +1382,13 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.computeIfPresent(arg0: _java.lang.Object_, arg1: _java.util.function.BiFunction_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">computeIfPresent</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.util.function.BiFunction_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
@@ -1401,12 +1401,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.contains(o: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">contains</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1415,13 +1415,13 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.contains(key: string, value: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">contains</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1434,12 +1434,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.containsAll(c: _java.util.Collection_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">containsAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| c | _java.util.Collection_ |   |
+| **c** | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -1452,12 +1452,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.containsKey(key: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">containsKey</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | _java.lang.Object_ |   |
+| **key** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1470,12 +1470,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.containsValue(value: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">containsValue</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| value | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1488,7 +1488,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.ensureJail(jailPath: string) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">ensureJail</span>(<span style="color: #FF8000">jailPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Define a restrição de segurança em um diretório específico para os objetos processados do tipo de ficheiros, apenas pode ser definido uma única vez.
@@ -1497,7 +1497,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| jailPath | string | Caminho onde será restringido os ficheiros. |
+| **jailPath** | _string_ | Caminho onde será restringido os ficheiros. |
 
 ##### Retorno
 
@@ -1510,7 +1510,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.entrySet() : _java.util.Set_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">entrySet</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
 ##### Retorno
 
 ( _java.util.Set_ )
@@ -1522,12 +1522,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.filter(p: _java.util.function.Predicate_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">filter</span>(<span style="color: #FF8000">p</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Predicate</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| p | _java.util.function.Predicate_ |   |
+| **p** | _java.util.function.Predicate_ |   |
 
 ##### Retorno
 
@@ -1536,12 +1536,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.filter(function: _org.graalvm.polyglot.Value_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">filter</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1554,13 +1554,13 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.find(key: string, value: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">find</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -1569,12 +1569,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.find(p: _java.util.function.Predicate_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">find</span>(<span style="color: #FF8000">p</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Predicate</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| p | _java.util.function.Predicate_ |   |
+| **p** | _java.util.function.Predicate_ |   |
 
 ##### Retorno
 
@@ -1583,12 +1583,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.find(function: _org.graalvm.polyglot.Value_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">find</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1597,12 +1597,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.find(filter: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">find</span>(<span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| filter | _[Values](../../objects/Values)_ |   |
+| **filter** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -1615,12 +1615,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.forEach(action: _java.util.function.BiConsumer_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">forEach</span>(<span style="color: #FF8000">action</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiConsumer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| action | _java.util.function.BiConsumer_ |   |
+| **action** | _java.util.function.BiConsumer_ |   |
 
 ##### Retorno
 
@@ -1629,12 +1629,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.forEach(action: _java.util.function.Consumer_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">forEach</span>(<span style="color: #FF8000">action</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Consumer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| action | _java.util.function.Consumer_ |   |
+| **action** | _java.util.function.Consumer_ |   |
 
 ##### Retorno
 
@@ -1643,12 +1643,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.forEach(function: _org.graalvm.polyglot.Value_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">forEach</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -1661,7 +1661,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.forceList() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">forceList</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -1673,7 +1673,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.forceMap() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">forceMap</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -1685,12 +1685,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.fromJSON(content: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">fromJSON</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| content | string |   |
+| **content** | _string_ |   |
 
 ##### Retorno
 
@@ -1699,12 +1699,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.fromJSON(content: _org.netuno.psamata.net.Remote$Response_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">fromJSON</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| content | _org.netuno.psamata.net.Remote$Response_ |   |
+| **content** | _org.netuno.psamata.net.Remote$Response_ |   |
 
 ##### Retorno
 
@@ -1717,7 +1717,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### _config.get(chave: _int_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Descrição
 
 Obtém o objeto original associado a chave.
@@ -1726,7 +1726,7 @@ Obtém o objeto original associado a chave.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _int_ | Chave para obter o objeto para associado. |
+| **chave** | _int_ | Chave para obter o objeto para associado. |
 
 ##### Retorno
 
@@ -1736,7 +1736,7 @@ Objeto original sem conversões.
 
 ---
 
-#### _config.get(chave: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Descrição
 
 Obtém o objeto original associado a chave.
@@ -1745,7 +1745,7 @@ Obtém o objeto original associado a chave.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _java.lang.Object_ | Chave para obter o objeto para associado. |
+| **chave** | _java.lang.Object_ | Chave para obter o objeto para associado. |
 
 ##### Retorno
 
@@ -1755,7 +1755,7 @@ Objeto original sem conversões.
 
 ---
 
-#### _config.get(chave: string) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Descrição
 
 Obtém o objeto original associado a chave.
@@ -1764,7 +1764,7 @@ Obtém o objeto original associado a chave.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Chave para obter o objeto para associado. |
+| **chave** | _string_ | Chave para obter o objeto para associado. |
 
 ##### Retorno
 
@@ -1774,7 +1774,7 @@ Objeto original sem conversões.
 
 ---
 
-#### _config.get(chave: string, tipo: _java.lang.Class_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">tipo</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Descrição
 
 Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
@@ -1783,8 +1783,8 @@ Obtém o objeto original associado a chave, mas convertido para o tipo da classe
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Chave para obter o objeto associado. |
-| tipo | _java.lang.Class_ | Classe que representa o tipo de objeto que deve ser convertido (_cast_). |
+| **chave** | _string_ | Chave para obter o objeto associado. |
+| **tipo** | _java.lang.Class_ | Classe que representa o tipo de objeto que deve ser convertido (_cast_). |
 
 ##### Retorno
 
@@ -1798,12 +1798,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getBoolean(index: _int_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -1812,13 +1812,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getBoolean(index: _int_, defaultValue: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _boolean_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _boolean_ |   |
 
 ##### Retorno
 
@@ -1827,12 +1827,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getBoolean(key: string) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -1841,13 +1841,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getBoolean(key: string, defaultValue: _boolean_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _boolean_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _boolean_ |   |
 
 ##### Retorno
 
@@ -1860,12 +1860,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getByte(index: _int_) : _byte_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -1874,13 +1874,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getByte(index: _int_, defaultValue: _byte_) : _byte_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _byte_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _byte_ |   |
 
 ##### Retorno
 
@@ -1889,12 +1889,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getByte(key: string) : _byte_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getByte</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -1903,13 +1903,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getByte(key: string, defaultValue: _byte_) : _byte_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getByte</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _byte_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _byte_ |   |
 
 ##### Retorno
 
@@ -1922,12 +1922,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getCalendar(key: string) : _java.util.Calendar_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -1936,13 +1936,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getCalendar(key: string, defaultValue: _java.util.Calendar_) : _java.util.Calendar_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.Calendar_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.Calendar_ |   |
 
 ##### Retorno
 
@@ -1955,12 +1955,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getDate(key: string) : _java.util.Date_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -1969,13 +1969,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getDate(key: string, defaultValue: _java.util.Date_) : _java.util.Date_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.Date_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.Date_ |   |
 
 ##### Retorno
 
@@ -1988,12 +1988,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getDouble(index: _int_) : _double_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -2002,13 +2002,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getDouble(index: _int_, defaultValue: _double_) : _double_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _double_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _double_ |   |
 
 ##### Retorno
 
@@ -2017,12 +2017,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getDouble(key: string) : _double_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2031,13 +2031,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getDouble(key: string, defaultValue: _double_) : _double_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _double_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _double_ |   |
 
 ##### Retorno
 
@@ -2050,12 +2050,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getFile(key: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getFile</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2068,12 +2068,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getFloat(index: _int_) : _float_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -2082,13 +2082,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getFloat(index: _int_, defaultValue: _float_) : _float_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _float_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _float_ |   |
 
 ##### Retorno
 
@@ -2097,12 +2097,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getFloat(key: string) : _float_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2111,13 +2111,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getFloat(key: string, defaultValue: _float_) : _float_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _float_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _float_ |   |
 
 ##### Retorno
 
@@ -2130,7 +2130,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getForceList() : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getForceList</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -2142,7 +2142,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getForceMap() : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getForceMap</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -2154,16 +2154,16 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getHTMLDecode(key: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getHTMLDecode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -2172,16 +2172,16 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getHTMLEncode(key: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getHTMLEncode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -2190,12 +2190,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getInstant(key: string) : _java.time.Instant_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2204,13 +2204,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getInstant(key: string, defaultValue: _java.time.Instant_) : _java.time.Instant_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.Instant_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.Instant_ |   |
 
 ##### Retorno
 
@@ -2223,12 +2223,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getInt(index: _int_) : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -2237,13 +2237,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getInt(index: _int_, defaultValue: _int_) : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _int_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _int_ |   |
 
 ##### Retorno
 
@@ -2252,12 +2252,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getInt(key: string) : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getInt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2266,13 +2266,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getInt(key: string, defaultValue: _int_) : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getInt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _int_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _int_ |   |
 
 ##### Retorno
 
@@ -2285,7 +2285,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getKeys() : _java.util.Set_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getKeys</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
 ##### Retorno
 
 ( _java.util.Set_ )
@@ -2297,12 +2297,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getList(index: _int_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -2311,13 +2311,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getList(index: _int_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| claz | _java.lang.Class_ |   |
+| **index** | _int_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Retorno
 
@@ -2326,13 +2326,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getList(index: _int_, defaultValue: _java.lang.Object_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -2341,14 +2341,14 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getList(index: _int_, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
-| claz | _java.lang.Class_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Retorno
 
@@ -2357,12 +2357,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getList(key: string) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2371,13 +2371,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getList(key: string, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| claz | _java.lang.Class_ |   |
+| **key** | _string_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Retorno
 
@@ -2386,13 +2386,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getList(key: string, defaultValue: _java.lang.Object_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -2401,14 +2401,14 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getList(key: string, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
-| claz | _java.lang.Class_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
+| **claz** | _java.lang.Class_ |   |
 
 ##### Retorno
 
@@ -2421,12 +2421,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLocalDate(key: string) : _java.time.LocalDate_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2435,13 +2435,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLocalDate(key: string, defaultValue: _java.time.LocalDate_) : _java.time.LocalDate_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalDate_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalDate_ |   |
 
 ##### Retorno
 
@@ -2454,12 +2454,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLocalDateTime(key: string) : _java.time.LocalDateTime_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2468,13 +2468,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLocalDateTime(key: string, defaultValue: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalDateTime_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalDateTime_ |   |
 
 ##### Retorno
 
@@ -2487,12 +2487,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLocalTime(key: string) : _java.time.LocalTime_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2501,13 +2501,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLocalTime(key: string, defaultValue: _java.time.LocalTime_) : _java.time.LocalTime_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.time.LocalTime_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.time.LocalTime_ |   |
 
 ##### Retorno
 
@@ -2520,12 +2520,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLong(index: _int_) : _long_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -2534,13 +2534,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLong(index: _int_, defaultValue: _long_) : _long_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _long_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _long_ |   |
 
 ##### Retorno
 
@@ -2549,12 +2549,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLong(key: string) : _long_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2563,13 +2563,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getLong(key: string, defaultValue: _long_) : _long_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _long_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _long_ |   |
 
 ##### Retorno
 
@@ -2582,12 +2582,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getMap(index: _int_) : _java.util.Map_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -2596,13 +2596,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getMap(index: _int_, defaultValue: _java.lang.Object_) : _java.util.Map_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -2611,12 +2611,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getMap(key: string) : _java.util.Map_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2625,13 +2625,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getMap(key: string, defaultValue: _java.lang.Object_) : _java.util.Map_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -2644,13 +2644,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getOrDefault(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getOrDefault</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -2663,12 +2663,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getSQLDate(key: string) : _java.sql.Date_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2677,13 +2677,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getSQLDate(key: string, defaultValue: _java.sql.Date_) : _java.sql.Date_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Date_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Date_ |   |
 
 ##### Retorno
 
@@ -2696,12 +2696,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getSQLTime(key: string) : _java.sql.Time_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2710,13 +2710,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getSQLTime(key: string, defaultValue: _java.sql.Time_) : _java.sql.Time_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Time_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Time_ |   |
 
 ##### Retorno
 
@@ -2729,12 +2729,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getSQLTimestamp(key: string) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2743,13 +2743,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getSQLTimestamp(key: string, defaultValue: _java.sql.Timestamp_) : _java.sql.Timestamp_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.sql.Timestamp_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.sql.Timestamp_ |   |
 
 ##### Retorno
 
@@ -2762,12 +2762,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getShort(index: _int_) : _short_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -2776,13 +2776,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getShort(index: _int_, defaultValue: _short_) : _short_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | _short_ |   |
+| **index** | _int_ |   |
+| **defaultValue** | _short_ |   |
 
 ##### Retorno
 
@@ -2791,12 +2791,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getShort(key: string) : _short_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2805,13 +2805,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getShort(key: string, defaultValue: _short_) : _short_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _short_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _short_ |   |
 
 ##### Retorno
 
@@ -2824,7 +2824,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getSize() : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -2836,76 +2836,76 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getString(index: _int_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.getString(index: _int_, defaultValue: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| defaultValue | string |   |
+| **index** | _int_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.getString(key: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.getString(key: string, defaultValue: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.getString(key: string, defaultValue: string, charsetName: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charsetName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
-| charsetName | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
+| **charsetName** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -2914,12 +2914,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getUID(key: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2928,13 +2928,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getUID(key: string, defaultValue: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Retorno
 
@@ -2943,13 +2943,13 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.UUID_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.UUID_ |   |
 
 ##### Retorno
 
@@ -2962,14 +2962,14 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### _config.getURLCharacterEncoding() : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getURLCharacterEncoding</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém a codificação de caracteres para ser utilizada na formatação para URL (_QueryString_).
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Código da codificação dos caracteres.
 
@@ -2979,12 +2979,12 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _config.getUUID(key: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -2993,13 +2993,13 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _config.getUUID(key: string, defaultValue: string) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | string |   |
+| **key** | _string_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Retorno
 
@@ -3008,13 +3008,13 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _config.getUUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| defaultValue | _java.util.UUID_ |   |
+| **key** | _string_ |   |
+| **defaultValue** | _java.util.UUID_ |   |
 
 ##### Retorno
 
@@ -3027,7 +3027,7 @@ Código da codificação dos caracteres.
 
 ---
 
-#### _config.getValues() : _java.util.Collection_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getValues</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>
 ##### Descrição
 
 Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
@@ -3040,7 +3040,7 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### _config.getValues(indice: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getValues</span>(<span style="color: #FF8000">indice</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
@@ -3049,7 +3049,7 @@ Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lis
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| indice | _int_ | Índice para obter o objeto associado. |
+| **indice** | _int_ | Índice para obter o objeto associado. |
 
 ##### Retorno
 
@@ -3059,7 +3059,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.getValues(indice: _int_, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getValues</span>(<span style="color: #FF8000">indice</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">valorPadrao</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
@@ -3068,8 +3068,8 @@ Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lis
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| indice | _int_ | Índice para obter o objeto associado. |
-| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| **indice** | _int_ | Índice para obter o objeto associado. |
+| **valorPadrao** | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -3079,7 +3079,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.getValues(chave: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getValues</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -3088,7 +3088,7 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | A chave para obter o objeto associado. |
+| **chave** | _string_ | A chave para obter o objeto associado. |
 
 ##### Retorno
 
@@ -3098,7 +3098,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.getValues(chave: string, valorPadrao: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">getValues</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">valorPadrao</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -3107,8 +3107,8 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | A chave para obter o objeto associado. |
-| valorPadrao | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
+| **chave** | _string_ | A chave para obter o objeto associado. |
+| **valorPadrao** | _java.lang.Object_ | Caso não consiga obter o valor como um objeto em Values então retorna este valor padrão como alternativa. |
 
 ##### Retorno
 
@@ -3122,12 +3122,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.has(o: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">has</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3136,12 +3136,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.has(key: string) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">has</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -3150,13 +3150,13 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.has(key: string, value: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">has</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3169,12 +3169,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.hasKey(key: string) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">hasKey</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -3187,12 +3187,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.hasValue(value: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">hasValue</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| value | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3205,12 +3205,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.indexOf(o: _java.lang.Object_) : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">indexOf</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3223,12 +3223,12 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.is(o: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">is</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3241,7 +3241,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.isEmpty() : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">isEmpty</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -3253,7 +3253,7 @@ Objeto convertido para Values.
 
 ---
 
-#### _config.isJail() : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">isJail</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verfica se está ativa a restrição para todos os ficheiros associados serem carregados apenas a partir de um directório específico.
@@ -3270,7 +3270,7 @@ Se está ativo a restrição aos ficheiros associados.
 
 ---
 
-#### _config.isList() : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">isList</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -3278,12 +3278,12 @@ Se está ativo a restrição aos ficheiros associados.
 
 ---
 
-#### _config.isList(o: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">isList</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3296,7 +3296,7 @@ Se está ativo a restrição aos ficheiros associados.
 
 ---
 
-#### _config.isLockedAsReadOnly() : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">isLockedAsReadOnly</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verfica se está bloqueado em modo de apenas leitura.
@@ -3313,7 +3313,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.isMap() : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">isMap</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -3321,12 +3321,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.isMap(o: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">isMap</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3339,12 +3339,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.isMergeable(object: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">isMergeable</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| object | _java.lang.Object_ |   |
+| **object** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3357,7 +3357,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.iterator() : _java.util.Iterator_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">iterator</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Iterator</span>
 ##### Retorno
 
 ( _java.util.Iterator_ )
@@ -3369,16 +3369,16 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.join(splitter: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">join</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| splitter | string |   |
+| **splitter** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -3387,7 +3387,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.keySet() : _java.util.Set_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">keySet</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
 ##### Retorno
 
 ( _java.util.Set_ )
@@ -3399,7 +3399,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.keys() : _java.util.Set_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">keys</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
 ##### Retorno
 
 ( _java.util.Set_ )
@@ -3411,7 +3411,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.keysSorted() : _java.util.Set_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">keysSorted</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
 ##### Retorno
 
 ( _java.util.Set_ )
@@ -3423,31 +3423,31 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.keysToString(splitter: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">keysToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| splitter | string |   |
+| **splitter** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.keysToString(map: _java.util.Map_, splitter: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">keysToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| splitter | string |   |
+| **map** | _java.util.Map_ |   |
+| **splitter** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -3456,12 +3456,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.lastIndexOf(o: _java.lang.Object_) : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">lastIndexOf</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3474,7 +3474,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.length() : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">length</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -3486,7 +3486,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.list() : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">list</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -3494,12 +3494,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.list(cls: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">list</span>(<span style="color: #FF8000">cls</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| cls | _java.lang.Class_ |   |
+| **cls** | _java.lang.Class_ |   |
 
 ##### Retorno
 
@@ -3512,7 +3512,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.listIterator() : _java.util.ListIterator_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">listIterator</span>() : <span style="font-weight: normal; font-style: italic;">java.util.ListIterator</span>
 ##### Retorno
 
 ( _java.util.ListIterator_ )
@@ -3520,12 +3520,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.listIterator(index: _int_) : _java.util.ListIterator_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">listIterator</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.ListIterator</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
+| **index** | _int_ |   |
 
 ##### Retorno
 
@@ -3538,7 +3538,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.listOfValues() : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">listOfValues</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -3550,12 +3550,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.loadJSON(in: _java.io.InputStream_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">loadJSON</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| in | _java.io.InputStream_ |   |
+| **in** | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -3564,12 +3564,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.loadJSON(in: _java.io.Reader_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">loadJSON</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| in | _java.io.Reader_ |   |
+| **in** | _java.io.Reader_ |   |
 
 ##### Retorno
 
@@ -3582,12 +3582,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.loadProperties(in: _java.io.InputStream_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">loadProperties</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| in | _java.io.InputStream_ |   |
+| **in** | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -3596,12 +3596,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.loadProperties(in: _java.io.Reader_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">loadProperties</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| in | _java.io.Reader_ |   |
+| **in** | _java.io.Reader_ |   |
 
 ##### Retorno
 
@@ -3610,12 +3610,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.loadProperties(properties: _java.util.Properties_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">loadProperties</span>(<span style="color: #FF8000">properties</span>: <span style="font-weight: normal; font-style: italic;">java.util.Properties</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| properties | _java.util.Properties_ |   |
+| **properties** | _java.util.Properties_ |   |
 
 ##### Retorno
 
@@ -3628,12 +3628,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.loadPropertiesFromString(data: string) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">loadPropertiesFromString</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| data | string |   |
+| **data** | _string_ |   |
 
 ##### Retorno
 
@@ -3646,7 +3646,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.lockAsReadOnly() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">lockAsReadOnly</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Verfica se está bloqueado em modo de apenas leitura.
@@ -3663,7 +3663,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.map() : _java.util.Map_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">map</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Retorno
 
 ( _java.util.Map_ )
@@ -3675,12 +3675,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.merge(object: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">merge</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| object | _java.lang.Object_ |   |
+| **object** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3689,14 +3689,14 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.merge(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.util.function.BiFunction_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">merge</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg2</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.util.function.BiFunction_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
+| **arg2** | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
@@ -3709,12 +3709,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.of(array: _[Ljava.lang.Object;[]_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">of</span>(<span style="color: #FF8000">array</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| array | _[Ljava.lang.Object;[]_ |   |
+| **array** | _[Ljava.lang.Object;[]_ |   |
 
 ##### Retorno
 
@@ -3723,12 +3723,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.of(o: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">of</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3737,12 +3737,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.of(list: _java.util.List_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">of</span>(<span style="color: #FF8000">list</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| list | _java.util.List_ |   |
+| **list** | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -3751,12 +3751,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.of(map: _java.util.Map_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">of</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| map | _java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -3769,12 +3769,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.ofList(o: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">ofList</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3787,12 +3787,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.ofMap(o: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">ofMap</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3805,12 +3805,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.push(o: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">push</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3823,13 +3823,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.put(key: _java.lang.Object_, value: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | _java.lang.Object_ |   |
-| value | _java.lang.Object_ |   |
+| **key** | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3838,13 +3838,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.put(key: string, value: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3857,12 +3857,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.putAll(m: _java.util.Map_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">putAll</span>(<span style="color: #FF8000">m</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| m | _java.util.Map_ |   |
+| **m** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -3875,13 +3875,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.putIfAbsent(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">putIfAbsent</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3894,12 +3894,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.remove(i: _int_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">remove</span>(<span style="color: #FF8000">i</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| i | _int_ |   |
+| **i** | _int_ |   |
 
 ##### Retorno
 
@@ -3908,12 +3908,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.remove(o: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">remove</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| o | _java.lang.Object_ |   |
+| **o** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3922,13 +3922,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.remove(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">remove</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3941,7 +3941,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.removeAll() : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">removeAll</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -3949,12 +3949,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.removeAll(c: _java.util.Collection_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">removeAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| c | _java.util.Collection_ |   |
+| **c** | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -3967,13 +3967,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">replace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -3982,14 +3982,14 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.replace(arg0: _java.lang.Object_, arg1: _java.lang.Object_, arg2: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">replace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg2</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.lang.Object_ |   |
+| **arg0** | _java.lang.Object_ |   |
+| **arg1** | _java.lang.Object_ |   |
+| **arg2** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4002,12 +4002,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.replaceAll(arg0: _java.util.function.BiFunction_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">replaceAll</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.util.function.BiFunction_ |   |
+| **arg0** | _java.util.function.BiFunction_ |   |
 
 ##### Retorno
 
@@ -4016,12 +4016,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.replaceAll(operator: _java.util.function.UnaryOperator_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">replaceAll</span>(<span style="color: #FF8000">operator</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.UnaryOperator</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| operator | _java.util.function.UnaryOperator_ |   |
+| **operator** | _java.util.function.UnaryOperator_ |   |
 
 ##### Retorno
 
@@ -4030,12 +4030,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.replaceAll(function: _org.graalvm.polyglot.Value_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">replaceAll</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -4048,12 +4048,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.retainAll(c: _java.util.Collection_) : _boolean_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">retainAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| c | _java.util.Collection_ |   |
+| **c** | _java.util.Collection_ |   |
 
 ##### Retorno
 
@@ -4066,31 +4066,31 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.safeString(object: _java.lang.Object_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">safeString</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| object | _java.lang.Object_ |   |
+| **object** | _java.lang.Object_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.safeString(object: _java.lang.Object_, defaultValue: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">safeString</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| object | _java.lang.Object_ |   |
-| defaultValue | string |   |
+| **object** | _java.lang.Object_ |   |
+| **defaultValue** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -4099,12 +4099,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.saveJSON(out: _java.io.OutputStream_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">saveJSON</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| out | _java.io.OutputStream_ |   |
+| **out** | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -4113,12 +4113,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.saveJSON(out: _java.io.Writer_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">saveJSON</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| out | _java.io.Writer_ |   |
+| **out** | _java.io.Writer_ |   |
 
 ##### Retorno
 
@@ -4131,12 +4131,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.saveProperties(out: _java.io.OutputStream_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">saveProperties</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| out | _java.io.OutputStream_ |   |
+| **out** | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -4145,12 +4145,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.saveProperties(out: _java.io.Writer_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">saveProperties</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| out | _java.io.Writer_ |   |
+| **out** | _java.io.Writer_ |   |
 
 ##### Retorno
 
@@ -4163,79 +4163,79 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.search(content: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| content | string |   |
+| **content** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.search(content: string, ignoreCase: _boolean_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ignoreCase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| content | string |   |
-| ignoreCase | _boolean_ |   |
+| **content** | _string_ |   |
+| **ignoreCase** | _boolean_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.search(content: string, splitter: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| content | string |   |
-| splitter | string |   |
+| **content** | _string_ |   |
+| **splitter** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.search(content: string, splitter: string, ignoreCase: _boolean_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ignoreCase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| content | string |   |
-| splitter | string |   |
-| ignoreCase | _boolean_ |   |
+| **content** | _string_ |   |
+| **splitter** | _string_ |   |
+| **ignoreCase** | _boolean_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.search(map: _java.util.Map_, content: string, splitter: string, ignoreCase: _boolean_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ignoreCase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| content | string |   |
-| splitter | string |   |
-| ignoreCase | _boolean_ |   |
+| **map** | _java.util.Map_ |   |
+| **content** | _string_ |   |
+| **splitter** | _string_ |   |
+| **ignoreCase** | _boolean_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -4244,13 +4244,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.set(index: _int_, element: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">set</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">element</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| index | _int_ |   |
-| element | _java.lang.Object_ |   |
+| **index** | _int_ |   |
+| **element** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4259,13 +4259,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.set(key: string, value: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">set</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **value** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -4278,12 +4278,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setForceList(forceList: _boolean_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setForceList</span>(<span style="color: #FF8000">forceList</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| forceList | _boolean_ |   |
+| **forceList** | _boolean_ |   |
 
 ##### Retorno
 
@@ -4296,12 +4296,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setForceMap(forceMap: _boolean_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setForceMap</span>(<span style="color: #FF8000">forceMap</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| forceMap | _boolean_ |   |
+| **forceMap** | _boolean_ |   |
 
 ##### Retorno
 
@@ -4314,13 +4314,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfFalse(key: string, value: _boolean_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfFalse</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _boolean_ |   |
+| **key** | _string_ |   |
+| **value** | _boolean_ |   |
 
 ##### Retorno
 
@@ -4333,13 +4333,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfGreaterThanZero(key: string, value: _double_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _double_ |   |
+| **key** | _string_ |   |
+| **value** | _double_ |   |
 
 ##### Retorno
 
@@ -4348,13 +4348,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfGreaterThanZero(key: string, value: _float_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _float_ |   |
+| **key** | _string_ |   |
+| **value** | _float_ |   |
 
 ##### Retorno
 
@@ -4363,13 +4363,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfGreaterThanZero(key: string, value: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _int_ |   |
+| **key** | _string_ |   |
+| **value** | _int_ |   |
 
 ##### Retorno
 
@@ -4378,13 +4378,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfGreaterThanZero(key: string, value: _long_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _long_ |   |
+| **key** | _string_ |   |
+| **value** | _long_ |   |
 
 ##### Retorno
 
@@ -4393,13 +4393,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfGreaterThanZero(key: string, value: _short_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _short_ |   |
+| **key** | _string_ |   |
+| **value** | _short_ |   |
 
 ##### Retorno
 
@@ -4412,13 +4412,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfLowerThanZero(key: string, value: _double_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _double_ |   |
+| **key** | _string_ |   |
+| **value** | _double_ |   |
 
 ##### Retorno
 
@@ -4427,13 +4427,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfLowerThanZero(key: string, value: _float_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _float_ |   |
+| **key** | _string_ |   |
+| **value** | _float_ |   |
 
 ##### Retorno
 
@@ -4442,13 +4442,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfLowerThanZero(key: string, value: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _int_ |   |
+| **key** | _string_ |   |
+| **value** | _int_ |   |
 
 ##### Retorno
 
@@ -4457,13 +4457,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfLowerThanZero(key: string, value: _long_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _long_ |   |
+| **key** | _string_ |   |
+| **value** | _long_ |   |
 
 ##### Retorno
 
@@ -4472,13 +4472,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfLowerThanZero(key: string, value: _short_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _short_ |   |
+| **key** | _string_ |   |
+| **value** | _short_ |   |
 
 ##### Retorno
 
@@ -4491,13 +4491,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfNotEmpty(key: string, value: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfNotEmpty</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | string |   |
+| **key** | _string_ |   |
+| **value** | _string_ |   |
 
 ##### Retorno
 
@@ -4510,13 +4510,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfNotZero(key: string, value: _double_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _double_ |   |
+| **key** | _string_ |   |
+| **value** | _double_ |   |
 
 ##### Retorno
 
@@ -4525,13 +4525,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfNotZero(key: string, value: _float_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _float_ |   |
+| **key** | _string_ |   |
+| **value** | _float_ |   |
 
 ##### Retorno
 
@@ -4540,13 +4540,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfNotZero(key: string, value: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _int_ |   |
+| **key** | _string_ |   |
+| **value** | _int_ |   |
 
 ##### Retorno
 
@@ -4555,13 +4555,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfNotZero(key: string, value: _long_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _long_ |   |
+| **key** | _string_ |   |
+| **value** | _long_ |   |
 
 ##### Retorno
 
@@ -4570,13 +4570,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfNotZero(key: string, value: _short_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _short_ |   |
+| **key** | _string_ |   |
+| **value** | _short_ |   |
 
 ##### Retorno
 
@@ -4589,13 +4589,13 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setIfTrue(key: string, value: _boolean_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setIfTrue</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| value | _boolean_ |   |
+| **key** | _string_ |   |
+| **value** | _boolean_ |   |
 
 ##### Retorno
 
@@ -4608,12 +4608,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setNull(key: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setNull</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -4626,7 +4626,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### _config.setURLCharacterEncoding(characterEncoding: string) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">setURLCharacterEncoding</span>(<span style="color: #FF8000">characterEncoding</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Define a codificação de caracteres para ser utilizada na formatação para URL (_QueryString_).
@@ -4635,7 +4635,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| characterEncoding | string | Código da codificação dos caracteres. |
+| **characterEncoding** | _string_ | Código da codificação dos caracteres. |
 
 ##### Retorno
 
@@ -4648,7 +4648,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.size() : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">size</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -4660,7 +4660,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.sizeOfList() : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">sizeOfList</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -4672,7 +4672,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.sizeOfMap() : _int_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">sizeOfMap</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -4684,12 +4684,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.sort(c: _java.util.Comparator_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">sort</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Comparator</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| c | _java.util.Comparator_ |   |
+| **c** | _java.util.Comparator_ |   |
 
 ##### Retorno
 
@@ -4698,12 +4698,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.sort(function: _org.graalvm.polyglot.Value_) : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">sort</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| function | _org.graalvm.polyglot.Value_ |   |
+| **function** | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -4716,7 +4716,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.spliterator() : _java.util.Spliterator_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">spliterator</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Spliterator</span>
 ##### Retorno
 
 ( _java.util.Spliterator_ )
@@ -4728,13 +4728,13 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.subList(fromIndex: _int_, toIndex: _int_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">subList</span>(<span style="color: #FF8000">fromIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">toIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| fromIndex | _int_ |   |
-| toIndex | _int_ |   |
+| **fromIndex** | _int_ |   |
+| **toIndex** | _int_ |   |
 
 ##### Retorno
 
@@ -4747,7 +4747,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toArray() : _[Ljava.lang.Object;[]_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toArray</span>() : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>
 ##### Retorno
 
 ( _[Ljava.lang.Object;[]_ )
@@ -4755,12 +4755,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toArray(a: _[Ljava.lang.Object;[]_) : _[Ljava.lang.Object;[]_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toArray</span>(<span style="color: #FF8000">a</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| a | _[Ljava.lang.Object;[]_ |   |
+| **a** | _[Ljava.lang.Object;[]_ |   |
 
 ##### Retorno
 
@@ -4773,7 +4773,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toByteArray() : _byte[]_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toByteArray</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Retorno
 
 ( _byte[]_ )
@@ -4785,7 +4785,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toDoubleArray() : _double[]_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toDoubleArray</span>() : <span style="font-weight: normal; font-style: italic;">double[]</span>
 ##### Retorno
 
 ( _double[]_ )
@@ -4797,7 +4797,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toFloatArray() : _float[]_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toFloatArray</span>() : <span style="font-weight: normal; font-style: italic;">float[]</span>
 ##### Retorno
 
 ( _float[]_ )
@@ -4809,7 +4809,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toFormMap() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toFormMap</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -4817,13 +4817,13 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toFormMap(key: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toFormMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **key** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -4832,12 +4832,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toFormMap(data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toFormMap</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -4850,7 +4850,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toIntArray() : _[I_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toIntArray</span>() : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Retorno
 
 ( _[I_ )
@@ -4862,113 +4862,113 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toJSON() : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toJSON</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.toJSON(htmlEscape: _boolean_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| htmlEscape | _boolean_ |   |
+| **htmlEscape** | _boolean_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.toJSON(htmlEscape: _boolean_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| htmlEscape | _boolean_ |   |
-| indentFactor | _int_ |   |
+| **htmlEscape** | _boolean_ |   |
+| **indentFactor** | _int_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.toJSON(indentFactor: _int_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| indentFactor | _int_ |   |
+| **indentFactor** | _int_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.toJSON(values: _java.util.List_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| values | _java.util.List_ |   |
+| **values** | _java.util.List_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.toJSON(values: _java.util.List_, htmlEscape: _boolean_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| values | _java.util.List_ |   |
-| htmlEscape | _boolean_ |   |
+| **values** | _java.util.List_ |   |
+| **htmlEscape** | _boolean_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.toJSON(values: _java.util.List_, htmlEscape: _boolean_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| values | _java.util.List_ |   |
-| htmlEscape | _boolean_ |   |
-| indentFactor | _int_ |   |
+| **values** | _java.util.List_ |   |
+| **htmlEscape** | _boolean_ |   |
+| **indentFactor** | _int_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.toJSON(values: _java.util.List_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| values | _java.util.List_ |   |
-| indentFactor | _int_ |   |
+| **values** | _java.util.List_ |   |
+| **indentFactor** | _int_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -4977,13 +4977,13 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toJSONObject(object: _java.lang.Object_, htmlEscape: _boolean_) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toJSONObject</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| object | _java.lang.Object_ |   |
-| htmlEscape | _boolean_ |   |
+| **object** | _java.lang.Object_ |   |
+| **htmlEscape** | _boolean_ |   |
 
 ##### Retorno
 
@@ -4996,18 +4996,18 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toJSONString(object: _java.lang.Object_, htmlEscape: _boolean_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toJSONString</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| object | _java.lang.Object_ |   |
-| htmlEscape | _boolean_ |   |
-| indentFactor | _int_ |   |
+| **object** | _java.lang.Object_ |   |
+| **htmlEscape** | _boolean_ |   |
+| **indentFactor** | _int_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -5016,7 +5016,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toList() : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toList</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -5024,12 +5024,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toList(cls: _java.lang.Class_) : _java.util.List_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toList</span>(<span style="color: #FF8000">cls</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| cls | _java.lang.Class_ |   |
+| **cls** | _java.lang.Class_ |   |
 
 ##### Retorno
 
@@ -5042,7 +5042,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toLongArray() : _long[]_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toLongArray</span>() : <span style="font-weight: normal; font-style: italic;">long[]</span>
 ##### Retorno
 
 ( _long[]_ )
@@ -5054,7 +5054,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toMap() : _java.util.Map_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toMap</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Retorno
 
 ( _java.util.Map_ )
@@ -5066,10 +5066,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toProperties() : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toProperties</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -5078,7 +5078,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toShortArray() : _short[]_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toShortArray</span>() : <span style="font-weight: normal; font-style: italic;">short[]</span>
 ##### Retorno
 
 ( _short[]_ )
@@ -5090,7 +5090,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.toStringArray() : _[Ljava.lang.String;[]_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">toStringArray</span>() : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>
 ##### Retorno
 
 ( _[Ljava.lang.String;[]_ )
@@ -5102,12 +5102,12 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.unset(key: string) : _java.lang.Object_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">unset</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| key | string |   |
+| **key** | _string_ |   |
 
 ##### Retorno
 
@@ -5120,7 +5120,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.unsetAll() : _void_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">unsetAll</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -5132,7 +5132,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### _config.values() : _java.util.Collection_
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">values</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>
 ##### Descrição
 
 Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
@@ -5149,126 +5149,126 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### _config.valuesToString(splitter: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| splitter | string |   |
+| **splitter** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.valuesToString(splitter: string, excludes: _[Ljava.lang.String;[]_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| splitter | string |   |
-| excludes | _[Ljava.lang.String;[]_ |   |
+| **splitter** | _string_ |   |
+| **excludes** | _[Ljava.lang.String;[]_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.valuesToString(splitter: string, excludes: _[Ljava.lang.String;[]_, config: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| splitter | string |   |
-| excludes | _[Ljava.lang.String;[]_ |   |
-| config | _[Values](../../objects/Values)_ |   |
+| **splitter** | _string_ |   |
+| **excludes** | _[Ljava.lang.String;[]_ |   |
+| **config** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.valuesToString(splitter: string, config: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| splitter | string |   |
-| config | _[Values](../../objects/Values)_ |   |
+| **splitter** | _string_ |   |
+| **config** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.valuesToString(map: _java.util.Map_, splitter: string) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| splitter | string |   |
+| **map** | _java.util.Map_ |   |
+| **splitter** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.valuesToString(map: _java.util.Map_, splitter: string, excludes: _[Ljava.lang.String;[]_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| splitter | string |   |
-| excludes | _[Ljava.lang.String;[]_ |   |
+| **map** | _java.util.Map_ |   |
+| **splitter** | _string_ |   |
+| **excludes** | _[Ljava.lang.String;[]_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.valuesToString(map: _java.util.Map_, splitter: string, excludes: _[Ljava.lang.String;[]_, config: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| splitter | string |   |
-| excludes | _[Ljava.lang.String;[]_ |   |
-| config | _[Values](../../objects/Values)_ |   |
+| **map** | _java.util.Map_ |   |
+| **splitter** | _string_ |   |
+| **excludes** | _[Ljava.lang.String;[]_ |   |
+| **config** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _config.valuesToString(map: _java.util.Map_, splitter: string, config: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_config</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| map | _java.util.Map_ |   |
-| splitter | string |   |
-| config | _[Values](../../objects/Values)_ |   |
+| **map** | _java.util.Map_ |   |
+| **splitter** | _string_ |   |
+| **config** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---

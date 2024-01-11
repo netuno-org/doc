@@ -12,7 +12,7 @@ Sessão SSH para executar comandos.
 
 ---
 
-#### close() : _void_
+#### <span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Fecha a sessão atual.
@@ -28,7 +28,7 @@ Fecha a sessão atual.
 
 ---
 
-#### closed() : _boolean_
+#### <span style="color: #008000">closed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se a sessão ainda está aberta.
@@ -45,7 +45,7 @@ Verdadeiro se estiver aberta
 
 ---
 
-#### exec(comando: string) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### <span style="color: #008000">exec</span>(<span style="color: #FF8000">comando</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
 ##### Descrição
 
 Executa comandos remotamente através do SSH no servidor.
@@ -54,7 +54,7 @@ Executa comandos remotamente através do SSH no servidor.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| comando | string | Command to be executed remotely on the server. |
+| **comando** | _string_ | Command to be executed remotely on the server. |
 
 ##### Retorno
 
@@ -64,7 +64,7 @@ Resultado da execução do comando.
 
 ---
 
-#### exec(comando: string, timeout: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### <span style="color: #008000">exec</span>(<span style="color: #FF8000">comando</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">timeout</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
 ##### Descrição
 
 Executa comandos remotamente através do SSH no servidor.
@@ -73,8 +73,8 @@ Executa comandos remotamente através do SSH no servidor.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| comando | string | Command to be executed remotely on the server. |
-| timeout | _int_ | Tempo limite para execução do comando. |
+| **comando** | _string_ | Command to be executed remotely on the server. |
+| **timeout** | _int_ | Tempo limite para execução do comando. |
 
 ##### Retorno
 
@@ -88,7 +88,7 @@ Resultado da execução do comando.
 
 ---
 
-#### isClosed() : _boolean_
+#### <span style="color: #008000">isClosed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )

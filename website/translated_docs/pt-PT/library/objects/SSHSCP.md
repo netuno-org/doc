@@ -12,7 +12,7 @@ Cliente SCP utilizado com o SSH.
 
 ---
 
-#### close() : _void_
+#### <span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Fecha a sessão atual de SCP.
@@ -28,7 +28,7 @@ Fecha a sessão atual de SCP.
 
 ---
 
-#### closed() : _boolean_
+#### <span style="color: #008000">closed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se a sessão SCP ainda está aberta.
@@ -45,7 +45,7 @@ Verdadeiro se estiver aberta
 
 ---
 
-#### download(caminhoRemoto: string, destino: _java.io.OutputStream_) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">download</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destino</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Descrição
 
 Copia um arquivo no servidor para um arquivo local.
@@ -54,8 +54,8 @@ Copia um arquivo no servidor para um arquivo local.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoRemoto | string | Caminho do arquivo no servidor. |
-| destino | _java.io.OutputStream_ | Arquivo local de destino para armazenar o conteúdo remoto. |
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
+| **destino** | _java.io.OutputStream_ | Arquivo local de destino para armazenar o conteúdo remoto. |
 
 ##### Retorno
 
@@ -65,7 +65,7 @@ O cliente SFTP atual.
 
 ---
 
-#### download(caminhoRemoto: string, destino: _[File](../../objects/File)_) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">download</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destino</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Descrição
 
 Copia um arquivo no servidor para um arquivo local.
@@ -74,8 +74,8 @@ Copia um arquivo no servidor para um arquivo local.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoRemoto | string | Caminho do arquivo no servidor. |
-| destino | _[File](../../objects/File)_ | Arquivo local de destino para armazenar o conteúdo remoto. |
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
+| **destino** | _[File](../../objects/File)_ | Arquivo local de destino para armazenar o conteúdo remoto. |
 
 ##### Retorno
 
@@ -89,7 +89,7 @@ O cliente SFTP atual.
 
 ---
 
-#### downloadBytes(caminhoRemoto: string) : _byte[]_
+#### <span style="color: #008000">downloadBytes</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Descrição
 
 Obtém um array de bytes do conteúdo de um arquivo no servidor.
@@ -98,7 +98,7 @@ Obtém um array de bytes do conteúdo de um arquivo no servidor.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoRemoto | string | Caminho do arquivo no servidor. |
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
 
 ##### Retorno
 
@@ -112,7 +112,7 @@ Array de bytes com o conteúdo do arquivo remoto no servidor.
 
 ---
 
-#### downloadText(caminhoRemoto: string) : string
+#### <span style="color: #008000">downloadText</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém um conteúdo de texto de um arquivo no servidor.
@@ -121,17 +121,17 @@ Obtém um conteúdo de texto de um arquivo no servidor.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoRemoto | string | Caminho do arquivo no servidor. |
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo de texto do arquivo remoto no servidor.
 
 ---
 
-#### downloadText(caminhoRemoto: string, encodificacao: string) : string
+#### <span style="color: #008000">downloadText</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">encodificacao</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém um conteúdo de texto de um arquivo no servidor.
@@ -140,12 +140,12 @@ Obtém um conteúdo de texto de um arquivo no servidor.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoRemoto | string | Caminho do arquivo no servidor. |
-| encodificacao | string | Código de encodificação dos caractéres. |
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
+| **encodificacao** | _string_ | Código de encodificação dos caractéres. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Conteúdo de texto do arquivo remoto no servidor.
 
@@ -155,7 +155,7 @@ Conteúdo de texto do arquivo remoto no servidor.
 
 ---
 
-#### isClosed() : _boolean_
+#### <span style="color: #008000">isClosed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -167,7 +167,7 @@ Conteúdo de texto do arquivo remoto no servidor.
 
 ---
 
-#### upload(caminhoRemoto: string, origem: _java.io.InputStream_) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">upload</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Descrição
 
 Envia os dados de um arquivo para ser salvo no servidor.
@@ -176,8 +176,8 @@ Envia os dados de um arquivo para ser salvo no servidor.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoRemoto | string | Caminho do arquivo no servidor. |
-| origem | _java.io.InputStream_ | Arquivo local de origem. |
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
+| **origem** | _java.io.InputStream_ | Arquivo local de origem. |
 
 ##### Retorno
 
@@ -187,7 +187,7 @@ O cliente SFTP atual.
 
 ---
 
-#### upload(caminhoRemoto: string, origem: _[File](../../objects/File)_) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">upload</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Descrição
 
 Envia os dados de um arquivo para ser salvo no servidor.
@@ -196,8 +196,8 @@ Envia os dados de um arquivo para ser salvo no servidor.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoRemoto | string | Caminho do arquivo no servidor. |
-| origem | _[File](../../objects/File)_ | Arquivo local de origem. |
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
+| **origem** | _[File](../../objects/File)_ | Arquivo local de origem. |
 
 ##### Retorno
 
@@ -211,7 +211,7 @@ O cliente SFTP atual.
 
 ---
 
-#### uploadBytes(caminhoRemoto: string, bytes: _byte[]_) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">uploadBytes</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Descrição
 
 Envia um array de bytes para serem salvos em um arquivo no servidor.
@@ -220,8 +220,8 @@ Envia um array de bytes para serem salvos em um arquivo no servidor.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoRemoto | string | Caminho do arquivo no servidor. |
-| bytes | _byte[]_ | Array de bytes. |
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
+| **bytes** | _byte[]_ | Array de bytes. |
 
 ##### Retorno
 
@@ -235,7 +235,7 @@ O cliente SFTP atual.
 
 ---
 
-#### uploadText(caminhoRemoto: string, texto: string) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">uploadText</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Descrição
 
 Envia um conteúdo de texto para ser salvado em um arquivo no servidor.
@@ -244,8 +244,8 @@ Envia um conteúdo de texto para ser salvado em um arquivo no servidor.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoRemoto | string | Caminho do arquivo no servidor. |
-| texto | string | Conteúdo de texto. |
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
+| **texto** | _string_ | Conteúdo de texto. |
 
 ##### Retorno
 
@@ -255,7 +255,7 @@ O cliente SFTP atual.
 
 ---
 
-#### uploadText(caminhoRemoto: string, texto: string, encodificacao: string) : _[SSHSCP](../../objects/SSHSCP)_
+#### <span style="color: #008000">uploadText</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">encodificacao</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSCP](../../objects/SSHSCP)</span>
 ##### Descrição
 
 Envia um conteúdo de texto para ser salvado em um arquivo no servidor.
@@ -264,9 +264,9 @@ Envia um conteúdo de texto para ser salvado em um arquivo no servidor.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminhoRemoto | string | Caminho do arquivo no servidor. |
-| texto | string | Conteúdo de texto. |
-| encodificacao | string | Código de encodificação dos caractéres. |
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
+| **texto** | _string_ | Conteúdo de texto. |
+| **encodificacao** | _string_ | Código de encodificação dos caractéres. |
 
 ##### Retorno
 

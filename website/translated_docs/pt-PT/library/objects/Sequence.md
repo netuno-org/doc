@@ -21,16 +21,16 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### commandNextValue(sequenceName: string) : string
+#### <span style="color: #008000">commandNextValue</span>(<span style="color: #FF8000">sequenceName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sequenceName | string |   |
+| **sequenceName** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -39,12 +39,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### create(name: string) : _[Sequence](../../objects/Sequence)_
+#### <span style="color: #008000">create</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Retorno
 
@@ -53,13 +53,13 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### create(name: string, startWith: _int_) : _[Sequence](../../objects/Sequence)_
+#### <span style="color: #008000">create</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">startWith</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| name | string |   |
-| startWith | _int_ |   |
+| **name** | _string_ |   |
+| **startWith** | _int_ |   |
 
 ##### Retorno
 
@@ -72,12 +72,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### drop(name: string) : _[Sequence](../../objects/Sequence)_
+#### <span style="color: #008000">drop</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Retorno
 
@@ -90,12 +90,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### getCurrentValue(sequenceName: string) : _int_
+#### <span style="color: #008000">getCurrentValue</span>(<span style="color: #FF8000">sequenceName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sequenceName | string |   |
+| **sequenceName** | _string_ |   |
 
 ##### Retorno
 
@@ -108,10 +108,10 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### getKey() : string
+#### <span style="color: #008000">getKey</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -120,7 +120,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isH2() : _boolean_
+#### <span style="color: #008000">isH2</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -128,12 +128,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isH2(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isH2</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -146,7 +146,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isMSSQL() : _boolean_
+#### <span style="color: #008000">isMSSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -154,12 +154,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isMSSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isMSSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -172,7 +172,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isMariaDB() : _boolean_
+#### <span style="color: #008000">isMariaDB</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -180,12 +180,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isMariaDB(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isMariaDB</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -198,7 +198,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isPostgreSQL() : _boolean_
+#### <span style="color: #008000">isPostgreSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -206,12 +206,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isPostgreSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isPostgreSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -224,13 +224,13 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### rename(oldName: string, newName: string) : _[Sequence](../../objects/Sequence)_
+#### <span style="color: #008000">rename</span>(<span style="color: #FF8000">oldName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">newName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| oldName | string |   |
-| newName | string |   |
+| **oldName** | _string_ |   |
+| **newName** | _string_ |   |
 
 ##### Retorno
 
@@ -243,13 +243,13 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### renameIfExists(oldName: string, newName: string) : _[Sequence](../../objects/Sequence)_
+#### <span style="color: #008000">renameIfExists</span>(<span style="color: #FF8000">oldName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">newName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| oldName | string |   |
-| newName | string |   |
+| **oldName** | _string_ |   |
+| **newName** | _string_ |   |
 
 ##### Retorno
 
@@ -262,13 +262,13 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### restart(sequenceName: string, nextValue: _int_) : _[Sequence](../../objects/Sequence)_
+#### <span style="color: #008000">restart</span>(<span style="color: #FF8000">sequenceName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">nextValue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sequenceName | string |   |
-| nextValue | _int_ |   |
+| **sequenceName** | _string_ |   |
+| **nextValue** | _int_ |   |
 
 ##### Retorno
 
@@ -277,14 +277,14 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### restart(sequenceName: string, tableName: string, column: string) : _[Sequence](../../objects/Sequence)_
+#### <span style="color: #008000">restart</span>(<span style="color: #FF8000">sequenceName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sequenceName | string |   |
-| tableName | string |   |
-| column | string |   |
+| **sequenceName** | _string_ |   |
+| **tableName** | _string_ |   |
+| **column** | _string_ |   |
 
 ##### Retorno
 
@@ -297,7 +297,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### sequence() : _boolean_
+#### <span style="color: #008000">sequence</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -309,7 +309,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### supported() : _boolean_
+#### <span style="color: #008000">supported</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )

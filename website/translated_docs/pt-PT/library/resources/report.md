@@ -12,7 +12,7 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.all() : _java.util.List_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">all</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -24,12 +24,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.create(data: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">create</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -42,13 +42,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.createComponent(formId: _int_, data: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">createComponent</span>(<span style="color: #FF8000">formId</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formId | _int_ |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **formId** | _int_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -57,13 +57,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.createComponent(formNameOrUid: string, data: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">createComponent</span>(<span style="color: #FF8000">formNameOrUid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formNameOrUid | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **formNameOrUid** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -76,13 +76,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.createComponentIfNotExists(formId: _int_, data: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">createComponentIfNotExists</span>(<span style="color: #FF8000">formId</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formId | _int_ |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **formId** | _int_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -91,13 +91,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.createComponentIfNotExists(formNameOrUid: string, data: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">createComponentIfNotExists</span>(<span style="color: #FF8000">formNameOrUid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formNameOrUid | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **formNameOrUid** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -110,12 +110,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.createIfNotExists(data: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">createIfNotExists</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -128,12 +128,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.get(id: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ |   |
+| **id** | _int_ |   |
 
 ##### Retorno
 
@@ -142,12 +142,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.get(nameOrUid: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">nameOrUid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nameOrUid | string |   |
+| **nameOrUid** | _string_ |   |
 
 ##### Retorno
 
@@ -156,12 +156,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.get(data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -174,12 +174,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getAllComponents(formId: _int_) : _java.util.List_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">getAllComponents</span>(<span style="color: #FF8000">formId</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formId | _int_ |   |
+| **formId** | _int_ |   |
 
 ##### Retorno
 
@@ -188,12 +188,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getAllComponents(formNameOrUid: string) : _java.util.List_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">getAllComponents</span>(<span style="color: #FF8000">formNameOrUid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formNameOrUid | string |   |
+| **formNameOrUid** | _string_ |   |
 
 ##### Retorno
 
@@ -206,13 +206,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(formId: _int_, id: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">getComponent</span>(<span style="color: #FF8000">formId</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formId | _int_ |   |
-| id | _int_ |   |
+| **formId** | _int_ |   |
+| **id** | _int_ |   |
 
 ##### Retorno
 
@@ -221,13 +221,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(formId: _int_, nameOrUid: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">getComponent</span>(<span style="color: #FF8000">formId</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">nameOrUid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formId | _int_ |   |
-| nameOrUid | string |   |
+| **formId** | _int_ |   |
+| **nameOrUid** | _string_ |   |
 
 ##### Retorno
 
@@ -236,13 +236,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(formId: _int_, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">getComponent</span>(<span style="color: #FF8000">formId</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formId | _int_ |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **formId** | _int_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -251,13 +251,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(formNameOrUid: string, id: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">getComponent</span>(<span style="color: #FF8000">formNameOrUid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formNameOrUid | string |   |
-| id | _int_ |   |
+| **formNameOrUid** | _string_ |   |
+| **id** | _int_ |   |
 
 ##### Retorno
 
@@ -266,13 +266,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(formNameOrUid: string, nameOrUid: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">getComponent</span>(<span style="color: #FF8000">formNameOrUid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">nameOrUid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formNameOrUid | string |   |
-| nameOrUid | string |   |
+| **formNameOrUid** | _string_ |   |
+| **nameOrUid** | _string_ |   |
 
 ##### Retorno
 
@@ -281,13 +281,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(formNameOrUid: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">getComponent</span>(<span style="color: #FF8000">formNameOrUid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formNameOrUid | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **formNameOrUid** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -300,12 +300,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.notNulls(formId: _int_) : _java.util.List_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">notNulls</span>(<span style="color: #FF8000">formId</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formId | _int_ |   |
+| **formId** | _int_ |   |
 
 ##### Retorno
 
@@ -314,12 +314,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.notNulls(formNameOrUid: string) : _java.util.List_
+#### <span style="font-weight: normal">_report</span>.<span style="color: #008000">notNulls</span>(<span style="color: #FF8000">formNameOrUid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| formNameOrUid | string |   |
+| **formNameOrUid** | _string_ |   |
 
 ##### Retorno
 

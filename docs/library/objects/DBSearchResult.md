@@ -12,7 +12,7 @@ Result of the research carried out on the database.
 
 ---
 
-#### getFullTotal() : _int_
+#### <span style="color: #008000">getFullTotal</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -24,7 +24,7 @@ Result of the research carried out on the database.
 
 ---
 
-#### getLength() : _int_
+#### <span style="color: #008000">getLength</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -36,7 +36,7 @@ Result of the research carried out on the database.
 
 ---
 
-#### getOffset() : _int_
+#### <span style="color: #008000">getOffset</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -48,7 +48,7 @@ Result of the research carried out on the database.
 
 ---
 
-#### getResults() : _java.util.List_
+#### <span style="color: #008000">getResults</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -60,7 +60,7 @@ Result of the research carried out on the database.
 
 ---
 
-#### getTotal() : _int_
+#### <span style="color: #008000">getTotal</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -72,12 +72,12 @@ Result of the research carried out on the database.
 
 ---
 
-#### setFullTotal(fullTotal: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="color: #008000">setFullTotal</span>(<span style="color: #FF8000">fullTotal</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| fullTotal | _int_ |   |
+| **fullTotal** | _int_ |   |
 
 ##### Return
 
@@ -90,12 +90,12 @@ Result of the research carried out on the database.
 
 ---
 
-#### setLength(length: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="color: #008000">setLength</span>(<span style="color: #FF8000">length</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| length | _int_ |   |
+| **length** | _int_ |   |
 
 ##### Return
 
@@ -108,12 +108,12 @@ Result of the research carried out on the database.
 
 ---
 
-#### setOffset(offset: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="color: #008000">setOffset</span>(<span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| offset | _int_ |   |
+| **offset** | _int_ |   |
 
 ##### Return
 
@@ -126,12 +126,12 @@ Result of the research carried out on the database.
 
 ---
 
-#### setResults(results: _java.util.List_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="color: #008000">setResults</span>(<span style="color: #FF8000">results</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| results | _java.util.List_ |   |
+| **results** | _java.util.List_ |   |
 
 ##### Return
 
@@ -144,12 +144,12 @@ Result of the research carried out on the database.
 
 ---
 
-#### setTotal(total: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### <span style="color: #008000">setTotal</span>(<span style="color: #FF8000">total</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| total | _int_ |   |
+| **total** | _int_ |   |
 
 ##### Return
 

@@ -12,7 +12,7 @@ Gestão dos grupos da aplicação e obtenção dos dados do grupo do utilizador 
 
 ---
 
-#### _group.all() : _java.util.List_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">all</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Obtém a lista de dados de todos os grupo.
@@ -36,7 +36,7 @@ Lista de todos os dados de todos os grupos.
 
 ---
 
-#### _group.allByCode(codigo: string) : _java.util.List_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">allByCode</span>(<span style="color: #FF8000">codigo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Obtém todos os grupos a partir do código alternativo.
@@ -55,7 +55,7 @@ for (const grupo of grupos) {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| codigo | string | Código alternativo que os grupos podem ter associado. |
+| **codigo** | _string_ | Código alternativo que os grupos podem ter associado. |
 
 ##### Retorno
 
@@ -69,7 +69,7 @@ Lista dos utilizadores encontrados para o código alternativo.
 
 ---
 
-#### _group.code() : string
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">code</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o código alternativo do grupo do utilizador que está autenticado.
@@ -83,7 +83,7 @@ _log.info(`Código do Utilizador: ${_group.code()}`)
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Código auxiliar do grupo do utilizador logado.
 
@@ -93,7 +93,7 @@ Código auxiliar do grupo do utilizador logado.
 
 ---
 
-#### _group.create(dadosGrupo: _[Values](../../objects/Values)_) : _int_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">create</span>(<span style="color: #FF8000">dadosGrupo</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Cria o novo grupo.
@@ -115,7 +115,7 @@ _group.create(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dadosGrupo | _[Values](../../objects/Values)_ | Dados do grupo que vai ser criado. |
+| **dadosGrupo** | _[Values](../../objects/Values)_ | Dados do grupo que vai ser criado. |
 
 ##### Retorno
 
@@ -129,7 +129,7 @@ ID do grupo que foi criado.
 
 ---
 
-#### _group.createIfNotExists(dadosGrupo: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">createIfNotExists</span>(<span style="color: #FF8000">dadosGrupo</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Cria o utilizador caso não exista ainda.
@@ -151,7 +151,7 @@ _group.createIfNotExists(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dadosGrupo | _[Values](../../objects/Values)_ | Dados do grupo que vai ser criado caso não exista ainda. |
+| **dadosGrupo** | _[Values](../../objects/Values)_ | Dados do grupo que vai ser criado caso não exista ainda. |
 
 ##### Retorno
 
@@ -165,7 +165,7 @@ Foi criado com sucesso.
 
 ---
 
-#### _group.data() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">data</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém toda a informação de dados do grupo do utilizador que está autenticado.
@@ -189,7 +189,7 @@ Todos os dados do grupo do utilizador logado.
 
 ---
 
-#### _group.firstByCode(codigo: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">firstByCode</span>(<span style="color: #FF8000">codigo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um grupo a partir do código alternativo.
@@ -206,7 +206,7 @@ _out.json(grupo)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| codigo | string | Código alternativo que o grupo pode ter associado. |
+| **codigo** | _string_ | Código alternativo que o grupo pode ter associado. |
 
 ##### Retorno
 
@@ -220,7 +220,7 @@ Dados do grupo encontrado com o código alternativo.
 
 ---
 
-#### _group.firstByMail(mail: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">firstByMail</span>(<span style="color: #FF8000">mail</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um grupo a partir do e-mail.
@@ -237,7 +237,7 @@ _out.json(grupo)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mail | string | E-mail do grupo. |
+| **mail** | _string_ | E-mail do grupo. |
 
 ##### Retorno
 
@@ -251,7 +251,7 @@ Dados do grupo encontrado com o e-mail.
 
 ---
 
-#### _group.firstByName(nome: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">firstByName</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um grupo a partir do nome.
@@ -268,7 +268,7 @@ _out.json(grupo)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nome | string | Nome do grupo. |
+| **nome** | _string_ | Nome do grupo. |
 
 ##### Retorno
 
@@ -282,7 +282,7 @@ Dados do utilizador encontrado com o nome.
 
 ---
 
-#### _group.get(id: _int_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um grupo a partir do ID (identificador numérico).
@@ -299,7 +299,7 @@ _out.json(grupo)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ | Identificador numérico do grupo. |
+| **id** | _int_ | Identificador numérico do grupo. |
 
 ##### Retorno
 
@@ -309,7 +309,7 @@ Dados do grupo encontrado.
 
 ---
 
-#### _group.get(idOuUid: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">idOuUid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um grupo a partir do ID (identificador numérico) ou do UUID (identificador único universal).
@@ -326,7 +326,7 @@ _out.json(grupo)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| idOuUid | string | Tanto pode ser um ID ou um UID do grupo. |
+| **idOuUid** | _string_ | Tanto pode ser um ID ou um UID do grupo. |
 
 ##### Retorno
 
@@ -340,7 +340,7 @@ Dados do grupo encontrado.
 
 ---
 
-#### _group.id() : _int_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">id</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Obtém o identificador númerico do grupo de quem está autenticado.
@@ -364,7 +364,7 @@ ID (identificador númerico) do grupo do utilizador logado.
 
 ---
 
-#### _group.name() : string
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o nome completo do grupo do utilizador que está autenticado.
@@ -378,7 +378,7 @@ _log.info(`Nome do Grupo: ${_group.name()}`)
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Nome do grupo do utilizador logado.
 
@@ -388,7 +388,7 @@ Nome do grupo do utilizador logado.
 
 ---
 
-#### _group.remove(id: _int_) : _boolean_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">remove</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Remove o grupo refente ao ID passado.
@@ -407,7 +407,7 @@ _group.remove(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ | O ID (identificador númerico) do grupo. |
+| **id** | _int_ | O ID (identificador númerico) do grupo. |
 
 ##### Retorno
 
@@ -421,7 +421,7 @@ Foi apagado com sucesso.
 
 ---
 
-#### _group.search(termo: string) : _java.util.List_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">termo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Descrição
 
 Pesquisa os grupos que tem alguma ocorrência nos dados com o texto de pesquisa passado.
@@ -440,7 +440,7 @@ for (const grupo of grupos) {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| termo | string | Chave de pesquisa. |
+| **termo** | _string_ | Chave de pesquisa. |
 
 ##### Retorno
 
@@ -454,7 +454,7 @@ Lista de dados dos grupos encontrados.
 
 ---
 
-#### _group.searchFirst(termo: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">searchFirst</span>(<span style="color: #FF8000">termo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 O primeiro resultado da pesquisa de grupos que tem alguma ocorrência nos dados do termo passado.
@@ -471,7 +471,7 @@ _out.json(grupo)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| termo | string | Chave de pesquisa. |
+| **termo** | _string_ | Chave de pesquisa. |
 
 ##### Retorno
 
@@ -485,7 +485,7 @@ Dados do grupo encontrado.
 
 ---
 
-#### _group.uid() : string
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">uid</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o identificador único universal do grupo de quem está autenticado.
@@ -499,7 +499,7 @@ _log.info(`UID do Grupo: ${_group.uid()}`)
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 UUID (identificador único universal) do grupo do utilizador logado.
 
@@ -509,7 +509,7 @@ UUID (identificador único universal) do grupo do utilizador logado.
 
 ---
 
-#### _group.update(id: _int_, dadosGrupo: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dadosGrupo</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Atualiza os dados do grupo referente ao ID passado.
@@ -530,8 +530,8 @@ _group.update(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | _int_ | O ID (identificador númerico) do grupo. |
-| dadosGrupo | _[Values](../../objects/Values)_ | Dados do grupo para atualizar a informação armazenada em base de dados. |
+| **id** | _int_ | O ID (identificador númerico) do grupo. |
+| **dadosGrupo** | _[Values](../../objects/Values)_ | Dados do grupo para atualizar a informação armazenada em base de dados. |
 
 ##### Retorno
 
@@ -541,7 +541,7 @@ Foi atualizado com sucesso.
 
 ---
 
-#### _group.update(dadosUtilizador: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">dadosUtilizador</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Atualiza os dados do grupo referente ao ID passado.
@@ -561,7 +561,7 @@ _group.update(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dadosUtilizador | _[Values](../../objects/Values)_ | Dados do grupo para atualizar a informação armazenada em base de dados. |
+| **dadosUtilizador** | _[Values](../../objects/Values)_ | Dados do grupo para atualizar a informação armazenada em base de dados. |
 
 ##### Retorno
 

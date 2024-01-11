@@ -12,7 +12,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.allSessionsEndpoints() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">allSessionsEndpoints</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -24,13 +24,13 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.broadcast(endpointName: string, data: _[Values](../../objects/Values)_) : _void_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">broadcast</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endpointName | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **endpointName** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -43,14 +43,14 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.broadcastAsService(endpointName: string, path: string, message: _[Values](../../objects/Values)_) : _void_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">broadcastAsService</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endpointName | string |   |
-| path | string |   |
-| message | _[Values](../../objects/Values)_ |   |
+| **endpointName** | _string_ |   |
+| **path** | _string_ |   |
+| **message** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -59,13 +59,13 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.broadcastAsService(endpointName: string, message: _[Values](../../objects/Values)_) : _void_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">broadcastAsService</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endpointName | string |   |
-| message | _[Values](../../objects/Values)_ |   |
+| **endpointName** | _string_ |   |
+| **message** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -78,14 +78,14 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.broadcastService(endpointName: string, path: string, message: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">broadcastService</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endpointName | string |   |
-| path | string |   |
-| message | _[Values](../../objects/Values)_ |   |
+| **endpointName** | _string_ |   |
+| **path** | _string_ |   |
+| **message** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -94,13 +94,13 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.broadcastService(endpointName: string, message: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">broadcastService</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endpointName | string |   |
-| message | _[Values](../../objects/Values)_ |   |
+| **endpointName** | _string_ |   |
+| **message** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -113,7 +113,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.close() : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -121,12 +121,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.close(sessionId: string) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">close</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sessionId | string |   |
+| **sessionId** | _string_ |   |
 
 ##### Retorno
 
@@ -139,10 +139,10 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.closeCode() : string
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">closeCode</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -151,7 +151,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.closeData() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">closeData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -163,10 +163,10 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.closeReason() : string
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">closeReason</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -175,12 +175,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.closeSession(id: string) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">closeSession</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
@@ -189,14 +189,14 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.closeSession(id: string, reason: string, message: string) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">closeSession</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">reason</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
-| reason | string |   |
-| message | string |   |
+| **id** | _string_ |   |
+| **reason** | _string_ |   |
+| **message** | _string_ |   |
 
 ##### Retorno
 
@@ -209,7 +209,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.config() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -221,7 +221,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.data() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">data</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -229,12 +229,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.data(id: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">data</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
@@ -247,24 +247,24 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.fullPath() : string
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">fullPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _ws.fullPath(id: string) : string
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">fullPath</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -273,7 +273,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getAllSessionsEndpoints() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getAllSessionsEndpoints</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -285,10 +285,10 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getCloseCode() : string
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getCloseCode</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -297,7 +297,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getCloseData() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getCloseData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -309,10 +309,10 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getCloseReason() : string
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getCloseReason</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -321,7 +321,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getConfig() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -333,7 +333,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getData() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -341,12 +341,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getData(id: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getData</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
@@ -359,24 +359,24 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getFullPath() : string
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getFullPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _ws.getFullPath(id: string) : string
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getFullPath</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -385,7 +385,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getMessage() : _org.netuno.tritao.resource.WS$WSMessage_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getMessage</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.resource.WS$WSMessage</span>
 ##### Retorno
 
 ( _org.netuno.tritao.resource.WS$WSMessage_ )
@@ -397,7 +397,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getPath() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getPath</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -405,12 +405,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getPath(id: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getPath</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
@@ -423,7 +423,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getQS() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getQS</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -435,7 +435,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getSession() : _javax.websocket.Session_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getSession</span>() : <span style="font-weight: normal; font-style: italic;">javax.websocket.Session</span>
 ##### Retorno
 
 ( _javax.websocket.Session_ )
@@ -443,12 +443,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getSession(id: string) : _javax.websocket.Session_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getSession</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">javax.websocket.Session</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
@@ -461,7 +461,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getSessionEndpoint() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getSessionEndpoint</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -469,12 +469,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getSessionEndpoint(id: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getSessionEndpoint</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
@@ -487,10 +487,10 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.getSessionId() : string
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getSessionId</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -499,7 +499,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.isClose() : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">isClose</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -511,7 +511,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.isConnect() : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">isConnect</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -523,7 +523,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.message() : _org.netuno.tritao.resource.WS$WSMessage_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">message</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.resource.WS$WSMessage</span>
 ##### Retorno
 
 ( _org.netuno.tritao.resource.WS$WSMessage_ )
@@ -535,7 +535,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.path() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">path</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -543,12 +543,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.path(id: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">path</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
@@ -561,7 +561,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.qs() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">qs</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -573,13 +573,13 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.rawBroadcast(endpointName: string, message: string) : _void_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">rawBroadcast</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endpointName | string |   |
-| message | string |   |
+| **endpointName** | _string_ |   |
+| **message** | _string_ |   |
 
 ##### Retorno
 
@@ -588,14 +588,14 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.rawBroadcast(endpointName: string, path: string, message: string) : _void_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">rawBroadcast</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| endpointName | string |   |
-| path | string |   |
-| message | string |   |
+| **endpointName** | _string_ |   |
+| **path** | _string_ |   |
+| **message** | _string_ |   |
 
 ##### Retorno
 
@@ -608,12 +608,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.rawSend(content: string) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">rawSend</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| content | string |   |
+| **content** | _string_ |   |
 
 ##### Retorno
 
@@ -622,13 +622,13 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.rawSend(sessionId: string, content: string) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">rawSend</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sessionId | string |   |
-| content | string |   |
+| **sessionId** | _string_ |   |
+| **content** | _string_ |   |
 
 ##### Retorno
 
@@ -641,12 +641,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.send(content: string) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">send</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| content | string |   |
+| **content** | _string_ |   |
 
 ##### Retorno
 
@@ -655,13 +655,13 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.send(sessionId: string, content: string) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">send</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sessionId | string |   |
-| content | string |   |
+| **sessionId** | _string_ |   |
+| **content** | _string_ |   |
 
 ##### Retorno
 
@@ -670,13 +670,13 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.send(sessionId: string, content: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">send</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sessionId | string |   |
-| content | _[Values](../../objects/Values)_ |   |
+| **sessionId** | _string_ |   |
+| **content** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -685,12 +685,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.send(content: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">send</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| content | _[Values](../../objects/Values)_ |   |
+| **content** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -703,13 +703,13 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.sendAsService(sessionId: string, message: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sendAsService</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sessionId | string |   |
-| message | _[Values](../../objects/Values)_ |   |
+| **sessionId** | _string_ |   |
+| **message** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -718,12 +718,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.sendAsService(message: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sendAsService</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| message | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -736,13 +736,13 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.sendService(sessionId: string, message: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sendService</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sessionId | string |   |
-| message | _[Values](../../objects/Values)_ |   |
+| **sessionId** | _string_ |   |
+| **message** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -751,12 +751,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.sendService(message: _[Values](../../objects/Values)_) : _boolean_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sendService</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| message | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -769,7 +769,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.session() : _javax.websocket.Session_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">session</span>() : <span style="font-weight: normal; font-style: italic;">javax.websocket.Session</span>
 ##### Retorno
 
 ( _javax.websocket.Session_ )
@@ -777,12 +777,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.session(id: string) : _javax.websocket.Session_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">session</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">javax.websocket.Session</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
@@ -795,7 +795,7 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.sessionEndpoint() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sessionEndpoint</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -803,12 +803,12 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.sessionEndpoint(id: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sessionEndpoint</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
@@ -821,10 +821,10 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### _ws.sessionId() : string
+#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sessionId</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---

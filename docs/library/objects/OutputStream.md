@@ -12,7 +12,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### close() : _void_
+#### <span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Return
 
 ( _void_ )
@@ -24,7 +24,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### closeMirrors() : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">closeMirrors</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Return
 
 ( _[OutputStream](../../objects/OutputStream)_ )
@@ -36,7 +36,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### finish() : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">finish</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Return
 
 ( _[OutputStream](../../objects/OutputStream)_ )
@@ -48,7 +48,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### flush() : _void_
+#### <span style="color: #008000">flush</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Return
 
 ( _void_ )
@@ -60,7 +60,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### getLength() : _int_
+#### <span style="color: #008000">getLength</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -72,7 +72,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### getMirrors() : _java.util.List_
+#### <span style="color: #008000">getMirrors</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -84,7 +84,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### getNotify() : _org.netuno.psamata.io.OutputStreamNotify_
+#### <span style="color: #008000">getNotify</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.io.OutputStreamNotify</span>
 ##### Return
 
 ( _org.netuno.psamata.io.OutputStreamNotify_ )
@@ -96,7 +96,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### isEmpty() : _boolean_
+#### <span style="color: #008000">isEmpty</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -108,7 +108,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### isEnabled() : _boolean_
+#### <span style="color: #008000">isEnabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -120,7 +120,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### nullOutputStream() : _java.io.OutputStream_
+#### <span style="color: #008000">nullOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
 ##### Return
 
 ( _java.io.OutputStream_ )
@@ -132,12 +132,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">print</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _boolean_ |   |
+| **v** | _boolean_ |   |
 
 ##### Return
 
@@ -146,12 +146,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(v: _char_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">print</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _char_ |   |
+| **v** | _char_ |   |
 
 ##### Return
 
@@ -160,12 +160,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(v: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">print</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _double_ |   |
+| **v** | _double_ |   |
 
 ##### Return
 
@@ -174,12 +174,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(v: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">print</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _float_ |   |
+| **v** | _float_ |   |
 
 ##### Return
 
@@ -188,12 +188,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(v: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">print</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _int_ |   |
+| **v** | _int_ |   |
 
 ##### Return
 
@@ -202,12 +202,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(bytes: string) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">print</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | string |   |
+| **bytes** | _string_ |   |
 
 ##### Return
 
@@ -216,12 +216,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(v: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">print</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _long_ |   |
+| **v** | _long_ |   |
 
 ##### Return
 
@@ -230,12 +230,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(v: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">print</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _short_ |   |
+| **v** | _short_ |   |
 
 ##### Return
 
@@ -248,12 +248,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _boolean_ |   |
+| **v** | _boolean_ |   |
 
 ##### Return
 
@@ -262,12 +262,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(v: _char_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _char_ |   |
+| **v** | _char_ |   |
 
 ##### Return
 
@@ -276,12 +276,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(v: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _double_ |   |
+| **v** | _double_ |   |
 
 ##### Return
 
@@ -290,12 +290,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(v: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _float_ |   |
+| **v** | _float_ |   |
 
 ##### Return
 
@@ -304,12 +304,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(v: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _int_ |   |
+| **v** | _int_ |   |
 
 ##### Return
 
@@ -318,12 +318,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(bytes: string) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printAndClose</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | string |   |
+| **bytes** | _string_ |   |
 
 ##### Return
 
@@ -332,12 +332,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(v: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _long_ |   |
+| **v** | _long_ |   |
 
 ##### Return
 
@@ -346,12 +346,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(v: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _short_ |   |
+| **v** | _short_ |   |
 
 ##### Return
 
@@ -364,13 +364,13 @@ sidebar_label: OutputStream
 
 ---
 
-#### printf(format: string, objects: _[Ljava.lang.Object;[]_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printf</span>(<span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">objects</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| format | string |   |
-| objects | _[Ljava.lang.Object;[]_ |   |
+| **format** | _string_ |   |
+| **objects** | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 
@@ -383,13 +383,13 @@ sidebar_label: OutputStream
 
 ---
 
-#### printfAndClose(format: string, objects: _[Ljava.lang.Object;[]_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printfAndClose</span>(<span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">objects</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| format | string |   |
-| objects | _[Ljava.lang.Object;[]_ |   |
+| **format** | _string_ |   |
+| **objects** | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 
@@ -402,7 +402,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### println() : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">println</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Return
 
 ( _[OutputStream](../../objects/OutputStream)_ )
@@ -410,26 +410,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">println</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _boolean_ |   |
-
-##### Return
-
-( _[OutputStream](../../objects/OutputStream)_ )
-
-
----
-
-#### println(v: _char_) : _[OutputStream](../../objects/OutputStream)_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| v | _char_ |   |
+| **v** | _boolean_ |   |
 
 ##### Return
 
@@ -438,12 +424,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(v: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">println</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _double_ |   |
+| **v** | _char_ |   |
 
 ##### Return
 
@@ -452,12 +438,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(v: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">println</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _float_ |   |
+| **v** | _double_ |   |
 
 ##### Return
 
@@ -466,12 +452,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(v: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">println</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _int_ |   |
+| **v** | _float_ |   |
 
 ##### Return
 
@@ -480,12 +466,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(bytes: string) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">println</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | string |   |
+| **v** | _int_ |   |
 
 ##### Return
 
@@ -494,12 +480,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(v: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">println</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _long_ |   |
+| **bytes** | _string_ |   |
 
 ##### Return
 
@@ -508,12 +494,26 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(v: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">println</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _short_ |   |
+| **v** | _long_ |   |
+
+##### Return
+
+( _[OutputStream](../../objects/OutputStream)_ )
+
+
+---
+
+#### <span style="color: #008000">println</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **v** | _short_ |   |
 
 ##### Return
 
@@ -526,7 +526,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose() : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printlnAndClose</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Return
 
 ( _[OutputStream](../../objects/OutputStream)_ )
@@ -534,26 +534,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printlnAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _boolean_ |   |
-
-##### Return
-
-( _[OutputStream](../../objects/OutputStream)_ )
-
-
----
-
-#### printlnAndClose(v: _char_) : _[OutputStream](../../objects/OutputStream)_
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| v | _char_ |   |
+| **v** | _boolean_ |   |
 
 ##### Return
 
@@ -562,12 +548,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(v: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printlnAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _double_ |   |
+| **v** | _char_ |   |
 
 ##### Return
 
@@ -576,12 +562,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(v: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printlnAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _float_ |   |
+| **v** | _double_ |   |
 
 ##### Return
 
@@ -590,12 +576,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(v: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printlnAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _int_ |   |
+| **v** | _float_ |   |
 
 ##### Return
 
@@ -604,12 +590,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(bytes: string) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printlnAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | string |   |
+| **v** | _int_ |   |
 
 ##### Return
 
@@ -618,12 +604,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(v: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printlnAndClose</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _long_ |   |
+| **bytes** | _string_ |   |
 
 ##### Return
 
@@ -632,12 +618,26 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(v: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">printlnAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _short_ |   |
+| **v** | _long_ |   |
+
+##### Return
+
+( _[OutputStream](../../objects/OutputStream)_ )
+
+
+---
+
+#### <span style="color: #008000">printlnAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **v** | _short_ |   |
 
 ##### Return
 
@@ -650,12 +650,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### setEnabled(enabled: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| enabled | _boolean_ |   |
+| **enabled** | _boolean_ |   |
 
 ##### Return
 
@@ -668,12 +668,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### setNotify(outputNotify: _org.netuno.psamata.io.OutputStreamNotify_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">setNotify</span>(<span style="color: #FF8000">outputNotify</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.io.OutputStreamNotify</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| outputNotify | _org.netuno.psamata.io.OutputStreamNotify_ |   |
+| **outputNotify** | _org.netuno.psamata.io.OutputStreamNotify_ |   |
 
 ##### Return
 
@@ -686,12 +686,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### setStart(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">setStart</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _boolean_ |   |
+| **v** | _boolean_ |   |
 
 ##### Return
 
@@ -704,7 +704,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### start() : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">start</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Return
 
 ( _[OutputStream](../../objects/OutputStream)_ )
@@ -716,12 +716,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### write(b: _byte[]_) : _void_
+#### <span style="color: #008000">write</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| b | _byte[]_ |   |
+| **b** | _byte[]_ |   |
 
 ##### Return
 
@@ -730,14 +730,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### write(bytes: _byte[]_, off: _int_, leng: _int_) : _void_
+#### <span style="color: #008000">write</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">off</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">leng</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _byte[]_ |   |
-| off | _int_ |   |
-| leng | _int_ |   |
+| **bytes** | _byte[]_ |   |
+| **off** | _int_ |   |
+| **leng** | _int_ |   |
 
 ##### Return
 
@@ -746,12 +746,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### write(b: _int_) : _void_
+#### <span style="color: #008000">write</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| b | _int_ |   |
+| **b** | _int_ |   |
 
 ##### Return
 
@@ -764,12 +764,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _boolean_ |   |
+| **v** | _boolean_ |   |
 
 ##### Return
 
@@ -778,12 +778,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(v: _char_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _char_ |   |
+| **v** | _char_ |   |
 
 ##### Return
 
@@ -792,12 +792,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(v: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _double_ |   |
+| **v** | _double_ |   |
 
 ##### Return
 
@@ -806,12 +806,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(v: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _float_ |   |
+| **v** | _float_ |   |
 
 ##### Return
 
@@ -820,12 +820,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(v: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _int_ |   |
+| **v** | _int_ |   |
 
 ##### Return
 
@@ -834,12 +834,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(bytes: string) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeAndClose</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | string |   |
+| **bytes** | _string_ |   |
 
 ##### Return
 
@@ -848,12 +848,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(v: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _long_ |   |
+| **v** | _long_ |   |
 
 ##### Return
 
@@ -862,12 +862,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(v: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeAndClose</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _short_ |   |
+| **v** | _short_ |   |
 
 ##### Return
 
@@ -880,12 +880,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeBoolean(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeBoolean</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _boolean_ |   |
+| **v** | _boolean_ |   |
 
 ##### Return
 
@@ -898,12 +898,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeByte(b: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeByte</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| b | _int_ |   |
+| **b** | _int_ |   |
 
 ##### Return
 
@@ -916,12 +916,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeBytes(s: string) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeBytes</span>(<span style="color: #FF8000">s</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| s | string |   |
+| **s** | _string_ |   |
 
 ##### Return
 
@@ -934,12 +934,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeChar(v: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeChar</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _int_ |   |
+| **v** | _int_ |   |
 
 ##### Return
 
@@ -952,12 +952,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeChars(s: string) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeChars</span>(<span style="color: #FF8000">s</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| s | string |   |
+| **s** | _string_ |   |
 
 ##### Return
 
@@ -970,12 +970,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeDouble(v: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeDouble</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _double_ |   |
+| **v** | _double_ |   |
 
 ##### Return
 
@@ -988,12 +988,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFile(file: _java.io.File_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeFile</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | _java.io.File_ |   |
+| **file** | _java.io.File_ |   |
 
 ##### Return
 
@@ -1002,12 +1002,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFile(file: string) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeFile</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | string |   |
+| **file** | _string_ |   |
 
 ##### Return
 
@@ -1016,12 +1016,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFile(file: _java.nio.file.Path_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeFile</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">java.nio.file.Path</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | _java.nio.file.Path_ |   |
+| **file** | _java.nio.file.Path_ |   |
 
 ##### Return
 
@@ -1034,12 +1034,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFileAndClose(file: _java.io.File_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeFileAndClose</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | _java.io.File_ |   |
+| **file** | _java.io.File_ |   |
 
 ##### Return
 
@@ -1048,12 +1048,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFileAndClose(file: string) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeFileAndClose</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | string |   |
+| **file** | _string_ |   |
 
 ##### Return
 
@@ -1062,12 +1062,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFileAndClose(file: _java.nio.file.Path_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeFileAndClose</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">java.nio.file.Path</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | _java.nio.file.Path_ |   |
+| **file** | _java.nio.file.Path_ |   |
 
 ##### Return
 
@@ -1080,12 +1080,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFloat(v: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeFloat</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _float_ |   |
+| **v** | _float_ |   |
 
 ##### Return
 
@@ -1098,12 +1098,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeInt(v: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeInt</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _int_ |   |
+| **v** | _int_ |   |
 
 ##### Return
 
@@ -1116,12 +1116,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeLong(v: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeLong</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _long_ |   |
+| **v** | _long_ |   |
 
 ##### Return
 
@@ -1134,12 +1134,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeShort(v: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### <span style="color: #008000">writeShort</span>(<span style="color: #FF8000">v</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| v | _short_ |   |
+| **v** | _short_ |   |
 
 ##### Return
 
@@ -1152,14 +1152,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(bytes: _byte[]_, path: _java.io.File_, append: _boolean_) : _void_
+#### <span style="color: #008000">writeToFile</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>, <span style="color: #FF8000">append</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _byte[]_ |   |
-| path | _java.io.File_ |   |
-| append | _boolean_ |   |
+| **bytes** | _byte[]_ |   |
+| **path** | _java.io.File_ |   |
+| **append** | _boolean_ |   |
 
 ##### Return
 
@@ -1168,14 +1168,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(bytes: _byte[]_, path: string, append: _boolean_) : _void_
+#### <span style="color: #008000">writeToFile</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">append</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _byte[]_ |   |
-| path | string |   |
-| append | _boolean_ |   |
+| **bytes** | _byte[]_ |   |
+| **path** | _string_ |   |
+| **append** | _boolean_ |   |
 
 ##### Return
 
@@ -1184,14 +1184,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(bytes: _byte[]_, path: _java.nio.file.Path_, append: _boolean_) : _void_
+#### <span style="color: #008000">writeToFile</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.nio.file.Path</span>, <span style="color: #FF8000">append</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _byte[]_ |   |
-| path | _java.nio.file.Path_ |   |
-| append | _boolean_ |   |
+| **bytes** | _byte[]_ |   |
+| **path** | _java.nio.file.Path_ |   |
+| **append** | _boolean_ |   |
 
 ##### Return
 
@@ -1200,14 +1200,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(content: string, path: _java.io.File_, append: _boolean_) : _void_
+#### <span style="color: #008000">writeToFile</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>, <span style="color: #FF8000">append</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string |   |
-| path | _java.io.File_ |   |
-| append | _boolean_ |   |
+| **content** | _string_ |   |
+| **path** | _java.io.File_ |   |
+| **append** | _boolean_ |   |
 
 ##### Return
 
@@ -1216,14 +1216,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(content: string, path: string, append: _boolean_) : _void_
+#### <span style="color: #008000">writeToFile</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">append</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string |   |
-| path | string |   |
-| append | _boolean_ |   |
+| **content** | _string_ |   |
+| **path** | _string_ |   |
+| **append** | _boolean_ |   |
 
 ##### Return
 
@@ -1232,14 +1232,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(content: string, path: _java.nio.file.Path_, append: _boolean_) : _void_
+#### <span style="color: #008000">writeToFile</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.nio.file.Path</span>, <span style="color: #FF8000">append</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | string |   |
-| path | _java.nio.file.Path_ |   |
-| append | _boolean_ |   |
+| **content** | _string_ |   |
+| **path** | _java.nio.file.Path_ |   |
+| **append** | _boolean_ |   |
 
 ##### Return
 

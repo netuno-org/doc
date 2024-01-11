@@ -18,7 +18,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getCounter() : _int_
+#### <span style="color: #008000">getCounter</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -30,10 +30,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getErrorMessage() : string
+#### <span style="color: #008000">getErrorMessage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -42,10 +42,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getErrorTitle() : string
+#### <span style="color: #008000">getErrorTitle</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -54,10 +54,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getField() : string
+#### <span style="color: #008000">getField</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -66,7 +66,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getFirebaseValues() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getFirebaseValues</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -78,10 +78,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getId() : string
+#### <span style="color: #008000">getId</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -90,7 +90,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getOldRecord() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getOldRecord</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -102,7 +102,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getRecord() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getRecord</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -114,7 +114,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getRelationItem() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getRelationItem</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -126,7 +126,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getRelationTable() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getRelationTable</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -138,7 +138,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getStatus() : _org.netuno.tritao.db.DataItem$Status_
+#### <span style="color: #008000">getStatus</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.DataItem$Status</span>
 ##### Retorno
 
 ( _org.netuno.tritao.db.DataItem$Status_ )
@@ -150,7 +150,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getStatusType() : _org.netuno.tritao.db.DataItem$StatusType_
+#### <span style="color: #008000">getStatusType</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.DataItem$StatusType</span>
 ##### Retorno
 
 ( _org.netuno.tritao.db.DataItem$StatusType_ )
@@ -162,10 +162,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getTable() : string
+#### <span style="color: #008000">getTable</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -174,10 +174,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getUid() : string
+#### <span style="color: #008000">getUid</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -186,7 +186,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### getValues() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getValues</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -198,7 +198,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isDelete() : _boolean_
+#### <span style="color: #008000">isDelete</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -210,7 +210,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isError() : _boolean_
+#### <span style="color: #008000">isError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -222,7 +222,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isFirebase() : _boolean_
+#### <span style="color: #008000">isFirebase</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -234,7 +234,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isInsert() : _boolean_
+#### <span style="color: #008000">isInsert</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -246,7 +246,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isNone() : _boolean_
+#### <span style="color: #008000">isNone</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -258,7 +258,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isOk() : _boolean_
+#### <span style="color: #008000">isOk</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -270,7 +270,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isProgrammatically() : _boolean_
+#### <span style="color: #008000">isProgrammatically</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -282,7 +282,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsDelete() : _boolean_
+#### <span style="color: #008000">isStatusAsDelete</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -294,7 +294,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsDeleted() : _boolean_
+#### <span style="color: #008000">isStatusAsDeleted</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -306,7 +306,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsError() : _boolean_
+#### <span style="color: #008000">isStatusAsError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -318,7 +318,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsExists() : _boolean_
+#### <span style="color: #008000">isStatusAsExists</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -330,7 +330,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsInsert() : _boolean_
+#### <span style="color: #008000">isStatusAsInsert</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -342,7 +342,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsInserted() : _boolean_
+#### <span style="color: #008000">isStatusAsInserted</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -354,7 +354,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsNone() : _boolean_
+#### <span style="color: #008000">isStatusAsNone</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -366,7 +366,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsNotFound() : _boolean_
+#### <span style="color: #008000">isStatusAsNotFound</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -378,7 +378,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsRelations() : _boolean_
+#### <span style="color: #008000">isStatusAsRelations</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -390,7 +390,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsUpdate() : _boolean_
+#### <span style="color: #008000">isStatusAsUpdate</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -402,7 +402,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusAsUpdated() : _boolean_
+#### <span style="color: #008000">isStatusAsUpdated</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -414,7 +414,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusTypeAsError() : _boolean_
+#### <span style="color: #008000">isStatusTypeAsError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -426,7 +426,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusTypeAsNone() : _boolean_
+#### <span style="color: #008000">isStatusTypeAsNone</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -438,7 +438,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isStatusTypeAsOk() : _boolean_
+#### <span style="color: #008000">isStatusTypeAsOk</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -450,7 +450,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### isUpdate() : _boolean_
+#### <span style="color: #008000">isUpdate</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -462,12 +462,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setCounter(counter: _int_) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setCounter</span>(<span style="color: #FF8000">counter</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| counter | _int_ |   |
+| **counter** | _int_ |   |
 
 ##### Retorno
 
@@ -480,12 +480,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setErrorMessage(errorMessage: string) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setErrorMessage</span>(<span style="color: #FF8000">errorMessage</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| errorMessage | string |   |
+| **errorMessage** | _string_ |   |
 
 ##### Retorno
 
@@ -498,12 +498,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setErrorTitle(errorTitle: string) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setErrorTitle</span>(<span style="color: #FF8000">errorTitle</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| errorTitle | string |   |
+| **errorTitle** | _string_ |   |
 
 ##### Retorno
 
@@ -516,12 +516,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setField(field: string) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setField</span>(<span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| field | string |   |
+| **field** | _string_ |   |
 
 ##### Retorno
 
@@ -534,12 +534,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setFirebase(firebase: _boolean_) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setFirebase</span>(<span style="color: #FF8000">firebase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| firebase | _boolean_ |   |
+| **firebase** | _boolean_ |   |
 
 ##### Retorno
 
@@ -552,12 +552,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setFirebaseValues(firebaseValues: _[Values](../../objects/Values)_) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setFirebaseValues</span>(<span style="color: #FF8000">firebaseValues</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| firebaseValues | _[Values](../../objects/Values)_ |   |
+| **firebaseValues** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -570,12 +570,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setId(id: string) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setId</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| id | string |   |
+| **id** | _string_ |   |
 
 ##### Retorno
 
@@ -588,12 +588,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setProgrammatically(programmatically: _boolean_) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setProgrammatically</span>(<span style="color: #FF8000">programmatically</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| programmatically | _boolean_ |   |
+| **programmatically** | _boolean_ |   |
 
 ##### Retorno
 
@@ -606,12 +606,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setRecord(record: _[Values](../../objects/Values)_) : _void_
+#### <span style="color: #008000">setRecord</span>(<span style="color: #FF8000">record</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| record | _[Values](../../objects/Values)_ |   |
+| **record** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -624,12 +624,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setRelationItem(relationItem: _[Values](../../objects/Values)_) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setRelationItem</span>(<span style="color: #FF8000">relationItem</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| relationItem | _[Values](../../objects/Values)_ |   |
+| **relationItem** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -642,12 +642,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setRelationTable(relationTable: _[Values](../../objects/Values)_) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setRelationTable</span>(<span style="color: #FF8000">relationTable</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| relationTable | _[Values](../../objects/Values)_ |   |
+| **relationTable** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -660,12 +660,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setStatus(status: _org.netuno.tritao.db.DataItem$Status_) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setStatus</span>(<span style="color: #FF8000">status</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.DataItem$Status</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| status | _org.netuno.tritao.db.DataItem$Status_ |   |
+| **status** | _org.netuno.tritao.db.DataItem$Status_ |   |
 
 ##### Retorno
 
@@ -678,7 +678,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setStatusWithError() : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setStatusWithError</span>() : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Retorno
 
 ( _[DataItem](../../objects/DataItem)_ )
@@ -690,12 +690,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setTable(table: string) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setTable</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| table | string |   |
+| **table** | _string_ |   |
 
 ##### Retorno
 
@@ -708,12 +708,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setUid(uid: string) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setUid</span>(<span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| uid | string |   |
+| **uid** | _string_ |   |
 
 ##### Retorno
 
@@ -726,12 +726,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### setValues(values: _[Values](../../objects/Values)_) : _[DataItem](../../objects/DataItem)_
+#### <span style="color: #008000">setValues</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[DataItem](../../objects/DataItem)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| values | _[Values](../../objects/Values)_ |   |
+| **values** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 

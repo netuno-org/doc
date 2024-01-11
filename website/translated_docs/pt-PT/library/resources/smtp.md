@@ -12,7 +12,7 @@ Recurso de envio de e-mail por SMTP.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[File](../../objects/File)_) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">attachment</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">tipo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ficheiro</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -21,9 +21,9 @@ Adiciona ficheiro de anexo ao e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nome | string | O nome do anexo. |
-| tipo | string | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| ficheiro | _[File](../../objects/File)_ | O ficheiro. |
+| **nome** | _string_ | O nome do anexo. |
+| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
+| **ficheiro** | _[File](../../objects/File)_ | O ficheiro. |
 
 ##### Retorno
 
@@ -33,7 +33,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[File](../../objects/File)_, idConteudo: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">attachment</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">tipo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ficheiro</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">idConteudo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -42,10 +42,10 @@ Adiciona ficheiro de anexo ao e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nome | string | O nome do anexo. |
-| tipo | string | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| ficheiro | _[File](../../objects/File)_ | O ficheiro. |
-| idConteudo | string | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
+| **nome** | _string_ | O nome do anexo. |
+| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
+| **ficheiro** | _[File](../../objects/File)_ | O ficheiro. |
+| **idConteudo** | _string_ | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
 
 ##### Retorno
 
@@ -55,7 +55,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[File](../../objects/File)_, idConteudo: string, emLinha: _boolean_) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">attachment</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">tipo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ficheiro</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">idConteudo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">emLinha</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -64,11 +64,11 @@ Adiciona ficheiro de anexo ao e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nome | string | O nome do anexo. |
-| tipo | string | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| ficheiro | _[File](../../objects/File)_ | O ficheiro. |
-| idConteudo | string | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
-| emLinha | _boolean_ | Se é ou não para ser injetado no conteúdo. |
+| **nome** | _string_ | O nome do anexo. |
+| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
+| **ficheiro** | _[File](../../objects/File)_ | O ficheiro. |
+| **idConteudo** | _string_ | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
+| **emLinha** | _boolean_ | Se é ou não para ser injetado no conteúdo. |
 
 ##### Retorno
 
@@ -78,7 +78,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[Storage](../../resources/Storage)_) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">attachment</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">tipo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ficheiro</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -87,9 +87,9 @@ Adiciona ficheiro de anexo ao e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nome | string | O nome do anexo. |
-| tipo | string | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| ficheiro | _[Storage](../../resources/Storage)_ | O ficheiro. |
+| **nome** | _string_ | O nome do anexo. |
+| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
+| **ficheiro** | _[Storage](../../resources/Storage)_ | O ficheiro. |
 
 ##### Retorno
 
@@ -99,7 +99,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[Storage](../../resources/Storage)_, idConteudo: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">attachment</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">tipo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ficheiro</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">idConteudo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -108,10 +108,10 @@ Adiciona ficheiro de anexo ao e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nome | string | O nome do anexo. |
-| tipo | string | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| ficheiro | _[Storage](../../resources/Storage)_ | O ficheiro. |
-| idConteudo | string | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
+| **nome** | _string_ | O nome do anexo. |
+| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
+| **ficheiro** | _[Storage](../../resources/Storage)_ | O ficheiro. |
+| **idConteudo** | _string_ | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
 
 ##### Retorno
 
@@ -121,7 +121,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.attachment(nome: string, tipo: string, ficheiro: _[Storage](../../resources/Storage)_, idConteudo: string, emLinha: _boolean_) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">attachment</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">tipo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ficheiro</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">idConteudo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">emLinha</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -130,11 +130,11 @@ Adiciona ficheiro de anexo ao e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nome | string | O nome do anexo. |
-| tipo | string | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| ficheiro | _[Storage](../../resources/Storage)_ | O ficheiro. |
-| idConteudo | string | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
-| emLinha | _boolean_ | Se é ou não para ser injetado no conteúdo. |
+| **nome** | _string_ | O nome do anexo. |
+| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
+| **ficheiro** | _[Storage](../../resources/Storage)_ | O ficheiro. |
+| **idConteudo** | _string_ | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
+| **emLinha** | _boolean_ | Se é ou não para ser injetado no conteúdo. |
 
 ##### Retorno
 
@@ -148,20 +148,20 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.bcc() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">bcc</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém quem recebe uma cópia escondida do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O e-mail de quem vai receber o e-mail como cópia oculta.
 
 ---
 
-#### _smtp.bcc(bcc: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">bcc</span>(<span style="color: #FF8000">bcc</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define quem recebe uma cópia escondida do e-mail.
@@ -170,7 +170,7 @@ Define quem recebe uma cópia escondida do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| bcc | string | O e-mail de quem vai receber o e-mail como cópia oculta. |
+| **bcc** | _string_ | O e-mail de quem vai receber o e-mail como cópia oculta. |
 
 ##### Retorno
 
@@ -184,20 +184,20 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.cc() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">cc</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém quem recebe uma cópia do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O e-mail de quem vai receber o e-mail como cópia.
 
 ---
 
-#### _smtp.cc(cc: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">cc</span>(<span style="color: #FF8000">cc</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define quem recebe uma cópia do e-mail.
@@ -206,7 +206,7 @@ Define quem recebe uma cópia do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| cc | string | O e-mail de quem vai receber o e-mail como cópia. |
+| **cc** | _string_ | O e-mail de quem vai receber o e-mail como cópia. |
 
 ##### Retorno
 
@@ -220,7 +220,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.config() : _[SMTPConfig](../../objects/SMTPConfig)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
@@ -233,7 +233,7 @@ Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### _smtp.config(config: _[Values](../../objects/Values)_) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
@@ -242,7 +242,7 @@ Inicia uma nova configuração própria.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[Values](../../objects/Values)_ | Estrutura de dados da definição da configuração. |
+| **config** | _[Values](../../objects/Values)_ | Estrutura de dados da definição da configuração. |
 
 ##### Retorno
 
@@ -252,7 +252,7 @@ Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### _smtp.config(config: _[SMTPConfig](../../objects/SMTPConfig)_) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -261,7 +261,7 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[SMTPConfig](../../objects/SMTPConfig)_ | Definição da nova configuração. |
+| **config** | _[SMTPConfig](../../objects/SMTPConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 
@@ -275,7 +275,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.emptyMail() : _org.netuno.psamata.mail.Mail_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">emptyMail</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.mail.Mail</span>
 ##### Retorno
 
 ( _org.netuno.psamata.mail.Mail_ )
@@ -287,7 +287,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.enabled() : _boolean_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">enabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -295,7 +295,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.enabled(ativo: _boolean_) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -304,7 +304,7 @@ Define se está habilitado.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ativo | _boolean_ | Se fica ativo ou inactivo. |
+| **ativo** | _boolean_ | Se fica ativo ou inactivo. |
 
 ##### Retorno
 
@@ -318,20 +318,20 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.from() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">from</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o endereço do remetente do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O endereço de e-mail de quem envia.
 
 ---
 
-#### _smtp.from(de: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">from</span>(<span style="color: #FF8000">de</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define o endereço do remetente do e-mail.
@@ -340,7 +340,7 @@ Define o endereço do remetente do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| de | string | O endereço de e-mail de quem envia. |
+| **de** | _string_ | O endereço de e-mail de quem envia. |
 
 ##### Retorno
 
@@ -354,14 +354,14 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.getBcc() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">getBcc</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém quem recebe uma cópia escondida do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O e-mail de quem vai receber o e-mail como cópia oculta.
 
@@ -371,14 +371,14 @@ O e-mail de quem vai receber o e-mail como cópia oculta.
 
 ---
 
-#### _smtp.getCc() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">getCc</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém quem recebe uma cópia do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O e-mail de quem vai receber o e-mail como cópia.
 
@@ -388,7 +388,7 @@ O e-mail de quem vai receber o e-mail como cópia.
 
 ---
 
-#### _smtp.getConfig() : _[SMTPConfig](../../objects/SMTPConfig)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
 ##### Descrição
 
 Obtém a configuração que está a ser utilizada.
@@ -405,14 +405,14 @@ Objeto da configuração ativa.
 
 ---
 
-#### _smtp.getFrom() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">getFrom</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o endereço do remetente do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O endereço de e-mail de quem envia.
 
@@ -422,14 +422,14 @@ O endereço de e-mail de quem envia.
 
 ---
 
-#### _smtp.getHTML() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">getHTML</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o HTML do corpo do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O HTML que vai ir no e-mail.
 
@@ -439,14 +439,14 @@ O HTML que vai ir no e-mail.
 
 ---
 
-#### _smtp.getMultipartSubtype() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">getMultipartSubtype</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o subtipo do multipart como por exemplo `mixed`, `alternative`, `digest` e `parallel`.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O subtipo do multipart.
 
@@ -456,14 +456,14 @@ O subtipo do multipart.
 
 ---
 
-#### _smtp.getReplyTo() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">getReplyTo</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém quem deve receber a resposta ao e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O e-mail de quem vai receber o e-mail como resposta.
 
@@ -473,14 +473,14 @@ O e-mail de quem vai receber o e-mail como resposta.
 
 ---
 
-#### _smtp.getSubject() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">getSubject</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o título do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O título que vai ir no e-mail.
 
@@ -490,14 +490,14 @@ O título que vai ir no e-mail.
 
 ---
 
-#### _smtp.getSubjectPrefix() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">getSubjectPrefix</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o prefixo do título do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O prefixo do título que vai ir no e-mail.
 
@@ -507,14 +507,14 @@ O prefixo do título que vai ir no e-mail.
 
 ---
 
-#### _smtp.getText() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">getText</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o texto do corpo do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O texto que vai ir no e-mail.
 
@@ -524,14 +524,14 @@ O texto que vai ir no e-mail.
 
 ---
 
-#### _smtp.getTo() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">getTo</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o endereço de destinatário do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O endereço de e-mail de quem recebe.
 
@@ -541,20 +541,20 @@ O endereço de e-mail de quem recebe.
 
 ---
 
-#### _smtp.html() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">html</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _smtp.html(html: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">html</span>(<span style="color: #FF8000">html</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| html | string |   |
+| **html** | _string_ |   |
 
 ##### Retorno
 
@@ -567,7 +567,7 @@ O endereço de e-mail de quem recebe.
 
 ---
 
-#### _smtp.init() : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Inicia uma nova instância do SMTP utilizando a configuração do STMP da chave `default`.
@@ -580,7 +580,7 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### _smtp.init(configKey: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configKey</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Inicia uma nova instância do SMTP a partir de uma configuração específica.
@@ -589,7 +589,7 @@ Inicia uma nova instância do SMTP a partir de uma configuração específica.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| configKey | string | Chave da configuração SMTP que será utilizada. |
+| **configKey** | _string_ | Chave da configuração SMTP que será utilizada. |
 
 ##### Retorno
 
@@ -599,7 +599,7 @@ A nova instância do recurso SMTP com base na configuração do SMTP especificad
 
 ---
 
-#### _smtp.init(config: _[SMTPConfig](../../objects/SMTPConfig)_) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Inicia uma nova instância do SMTP a partir de uma configuração que é definida em um objeto de configuração própria.
@@ -608,7 +608,7 @@ Inicia uma nova instância do SMTP a partir de uma configuração que é definid
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[SMTPConfig](../../objects/SMTPConfig)_ | Configuração que será utilizada. |
+| **config** | _[SMTPConfig](../../objects/SMTPConfig)_ | Configuração que será utilizada. |
 
 ##### Retorno
 
@@ -622,7 +622,7 @@ A nova instância do recurso SMTP com base na configuração definida.
 
 ---
 
-#### _smtp.isEnabled() : _boolean_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">isEnabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se está habilitado.
@@ -639,7 +639,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _smtp.mail() : _org.netuno.psamata.mail.Mail_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">mail</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.mail.Mail</span>
 ##### Retorno
 
 ( _org.netuno.psamata.mail.Mail_ )
@@ -651,20 +651,20 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _smtp.multipartSubtype() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">multipartSubtype</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _smtp.multipartSubtype(html: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">multipartSubtype</span>(<span style="color: #FF8000">html</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| html | string |   |
+| **html** | _string_ |   |
 
 ##### Retorno
 
@@ -677,20 +677,20 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _smtp.replyTo() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">replyTo</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _smtp.replyTo(replyTo: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">replyTo</span>(<span style="color: #FF8000">replyTo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| replyTo | string |   |
+| **replyTo** | _string_ |   |
 
 ##### Retorno
 
@@ -703,7 +703,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _smtp.send() : _void_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">send</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Realiza o envio do e-mail.
@@ -715,12 +715,12 @@ Realiza o envio do e-mail.
 
 ---
 
-#### _smtp.send(mail: _org.netuno.psamata.mail.Mail_) : _void_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">send</span>(<span style="color: #FF8000">mail</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.mail.Mail</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| mail | _org.netuno.psamata.mail.Mail_ |   |
+| **mail** | _org.netuno.psamata.mail.Mail_ |   |
 
 ##### Retorno
 
@@ -733,7 +733,7 @@ Realiza o envio do e-mail.
 
 ---
 
-#### _smtp.setBcc(bcc: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setBcc</span>(<span style="color: #FF8000">bcc</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define quem recebe uma cópia escondida do e-mail.
@@ -742,7 +742,7 @@ Define quem recebe uma cópia escondida do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| bcc | string | O e-mail de quem vai receber o e-mail como cópia oculta. |
+| **bcc** | _string_ | O e-mail de quem vai receber o e-mail como cópia oculta. |
 
 ##### Retorno
 
@@ -756,7 +756,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setCc(cc: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setCc</span>(<span style="color: #FF8000">cc</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define quem recebe uma cópia do e-mail.
@@ -765,7 +765,7 @@ Define quem recebe uma cópia do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| cc | string | O e-mail de quem vai receber o e-mail como cópia. |
+| **cc** | _string_ | O e-mail de quem vai receber o e-mail como cópia. |
 
 ##### Retorno
 
@@ -779,7 +779,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setConfig(config: _[SMTPConfig](../../objects/SMTPConfig)_) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -788,7 +788,7 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[SMTPConfig](../../objects/SMTPConfig)_ | Definição da nova configuração. |
+| **config** | _[SMTPConfig](../../objects/SMTPConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 
@@ -802,7 +802,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setEnabled(ativo: _boolean_) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -811,7 +811,7 @@ Define se está habilitado.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ativo | _boolean_ | Se fica ativo ou inactivo. |
+| **ativo** | _boolean_ | Se fica ativo ou inactivo. |
 
 ##### Retorno
 
@@ -825,7 +825,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setFrom(de: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setFrom</span>(<span style="color: #FF8000">de</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define o endereço do remetente do e-mail.
@@ -834,7 +834,7 @@ Define o endereço do remetente do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| de | string | O endereço de e-mail de quem envia. |
+| **de** | _string_ | O endereço de e-mail de quem envia. |
 
 ##### Retorno
 
@@ -848,7 +848,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setHTML(html: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setHTML</span>(<span style="color: #FF8000">html</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define o HTML do corpo do e-mail.
@@ -857,7 +857,7 @@ Define o HTML do corpo do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| html | string | O HTML que vai ir no e-mail. |
+| **html** | _string_ | O HTML que vai ir no e-mail. |
 
 ##### Retorno
 
@@ -871,7 +871,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setMultipartSubtype(multipartSubtipo: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setMultipartSubtype</span>(<span style="color: #FF8000">multipartSubtipo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define o subtipo do multipart como por exemplo `mixed`, `alternative`, `digest` e `parallel`.
@@ -880,7 +880,7 @@ Define o subtipo do multipart como por exemplo `mixed`, `alternative`, `digest` 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| multipartSubtipo | string | O subtipo do multipart. |
+| **multipartSubtipo** | _string_ | O subtipo do multipart. |
 
 ##### Retorno
 
@@ -894,7 +894,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setReplyTo(replyTo: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setReplyTo</span>(<span style="color: #FF8000">replyTo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define quem deve ser respondido ao e-mail.
@@ -903,7 +903,7 @@ Define quem deve ser respondido ao e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| replyTo | string | O e-mail de quem vai receber o e-mail como resposta. |
+| **replyTo** | _string_ | O e-mail de quem vai receber o e-mail como resposta. |
 
 ##### Retorno
 
@@ -917,7 +917,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setSubject(titulo: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setSubject</span>(<span style="color: #FF8000">titulo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define o título do e-mail.
@@ -926,7 +926,7 @@ Define o título do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| titulo | string | O título que vai ir no e-mail. |
+| **titulo** | _string_ | O título que vai ir no e-mail. |
 
 ##### Retorno
 
@@ -940,7 +940,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setSubjectPrefix(tituloPrefixo: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setSubjectPrefix</span>(<span style="color: #FF8000">tituloPrefixo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define o prefixo do título do e-mail.
@@ -949,7 +949,7 @@ Define o prefixo do título do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tituloPrefixo | string | O prefixo do título que vai ir no e-mail. |
+| **tituloPrefixo** | _string_ | O prefixo do título que vai ir no e-mail. |
 
 ##### Retorno
 
@@ -963,7 +963,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setText(texto: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setText</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define o texto do corpo do e-mail.
@@ -972,7 +972,7 @@ Define o texto do corpo do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | string | O texto que vai ir no e-mail. |
+| **texto** | _string_ | O texto que vai ir no e-mail. |
 
 ##### Retorno
 
@@ -986,7 +986,7 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.setTo(para: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">setTo</span>(<span style="color: #FF8000">para</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define o endereço do destinatário do e-mail.
@@ -995,7 +995,7 @@ Define o endereço do destinatário do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| para | string | O endereço de e-mail de quem recebe. |
+| **para** | _string_ | O endereço de e-mail de quem recebe. |
 
 ##### Retorno
 
@@ -1009,20 +1009,20 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.subject() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">subject</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o título do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O título que vai ir no e-mail.
 
 ---
 
-#### _smtp.subject(titulo: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">subject</span>(<span style="color: #FF8000">titulo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define o título do e-mail.
@@ -1031,7 +1031,7 @@ Define o título do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| titulo | string | O título que vai ir no e-mail. |
+| **titulo** | _string_ | O título que vai ir no e-mail. |
 
 ##### Retorno
 
@@ -1045,20 +1045,20 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.subjectPrefix() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">subjectPrefix</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _smtp.subjectPrefix(subjectPrefix: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">subjectPrefix</span>(<span style="color: #FF8000">subjectPrefix</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| subjectPrefix | string |   |
+| **subjectPrefix** | _string_ |   |
 
 ##### Retorno
 
@@ -1071,20 +1071,20 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.text() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">text</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o texto do corpo do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O texto que vai ir no e-mail.
 
 ---
 
-#### _smtp.text(texto: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">text</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define o texto do corpo do e-mail.
@@ -1093,7 +1093,7 @@ Define o texto do corpo do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| texto | string | O texto que vai ir no e-mail. |
+| **texto** | _string_ | O texto que vai ir no e-mail. |
 
 ##### Retorno
 
@@ -1107,20 +1107,20 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.to() : string
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">to</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o endereço de destinatário do e-mail.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O endereço de e-mail de quem recebe.
 
 ---
 
-#### _smtp.to(para: string) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">to</span>(<span style="color: #FF8000">para</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Descrição
 
 Define o endereço do destinatário do e-mail.
@@ -1129,7 +1129,7 @@ Define o endereço do destinatário do e-mail.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| para | string | O endereço de e-mail de quem recebe. |
+| **para** | _string_ | O endereço de e-mail de quem recebe. |
 
 ##### Retorno
 
@@ -1143,12 +1143,12 @@ Objeto SMTP atual.
 
 ---
 
-#### _smtp.with(imap: _[IMAP](../../resources/IMAP)_) : _[SMTP](../../resources/SMTP)_
+#### <span style="font-weight: normal">_smtp</span>.<span style="color: #008000">with</span>(<span style="color: #FF8000">imap</span>: <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>) : <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| imap | _[IMAP](../../resources/IMAP)_ |   |
+| **imap** | _[IMAP](../../resources/IMAP)_ |   |
 
 ##### Retorno
 

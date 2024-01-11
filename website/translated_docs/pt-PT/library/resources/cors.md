@@ -13,7 +13,7 @@ Permite gerir as múltiplas origens e os respectivos cabeçalhos.
 
 ---
 
-#### _cors.add(config: _[Values](../../objects/Values)_) : _[CORS](../../resources/CORS)_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">add</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/CORS)</span>
 ##### Descrição
 
 Adiciona as configurações para uma definição de CORS.
@@ -22,7 +22,7 @@ Adiciona as configurações para uma definição de CORS.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| config | _[Values](../../objects/Values)_ | A nova configuração de CORS. |
+| **config** | _[Values](../../objects/Values)_ | A nova configuração de CORS. |
 
 ##### Retorno
 
@@ -36,7 +36,7 @@ Atual instância do CORS.
 
 ---
 
-#### _cors.all() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">all</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém todas as configurações de CORS.
@@ -53,7 +53,7 @@ Todas as definições de CORS configuradas.
 
 ---
 
-#### _cors.getAll() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">getAll</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém todas as configurações de CORS.
@@ -70,7 +70,7 @@ Todas as definições de CORS configuradas.
 
 ---
 
-#### _cors.isOriginEnabled(origem: string) : _boolean_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">isOriginEnabled</span>(<span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se uma origem já foi definida e se está ativa.
@@ -79,7 +79,7 @@ Verifica se uma origem já foi definida e se está ativa.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| origem | string | Origem que vem no cabeçalho HTTP. |
+| **origem** | _string_ | Origem que vem no cabeçalho HTTP. |
 
 ##### Retorno
 
@@ -93,7 +93,7 @@ Se a origem está ativada.
 
 ---
 
-#### _cors.load() : _[CORS](../../resources/CORS)_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/CORS)</span>
 ##### Descrição
 
 Executa a verificação da origem e realiza as definições de cabeçalho na resposta do pedido HTTP.
@@ -110,7 +110,7 @@ Atual instância do CORS.
 
 ---
 
-#### _cors.removeOrigin(origem: string) : _[CORS](../../resources/CORS)_
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">removeOrigin</span>(<span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/CORS)</span>
 ##### Descrição
 
 Remove a origem em todas as configuração que ela existir.
@@ -119,7 +119,7 @@ Remove a origem em todas as configuração que ela existir.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| origem | string | Origem que vem no cabeçalho HTTP. |
+| **origem** | _string_ | Origem que vem no cabeçalho HTTP. |
 
 ##### Retorno
 

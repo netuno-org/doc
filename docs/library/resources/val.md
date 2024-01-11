@@ -33,7 +33,7 @@ for (const line of dataList) {
 
 ---
 
-#### _val.cast(obj: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">cast</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Turns an object into values if possible.
@@ -42,7 +42,7 @@ Turns an object into values if possible.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| obj | _java.lang.Object_ | Object to be converted. |
+| **obj** | _java.lang.Object_ | Object to be converted. |
 
 ##### Return
 
@@ -56,7 +56,7 @@ The object converted to values.
 
 ---
 
-#### _val.fromJSON(text: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">fromJSON</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Gets the values of a string with an array or object in JSON.
@@ -65,7 +65,7 @@ Gets the values of a string with an array or object in JSON.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| text | string | JSON content. |
+| **text** | _string_ | JSON content. |
 
 ##### Return
 
@@ -79,7 +79,7 @@ The values object loaded with the structure and data obtained with the JSON stri
 
 ---
 
-#### _val.global() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">global</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Instance of type Values to store data that is only available during the execution of the HTTP request, it is useful to share data between scripts.
@@ -105,7 +105,7 @@ Data that is shared globally between the different scripts during the execution 
 
 ---
 
-#### _val.init() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
@@ -118,7 +118,7 @@ The new generic value object.
 
 ---
 
-#### _val.init(obj: _java.lang.Iterable_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Iterable</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
@@ -127,7 +127,7 @@ Initializes values in a generic way, the first data to be assigned will define w
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| obj | _java.lang.Iterable_ | Object to load the newly created values object. |
+| **obj** | _java.lang.Iterable_ | Object to load the newly created values object. |
 
 ##### Return
 
@@ -137,7 +137,7 @@ The new values object starts with the data from the passed object.
 
 ---
 
-#### _val.init(obj: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
@@ -146,7 +146,7 @@ Initializes values in a generic way, the first data to be assigned will define w
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| obj | _java.lang.Object_ | Object to load the newly created values object. |
+| **obj** | _java.lang.Object_ | Object to load the newly created values object. |
 
 ##### Return
 
@@ -156,7 +156,7 @@ The new values object starts with the data from the passed object.
 
 ---
 
-#### _val.init(obj: _java.util.Map_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
@@ -165,7 +165,7 @@ Initializes values in a generic way, the first data to be assigned will define w
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| obj | _java.util.Map_ | Object to load the newly created values object. |
+| **obj** | _java.util.Map_ | Object to load the newly created values object. |
 
 ##### Return
 
@@ -179,7 +179,7 @@ The new values object starts with the data from the passed object.
 
 ---
 
-#### _val.is(obj: _java.lang.Object_) : _boolean_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">is</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether the object is of the value type.
@@ -188,7 +188,7 @@ Checks whether the object is of the value type.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| obj | _java.lang.Object_ | Object to be validated if it is of the value type. |
+| **obj** | _java.lang.Object_ | Object to be validated if it is of the value type. |
 
 ##### Return
 
@@ -202,7 +202,7 @@ Result of checking whether it is of type values or not.
 
 ---
 
-#### _val.list() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">list</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Starts a new object of values but of type list.
@@ -215,7 +215,7 @@ The new values object started as list.
 
 ---
 
-#### _val.list(values: _java.lang.Object_) : _java.util.List_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">list</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Description
 
 Transforms an object from values to a normal list.
@@ -224,7 +224,7 @@ Transforms an object from values to a normal list.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.lang.Object_ | Value object in list mode. |
+| **values** | _java.lang.Object_ | Value object in list mode. |
 
 ##### Return
 
@@ -234,7 +234,7 @@ A new normal list of items from the received value object.
 
 ---
 
-#### _val.list(values: _[Values](../../objects/Values)_) : _java.util.List_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">list</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Description
 
 Transforms an object from values to a normal list.
@@ -243,7 +243,7 @@ Transforms an object from values to a normal list.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _[Values](../../objects/Values)_ | Value object in list mode. |
+| **values** | _[Values](../../objects/Values)_ | Value object in list mode. |
 
 ##### Return
 
@@ -257,7 +257,7 @@ A new normal list of items from the received value object.
 
 ---
 
-#### _val.map() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">map</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Starts a new object of values but of type map.
@@ -270,7 +270,7 @@ The new values object started as map.
 
 ---
 
-#### _val.map(values: _java.lang.Object_) : _java.util.Map_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">map</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -279,7 +279,7 @@ Transforms an object from values to a normal map.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.lang.Object_ | Value object in map mode. |
+| **values** | _java.lang.Object_ | Value object in map mode. |
 
 ##### Return
 
@@ -289,7 +289,7 @@ A new normal map with the data from the received values object.
 
 ---
 
-#### _val.map(values: _[Values](../../objects/Values)_) : _java.util.Map_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">map</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -298,7 +298,7 @@ Transforms an object from values to a normal map.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _[Values](../../objects/Values)_ | Value object in map mode. |
+| **values** | _[Values](../../objects/Values)_ | Value object in map mode. |
 
 ##### Return
 
@@ -312,7 +312,7 @@ A new normal map with the data from the received values object.
 
 ---
 
-#### _val.persistent() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">persistent</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Values type instance to store data that persists in memory, that is, the data stored here are available for all HTTP requests.
@@ -338,7 +338,7 @@ Data that is kept in memory and is available for all requests.
 
 ---
 
-#### _val.toJSON(values: _java.util.List_) : string
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Convert values to JSON.
@@ -347,17 +347,17 @@ Convert values to JSON.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.util.List_ | Values object to be transformed into JSON format. |
+| **values** | _java.util.List_ | Values object to be transformed into JSON format. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 String JSON with the structure and data of the values object.
 
 ---
 
-#### _val.toJSON(values: _java.util.List_, htmlEscape: _boolean_) : string
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Convert values to JSON.
@@ -366,18 +366,18 @@ Convert values to JSON.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.util.List_ | Values object to be transformed into JSON format. |
-| htmlEscape | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
+| **values** | _java.util.List_ | Values object to be transformed into JSON format. |
+| **htmlEscape** | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 String JSON with the structure and data of the values object.
 
 ---
 
-#### _val.toJSON(values: _java.util.List_, htmlEscape: _boolean_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Convert values to JSON.
@@ -402,19 +402,19 @@ _out.println(`${mapString}<br/>`)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.util.List_ | Values object to be transformed into JSON format. |
-| htmlEscape | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
-| indentFactor | _int_ | Number of spaces that should be used in JSON indentation. |
+| **values** | _java.util.List_ | Values object to be transformed into JSON format. |
+| **htmlEscape** | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
+| **indentFactor** | _int_ | Number of spaces that should be used in JSON indentation. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 String JSON with the structure and data of the values object.
 
 ---
 
-#### _val.toJSON(values: _java.util.List_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Convert values to JSON.
@@ -423,18 +423,18 @@ Convert values to JSON.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.util.List_ | Values object to be transformed into JSON format. |
-| indentFactor | _int_ | Number of spaces that should be used in JSON indentation. |
+| **values** | _java.util.List_ | Values object to be transformed into JSON format. |
+| **indentFactor** | _int_ | Number of spaces that should be used in JSON indentation. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 String JSON with the structure and data of the values object.
 
 ---
 
-#### _val.toJSON(values: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Convert values to JSON.
@@ -443,17 +443,17 @@ Convert values to JSON.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+| **values** | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 String JSON with the structure and data of the values object.
 
 ---
 
-#### _val.toJSON(values: _[Values](../../objects/Values)_, htmlEscape: _boolean_) : string
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Convert values to JSON.
@@ -462,18 +462,18 @@ Convert values to JSON.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
-| htmlEscape | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
+| **values** | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+| **htmlEscape** | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 String JSON with the structure and data of the values object.
 
 ---
 
-#### _val.toJSON(values: _[Values](../../objects/Values)_, htmlEscape: _boolean_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Convert values to JSON.
@@ -498,19 +498,19 @@ _out.println(`${mapString}<br/>`)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
-| htmlEscape | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
-| indentFactor | _int_ | Number of spaces that should be used in JSON indentation. |
+| **values** | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+| **htmlEscape** | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
+| **indentFactor** | _int_ | Number of spaces that should be used in JSON indentation. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 String JSON with the structure and data of the values object.
 
 ---
 
-#### _val.toJSON(values: _[Values](../../objects/Values)_, indentFactor: _int_) : string
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Convert values to JSON.
@@ -519,12 +519,12 @@ Convert values to JSON.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
-| indentFactor | _int_ | Number of spaces that should be used in JSON indentation. |
+| **values** | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+| **indentFactor** | _int_ | Number of spaces that should be used in JSON indentation. |
 
 ##### Return
 
-( string )
+( _string_ )
 
 String JSON with the structure and data of the values object.
 
@@ -534,7 +534,7 @@ String JSON with the structure and data of the values object.
 
 ---
 
-#### _val.toList(values: _java.lang.Object_) : _java.util.List_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toList</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Description
 
 Transforms an object from values to a normal list.
@@ -543,7 +543,7 @@ Transforms an object from values to a normal list.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.lang.Object_ | Value object in list mode. |
+| **values** | _java.lang.Object_ | Value object in list mode. |
 
 ##### Return
 
@@ -553,7 +553,7 @@ A new normal list of items from the received value object.
 
 ---
 
-#### _val.toList(values: _[Values](../../objects/Values)_) : _java.util.List_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toList</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Description
 
 Transforms an object from values to a normal list.
@@ -562,7 +562,7 @@ Transforms an object from values to a normal list.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _[Values](../../objects/Values)_ | Value object in list mode. |
+| **values** | _[Values](../../objects/Values)_ | Value object in list mode. |
 
 ##### Return
 
@@ -576,7 +576,7 @@ A new normal list of items from the received value object.
 
 ---
 
-#### _val.toMap(values: _java.lang.Object_) : _java.util.Map_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toMap</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -585,7 +585,7 @@ Transforms an object from values to a normal map.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _java.lang.Object_ | Value object in map mode. |
+| **values** | _java.lang.Object_ | Value object in map mode. |
 
 ##### Return
 
@@ -595,7 +595,7 @@ A new normal map with the data from the received values object.
 
 ---
 
-#### _val.toMap(values: _[Values](../../objects/Values)_) : _java.util.Map_
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toMap</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -604,7 +604,7 @@ Transforms an object from values to a normal map.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| values | _[Values](../../objects/Values)_ | Value object in map mode. |
+| **values** | _[Values](../../objects/Values)_ | Value object in map mode. |
 
 ##### Return
 

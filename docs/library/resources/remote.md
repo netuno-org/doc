@@ -13,7 +13,7 @@ O Remote facilita esta integração e torna simples a integração com web servi
 
 ---
 
-#### _remote.acceptJSON() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">acceptJSON</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines that the content will be received in the application/json.
@@ -30,7 +30,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.alwaysBodyData() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">alwaysBodyData</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Forces data to go in the body of the HTTP header, even in the case of the <code>GET</code> method.
@@ -47,7 +47,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.asBinary() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asBinary</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines that the content data received by the remote connection is in binary format, such as downloading files, images, zip, etc...
@@ -64,7 +64,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.asForm() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asForm</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines that the data content will be submitted in the application/x-www-form-urlencoded format.
@@ -81,7 +81,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.asJSON() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asJSON</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines that the data content will be submitted in the application/json format.
@@ -98,7 +98,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.asMultipartFormData() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asMultipartFormData</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines that the data content will be submitted in the multipart/form-data format.
@@ -115,7 +115,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.asText() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asText</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines that the data content will be submitted in the text/plain format.
@@ -132,7 +132,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.delete() : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Submit the request for remote connection using the DELETE method.
@@ -145,7 +145,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.delete(url: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address it submits the request for remote connection using the DELETE method.
@@ -154,7 +154,7 @@ With the assigned address it submits the request for remote connection using the
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
+| **url** | _string_ | Address to be submitted. |
 
 ##### Return
 
@@ -164,7 +164,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.delete(url: string, data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the DELETE method.
@@ -173,8 +173,8 @@ With the assigned address and data map, submit the request for remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
-| data | _java.util.Map_ | Data map to be submitted. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -184,7 +184,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.delete(url: string, data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the DELETE method.
@@ -193,8 +193,8 @@ With the assigned address and data map, submit the request for remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -204,7 +204,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.delete(data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the DELETE method.
@@ -213,7 +213,7 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _java.util.Map_ | Data map to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -223,7 +223,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.delete(data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the DELETE method.
@@ -232,7 +232,7 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -246,7 +246,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.get() : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Submit the request for remote connection using the GET method.
@@ -259,7 +259,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.get(url: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address it submits the request for remote connection using the GET method.
@@ -268,7 +268,7 @@ With the assigned address it submits the request for remote connection using the
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
+| **url** | _string_ | Address to be submitted. |
 
 ##### Return
 
@@ -278,7 +278,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.get(url: string, data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the GET method.
@@ -287,8 +287,8 @@ With the assigned address and data map, submit the request for remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
-| data | _java.util.Map_ | Data map to be submitted. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -298,7 +298,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.get(url: string, data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the GET method.
@@ -307,8 +307,8 @@ With the assigned address and data map, submit the request for remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -318,7 +318,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.get(data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the GET method.
@@ -327,7 +327,7 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _java.util.Map_ | Data map to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -337,7 +337,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.get(data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the GET method.
@@ -346,7 +346,7 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -360,10 +360,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getAuthorization() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getAuthorization</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -372,10 +372,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getCharset() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getCharset</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -384,7 +384,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getConnectTimeout() : _int_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getConnectTimeout</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -396,10 +396,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getContentType() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getContentType</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -408,7 +408,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getData() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -420,10 +420,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getDefaultSubmitData() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getDefaultSubmitData</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -432,7 +432,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getFormData() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getFormData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -444,7 +444,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getHeader() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getHeader</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -456,7 +456,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getQS() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getQS</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -468,7 +468,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getQueryString() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getQueryString</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -480,7 +480,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getReadTimeout() : _int_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getReadTimeout</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -492,10 +492,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getSOAPAction() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getSOAPAction</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -504,10 +504,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getSOAPNS() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getSOAPNS</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -516,10 +516,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getSOAPURL() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getSOAPURL</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -528,7 +528,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getStatusCode() : _int_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getStatusCode</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Return
 
 ( _int_ )
@@ -540,10 +540,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getURL() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getURL</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -552,10 +552,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.getURLPrefix() : string
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getURLPrefix</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -564,7 +564,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.init() : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Starts a new Remote.
@@ -577,7 +577,7 @@ New Remote instance.
 
 ---
 
-#### _remote.init(configName: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Starts a new Remote based on the configuration key.
@@ -586,7 +586,7 @@ Starts a new Remote based on the configuration key.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| configName | string | Name of the configuration that will be used. |
+| **configName** | _string_ | Name of the configuration that will be used. |
 
 ##### Return
 
@@ -596,7 +596,7 @@ New Remote instance.
 
 ---
 
-#### _remote.init(configName: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configName</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Starts a new Remote based on the configuration key.
@@ -605,7 +605,7 @@ Starts a new Remote based on the configuration key.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| configName | _[Values](../../objects/Values)_ | Name of the configuration that will be used. |
+| **configName** | _[Values](../../objects/Values)_ | Name of the configuration that will be used. |
 
 ##### Return
 
@@ -619,7 +619,7 @@ New Remote instance.
 
 ---
 
-#### _remote.isAlwaysDataBody() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isAlwaysDataBody</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -631,7 +631,7 @@ New Remote instance.
 
 ---
 
-#### _remote.isBinary() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isBinary</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -643,7 +643,7 @@ New Remote instance.
 
 ---
 
-#### _remote.isFollowRedirects() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isFollowRedirects</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -655,7 +655,7 @@ New Remote instance.
 
 ---
 
-#### _remote.isForm() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isForm</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -667,7 +667,7 @@ New Remote instance.
 
 ---
 
-#### _remote.isJSON() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isJSON</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -679,7 +679,7 @@ New Remote instance.
 
 ---
 
-#### _remote.isMultipartFormData() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isMultipartFormData</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -691,7 +691,7 @@ New Remote instance.
 
 ---
 
-#### _remote.isText() : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isText</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -703,7 +703,7 @@ New Remote instance.
 
 ---
 
-#### _remote.json(method: string, url: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned address it submits as JSON for the remote connection.
@@ -712,8 +712,8 @@ Through the HTTP method and assigned address it submits as JSON for the remote c
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
 
 ##### Return
 
@@ -723,7 +723,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.json(method: string, url: string, data: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data map it submits the data as JSON for the remote connection.
@@ -732,9 +732,9 @@ Through the HTTP method, address and assigned data map it submits the data as JS
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| data | string | Data map to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _string_ | Data map to be submitted. |
 
 ##### Return
 
@@ -744,7 +744,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.json(method: string, url: string, data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data map it submits the data as JSON for the remote connection.
@@ -753,9 +753,9 @@ Through the HTTP method, address and assigned data map it submits the data as JS
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| data | _java.util.Map_ | Data map to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -765,7 +765,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.json(method: string, url: string, data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data map it submits the data as JSON for the remote connection.
@@ -774,9 +774,9 @@ Through the HTTP method, address and assigned data map it submits the data as JS
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -790,7 +790,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.patch() : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Submit the request for remote connection using the PATCH method.
@@ -803,7 +803,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.patch(url: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address it submits the request for remote connection using the PATCH method.
@@ -812,7 +812,7 @@ With the assigned address it submits the request for remote connection using the
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
+| **url** | _string_ | Address to be submitted. |
 
 ##### Return
 
@@ -822,7 +822,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.patch(url: string, data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the PATCH method.
@@ -831,8 +831,8 @@ With the assigned address and data map, submit the request for remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
-| data | _java.util.Map_ | Data map to be submitted. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -842,7 +842,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.patch(url: string, data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the PATCH method.
@@ -851,8 +851,8 @@ With the assigned address and data map, submit the request for remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -862,7 +862,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.patch(data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the PATCH method.
@@ -871,7 +871,7 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _java.util.Map_ | Data map to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -881,7 +881,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.patch(data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the PATCH method.
@@ -890,7 +890,7 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -904,7 +904,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.ping(host: string) : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">ping</span>(<span style="color: #FF8000">host</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Check whether the server name or IP is available.
@@ -913,7 +913,7 @@ Check whether the server name or IP is available.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| host | string | Server name or IP. |
+| **host** | _string_ | Server name or IP. |
 
 ##### Return
 
@@ -927,7 +927,7 @@ Result if address is available.
 
 ---
 
-#### _remote.portListening(host: string, port: _int_) : _boolean_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">portListening</span>(<span style="color: #FF8000">host</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">port</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks if the port is available for a server name or IP.
@@ -936,8 +936,8 @@ Checks if the port is available for a server name or IP.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| host | string | Server name or IP. |
-| port | _int_ | Port number. |
+| **host** | _string_ | Server name or IP. |
+| **port** | _int_ | Port number. |
 
 ##### Return
 
@@ -951,7 +951,7 @@ Result if port is available.
 
 ---
 
-#### _remote.post() : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Submit the request for remote connection using the POST method.
@@ -964,7 +964,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.post(url: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address it submits the request for remote connection using the POST method.
@@ -973,7 +973,7 @@ With the assigned address it submits the request for remote connection using the
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
+| **url** | _string_ | Address to be submitted. |
 
 ##### Return
 
@@ -983,7 +983,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.post(url: string, data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the POST method.
@@ -992,8 +992,8 @@ With the assigned address and data map, submit the request for remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
-| data | _java.util.Map_ | Data map to be submitted. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1003,7 +1003,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.post(url: string, data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the POST method.
@@ -1012,8 +1012,8 @@ With the assigned address and data map, submit the request for remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1023,7 +1023,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.post(data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the POST method.
@@ -1032,7 +1032,7 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _java.util.Map_ | Data map to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1042,7 +1042,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.post(data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the POST method.
@@ -1051,7 +1051,7 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1065,7 +1065,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.put() : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Submit the request for remote connection using the PUT method.
@@ -1078,7 +1078,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.put(url: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address it submits the request for remote connection using the PUT method.
@@ -1087,7 +1087,7 @@ With the assigned address it submits the request for remote connection using the
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
+| **url** | _string_ | Address to be submitted. |
 
 ##### Return
 
@@ -1097,7 +1097,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.put(url: string, data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the PUT method.
@@ -1106,8 +1106,8 @@ With the assigned address and data map, submit the request for remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
-| data | _java.util.Map_ | Data map to be submitted. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1117,7 +1117,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.put(url: string, data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the PUT method.
@@ -1126,8 +1126,8 @@ With the assigned address and data map, submit the request for remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1137,7 +1137,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.put(data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the PUT method.
@@ -1146,7 +1146,7 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _java.util.Map_ | Data map to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1156,7 +1156,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.put(data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the PUT method.
@@ -1165,7 +1165,7 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1179,7 +1179,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.setAlwaysBodyData(alwaysDataBody: _boolean_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setAlwaysBodyData</span>(<span style="color: #FF8000">alwaysDataBody</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Forces data to go in the body of the HTTP header, even in the case of the <code>GET</code> method.
@@ -1188,7 +1188,7 @@ Forces data to go in the body of the HTTP header, even in the case of the <code>
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| alwaysDataBody | _boolean_ | Defines whether the data should always go in the header body of the HTTP communication that will be sent over the remote connection. |
+| **alwaysDataBody** | _boolean_ | Defines whether the data should always go in the header body of the HTTP communication that will be sent over the remote connection. |
 
 ##### Return
 
@@ -1202,7 +1202,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setAuthorization(authorization: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setAuthorization</span>(<span style="color: #FF8000">authorization</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines the exact content of the authorization that will header the communication that will be sent on the remote connection.
@@ -1211,7 +1211,7 @@ Defines the exact content of the authorization that will header the communicatio
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| authorization | string | Content of the authorization to be submitted. |
+| **authorization** | _string_ | Content of the authorization to be submitted. |
 
 ##### Return
 
@@ -1221,7 +1221,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setAuthorization(username: string, password: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setAuthorization</span>(<span style="color: #FF8000">username</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines the content of the basic authorization with user and password that goes to the header of the communication that will be sent on the remote connection.
@@ -1230,8 +1230,8 @@ Defines the content of the basic authorization with user and password that goes 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| username | string | Username of the authorization to be submitted. |
-| password | string | Password of the authorization to be submitted. |
+| **username** | _string_ | Username of the authorization to be submitted. |
+| **password** | _string_ | Password of the authorization to be submitted. |
 
 ##### Return
 
@@ -1245,7 +1245,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setBinary(binary: _boolean_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setBinary</span>(<span style="color: #FF8000">binary</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines that the content data received by the remote connection is in binary format, such as downloading files, images, zip, etc...
@@ -1254,7 +1254,7 @@ Defines that the content data received by the remote connection is in binary for
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| binary | _boolean_ | It will be downloading files. |
+| **binary** | _boolean_ | It will be downloading files. |
 
 ##### Return
 
@@ -1268,7 +1268,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setCharset(charset: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setCharset</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines the character encoding to be used for the remote connection.
@@ -1277,7 +1277,7 @@ Defines the character encoding to be used for the remote connection.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| charset | string | Character encoding code. |
+| **charset** | _string_ | Character encoding code. |
 
 ##### Return
 
@@ -1291,7 +1291,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setConnectTimeout(timeout: _int_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setConnectTimeout</span>(<span style="color: #FF8000">timeout</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Sets the timeout to stabilize the remote connection.
@@ -1300,7 +1300,7 @@ Sets the timeout to stabilize the remote connection.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| timeout | _int_ | Timeout in milliseconds. |
+| **timeout** | _int_ | Timeout in milliseconds. |
 
 ##### Return
 
@@ -1314,7 +1314,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setContentType(contentType: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setContentType</span>(<span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines the type of content to be used for the remote connection.
@@ -1323,7 +1323,7 @@ Defines the type of content to be used for the remote connection.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| contentType | string | Content type code. |
+| **contentType** | _string_ | Content type code. |
 
 ##### Return
 
@@ -1337,7 +1337,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setData(data: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines the parameterization of the data that will be sent as content of the remote connection, via POST or PUT.
@@ -1346,7 +1346,7 @@ Defines the parameterization of the data that will be sent as content of the rem
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ | Parameter map with data to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Parameter map with data to be submitted. |
 
 ##### Return
 
@@ -1360,7 +1360,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setDefaultSubmitData(requestHeader: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setDefaultSubmitData</span>(<span style="color: #FF8000">requestHeader</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines the default data if there is no other data defined to be sent over the remote connection.
@@ -1369,7 +1369,7 @@ Defines the default data if there is no other data defined to be sent over the r
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| requestHeader | string | Standard data that will be submitted if there is no other data defined. |
+| **requestHeader** | _string_ | Standard data that will be submitted if there is no other data defined. |
 
 ##### Return
 
@@ -1383,7 +1383,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setFollowRedirects(followRedirects: _boolean_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setFollowRedirects</span>(<span style="color: #FF8000">followRedirects</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines whether to follow redirects on the remote connection.
@@ -1392,7 +1392,7 @@ Defines whether to follow redirects on the remote connection.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| followRedirects | _boolean_ | Whether or not to follow redirects |
+| **followRedirects** | _boolean_ | Whether or not to follow redirects |
 
 ##### Return
 
@@ -1406,12 +1406,12 @@ The current Remote instance.
 
 ---
 
-#### _remote.setFormData(data: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setFormData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -1424,7 +1424,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setHeader(requestHeader: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setHeader</span>(<span style="color: #FF8000">requestHeader</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines the header of the request that is submitted on the remote connection.
@@ -1433,7 +1433,7 @@ Defines the header of the request that is submitted on the remote connection.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| requestHeader | _[Values](../../objects/Values)_ | Header data of the request to be submitted. |
+| **requestHeader** | _[Values](../../objects/Values)_ | Header data of the request to be submitted. |
 
 ##### Return
 
@@ -1447,7 +1447,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setQS(data: _[Values](../../objects/Values)_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setQS</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines the parameterization of the query string data, that is, the parameters with data passed in the address of the remote connection.
@@ -1456,7 +1456,7 @@ Defines the parameterization of the query string data, that is, the parameters w
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| data | _[Values](../../objects/Values)_ | Parameter map with data to be passed in the URL. |
+| **data** | _[Values](../../objects/Values)_ | Parameter map with data to be passed in the URL. |
 
 ##### Return
 
@@ -1470,12 +1470,12 @@ The current Remote instance.
 
 ---
 
-#### _remote.setQueryString(qs: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setQueryString</span>(<span style="color: #FF8000">qs</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| qs | _[Values](../../objects/Values)_ |   |
+| **qs** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -1488,7 +1488,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setReadTimeout(timeout: _int_) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setReadTimeout</span>(<span style="color: #FF8000">timeout</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Sets the time limit for reading data.
@@ -1497,7 +1497,7 @@ Sets the time limit for reading data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| timeout | _int_ | Timeout in milliseconds. |
+| **timeout** | _int_ | Timeout in milliseconds. |
 
 ##### Return
 
@@ -1511,7 +1511,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setSOAPAction(soapAction: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setSOAPAction</span>(<span style="color: #FF8000">soapAction</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Defines the SOAP "action " (operation, method, etc.) of the remote connection.
@@ -1520,7 +1520,7 @@ Defines the SOAP "action " (operation, method, etc.) of the remote connection.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| soapAction | string | SOAP action (operation or method) that will be invoked on submission. |
+| **soapAction** | _string_ | SOAP action (operation or method) that will be invoked on submission. |
 
 ##### Return
 
@@ -1534,7 +1534,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setSOAPNS(soapNS: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setSOAPNS</span>(<span style="color: #FF8000">soapNS</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Define the SOAP namespace on the remote connection.
@@ -1543,7 +1543,7 @@ Define the SOAP namespace on the remote connection.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| soapNS | string | SOAP namespace for submission. |
+| **soapNS** | _string_ | SOAP namespace for submission. |
 
 ##### Return
 
@@ -1557,7 +1557,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setSOAPURL(soapURL: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setSOAPURL</span>(<span style="color: #FF8000">soapURL</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Sets the SOAP address of the remote connection.
@@ -1566,7 +1566,7 @@ Sets the SOAP address of the remote connection.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| soapURL | string | SOAP Address to be submitted. |
+| **soapURL** | _string_ | SOAP Address to be submitted. |
 
 ##### Return
 
@@ -1580,7 +1580,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.setURL(url: string) : _[Remote](../../resources/Remote)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setURL</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/Remote)</span>
 ##### Description
 
 Sets the address of the remote connection.
@@ -1589,7 +1589,7 @@ Sets the address of the remote connection.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| url | string | Address to be submitted. |
+| **url** | _string_ | Address to be submitted. |
 
 ##### Return
 
@@ -1603,12 +1603,12 @@ The current Remote instance.
 
 ---
 
-#### _remote.setURLPrefix(urlPrefix: string) : _org.netuno.psamata.net.Remote_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setURLPrefix</span>(<span style="color: #FF8000">urlPrefix</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| urlPrefix | string |   |
+| **urlPrefix** | _string_ |   |
 
 ##### Return
 
@@ -1621,12 +1621,12 @@ The current Remote instance.
 
 ---
 
-#### _remote.soap11(soapMethod: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap11</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| soapMethod | string |   |
+| **soapMethod** | _string_ |   |
 
 ##### Return
 
@@ -1635,13 +1635,13 @@ The current Remote instance.
 
 ---
 
-#### _remote.soap11(soapMethod: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap11</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| soapMethod | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **soapMethod** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -1654,12 +1654,12 @@ The current Remote instance.
 
 ---
 
-#### _remote.soap12(soapMethod: string) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap12</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| soapMethod | string |   |
+| **soapMethod** | _string_ |   |
 
 ##### Return
 
@@ -1668,13 +1668,13 @@ The current Remote instance.
 
 ---
 
-#### _remote.soap12(soapMethod: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap12</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| soapMethod | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **soapMethod** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -1687,7 +1687,7 @@ The current Remote instance.
 
 ---
 
-#### _remote.submit(method: string, url: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned address it submits to the remote connection.
@@ -1696,8 +1696,8 @@ Through the HTTP method and assigned address it submits to the remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
 
 ##### Return
 
@@ -1707,7 +1707,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submit(method: string, url: string, data: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data, submit for remote connection.
@@ -1716,9 +1716,9 @@ Through the HTTP method, address and assigned data, submit for remote connection
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| data | string | Data to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _string_ | Data to be submitted. |
 
 ##### Return
 
@@ -1728,7 +1728,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submit(method: string, url: string, querystring: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address, query string, content type and assigned data, it submits to the remote connection.
@@ -1737,9 +1737,9 @@ Through the HTTP method, address, query string, content type and assigned data, 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| querystring | _java.util.Map_ | Data for the querystring. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **querystring** | _java.util.Map_ | Data for the querystring. |
 
 ##### Return
 
@@ -1749,7 +1749,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submit(method: string, url: string, querystring: _java.util.Map_, contentType: string, data: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address, query string, content type and assigned data, it submits to the remote connection.
@@ -1758,11 +1758,11 @@ Through the HTTP method, address, query string, content type and assigned data, 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| querystring | _java.util.Map_ | Data for the querystring. |
-| contentType | string | Content type code. |
-| data | string | Data to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **querystring** | _java.util.Map_ | Data for the querystring. |
+| **contentType** | _string_ | Content type code. |
+| **data** | _string_ | Data to be submitted. |
 
 ##### Return
 
@@ -1772,7 +1772,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submit(method: string, url: string, querystring: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address, query string, content type and assigned data, it submits to the remote connection.
@@ -1781,9 +1781,9 @@ Through the HTTP method, address, query string, content type and assigned data, 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| querystring | _[Values](../../objects/Values)_ | Data for the querystring. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **querystring** | _[Values](../../objects/Values)_ | Data for the querystring. |
 
 ##### Return
 
@@ -1793,7 +1793,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submit(method: string, url: string, querystring: _[Values](../../objects/Values)_, contentType: string, data: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address, query string, content type and assigned data, it submits to the remote connection.
@@ -1802,11 +1802,11 @@ Through the HTTP method, address, query string, content type and assigned data, 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| querystring | _[Values](../../objects/Values)_ | Data for the querystring. |
-| contentType | string | Content type code. |
-| data | string | Data to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **querystring** | _[Values](../../objects/Values)_ | Data for the querystring. |
+| **contentType** | _string_ | Content type code. |
+| **data** | _string_ | Data to be submitted. |
 
 ##### Return
 
@@ -1820,7 +1820,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submitForm(method: string, url: string, data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as form for the remote connection.
@@ -1829,9 +1829,9 @@ Through the HTTP method and assigned data map it submits the data as form for th
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| data | _java.util.Map_ | Data map to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1841,7 +1841,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submitForm(method: string, url: string, data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as form for the remote connection.
@@ -1850,9 +1850,9 @@ Through the HTTP method and assigned data map it submits the data as form for th
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1862,7 +1862,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submitForm(method: string, data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as form for the remote connection.
@@ -1871,8 +1871,8 @@ Through the HTTP method and assigned data map it submits the data as form for th
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| data | _java.util.Map_ | Data map to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1882,7 +1882,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submitForm(method: string, data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as form for the remote connection.
@@ -1891,8 +1891,8 @@ Through the HTTP method and assigned data map it submits the data as form for th
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1906,7 +1906,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submitJSON(method: string, url: string, data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data map it submits the data as JSON for the remote connection.
@@ -1915,9 +1915,9 @@ Through the HTTP method, address and assigned data map it submits the data as JS
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| data | _java.util.Map_ | Data map to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1927,7 +1927,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submitJSON(method: string, url: string, data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data map it submits the data as JSON for the remote connection.
@@ -1936,9 +1936,9 @@ Through the HTTP method, address and assigned data map it submits the data as JS
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| url | string | Address to be submitted. |
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **url** | _string_ | Address to be submitted. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1948,7 +1948,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submitJSON(method: string, data: _java.util.Map_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as JSON for the remote connection.
@@ -1957,8 +1957,8 @@ Through the HTTP method and assigned data map it submits the data as JSON for th
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| data | _java.util.Map_ | Data map to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **data** | _java.util.Map_ | Data map to be submitted. |
 
 ##### Return
 
@@ -1968,7 +1968,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### _remote.submitJSON(method: string, data: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as JSON for the remote connection.
@@ -1977,8 +1977,8 @@ Through the HTTP method and assigned data map it submits the data as JSON for th
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| method | string | HTTP method code. |
-| data | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **method** | _string_ | HTTP method code. |
+| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 

@@ -12,7 +12,7 @@ Parametrizações gerais da aplicação.
 
 ---
 
-#### _app.config() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de configuração da aplicação presentes no ficheiro na pasta config.
@@ -38,7 +38,7 @@ Retorna uma estrutura com os parametros de configuração.
 
 ---
 
-#### _app.configReloaded() : _boolean_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">configReloaded</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se a configuração da aplicação foi alterada.
@@ -65,7 +65,7 @@ Retorna se a configuração foi alterada e recarregada.
 
 ---
 
-#### _app.file(caminho: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">file</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Descrição
 
 Processa ficheiros dentro da aplicação.
@@ -96,7 +96,7 @@ if (jsonFicheiro.exists()) {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | string | Caminho relativo do ficheiro dentro da aplicação. |
+| **caminho** | _string_ | Caminho relativo do ficheiro dentro da aplicação. |
 
 ##### Retorno
 
@@ -110,7 +110,7 @@ Retorna o objeto de ficheiro obtido através do caminho.
 
 ---
 
-#### _app.folder(caminho: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">folder</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Descrição
 
 Procura os ficheiros presentes na pasta do caminho inserido.
@@ -119,7 +119,7 @@ Procura os ficheiros presentes na pasta do caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | string | Caminho do ficheiro. |
+| **caminho** | _string_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -133,7 +133,7 @@ Retorna os os ficheiros presentes na pasta do caminho inserido.
 
 ---
 
-#### _app.getConfig() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de configuração da aplicação presentes no ficheiro na pasta config.
@@ -159,7 +159,7 @@ Retorna uma estrutura com os parametros de configuração.
 
 ---
 
-#### _app.getFile(caminho: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getFile</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Descrição
 
 Processa ficheiros dentro da aplicação.
@@ -190,7 +190,7 @@ if (jsonFicheiro.exists()) {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | string | Caminho relativo do ficheiro dentro da aplicação. |
+| **caminho** | _string_ | Caminho relativo do ficheiro dentro da aplicação. |
 
 ##### Retorno
 
@@ -204,7 +204,7 @@ Retorna o objeto de ficheiro obtido através do caminho.
 
 ---
 
-#### _app.getFolder(caminho: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getFolder</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Descrição
 
 Procura os ficheiros presentes na pasta do caminho inserido.
@@ -213,7 +213,7 @@ Procura os ficheiros presentes na pasta do caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | string | Caminho do ficheiro. |
+| **caminho** | _string_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -227,7 +227,7 @@ Retorna os os ficheiros presentes na pasta do caminho inserido.
 
 ---
 
-#### _app.getName() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o nome da aplicação.
@@ -240,7 +240,7 @@ const nomeDaApp = _app.name();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o nome da aplicação.
 
@@ -250,10 +250,10 @@ Retorna o nome da aplicação.
 
 ---
 
-#### _app.getPathBase() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathBase</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -262,10 +262,10 @@ Retorna o nome da aplicação.
 
 ---
 
-#### _app.getPathConfig() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathConfig</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -274,10 +274,10 @@ Retorna o nome da aplicação.
 
 ---
 
-#### _app.getPathHome() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathHome</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -286,10 +286,10 @@ Retorna o nome da aplicação.
 
 ---
 
-#### _app.getPathPublic() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -298,10 +298,10 @@ Retorna o nome da aplicação.
 
 ---
 
-#### _app.getPathServer() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathServer</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -310,10 +310,10 @@ Retorna o nome da aplicação.
 
 ---
 
-#### _app.getPathStorage() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathStorage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -322,7 +322,7 @@ Retorna o nome da aplicação.
 
 ---
 
-#### _app.getSettings() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getSettings</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de settings da aplicação presentes no ficheiro de config.
@@ -349,7 +349,7 @@ Retorna as definições customizadas.
 
 ---
 
-#### _app.getUrl() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrl</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o url da aplicação.
@@ -362,13 +362,13 @@ const urlDaApp = _app.url();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a URL da aplicação.
 
 ---
 
-#### _app.getUrl(chave: string) : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrl</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o prefixo da URL definido na configuração, como um prefixo de URL customizado.
@@ -383,11 +383,11 @@ const urlCustom = _app.url('nome-da-minha-url-configurada');
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Nome do url configurado. |
+| **chave** | _string_ | Nome do url configurado. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o prefixo da localização definida na configuração.
 
@@ -397,10 +397,10 @@ Retorna o prefixo da localização definida na configuração.
 
 ---
 
-#### _app.getUrlAdmin() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlAdmin</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -409,10 +409,10 @@ Retorna o prefixo da localização definida na configuração.
 
 ---
 
-#### _app.getUrlFileSystem() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlFileSystem</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -421,10 +421,10 @@ Retorna o prefixo da localização definida na configuração.
 
 ---
 
-#### _app.getUrlFileSystemPrivate() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlFileSystemPrivate</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -433,10 +433,10 @@ Retorna o prefixo da localização definida na configuração.
 
 ---
 
-#### _app.getUrlFileSystemPublic() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlFileSystemPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -445,10 +445,10 @@ Retorna o prefixo da localização definida na configuração.
 
 ---
 
-#### _app.getUrlFileSystemServer() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlFileSystemServer</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -457,10 +457,10 @@ Retorna o prefixo da localização definida na configuração.
 
 ---
 
-#### _app.getUrlPublic() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -469,10 +469,10 @@ Retorna o prefixo da localização definida na configuração.
 
 ---
 
-#### _app.getUrlServices() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlServices</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -481,10 +481,10 @@ Retorna o prefixo da localização definida na configuração.
 
 ---
 
-#### _app.getUrlStorage() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlStorage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -493,7 +493,7 @@ Retorna o prefixo da localização definida na configuração.
 
 ---
 
-#### _app.isConfigReloaded() : _boolean_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">isConfigReloaded</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -505,7 +505,7 @@ Retorna o prefixo da localização definida na configuração.
 
 ---
 
-#### _app.isFile(caminho: string) : _boolean_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">isFile</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se um determinado ficheiro existe.
@@ -514,7 +514,7 @@ Verifica se um determinado ficheiro existe.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | string | Caminho do ficheiro. |
+| **caminho** | _string_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -528,7 +528,7 @@ Retorna uma verificação boolean da existência do ficheiro e localiza-o.
 
 ---
 
-#### _app.isFolder(caminho: string) : _boolean_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">isFolder</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se uma determinada pasta existe no caminho inserido.
@@ -537,7 +537,7 @@ Verifica se uma determinada pasta existe no caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | string | Caminho da pasta. |
+| **caminho** | _string_ | Caminho da pasta. |
 
 ##### Retorno
 
@@ -551,7 +551,7 @@ Retorna uma verificação boolean da existência do ficheiro e localiza a pasta 
 
 ---
 
-#### _app.name() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o nome da aplicação.
@@ -564,7 +564,7 @@ const nomeDaApp = _app.name();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o nome da aplicação.
 
@@ -574,7 +574,7 @@ Retorna o nome da aplicação.
 
 ---
 
-#### _app.pathBase() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathBase</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o caminho da aplicação para a diretoria base/home.
@@ -587,7 +587,7 @@ const caminhoRaiz = _app.pathBase();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização base da aplicação.
 
@@ -597,7 +597,7 @@ Retorna a localização base da aplicação.
 
 ---
 
-#### _app.pathConfig() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathConfig</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o caminho da aplicação para a pasta config.
@@ -610,7 +610,7 @@ const caminhoConfig = _app.pathConfig();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização da pasta de configuração.
 
@@ -620,7 +620,7 @@ Retorna a localização da pasta de configuração.
 
 ---
 
-#### _app.pathHome() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathHome</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o caminho da aplicação para a diretoria home/base.
@@ -633,7 +633,7 @@ const caminhoRaiz = _app.pathHome();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização base da aplicação.
 
@@ -643,7 +643,7 @@ Retorna a localização base da aplicação.
 
 ---
 
-#### _app.pathPublic() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o caminho da aplicação para a pasta public.
@@ -656,7 +656,7 @@ const caminhoPublico = _app.pathPublic();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização da pasta public.
 
@@ -666,7 +666,7 @@ Retorna a localização da pasta public.
 
 ---
 
-#### _app.pathServer() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathServer</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o caminho da aplicação para a pasta server.
@@ -679,7 +679,7 @@ const caminhoServer = _app.pathServer();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização da pasta server.
 
@@ -689,7 +689,7 @@ Retorna a localização da pasta server.
 
 ---
 
-#### _app.pathStorage() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathStorage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o caminho da aplicação para a pasta storage.
@@ -702,7 +702,7 @@ const caminhoStorage = _app.pathStorage();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização da pasta storage.
 
@@ -712,7 +712,7 @@ Retorna a localização da pasta storage.
 
 ---
 
-#### _app.settings() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">settings</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de settings da aplicação presentes no ficheiro de config.
@@ -739,7 +739,7 @@ Retorna as definições customizadas.
 
 ---
 
-#### _app.url() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">url</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o url da aplicação.
@@ -752,13 +752,13 @@ const urlDaApp = _app.url();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a URL da aplicação.
 
 ---
 
-#### _app.url(chave: string) : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">url</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o prefixo da URL definido na configuração, como um prefixo de URL customizado.
@@ -773,11 +773,11 @@ const urlCustom = _app.url('nome-da-minha-url-configurada');
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | string | Nome do url configurado. |
+| **chave** | _string_ | Nome do url configurado. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o prefixo da localização definida na configuração.
 
@@ -787,7 +787,7 @@ Retorna o prefixo da localização definida na configuração.
 
 ---
 
-#### _app.urlAdmin() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlAdmin</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o url da aplicação para a interface de administração.
@@ -800,7 +800,7 @@ const urlAdmin = _app.urlAdmin();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o prefixo da localização de administração.
 
@@ -810,7 +810,7 @@ Retorna o prefixo da localização de administração.
 
 ---
 
-#### _app.urlFileSystem() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlFileSystem</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o url da aplicação para a pasta filesystem.
@@ -823,7 +823,7 @@ const fsURL = _app.urlFileSystem();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização da pasta de filesystem.
 
@@ -833,7 +833,7 @@ Retorna a localização da pasta de filesystem.
 
 ---
 
-#### _app.urlFileSystemPrivate() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlFileSystemPrivate</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o url da aplicação para a pasta private.
@@ -846,7 +846,7 @@ const fsURLPrivada = _app.urlFileSystemPrivate();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização da pasta private do filesystem.
 
@@ -856,7 +856,7 @@ Retorna a localização da pasta private do filesystem.
 
 ---
 
-#### _app.urlFileSystemPublic() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlFileSystemPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o url da aplicação para a pasta public do filesystem.
@@ -869,7 +869,7 @@ const fsURLPublica = _app.urlFileSystemPublic();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização da pasta public do filesystem.
 
@@ -879,7 +879,7 @@ Retorna a localização da pasta public do filesystem.
 
 ---
 
-#### _app.urlFileSystemServer() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlFileSystemServer</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o url da aplicação para a pasta server do filesystem.
@@ -892,7 +892,7 @@ const fsURLServidor = _app.urlFileSystemServer();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização da pasta server do filesystem.
 
@@ -902,7 +902,7 @@ Retorna a localização da pasta server do filesystem.
 
 ---
 
-#### _app.urlPublic() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o url da aplicação para a pasta public.
@@ -915,7 +915,7 @@ const urlPublicaDaApp = _app.urlPublic();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização da pasta public.
 
@@ -925,7 +925,7 @@ Retorna a localização da pasta public.
 
 ---
 
-#### _app.urlServices() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlServices</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o url da aplicação para a pasta services.
@@ -938,7 +938,7 @@ const urlServicos = _app.urlServices();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização dos serviços.
 
@@ -948,7 +948,7 @@ Retorna a localização dos serviços.
 
 ---
 
-#### _app.urlStorage() : string
+#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlStorage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o url da aplicação para a pasta storage.
@@ -961,7 +961,7 @@ const urlDaApp = _app.urlStorage();
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna a localização da pasta storage.
 

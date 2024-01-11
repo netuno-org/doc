@@ -12,7 +12,7 @@ Response feature to HTTP requests.
 
 ---
 
-#### _out.close() : _void_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Closes the sending of HTTP response data.
@@ -28,7 +28,7 @@ Closes the sending of HTTP response data.
 
 ---
 
-#### _out.closed() : _boolean_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">closed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether the response to the HTTP request has already been closed.
@@ -45,12 +45,12 @@ The response to the HTTP request has been closed.
 
 ---
 
-#### _out.copy(in: _java.io.InputStream_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| in | _java.io.InputStream_ |   |
+| **in** | _java.io.InputStream_ |   |
 
 ##### Return
 
@@ -59,13 +59,13 @@ The response to the HTTP request has been closed.
 
 ---
 
-#### _out.copy(in: _java.io.InputStream_, skip: _long_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| in | _java.io.InputStream_ |   |
-| skip | _long_ |   |
+| **in** | _java.io.InputStream_ |   |
+| **skip** | _long_ |   |
 
 ##### Return
 
@@ -74,14 +74,14 @@ The response to the HTTP request has been closed.
 
 ---
 
-#### _out.copy(in: _java.io.InputStream_, skip: _long_, size: _long_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| in | _java.io.InputStream_ |   |
-| skip | _long_ |   |
-| size | _long_ |   |
+| **in** | _java.io.InputStream_ |   |
+| **skip** | _long_ |   |
+| **size** | _long_ |   |
 
 ##### Return
 
@@ -90,12 +90,12 @@ The response to the HTTP request has been closed.
 
 ---
 
-#### _out.copy(file: _[File](../../objects/File)_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | _[File](../../objects/File)_ |   |
+| **file** | _[File](../../objects/File)_ |   |
 
 ##### Return
 
@@ -104,13 +104,13 @@ The response to the HTTP request has been closed.
 
 ---
 
-#### _out.copy(file: _[File](../../objects/File)_, skip: _long_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | _[File](../../objects/File)_ |   |
-| skip | _long_ |   |
+| **file** | _[File](../../objects/File)_ |   |
+| **skip** | _long_ |   |
 
 ##### Return
 
@@ -119,14 +119,14 @@ The response to the HTTP request has been closed.
 
 ---
 
-#### _out.copy(file: _[File](../../objects/File)_, skip: _long_, size: _long_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| file | _[File](../../objects/File)_ |   |
-| skip | _long_ |   |
-| size | _long_ |   |
+| **file** | _[File](../../objects/File)_ |   |
+| **skip** | _long_ |   |
+| **size** | _long_ |   |
 
 ##### Return
 
@@ -135,12 +135,12 @@ The response to the HTTP request has been closed.
 
 ---
 
-#### _out.copy(storage: _[Storage](../../resources/Storage)_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/Storage)_ |   |
 
 ##### Return
 
@@ -149,13 +149,13 @@ The response to the HTTP request has been closed.
 
 ---
 
-#### _out.copy(storage: _[Storage](../../resources/Storage)_, skip: _long_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ |   |
-| skip | _long_ |   |
+| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **skip** | _long_ |   |
 
 ##### Return
 
@@ -164,14 +164,14 @@ The response to the HTTP request has been closed.
 
 ---
 
-#### _out.copy(storage: _[Storage](../../resources/Storage)_, skip: _long_, size: _long_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ |   |
-| skip | _long_ |   |
-| size | _long_ |   |
+| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **skip** | _long_ |   |
+| **size** | _long_ |   |
 
 ##### Return
 
@@ -184,7 +184,7 @@ The response to the HTTP request has been closed.
 
 ---
 
-#### _out.flush() : _void_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">flush</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Sends what is pending accumulated in the buffer.
@@ -200,7 +200,7 @@ Sends what is pending accumulated in the buffer.
 
 ---
 
-#### _out.getJSONHTMLEscape() : _boolean_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">getJSONHTMLEscape</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -212,7 +212,7 @@ Sends what is pending accumulated in the buffer.
 
 ---
 
-#### _out.getMirrors() : _java.util.List_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">getMirrors</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Description
 
 Gets the output replicas.
@@ -229,7 +229,7 @@ List of replicas.
 
 ---
 
-#### _out.init() : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Starts a new instance of output.
@@ -246,7 +246,7 @@ The new instance of the Output feature.
 
 ---
 
-#### _out.isClosed() : _boolean_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">isClosed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -258,7 +258,7 @@ The new instance of the Output feature.
 
 ---
 
-#### _out.isStarted() : _boolean_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">isStarted</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -270,12 +270,12 @@ The new instance of the Output feature.
 
 ---
 
-#### _out.json(json: _java.lang.Object_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| json | _java.lang.Object_ |   |
+| **json** | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -284,12 +284,12 @@ The new instance of the Output feature.
 
 ---
 
-#### _out.json(json: string) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| json | string |   |
+| **json** | _string_ |   |
 
 ##### Return
 
@@ -298,12 +298,12 @@ The new instance of the Output feature.
 
 ---
 
-#### _out.json(json: _java.util.List_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| json | _java.util.List_ |   |
+| **json** | _java.util.List_ |   |
 
 ##### Return
 
@@ -312,12 +312,12 @@ The new instance of the Output feature.
 
 ---
 
-#### _out.json(json: _java.util.Map_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| json | _java.util.Map_ |   |
+| **json** | _java.util.Map_ |   |
 
 ##### Return
 
@@ -326,12 +326,12 @@ The new instance of the Output feature.
 
 ---
 
-#### _out.json(json: _[Values](../../objects/Values)_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| json | _[Values](../../objects/Values)_ |   |
+| **json** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -344,7 +344,7 @@ The new instance of the Output feature.
 
 ---
 
-#### _out.jsonHTMLEscape() : _boolean_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">jsonHTMLEscape</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -352,12 +352,12 @@ The new instance of the Output feature.
 
 ---
 
-#### _out.jsonHTMLEscape(htmlEscape: _boolean_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">jsonHTMLEscape</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| htmlEscape | _boolean_ |   |
+| **htmlEscape** | _boolean_ |   |
 
 ##### Return
 
@@ -370,7 +370,7 @@ The new instance of the Output feature.
 
 ---
 
-#### _out.mirrors() : _java.util.List_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">mirrors</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Description
 
 Gets the output replicas.
@@ -387,7 +387,7 @@ List of replicas.
 
 ---
 
-#### _out.output() : _java.io.OutputStream_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">output</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
 ##### Description
 
 Provides the original output stream.
@@ -404,7 +404,7 @@ The original output stream..
 
 ---
 
-#### _out.print(bool: _boolean_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the boolean result.
@@ -413,7 +413,7 @@ Sends the boolean result.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bool | _boolean_ | Boolean value that will be sent. |
+| **bool** | _boolean_ | Boolean value that will be sent. |
 
 ##### Return
 
@@ -423,7 +423,7 @@ Current data output.
 
 ---
 
-#### _out.print(character: _char_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">character</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the character.
@@ -432,7 +432,7 @@ Sends the character.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| character | _char_ | Character that will be sent. |
+| **character** | _char_ | Character that will be sent. |
 
 ##### Return
 
@@ -442,7 +442,7 @@ Current data output.
 
 ---
 
-#### _out.print(bool: _double_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the boolean result.
@@ -451,7 +451,7 @@ Sends the boolean result.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bool | _double_ | Boolean value that will be sent. |
+| **bool** | _double_ | Boolean value that will be sent. |
 
 ##### Return
 
@@ -461,7 +461,7 @@ Current data output.
 
 ---
 
-#### _out.print(bool: _float_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the boolean result.
@@ -470,7 +470,7 @@ Sends the boolean result.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bool | _float_ | Boolean value that will be sent. |
+| **bool** | _float_ | Boolean value that will be sent. |
 
 ##### Return
 
@@ -480,7 +480,7 @@ Current data output.
 
 ---
 
-#### _out.print(number: _int_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">number</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the number.
@@ -489,7 +489,7 @@ Sends the number.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| number | _int_ | Number that will be sent. |
+| **number** | _int_ | Number that will be sent. |
 
 ##### Return
 
@@ -499,7 +499,7 @@ Current data output.
 
 ---
 
-#### _out.print(obj: _java.lang.Object_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Converts the object to text and sends it.
@@ -508,7 +508,7 @@ Converts the object to text and sends it.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| obj | _java.lang.Object_ | Object that will be converted to text and sent. |
+| **obj** | _java.lang.Object_ | Object that will be converted to text and sent. |
 
 ##### Return
 
@@ -518,7 +518,7 @@ Current data output.
 
 ---
 
-#### _out.print(text: string) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the text content.
@@ -527,7 +527,7 @@ Sends the text content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| text | string | Content that will be sent. |
+| **text** | _string_ | Content that will be sent. |
 
 ##### Return
 
@@ -537,7 +537,7 @@ Current data output.
 
 ---
 
-#### _out.print(bool: _long_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the boolean result.
@@ -546,7 +546,7 @@ Sends the boolean result.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bool | _long_ | Boolean value that will be sent. |
+| **bool** | _long_ | Boolean value that will be sent. |
 
 ##### Return
 
@@ -556,7 +556,7 @@ Current data output.
 
 ---
 
-#### _out.print(bool: _short_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the boolean result.
@@ -565,7 +565,7 @@ Sends the boolean result.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bool | _short_ | Boolean value that will be sent. |
+| **bool** | _short_ | Boolean value that will be sent. |
 
 ##### Return
 
@@ -579,13 +579,13 @@ Current data output.
 
 ---
 
-#### _out.printf(format: string, objects: _[Ljava.lang.Object;[]_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">printf</span>(<span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">objects</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| format | string |   |
-| objects | _[Ljava.lang.Object;[]_ |   |
+| **format** | _string_ |   |
+| **objects** | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 
@@ -598,7 +598,7 @@ Current data output.
 
 ---
 
-#### _out.println() : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>() : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends a line break.
@@ -611,7 +611,7 @@ Current data output.
 
 ---
 
-#### _out.println(bool: _boolean_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the boolean result with a line break.
@@ -620,7 +620,7 @@ Sends the boolean result with a line break.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bool | _boolean_ | Boolean value that will be sent with the line break. |
+| **bool** | _boolean_ | Boolean value that will be sent with the line break. |
 
 ##### Return
 
@@ -630,7 +630,7 @@ Current data output.
 
 ---
 
-#### _out.println(character: _char_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">character</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the character with a line break.
@@ -639,7 +639,7 @@ Sends the character with a line break.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| character | _char_ | Character that will be sent with the line break. |
+| **character** | _char_ | Character that will be sent with the line break. |
 
 ##### Return
 
@@ -649,7 +649,7 @@ Current data output.
 
 ---
 
-#### _out.println(bool: _double_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the boolean result with a line break.
@@ -658,7 +658,7 @@ Sends the boolean result with a line break.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bool | _double_ | Boolean value that will be sent with the line break. |
+| **bool** | _double_ | Boolean value that will be sent with the line break. |
 
 ##### Return
 
@@ -668,7 +668,7 @@ Current data output.
 
 ---
 
-#### _out.println(bool: _float_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the boolean result with a line break.
@@ -677,7 +677,7 @@ Sends the boolean result with a line break.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bool | _float_ | Boolean value that will be sent with the line break. |
+| **bool** | _float_ | Boolean value that will be sent with the line break. |
 
 ##### Return
 
@@ -687,7 +687,7 @@ Current data output.
 
 ---
 
-#### _out.println(number: _int_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">number</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the number with a line break.
@@ -696,7 +696,7 @@ Sends the number with a line break.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| number | _int_ | Number that will be sent with the line break. |
+| **number** | _int_ | Number that will be sent with the line break. |
 
 ##### Return
 
@@ -706,7 +706,7 @@ Current data output.
 
 ---
 
-#### _out.println(obj: _java.lang.Object_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Converts the object to text and sends it with a line break.
@@ -715,7 +715,7 @@ Converts the object to text and sends it with a line break.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| obj | _java.lang.Object_ | Object that will be converted to text and sent with the line break. |
+| **obj** | _java.lang.Object_ | Object that will be converted to text and sent with the line break. |
 
 ##### Return
 
@@ -725,7 +725,7 @@ Current data output.
 
 ---
 
-#### _out.println(text: string) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the text content with a line break.
@@ -734,7 +734,7 @@ Sends the text content with a line break.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| text | string | Content that will be sent with the line break. |
+| **text** | _string_ | Content that will be sent with the line break. |
 
 ##### Return
 
@@ -744,7 +744,7 @@ Current data output.
 
 ---
 
-#### _out.println(bool: _long_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the boolean result with a line break.
@@ -753,7 +753,7 @@ Sends the boolean result with a line break.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bool | _long_ | Boolean value that will be sent with the line break. |
+| **bool** | _long_ | Boolean value that will be sent with the line break. |
 
 ##### Return
 
@@ -763,7 +763,7 @@ Current data output.
 
 ---
 
-#### _out.println(bool: _short_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Description
 
 Sends the boolean result with a line break.
@@ -772,7 +772,7 @@ Sends the boolean result with a line break.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bool | _short_ | Boolean value that will be sent with the line break. |
+| **bool** | _short_ | Boolean value that will be sent with the line break. |
 
 ##### Return
 
@@ -786,12 +786,12 @@ Current data output.
 
 ---
 
-#### _out.setJSONHTMLEscape(htmlEscape: _boolean_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">setJSONHTMLEscape</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| htmlEscape | _boolean_ |   |
+| **htmlEscape** | _boolean_ |   |
 
 ##### Return
 
@@ -804,7 +804,7 @@ Current data output.
 
 ---
 
-#### _out.start() : _void_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">start</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Starts the output, the HTTP header is sent.
@@ -820,7 +820,7 @@ Starts the output, the HTTP header is sent.
 
 ---
 
-#### _out.started() : _boolean_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">started</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether the response to the HTTP request has already started.
@@ -837,12 +837,12 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### _out.write(bytes: _byte[]_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">write</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _byte[]_ |   |
+| **bytes** | _byte[]_ |   |
 
 ##### Return
 
@@ -851,14 +851,14 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### _out.write(bytes: _byte[]_, off: _int_, len: _int_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">write</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">off</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">len</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _byte[]_ |   |
-| off | _int_ |   |
-| len | _int_ |   |
+| **bytes** | _byte[]_ |   |
+| **off** | _int_ |   |
+| **len** | _int_ |   |
 
 ##### Return
 
@@ -867,12 +867,12 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### _out.write(b: _int_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">write</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| b | _int_ |   |
+| **b** | _int_ |   |
 
 ##### Return
 
@@ -885,12 +885,12 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### _out.writeBoolean(b: _boolean_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeBoolean</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| b | _boolean_ |   |
+| **b** | _boolean_ |   |
 
 ##### Return
 
@@ -903,12 +903,12 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### _out.writeByte(b: _int_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeByte</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| b | _int_ |   |
+| **b** | _int_ |   |
 
 ##### Return
 
@@ -921,12 +921,12 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### _out.writeChar(c: _char_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeChar</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| c | _char_ |   |
+| **c** | _char_ |   |
 
 ##### Return
 
@@ -939,12 +939,12 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### _out.writeDouble(d: _double_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeDouble</span>(<span style="color: #FF8000">d</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| d | _double_ |   |
+| **d** | _double_ |   |
 
 ##### Return
 
@@ -957,12 +957,12 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### _out.writeFloat(f: _float_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeFloat</span>(<span style="color: #FF8000">f</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| f | _float_ |   |
+| **f** | _float_ |   |
 
 ##### Return
 
@@ -975,12 +975,12 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### _out.writeInt(i: _int_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeInt</span>(<span style="color: #FF8000">i</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| i | _int_ |   |
+| **i** | _int_ |   |
 
 ##### Return
 
@@ -993,12 +993,12 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### _out.writeLong(l: _long_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeLong</span>(<span style="color: #FF8000">l</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| l | _long_ |   |
+| **l** | _long_ |   |
 
 ##### Return
 
@@ -1011,12 +1011,12 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### _out.writeShort(s: _short_) : _[Out](../../resources/Out)_
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeShort</span>(<span style="color: #FF8000">s</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| s | _short_ |   |
+| **s** | _short_ |   |
 
 ##### Return
 

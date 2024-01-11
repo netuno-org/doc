@@ -12,7 +12,7 @@ Sessão SSH para executar comandos.
 
 ---
 
-#### close() : _void_
+#### <span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Closes the current session.
@@ -28,7 +28,7 @@ Closes the current session.
 
 ---
 
-#### closed() : _boolean_
+#### <span style="color: #008000">closed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks if the session is still open.
@@ -45,7 +45,7 @@ True if it is open.
 
 ---
 
-#### exec(command: string) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### <span style="color: #008000">exec</span>(<span style="color: #FF8000">command</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
 ##### Description
 
 Execute commands remotely via SSH on the server.
@@ -54,7 +54,7 @@ Execute commands remotely via SSH on the server.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| command | string | Server path where the folder should be created. |
+| **command** | _string_ | Server path where the folder should be created. |
 
 ##### Return
 
@@ -64,7 +64,7 @@ Command execution result.
 
 ---
 
-#### exec(command: string, timeout: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### <span style="color: #008000">exec</span>(<span style="color: #FF8000">command</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">timeout</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
 ##### Description
 
 Execute commands remotely via SSH on the server.
@@ -73,8 +73,8 @@ Execute commands remotely via SSH on the server.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| command | string | Server path where the folder should be created. |
-| timeout | _int_ | Command execution timeout. |
+| **command** | _string_ | Server path where the folder should be created. |
+| **timeout** | _int_ | Command execution timeout. |
 
 ##### Return
 
@@ -88,7 +88,7 @@ Command execution result.
 
 ---
 
-#### isClosed() : _boolean_
+#### <span style="color: #008000">isClosed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )

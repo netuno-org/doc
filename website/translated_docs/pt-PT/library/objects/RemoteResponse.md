@@ -12,7 +12,7 @@ Objeto que contém os detalhes da resposta obtida através da conexão remota, q
 
 ---
 
-#### bytes() : _byte[]_
+#### <span style="color: #008000">bytes</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Retorno
 
 ( _byte[]_ )
@@ -24,7 +24,7 @@ Objeto que contém os detalhes da resposta obtida através da conexão remota, q
 
 ---
 
-#### content() : _java.lang.Object_
+#### <span style="color: #008000">content</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Retorno
 
 ( _java.lang.Object_ )
@@ -36,10 +36,10 @@ Objeto que contém os detalhes da resposta obtida através da conexão remota, q
 
 ---
 
-#### contentType() : string
+#### <span style="color: #008000">contentType</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -48,7 +48,7 @@ Objeto que contém os detalhes da resposta obtida através da conexão remota, q
 
 ---
 
-#### dataSent() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">dataSent</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados que foram enviados na conexão remota.
@@ -61,12 +61,12 @@ Todos os dados que foram enviados.
 
 ---
 
-#### dataSent(dataSent: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
+#### <span style="color: #008000">dataSent</span>(<span style="color: #FF8000">dataSent</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dataSent | _[Values](../../objects/Values)_ |   |
+| **dataSent** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -79,7 +79,7 @@ Todos os dados que foram enviados.
 
 ---
 
-#### error() : _java.lang.Throwable_
+#### <span style="color: #008000">error</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
 ##### Retorno
 
 ( _java.lang.Throwable_ )
@@ -91,7 +91,7 @@ Todos os dados que foram enviados.
 
 ---
 
-#### file() : _[File](../../objects/File)_
+#### <span style="color: #008000">file</span>() : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Retorno
 
 ( _[File](../../objects/File)_ )
@@ -103,7 +103,7 @@ Todos os dados que foram enviados.
 
 ---
 
-#### formDataSent() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">formDataSent</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os dados que foram enviados na conexão remota.
@@ -116,12 +116,12 @@ Todos os dados que foram enviados.
 
 ---
 
-#### formDataSent(dataSent: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
+#### <span style="color: #008000">formDataSent</span>(<span style="color: #FF8000">dataSent</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dataSent | _[Values](../../objects/Values)_ |   |
+| **dataSent** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -134,7 +134,7 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getBytes() : _byte[]_
+#### <span style="color: #008000">getBytes</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Retorno
 
 ( _byte[]_ )
@@ -146,7 +146,7 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getContent() : _java.lang.Object_
+#### <span style="color: #008000">getContent</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Retorno
 
 ( _java.lang.Object_ )
@@ -158,10 +158,10 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getContentType() : string
+#### <span style="color: #008000">getContentType</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -170,7 +170,7 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getDataSent() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getDataSent</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -182,7 +182,7 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getError() : _java.lang.Throwable_
+#### <span style="color: #008000">getError</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
 ##### Retorno
 
 ( _java.lang.Throwable_ )
@@ -194,7 +194,7 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getFile() : _[File](../../objects/File)_
+#### <span style="color: #008000">getFile</span>() : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Retorno
 
 ( _[File](../../objects/File)_ )
@@ -206,7 +206,7 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getFormDataSent() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getFormDataSent</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -218,7 +218,7 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getHeader() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getHeader</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -230,7 +230,7 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getJSON() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getJSON</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -242,14 +242,14 @@ Todos os dados que foram enviados.
 
 ---
 
-#### getMethod() : string
+#### <span style="color: #008000">getMethod</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o código do método HTTP utilizado na conexão remota.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Código do método HTTP que foi submetido.
 
@@ -259,7 +259,7 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### getQSSent() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getQSSent</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -271,7 +271,7 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### getQueryStringSent() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">getQueryStringSent</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -283,7 +283,7 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### getStatusCode() : _int_
+#### <span style="color: #008000">getStatusCode</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -295,10 +295,10 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### getURL() : string
+#### <span style="color: #008000">getURL</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -307,7 +307,7 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### header() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">header</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -319,7 +319,7 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### isForm() : _boolean_
+#### <span style="color: #008000">isForm</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -331,7 +331,7 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### isJSON() : _boolean_
+#### <span style="color: #008000">isJSON</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -343,7 +343,7 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### isMultipartFormData() : _boolean_
+#### <span style="color: #008000">isMultipartFormData</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -355,7 +355,7 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### isOk() : _boolean_
+#### <span style="color: #008000">isOk</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -367,7 +367,7 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### isText() : _boolean_
+#### <span style="color: #008000">isText</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -379,7 +379,7 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### json() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">json</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
@@ -391,20 +391,20 @@ Código do método HTTP que foi submetido.
 
 ---
 
-#### method() : string
+#### <span style="color: #008000">method</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o código do método HTTP utilizado na conexão remota.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Código do método HTTP que foi submetido.
 
 ---
 
-#### method(metodo: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="color: #008000">method</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Define o código do método HTTP que foi utilizado na conexão remota.
@@ -413,7 +413,7 @@ Define o código do método HTTP que foi utilizado na conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
+| **metodo** | _string_ | Código do método HTTP. |
 
 ##### Retorno
 
@@ -427,7 +427,7 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### ok() : _boolean_
+#### <span style="color: #008000">ok</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -439,7 +439,7 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### qsSent() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">qsSent</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os parâmetros de query string que foi enviada na conexão remota.
@@ -452,12 +452,12 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### qsSent(qsSent: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
+#### <span style="color: #008000">qsSent</span>(<span style="color: #FF8000">qsSent</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| qsSent | _[Values](../../objects/Values)_ |   |
+| **qsSent** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -470,7 +470,7 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### queryStringSent() : _[Values](../../objects/Values)_
+#### <span style="color: #008000">queryStringSent</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Obtém os parâmetros de query string que foi enviada na conexão remota.
@@ -483,12 +483,12 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### queryStringSent(qs: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
+#### <span style="color: #008000">queryStringSent</span>(<span style="color: #FF8000">qs</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| qs | _[Values](../../objects/Values)_ |   |
+| **qs** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -501,12 +501,12 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setBytes(bytes: _byte[]_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="color: #008000">setBytes</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| bytes | _byte[]_ |   |
+| **bytes** | _byte[]_ |   |
 
 ##### Retorno
 
@@ -519,12 +519,12 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setContent(content: _java.lang.Object_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="color: #008000">setContent</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| content | _java.lang.Object_ |   |
+| **content** | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -537,12 +537,12 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setDataSent(dataSent: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
+#### <span style="color: #008000">setDataSent</span>(<span style="color: #FF8000">dataSent</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dataSent | _[Values](../../objects/Values)_ |   |
+| **dataSent** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -555,12 +555,12 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setError(error: _java.lang.Throwable_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="color: #008000">setError</span>(<span style="color: #FF8000">error</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| error | _java.lang.Throwable_ |   |
+| **error** | _java.lang.Throwable_ |   |
 
 ##### Retorno
 
@@ -573,12 +573,12 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setFormDataSent(dataSent: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
+#### <span style="color: #008000">setFormDataSent</span>(<span style="color: #FF8000">dataSent</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| dataSent | _[Values](../../objects/Values)_ |   |
+| **dataSent** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -591,12 +591,12 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setHeader(header: _[Values](../../objects/Values)_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="color: #008000">setHeader</span>(<span style="color: #FF8000">header</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| header | _[Values](../../objects/Values)_ |   |
+| **header** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -609,7 +609,7 @@ Todos os parâmetros de query string que foram enviados.
 
 ---
 
-#### setMethod(metodo: string) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="color: #008000">setMethod</span>(<span style="color: #FF8000">metodo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Descrição
 
 Define o código do método HTTP que foi utilizado na conexão remota.
@@ -618,7 +618,7 @@ Define o código do método HTTP que foi utilizado na conexão remota.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| metodo | string | Código do método HTTP. |
+| **metodo** | _string_ | Código do método HTTP. |
 
 ##### Retorno
 
@@ -632,12 +632,12 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### setQSSent(qsSent: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
+#### <span style="color: #008000">setQSSent</span>(<span style="color: #FF8000">qsSent</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| qsSent | _[Values](../../objects/Values)_ |   |
+| **qsSent** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -650,12 +650,12 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### setQueryStringSent(qs: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote$Response_
+#### <span style="color: #008000">setQueryStringSent</span>(<span style="color: #FF8000">qs</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| qs | _[Values](../../objects/Values)_ |   |
+| **qs** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -668,12 +668,12 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### setStatusCode(statusCode: _int_) : _[RemoteResponse](../../objects/RemoteResponse)_
+#### <span style="color: #008000">setStatusCode</span>(<span style="color: #FF8000">statusCode</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| statusCode | _int_ |   |
+| **statusCode** | _int_ |   |
 
 ##### Retorno
 
@@ -686,12 +686,12 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### setURL(url: string) : _org.netuno.psamata.net.Remote$Response_
+#### <span style="color: #008000">setURL</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| url | string |   |
+| **url** | _string_ |   |
 
 ##### Retorno
 
@@ -704,7 +704,7 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### statusCode() : _int_
+#### <span style="color: #008000">statusCode</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -716,10 +716,10 @@ Resposta da submissão da conexão remota.
 
 ---
 
-#### url() : string
+#### <span style="color: #008000">url</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---

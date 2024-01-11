@@ -12,7 +12,7 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### await() : _boolean_
+#### <span style="color: #008000">await</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -20,12 +20,12 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### await(timeout: _long_) : _boolean_
+#### <span style="color: #008000">await</span>(<span style="color: #FF8000">timeout</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| timeout | _long_ |   |
+| **timeout** | _long_ |   |
 
 ##### Return
 
@@ -38,7 +38,7 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### invokeAll() : _java.util.List_
+#### <span style="color: #008000">invokeAll</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -46,12 +46,12 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### invokeAll(timeout: _long_) : _java.util.List_
+#### <span style="color: #008000">invokeAll</span>(<span style="color: #FF8000">timeout</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| timeout | _long_ |   |
+| **timeout** | _long_ |   |
 
 ##### Return
 
@@ -64,7 +64,7 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### invokeAny() : _java.lang.Object_
+#### <span style="color: #008000">invokeAny</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Return
 
 ( _java.lang.Object_ )
@@ -72,12 +72,12 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### invokeAny(timeout: _long_) : _java.lang.Object_
+#### <span style="color: #008000">invokeAny</span>(<span style="color: #FF8000">timeout</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| timeout | _long_ |   |
+| **timeout** | _long_ |   |
 
 ##### Return
 
@@ -90,7 +90,7 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### start() : _[Async](../../objects/Async)_
+#### <span style="color: #008000">start</span>() : <span style="font-weight: normal; font-style: italic;">[Async](../../objects/Async)</span>
 ##### Return
 
 ( _[Async](../../objects/Async)_ )
@@ -102,7 +102,7 @@ Orchestrates asynchronous execution modes.
 
 ---
 
-#### stop() : _[Async](../../objects/Async)_
+#### <span style="color: #008000">stop</span>() : <span style="font-weight: normal; font-style: italic;">[Async](../../objects/Async)</span>
 ##### Return
 
 ( _[Async](../../objects/Async)_ )

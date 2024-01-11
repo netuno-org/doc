@@ -12,12 +12,12 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### add(sql: string) : _[DBBatch](../../objects/DBBatch)_
+#### <span style="color: #008000">add</span>(<span style="color: #FF8000">sql</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DBBatch](../../objects/DBBatch)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| sql | string |   |
+| **sql** | _string_ |   |
 
 ##### Retorno
 
@@ -30,7 +30,7 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### clear() : _void_
+#### <span style="color: #008000">clear</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -42,7 +42,7 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### close() : _void_
+#### <span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -54,7 +54,7 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### execute() : _[I_
+#### <span style="color: #008000">execute</span>() : <span style="font-weight: normal; font-style: italic;">[I</span>
 ##### Retorno
 
 ( _[I_ )
@@ -66,12 +66,12 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### put(params: _[Ljava.lang.Object;[]_) : _[DBBatch](../../objects/DBBatch)_
+#### <span style="color: #008000">put</span>(<span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[DBBatch](../../objects/DBBatch)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| params | _[Ljava.lang.Object;[]_ |   |
+| **params** | _[Ljava.lang.Object;[]_ |   |
 
 ##### Retorno
 

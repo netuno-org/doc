@@ -12,14 +12,14 @@ Recursos de gestão de ficheiros da aplicação.
 
 ---
 
-#### _storage.absolutePath() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">absolutePath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o caminho absoluto do storage que está sendo utilizado.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O caminho absoluto do storage.
 
@@ -29,7 +29,7 @@ O caminho absoluto do storage.
 
 ---
 
-#### _storage.database(tabela: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Descrição
 
 Inicia um novo storage para a pasta onde ficam os ficheiros de uma tabela que representa um formulário.
@@ -38,7 +38,7 @@ Inicia um novo storage para a pasta onde ficam os ficheiros de uma tabela que re
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela que também é mesmo nome do formulário. |
+| **tabela** | _string_ | Nome da tabela que também é mesmo nome do formulário. |
 
 ##### Retorno
 
@@ -48,7 +48,7 @@ Novo storage iniciado para a tabela de base de dados.
 
 ---
 
-#### _storage.database(tabela: string, coluna: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Descrição
 
 Inicia um novo storage para a pasta onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
@@ -57,8 +57,8 @@ Inicia um novo storage para a pasta onde ficam os ficheiros de uma coluna espec�
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela que também é mesmo nome do formulário. |
-| coluna | string | Nome da coluna que também é mesmo nome do campo no formulário. |
+| **tabela** | _string_ | Nome da tabela que também é mesmo nome do formulário. |
+| **coluna** | _string_ | Nome da coluna que também é mesmo nome do campo no formulário. |
 
 ##### Retorno
 
@@ -68,7 +68,7 @@ Novo storage iniciado para a coluna de uma tabela de base de dados.
 
 ---
 
-#### _storage.database(tabela: string, coluna: string, caminho: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Descrição
 
 Inicia um novo storage para um caminho específico onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
@@ -77,9 +77,9 @@ Inicia um novo storage para um caminho específico onde ficam os ficheiros de um
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela que também é mesmo nome do formulário. |
-| coluna | string | Nome da coluna que também é mesmo nome do campo no formulário. |
-| caminho | string | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
+| **tabela** | _string_ | Nome da tabela que também é mesmo nome do formulário. |
+| **coluna** | _string_ | Nome da coluna que também é mesmo nome do campo no formulário. |
+| **caminho** | _string_ | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
 
 ##### Retorno
 
@@ -89,7 +89,7 @@ Novo storage iniciado para o caminho específico a partir de uma coluna em uma t
 
 ---
 
-#### _storage.database(tabela: string, coluna: string, caminho: string, nomeFicheiro: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">nomeFicheiro</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Descrição
 
 Inicia um novo storage para um caminho específico onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
@@ -98,10 +98,10 @@ Inicia um novo storage para um caminho específico onde ficam os ficheiros de um
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tabela | string | Nome da tabela que também é mesmo nome do formulário. |
-| coluna | string | Nome da coluna que também é mesmo nome do campo no formulário. |
-| caminho | string | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
-| nomeFicheiro | string | Possibilidade de adicionar o nome do ficheiro a parte caso haja uma estrutura de caminho muito complexa, muito pouco usual. |
+| **tabela** | _string_ | Nome da tabela que também é mesmo nome do formulário. |
+| **coluna** | _string_ | Nome da coluna que também é mesmo nome do campo no formulário. |
+| **caminho** | _string_ | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
+| **nomeFicheiro** | _string_ | Possibilidade de adicionar o nome do ficheiro a parte caso haja uma estrutura de caminho muito complexa, muito pouco usual. |
 
 ##### Retorno
 
@@ -115,7 +115,7 @@ Novo storage iniciado para o caminho específico a partir de uma coluna em uma t
 
 ---
 
-#### _storage.ensurePath() : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">ensurePath</span>() : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Retorno
 
 ( _[Storage](../../resources/Storage)_ )
@@ -127,14 +127,14 @@ Novo storage iniciado para o caminho específico a partir de uma coluna em uma t
 
 ---
 
-#### _storage.extension() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">extension</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém a extensão do ficheiro.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 A extensão do ficheiro.
 
@@ -144,7 +144,7 @@ A extensão do ficheiro.
 
 ---
 
-#### _storage.file() : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">file</span>() : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Descrição
 
 Objeto de manipulação de ficheiro do storage que está sendo utilizado.
@@ -161,7 +161,7 @@ Permite interagir com o ficheiro fisicamente.
 
 ---
 
-#### _storage.filesystem(pasta: string, caminho: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">pasta</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Descrição
 
 Inicia um novo storage para um caminho específico do filesystem dentro do storage.
@@ -170,8 +170,8 @@ Inicia um novo storage para um caminho específico do filesystem dentro do stora
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| pasta | string | Nome da pasta dentro do `storage/filesystem`, normalmente será public, private ou server. |
-| caminho | string | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
+| **pasta** | _string_ | Nome da pasta dentro do `storage/filesystem`, normalmente será public, private ou server. |
+| **caminho** | _string_ | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
 
 ##### Retorno
 
@@ -181,7 +181,7 @@ Novo storage iniciado para o caminho específico a partir do filesystem do stora
 
 ---
 
-#### _storage.filesystem(pasta: string, caminho: string, nomeFicheiro: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">pasta</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">nomeFicheiro</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Descrição
 
 Inicia um novo storage para um caminho específico do filesystem dentro do storage.
@@ -190,9 +190,9 @@ Inicia um novo storage para um caminho específico do filesystem dentro do stora
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| pasta | string | Nome da pasta dentro do `storage/filesystem`, normalmente será public, private ou server. |
-| caminho | string | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
-| nomeFicheiro | string | Possibilidade de adicionar o nome do ficheiro a parte caso haja uma estrutura de caminho muito complexa. |
+| **pasta** | _string_ | Nome da pasta dentro do `storage/filesystem`, normalmente será public, private ou server. |
+| **caminho** | _string_ | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
+| **nomeFicheiro** | _string_ | Possibilidade de adicionar o nome do ficheiro a parte caso haja uma estrutura de caminho muito complexa. |
 
 ##### Retorno
 
@@ -206,7 +206,7 @@ Novo storage iniciado para o caminho específico a partir do filesystem do stora
 
 ---
 
-#### _storage.folder() : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">folder</span>() : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Descrição
 
 Objeto de manipulação de pasta do storage que está sendo utilizado.
@@ -223,14 +223,14 @@ Permite interagir com a pasta fisicamente.
 
 ---
 
-#### _storage.fullPath() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">fullPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o caminho completo do storage que está sendo utilizado.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O caminho completo do storage.
 
@@ -240,14 +240,14 @@ O caminho completo do storage.
 
 ---
 
-#### _storage.getBase() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getBase</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o caminho base do storage que está sendo utilizado.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O caminho base do storage.
 
@@ -257,7 +257,7 @@ O caminho base do storage.
 
 ---
 
-#### _storage.input() : _[InputStream](../../objects/InputStream)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">input</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Descrição
 
 Obtém o objeto de entrada de dados do Netuno para o storage que está sendo utilizado.
@@ -274,7 +274,7 @@ Objeto de entrada de dados do Netuno para o storage em uso.
 
 ---
 
-#### _storage.inputStream() : _java.io.InputStream_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
 ##### Descrição
 
 Obtém o objeto de entrada de dados do Java para o storage que está sendo utilizado.
@@ -291,7 +291,7 @@ Objeto de entrada de dados do Java para o storage em uso.
 
 ---
 
-#### _storage.isDatabase() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isDatabase</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Se o storage está definido na pasta de base de dados.
@@ -308,7 +308,7 @@ Se está utilizando a pasta de base de dados.
 
 ---
 
-#### _storage.isExtension(charset: string) : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isExtension</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se o nome ficheiro contém a extensão.
@@ -317,7 +317,7 @@ Verifica se o nome ficheiro contém a extensão.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| charset | string | Extensão no nome do ficheiro. |
+| **charset** | _string_ | Extensão no nome do ficheiro. |
 
 ##### Retorno
 
@@ -331,7 +331,7 @@ Se o ficheiro contém a extensão definida.
 
 ---
 
-#### _storage.isFile() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFile</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se é um ficheiro.
@@ -348,7 +348,7 @@ Se é um ficheiro.
 
 ---
 
-#### _storage.isFileSystem() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFileSystem</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Se o storage está definido na pasta de filesystem.
@@ -365,7 +365,7 @@ Se está utilizando a pasta de filesystem.
 
 ---
 
-#### _storage.isFileSystemPrivate() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFileSystemPrivate</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Se o storage está definido na pasta privada do filesystem.
@@ -382,7 +382,7 @@ Se está utilizando a pasta privada do filesystem.
 
 ---
 
-#### _storage.isFileSystemPublic() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFileSystemPublic</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Se o storage está definido na pasta pública do filesystem.
@@ -399,7 +399,7 @@ Se está utilizando a pasta pública do filesystem.
 
 ---
 
-#### _storage.isFileSystemServer() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFileSystemServer</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Se o storage está definido na pasta de servidor do filesystem.
@@ -416,7 +416,7 @@ Se está utilizando a pasta de servidor do filesystem.
 
 ---
 
-#### _storage.isFolder() : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">isFolder</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Verifica se é uma pasta.
@@ -433,7 +433,7 @@ Se é uma pasta.
 
 ---
 
-#### _storage.newRandomFile(charset: string) : _[Storage](../../resources/Storage)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">newRandomFile</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
 ##### Descrição
 
 Gera um novo storage a partir do storage atual mas para um ficheiro com um nome randómico e que ainda não exista e assim possa ser guardado sem conflitos.
@@ -442,7 +442,7 @@ Gera um novo storage a partir do storage atual mas para um ficheiro com um nome 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| charset | string | Extensão no nome do ficheiro. |
+| **charset** | _string_ | Extensão no nome do ficheiro. |
 
 ##### Retorno
 
@@ -456,7 +456,7 @@ Novo storage para um novo ficheiro com um nome randómico inexistente.
 
 ---
 
-#### _storage.output() : _[OutputStream](../../objects/OutputStream)_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">output</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Descrição
 
 Obtém o objeto de saída de dados do Netuno para o storage que está sendo utilizado.
@@ -473,7 +473,7 @@ Objeto de saída de dados do Netuno para o storage em uso.
 
 ---
 
-#### _storage.outputStream() : _java.io.OutputStream_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
 ##### Descrição
 
 Obtém o objeto de saída de dados do Java para o storage que está sendo utilizado.
@@ -490,14 +490,14 @@ Objeto de saída de dados do Java para o storage em uso.
 
 ---
 
-#### _storage.path() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">path</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o caminho do storage que está sendo utilizado.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 O caminho do storage.
 
@@ -507,7 +507,7 @@ O caminho do storage.
 
 ---
 
-#### _storage.reader() : _java.io.Reader_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">reader</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
 ##### Descrição
 
 Obtém o objeto de entrada de dados como texto do Java para o storage que está sendo utilizado.
@@ -524,7 +524,7 @@ Objeto de entrada de dados como texto do Java para o storage em uso.
 
 ---
 
-#### _storage.readerBOM() : _java.io.Reader_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">readerBOM</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
 ##### Descrição
 
 Obtém o objeto de entrada de dados como texto BOM (marca de ordem de byte) do Java para o storage que está sendo utilizado.
@@ -537,7 +537,7 @@ Objeto de entrada de dados como texto (_BOM_) do Java para o storage em uso.
 
 ---
 
-#### _storage.readerBOM(charset: string) : _java.io.Reader_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">readerBOM</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
 ##### Descrição
 
 Obtém o objeto de entrada de dados como texto BOM (marca de ordem de byte) do Java para o storage que está sendo utilizado.
@@ -546,7 +546,7 @@ Obtém o objeto de entrada de dados como texto BOM (marca de ordem de byte) do J
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| charset | string | Código do tipo de codificação de caracteres como: |
+| **charset** | _string_ | Código do tipo de codificação de caracteres como: |
 |   |   | - US-ASCII |
 |   |   | - ISO-8859-1 |
 |   |   | - UTF-8 |
@@ -566,7 +566,7 @@ Objeto de entrada de dados como texto (_BOM_) do Java para o storage em uso.
 
 ---
 
-#### _storage.saveFile(ficheiro: _[File](../../objects/File)_) : _void_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">saveFile</span>(<span style="color: #FF8000">ficheiro</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Guarda o ficheiro no caminho do storage atual.
@@ -575,7 +575,7 @@ Guarda o ficheiro no caminho do storage atual.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ficheiro | _[File](../../objects/File)_ | Ficheiro que será guardado no `storage` atual. |
+| **ficheiro** | _[File](../../objects/File)_ | Ficheiro que será guardado no `storage` atual. |
 
 ##### Retorno
 
@@ -588,7 +588,7 @@ Guarda o ficheiro no caminho do storage atual.
 
 ---
 
-#### _storage.setBase(base: string) : _boolean_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">setBase</span>(<span style="color: #FF8000">base</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Descrição
 
 Define o caminho base do storage que será utilizado.
@@ -597,7 +597,7 @@ Define o caminho base do storage que será utilizado.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| base | string | O caminho base do storage. |
+| **base** | _string_ | O caminho base do storage. |
 
 ##### Retorno
 
@@ -611,14 +611,14 @@ Se o caminho é válido e foi definido.
 
 ---
 
-#### _storage.url() : string
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">url</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém a URL do storage que está sendo utilizado.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 A URL para o storage.
 
@@ -628,7 +628,7 @@ A URL para o storage.
 
 ---
 
-#### _storage.writer() : _java.io.Writer_
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">writer</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>
 ##### Descrição
 
 Obtém o objeto de saída de dados como texto do Java para o storage que está sendo utilizado.

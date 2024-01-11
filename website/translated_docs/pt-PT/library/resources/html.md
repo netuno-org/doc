@@ -12,50 +12,50 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.clean(bodyHtml: string, baseUri: string, safelist: _org.jsoup.safety.Safelist_) : string
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">clean</span>(<span style="color: #FF8000">bodyHtml</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">safelist</span>: <span style="font-weight: normal; font-style: italic;">org.jsoup.safety.Safelist</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| bodyHtml | string |   |
-| baseUri | string |   |
-| safelist | _org.jsoup.safety.Safelist_ |   |
+| **bodyHtml** | _string_ |   |
+| **baseUri** | _string_ |   |
+| **safelist** | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _html.clean(bodyHtml: string, baseUri: string, safelist: _org.jsoup.safety.Safelist_, outputSettings: _org.jsoup.nodes.Document$OutputSettings_) : string
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">clean</span>(<span style="color: #FF8000">bodyHtml</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">safelist</span>: <span style="font-weight: normal; font-style: italic;">org.jsoup.safety.Safelist</span>, <span style="color: #FF8000">outputSettings</span>: <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document$OutputSettings</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| bodyHtml | string |   |
-| baseUri | string |   |
-| safelist | _org.jsoup.safety.Safelist_ |   |
-| outputSettings | _org.jsoup.nodes.Document$OutputSettings_ |   |
+| **bodyHtml** | _string_ |   |
+| **baseUri** | _string_ |   |
+| **safelist** | _org.jsoup.safety.Safelist_ |   |
+| **outputSettings** | _org.jsoup.nodes.Document$OutputSettings_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _html.clean(bodyHtml: string, safelist: _org.jsoup.safety.Safelist_) : string
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">clean</span>(<span style="color: #FF8000">bodyHtml</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">safelist</span>: <span style="font-weight: normal; font-style: italic;">org.jsoup.safety.Safelist</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| bodyHtml | string |   |
-| safelist | _org.jsoup.safety.Safelist_ |   |
+| **bodyHtml** | _string_ |   |
+| **safelist** | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 
 ---
@@ -64,12 +64,12 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.connect(url: string) : _org.jsoup.Connection_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">connect</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.Connection</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| url | string |   |
+| **url** | _string_ |   |
 
 ##### Retorno
 
@@ -82,7 +82,7 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.documentOutputSettings() : _org.jsoup.nodes.Document$OutputSettings_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">documentOutputSettings</span>() : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document$OutputSettings</span>
 ##### Retorno
 
 ( _org.jsoup.nodes.Document$OutputSettings_ )
@@ -94,13 +94,13 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.isValid(bodyHtml: string, safelist: _org.jsoup.safety.Safelist_) : _boolean_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">isValid</span>(<span style="color: #FF8000">bodyHtml</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">safelist</span>: <span style="font-weight: normal; font-style: italic;">org.jsoup.safety.Safelist</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| bodyHtml | string |   |
-| safelist | _org.jsoup.safety.Safelist_ |   |
+| **bodyHtml** | _string_ |   |
+| **safelist** | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 
@@ -113,7 +113,7 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.newSession() : _org.jsoup.Connection_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">newSession</span>() : <span style="font-weight: normal; font-style: italic;">org.jsoup.Connection</span>
 ##### Retorno
 
 ( _org.jsoup.Connection_ )
@@ -125,7 +125,7 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.parse(input: _java.io.InputStream_, baseUri: string, charset: string) : _org.jsoup.nodes.Document_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parse</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
 ##### Descrição
 
 Realiza a interpretação dum conteúdo e retorna-o em HTML.
@@ -134,9 +134,9 @@ Realiza a interpretação dum conteúdo e retorna-o em HTML.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| input | _java.io.InputStream_ | Conteúdo de um ficheiro HTML a ser processado. |
-| baseUri | string | Url base para resolver links relativos. |
-| charset | string | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
+| **input** | _java.io.InputStream_ | Conteúdo de um ficheiro HTML a ser processado. |
+| **baseUri** | _string_ | Url base para resolver links relativos. |
+| **charset** | _string_ | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
 
 ##### Retorno
 
@@ -146,7 +146,7 @@ Conteúdo processado em HTML.
 
 ---
 
-#### _html.parse(content: string) : _org.jsoup.nodes.Document_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parse</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
 ##### Descrição
 
 Através do código HTML é realiza a interpretação e retorna o objeto de manipulação.
@@ -155,7 +155,7 @@ Através do código HTML é realiza a interpretação e retorna o objeto de mani
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| content | string | Conteúdo HTML que será processado. |
+| **content** | _string_ | Conteúdo HTML que será processado. |
 
 ##### Retorno
 
@@ -165,7 +165,7 @@ Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTM
 
 ---
 
-#### _html.parse(ficheiro: _[File](../../objects/File)_, baseUri: string, charset: string) : _org.jsoup.nodes.Document_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parse</span>(<span style="color: #FF8000">ficheiro</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
 ##### Descrição
 
 Realiza a interpretação do conteúdo dum ficheiro e retorna-o em HTML.
@@ -174,9 +174,9 @@ Realiza a interpretação do conteúdo dum ficheiro e retorna-o em HTML.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ficheiro | _[File](../../objects/File)_ | Ficheiro que será processado. |
-| baseUri | string | Url base para resolver links relativos. |
-| charset | string | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
+| **ficheiro** | _[File](../../objects/File)_ | Ficheiro que será processado. |
+| **baseUri** | _string_ | Url base para resolver links relativos. |
+| **charset** | _string_ | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
 
 ##### Retorno
 
@@ -186,7 +186,7 @@ Conteúdo do ficheiro em HTML.
 
 ---
 
-#### _html.parse(storage: _[Storage](../../resources/Storage)_, baseUri: string, charset: string) : _org.jsoup.nodes.Document_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parse</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
 ##### Descrição
 
 Realiza a interpretação dum conteúdo e retorna-o em HTML.
@@ -195,9 +195,9 @@ Realiza a interpretação dum conteúdo e retorna-o em HTML.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ | Caminho do ficheiro em storage que deverá ser processado. |
-| baseUri | string | Url base para resolver links relativos. |
-| charset | string | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
+| **storage** | _[Storage](../../resources/Storage)_ | Caminho do ficheiro em storage que deverá ser processado. |
+| **baseUri** | _string_ | Url base para resolver links relativos. |
+| **charset** | _string_ | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
 
 ##### Retorno
 
@@ -211,12 +211,12 @@ Conteúdo processado em HTML.
 
 ---
 
-#### _html.parseBodyFragment(bodyHtml: string) : _org.jsoup.nodes.Document_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parseBodyFragment</span>(<span style="color: #FF8000">bodyHtml</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| bodyHtml | string |   |
+| **bodyHtml** | _string_ |   |
 
 ##### Retorno
 
@@ -225,13 +225,13 @@ Conteúdo processado em HTML.
 
 ---
 
-#### _html.parseBodyFragment(bodyHtml: string, baseUri: string) : _org.jsoup.nodes.Document_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parseBodyFragment</span>(<span style="color: #FF8000">bodyHtml</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| bodyHtml | string |   |
-| baseUri | string |   |
+| **bodyHtml** | _string_ |   |
+| **baseUri** | _string_ |   |
 
 ##### Retorno
 
@@ -244,7 +244,7 @@ Conteúdo processado em HTML.
 
 ---
 
-#### _html.parseURL(url: string) : _org.jsoup.nodes.Document_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parseURL</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
 ##### Descrição
 
 Obtém o HTML através de um endereço web (URL), realiza a interpretação e retorna o objeto de manipulação.
@@ -253,7 +253,7 @@ Obtém o HTML através de um endereço web (URL), realiza a interpretação e re
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| url | string | Objeto que será convertido em texto e enviado. |
+| **url** | _string_ | Objeto que será convertido em texto e enviado. |
 
 ##### Retorno
 
@@ -263,13 +263,13 @@ Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTM
 
 ---
 
-#### _html.parseURL(url: string, timeoutMillis: _int_) : _org.jsoup.nodes.Document_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parseURL</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">timeoutMillis</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| url | string |   |
-| timeoutMillis | _int_ |   |
+| **url** | _string_ |   |
+| **timeoutMillis** | _int_ |   |
 
 ##### Retorno
 
@@ -282,7 +282,7 @@ Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTM
 
 ---
 
-#### _html.safelist() : _org.jsoup.safety.Safelist_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">safelist</span>() : <span style="font-weight: normal; font-style: italic;">org.jsoup.safety.Safelist</span>
 ##### Retorno
 
 ( _org.jsoup.safety.Safelist_ )
@@ -290,12 +290,12 @@ Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTM
 
 ---
 
-#### _html.safelist(copy: _org.jsoup.safety.Safelist_) : _org.jsoup.safety.Safelist_
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">safelist</span>(<span style="color: #FF8000">copy</span>: <span style="font-weight: normal; font-style: italic;">org.jsoup.safety.Safelist</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.safety.Safelist</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| copy | _org.jsoup.safety.Safelist_ |   |
+| **copy** | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 

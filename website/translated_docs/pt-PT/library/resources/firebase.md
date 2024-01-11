@@ -12,7 +12,7 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.active() : _boolean_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">active</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Retorno
 
 ( _boolean_ )
@@ -24,7 +24,7 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.app() : _com.google.firebase.FirebaseApp_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">app</span>() : <span style="font-weight: normal; font-style: italic;">com.google.firebase.FirebaseApp</span>
 ##### Retorno
 
 ( _com.google.firebase.FirebaseApp_ )
@@ -36,7 +36,7 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.auth() : _com.google.firebase.auth.FirebaseAuth_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">auth</span>() : <span style="font-weight: normal; font-style: italic;">com.google.firebase.auth.FirebaseAuth</span>
 ##### Retorno
 
 ( _com.google.firebase.auth.FirebaseAuth_ )
@@ -48,7 +48,7 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.config() : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Retorno
 
 ( _void_ )
@@ -60,7 +60,7 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.database() : _com.google.firebase.database.FirebaseDatabase_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">database</span>() : <span style="font-weight: normal; font-style: italic;">com.google.firebase.database.FirebaseDatabase</span>
 ##### Retorno
 
 ( _com.google.firebase.database.FirebaseDatabase_ )
@@ -72,12 +72,12 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.databaseReference(path: string) : _com.google.firebase.database.DatabaseReference_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">databaseReference</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.google.firebase.database.DatabaseReference</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
+| **path** | _string_ |   |
 
 ##### Retorno
 
@@ -86,13 +86,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.databaseReference(path: string, uid: string) : _com.google.firebase.database.DatabaseReference_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">databaseReference</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.google.firebase.database.DatabaseReference</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
-| uid | string |   |
+| **path** | _string_ |   |
+| **uid** | _string_ |   |
 
 ##### Retorno
 
@@ -105,13 +105,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.listener(ref: _com.google.firebase.database.DatabaseReference_, url: string) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">listener</span>(<span style="color: #FF8000">ref</span>: <span style="font-weight: normal; font-style: italic;">com.google.firebase.database.DatabaseReference</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ref | _com.google.firebase.database.DatabaseReference_ |   |
-| url | string |   |
+| **ref** | _com.google.firebase.database.DatabaseReference_ |   |
+| **url** | _string_ |   |
 
 ##### Retorno
 
@@ -120,13 +120,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.listener(path: string, url: string) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">listener</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
-| url | string |   |
+| **path** | _string_ |   |
+| **url** | _string_ |   |
 
 ##### Retorno
 
@@ -139,12 +139,12 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.removeValue(ref: _com.google.firebase.database.DatabaseReference_) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">removeValue</span>(<span style="color: #FF8000">ref</span>: <span style="font-weight: normal; font-style: italic;">com.google.firebase.database.DatabaseReference</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ref | _com.google.firebase.database.DatabaseReference_ |   |
+| **ref** | _com.google.firebase.database.DatabaseReference_ |   |
 
 ##### Retorno
 
@@ -153,12 +153,12 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.removeValue(path: string) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">removeValue</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
+| **path** | _string_ |   |
 
 ##### Retorno
 
@@ -167,13 +167,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.removeValue(path: string, uid: string) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">removeValue</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
-| uid | string |   |
+| **path** | _string_ |   |
+| **uid** | _string_ |   |
 
 ##### Retorno
 
@@ -186,13 +186,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(ref: _com.google.firebase.database.DatabaseReference_, data: _java.util.List_) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">setValue</span>(<span style="color: #FF8000">ref</span>: <span style="font-weight: normal; font-style: italic;">com.google.firebase.database.DatabaseReference</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ref | _com.google.firebase.database.DatabaseReference_ |   |
-| data | _java.util.List_ |   |
+| **ref** | _com.google.firebase.database.DatabaseReference_ |   |
+| **data** | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -201,13 +201,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(ref: _com.google.firebase.database.DatabaseReference_, data: _[Values](../../objects/Values)_) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">setValue</span>(<span style="color: #FF8000">ref</span>: <span style="font-weight: normal; font-style: italic;">com.google.firebase.database.DatabaseReference</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| ref | _com.google.firebase.database.DatabaseReference_ |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **ref** | _com.google.firebase.database.DatabaseReference_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -216,14 +216,14 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(path: string, uid: string, data: _java.util.List_) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">setValue</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
-| uid | string |   |
-| data | _java.util.List_ |   |
+| **path** | _string_ |   |
+| **uid** | _string_ |   |
+| **data** | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -232,14 +232,14 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(path: string, uid: string, data: _java.util.Map_) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">setValue</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
-| uid | string |   |
-| data | _java.util.Map_ |   |
+| **path** | _string_ |   |
+| **uid** | _string_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -248,14 +248,14 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(path: string, uid: string, data: _[Values](../../objects/Values)_) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">setValue</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
-| uid | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **path** | _string_ |   |
+| **uid** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -264,13 +264,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(path: string, data: _java.util.List_) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">setValue</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
-| data | _java.util.List_ |   |
+| **path** | _string_ |   |
+| **data** | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -279,13 +279,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(path: string, data: _java.util.Map_) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">setValue</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
-| data | _java.util.Map_ |   |
+| **path** | _string_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -294,13 +294,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(path: string, data: _[Values](../../objects/Values)_) : _void_
+#### <span style="font-weight: normal">_firebase</span>.<span style="color: #008000">setValue</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| path | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **path** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 

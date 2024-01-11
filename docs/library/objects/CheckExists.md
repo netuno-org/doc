@@ -22,13 +22,13 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### column(table: string, column: string) : _boolean_
+#### <span style="color: #008000">column</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| table | string |   |
-| column | string |   |
+| **table** | _string_ |   |
+| **column** | _string_ |   |
 
 ##### Return
 
@@ -41,10 +41,10 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### getKey() : string
+#### <span style="color: #008000">getKey</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -53,12 +53,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### index(index: string) : _boolean_
+#### <span style="color: #008000">index</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| index | string |   |
+| **index** | _string_ |   |
 
 ##### Return
 
@@ -67,13 +67,13 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### index(tableName: string, columnName: string) : _boolean_
+#### <span style="color: #008000">index</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">columnName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| tableName | string |   |
-| columnName | string |   |
+| **tableName** | _string_ |   |
+| **columnName** | _string_ |   |
 
 ##### Return
 
@@ -86,7 +86,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isH2() : _boolean_
+#### <span style="color: #008000">isH2</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -94,12 +94,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isH2(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isH2</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -112,7 +112,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isMSSQL() : _boolean_
+#### <span style="color: #008000">isMSSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -120,12 +120,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isMSSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isMSSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -138,7 +138,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isMariaDB() : _boolean_
+#### <span style="color: #008000">isMariaDB</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -146,12 +146,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isMariaDB(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isMariaDB</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -164,7 +164,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isPostgreSQL() : _boolean_
+#### <span style="color: #008000">isPostgreSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -172,12 +172,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isPostgreSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
+#### <span style="color: #008000">isPostgreSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| builder | _org.netuno.tritao.db.Builder_ |   |
+| **builder** | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Return
 
@@ -190,7 +190,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### sequence() : _boolean_
+#### <span style="color: #008000">sequence</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -198,12 +198,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### sequence(name: string) : _boolean_
+#### <span style="color: #008000">sequence</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Return
 
@@ -212,13 +212,13 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### sequence(tableName: string, columnName: string) : _boolean_
+#### <span style="color: #008000">sequence</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">columnName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| tableName | string |   |
-| columnName | string |   |
+| **tableName** | _string_ |   |
+| **columnName** | _string_ |   |
 
 ##### Return
 
@@ -231,12 +231,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### table(table: string) : _boolean_
+#### <span style="color: #008000">table</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| table | string |   |
+| **table** | _string_ |   |
 
 ##### Return
 

@@ -12,7 +12,7 @@ Contém a referência da posição de uma célula na folha de cálculos, com ind
 
 ---
 
-#### col() : _int_
+#### <span style="color: #008000">col</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 O número do índice da coluna relacionado com a posição.
@@ -29,7 +29,7 @@ O índice da coluna.
 
 ---
 
-#### getCol() : _int_
+#### <span style="color: #008000">getCol</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 O número do índice da coluna relacionado com a posição.
@@ -46,7 +46,7 @@ O índice da coluna.
 
 ---
 
-#### getRow() : _int_
+#### <span style="color: #008000">getRow</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 O número do índice da linha relacionado com a posição.
@@ -63,7 +63,7 @@ O índice da linha.
 
 ---
 
-#### row() : _int_
+#### <span style="color: #008000">row</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 O número do índice da linha relacionado com a posição.

@@ -13,7 +13,7 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 
 ---
 
-#### _pdf.areaBreak() : _com.itextpdf.layout.element.AreaBreak_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">areaBreak</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.AreaBreak</span>
 ##### Descrição
 
 Cria uma área de quebra que termina um tipo de área anterior.
@@ -26,7 +26,7 @@ Termina a área anterior e retorna a nova área.
 
 ---
 
-#### _pdf.areaBreak(nPaginas: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.element.AreaBreak_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">areaBreak</span>(<span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.AreaBreak</span>
 ##### Descrição
 
 Cria uma área de quebra que termina um tipo de área anterior.
@@ -35,7 +35,7 @@ Cria uma área de quebra que termina um tipo de área anterior.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nPaginas | _com.itextpdf.kernel.geom.PageSize_ | Tamanho do novo conteúdo. |
+| **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Tamanho do novo conteúdo. |
 
 ##### Retorno
 
@@ -45,7 +45,7 @@ Termina a área anterior e retorna a nova área.
 
 ---
 
-#### _pdf.areaBreak(tipo: string) : _com.itextpdf.layout.element.AreaBreak_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">areaBreak</span>(<span style="color: #FF8000">tipo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.AreaBreak</span>
 ##### Descrição
 
 Cria uma área de quebra que termina um tipo de área anterior.
@@ -54,7 +54,7 @@ Cria uma área de quebra que termina um tipo de área anterior.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tipo | string | Tipo da nova área. |
+| **tipo** | _string_ | Tipo da nova área. |
 
 ##### Retorno
 
@@ -68,7 +68,7 @@ Termina a área anterior e retorna a nova área.
 
 ---
 
-#### _pdf.border(moldura: string) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura.
@@ -77,7 +77,7 @@ Cria um tipo de moldura.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
 
 ##### Retorno
 
@@ -87,7 +87,7 @@ Retorna uma moldura do tipo inserido.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -96,9 +96,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _double_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _double_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -108,7 +108,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -117,10 +117,10 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _double_ | Largura da moldura. |
-| opacity | _double_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _double_ | Largura da moldura. |
+| **opacity** | _double_ |   |
 
 ##### Retorno
 
@@ -130,7 +130,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -139,10 +139,10 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _double_ | Largura da moldura. |
-| opacity | _float_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _double_ | Largura da moldura. |
+| **opacity** | _float_ |   |
 
 ##### Retorno
 
@@ -152,7 +152,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -161,10 +161,10 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _double_ | Largura da moldura. |
-| opacity | _int_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _double_ | Largura da moldura. |
+| **opacity** | _int_ |   |
 
 ##### Retorno
 
@@ -174,7 +174,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -183,9 +183,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _float_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _float_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -195,7 +195,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -204,10 +204,10 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacity | _double_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacity** | _double_ |   |
 
 ##### Retorno
 
@@ -217,7 +217,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_, opacidade: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria uma border personalizada com tipo de moldura, cor, largura e opacidade definidas.
@@ -226,10 +226,10 @@ Cria uma border personalizada com tipo de moldura, cor, largura e opacidade defi
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacidade | _float_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacidade** | _float_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -239,7 +239,7 @@ Retorna a moldura personalizada criada.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_, opacidade: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura, cor, largura e opacidade definidas.
@@ -248,10 +248,10 @@ Cria um tipo de moldura, cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacidade | _int_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacidade** | _int_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -261,7 +261,7 @@ Retorna um tipo de moldura, cor, largura e opacidade inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -270,9 +270,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _int_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _int_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -282,7 +282,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -291,10 +291,10 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacity | _double_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacity** | _double_ |   |
 
 ##### Retorno
 
@@ -304,7 +304,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -313,10 +313,10 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacity | _float_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacity** | _float_ |   |
 
 ##### Retorno
 
@@ -326,7 +326,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -335,10 +335,10 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacity | _int_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacity** | _int_ |   |
 
 ##### Retorno
 
@@ -348,7 +348,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, largura: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura definida.
@@ -357,8 +357,8 @@ Cria um tipo de moldura com uma largura definida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _double_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _double_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -368,7 +368,7 @@ Retorna uma moldura do tipo inserido e com a largura inserida de cor preta.
 
 ---
 
-#### _pdf.border(moldura: string, largura: _double_, opacidade: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -377,9 +377,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _double_ | Largura da moldura. |
-| opacidade | _double_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _double_ | Largura da moldura. |
+| **opacidade** | _double_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -389,7 +389,7 @@ Retorna um tipo de moldura, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border(moldura: string, largura: _double_, opacidade: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -398,9 +398,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _double_ | Largura da moldura. |
-| opacidade | _float_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _double_ | Largura da moldura. |
+| **opacidade** | _float_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -410,7 +410,7 @@ Retorna um tipo de moldura, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _double_, largura: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -419,9 +419,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _double_ | Cor da moldura. |
-| largura | _int_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _double_ | Cor da moldura. |
+| **largura** | _int_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -431,7 +431,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, largura: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura definida.
@@ -440,8 +440,8 @@ Cria um tipo de moldura com uma largura definida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _float_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _float_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -451,7 +451,7 @@ Retorna uma moldura do tipo inserido e com a largura inserida de cor preta.
 
 ---
 
-#### _pdf.border(moldura: string, largura: _float_, opacidade: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -460,9 +460,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacidade | _double_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacidade** | _double_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -472,7 +472,7 @@ Retorna um tipo de moldura, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border(moldura: string, largura: _float_, opacidade: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -481,9 +481,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacidade | _float_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacidade** | _float_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -493,7 +493,7 @@ Retorna um tipo de moldura, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border(moldura: string, largura: _float_, opacidade: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -502,9 +502,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacidade | _int_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacidade** | _int_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -514,7 +514,7 @@ Retorna um tipo de moldura, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border(moldura: string, largura: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura definida.
@@ -523,8 +523,8 @@ Cria um tipo de moldura com uma largura definida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _int_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _int_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -534,7 +534,7 @@ Retorna uma moldura do tipo inserido e com a largura inserida de cor preta.
 
 ---
 
-#### _pdf.border(moldura: string, largura: _int_, opacidade: _double_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -543,9 +543,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacidade | _double_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacidade** | _double_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -555,7 +555,7 @@ Retorna um tipo de moldura, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border(moldura: string, largura: _int_, opacidade: _float_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -564,9 +564,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacidade | _float_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacidade** | _float_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -576,7 +576,7 @@ Retorna um tipo de moldura, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border(moldura: string, largura: _int_, opacidade: _int_) : _com.itextpdf.layout.borders.Border_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -585,9 +585,9 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacidade | _int_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacidade** | _int_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -601,7 +601,7 @@ Retorna um tipo de moldura, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -610,7 +610,7 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
 
 ##### Retorno
 
@@ -620,7 +620,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -629,9 +629,9 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _double_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _double_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -641,7 +641,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -650,10 +650,10 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _double_ | Largura da moldura. |
-| opacity | _double_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _double_ | Largura da moldura. |
+| **opacity** | _double_ |   |
 
 ##### Retorno
 
@@ -663,7 +663,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -672,10 +672,10 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _double_ | Largura da moldura. |
-| opacity | _float_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _double_ | Largura da moldura. |
+| **opacity** | _float_ |   |
 
 ##### Retorno
 
@@ -685,7 +685,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -694,10 +694,10 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _double_ | Largura da moldura. |
-| opacity | _int_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _double_ | Largura da moldura. |
+| **opacity** | _int_ |   |
 
 ##### Retorno
 
@@ -707,7 +707,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -716,9 +716,9 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _float_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _float_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -728,7 +728,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D, cor, largura e opacidade definidas.
@@ -737,10 +737,10 @@ Cria um tipo de moldura 3D, cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacity | _double_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacity** | _double_ |   |
 
 ##### Retorno
 
@@ -750,7 +750,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_, opacidade: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria uma border 3D personalizada com tipo de moldura,cor, largura e opacidade definidas.
@@ -759,10 +759,10 @@ Cria uma border 3D personalizada com tipo de moldura,cor, largura e opacidade de
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacidade | _float_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacidade** | _float_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -772,7 +772,7 @@ Retorna a moldura 3D personalizada criada.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_, opacidade: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -781,10 +781,10 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacidade | _int_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacidade** | _int_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -794,7 +794,7 @@ Retorna um tipo de moldura 3D, cor, largura e opacidade inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -803,9 +803,9 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _int_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _int_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -815,7 +815,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -824,10 +824,10 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacity | _double_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacity** | _double_ |   |
 
 ##### Retorno
 
@@ -837,7 +837,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -846,10 +846,10 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacity | _float_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacity** | _float_ |   |
 
 ##### Retorno
 
@@ -859,7 +859,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, opacidade: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -868,10 +868,10 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacidade | _int_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacidade** | _int_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -881,7 +881,7 @@ Retorna um tipo de moldura 3D,cor, largura e opacidade inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, largura: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D com uma largura definida.
@@ -890,8 +890,8 @@ Cria um tipo de moldura 3D com uma largura definida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _double_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _double_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -901,7 +901,7 @@ Retorna uma moldura 3D do tipo inserido e com a largura inserida de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, largura: _double_, opacidade: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D com uma largura e opacidade definidas.
@@ -910,9 +910,9 @@ Cria um tipo de moldura 3D com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _double_ | Largura da moldura. |
-| opacidade | _double_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _double_ | Largura da moldura. |
+| **opacidade** | _double_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -922,7 +922,7 @@ Retorna um tipo de moldura 3D, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, largura: _double_, opacidade: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D com uma largura e opacidade definidas.
@@ -931,9 +931,9 @@ Cria um tipo de moldura 3D com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _double_ | Largura da moldura. |
-| opacidade | _float_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _double_ | Largura da moldura. |
+| **opacidade** | _float_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -943,7 +943,7 @@ Retorna um tipo de moldura 3D, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, largura: _double_, opacidade: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D com uma largura e opacidade definidas.
@@ -952,9 +952,9 @@ Cria um tipo de moldura 3D com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _double_ | Largura da moldura. |
-| opacidade | _int_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _double_ | Largura da moldura. |
+| **opacidade** | _int_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -964,7 +964,7 @@ Retorna um tipo de moldura 3D, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, largura: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D com uma largura definida.
@@ -973,8 +973,8 @@ Cria um tipo de moldura 3D com uma largura definida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _float_ | Largura da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _float_ | Largura da moldura. |
 
 ##### Retorno
 
@@ -984,7 +984,7 @@ Retorna uma moldura 3D do tipo inserido e com a largura inserida de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, largura: _float_, opacidade: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D com uma largura e opacidade definidas.
@@ -993,9 +993,9 @@ Cria um tipo de moldura 3D com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacidade | _double_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacidade** | _double_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -1005,7 +1005,7 @@ Retorna um tipo de moldura 3D, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, largura: _float_, opacidade: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D com uma largura e opacidade definidas.
@@ -1014,9 +1014,9 @@ Cria um tipo de moldura 3D com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacidade | _float_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacidade** | _float_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -1026,7 +1026,7 @@ Retorna um tipo de moldura 3D, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, largura: _float_, opacidade: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D com uma largura e opacidade definidas.
@@ -1035,9 +1035,9 @@ Cria um tipo de moldura 3D com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _float_ | Largura da moldura. |
-| opacidade | _int_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _float_ | Largura da moldura. |
+| **opacidade** | _int_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -1047,7 +1047,7 @@ Retorna um tipo de moldura 3D, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, width: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D.
@@ -1056,8 +1056,8 @@ Cria um tipo de moldura 3D.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| width | _int_ |   |
+| **moldura** | _string_ | Tipo de moldura. |
+| **width** | _int_ |   |
 
 ##### Retorno
 
@@ -1067,7 +1067,7 @@ Retorna uma moldura 3D do tipo inserido e de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, largura: _int_, opacidade: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D com uma largura e opacidade definidas.
@@ -1076,9 +1076,9 @@ Cria um tipo de moldura 3D com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacidade | _double_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacidade** | _double_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -1088,7 +1088,7 @@ Retorna um tipo de moldura 3D, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, largura: _int_, opacidade: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D com uma largura e opacidade definidas.
@@ -1097,9 +1097,9 @@ Cria um tipo de moldura 3D com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacidade | _float_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacidade** | _float_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -1109,7 +1109,7 @@ Retorna um tipo de moldura 3D, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, largura: _int_, opacidade: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">moldura</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacidade</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
 ##### Descrição
 
 Cria um tipo de moldura 3D com uma largura e opacidade definidas.
@@ -1118,9 +1118,9 @@ Cria um tipo de moldura 3D com uma largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| moldura | string | Tipo de moldura. |
-| largura | _int_ | Largura da moldura. |
-| opacidade | _int_ | Opacidade da moldura. |
+| **moldura** | _string_ | Tipo de moldura. |
+| **largura** | _int_ | Largura da moldura. |
+| **opacidade** | _int_ | Opacidade da moldura. |
 
 ##### Retorno
 
@@ -1134,7 +1134,7 @@ Retorna um tipo de moldura 3D, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.canvas(doc: _com.itextpdf.kernel.pdf.PdfDocument_, pageNum: _int_) : _com.itextpdf.kernel.pdf.canvas.PdfCanvas_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">canvas</span>(<span style="color: #FF8000">doc</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>, <span style="color: #FF8000">pageNum</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.PdfCanvas</span>
 ##### Descrição
 
 Cria uma área de texto retangular.
@@ -1143,8 +1143,8 @@ Cria uma área de texto retangular.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| doc | _com.itextpdf.kernel.pdf.PdfDocument_ |   |
-| pageNum | _int_ |   |
+| **doc** | _com.itextpdf.kernel.pdf.PdfDocument_ |   |
+| **pageNum** | _int_ |   |
 
 ##### Retorno
 
@@ -1153,7 +1153,7 @@ Cria uma área de texto retangular.
 
 ---
 
-#### _pdf.canvas(page: _com.itextpdf.kernel.pdf.PdfPage_) : _com.itextpdf.kernel.pdf.canvas.PdfCanvas_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">canvas</span>(<span style="color: #FF8000">page</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfPage</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.PdfCanvas</span>
 ##### Descrição
 
 Cria uma área de texto retangular.
@@ -1162,7 +1162,7 @@ Cria uma área de texto retangular.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| page | _com.itextpdf.kernel.pdf.PdfPage_ |   |
+| **page** | _com.itextpdf.kernel.pdf.PdfPage_ |   |
 
 ##### Retorno
 
@@ -1175,7 +1175,7 @@ Cria uma área de texto retangular.
 
 ---
 
-#### _pdf.cell() : _com.itextpdf.layout.element.Cell_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">cell</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Cell</span>
 ##### Descrição
 
 Cria uma célula de tabela.
@@ -1188,7 +1188,7 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.cell(agregVertical: _int_, agregHorizontal: _int_) : _com.itextpdf.layout.element.Cell_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">cell</span>(<span style="color: #FF8000">agregVertical</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">agregHorizontal</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Cell</span>
 ##### Descrição
 
 Cria uma célula de tabela, com agregação vertical ou horizontal.
@@ -1197,8 +1197,8 @@ Cria uma célula de tabela, com agregação vertical ou horizontal.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| agregVertical | _int_ | Número de linhas agregadas. |
-| agregHorizontal | _int_ | Número de colunas agregadas. |
+| **agregVertical** | _int_ | Número de linhas agregadas. |
+| **agregHorizontal** | _int_ | Número de colunas agregadas. |
 
 ##### Retorno
 
@@ -1212,12 +1212,12 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.color(color: string) : _com.itextpdf.kernel.colors.Color_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">color</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| color | string |   |
+| **color** | _string_ |   |
 
 ##### Retorno
 
@@ -1230,15 +1230,15 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorCMYK(cyan: _double_, magenta: _double_, yellow: _double_, black: _double_) : _com.itextpdf.kernel.colors.DeviceCmyk_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorCMYK</span>(<span style="color: #FF8000">cyan</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">magenta</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">yellow</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">black</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceCmyk</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| cyan | _double_ |   |
-| magenta | _double_ |   |
-| yellow | _double_ |   |
-| black | _double_ |   |
+| **cyan** | _double_ |   |
+| **magenta** | _double_ |   |
+| **yellow** | _double_ |   |
+| **black** | _double_ |   |
 
 ##### Retorno
 
@@ -1247,15 +1247,15 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorCMYK(cyan: _float_, magenta: _float_, yellow: _float_, black: _float_) : _com.itextpdf.kernel.colors.DeviceCmyk_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorCMYK</span>(<span style="color: #FF8000">cyan</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">magenta</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">yellow</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">black</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceCmyk</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| cyan | _float_ |   |
-| magenta | _float_ |   |
-| yellow | _float_ |   |
-| black | _float_ |   |
+| **cyan** | _float_ |   |
+| **magenta** | _float_ |   |
+| **yellow** | _float_ |   |
+| **black** | _float_ |   |
 
 ##### Retorno
 
@@ -1264,15 +1264,15 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorCMYK(cyan: _int_, magenta: _int_, yellow: _int_, black: _int_) : _com.itextpdf.kernel.colors.DeviceCmyk_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorCMYK</span>(<span style="color: #FF8000">cyan</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">magenta</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">yellow</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">black</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceCmyk</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| cyan | _int_ |   |
-| magenta | _int_ |   |
-| yellow | _int_ |   |
-| black | _int_ |   |
+| **cyan** | _int_ |   |
+| **magenta** | _int_ |   |
+| **yellow** | _int_ |   |
+| **black** | _int_ |   |
 
 ##### Retorno
 
@@ -1285,12 +1285,12 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorGray(value: _double_) : _com.itextpdf.kernel.colors.DeviceGray_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorGray</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceGray</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| value | _double_ |   |
+| **value** | _double_ |   |
 
 ##### Retorno
 
@@ -1299,12 +1299,12 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorGray(value: _float_) : _com.itextpdf.kernel.colors.DeviceGray_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorGray</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceGray</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| value | _float_ |   |
+| **value** | _float_ |   |
 
 ##### Retorno
 
@@ -1313,12 +1313,12 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorGray(value: _int_) : _com.itextpdf.kernel.colors.DeviceGray_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorGray</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceGray</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| value | _int_ |   |
+| **value** | _int_ |   |
 
 ##### Retorno
 
@@ -1331,14 +1331,14 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorRGB(red: _double_, green: _double_, blue: _double_) : _com.itextpdf.kernel.colors.DeviceRgb_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorRGB</span>(<span style="color: #FF8000">red</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">green</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">blue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceRgb</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| red | _double_ |   |
-| green | _double_ |   |
-| blue | _double_ |   |
+| **red** | _double_ |   |
+| **green** | _double_ |   |
+| **blue** | _double_ |   |
 
 ##### Retorno
 
@@ -1347,14 +1347,14 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorRGB(red: _float_, green: _float_, blue: _float_) : _com.itextpdf.kernel.colors.DeviceRgb_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorRGB</span>(<span style="color: #FF8000">red</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">green</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">blue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceRgb</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| red | _float_ |   |
-| green | _float_ |   |
-| blue | _float_ |   |
+| **red** | _float_ |   |
+| **green** | _float_ |   |
+| **blue** | _float_ |   |
 
 ##### Retorno
 
@@ -1363,14 +1363,14 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorRGB(red: _int_, green: _int_, blue: _int_) : _com.itextpdf.kernel.colors.DeviceRgb_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorRGB</span>(<span style="color: #FF8000">red</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">green</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">blue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceRgb</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| red | _int_ |   |
-| green | _int_ |   |
-| blue | _int_ |   |
+| **red** | _int_ |   |
+| **green** | _int_ |   |
+| **blue** | _int_ |   |
 
 ##### Retorno
 
@@ -1383,7 +1383,7 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.extract(conteúdo: _java.io.InputStream_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Extrai o conteúdo de PDFs.
@@ -1392,7 +1392,7 @@ Extrai o conteúdo de PDFs.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _java.io.InputStream_ | Conteúdo a ser extraído. |
+| **conteúdo** | _java.io.InputStream_ | Conteúdo a ser extraído. |
 
 ##### Retorno
 
@@ -1402,7 +1402,7 @@ Retorna o conteudo extraído.
 
 ---
 
-#### _pdf.extract(conteúdo: _[File](../../objects/File)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Extrai o conteúdo de PDFs.
@@ -1411,7 +1411,7 @@ Extrai o conteúdo de PDFs.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _[File](../../objects/File)_ | Conteúdo a ser extraído. |
+| **conteúdo** | _[File](../../objects/File)_ | Conteúdo a ser extraído. |
 
 ##### Retorno
 
@@ -1421,7 +1421,7 @@ Retorna o conteudo extraído.
 
 ---
 
-#### _pdf.extract(conteúdo: _[InputStream](../../objects/InputStream)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Extrai o conteúdo de PDFs.
@@ -1430,7 +1430,7 @@ Extrai o conteúdo de PDFs.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _[InputStream](../../objects/InputStream)_ | Conteúdo a ser extraído. |
+| **conteúdo** | _[InputStream](../../objects/InputStream)_ | Conteúdo a ser extraído. |
 
 ##### Retorno
 
@@ -1440,7 +1440,7 @@ Retorna o conteudo extraído.
 
 ---
 
-#### _pdf.extract(armazenamento: _[Storage](../../resources/Storage)_) : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Extrai o conteúdo de PDFs.
@@ -1449,7 +1449,7 @@ Extrai o conteúdo de PDFs.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
+| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
 
 ##### Retorno
 
@@ -1463,7 +1463,7 @@ Retorna o conteúdo extraido.
 
 ---
 
-#### _pdf.font(armazenamento: string) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1472,7 +1472,7 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | string | Caminho do armazenamento. |
+| **armazenamento** | _string_ | Caminho do armazenamento. |
 
 ##### Retorno
 
@@ -1482,7 +1482,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### _pdf.font(armazenamento: _[File](../../objects/File)_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1491,7 +1491,7 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[File](../../objects/File)_ | Caminho do armazenamento. |
+| **armazenamento** | _[File](../../objects/File)_ | Caminho do armazenamento. |
 
 ##### Retorno
 
@@ -1501,7 +1501,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### _pdf.font(armazenamento: _[File](../../objects/File)_, codificação: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1510,8 +1510,8 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[File](../../objects/File)_ | Caminho do armazenamento. |
-| codificação | _boolean_ | Codificação. |
+| **armazenamento** | _[File](../../objects/File)_ | Caminho do armazenamento. |
+| **codificação** | _boolean_ | Codificação. |
 
 ##### Retorno
 
@@ -1521,7 +1521,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### _pdf.font(armazenamento: _[File](../../objects/File)_, codificação: string) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1530,8 +1530,8 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[File](../../objects/File)_ | Caminho do armazenamento. |
-| codificação | string | Codificação. |
+| **armazenamento** | _[File](../../objects/File)_ | Caminho do armazenamento. |
+| **codificação** | _string_ | Codificação. |
 
 ##### Retorno
 
@@ -1541,7 +1541,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### _pdf.font(armazenamento: _[File](../../objects/File)_, codificação: string, embedded: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">embedded</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1550,9 +1550,9 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[File](../../objects/File)_ | Caminho do armazenamento. |
-| codificação | string | Codificação. |
-| embedded | _boolean_ |   |
+| **armazenamento** | _[File](../../objects/File)_ | Caminho do armazenamento. |
+| **codificação** | _string_ | Codificação. |
+| **embedded** | _boolean_ |   |
 
 ##### Retorno
 
@@ -1562,7 +1562,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### _pdf.font(armazenamento: _[Storage](../../resources/Storage)_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1571,7 +1571,7 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
+| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
 
 ##### Retorno
 
@@ -1581,7 +1581,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### _pdf.font(armazenamento: _[Storage](../../resources/Storage)_, codificação: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1590,8 +1590,8 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
-| codificação | _boolean_ | Codificação. |
+| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
+| **codificação** | _boolean_ | Codificação. |
 
 ##### Retorno
 
@@ -1601,7 +1601,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### _pdf.font(armazenamento: _[Storage](../../resources/Storage)_, codificação: string) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1610,8 +1610,8 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
-| codificação | string | Codificação. |
+| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
+| **codificação** | _string_ | Codificação. |
 
 ##### Retorno
 
@@ -1621,7 +1621,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### _pdf.font(armazenamento: _[Storage](../../resources/Storage)_, codificação: string, embedded: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">embedded</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1630,9 +1630,9 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
-| codificação | string | Codificação. |
-| embedded | _boolean_ |   |
+| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
+| **codificação** | _string_ | Codificação. |
+| **embedded** | _boolean_ |   |
 
 ##### Retorno
 
@@ -1646,7 +1646,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### _pdf.getDocument() : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Obtém o objecto Document do iText para a estrutura do documento PDF.
@@ -1662,7 +1662,7 @@ Obtém o objecto Document do iText para a estrutura do documento PDF.
 
 ---
 
-#### _pdf.getPdfDocument() : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getPdfDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Descrição
 
 Obtém o objecto PdfDocument do iText para a construção do documento PDF.
@@ -1678,7 +1678,7 @@ Obtém o objecto PdfDocument do iText para a construção do documento PDF.
 
 ---
 
-#### _pdf.getPdfReader() : _com.itextpdf.kernel.pdf.PdfReader_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getPdfReader</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfReader</span>
 ##### Descrição
 
 Obtém o objecto PdfReader do iText para a leitura do documento PDF.
@@ -1694,7 +1694,7 @@ Obtém o objecto PdfReader do iText para a leitura do documento PDF.
 
 ---
 
-#### _pdf.getPdfWriter() : _com.itextpdf.kernel.pdf.PdfWriter_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getPdfWriter</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfWriter</span>
 ##### Descrição
 
 Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
@@ -1710,12 +1710,12 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### _pdf.image(file: _[File](../../objects/File)_) : _com.itextpdf.layout.element.Image_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">image</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Image</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| file | _[File](../../objects/File)_ |   |
+| **file** | _[File](../../objects/File)_ |   |
 
 ##### Retorno
 
@@ -1724,12 +1724,12 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### _pdf.image(storage: _[Storage](../../resources/Storage)_) : _com.itextpdf.layout.element.Image_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">image</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Image</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/Storage)_ |   |
 
 ##### Retorno
 
@@ -1742,7 +1742,7 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### _pdf.init() : _[PDF](../../resources/PDF)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[PDF](../../resources/PDF)</span>
 ##### Descrição
 
 Cria um novo objeto de recurso para a construção de PDFs.
@@ -1764,7 +1764,7 @@ const pdf = _pdf.init();
 
 ---
 
-#### _pdf.line(tipo: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_) : _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">line</span>(<span style="color: #FF8000">tipo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
 ##### Descrição
 
 Cria uma linha com tipo,cor, largura e opacidade definidas.
@@ -1773,9 +1773,9 @@ Cria uma linha com tipo,cor, largura e opacidade definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tipo | string | Tipo da linha. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da linha. |
-| largura | _double_ | Largura da linha. |
+| **tipo** | _string_ | Tipo da linha. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da linha. |
+| **largura** | _double_ | Largura da linha. |
 
 ##### Retorno
 
@@ -1785,7 +1785,7 @@ Retorna a linha personalizada criada.
 
 ---
 
-#### _pdf.line(tipo: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_) : _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">line</span>(<span style="color: #FF8000">tipo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
 ##### Descrição
 
 Cria uma linha personalizada com tipo de moldura,cor, largura e definidas.
@@ -1794,9 +1794,9 @@ Cria uma linha personalizada com tipo de moldura,cor, largura e definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| tipo | string | Tipo da linha. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da linha. |
-| largura | _float_ | Largura da linha. |
+| **tipo** | _string_ | Tipo da linha. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da linha. |
+| **largura** | _float_ | Largura da linha. |
 
 ##### Retorno
 
@@ -1806,7 +1806,7 @@ Retorna a linha personalidade criada.
 
 ---
 
-#### _pdf.line(linha: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_) : _com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">line</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cor</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
 ##### Descrição
 
 Cria um tipo de linha com cor e largura definidas.
@@ -1815,9 +1815,9 @@ Cria um tipo de linha com cor e largura definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| linha | string | Tipo de linha. |
-| cor | _com.itextpdf.kernel.colors.Color_ | Cor da linha. |
-| largura | _int_ | Largura da linha. |
+| **linha** | _string_ | Tipo de linha. |
+| **cor** | _com.itextpdf.kernel.colors.Color_ | Cor da linha. |
+| **largura** | _int_ | Largura da linha. |
 
 ##### Retorno
 
@@ -1831,7 +1831,7 @@ Retorna tipo de linha, cor e largura inseridas.
 
 ---
 
-#### _pdf.newDocument() : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento.
@@ -1843,7 +1843,7 @@ Cria um novo documento.
 
 ---
 
-#### _pdf.newDocument(nPaginas: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF com o número de páginas inserida.
@@ -1852,7 +1852,7 @@ Cria um novo documento PDF com o número de páginas inserida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| nPaginas | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
+| **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
 
 ##### Retorno
 
@@ -1862,7 +1862,7 @@ Retorna um novo documento com o número de páginas inseridas.
 
 ---
 
-#### _pdf.newDocument(out: _java.io.OutputStream_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -1871,7 +1871,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| out | _java.io.OutputStream_ |   |
+| **out** | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -1880,7 +1880,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### _pdf.newDocument(armazenamento: _java.io.OutputStream_, nPaginas: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF com o número de páginas inseridas.
@@ -1889,8 +1889,8 @@ Cria um novo documento PDF com o número de páginas inseridas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _java.io.OutputStream_ | Caminho do ficheiro. |
-| nPaginas | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
+| **armazenamento** | _java.io.OutputStream_ | Caminho do ficheiro. |
+| **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
 
 ##### Retorno
 
@@ -1900,7 +1900,7 @@ Retorna um novo documento com o número de páginas inseridas.
 
 ---
 
-#### _pdf.newDocument(file: _[File](../../objects/File)_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -1909,7 +1909,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| file | _[File](../../objects/File)_ |   |
+| **file** | _[File](../../objects/File)_ |   |
 
 ##### Retorno
 
@@ -1918,7 +1918,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### _pdf.newDocument(armazenamento: _[File](../../objects/File)_, nPaginas: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF com o número de páginas inseridas.
@@ -1927,8 +1927,8 @@ Cria um novo documento PDF com o número de páginas inseridas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[File](../../objects/File)_ | Caminho do ficheiro. |
-| nPaginas | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
+| **armazenamento** | _[File](../../objects/File)_ | Caminho do ficheiro. |
+| **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
 
 ##### Retorno
 
@@ -1938,7 +1938,7 @@ Retorna um novo documento com o número de páginas inseridas.
 
 ---
 
-#### _pdf.newDocument(out: _[OutputStream](../../objects/OutputStream)_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -1947,7 +1947,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| out | _[OutputStream](../../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -1956,7 +1956,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### _pdf.newDocument(armazenamento: _[OutputStream](../../objects/OutputStream)_, nPaginas: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF com o número de páginas inseridas.
@@ -1965,8 +1965,8 @@ Cria um novo documento PDF com o número de páginas inseridas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[OutputStream](../../objects/OutputStream)_ | Caminho do ficheiro. |
-| nPaginas | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
+| **armazenamento** | _[OutputStream](../../objects/OutputStream)_ | Caminho do ficheiro. |
+| **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
 
 ##### Retorno
 
@@ -1976,7 +1976,7 @@ Retorna um novo documento com o número de páginas inseridas.
 
 ---
 
-#### _pdf.newDocument(storage: _[Storage](../../resources/Storage)_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -1985,7 +1985,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| storage | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/Storage)_ |   |
 
 ##### Retorno
 
@@ -1994,7 +1994,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### _pdf.newDocument(armazenamento: _[Storage](../../resources/Storage)_, nPaginas: _com.itextpdf.kernel.geom.PageSize_) : _com.itextpdf.layout.Document_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF com o número de páginas inseridas.
@@ -2003,8 +2003,8 @@ Cria um novo documento PDF com o número de páginas inseridas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[Storage](../../resources/Storage)_ | Caminho do ficheiro. |
-| nPaginas | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
+| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do ficheiro. |
+| **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
 
 ##### Retorno
 
@@ -2018,7 +2018,7 @@ Retorna um novo documento com o número de páginas inseridas.
 
 ---
 
-#### _pdf.newPdfDocument() : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -2030,7 +2030,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### _pdf.newPdfDocument(armazenamento: _java.io.OutputStream_) : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -2039,7 +2039,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _java.io.OutputStream_ | Caminho do ficheiro. |
+| **armazenamento** | _java.io.OutputStream_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -2048,7 +2048,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### _pdf.newPdfDocument(armazenamento: _[File](../../objects/File)_) : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -2057,7 +2057,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[File](../../objects/File)_ | Caminho do ficheiro. |
+| **armazenamento** | _[File](../../objects/File)_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -2066,7 +2066,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### _pdf.newPdfDocument(armazenamento: _[OutputStream](../../objects/OutputStream)_) : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -2075,7 +2075,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[OutputStream](../../objects/OutputStream)_ | Caminho do ficheiro. |
+| **armazenamento** | _[OutputStream](../../objects/OutputStream)_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -2084,7 +2084,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### _pdf.newPdfDocument(armazenamento: _[Storage](../../resources/Storage)_) : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -2093,7 +2093,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| armazenamento | _[Storage](../../resources/Storage)_ | Caminho do ficheiro. |
+| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -2106,7 +2106,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### _pdf.openPdfDocument(caminho: string) : _com.itextpdf.kernel.pdf.PdfDocument_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Descrição
 
 Abre o documento PDF referente ao caminho inserido.
@@ -2115,7 +2115,7 @@ Abre o documento PDF referente ao caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| caminho | string | Caminho do ficheiro. |
+| **caminho** | _string_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -2129,7 +2129,7 @@ Retorna o documento PDF aberto.
 
 ---
 
-#### _pdf.pageSize(width: _float_, height: _float_) : _com.itextpdf.kernel.geom.PageSize_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">pageSize</span>(<span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>
 ##### Descrição
 
 Obtém a definição do tamanho da página atráves da largura e altura.
@@ -2138,8 +2138,8 @@ Obtém a definição do tamanho da página atráves da largura e altura.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| width | _float_ |   |
-| height | _float_ |   |
+| **width** | _float_ |   |
+| **height** | _float_ |   |
 
 ##### Retorno
 
@@ -2148,7 +2148,7 @@ Obtém a definição do tamanho da página atráves da largura e altura.
 
 ---
 
-#### _pdf.pageSize(page: string) : _com.itextpdf.kernel.geom.PageSize_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">pageSize</span>(<span style="color: #FF8000">page</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>
 ##### Descrição
 
 Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</li><li>A2</li><li>A3</li><li>A4</li><li>A5</li><li>A6</li><li>A7</li><li>A8</li><li>A9</li><li>A10</li><li>B0</li><li>B1</li><li>B2</li><li>B3</li><li>B4</li><li>B5</li><li>B6</li><li>B7</li><li>B8</li><li>B9</li><li>B10</li><li>default</li><li>executive</li><li>ledger</li><li>legal</li><li>letter</li><li>tabloid</li></ul>
@@ -2157,7 +2157,7 @@ Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</l
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| page | string |   |
+| **page** | _string_ |   |
 
 ##### Retorno
 
@@ -2170,7 +2170,7 @@ Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</l
 
 ---
 
-#### _pdf.paragraph(text: string) : _com.itextpdf.layout.element.Paragraph_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">paragraph</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Paragraph</span>
 ##### Descrição
 
 Cria um parágrafo.
@@ -2179,7 +2179,7 @@ Cria um parágrafo.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| text | string |   |
+| **text** | _string_ |   |
 
 ##### Retorno
 
@@ -2192,12 +2192,12 @@ Cria um parágrafo.
 
 ---
 
-#### _pdf.setDocument(document: _com.itextpdf.layout.Document_) : _[PDF](../../resources/PDF)_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">setDocument</span>(<span style="color: #FF8000">document</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>) : <span style="font-weight: normal; font-style: italic;">[PDF](../../resources/PDF)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| document | _com.itextpdf.layout.Document_ |   |
+| **document** | _com.itextpdf.layout.Document_ |   |
 
 ##### Retorno
 
@@ -2210,7 +2210,7 @@ Cria um parágrafo.
 
 ---
 
-#### _pdf.table(largura: _double[]_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela com colunas da largura definida.
@@ -2219,7 +2219,7 @@ Cria uma tabela com colunas da largura definida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _double[]_ | Largura das colunas da tabela. |
+| **largura** | _double[]_ | Largura das colunas da tabela. |
 
 ##### Retorno
 
@@ -2229,7 +2229,7 @@ Retorna uma tabela com a largura das colunas inseridas.
 
 ---
 
-#### _pdf.table(largura: _double[]_, colunaLarga: _boolean_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double[]</span>, <span style="color: #FF8000">colunaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela.
@@ -2238,8 +2238,8 @@ Cria uma tabela.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _double[]_ | Largura das colunas. |
-| colunaLarga | _boolean_ | Coluna de tamanho grande. |
+| **largura** | _double[]_ | Largura das colunas. |
+| **colunaLarga** | _boolean_ | Coluna de tamanho grande. |
 
 ##### Retorno
 
@@ -2249,7 +2249,7 @@ Retorna a tabela criada.
 
 ---
 
-#### _pdf.table(largura: _float[]_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela com colunas da largura definida.
@@ -2258,7 +2258,7 @@ Cria uma tabela com colunas da largura definida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _float[]_ | Largura das colunas da tabela. |
+| **largura** | _float[]_ | Largura das colunas da tabela. |
 
 ##### Retorno
 
@@ -2268,7 +2268,7 @@ Retorna uma tabela com a largura das colunas inseridas.
 
 ---
 
-#### _pdf.table(largura: _float[]_, colunaLarga: _boolean_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float[]</span>, <span style="color: #FF8000">colunaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela.
@@ -2277,8 +2277,8 @@ Cria uma tabela.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _float[]_ | Largura das colunas. |
-| colunaLarga | _boolean_ | Coluna de tamanho grande. |
+| **largura** | _float[]_ | Largura das colunas. |
+| **colunaLarga** | _boolean_ | Coluna de tamanho grande. |
 
 ##### Retorno
 
@@ -2288,7 +2288,7 @@ Retorna a tabela criada.
 
 ---
 
-#### _pdf.table(largura: _[I_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">[I</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela com colunas da largura definida.
@@ -2297,7 +2297,7 @@ Cria uma tabela com colunas da largura definida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _[I_ | Largura das colunas da tabela. |
+| **largura** | _[I_ | Largura das colunas da tabela. |
 
 ##### Retorno
 
@@ -2307,7 +2307,7 @@ Retorna uma tabela com a largura das colunas inseridas.
 
 ---
 
-#### _pdf.table(largura: _[I_, colunaLarga: _boolean_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">[I</span>, <span style="color: #FF8000">colunaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela.
@@ -2316,8 +2316,8 @@ Cria uma tabela.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _[I_ | Largura das colunas. |
-| colunaLarga | _boolean_ | Coluna de tamanho grande. |
+| **largura** | _[I_ | Largura das colunas. |
+| **colunaLarga** | _boolean_ | Coluna de tamanho grande. |
 
 ##### Retorno
 
@@ -2327,7 +2327,7 @@ Retorna a tabela criada.
 
 ---
 
-#### _pdf.table(colunas: _int_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">colunas</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela.
@@ -2336,7 +2336,7 @@ Cria uma tabela.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| colunas | _int_ | Número de colunas. |
+| **colunas** | _int_ | Número de colunas. |
 
 ##### Retorno
 
@@ -2346,7 +2346,7 @@ Retorna a tabela criada.
 
 ---
 
-#### _pdf.table(largura: _java.util.List_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela com a largura das colunas definidas.
@@ -2355,7 +2355,7 @@ Cria uma tabela com a largura das colunas definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _java.util.List_ | Largura das colunas da tabela. |
+| **largura** | _java.util.List_ | Largura das colunas da tabela. |
 
 ##### Retorno
 
@@ -2365,7 +2365,7 @@ Retorna uma tabela com colunas da largura inseridas.
 
 ---
 
-#### _pdf.table(largura: _java.util.List_, colunaLarga: _boolean_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">colunaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela.
@@ -2374,8 +2374,8 @@ Cria uma tabela.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _java.util.List_ | Largura das colunas. |
-| colunaLarga | _boolean_ | Coluna de tamanho grande. |
+| **largura** | _java.util.List_ | Largura das colunas. |
+| **colunaLarga** | _boolean_ | Coluna de tamanho grande. |
 
 ##### Retorno
 
@@ -2385,7 +2385,7 @@ Retorna a tabela criada.
 
 ---
 
-#### _pdf.table(largura: _[Values](../../objects/Values)_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela com colunas da largura definida.
@@ -2394,7 +2394,7 @@ Cria uma tabela com colunas da largura definida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _[Values](../../objects/Values)_ | Largura das colunas da tabela. |
+| **largura** | _[Values](../../objects/Values)_ | Largura das colunas da tabela. |
 
 ##### Retorno
 
@@ -2404,7 +2404,7 @@ Retorna uma tabela com a largura das colunas inseridas.
 
 ---
 
-#### _pdf.table(largura: _[Values](../../objects/Values)_, colunaLarga: _boolean_) : _com.itextpdf.layout.element.Table_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">colunaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela.
@@ -2413,8 +2413,8 @@ Cria uma tabela.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _[Values](../../objects/Values)_ | Largura das colunas. |
-| colunaLarga | _boolean_ | Coluna de tamanho grande. |
+| **largura** | _[Values](../../objects/Values)_ | Largura das colunas. |
+| **colunaLarga** | _boolean_ | Coluna de tamanho grande. |
 
 ##### Retorno
 
@@ -2428,7 +2428,7 @@ Retorna a tabela criada.
 
 ---
 
-#### _pdf.text(conteúdo: string) : _com.itextpdf.layout.element.Text_
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">text</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Text</span>
 ##### Descrição
 
 Cria um novo texto com o conteúdo inserido.
@@ -2437,7 +2437,7 @@ Cria um novo texto com o conteúdo inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | string | Conteúdo para ser criado. |
+| **conteúdo** | _string_ | Conteúdo para ser criado. |
 
 ##### Retorno
 
@@ -2451,7 +2451,7 @@ Retorna o conteudo do texto.
 
 ---
 
-#### _pdf.toHTML(conteúdo: _java.io.InputStream_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa para HTML o conteúdo inserido.
@@ -2460,17 +2460,17 @@ Passa para HTML o conteúdo inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _java.io.InputStream_ | Conteúdo a passar pra HTML. |
+| **conteúdo** | _java.io.InputStream_ | Conteúdo a passar pra HTML. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o HTML.
 
 ---
 
-#### _pdf.toHTML(conteúdo: _[File](../../objects/File)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa para HTML o conteúdo inserido.
@@ -2479,17 +2479,17 @@ Passa para HTML o conteúdo inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _[File](../../objects/File)_ | Conteúdo a passar pra HTML. |
+| **conteúdo** | _[File](../../objects/File)_ | Conteúdo a passar pra HTML. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o HTML.
 
 ---
 
-#### _pdf.toHTML(conteúdo: _[InputStream](../../objects/InputStream)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa para HTML o conteúdo inserido.
@@ -2498,17 +2498,17 @@ Passa para HTML o conteúdo inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _[InputStream](../../objects/InputStream)_ | Conteúdo a passar pra HTML. |
+| **conteúdo** | _[InputStream](../../objects/InputStream)_ | Conteúdo a passar pra HTML. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o HTML.
 
 ---
 
-#### _pdf.toHTML(conteúdo: _[Storage](../../resources/Storage)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa para HTML o conteúdo inserido.
@@ -2517,11 +2517,11 @@ Passa para HTML o conteúdo inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _[Storage](../../resources/Storage)_ | Conteúdo a passar pra HTML. |
+| **conteúdo** | _[Storage](../../resources/Storage)_ | Conteúdo a passar pra HTML. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o HTML.
 
@@ -2531,7 +2531,7 @@ Retorna o HTML.
 
 ---
 
-#### _pdf.toText(conteúdo: _java.io.InputStream_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa o conteúdo inserido para texto.
@@ -2540,17 +2540,17 @@ Passa o conteúdo inserido para texto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _java.io.InputStream_ | Conteúdo a passar para texto. |
+| **conteúdo** | _java.io.InputStream_ | Conteúdo a passar para texto. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o HTML.
 
 ---
 
-#### _pdf.toText(conteúdo: _[File](../../objects/File)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa o conteúdo inserido para texto.
@@ -2559,17 +2559,17 @@ Passa o conteúdo inserido para texto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _[File](../../objects/File)_ | Conteúdo a passar para texto. |
+| **conteúdo** | _[File](../../objects/File)_ | Conteúdo a passar para texto. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o HTML.
 
 ---
 
-#### _pdf.toText(conteúdo: _[InputStream](../../objects/InputStream)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa o conteúdo inserido para texto.
@@ -2578,17 +2578,17 @@ Passa o conteúdo inserido para texto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _[InputStream](../../objects/InputStream)_ | Conteúdo a passar para texto. |
+| **conteúdo** | _[InputStream](../../objects/InputStream)_ | Conteúdo a passar para texto. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o HTML.
 
 ---
 
-#### _pdf.toText(conteúdo: _[Storage](../../resources/Storage)_) : string
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa o conteúdo inserido para texto.
@@ -2597,11 +2597,11 @@ Passa o conteúdo inserido para texto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _[Storage](../../resources/Storage)_ | Conteúdo a passar para texto. |
+| **conteúdo** | _[Storage](../../resources/Storage)_ | Conteúdo a passar para texto. |
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Retorna o HTML.
 

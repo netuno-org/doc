@@ -13,46 +13,46 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.get(name: string) : string
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _template.get(name: string, data: _java.util.Map_) : string
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| data | _java.util.Map_ |   |
+| **name** | _string_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _template.get(name: string, data: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **name** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -61,46 +61,46 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.getOutput(name: string) : string
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">getOutput</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _template.getOutput(name: string, data: _java.util.Map_) : string
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">getOutput</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| data | _java.util.Map_ |   |
+| **name** | _string_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
 
-#### _template.getOutput(name: string, data: _[Values](../../objects/Values)_) : string
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">getOutput</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **name** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
-( string )
+( _string_ )
 
 
 ---
@@ -109,7 +109,7 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.init() : _[Template](../../resources/Template)_
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Template](../../resources/Template)</span>
 ##### Return
 
 ( _[Template](../../resources/Template)_ )
@@ -121,7 +121,7 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.initCore() : _[Template](../../resources/Template)_
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">initCore</span>() : <span style="font-weight: normal; font-style: italic;">[Template](../../resources/Template)</span>
 ##### Return
 
 ( _[Template](../../resources/Template)_ )
@@ -133,12 +133,12 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.out(name: string) : _void_
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">out</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Return
 
@@ -147,13 +147,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.out(name: string, data: _java.util.Map_) : _void_
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">out</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| data | _java.util.Map_ |   |
+| **name** | _string_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Return
 
@@ -162,13 +162,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.out(name: string, data: _[Values](../../objects/Values)_) : _void_
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">out</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **name** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -181,12 +181,12 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.output(name: string) : _void_
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">output</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
+| **name** | _string_ |   |
 
 ##### Return
 
@@ -195,13 +195,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.output(name: string, data: _java.util.Map_) : _void_
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">output</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| data | _java.util.Map_ |   |
+| **name** | _string_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Return
 
@@ -210,13 +210,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.output(name: string, data: _[Values](../../objects/Values)_) : _void_
+#### <span style="font-weight: normal">_template</span>.<span style="color: #008000">output</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| name | string |   |
-| data | _[Values](../../objects/Values)_ |   |
+| **name** | _string_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 

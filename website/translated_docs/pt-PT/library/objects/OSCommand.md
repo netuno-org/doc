@@ -12,14 +12,14 @@ Contém os detalhes do comando executado.
 
 ---
 
-#### error() : string
+#### <span style="color: #008000">error</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o conteúdo de erros gerado pela execução do comando.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Os dados obtidos como resultado de erros da execução do comando.
 
@@ -29,7 +29,7 @@ Os dados obtidos como resultado de erros da execução do comando.
 
 ---
 
-#### exitCode() : _int_
+#### <span style="color: #008000">exitCode</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Obtém o código de conclusão do comando.
@@ -46,14 +46,14 @@ O número do código de conclusão do comando.
 
 ---
 
-#### getError() : string
+#### <span style="color: #008000">getError</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o conteúdo de erros gerado pela execução do comando.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Os dados obtidos como resultado de erros da execução do comando.
 
@@ -63,7 +63,7 @@ Os dados obtidos como resultado de erros da execução do comando.
 
 ---
 
-#### getExitCode() : _int_
+#### <span style="color: #008000">getExitCode</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Retorno
 
 ( _int_ )
@@ -75,14 +75,14 @@ Os dados obtidos como resultado de erros da execução do comando.
 
 ---
 
-#### getOutput() : string
+#### <span style="color: #008000">getOutput</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o conteúdo resultado da execução do comando.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Os dados obtidos como resultado da execução do comando.
 
@@ -92,14 +92,14 @@ Os dados obtidos como resultado da execução do comando.
 
 ---
 
-#### output() : string
+#### <span style="color: #008000">output</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o conteúdo resultado da execução do comando.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Os dados obtidos como resultado da execução do comando.
 
@@ -109,14 +109,14 @@ Os dados obtidos como resultado da execução do comando.
 
 ---
 
-#### toString() : string
+#### <span style="color: #008000">toString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Obtém o conteúdo resultado da execução do comando.
 
 ##### Retorno
 
-( string )
+( _string_ )
 
 Os dados obtidos como resultado da execução do comando.
 

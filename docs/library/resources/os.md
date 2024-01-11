@@ -12,7 +12,7 @@ Performs the execution of commands in the operating system, manipulation of file
 
 ---
 
-#### _os.command(command: _[Ljava.lang.String;[]_) : _[OSCommand](../../objects/OSCommand)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">command</span>(<span style="color: #FF8000">command</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>) : <span style="font-weight: normal; font-style: italic;">[OSCommand](../../objects/OSCommand)</span>
 ##### Description
 
 Executes a command in the operating system and obtains the result of the execution, the first item is the command and the following are parameters.
@@ -21,7 +21,7 @@ Executes a command in the operating system and obtains the result of the executi
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| command | _[Ljava.lang.String;[]_ | The command and optional parameters that will be executed. |
+| **command** | _[Ljava.lang.String;[]_ | The command and optional parameters that will be executed. |
 
 ##### Return
 
@@ -31,7 +31,7 @@ Result of executing the command in the operating system, including the output.
 
 ---
 
-#### _os.command(command: _java.util.List_) : _[OSCommand](../../objects/OSCommand)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">command</span>(<span style="color: #FF8000">command</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[OSCommand](../../objects/OSCommand)</span>
 ##### Description
 
 Executes a command in the operating system and obtains the result of the execution, the first item is the command and the following are parameters.
@@ -40,7 +40,7 @@ Executes a command in the operating system and obtains the result of the executi
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| command | _java.util.List_ | The command and optional parameters that will be executed. |
+| **command** | _java.util.List_ | The command and optional parameters that will be executed. |
 
 ##### Return
 
@@ -50,7 +50,7 @@ Result of executing the command in the operating system, including the output.
 
 ---
 
-#### _os.command(command: _[Values](../../objects/Values)_) : _[OSCommand](../../objects/OSCommand)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">command</span>(<span style="color: #FF8000">command</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[OSCommand](../../objects/OSCommand)</span>
 ##### Description
 
 Executes a command in the operating system and obtains the result of the execution, the first item is the command and the following are parameters.
@@ -59,7 +59,7 @@ Executes a command in the operating system and obtains the result of the executi
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| command | _[Values](../../objects/Values)_ | The command and optional parameters that will be executed. |
+| **command** | _[Values](../../objects/Values)_ | The command and optional parameters that will be executed. |
 
 ##### Return
 
@@ -73,20 +73,20 @@ Result of executing the command in the operating system, including the output.
 
 ---
 
-#### _os.directory() : string
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Gets the path where the commands will be executed.
 
 ##### Return
 
-( string )
+( _string_ )
 
 The location where the command will be executed.
 
 ---
 
-#### _os.directory(directory: string) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -95,7 +95,7 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| directory | string | The location where the command will be executed. |
+| **directory** | _string_ | The location where the command will be executed. |
 
 ##### Return
 
@@ -105,7 +105,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.directory(directory: _[File](../../objects/File)_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -114,7 +114,7 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| directory | _[File](../../objects/File)_ | The location where the command will be executed. |
+| **directory** | _[File](../../objects/File)_ | The location where the command will be executed. |
 
 ##### Return
 
@@ -124,7 +124,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.directory(directory: _[Storage](../../resources/Storage)_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -133,7 +133,7 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| directory | _[Storage](../../resources/Storage)_ | The location where the command will be executed. |
+| **directory** | _[Storage](../../resources/Storage)_ | The location where the command will be executed. |
 
 ##### Return
 
@@ -147,7 +147,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.env() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">env</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -155,12 +155,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.env(env: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">env</span>(<span style="color: #FF8000">env</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| env | _[Values](../../objects/Values)_ |   |
+| **env** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -173,7 +173,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.file(path: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">file</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of files and folders relative to the passed path, in this case the path must be a **file**.
@@ -182,7 +182,7 @@ Gets the object of manipulation of files and folders relative to the passed path
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string | The path of **folder** that the manipulation object should obtain. |
+| **path** | _string_ | The path of **folder** that the manipulation object should obtain. |
 
 ##### Return
 
@@ -196,7 +196,7 @@ Instance of the file and folder manipulation object relative to the passed path,
 
 ---
 
-#### _os.folder(path: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">folder</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of folders and files relative to the passed path, in this case the path must be a **folder**.
@@ -205,7 +205,7 @@ Gets the object of manipulation of folders and files relative to the passed path
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string | The path of **folder** that the manipulation object should obtain. |
+| **path** | _string_ | The path of **folder** that the manipulation object should obtain. |
 
 ##### Return
 
@@ -219,14 +219,14 @@ Instance of the file and folder manipulation object relative to the passed path,
 
 ---
 
-#### _os.getDirectory() : string
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getDirectory</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Gets the path where the commands will be executed.
 
 ##### Return
 
-( string )
+( _string_ )
 
 The location where the command will be executed.
 
@@ -236,7 +236,7 @@ The location where the command will be executed.
 
 ---
 
-#### _os.getEnv() : _[Values](../../objects/Values)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getEnv</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Return
 
 ( _[Values](../../objects/Values)_ )
@@ -248,7 +248,7 @@ The location where the command will be executed.
 
 ---
 
-#### _os.getFile(path: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of files and folders relative to the passed path, in this case the path must be a **file**.
@@ -257,7 +257,7 @@ Gets the object of manipulation of files and folders relative to the passed path
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string | The path of **folder** that the manipulation object should obtain. |
+| **path** | _string_ | The path of **folder** that the manipulation object should obtain. |
 
 ##### Return
 
@@ -271,7 +271,7 @@ Instance of the file and folder manipulation object relative to the passed path,
 
 ---
 
-#### _os.getFolder(path: string) : _[File](../../objects/File)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getFolder</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of folders and files relative to the passed path, in this case the path must be a **folder**.
@@ -280,7 +280,7 @@ Gets the object of manipulation of folders and files relative to the passed path
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string | The path of **folder** that the manipulation object should obtain. |
+| **path** | _string_ | The path of **folder** that the manipulation object should obtain. |
 
 ##### Return
 
@@ -294,14 +294,14 @@ Instance of the file and folder manipulation object relative to the passed path,
 
 ---
 
-#### _os.getName() : string
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Gets the name of the operating system.
 
 ##### Return
 
-( string )
+( _string_ )
 
 The name of the operating system.
 
@@ -311,7 +311,7 @@ The name of the operating system.
 
 ---
 
-#### _os.getShell() : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getShell</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -323,7 +323,7 @@ The name of the operating system.
 
 ---
 
-#### _os.getWaitFor() : _long_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getWaitFor</span>() : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Return
 
 ( _long_ )
@@ -335,7 +335,7 @@ The name of the operating system.
 
 ---
 
-#### _os.init() : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Description
 
 Starts a new instance of the OS.
@@ -352,7 +352,7 @@ The new instance of the OS resource.
 
 ---
 
-#### _os.isFile(path: string) : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether the path is a **file**.
@@ -361,7 +361,7 @@ Checks whether the path is a **file**.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string |   |
+| **path** | _string_ |   |
 
 ##### Return
 
@@ -375,7 +375,7 @@ Whether or not it is a **file**.
 
 ---
 
-#### _os.isFolder(path: string) : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isFolder</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether the path is a **folder**.
@@ -384,7 +384,7 @@ Checks whether the path is a **folder**.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| path | string |   |
+| **path** | _string_ |   |
 
 ##### Return
 
@@ -398,7 +398,7 @@ Whether or not it is a **folder**.
 
 ---
 
-#### _os.isLinux() : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isLinux</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether the operating system is Linux.
@@ -415,7 +415,7 @@ Whether or not the operating system Linux.
 
 ---
 
-#### _os.isMac() : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isMac</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether the operating system is Mac OS X.
@@ -432,7 +432,7 @@ Whether or not the operating system Mac OS X.
 
 ---
 
-#### _os.isOS(osType: string) : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isOS</span>(<span style="color: #FF8000">osType</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks the operating system based on the past name which can be Linux, Mac or Windows.
@@ -441,7 +441,7 @@ Checks the operating system based on the past name which can be Linux, Mac or Wi
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| osType | string | The type of operating system that can be Linux, Mac, or Windows. |
+| **osType** | _string_ | The type of operating system that can be Linux, Mac, or Windows. |
 
 ##### Return
 
@@ -455,7 +455,7 @@ Whether or not the operating system is indicated.
 
 ---
 
-#### _os.isReadCommandError() : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isReadCommandError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -467,7 +467,7 @@ Whether or not the operating system is indicated.
 
 ---
 
-#### _os.isReadCommandOutput() : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isReadCommandOutput</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -479,7 +479,7 @@ Whether or not the operating system is indicated.
 
 ---
 
-#### _os.isWindows() : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isWindows</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Description
 
 Checks whether the operating system is Windows.
@@ -496,14 +496,14 @@ Whether or not the operating system Windows.
 
 ---
 
-#### _os.name() : string
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Description
 
 Gets the name of the operating system.
 
 ##### Return
 
-( string )
+( _string_ )
 
 The name of the operating system.
 
@@ -513,7 +513,7 @@ The name of the operating system.
 
 ---
 
-#### _os.readCommandError() : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -521,12 +521,12 @@ The name of the operating system.
 
 ---
 
-#### _os.readCommandError(readCommandError: _boolean_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandError</span>(<span style="color: #FF8000">readCommandError</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| readCommandError | _boolean_ |   |
+| **readCommandError** | _boolean_ |   |
 
 ##### Return
 
@@ -539,7 +539,7 @@ The name of the operating system.
 
 ---
 
-#### _os.readCommandOutput() : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandOutput</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -547,12 +547,12 @@ The name of the operating system.
 
 ---
 
-#### _os.readCommandOutput(readCommandOutput: _boolean_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandOutput</span>(<span style="color: #FF8000">readCommandOutput</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| readCommandOutput | _boolean_ |   |
+| **readCommandOutput** | _boolean_ |   |
 
 ##### Return
 
@@ -565,7 +565,7 @@ The name of the operating system.
 
 ---
 
-#### _os.setDirectory(directory: string) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -574,7 +574,7 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| directory | string | The location where the command will be executed. |
+| **directory** | _string_ | The location where the command will be executed. |
 
 ##### Return
 
@@ -584,7 +584,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setDirectory(directory: _[File](../../objects/File)_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -593,7 +593,7 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| directory | _[File](../../objects/File)_ | The location where the command will be executed. |
+| **directory** | _[File](../../objects/File)_ | The location where the command will be executed. |
 
 ##### Return
 
@@ -603,7 +603,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setDirectory(directory: _[Storage](../../resources/Storage)_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -612,7 +612,7 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| directory | _[Storage](../../resources/Storage)_ | The location where the command will be executed. |
+| **directory** | _[Storage](../../resources/Storage)_ | The location where the command will be executed. |
 
 ##### Return
 
@@ -626,12 +626,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setEnv(shell: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setEnv</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| shell | _[Values](../../objects/Values)_ |   |
+| **shell** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -644,12 +644,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setReadCommandError(readCommandError: _boolean_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setReadCommandError</span>(<span style="color: #FF8000">readCommandError</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| readCommandError | _boolean_ |   |
+| **readCommandError** | _boolean_ |   |
 
 ##### Return
 
@@ -662,12 +662,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setReadCommandOutput(readCommandOutput: _boolean_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setReadCommandOutput</span>(<span style="color: #FF8000">readCommandOutput</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| readCommandOutput | _boolean_ |   |
+| **readCommandOutput** | _boolean_ |   |
 
 ##### Return
 
@@ -680,12 +680,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setShell(shell: _boolean_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setShell</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| shell | _boolean_ |   |
+| **shell** | _boolean_ |   |
 
 ##### Return
 
@@ -698,12 +698,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setWaitFor(waitFor: _long_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setWaitFor</span>(<span style="color: #FF8000">waitFor</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| waitFor | _long_ |   |
+| **waitFor** | _long_ |   |
 
 ##### Return
 
@@ -716,7 +716,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.shell() : _boolean_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">shell</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -724,12 +724,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.shell(shell: _boolean_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">shell</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| shell | _boolean_ |   |
+| **shell** | _boolean_ |   |
 
 ##### Return
 
@@ -742,7 +742,7 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.waitFor() : _long_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">waitFor</span>() : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Return
 
 ( _long_ )
@@ -750,12 +750,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.waitFor(waitFor: _long_) : _[OS](../../resources/OS)_
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">waitFor</span>(<span style="color: #FF8000">waitFor</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| waitFor | _long_ |   |
+| **waitFor** | _long_ |   |
 
 ##### Return
 
