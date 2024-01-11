@@ -24,12 +24,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.create(arg0: _[Values](../../objects/Values)_) : _boolean_
+#### _report.create(data: _[Values](../../objects/Values)_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -42,13 +42,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.createComponent(arg0: _int_, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _report.createComponent(formId: _int_, data: _[Values](../../objects/Values)_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formId | _int_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -57,13 +57,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.createComponent(arg0: string, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _report.createComponent(formNameOrUid: string, data: _[Values](../../objects/Values)_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formNameOrUid | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -76,13 +76,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.createComponentIfNotExists(arg0: _int_, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _report.createComponentIfNotExists(formId: _int_, data: _[Values](../../objects/Values)_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formId | _int_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -91,13 +91,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.createComponentIfNotExists(arg0: string, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _report.createComponentIfNotExists(formNameOrUid: string, data: _[Values](../../objects/Values)_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formNameOrUid | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -110,12 +110,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.createIfNotExists(arg0: _[Values](../../objects/Values)_) : _boolean_
+#### _report.createIfNotExists(data: _[Values](../../objects/Values)_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -128,12 +128,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.get(arg0: _int_) : _[Values](../../objects/Values)_
+#### _report.get(id: _int_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| id | _int_ |   |
 
 ##### Retorno
 
@@ -142,12 +142,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.get(arg0: string) : _[Values](../../objects/Values)_
+#### _report.get(nameOrUid: string) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| nameOrUid | string |   |
 
 ##### Retorno
 
@@ -156,12 +156,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.get(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _report.get(data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -174,12 +174,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getAllComponents(arg0: _int_) : _java.util.List_
+#### _report.getAllComponents(formId: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| formId | _int_ |   |
 
 ##### Retorno
 
@@ -188,12 +188,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getAllComponents(arg0: string) : _java.util.List_
+#### _report.getAllComponents(formNameOrUid: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| formNameOrUid | string |   |
 
 ##### Retorno
 
@@ -206,13 +206,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(arg0: _int_, arg1: _int_) : _[Values](../../objects/Values)_
+#### _report.getComponent(formId: _int_, id: _int_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| formId | _int_ |   |
+| id | _int_ |   |
 
 ##### Retorno
 
@@ -221,13 +221,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(arg0: _int_, arg1: string) : _[Values](../../objects/Values)_
+#### _report.getComponent(formId: _int_, nameOrUid: string) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| formId | _int_ |   |
+| nameOrUid | string |   |
 
 ##### Retorno
 
@@ -236,13 +236,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(arg0: _int_, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _report.getComponent(formId: _int_, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formId | _int_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -251,13 +251,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(arg0: string, arg1: _int_) : _[Values](../../objects/Values)_
+#### _report.getComponent(formNameOrUid: string, id: _int_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| formNameOrUid | string |   |
+| id | _int_ |   |
 
 ##### Retorno
 
@@ -266,13 +266,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(arg0: string, arg1: string) : _[Values](../../objects/Values)_
+#### _report.getComponent(formNameOrUid: string, nameOrUid: string) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| formNameOrUid | string |   |
+| nameOrUid | string |   |
 
 ##### Retorno
 
@@ -281,13 +281,13 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.getComponent(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _report.getComponent(formNameOrUid: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formNameOrUid | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -300,12 +300,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.notNulls(arg0: _int_) : _java.util.List_
+#### _report.notNulls(formId: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| formId | _int_ |   |
 
 ##### Retorno
 
@@ -314,12 +314,12 @@ Gerador de Reports da aplicação programaticamente.
 
 ---
 
-#### _report.notNulls(arg0: string) : _java.util.List_
+#### _report.notNulls(formNameOrUid: string) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| formNameOrUid | string |   |
 
 ##### Retorno
 

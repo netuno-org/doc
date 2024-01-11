@@ -154,12 +154,12 @@ Returns strong password encryption.
 
 ---
 
-#### _auth.getProviderConfig(arg0: string) : _[Values](../../objects/Values)_
+#### _auth.getProviderConfig(providerCode: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| providerCode | string |   |
 
 ##### Return
 
@@ -276,12 +276,12 @@ If the user is authenticated with JSON Web Token returns _true_.
 
 ---
 
-#### _auth.isProviderEnabled(arg0: string) : _boolean_
+#### _auth.isProviderEnabled(providerCode: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| providerCode | string |   |
 
 ##### Return
 

@@ -48,12 +48,12 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### bufferedReader(arg0: _int_) : _java.io.BufferedReader_
+#### bufferedReader(bufferSize: _int_) : _java.io.BufferedReader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| bufferSize | _int_ |   |
 
 ##### Return
 
@@ -62,13 +62,13 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### bufferedReader(arg0: _int_, arg1: string) : _java.io.BufferedReader_
+#### bufferedReader(bufferSize: _int_, charset: string) : _java.io.BufferedReader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| bufferSize | _int_ |   |
+| charset | string |   |
 
 ##### Return
 
@@ -77,13 +77,13 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### bufferedReader(arg0: _int_, arg1: _java.nio.charset.Charset_) : _java.io.BufferedReader_
+#### bufferedReader(bufferSize: _int_, charset: _java.nio.charset.Charset_) : _java.io.BufferedReader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.nio.charset.Charset_ |   |
+| bufferSize | _int_ |   |
+| charset | _java.nio.charset.Charset_ |   |
 
 ##### Return
 
@@ -92,12 +92,12 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### bufferedReader(arg0: string) : _java.io.BufferedReader_
+#### bufferedReader(charset: string) : _java.io.BufferedReader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| charset | string |   |
 
 ##### Return
 
@@ -106,12 +106,12 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### bufferedReader(arg0: _java.nio.charset.Charset_) : _java.io.BufferedReader_
+#### bufferedReader(charset: _java.nio.charset.Charset_) : _java.io.BufferedReader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.nio.charset.Charset_ |   |
+| charset | _java.nio.charset.Charset_ |   |
 
 ##### Return
 
@@ -124,14 +124,14 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### bytes() : _[B_
+#### bytes() : _byte[]_
 ##### Description
 
 Returns the number of estimated bytes left to read a file
 
 ##### Return
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
@@ -244,7 +244,7 @@ Deletes a file/directory and recursive all the subs
 
 ---
 
-#### deleteAll(arg0: string) : _boolean_
+#### deleteAll(extension: string) : _boolean_
 ##### Description
 
 Deletes a file/directory by the file extension
@@ -253,7 +253,7 @@ Deletes a file/directory by the file extension
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| extension | string |   |
 
 ##### Return
 
@@ -300,12 +300,12 @@ Deletes a file of a inserted extension and recursive all the subs
 
 ---
 
-#### ensureJail(arg0: string) : _[File](../../objects/File)_
+#### ensureJail(jailPath: string) : _[File](../../objects/File)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| jailPath | string |   |
 
 ##### Return
 
@@ -378,14 +378,14 @@ Returns the base name of the present file
 
 ---
 
-#### getBytes() : _[B_
+#### getBytes() : _byte[]_
 ##### Description
 
 Returns the number of estimated bytes left to read a file
 
 ##### Return
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
@@ -590,12 +590,12 @@ Returns the name of the inserted file with a sequence number if the file already
 
 ---
 
-#### isBaseName(arg0: string) : _boolean_
+#### isBaseName(baseName: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| baseName | string |   |
 
 ##### Return
 
@@ -624,12 +624,12 @@ Returns a boolean result that verify if the inserted path is a directory
 
 ---
 
-#### isExtension(arg0: string) : _boolean_
+#### isExtension(extension: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| extension | string |   |
 
 ##### Return
 
@@ -827,12 +827,12 @@ Allows to get the path of the file.
 
 ---
 
-#### readerBOM(arg0: string) : _java.io.Reader_
+#### readerBOM(charsetName: string) : _java.io.Reader_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| charsetName | string |   |
 
 ##### Return
 
@@ -929,13 +929,13 @@ Saves the file in the inserted path
 
 ---
 
-#### sequenceName(arg0: _java.io.File_, arg1: string) : string
+#### sequenceName(targetPath: _java.io.File_, fileName: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.File_ |   |
-| arg1 | string |   |
+| targetPath | _java.io.File_ |   |
+| fileName | string |   |
 
 ##### Return
 
@@ -944,13 +944,13 @@ Saves the file in the inserted path
 
 ---
 
-#### sequenceName(arg0: string, arg1: string) : string
+#### sequenceName(targetPath: string, fileName: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| targetPath | string |   |
+| fileName | string |   |
 
 ##### Return
 

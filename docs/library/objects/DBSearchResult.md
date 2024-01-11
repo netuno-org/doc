@@ -72,12 +72,12 @@ Result of the research carried out on the database.
 
 ---
 
-#### setFullTotal(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### setFullTotal(fullTotal: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| fullTotal | _int_ |   |
 
 ##### Return
 
@@ -90,12 +90,12 @@ Result of the research carried out on the database.
 
 ---
 
-#### setLength(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### setLength(length: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| length | _int_ |   |
 
 ##### Return
 
@@ -108,12 +108,12 @@ Result of the research carried out on the database.
 
 ---
 
-#### setOffset(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### setOffset(offset: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| offset | _int_ |   |
 
 ##### Return
 
@@ -126,12 +126,12 @@ Result of the research carried out on the database.
 
 ---
 
-#### setResults(arg0: _java.util.List_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### setResults(results: _java.util.List_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
+| results | _java.util.List_ |   |
 
 ##### Return
 
@@ -144,12 +144,12 @@ Result of the research carried out on the database.
 
 ---
 
-#### setTotal(arg0: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### setTotal(total: _int_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| total | _int_ |   |
 
 ##### Return
 

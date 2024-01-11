@@ -25,7 +25,7 @@ Returns a class.
 
 ---
 
-#### _random.init(arg0: _long_) : _java.util.Random_
+#### _random.init(seed: _long_) : _java.util.Random_
 ##### Description
 
 Generates a random seed.
@@ -34,7 +34,7 @@ Generates a random seed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _long_ |   |
+| seed | _long_ |   |
 
 ##### Return
 
@@ -56,12 +56,12 @@ Returns a seed.
 
 ---
 
-#### _random.initSecure(arg0: _[B_) : _java.security.SecureRandom_
+#### _random.initSecure(seed: _byte[]_) : _java.security.SecureRandom_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[B_ |   |
+| seed | _byte[]_ |   |
 
 ##### Return
 
@@ -87,12 +87,12 @@ Returns a 24 characters random string.
 
 ---
 
-#### _random.initString(arg0: _int_) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(length: _int_) : _[RandomString](../../objects/RandomString)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| length | _int_ |   |
 
 ##### Return
 
@@ -101,13 +101,13 @@ Returns a 24 characters random string.
 
 ---
 
-#### _random.initString(arg0: _int_, arg1: string) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(length: _int_, symbols: string) : _[RandomString](../../objects/RandomString)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| length | _int_ |   |
+| symbols | string |   |
 
 ##### Return
 
@@ -116,13 +116,13 @@ Returns a 24 characters random string.
 
 ---
 
-#### _random.initString(arg0: _int_, arg1: _java.util.Random_) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(length: _int_, random: _java.util.Random_) : _[RandomString](../../objects/RandomString)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.util.Random_ |   |
+| length | _int_ |   |
+| random | _java.util.Random_ |   |
 
 ##### Return
 
@@ -131,14 +131,14 @@ Returns a 24 characters random string.
 
 ---
 
-#### _random.initString(arg0: _int_, arg1: _java.util.Random_, arg2: string) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(length: _int_, random: _java.util.Random_, symbols: string) : _[RandomString](../../objects/RandomString)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.util.Random_ |   |
-| arg2 | string |   |
+| length | _int_ |   |
+| random | _java.util.Random_ |   |
+| symbols | string |   |
 
 ##### Return
 

@@ -448,7 +448,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### _db.deleteMany(tabela: string, listaDados: _[Ljava.lang.Object;_) : _[I_
+#### _db.deleteMany(tabela: string, listaDados: _[Ljava.lang.Object;[]_) : _[I_
 ##### Descrição
 
 Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -474,7 +474,7 @@ _out.json({dadosEliminados: dadosEliminados})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _[Ljava.lang.Object;_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| listaDados | _[Ljava.lang.Object;[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -645,7 +645,7 @@ Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### _db.execute(comandoSQL: string, parametros: _[Ljava.lang.Object;_) : _int_
+#### _db.execute(comandoSQL: string, parametros: _[Ljava.lang.Object;[]_) : _int_
 ##### Descrição
 
 Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
@@ -664,7 +664,7 @@ const linhasAfetadas = _db.execute(`
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | comandoSQL | string | Comando SQL que será executado diretamente na base de dados. |
-| parametros | _[Ljava.lang.Object;_ | Sequência de valores dos parâmetros que são injetados no comando. |
+| parametros | _[Ljava.lang.Object;[]_ | Sequência de valores dos parâmetros que são injetados no comando. |
 
 ##### Retorno
 
@@ -1236,7 +1236,7 @@ ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
-#### _db.insertMany(tabela: string, listaDados: _[Ljava.lang.Object;_) : _[I_
+#### _db.insertMany(tabela: string, listaDados: _[Ljava.lang.Object;[]_) : _[I_
 ##### Descrição
 
 Executa a inserção várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores.
@@ -1261,7 +1261,7 @@ _db.insertMany(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _[Ljava.lang.Object;_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| listaDados | _[Ljava.lang.Object;[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -1461,12 +1461,12 @@ Nome da configuração de conexão à base de dados que está a ser utilizada.
 
 ---
 
-#### _db.param(arg0: string) : string
+#### _db.param(type: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| type | string |   |
 
 ##### Retorno
 
@@ -1511,7 +1511,7 @@ Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### _db.query(query: string, params: _[Ljava.lang.Object;_) : _java.util.List_
+#### _db.query(query: string, params: _[Ljava.lang.Object;[]_) : _java.util.List_
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1532,7 +1532,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | query | string | Comando que será executado na base de dados para obter registos. |
-| params | _[Ljava.lang.Object;_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| params | _[Ljava.lang.Object;[]_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1637,7 +1637,7 @@ O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### _db.queryFirst(query: string, params: _[Ljava.lang.Object;_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _[Ljava.lang.Object;[]_) : _[Values](../../objects/Values)_
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
@@ -1657,7 +1657,7 @@ _log.info('O primeiro produto encontrado:', produtoEncontrado)
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | query | string | Comando que será executado na base de dados para obter o registo. |
-| params | _[Ljava.lang.Object;_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| params | _[Ljava.lang.Object;[]_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -2068,14 +2068,14 @@ Objeto do tipo DBSearchResult.
 
 ---
 
-#### _db.search(arg0: string, arg1: _java.util.Map_, arg2: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(table: string, data: _java.util.Map_, wildcards: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Map_ |   |
-| arg2 | _boolean_ |   |
+| table | string |   |
+| data | _java.util.Map_ |   |
+| wildcards | _boolean_ |   |
 
 ##### Retorno
 
@@ -2115,14 +2115,14 @@ Objeto do tipo DBSearchResult.
 
 ---
 
-#### _db.search(arg0: string, arg1: _[Values](../../objects/Values)_, arg2: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(table: string, data: _[Values](../../objects/Values)_, wildcards: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
-| arg2 | _boolean_ |   |
+| table | string |   |
+| data | _[Values](../../objects/Values)_ |   |
+| wildcards | _boolean_ |   |
 
 ##### Retorno
 
@@ -2905,7 +2905,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### _db.updateMany(tabela: string, listaDados: _[Ljava.lang.Object;_) : _[I_
+#### _db.updateMany(tabela: string, listaDados: _[Ljava.lang.Object;[]_) : _[I_
 ##### Descrição
 
 Executa a atualização várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -2933,7 +2933,7 @@ _out.json({dados: dadosAlterados})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | tabela | string | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| listaDados | _[Ljava.lang.Object;_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| listaDados | _[Ljava.lang.Object;[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 

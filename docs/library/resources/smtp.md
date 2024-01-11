@@ -549,12 +549,12 @@ The recipient's e-mail address.
 
 ---
 
-#### _smtp.html(arg0: string) : _[SMTP](../../resources/SMTP)_
+#### _smtp.html(html: string) : _[SMTP](../../resources/SMTP)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| html | string |   |
 
 ##### Return
 
@@ -659,12 +659,12 @@ Result whether or not it is activated.
 
 ---
 
-#### _smtp.multipartSubtype(arg0: string) : _[SMTP](../../resources/SMTP)_
+#### _smtp.multipartSubtype(html: string) : _[SMTP](../../resources/SMTP)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| html | string |   |
 
 ##### Return
 
@@ -685,12 +685,12 @@ Result whether or not it is activated.
 
 ---
 
-#### _smtp.replyTo(arg0: string) : _[SMTP](../../resources/SMTP)_
+#### _smtp.replyTo(replyTo: string) : _[SMTP](../../resources/SMTP)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| replyTo | string |   |
 
 ##### Return
 
@@ -715,12 +715,12 @@ Performs the sending of the e-mail.
 
 ---
 
-#### _smtp.send(arg0: _org.netuno.psamata.mail.Mail_) : _void_
+#### _smtp.send(mail: _org.netuno.psamata.mail.Mail_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.netuno.psamata.mail.Mail_ |   |
+| mail | _org.netuno.psamata.mail.Mail_ |   |
 
 ##### Return
 
@@ -1053,12 +1053,12 @@ Current SMTP object.
 
 ---
 
-#### _smtp.subjectPrefix(arg0: string) : _[SMTP](../../resources/SMTP)_
+#### _smtp.subjectPrefix(subjectPrefix: string) : _[SMTP](../../resources/SMTP)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| subjectPrefix | string |   |
 
 ##### Return
 
@@ -1143,12 +1143,12 @@ Current SMTP object.
 
 ---
 
-#### _smtp.with(arg0: _[IMAP](../../resources/IMAP)_) : _[SMTP](../../resources/SMTP)_
+#### _smtp.with(imap: _[IMAP](../../resources/IMAP)_) : _[SMTP](../../resources/SMTP)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[IMAP](../../resources/IMAP)_ |   |
+| imap | _[IMAP](../../resources/IMAP)_ |   |
 
 ##### Return
 

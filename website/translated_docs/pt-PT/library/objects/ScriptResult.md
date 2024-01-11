@@ -36,12 +36,12 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ---
 
-#### whenError(arg0: _java.util.function.Consumer_) : _[ScriptResult](../../objects/ScriptResult)_
+#### whenError(func: _java.util.function.Consumer_) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.util.function.Consumer_ |   |
+| func | _java.util.function.Consumer_ |   |
 
 ##### Retorno
 
@@ -50,12 +50,12 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ---
 
-#### whenError(arg0: _org.graalvm.polyglot.Value_) : _[ScriptResult](../../objects/ScriptResult)_
+#### whenError(function: _org.graalvm.polyglot.Value_) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 
@@ -68,12 +68,12 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ---
 
-#### whenSucceed(arg0: _java.lang.Runnable_) : _[ScriptResult](../../objects/ScriptResult)_
+#### whenSucceed(func: _java.lang.Runnable_) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Runnable_ |   |
+| func | _java.lang.Runnable_ |   |
 
 ##### Retorno
 
@@ -82,12 +82,12 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ---
 
-#### whenSucceed(arg0: _org.graalvm.polyglot.Value_) : _[ScriptResult](../../objects/ScriptResult)_
+#### whenSucceed(function: _org.graalvm.polyglot.Value_) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Retorno
 

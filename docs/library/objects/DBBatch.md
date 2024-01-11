@@ -12,12 +12,12 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### add(arg0: string) : _[DBBatch](../../objects/DBBatch)_
+#### add(sql: string) : _[DBBatch](../../objects/DBBatch)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| sql | string |   |
 
 ##### Return
 
@@ -66,12 +66,12 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### put(arg0: _[Ljava.lang.Object;_) : _[DBBatch](../../objects/DBBatch)_
+#### put(params: _[Ljava.lang.Object;[]_) : _[DBBatch](../../objects/DBBatch)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Ljava.lang.Object;_ |   |
+| params | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 

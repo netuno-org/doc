@@ -134,12 +134,12 @@ Retorna a validação.
 
 ---
 
-#### _jwt.data(arg0: string) : _[Values](../../objects/Values)_
+#### _jwt.data(token: string) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| token | string |   |
 
 ##### Retorno
 
@@ -152,12 +152,12 @@ Retorna a validação.
 
 ---
 
-#### _jwt.dbRecord(arg0: string) : _[Values](../../objects/Values)_
+#### _jwt.dbRecord(token: string) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| token | string |   |
 
 ##### Retorno
 
@@ -244,13 +244,13 @@ Retorna os valores codificados.
 
 ---
 
-#### _jwt.init(arg0: string, arg1: string) : _[JWT](../../resources/JWT)_
+#### _jwt.init(secret: string, algorithm: string) : _[JWT](../../resources/JWT)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| secret | string |   |
+| algorithm | string |   |
 
 ##### Retorno
 

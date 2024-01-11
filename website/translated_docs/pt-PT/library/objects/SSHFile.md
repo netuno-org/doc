@@ -72,12 +72,12 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### setDirectory(arg0: _boolean_) : _void_
+#### setDirectory(directory: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| directory | _boolean_ |   |
 
 ##### Retorno
 
@@ -90,12 +90,12 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### setName(arg0: string) : _void_
+#### setName(name: string) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| name | string |   |
 
 ##### Retorno
 
@@ -108,12 +108,12 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### setParent(arg0: string) : _void_
+#### setParent(parent: string) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| parent | string |   |
 
 ##### Retorno
 
@@ -126,12 +126,12 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### setPath(arg0: string) : _void_
+#### setPath(path: string) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| path | string |   |
 
 ##### Retorno
 
@@ -144,12 +144,12 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### setRegularFile(arg0: _boolean_) : _void_
+#### setRegularFile(regularFile: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| regularFile | _boolean_ |   |
 
 ##### Retorno
 

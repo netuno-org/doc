@@ -45,12 +45,12 @@ Se fechou a resposta do pedido HTTP.
 
 ---
 
-#### _out.copy(arg0: _java.io.InputStream_) : _[Out](../../resources/Out)_
+#### _out.copy(in: _java.io.InputStream_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.InputStream_ |   |
+| in | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -59,13 +59,13 @@ Se fechou a resposta do pedido HTTP.
 
 ---
 
-#### _out.copy(arg0: _java.io.InputStream_, arg1: _long_) : _[Out](../../resources/Out)_
+#### _out.copy(in: _java.io.InputStream_, skip: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.InputStream_ |   |
-| arg1 | _long_ |   |
+| in | _java.io.InputStream_ |   |
+| skip | _long_ |   |
 
 ##### Retorno
 
@@ -74,14 +74,14 @@ Se fechou a resposta do pedido HTTP.
 
 ---
 
-#### _out.copy(arg0: _java.io.InputStream_, arg1: _long_, arg2: _long_) : _[Out](../../resources/Out)_
+#### _out.copy(in: _java.io.InputStream_, skip: _long_, size: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.InputStream_ |   |
-| arg1 | _long_ |   |
-| arg2 | _long_ |   |
+| in | _java.io.InputStream_ |   |
+| skip | _long_ |   |
+| size | _long_ |   |
 
 ##### Retorno
 
@@ -90,12 +90,12 @@ Se fechou a resposta do pedido HTTP.
 
 ---
 
-#### _out.copy(arg0: _[File](../../objects/File)_) : _[Out](../../resources/Out)_
+#### _out.copy(file: _[File](../../objects/File)_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[File](../../objects/File)_ |   |
+| file | _[File](../../objects/File)_ |   |
 
 ##### Retorno
 
@@ -104,13 +104,13 @@ Se fechou a resposta do pedido HTTP.
 
 ---
 
-#### _out.copy(arg0: _[File](../../objects/File)_, arg1: _long_) : _[Out](../../resources/Out)_
+#### _out.copy(file: _[File](../../objects/File)_, skip: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[File](../../objects/File)_ |   |
-| arg1 | _long_ |   |
+| file | _[File](../../objects/File)_ |   |
+| skip | _long_ |   |
 
 ##### Retorno
 
@@ -119,14 +119,14 @@ Se fechou a resposta do pedido HTTP.
 
 ---
 
-#### _out.copy(arg0: _[File](../../objects/File)_, arg1: _long_, arg2: _long_) : _[Out](../../resources/Out)_
+#### _out.copy(file: _[File](../../objects/File)_, skip: _long_, size: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[File](../../objects/File)_ |   |
-| arg1 | _long_ |   |
-| arg2 | _long_ |   |
+| file | _[File](../../objects/File)_ |   |
+| skip | _long_ |   |
+| size | _long_ |   |
 
 ##### Retorno
 
@@ -135,12 +135,12 @@ Se fechou a resposta do pedido HTTP.
 
 ---
 
-#### _out.copy(arg0: _[Storage](../../resources/Storage)_) : _[Out](../../resources/Out)_
+#### _out.copy(storage: _[Storage](../../resources/Storage)_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Storage](../../resources/Storage)_ |   |
+| storage | _[Storage](../../resources/Storage)_ |   |
 
 ##### Retorno
 
@@ -149,13 +149,13 @@ Se fechou a resposta do pedido HTTP.
 
 ---
 
-#### _out.copy(arg0: _[Storage](../../resources/Storage)_, arg1: _long_) : _[Out](../../resources/Out)_
+#### _out.copy(storage: _[Storage](../../resources/Storage)_, skip: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Storage](../../resources/Storage)_ |   |
-| arg1 | _long_ |   |
+| storage | _[Storage](../../resources/Storage)_ |   |
+| skip | _long_ |   |
 
 ##### Retorno
 
@@ -164,14 +164,14 @@ Se fechou a resposta do pedido HTTP.
 
 ---
 
-#### _out.copy(arg0: _[Storage](../../resources/Storage)_, arg1: _long_, arg2: _long_) : _[Out](../../resources/Out)_
+#### _out.copy(storage: _[Storage](../../resources/Storage)_, skip: _long_, size: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Storage](../../resources/Storage)_ |   |
-| arg1 | _long_ |   |
-| arg2 | _long_ |   |
+| storage | _[Storage](../../resources/Storage)_ |   |
+| skip | _long_ |   |
+| size | _long_ |   |
 
 ##### Retorno
 
@@ -270,12 +270,12 @@ A nova instância do recurso de Output.
 
 ---
 
-#### _out.json(arg0: _java.lang.Object_) : _[Out](../../resources/Out)_
+#### _out.json(json: _java.lang.Object_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| json | _java.lang.Object_ |   |
 
 ##### Retorno
 
@@ -284,12 +284,12 @@ A nova instância do recurso de Output.
 
 ---
 
-#### _out.json(arg0: string) : _[Out](../../resources/Out)_
+#### _out.json(json: string) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| json | string |   |
 
 ##### Retorno
 
@@ -298,12 +298,12 @@ A nova instância do recurso de Output.
 
 ---
 
-#### _out.json(arg0: _java.util.List_) : _[Out](../../resources/Out)_
+#### _out.json(json: _java.util.List_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
+| json | _java.util.List_ |   |
 
 ##### Retorno
 
@@ -312,12 +312,12 @@ A nova instância do recurso de Output.
 
 ---
 
-#### _out.json(arg0: _java.util.Map_) : _[Out](../../resources/Out)_
+#### _out.json(json: _java.util.Map_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
+| json | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -326,12 +326,12 @@ A nova instância do recurso de Output.
 
 ---
 
-#### _out.json(arg0: _[Values](../../objects/Values)_) : _[Out](../../resources/Out)_
+#### _out.json(json: _[Values](../../objects/Values)_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| json | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -352,12 +352,12 @@ A nova instância do recurso de Output.
 
 ---
 
-#### _out.jsonHTMLEscape(arg0: _boolean_) : _[Out](../../resources/Out)_
+#### _out.jsonHTMLEscape(htmlEscape: _boolean_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| htmlEscape | _boolean_ |   |
 
 ##### Retorno
 
@@ -579,13 +579,13 @@ Saída de dados atual.
 
 ---
 
-#### _out.printf(arg0: string, arg1: _[Ljava.lang.Object;_) : _[Out](../../resources/Out)_
+#### _out.printf(format: string, objects: _[Ljava.lang.Object;[]_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Ljava.lang.Object;_ |   |
+| format | string |   |
+| objects | _[Ljava.lang.Object;[]_ |   |
 
 ##### Retorno
 
@@ -786,12 +786,12 @@ Saída de dados atual.
 
 ---
 
-#### _out.setJSONHTMLEscape(arg0: _boolean_) : _[Out](../../resources/Out)_
+#### _out.setJSONHTMLEscape(htmlEscape: _boolean_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| htmlEscape | _boolean_ |   |
 
 ##### Retorno
 
@@ -837,12 +837,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.write(arg0: _[B_) : _[Out](../../resources/Out)_
+#### _out.write(bytes: _byte[]_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[B_ |   |
+| bytes | _byte[]_ |   |
 
 ##### Retorno
 
@@ -851,14 +851,14 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.write(arg0: _[B_, arg1: _int_, arg2: _int_) : _[Out](../../resources/Out)_
+#### _out.write(bytes: _byte[]_, off: _int_, len: _int_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[B_ |   |
-| arg1 | _int_ |   |
-| arg2 | _int_ |   |
+| bytes | _byte[]_ |   |
+| off | _int_ |   |
+| len | _int_ |   |
 
 ##### Retorno
 
@@ -867,12 +867,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.write(arg0: _int_) : _[Out](../../resources/Out)_
+#### _out.write(b: _int_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| b | _int_ |   |
 
 ##### Retorno
 
@@ -885,12 +885,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeBoolean(arg0: _boolean_) : _[Out](../../resources/Out)_
+#### _out.writeBoolean(b: _boolean_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| b | _boolean_ |   |
 
 ##### Retorno
 
@@ -903,12 +903,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeByte(arg0: _int_) : _[Out](../../resources/Out)_
+#### _out.writeByte(b: _int_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| b | _int_ |   |
 
 ##### Retorno
 
@@ -921,12 +921,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeChar(arg0: _char_) : _[Out](../../resources/Out)_
+#### _out.writeChar(c: _char_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _char_ |   |
+| c | _char_ |   |
 
 ##### Retorno
 
@@ -939,12 +939,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeDouble(arg0: _double_) : _[Out](../../resources/Out)_
+#### _out.writeDouble(d: _double_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
+| d | _double_ |   |
 
 ##### Retorno
 
@@ -957,12 +957,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeFloat(arg0: _float_) : _[Out](../../resources/Out)_
+#### _out.writeFloat(f: _float_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| f | _float_ |   |
 
 ##### Retorno
 
@@ -975,12 +975,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeInt(arg0: _int_) : _[Out](../../resources/Out)_
+#### _out.writeInt(i: _int_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| i | _int_ |   |
 
 ##### Retorno
 
@@ -993,12 +993,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeLong(arg0: _long_) : _[Out](../../resources/Out)_
+#### _out.writeLong(l: _long_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| l | _long_ |   |
 
 ##### Retorno
 
@@ -1011,12 +1011,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### _out.writeShort(arg0: _short_) : _[Out](../../resources/Out)_
+#### _out.writeShort(s: _short_) : _[Out](../../resources/Out)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| s | _short_ |   |
 
 ##### Retorno
 

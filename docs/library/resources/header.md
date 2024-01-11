@@ -68,13 +68,13 @@ Main functions:
 
 ---
 
-#### _header.add(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### _header.add(index: _int_, element: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| element | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -83,12 +83,12 @@ Main functions:
 
 ---
 
-#### _header.add(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### _header.add(o: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -101,13 +101,13 @@ Main functions:
 
 ---
 
-#### _header.addAll(arg0: _int_, arg1: _java.util.Collection_) : _boolean_
+#### _header.addAll(index: _int_, c: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.util.Collection_ |   |
+| index | _int_ |   |
+| c | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -116,12 +116,12 @@ Main functions:
 
 ---
 
-#### _header.addAll(arg0: _java.util.Collection_) : _boolean_
+#### _header.addAll(c: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Collection_ |   |
+| c | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -134,12 +134,12 @@ Main functions:
 
 ---
 
-#### _header.as(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### _header.as(o: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -148,13 +148,13 @@ Main functions:
 
 ---
 
-#### _header.as(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### _header.as(o: _java.lang.Object_, oDefault: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
+| oDefault | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -167,12 +167,12 @@ Main functions:
 
 ---
 
-#### _header.asBoolean(arg0: _int_) : _boolean_
+#### _header.asBoolean(index: _int_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -181,13 +181,13 @@ Main functions:
 
 ---
 
-#### _header.asBoolean(arg0: _int_, arg1: _boolean_) : _boolean_
+#### _header.asBoolean(index: _int_, defaultValue: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _boolean_ |   |
+| index | _int_ |   |
+| defaultValue | _boolean_ |   |
 
 ##### Return
 
@@ -196,12 +196,12 @@ Main functions:
 
 ---
 
-#### _header.asBoolean(arg0: string) : _boolean_
+#### _header.asBoolean(key: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -210,13 +210,13 @@ Main functions:
 
 ---
 
-#### _header.asBoolean(arg0: string, arg1: _boolean_) : _boolean_
+#### _header.asBoolean(key: string, defaultValue: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| key | string |   |
+| defaultValue | _boolean_ |   |
 
 ##### Return
 
@@ -229,12 +229,12 @@ Main functions:
 
 ---
 
-#### _header.asByte(arg0: _int_) : _byte_
+#### _header.asByte(index: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -243,13 +243,13 @@ Main functions:
 
 ---
 
-#### _header.asByte(arg0: _int_, arg1: _byte_) : _byte_
+#### _header.asByte(index: _int_, defaultValue: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _byte_ |   |
+| index | _int_ |   |
+| defaultValue | _byte_ |   |
 
 ##### Return
 
@@ -258,13 +258,13 @@ Main functions:
 
 ---
 
-#### _header.asByte(arg0: string, arg1: _byte_) : _byte_
+#### _header.asByte(key: string, defaultValue: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _byte_ |   |
+| key | string |   |
+| defaultValue | _byte_ |   |
 
 ##### Return
 
@@ -277,12 +277,12 @@ Main functions:
 
 ---
 
-#### _header.asCalendar(arg0: string) : _java.util.Calendar_
+#### _header.asCalendar(key: string) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -291,13 +291,13 @@ Main functions:
 
 ---
 
-#### _header.asCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
+#### _header.asCalendar(key: string, defaultValue: _java.util.Calendar_) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Calendar_ |   |
+| key | string |   |
+| defaultValue | _java.util.Calendar_ |   |
 
 ##### Return
 
@@ -310,12 +310,12 @@ Main functions:
 
 ---
 
-#### _header.asDate(arg0: string) : _java.util.Date_
+#### _header.asDate(key: string) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -324,13 +324,13 @@ Main functions:
 
 ---
 
-#### _header.asDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
+#### _header.asDate(key: string, defaultValue: _java.util.Date_) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Date_ |   |
+| key | string |   |
+| defaultValue | _java.util.Date_ |   |
 
 ##### Return
 
@@ -343,12 +343,12 @@ Main functions:
 
 ---
 
-#### _header.asDouble(arg0: _int_) : _double_
+#### _header.asDouble(index: _int_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -357,13 +357,13 @@ Main functions:
 
 ---
 
-#### _header.asDouble(arg0: _int_, arg1: _double_) : _double_
+#### _header.asDouble(index: _int_, defaultValue: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _double_ |   |
+| index | _int_ |   |
+| defaultValue | _double_ |   |
 
 ##### Return
 
@@ -372,12 +372,12 @@ Main functions:
 
 ---
 
-#### _header.asDouble(arg0: string) : _double_
+#### _header.asDouble(key: string) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -386,13 +386,13 @@ Main functions:
 
 ---
 
-#### _header.asDouble(arg0: string, arg1: _double_) : _double_
+#### _header.asDouble(key: string, defaultValue: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| key | string |   |
+| defaultValue | _double_ |   |
 
 ##### Return
 
@@ -405,12 +405,12 @@ Main functions:
 
 ---
 
-#### _header.asFile(arg0: string) : _[File](../../objects/File)_
+#### _header.asFile(key: string) : _[File](../../objects/File)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -423,12 +423,12 @@ Main functions:
 
 ---
 
-#### _header.asFloat(arg0: _int_) : _float_
+#### _header.asFloat(index: _int_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -437,13 +437,13 @@ Main functions:
 
 ---
 
-#### _header.asFloat(arg0: _int_, arg1: _float_) : _float_
+#### _header.asFloat(index: _int_, defaultValue: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _float_ |   |
+| index | _int_ |   |
+| defaultValue | _float_ |   |
 
 ##### Return
 
@@ -452,12 +452,12 @@ Main functions:
 
 ---
 
-#### _header.asFloat(arg0: string) : _float_
+#### _header.asFloat(key: string) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -466,13 +466,13 @@ Main functions:
 
 ---
 
-#### _header.asFloat(arg0: string, arg1: _float_) : _float_
+#### _header.asFloat(key: string, defaultValue: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| key | string |   |
+| defaultValue | _float_ |   |
 
 ##### Return
 
@@ -485,12 +485,12 @@ Main functions:
 
 ---
 
-#### _header.asHTMLDecode(arg0: string) : string
+#### _header.asHTMLDecode(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -503,12 +503,12 @@ Main functions:
 
 ---
 
-#### _header.asHTMLEncode(arg0: string) : string
+#### _header.asHTMLEncode(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -521,12 +521,12 @@ Main functions:
 
 ---
 
-#### _header.asInstant(arg0: string) : _java.time.Instant_
+#### _header.asInstant(key: string) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -535,13 +535,13 @@ Main functions:
 
 ---
 
-#### _header.asInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
+#### _header.asInstant(key: string, defaultValue: _java.time.Instant_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.Instant_ |   |
+| key | string |   |
+| defaultValue | _java.time.Instant_ |   |
 
 ##### Return
 
@@ -554,12 +554,12 @@ Main functions:
 
 ---
 
-#### _header.asInt(arg0: _int_) : _int_
+#### _header.asInt(index: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -568,13 +568,13 @@ Main functions:
 
 ---
 
-#### _header.asInt(arg0: _int_, arg1: _int_) : _int_
+#### _header.asInt(index: _int_, defaultValue: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| index | _int_ |   |
+| defaultValue | _int_ |   |
 
 ##### Return
 
@@ -583,13 +583,13 @@ Main functions:
 
 ---
 
-#### _header.asInt(arg0: string, arg1: _short_) : _int_
+#### _header.asInt(key: string, defaultValue: _short_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| defaultValue | _short_ |   |
 
 ##### Return
 
@@ -602,12 +602,12 @@ Main functions:
 
 ---
 
-#### _header.asList(arg0: _int_) : _java.util.List_
+#### _header.asList(index: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -616,13 +616,13 @@ Main functions:
 
 ---
 
-#### _header.asList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
+#### _header.asList(index: _int_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Class_ |   |
+| index | _int_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -631,13 +631,13 @@ Main functions:
 
 ---
 
-#### _header.asList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
+#### _header.asList(index: _int_, defaultValue: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -646,14 +646,14 @@ Main functions:
 
 ---
 
-#### _header.asList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
+#### _header.asList(index: _int_, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.lang.Class_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -662,12 +662,12 @@ Main functions:
 
 ---
 
-#### _header.asList(arg0: string) : _java.util.List_
+#### _header.asList(key: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -676,13 +676,13 @@ Main functions:
 
 ---
 
-#### _header.asList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
+#### _header.asList(key: string, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Class_ |   |
+| key | string |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -691,13 +691,13 @@ Main functions:
 
 ---
 
-#### _header.asList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
+#### _header.asList(key: string, defaultValue: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -706,14 +706,14 @@ Main functions:
 
 ---
 
-#### _header.asList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
+#### _header.asList(key: string, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.lang.Class_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -726,12 +726,12 @@ Main functions:
 
 ---
 
-#### _header.asLocalDate(arg0: string) : _java.time.LocalDate_
+#### _header.asLocalDate(key: string) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -740,13 +740,13 @@ Main functions:
 
 ---
 
-#### _header.asLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
+#### _header.asLocalDate(key: string, defaultValue: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalDate_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalDate_ |   |
 
 ##### Return
 
@@ -759,12 +759,12 @@ Main functions:
 
 ---
 
-#### _header.asLocalDateTime(arg0: string) : _java.time.LocalDateTime_
+#### _header.asLocalDateTime(key: string) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -773,13 +773,13 @@ Main functions:
 
 ---
 
-#### _header.asLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
+#### _header.asLocalDateTime(key: string, defaultValue: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalDateTime_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalDateTime_ |   |
 
 ##### Return
 
@@ -792,12 +792,12 @@ Main functions:
 
 ---
 
-#### _header.asLocalTime(arg0: string) : _java.time.LocalTime_
+#### _header.asLocalTime(key: string) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -806,13 +806,13 @@ Main functions:
 
 ---
 
-#### _header.asLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
+#### _header.asLocalTime(key: string, defaultValue: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalTime_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalTime_ |   |
 
 ##### Return
 
@@ -825,12 +825,12 @@ Main functions:
 
 ---
 
-#### _header.asLong(arg0: _int_) : _long_
+#### _header.asLong(index: _int_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -839,13 +839,13 @@ Main functions:
 
 ---
 
-#### _header.asLong(arg0: _int_, arg1: _long_) : _long_
+#### _header.asLong(index: _int_, defaultValue: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _long_ |   |
+| index | _int_ |   |
+| defaultValue | _long_ |   |
 
 ##### Return
 
@@ -854,12 +854,12 @@ Main functions:
 
 ---
 
-#### _header.asLong(arg0: string) : _long_
+#### _header.asLong(key: string) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -868,13 +868,13 @@ Main functions:
 
 ---
 
-#### _header.asLong(arg0: string, arg1: _long_) : _long_
+#### _header.asLong(key: string, defaultValue: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _long_ |   |
+| key | string |   |
+| defaultValue | _long_ |   |
 
 ##### Return
 
@@ -887,12 +887,12 @@ Main functions:
 
 ---
 
-#### _header.asMap(arg0: _int_) : _java.util.Map_
+#### _header.asMap(index: _int_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -901,13 +901,13 @@ Main functions:
 
 ---
 
-#### _header.asMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
+#### _header.asMap(index: _int_, defaultValue: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -916,12 +916,12 @@ Main functions:
 
 ---
 
-#### _header.asMap(arg0: string) : _java.util.Map_
+#### _header.asMap(key: string) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -930,13 +930,13 @@ Main functions:
 
 ---
 
-#### _header.asMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
+#### _header.asMap(key: string, defaultValue: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -949,12 +949,12 @@ Main functions:
 
 ---
 
-#### _header.asSQLDate(arg0: string) : _java.sql.Date_
+#### _header.asSQLDate(key: string) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -963,13 +963,13 @@ Main functions:
 
 ---
 
-#### _header.asSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
+#### _header.asSQLDate(key: string, defaultValue: _java.sql.Date_) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Date_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Date_ |   |
 
 ##### Return
 
@@ -982,12 +982,12 @@ Main functions:
 
 ---
 
-#### _header.asSQLTime(arg0: string) : _java.sql.Time_
+#### _header.asSQLTime(key: string) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -996,13 +996,13 @@ Main functions:
 
 ---
 
-#### _header.asSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
+#### _header.asSQLTime(key: string, defaultValue: _java.sql.Time_) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Time_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Time_ |   |
 
 ##### Return
 
@@ -1015,12 +1015,12 @@ Main functions:
 
 ---
 
-#### _header.asSQLTimestamp(arg0: string) : _java.sql.Timestamp_
+#### _header.asSQLTimestamp(key: string) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1029,13 +1029,13 @@ Main functions:
 
 ---
 
-#### _header.asSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
+#### _header.asSQLTimestamp(key: string, defaultValue: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Timestamp_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Timestamp_ |   |
 
 ##### Return
 
@@ -1048,12 +1048,12 @@ Main functions:
 
 ---
 
-#### _header.asShort(arg0: _int_) : _short_
+#### _header.asShort(index: _int_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -1062,13 +1062,13 @@ Main functions:
 
 ---
 
-#### _header.asShort(arg0: _int_, arg1: _short_) : _short_
+#### _header.asShort(index: _int_, defaultValue: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _short_ |   |
+| index | _int_ |   |
+| defaultValue | _short_ |   |
 
 ##### Return
 
@@ -1077,12 +1077,12 @@ Main functions:
 
 ---
 
-#### _header.asShort(arg0: string) : _short_
+#### _header.asShort(key: string) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1091,13 +1091,13 @@ Main functions:
 
 ---
 
-#### _header.asShort(arg0: string, arg1: _short_) : _short_
+#### _header.asShort(key: string, defaultValue: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| defaultValue | _short_ |   |
 
 ##### Return
 
@@ -1110,12 +1110,12 @@ Main functions:
 
 ---
 
-#### _header.asString(arg0: _int_) : string
+#### _header.asString(index: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -1124,13 +1124,13 @@ Main functions:
 
 ---
 
-#### _header.asString(arg0: _int_, arg1: string) : string
+#### _header.asString(index: _int_, defaultValue: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| index | _int_ |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -1139,12 +1139,12 @@ Main functions:
 
 ---
 
-#### _header.asString(arg0: string) : string
+#### _header.asString(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1153,13 +1153,13 @@ Main functions:
 
 ---
 
-#### _header.asString(arg0: string, arg1: string) : string
+#### _header.asString(key: string, defaultValue: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -1168,14 +1168,14 @@ Main functions:
 
 ---
 
-#### _header.asString(arg0: string, arg1: string, arg2: string) : string
+#### _header.asString(key: string, defaultValue: string, charsetName: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| key | string |   |
+| defaultValue | string |   |
+| charsetName | string |   |
 
 ##### Return
 
@@ -1188,12 +1188,12 @@ Main functions:
 
 ---
 
-#### _header.asUID(arg0: string) : _java.util.UUID_
+#### _header.asUID(key: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1202,13 +1202,13 @@ Main functions:
 
 ---
 
-#### _header.asUID(arg0: string, arg1: string) : _java.util.UUID_
+#### _header.asUID(key: string, defaultValue: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -1217,13 +1217,13 @@ Main functions:
 
 ---
 
-#### _header.asUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
+#### _header.asUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.UUID_ |   |
+| key | string |   |
+| defaultValue | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -1236,12 +1236,12 @@ Main functions:
 
 ---
 
-#### _header.asUUID(arg0: string) : _java.util.UUID_
+#### _header.asUUID(key: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1250,13 +1250,13 @@ Main functions:
 
 ---
 
-#### _header.asUUID(arg0: string, arg1: string) : _java.util.UUID_
+#### _header.asUUID(key: string, defaultValue: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -1265,13 +1265,13 @@ Main functions:
 
 ---
 
-#### _header.asUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
+#### _header.asUUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.UUID_ |   |
+| key | string |   |
+| defaultValue | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -1378,12 +1378,12 @@ Object converted to Values.
 
 ---
 
-#### _header.cache(arg0: _int_) : _[Header](../../resources/Header)_
+#### _header.cache(time: _int_) : _[Header](../../resources/Header)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| time | _int_ |   |
 
 ##### Return
 
@@ -1477,12 +1477,12 @@ Object converted to Values.
 
 ---
 
-#### _header.contains(arg0: _java.lang.Object_) : _boolean_
+#### _header.contains(o: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1491,13 +1491,13 @@ Object converted to Values.
 
 ---
 
-#### _header.contains(arg0: string, arg1: _java.lang.Object_) : _boolean_
+#### _header.contains(key: string, value: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1510,12 +1510,12 @@ Object converted to Values.
 
 ---
 
-#### _header.containsAll(arg0: _java.util.Collection_) : _boolean_
+#### _header.containsAll(c: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Collection_ |   |
+| c | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -1528,12 +1528,12 @@ Object converted to Values.
 
 ---
 
-#### _header.containsKey(arg0: _java.lang.Object_) : _boolean_
+#### _header.containsKey(key: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| key | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1546,12 +1546,12 @@ Object converted to Values.
 
 ---
 
-#### _header.containsValue(arg0: _java.lang.Object_) : _boolean_
+#### _header.containsValue(value: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1572,12 +1572,12 @@ Object converted to Values.
 
 ---
 
-#### _header.contentType(arg0: string) : _[Header](../../resources/Header)_
+#### _header.contentType(contentType: string) : _[Header](../../resources/Header)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| contentType | string |   |
 
 ##### Return
 
@@ -1698,12 +1698,12 @@ Object converted to Values.
 
 ---
 
-#### _header.downloadFile(arg0: string) : _[Header](../../resources/Header)_
+#### _header.downloadFile(fileName: string) : _[Header](../../resources/Header)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| fileName | string |   |
 
 ##### Return
 
@@ -1750,12 +1750,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _header.filter(arg0: _java.util.function.Predicate_) : _[Values](../../objects/Values)_
+#### _header.filter(p: _java.util.function.Predicate_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.Predicate_ |   |
+| p | _java.util.function.Predicate_ |   |
 
 ##### Return
 
@@ -1764,12 +1764,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _header.filter(arg0: _org.graalvm.polyglot.Value_) : _[Values](../../objects/Values)_
+#### _header.filter(function: _org.graalvm.polyglot.Value_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1782,13 +1782,13 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _header.find(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### _header.find(key: string, value: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1797,12 +1797,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _header.find(arg0: _java.util.function.Predicate_) : _java.lang.Object_
+#### _header.find(p: _java.util.function.Predicate_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.Predicate_ |   |
+| p | _java.util.function.Predicate_ |   |
 
 ##### Return
 
@@ -1811,12 +1811,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _header.find(arg0: _org.graalvm.polyglot.Value_) : _java.lang.Object_
+#### _header.find(function: _org.graalvm.polyglot.Value_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1825,12 +1825,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _header.find(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _header.find(filter: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| filter | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -1843,12 +1843,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _header.forEach(arg0: _java.util.function.BiConsumer_) : _void_
+#### _header.forEach(action: _java.util.function.BiConsumer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.BiConsumer_ |   |
+| action | _java.util.function.BiConsumer_ |   |
 
 ##### Return
 
@@ -1857,12 +1857,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _header.forEach(arg0: _java.util.function.Consumer_) : _void_
+#### _header.forEach(action: _java.util.function.Consumer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.Consumer_ |   |
+| action | _java.util.function.Consumer_ |   |
 
 ##### Return
 
@@ -1871,12 +1871,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _header.forEach(arg0: _org.graalvm.polyglot.Value_) : _void_
+#### _header.forEach(function: _org.graalvm.polyglot.Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1913,12 +1913,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _header.fromJSON(arg0: string) : _[Values](../../objects/Values)_
+#### _header.fromJSON(content: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string |   |
 
 ##### Return
 
@@ -1927,12 +1927,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### _header.fromJSON(arg0: _org.netuno.psamata.net.Remote$Response_) : _[Values](../../objects/Values)_
+#### _header.fromJSON(content: _org.netuno.psamata.net.Remote$Response_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.netuno.psamata.net.Remote$Response_ |   |
+| content | _org.netuno.psamata.net.Remote$Response_ |   |
 
 ##### Return
 
@@ -2026,12 +2026,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getBoolean(arg0: _int_) : _boolean_
+#### _header.getBoolean(index: _int_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2040,13 +2040,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getBoolean(arg0: _int_, arg1: _boolean_) : _boolean_
+#### _header.getBoolean(index: _int_, defaultValue: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _boolean_ |   |
+| index | _int_ |   |
+| defaultValue | _boolean_ |   |
 
 ##### Return
 
@@ -2055,12 +2055,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getBoolean(arg0: string) : _boolean_
+#### _header.getBoolean(key: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2069,13 +2069,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getBoolean(arg0: string, arg1: _boolean_) : _boolean_
+#### _header.getBoolean(key: string, defaultValue: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| key | string |   |
+| defaultValue | _boolean_ |   |
 
 ##### Return
 
@@ -2088,12 +2088,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getByte(arg0: _int_) : _byte_
+#### _header.getByte(index: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2102,13 +2102,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getByte(arg0: _int_, arg1: _byte_) : _byte_
+#### _header.getByte(index: _int_, defaultValue: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _byte_ |   |
+| index | _int_ |   |
+| defaultValue | _byte_ |   |
 
 ##### Return
 
@@ -2117,12 +2117,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getByte(arg0: string) : _byte_
+#### _header.getByte(key: string) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2131,13 +2131,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getByte(arg0: string, arg1: _byte_) : _byte_
+#### _header.getByte(key: string, defaultValue: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _byte_ |   |
+| key | string |   |
+| defaultValue | _byte_ |   |
 
 ##### Return
 
@@ -2150,12 +2150,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getCalendar(arg0: string) : _java.util.Calendar_
+#### _header.getCalendar(key: string) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2164,13 +2164,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
+#### _header.getCalendar(key: string, defaultValue: _java.util.Calendar_) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Calendar_ |   |
+| key | string |   |
+| defaultValue | _java.util.Calendar_ |   |
 
 ##### Return
 
@@ -2183,12 +2183,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getDate(arg0: string) : _java.util.Date_
+#### _header.getDate(key: string) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2197,13 +2197,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
+#### _header.getDate(key: string, defaultValue: _java.util.Date_) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Date_ |   |
+| key | string |   |
+| defaultValue | _java.util.Date_ |   |
 
 ##### Return
 
@@ -2216,12 +2216,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getDouble(arg0: _int_) : _double_
+#### _header.getDouble(index: _int_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2230,13 +2230,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getDouble(arg0: _int_, arg1: _double_) : _double_
+#### _header.getDouble(index: _int_, defaultValue: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _double_ |   |
+| index | _int_ |   |
+| defaultValue | _double_ |   |
 
 ##### Return
 
@@ -2245,12 +2245,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getDouble(arg0: string) : _double_
+#### _header.getDouble(key: string) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2259,13 +2259,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getDouble(arg0: string, arg1: _double_) : _double_
+#### _header.getDouble(key: string, defaultValue: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| key | string |   |
+| defaultValue | _double_ |   |
 
 ##### Return
 
@@ -2278,12 +2278,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getFile(arg0: string) : _[File](../../objects/File)_
+#### _header.getFile(key: string) : _[File](../../objects/File)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2296,12 +2296,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getFloat(arg0: _int_) : _float_
+#### _header.getFloat(index: _int_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2310,13 +2310,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getFloat(arg0: _int_, arg1: _float_) : _float_
+#### _header.getFloat(index: _int_, defaultValue: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _float_ |   |
+| index | _int_ |   |
+| defaultValue | _float_ |   |
 
 ##### Return
 
@@ -2325,12 +2325,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getFloat(arg0: string) : _float_
+#### _header.getFloat(key: string) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2339,13 +2339,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getFloat(arg0: string, arg1: _float_) : _float_
+#### _header.getFloat(key: string, defaultValue: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| key | string |   |
+| defaultValue | _float_ |   |
 
 ##### Return
 
@@ -2382,12 +2382,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getHTMLDecode(arg0: string) : string
+#### _header.getHTMLDecode(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2400,12 +2400,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getHTMLEncode(arg0: string) : string
+#### _header.getHTMLEncode(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2418,12 +2418,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getInstant(arg0: string) : _java.time.Instant_
+#### _header.getInstant(key: string) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2432,13 +2432,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
+#### _header.getInstant(key: string, defaultValue: _java.time.Instant_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.Instant_ |   |
+| key | string |   |
+| defaultValue | _java.time.Instant_ |   |
 
 ##### Return
 
@@ -2451,12 +2451,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getInt(arg0: _int_) : _int_
+#### _header.getInt(index: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2465,13 +2465,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getInt(arg0: _int_, arg1: _int_) : _int_
+#### _header.getInt(index: _int_, defaultValue: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| index | _int_ |   |
+| defaultValue | _int_ |   |
 
 ##### Return
 
@@ -2480,12 +2480,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getInt(arg0: string) : _int_
+#### _header.getInt(key: string) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2494,13 +2494,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getInt(arg0: string, arg1: _int_) : _int_
+#### _header.getInt(key: string, defaultValue: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| key | string |   |
+| defaultValue | _int_ |   |
 
 ##### Return
 
@@ -2525,12 +2525,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getList(arg0: _int_) : _java.util.List_
+#### _header.getList(index: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2539,13 +2539,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
+#### _header.getList(index: _int_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Class_ |   |
+| index | _int_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2554,13 +2554,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
+#### _header.getList(index: _int_, defaultValue: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2569,14 +2569,14 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
+#### _header.getList(index: _int_, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.lang.Class_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2585,12 +2585,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getList(arg0: string) : _java.util.List_
+#### _header.getList(key: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2599,13 +2599,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
+#### _header.getList(key: string, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Class_ |   |
+| key | string |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2614,13 +2614,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
+#### _header.getList(key: string, defaultValue: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2629,14 +2629,14 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
+#### _header.getList(key: string, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.lang.Class_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2649,12 +2649,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getLocalDate(arg0: string) : _java.time.LocalDate_
+#### _header.getLocalDate(key: string) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2663,13 +2663,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
+#### _header.getLocalDate(key: string, defaultValue: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalDate_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalDate_ |   |
 
 ##### Return
 
@@ -2682,12 +2682,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getLocalDateTime(arg0: string) : _java.time.LocalDateTime_
+#### _header.getLocalDateTime(key: string) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2696,13 +2696,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
+#### _header.getLocalDateTime(key: string, defaultValue: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalDateTime_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalDateTime_ |   |
 
 ##### Return
 
@@ -2715,12 +2715,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getLocalTime(arg0: string) : _java.time.LocalTime_
+#### _header.getLocalTime(key: string) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2729,13 +2729,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
+#### _header.getLocalTime(key: string, defaultValue: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalTime_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalTime_ |   |
 
 ##### Return
 
@@ -2748,12 +2748,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getLong(arg0: _int_) : _long_
+#### _header.getLong(index: _int_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2762,13 +2762,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getLong(arg0: _int_, arg1: _long_) : _long_
+#### _header.getLong(index: _int_, defaultValue: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _long_ |   |
+| index | _int_ |   |
+| defaultValue | _long_ |   |
 
 ##### Return
 
@@ -2777,12 +2777,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getLong(arg0: string) : _long_
+#### _header.getLong(key: string) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2791,13 +2791,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getLong(arg0: string, arg1: _long_) : _long_
+#### _header.getLong(key: string, defaultValue: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _long_ |   |
+| key | string |   |
+| defaultValue | _long_ |   |
 
 ##### Return
 
@@ -2810,12 +2810,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getMap(arg0: _int_) : _java.util.Map_
+#### _header.getMap(index: _int_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2824,13 +2824,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
+#### _header.getMap(index: _int_, defaultValue: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2839,12 +2839,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getMap(arg0: string) : _java.util.Map_
+#### _header.getMap(key: string) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2853,13 +2853,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
+#### _header.getMap(key: string, defaultValue: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2891,12 +2891,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getSQLDate(arg0: string) : _java.sql.Date_
+#### _header.getSQLDate(key: string) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2905,13 +2905,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
+#### _header.getSQLDate(key: string, defaultValue: _java.sql.Date_) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Date_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Date_ |   |
 
 ##### Return
 
@@ -2924,12 +2924,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getSQLTime(arg0: string) : _java.sql.Time_
+#### _header.getSQLTime(key: string) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2938,13 +2938,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
+#### _header.getSQLTime(key: string, defaultValue: _java.sql.Time_) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Time_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Time_ |   |
 
 ##### Return
 
@@ -2957,12 +2957,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getSQLTimestamp(arg0: string) : _java.sql.Timestamp_
+#### _header.getSQLTimestamp(key: string) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2971,13 +2971,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
+#### _header.getSQLTimestamp(key: string, defaultValue: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Timestamp_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Timestamp_ |   |
 
 ##### Return
 
@@ -2990,12 +2990,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getShort(arg0: _int_) : _short_
+#### _header.getShort(index: _int_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -3004,13 +3004,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getShort(arg0: _int_, arg1: _short_) : _short_
+#### _header.getShort(index: _int_, defaultValue: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _short_ |   |
+| index | _int_ |   |
+| defaultValue | _short_ |   |
 
 ##### Return
 
@@ -3019,12 +3019,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getShort(arg0: string) : _short_
+#### _header.getShort(key: string) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -3033,13 +3033,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getShort(arg0: string, arg1: _short_) : _short_
+#### _header.getShort(key: string, defaultValue: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| defaultValue | _short_ |   |
 
 ##### Return
 
@@ -3064,12 +3064,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getString(arg0: _int_) : string
+#### _header.getString(index: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -3078,13 +3078,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getString(arg0: _int_, arg1: string) : string
+#### _header.getString(index: _int_, defaultValue: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| index | _int_ |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -3093,12 +3093,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getString(arg0: string) : string
+#### _header.getString(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -3107,13 +3107,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getString(arg0: string, arg1: string) : string
+#### _header.getString(key: string, defaultValue: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -3122,14 +3122,14 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getString(arg0: string, arg1: string, arg2: string) : string
+#### _header.getString(key: string, defaultValue: string, charsetName: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| key | string |   |
+| defaultValue | string |   |
+| charsetName | string |   |
 
 ##### Return
 
@@ -3142,12 +3142,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getUID(arg0: string) : _java.util.UUID_
+#### _header.getUID(key: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -3156,13 +3156,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getUID(arg0: string, arg1: string) : _java.util.UUID_
+#### _header.getUID(key: string, defaultValue: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -3171,13 +3171,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### _header.getUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
+#### _header.getUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.UUID_ |   |
+| key | string |   |
+| defaultValue | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -3207,12 +3207,12 @@ Character encoding code.
 
 ---
 
-#### _header.getUUID(arg0: string) : _java.util.UUID_
+#### _header.getUUID(key: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -3221,13 +3221,13 @@ Character encoding code.
 
 ---
 
-#### _header.getUUID(arg0: string, arg1: string) : _java.util.UUID_
+#### _header.getUUID(key: string, defaultValue: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -3236,13 +3236,13 @@ Character encoding code.
 
 ---
 
-#### _header.getUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
+#### _header.getUUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.UUID_ |   |
+| key | string |   |
+| defaultValue | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -3350,12 +3350,12 @@ Object converted to Values.
 
 ---
 
-#### _header.has(arg0: _java.lang.Object_) : _boolean_
+#### _header.has(o: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3364,12 +3364,12 @@ Object converted to Values.
 
 ---
 
-#### _header.has(arg0: string) : _boolean_
+#### _header.has(key: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -3378,13 +3378,13 @@ Object converted to Values.
 
 ---
 
-#### _header.has(arg0: string, arg1: _java.lang.Object_) : _boolean_
+#### _header.has(key: string, value: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3397,12 +3397,12 @@ Object converted to Values.
 
 ---
 
-#### _header.hasKey(arg0: string) : _boolean_
+#### _header.hasKey(key: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -3415,12 +3415,12 @@ Object converted to Values.
 
 ---
 
-#### _header.hasValue(arg0: _java.lang.Object_) : _boolean_
+#### _header.hasValue(value: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3445,12 +3445,12 @@ Object converted to Values.
 
 ---
 
-#### _header.indexOf(arg0: _java.lang.Object_) : _int_
+#### _header.indexOf(o: _java.lang.Object_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3463,12 +3463,12 @@ Object converted to Values.
 
 ---
 
-#### _header.is(arg0: _java.lang.Object_) : _boolean_
+#### _header.is(o: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3590,12 +3590,12 @@ If the restriction on associated files is active.
 
 ---
 
-#### _header.isList(arg0: _java.lang.Object_) : _boolean_
+#### _header.isList(o: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3645,12 +3645,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.isMap(arg0: _java.lang.Object_) : _boolean_
+#### _header.isMap(o: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3663,12 +3663,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.isMergeable(arg0: _java.lang.Object_) : _boolean_
+#### _header.isMergeable(object: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| object | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3813,12 +3813,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.join(arg0: string) : string
+#### _header.join(splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -3867,12 +3867,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.keysToString(arg0: string) : string
+#### _header.keysToString(splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -3881,13 +3881,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.keysToString(arg0: _java.util.Map_, arg1: string) : string
+#### _header.keysToString(map: _java.util.Map_, splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
+| map | _java.util.Map_ |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -3900,12 +3900,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.lastIndexOf(arg0: _java.lang.Object_) : _int_
+#### _header.lastIndexOf(o: _java.lang.Object_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3938,12 +3938,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.list(arg0: _java.lang.Class_) : _java.util.List_
+#### _header.list(cls: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Class_ |   |
+| cls | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -3964,12 +3964,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.listIterator(arg0: _int_) : _java.util.ListIterator_
+#### _header.listIterator(index: _int_) : _java.util.ListIterator_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -3994,12 +3994,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.loadJSON(arg0: _java.io.InputStream_) : _void_
+#### _header.loadJSON(in: _java.io.InputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.InputStream_ |   |
+| in | _java.io.InputStream_ |   |
 
 ##### Return
 
@@ -4008,12 +4008,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.loadJSON(arg0: _java.io.Reader_) : _void_
+#### _header.loadJSON(in: _java.io.Reader_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.Reader_ |   |
+| in | _java.io.Reader_ |   |
 
 ##### Return
 
@@ -4026,12 +4026,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.loadProperties(arg0: _java.io.InputStream_) : _void_
+#### _header.loadProperties(in: _java.io.InputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.InputStream_ |   |
+| in | _java.io.InputStream_ |   |
 
 ##### Return
 
@@ -4040,12 +4040,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.loadProperties(arg0: _java.io.Reader_) : _void_
+#### _header.loadProperties(in: _java.io.Reader_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.Reader_ |   |
+| in | _java.io.Reader_ |   |
 
 ##### Return
 
@@ -4054,12 +4054,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.loadProperties(arg0: _java.util.Properties_) : _void_
+#### _header.loadProperties(properties: _java.util.Properties_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Properties_ |   |
+| properties | _java.util.Properties_ |   |
 
 ##### Return
 
@@ -4072,12 +4072,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.loadPropertiesFromString(arg0: string) : _void_
+#### _header.loadPropertiesFromString(data: string) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| data | string |   |
 
 ##### Return
 
@@ -4119,12 +4119,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.merge(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### _header.merge(object: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| object | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4177,12 +4177,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.of(arg0: _[Ljava.lang.Object;_) : _[Values](../../objects/Values)_
+#### _header.of(array: _[Ljava.lang.Object;[]_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Ljava.lang.Object;_ |   |
+| array | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 
@@ -4191,12 +4191,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.of(arg0: _java.lang.Object_) : _java.lang.Object_
+#### _header.of(o: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4205,12 +4205,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.of(arg0: _java.util.List_) : _[Values](../../objects/Values)_
+#### _header.of(list: _java.util.List_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
+| list | _java.util.List_ |   |
 
 ##### Return
 
@@ -4219,12 +4219,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.of(arg0: _java.util.Map_) : _[Values](../../objects/Values)_
+#### _header.of(map: _java.util.Map_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
+| map | _java.util.Map_ |   |
 
 ##### Return
 
@@ -4237,12 +4237,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.ofList(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### _header.ofList(o: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4255,12 +4255,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.ofMap(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### _header.ofMap(o: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4285,12 +4285,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.push(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### _header.push(o: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4303,13 +4303,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.put(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
+#### _header.put(key: _java.lang.Object_, value: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| key | _java.lang.Object_ |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4318,13 +4318,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.put(arg0: string, arg1: _java.lang.Object_) : _java.lang.Object_
+#### _header.put(key: string, value: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4337,12 +4337,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.putAll(arg0: _java.util.Map_) : _void_
+#### _header.putAll(m: _java.util.Map_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
+| m | _java.util.Map_ |   |
 
 ##### Return
 
@@ -4386,12 +4386,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.remove(arg0: _int_) : _java.lang.Object_
+#### _header.remove(i: _int_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| i | _int_ |   |
 
 ##### Return
 
@@ -4400,12 +4400,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.remove(arg0: _java.lang.Object_) : _java.lang.Object_
+#### _header.remove(o: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4441,12 +4441,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.removeAll(arg0: _java.util.Collection_) : _boolean_
+#### _header.removeAll(c: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Collection_ |   |
+| c | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -4508,12 +4508,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.replaceAll(arg0: _java.util.function.UnaryOperator_) : _void_
+#### _header.replaceAll(operator: _java.util.function.UnaryOperator_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.UnaryOperator_ |   |
+| operator | _java.util.function.UnaryOperator_ |   |
 
 ##### Return
 
@@ -4522,12 +4522,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### _header.replaceAll(arg0: _org.graalvm.polyglot.Value_) : _void_
+#### _header.replaceAll(function: _org.graalvm.polyglot.Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -4557,12 +4557,12 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.retainAll(arg0: _java.util.Collection_) : _boolean_
+#### _header.retainAll(c: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Collection_ |   |
+| c | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -4575,12 +4575,12 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.safeString(arg0: _java.lang.Object_) : string
+#### _header.safeString(object: _java.lang.Object_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| object | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4589,13 +4589,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.safeString(arg0: _java.lang.Object_, arg1: string) : string
+#### _header.safeString(object: _java.lang.Object_, defaultValue: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | string |   |
+| object | _java.lang.Object_ |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -4608,12 +4608,12 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.saveJSON(arg0: _java.io.OutputStream_) : _void_
+#### _header.saveJSON(out: _java.io.OutputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.OutputStream_ |   |
+| out | _java.io.OutputStream_ |   |
 
 ##### Return
 
@@ -4622,12 +4622,12 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.saveJSON(arg0: _java.io.Writer_) : _void_
+#### _header.saveJSON(out: _java.io.Writer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.Writer_ |   |
+| out | _java.io.Writer_ |   |
 
 ##### Return
 
@@ -4640,12 +4640,12 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.saveProperties(arg0: _java.io.OutputStream_) : _void_
+#### _header.saveProperties(out: _java.io.OutputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.OutputStream_ |   |
+| out | _java.io.OutputStream_ |   |
 
 ##### Return
 
@@ -4654,12 +4654,12 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.saveProperties(arg0: _java.io.Writer_) : _void_
+#### _header.saveProperties(out: _java.io.Writer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.Writer_ |   |
+| out | _java.io.Writer_ |   |
 
 ##### Return
 
@@ -4684,12 +4684,12 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.search(arg0: string) : string
+#### _header.search(content: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string |   |
 
 ##### Return
 
@@ -4698,13 +4698,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.search(arg0: string, arg1: _boolean_) : string
+#### _header.search(content: string, ignoreCase: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| content | string |   |
+| ignoreCase | _boolean_ |   |
 
 ##### Return
 
@@ -4713,13 +4713,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.search(arg0: string, arg1: string) : string
+#### _header.search(content: string, splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| content | string |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -4728,14 +4728,14 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.search(arg0: string, arg1: string, arg2: _boolean_) : string
+#### _header.search(content: string, splitter: string, ignoreCase: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _boolean_ |   |
+| content | string |   |
+| splitter | string |   |
+| ignoreCase | _boolean_ |   |
 
 ##### Return
 
@@ -4744,15 +4744,15 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.search(arg0: _java.util.Map_, arg1: string, arg2: string, arg3: _boolean_) : string
+#### _header.search(map: _java.util.Map_, content: string, splitter: string, ignoreCase: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _boolean_ |   |
+| map | _java.util.Map_ |   |
+| content | string |   |
+| splitter | string |   |
+| ignoreCase | _boolean_ |   |
 
 ##### Return
 
@@ -4765,13 +4765,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.set(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### _header.set(index: _int_, element: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| element | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4780,13 +4780,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.set(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### _header.set(key: string, value: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4799,12 +4799,12 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setForceList(arg0: _boolean_) : _[Values](../../objects/Values)_
+#### _header.setForceList(forceList: _boolean_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| forceList | _boolean_ |   |
 
 ##### Return
 
@@ -4817,12 +4817,12 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setForceMap(arg0: _boolean_) : _[Values](../../objects/Values)_
+#### _header.setForceMap(forceMap: _boolean_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| forceMap | _boolean_ |   |
 
 ##### Return
 
@@ -4835,13 +4835,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfFalse(arg0: string, arg1: _boolean_) : _[Values](../../objects/Values)_
+#### _header.setIfFalse(key: string, value: _boolean_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| key | string |   |
+| value | _boolean_ |   |
 
 ##### Return
 
@@ -4854,13 +4854,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfGreaterThanZero(arg0: string, arg1: _double_) : _[Values](../../objects/Values)_
+#### _header.setIfGreaterThanZero(key: string, value: _double_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| key | string |   |
+| value | _double_ |   |
 
 ##### Return
 
@@ -4869,13 +4869,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfGreaterThanZero(arg0: string, arg1: _float_) : _[Values](../../objects/Values)_
+#### _header.setIfGreaterThanZero(key: string, value: _float_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| key | string |   |
+| value | _float_ |   |
 
 ##### Return
 
@@ -4884,13 +4884,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfGreaterThanZero(arg0: string, arg1: _int_) : _[Values](../../objects/Values)_
+#### _header.setIfGreaterThanZero(key: string, value: _int_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| key | string |   |
+| value | _int_ |   |
 
 ##### Return
 
@@ -4899,13 +4899,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfGreaterThanZero(arg0: string, arg1: _long_) : _[Values](../../objects/Values)_
+#### _header.setIfGreaterThanZero(key: string, value: _long_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _long_ |   |
+| key | string |   |
+| value | _long_ |   |
 
 ##### Return
 
@@ -4914,13 +4914,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfGreaterThanZero(arg0: string, arg1: _short_) : _[Values](../../objects/Values)_
+#### _header.setIfGreaterThanZero(key: string, value: _short_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| value | _short_ |   |
 
 ##### Return
 
@@ -4933,13 +4933,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfLowerThanZero(arg0: string, arg1: _double_) : _[Values](../../objects/Values)_
+#### _header.setIfLowerThanZero(key: string, value: _double_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| key | string |   |
+| value | _double_ |   |
 
 ##### Return
 
@@ -4948,13 +4948,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfLowerThanZero(arg0: string, arg1: _float_) : _[Values](../../objects/Values)_
+#### _header.setIfLowerThanZero(key: string, value: _float_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| key | string |   |
+| value | _float_ |   |
 
 ##### Return
 
@@ -4963,13 +4963,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfLowerThanZero(arg0: string, arg1: _int_) : _[Values](../../objects/Values)_
+#### _header.setIfLowerThanZero(key: string, value: _int_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| key | string |   |
+| value | _int_ |   |
 
 ##### Return
 
@@ -4978,13 +4978,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfLowerThanZero(arg0: string, arg1: _long_) : _[Values](../../objects/Values)_
+#### _header.setIfLowerThanZero(key: string, value: _long_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _long_ |   |
+| key | string |   |
+| value | _long_ |   |
 
 ##### Return
 
@@ -4993,13 +4993,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfLowerThanZero(arg0: string, arg1: _short_) : _[Values](../../objects/Values)_
+#### _header.setIfLowerThanZero(key: string, value: _short_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| value | _short_ |   |
 
 ##### Return
 
@@ -5012,13 +5012,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfNotEmpty(arg0: string, arg1: string) : _[Values](../../objects/Values)_
+#### _header.setIfNotEmpty(key: string, value: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| value | string |   |
 
 ##### Return
 
@@ -5031,13 +5031,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfNotZero(arg0: string, arg1: _double_) : _[Values](../../objects/Values)_
+#### _header.setIfNotZero(key: string, value: _double_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| key | string |   |
+| value | _double_ |   |
 
 ##### Return
 
@@ -5046,13 +5046,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfNotZero(arg0: string, arg1: _float_) : _[Values](../../objects/Values)_
+#### _header.setIfNotZero(key: string, value: _float_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| key | string |   |
+| value | _float_ |   |
 
 ##### Return
 
@@ -5061,13 +5061,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfNotZero(arg0: string, arg1: _int_) : _[Values](../../objects/Values)_
+#### _header.setIfNotZero(key: string, value: _int_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| key | string |   |
+| value | _int_ |   |
 
 ##### Return
 
@@ -5076,13 +5076,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfNotZero(arg0: string, arg1: _long_) : _[Values](../../objects/Values)_
+#### _header.setIfNotZero(key: string, value: _long_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _long_ |   |
+| key | string |   |
+| value | _long_ |   |
 
 ##### Return
 
@@ -5091,13 +5091,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfNotZero(arg0: string, arg1: _short_) : _[Values](../../objects/Values)_
+#### _header.setIfNotZero(key: string, value: _short_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| value | _short_ |   |
 
 ##### Return
 
@@ -5110,13 +5110,13 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setIfTrue(arg0: string, arg1: _boolean_) : _[Values](../../objects/Values)_
+#### _header.setIfTrue(key: string, value: _boolean_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| key | string |   |
+| value | _boolean_ |   |
 
 ##### Return
 
@@ -5129,12 +5129,12 @@ The new instance of the SMTP resource based on the `default` STMP configuration.
 
 ---
 
-#### _header.setNull(arg0: string) : _[Values](../../objects/Values)_
+#### _header.setNull(key: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -5205,12 +5205,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.sort(arg0: _java.util.Comparator_) : _void_
+#### _header.sort(c: _java.util.Comparator_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Comparator_ |   |
+| c | _java.util.Comparator_ |   |
 
 ##### Return
 
@@ -5219,12 +5219,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.sort(arg0: _org.graalvm.polyglot.Value_) : _void_
+#### _header.sort(function: _org.graalvm.polyglot.Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -5257,12 +5257,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.status(arg0: _int_) : _[Header](../../resources/Header)_
+#### _header.status(httpStatus: _int_) : _[Header](../../resources/Header)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| httpStatus | _int_ |   |
 
 ##### Return
 
@@ -5271,12 +5271,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.status(arg0: _org.netuno.proteu.Proteu$HTTPStatus_) : _[Header](../../resources/Header)_
+#### _header.status(httpStatus: _org.netuno.proteu.Proteu$HTTPStatus_) : _[Header](../../resources/Header)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.netuno.proteu.Proteu$HTTPStatus_ |   |
+| httpStatus | _org.netuno.proteu.Proteu$HTTPStatus_ |   |
 
 ##### Return
 
@@ -5289,13 +5289,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.subList(arg0: _int_, arg1: _int_) : _java.util.List_
+#### _header.subList(fromIndex: _int_, toIndex: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| fromIndex | _int_ |   |
+| toIndex | _int_ |   |
 
 ##### Return
 
@@ -5308,24 +5308,24 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toArray() : _[Ljava.lang.Object;_
+#### _header.toArray() : _[Ljava.lang.Object;[]_
 ##### Return
 
-( _[Ljava.lang.Object;_ )
+( _[Ljava.lang.Object;[]_ )
 
 
 ---
 
-#### _header.toArray(arg0: _[Ljava.lang.Object;_) : _[Ljava.lang.Object;_
+#### _header.toArray(a: _[Ljava.lang.Object;[]_) : _[Ljava.lang.Object;[]_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Ljava.lang.Object;_ |   |
+| a | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 
-( _[Ljava.lang.Object;_ )
+( _[Ljava.lang.Object;[]_ )
 
 
 ---
@@ -5334,10 +5334,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toByteArray() : _[B_
+#### _header.toByteArray() : _byte[]_
 ##### Return
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
@@ -5346,10 +5346,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toDoubleArray() : _[D_
+#### _header.toDoubleArray() : _double[]_
 ##### Return
 
-( _[D_ )
+( _double[]_ )
 
 
 ---
@@ -5358,10 +5358,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toFloatArray() : _[F_
+#### _header.toFloatArray() : _float[]_
 ##### Return
 
-( _[F_ )
+( _float[]_ )
 
 
 ---
@@ -5378,13 +5378,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toFormMap(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _header.toFormMap(key: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| key | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5393,12 +5393,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toFormMap(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _header.toFormMap(data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5431,12 +5431,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toJSON(arg0: _boolean_) : string
+#### _header.toJSON(htmlEscape: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| htmlEscape | _boolean_ |   |
 
 ##### Return
 
@@ -5445,13 +5445,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toJSON(arg0: _boolean_, arg1: _int_) : string
+#### _header.toJSON(htmlEscape: _boolean_, indentFactor: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
-| arg1 | _int_ |   |
+| htmlEscape | _boolean_ |   |
+| indentFactor | _int_ |   |
 
 ##### Return
 
@@ -5460,12 +5460,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toJSON(arg0: _int_) : string
+#### _header.toJSON(indentFactor: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| indentFactor | _int_ |   |
 
 ##### Return
 
@@ -5474,12 +5474,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toJSON(arg0: _java.util.List_) : string
+#### _header.toJSON(values: _java.util.List_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
+| values | _java.util.List_ |   |
 
 ##### Return
 
@@ -5488,13 +5488,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toJSON(arg0: _java.util.List_, arg1: _boolean_) : string
+#### _header.toJSON(values: _java.util.List_, htmlEscape: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
-| arg1 | _boolean_ |   |
+| values | _java.util.List_ |   |
+| htmlEscape | _boolean_ |   |
 
 ##### Return
 
@@ -5503,14 +5503,14 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toJSON(arg0: _java.util.List_, arg1: _boolean_, arg2: _int_) : string
+#### _header.toJSON(values: _java.util.List_, htmlEscape: _boolean_, indentFactor: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
-| arg1 | _boolean_ |   |
-| arg2 | _int_ |   |
+| values | _java.util.List_ |   |
+| htmlEscape | _boolean_ |   |
+| indentFactor | _int_ |   |
 
 ##### Return
 
@@ -5519,13 +5519,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toJSON(arg0: _java.util.List_, arg1: _int_) : string
+#### _header.toJSON(values: _java.util.List_, indentFactor: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
-| arg1 | _int_ |   |
+| values | _java.util.List_ |   |
+| indentFactor | _int_ |   |
 
 ##### Return
 
@@ -5538,13 +5538,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toJSONObject(arg0: _java.lang.Object_, arg1: _boolean_) : _java.lang.Object_
+#### _header.toJSONObject(object: _java.lang.Object_, htmlEscape: _boolean_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _boolean_ |   |
+| object | _java.lang.Object_ |   |
+| htmlEscape | _boolean_ |   |
 
 ##### Return
 
@@ -5557,14 +5557,14 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toJSONString(arg0: _java.lang.Object_, arg1: _boolean_, arg2: _int_) : string
+#### _header.toJSONString(object: _java.lang.Object_, htmlEscape: _boolean_, indentFactor: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _boolean_ |   |
-| arg2 | _int_ |   |
+| object | _java.lang.Object_ |   |
+| htmlEscape | _boolean_ |   |
+| indentFactor | _int_ |   |
 
 ##### Return
 
@@ -5585,12 +5585,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toList(arg0: _java.lang.Class_) : _java.util.List_
+#### _header.toList(cls: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Class_ |   |
+| cls | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -5603,10 +5603,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toLongArray() : _[J_
+#### _header.toLongArray() : _long[]_
 ##### Return
 
-( _[J_ )
+( _long[]_ )
 
 
 ---
@@ -5639,10 +5639,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toShortArray() : _[S_
+#### _header.toShortArray() : _short[]_
 ##### Return
 
-( _[S_ )
+( _short[]_ )
 
 
 ---
@@ -5651,10 +5651,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.toStringArray() : _[Ljava.lang.String;_
+#### _header.toStringArray() : _[Ljava.lang.String;[]_
 ##### Return
 
-( _[Ljava.lang.String;_ )
+( _[Ljava.lang.String;[]_ )
 
 
 ---
@@ -5663,12 +5663,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### _header.unset(arg0: string) : _java.lang.Object_
+#### _header.unset(key: string) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -5734,12 +5734,12 @@ List of all obtained values.
 
 ---
 
-#### _header.valuesToString(arg0: string) : string
+#### _header.valuesToString(splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -5748,13 +5748,13 @@ List of all obtained values.
 
 ---
 
-#### _header.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_) : string
+#### _header.valuesToString(splitter: string, excludes: _[Ljava.lang.String;[]_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Ljava.lang.String;_ |   |
+| splitter | string |   |
+| excludes | _[Ljava.lang.String;[]_ |   |
 
 ##### Return
 
@@ -5763,14 +5763,14 @@ List of all obtained values.
 
 ---
 
-#### _header.valuesToString(arg0: string, arg1: _[Ljava.lang.String;_, arg2: _[Values](../../objects/Values)_) : string
+#### _header.valuesToString(splitter: string, excludes: _[Ljava.lang.String;[]_, config: _[Values](../../objects/Values)_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Ljava.lang.String;_ |   |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| splitter | string |   |
+| excludes | _[Ljava.lang.String;[]_ |   |
+| config | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5779,13 +5779,13 @@ List of all obtained values.
 
 ---
 
-#### _header.valuesToString(arg0: string, arg1: _[Values](../../objects/Values)_) : string
+#### _header.valuesToString(splitter: string, config: _[Values](../../objects/Values)_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| splitter | string |   |
+| config | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5794,13 +5794,13 @@ List of all obtained values.
 
 ---
 
-#### _header.valuesToString(arg0: _java.util.Map_, arg1: string) : string
+#### _header.valuesToString(map: _java.util.Map_, splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
+| map | _java.util.Map_ |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -5809,14 +5809,14 @@ List of all obtained values.
 
 ---
 
-#### _header.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_) : string
+#### _header.valuesToString(map: _java.util.Map_, splitter: string, excludes: _[Ljava.lang.String;[]_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
-| arg2 | _[Ljava.lang.String;_ |   |
+| map | _java.util.Map_ |   |
+| splitter | string |   |
+| excludes | _[Ljava.lang.String;[]_ |   |
 
 ##### Return
 
@@ -5825,15 +5825,15 @@ List of all obtained values.
 
 ---
 
-#### _header.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_, arg3: _[Values](../../objects/Values)_) : string
+#### _header.valuesToString(map: _java.util.Map_, splitter: string, excludes: _[Ljava.lang.String;[]_, config: _[Values](../../objects/Values)_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
-| arg2 | _[Ljava.lang.String;_ |   |
-| arg3 | _[Values](../../objects/Values)_ |   |
+| map | _java.util.Map_ |   |
+| splitter | string |   |
+| excludes | _[Ljava.lang.String;[]_ |   |
+| config | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5842,14 +5842,14 @@ List of all obtained values.
 
 ---
 
-#### _header.valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
+#### _header.valuesToString(map: _java.util.Map_, splitter: string, config: _[Values](../../objects/Values)_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| map | _java.util.Map_ |   |
+| splitter | string |   |
+| config | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 

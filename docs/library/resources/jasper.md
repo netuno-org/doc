@@ -12,12 +12,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### _jasper.exportToHtmlFile(arg0: _[Storage](../../resources/Storage)_) : _boolean_
+#### _jasper.exportToHtmlFile(storage: _[Storage](../../resources/Storage)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Storage](../../resources/Storage)_ |   |
+| storage | _[Storage](../../resources/Storage)_ |   |
 
 ##### Return
 
@@ -30,10 +30,10 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### _jasper.exportToPdf() : _[B_
+#### _jasper.exportToPdf() : _byte[]_
 ##### Return
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
@@ -42,12 +42,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### _jasper.exportToPdfFile(arg0: _[Storage](../../resources/Storage)_) : _boolean_
+#### _jasper.exportToPdfFile(storage: _[Storage](../../resources/Storage)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Storage](../../resources/Storage)_ |   |
+| storage | _[Storage](../../resources/Storage)_ |   |
 
 ##### Return
 
@@ -60,12 +60,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### _jasper.exportToPdfStream(arg0: _java.io.OutputStream_) : _boolean_
+#### _jasper.exportToPdfStream(output: _java.io.OutputStream_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.OutputStream_ |   |
+| output | _java.io.OutputStream_ |   |
 
 ##### Return
 
@@ -90,13 +90,13 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### _jasper.loadPrinter(arg0: _[Values](../../objects/Values)_, arg1: _[Lorg.netuno.psamata.Values;_) : _boolean_
+#### _jasper.loadPrinter(parameters: _[Values](../../objects/Values)_, dataSource: _[Lorg.netuno.psamata.Values;[]_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
-| arg1 | _[Lorg.netuno.psamata.Values;_ |   |
+| parameters | _[Values](../../objects/Values)_ |   |
+| dataSource | _[Lorg.netuno.psamata.Values;[]_ |   |
 
 ##### Return
 
@@ -109,12 +109,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### _jasper.setReportFile(arg0: _[Storage](../../resources/Storage)_) : _boolean_
+#### _jasper.setReportFile(storage: _[Storage](../../resources/Storage)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Storage](../../resources/Storage)_ |   |
+| storage | _[Storage](../../resources/Storage)_ |   |
 
 ##### Return
 

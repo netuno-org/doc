@@ -21,12 +21,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### commandNextValue(arg0: string) : string
+#### commandNextValue(sequenceName: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| sequenceName | string |   |
 
 ##### Retorno
 
@@ -39,12 +39,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### create(arg0: string) : _[Sequence](../../objects/Sequence)_
+#### create(name: string) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| name | string |   |
 
 ##### Retorno
 
@@ -53,13 +53,13 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### create(arg0: string, arg1: _int_) : _[Sequence](../../objects/Sequence)_
+#### create(name: string, startWith: _int_) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| name | string |   |
+| startWith | _int_ |   |
 
 ##### Retorno
 
@@ -72,12 +72,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### drop(arg0: string) : _[Sequence](../../objects/Sequence)_
+#### drop(name: string) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| name | string |   |
 
 ##### Retorno
 
@@ -90,12 +90,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### getCurrentValue(arg0: string) : _int_
+#### getCurrentValue(sequenceName: string) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| sequenceName | string |   |
 
 ##### Retorno
 
@@ -128,12 +128,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isH2(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isH2(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -154,12 +154,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isMSSQL(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isMSSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -180,12 +180,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isMariaDB(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isMariaDB(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -206,12 +206,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### isPostgreSQL(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isPostgreSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -224,13 +224,13 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### rename(arg0: string, arg1: string) : _[Sequence](../../objects/Sequence)_
+#### rename(oldName: string, newName: string) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| oldName | string |   |
+| newName | string |   |
 
 ##### Retorno
 
@@ -243,13 +243,13 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### renameIfExists(arg0: string, arg1: string) : _[Sequence](../../objects/Sequence)_
+#### renameIfExists(oldName: string, newName: string) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| oldName | string |   |
+| newName | string |   |
 
 ##### Retorno
 
@@ -262,13 +262,13 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### restart(arg0: string, arg1: _int_) : _[Sequence](../../objects/Sequence)_
+#### restart(sequenceName: string, nextValue: _int_) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| sequenceName | string |   |
+| nextValue | _int_ |   |
 
 ##### Retorno
 
@@ -277,14 +277,14 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### restart(arg0: string, arg1: string, arg2: string) : _[Sequence](../../objects/Sequence)_
+#### restart(sequenceName: string, tableName: string, column: string) : _[Sequence](../../objects/Sequence)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| sequenceName | string |   |
+| tableName | string |   |
+| column | string |   |
 
 ##### Retorno
 

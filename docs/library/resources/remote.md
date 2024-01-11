@@ -1406,12 +1406,12 @@ The current Remote instance.
 
 ---
 
-#### _remote.setFormData(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote_
+#### _remote.setFormData(data: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -1470,12 +1470,12 @@ The current Remote instance.
 
 ---
 
-#### _remote.setQueryString(arg0: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote_
+#### _remote.setQueryString(qs: _[Values](../../objects/Values)_) : _org.netuno.psamata.net.Remote_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| qs | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -1603,12 +1603,12 @@ The current Remote instance.
 
 ---
 
-#### _remote.setURLPrefix(arg0: string) : _org.netuno.psamata.net.Remote_
+#### _remote.setURLPrefix(urlPrefix: string) : _org.netuno.psamata.net.Remote_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| urlPrefix | string |   |
 
 ##### Return
 
@@ -1621,12 +1621,12 @@ The current Remote instance.
 
 ---
 
-#### _remote.soap11(arg0: string) : _[Values](../../objects/Values)_
+#### _remote.soap11(soapMethod: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| soapMethod | string |   |
 
 ##### Return
 
@@ -1635,13 +1635,13 @@ The current Remote instance.
 
 ---
 
-#### _remote.soap11(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _remote.soap11(soapMethod: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| soapMethod | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -1654,12 +1654,12 @@ The current Remote instance.
 
 ---
 
-#### _remote.soap12(arg0: string) : _[Values](../../objects/Values)_
+#### _remote.soap12(soapMethod: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| soapMethod | string |   |
 
 ##### Return
 
@@ -1668,13 +1668,13 @@ The current Remote instance.
 
 ---
 
-#### _remote.soap12(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _remote.soap12(soapMethod: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| soapMethod | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 

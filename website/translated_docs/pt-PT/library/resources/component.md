@@ -12,14 +12,14 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: _int_) : _void_
+#### _component.addDataStructure(name: string, type: string, size: _int_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _int_ |   |
+| name | string |   |
+| type | string |   |
+| size | _int_ |   |
 
 ##### Retorno
 
@@ -28,15 +28,15 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: _int_, arg3: _boolean_) : _void_
+#### _component.addDataStructure(name: string, type: string, size: _int_, readonly: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _int_ |   |
-| arg3 | _boolean_ |   |
+| name | string |   |
+| type | string |   |
+| size | _int_ |   |
+| readonly | _boolean_ |   |
 
 ##### Retorno
 
@@ -45,16 +45,16 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: _int_, arg3: _boolean_, arg4: _boolean_) : _void_
+#### _component.addDataStructure(name: string, type: string, size: _int_, readonly: _boolean_, index: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _int_ |   |
-| arg3 | _boolean_ |   |
-| arg4 | _boolean_ |   |
+| name | string |   |
+| type | string |   |
+| size | _int_ |   |
+| readonly | _boolean_ |   |
+| index | _boolean_ |   |
 
 ##### Retorno
 
@@ -63,15 +63,15 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: string, arg3: _int_) : _void_
+#### _component.addDataStructure(name: string, type: string, filter: string, size: _int_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _int_ |   |
+| name | string |   |
+| type | string |   |
+| filter | string |   |
+| size | _int_ |   |
 
 ##### Retorno
 
@@ -80,16 +80,16 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: string, arg3: _int_, arg4: _boolean_) : _void_
+#### _component.addDataStructure(name: string, type: string, filter: string, size: _int_, readonly: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _int_ |   |
-| arg4 | _boolean_ |   |
+| name | string |   |
+| type | string |   |
+| filter | string |   |
+| size | _int_ |   |
+| readonly | _boolean_ |   |
 
 ##### Retorno
 
@@ -98,17 +98,17 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: string, arg3: _int_, arg4: _boolean_, arg5: _boolean_) : _void_
+#### _component.addDataStructure(name: string, type: string, filter: string, size: _int_, readonly: _boolean_, index: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _int_ |   |
-| arg4 | _boolean_ |   |
-| arg5 | _boolean_ |   |
+| name | string |   |
+| type | string |   |
+| filter | string |   |
+| size | _int_ |   |
+| readonly | _boolean_ |   |
+| index | _boolean_ |   |
 
 ##### Retorno
 

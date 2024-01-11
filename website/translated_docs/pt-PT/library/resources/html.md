@@ -12,14 +12,14 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.clean(arg0: string, arg1: string, arg2: _org.jsoup.safety.Safelist_) : string
+#### _html.clean(bodyHtml: string, baseUri: string, safelist: _org.jsoup.safety.Safelist_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _org.jsoup.safety.Safelist_ |   |
+| bodyHtml | string |   |
+| baseUri | string |   |
+| safelist | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 
@@ -28,15 +28,15 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.clean(arg0: string, arg1: string, arg2: _org.jsoup.safety.Safelist_, arg3: _org.jsoup.nodes.Document$OutputSettings_) : string
+#### _html.clean(bodyHtml: string, baseUri: string, safelist: _org.jsoup.safety.Safelist_, outputSettings: _org.jsoup.nodes.Document$OutputSettings_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _org.jsoup.safety.Safelist_ |   |
-| arg3 | _org.jsoup.nodes.Document$OutputSettings_ |   |
+| bodyHtml | string |   |
+| baseUri | string |   |
+| safelist | _org.jsoup.safety.Safelist_ |   |
+| outputSettings | _org.jsoup.nodes.Document$OutputSettings_ |   |
 
 ##### Retorno
 
@@ -45,13 +45,13 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.clean(arg0: string, arg1: _org.jsoup.safety.Safelist_) : string
+#### _html.clean(bodyHtml: string, safelist: _org.jsoup.safety.Safelist_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _org.jsoup.safety.Safelist_ |   |
+| bodyHtml | string |   |
+| safelist | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 
@@ -64,12 +64,12 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.connect(arg0: string) : _org.jsoup.Connection_
+#### _html.connect(url: string) : _org.jsoup.Connection_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| url | string |   |
 
 ##### Retorno
 
@@ -94,13 +94,13 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### _html.isValid(arg0: string, arg1: _org.jsoup.safety.Safelist_) : _boolean_
+#### _html.isValid(bodyHtml: string, safelist: _org.jsoup.safety.Safelist_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _org.jsoup.safety.Safelist_ |   |
+| bodyHtml | string |   |
+| safelist | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 
@@ -211,12 +211,12 @@ Conteúdo processado em HTML.
 
 ---
 
-#### _html.parseBodyFragment(arg0: string) : _org.jsoup.nodes.Document_
+#### _html.parseBodyFragment(bodyHtml: string) : _org.jsoup.nodes.Document_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| bodyHtml | string |   |
 
 ##### Retorno
 
@@ -225,13 +225,13 @@ Conteúdo processado em HTML.
 
 ---
 
-#### _html.parseBodyFragment(arg0: string, arg1: string) : _org.jsoup.nodes.Document_
+#### _html.parseBodyFragment(bodyHtml: string, baseUri: string) : _org.jsoup.nodes.Document_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| bodyHtml | string |   |
+| baseUri | string |   |
 
 ##### Retorno
 
@@ -263,13 +263,13 @@ Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTM
 
 ---
 
-#### _html.parseURL(arg0: string, arg1: _int_) : _org.jsoup.nodes.Document_
+#### _html.parseURL(url: string, timeoutMillis: _int_) : _org.jsoup.nodes.Document_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| url | string |   |
+| timeoutMillis | _int_ |   |
 
 ##### Retorno
 
@@ -290,12 +290,12 @@ Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTM
 
 ---
 
-#### _html.safelist(arg0: _org.jsoup.safety.Safelist_) : _org.jsoup.safety.Safelist_
+#### _html.safelist(copy: _org.jsoup.safety.Safelist_) : _org.jsoup.safety.Safelist_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.jsoup.safety.Safelist_ |   |
+| copy | _org.jsoup.safety.Safelist_ |   |
 
 ##### Retorno
 

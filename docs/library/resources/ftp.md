@@ -25,10 +25,15 @@ FTP client feature.
 ---
 
 #### _ftp.changeToParentDirectory() : _[FTP](../../resources/FTP)_
+##### Description
+
+Switches to the previous folder where it should be used to perform operations.
+
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -36,17 +41,22 @@ FTP client feature.
 
 ---
 
-#### _ftp.changeWorkingDirectory(arg0: string) : _[FTP](../../resources/FTP)_
+#### _ftp.changeWorkingDirectory(remotePath: string) : _[FTP](../../resources/FTP)_
+##### Description
+
+Defines the remote path that should be used to perform operations.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| remotePath | string | Path on the server to perform the work. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -55,6 +65,10 @@ FTP client feature.
 ---
 
 #### _ftp.close() : _void_
+##### Description
+
+Closes the FTP connection to the server.
+
 ##### Return
 
 ( _void_ )
@@ -122,10 +136,15 @@ Current FTP object.
 ---
 
 #### _ftp.connect() : _[FTP](../../resources/FTP)_
+##### Description
+
+Starts connecting to the server via FTP.
+
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -133,17 +152,22 @@ Current FTP object.
 
 ---
 
-#### _ftp.createDirectory(arg0: string) : _[FTP](../../resources/FTP)_
+#### _ftp.createDirectory(remotePath: string) : _[FTP](../../resources/FTP)_
+##### Description
+
+Creates a folder in the server.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| remotePath | string | Server path where the folder should be created. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -151,17 +175,22 @@ Current FTP object.
 
 ---
 
-#### _ftp.deleteDirectory(arg0: string) : _[FTP](../../resources/FTP)_
+#### _ftp.deleteDirectory(remotePath: string) : _[FTP](../../resources/FTP)_
+##### Description
+
+Deletes a folder in the server.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| remotePath | string | Server path where the folder should be removed. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -169,17 +198,22 @@ Current FTP object.
 
 ---
 
-#### _ftp.deleteFile(arg0: string) : _[FTP](../../resources/FTP)_
+#### _ftp.deleteFile(remotePath: string) : _[FTP](../../resources/FTP)_
+##### Description
+
+Deletes a file in the server.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| remotePath | string | Server path where the file should be removed. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -188,10 +222,15 @@ Current FTP object.
 ---
 
 #### _ftp.disconnect() : _[FTP](../../resources/FTP)_
+##### Description
+
+Performs FTP disconnection from the server.
+
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -199,33 +238,43 @@ Current FTP object.
 
 ---
 
-#### _ftp.download(arg0: string, arg1: _java.io.OutputStream_) : _[FTP](../../resources/FTP)_
+#### _ftp.download(remotePath: string, destination: _java.io.OutputStream_) : _[FTP](../../resources/FTP)_
+##### Description
+
+Copies a server file to a local file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.io.OutputStream_ |   |
+| remotePath | string | File path in the server. |
+| destination | _java.io.OutputStream_ | Local file of destination to store the remote content. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
-#### _ftp.download(arg0: string, arg1: _[File](../../objects/File)_) : _[FTP](../../resources/FTP)_
+#### _ftp.download(remotePath: string, destination: _[File](../../objects/File)_) : _[FTP](../../resources/FTP)_
+##### Description
+
+Copies a server file to a local file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[File](../../objects/File)_ |   |
+| remotePath | string | File path in the server. |
+| destination | _[File](../../objects/File)_ | Local file of destination to store the remote content. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -233,17 +282,22 @@ Current FTP object.
 
 ---
 
-#### _ftp.downloadBytes(arg0: string) : _[B_
+#### _ftp.downloadBytes(remotePath: string) : _byte[]_
+##### Description
+
+Obtain a byte array as content from a file server.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| remotePath | string | File path in the server. |
 
 ##### Return
 
-( _[B_ )
+( _byte[]_ )
 
+Byte array with the remote file content in the server.
 
 ---
 
@@ -251,32 +305,42 @@ Current FTP object.
 
 ---
 
-#### _ftp.downloadText(arg0: string) : string
+#### _ftp.downloadText(remotePath: string) : string
+##### Description
+
+Obtain a text content of a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| remotePath | string | File path in the server. |
 
 ##### Return
 
 ( string )
 
+Text content of the remote file in the server.
 
 ---
 
-#### _ftp.downloadText(arg0: string, arg1: string) : string
+#### _ftp.downloadText(remotePath: string, charset: string) : string
+##### Description
+
+Obtain a text content of a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| remotePath | string | File path in the server. |
+| charset | string | Encoding code of the characters. |
 
 ##### Return
 
 ( string )
 
+Text content of the remote file in the server.
 
 ---
 
@@ -316,10 +380,15 @@ Current FTP object.
 ---
 
 #### _ftp.getClient() : _org.netuno.psamata.ftp.FTPClient_
+##### Description
+
+Gets the base FTP client.
+
 ##### Return
 
 ( _org.netuno.psamata.ftp.FTPClient_ )
 
+Original base FTP client
 
 ---
 
@@ -345,10 +414,15 @@ Object of the active configuration.
 ---
 
 #### _ftp.getWorkingDirectory() : string
+##### Description
+
+Gets the current remote working path where operations are being performed.
+
 ##### Return
 
 ( string )
 
+The full remote path being used.
 
 ---
 
@@ -428,17 +502,22 @@ Result whether or not it is activated.
 
 ---
 
-#### _ftp.list(arg0: string) : _java.util.List_
+#### _ftp.list(remotePath: string) : _java.util.List_
+##### Description
+
+List of items in a server folder.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| remotePath | string | Folder path in the server. |
 
 ##### Return
 
 ( _java.util.List_ )
 
+The list of itens into the server path.
 
 ---
 
@@ -446,18 +525,23 @@ Result whether or not it is activated.
 
 ---
 
-#### _ftp.rename(arg0: string, arg1: string) : _[FTP](../../resources/FTP)_
+#### _ftp.rename(oldPath: string, newPath: string) : _[FTP](../../resources/FTP)_
+##### Description
+
+Renames a file or folder on the server.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| oldPath | string | Path on the server that should be renamed. |
+| newPath | string | The destination path on the server. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -465,32 +549,42 @@ Result whether or not it is activated.
 
 ---
 
-#### _ftp.sendCommand(arg0: string) : _int_
+#### _ftp.sendCommand(command: string) : _int_
+##### Description
+
+Send a specific command.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| command | string | Command that must be sent. |
 
 ##### Return
 
 ( _int_ )
 
+Command result.
 
 ---
 
-#### _ftp.sendCommand(arg0: string, arg1: string) : _int_
+#### _ftp.sendCommand(command: string, args: string) : _int_
+##### Description
+
+Send a specific command.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| command | string | Command that must be sent. |
+| args | string | Additional arguments. |
 
 ##### Return
 
 ( _int_ )
 
+Command result.
 
 ---
 
@@ -498,17 +592,22 @@ Result whether or not it is activated.
 
 ---
 
-#### _ftp.sendSiteCommand(arg0: string) : _[FTP](../../resources/FTP)_
+#### _ftp.sendSiteCommand(command: string) : _[FTP](../../resources/FTP)_
+##### Description
+
+Send a site specific command.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| command | string | Command that must be sent. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -562,33 +661,43 @@ Current FTP object.
 
 ---
 
-#### _ftp.upload(arg0: string, arg1: _java.io.InputStream_) : _[FTP](../../resources/FTP)_
+#### _ftp.upload(remotePath: string, source: _java.io.InputStream_) : _[FTP](../../resources/FTP)_
+##### Description
+
+Sends the file data to be saved in a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.io.InputStream_ |   |
+| remotePath | string | File path in the server. |
+| source | _java.io.InputStream_ | Local file as the source. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
-#### _ftp.upload(arg0: string, arg1: _[File](../../objects/File)_) : _[FTP](../../resources/FTP)_
+#### _ftp.upload(remotePath: string, source: _[File](../../objects/File)_) : _[FTP](../../resources/FTP)_
+##### Description
+
+Sends the file data to be saved in a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[File](../../objects/File)_ |   |
+| remotePath | string | File path in the server. |
+| source | _[File](../../objects/File)_ | Local file as the source. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -596,18 +705,23 @@ Current FTP object.
 
 ---
 
-#### _ftp.uploadBytes(arg0: string, arg1: _[B_) : _[FTP](../../resources/FTP)_
+#### _ftp.uploadBytes(remotePath: string, bytes: _byte[]_) : _[FTP](../../resources/FTP)_
+##### Description
+
+Sends a byte array to be saved in a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[B_ |   |
+| remotePath | string | File path in the server. |
+| bytes | _byte[]_ | Array of bytes. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
@@ -615,34 +729,44 @@ Current FTP object.
 
 ---
 
-#### _ftp.uploadText(arg0: string, arg1: string) : _[FTP](../../resources/FTP)_
+#### _ftp.uploadText(remotePath: string, text: string) : _[FTP](../../resources/FTP)_
+##### Description
+
+Sends a text content to be saved in a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| remotePath | string | File path in the server. |
+| text | string | Text content. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 
-#### _ftp.uploadText(arg0: string, arg1: string, arg2: string) : _[FTP](../../resources/FTP)_
+#### _ftp.uploadText(remotePath: string, text: string, charset: string) : _[FTP](../../resources/FTP)_
+##### Description
+
+Sends a text content to be saved in a server file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| remotePath | string | File path in the server. |
+| text | string | Text content. |
+| charset | string | Encoding code of the characters. |
 
 ##### Return
 
 ( _[FTP](../../resources/FTP)_ )
 
+The current FTP resource.
 
 ---
 

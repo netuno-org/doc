@@ -12,14 +12,14 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: _int_) : _void_
+#### _component.addDataStructure(name: string, type: string, size: _int_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _int_ |   |
+| name | string |   |
+| type | string |   |
+| size | _int_ |   |
 
 ##### Return
 
@@ -28,15 +28,15 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: _int_, arg3: _boolean_) : _void_
+#### _component.addDataStructure(name: string, type: string, size: _int_, readonly: _boolean_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _int_ |   |
-| arg3 | _boolean_ |   |
+| name | string |   |
+| type | string |   |
+| size | _int_ |   |
+| readonly | _boolean_ |   |
 
 ##### Return
 
@@ -45,16 +45,16 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: _int_, arg3: _boolean_, arg4: _boolean_) : _void_
+#### _component.addDataStructure(name: string, type: string, size: _int_, readonly: _boolean_, index: _boolean_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _int_ |   |
-| arg3 | _boolean_ |   |
-| arg4 | _boolean_ |   |
+| name | string |   |
+| type | string |   |
+| size | _int_ |   |
+| readonly | _boolean_ |   |
+| index | _boolean_ |   |
 
 ##### Return
 
@@ -63,15 +63,15 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: string, arg3: _int_) : _void_
+#### _component.addDataStructure(name: string, type: string, filter: string, size: _int_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _int_ |   |
+| name | string |   |
+| type | string |   |
+| filter | string |   |
+| size | _int_ |   |
 
 ##### Return
 
@@ -80,16 +80,16 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: string, arg3: _int_, arg4: _boolean_) : _void_
+#### _component.addDataStructure(name: string, type: string, filter: string, size: _int_, readonly: _boolean_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _int_ |   |
-| arg4 | _boolean_ |   |
+| name | string |   |
+| type | string |   |
+| filter | string |   |
+| size | _int_ |   |
+| readonly | _boolean_ |   |
 
 ##### Return
 
@@ -98,17 +98,17 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### _component.addDataStructure(arg0: string, arg1: string, arg2: string, arg3: _int_, arg4: _boolean_, arg5: _boolean_) : _void_
+#### _component.addDataStructure(name: string, type: string, filter: string, size: _int_, readonly: _boolean_, index: _boolean_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _int_ |   |
-| arg4 | _boolean_ |   |
-| arg5 | _boolean_ |   |
+| name | string |   |
+| type | string |   |
+| filter | string |   |
+| size | _int_ |   |
+| readonly | _boolean_ |   |
+| index | _boolean_ |   |
 
 ##### Return
 

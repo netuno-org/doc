@@ -89,7 +89,7 @@ The current SFTP client.
 
 ---
 
-#### downloadBytes(remotePath: string) : _[B_
+#### downloadBytes(remotePath: string) : _byte[]_
 ##### Description
 
 Obtain a byte array as content from a file server.
@@ -102,7 +102,7 @@ Obtain a byte array as content from a file server.
 
 ##### Return
 
-( _[B_ )
+( _byte[]_ )
 
 Byte array with the remote file content in the server.
 
@@ -211,7 +211,7 @@ The current SFTP client.
 
 ---
 
-#### uploadBytes(remotePath: string, bytes: _[B_) : _[SSHSCP](../../objects/SSHSCP)_
+#### uploadBytes(remotePath: string, bytes: _byte[]_) : _[SSHSCP](../../objects/SSHSCP)_
 ##### Description
 
 Sends a byte array to be saved in a server file.
@@ -221,7 +221,7 @@ Sends a byte array to be saved in a server file.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | remotePath | string | File path in the server. |
-| bytes | _[B_ | Array of bytes. |
+| bytes | _byte[]_ | Array of bytes. |
 
 ##### Return
 

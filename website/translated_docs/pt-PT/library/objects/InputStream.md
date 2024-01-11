@@ -86,12 +86,12 @@ sidebar_label: InputStream
 
 ---
 
-#### read(arg0: _[B_) : _int_
+#### read(arg0: _byte[]_) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[B_ |   |
+| arg0 | _byte[]_ |   |
 
 ##### Retorno
 
@@ -100,12 +100,12 @@ sidebar_label: InputStream
 
 ---
 
-#### read(arg0: _[B_, arg1: _int_, arg2: _int_) : _int_
+#### read(arg0: _byte[]_, arg1: _int_, arg2: _int_) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[B_ |   |
+| arg0 | _byte[]_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 
@@ -128,12 +128,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readAll(arg0: _java.io.InputStream_) : string
+#### readAll(in: _java.io.InputStream_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.InputStream_ |   |
+| in | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -142,13 +142,13 @@ sidebar_label: InputStream
 
 ---
 
-#### readAll(arg0: _java.io.InputStream_, arg1: string) : string
+#### readAll(in: _java.io.InputStream_, charset: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.InputStream_ |   |
-| arg1 | string |   |
+| in | _java.io.InputStream_ |   |
+| charset | string |   |
 
 ##### Retorno
 
@@ -157,12 +157,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readAll(arg0: _java.io.Reader_) : string
+#### readAll(r: _java.io.Reader_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.Reader_ |   |
+| r | _java.io.Reader_ |   |
 
 ##### Retorno
 
@@ -187,24 +187,24 @@ sidebar_label: InputStream
 
 ---
 
-#### readAllBytes() : _[B_
+#### readAllBytes() : _byte[]_
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
 
-#### readAllBytes(arg0: _java.io.InputStream_) : _[B_
+#### readAllBytes(in: _java.io.InputStream_) : _byte[]_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.InputStream_ |   |
+| in | _java.io.InputStream_ |   |
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
@@ -213,44 +213,44 @@ sidebar_label: InputStream
 
 ---
 
-#### readAllBytesFromFile(arg0: _java.io.File_) : _[B_
+#### readAllBytesFromFile(file: _java.io.File_) : _byte[]_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.File_ |   |
+| file | _java.io.File_ |   |
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
 
-#### readAllBytesFromFile(arg0: string) : _[B_
+#### readAllBytesFromFile(file: string) : _byte[]_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| file | string |   |
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
 
-#### readAllBytesFromFile(arg0: _java.nio.file.Path_) : _[B_
+#### readAllBytesFromFile(file: _java.nio.file.Path_) : _byte[]_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.nio.file.Path_ |   |
+| file | _java.nio.file.Path_ |   |
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
@@ -259,12 +259,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readFromFile(arg0: _java.io.File_) : string
+#### readFromFile(path: _java.io.File_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.File_ |   |
+| path | _java.io.File_ |   |
 
 ##### Retorno
 
@@ -273,13 +273,13 @@ sidebar_label: InputStream
 
 ---
 
-#### readFromFile(arg0: _java.io.File_, arg1: string) : string
+#### readFromFile(path: _java.io.File_, charset: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.File_ |   |
-| arg1 | string |   |
+| path | _java.io.File_ |   |
+| charset | string |   |
 
 ##### Retorno
 
@@ -288,12 +288,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readFromFile(arg0: string) : string
+#### readFromFile(path: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| path | string |   |
 
 ##### Retorno
 
@@ -302,13 +302,13 @@ sidebar_label: InputStream
 
 ---
 
-#### readFromFile(arg0: string, arg1: string) : string
+#### readFromFile(path: string, charset: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| path | string |   |
+| charset | string |   |
 
 ##### Retorno
 
@@ -317,12 +317,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readFromFile(arg0: _java.nio.file.Path_) : string
+#### readFromFile(path: _java.nio.file.Path_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.nio.file.Path_ |   |
+| path | _java.nio.file.Path_ |   |
 
 ##### Retorno
 
@@ -331,13 +331,13 @@ sidebar_label: InputStream
 
 ---
 
-#### readFromFile(arg0: _java.nio.file.Path_, arg1: string) : string
+#### readFromFile(path: _java.nio.file.Path_, charset: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.nio.file.Path_ |   |
-| arg1 | string |   |
+| path | _java.nio.file.Path_ |   |
+| charset | string |   |
 
 ##### Retorno
 
@@ -358,12 +358,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readLine(arg0: _java.io.InputStream_) : string
+#### readLine(in: _java.io.InputStream_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.InputStream_ |   |
+| in | _java.io.InputStream_ |   |
 
 ##### Retorno
 
@@ -376,12 +376,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readNBytes(arg0: _[B_, arg1: _int_, arg2: _int_) : _int_
+#### readNBytes(arg0: _byte[]_, arg1: _int_, arg2: _int_) : _int_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[B_ |   |
+| arg0 | _byte[]_ |   |
 | arg1 | _int_ |   |
 | arg2 | _int_ |   |
 
@@ -392,7 +392,7 @@ sidebar_label: InputStream
 
 ---
 
-#### readNBytes(arg0: _int_) : _[B_
+#### readNBytes(arg0: _int_) : _byte[]_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -401,7 +401,7 @@ sidebar_label: InputStream
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
@@ -418,12 +418,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readString(arg0: _java.nio.charset.Charset_) : string
+#### readString(charset: _java.nio.charset.Charset_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.nio.charset.Charset_ |   |
+| charset | _java.nio.charset.Charset_ |   |
 
 ##### Retorno
 
@@ -444,12 +444,12 @@ sidebar_label: InputStream
 
 ---
 
-#### readStringAndClose(arg0: _java.nio.charset.Charset_) : string
+#### readStringAndClose(charset: _java.nio.charset.Charset_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.nio.charset.Charset_ |   |
+| charset | _java.nio.charset.Charset_ |   |
 
 ##### Retorno
 
@@ -528,12 +528,12 @@ sidebar_label: InputStream
 
 ---
 
-#### writeTo(arg0: _[OutputStream](../../objects/OutputStream)_) : _[InputStream](../../objects/InputStream)_
+#### writeTo(out: _[OutputStream](../../objects/OutputStream)_) : _[InputStream](../../objects/InputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[OutputStream](../../objects/OutputStream)_ |   |
+| out | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -546,12 +546,12 @@ sidebar_label: InputStream
 
 ---
 
-#### writeToAndClose(arg0: _[OutputStream](../../objects/OutputStream)_) : _[InputStream](../../objects/InputStream)_
+#### writeToAndClose(out: _[OutputStream](../../objects/OutputStream)_) : _[InputStream](../../objects/InputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[OutputStream](../../objects/OutputStream)_ |   |
+| out | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 

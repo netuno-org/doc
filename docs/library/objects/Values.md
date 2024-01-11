@@ -12,13 +12,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### add(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### add(index: _int_, element: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| element | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -27,12 +27,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### add(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### add(o: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -45,13 +45,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### addAll(arg0: _int_, arg1: _java.util.Collection_) : _boolean_
+#### addAll(index: _int_, c: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.util.Collection_ |   |
+| index | _int_ |   |
+| c | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -60,12 +60,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### addAll(arg0: _java.util.Collection_) : _boolean_
+#### addAll(c: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Collection_ |   |
+| c | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -78,12 +78,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### as(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### as(o: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -92,13 +92,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### as(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### as(o: _java.lang.Object_, oDefault: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
+| oDefault | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -111,12 +111,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asBoolean(arg0: _int_) : _boolean_
+#### asBoolean(index: _int_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -125,13 +125,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asBoolean(arg0: _int_, arg1: _boolean_) : _boolean_
+#### asBoolean(index: _int_, defaultValue: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _boolean_ |   |
+| index | _int_ |   |
+| defaultValue | _boolean_ |   |
 
 ##### Return
 
@@ -140,12 +140,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asBoolean(arg0: string) : _boolean_
+#### asBoolean(key: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -154,13 +154,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asBoolean(arg0: string, arg1: _boolean_) : _boolean_
+#### asBoolean(key: string, defaultValue: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| key | string |   |
+| defaultValue | _boolean_ |   |
 
 ##### Return
 
@@ -173,12 +173,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asByte(arg0: _int_) : _byte_
+#### asByte(index: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -187,13 +187,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asByte(arg0: _int_, arg1: _byte_) : _byte_
+#### asByte(index: _int_, defaultValue: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _byte_ |   |
+| index | _int_ |   |
+| defaultValue | _byte_ |   |
 
 ##### Return
 
@@ -202,13 +202,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asByte(arg0: string, arg1: _byte_) : _byte_
+#### asByte(key: string, defaultValue: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _byte_ |   |
+| key | string |   |
+| defaultValue | _byte_ |   |
 
 ##### Return
 
@@ -221,12 +221,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asCalendar(arg0: string) : _java.util.Calendar_
+#### asCalendar(key: string) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -235,13 +235,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
+#### asCalendar(key: string, defaultValue: _java.util.Calendar_) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Calendar_ |   |
+| key | string |   |
+| defaultValue | _java.util.Calendar_ |   |
 
 ##### Return
 
@@ -254,12 +254,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asDate(arg0: string) : _java.util.Date_
+#### asDate(key: string) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -268,13 +268,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
+#### asDate(key: string, defaultValue: _java.util.Date_) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Date_ |   |
+| key | string |   |
+| defaultValue | _java.util.Date_ |   |
 
 ##### Return
 
@@ -287,12 +287,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asDouble(arg0: _int_) : _double_
+#### asDouble(index: _int_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -301,13 +301,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asDouble(arg0: _int_, arg1: _double_) : _double_
+#### asDouble(index: _int_, defaultValue: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _double_ |   |
+| index | _int_ |   |
+| defaultValue | _double_ |   |
 
 ##### Return
 
@@ -316,12 +316,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asDouble(arg0: string) : _double_
+#### asDouble(key: string) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -330,13 +330,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asDouble(arg0: string, arg1: _double_) : _double_
+#### asDouble(key: string, defaultValue: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| key | string |   |
+| defaultValue | _double_ |   |
 
 ##### Return
 
@@ -349,12 +349,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asFile(arg0: string) : _[File](../../objects/File)_
+#### asFile(key: string) : _[File](../../objects/File)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -367,12 +367,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asFloat(arg0: _int_) : _float_
+#### asFloat(index: _int_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -381,13 +381,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asFloat(arg0: _int_, arg1: _float_) : _float_
+#### asFloat(index: _int_, defaultValue: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _float_ |   |
+| index | _int_ |   |
+| defaultValue | _float_ |   |
 
 ##### Return
 
@@ -396,12 +396,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asFloat(arg0: string) : _float_
+#### asFloat(key: string) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -410,13 +410,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asFloat(arg0: string, arg1: _float_) : _float_
+#### asFloat(key: string, defaultValue: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| key | string |   |
+| defaultValue | _float_ |   |
 
 ##### Return
 
@@ -429,12 +429,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asHTMLDecode(arg0: string) : string
+#### asHTMLDecode(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -447,12 +447,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asHTMLEncode(arg0: string) : string
+#### asHTMLEncode(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -465,12 +465,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asInstant(arg0: string) : _java.time.Instant_
+#### asInstant(key: string) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -479,13 +479,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
+#### asInstant(key: string, defaultValue: _java.time.Instant_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.Instant_ |   |
+| key | string |   |
+| defaultValue | _java.time.Instant_ |   |
 
 ##### Return
 
@@ -498,12 +498,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asInt(arg0: _int_) : _int_
+#### asInt(index: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -512,13 +512,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asInt(arg0: _int_, arg1: _int_) : _int_
+#### asInt(index: _int_, defaultValue: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| index | _int_ |   |
+| defaultValue | _int_ |   |
 
 ##### Return
 
@@ -527,13 +527,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asInt(arg0: string, arg1: _short_) : _int_
+#### asInt(key: string, defaultValue: _short_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| defaultValue | _short_ |   |
 
 ##### Return
 
@@ -546,12 +546,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asList(arg0: _int_) : _java.util.List_
+#### asList(index: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -560,13 +560,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
+#### asList(index: _int_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Class_ |   |
+| index | _int_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -575,13 +575,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
+#### asList(index: _int_, defaultValue: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -590,14 +590,14 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
+#### asList(index: _int_, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.lang.Class_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -606,12 +606,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asList(arg0: string) : _java.util.List_
+#### asList(key: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -620,13 +620,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
+#### asList(key: string, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Class_ |   |
+| key | string |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -635,13 +635,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
+#### asList(key: string, defaultValue: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -650,14 +650,14 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
+#### asList(key: string, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.lang.Class_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -670,12 +670,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asLocalDate(arg0: string) : _java.time.LocalDate_
+#### asLocalDate(key: string) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -684,13 +684,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
+#### asLocalDate(key: string, defaultValue: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalDate_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalDate_ |   |
 
 ##### Return
 
@@ -703,12 +703,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asLocalDateTime(arg0: string) : _java.time.LocalDateTime_
+#### asLocalDateTime(key: string) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -717,13 +717,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
+#### asLocalDateTime(key: string, defaultValue: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalDateTime_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalDateTime_ |   |
 
 ##### Return
 
@@ -736,12 +736,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asLocalTime(arg0: string) : _java.time.LocalTime_
+#### asLocalTime(key: string) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -750,13 +750,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
+#### asLocalTime(key: string, defaultValue: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalTime_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalTime_ |   |
 
 ##### Return
 
@@ -769,12 +769,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asLong(arg0: _int_) : _long_
+#### asLong(index: _int_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -783,13 +783,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asLong(arg0: _int_, arg1: _long_) : _long_
+#### asLong(index: _int_, defaultValue: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _long_ |   |
+| index | _int_ |   |
+| defaultValue | _long_ |   |
 
 ##### Return
 
@@ -798,12 +798,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asLong(arg0: string) : _long_
+#### asLong(key: string) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -812,13 +812,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asLong(arg0: string, arg1: _long_) : _long_
+#### asLong(key: string, defaultValue: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _long_ |   |
+| key | string |   |
+| defaultValue | _long_ |   |
 
 ##### Return
 
@@ -831,12 +831,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asMap(arg0: _int_) : _java.util.Map_
+#### asMap(index: _int_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -845,13 +845,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
+#### asMap(index: _int_, defaultValue: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -860,12 +860,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asMap(arg0: string) : _java.util.Map_
+#### asMap(key: string) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -874,13 +874,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
+#### asMap(key: string, defaultValue: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -893,12 +893,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asSQLDate(arg0: string) : _java.sql.Date_
+#### asSQLDate(key: string) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -907,13 +907,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
+#### asSQLDate(key: string, defaultValue: _java.sql.Date_) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Date_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Date_ |   |
 
 ##### Return
 
@@ -926,12 +926,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asSQLTime(arg0: string) : _java.sql.Time_
+#### asSQLTime(key: string) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -940,13 +940,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
+#### asSQLTime(key: string, defaultValue: _java.sql.Time_) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Time_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Time_ |   |
 
 ##### Return
 
@@ -959,12 +959,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asSQLTimestamp(arg0: string) : _java.sql.Timestamp_
+#### asSQLTimestamp(key: string) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -973,13 +973,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
+#### asSQLTimestamp(key: string, defaultValue: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Timestamp_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Timestamp_ |   |
 
 ##### Return
 
@@ -992,12 +992,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asShort(arg0: _int_) : _short_
+#### asShort(index: _int_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -1006,13 +1006,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asShort(arg0: _int_, arg1: _short_) : _short_
+#### asShort(index: _int_, defaultValue: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _short_ |   |
+| index | _int_ |   |
+| defaultValue | _short_ |   |
 
 ##### Return
 
@@ -1021,12 +1021,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asShort(arg0: string) : _short_
+#### asShort(key: string) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1035,13 +1035,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asShort(arg0: string, arg1: _short_) : _short_
+#### asShort(key: string, defaultValue: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| defaultValue | _short_ |   |
 
 ##### Return
 
@@ -1054,12 +1054,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asString(arg0: _int_) : string
+#### asString(index: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -1068,13 +1068,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asString(arg0: _int_, arg1: string) : string
+#### asString(index: _int_, defaultValue: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| index | _int_ |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -1083,12 +1083,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asString(arg0: string) : string
+#### asString(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1097,13 +1097,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asString(arg0: string, arg1: string) : string
+#### asString(key: string, defaultValue: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -1112,14 +1112,14 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asString(arg0: string, arg1: string, arg2: string) : string
+#### asString(key: string, defaultValue: string, charsetName: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| key | string |   |
+| defaultValue | string |   |
+| charsetName | string |   |
 
 ##### Return
 
@@ -1132,12 +1132,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asUID(arg0: string) : _java.util.UUID_
+#### asUID(key: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1146,13 +1146,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asUID(arg0: string, arg1: string) : _java.util.UUID_
+#### asUID(key: string, defaultValue: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -1161,13 +1161,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
+#### asUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.UUID_ |   |
+| key | string |   |
+| defaultValue | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -1180,12 +1180,12 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asUUID(arg0: string) : _java.util.UUID_
+#### asUUID(key: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1194,13 +1194,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asUUID(arg0: string, arg1: string) : _java.util.UUID_
+#### asUUID(key: string, defaultValue: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -1209,13 +1209,13 @@ O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Sup
 
 ---
 
-#### asUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
+#### asUUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.UUID_ |   |
+| key | string |   |
+| defaultValue | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -1391,12 +1391,12 @@ Object converted to Values.
 
 ---
 
-#### contains(arg0: _java.lang.Object_) : _boolean_
+#### contains(o: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1405,13 +1405,13 @@ Object converted to Values.
 
 ---
 
-#### contains(arg0: string, arg1: _java.lang.Object_) : _boolean_
+#### contains(key: string, value: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1424,12 +1424,12 @@ Object converted to Values.
 
 ---
 
-#### containsAll(arg0: _java.util.Collection_) : _boolean_
+#### containsAll(c: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Collection_ |   |
+| c | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -1442,12 +1442,12 @@ Object converted to Values.
 
 ---
 
-#### containsKey(arg0: _java.lang.Object_) : _boolean_
+#### containsKey(key: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| key | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1460,12 +1460,12 @@ Object converted to Values.
 
 ---
 
-#### containsValue(arg0: _java.lang.Object_) : _boolean_
+#### containsValue(value: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1512,12 +1512,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### filter(arg0: _java.util.function.Predicate_) : _[Values](../../objects/Values)_
+#### filter(p: _java.util.function.Predicate_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.Predicate_ |   |
+| p | _java.util.function.Predicate_ |   |
 
 ##### Return
 
@@ -1526,12 +1526,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### filter(arg0: _org.graalvm.polyglot.Value_) : _[Values](../../objects/Values)_
+#### filter(function: _org.graalvm.polyglot.Value_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1544,13 +1544,13 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### find(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### find(key: string, value: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -1559,12 +1559,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### find(arg0: _java.util.function.Predicate_) : _java.lang.Object_
+#### find(p: _java.util.function.Predicate_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.Predicate_ |   |
+| p | _java.util.function.Predicate_ |   |
 
 ##### Return
 
@@ -1573,12 +1573,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### find(arg0: _org.graalvm.polyglot.Value_) : _java.lang.Object_
+#### find(function: _org.graalvm.polyglot.Value_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1587,12 +1587,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### find(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### find(filter: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| filter | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -1605,12 +1605,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### forEach(arg0: _java.util.function.BiConsumer_) : _void_
+#### forEach(action: _java.util.function.BiConsumer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.BiConsumer_ |   |
+| action | _java.util.function.BiConsumer_ |   |
 
 ##### Return
 
@@ -1619,12 +1619,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### forEach(arg0: _java.util.function.Consumer_) : _void_
+#### forEach(action: _java.util.function.Consumer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.Consumer_ |   |
+| action | _java.util.function.Consumer_ |   |
 
 ##### Return
 
@@ -1633,12 +1633,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### forEach(arg0: _org.graalvm.polyglot.Value_) : _void_
+#### forEach(function: _org.graalvm.polyglot.Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -1675,12 +1675,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### fromJSON(arg0: string) : _[Values](../../objects/Values)_
+#### fromJSON(content: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string |   |
 
 ##### Return
 
@@ -1689,12 +1689,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### fromJSON(arg0: _org.netuno.psamata.net.Remote$Response_) : _[Values](../../objects/Values)_
+#### fromJSON(content: _org.netuno.psamata.net.Remote$Response_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.netuno.psamata.net.Remote$Response_ |   |
+| content | _org.netuno.psamata.net.Remote$Response_ |   |
 
 ##### Return
 
@@ -1788,12 +1788,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getBoolean(arg0: _int_) : _boolean_
+#### getBoolean(index: _int_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -1802,13 +1802,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getBoolean(arg0: _int_, arg1: _boolean_) : _boolean_
+#### getBoolean(index: _int_, defaultValue: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _boolean_ |   |
+| index | _int_ |   |
+| defaultValue | _boolean_ |   |
 
 ##### Return
 
@@ -1817,12 +1817,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getBoolean(arg0: string) : _boolean_
+#### getBoolean(key: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1831,13 +1831,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getBoolean(arg0: string, arg1: _boolean_) : _boolean_
+#### getBoolean(key: string, defaultValue: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| key | string |   |
+| defaultValue | _boolean_ |   |
 
 ##### Return
 
@@ -1850,12 +1850,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getByte(arg0: _int_) : _byte_
+#### getByte(index: _int_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -1864,13 +1864,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getByte(arg0: _int_, arg1: _byte_) : _byte_
+#### getByte(index: _int_, defaultValue: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _byte_ |   |
+| index | _int_ |   |
+| defaultValue | _byte_ |   |
 
 ##### Return
 
@@ -1879,12 +1879,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getByte(arg0: string) : _byte_
+#### getByte(key: string) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1893,13 +1893,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getByte(arg0: string, arg1: _byte_) : _byte_
+#### getByte(key: string, defaultValue: _byte_) : _byte_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _byte_ |   |
+| key | string |   |
+| defaultValue | _byte_ |   |
 
 ##### Return
 
@@ -1912,12 +1912,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getCalendar(arg0: string) : _java.util.Calendar_
+#### getCalendar(key: string) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1926,13 +1926,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getCalendar(arg0: string, arg1: _java.util.Calendar_) : _java.util.Calendar_
+#### getCalendar(key: string, defaultValue: _java.util.Calendar_) : _java.util.Calendar_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Calendar_ |   |
+| key | string |   |
+| defaultValue | _java.util.Calendar_ |   |
 
 ##### Return
 
@@ -1945,12 +1945,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getDate(arg0: string) : _java.util.Date_
+#### getDate(key: string) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -1959,13 +1959,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getDate(arg0: string, arg1: _java.util.Date_) : _java.util.Date_
+#### getDate(key: string, defaultValue: _java.util.Date_) : _java.util.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Date_ |   |
+| key | string |   |
+| defaultValue | _java.util.Date_ |   |
 
 ##### Return
 
@@ -1978,12 +1978,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getDouble(arg0: _int_) : _double_
+#### getDouble(index: _int_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -1992,13 +1992,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getDouble(arg0: _int_, arg1: _double_) : _double_
+#### getDouble(index: _int_, defaultValue: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _double_ |   |
+| index | _int_ |   |
+| defaultValue | _double_ |   |
 
 ##### Return
 
@@ -2007,12 +2007,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getDouble(arg0: string) : _double_
+#### getDouble(key: string) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2021,13 +2021,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getDouble(arg0: string, arg1: _double_) : _double_
+#### getDouble(key: string, defaultValue: _double_) : _double_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| key | string |   |
+| defaultValue | _double_ |   |
 
 ##### Return
 
@@ -2040,12 +2040,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getFile(arg0: string) : _[File](../../objects/File)_
+#### getFile(key: string) : _[File](../../objects/File)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2058,12 +2058,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getFloat(arg0: _int_) : _float_
+#### getFloat(index: _int_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2072,13 +2072,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getFloat(arg0: _int_, arg1: _float_) : _float_
+#### getFloat(index: _int_, defaultValue: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _float_ |   |
+| index | _int_ |   |
+| defaultValue | _float_ |   |
 
 ##### Return
 
@@ -2087,12 +2087,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getFloat(arg0: string) : _float_
+#### getFloat(key: string) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2101,13 +2101,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getFloat(arg0: string, arg1: _float_) : _float_
+#### getFloat(key: string, defaultValue: _float_) : _float_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| key | string |   |
+| defaultValue | _float_ |   |
 
 ##### Return
 
@@ -2144,12 +2144,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getHTMLDecode(arg0: string) : string
+#### getHTMLDecode(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2162,12 +2162,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getHTMLEncode(arg0: string) : string
+#### getHTMLEncode(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2180,12 +2180,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getInstant(arg0: string) : _java.time.Instant_
+#### getInstant(key: string) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2194,13 +2194,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getInstant(arg0: string, arg1: _java.time.Instant_) : _java.time.Instant_
+#### getInstant(key: string, defaultValue: _java.time.Instant_) : _java.time.Instant_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.Instant_ |   |
+| key | string |   |
+| defaultValue | _java.time.Instant_ |   |
 
 ##### Return
 
@@ -2213,12 +2213,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getInt(arg0: _int_) : _int_
+#### getInt(index: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2227,13 +2227,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getInt(arg0: _int_, arg1: _int_) : _int_
+#### getInt(index: _int_, defaultValue: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| index | _int_ |   |
+| defaultValue | _int_ |   |
 
 ##### Return
 
@@ -2242,12 +2242,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getInt(arg0: string) : _int_
+#### getInt(key: string) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2256,13 +2256,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getInt(arg0: string, arg1: _int_) : _int_
+#### getInt(key: string, defaultValue: _int_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| key | string |   |
+| defaultValue | _int_ |   |
 
 ##### Return
 
@@ -2287,12 +2287,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getList(arg0: _int_) : _java.util.List_
+#### getList(index: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2301,13 +2301,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getList(arg0: _int_, arg1: _java.lang.Class_) : _java.util.List_
+#### getList(index: _int_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Class_ |   |
+| index | _int_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2316,13 +2316,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getList(arg0: _int_, arg1: _java.lang.Object_) : _java.util.List_
+#### getList(index: _int_, defaultValue: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2331,14 +2331,14 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getList(arg0: _int_, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
+#### getList(index: _int_, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.lang.Class_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2347,12 +2347,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getList(arg0: string) : _java.util.List_
+#### getList(key: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2361,13 +2361,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getList(arg0: string, arg1: _java.lang.Class_) : _java.util.List_
+#### getList(key: string, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Class_ |   |
+| key | string |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2376,13 +2376,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getList(arg0: string, arg1: _java.lang.Object_) : _java.util.List_
+#### getList(key: string, defaultValue: _java.lang.Object_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2391,14 +2391,14 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getList(arg0: string, arg1: _java.lang.Object_, arg2: _java.lang.Class_) : _java.util.List_
+#### getList(key: string, defaultValue: _java.lang.Object_, claz: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
-| arg2 | _java.lang.Class_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
+| claz | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -2411,12 +2411,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getLocalDate(arg0: string) : _java.time.LocalDate_
+#### getLocalDate(key: string) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2425,13 +2425,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getLocalDate(arg0: string, arg1: _java.time.LocalDate_) : _java.time.LocalDate_
+#### getLocalDate(key: string, defaultValue: _java.time.LocalDate_) : _java.time.LocalDate_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalDate_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalDate_ |   |
 
 ##### Return
 
@@ -2444,12 +2444,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getLocalDateTime(arg0: string) : _java.time.LocalDateTime_
+#### getLocalDateTime(key: string) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2458,13 +2458,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getLocalDateTime(arg0: string, arg1: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
+#### getLocalDateTime(key: string, defaultValue: _java.time.LocalDateTime_) : _java.time.LocalDateTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalDateTime_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalDateTime_ |   |
 
 ##### Return
 
@@ -2477,12 +2477,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getLocalTime(arg0: string) : _java.time.LocalTime_
+#### getLocalTime(key: string) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2491,13 +2491,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getLocalTime(arg0: string, arg1: _java.time.LocalTime_) : _java.time.LocalTime_
+#### getLocalTime(key: string, defaultValue: _java.time.LocalTime_) : _java.time.LocalTime_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.time.LocalTime_ |   |
+| key | string |   |
+| defaultValue | _java.time.LocalTime_ |   |
 
 ##### Return
 
@@ -2510,12 +2510,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getLong(arg0: _int_) : _long_
+#### getLong(index: _int_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2524,13 +2524,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getLong(arg0: _int_, arg1: _long_) : _long_
+#### getLong(index: _int_, defaultValue: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _long_ |   |
+| index | _int_ |   |
+| defaultValue | _long_ |   |
 
 ##### Return
 
@@ -2539,12 +2539,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getLong(arg0: string) : _long_
+#### getLong(key: string) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2553,13 +2553,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getLong(arg0: string, arg1: _long_) : _long_
+#### getLong(key: string, defaultValue: _long_) : _long_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _long_ |   |
+| key | string |   |
+| defaultValue | _long_ |   |
 
 ##### Return
 
@@ -2572,12 +2572,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getMap(arg0: _int_) : _java.util.Map_
+#### getMap(index: _int_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2586,13 +2586,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getMap(arg0: _int_, arg1: _java.lang.Object_) : _java.util.Map_
+#### getMap(index: _int_, defaultValue: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2601,12 +2601,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getMap(arg0: string) : _java.util.Map_
+#### getMap(key: string) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2615,13 +2615,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getMap(arg0: string, arg1: _java.lang.Object_) : _java.util.Map_
+#### getMap(key: string, defaultValue: _java.lang.Object_) : _java.util.Map_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| defaultValue | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -2653,12 +2653,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getSQLDate(arg0: string) : _java.sql.Date_
+#### getSQLDate(key: string) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2667,13 +2667,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getSQLDate(arg0: string, arg1: _java.sql.Date_) : _java.sql.Date_
+#### getSQLDate(key: string, defaultValue: _java.sql.Date_) : _java.sql.Date_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Date_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Date_ |   |
 
 ##### Return
 
@@ -2686,12 +2686,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getSQLTime(arg0: string) : _java.sql.Time_
+#### getSQLTime(key: string) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2700,13 +2700,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getSQLTime(arg0: string, arg1: _java.sql.Time_) : _java.sql.Time_
+#### getSQLTime(key: string, defaultValue: _java.sql.Time_) : _java.sql.Time_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Time_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Time_ |   |
 
 ##### Return
 
@@ -2719,12 +2719,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getSQLTimestamp(arg0: string) : _java.sql.Timestamp_
+#### getSQLTimestamp(key: string) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2733,13 +2733,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getSQLTimestamp(arg0: string, arg1: _java.sql.Timestamp_) : _java.sql.Timestamp_
+#### getSQLTimestamp(key: string, defaultValue: _java.sql.Timestamp_) : _java.sql.Timestamp_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.sql.Timestamp_ |   |
+| key | string |   |
+| defaultValue | _java.sql.Timestamp_ |   |
 
 ##### Return
 
@@ -2752,12 +2752,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getShort(arg0: _int_) : _short_
+#### getShort(index: _int_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2766,13 +2766,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getShort(arg0: _int_, arg1: _short_) : _short_
+#### getShort(index: _int_, defaultValue: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _short_ |   |
+| index | _int_ |   |
+| defaultValue | _short_ |   |
 
 ##### Return
 
@@ -2781,12 +2781,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getShort(arg0: string) : _short_
+#### getShort(key: string) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2795,13 +2795,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getShort(arg0: string, arg1: _short_) : _short_
+#### getShort(key: string, defaultValue: _short_) : _short_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| defaultValue | _short_ |   |
 
 ##### Return
 
@@ -2826,12 +2826,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getString(arg0: _int_) : string
+#### getString(index: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -2840,13 +2840,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getString(arg0: _int_, arg1: string) : string
+#### getString(index: _int_, defaultValue: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| index | _int_ |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -2855,12 +2855,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getString(arg0: string) : string
+#### getString(key: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2869,13 +2869,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getString(arg0: string, arg1: string) : string
+#### getString(key: string, defaultValue: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -2884,14 +2884,14 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getString(arg0: string, arg1: string, arg2: string) : string
+#### getString(key: string, defaultValue: string, charsetName: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| key | string |   |
+| defaultValue | string |   |
+| charsetName | string |   |
 
 ##### Return
 
@@ -2904,12 +2904,12 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getUID(arg0: string) : _java.util.UUID_
+#### getUID(key: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2918,13 +2918,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getUID(arg0: string, arg1: string) : _java.util.UUID_
+#### getUID(key: string, defaultValue: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -2933,13 +2933,13 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### getUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
+#### getUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.UUID_ |   |
+| key | string |   |
+| defaultValue | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -2969,12 +2969,12 @@ Character encoding code.
 
 ---
 
-#### getUUID(arg0: string) : _java.util.UUID_
+#### getUUID(key: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -2983,13 +2983,13 @@ Character encoding code.
 
 ---
 
-#### getUUID(arg0: string, arg1: string) : _java.util.UUID_
+#### getUUID(key: string, defaultValue: string) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -2998,13 +2998,13 @@ Character encoding code.
 
 ---
 
-#### getUUID(arg0: string, arg1: _java.util.UUID_) : _java.util.UUID_
+#### getUUID(key: string, defaultValue: _java.util.UUID_) : _java.util.UUID_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.UUID_ |   |
+| key | string |   |
+| defaultValue | _java.util.UUID_ |   |
 
 ##### Return
 
@@ -3112,12 +3112,12 @@ Object converted to Values.
 
 ---
 
-#### has(arg0: _java.lang.Object_) : _boolean_
+#### has(o: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3126,12 +3126,12 @@ Object converted to Values.
 
 ---
 
-#### has(arg0: string) : _boolean_
+#### has(key: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -3140,13 +3140,13 @@ Object converted to Values.
 
 ---
 
-#### has(arg0: string, arg1: _java.lang.Object_) : _boolean_
+#### has(key: string, value: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3159,12 +3159,12 @@ Object converted to Values.
 
 ---
 
-#### hasKey(arg0: string) : _boolean_
+#### hasKey(key: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -3177,12 +3177,12 @@ Object converted to Values.
 
 ---
 
-#### hasValue(arg0: _java.lang.Object_) : _boolean_
+#### hasValue(value: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3195,12 +3195,12 @@ Object converted to Values.
 
 ---
 
-#### indexOf(arg0: _java.lang.Object_) : _int_
+#### indexOf(o: _java.lang.Object_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3213,12 +3213,12 @@ Object converted to Values.
 
 ---
 
-#### is(arg0: _java.lang.Object_) : _boolean_
+#### is(o: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3268,12 +3268,12 @@ If the restriction on associated files is active.
 
 ---
 
-#### isList(arg0: _java.lang.Object_) : _boolean_
+#### isList(o: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3311,12 +3311,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### isMap(arg0: _java.lang.Object_) : _boolean_
+#### isMap(o: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3329,12 +3329,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### isMergeable(arg0: _java.lang.Object_) : _boolean_
+#### isMergeable(object: _java.lang.Object_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| object | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3359,12 +3359,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### join(arg0: string) : string
+#### join(splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -3413,12 +3413,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### keysToString(arg0: string) : string
+#### keysToString(splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -3427,13 +3427,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### keysToString(arg0: _java.util.Map_, arg1: string) : string
+#### keysToString(map: _java.util.Map_, splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
+| map | _java.util.Map_ |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -3446,12 +3446,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### lastIndexOf(arg0: _java.lang.Object_) : _int_
+#### lastIndexOf(o: _java.lang.Object_) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3484,12 +3484,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### list(arg0: _java.lang.Class_) : _java.util.List_
+#### list(cls: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Class_ |   |
+| cls | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -3510,12 +3510,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### listIterator(arg0: _int_) : _java.util.ListIterator_
+#### listIterator(index: _int_) : _java.util.ListIterator_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| index | _int_ |   |
 
 ##### Return
 
@@ -3540,12 +3540,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### loadJSON(arg0: _java.io.InputStream_) : _void_
+#### loadJSON(in: _java.io.InputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.InputStream_ |   |
+| in | _java.io.InputStream_ |   |
 
 ##### Return
 
@@ -3554,12 +3554,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### loadJSON(arg0: _java.io.Reader_) : _void_
+#### loadJSON(in: _java.io.Reader_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.Reader_ |   |
+| in | _java.io.Reader_ |   |
 
 ##### Return
 
@@ -3572,12 +3572,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### loadProperties(arg0: _java.io.InputStream_) : _void_
+#### loadProperties(in: _java.io.InputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.InputStream_ |   |
+| in | _java.io.InputStream_ |   |
 
 ##### Return
 
@@ -3586,12 +3586,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### loadProperties(arg0: _java.io.Reader_) : _void_
+#### loadProperties(in: _java.io.Reader_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.Reader_ |   |
+| in | _java.io.Reader_ |   |
 
 ##### Return
 
@@ -3600,12 +3600,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### loadProperties(arg0: _java.util.Properties_) : _void_
+#### loadProperties(properties: _java.util.Properties_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Properties_ |   |
+| properties | _java.util.Properties_ |   |
 
 ##### Return
 
@@ -3618,12 +3618,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### loadPropertiesFromString(arg0: string) : _void_
+#### loadPropertiesFromString(data: string) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| data | string |   |
 
 ##### Return
 
@@ -3665,12 +3665,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### merge(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### merge(object: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| object | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3699,12 +3699,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### of(arg0: _[Ljava.lang.Object;_) : _[Values](../../objects/Values)_
+#### of(array: _[Ljava.lang.Object;[]_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Ljava.lang.Object;_ |   |
+| array | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 
@@ -3713,12 +3713,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### of(arg0: _java.lang.Object_) : _java.lang.Object_
+#### of(o: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3727,12 +3727,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### of(arg0: _java.util.List_) : _[Values](../../objects/Values)_
+#### of(list: _java.util.List_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
+| list | _java.util.List_ |   |
 
 ##### Return
 
@@ -3741,12 +3741,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### of(arg0: _java.util.Map_) : _[Values](../../objects/Values)_
+#### of(map: _java.util.Map_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
+| map | _java.util.Map_ |   |
 
 ##### Return
 
@@ -3759,12 +3759,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### ofList(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### ofList(o: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3777,12 +3777,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### ofMap(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### ofMap(o: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3795,12 +3795,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### push(arg0: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### push(o: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3813,13 +3813,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### put(arg0: _java.lang.Object_, arg1: _java.lang.Object_) : _java.lang.Object_
+#### put(key: _java.lang.Object_, value: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _java.lang.Object_ |   |
+| key | _java.lang.Object_ |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3828,13 +3828,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### put(arg0: string, arg1: _java.lang.Object_) : _java.lang.Object_
+#### put(key: string, value: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3847,12 +3847,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### putAll(arg0: _java.util.Map_) : _void_
+#### putAll(m: _java.util.Map_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
+| m | _java.util.Map_ |   |
 
 ##### Return
 
@@ -3884,12 +3884,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### remove(arg0: _int_) : _java.lang.Object_
+#### remove(i: _int_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| i | _int_ |   |
 
 ##### Return
 
@@ -3898,12 +3898,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### remove(arg0: _java.lang.Object_) : _java.lang.Object_
+#### remove(o: _java.lang.Object_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| o | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -3939,12 +3939,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### removeAll(arg0: _java.util.Collection_) : _boolean_
+#### removeAll(c: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Collection_ |   |
+| c | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -4006,12 +4006,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### replaceAll(arg0: _java.util.function.UnaryOperator_) : _void_
+#### replaceAll(operator: _java.util.function.UnaryOperator_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.UnaryOperator_ |   |
+| operator | _java.util.function.UnaryOperator_ |   |
 
 ##### Return
 
@@ -4020,12 +4020,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### replaceAll(arg0: _org.graalvm.polyglot.Value_) : _void_
+#### replaceAll(function: _org.graalvm.polyglot.Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -4038,12 +4038,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### retainAll(arg0: _java.util.Collection_) : _boolean_
+#### retainAll(c: _java.util.Collection_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Collection_ |   |
+| c | _java.util.Collection_ |   |
 
 ##### Return
 
@@ -4056,12 +4056,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### safeString(arg0: _java.lang.Object_) : string
+#### safeString(object: _java.lang.Object_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
+| object | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4070,13 +4070,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### safeString(arg0: _java.lang.Object_, arg1: string) : string
+#### safeString(object: _java.lang.Object_, defaultValue: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | string |   |
+| object | _java.lang.Object_ |   |
+| defaultValue | string |   |
 
 ##### Return
 
@@ -4089,12 +4089,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### saveJSON(arg0: _java.io.OutputStream_) : _void_
+#### saveJSON(out: _java.io.OutputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.OutputStream_ |   |
+| out | _java.io.OutputStream_ |   |
 
 ##### Return
 
@@ -4103,12 +4103,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### saveJSON(arg0: _java.io.Writer_) : _void_
+#### saveJSON(out: _java.io.Writer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.Writer_ |   |
+| out | _java.io.Writer_ |   |
 
 ##### Return
 
@@ -4121,12 +4121,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### saveProperties(arg0: _java.io.OutputStream_) : _void_
+#### saveProperties(out: _java.io.OutputStream_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.OutputStream_ |   |
+| out | _java.io.OutputStream_ |   |
 
 ##### Return
 
@@ -4135,12 +4135,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### saveProperties(arg0: _java.io.Writer_) : _void_
+#### saveProperties(out: _java.io.Writer_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.io.Writer_ |   |
+| out | _java.io.Writer_ |   |
 
 ##### Return
 
@@ -4153,12 +4153,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### search(arg0: string) : string
+#### search(content: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string |   |
 
 ##### Return
 
@@ -4167,13 +4167,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### search(arg0: string, arg1: _boolean_) : string
+#### search(content: string, ignoreCase: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| content | string |   |
+| ignoreCase | _boolean_ |   |
 
 ##### Return
 
@@ -4182,13 +4182,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### search(arg0: string, arg1: string) : string
+#### search(content: string, splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| content | string |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -4197,14 +4197,14 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### search(arg0: string, arg1: string, arg2: _boolean_) : string
+#### search(content: string, splitter: string, ignoreCase: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _boolean_ |   |
+| content | string |   |
+| splitter | string |   |
+| ignoreCase | _boolean_ |   |
 
 ##### Return
 
@@ -4213,15 +4213,15 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### search(arg0: _java.util.Map_, arg1: string, arg2: string, arg3: _boolean_) : string
+#### search(map: _java.util.Map_, content: string, splitter: string, ignoreCase: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
-| arg2 | string |   |
-| arg3 | _boolean_ |   |
+| map | _java.util.Map_ |   |
+| content | string |   |
+| splitter | string |   |
+| ignoreCase | _boolean_ |   |
 
 ##### Return
 
@@ -4234,13 +4234,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### set(arg0: _int_, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### set(index: _int_, element: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.lang.Object_ |   |
+| index | _int_ |   |
+| element | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4249,13 +4249,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### set(arg0: string, arg1: _java.lang.Object_) : _[Values](../../objects/Values)_
+#### set(key: string, value: _java.lang.Object_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.lang.Object_ |   |
+| key | string |   |
+| value | _java.lang.Object_ |   |
 
 ##### Return
 
@@ -4268,12 +4268,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setForceList(arg0: _boolean_) : _[Values](../../objects/Values)_
+#### setForceList(forceList: _boolean_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| forceList | _boolean_ |   |
 
 ##### Return
 
@@ -4286,12 +4286,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setForceMap(arg0: _boolean_) : _[Values](../../objects/Values)_
+#### setForceMap(forceMap: _boolean_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| forceMap | _boolean_ |   |
 
 ##### Return
 
@@ -4304,13 +4304,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfFalse(arg0: string, arg1: _boolean_) : _[Values](../../objects/Values)_
+#### setIfFalse(key: string, value: _boolean_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| key | string |   |
+| value | _boolean_ |   |
 
 ##### Return
 
@@ -4323,13 +4323,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfGreaterThanZero(arg0: string, arg1: _double_) : _[Values](../../objects/Values)_
+#### setIfGreaterThanZero(key: string, value: _double_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| key | string |   |
+| value | _double_ |   |
 
 ##### Return
 
@@ -4338,13 +4338,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfGreaterThanZero(arg0: string, arg1: _float_) : _[Values](../../objects/Values)_
+#### setIfGreaterThanZero(key: string, value: _float_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| key | string |   |
+| value | _float_ |   |
 
 ##### Return
 
@@ -4353,13 +4353,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfGreaterThanZero(arg0: string, arg1: _int_) : _[Values](../../objects/Values)_
+#### setIfGreaterThanZero(key: string, value: _int_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| key | string |   |
+| value | _int_ |   |
 
 ##### Return
 
@@ -4368,13 +4368,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfGreaterThanZero(arg0: string, arg1: _long_) : _[Values](../../objects/Values)_
+#### setIfGreaterThanZero(key: string, value: _long_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _long_ |   |
+| key | string |   |
+| value | _long_ |   |
 
 ##### Return
 
@@ -4383,13 +4383,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfGreaterThanZero(arg0: string, arg1: _short_) : _[Values](../../objects/Values)_
+#### setIfGreaterThanZero(key: string, value: _short_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| value | _short_ |   |
 
 ##### Return
 
@@ -4402,13 +4402,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfLowerThanZero(arg0: string, arg1: _double_) : _[Values](../../objects/Values)_
+#### setIfLowerThanZero(key: string, value: _double_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| key | string |   |
+| value | _double_ |   |
 
 ##### Return
 
@@ -4417,13 +4417,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfLowerThanZero(arg0: string, arg1: _float_) : _[Values](../../objects/Values)_
+#### setIfLowerThanZero(key: string, value: _float_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| key | string |   |
+| value | _float_ |   |
 
 ##### Return
 
@@ -4432,13 +4432,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfLowerThanZero(arg0: string, arg1: _int_) : _[Values](../../objects/Values)_
+#### setIfLowerThanZero(key: string, value: _int_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| key | string |   |
+| value | _int_ |   |
 
 ##### Return
 
@@ -4447,13 +4447,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfLowerThanZero(arg0: string, arg1: _long_) : _[Values](../../objects/Values)_
+#### setIfLowerThanZero(key: string, value: _long_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _long_ |   |
+| key | string |   |
+| value | _long_ |   |
 
 ##### Return
 
@@ -4462,13 +4462,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfLowerThanZero(arg0: string, arg1: _short_) : _[Values](../../objects/Values)_
+#### setIfLowerThanZero(key: string, value: _short_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| value | _short_ |   |
 
 ##### Return
 
@@ -4481,13 +4481,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfNotEmpty(arg0: string, arg1: string) : _[Values](../../objects/Values)_
+#### setIfNotEmpty(key: string, value: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| key | string |   |
+| value | string |   |
 
 ##### Return
 
@@ -4500,13 +4500,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfNotZero(arg0: string, arg1: _double_) : _[Values](../../objects/Values)_
+#### setIfNotZero(key: string, value: _double_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _double_ |   |
+| key | string |   |
+| value | _double_ |   |
 
 ##### Return
 
@@ -4515,13 +4515,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfNotZero(arg0: string, arg1: _float_) : _[Values](../../objects/Values)_
+#### setIfNotZero(key: string, value: _float_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _float_ |   |
+| key | string |   |
+| value | _float_ |   |
 
 ##### Return
 
@@ -4530,13 +4530,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfNotZero(arg0: string, arg1: _int_) : _[Values](../../objects/Values)_
+#### setIfNotZero(key: string, value: _int_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| key | string |   |
+| value | _int_ |   |
 
 ##### Return
 
@@ -4545,13 +4545,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfNotZero(arg0: string, arg1: _long_) : _[Values](../../objects/Values)_
+#### setIfNotZero(key: string, value: _long_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _long_ |   |
+| key | string |   |
+| value | _long_ |   |
 
 ##### Return
 
@@ -4560,13 +4560,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfNotZero(arg0: string, arg1: _short_) : _[Values](../../objects/Values)_
+#### setIfNotZero(key: string, value: _short_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _short_ |   |
+| key | string |   |
+| value | _short_ |   |
 
 ##### Return
 
@@ -4579,13 +4579,13 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setIfTrue(arg0: string, arg1: _boolean_) : _[Values](../../objects/Values)_
+#### setIfTrue(key: string, value: _boolean_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| key | string |   |
+| value | _boolean_ |   |
 
 ##### Return
 
@@ -4598,12 +4598,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### setNull(arg0: string) : _[Values](../../objects/Values)_
+#### setNull(key: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -4674,12 +4674,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### sort(arg0: _java.util.Comparator_) : _void_
+#### sort(c: _java.util.Comparator_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Comparator_ |   |
+| c | _java.util.Comparator_ |   |
 
 ##### Return
 
@@ -4688,12 +4688,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### sort(arg0: _org.graalvm.polyglot.Value_) : _void_
+#### sort(function: _org.graalvm.polyglot.Value_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -4718,13 +4718,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### subList(arg0: _int_, arg1: _int_) : _java.util.List_
+#### subList(fromIndex: _int_, toIndex: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| fromIndex | _int_ |   |
+| toIndex | _int_ |   |
 
 ##### Return
 
@@ -4737,24 +4737,24 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toArray() : _[Ljava.lang.Object;_
+#### toArray() : _[Ljava.lang.Object;[]_
 ##### Return
 
-( _[Ljava.lang.Object;_ )
+( _[Ljava.lang.Object;[]_ )
 
 
 ---
 
-#### toArray(arg0: _[Ljava.lang.Object;_) : _[Ljava.lang.Object;_
+#### toArray(a: _[Ljava.lang.Object;[]_) : _[Ljava.lang.Object;[]_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Ljava.lang.Object;_ |   |
+| a | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 
-( _[Ljava.lang.Object;_ )
+( _[Ljava.lang.Object;[]_ )
 
 
 ---
@@ -4763,10 +4763,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toByteArray() : _[B_
+#### toByteArray() : _byte[]_
 ##### Return
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
@@ -4775,10 +4775,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toDoubleArray() : _[D_
+#### toDoubleArray() : _double[]_
 ##### Return
 
-( _[D_ )
+( _double[]_ )
 
 
 ---
@@ -4787,10 +4787,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toFloatArray() : _[F_
+#### toFloatArray() : _float[]_
 ##### Return
 
-( _[F_ )
+( _float[]_ )
 
 
 ---
@@ -4807,13 +4807,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toFormMap(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### toFormMap(key: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| key | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -4822,12 +4822,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toFormMap(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### toFormMap(data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -4860,12 +4860,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toJSON(arg0: _boolean_) : string
+#### toJSON(htmlEscape: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| htmlEscape | _boolean_ |   |
 
 ##### Return
 
@@ -4874,13 +4874,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toJSON(arg0: _boolean_, arg1: _int_) : string
+#### toJSON(htmlEscape: _boolean_, indentFactor: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
-| arg1 | _int_ |   |
+| htmlEscape | _boolean_ |   |
+| indentFactor | _int_ |   |
 
 ##### Return
 
@@ -4889,12 +4889,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toJSON(arg0: _int_) : string
+#### toJSON(indentFactor: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| indentFactor | _int_ |   |
 
 ##### Return
 
@@ -4903,12 +4903,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toJSON(arg0: _java.util.List_) : string
+#### toJSON(values: _java.util.List_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
+| values | _java.util.List_ |   |
 
 ##### Return
 
@@ -4917,13 +4917,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toJSON(arg0: _java.util.List_, arg1: _boolean_) : string
+#### toJSON(values: _java.util.List_, htmlEscape: _boolean_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
-| arg1 | _boolean_ |   |
+| values | _java.util.List_ |   |
+| htmlEscape | _boolean_ |   |
 
 ##### Return
 
@@ -4932,14 +4932,14 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toJSON(arg0: _java.util.List_, arg1: _boolean_, arg2: _int_) : string
+#### toJSON(values: _java.util.List_, htmlEscape: _boolean_, indentFactor: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
-| arg1 | _boolean_ |   |
-| arg2 | _int_ |   |
+| values | _java.util.List_ |   |
+| htmlEscape | _boolean_ |   |
+| indentFactor | _int_ |   |
 
 ##### Return
 
@@ -4948,13 +4948,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toJSON(arg0: _java.util.List_, arg1: _int_) : string
+#### toJSON(values: _java.util.List_, indentFactor: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.List_ |   |
-| arg1 | _int_ |   |
+| values | _java.util.List_ |   |
+| indentFactor | _int_ |   |
 
 ##### Return
 
@@ -4967,13 +4967,13 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toJSONObject(arg0: _java.lang.Object_, arg1: _boolean_) : _java.lang.Object_
+#### toJSONObject(object: _java.lang.Object_, htmlEscape: _boolean_) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _boolean_ |   |
+| object | _java.lang.Object_ |   |
+| htmlEscape | _boolean_ |   |
 
 ##### Return
 
@@ -4986,14 +4986,14 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toJSONString(arg0: _java.lang.Object_, arg1: _boolean_, arg2: _int_) : string
+#### toJSONString(object: _java.lang.Object_, htmlEscape: _boolean_, indentFactor: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Object_ |   |
-| arg1 | _boolean_ |   |
-| arg2 | _int_ |   |
+| object | _java.lang.Object_ |   |
+| htmlEscape | _boolean_ |   |
+| indentFactor | _int_ |   |
 
 ##### Return
 
@@ -5014,12 +5014,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toList(arg0: _java.lang.Class_) : _java.util.List_
+#### toList(cls: _java.lang.Class_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Class_ |   |
+| cls | _java.lang.Class_ |   |
 
 ##### Return
 
@@ -5032,10 +5032,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toLongArray() : _[J_
+#### toLongArray() : _long[]_
 ##### Return
 
-( _[J_ )
+( _long[]_ )
 
 
 ---
@@ -5068,10 +5068,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toShortArray() : _[S_
+#### toShortArray() : _short[]_
 ##### Return
 
-( _[S_ )
+( _short[]_ )
 
 
 ---
@@ -5080,10 +5080,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### toStringArray() : _[Ljava.lang.String;_
+#### toStringArray() : _[Ljava.lang.String;[]_
 ##### Return
 
-( _[Ljava.lang.String;_ )
+( _[Ljava.lang.String;[]_ )
 
 
 ---
@@ -5092,12 +5092,12 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### unset(arg0: string) : _java.lang.Object_
+#### unset(key: string) : _java.lang.Object_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| key | string |   |
 
 ##### Return
 
@@ -5139,12 +5139,12 @@ List of all obtained values.
 
 ---
 
-#### valuesToString(arg0: string) : string
+#### valuesToString(splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -5153,13 +5153,13 @@ List of all obtained values.
 
 ---
 
-#### valuesToString(arg0: string, arg1: _[Ljava.lang.String;_) : string
+#### valuesToString(splitter: string, excludes: _[Ljava.lang.String;[]_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Ljava.lang.String;_ |   |
+| splitter | string |   |
+| excludes | _[Ljava.lang.String;[]_ |   |
 
 ##### Return
 
@@ -5168,14 +5168,14 @@ List of all obtained values.
 
 ---
 
-#### valuesToString(arg0: string, arg1: _[Ljava.lang.String;_, arg2: _[Values](../../objects/Values)_) : string
+#### valuesToString(splitter: string, excludes: _[Ljava.lang.String;[]_, config: _[Values](../../objects/Values)_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Ljava.lang.String;_ |   |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| splitter | string |   |
+| excludes | _[Ljava.lang.String;[]_ |   |
+| config | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5184,13 +5184,13 @@ List of all obtained values.
 
 ---
 
-#### valuesToString(arg0: string, arg1: _[Values](../../objects/Values)_) : string
+#### valuesToString(splitter: string, config: _[Values](../../objects/Values)_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| splitter | string |   |
+| config | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5199,13 +5199,13 @@ List of all obtained values.
 
 ---
 
-#### valuesToString(arg0: _java.util.Map_, arg1: string) : string
+#### valuesToString(map: _java.util.Map_, splitter: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
+| map | _java.util.Map_ |   |
+| splitter | string |   |
 
 ##### Return
 
@@ -5214,14 +5214,14 @@ List of all obtained values.
 
 ---
 
-#### valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_) : string
+#### valuesToString(map: _java.util.Map_, splitter: string, excludes: _[Ljava.lang.String;[]_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
-| arg2 | _[Ljava.lang.String;_ |   |
+| map | _java.util.Map_ |   |
+| splitter | string |   |
+| excludes | _[Ljava.lang.String;[]_ |   |
 
 ##### Return
 
@@ -5230,15 +5230,15 @@ List of all obtained values.
 
 ---
 
-#### valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Ljava.lang.String;_, arg3: _[Values](../../objects/Values)_) : string
+#### valuesToString(map: _java.util.Map_, splitter: string, excludes: _[Ljava.lang.String;[]_, config: _[Values](../../objects/Values)_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
-| arg2 | _[Ljava.lang.String;_ |   |
-| arg3 | _[Values](../../objects/Values)_ |   |
+| map | _java.util.Map_ |   |
+| splitter | string |   |
+| excludes | _[Ljava.lang.String;[]_ |   |
+| config | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5247,14 +5247,14 @@ List of all obtained values.
 
 ---
 
-#### valuesToString(arg0: _java.util.Map_, arg1: string, arg2: _[Values](../../objects/Values)_) : string
+#### valuesToString(map: _java.util.Map_, splitter: string, config: _[Values](../../objects/Values)_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Map_ |   |
-| arg1 | string |   |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| map | _java.util.Map_ |   |
+| splitter | string |   |
+| config | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 

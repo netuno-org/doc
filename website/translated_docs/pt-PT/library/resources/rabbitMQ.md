@@ -13,12 +13,12 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.basicConsume(arg0: _[Values](../../objects/Values)_) : _[RabbitMQ](../../resources/RabbitMQ)_
+#### _rabbitMQ.basicConsume(settings: _[Values](../../objects/Values)_) : _[RabbitMQ](../../resources/RabbitMQ)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| settings | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -67,12 +67,12 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.init(arg0: string) : _[RabbitMQ](../../resources/RabbitMQ)_
+#### _rabbitMQ.init(serverName: string) : _[RabbitMQ](../../resources/RabbitMQ)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| serverName | string |   |
 
 ##### Retorno
 
@@ -81,13 +81,13 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.init(arg0: string, arg1: string) : _[RabbitMQ](../../resources/RabbitMQ)_
+#### _rabbitMQ.init(serverName: string, connectionName: string) : _[RabbitMQ](../../resources/RabbitMQ)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| serverName | string |   |
+| connectionName | string |   |
 
 ##### Retorno
 
@@ -96,14 +96,14 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.init(arg0: string, arg1: string, arg2: string) : _[RabbitMQ](../../resources/RabbitMQ)_
+#### _rabbitMQ.init(serverName: string, connectionName: string, channelName: string) : _[RabbitMQ](../../resources/RabbitMQ)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| serverName | string |   |
+| connectionName | string |   |
+| channelName | string |   |
 
 ##### Retorno
 
@@ -116,12 +116,12 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.rpcConsume(arg0: _[Values](../../objects/Values)_) : _[RabbitMQ](../../resources/RabbitMQ)_
+#### _rabbitMQ.rpcConsume(settings: _[Values](../../objects/Values)_) : _[RabbitMQ](../../resources/RabbitMQ)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| settings | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -134,13 +134,13 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.rpcPublish(arg0: string, arg1: string) : string
+#### _rabbitMQ.rpcPublish(queueName: string, message: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| queueName | string |   |
+| message | string |   |
 
 ##### Retorno
 
@@ -149,14 +149,14 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.rpcPublish(arg0: string, arg1: string, arg2: string) : string
+#### _rabbitMQ.rpcPublish(queueName: string, message: string, charset: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| queueName | string |   |
+| message | string |   |
+| charset | string |   |
 
 ##### Retorno
 
@@ -165,13 +165,13 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.rpcPublish(arg0: string, arg1: _[Values](../../objects/Values)_) : string
+#### _rabbitMQ.rpcPublish(queueName: string, message: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| queueName | string |   |
+| message | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -180,14 +180,14 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.rpcPublish(arg0: string, arg1: _[Values](../../objects/Values)_, arg2: string) : string
+#### _rabbitMQ.rpcPublish(queueName: string, message: _[Values](../../objects/Values)_, charset: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
-| arg2 | string |   |
+| queueName | string |   |
+| message | _[Values](../../objects/Values)_ |   |
+| charset | string |   |
 
 ##### Retorno
 
@@ -200,12 +200,12 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.serverConfig(arg0: string) : _[Values](../../objects/Values)_
+#### _rabbitMQ.serverConfig(server: string) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| server | string |   |
 
 ##### Retorno
 
@@ -218,12 +218,12 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### _rabbitMQ.serversConfig(arg0: string) : _[Values](../../objects/Values)_
+#### _rabbitMQ.serversConfig(server: string) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| server | string |   |
 
 ##### Retorno
 

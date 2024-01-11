@@ -20,12 +20,12 @@ Orquestra os modos de execução assíncrona.
 
 ---
 
-#### await(arg0: _long_) : _boolean_
+#### await(timeout: _long_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| timeout | _long_ |   |
 
 ##### Retorno
 
@@ -46,12 +46,12 @@ Orquestra os modos de execução assíncrona.
 
 ---
 
-#### invokeAll(arg0: _long_) : _java.util.List_
+#### invokeAll(timeout: _long_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| timeout | _long_ |   |
 
 ##### Retorno
 
@@ -72,12 +72,12 @@ Orquestra os modos de execução assíncrona.
 
 ---
 
-#### invokeAny(arg0: _long_) : _java.lang.Object_
+#### invokeAny(timeout: _long_) : _java.lang.Object_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| timeout | _long_ |   |
 
 ##### Retorno
 

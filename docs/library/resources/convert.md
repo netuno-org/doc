@@ -35,7 +35,7 @@ New list with all array elements.
 
 ---
 
-#### _convert.fromBase64(content: _[B_) : string
+#### _convert.fromBase64(content: _byte[]_) : string
 ##### Description
 
 Converts Base64 content to a decoded string.
@@ -44,7 +44,7 @@ Converts Base64 content to a decoded string.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[B_ | Content to be converted. |
+| content | _byte[]_ | Content to be converted. |
 
 ##### Return
 
@@ -77,7 +77,7 @@ Returns the decoded string that was in Base64.
 
 ---
 
-#### _convert.fromBase64AsBytes(content: _[B_) : _[B_
+#### _convert.fromBase64AsBytes(content: _byte[]_) : _byte[]_
 ##### Description
 
 Converts the Base64 content to the original decoded byte array.
@@ -86,17 +86,17 @@ Converts the Base64 content to the original decoded byte array.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[B_ | Content to be converted. |
+| content | _byte[]_ | Content to be converted. |
 
 ##### Return
 
-( _[B_ )
+( _byte[]_ )
 
 Returns decoded bytes that were in Base64.
 
 ---
 
-#### _convert.fromBase64AsBytes(content: string) : _[B_
+#### _convert.fromBase64AsBytes(content: string) : _byte[]_
 ##### Description
 
 Converts the Base64 content to the original decoded byte array.
@@ -109,7 +109,7 @@ Converts the Base64 content to the original decoded byte array.
 
 ##### Return
 
-( _[B_ )
+( _byte[]_ )
 
 Returns decoded bytes that were in Base64.
 
@@ -179,7 +179,7 @@ Text with encoding of special characters in JSON transformed to normal text.
 
 ---
 
-#### _convert.toBase64(content: _[B_) : string
+#### _convert.toBase64(content: _byte[]_) : string
 ##### Description
 
 Converts the content to a Base64 encoded string.
@@ -188,7 +188,7 @@ Converts the content to a Base64 encoded string.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[B_ | Content to be converted. |
+| content | _byte[]_ | Content to be converted. |
 
 ##### Return
 
@@ -221,7 +221,7 @@ Returns the encoded string in Base64.
 
 ---
 
-#### _convert.toBase64AsBytes(content: _[B_) : _[B_
+#### _convert.toBase64AsBytes(content: _byte[]_) : _byte[]_
 ##### Description
 
 Converts the content to a Base64 encoded string.
@@ -230,17 +230,17 @@ Converts the content to a Base64 encoded string.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[B_ | Content to be converted. |
+| content | _byte[]_ | Content to be converted. |
 
 ##### Return
 
-( _[B_ )
+( _byte[]_ )
 
 Returns the encoded string in Base64.
 
 ---
 
-#### _convert.toBase64AsBytes(content: string) : _[B_
+#### _convert.toBase64AsBytes(content: string) : _byte[]_
 ##### Description
 
 Convert the content into Base64 encoding.
@@ -253,7 +253,7 @@ Convert the content into Base64 encoding.
 
 ##### Return
 
-( _[B_ )
+( _byte[]_ )
 
 Returns Base64 encoded bytes.
 
@@ -539,7 +539,7 @@ Returns the object converted as Exception.
 
 ---
 
-#### _convert.toFile(fileName: string, contentType: string, bytes: _[B_) : _[File](../../objects/File)_
+#### _convert.toFile(fileName: string, contentType: string, bytes: _byte[]_) : _[File](../../objects/File)_
 ##### Description
 
 Starts a file object in memory with the contents of the received bytes.
@@ -550,7 +550,7 @@ Starts a file object in memory with the contents of the received bytes.
 |---|---|---|
 | fileName | string | Name of the file. |
 | contentType | string | Type of content. |
-| bytes | _[B_ | Bytes that represent the file content. |
+| bytes | _byte[]_ | Bytes that represent the file content. |
 
 ##### Return
 
@@ -693,7 +693,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### _convert.toHEX(bytes: _[B_) : string
+#### _convert.toHEX(bytes: _byte[]_) : string
 ##### Description
 
 Convert bytes to **hexadecimal** with uppercase letters.
@@ -702,7 +702,7 @@ Convert bytes to **hexadecimal** with uppercase letters.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _[B_ | Bytes to be converted. |
+| bytes | _byte[]_ | Bytes to be converted. |
 
 ##### Return
 
@@ -746,7 +746,7 @@ Text formatted with encoding of special characters in HTML.
 
 ---
 
-#### _convert.toHex(bytes: _[B_) : string
+#### _convert.toHex(bytes: _byte[]_) : string
 ##### Description
 
 Convert bytes to **hexadecimal** with lowercase letters.
@@ -755,7 +755,7 @@ Convert bytes to **hexadecimal** with lowercase letters.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| bytes | _[B_ | Bytes to be converted. |
+| bytes | _byte[]_ | Bytes to be converted. |
 
 ##### Return
 

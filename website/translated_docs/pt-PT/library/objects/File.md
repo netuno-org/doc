@@ -48,12 +48,12 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bufferedReader(arg0: _int_) : _java.io.BufferedReader_
+#### bufferedReader(bufferSize: _int_) : _java.io.BufferedReader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| bufferSize | _int_ |   |
 
 ##### Retorno
 
@@ -62,13 +62,13 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bufferedReader(arg0: _int_, arg1: string) : _java.io.BufferedReader_
+#### bufferedReader(bufferSize: _int_, charset: string) : _java.io.BufferedReader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| bufferSize | _int_ |   |
+| charset | string |   |
 
 ##### Retorno
 
@@ -77,13 +77,13 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bufferedReader(arg0: _int_, arg1: _java.nio.charset.Charset_) : _java.io.BufferedReader_
+#### bufferedReader(bufferSize: _int_, charset: _java.nio.charset.Charset_) : _java.io.BufferedReader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.nio.charset.Charset_ |   |
+| bufferSize | _int_ |   |
+| charset | _java.nio.charset.Charset_ |   |
 
 ##### Retorno
 
@@ -92,12 +92,12 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bufferedReader(arg0: string) : _java.io.BufferedReader_
+#### bufferedReader(charset: string) : _java.io.BufferedReader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| charset | string |   |
 
 ##### Retorno
 
@@ -106,12 +106,12 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bufferedReader(arg0: _java.nio.charset.Charset_) : _java.io.BufferedReader_
+#### bufferedReader(charset: _java.nio.charset.Charset_) : _java.io.BufferedReader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.nio.charset.Charset_ |   |
+| charset | _java.nio.charset.Charset_ |   |
 
 ##### Retorno
 
@@ -124,14 +124,14 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### bytes() : _[B_
+#### bytes() : _byte[]_
 ##### Descrição
 
 Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
@@ -244,7 +244,7 @@ Apaga um determinado ficheiro/diretorio e recursivamente todos os subs.
 
 ---
 
-#### deleteAll(arg0: string) : _boolean_
+#### deleteAll(extension: string) : _boolean_
 ##### Descrição
 
 Apaga um determinado ficheiro/diretorio pela extensão do ficheiro.
@@ -253,7 +253,7 @@ Apaga um determinado ficheiro/diretorio pela extensão do ficheiro.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| extension | string |   |
 
 ##### Retorno
 
@@ -300,12 +300,12 @@ Apaga ficheiros designados pela extensão inserida e recursivamente nas subpasta
 
 ---
 
-#### ensureJail(arg0: string) : _[File](../../objects/File)_
+#### ensureJail(jailPath: string) : _[File](../../objects/File)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| jailPath | string |   |
 
 ##### Retorno
 
@@ -378,14 +378,14 @@ Retorna o nome base do presente ficheiro.
 
 ---
 
-#### getBytes() : _[B_
+#### getBytes() : _byte[]_
 ##### Descrição
 
 Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 
 ---
@@ -590,12 +590,12 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 ---
 
-#### isBaseName(arg0: string) : _boolean_
+#### isBaseName(baseName: string) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| baseName | string |   |
 
 ##### Retorno
 
@@ -624,12 +624,12 @@ Retorna um resultado booleano que verifica se o caminho indicado é uma pasta.
 
 ---
 
-#### isExtension(arg0: string) : _boolean_
+#### isExtension(extension: string) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| extension | string |   |
 
 ##### Retorno
 
@@ -827,12 +827,12 @@ Permite obter o caminho do ficheiro.
 
 ---
 
-#### readerBOM(arg0: string) : _java.io.Reader_
+#### readerBOM(charsetName: string) : _java.io.Reader_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| charsetName | string |   |
 
 ##### Retorno
 
@@ -929,13 +929,13 @@ Guarda o ficheiro no caminho inserido.
 
 ---
 
-#### sequenceName(arg0: _java.io.File_, arg1: string) : string
+#### sequenceName(targetPath: _java.io.File_, fileName: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.File_ |   |
-| arg1 | string |   |
+| targetPath | _java.io.File_ |   |
+| fileName | string |   |
 
 ##### Retorno
 
@@ -944,13 +944,13 @@ Guarda o ficheiro no caminho inserido.
 
 ---
 
-#### sequenceName(arg0: string, arg1: string) : string
+#### sequenceName(targetPath: string, fileName: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| targetPath | string |   |
+| fileName | string |   |
 
 ##### Retorno
 

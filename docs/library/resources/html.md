@@ -12,14 +12,14 @@ Enables greater ease in manipulating HTML code, uses [JSOUP](https://jsoup.org).
 
 ---
 
-#### _html.clean(arg0: string, arg1: string, arg2: _org.jsoup.safety.Safelist_) : string
+#### _html.clean(bodyHtml: string, baseUri: string, safelist: _org.jsoup.safety.Safelist_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _org.jsoup.safety.Safelist_ |   |
+| bodyHtml | string |   |
+| baseUri | string |   |
+| safelist | _org.jsoup.safety.Safelist_ |   |
 
 ##### Return
 
@@ -28,15 +28,15 @@ Enables greater ease in manipulating HTML code, uses [JSOUP](https://jsoup.org).
 
 ---
 
-#### _html.clean(arg0: string, arg1: string, arg2: _org.jsoup.safety.Safelist_, arg3: _org.jsoup.nodes.Document$OutputSettings_) : string
+#### _html.clean(bodyHtml: string, baseUri: string, safelist: _org.jsoup.safety.Safelist_, outputSettings: _org.jsoup.nodes.Document$OutputSettings_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _org.jsoup.safety.Safelist_ |   |
-| arg3 | _org.jsoup.nodes.Document$OutputSettings_ |   |
+| bodyHtml | string |   |
+| baseUri | string |   |
+| safelist | _org.jsoup.safety.Safelist_ |   |
+| outputSettings | _org.jsoup.nodes.Document$OutputSettings_ |   |
 
 ##### Return
 
@@ -45,13 +45,13 @@ Enables greater ease in manipulating HTML code, uses [JSOUP](https://jsoup.org).
 
 ---
 
-#### _html.clean(arg0: string, arg1: _org.jsoup.safety.Safelist_) : string
+#### _html.clean(bodyHtml: string, safelist: _org.jsoup.safety.Safelist_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _org.jsoup.safety.Safelist_ |   |
+| bodyHtml | string |   |
+| safelist | _org.jsoup.safety.Safelist_ |   |
 
 ##### Return
 
@@ -64,12 +64,12 @@ Enables greater ease in manipulating HTML code, uses [JSOUP](https://jsoup.org).
 
 ---
 
-#### _html.connect(arg0: string) : _org.jsoup.Connection_
+#### _html.connect(url: string) : _org.jsoup.Connection_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| url | string |   |
 
 ##### Return
 
@@ -94,13 +94,13 @@ Enables greater ease in manipulating HTML code, uses [JSOUP](https://jsoup.org).
 
 ---
 
-#### _html.isValid(arg0: string, arg1: _org.jsoup.safety.Safelist_) : _boolean_
+#### _html.isValid(bodyHtml: string, safelist: _org.jsoup.safety.Safelist_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _org.jsoup.safety.Safelist_ |   |
+| bodyHtml | string |   |
+| safelist | _org.jsoup.safety.Safelist_ |   |
 
 ##### Return
 
@@ -211,12 +211,12 @@ File content processed in HTML.
 
 ---
 
-#### _html.parseBodyFragment(arg0: string) : _org.jsoup.nodes.Document_
+#### _html.parseBodyFragment(bodyHtml: string) : _org.jsoup.nodes.Document_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| bodyHtml | string |   |
 
 ##### Return
 
@@ -225,13 +225,13 @@ File content processed in HTML.
 
 ---
 
-#### _html.parseBodyFragment(arg0: string, arg1: string) : _org.jsoup.nodes.Document_
+#### _html.parseBodyFragment(bodyHtml: string, baseUri: string) : _org.jsoup.nodes.Document_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| bodyHtml | string |   |
+| baseUri | string |   |
 
 ##### Return
 
@@ -263,13 +263,13 @@ Object of [JSOUP](https://jsoup.org) that allows interaction with the HTML code.
 
 ---
 
-#### _html.parseURL(arg0: string, arg1: _int_) : _org.jsoup.nodes.Document_
+#### _html.parseURL(url: string, timeoutMillis: _int_) : _org.jsoup.nodes.Document_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| url | string |   |
+| timeoutMillis | _int_ |   |
 
 ##### Return
 
@@ -290,12 +290,12 @@ Object of [JSOUP](https://jsoup.org) that allows interaction with the HTML code.
 
 ---
 
-#### _html.safelist(arg0: _org.jsoup.safety.Safelist_) : _org.jsoup.safety.Safelist_
+#### _html.safelist(copy: _org.jsoup.safety.Safelist_) : _org.jsoup.safety.Safelist_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.jsoup.safety.Safelist_ |   |
+| copy | _org.jsoup.safety.Safelist_ |   |
 
 ##### Return
 

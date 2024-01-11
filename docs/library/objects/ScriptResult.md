@@ -36,12 +36,12 @@ Script execution results if an error occurred or was successful.
 
 ---
 
-#### whenError(arg0: _java.util.function.Consumer_) : _[ScriptResult](../../objects/ScriptResult)_
+#### whenError(func: _java.util.function.Consumer_) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.function.Consumer_ |   |
+| func | _java.util.function.Consumer_ |   |
 
 ##### Return
 
@@ -50,12 +50,12 @@ Script execution results if an error occurred or was successful.
 
 ---
 
-#### whenError(arg0: _org.graalvm.polyglot.Value_) : _[ScriptResult](../../objects/ScriptResult)_
+#### whenError(function: _org.graalvm.polyglot.Value_) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 
@@ -68,12 +68,12 @@ Script execution results if an error occurred or was successful.
 
 ---
 
-#### whenSucceed(arg0: _java.lang.Runnable_) : _[ScriptResult](../../objects/ScriptResult)_
+#### whenSucceed(func: _java.lang.Runnable_) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.Runnable_ |   |
+| func | _java.lang.Runnable_ |   |
 
 ##### Return
 
@@ -82,12 +82,12 @@ Script execution results if an error occurred or was successful.
 
 ---
 
-#### whenSucceed(arg0: _org.graalvm.polyglot.Value_) : _[ScriptResult](../../objects/ScriptResult)_
+#### whenSucceed(function: _org.graalvm.polyglot.Value_) : _[ScriptResult](../../objects/ScriptResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _org.graalvm.polyglot.Value_ |   |
+| function | _org.graalvm.polyglot.Value_ |   |
 
 ##### Return
 

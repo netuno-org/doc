@@ -22,12 +22,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### changeType(arg0: string) : _[Column](../../objects/Column)_
+#### changeType(table: string) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| table | string |   |
 
 ##### Retorno
 
@@ -40,13 +40,13 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### drop(arg0: string, arg1: string) : _[Column](../../objects/Column)_
+#### drop(table: string, column: string) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| table | string |   |
+| column | string |   |
 
 ##### Retorno
 
@@ -127,12 +127,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isH2(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isH2(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -153,12 +153,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isMSSQL(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isMSSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -179,12 +179,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isMariaDB(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isMariaDB(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -217,12 +217,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### isPostgreSQL(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isPostgreSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -247,14 +247,14 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### rename(arg0: string, arg1: string, arg2: string) : _[Column](../../objects/Column)_
+#### rename(table: string, oldName: string, newName: string) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| table | string |   |
+| oldName | string |   |
+| newName | string |   |
 
 ##### Retorno
 
@@ -267,14 +267,14 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### renameIfExists(arg0: string, arg1: string, arg2: string) : _[Column](../../objects/Column)_
+#### renameIfExists(table: string, oldName: string, newName: string) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| table | string |   |
+| oldName | string |   |
+| newName | string |   |
 
 ##### Retorno
 
@@ -307,12 +307,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefault(arg0: _boolean_) : _[Column](../../objects/Column)_
+#### setDefault(_default: _boolean_) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| _default | _boolean_ |   |
 
 ##### Retorno
 
@@ -321,12 +321,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefault(arg0: _float_) : _[Column](../../objects/Column)_
+#### setDefault(_default: _float_) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| _default | _float_ |   |
 
 ##### Retorno
 
@@ -335,12 +335,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefault(arg0: _int_) : _[Column](../../objects/Column)_
+#### setDefault(_default: _int_) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| _default | _int_ |   |
 
 ##### Retorno
 
@@ -349,12 +349,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setDefault(arg0: string) : _[Column](../../objects/Column)_
+#### setDefault(_default: string) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| _default | string |   |
 
 ##### Retorno
 
@@ -415,12 +415,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setMaxLength(arg0: _int_) : _[Column](../../objects/Column)_
+#### setMaxLength(maxLength: _int_) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| maxLength | _int_ |   |
 
 ##### Retorno
 
@@ -433,12 +433,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setName(arg0: string) : _[Column](../../objects/Column)_
+#### setName(name: string) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| name | string |   |
 
 ##### Retorno
 
@@ -451,12 +451,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setNotNull(arg0: _boolean_) : _[Column](../../objects/Column)_
+#### setNotNull(notNull: _boolean_) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| notNull | _boolean_ |   |
 
 ##### Retorno
 
@@ -469,12 +469,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setPrimaryKey(arg0: _boolean_) : _[Column](../../objects/Column)_
+#### setPrimaryKey(primaryKey: _boolean_) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| primaryKey | _boolean_ |   |
 
 ##### Retorno
 
@@ -487,12 +487,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setType(arg0: string) : _[Column](../../objects/Column)_
+#### setType(typeName: string) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| typeName | string |   |
 
 ##### Retorno
 
@@ -501,12 +501,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### setType(arg0: _org.netuno.tritao.db.manager.Column$Type_) : _[Column](../../objects/Column)_
+#### setType(type: _org.netuno.tritao.db.manager.Column$Type_) : _[Column](../../objects/Column)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.manager.Column$Type_ |   |
+| type | _org.netuno.tritao.db.manager.Column$Type_ |   |
 
 ##### Retorno
 

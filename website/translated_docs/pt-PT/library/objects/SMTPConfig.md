@@ -312,12 +312,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setAuthMechanisms(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setAuthMechanisms(authMechanisms: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| authMechanisms | string |   |
 
 ##### Retorno
 
@@ -330,12 +330,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setAuthNTLMDomain(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setAuthNTLMDomain(authNTLMDomain: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| authNTLMDomain | string |   |
 
 ##### Retorno
 
@@ -348,12 +348,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setBcc(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setBcc(bcc: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| bcc | string |   |
 
 ##### Retorno
 
@@ -366,12 +366,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setCc(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setCc(cc: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| cc | string |   |
 
 ##### Retorno
 
@@ -384,12 +384,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setDebug(arg0: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setDebug(debug: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| debug | _boolean_ |   |
 
 ##### Retorno
 
@@ -402,12 +402,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setEnabled(arg0: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setEnabled(enabled: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| enabled | _boolean_ |   |
 
 ##### Retorno
 
@@ -420,12 +420,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setFrom(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setFrom(from: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| from | string |   |
 
 ##### Retorno
 
@@ -438,12 +438,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setHTML(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setHTML(html: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| html | string |   |
 
 ##### Retorno
 
@@ -456,12 +456,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setHost(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setHost(host: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| host | string |   |
 
 ##### Retorno
 
@@ -474,12 +474,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setMultipartSubtype(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setMultipartSubtype(multipartSubtype: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| multipartSubtype | string |   |
 
 ##### Retorno
 
@@ -492,12 +492,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setPassword(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setPassword(password: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| password | string |   |
 
 ##### Retorno
 
@@ -510,12 +510,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setPort(arg0: _int_) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setPort(port: _int_) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| port | _int_ |   |
 
 ##### Retorno
 
@@ -528,12 +528,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setProtocol(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setProtocol(protocol: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| protocol | string |   |
 
 ##### Retorno
 
@@ -546,12 +546,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setQuitWait(arg0: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setQuitWait(quitWait: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| quitWait | _boolean_ |   |
 
 ##### Retorno
 
@@ -564,12 +564,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setReplyTo(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setReplyTo(replyTo: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| replyTo | string |   |
 
 ##### Retorno
 
@@ -582,12 +582,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setSSL(arg0: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setSSL(ssl: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| ssl | _boolean_ |   |
 
 ##### Retorno
 
@@ -600,12 +600,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setSocketFactoryClass(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setSocketFactoryClass(socketFactoryClass: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| socketFactoryClass | string |   |
 
 ##### Retorno
 
@@ -618,12 +618,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setSocketFactoryFallback(arg0: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setSocketFactoryFallback(socketFactoryFallback: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| socketFactoryFallback | _boolean_ |   |
 
 ##### Retorno
 
@@ -636,12 +636,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setSocketFactoryPort(arg0: _int_) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setSocketFactoryPort(socketFactoryPort: _int_) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| socketFactoryPort | _int_ |   |
 
 ##### Retorno
 
@@ -654,12 +654,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setSubject(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setSubject(subject: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| subject | string |   |
 
 ##### Retorno
 
@@ -672,12 +672,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setSubjectPrefix(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setSubjectPrefix(subjectPrefix: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| subjectPrefix | string |   |
 
 ##### Retorno
 
@@ -690,12 +690,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setTLS(arg0: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setTLS(tls: _boolean_) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| tls | _boolean_ |   |
 
 ##### Retorno
 
@@ -708,12 +708,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setText(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setText(text: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| text | string |   |
 
 ##### Retorno
 
@@ -726,12 +726,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setTo(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setTo(to: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| to | string |   |
 
 ##### Retorno
 
@@ -744,12 +744,12 @@ Definição da configuração do SMTP.
 
 ---
 
-#### setUsername(arg0: string) : _[SMTPConfig](../../objects/SMTPConfig)_
+#### setUsername(username: string) : _[SMTPConfig](../../objects/SMTPConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| username | string |   |
 
 ##### Retorno
 

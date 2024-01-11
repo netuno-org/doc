@@ -12,7 +12,7 @@ Realiza a execução de comandos no sistema operativo, manipulação de ficheiro
 
 ---
 
-#### _os.command(comando: _[Ljava.lang.String;_) : _[OSCommand](../../objects/OSCommand)_
+#### _os.command(comando: _[Ljava.lang.String;[]_) : _[OSCommand](../../objects/OSCommand)_
 ##### Descrição
 
 Executa um comando no sistema operacional e obtém o resultado da execução, o primeiro item é o comando e os seguintes são parâmetros.
@@ -21,7 +21,7 @@ Executa um comando no sistema operacional e obtém o resultado da execução, o 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| comando | _[Ljava.lang.String;_ | O comando e parâmetros opcionais que serão executados. |
+| comando | _[Ljava.lang.String;[]_ | O comando e parâmetros opcionais que serão executados. |
 
 ##### Retorno
 
@@ -155,12 +155,12 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### _os.env(arg0: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
+#### _os.env(env: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| env | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -352,7 +352,7 @@ A nova instância do recurso OS.
 
 ---
 
-#### _os.isFile(arg0: string) : _boolean_
+#### _os.isFile(path: string) : _boolean_
 ##### Descrição
 
 Verifica se o caminho é um **ficheiro**.
@@ -361,7 +361,7 @@ Verifica se o caminho é um **ficheiro**.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| path | string |   |
 
 ##### Retorno
 
@@ -375,7 +375,7 @@ Se é ou não um **ficheiro**.
 
 ---
 
-#### _os.isFolder(arg0: string) : _boolean_
+#### _os.isFolder(path: string) : _boolean_
 ##### Descrição
 
 Verifica se o caminho é uma **pasta**.
@@ -384,7 +384,7 @@ Verifica se o caminho é uma **pasta**.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| path | string |   |
 
 ##### Retorno
 
@@ -521,12 +521,12 @@ O nome do sistema operacional.
 
 ---
 
-#### _os.readCommandError(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.readCommandError(readCommandError: _boolean_) : _[OS](../../resources/OS)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| readCommandError | _boolean_ |   |
 
 ##### Retorno
 
@@ -547,12 +547,12 @@ O nome do sistema operacional.
 
 ---
 
-#### _os.readCommandOutput(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.readCommandOutput(readCommandOutput: _boolean_) : _[OS](../../resources/OS)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| readCommandOutput | _boolean_ |   |
 
 ##### Retorno
 
@@ -626,12 +626,12 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### _os.setEnv(arg0: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
+#### _os.setEnv(shell: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| shell | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -644,12 +644,12 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### _os.setReadCommandError(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.setReadCommandError(readCommandError: _boolean_) : _[OS](../../resources/OS)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| readCommandError | _boolean_ |   |
 
 ##### Retorno
 
@@ -662,12 +662,12 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### _os.setReadCommandOutput(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.setReadCommandOutput(readCommandOutput: _boolean_) : _[OS](../../resources/OS)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| readCommandOutput | _boolean_ |   |
 
 ##### Retorno
 
@@ -680,12 +680,12 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### _os.setShell(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.setShell(shell: _boolean_) : _[OS](../../resources/OS)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| shell | _boolean_ |   |
 
 ##### Retorno
 
@@ -698,12 +698,12 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### _os.setWaitFor(arg0: _long_) : _[OS](../../resources/OS)_
+#### _os.setWaitFor(waitFor: _long_) : _[OS](../../resources/OS)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| waitFor | _long_ |   |
 
 ##### Retorno
 
@@ -724,12 +724,12 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### _os.shell(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.shell(shell: _boolean_) : _[OS](../../resources/OS)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| shell | _boolean_ |   |
 
 ##### Retorno
 
@@ -750,12 +750,12 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### _os.waitFor(arg0: _long_) : _[OS](../../resources/OS)_
+#### _os.waitFor(waitFor: _long_) : _[OS](../../resources/OS)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| waitFor | _long_ |   |
 
 ##### Retorno
 

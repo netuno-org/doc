@@ -448,7 +448,7 @@ Number of records affected by deletion.
 
 ---
 
-#### _db.deleteMany(table: string, dataItems: _[Ljava.lang.Object;_) : _[I_
+#### _db.deleteMany(table: string, dataItems: _[Ljava.lang.Object;[]_) : _[I_
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -474,7 +474,7 @@ _out.json({deletedData: deletedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| dataItems | _[Ljava.lang.Object;_ | Array or list of objects with the data structure to be inserted. |
+| dataItems | _[Ljava.lang.Object;[]_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
@@ -645,7 +645,7 @@ Number of lines affected by the executed command.
 
 ---
 
-#### _db.execute(sqlCommand: string, params: _[Ljava.lang.Object;_) : _int_
+#### _db.execute(sqlCommand: string, params: _[Ljava.lang.Object;[]_) : _int_
 ##### Description
 
 Execute commands directly on the database, commands such as inserts and updates can be executed as required.
@@ -664,7 +664,7 @@ const rowsAffected = _db.execute(`
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | sqlCommand | string | SQL command that will be executed directly on the database. |
-| params | _[Ljava.lang.Object;_ | The sequence of parameter values that are injected into the command. |
+| params | _[Ljava.lang.Object;[]_ | The sequence of parameter values that are injected into the command. |
 
 ##### Return
 
@@ -1236,7 +1236,7 @@ ID of the data that was inserted or ID of the existing data.
 
 ---
 
-#### _db.insertMany(table: string, dataItems: _[Ljava.lang.Object;_) : _[I_
+#### _db.insertMany(table: string, dataItems: _[Ljava.lang.Object;[]_) : _[I_
 ##### Description
 
 Executes the insertion of multiple rows into a table of an Array of Objects or a List of Values.
@@ -1261,7 +1261,7 @@ _db.insertMany(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| dataItems | _[Ljava.lang.Object;_ | Array or list of objects with the data structure to be inserted. |
+| dataItems | _[Ljava.lang.Object;[]_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
@@ -1461,12 +1461,12 @@ Name of the connection configuration to the database being used.
 
 ---
 
-#### _db.param(arg0: string) : string
+#### _db.param(type: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| type | string |   |
 
 ##### Return
 
@@ -1511,7 +1511,7 @@ List of data obtained with the direct query to the database.
 
 ---
 
-#### _db.query(query: string, params: _[Ljava.lang.Object;_) : _java.util.List_
+#### _db.query(query: string, params: _[Ljava.lang.Object;[]_) : _java.util.List_
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1532,7 +1532,7 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | query | string | Command that will be executed on the database to get records. |
-| params | _[Ljava.lang.Object;_ | List of parameter values that will be injected into the database query. |
+| params | _[Ljava.lang.Object;[]_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
@@ -1637,7 +1637,7 @@ The first data record obtained with the direct database query.
 
 ---
 
-#### _db.queryFirst(query: string, params: _[Ljava.lang.Object;_) : _[Values](../../objects/Values)_
+#### _db.queryFirst(query: string, params: _[Ljava.lang.Object;[]_) : _[Values](../../objects/Values)_
 ##### Description
 
 Run an SQL query directly on the database and get only the first record. Be very careful with SQL Injection.
@@ -1657,7 +1657,7 @@ _log.info('The first product found:', productFound)
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | query | string | Command that will be executed on the database to get the record. |
-| params | _[Ljava.lang.Object;_ | List of parameter values that will be injected into the database query. |
+| params | _[Ljava.lang.Object;[]_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
@@ -2068,14 +2068,14 @@ Object of type DBSearchResult.
 
 ---
 
-#### _db.search(arg0: string, arg1: _java.util.Map_, arg2: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(table: string, data: _java.util.Map_, wildcards: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Map_ |   |
-| arg2 | _boolean_ |   |
+| table | string |   |
+| data | _java.util.Map_ |   |
+| wildcards | _boolean_ |   |
 
 ##### Return
 
@@ -2115,14 +2115,14 @@ Object of type DBSearchResult.
 
 ---
 
-#### _db.search(arg0: string, arg1: _[Values](../../objects/Values)_, arg2: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
+#### _db.search(table: string, data: _[Values](../../objects/Values)_, wildcards: _boolean_) : _[DBSearchResult](../../objects/DBSearchResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
-| arg2 | _boolean_ |   |
+| table | string |   |
+| data | _[Values](../../objects/Values)_ |   |
+| wildcards | _boolean_ |   |
 
 ##### Return
 
@@ -2907,7 +2907,7 @@ Number of records affected by the update.
 
 ---
 
-#### _db.updateMany(table: string, dataItems: _[Ljava.lang.Object;_) : _[I_
+#### _db.updateMany(table: string, dataItems: _[Ljava.lang.Object;[]_) : _[I_
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -2935,7 +2935,7 @@ _out.json({updatedData: updatedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | table | string | Name of the table in the database that should receive the data to be entered. |
-| dataItems | _[Ljava.lang.Object;_ | Array or list of objects with the data structure to be inserted. |
+| dataItems | _[Ljava.lang.Object;[]_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 

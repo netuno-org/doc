@@ -36,12 +36,12 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### core(arg0: string) : _boolean_
+#### core(file: string) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| file | string |   |
 
 ##### Retorno
 
@@ -78,12 +78,12 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### execute(arg0: string) : _boolean_
+#### execute(file: string) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| file | string |   |
 
 ##### Retorno
 
@@ -96,12 +96,12 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### getInstance(arg0: _org.netuno.proteu.Proteu_) : _[Service](../../objects/Service)_
+#### getInstance(proteu: _org.netuno.proteu.Proteu_) : _[Service](../../objects/Service)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.proteu.Proteu_ |   |
+| proteu | _org.netuno.proteu.Proteu_ |   |
 
 ##### Retorno
 
@@ -230,12 +230,12 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### notFoundDefaultError(arg0: _boolean_) : _void_
+#### notFoundDefaultError(value: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| value | _boolean_ |   |
 
 ##### Retorno
 
@@ -260,12 +260,12 @@ Gere a execução dos scripts de serviços em `server/services`.
 
 ---
 
-#### setNotFoundDefaultError(arg0: _boolean_) : _void_
+#### setNotFoundDefaultError(value: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| value | _boolean_ |   |
 
 ##### Retorno
 

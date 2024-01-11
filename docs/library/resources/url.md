@@ -12,12 +12,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.contains(arg0: string) : _boolean_
+#### _url.contains(string: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| string | string |   |
 
 ##### Return
 
@@ -42,12 +42,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.endsWith(arg0: string) : _boolean_
+#### _url.endsWith(string: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| string | string |   |
 
 ##### Return
 
@@ -60,12 +60,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.equalsIgnoreCase(arg0: string) : _boolean_
+#### _url.equalsIgnoreCase(string: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| string | string |   |
 
 ##### Return
 
@@ -78,12 +78,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.indexOf(arg0: string) : _int_
+#### _url.indexOf(string: string) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| string | string |   |
 
 ##### Return
 
@@ -120,12 +120,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.lastIndexOf(arg0: string) : _int_
+#### _url.lastIndexOf(string: string) : _int_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| string | string |   |
 
 ##### Return
 
@@ -138,13 +138,13 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.replace(arg0: _java.lang.CharSequence_, arg1: _java.lang.CharSequence_) : string
+#### _url.replace(_old: _java.lang.CharSequence_, _new: _java.lang.CharSequence_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.lang.CharSequence_ |   |
-| arg1 | _java.lang.CharSequence_ |   |
+| _old | _java.lang.CharSequence_ |   |
+| _new | _java.lang.CharSequence_ |   |
 
 ##### Return
 
@@ -157,13 +157,13 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.replaceAll(arg0: string, arg1: string) : string
+#### _url.replaceAll(_old: string, _new: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| _old | string |   |
+| _new | string |   |
 
 ##### Return
 
@@ -200,16 +200,16 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.split(arg0: string) : _[Ljava.lang.String;_
+#### _url.split(regex: string) : _[Ljava.lang.String;[]_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| regex | string |   |
 
 ##### Return
 
-( _[Ljava.lang.String;_ )
+( _[Ljava.lang.String;[]_ )
 
 
 ---
@@ -218,12 +218,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.startsWith(arg0: string) : _boolean_
+#### _url.startsWith(string: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| string | string |   |
 
 ##### Return
 
@@ -236,13 +236,13 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.substring(arg0: _int_, arg1: _int_) : string
+#### _url.substring(start: _int_, end: _int_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| start | _int_ |   |
+| end | _int_ |   |
 
 ##### Return
 
@@ -255,12 +255,12 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### _url.to(arg0: string) : _[URL](../../resources/URL)_
+#### _url.to(url: string) : _[URL](../../resources/URL)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| url | string |   |
 
 ##### Return
 

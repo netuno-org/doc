@@ -12,7 +12,7 @@ Performs the execution of commands in the operating system, manipulation of file
 
 ---
 
-#### _os.command(command: _[Ljava.lang.String;_) : _[OSCommand](../../objects/OSCommand)_
+#### _os.command(command: _[Ljava.lang.String;[]_) : _[OSCommand](../../objects/OSCommand)_
 ##### Description
 
 Executes a command in the operating system and obtains the result of the execution, the first item is the command and the following are parameters.
@@ -21,7 +21,7 @@ Executes a command in the operating system and obtains the result of the executi
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| command | _[Ljava.lang.String;_ | The command and optional parameters that will be executed. |
+| command | _[Ljava.lang.String;[]_ | The command and optional parameters that will be executed. |
 
 ##### Return
 
@@ -155,12 +155,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.env(arg0: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
+#### _os.env(env: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| env | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -352,7 +352,7 @@ The new instance of the OS resource.
 
 ---
 
-#### _os.isFile(arg0: string) : _boolean_
+#### _os.isFile(path: string) : _boolean_
 ##### Description
 
 Checks whether the path is a **file**.
@@ -361,7 +361,7 @@ Checks whether the path is a **file**.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| path | string |   |
 
 ##### Return
 
@@ -375,7 +375,7 @@ Whether or not it is a **file**.
 
 ---
 
-#### _os.isFolder(arg0: string) : _boolean_
+#### _os.isFolder(path: string) : _boolean_
 ##### Description
 
 Checks whether the path is a **folder**.
@@ -384,7 +384,7 @@ Checks whether the path is a **folder**.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| path | string |   |
 
 ##### Return
 
@@ -521,12 +521,12 @@ The name of the operating system.
 
 ---
 
-#### _os.readCommandError(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.readCommandError(readCommandError: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| readCommandError | _boolean_ |   |
 
 ##### Return
 
@@ -547,12 +547,12 @@ The name of the operating system.
 
 ---
 
-#### _os.readCommandOutput(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.readCommandOutput(readCommandOutput: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| readCommandOutput | _boolean_ |   |
 
 ##### Return
 
@@ -626,12 +626,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setEnv(arg0: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
+#### _os.setEnv(shell: _[Values](../../objects/Values)_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| shell | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -644,12 +644,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setReadCommandError(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.setReadCommandError(readCommandError: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| readCommandError | _boolean_ |   |
 
 ##### Return
 
@@ -662,12 +662,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setReadCommandOutput(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.setReadCommandOutput(readCommandOutput: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| readCommandOutput | _boolean_ |   |
 
 ##### Return
 
@@ -680,12 +680,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setShell(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.setShell(shell: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| shell | _boolean_ |   |
 
 ##### Return
 
@@ -698,12 +698,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.setWaitFor(arg0: _long_) : _[OS](../../resources/OS)_
+#### _os.setWaitFor(waitFor: _long_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _long_ |   |
+| waitFor | _long_ |   |
 
 ##### Return
 
@@ -724,12 +724,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.shell(arg0: _boolean_) : _[OS](../../resources/OS)_
+#### _os.shell(shell: _boolean_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| shell | _boolean_ |   |
 
 ##### Return
 
@@ -750,12 +750,12 @@ Instance of the operating system resource.
 
 ---
 
-#### _os.waitFor(arg0: _long_) : _[OS](../../resources/OS)_
+#### _os.waitFor(waitFor: _long_) : _[OS](../../resources/OS)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _long_ |   |
+| waitFor | _long_ |   |
 
 ##### Return
 

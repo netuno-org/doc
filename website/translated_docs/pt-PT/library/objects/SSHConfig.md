@@ -120,12 +120,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setCompression(arg0: _boolean_) : _void_
+#### setCompression(compression: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| compression | _boolean_ |   |
 
 ##### Retorno
 
@@ -138,12 +138,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setConnectTimeout(arg0: _int_) : _[SSHConfig](../../objects/SSHConfig)_
+#### setConnectTimeout(connectTimeout: _int_) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| connectTimeout | _int_ |   |
 
 ##### Retorno
 
@@ -156,12 +156,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setDebug(arg0: _boolean_) : _[SSHConfig](../../objects/SSHConfig)_
+#### setDebug(debug: _boolean_) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| debug | _boolean_ |   |
 
 ##### Retorno
 
@@ -174,12 +174,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setEnabled(arg0: _boolean_) : _[SSHConfig](../../objects/SSHConfig)_
+#### setEnabled(enabled: _boolean_) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| enabled | _boolean_ |   |
 
 ##### Retorno
 
@@ -192,12 +192,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setHost(arg0: string) : _[SSHConfig](../../objects/SSHConfig)_
+#### setHost(host: string) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| host | string |   |
 
 ##### Retorno
 
@@ -210,12 +210,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setPassword(arg0: string) : _[SSHConfig](../../objects/SSHConfig)_
+#### setPassword(password: string) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| password | string |   |
 
 ##### Retorno
 
@@ -228,12 +228,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setPort(arg0: _int_) : _[SSHConfig](../../objects/SSHConfig)_
+#### setPort(port: _int_) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| port | _int_ |   |
 
 ##### Retorno
 
@@ -246,12 +246,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setPublicKey(arg0: string) : _void_
+#### setPublicKey(publicKey: string) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| publicKey | string |   |
 
 ##### Retorno
 
@@ -264,12 +264,12 @@ Definição da configuração do SSH.
 
 ---
 
-#### setUsername(arg0: string) : _[SSHConfig](../../objects/SSHConfig)_
+#### setUsername(username: string) : _[SSHConfig](../../objects/SSHConfig)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| username | string |   |
 
 ##### Retorno
 

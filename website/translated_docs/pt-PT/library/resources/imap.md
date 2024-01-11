@@ -163,12 +163,12 @@ Objeto da configuração ativa.
 
 ---
 
-#### _imap.getMail(arg0: _int_) : _org.netuno.psamata.mail.Mail_
+#### _imap.getMail(position: _int_) : _org.netuno.psamata.mail.Mail_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| position | _int_ |   |
 
 ##### Retorno
 
@@ -189,13 +189,13 @@ Objeto da configuração ativa.
 
 ---
 
-#### _imap.getMails(arg0: _int_, arg1: _int_) : _java.util.List_
+#### _imap.getMails(start: _int_, end: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| start | _int_ |   |
+| end | _int_ |   |
 
 ##### Retorno
 
@@ -280,12 +280,12 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _imap.mail(arg0: _int_) : _org.netuno.psamata.mail.Mail_
+#### _imap.mail(position: _int_) : _org.netuno.psamata.mail.Mail_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| position | _int_ |   |
 
 ##### Retorno
 
@@ -306,13 +306,13 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _imap.mails(arg0: _int_, arg1: _int_) : _java.util.List_
+#### _imap.mails(start: _int_, end: _int_) : _java.util.List_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| start | _int_ |   |
+| end | _int_ |   |
 
 ##### Retorno
 
@@ -337,12 +337,12 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _imap.openFolder(arg0: string) : _[IMAP](../../resources/IMAP)_
+#### _imap.openFolder(name: string) : _[IMAP](../../resources/IMAP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| name | string |   |
 
 ##### Retorno
 
@@ -351,13 +351,13 @@ Resultado se está ou não ativado.
 
 ---
 
-#### _imap.openFolder(arg0: string, arg1: _boolean_) : _[IMAP](../../resources/IMAP)_
+#### _imap.openFolder(name: string, write: _boolean_) : _[IMAP](../../resources/IMAP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _boolean_ |   |
+| name | string |   |
+| write | _boolean_ |   |
 
 ##### Retorno
 
@@ -440,12 +440,12 @@ Objeto IMAP atual.
 
 ---
 
-#### _imap.with(arg0: _[SMTP](../../resources/SMTP)_) : _[IMAP](../../resources/IMAP)_
+#### _imap.with(smtp: _[SMTP](../../resources/SMTP)_) : _[IMAP](../../resources/IMAP)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[SMTP](../../resources/SMTP)_ |   |
+| smtp | _[SMTP](../../resources/SMTP)_ |   |
 
 ##### Retorno
 

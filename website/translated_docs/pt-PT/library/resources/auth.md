@@ -154,12 +154,12 @@ Retorna a encriptação da password segura.
 
 ---
 
-#### _auth.getProviderConfig(arg0: string) : _[Values](../../objects/Values)_
+#### _auth.getProviderConfig(providerCode: string) : _[Values](../../objects/Values)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| providerCode | string |   |
 
 ##### Retorno
 
@@ -276,12 +276,12 @@ Se o utilizador está autenticado com JSON Web Token retorna _true_.
 
 ---
 
-#### _auth.isProviderEnabled(arg0: string) : _boolean_
+#### _auth.isProviderEnabled(providerCode: string) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| providerCode | string |   |
 
 ##### Retorno
 

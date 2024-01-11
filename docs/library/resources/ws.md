@@ -24,13 +24,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.broadcast(arg0: string, arg1: _[Values](../../objects/Values)_) : _void_
+#### _ws.broadcast(endpointName: string, data: _[Values](../../objects/Values)_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| endpointName | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -43,14 +43,14 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.broadcastAsService(arg0: string, arg1: string, arg2: _[Values](../../objects/Values)_) : _void_
+#### _ws.broadcastAsService(endpointName: string, path: string, message: _[Values](../../objects/Values)_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| endpointName | string |   |
+| path | string |   |
+| message | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -59,13 +59,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.broadcastAsService(arg0: string, arg1: _[Values](../../objects/Values)_) : _void_
+#### _ws.broadcastAsService(endpointName: string, message: _[Values](../../objects/Values)_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| endpointName | string |   |
+| message | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -78,14 +78,14 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.broadcastService(arg0: string, arg1: string, arg2: _[Values](../../objects/Values)_) : _boolean_
+#### _ws.broadcastService(endpointName: string, path: string, message: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| endpointName | string |   |
+| path | string |   |
+| message | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -94,13 +94,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.broadcastService(arg0: string, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _ws.broadcastService(endpointName: string, message: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| endpointName | string |   |
+| message | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -121,12 +121,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.close(arg0: string) : _boolean_
+#### _ws.close(sessionId: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| sessionId | string |   |
 
 ##### Return
 
@@ -175,12 +175,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.closeSession(arg0: string) : _boolean_
+#### _ws.closeSession(id: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| id | string |   |
 
 ##### Return
 
@@ -189,14 +189,14 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.closeSession(arg0: string, arg1: string, arg2: string) : _boolean_
+#### _ws.closeSession(id: string, reason: string, message: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| id | string |   |
+| reason | string |   |
+| message | string |   |
 
 ##### Return
 
@@ -229,12 +229,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.data(arg0: string) : _[Values](../../objects/Values)_
+#### _ws.data(id: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| id | string |   |
 
 ##### Return
 
@@ -255,12 +255,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.fullPath(arg0: string) : string
+#### _ws.fullPath(id: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| id | string |   |
 
 ##### Return
 
@@ -341,12 +341,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.getData(arg0: string) : _[Values](../../objects/Values)_
+#### _ws.getData(id: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| id | string |   |
 
 ##### Return
 
@@ -367,12 +367,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.getFullPath(arg0: string) : string
+#### _ws.getFullPath(id: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| id | string |   |
 
 ##### Return
 
@@ -405,12 +405,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.getPath(arg0: string) : _[Values](../../objects/Values)_
+#### _ws.getPath(id: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| id | string |   |
 
 ##### Return
 
@@ -443,12 +443,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.getSession(arg0: string) : _javax.websocket.Session_
+#### _ws.getSession(id: string) : _javax.websocket.Session_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| id | string |   |
 
 ##### Return
 
@@ -469,12 +469,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.getSessionEndpoint(arg0: string) : _[Values](../../objects/Values)_
+#### _ws.getSessionEndpoint(id: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| id | string |   |
 
 ##### Return
 
@@ -543,12 +543,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.path(arg0: string) : _[Values](../../objects/Values)_
+#### _ws.path(id: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| id | string |   |
 
 ##### Return
 
@@ -573,13 +573,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.rawBroadcast(arg0: string, arg1: string) : _void_
+#### _ws.rawBroadcast(endpointName: string, message: string) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| endpointName | string |   |
+| message | string |   |
 
 ##### Return
 
@@ -588,14 +588,14 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.rawBroadcast(arg0: string, arg1: string, arg2: string) : _void_
+#### _ws.rawBroadcast(endpointName: string, path: string, message: string) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | string |   |
+| endpointName | string |   |
+| path | string |   |
+| message | string |   |
 
 ##### Return
 
@@ -608,12 +608,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.rawSend(arg0: string) : _boolean_
+#### _ws.rawSend(content: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string |   |
 
 ##### Return
 
@@ -622,13 +622,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.rawSend(arg0: string, arg1: string) : _boolean_
+#### _ws.rawSend(sessionId: string, content: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| sessionId | string |   |
+| content | string |   |
 
 ##### Return
 
@@ -641,12 +641,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.send(arg0: string) : _boolean_
+#### _ws.send(content: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| content | string |   |
 
 ##### Return
 
@@ -655,13 +655,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.send(arg0: string, arg1: string) : _boolean_
+#### _ws.send(sessionId: string, content: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| sessionId | string |   |
+| content | string |   |
 
 ##### Return
 
@@ -670,13 +670,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.send(arg0: string, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _ws.send(sessionId: string, content: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| sessionId | string |   |
+| content | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -685,12 +685,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.send(arg0: _[Values](../../objects/Values)_) : _boolean_
+#### _ws.send(content: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| content | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -703,13 +703,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.sendAsService(arg0: string, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _ws.sendAsService(sessionId: string, message: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| sessionId | string |   |
+| message | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -718,12 +718,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.sendAsService(arg0: _[Values](../../objects/Values)_) : _boolean_
+#### _ws.sendAsService(message: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| message | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -736,13 +736,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.sendService(arg0: string, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _ws.sendService(sessionId: string, message: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| sessionId | string |   |
+| message | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -751,12 +751,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.sendService(arg0: _[Values](../../objects/Values)_) : _boolean_
+#### _ws.sendService(message: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| message | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -777,12 +777,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.session(arg0: string) : _javax.websocket.Session_
+#### _ws.session(id: string) : _javax.websocket.Session_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| id | string |   |
 
 ##### Return
 
@@ -803,12 +803,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### _ws.sessionEndpoint(arg0: string) : _[Values](../../objects/Values)_
+#### _ws.sessionEndpoint(id: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| id | string |   |
 
 ##### Return
 

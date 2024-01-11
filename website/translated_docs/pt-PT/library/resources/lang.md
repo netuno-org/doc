@@ -47,13 +47,13 @@ Retorna a chave correspondente.
 
 ---
 
-#### _lang.get(arg0: string, arg1: _[Ljava.lang.Object;_) : string
+#### _lang.get(key: string, formats: _[Ljava.lang.Object;[]_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Ljava.lang.Object;_ |   |
+| key | string |   |
+| formats | _[Ljava.lang.Object;[]_ |   |
 
 ##### Retorno
 

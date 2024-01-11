@@ -77,12 +77,12 @@ List of users found for the alternative code.
 
 ---
 
-#### _user.allProvidersData(arg0: _int_) : _[Values](../../objects/Values)_
+#### _user.allProvidersData(userId: _int_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| userId | _int_ |   |
 
 ##### Return
 
@@ -404,13 +404,13 @@ User data found.
 
 ---
 
-#### _user.hasProvider(arg0: _int_, arg1: string) : _boolean_
+#### _user.hasProvider(userId: _int_, providerCode: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| userId | _int_ |   |
+| providerCode | string |   |
 
 ##### Return
 
@@ -419,12 +419,12 @@ User data found.
 
 ---
 
-#### _user.hasProvider(arg0: string) : _boolean_
+#### _user.hasProvider(providerCode: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| providerCode | string |   |
 
 ##### Return
 
@@ -485,12 +485,12 @@ Full name of the logged in user.
 
 ---
 
-#### _user.noPassword(arg0: _boolean_) : _boolean_
+#### _user.noPassword(active: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| active | _boolean_ |   |
 
 ##### Return
 
@@ -499,13 +499,13 @@ Full name of the logged in user.
 
 ---
 
-#### _user.noPassword(arg0: _int_, arg1: _boolean_) : _boolean_
+#### _user.noPassword(id: _int_, active: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _boolean_ |   |
+| id | _int_ |   |
+| active | _boolean_ |   |
 
 ##### Return
 
@@ -518,13 +518,13 @@ Full name of the logged in user.
 
 ---
 
-#### _user.password(arg0: _int_, arg1: string) : _boolean_
+#### _user.password(id: _int_, password: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| id | _int_ |   |
+| password | string |   |
 
 ##### Return
 
@@ -533,12 +533,12 @@ Full name of the logged in user.
 
 ---
 
-#### _user.password(arg0: string) : _boolean_
+#### _user.password(password: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| password | string |   |
 
 ##### Return
 
@@ -551,13 +551,13 @@ Full name of the logged in user.
 
 ---
 
-#### _user.providerData(arg0: _int_, arg1: string) : _[Values](../../objects/Values)_
+#### _user.providerData(userId: _int_, providerCode: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| userId | _int_ |   |
+| providerCode | string |   |
 
 ##### Return
 
@@ -566,12 +566,12 @@ Full name of the logged in user.
 
 ---
 
-#### _user.providerData(arg0: string) : _[Values](../../objects/Values)_
+#### _user.providerData(providerCode: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| providerCode | string |   |
 
 ##### Return
 
@@ -584,12 +584,12 @@ Full name of the logged in user.
 
 ---
 
-#### _user.providerDataByUid(arg0: string) : _[Values](../../objects/Values)_
+#### _user.providerDataByUid(uid: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| uid | string |   |
 
 ##### Return
 
@@ -602,12 +602,12 @@ Full name of the logged in user.
 
 ---
 
-#### _user.providerLDAP(arg0: _boolean_) : _boolean_
+#### _user.providerLDAP(active: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| active | _boolean_ |   |
 
 ##### Return
 
@@ -616,13 +616,13 @@ Full name of the logged in user.
 
 ---
 
-#### _user.providerLDAP(arg0: _int_, arg1: _boolean_) : _boolean_
+#### _user.providerLDAP(id: _int_, active: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _boolean_ |   |
+| id | _int_ |   |
+| active | _boolean_ |   |
 
 ##### Return
 
@@ -732,12 +732,12 @@ User data found.
 
 ---
 
-#### _user.setNoPassword(arg0: _boolean_) : _boolean_
+#### _user.setNoPassword(active: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| active | _boolean_ |   |
 
 ##### Return
 
@@ -746,13 +746,13 @@ User data found.
 
 ---
 
-#### _user.setNoPassword(arg0: _int_, arg1: _boolean_) : _boolean_
+#### _user.setNoPassword(id: _int_, active: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _boolean_ |   |
+| id | _int_ |   |
+| active | _boolean_ |   |
 
 ##### Return
 
@@ -765,13 +765,13 @@ User data found.
 
 ---
 
-#### _user.setPassword(arg0: _int_, arg1: string) : _boolean_
+#### _user.setPassword(id: _int_, password: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| id | _int_ |   |
+| password | string |   |
 
 ##### Return
 
@@ -780,12 +780,12 @@ User data found.
 
 ---
 
-#### _user.setPassword(arg0: string) : _boolean_
+#### _user.setPassword(password: string) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| password | string |   |
 
 ##### Return
 
@@ -798,12 +798,12 @@ User data found.
 
 ---
 
-#### _user.setProviderLDAP(arg0: _boolean_) : _boolean_
+#### _user.setProviderLDAP(active: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| active | _boolean_ |   |
 
 ##### Return
 
@@ -812,13 +812,13 @@ User data found.
 
 ---
 
-#### _user.setProviderLDAP(arg0: _int_, arg1: _boolean_) : _boolean_
+#### _user.setProviderLDAP(id: _int_, active: _boolean_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _boolean_ |   |
+| id | _int_ |   |
+| active | _boolean_ |   |
 
 ##### Return
 

@@ -176,7 +176,7 @@ Dados do conteúdo encriptado em bcryptSalt.
 
 ---
 
-#### _crypto.cryptHash(conteúdo: _[B_) : string
+#### _crypto.cryptHash(conteúdo: _byte[]_) : string
 ##### Descrição
 
 Codifica os dados com o cryptHash
@@ -185,7 +185,7 @@ Codifica os dados com o cryptHash
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _[B_ | Conteúdo para ser encriptado. |
+| conteúdo | _byte[]_ | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
@@ -195,7 +195,7 @@ Dados do conteúdo encriptado cryptHash.
 
 ---
 
-#### _crypto.cryptHash(conteúdo: _[B_, salt: string) : string
+#### _crypto.cryptHash(conteúdo: _byte[]_, salt: string) : string
 ##### Descrição
 
 Codifica os dados com o cryptHash
@@ -204,7 +204,7 @@ Codifica os dados com o cryptHash
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteúdo | _[B_ | Conteúdo para ser encriptado. |
+| conteúdo | _byte[]_ | Conteúdo para ser encriptado. |
 | salt | string | Salt Hash para ser utilizado na encriptação. |
 
 ##### Retorno
@@ -258,7 +258,7 @@ Dados do conteúdo encriptado cryptHash.
 
 ---
 
-#### _crypto.desDecode(conteudo: string, dados: _[B_) : string
+#### _crypto.desDecode(conteudo: string, dados: _byte[]_) : string
 ##### Descrição
 
 Codifica os dados com o Desdecode (Des).
@@ -268,7 +268,7 @@ Codifica os dados com o Desdecode (Des).
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | conteudo | string | Conteúdo para ser encriptado. |
-| dados | _[B_ | Dados para serem encriptados. |
+| dados | _byte[]_ | Dados para serem encriptados. |
 
 ##### Retorno
 
@@ -278,7 +278,7 @@ Dados binários do conteúdo encriptado em Desdecode (Des).
 
 ---
 
-#### _crypto.desDecode(conteudo: string, dados: _[B_, charset: string) : string
+#### _crypto.desDecode(conteudo: string, dados: _byte[]_, charset: string) : string
 ##### Descrição
 
 Codifica os dados com o SHA512 (SHA-2) e retorna a encriptação binária.
@@ -288,7 +288,7 @@ Codifica os dados com o SHA512 (SHA-2) e retorna a encriptação binária.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | conteudo | string | Conteúdo para ser encriptado. |
-| dados | _[B_ | Dados para serem encriptados. |
+| dados | _byte[]_ | Dados para serem encriptados. |
 | charset | string | Conjunto de caracteres. |
 
 ##### Retorno
@@ -328,7 +328,7 @@ Dados binários do conteúdo encriptado em Desdecode (Des) e convertidos em base
 
 ---
 
-#### _crypto.desEncode(chave: string, conteudo: string) : _[B_
+#### _crypto.desEncode(chave: string, conteudo: string) : _byte[]_
 ##### Descrição
 
 Codifica os dados com o desEncode.
@@ -342,13 +342,13 @@ Codifica os dados com o desEncode.
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Dados binários do conteúdo encriptado em desEncode.
 
 ---
 
-#### _crypto.desEncode(chave: string, conteudo: string, charset: string) : _[B_
+#### _crypto.desEncode(chave: string, conteudo: string, charset: string) : _byte[]_
 ##### Descrição
 
 Codifica os dados com o desEncode.
@@ -363,7 +363,7 @@ Codifica os dados com o desEncode.
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Dados binários do conteúdo encriptado em desEncode.
 
@@ -398,7 +398,7 @@ String do conteúdo encriptado em desEncode.
 
 ---
 
-#### _crypto.hmac256(chave: _[B_, conteudo: _[B_) : _[B_
+#### _crypto.hmac256(chave: _byte[]_, conteudo: _byte[]_) : _byte[]_
 ##### Descrição
 
 Codifica os dados com o HMAC256, que serve para garantir a integridade e autenticidade.
@@ -407,18 +407,18 @@ Codifica os dados com o HMAC256, que serve para garantir a integridade e autenti
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _[B_ | Chave secreta para a codificação. |
-| conteudo | _[B_ | Conteúdo para ser codificado com HMAC256. |
+| chave | _byte[]_ | Chave secreta para a codificação. |
+| conteudo | _byte[]_ | Conteúdo para ser codificado com HMAC256. |
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Dados codificados com HMAC256.
 
 ---
 
-#### _crypto.hmac256(chave: string, conteudo: string) : _[B_
+#### _crypto.hmac256(chave: string, conteudo: string) : _byte[]_
 ##### Descrição
 
 Codifica os dados com o HMAC256, que serve para garantir a integridade e autenticidade.
@@ -432,7 +432,7 @@ Codifica os dados com o HMAC256, que serve para garantir a integridade e autenti
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Dados codificados com HMAC256.
 
@@ -442,7 +442,7 @@ Dados codificados com HMAC256.
 
 ---
 
-#### _crypto.hmac256Base64(chave: _[B_, conteudo: _[B_) : string
+#### _crypto.hmac256Base64(chave: _byte[]_, conteudo: _byte[]_) : string
 ##### Descrição
 
 Codifica os dados com o HMAC256 e converte para Base64, que serve para garantir a integridade e autenticidade.
@@ -451,8 +451,8 @@ Codifica os dados com o HMAC256 e converte para Base64, que serve para garantir 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _[B_ | Chave secreta para a codificação. |
-| conteudo | _[B_ | Conteúdo para ser codificado com HMAC256. |
+| chave | _byte[]_ | Chave secreta para a codificação. |
+| conteudo | _byte[]_ | Conteúdo para ser codificado com HMAC256. |
 
 ##### Retorno
 
@@ -486,7 +486,7 @@ Dados codificados com HMAC256 e em formato Base64.
 
 ---
 
-#### _crypto.hmac256Hex(chave: _[B_, conteudo: _[B_) : string
+#### _crypto.hmac256Hex(chave: _byte[]_, conteudo: _byte[]_) : string
 ##### Descrição
 
 Codifica os dados com o HMAC256 e converte para hexadecimal, que serve para garantir a integridade e autenticidade.
@@ -495,8 +495,8 @@ Codifica os dados com o HMAC256 e converte para hexadecimal, que serve para gara
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| chave | _[B_ | Chave secreta para a codificação. |
-| conteudo | _[B_ | Conteúdo para ser codificado com HMAC256. |
+| chave | _byte[]_ | Chave secreta para a codificação. |
+| conteudo | _byte[]_ | Conteúdo para ser codificado com HMAC256. |
 
 ##### Retorno
 
@@ -530,7 +530,7 @@ Dados codificados com HMAC256 e em formato hexadecimal.
 
 ---
 
-#### _crypto.md5(conteudo: string) : _[B_
+#### _crypto.md5(conteudo: string) : _byte[]_
 ##### Descrição
 
 Codifica os dados com o MD5 e retorna a encriptação de 128 bit.
@@ -543,7 +543,7 @@ Codifica os dados com o MD5 e retorna a encriptação de 128 bit.
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Dados do conteúdo encriptado em MD5.
 
@@ -599,7 +599,7 @@ Dados do conteúdo encriptado em MD5 e convertido hexadecimal.
 
 ---
 
-#### _crypto.sha256(conteudo: _[B_) : string
+#### _crypto.sha256(conteudo: _byte[]_) : string
 ##### Descrição
 
 Codifica os dados com o SHA256 (SHA-2) e converte a encriptação binária em hexadecimal.
@@ -608,7 +608,7 @@ Codifica os dados com o SHA256 (SHA-2) e converte a encriptação binária em he
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _[B_ | Conteúdo para ser encriptado. |
+| conteudo | _byte[]_ | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
@@ -641,7 +641,7 @@ Conteúdo encriptado em SHA256 (SHA2) e convertido em hexadecimal.
 
 ---
 
-#### _crypto.sha256AsBytes(conteudo: _[B_) : _[B_
+#### _crypto.sha256AsBytes(conteudo: _byte[]_) : _byte[]_
 ##### Descrição
 
 Codifica os dados com o SHA256 (SHA-2) e retorna a encriptação binária.
@@ -650,17 +650,17 @@ Codifica os dados com o SHA256 (SHA-2) e retorna a encriptação binária.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _[B_ | Conteúdo para ser encriptado. |
+| conteudo | _byte[]_ | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Dados binários do conteúdo encriptado em SHA256 (SHA-2).
 
 ---
 
-#### _crypto.sha256AsBytes(conteudo: string) : _[B_
+#### _crypto.sha256AsBytes(conteudo: string) : _byte[]_
 ##### Descrição
 
 Codifica os dados com o SHA256 (SHA-2) e retorna a encriptação binária.
@@ -673,7 +673,7 @@ Codifica os dados com o SHA256 (SHA-2) e retorna a encriptação binária.
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Dados binários do conteúdo encriptado em SHA256 (SHA-2).
 
@@ -683,7 +683,7 @@ Dados binários do conteúdo encriptado em SHA256 (SHA-2).
 
 ---
 
-#### _crypto.sha384(conteudo: _[B_) : string
+#### _crypto.sha384(conteudo: _byte[]_) : string
 ##### Descrição
 
 Codifica os dados com o SHA384 (SHA-2) e converte a encriptação binária em hexadecimal.
@@ -692,7 +692,7 @@ Codifica os dados com o SHA384 (SHA-2) e converte a encriptação binária em he
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _[B_ | Conteúdo para ser encriptado. |
+| conteudo | _byte[]_ | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
@@ -725,7 +725,7 @@ Conteúdo encriptado em SHA384 (SHA2) e convertido em hexadecimal.
 
 ---
 
-#### _crypto.sha384AsBytes(conteudo: _[B_) : _[B_
+#### _crypto.sha384AsBytes(conteudo: _byte[]_) : _byte[]_
 ##### Descrição
 
 Codifica os dados com o SHA384 (SHA-2) e retorna a encriptação binária.
@@ -734,17 +734,17 @@ Codifica os dados com o SHA384 (SHA-2) e retorna a encriptação binária.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _[B_ | Conteúdo para ser encriptado. |
+| conteudo | _byte[]_ | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Dados binários do conteúdo encriptado em SHA384 (SHA-2).
 
 ---
 
-#### _crypto.sha384AsBytes(conteudo: string) : _[B_
+#### _crypto.sha384AsBytes(conteudo: string) : _byte[]_
 ##### Descrição
 
 Codifica os dados com o SHA384 (SHA-2) e retorna a encriptação binária.
@@ -757,7 +757,7 @@ Codifica os dados com o SHA384 (SHA-2) e retorna a encriptação binária.
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Dados binários do conteúdo encriptado em SHA384 (SHA-2).
 
@@ -767,7 +767,7 @@ Dados binários do conteúdo encriptado em SHA384 (SHA-2).
 
 ---
 
-#### _crypto.sha512(conteudo: _[B_) : string
+#### _crypto.sha512(conteudo: _byte[]_) : string
 ##### Descrição
 
 Codifica os dados com o SHA512 (SHA-2) e converte a encriptação binária em hexadecimal.
@@ -776,7 +776,7 @@ Codifica os dados com o SHA512 (SHA-2) e converte a encriptação binária em he
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _[B_ | Conteúdo para ser encriptado. |
+| conteudo | _byte[]_ | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
@@ -809,7 +809,7 @@ Conteúdo encriptado em SHA512 (SHA2) e convertido em hexadecimal.
 
 ---
 
-#### _crypto.sha512AsBytes(conteudo: _[B_) : _[B_
+#### _crypto.sha512AsBytes(conteudo: _byte[]_) : _byte[]_
 ##### Descrição
 
 Codifica os dados com o SHA512 (SHA-2) e retorna a encriptação binária.
@@ -818,17 +818,17 @@ Codifica os dados com o SHA512 (SHA-2) e retorna a encriptação binária.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _[B_ | Conteúdo para ser encriptado. |
+| conteudo | _byte[]_ | Conteúdo para ser encriptado. |
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Dados binários do conteúdo encriptado em SHA512 (SHA-2).
 
 ---
 
-#### _crypto.sha512AsBytes(conteudo: string) : _[B_
+#### _crypto.sha512AsBytes(conteudo: string) : _byte[]_
 ##### Descrição
 
 Codifica os dados com o SHA512 (SHA-512).
@@ -841,7 +841,7 @@ Codifica os dados com o SHA512 (SHA-512).
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Dados binários do conteúdo encriptado em SHA512 (SHA-2).
 

@@ -24,12 +24,12 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.create(arg0: _[Values](../../objects/Values)_) : _boolean_
+#### _report.create(data: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -42,13 +42,13 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.createComponent(arg0: _int_, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _report.createComponent(formId: _int_, data: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formId | _int_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -57,13 +57,13 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.createComponent(arg0: string, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _report.createComponent(formNameOrUid: string, data: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formNameOrUid | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -76,13 +76,13 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.createComponentIfNotExists(arg0: _int_, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _report.createComponentIfNotExists(formId: _int_, data: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formId | _int_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -91,13 +91,13 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.createComponentIfNotExists(arg0: string, arg1: _[Values](../../objects/Values)_) : _boolean_
+#### _report.createComponentIfNotExists(formNameOrUid: string, data: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formNameOrUid | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -110,12 +110,12 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.createIfNotExists(arg0: _[Values](../../objects/Values)_) : _boolean_
+#### _report.createIfNotExists(data: _[Values](../../objects/Values)_) : _boolean_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -128,12 +128,12 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.get(arg0: _int_) : _[Values](../../objects/Values)_
+#### _report.get(id: _int_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| id | _int_ |   |
 
 ##### Return
 
@@ -142,12 +142,12 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.get(arg0: string) : _[Values](../../objects/Values)_
+#### _report.get(nameOrUid: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| nameOrUid | string |   |
 
 ##### Return
 
@@ -156,12 +156,12 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.get(arg0: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _report.get(data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[Values](../../objects/Values)_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -174,12 +174,12 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.getAllComponents(arg0: _int_) : _java.util.List_
+#### _report.getAllComponents(formId: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| formId | _int_ |   |
 
 ##### Return
 
@@ -188,12 +188,12 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.getAllComponents(arg0: string) : _java.util.List_
+#### _report.getAllComponents(formNameOrUid: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| formNameOrUid | string |   |
 
 ##### Return
 
@@ -206,13 +206,13 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.getComponent(arg0: _int_, arg1: _int_) : _[Values](../../objects/Values)_
+#### _report.getComponent(formId: _int_, id: _int_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
+| formId | _int_ |   |
+| id | _int_ |   |
 
 ##### Return
 
@@ -221,13 +221,13 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.getComponent(arg0: _int_, arg1: string) : _[Values](../../objects/Values)_
+#### _report.getComponent(formId: _int_, nameOrUid: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| formId | _int_ |   |
+| nameOrUid | string |   |
 
 ##### Return
 
@@ -236,13 +236,13 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.getComponent(arg0: _int_, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _report.getComponent(formId: _int_, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formId | _int_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -251,13 +251,13 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.getComponent(arg0: string, arg1: _int_) : _[Values](../../objects/Values)_
+#### _report.getComponent(formNameOrUid: string, id: _int_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _int_ |   |
+| formNameOrUid | string |   |
+| id | _int_ |   |
 
 ##### Return
 
@@ -266,13 +266,13 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.getComponent(arg0: string, arg1: string) : _[Values](../../objects/Values)_
+#### _report.getComponent(formNameOrUid: string, nameOrUid: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| formNameOrUid | string |   |
+| nameOrUid | string |   |
 
 ##### Return
 
@@ -281,13 +281,13 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.getComponent(arg0: string, arg1: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
+#### _report.getComponent(formNameOrUid: string, data: _[Values](../../objects/Values)_) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| formNameOrUid | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -300,12 +300,12 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.notNulls(arg0: _int_) : _java.util.List_
+#### _report.notNulls(formId: _int_) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| formId | _int_ |   |
 
 ##### Return
 
@@ -314,12 +314,12 @@ Application reports generator programmatically.
 
 ---
 
-#### _report.notNulls(arg0: string) : _java.util.List_
+#### _report.notNulls(formNameOrUid: string) : _java.util.List_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| formNameOrUid | string |   |
 
 ##### Return
 

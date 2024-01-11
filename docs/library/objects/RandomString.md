@@ -24,10 +24,10 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### getSymbols() : _[C_
+#### getSymbols() : _char[]_
 ##### Return
 
-( _[C_ )
+( _char[]_ )
 
 
 ---
@@ -84,12 +84,12 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### setRandom(arg0: _java.util.Random_) : _[RandomString](../../objects/RandomString)_
+#### setRandom(random: _java.util.Random_) : _[RandomString](../../objects/RandomString)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Random_ |   |
+| random | _java.util.Random_ |   |
 
 ##### Return
 
@@ -102,12 +102,12 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### setSymbols(arg0: _[C_) : _[RandomString](../../objects/RandomString)_
+#### setSymbols(symbols: _char[]_) : _[RandomString](../../objects/RandomString)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _[C_ |   |
+| symbols | _char[]_ |   |
 
 ##### Return
 
@@ -116,12 +116,12 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### setSymbols(arg0: string) : _[RandomString](../../objects/RandomString)_
+#### setSymbols(symbols: string) : _[RandomString](../../objects/RandomString)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| symbols | string |   |
 
 ##### Return
 
@@ -134,10 +134,10 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### symbols() : _[C_
+#### symbols() : _char[]_
 ##### Return
 
-( _[C_ )
+( _char[]_ )
 
 
 ---

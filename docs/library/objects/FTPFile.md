@@ -288,12 +288,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroup(arg0: string) : _[FTPFile](../../objects/FTPFile)_
+#### setGroup(group: string) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| group | string |   |
 
 ##### Return
 
@@ -306,12 +306,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroupExecutable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### setGroupExecutable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| access | _boolean_ |   |
 
 ##### Return
 
@@ -324,12 +324,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroupReadable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### setGroupReadable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| access | _boolean_ |   |
 
 ##### Return
 
@@ -342,12 +342,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setGroupWritable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### setGroupWritable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| access | _boolean_ |   |
 
 ##### Return
 
@@ -360,12 +360,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setHardLinkCount(arg0: _int_) : _[FTPFile](../../objects/FTPFile)_
+#### setHardLinkCount(links: _int_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| links | _int_ |   |
 
 ##### Return
 
@@ -378,12 +378,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setLink(arg0: string) : _[FTPFile](../../objects/FTPFile)_
+#### setLink(link: string) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| link | string |   |
 
 ##### Return
 
@@ -396,12 +396,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setName(arg0: string) : _[FTPFile](../../objects/FTPFile)_
+#### setName(name: string) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| name | string |   |
 
 ##### Return
 
@@ -414,12 +414,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setRawListing(arg0: string) : _[FTPFile](../../objects/FTPFile)_
+#### setRawListing(rawListing: string) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| rawListing | string |   |
 
 ##### Return
 
@@ -432,12 +432,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setSize(arg0: _long_) : _[FTPFile](../../objects/FTPFile)_
+#### setSize(size: _long_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _long_ |   |
+| size | _long_ |   |
 
 ##### Return
 
@@ -450,12 +450,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setTimestamp(arg0: _java.util.Calendar_) : _[FTPFile](../../objects/FTPFile)_
+#### setTimestamp(date: _java.util.Calendar_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _java.util.Calendar_ |   |
+| date | _java.util.Calendar_ |   |
 
 ##### Return
 
@@ -468,12 +468,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUser(arg0: string) : _[FTPFile](../../objects/FTPFile)_
+#### setUser(user: string) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| user | string |   |
 
 ##### Return
 
@@ -486,12 +486,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUserExecutable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### setUserExecutable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| access | _boolean_ |   |
 
 ##### Return
 
@@ -504,12 +504,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUserReadable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### setUserReadable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| access | _boolean_ |   |
 
 ##### Return
 
@@ -522,12 +522,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setUserWritable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### setUserWritable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| access | _boolean_ |   |
 
 ##### Return
 
@@ -540,12 +540,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setWorldExecutable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### setWorldExecutable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| access | _boolean_ |   |
 
 ##### Return
 
@@ -558,12 +558,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setWorldReadable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### setWorldReadable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| access | _boolean_ |   |
 
 ##### Return
 
@@ -576,12 +576,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### setWorldWritable(arg0: _boolean_) : _[FTPFile](../../objects/FTPFile)_
+#### setWorldWritable(access: _boolean_) : _[FTPFile](../../objects/FTPFile)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| access | _boolean_ |   |
 
 ##### Return
 
@@ -626,12 +626,12 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### toFormattedString(arg0: string) : string
+#### toFormattedString(timezone: string) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| timezone | string |   |
 
 ##### Return
 

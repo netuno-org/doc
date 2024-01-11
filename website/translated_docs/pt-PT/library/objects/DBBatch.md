@@ -12,12 +12,12 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### add(arg0: string) : _[DBBatch](../../objects/DBBatch)_
+#### add(sql: string) : _[DBBatch](../../objects/DBBatch)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| sql | string |   |
 
 ##### Retorno
 
@@ -66,12 +66,12 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### put(arg0: _[Ljava.lang.Object;_) : _[DBBatch](../../objects/DBBatch)_
+#### put(params: _[Ljava.lang.Object;[]_) : _[DBBatch](../../objects/DBBatch)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Ljava.lang.Object;_ |   |
+| params | _[Ljava.lang.Object;[]_ |   |
 
 ##### Retorno
 

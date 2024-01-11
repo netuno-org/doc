@@ -180,7 +180,7 @@ Imprime uma mensagem do tipo **INFORMAÇÃO** (_INFORMATION_) no ficheiro de log
 
 ---
 
-#### _log.print(conteudo: _[C_) : _void_
+#### _log.print(conteudo: _char[]_) : _void_
 ##### Descrição
 
 Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -189,7 +189,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _[C_ | Conteúdo que será apresentado. |
+| conteudo | _char[]_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 
@@ -346,7 +346,7 @@ Imprime uma mensagem direta sem nenhuma contextualização no terminal do Netuno
 
 ---
 
-#### _log.println(conteudo: _[C_) : _void_
+#### _log.println(conteudo: _char[]_) : _void_
 ##### Descrição
 
 Imprime uma linha com a mensagem direta sem nenhuma contextualização no terminal do Netuno.
@@ -355,7 +355,7 @@ Imprime uma linha com a mensagem direta sem nenhuma contextualização no termin
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| conteudo | _[C_ | Conteúdo que será apresentado. |
+| conteudo | _char[]_ | Conteúdo que será apresentado. |
 
 ##### Retorno
 

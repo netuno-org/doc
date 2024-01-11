@@ -21,13 +21,13 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### create(arg0: string, arg1: string) : _[Index](../../objects/Index)_
+#### create(table: string, column: string) : _[Index](../../objects/Index)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| table | string |   |
+| column | string |   |
 
 ##### Retorno
 
@@ -60,12 +60,12 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isH2(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isH2(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -86,12 +86,12 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isMSSQL(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isMSSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -112,12 +112,12 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isMariaDB(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isMariaDB(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 
@@ -138,12 +138,12 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### isPostgreSQL(arg0: _org.netuno.tritao.db.Builder_) : _boolean_
+#### isPostgreSQL(builder: _org.netuno.tritao.db.Builder_) : _boolean_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.tritao.db.Builder_ |   |
+| builder | _org.netuno.tritao.db.Builder_ |   |
 
 ##### Retorno
 

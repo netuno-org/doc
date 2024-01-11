@@ -72,12 +72,12 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.databaseReference(arg0: string) : _com.google.firebase.database.DatabaseReference_
+#### _firebase.databaseReference(path: string) : _com.google.firebase.database.DatabaseReference_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| path | string |   |
 
 ##### Return
 
@@ -86,13 +86,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.databaseReference(arg0: string, arg1: string) : _com.google.firebase.database.DatabaseReference_
+#### _firebase.databaseReference(path: string, uid: string) : _com.google.firebase.database.DatabaseReference_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| path | string |   |
+| uid | string |   |
 
 ##### Return
 
@@ -105,13 +105,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.listener(arg0: _com.google.firebase.database.DatabaseReference_, arg1: string) : _void_
+#### _firebase.listener(ref: _com.google.firebase.database.DatabaseReference_, url: string) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _com.google.firebase.database.DatabaseReference_ |   |
-| arg1 | string |   |
+| ref | _com.google.firebase.database.DatabaseReference_ |   |
+| url | string |   |
 
 ##### Return
 
@@ -120,13 +120,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.listener(arg0: string, arg1: string) : _void_
+#### _firebase.listener(path: string, url: string) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| path | string |   |
+| url | string |   |
 
 ##### Return
 
@@ -139,12 +139,12 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.removeValue(arg0: _com.google.firebase.database.DatabaseReference_) : _void_
+#### _firebase.removeValue(ref: _com.google.firebase.database.DatabaseReference_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _com.google.firebase.database.DatabaseReference_ |   |
+| ref | _com.google.firebase.database.DatabaseReference_ |   |
 
 ##### Return
 
@@ -153,12 +153,12 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.removeValue(arg0: string) : _void_
+#### _firebase.removeValue(path: string) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| path | string |   |
 
 ##### Return
 
@@ -167,13 +167,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.removeValue(arg0: string, arg1: string) : _void_
+#### _firebase.removeValue(path: string, uid: string) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| path | string |   |
+| uid | string |   |
 
 ##### Return
 
@@ -186,13 +186,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(arg0: _com.google.firebase.database.DatabaseReference_, arg1: _java.util.List_) : _void_
+#### _firebase.setValue(ref: _com.google.firebase.database.DatabaseReference_, data: _java.util.List_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _com.google.firebase.database.DatabaseReference_ |   |
-| arg1 | _java.util.List_ |   |
+| ref | _com.google.firebase.database.DatabaseReference_ |   |
+| data | _java.util.List_ |   |
 
 ##### Return
 
@@ -201,13 +201,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(arg0: _com.google.firebase.database.DatabaseReference_, arg1: _[Values](../../objects/Values)_) : _void_
+#### _firebase.setValue(ref: _com.google.firebase.database.DatabaseReference_, data: _[Values](../../objects/Values)_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _com.google.firebase.database.DatabaseReference_ |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| ref | _com.google.firebase.database.DatabaseReference_ |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -216,14 +216,14 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(arg0: string, arg1: string, arg2: _java.util.List_) : _void_
+#### _firebase.setValue(path: string, uid: string, data: _java.util.List_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _java.util.List_ |   |
+| path | string |   |
+| uid | string |   |
+| data | _java.util.List_ |   |
 
 ##### Return
 
@@ -232,14 +232,14 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(arg0: string, arg1: string, arg2: _java.util.Map_) : _void_
+#### _firebase.setValue(path: string, uid: string, data: _java.util.Map_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _java.util.Map_ |   |
+| path | string |   |
+| uid | string |   |
+| data | _java.util.Map_ |   |
 
 ##### Return
 
@@ -248,14 +248,14 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(arg0: string, arg1: string, arg2: _[Values](../../objects/Values)_) : _void_
+#### _firebase.setValue(path: string, uid: string, data: _[Values](../../objects/Values)_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _[Values](../../objects/Values)_ |   |
+| path | string |   |
+| uid | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -264,13 +264,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(arg0: string, arg1: _java.util.List_) : _void_
+#### _firebase.setValue(path: string, data: _java.util.List_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.List_ |   |
+| path | string |   |
+| data | _java.util.List_ |   |
 
 ##### Return
 
@@ -279,13 +279,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(arg0: string, arg1: _java.util.Map_) : _void_
+#### _firebase.setValue(path: string, data: _java.util.Map_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Map_ |   |
+| path | string |   |
+| data | _java.util.Map_ |   |
 
 ##### Return
 
@@ -294,13 +294,13 @@ Recurso de comunicação com o Firebase.
 
 ---
 
-#### _firebase.setValue(arg0: string, arg1: _[Values](../../objects/Values)_) : _void_
+#### _firebase.setValue(path: string, data: _[Values](../../objects/Values)_) : _void_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| path | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 

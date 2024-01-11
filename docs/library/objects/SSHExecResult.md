@@ -20,12 +20,12 @@ Resultado gerado pelos comandos SSH depois que são executados.
 
 ---
 
-#### error(arg0: string) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### error(error: string) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| error | string |   |
 
 ##### Return
 
@@ -46,12 +46,12 @@ Resultado gerado pelos comandos SSH depois que são executados.
 
 ---
 
-#### exitErrorMessage(arg0: string) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### exitErrorMessage(exitErrorMessage: string) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| exitErrorMessage | string |   |
 
 ##### Return
 
@@ -72,12 +72,12 @@ Resultado gerado pelos comandos SSH depois que são executados.
 
 ---
 
-#### exitStatus(arg0: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### exitStatus(exitStatus: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| exitStatus | _int_ |   |
 
 ##### Return
 
@@ -158,12 +158,12 @@ Resultado gerado pelos comandos SSH depois que são executados.
 
 ---
 
-#### id(arg0: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### id(id: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| id | _int_ |   |
 
 ##### Return
 
@@ -184,12 +184,12 @@ Resultado gerado pelos comandos SSH depois que são executados.
 
 ---
 
-#### output(arg0: string) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### output(output: string) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| output | string |   |
 
 ##### Return
 
@@ -202,12 +202,12 @@ Resultado gerado pelos comandos SSH depois que são executados.
 
 ---
 
-#### setError(arg0: string) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### setError(error: string) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| error | string |   |
 
 ##### Return
 
@@ -220,12 +220,12 @@ Resultado gerado pelos comandos SSH depois que são executados.
 
 ---
 
-#### setExitErrorMessage(arg0: string) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### setExitErrorMessage(exitErrorMessage: string) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| exitErrorMessage | string |   |
 
 ##### Return
 
@@ -238,12 +238,12 @@ Resultado gerado pelos comandos SSH depois que são executados.
 
 ---
 
-#### setExitStatus(arg0: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### setExitStatus(exitStatus: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| exitStatus | _int_ |   |
 
 ##### Return
 
@@ -256,12 +256,12 @@ Resultado gerado pelos comandos SSH depois que são executados.
 
 ---
 
-#### setId(arg0: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### setId(id: _int_) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | _int_ |   |
+| id | _int_ |   |
 
 ##### Return
 
@@ -274,12 +274,12 @@ Resultado gerado pelos comandos SSH depois que são executados.
 
 ---
 
-#### setOutput(arg0: string) : _[SSHExecResult](../../objects/SSHExecResult)_
+#### setOutput(output: string) : _[SSHExecResult](../../objects/SSHExecResult)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| output | string |   |
 
 ##### Return
 

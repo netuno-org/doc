@@ -134,12 +134,12 @@ Returns the validation.
 
 ---
 
-#### _jwt.data(arg0: string) : _[Values](../../objects/Values)_
+#### _jwt.data(token: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| token | string |   |
 
 ##### Return
 
@@ -152,12 +152,12 @@ Returns the validation.
 
 ---
 
-#### _jwt.dbRecord(arg0: string) : _[Values](../../objects/Values)_
+#### _jwt.dbRecord(token: string) : _[Values](../../objects/Values)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
+| token | string |   |
 
 ##### Return
 
@@ -244,13 +244,13 @@ Returns the values encoded.
 
 ---
 
-#### _jwt.init(arg0: string, arg1: string) : _[JWT](../../resources/JWT)_
+#### _jwt.init(secret: string, algorithm: string) : _[JWT](../../resources/JWT)_
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
+| secret | string |   |
+| algorithm | string |   |
 
 ##### Return
 

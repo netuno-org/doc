@@ -13,12 +13,12 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.get(arg0: string) : string
+#### _template.get(name: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| name | string |   |
 
 ##### Retorno
 
@@ -27,13 +27,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.get(arg0: string, arg1: _java.util.Map_) : string
+#### _template.get(name: string, data: _java.util.Map_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Map_ |   |
+| name | string |   |
+| data | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -42,13 +42,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.get(arg0: string, arg1: _[Values](../../objects/Values)_) : string
+#### _template.get(name: string, data: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| name | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -61,12 +61,12 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.getOutput(arg0: string) : string
+#### _template.getOutput(name: string) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| name | string |   |
 
 ##### Retorno
 
@@ -75,13 +75,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.getOutput(arg0: string, arg1: _java.util.Map_) : string
+#### _template.getOutput(name: string, data: _java.util.Map_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Map_ |   |
+| name | string |   |
+| data | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -90,13 +90,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.getOutput(arg0: string, arg1: _[Values](../../objects/Values)_) : string
+#### _template.getOutput(name: string, data: _[Values](../../objects/Values)_) : string
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| name | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -133,12 +133,12 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.out(arg0: string) : _void_
+#### _template.out(name: string) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| name | string |   |
 
 ##### Retorno
 
@@ -147,13 +147,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.out(arg0: string, arg1: _java.util.Map_) : _void_
+#### _template.out(name: string, data: _java.util.Map_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Map_ |   |
+| name | string |   |
+| data | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -162,13 +162,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.out(arg0: string, arg1: _[Values](../../objects/Values)_) : _void_
+#### _template.out(name: string, data: _[Values](../../objects/Values)_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| name | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -181,12 +181,12 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.output(arg0: string) : _void_
+#### _template.output(name: string) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| name | string |   |
 
 ##### Retorno
 
@@ -195,13 +195,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.output(arg0: string, arg1: _java.util.Map_) : _void_
+#### _template.output(name: string, data: _java.util.Map_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.util.Map_ |   |
+| name | string |   |
+| data | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -210,13 +210,13 @@ Este recurso permite a manipulação de templates com base no motor de templates
 
 ---
 
-#### _template.output(arg0: string, arg1: _[Values](../../objects/Values)_) : _void_
+#### _template.output(name: string, data: _[Values](../../objects/Values)_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Values](../../objects/Values)_ |   |
+| name | string |   |
+| data | _[Values](../../objects/Values)_ |   |
 
 ##### Retorno
 

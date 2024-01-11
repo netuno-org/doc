@@ -187,15 +187,15 @@ O parser inicializado.
 
 ---
 
-#### _csv.parser(arg0: _[Storage](../../resources/Storage)_, arg1: _org.apache.commons.csv.CSVFormat_, arg2: _long_, arg3: _long_) : _org.apache.commons.csv.CSVParser_
+#### _csv.parser(storage: _[Storage](../../resources/Storage)_, format: _org.apache.commons.csv.CSVFormat_, characterOffset: _long_, recordNumber: _long_) : _org.apache.commons.csv.CSVParser_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Storage](../../resources/Storage)_ |   |
-| arg1 | _org.apache.commons.csv.CSVFormat_ |   |
-| arg2 | _long_ |   |
-| arg3 | _long_ |   |
+| storage | _[Storage](../../resources/Storage)_ |   |
+| format | _org.apache.commons.csv.CSVFormat_ |   |
+| characterOffset | _long_ |   |
+| recordNumber | _long_ |   |
 
 ##### Retorno
 

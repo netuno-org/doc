@@ -89,7 +89,7 @@ O cliente SFTP atual.
 
 ---
 
-#### downloadBytes(caminhoRemoto: string) : _[B_
+#### downloadBytes(caminhoRemoto: string) : _byte[]_
 ##### Descrição
 
 Obtém um array de bytes do conteúdo de um arquivo no servidor.
@@ -102,7 +102,7 @@ Obtém um array de bytes do conteúdo de um arquivo no servidor.
 
 ##### Retorno
 
-( _[B_ )
+( _byte[]_ )
 
 Array de bytes com o conteúdo do arquivo remoto no servidor.
 
@@ -211,7 +211,7 @@ O cliente SFTP atual.
 
 ---
 
-#### uploadBytes(caminhoRemoto: string, bytes: _[B_) : _[SSHSCP](../../objects/SSHSCP)_
+#### uploadBytes(caminhoRemoto: string, bytes: _byte[]_) : _[SSHSCP](../../objects/SSHSCP)_
 ##### Descrição
 
 Envia um array de bytes para serem salvos em um arquivo no servidor.
@@ -221,7 +221,7 @@ Envia um array de bytes para serem salvos em um arquivo no servidor.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | caminhoRemoto | string | Caminho do arquivo no servidor. |
-| bytes | _[B_ | Array de bytes. |
+| bytes | _byte[]_ | Array de bytes. |
 
 ##### Retorno
 

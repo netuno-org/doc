@@ -162,10 +162,10 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getStackTrace() : _[Ljava.lang.StackTraceElement;_
+#### getStackTrace() : _[Ljava.lang.StackTraceElement;[]_
 ##### Retorno
 
-( _[Ljava.lang.StackTraceElement;_ )
+( _[Ljava.lang.StackTraceElement;[]_ )
 
 
 ---
@@ -174,10 +174,10 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### getSuppressed() : _[Ljava.lang.Throwable;_
+#### getSuppressed() : _[Ljava.lang.Throwable;[]_
 ##### Retorno
 
-( _[Ljava.lang.Throwable;_ )
+( _[Ljava.lang.Throwable;[]_ )
 
 
 ---
@@ -538,12 +538,12 @@ Exceção provocada por um erro genérico na plataforma, apresenta os detalhes d
 
 ---
 
-#### setStackTrace(arg0: _[Ljava.lang.StackTraceElement;_) : _void_
+#### setStackTrace(arg0: _[Ljava.lang.StackTraceElement;[]_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Ljava.lang.StackTraceElement;_ |   |
+| arg0 | _[Ljava.lang.StackTraceElement;[]_ |   |
 
 ##### Retorno
 

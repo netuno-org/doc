@@ -108,7 +108,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, arg3: _double_) : _com.itextpdf.layout.borders.Border_
+#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -120,7 +120,7 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _double_ | Largura da moldura. |
-| arg3 | _double_ |   |
+| opacity | _double_ |   |
 
 ##### Retorno
 
@@ -130,7 +130,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, arg3: _float_) : _com.itextpdf.layout.borders.Border_
+#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -142,7 +142,7 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _double_ | Largura da moldura. |
-| arg3 | _float_ |   |
+| opacity | _float_ |   |
 
 ##### Retorno
 
@@ -152,7 +152,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, arg3: _int_) : _com.itextpdf.layout.borders.Border_
+#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -164,7 +164,7 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _double_ | Largura da moldura. |
-| arg3 | _int_ |   |
+| opacity | _int_ |   |
 
 ##### Retorno
 
@@ -195,7 +195,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_, arg3: _double_) : _com.itextpdf.layout.borders.Border_
+#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -207,7 +207,7 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _float_ | Largura da moldura. |
-| arg3 | _double_ |   |
+| opacity | _double_ |   |
 
 ##### Retorno
 
@@ -282,7 +282,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, arg3: _double_) : _com.itextpdf.layout.borders.Border_
+#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, opacity: _double_) : _com.itextpdf.layout.borders.Border_
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -294,7 +294,7 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _int_ | Largura da moldura. |
-| arg3 | _double_ |   |
+| opacity | _double_ |   |
 
 ##### Retorno
 
@@ -304,7 +304,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, arg3: _float_) : _com.itextpdf.layout.borders.Border_
+#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, opacity: _float_) : _com.itextpdf.layout.borders.Border_
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -316,7 +316,7 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _int_ | Largura da moldura. |
-| arg3 | _float_ |   |
+| opacity | _float_ |   |
 
 ##### Retorno
 
@@ -326,7 +326,7 @@ Retorna um tipo de moldura, largura e com a cor inseridas.
 
 ---
 
-#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, arg3: _int_) : _com.itextpdf.layout.borders.Border_
+#### _pdf.border(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, opacity: _int_) : _com.itextpdf.layout.borders.Border_
 ##### Descrição
 
 Cria um tipo de moldura com uma largura e opacidade definidas.
@@ -338,7 +338,7 @@ Cria um tipo de moldura com uma largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _int_ | Largura da moldura. |
-| arg3 | _int_ |   |
+| opacity | _int_ |   |
 
 ##### Retorno
 
@@ -641,7 +641,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, arg3: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -653,7 +653,7 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _double_ | Largura da moldura. |
-| arg3 | _double_ |   |
+| opacity | _double_ |   |
 
 ##### Retorno
 
@@ -663,7 +663,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, arg3: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -675,7 +675,7 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _double_ | Largura da moldura. |
-| arg3 | _float_ |   |
+| opacity | _float_ |   |
 
 ##### Retorno
 
@@ -685,7 +685,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, arg3: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _double_, opacity: _int_) : _com.itextpdf.layout.borders.Border3D_
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -697,7 +697,7 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _double_ | Largura da moldura. |
-| arg3 | _int_ |   |
+| opacity | _int_ |   |
 
 ##### Retorno
 
@@ -728,7 +728,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_, arg3: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _float_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
 ##### Descrição
 
 Cria um tipo de moldura 3D, cor, largura e opacidade definidas.
@@ -740,7 +740,7 @@ Cria um tipo de moldura 3D, cor, largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _float_ | Largura da moldura. |
-| arg3 | _double_ |   |
+| opacity | _double_ |   |
 
 ##### Retorno
 
@@ -815,7 +815,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, arg3: _double_) : _com.itextpdf.layout.borders.Border3D_
+#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, opacity: _double_) : _com.itextpdf.layout.borders.Border3D_
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -827,7 +827,7 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _int_ | Largura da moldura. |
-| arg3 | _double_ |   |
+| opacity | _double_ |   |
 
 ##### Retorno
 
@@ -837,7 +837,7 @@ Retorna um tipo de moldura 3D,cor, largura inseridas.
 
 ---
 
-#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, arg3: _float_) : _com.itextpdf.layout.borders.Border3D_
+#### _pdf.border3D(moldura: string, cor: _com.itextpdf.kernel.colors.Color_, largura: _int_, opacity: _float_) : _com.itextpdf.layout.borders.Border3D_
 ##### Descrição
 
 Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
@@ -849,7 +849,7 @@ Cria um tipo de moldura 3D,cor, largura e opacidade definidas.
 | moldura | string | Tipo de moldura. |
 | cor | _com.itextpdf.kernel.colors.Color_ | Cor da moldura. |
 | largura | _int_ | Largura da moldura. |
-| arg3 | _float_ |   |
+| opacity | _float_ |   |
 
 ##### Retorno
 
@@ -1047,7 +1047,7 @@ Retorna um tipo de moldura 3D, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.border3D(moldura: string, arg1: _int_) : _com.itextpdf.layout.borders.Border3D_
+#### _pdf.border3D(moldura: string, width: _int_) : _com.itextpdf.layout.borders.Border3D_
 ##### Descrição
 
 Cria um tipo de moldura 3D.
@@ -1057,7 +1057,7 @@ Cria um tipo de moldura 3D.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | moldura | string | Tipo de moldura. |
-| arg1 | _int_ |   |
+| width | _int_ |   |
 
 ##### Retorno
 
@@ -1134,7 +1134,7 @@ Retorna um tipo de moldura 3D, largura e opacidade inseridas de cor preta.
 
 ---
 
-#### _pdf.canvas(arg0: _com.itextpdf.kernel.pdf.PdfDocument_, arg1: _int_) : _com.itextpdf.kernel.pdf.canvas.PdfCanvas_
+#### _pdf.canvas(doc: _com.itextpdf.kernel.pdf.PdfDocument_, pageNum: _int_) : _com.itextpdf.kernel.pdf.canvas.PdfCanvas_
 ##### Descrição
 
 Cria uma área de texto retangular.
@@ -1143,8 +1143,8 @@ Cria uma área de texto retangular.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _com.itextpdf.kernel.pdf.PdfDocument_ |   |
-| arg1 | _int_ |   |
+| doc | _com.itextpdf.kernel.pdf.PdfDocument_ |   |
+| pageNum | _int_ |   |
 
 ##### Retorno
 
@@ -1153,7 +1153,7 @@ Cria uma área de texto retangular.
 
 ---
 
-#### _pdf.canvas(arg0: _com.itextpdf.kernel.pdf.PdfPage_) : _com.itextpdf.kernel.pdf.canvas.PdfCanvas_
+#### _pdf.canvas(page: _com.itextpdf.kernel.pdf.PdfPage_) : _com.itextpdf.kernel.pdf.canvas.PdfCanvas_
 ##### Descrição
 
 Cria uma área de texto retangular.
@@ -1162,7 +1162,7 @@ Cria uma área de texto retangular.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _com.itextpdf.kernel.pdf.PdfPage_ |   |
+| page | _com.itextpdf.kernel.pdf.PdfPage_ |   |
 
 ##### Retorno
 
@@ -1212,12 +1212,12 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.color(arg0: string) : _com.itextpdf.kernel.colors.Color_
+#### _pdf.color(color: string) : _com.itextpdf.kernel.colors.Color_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| color | string |   |
 
 ##### Retorno
 
@@ -1230,15 +1230,15 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorCMYK(arg0: _double_, arg1: _double_, arg2: _double_, arg3: _double_) : _com.itextpdf.kernel.colors.DeviceCmyk_
+#### _pdf.colorCMYK(cyan: _double_, magenta: _double_, yellow: _double_, black: _double_) : _com.itextpdf.kernel.colors.DeviceCmyk_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
-| arg1 | _double_ |   |
-| arg2 | _double_ |   |
-| arg3 | _double_ |   |
+| cyan | _double_ |   |
+| magenta | _double_ |   |
+| yellow | _double_ |   |
+| black | _double_ |   |
 
 ##### Retorno
 
@@ -1247,15 +1247,15 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorCMYK(arg0: _float_, arg1: _float_, arg2: _float_, arg3: _float_) : _com.itextpdf.kernel.colors.DeviceCmyk_
+#### _pdf.colorCMYK(cyan: _float_, magenta: _float_, yellow: _float_, black: _float_) : _com.itextpdf.kernel.colors.DeviceCmyk_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
-| arg1 | _float_ |   |
-| arg2 | _float_ |   |
-| arg3 | _float_ |   |
+| cyan | _float_ |   |
+| magenta | _float_ |   |
+| yellow | _float_ |   |
+| black | _float_ |   |
 
 ##### Retorno
 
@@ -1264,15 +1264,15 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorCMYK(arg0: _int_, arg1: _int_, arg2: _int_, arg3: _int_) : _com.itextpdf.kernel.colors.DeviceCmyk_
+#### _pdf.colorCMYK(cyan: _int_, magenta: _int_, yellow: _int_, black: _int_) : _com.itextpdf.kernel.colors.DeviceCmyk_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
-| arg2 | _int_ |   |
-| arg3 | _int_ |   |
+| cyan | _int_ |   |
+| magenta | _int_ |   |
+| yellow | _int_ |   |
+| black | _int_ |   |
 
 ##### Retorno
 
@@ -1285,12 +1285,12 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorGray(arg0: _double_) : _com.itextpdf.kernel.colors.DeviceGray_
+#### _pdf.colorGray(value: _double_) : _com.itextpdf.kernel.colors.DeviceGray_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
+| value | _double_ |   |
 
 ##### Retorno
 
@@ -1299,12 +1299,12 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorGray(arg0: _float_) : _com.itextpdf.kernel.colors.DeviceGray_
+#### _pdf.colorGray(value: _float_) : _com.itextpdf.kernel.colors.DeviceGray_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| value | _float_ |   |
 
 ##### Retorno
 
@@ -1313,12 +1313,12 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorGray(arg0: _int_) : _com.itextpdf.kernel.colors.DeviceGray_
+#### _pdf.colorGray(value: _int_) : _com.itextpdf.kernel.colors.DeviceGray_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| value | _int_ |   |
 
 ##### Retorno
 
@@ -1331,14 +1331,14 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorRGB(arg0: _double_, arg1: _double_, arg2: _double_) : _com.itextpdf.kernel.colors.DeviceRgb_
+#### _pdf.colorRGB(red: _double_, green: _double_, blue: _double_) : _com.itextpdf.kernel.colors.DeviceRgb_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
-| arg1 | _double_ |   |
-| arg2 | _double_ |   |
+| red | _double_ |   |
+| green | _double_ |   |
+| blue | _double_ |   |
 
 ##### Retorno
 
@@ -1347,14 +1347,14 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorRGB(arg0: _float_, arg1: _float_, arg2: _float_) : _com.itextpdf.kernel.colors.DeviceRgb_
+#### _pdf.colorRGB(red: _float_, green: _float_, blue: _float_) : _com.itextpdf.kernel.colors.DeviceRgb_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
-| arg1 | _float_ |   |
-| arg2 | _float_ |   |
+| red | _float_ |   |
+| green | _float_ |   |
+| blue | _float_ |   |
 
 ##### Retorno
 
@@ -1363,14 +1363,14 @@ Retorna a célula criada.
 
 ---
 
-#### _pdf.colorRGB(arg0: _int_, arg1: _int_, arg2: _int_) : _com.itextpdf.kernel.colors.DeviceRgb_
+#### _pdf.colorRGB(red: _int_, green: _int_, blue: _int_) : _com.itextpdf.kernel.colors.DeviceRgb_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _int_ |   |
-| arg2 | _int_ |   |
+| red | _int_ |   |
+| green | _int_ |   |
+| blue | _int_ |   |
 
 ##### Retorno
 
@@ -1541,7 +1541,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### _pdf.font(armazenamento: _[File](../../objects/File)_, codificação: string, arg2: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
+#### _pdf.font(armazenamento: _[File](../../objects/File)_, codificação: string, embedded: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1552,7 +1552,7 @@ Cria um tipo de letra.
 |---|---|---|
 | armazenamento | _[File](../../objects/File)_ | Caminho do armazenamento. |
 | codificação | string | Codificação. |
-| arg2 | _boolean_ |   |
+| embedded | _boolean_ |   |
 
 ##### Retorno
 
@@ -1621,7 +1621,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### _pdf.font(armazenamento: _[Storage](../../resources/Storage)_, codificação: string, arg2: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
+#### _pdf.font(armazenamento: _[Storage](../../resources/Storage)_, codificação: string, embedded: _boolean_) : _com.itextpdf.kernel.font.PdfFont_
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1632,7 +1632,7 @@ Cria um tipo de letra.
 |---|---|---|
 | armazenamento | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
 | codificação | string | Codificação. |
-| arg2 | _boolean_ |   |
+| embedded | _boolean_ |   |
 
 ##### Retorno
 
@@ -1710,12 +1710,12 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### _pdf.image(arg0: _[File](../../objects/File)_) : _com.itextpdf.layout.element.Image_
+#### _pdf.image(file: _[File](../../objects/File)_) : _com.itextpdf.layout.element.Image_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[File](../../objects/File)_ |   |
+| file | _[File](../../objects/File)_ |   |
 
 ##### Retorno
 
@@ -1724,12 +1724,12 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### _pdf.image(arg0: _[Storage](../../resources/Storage)_) : _com.itextpdf.layout.element.Image_
+#### _pdf.image(storage: _[Storage](../../resources/Storage)_) : _com.itextpdf.layout.element.Image_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Storage](../../resources/Storage)_ |   |
+| storage | _[Storage](../../resources/Storage)_ |   |
 
 ##### Retorno
 
@@ -1862,7 +1862,7 @@ Retorna um novo documento com o número de páginas inseridas.
 
 ---
 
-#### _pdf.newDocument(arg0: _java.io.OutputStream_) : _com.itextpdf.layout.Document_
+#### _pdf.newDocument(out: _java.io.OutputStream_) : _com.itextpdf.layout.Document_
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -1871,7 +1871,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.OutputStream_ |   |
+| out | _java.io.OutputStream_ |   |
 
 ##### Retorno
 
@@ -1900,7 +1900,7 @@ Retorna um novo documento com o número de páginas inseridas.
 
 ---
 
-#### _pdf.newDocument(arg0: _[File](../../objects/File)_) : _com.itextpdf.layout.Document_
+#### _pdf.newDocument(file: _[File](../../objects/File)_) : _com.itextpdf.layout.Document_
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -1909,7 +1909,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[File](../../objects/File)_ |   |
+| file | _[File](../../objects/File)_ |   |
 
 ##### Retorno
 
@@ -1938,7 +1938,7 @@ Retorna um novo documento com o número de páginas inseridas.
 
 ---
 
-#### _pdf.newDocument(arg0: _[OutputStream](../../objects/OutputStream)_) : _com.itextpdf.layout.Document_
+#### _pdf.newDocument(out: _[OutputStream](../../objects/OutputStream)_) : _com.itextpdf.layout.Document_
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -1947,7 +1947,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[OutputStream](../../objects/OutputStream)_ |   |
+| out | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -1976,7 +1976,7 @@ Retorna um novo documento com o número de páginas inseridas.
 
 ---
 
-#### _pdf.newDocument(arg0: _[Storage](../../resources/Storage)_) : _com.itextpdf.layout.Document_
+#### _pdf.newDocument(storage: _[Storage](../../resources/Storage)_) : _com.itextpdf.layout.Document_
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -1985,7 +1985,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[Storage](../../resources/Storage)_ |   |
+| storage | _[Storage](../../resources/Storage)_ |   |
 
 ##### Retorno
 
@@ -2129,7 +2129,7 @@ Retorna o documento PDF aberto.
 
 ---
 
-#### _pdf.pageSize(arg0: _float_, arg1: _float_) : _com.itextpdf.kernel.geom.PageSize_
+#### _pdf.pageSize(width: _float_, height: _float_) : _com.itextpdf.kernel.geom.PageSize_
 ##### Descrição
 
 Obtém a definição do tamanho da página atráves da largura e altura.
@@ -2138,8 +2138,8 @@ Obtém a definição do tamanho da página atráves da largura e altura.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
-| arg1 | _float_ |   |
+| width | _float_ |   |
+| height | _float_ |   |
 
 ##### Retorno
 
@@ -2148,7 +2148,7 @@ Obtém a definição do tamanho da página atráves da largura e altura.
 
 ---
 
-#### _pdf.pageSize(arg0: string) : _com.itextpdf.kernel.geom.PageSize_
+#### _pdf.pageSize(page: string) : _com.itextpdf.kernel.geom.PageSize_
 ##### Descrição
 
 Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</li><li>A2</li><li>A3</li><li>A4</li><li>A5</li><li>A6</li><li>A7</li><li>A8</li><li>A9</li><li>A10</li><li>B0</li><li>B1</li><li>B2</li><li>B3</li><li>B4</li><li>B5</li><li>B6</li><li>B7</li><li>B8</li><li>B9</li><li>B10</li><li>default</li><li>executive</li><li>ledger</li><li>legal</li><li>letter</li><li>tabloid</li></ul>
@@ -2157,7 +2157,7 @@ Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</l
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| page | string |   |
 
 ##### Retorno
 
@@ -2170,7 +2170,7 @@ Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</l
 
 ---
 
-#### _pdf.paragraph(arg0: string) : _com.itextpdf.layout.element.Paragraph_
+#### _pdf.paragraph(text: string) : _com.itextpdf.layout.element.Paragraph_
 ##### Descrição
 
 Cria um parágrafo.
@@ -2179,7 +2179,7 @@ Cria um parágrafo.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| text | string |   |
 
 ##### Retorno
 
@@ -2192,12 +2192,12 @@ Cria um parágrafo.
 
 ---
 
-#### _pdf.setDocument(arg0: _com.itextpdf.layout.Document_) : _[PDF](../../resources/PDF)_
+#### _pdf.setDocument(document: _com.itextpdf.layout.Document_) : _[PDF](../../resources/PDF)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _com.itextpdf.layout.Document_ |   |
+| document | _com.itextpdf.layout.Document_ |   |
 
 ##### Retorno
 
@@ -2210,7 +2210,7 @@ Cria um parágrafo.
 
 ---
 
-#### _pdf.table(largura: _[D_) : _com.itextpdf.layout.element.Table_
+#### _pdf.table(largura: _double[]_) : _com.itextpdf.layout.element.Table_
 ##### Descrição
 
 Cria uma tabela com colunas da largura definida.
@@ -2219,7 +2219,7 @@ Cria uma tabela com colunas da largura definida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _[D_ | Largura das colunas da tabela. |
+| largura | _double[]_ | Largura das colunas da tabela. |
 
 ##### Retorno
 
@@ -2229,7 +2229,7 @@ Retorna uma tabela com a largura das colunas inseridas.
 
 ---
 
-#### _pdf.table(largura: _[D_, colunaLarga: _boolean_) : _com.itextpdf.layout.element.Table_
+#### _pdf.table(largura: _double[]_, colunaLarga: _boolean_) : _com.itextpdf.layout.element.Table_
 ##### Descrição
 
 Cria uma tabela.
@@ -2238,7 +2238,7 @@ Cria uma tabela.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _[D_ | Largura das colunas. |
+| largura | _double[]_ | Largura das colunas. |
 | colunaLarga | _boolean_ | Coluna de tamanho grande. |
 
 ##### Retorno
@@ -2249,7 +2249,7 @@ Retorna a tabela criada.
 
 ---
 
-#### _pdf.table(largura: _[F_) : _com.itextpdf.layout.element.Table_
+#### _pdf.table(largura: _float[]_) : _com.itextpdf.layout.element.Table_
 ##### Descrição
 
 Cria uma tabela com colunas da largura definida.
@@ -2258,7 +2258,7 @@ Cria uma tabela com colunas da largura definida.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _[F_ | Largura das colunas da tabela. |
+| largura | _float[]_ | Largura das colunas da tabela. |
 
 ##### Retorno
 
@@ -2268,7 +2268,7 @@ Retorna uma tabela com a largura das colunas inseridas.
 
 ---
 
-#### _pdf.table(largura: _[F_, colunaLarga: _boolean_) : _com.itextpdf.layout.element.Table_
+#### _pdf.table(largura: _float[]_, colunaLarga: _boolean_) : _com.itextpdf.layout.element.Table_
 ##### Descrição
 
 Cria uma tabela.
@@ -2277,7 +2277,7 @@ Cria uma tabela.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| largura | _[F_ | Largura das colunas. |
+| largura | _float[]_ | Largura das colunas. |
 | colunaLarga | _boolean_ | Coluna de tamanho grande. |
 
 ##### Retorno

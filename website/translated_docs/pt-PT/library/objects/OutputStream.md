@@ -132,12 +132,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(arg0: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### print(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| v | _boolean_ |   |
 
 ##### Retorno
 
@@ -146,12 +146,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(arg0: _char_) : _[OutputStream](../../objects/OutputStream)_
+#### print(v: _char_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _char_ |   |
+| v | _char_ |   |
 
 ##### Retorno
 
@@ -160,12 +160,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(arg0: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### print(v: _double_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
+| v | _double_ |   |
 
 ##### Retorno
 
@@ -174,12 +174,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(arg0: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### print(v: _float_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| v | _float_ |   |
 
 ##### Retorno
 
@@ -188,12 +188,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(arg0: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### print(v: _int_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| v | _int_ |   |
 
 ##### Retorno
 
@@ -202,12 +202,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(arg0: string) : _[OutputStream](../../objects/OutputStream)_
+#### print(bytes: string) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| bytes | string |   |
 
 ##### Retorno
 
@@ -216,12 +216,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(arg0: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### print(v: _long_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| v | _long_ |   |
 
 ##### Retorno
 
@@ -230,12 +230,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### print(arg0: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### print(v: _short_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| v | _short_ |   |
 
 ##### Retorno
 
@@ -248,12 +248,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(arg0: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### printAndClose(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| v | _boolean_ |   |
 
 ##### Retorno
 
@@ -262,12 +262,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(arg0: _char_) : _[OutputStream](../../objects/OutputStream)_
+#### printAndClose(v: _char_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _char_ |   |
+| v | _char_ |   |
 
 ##### Retorno
 
@@ -276,12 +276,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(arg0: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### printAndClose(v: _double_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
+| v | _double_ |   |
 
 ##### Retorno
 
@@ -290,12 +290,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(arg0: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### printAndClose(v: _float_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| v | _float_ |   |
 
 ##### Retorno
 
@@ -304,12 +304,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(arg0: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### printAndClose(v: _int_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| v | _int_ |   |
 
 ##### Retorno
 
@@ -318,12 +318,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(arg0: string) : _[OutputStream](../../objects/OutputStream)_
+#### printAndClose(bytes: string) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| bytes | string |   |
 
 ##### Retorno
 
@@ -332,12 +332,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(arg0: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### printAndClose(v: _long_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| v | _long_ |   |
 
 ##### Retorno
 
@@ -346,12 +346,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printAndClose(arg0: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### printAndClose(v: _short_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| v | _short_ |   |
 
 ##### Retorno
 
@@ -364,13 +364,13 @@ sidebar_label: OutputStream
 
 ---
 
-#### printf(arg0: string, arg1: _[Ljava.lang.Object;_) : _[OutputStream](../../objects/OutputStream)_
+#### printf(format: string, objects: _[Ljava.lang.Object;[]_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Ljava.lang.Object;_ |   |
+| format | string |   |
+| objects | _[Ljava.lang.Object;[]_ |   |
 
 ##### Retorno
 
@@ -383,13 +383,13 @@ sidebar_label: OutputStream
 
 ---
 
-#### printfAndClose(arg0: string, arg1: _[Ljava.lang.Object;_) : _[OutputStream](../../objects/OutputStream)_
+#### printfAndClose(format: string, objects: _[Ljava.lang.Object;[]_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Ljava.lang.Object;_ |   |
+| format | string |   |
+| objects | _[Ljava.lang.Object;[]_ |   |
 
 ##### Retorno
 
@@ -410,12 +410,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(arg0: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### println(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| v | _boolean_ |   |
 
 ##### Retorno
 
@@ -424,12 +424,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(arg0: _char_) : _[OutputStream](../../objects/OutputStream)_
+#### println(v: _char_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _char_ |   |
+| v | _char_ |   |
 
 ##### Retorno
 
@@ -438,12 +438,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(arg0: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### println(v: _double_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
+| v | _double_ |   |
 
 ##### Retorno
 
@@ -452,12 +452,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(arg0: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### println(v: _float_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| v | _float_ |   |
 
 ##### Retorno
 
@@ -466,12 +466,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(arg0: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### println(v: _int_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| v | _int_ |   |
 
 ##### Retorno
 
@@ -480,12 +480,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(arg0: string) : _[OutputStream](../../objects/OutputStream)_
+#### println(bytes: string) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| bytes | string |   |
 
 ##### Retorno
 
@@ -494,12 +494,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(arg0: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### println(v: _long_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| v | _long_ |   |
 
 ##### Retorno
 
@@ -508,12 +508,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### println(arg0: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### println(v: _short_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| v | _short_ |   |
 
 ##### Retorno
 
@@ -534,12 +534,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(arg0: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### printlnAndClose(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| v | _boolean_ |   |
 
 ##### Retorno
 
@@ -548,12 +548,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(arg0: _char_) : _[OutputStream](../../objects/OutputStream)_
+#### printlnAndClose(v: _char_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _char_ |   |
+| v | _char_ |   |
 
 ##### Retorno
 
@@ -562,12 +562,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(arg0: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### printlnAndClose(v: _double_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
+| v | _double_ |   |
 
 ##### Retorno
 
@@ -576,12 +576,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(arg0: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### printlnAndClose(v: _float_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| v | _float_ |   |
 
 ##### Retorno
 
@@ -590,12 +590,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(arg0: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### printlnAndClose(v: _int_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| v | _int_ |   |
 
 ##### Retorno
 
@@ -604,12 +604,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(arg0: string) : _[OutputStream](../../objects/OutputStream)_
+#### printlnAndClose(bytes: string) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| bytes | string |   |
 
 ##### Retorno
 
@@ -618,12 +618,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(arg0: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### printlnAndClose(v: _long_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| v | _long_ |   |
 
 ##### Retorno
 
@@ -632,12 +632,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### printlnAndClose(arg0: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### printlnAndClose(v: _short_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| v | _short_ |   |
 
 ##### Retorno
 
@@ -650,12 +650,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### setEnabled(arg0: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### setEnabled(enabled: _boolean_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| enabled | _boolean_ |   |
 
 ##### Retorno
 
@@ -668,12 +668,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### setNotify(arg0: _org.netuno.psamata.io.OutputStreamNotify_) : _[OutputStream](../../objects/OutputStream)_
+#### setNotify(outputNotify: _org.netuno.psamata.io.OutputStreamNotify_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _org.netuno.psamata.io.OutputStreamNotify_ |   |
+| outputNotify | _org.netuno.psamata.io.OutputStreamNotify_ |   |
 
 ##### Retorno
 
@@ -686,12 +686,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### setStart(arg0: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### setStart(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| v | _boolean_ |   |
 
 ##### Retorno
 
@@ -716,12 +716,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### write(arg0: _[B_) : _void_
+#### write(b: _byte[]_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[B_ |   |
+| b | _byte[]_ |   |
 
 ##### Retorno
 
@@ -730,14 +730,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### write(arg0: _[B_, arg1: _int_, arg2: _int_) : _void_
+#### write(bytes: _byte[]_, off: _int_, leng: _int_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[B_ |   |
-| arg1 | _int_ |   |
-| arg2 | _int_ |   |
+| bytes | _byte[]_ |   |
+| off | _int_ |   |
+| leng | _int_ |   |
 
 ##### Retorno
 
@@ -746,12 +746,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### write(arg0: _int_) : _void_
+#### write(b: _int_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| b | _int_ |   |
 
 ##### Retorno
 
@@ -764,12 +764,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(arg0: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### writeAndClose(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| v | _boolean_ |   |
 
 ##### Retorno
 
@@ -778,12 +778,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(arg0: _char_) : _[OutputStream](../../objects/OutputStream)_
+#### writeAndClose(v: _char_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _char_ |   |
+| v | _char_ |   |
 
 ##### Retorno
 
@@ -792,12 +792,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(arg0: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### writeAndClose(v: _double_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
+| v | _double_ |   |
 
 ##### Retorno
 
@@ -806,12 +806,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(arg0: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### writeAndClose(v: _float_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| v | _float_ |   |
 
 ##### Retorno
 
@@ -820,12 +820,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(arg0: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### writeAndClose(v: _int_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| v | _int_ |   |
 
 ##### Retorno
 
@@ -834,12 +834,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(arg0: string) : _[OutputStream](../../objects/OutputStream)_
+#### writeAndClose(bytes: string) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| bytes | string |   |
 
 ##### Retorno
 
@@ -848,12 +848,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(arg0: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### writeAndClose(v: _long_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| v | _long_ |   |
 
 ##### Retorno
 
@@ -862,12 +862,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeAndClose(arg0: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### writeAndClose(v: _short_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| v | _short_ |   |
 
 ##### Retorno
 
@@ -880,12 +880,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeBoolean(arg0: _boolean_) : _[OutputStream](../../objects/OutputStream)_
+#### writeBoolean(v: _boolean_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _boolean_ |   |
+| v | _boolean_ |   |
 
 ##### Retorno
 
@@ -898,12 +898,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeByte(arg0: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### writeByte(b: _int_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| b | _int_ |   |
 
 ##### Retorno
 
@@ -916,12 +916,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeBytes(arg0: string) : _[OutputStream](../../objects/OutputStream)_
+#### writeBytes(s: string) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| s | string |   |
 
 ##### Retorno
 
@@ -934,12 +934,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeChar(arg0: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### writeChar(v: _int_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| v | _int_ |   |
 
 ##### Retorno
 
@@ -952,12 +952,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeChars(arg0: string) : _[OutputStream](../../objects/OutputStream)_
+#### writeChars(s: string) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| s | string |   |
 
 ##### Retorno
 
@@ -970,12 +970,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeDouble(arg0: _double_) : _[OutputStream](../../objects/OutputStream)_
+#### writeDouble(v: _double_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _double_ |   |
+| v | _double_ |   |
 
 ##### Retorno
 
@@ -988,12 +988,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFile(arg0: _java.io.File_) : _[OutputStream](../../objects/OutputStream)_
+#### writeFile(file: _java.io.File_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.File_ |   |
+| file | _java.io.File_ |   |
 
 ##### Retorno
 
@@ -1002,12 +1002,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFile(arg0: string) : _[OutputStream](../../objects/OutputStream)_
+#### writeFile(file: string) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| file | string |   |
 
 ##### Retorno
 
@@ -1016,12 +1016,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFile(arg0: _java.nio.file.Path_) : _[OutputStream](../../objects/OutputStream)_
+#### writeFile(file: _java.nio.file.Path_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.nio.file.Path_ |   |
+| file | _java.nio.file.Path_ |   |
 
 ##### Retorno
 
@@ -1034,12 +1034,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFileAndClose(arg0: _java.io.File_) : _[OutputStream](../../objects/OutputStream)_
+#### writeFileAndClose(file: _java.io.File_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.io.File_ |   |
+| file | _java.io.File_ |   |
 
 ##### Retorno
 
@@ -1048,12 +1048,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFileAndClose(arg0: string) : _[OutputStream](../../objects/OutputStream)_
+#### writeFileAndClose(file: string) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
+| file | string |   |
 
 ##### Retorno
 
@@ -1062,12 +1062,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFileAndClose(arg0: _java.nio.file.Path_) : _[OutputStream](../../objects/OutputStream)_
+#### writeFileAndClose(file: _java.nio.file.Path_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _java.nio.file.Path_ |   |
+| file | _java.nio.file.Path_ |   |
 
 ##### Retorno
 
@@ -1080,12 +1080,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeFloat(arg0: _float_) : _[OutputStream](../../objects/OutputStream)_
+#### writeFloat(v: _float_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _float_ |   |
+| v | _float_ |   |
 
 ##### Retorno
 
@@ -1098,12 +1098,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeInt(arg0: _int_) : _[OutputStream](../../objects/OutputStream)_
+#### writeInt(v: _int_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| v | _int_ |   |
 
 ##### Retorno
 
@@ -1116,12 +1116,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeLong(arg0: _long_) : _[OutputStream](../../objects/OutputStream)_
+#### writeLong(v: _long_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| v | _long_ |   |
 
 ##### Retorno
 
@@ -1134,12 +1134,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeShort(arg0: _short_) : _[OutputStream](../../objects/OutputStream)_
+#### writeShort(v: _short_) : _[OutputStream](../../objects/OutputStream)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _short_ |   |
+| v | _short_ |   |
 
 ##### Retorno
 
@@ -1152,14 +1152,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(arg0: _[B_, arg1: _java.io.File_, arg2: _boolean_) : _void_
+#### writeToFile(bytes: _byte[]_, path: _java.io.File_, append: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[B_ |   |
-| arg1 | _java.io.File_ |   |
-| arg2 | _boolean_ |   |
+| bytes | _byte[]_ |   |
+| path | _java.io.File_ |   |
+| append | _boolean_ |   |
 
 ##### Retorno
 
@@ -1168,14 +1168,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(arg0: _[B_, arg1: string, arg2: _boolean_) : _void_
+#### writeToFile(bytes: _byte[]_, path: string, append: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[B_ |   |
-| arg1 | string |   |
-| arg2 | _boolean_ |   |
+| bytes | _byte[]_ |   |
+| path | string |   |
+| append | _boolean_ |   |
 
 ##### Retorno
 
@@ -1184,14 +1184,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(arg0: _[B_, arg1: _java.nio.file.Path_, arg2: _boolean_) : _void_
+#### writeToFile(bytes: _byte[]_, path: _java.nio.file.Path_, append: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[B_ |   |
-| arg1 | _java.nio.file.Path_ |   |
-| arg2 | _boolean_ |   |
+| bytes | _byte[]_ |   |
+| path | _java.nio.file.Path_ |   |
+| append | _boolean_ |   |
 
 ##### Retorno
 
@@ -1200,14 +1200,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(arg0: string, arg1: _java.io.File_, arg2: _boolean_) : _void_
+#### writeToFile(content: string, path: _java.io.File_, append: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.io.File_ |   |
-| arg2 | _boolean_ |   |
+| content | string |   |
+| path | _java.io.File_ |   |
+| append | _boolean_ |   |
 
 ##### Retorno
 
@@ -1216,14 +1216,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(arg0: string, arg1: string, arg2: _boolean_) : _void_
+#### writeToFile(content: string, path: string, append: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | string |   |
-| arg2 | _boolean_ |   |
+| content | string |   |
+| path | string |   |
+| append | _boolean_ |   |
 
 ##### Retorno
 
@@ -1232,14 +1232,14 @@ sidebar_label: OutputStream
 
 ---
 
-#### writeToFile(arg0: string, arg1: _java.nio.file.Path_, arg2: _boolean_) : _void_
+#### writeToFile(content: string, path: _java.nio.file.Path_, append: _boolean_) : _void_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _java.nio.file.Path_ |   |
-| arg2 | _boolean_ |   |
+| content | string |   |
+| path | _java.nio.file.Path_ |   |
+| append | _boolean_ |   |
 
 ##### Retorno
 

@@ -180,7 +180,7 @@ Print a message of type **INFORMATION** in the log file and in the terminal of N
 
 ---
 
-#### _log.print(content: _[C_) : _void_
+#### _log.print(content: _char[]_) : _void_
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -189,7 +189,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[C_ | Content that will be displayed. |
+| content | _char[]_ | Content that will be displayed. |
 
 ##### Return
 
@@ -346,7 +346,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### _log.println(content: _[C_) : _void_
+#### _log.println(content: _char[]_) : _void_
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -355,7 +355,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| content | _[C_ | Content that will be displayed. |
+| content | _char[]_ | Content that will be displayed. |
 
 ##### Return
 

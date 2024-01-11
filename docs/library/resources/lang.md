@@ -47,13 +47,13 @@ Returns the match key.
 
 ---
 
-#### _lang.get(arg0: string, arg1: _[Ljava.lang.Object;_) : string
+#### _lang.get(key: string, formats: _[Ljava.lang.Object;[]_) : string
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| arg0 | string |   |
-| arg1 | _[Ljava.lang.Object;_ |   |
+| key | string |   |
+| formats | _[Ljava.lang.Object;[]_ |   |
 
 ##### Return
 

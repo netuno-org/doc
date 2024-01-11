@@ -25,7 +25,7 @@ Retorna uma classe.
 
 ---
 
-#### _random.init(arg0: _long_) : _java.util.Random_
+#### _random.init(seed: _long_) : _java.util.Random_
 ##### Descrição
 
 Gera aleatoriamente uma seed.
@@ -34,7 +34,7 @@ Gera aleatoriamente uma seed.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _long_ |   |
+| seed | _long_ |   |
 
 ##### Retorno
 
@@ -56,12 +56,12 @@ Retorna uma seed.
 
 ---
 
-#### _random.initSecure(arg0: _[B_) : _java.security.SecureRandom_
+#### _random.initSecure(seed: _byte[]_) : _java.security.SecureRandom_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _[B_ |   |
+| seed | _byte[]_ |   |
 
 ##### Retorno
 
@@ -87,12 +87,12 @@ Retorna um texto de 24 caracteres aleatórios.
 
 ---
 
-#### _random.initString(arg0: _int_) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(length: _int_) : _[RandomString](../../objects/RandomString)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
+| length | _int_ |   |
 
 ##### Retorno
 
@@ -101,13 +101,13 @@ Retorna um texto de 24 caracteres aleatórios.
 
 ---
 
-#### _random.initString(arg0: _int_, arg1: string) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(length: _int_, symbols: string) : _[RandomString](../../objects/RandomString)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | string |   |
+| length | _int_ |   |
+| symbols | string |   |
 
 ##### Retorno
 
@@ -116,13 +116,13 @@ Retorna um texto de 24 caracteres aleatórios.
 
 ---
 
-#### _random.initString(arg0: _int_, arg1: _java.util.Random_) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(length: _int_, random: _java.util.Random_) : _[RandomString](../../objects/RandomString)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.util.Random_ |   |
+| length | _int_ |   |
+| random | _java.util.Random_ |   |
 
 ##### Retorno
 
@@ -131,14 +131,14 @@ Retorna um texto de 24 caracteres aleatórios.
 
 ---
 
-#### _random.initString(arg0: _int_, arg1: _java.util.Random_, arg2: string) : _[RandomString](../../objects/RandomString)_
+#### _random.initString(length: _int_, random: _java.util.Random_, symbols: string) : _[RandomString](../../objects/RandomString)_
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| arg0 | _int_ |   |
-| arg1 | _java.util.Random_ |   |
-| arg2 | string |   |
+| length | _int_ |   |
+| random | _java.util.Random_ |   |
+| symbols | string |   |
 
 ##### Retorno
 
