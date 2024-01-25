@@ -278,6 +278,26 @@ O recurso FTP atual.
 
 ---
 
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">download</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destino</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+##### Descrição
+
+Copia um arquivo no servidor para um arquivo local.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
+| **destino** | _[Storage](../../resources/Storage)_ | Arquivo local de destino para armazenar o conteúdo remoto. |
+
+##### Retorno
+
+( _[FTP](../../resources/FTP)_ )
+
+O recurso FTP atual.
+
+---
+
 ## downloadBytes
 
 ---
@@ -692,6 +712,26 @@ Envia os dados de um arquivo para ser salvo no servidor.
 |---|---|---|
 | **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
 | **origem** | _[File](../../objects/File)_ | Arquivo local de origem. |
+
+##### Retorno
+
+( _[FTP](../../resources/FTP)_ )
+
+O recurso FTP atual.
+
+---
+
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">upload</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+##### Descrição
+
+Envia os dados de um arquivo para ser salvo no servidor.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
+| **origem** | _[Storage](../../resources/Storage)_ | Arquivo local de origem. |
 
 ##### Retorno
 

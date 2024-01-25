@@ -278,6 +278,26 @@ The current FTP resource.
 
 ---
 
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">download</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destination</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+##### Description
+
+Copies a server file to a local file.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **remotePath** | _string_ | File path in the server. |
+| **destination** | _[Storage](../../resources/Storage)_ | Local file of destination to store the remote content. |
+
+##### Return
+
+( _[FTP](../../resources/FTP)_ )
+
+The current FTP resource.
+
+---
+
 ## downloadBytes
 
 ---
@@ -692,6 +712,26 @@ Sends the file data to be saved in a server file.
 |---|---|---|
 | **remotePath** | _string_ | File path in the server. |
 | **source** | _[File](../../objects/File)_ | Local file as the source. |
+
+##### Return
+
+( _[FTP](../../resources/FTP)_ )
+
+The current FTP resource.
+
+---
+
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">upload</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">source</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+##### Description
+
+Sends the file data to be saved in a server file.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **remotePath** | _string_ | File path in the server. |
+| **source** | _[Storage](../../resources/Storage)_ | Local file as the source. |
 
 ##### Return
 
