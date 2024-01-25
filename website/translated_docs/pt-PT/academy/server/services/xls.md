@@ -12,7 +12,7 @@ Através do recurso [XLS](../../../library/resources/xls) que permite uma abstra
 
 Podemos tanto gerar arquivos XLSX, XLS ou ODS.
 
-A aplicação que vem com o Netuno denominada **demo** (aplicação de demonstração) contém bastantes exemplos das possíveis implementações de código em várias linguagens, incluindo a demonstração de envio de emails através do serviço `export-excel` que se localiza em:
+A aplicação que vem com o Netuno denominada **demo** (aplicação de demonstração) contém bastantes exemplos das possíveis implementações de código em várias linguagens, incluindo a demonstração da exportação de planilhas através do serviço `export-excel` que se localiza em:
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Groovy-->
