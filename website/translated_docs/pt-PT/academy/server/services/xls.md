@@ -518,5 +518,52 @@ excel.save(_app.file('file.xls'))
 A extração de dados de arquivos em Excel é feita com o método `read`.
 
 ```
-const dados = _xls.read(_app.file())
+const dados = _xls.read(_app.file('file.xlsx'))
 ```
+
+Os dados será uma estrutura de objetos do tipo Values com contém Listas e Mapas (chave e valor).
+
+Para visualizar todos os dados podemos colocar como saída de dados do serviço:
+
+```
+_out.json(dados)
+```
+
+Para realizar a interação temos que ter em mente que a estrutura consiste em:
+
+1. `sheets` - Planilhas
+2. `rows` - Linhas
+3. `columns` - Colunas
+
+Exemplo de uma interação completa:
+
+```
+for (const planilha of dados.getValues('sheets')) {
+    _out.println(`<h4>Planilha: ${planilha.getInt('index')} - ${planilha.getString('name')}</h4>`)
+    for (const linha of planilha.getValues('rows')) {
+        _out.println(`<h4>Linha: ${linha.getInt('row')}</h4>`)
+        _out.println('<p>')
+        for (const coluna of linha.getValues('columns')) {
+            _out.print(`${coluna.getInt('row')}:${coluna.getInt('column')}`)
+            _out.print(` # ${coluna.getString('address')}`)
+            _out.print(` # ${coluna.getString('type')}`)
+            _out.print(` # ${coluna.getString('value')}`)
+            _out.println('<br>')
+        }
+        _out.println('</p>')
+    }
+}
+```
+
+O tipo da célula é obtido através do código:
+
+- `coluna.getString('type')`
+
+E os tipos suportados são:
+
+- `string` - Conteúdo de texto.
+- `numeric` - Conteúdo numérico e de data e hora.
+- `boolean` - Verdadeiro ou falso.
+- `blank` - Célula em branco.
+- `formula` - Célula que contém um fórmula.
+- `error` - Erro no processameneto da célula.
