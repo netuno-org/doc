@@ -49,7 +49,9 @@ Cria o objeto que contém o contexto do novo arquivo que será construído, com 
 
 ## Formatação
 
-A definição de estilos de formatação deve vir antes do definir o valor das células.
+A definição de estilos de formatação visual, ou seja formato de datas, horas, dinheiro, entre outros, deve ser feita antes da definição de valores das células, por que ao definir os valores das células é possível associar junto o seu estilo de formatação.
+
+Então como é demonstrado no exemplo que vem na aplicação `demo`, as formatações são definidas logo no início do código.
 
 Para formatar datas:
 
@@ -89,7 +91,11 @@ const stylePercentage = excel.cellStyleFormat("0.00%")
 
 ## Aparência
 
-A definição de estilos aparência deve vir antes do definir o valor das células:
+A definição de estilos de aparência visual, ou seja a aparência de células como cores, fonte, bordas, alinhamento, entre outros, deve ser feita antes da definição de valores das células, por que ao definir os valores das células é possível associar junto o seu estilo de aparência.
+
+Então como é demonstrado no exemplo que vem na aplicação `demo`, as aparências são definidas logo no início do código.
+
+Exemplo para a definição de cores e alinhamento:
 
 ```javascript
 const styleHeader = excel.cellStyle()
@@ -112,13 +118,14 @@ styleData.setBorderRight(_xls.borderStyle('thin'))
 
 > Documentação com todos os métodos do objeto de <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Estilos no Apache POI</a>.
 
-Novo estilo de fonte do texto e associa ao estilo da célula:
+Cria um novo estilo de fonte para o texto, associa as definições da fonte em um determinado estilo da célula já existente:
 
 ```javascript
 const fontTitle = excel.font()
 fontTitle.setBold(true)
 fontTitle.setFontHeightInPoints(14)
 fontTitle.setColor(_xls.color('yellow'))
+// Define a fonte do styleHeader
 styleHeader.setFont(fontTitle)
 ```
 
@@ -126,7 +133,7 @@ styleHeader.setFont(fontTitle)
 
 ## Imagem
 
-Para inserir uma imagem na planilha que está no `storage/samples/export-excel/logo.png` da aplicação:
+Para inserir uma imagem na planilha que está localizada em `storage/samples/export-excel/logo.png` internamente na aplicação:
 
 ```javascript
 excel.insertPicture(
@@ -161,7 +168,7 @@ Sendo que a ordem dos parâmetros são:
 
 > As referências numéricas de posicionamento começam sempre em **zero**.
 
-Então neste exemplo vai ser mesclada todas as células a partir da coluna 10 até a coluna 15 que estão na linha 3:
+Neste exemplo abaixo será mesclada todas as células a partir da coluna 10 até a coluna 15 que estão na linha 3:
 
 ```
 excel.mergedRegion(3, 10, 3, 15)
@@ -223,18 +230,18 @@ Sendo que os dois primeiros parâmetros servem para definir a posição onde os 
 >
 > Ou seja, a Linha 1 é a posição 0 e a Coluna A também é a posição 0.
 
-A seguir passamos uma lista de linhas, onde cada item vai conter outra lista para as colunas, aí adicionamos um mapa com o valor da célula.
+A seguir passamos uma lista de linhas, onde cada linha contém outra lista para as colunas, só então adicionamos um mapa com o valor da célula.
 
 Exemplo completo:
 
 ```javascript
 excel.addDataTable(
     6, 1,
-    _val.list()
+    _val.list() // Linhas
         .add(
-            _val.list()
+            _val.list() // Coluna
                 .add(
-                    _val.map()
+                    _val.map() // Célula
                         .set("value", "Nome")
                 )
                 .add(
@@ -242,13 +249,13 @@ excel.addDataTable(
                         .set("value", "Idade")
                 )
         )
-        .add(
+        .add( // Outra Linha
             _val.list()
-                .add(
+                .add( // Primeira Coluna
                     _val.map()
                         .set("value", "Maria")
                 )
-                .add(
+                .add( // Segunda Coluna
                     _val.map()
                         .set("value", 26)
                 )
@@ -258,7 +265,9 @@ excel.addDataTable(
 
 ### Aparência
 
-No mapa das células podemos definir o estilo, utilizando por exemplo os estilos definidos na secção da aparência:
+No mapa das células podemos associar os estilo já criados, utilizando por exemplo os estilos definidos na secção da aparência e formatação que vimos anteriormente.
+
+Segue o exemplo de como associar os estilos nas células:
 
 ```javascript
 excel.addDataTable(
@@ -282,9 +291,9 @@ excel.addDataTable(
 
 ### Fórmulas
 
-Para inserir fórmulas utilizamos a chave `formula` no mapa de definição da célula.
+Para inserir fórmulas utilizamos a chave `formula` no mapa de definições da célula.
 
-Neste exemplo será somado na última célula todos os valores das outras células:
+Neste exemplo será realizado a soma na última célula todos os valores das outras células:
 
 ```javascript
 excel.addDataTable(
@@ -345,13 +354,15 @@ excel.addDataTable(
 
 ## Planilhas
 
-Para criar uma nova folha de cálculos (_sheet_) dentro do próprio documento.
+Para criar uma nova folha de cálculos (_sheet_) dentro do próprio documento, observe o seguinte exemplo:
 
 ```
 const novaPlanilha = excel.createSheet('Nova Planilha')
 ```
 
-> Nos métodos de manipulação de células, imagens e dados, basta adicionar no primeiro parâmetro a referência do objeto da planilha.
+> Nos métodos de manipulação de células, imagens e dados, pode ser adicionado no primeiro parâmetro a referência do objeto da planilha.
+>
+> Depende de qual planilha esteja ativa, é possivel alterar a planilha ativa com o método [activeSheet](../../../library/resources/xls#activesheet).
 
 Exemplo de como inserir uma imagem na nova planilha:
 
@@ -397,7 +408,7 @@ excel.addDataTable(
 
 Assim para evitar ter que indicar constantemente nos métodos qual é a planilha que deve ser processada, como nos exemplos acima, em alternativa é possível indicar qual é a planilha ativa.
 
-> Todos os métodos de manipualação de células, imagens e dados, utilizam a planilha que está ativada quando não é indicado uma planilha específica.
+> Todos os métodos de manipulação de células, imagens e dados, utilizam a planilha que está ativada quando **não** é indicado uma planilha específica.
 
 
 ```
@@ -444,6 +455,8 @@ for (const sheet of todasAsPlanilhas) {
 
 ## Gerar Arquivo
 
+Nos métodos de `save` e `output` é gerado o binário do arquivo final.
+
 Envia o arquivo gerado como saída de dados (`output`) do serviço:
 
 ```javascript
@@ -456,7 +469,7 @@ Para guardar o arquivo gerado na pasta `storage/filesystem` da aplicação:
 excel.save(_storage.filesystem('server', 'file.xls'))
 ```
 
-E ainda para guardar o arquivo gerado na pasta `/tmp` a partir do sistema de arquivos do HD:
+Para salvar o arquivo gerado na pasta `/tmp` a partir do sistema de arquivos do HD:
 
 ```javascript
 excel.save(_os.file('/tmp/file.xls'))
@@ -464,7 +477,7 @@ excel.save(_os.file('/tmp/file.xls'))
 
 ## Editar Arquivo
 
-Podemos editar arquivos abrindo eles, realizando as alterações necessárias e depois gerar o novo arquivo editado.
+Podemos editar arquivos abrindo eles, realizando as alterações necessárias e depois salvar o novo arquivo editado.
 
 Segue abaixo alguns exemplos de como é possível abrir arquivos.
 
@@ -509,8 +522,8 @@ excel.setCellData(
         )
 )
 
-fileInput.close()
-excel.save(_app.file('file.xls'))
+fileInput.close() // Fecha o arquivo aberto.
+excel.save(_app.file('file.xls')) // Salva a nova versão.
 ```
 
 ## Ler Arquivo
@@ -521,7 +534,7 @@ A extração de dados de arquivos em Excel é feita com o método `read`.
 const dados = _xls.read(_app.file('file.xlsx'))
 ```
 
-Os dados será uma estrutura de objetos do tipo Values com contém Listas e Mapas (chave e valor).
+Os dados são obtidos em uma estrutura de objetos do tipo Values com contém Listas, para as planilhas, linhas e colunas, e Mapas (chave e valor) para as células.
 
 Para visualizar todos os dados podemos colocar como saída de dados do serviço:
 
@@ -529,7 +542,7 @@ Para visualizar todos os dados podemos colocar como saída de dados do serviço:
 _out.json(dados)
 ```
 
-Para realizar a interação temos que ter em mente que a estrutura consiste em:
+Para realizar a interação temos que ter em mente que a estrutura dos dados é organizada na seginte ordem:
 
 1. `sheets` - Planilhas
 2. `rows` - Linhas
@@ -562,8 +575,45 @@ O tipo da célula é obtido através do código:
 E os tipos suportados são:
 
 - `string` - Conteúdo de texto.
-- `numeric` - Conteúdo numérico e de data e hora.
+- `numeric` - Conteúdo numérico ou de data e/ou hora.
 - `boolean` - Verdadeiro ou falso.
 - `blank` - Célula em branco.
 - `formula` - Célula que contém um fórmula.
 - `error` - Erro no processameneto da célula.
+
+### Parâmetros Adicionais
+
+Para cada tipo de célula temos alguns parâmetros adicionais.
+
+`string` - Tipo de célula com conteúdo textual.
+
+- `value` - Texto da célula.
+- `richValue` - Formatações da célula.
+
+`numeric` - Tipo de célula com conteúdo numérico, ou datas e ainda horas.
+
+- `value` - Valor do conteúdo numérico da célula.
+  
+No caso de datas e horas temos mais estes parâmetros adicionais:
+
+- `localDateTime` - Objeto do Java Time LocalDateTime que representa o valor de data e hora da célula.
+- `localDate` - Objeto do Java Time LocalDate que representa o valor de data da célula.
+- `localTime` - Objeto do Java Time LocalTime que representa o valor de hora da célula.
+- `instant` - Objeto do Java Time Instant que representa o valor de data e/ou hora da célula.
+- `date` - Objeto Date do Java que representa o valor de data e/ou hora da célula.
+
+`boolean` - Tipo de célula com conteúdo booleano, ou seja verdadeiro ou falso.
+
+- `value` - Valor do tipo _boolean_, `true` ou `false`.
+
+`blank` - Tipo de célula sem conteúdo, portanto não contém parâmetros adicionais.
+
+`formula` - Tipo de célula que contém fórmulas de cálculo.
+
+- `value` - Valor final resultante do cálculo.
+- `formula` - Contém a expressão da fórmula utilizada para o cálculo.
+
+`error` - Tipo de célula que contém erro.
+
+- `value` - Valor em byte do erro gerado.
+- `code` - No caso de haver erros no cálculo da fórmula fornece aqui o código do erro ocorrido.
