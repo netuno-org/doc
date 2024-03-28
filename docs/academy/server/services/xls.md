@@ -263,11 +263,11 @@ excel.addDataTable(
 )
 ```
 
-### Aparência
+### Appearance
 
-No mapa das células podemos associar os estilo já criados, utilizando por exemplo os estilos definidos na secção da aparência e formatação que vimos anteriormente.
+In the cell map we can associate the styles already created, using for example the styles defined in the appearance and formatting section that we saw previously.
 
-Segue o exemplo de como associar os estilos nas células:
+Here is an example of how to associate styles in cells:
 
 ```javascript
 excel.addDataTable(
@@ -277,23 +277,23 @@ excel.addDataTable(
             _val.list()
                 .add(
                     _val.map()
-                        .set("value", "Nome")
+                        .set("value", "Name")
                         .set("style", styleHeader)
                 )
                 .add(
                     _val.map()
-                        .set("value", "Idade")
+                        .set("value", "Age")
                         .set("style", styleHeader)
                 )
         )
 )
 ```
 
-### Fórmulas
+### Formulas
 
-Para inserir fórmulas utilizamos a chave `formula` no mapa de definições da célula.
+To insert formulas we use the `formula` key in the cell definitions map.
 
-Neste exemplo será realizado a soma na última célula todos os valores das outras células:
+In this example, all the values in the other cells will be added together in the last cell:
 
 ```javascript
 excel.addDataTable(
@@ -321,7 +321,7 @@ excel.addDataTable(
 )
 ```
 
-Para obter a letra da coluna a partir de número da coluna pode ser utilizado o método `columnReference`, o que pode ajudar na definição das fórmulas. O mesmo método também pode ser utilizado para obter o número da coluna a partir da letra de referência, por exemplo:
+To obtain the column letter from the column number, the columnReference method can be used, which can help in defining the formulas. The same method can also be used to obtain the column number from the reference letter, for example:
 
 ```javascript
 excel.addDataTable(
@@ -352,34 +352,34 @@ excel.addDataTable(
 )
 ```
 
-## Planilhas
+## Spreadsheets
 
-Para criar uma nova folha de cálculos (_sheet_) dentro do próprio documento, observe o seguinte exemplo:
+To create a new __spreadsheet__ within the document itself, observe the following example:
 
+```javascript
+const newSheet = excel.createSheet('New Sheet')
 ```
-const novaPlanilha = excel.createSheet('Nova Planilha')
-```
 
-> Nos métodos de manipulação de células, imagens e dados, pode ser adicionado no primeiro parâmetro a referência do objeto da planilha.
+> In cell, image and data manipulation methods, the reference to the spreadsheet object can be assigned to the first parameter.
 >
-> Depende de qual planilha esteja ativa, é possivel alterar a planilha ativa com o método [activeSheet](../../../library/resources/xls#activesheet).
+> It depends on which sheet is active, it is possible to change the active sheet with the [activeSheet](../../../library/resources/xls#activesheet) method.
 
-Exemplo de como inserir uma imagem na nova planilha:
+Example of how to insert an image into the new spreadsheet:
 
-```
+```javascript
 excel.insertPicture(
-    novaPlanilha,
+    newSheet,
     _app.file("public/images/logo.png"),
-    10, // Número da Coluna
-    1  // Número da Linha
+    10, // Column Number
+    1  // Line Number
 ).resize(1.5)
 ```
 
-Exemplo de como inserir uma tabela de dados na nova planilha:
+Example of how to insert a data table into the new spreadsheet:
 
-```
+```javascript
 excel.addDataTable(
-    novaPlanilha,
+    newSheet,
     6, 1,
     _val.list()
         .add(
@@ -404,110 +404,111 @@ excel.addDataTable(
 )
 ```
 
-### Ativar
+### Activate
 
-Assim para evitar ter que indicar constantemente nos métodos qual é a planilha que deve ser processada, como nos exemplos acima, em alternativa é possível indicar qual é a planilha ativa.
+So, to avoid having to constantly indicate in the methods which spreadsheet should be used, as in the examples above, alternatively it is possible to indicate which spreadsheet is active.
 
-> Todos os métodos de manipulação de células, imagens e dados, utilizam a planilha que está ativada quando **não** é indicado uma planilha específica.
+> All cell, image and data manipulation methods use the spreadsheet that is activated when a specific spreadsheet is not indicated.
 
-
-```
-excel.activeSheet(minhaPlanilha) // Objeto de referência da planilha.
-excel.activeSheet(1) // Índice da planilha que será ativada.
-```
-
-### Recursos Úteis
-
-Exemplos de outros métodos úteis na manipulação de planilhas.
-
-Obter uma planilha pelo nome:
+See two ways to activate a specific spreadsheet, first with object reference and then second with the index of the spreadsheet:
 
 ```javascript
-// Obtém a planilha a partir do seu nome.
-const minhaPlanilha = excel.getSheet('Nome da Planilha')
+excel.activeSheet(mySheet) // Spreadsheet reference object.
+excel.activeSheet(1) // Index of the spreadsheet that will be activated.
 ```
 
-Obter uma planilha pelo seu índice:
+### Useful Resources
+
+Examples of other useful methods for manipulating spreadsheets.
+
+Get a sheet by name:
 
 ```javascript
-// Obtém a planilha a partir do respectivo número.
+// Gets the sheet from its name.
+const mySheet = excel.getSheet('Sheet Name')
+```
+
+Get a spreadsheet by its index:
+
+```javascript
+// Gets the spreadsheet from the respective number.
 const minhaPlanilha = excel.getSheet(1)
 ```
 
-Para obter o número total de planilhas:
+To get the total number of sheets:
 
 ```javascript
-// Número total de planilhas.
+// Total number of sheets.
 const totalDePlanilhas = excel.getNumberOfSheets()
 ```
 
-Para listar todas as planilhas existentes no documento.
+To list all existing sheets in the document.
 
 ```javascript
-// Lista todas as planilhas.
+// List all sheets.
 const todasAsPlanilhas = excel.getAllSheets()
 for (const sheet of todasAsPlanilhas) {
     ...
 }
 ```
 
-> Documentação com todos os métodos do objeto de <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Planilha no Apache POI</a>.
+> Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Spreadsheet object in Apache POI</a>.
 
-## Gerar Arquivo
+## Generate File
 
-Nos métodos de `save` e `output` é gerado o binário do arquivo final.
+In the `save` and `output` methods, the final file binary is generated.
 
-Envia o arquivo gerado como saída de dados (`output`) do serviço:
+Sends the generated file as the service's `output`:
 
 ```javascript
 excel.output('file.xls')
 ```
 
-Para guardar o arquivo gerado na pasta `storage/filesystem` da aplicação:
+To save the generated file in the application's `storage/filesystem` folder:
 
 ```javascript
 excel.save(_storage.filesystem('server', 'file.xls'))
 ```
 
-Para salvar o arquivo gerado na pasta `/tmp` a partir do sistema de arquivos do HD:
+To save the generated file in the `/tmp` folder from the HD file system:
 
 ```javascript
 excel.save(_os.file('/tmp/file.xls'))
 ```
 
-## Editar Arquivo
+## Edit File
 
-Podemos editar arquivos abrindo eles, realizando as alterações necessárias e depois salvar o novo arquivo editado.
+We can edit files by opening them, making the necessary changes and then saving the new edited file.
 
-Segue abaixo alguns exemplos de como é possível abrir arquivos.
+Below are some examples of how you can open files.
 
-Abrir um arquivo na raíz da aplicação:
+Open a file in the application root:
 
 ```javascript
 const excel = _xls.open(_app.file('file.xls'))
 ```
 
-Para abrir o arquivo gerado na pasta `storage/filesystem` da aplicação:
+To open the file generated in the application's `storage/filesystem` folder:
 
 ```javascript
 const excel = _xls.open(_storage.filesystem('server', 'file.xls'))
 ```
 
-E ainda para abrir o arquivo na pasta `/tmp` a partir do sistema de arquivos do HD:
+And also to open the file in the `/tmp` folder from the HD file system:
 
 ```javascript
 const excel = _xls.open(_os.file('/tmp/file.xls'))
 ```
 
-Nos exemplos acima a constante `excel` vai conter o objeto de edição com o contexto do respectivo arquivo, assim é possível fazer qualquer tipo de manipulação.
+In the examples above, the Excel constant will contain the editing object with the context of the respective file, so it is possible to carry out any type of manipulation.
 
-Quando concluir as alterações realize a geração do novo arquivo.
+When you complete the changes, generate the new file.
 
-> Não é possível alterar diretamente o mesmo arquivo aberto, sendo necessário gerar um novo arquivo com um caminho diferente.
+> It is not possible to directly change the same open file, making it necessary to generate a new file with a different path.
 
-Para alterar diretamente o mesmo arquivo, então pode ser feito utilizando o `inputStream`.
+To directly change the same file, it can be done using `inputStream`.
 
-Segue um exemplo de como alterar o valor de uma célula:
+Here is an example of how to change the value of a cell:
 
 ```javascript
 const fileInput = _app.file('file.xls').inputStream()
@@ -522,45 +523,45 @@ excel.setCellData(
         )
 )
 
-fileInput.close() // Fecha o arquivo aberto.
-excel.save(_app.file('file.xls')) // Salva a nova versão.
+fileInput.close() // Closes the open file.
+excel.save(_app.file('file.xls')) // Save the new version.
 ```
 
-## Ler Arquivo
+## Read File
 
-A extração de dados de arquivos em Excel é feita com o método `read`.
-
-```
-const dados = _xls.read(_app.file('file.xlsx'))
-```
-
-Os dados são obtidos em uma estrutura de objetos do tipo Values com contém Listas, para as planilhas, linhas e colunas, e Mapas (chave e valor) para as células.
-
-Para visualizar todos os dados podemos colocar como saída de dados do serviço:
+Extracting data from Excel files is done using the `read` method.
 
 ```
-_out.json(dados)
+const data = _xls.read(_app.file('file.xlsx'))
 ```
 
-Para realizar a interação temos que ter em mente que a estrutura dos dados é organizada na seginte ordem:
+The data is obtained in an object structure of the Values type with Lists, for the spreadsheets, rows and columns, and Maps (key and value) for the cells.
 
-1. `sheets` - Planilhas
-2. `rows` - Linhas
-3. `columns` - Colunas
-
-Exemplo de uma interação completa:
+To visualize all the data, we can put as data output from the service:
 
 ```
-for (const planilha of dados.getValues('sheets')) {
-    _out.println(`<h4>Planilha: ${planilha.getInt('index')} - ${planilha.getString('name')}</h4>`)
-    for (const linha of planilha.getValues('rows')) {
-        _out.println(`<h4>Linha: ${linha.getInt('row')}</h4>`)
+_out.json(data)
+```
+
+To carry out the interaction we have to keep in mind that the data structure is organized in the following order:
+
+1. `sheets` - Spreadsheets
+2. `rows` - Rows
+3. `columns` - Columns
+
+Example of a complete interaction:
+
+```
+for (const sheet of data.getValues('sheets')) {
+    _out.println(`<h4>Spreadsheet: ${sheet.getInt('index')} - ${sheet.getString('name')}</h4>`)
+    for (const row of planilha.getValues('rows')) {
+        _out.println(`<h4>Row: ${row.getInt('row')}</h4>`)
         _out.println('<p>')
-        for (const coluna of linha.getValues('columns')) {
-            _out.print(`${coluna.getInt('row')}:${coluna.getInt('column')}`)
-            _out.print(` # ${coluna.getString('address')}`)
-            _out.print(` # ${coluna.getString('type')}`)
-            _out.print(` # ${coluna.getString('value')}`)
+        for (const column of row.getValues('columns')) {
+            _out.print(`${column.getInt('row')}:${column.getInt('column')}`)
+            _out.print(` # ${column.getString('address')}`)
+            _out.print(` # ${column.getString('type')}`)
+            _out.print(` # ${column.getString('value')}`)
             _out.println('<br>')
         }
         _out.println('</p>')
@@ -568,52 +569,52 @@ for (const planilha of dados.getValues('sheets')) {
 }
 ```
 
-O tipo da célula é obtido através do código:
+The cell type is obtained through the code:
 
-- `coluna.getString('type')`
+- `column.getString('type')`
 
-E os tipos suportados são:
+And the supported types are:
 
-- `string` - Conteúdo de texto.
-- `numeric` - Conteúdo numérico ou de data e/ou hora.
-- `boolean` - Verdadeiro ou falso.
-- `blank` - Célula em branco.
-- `formula` - Célula que contém um fórmula.
-- `error` - Erro no processameneto da célula.
+- `string` - Text content.
+- `numeric` - Numeric or date and/or time content.
+- `boolean` - True or false.
+- `blank` - Blank cell.
+- `formula` - Cell that contains a formula.
+- `error` - Error processing the cell.
 
-### Parâmetros Adicionais
+### Additional Parameters
 
-Para cada tipo de célula temos alguns parâmetros adicionais.
+For each cell type we have some additional parameters.
 
-`string` - Tipo de célula com conteúdo textual.
+**string** - Type of cell with textual content.
 
-- `value` - Texto da célula.
-- `richValue` - Formatações da célula.
+- `value` - Cell text.
+- `richValue` - Cell formatting.
 
-`numeric` - Tipo de célula com conteúdo numérico, ou datas e ainda horas.
+**numeric** - Type of cell with numeric content, or dates and even times.
 
-- `value` - Valor do conteúdo numérico da célula.
-  
-No caso de datas e horas temos mais estes parâmetros adicionais:
+- `value` - Value of the cell's numeric content.
 
-- `localDateTime` - Objeto do Java Time LocalDateTime que representa o valor de data e hora da célula.
-- `localDate` - Objeto do Java Time LocalDate que representa o valor de data da célula.
-- `localTime` - Objeto do Java Time LocalTime que representa o valor de hora da célula.
-- `instant` - Objeto do Java Time Instant que representa o valor de data e/ou hora da célula.
-- `date` - Objeto Date do Java que representa o valor de data e/ou hora da célula.
+In the case of dates and times we have these additional parameters
 
-`boolean` - Tipo de célula com conteúdo booleano, ou seja verdadeiro ou falso.
+- `localDateTime` - Java Time LocalDateTime object that represents the date and time value of the cell.
+- `localDate` - Java Time LocalDate object that represents the date value of the cell.
+- `localTime` - Java Time LocalTime object that represents the cell's time value.
+- `instant` - Java Time Instant object that represents the date and/or time value of the cell.
+- `date` - Java Date object that represents the date and/or time value of the cell.
 
-- `value` - Valor do tipo _boolean_, `true` ou `false`.
+**boolean** - Type of cell with boolean content, i.e. true or false.
 
-`blank` - Tipo de célula sem conteúdo, portanto não contém parâmetros adicionais.
+- `value` - Value of type _boolean_, `true` or `false`.
 
-`formula` - Tipo de célula que contém fórmulas de cálculo.
+**blank** - Type of cell without content, therefore it does not contain additional parameters.
 
-- `value` - Valor final resultante do cálculo.
-- `formula` - Contém a expressão da fórmula utilizada para o cálculo.
+**formula** - Type of cell that contains calculation formulas.
 
-`error` - Tipo de célula que contém erro.
+- `value` - Final value resulting from the calculation.
+- `formula` - Contains the expression of the formula used for the calculation.
 
-- `value` - Valor em byte do erro gerado.
-- `code` - No caso de haver erros no cálculo da fórmula fornece aqui o código do erro ocorrido.
+**error** - Type of cell that contains error.
+
+- `value` - Value in bytes of the generated error.
+- `code` - If there are errors in the calculation of the formula, provide here the code of the error that occurred.
