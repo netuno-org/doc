@@ -356,7 +356,7 @@ excel.addDataTable(
 
 Para criar uma nova folha de cálculos (_sheet_) dentro do próprio documento, observe o seguinte exemplo:
 
-```
+```javascript
 const novaPlanilha = excel.createSheet('Nova Planilha')
 ```
 
@@ -366,7 +366,7 @@ const novaPlanilha = excel.createSheet('Nova Planilha')
 
 Exemplo de como inserir uma imagem na nova planilha:
 
-```
+```javascript
 excel.insertPicture(
     novaPlanilha,
     _app.file("public/images/logo.png"),
@@ -377,7 +377,7 @@ excel.insertPicture(
 
 Exemplo de como inserir uma tabela de dados na nova planilha:
 
-```
+```javascript
 excel.addDataTable(
     novaPlanilha,
     6, 1,
@@ -410,8 +410,9 @@ Assim para evitar ter que indicar constantemente nos métodos qual é a planilha
 
 > Todos os métodos de manipulação de células, imagens e dados, utilizam a planilha que está ativada quando **não** é indicado uma planilha específica.
 
+Veja duas formas de ativar uma planilha específica, primeiro com referência do objeto e depois com o índice da planilha:
 
-```
+```javascript
 excel.activeSheet(minhaPlanilha) // Objeto de referência da planilha.
 excel.activeSheet(1) // Índice da planilha que será ativada.
 ```
@@ -579,7 +580,7 @@ E os tipos suportados são:
 - `boolean` - Verdadeiro ou falso.
 - `blank` - Célula em branco.
 - `formula` - Célula que contém um fórmula.
-- `error` - Erro no processameneto da célula.
+- `error` - Erro no processamento da célula.
 
 ### Parâmetros Adicionais
 
