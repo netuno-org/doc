@@ -161,17 +161,17 @@ Para juntar células em uma região utilizamos o método `mergedRegion`.
 
 Sendo que a ordem dos parâmetros são:
 
-- Linha Inicial
-- Coluna Inicial
-- Linha Final
-- Coluna Final
+1. Linha Inicial
+2. Coluna Inicial
+3. Linha Final
+4. Coluna Final
 
 > As referências numéricas de posicionamento começam sempre em **zero**.
 
 Neste exemplo abaixo será mesclada todas as células a partir da coluna 10 até a coluna 15 que estão na linha 3:
 
 ```
-excel.mergedRegion(3, 10, 3, 15)
+excel.mergedRegion(2, 9, 2, 14)
 ```
 
 ## Células
@@ -224,11 +224,11 @@ No exemplo acima caso a linha não exista será criada uma nova linha automatica
 
 Podemos inserir uma tabela de dados utilizando o método `addDataTable`.
 
-Sendo que os dois primeiros parâmetros servem para definir a posição onde os dados devem começar a ser inseridos, então são os números respectivos da linha e da coluna.
+Como os dois primeiros parâmetros definem a posição onde a tabela de dados deve ser inserida, eles são os números das linhas e das colunas.
 
 > Atenção que o posicionamento no código de linhas e colunas começam sempre a partir do **zero**.
 >
-> Ou seja, a Linha 1 é a posição 0 e a Coluna A também é a posição 0.
+> Ou seja, a Linha 1 é a posição `0` e a Coluna A também é a posição `0`.
 
 A seguir passamos uma lista de linhas, onde cada linha contém outra lista para as colunas, só então adicionamos um mapa com o valor da célula.
 
