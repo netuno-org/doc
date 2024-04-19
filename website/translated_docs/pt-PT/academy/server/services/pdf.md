@@ -91,6 +91,12 @@ Os documentos PDF podem ser criados com a definição do tamanho da página pers
 _pdf.pageSize(50, 30)
 ```
 
+### Editar
+
+É possível editar um documento PDF já existente.
+
+
+
 ## Quebra de Página
 
 Para criar uma nova página é utilizado o `areaBreak`:
@@ -101,6 +107,113 @@ pdfDocument.add(
 )
 ```
 
+## Parágrafo
+
+```
+pdfDocument.add(
+    _pdf.paragraph("\n\nTable with flexible columns:\n")
+        .setFontSize(15)
+)
+```
+
+Para adicionar um parágrafo em uma posição fixa:
+
+```
+pdfDocument.add(
+    _pdf.paragraph("Helvetica Oblique!")
+        .setFixedPosition(100, 500, 200)
+        .setFontSize(15)
+)
+```
+
+Sendo que acima, no método `setFixedPosition`, o primeiro parâmetro é a posição X (`100`), já o segundo parâmetro é a posição Y (`500`), e o terceiro parâmetro é a largura (`200`).
+
+**Atenção:** se o Y for definido com o valor `0` quer dizer que fica no fundo da página, então para subir é preciso aumentar o valor do Y, quanto maior for o valor do Y mais no topo aparecerá, mas se for demasiado alto para além do comprimento da página então não será visível.
+
+> Documentação com todos os métodos do objeto de [Parágrafo do iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Paragraph.html).
+
+## Fonte
+
+Para definir uma fonte nativa podemos fazer da seguinte forma:
+
+```
+const helvetica = _pdf.font("helvetica")
+const helveticaBold = _pdf.font("helvetica-bold")
+const helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+const helveticaOblique = _pdf.font("helvetica-oblique")
+```
+
+Já para definir uma fonte customizada à medida, podemos utilizar `storage`:
+
+```
+const viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+```
+
+Também podemos utilizar um arquivo dentro da aplicação, como neste exemplo demonstra que a fonte está dentro da pasta `fonts` na raíz da aplicação:
+
+```
+const roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+```
+
+Ou ainda utilizar um arquivo em qualquer caminho do sistema, então neste exemplo a fonte está dentro da pasta `fonts` que está dentro da pasta de arquivos temporários do sistema:
+
+```
+const roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+```
+
+> Documentação com todos os métodos do objeto de [Fonte do iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/kernel/font/PdfFont.html).
+
+Para utilizar a fonte nos textos deve ser passado a constante da fonte para o parágrafo, desta forma:
+
+```
+pdfDocument.add(
+    _pdf.paragraph("\n\nUtilizando a fonte em negrito.\n")
+        .setFont(helveticaBold)
+        .setFontSize(15)
+)
+```
+
+## Imagem
+
+A inserção de imagens no documento PDF gerado programaticamente é feita desta forma:
+
+```
+pdfDocument.add(
+    _pdf.image(_storage.filesystem("server", "samples/export-pdf", "logo.png"))
+        .scaleAbsolute(120, 36)
+)
+```
+
+Repare que o método `scaleAbsolute` é muito útil para redimencionar e ajustar o tamanho da imagem.
+
+Em alternativa podemos utilizar um arquivo dentro da aplicação, como neste exemplo:
+
+```
+const imageLogo = _pdf.image(_app.file("public/images/logo.png")
+```
+
+Ou ainda utilizar um arquivo em qualquer caminho do sistema, como neste exemplo:
+
+```
+const imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+```
+
+Para adicionar uma imagem em uma posição fixa:
+
+```
+pdfDocument.add(
+    imageLogo
+        .scaleAbsolute(120, 36)
+        .setFixedPosition(100, 500)
+)
+```
+
+Sendo que acima, no método `setFixedPosition`, o primeiro parâmetro é a posição X (`100`), já o segundo parâmetro é a posição Y (`500`).
+
+**Atenção:** se o Y for definido com o valor `0` quer dizer que fica no fundo da página, então para subir é preciso aumentar o valor do Y, quanto maior for o valor do Y mais no topo aparecerá, mas se for demasiado alto para além do comprimento da página então não será visível.
+
+> Documentação com todos os métodos do objeto de [Imagem do iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Image.html).
+
 ## Fechar e Salvar o Documento
 
 O documento só é totalmente guardado ou gerado, apenas quando o método `close` for chamado, da seginte forma:
@@ -108,3 +221,20 @@ O documento só é totalmente guardado ou gerado, apenas quando o método `close
 ```javascript
 pdfDocument.close()
 ```
+
+Onde o documento é gerado é definido na inicialização, portanto é na inicialização do documento que definimos onde será gerado o documento final, se será na saída de dados do serviço (`output`) ou em arquivo.
+
+## Extrair Dados
+
+Para ler um documento PDF podemos utilizar o 
+
+
+## Converter
+
+É possível converter programaticamente o PDF para texto ou até mesmo para HTML.
+
+### Texto
+
+
+### HTML
+
