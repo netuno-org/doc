@@ -93,9 +93,40 @@ _pdf.pageSize(50, 30)
 
 ### Editar
 
-É possível editar um documento PDF já existente.
+É possível editar um documento PDF já existente, por exemplo:
+
+```javascript
+const pdfDocument = _pdf.openPdfDocument(_app.file('file.pdf'))
+```
+
+O documento final gerado será enviado na saída de dados do serviço.
+
+> É muito útil para utilizar um PDF como base, como se fosse um template.
+
+Exemplo para editar um documento no `storage` da aplicação:
 
 
+```javascript
+const pdfDocument = _pdf.openPdfDocument(_storage.filesystem('server', 'file.pdf'))
+```
+
+Utiliza um documento como base mas salva as alterações em um novo arquivo PDF:
+
+```javascript
+const pdfDocument = _pdf.openPdfDocument(
+    _app.file('documento-base.pdf'),
+    _app.file('documento-final.pdf')
+)
+```
+
+Exemplo usando como base um documento no `storage` mas salva em outro:
+
+```javascript
+const pdfDocument = _pdf.openPdfDocument(
+    _storage.filesystem('server', 'contrato-base.pdf'),
+    _storage.filesystem('server', 'contrato-final.pdf')
+)
+```
 
 ## Quebra de Página
 
@@ -214,6 +245,46 @@ Sendo que acima, no método `setFixedPosition`, o primeiro parâmetro é a posi�
 
 > Documentação com todos os métodos do objeto de [Imagem do iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Image.html).
 
+## Tabela
+
+É possível criar tabelas o que permite apresentar um conjunto de dados de forma mais legível.
+
+O número de colunas da tabela é definido com o parâmetro: `_pdf.table(numeroColunas)`
+
+No exemplo abaixo o `numeroColunas` é o número `1`, ou seja uma coluna.
+
+Como adicionamos duas células na tabela, então a segunda célula vai para a linha seguinte.
+
+Repare:
+
+```javascript
+pdfDocument.add(
+  _pdf.table(1)
+    .addCell(
+      _pdf.cell()
+        .add(
+          _pdf.paragraph("Person")
+            .setFont(helvetica)
+            .setFontSize(10)
+          )
+          .setBorder(_pdf.border("solid", 2))
+          .setBackgroundColor(_pdf.colorRGB(1, 0, 0))
+        )
+    .addCell(
+      _pdf.cell()
+        .add(
+          _pdf.paragraph("Nicole")
+            .setFont(helvetica)
+            .setFontSize(10)
+          )
+          .setBackgroundColor(_pdf.colorGray(0.5)
+      )
+```
+
+Com o método `addCell` permite inserir a definição das células com o seu respectivo conteúdo.
+
+> Documentação com todos os métodos do objeto de [Célula do iText](https://api.itextpdf.com/iText/java//8.0.3/com/itextpdf/layout/element/Cell.html).
+
 ## Fechar e Salvar o Documento
 
 O documento só é totalmente guardado ou gerado, apenas quando o método `close` for chamado, da seginte forma:
@@ -235,6 +306,42 @@ Para ler um documento PDF podemos utilizar o
 
 ### Texto
 
+Podemos extrair todo o conteúdo do arquivo PDF em texto corrido utilizando o método:
+
+```javascript
+_pdf.toText(...)
+```
+
+Exemplo de como utiliza-lo para ler um arquivo na raíz da aplicação:
+
+```javascript
+_out.print(_pdf.toText(_app.file('meu-documento.pdf')))
+```
+
+Ou ainda utilizando um arquivo no `storage` da aplicação:
+
+```javascript
+_out.print(_pdf.toText(_storage.filesystem('server', 'meu-documento.pdf')))
+```
+
 
 ### HTML
 
+
+Podemos extrair todo o conteúdo do arquivo PDF em HTML utilizando o método:
+
+```javascript
+_pdf.toHTML(...)
+```
+
+Exemplo de como utiliza-lo para ler um arquivo na raíz da aplicação:
+
+```javascript
+_out.print(_pdf.toHTML(_app.file('meu-documento.pdf')))
+```
+
+Ou ainda utilizando um arquivo no `storage` da aplicação:
+
+```javascript
+_out.print(_pdf.toHTML(_storage.filesystem('server', 'meu-documento.pdf')))
+```
