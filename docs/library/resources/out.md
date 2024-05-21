@@ -208,6 +208,18 @@ Sends what is pending accumulated in the buffer.
 
 ---
 
+## getJSONIdentFactor
+
+---
+
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">getJSONIdentFactor</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Return
+
+( _int_ )
+
+
+---
+
 ## getMirrors
 
 ---
@@ -312,12 +324,12 @@ The new instance of the Output feature.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **json** | _java.util.Map_ |   |
+| **json** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 
 ##### Return
 
@@ -358,6 +370,32 @@ The new instance of the Output feature.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **htmlEscape** | _boolean_ |   |
+
+##### Return
+
+( _[Out](../../resources/Out)_ )
+
+
+---
+
+## jsonIdentFactor
+
+---
+
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">jsonIdentFactor</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Return
+
+( _int_ )
+
+
+---
+
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">jsonIdentFactor</span>(<span style="color: #FF8000">jsonIdentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **jsonIdentFactor** | _int_ |   |
 
 ##### Return
 
@@ -792,6 +830,24 @@ Current data output.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **htmlEscape** | _boolean_ |   |
+
+##### Return
+
+( _[Out](../../resources/Out)_ )
+
+
+---
+
+## setJSONIdentFactor
+
+---
+
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">setJSONIdentFactor</span>(<span style="color: #FF8000">jsonIdentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **jsonIdentFactor** | _int_ |   |
 
 ##### Return
 

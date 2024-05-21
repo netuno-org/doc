@@ -13,10 +13,15 @@ Recurso cliente de FTP.
 ---
 
 #### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">abort</span>() : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+##### Descrição
+
+Interrompe a operação de transferência de dados em andamento.
+
 ##### Retorno
 
 ( _[FTP](../../resources/FTP)_ )
 
+O recurso FTP atual.
 
 ---
 
@@ -80,20 +85,20 @@ Fecha a conexão FTP com o servidor.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
 
 ##### Retorno
 
-( _org.netuno.psamata.ftp.FTPConfig_ )
+( _[FTPConfig](../../objects/FTPConfig)_ )
 
 Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
@@ -106,13 +111,13 @@ Inicia uma nova configuração própria.
 
 ##### Retorno
 
-( _org.netuno.psamata.ftp.FTPConfig_ )
+( _[FTPConfig](../../objects/FTPConfig)_ )
 
 Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -121,7 +126,7 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _org.netuno.psamata.ftp.FTPConfig_ | Definição da nova configuração. |
+| **config** | _[FTPConfig](../../objects/FTPConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 
@@ -416,14 +421,14 @@ Cliente FTP original de base.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>
 ##### Descrição
 
 Obtém a configuração que está a ser utilizada.
 
 ##### Retorno
 
-( _org.netuno.psamata.ftp.FTPConfig_ )
+( _[FTPConfig](../../objects/FTPConfig)_ )
 
 Objeto da configuração ativa.
 
@@ -482,7 +487,7 @@ A nova instância do recurso FTP com base na configuração do FTP especificada.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
 ##### Descrição
 
 Inicia uma nova instância do FTP a partir de uma configuração que é definida em um objeto de configuração própria.
@@ -491,7 +496,7 @@ Inicia uma nova instância do FTP a partir de uma configuração que é definida
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _org.netuno.psamata.ftp.FTPConfig_ | Configuração que será utilizada. |
+| **config** | _[FTPConfig](../../objects/FTPConfig)_ | Configuração que será utilizada. |
 
 ##### Retorno
 
@@ -591,7 +596,7 @@ Resultado do comando.
 #### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">sendCommand</span>(<span style="color: #FF8000">comando</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">args</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
-Envia um comando específico.
+Envia um comando específico com argumentos adicionais necessários para o comando FTP.
 
 ##### Atributos
 
@@ -635,7 +640,7 @@ O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -644,7 +649,7 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _org.netuno.psamata.ftp.FTPConfig_ | Definição da nova configuração. |
+| **config** | _[FTPConfig](../../objects/FTPConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 

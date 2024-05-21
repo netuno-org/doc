@@ -8,117 +8,95 @@ Recurso de geração de JSON Web Tokens.
 
 ---
 
-## accessExpires
+## algorithmES
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">accessExpires</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">algorithmES</span>(<span style="color: #FF8000">bits</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">io.jsonwebtoken.security.SignatureAlgorithm</span>
 ##### Description
 
-Sets the time of expiration of the token to the settings in configs.
-
-##### Return
-
-( _int_ )
-
-
----
-
-## accessToken
-
----
-
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">accessToken</span>(<span style="color: #FF8000">userId</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">Values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
-##### Description
-
-This method access to the token of a user and returns the content.
+Gets the type of algorithm for signing of type ECDSA.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **userId** | _int_ | Id of user. |
-| **Values** | _[Values](../../objects/Values)_ | Values of the user. |
+| **bits** | _int_ | Number of bits in the signature algorithm, it can be 256, 384 or 512. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _io.jsonwebtoken.security.SignatureAlgorithm_ )
 
-Returns the content of the user inserted.
+Returns the signature algorithm type object.
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">accessToken</span>(<span style="color: #FF8000">userId</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+## algorithmHS
+
+---
+
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">algorithmHS</span>(<span style="color: #FF8000">bits</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">io.jsonwebtoken.security.MacAlgorithm</span>
 ##### Description
 
-This method access to the token of a user and returns the content.
+Gets the type of algorithm for signing of type HMAC.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **userId** | _[Values](../../objects/Values)_ | Id of user. |
+| **bits** | _int_ | Number of bits in the signature algorithm, it can be 256, 384 or 512. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _io.jsonwebtoken.security.MacAlgorithm_ )
 
-Returns the content of the user inserted.
-
----
-
-## check
+Returns the signature algorithm type object.
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">check</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+## algorithmPS
+
+---
+
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">algorithmPS</span>(<span style="color: #FF8000">bits</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">io.jsonwebtoken.security.SignatureAlgorithm</span>
 ##### Description
 
-Verify if a token exists.
-
-##### Return
-
-( _boolean_ )
-
-Returns the validation.
-
----
-
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">check</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
-##### Description
-
-This method verify the token.
+Gets the type of algorithm for signing of type RSASS and MGF1.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **token** | _string_ | Token to be verify. |
+| **bits** | _int_ | Number of bits in the signature algorithm, it can be 256, 384 or 512. |
 
 ##### Return
 
-( _boolean_ )
+( _io.jsonwebtoken.security.SignatureAlgorithm_ )
 
-Returns the validation.
+Returns the signature algorithm type object.
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">check</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+## algorithmRS
+
+---
+
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">algorithmRS</span>(<span style="color: #FF8000">bits</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">io.jsonwebtoken.security.SignatureAlgorithm</span>
 ##### Description
 
-This method verify the token.
+Gets the type of algorithm for signing of type RSASSA-PKCS1-v1_5.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **token** | _[Values](../../objects/Values)_ | Token to be verify. |
+| **bits** | _int_ | Number of bits in the signature algorithm, it can be 256, 384 or 512. |
 
 ##### Return
 
-( _boolean_ )
+( _io.jsonwebtoken.security.SignatureAlgorithm_ )
 
-Returns the validation.
+Returns the signature algorithm type object.
 
 ---
 
@@ -126,33 +104,7 @@ Returns the validation.
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">data</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
-##### Return
-
-( _[Values](../../objects/Values)_ )
-
-
----
-
 #### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">data</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **token** | _string_ |   |
-
-##### Return
-
-( _[Values](../../objects/Values)_ )
-
-
----
-
-## dbRecord
-
----
-
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">dbRecord</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -186,6 +138,37 @@ Encodes the values of the header and body inserted.
 ( _[Values](../../objects/Values)_ )
 
 Returns the values decoded.
+
+---
+
+## enabled
+
+---
+
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">enabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Verify if the JWT is enable.
+
+##### Return
+
+( _boolean_ )
+
+Returns if is enabled.
+
+---
+
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **enabled** | _boolean_ |   |
+
+##### Return
+
+( _[JWT](../../resources/JWT)_ )
+
 
 ---
 
@@ -232,6 +215,36 @@ Returns the values encoded.
 
 ---
 
+## getHMACKeyFromSecret
+
+---
+
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">getHMACKeyFromSecret</span>(<span style="color: #FF8000">secret</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **secret** | _string_ |   |
+
+##### Return
+
+( _javax.crypto.SecretKey_ )
+
+
+---
+
+## getKey
+
+---
+
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">getKey</span>() : <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>
+##### Return
+
+( _javax.crypto.SecretKey_ )
+
+
+---
+
 ## init
 
 ---
@@ -244,13 +257,26 @@ Returns the values encoded.
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">secret</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">algorithm</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">secret</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **secret** | _string_ |   |
-| **algorithm** | _string_ |   |
+
+##### Return
+
+( _[JWT](../../resources/JWT)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **key** | _javax.crypto.SecretKey_ |   |
 
 ##### Return
 
@@ -264,71 +290,94 @@ Returns the values encoded.
 ---
 
 #### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">isEnabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
-##### Description
-
-Verify if a token is enable.
-
 ##### Return
 
 ( _boolean_ )
 
-Returns enabled.
 
 ---
 
-## refreshExpires
+## key
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">refreshExpires</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
-##### Description
-
-Updates the time of expiration of the token to the settings in configs.
-
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">key</span>() : <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>
 ##### Return
 
-( _int_ )
+( _javax.crypto.SecretKey_ )
 
 
 ---
 
-## refreshToken
-
----
-
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">refreshToken</span>(<span style="color: #FF8000">refreshToken</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
-##### Description
-
-Replaces an old token for the new on inserted.
-
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">key</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **refreshToken** | _string_ | Replace token. |
+| **key** | _javax.crypto.SecretKey_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[JWT](../../resources/JWT)_ )
 
-Returns the updated token.
+
+---
+
+## setEnabled
+
+---
+
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **enabled** | _boolean_ |   |
+
+##### Return
+
+( _[JWT](../../resources/JWT)_ )
+
+
+---
+
+## setHMACKeyFromSecret
+
+---
+
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">setHMACKeyFromSecret</span>(<span style="color: #FF8000">secret</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **secret** | _string_ |   |
+
+##### Return
+
+( _[JWT](../../resources/JWT)_ )
+
+
+---
+
+## setKey
+
+---
+
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">setKey</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **key** | _javax.crypto.SecretKey_ |   |
+
+##### Return
+
+( _[JWT](../../resources/JWT)_ )
+
 
 ---
 
 ## token
-
----
-
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">token</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
-##### Description
-
-Verify if exists an authenticated token.
-
-##### Return
-
-( _string_ )
-
-Returns the token.
 
 ---
 

@@ -457,6 +457,18 @@ ID (numeric identifier) of the logged in user.
 
 ---
 
+## load
+
+---
+
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[User](../../resources/User)</span>
+##### Return
+
+( _[User](../../resources/User)_ )
+
+
+---
+
 ## name
 
 ---

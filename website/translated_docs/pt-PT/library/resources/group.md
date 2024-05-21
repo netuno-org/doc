@@ -360,6 +360,18 @@ ID (identificador númerico) do grupo do utilizador logado.
 
 ---
 
+## load
+
+---
+
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[Group](../../resources/Group)</span>
+##### Retorno
+
+( _[Group](../../resources/Group)_ )
+
+
+---
+
 ## name
 
 ---

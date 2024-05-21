@@ -374,7 +374,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a eliminação de registos na base de dados baseado no ID ou UID passado no objeto de dados.
@@ -399,7 +399,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados. |
-| **dados** | _java.util.Map_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
 
 ##### Retorno
 
@@ -809,6 +809,39 @@ Lista dos registos de dados encontrados.
 
 ---
 
+## findAll
+
+---
+
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">findAll</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **tableName** | _string_ |   |
+
+##### Retorno
+
+( _java.util.List_ )
+
+
+---
+
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">findAll</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">example</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **tableName** | _string_ |   |
+| **example** | _[Values](../../objects/Values)_ |   |
+
+##### Retorno
+
+( _java.util.List_ )
+
+
+---
+
 ## findFirst
 
 ---
@@ -1094,7 +1127,7 @@ O novo recurso de base de dados que utiliza uma outra base de dados.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insert</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insert</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção de novos dados na base de dados e retorna o id dos mesmos.
@@ -1121,7 +1154,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1170,7 +1203,7 @@ _out.json(
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertIfNotExists</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertIfNotExists</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção de um valor caso ele não exista ou retorna o ID caso já exista.
@@ -1191,7 +1224,7 @@ _out.json({dadosInseridos: dadosInseridos})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1869,7 +1902,7 @@ Conteúdo como caminho (tabela.nome) seguro para utilizar diretamente em queries
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -1900,7 +1933,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados. |
 | **uid** | _int_ | UID do registo a eliminar. |
-| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -1951,7 +1984,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -1982,7 +2015,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados. |
 | **uid** | _string_ | UID do registo a eliminar. |
-| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2037,7 +2070,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Descrição
 
 Executa uma pesquisa a uma tabela retornando um objeto do tipo DBSearchResult.
@@ -2058,7 +2091,7 @@ _out.json({data: query.getResults(),total: query.getTotal()});
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve obter os dados. |
-| **dados** | _java.util.Map_ | Dados para se efectuar a pesquisa. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Dados para se efectuar a pesquisa. |
 
 ##### Retorno
 
@@ -2068,13 +2101,13 @@ Objeto do tipo DBSearchResult.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">wildcards</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">wildcards</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **table** | _string_ |   |
-| **data** | _java.util.Map_ |   |
+| **data** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 | **wildcards** | _boolean_ |   |
 
 ##### Retorno
@@ -2162,7 +2195,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">store</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">store</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de um valor caso ele exista baseando-se numa chave primária ou uma inserção quando nenhum dado existe com a mesma chave primária. Este tipo de operação é útil quando não é possível utilizar IDs em determinadas operações.
@@ -2183,7 +2216,7 @@ _out.json({dadosStore: dadosStore})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -2677,7 +2710,7 @@ Conteúdo que é seguro utilizar diretamente em query como string/varchar/texto.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -2704,7 +2737,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
 | **id** | _int_ | ID do registo que será afetado pela atualização. |
-| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2751,7 +2784,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com um id específico.
@@ -2780,7 +2813,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
 | **uid** | _string_ | UID do registo que será afetado pela atualização. |
-| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2829,7 +2862,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -2855,7 +2888,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
-| **dados** | _java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 

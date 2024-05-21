@@ -253,6 +253,64 @@ O caminho base do storage.
 
 ---
 
+## getInput
+
+---
+
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getInput</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+##### Descrição
+
+Obtém o objeto de entrada de dados do Netuno para o storage que está sendo utilizado.
+
+##### Retorno
+
+( _[InputStream](../../objects/InputStream)_ )
+
+Objeto de entrada de dados do Netuno para o storage em uso.
+
+---
+
+## getInputStream
+
+---
+
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getInputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
+##### Retorno
+
+( _java.io.InputStream_ )
+
+
+---
+
+## getOutput
+
+---
+
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getOutput</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
+##### Descrição
+
+Obtém o objeto de saída de dados do Netuno para o storage que está sendo utilizado.
+
+##### Retorno
+
+( _[OutputStream](../../objects/OutputStream)_ )
+
+Objeto de saída de dados do Netuno para o storage em uso.
+
+---
+
+## getOutputStream
+
+---
+
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
+##### Retorno
+
+( _java.io.OutputStream_ )
+
+
+---
+
 ## input
 
 ---

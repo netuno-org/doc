@@ -1900,25 +1900,7 @@ Retorna um novo documento com o número de páginas inseridas.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
-##### Descrição
-
-Cria um novo documento PDF.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **file** | _[File](../../objects/File)_ |   |
-
-##### Retorno
-
-( _com.itextpdf.layout.Document_ )
-
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF com o número de páginas inseridas.
@@ -1927,83 +1909,7 @@ Cria um novo documento PDF com o número de páginas inseridas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _[File](../../objects/File)_ | Caminho do ficheiro. |
-| **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
-
-##### Retorno
-
-( _com.itextpdf.layout.Document_ )
-
-Retorna um novo documento com o número de páginas inseridas.
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
-##### Descrição
-
-Cria um novo documento PDF.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
-
-##### Retorno
-
-( _com.itextpdf.layout.Document_ )
-
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
-##### Descrição
-
-Cria um novo documento PDF com o número de páginas inseridas.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **armazenamento** | _[OutputStream](../../objects/OutputStream)_ | Caminho do ficheiro. |
-| **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
-
-##### Retorno
-
-( _com.itextpdf.layout.Document_ )
-
-Retorna um novo documento com o número de páginas inseridas.
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
-##### Descrição
-
-Cria um novo documento PDF.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
-
-##### Retorno
-
-( _com.itextpdf.layout.Document_ )
-
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
-##### Descrição
-
-Cria um novo documento PDF com o número de páginas inseridas.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do ficheiro. |
+| **armazenamento** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ | Caminho do ficheiro. |
 | **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
 
 ##### Retorno
@@ -2048,7 +1954,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -2057,43 +1963,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _[File](../../objects/File)_ | Caminho do ficheiro. |
-
-##### Retorno
-
-( _com.itextpdf.kernel.pdf.PdfDocument_ )
-
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
-##### Descrição
-
-Cria um novo documento PDF.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **armazenamento** | _[OutputStream](../../objects/OutputStream)_ | Caminho do ficheiro. |
-
-##### Retorno
-
-( _com.itextpdf.kernel.pdf.PdfDocument_ )
-
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
-##### Descrição
-
-Cria um novo documento PDF.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do ficheiro. |
+| **armazenamento** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -2106,7 +1976,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Descrição
 
 Abre o documento PDF referente ao caminho inserido.
@@ -2115,7 +1985,7 @@ Abre o documento PDF referente ao caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **caminho** | _string_ | Caminho do ficheiro. |
+| **caminho** | _java.io.InputStream_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -2125,11 +1995,90 @@ Retorna o documento PDF aberto.
 
 ---
 
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **in** | _java.io.InputStream_ |   |
+| **out** | _java.io.OutputStream_ |   |
+
+##### Retorno
+
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
+
+
+---
+
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **in** | _java.io.InputStream_ |   |
+| **out** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ |   |
+
+##### Retorno
+
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
+
+
+---
+
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+##### Descrição
+
+Abre o documento PDF referente ao caminho inserido.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **caminho** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ | Caminho do ficheiro. |
+
+##### Retorno
+
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
+
+Retorna o documento PDF aberto.
+
+---
+
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **in** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ |   |
+| **out** | _java.io.OutputStream_ |   |
+
+##### Retorno
+
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
+
+
+---
+
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **in** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ |   |
+| **out** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ |   |
+
+##### Retorno
+
+( _com.itextpdf.kernel.pdf.PdfDocument_ )
+
+
+---
+
 ## pageSize
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">pageSize</span>(<span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">pageSize</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">altura</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>
 ##### Descrição
 
 Obtém a definição do tamanho da página atráves da largura e altura.
@@ -2138,13 +2087,14 @@ Obtém a definição do tamanho da página atráves da largura e altura.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **width** | _float_ |   |
-| **height** | _float_ |   |
+| **largura** | _float_ | Largura da página. |
+| **altura** | _float_ | Altura da página. |
 
 ##### Retorno
 
 ( _com.itextpdf.kernel.geom.PageSize_ )
 
+Definição da página.
 
 ---
 

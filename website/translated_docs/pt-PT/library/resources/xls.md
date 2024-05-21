@@ -48,7 +48,7 @@ excel.output("idades.xls");
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">activeSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>
+#### `_xls.create()`.<span style="color: #008000">activeSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
 ##### Descrição
 
 Define a folha de cálculos que fica ativa.
@@ -61,68 +61,22 @@ Define a folha de cálculos que fica ativa.
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
-
-Folha de cálculos ativa.
-
----
-
-## add
-
----
-
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">add</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
-##### Descrição
-
-Insere dados numa célula específica.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **linha** | _int_ | Número da linha. |
-| **coluna** | _int_ | Número da coluna. |
-| **dados** | _java.util.Map_ | Dados que serão inseridos. |
-
-##### Retorno
-
 ( _[XLS](../../resources/XLS)_ )
 
 A instância atual do recurso XLS.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">add</span>(<span style="color: #FF8000">celula</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFCell</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### `_xls.create()`.<span style="color: #008000">activeSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
 ##### Descrição
 
-Insere dados numa célula específica.
+Define a folha de cálculos que fica ativa.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **celula** | _org.apache.poi.hssf.usermodel.HSSFCell_ | Objeto da célula. |
-| **dados** | _java.util.Map_ | Dados que serão inseridos. |
-
-##### Retorno
-
-( _[XLS](../../resources/XLS)_ )
-
-A instância atual do recurso XLS.
-
----
-
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">add</span>(<span style="color: #FF8000">celula</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFCell</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
-##### Descrição
-
-Insere dados numa célula específica.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **celula** | _org.apache.poi.hssf.usermodel.HSSFCell_ | Objeto da célula. |
-| **dados** | _[Values](../../objects/Values)_ | Dados que serão inseridos. |
+| **index** | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Objeto de referência da folha de cálculos. |
 
 ##### Retorno
 
@@ -222,7 +176,7 @@ Referência da posição da última célula com dados inserida.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
 ##### Descrição
 
 Adiciona uma tabela de dados na folha de cálculos.
@@ -231,7 +185,7 @@ Adiciona uma tabela de dados na folha de cálculos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _java.util.Map_ | Configuração da tabela de dados. |
+| **config** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Configuração da tabela de dados. |
 | **dados** | _java.util.List_ | Lista de dados que serão inseridos. |
 
 ##### Retorno
@@ -242,7 +196,7 @@ Referência da posição da última célula com dados inserida.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">vertical</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
 ##### Descrição
 
 Adiciona uma tabela de dados na folha de cálculos.
@@ -251,11 +205,10 @@ Adiciona uma tabela de dados na folha de cálculos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **folhaCalculos** | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Objeto da folha de cálculos. |
+| **folhaCalculos** | _org.apache.poi.ss.usermodel.Sheet_ | Objeto da folha de cálculos. |
 | **linha** | _int_ | Número da linha. |
 | **coluna** | _int_ | Número da coluna. |
 | **dados** | _java.util.List_ | Lista de dados que serão inseridos. |
-| **vertical** | _boolean_ | Inserir os dados na vertical. |
 
 ##### Retorno
 
@@ -265,7 +218,25 @@ Referência da posição da última célula com dados inserida.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">vertical</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">vertical</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **sheet** | _org.apache.poi.ss.usermodel.Sheet_ |   |
+| **rowIndex** | _int_ |   |
+| **colIndex** | _int_ |   |
+| **data** | _java.util.List_ |   |
+| **vertical** | _boolean_ |   |
+
+##### Retorno
+
+( _[XLSPosition](../../objects/XLSPosition)_ )
+
+
+---
+
+#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
 ##### Descrição
 
 Adiciona uma tabela de dados na folha de cálculos.
@@ -274,17 +245,34 @@ Adiciona uma tabela de dados na folha de cálculos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **folhaCalculos** | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Objeto da folha de cálculos. |
+| **folhaCalculos** | _org.apache.poi.ss.usermodel.Sheet_ | Objeto da folha de cálculos. |
 | **linha** | _int_ | Número da linha. |
 | **coluna** | _int_ | Número da coluna. |
 | **dados** | _[Values](../../objects/Values)_ | Lista de dados que serão inseridos. |
-| **vertical** | _boolean_ | Inserir os dados na vertical. |
 
 ##### Retorno
 
 ( _[XLSPosition](../../objects/XLSPosition)_ )
 
 Referência da posição da última célula com dados inserida.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">vertical</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **sheet** | _org.apache.poi.ss.usermodel.Sheet_ |   |
+| **rowIndex** | _int_ |   |
+| **colIndex** | _int_ |   |
+| **data** | _[Values](../../objects/Values)_ |   |
+| **vertical** | _boolean_ |   |
+
+##### Retorno
+
+( _[XLSPosition](../../objects/XLSPosition)_ )
+
 
 ---
 
@@ -338,7 +326,7 @@ O estilo de contorno de borda configurado com o tipo definido.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">cell</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFCell</span>
+#### `_xls.create()`.<span style="color: #008000">cell</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>
 ##### Descrição
 
 Obtém uma célula da folha de cálculos e caso não exista então será criada.
@@ -352,13 +340,13 @@ Obtém uma célula da folha de cálculos e caso não exista então será criada.
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFCell_ )
+( _org.apache.poi.ss.usermodel.Cell_ )
 
 Objeto de representação da célula.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">cell</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFCell</span>
+#### `_xls.create()`.<span style="color: #008000">cell</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>
 ##### Descrição
 
 Obtém uma célula da folha de cálculos e caso não exista então será criada.
@@ -367,13 +355,13 @@ Obtém uma célula da folha de cálculos e caso não exista então será criada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **linha** | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Objeto da folha de cálculos. |
+| **linha** | _org.apache.poi.ss.usermodel.Sheet_ | Objeto da folha de cálculos. |
 | **linha** | _int_ | Número da linha da folha. |
 | **coluna** | _int_ | Número da coluna. |
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFCell_ )
+( _org.apache.poi.ss.usermodel.Cell_ )
 
 Objeto de representação da célula.
 
@@ -409,14 +397,14 @@ A referência do endereço da área das células.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">cellStyle</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFCellStyle</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">cellStyle</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.CellStyle</span>
 ##### Descrição
 
 Cria um novo estilo de célula no workbook.
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFCellStyle_ )
+( _org.apache.poi.ss.usermodel.CellStyle_ )
 
 O novo estilo de célula criado.
 
@@ -426,7 +414,7 @@ O novo estilo de célula criado.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">cellStyleFormat</span>(<span style="color: #FF8000">formato</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFCellStyle</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">cellStyleFormat</span>(<span style="color: #FF8000">formato</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.CellStyle</span>
 ##### Descrição
 
 Cria um novo estilo de célula com um formato associado no workbook.
@@ -439,7 +427,7 @@ Cria um novo estilo de célula com um formato associado no workbook.
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFCellStyle_ )
+( _org.apache.poi.ss.usermodel.CellStyle_ )
 
 O novo estilo de célula criado com o formato configurado.
 
@@ -537,20 +525,20 @@ Nova instância do recurso XLS.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">createSheet</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>
+#### `_xls.create()`.<span style="color: #008000">createSheet</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>
 ##### Descrição
 
 Cria uma nova folha de cálculos.
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
+( _org.apache.poi.ss.usermodel.Sheet_ )
 
 Folha de cálculos criada.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">createSheet</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>
+#### `_xls.create()`.<span style="color: #008000">createSheet</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>
 ##### Descrição
 
 Cria uma nova folha de cálculos e define o seu nome.
@@ -563,7 +551,7 @@ Cria uma nova folha de cálculos e define o seu nome.
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
+( _org.apache.poi.ss.usermodel.Sheet_ )
 
 Folha de cálculos criada.
 
@@ -596,14 +584,14 @@ O padrão de preenchimento configurado com o tipo definido.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">font</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFFont</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">font</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Font</span>
 ##### Descrição
 
 Cria um novo estilo de fonte no workbook.
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFFont_ )
+( _org.apache.poi.ss.usermodel.Font_ )
 
 O novo estilo de fonte criado.
 
@@ -632,11 +620,109 @@ Código identificador do novo formato.
 
 ---
 
+## getAllSheets
+
+---
+
+#### `_xls.create()`.<span style="color: #008000">getAllSheets</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+##### Descrição
+
+Lista com todas as folhas de cálculos.
+
+##### Retorno
+
+( _java.util.List_ )
+
+Todas as folhas de cálculos existentes no documento.
+
+---
+
+## getCellData
+
+---
+
+#### `_xls.create()`.<span style="color: #008000">getCellData</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Descrição
+
+Obtém um objeto com os dados de uma célula da folha de cálculos.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **linha** | _int_ | Número da linha. |
+| **coluna** | _int_ | Número da coluna. |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Informações de dados da célula.
+
+---
+
+#### `_xls.create()`.<span style="color: #008000">getCellData</span>(<span style="color: #FF8000">celula</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Descrição
+
+Obtém um objeto com os dados de uma célula da folha de cálculos.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **celula** | _org.apache.poi.ss.usermodel.Cell_ | Objeto que representa a célula. |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Informações de dados da célula.
+
+---
+
+#### `_xls.create()`.<span style="color: #008000">getCellData</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Descrição
+
+Obtém um objeto com os dados de uma célula da folha de cálculos.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **linha** | _org.apache.poi.ss.usermodel.Sheet_ | Objeto da folha de cálculos. |
+| **linha** | _int_ | Número da linha da folha. |
+| **coluna** | _int_ | Número da coluna. |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Informações de dados da célula.
+
+---
+
+## getNumberOfSheets
+
+---
+
+#### `_xls.create()`.<span style="color: #008000">getNumberOfSheets</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Descrição
+
+Obtém o número total de folhas de cálculos.
+
+##### Retorno
+
+( _int_ )
+
+O número total de folhas de cálculos existentes no documento.
+
+---
+
 ## getSheet
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">getSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>
+#### `_xls.create()`.<span style="color: #008000">getSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>
 ##### Descrição
 
 Obtém a folha de cálculos através do número (index).
@@ -649,13 +735,13 @@ Obtém a folha de cálculos através do número (index).
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
+( _org.apache.poi.ss.usermodel.Sheet_ )
 
 Folha de cálculos referente ao número (index).
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">getSheet</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>
+#### `_xls.create()`.<span style="color: #008000">getSheet</span>(<span style="color: #FF8000">nome</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>
 ##### Descrição
 
 Obtém a folha de cálculos através do nome.
@@ -668,7 +754,7 @@ Obtém a folha de cálculos através do nome.
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
+( _org.apache.poi.ss.usermodel.Sheet_ )
 
 Folha de cálculos referente ao nome.
 
@@ -701,7 +787,7 @@ O alinhamento horizontal configurado com o tipo definido.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>, <span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">ancora</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">ancora</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
 ##### Descrição
 
 Insere uma imagem associada à âncora em uma folha de cálculos específica.
@@ -710,7 +796,7 @@ Insere uma imagem associada à âncora em uma folha de cálculos específica.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **folhaCalculos** | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Folha de cálculos que será utilizada para inserir a imagem. |
+| **folhaCalculos** | _org.apache.poi.ss.usermodel.Sheet_ | Folha de cálculos que será utilizada para inserir a imagem. |
 | **file** | _[File](../../objects/File)_ | Ficheiro de imagem. |
 | **ancora** | _org.apache.poi.ss.usermodel.ClientAnchor_ | Âncora para associar a imagem. |
 
@@ -722,7 +808,7 @@ O objeto de referência da imagem inserida.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>, <span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">ancora</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">ancora</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
 ##### Descrição
 
 Insere uma imagem associada à âncora em uma folha de cálculos específica.
@@ -731,7 +817,7 @@ Insere uma imagem associada à âncora em uma folha de cálculos específica.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **folhaCalculos** | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Folha de cálculos que será utilizada para inserir a imagem. |
+| **folhaCalculos** | _org.apache.poi.ss.usermodel.Sheet_ | Folha de cálculos que será utilizada para inserir a imagem. |
 | **storage** | _[Storage](../../resources/Storage)_ | Referência do storage associado a um ficheiro de imagem. |
 | **ancora** | _org.apache.poi.ss.usermodel.ClientAnchor_ | Âncora para associar a imagem. |
 
@@ -851,7 +937,7 @@ A referência da região de células mesclada.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">mergedRegion</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>, <span style="color: #FF8000">primeiraLinha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">ultimaLinha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">primeiraColuna</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">ultimaColuna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">mergedRegion</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">primeiraLinha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">ultimaLinha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">primeiraColuna</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">ultimaColuna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
 Realiza a mesclagem de células na região passada em uma folha de cálculos específica.
@@ -860,7 +946,7 @@ Realiza a mesclagem de células na região passada em uma folha de cálculos esp
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **folhaCalculos** | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Folha de cálculos que será mesclada as células. |
+| **folhaCalculos** | _org.apache.poi.ss.usermodel.Sheet_ | Folha de cálculos que será mesclada as células. |
 | **primeiraLinha** | _int_ | Número da primeira linha. |
 | **ultimaLinha** | _int_ | Número da última linha. |
 | **primeiraColuna** | _int_ | Número da primeira coluna. |
@@ -871,6 +957,166 @@ Realiza a mesclagem de células na região passada em uma folha de cálculos esp
 ( _int_ )
 
 A referência da região de células mesclada.
+
+---
+
+## open
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">entrada</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Abre um arquivo do Excel.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **entrada** | _java.io.InputStream_ | Objeto de fluxo de entrada de dados do arquivo. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+Arquivo aberto em uma nova instância do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">entrada</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">senha</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Abre um arquivo do Excel.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **entrada** | _java.io.InputStream_ | Objeto de fluxo de entrada de dados do arquivo. |
+| **senha** | _string_ | Senha do arquivo. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+Arquivo aberto em uma nova instância do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">arquivo</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Abre um arquivo do Excel.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **arquivo** | _[File](../../objects/File)_ | Arquivo do tipo documento de Excel. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+Arquivo aberto em uma nova instância do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">arquivo</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">senha</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Abre um arquivo do Excel.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **arquivo** | _[File](../../objects/File)_ | Arquivo do tipo documento de Excel. |
+| **senha** | _string_ | Senha do arquivo. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+Arquivo aberto em uma nova instância do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">entrada</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Abre um arquivo do Excel.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **entrada** | _[InputStream](../../objects/InputStream)_ | Objeto de fluxo de entrada de dados do arquivo. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+Arquivo aberto em uma nova instância do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">entrada</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">senha</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Abre um arquivo do Excel.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **entrada** | _[InputStream](../../objects/InputStream)_ | Objeto de fluxo de entrada de dados do arquivo. |
+| **senha** | _string_ | Senha do arquivo. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+Arquivo aberto em uma nova instância do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Abre um arquivo do Excel.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **storage** | _[Storage](../../resources/Storage)_ | Referência do storage onde está o arquivo que será aberto. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+Arquivo aberto em uma nova instância do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">senha</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Abre um arquivo do Excel.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **storage** | _[Storage](../../resources/Storage)_ | Referência do storage onde está o arquivo que será aberto. |
+| **senha** | _string_ | Senha do arquivo. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+Arquivo aberto em uma nova instância do recurso XLS.
 
 ---
 
@@ -983,7 +1229,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -993,7 +1239,27 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **input** | _java.io.InputStream_ | Referência do ficheiro Excel. |
-| **numero** | _int_ | Número da folha de cálculos. |
+| **escondidas** | _string_ | Processa também folhas de cálculos escondidas. |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Estrutura com todos os dados obtidos através da leitura e processamento do ficheiros Excel.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Descrição
+
+Realiza a leitura de um ficheiro Excel, obtém todos os dados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **input** | _java.io.InputStream_ | Referência do ficheiro Excel. |
+| **numero** | _string_ | Número da folha de cálculos. |
 | **escondidas** | _boolean_ | Processa também folhas de cálculos escondidas. |
 
 ##### Retorno
@@ -1001,6 +1267,44 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 ( _[Values](../../objects/Values)_ )
 
 Estrutura com todos os dados obtidos através da leitura e processamento do ficheiros Excel.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Descrição
+
+Realiza a leitura de um ficheiro Excel, obtém todos os dados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **input** | _java.io.InputStream_ | Referência do ficheiro Excel. |
+| **numero** | _string_ | Número da folha de cálculos. |
+| **escondidas** | _int_ | Processa também folhas de cálculos escondidas. |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Estrutura com todos os dados obtidos através da leitura e processamento do ficheiros Excel.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **in** | _java.io.InputStream_ |   |
+| **password** | _string_ |   |
+| **sheetNumber** | _int_ |   |
+| **hiddenSheets** | _boolean_ |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
 
 ---
 
@@ -1084,7 +1388,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1093,7 +1397,8 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | Referência do ficheiro Excel. |
+| **input** | _[File](../../objects/File)_ | Referência do ficheiro Excel. |
+| **escondidas** | _string_ | Processa também folhas de cálculos escondidas. |
 
 ##### Retorno
 
@@ -1103,7 +1408,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1112,7 +1417,8 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | Referência do ficheiro Excel. |
+| **input** | _[File](../../objects/File)_ | Referência do ficheiro Excel. |
+| **numero** | _string_ | Número da folha de cálculos. |
 | **escondidas** | _boolean_ | Processa também folhas de cálculos escondidas. |
 
 ##### Retorno
@@ -1123,7 +1429,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1132,8 +1438,9 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | Referência do ficheiro Excel. |
-| **numero** | _int_ | Número da folha de cálculos. |
+| **input** | _[File](../../objects/File)_ | Referência do ficheiro Excel. |
+| **numero** | _string_ | Número da folha de cálculos. |
+| **escondidas** | _int_ | Processa também folhas de cálculos escondidas. |
 
 ##### Retorno
 
@@ -1143,24 +1450,20 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
-##### Descrição
-
-Realiza a leitura de um ficheiro Excel, obtém todos os dados.
-
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | Referência do ficheiro Excel. |
-| **numero** | _int_ | Número da folha de cálculos. |
-| **escondidas** | _boolean_ | Processa também folhas de cálculos escondidas. |
+| **file** | _[File](../../objects/File)_ |   |
+| **password** | _string_ |   |
+| **sheetNumber** | _int_ |   |
+| **hiddenSheets** | _boolean_ |   |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
-Estrutura com todos os dados obtidos através da leitura e processamento do ficheiros Excel.
 
 ---
 
@@ -1244,11 +1547,90 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Descrição
+
+Realiza a leitura de um ficheiro Excel, obtém todos os dados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **input** | _[Storage](../../resources/Storage)_ | Referência do ficheiro Excel. |
+| **escondidas** | _string_ | Processa também folhas de cálculos escondidas. |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Estrutura com todos os dados obtidos através da leitura e processamento do ficheiros Excel.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Descrição
+
+Realiza a leitura de um ficheiro Excel, obtém todos os dados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **input** | _[Storage](../../resources/Storage)_ | Referência do ficheiro Excel. |
+| **numero** | _string_ | Número da folha de cálculos. |
+| **escondidas** | _boolean_ | Processa também folhas de cálculos escondidas. |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Estrutura com todos os dados obtidos através da leitura e processamento do ficheiros Excel.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Descrição
+
+Realiza a leitura de um ficheiro Excel, obtém todos os dados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **input** | _[Storage](../../resources/Storage)_ | Referência do ficheiro Excel. |
+| **numero** | _string_ | Número da folha de cálculos. |
+| **escondidas** | _int_ | Processa também folhas de cálculos escondidas. |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+Estrutura com todos os dados obtidos através da leitura e processamento do ficheiros Excel.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **password** | _string_ |   |
+| **sheetNumber** | _int_ |   |
+| **hiddenSheets** | _boolean_ |   |
+
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 ## row
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">row</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFRow</span>
+#### `_xls.create()`.<span style="color: #008000">row</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Row</span>
 ##### Descrição
 
 Obtém uma linha da folha de cálculos e caso não exista então será criada.
@@ -1261,13 +1643,13 @@ Obtém uma linha da folha de cálculos e caso não exista então será criada.
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFRow_ )
+( _org.apache.poi.ss.usermodel.Row_ )
 
 Objeto de representação da linha.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">row</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFRow</span>
+#### `_xls.create()`.<span style="color: #008000">row</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Row</span>
 ##### Descrição
 
 Obtém uma linha da folha de cálculos e caso não exista então será criada.
@@ -1276,12 +1658,12 @@ Obtém uma linha da folha de cálculos e caso não exista então será criada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **folhaCalculos** | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Objeto de folha de cálculos. |
+| **folhaCalculos** | _org.apache.poi.ss.usermodel.Sheet_ | Objeto de folha de cálculos. |
 | **linha** | _int_ | Número da linha. |
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFRow_ )
+( _org.apache.poi.ss.usermodel.Row_ )
 
 Objeto de representação da linha.
 
@@ -1406,11 +1788,141 @@ Realiza a escrita dos dados do ficheiro final para o storage interno da aplicaç
 
 ---
 
+## setCellData
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Insere dados numa célula específica.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **linha** | _int_ | Número da linha. |
+| **coluna** | _int_ | Número da coluna. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Dados que serão inseridos. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+A instância atual do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Insere dados numa célula específica.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **linha** | _int_ | Número da linha. |
+| **coluna** | _int_ | Número da coluna. |
+| **dados** | _[Values](../../objects/Values)_ | Dados que serão inseridos. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+A instância atual do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">celula</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Insere dados numa célula específica.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **celula** | _org.apache.poi.ss.usermodel.Cell_ | Objeto da célula. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Dados que serão inseridos. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+A instância atual do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">celula</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Insere dados numa célula específica.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **celula** | _org.apache.poi.ss.usermodel.Cell_ | Objeto da célula. |
+| **dados** | _[Values](../../objects/Values)_ | Dados que serão inseridos. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+A instância atual do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Insere dados numa célula específica em uma planilha de cálculos.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **folhaCalculos** | _org.apache.poi.ss.usermodel.Sheet_ | Objeto da folha de cálculos. |
+| **linha** | _int_ | Número da linha. |
+| **coluna** | _int_ | Número da coluna. |
+| **dados** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Dados que serão inseridos. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+A instância atual do recurso XLS.
+
+---
+
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">folhaCalculos</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dados</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+##### Descrição
+
+Insere dados numa célula específica em uma planilha de cálculos.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **folhaCalculos** | _org.apache.poi.ss.usermodel.Sheet_ | Objeto da folha de cálculos. |
+| **linha** | _int_ | Número da linha. |
+| **coluna** | _int_ | Número da coluna. |
+| **dados** | _[Values](../../objects/Values)_ | Dados que serão inseridos. |
+
+##### Retorno
+
+( _[XLS](../../resources/XLS)_ )
+
+A instância atual do recurso XLS.
+
+---
+
 ## sheet
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">sheet</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>
+#### `_xls.create()`.<span style="color: #008000">sheet</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>
 ##### Descrição
 
 Para obter a folha de cálculos atual que está sendo utilizada para manipular os dados.
@@ -1423,7 +1935,7 @@ const folhaDeCalculos = _xls.create().sheet();
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFSheet_ )
+( _org.apache.poi.ss.usermodel.Sheet_ )
 
 Obtém a folha de cálculos atual.
 
@@ -1496,7 +2008,7 @@ O alinhamento vertical configurado com o tipo definido.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">workbook</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFWorkbook</span>
+#### `_xls.create()`.<span style="color: #008000">workbook</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Workbook</span>
 ##### Descrição
 
 Cria um novo documento Excel.
@@ -1509,7 +2021,7 @@ const workbook = _xls.create().workbook();
 
 ##### Retorno
 
-( _org.apache.poi.hssf.usermodel.HSSFWorkbook_ )
+( _org.apache.poi.ss.usermodel.Workbook_ )
 
 Obtém o workbook.
 
