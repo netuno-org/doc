@@ -60,12 +60,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToPdfStream</span>(<span style="color: #FF8000">output</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToPdfStream</span>(<span style="color: #FF8000">output</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **output** | _java.io.OutputStream_ |   |
+| **output** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Return
 

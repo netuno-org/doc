@@ -120,10 +120,10 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style="color: #008000">nullOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
+#### <span style="color: #008000">nullOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Retorno
 
-( _java.io.OutputStream_ )
+( _[OutputStream](../../objects/OutputStream)_ )
 
 
 ---

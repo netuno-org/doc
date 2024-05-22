@@ -148,7 +148,7 @@ Realiza o output do ficheiro XML final para o cliente realizar o download final 
 
 ---
 
-#### `_xml.create()`.<span style="color: #008000">parse</span>(<span style="color: #FF8000">fluxoEntrada</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">org.w3c.dom.Document</span>
+#### `_xml.create()`.<span style="color: #008000">parse</span>(<span style="color: #FF8000">fluxoEntrada</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">org.w3c.dom.Document</span>
 ##### Description
 
 Através de um fluxo de entrada de dados de XML obtém o objeto de representação do documento para ser interpretado e processado.
@@ -157,7 +157,7 @@ Através de um fluxo de entrada de dados de XML obtém o objeto de representaç�
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **fluxoEntrada** | _java.io.InputStream_ | Fluxo de entrada de dados em XML. |
+| **fluxoEntrada** | _[InputStream](../../objects/InputStream)_ | Fluxo de entrada de dados em XML. |
 
 ##### Return
 
@@ -229,7 +229,7 @@ Objeto de representação do documento XML obtido.
 
 ---
 
-#### <span style="font-weight: normal">_xml</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">documento</span>: <span style="font-weight: normal; font-style: italic;">org.w3c.dom.Document</span>, <span style="color: #FF8000">fluxoSaida</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style="font-weight: normal">_xml</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">documento</span>: <span style="font-weight: normal; font-style: italic;">org.w3c.dom.Document</span>, <span style="color: #FF8000">fluxoSaida</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Guarda o documento em um fluxo de dados de saída.
@@ -239,7 +239,7 @@ Guarda o documento em um fluxo de dados de saída.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **documento** | _org.w3c.dom.Document_ | Objeto que contém a estrutura e dados do documento de XML. |
-| **fluxoSaida** | _java.io.OutputStream_ | Fluxo de dados de saída onde o documento deve ser guardado. |
+| **fluxoSaida** | _[OutputStream](../../objects/OutputStream)_ | Fluxo de dados de saída onde o documento deve ser guardado. |
 
 ##### Return
 

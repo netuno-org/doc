@@ -1383,7 +1383,7 @@ Retorna a célula criada.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Extrai o conteúdo de PDFs.
@@ -1392,7 +1392,7 @@ Extrai o conteúdo de PDFs.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **conteúdo** | _java.io.InputStream_ | Conteúdo a ser extraído. |
+| **conteúdo** | _[InputStream](../../objects/InputStream)_ | Conteúdo a ser extraído. |
 
 ##### Retorno
 
@@ -1862,7 +1862,7 @@ Retorna um novo documento com o número de páginas inseridas.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -1871,7 +1871,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _java.io.OutputStream_ |   |
+| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -1880,7 +1880,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF com o número de páginas inseridas.
@@ -1889,7 +1889,7 @@ Cria um novo documento PDF com o número de páginas inseridas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _java.io.OutputStream_ | Caminho do ficheiro. |
+| **armazenamento** | _[OutputStream](../../objects/OutputStream)_ | Caminho do ficheiro. |
 | **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
 
 ##### Retorno
@@ -1936,7 +1936,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Descrição
 
 Cria um novo documento PDF.
@@ -1945,7 +1945,7 @@ Cria um novo documento PDF.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _java.io.OutputStream_ | Caminho do ficheiro. |
+| **armazenamento** | _[OutputStream](../../objects/OutputStream)_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -1976,7 +1976,7 @@ Cria um novo documento PDF.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Descrição
 
 Abre o documento PDF referente ao caminho inserido.
@@ -1985,7 +1985,7 @@ Abre o documento PDF referente ao caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **caminho** | _java.io.InputStream_ | Caminho do ficheiro. |
+| **caminho** | _[InputStream](../../objects/InputStream)_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -1995,13 +1995,13 @@ Retorna o documento PDF aberto.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _java.io.InputStream_ |   |
-| **out** | _java.io.OutputStream_ |   |
+| **in** | _[InputStream](../../objects/InputStream)_ |   |
+| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -2010,12 +2010,12 @@ Retorna o documento PDF aberto.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _java.io.InputStream_ |   |
+| **in** | _[InputStream](../../objects/InputStream)_ |   |
 | **out** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ |   |
 
 ##### Retorno
@@ -2044,13 +2044,13 @@ Retorna o documento PDF aberto.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **in** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ |   |
-| **out** | _java.io.OutputStream_ |   |
+| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -2401,7 +2401,7 @@ Retorna o conteudo do texto.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa para HTML o conteúdo inserido.
@@ -2410,7 +2410,7 @@ Passa para HTML o conteúdo inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **conteúdo** | _java.io.InputStream_ | Conteúdo a passar pra HTML. |
+| **conteúdo** | _[InputStream](../../objects/InputStream)_ | Conteúdo a passar pra HTML. |
 
 ##### Retorno
 
@@ -2481,7 +2481,7 @@ Retorna o HTML.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa o conteúdo inserido para texto.
@@ -2490,7 +2490,7 @@ Passa o conteúdo inserido para texto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **conteúdo** | _java.io.InputStream_ | Conteúdo a passar para texto. |
+| **conteúdo** | _[InputStream](../../objects/InputStream)_ | Conteúdo a passar para texto. |
 
 ##### Retorno
 

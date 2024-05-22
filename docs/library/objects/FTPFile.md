@@ -13,10 +13,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">getGroup</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the name of the group owning the file.
+
 ##### Return
 
 ( _string_ )
 
+The name of the group owning the file.
 
 ---
 
@@ -25,10 +30,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">getHardLinkCount</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Description
+
+Returns the number of hard links to this file.
+
 ##### Return
 
 ( _int_ )
 
+The number of hard links to this file.
 
 ---
 
@@ -37,10 +47,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">getLink</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+If the FTPFile is a symbolic link, this method returns the name of the file being pointed to by the symbolic link. Otherwise it returns null.
+
 ##### Return
 
 ( _string_ )
 
+The file pointed to by the symbolic link (null if the FTPFile is not a symbolic link).
 
 ---
 
@@ -49,10 +64,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the name of the file.
+
 ##### Return
 
 ( _string_ )
 
+The name of the file.
 
 ---
 
@@ -61,10 +81,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">getRawListing</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the original FTP server raw listing used to initialize the FTPFile.
+
 ##### Return
 
 ( _string_ )
 
+The original FTP server raw listing used to initialize the FTPFile.
 
 ---
 
@@ -73,10 +98,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">getSize</span>() : <span style="font-weight: normal; font-style: italic;">long</span>
+##### Description
+
+Returns the file size in bytes.
+
 ##### Return
 
 ( _long_ )
 
+The file size in bytes.
 
 ---
 
@@ -85,10 +115,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">getTimestamp</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
+##### Description
+
+Returns the file timestamp. This usually the last modification time.
+
 ##### Return
 
 ( _java.util.Calendar_ )
 
+A Calendar instance representing the file timestamp.
 
 ---
 
@@ -97,10 +132,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">getTimestampInstant</span>() : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+##### Description
+
+Returns the file timestamp. This usually the last modification time.
+
 ##### Return
 
 ( _java.time.Instant_ )
 
+A Calendar instance representing the file timestamp.
 
 ---
 
@@ -109,10 +149,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">getUser</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the name of the user owning the file. Sometimes this will be a string representation of the user number.
+
 ##### Return
 
 ( _string_ )
 
+The name of the user owning the file.
 
 ---
 
@@ -121,10 +166,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isDirectory</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether it is a directory.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it is a directory.
 
 ---
 
@@ -133,10 +183,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isFile</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether it is a file.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it is a file.
 
 ---
 
@@ -145,10 +200,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isGroupExecutable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether a group has file execute permission or directory listing permission.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it has permission.
 
 ---
 
@@ -157,10 +217,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isGroupReadable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether a group has read permissions.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it has permission.
 
 ---
 
@@ -169,10 +234,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isGroupWritable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether a group has write permissions.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it has permission.
 
 ---
 
@@ -181,10 +251,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isSymbolicLink</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether it is a symbolic link.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it is a symbolic link.
 
 ---
 
@@ -193,10 +268,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isUnknown</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether it is a unknown type.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it is a unknown type.
 
 ---
 
@@ -205,10 +285,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isUserExecutable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether the user has file execute permission or directory listing permission.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it has permission.
 
 ---
 
@@ -217,10 +302,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isUserReadable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether the user has read permissions
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it has read permission.
 
 ---
 
@@ -229,10 +319,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isUserWritable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether the user has write permissions
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it has write permission.
 
 ---
 
@@ -241,10 +336,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isValid</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether an entry is valid.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether an entry is valid or not.
 
 ---
 
@@ -253,10 +353,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isWorldExecutable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether you have global file execute permission or directory listing permission.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it has permission.
 
 ---
 
@@ -265,10 +370,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isWorldReadable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether it has global read permission.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it has permission.
 
 ---
 
@@ -277,10 +387,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">isWorldWritable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether it has global write permission.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it has permission.
 
 ---
 
@@ -289,16 +404,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setGroup</span>(<span style="color: #FF8000">group</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines the name of the group owning the file
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **group** | _string_ |   |
+| **group** | _string_ | The name of the group owning the file. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -307,16 +427,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setGroupExecutable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines file execute permission or directory listing permission for a group.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **access** | _boolean_ |   |
+| **access** | _boolean_ | Whether or not it has permission. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -325,16 +450,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setGroupReadable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines read permission for a group.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **access** | _boolean_ |   |
+| **access** | _boolean_ | Whether or not it has permission. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -343,16 +473,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setGroupWritable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines write permission for a group.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **access** | _boolean_ |   |
+| **access** | _boolean_ | Whether or not it has permission. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -361,16 +496,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setHardLinkCount</span>(<span style="color: #FF8000">links</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines the number of hard links to this file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **links** | _int_ |   |
+| **links** | _int_ | The number of hard links to this file. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -379,16 +519,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setLink</span>(<span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+If the FTPFile is a symbolic link, use this method to defines the name of the file being pointed to by the symbolic link.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **link** | _string_ |   |
+| **link** | _string_ | The file pointed to by the symbolic link. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -397,16 +542,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setName</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines the name of the file.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **name** | _string_ |   |
+| **name** | _string_ | The name of the file. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -415,16 +565,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setRawListing</span>(<span style="color: #FF8000">rawListing</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines the original FTP server raw listing from which the FTPFile was created.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **rawListing** | _string_ |   |
+| **rawListing** | _string_ | The raw FTP server listing. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -433,16 +588,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setSize</span>(<span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines the file size in bytes.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **size** | _long_ |   |
+| **size** | _long_ | The file size in bytes. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -451,16 +611,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setTimestamp</span>(<span style="color: #FF8000">date</span>: <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines the file timestamp. This usually the last modification time. The parameter is not cloned, so do not alter its value after calling this method.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **date** | _java.util.Calendar_ |   |
+| **date** | _java.util.Calendar_ | A Calendar instance representing the file timestamp. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -469,16 +634,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setUser</span>(<span style="color: #FF8000">user</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines the name of the user owning the file. This may be a string representation of the user number.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **user** | _string_ |   |
+| **user** | _string_ | The name of the user owning the file. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -487,16 +657,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setUserExecutable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines file execute permission or directory listing permission for a user.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **access** | _boolean_ |   |
+| **access** | _boolean_ | Whether or not it has permission. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -505,16 +680,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setUserReadable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines read permission for a user.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **access** | _boolean_ |   |
+| **access** | _boolean_ | Whether or not it has read permission. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -523,16 +703,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setUserWritable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines write permission for a user.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **access** | _boolean_ |   |
+| **access** | _boolean_ | Whether or not it has write permission. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -541,16 +726,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setWorldExecutable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines global file execution permission or directory listing permission.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **access** | _boolean_ |   |
+| **access** | _boolean_ | Whether or not it has permission. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -559,16 +749,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setWorldReadable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines global read permission.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **access** | _boolean_ |   |
+| **access** | _boolean_ | Whether or not it has permission. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -577,16 +772,21 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">setWorldWritable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+Defines global write permission.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **access** | _boolean_ |   |
+| **access** | _boolean_ | Whether or not it has permission. |
 
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -595,10 +795,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">toDirectory</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+indicates that the current object is a directory.
+
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -607,10 +812,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">toFile</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+indicates that the current object is a file.
+
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -619,24 +829,34 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">toFormattedString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns a string representation of the FTPFile information.
+
 ##### Return
 
 ( _string_ )
 
+String representation of FTPFile information.
 
 ---
 
 #### <span style="color: #008000">toFormattedString</span>(<span style="color: #FF8000">timezone</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns a string representation of the FTPFile information.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **timezone** | _string_ |   |
+| **timezone** | _string_ | Time zone to use to display the date and time moment. |
 
 ##### Return
 
 ( _string_ )
 
+String representation of FTPFile information.
 
 ---
 
@@ -645,10 +865,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">toSymbolicLink</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+indicates that the current object is a symbolic link.
+
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 
@@ -657,10 +882,15 @@ Os dados referente a um ficheiro FTP.
 ---
 
 #### <span style="color: #008000">toUnknown</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+##### Description
+
+indicates that the current object is a unknown type.
+
 ##### Return
 
 ( _[FTPFile](../../objects/FTPFile)_ )
 
+The current FTPFile object.
 
 ---
 

@@ -1848,12 +1848,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _java.io.InputStream_ |   |
+| **in** | _[InputStream](../../objects/InputStream)_ |   |
 
 ##### Retorno
 
@@ -2069,12 +2069,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _java.io.OutputStream_ |   |
+| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
 | **type** | _string_ |   |
 
 ##### Retorno

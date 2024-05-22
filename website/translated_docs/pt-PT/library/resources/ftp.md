@@ -243,7 +243,7 @@ O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">download</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destino</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">download</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destino</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
 ##### Descrição
 
 Copia um arquivo no servidor para um arquivo local.
@@ -253,7 +253,7 @@ Copia um arquivo no servidor para um arquivo local.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
-| **destino** | _java.io.OutputStream_ | Arquivo local de destino para armazenar o conteúdo remoto. |
+| **destino** | _[OutputStream](../../objects/OutputStream)_ | Arquivo local de destino para armazenar o conteúdo remoto. |
 
 ##### Retorno
 
@@ -686,7 +686,7 @@ Objeto FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">upload</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">upload</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
 ##### Descrição
 
 Envia os dados de um arquivo para ser salvo no servidor.
@@ -696,7 +696,7 @@ Envia os dados de um arquivo para ser salvo no servidor.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
-| **origem** | _java.io.InputStream_ | Arquivo local de origem. |
+| **origem** | _[InputStream](../../objects/InputStream)_ | Arquivo local de origem. |
 
 ##### Retorno
 

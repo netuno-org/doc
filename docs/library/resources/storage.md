@@ -274,10 +274,10 @@ Data input object from Netuno to the storage in use.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getInputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getInputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Return
 
-( _java.io.InputStream_ )
+( _[InputStream](../../objects/InputStream)_ )
 
 
 ---
@@ -303,10 +303,10 @@ Data output object from Netuno to the storage in use.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Return
 
-( _java.io.OutputStream_ )
+( _[OutputStream](../../objects/OutputStream)_ )
 
 
 ---
@@ -332,14 +332,14 @@ Data input object from Netuno to the storage in use.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Description
 
 Gets the Java input object for the storage being used.
 
 ##### Return
 
-( _java.io.InputStream_ )
+( _[InputStream](../../objects/InputStream)_ )
 
 Java data input object for the storage in use.
 
@@ -531,14 +531,14 @@ Data output object from Netuno to the storage in use.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Description
 
 Gets the Java output object for the storage being used.
 
 ##### Return
 
-( _java.io.OutputStream_ )
+( _[OutputStream](../../objects/OutputStream)_ )
 
 Java data output object for the storage in use.
 

@@ -964,7 +964,7 @@ A referência da região de células mesclada.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">entrada</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">entrada</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
 ##### Descrição
 
 Abre um arquivo do Excel.
@@ -973,7 +973,7 @@ Abre um arquivo do Excel.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **entrada** | _java.io.InputStream_ | Objeto de fluxo de entrada de dados do arquivo. |
+| **entrada** | _[InputStream](../../objects/InputStream)_ | Objeto de fluxo de entrada de dados do arquivo. |
 
 ##### Retorno
 
@@ -983,7 +983,7 @@ Arquivo aberto em uma nova instância do recurso XLS.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">entrada</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">senha</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">entrada</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">senha</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
 ##### Descrição
 
 Abre um arquivo do Excel.
@@ -992,7 +992,7 @@ Abre um arquivo do Excel.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **entrada** | _java.io.InputStream_ | Objeto de fluxo de entrada de dados do arquivo. |
+| **entrada** | _[InputStream](../../objects/InputStream)_ | Objeto de fluxo de entrada de dados do arquivo. |
 | **senha** | _string_ | Senha do arquivo. |
 
 ##### Retorno
@@ -1170,7 +1170,7 @@ Referência da posição com base nas coordenadas passadas.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1179,7 +1179,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _java.io.InputStream_ | Referência do ficheiro Excel. |
+| **input** | _[InputStream](../../objects/InputStream)_ | Referência do ficheiro Excel. |
 
 ##### Retorno
 
@@ -1189,7 +1189,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1198,7 +1198,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _java.io.InputStream_ | Referência do ficheiro Excel. |
+| **input** | _[InputStream](../../objects/InputStream)_ | Referência do ficheiro Excel. |
 | **escondidas** | _boolean_ | Processa também folhas de cálculos escondidas. |
 
 ##### Retorno
@@ -1209,7 +1209,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1218,7 +1218,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _java.io.InputStream_ | Referência do ficheiro Excel. |
+| **input** | _[InputStream](../../objects/InputStream)_ | Referência do ficheiro Excel. |
 | **numero** | _int_ | Número da folha de cálculos. |
 
 ##### Retorno
@@ -1229,7 +1229,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1238,7 +1238,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _java.io.InputStream_ | Referência do ficheiro Excel. |
+| **input** | _[InputStream](../../objects/InputStream)_ | Referência do ficheiro Excel. |
 | **escondidas** | _string_ | Processa também folhas de cálculos escondidas. |
 
 ##### Retorno
@@ -1249,7 +1249,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1258,7 +1258,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _java.io.InputStream_ | Referência do ficheiro Excel. |
+| **input** | _[InputStream](../../objects/InputStream)_ | Referência do ficheiro Excel. |
 | **numero** | _string_ | Número da folha de cálculos. |
 | **escondidas** | _boolean_ | Processa também folhas de cálculos escondidas. |
 
@@ -1270,7 +1270,7 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">escondidas</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Realiza a leitura de um ficheiro Excel, obtém todos os dados.
@@ -1279,7 +1279,7 @@ Realiza a leitura de um ficheiro Excel, obtém todos os dados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _java.io.InputStream_ | Referência do ficheiro Excel. |
+| **input** | _[InputStream](../../objects/InputStream)_ | Referência do ficheiro Excel. |
 | **numero** | _string_ | Número da folha de cálculos. |
 | **escondidas** | _int_ | Processa também folhas de cálculos escondidas. |
 
@@ -1291,12 +1291,12 @@ Estrutura com todos os dados obtidos através da leitura e processamento do fich
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _java.io.InputStream_ |   |
+| **in** | _[InputStream](../../objects/InputStream)_ |   |
 | **password** | _string_ |   |
 | **sheetNumber** | _int_ |   |
 | **hiddenSheets** | _boolean_ |   |
@@ -1716,7 +1716,7 @@ Nome válido para ser utilizado como nome da folha de cálculos.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">save</span>(<span style="color: #FF8000">output</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### `_xls.create()`.<span style="color: #008000">save</span>(<span style="color: #FF8000">output</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Descrição
 
 Realiza a escrita dos dados do ficheiro final para o output.
@@ -1725,7 +1725,7 @@ Realiza a escrita dos dados do ficheiro final para o output.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **output** | _java.io.OutputStream_ | Output onde o ficheiro será guardado. |
+| **output** | _[OutputStream](../../objects/OutputStream)_ | Output onde o ficheiro será guardado. |
 
 ##### Retorno
 

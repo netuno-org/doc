@@ -125,7 +125,7 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parse</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parse</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
 ##### Descrição
 
 Realiza a interpretação dum conteúdo e retorna-o em HTML.
@@ -134,7 +134,7 @@ Realiza a interpretação dum conteúdo e retorna-o em HTML.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _java.io.InputStream_ | Conteúdo de um ficheiro HTML a ser processado. |
+| **input** | _[InputStream](../../objects/InputStream)_ | Conteúdo de um ficheiro HTML a ser processado. |
 | **baseUri** | _string_ | Url base para resolver links relativos. |
 | **charset** | _string_ | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
 
