@@ -13,24 +13,34 @@ Resultado gerado pelos comandos SSH depois que são executados.
 ---
 
 #### <span style="color: #008000">error</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Descrição
+
+Retorna o erro da execução do comando do objeto atual (se houver).
+
 ##### Retorno
 
 ( _string_ )
 
+Erro da execução do comando.
 
 ---
 
-#### <span style="color: #008000">error</span>(<span style="color: #FF8000">error</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+#### <span style="color: #008000">error</span>(<span style="color: #FF8000">erro</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+##### Descrição
+
+Define o erro da execução do comando do objeto atual.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **error** | _string_ |   |
+| **erro** | _string_ | Erro da execução do comando. |
 
 ##### Retorno
 
 ( _[SSHExecResult](../../objects/SSHExecResult)_ )
 
+Objeto SSHExecResult atual.
 
 ---
 
@@ -39,24 +49,34 @@ Resultado gerado pelos comandos SSH depois que são executados.
 ---
 
 #### <span style="color: #008000">exitErrorMessage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Descrição
+
+Retorna a mensagem de erro da execução do comando do objeto atual (se houver).
+
 ##### Retorno
 
 ( _string_ )
 
+Mensagem de erro da execução do comando.
 
 ---
 
-#### <span style="color: #008000">exitErrorMessage</span>(<span style="color: #FF8000">exitErrorMessage</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+#### <span style="color: #008000">exitErrorMessage</span>(<span style="color: #FF8000">mensagemErro</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+##### Descrição
+
+Define a mensagem de erro da execução do comando do objeto atual.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **exitErrorMessage** | _string_ |   |
+| **mensagemErro** | _string_ | Mensagem de erro da execução do comando. |
 
 ##### Retorno
 
 ( _[SSHExecResult](../../objects/SSHExecResult)_ )
 
+Objeto SSHExecResult atual.
 
 ---
 
@@ -65,84 +85,34 @@ Resultado gerado pelos comandos SSH depois que são executados.
 ---
 
 #### <span style="color: #008000">exitStatus</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Descrição
+
+Retorna o código de saída do comando que foi executado.
+
 ##### Retorno
 
 ( _int_ )
 
+Código de saída do comando que foi executado.
 
 ---
 
-#### <span style="color: #008000">exitStatus</span>(<span style="color: #FF8000">exitStatus</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+#### <span style="color: #008000">exitStatus</span>(<span style="color: #FF8000">statusSaida</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+##### Descrição
+
+Define o código de saída do comando que foi executado.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **exitStatus** | _int_ |   |
+| **statusSaida** | _int_ | Código de saída do comando que foi executado. |
 
 ##### Retorno
 
 ( _[SSHExecResult](../../objects/SSHExecResult)_ )
 
-
----
-
-## getError
-
----
-
-#### <span style="color: #008000">getError</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
-##### Retorno
-
-( _string_ )
-
-
----
-
-## getExitErrorMessage
-
----
-
-#### <span style="color: #008000">getExitErrorMessage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
-##### Retorno
-
-( _string_ )
-
-
----
-
-## getExitStatus
-
----
-
-#### <span style="color: #008000">getExitStatus</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
-##### Retorno
-
-( _int_ )
-
-
----
-
-## getId
-
----
-
-#### <span style="color: #008000">getId</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
-##### Retorno
-
-( _int_ )
-
-
----
-
-## getOutput
-
----
-
-#### <span style="color: #008000">getOutput</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
-##### Retorno
-
-( _string_ )
-
+Objeto SSHExecResult atual.
 
 ---
 
@@ -151,24 +121,34 @@ Resultado gerado pelos comandos SSH depois que são executados.
 ---
 
 #### <span style="color: #008000">id</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Descrição
+
+Retorna a identificação do objeto atual.
+
 ##### Retorno
 
 ( _int_ )
 
+Identificação do objeto atual.
 
 ---
 
-#### <span style="color: #008000">id</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+#### <span style="color: #008000">id</span>(<span style="color: #FF8000">identificacao</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+##### Descrição
+
+Define a identificação do objeto atual.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **id** | _int_ |   |
+| **identificacao** | _int_ | Identificação do objeto atual. |
 
 ##### Retorno
 
 ( _[SSHExecResult](../../objects/SSHExecResult)_ )
 
+Objeto SSHExecResult atual.
 
 ---
 
@@ -177,114 +157,34 @@ Resultado gerado pelos comandos SSH depois que são executados.
 ---
 
 #### <span style="color: #008000">output</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Descrição
+
+Retorna o resultado da execução do comando do objeto atual.
+
 ##### Retorno
 
 ( _string_ )
 
+Resultado da execução do comando.
 
 ---
 
-#### <span style="color: #008000">output</span>(<span style="color: #FF8000">output</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+#### <span style="color: #008000">output</span>(<span style="color: #FF8000">resultado</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+##### Descrição
+
+Define o resultado da execução do comando do objeto atual.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **output** | _string_ |   |
+| **resultado** | _string_ | Resultado da execução do comando. |
 
 ##### Retorno
 
 ( _[SSHExecResult](../../objects/SSHExecResult)_ )
 
-
----
-
-## setError
-
----
-
-#### <span style="color: #008000">setError</span>(<span style="color: #FF8000">error</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **error** | _string_ |   |
-
-##### Retorno
-
-( _[SSHExecResult](../../objects/SSHExecResult)_ )
-
-
----
-
-## setExitErrorMessage
-
----
-
-#### <span style="color: #008000">setExitErrorMessage</span>(<span style="color: #FF8000">exitErrorMessage</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **exitErrorMessage** | _string_ |   |
-
-##### Retorno
-
-( _[SSHExecResult](../../objects/SSHExecResult)_ )
-
-
----
-
-## setExitStatus
-
----
-
-#### <span style="color: #008000">setExitStatus</span>(<span style="color: #FF8000">exitStatus</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **exitStatus** | _int_ |   |
-
-##### Retorno
-
-( _[SSHExecResult](../../objects/SSHExecResult)_ )
-
-
----
-
-## setId
-
----
-
-#### <span style="color: #008000">setId</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **id** | _int_ |   |
-
-##### Retorno
-
-( _[SSHExecResult](../../objects/SSHExecResult)_ )
-
-
----
-
-## setOutput
-
----
-
-#### <span style="color: #008000">setOutput</span>(<span style="color: #FF8000">output</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **output** | _string_ |   |
-
-##### Retorno
-
-( _[SSHExecResult](../../objects/SSHExecResult)_ )
-
+Objeto SSHExecResult atual.
 
 ---
 
