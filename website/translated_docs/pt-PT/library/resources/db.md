@@ -809,39 +809,6 @@ Lista dos registos de dados encontrados.
 
 ---
 
-## findAll
-
----
-
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">findAll</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **tableName** | _string_ |   |
-
-##### Retorno
-
-( _java.util.List_ )
-
-
----
-
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">findAll</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">example</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **tableName** | _string_ |   |
-| **example** | _[Values](../../objects/Values)_ |   |
-
-##### Retorno
-
-( _java.util.List_ )
-
-
----
-
 ## findFirst
 
 ---

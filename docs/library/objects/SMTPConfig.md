@@ -13,10 +13,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getAuthMechanisms</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns which authentication mechanisms are being used in the current configuration.
+
 ##### Return
 
 ( _string_ )
 
+Authentication mechanisms used in the current configuration.
 
 ---
 
@@ -25,10 +30,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getAuthNTLMDomain</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the NTLM domain used in the current configuration.
+
 ##### Return
 
 ( _string_ )
 
+The NTLM domain.
 
 ---
 
@@ -37,10 +47,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getBcc</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns email addresses in the BCC (Blind Carbon Copy) field.
+
 ##### Return
 
 ( _string_ )
 
+The email addresses.
 
 ---
 
@@ -49,10 +64,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getCc</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns email addresses in the CC (Carbon Copy) field
+
 ##### Return
 
 ( _string_ )
 
+The email addresses.
 
 ---
 
@@ -61,10 +81,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getFrom</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the sender email address of the current configuration.
+
 ##### Return
 
 ( _string_ )
 
+Email address.
 
 ---
 
@@ -73,10 +98,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getHTML</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the HTML code of the email message.
+
 ##### Return
 
 ( _string_ )
 
+The HTML code.
 
 ---
 
@@ -85,10 +115,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getHost</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the current configuration host.
+
 ##### Return
 
 ( _string_ )
 
+Host of the current configuration.
 
 ---
 
@@ -97,10 +132,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getMultipartSubtype</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the subtype of the multipart email message.
+
 ##### Return
 
 ( _string_ )
 
+Message subtype.
 
 ---
 
@@ -109,10 +149,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getPassword</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the current configuration password.
+
 ##### Return
 
 ( _string_ )
 
+Password.
 
 ---
 
@@ -121,10 +166,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getPort</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Description
+
+Returns the current configuration port.
+
 ##### Return
 
 ( _int_ )
 
+Port of the current configuration.
 
 ---
 
@@ -133,10 +183,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getProtocol</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the name of the protocol used in the current configuration.
+
 ##### Return
 
 ( _string_ )
 
+Current configuration protocol name.
 
 ---
 
@@ -145,10 +200,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getReplyTo</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the email addresses specified in the Reply-To field.
+
 ##### Return
 
 ( _string_ )
 
+The email addresses.
 
 ---
 
@@ -157,10 +217,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getSocketFactoryClass</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the socketFactory class of the current configuration.
+
 ##### Return
 
 ( _string_ )
 
+Current configuration socketFactory class name
 
 ---
 
@@ -169,10 +234,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getSocketFactoryPort</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Description
+
+Returns the socketFactory port of the current configuration.
+
 ##### Return
 
 ( _int_ )
 
+Current configuration socketFactory port.
 
 ---
 
@@ -181,10 +251,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getSubject</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the email message subject.
+
 ##### Return
 
 ( _string_ )
 
+The email subject.
 
 ---
 
@@ -193,10 +268,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getSubjectPrefix</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the email message subject prefix.
+
 ##### Return
 
 ( _string_ )
 
+The subject prefix.
 
 ---
 
@@ -205,10 +285,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getText</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the text of the email message.
+
 ##### Return
 
 ( _string_ )
 
+The text message.
 
 ---
 
@@ -217,10 +302,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getTo</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the recipient's email address from the current configuration.
+
 ##### Return
 
 ( _string_ )
 
+Email address.
 
 ---
 
@@ -229,10 +319,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">getUsername</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the current configuration username.
+
 ##### Return
 
 ( _string_ )
 
+Username.
 
 ---
 
@@ -241,10 +336,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">isDebug</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether the current object is in debug mode active.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether it is active or not.
 
 ---
 
@@ -253,10 +353,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">isEnabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether the current configuration is active.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether it is active or not.
 
 ---
 
@@ -265,10 +370,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">isQuitWait</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether in the current configuration the client should wait for the server's response to the QUIT command before closing the connection.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not to wait for a response.
 
 ---
 
@@ -277,10 +387,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">isSSL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether SSL is enabled in the current configuration.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it is active.
 
 ---
 
@@ -289,10 +404,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">isSocketFactoryFallback</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether the configuration should attempt to use the system default SocketFactory if the specified SocketFactory fails.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it will be used.
 
 ---
 
@@ -301,10 +421,15 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">isTLS</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether TLS is enabled in the current configuration.
+
 ##### Return
 
 ( _boolean_ )
 
+Whether or not it is active.
 
 ---
 
@@ -313,16 +438,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setAuthMechanisms</span>(<span style="color: #FF8000">authMechanisms</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines which authentication mechanisms will be used in the current configuration.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **authMechanisms** | _string_ |   |
+| **authMechanisms** | _string_ | Authentication mechanisms to be used in the current configuration. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -331,16 +461,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setAuthNTLMDomain</span>(<span style="color: #FF8000">authNTLMDomain</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the NTLM domain in the current configuration.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **authNTLMDomain** | _string_ |   |
+| **authNTLMDomain** | _string_ | The NTLM domain. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -349,16 +484,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setBcc</span>(<span style="color: #FF8000">bcc</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the email addresses in the BCC (Blind Carbon Copy) field.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **bcc** | _string_ |   |
+| **bcc** | _string_ | The email addresses. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -367,16 +507,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setCc</span>(<span style="color: #FF8000">cc</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines email addresses in the CC (Carbon Copy) field.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **cc** | _string_ |   |
+| **cc** | _string_ | The email addresses. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -385,16 +530,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setDebug</span>(<span style="color: #FF8000">debug</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines whether the current object is in debug mode active.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **debug** | _boolean_ |   |
+| **debug** | _boolean_ | Whether it is active or not. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -403,16 +553,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines whether the current configuration is active.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **enabled** | _boolean_ |   |
+| **enabled** | _boolean_ | Whether it is active or not. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -421,16 +576,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setFrom</span>(<span style="color: #FF8000">from</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the sender email address of the current configuration.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **from** | _string_ |   |
+| **from** | _string_ | Email address. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -439,16 +599,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setHTML</span>(<span style="color: #FF8000">html</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the HTML code that will build the body of the email message.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **html** | _string_ |   |
+| **html** | _string_ | The HTML code. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -457,16 +622,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setHost</span>(<span style="color: #FF8000">host</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the host of the current configuration.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **host** | _string_ |   |
+| **host** | _string_ | Host to be defined. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -475,16 +645,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setMultipartSubtype</span>(<span style="color: #FF8000">multipartSubtype</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the subtype of the multipart email message.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **multipartSubtype** | _string_ |   |
+| **multipartSubtype** | _string_ | Message subtype. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -493,16 +668,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setPassword</span>(<span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the current configuration password.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **password** | _string_ |   |
+| **password** | _string_ | Password. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -511,16 +691,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setPort</span>(<span style="color: #FF8000">port</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the port of the current configuration.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **port** | _int_ |   |
+| **port** | _int_ | Port to be defined. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -529,16 +714,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setProtocol</span>(<span style="color: #FF8000">protocol</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the protocol used in the current configuration.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **protocol** | _string_ |   |
+| **protocol** | _string_ | Protocol to be defined. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -547,16 +737,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setQuitWait</span>(<span style="color: #FF8000">quitWait</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines whether in the current configuration the client must wait for the server's response to the QUIT command before closing the connection.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **quitWait** | _boolean_ |   |
+| **quitWait** | _boolean_ | Whether or not to wait for a response. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -565,16 +760,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setReplyTo</span>(<span style="color: #FF8000">replyTo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the email addresses specified in the Reply-To field.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **replyTo** | _string_ |   |
+| **replyTo** | _string_ | The email addresses. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -583,16 +783,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setSSL</span>(<span style="color: #FF8000">ssl</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines whether SSL is enabled in the current configuration.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **ssl** | _boolean_ |   |
+| **ssl** | _boolean_ | Whether or not it is active. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -601,16 +806,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setSocketFactoryClass</span>(<span style="color: #FF8000">socketFactoryClass</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the name of the class to be used in the current configuration's SocketFactory.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **socketFactoryClass** | _string_ |   |
+| **socketFactoryClass** | _string_ | Name of the class to be used in the current configuration's SocketFactory. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -618,17 +828,22 @@ Definição da configuração do SMTP.
 
 ---
 
-#### <span style="color: #008000">setSocketFactoryFallback</span>(<span style="color: #FF8000">socketFactoryFallback</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+#### <span style="color: #008000">setSocketFactoryFallback</span>(<span style="color: #FF8000">ssl</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines whether the configuration should attempt to use the system default SocketFactory if the specified SocketFactory fails.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **socketFactoryFallback** | _boolean_ |   |
+| **ssl** | _boolean_ | Whether or not it will be used. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -637,16 +852,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setSocketFactoryPort</span>(<span style="color: #FF8000">socketFactoryPort</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the port to be used in the current configuration's SocketFactory.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **socketFactoryPort** | _int_ |   |
+| **socketFactoryPort** | _int_ | Port to be used in the current configuration's SocketFactory. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -655,16 +875,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setSubject</span>(<span style="color: #FF8000">subject</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the email message subject.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **subject** | _string_ |   |
+| **subject** | _string_ | The email subject. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -673,16 +898,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setSubjectPrefix</span>(<span style="color: #FF8000">subjectPrefix</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the email message subject prefix.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **subjectPrefix** | _string_ |   |
+| **subjectPrefix** | _string_ | The subject prefix. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -690,17 +920,22 @@ Definição da configuração do SMTP.
 
 ---
 
-#### <span style="color: #008000">setTLS</span>(<span style="color: #FF8000">tls</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+#### <span style="color: #008000">setTLS</span>(<span style="color: #FF8000">ssl</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines whether TLS is enabled in the current configuration.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **tls** | _boolean_ |   |
+| **ssl** | _boolean_ | Whether or not it is active. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -709,16 +944,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the text of the email message.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **text** | _string_ |   |
+| **text** | _string_ | The text message. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -727,16 +967,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setTo</span>(<span style="color: #FF8000">to</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the recipient's email address of the current configuration.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **to** | _string_ |   |
+| **to** | _string_ | Email address. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 
@@ -745,16 +990,21 @@ Definição da configuração do SMTP.
 ---
 
 #### <span style="color: #008000">setUsername</span>(<span style="color: #FF8000">username</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SMTPConfig](../../objects/SMTPConfig)</span>
+##### Description
+
+Defines the current configuration username.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **username** | _string_ |   |
+| **username** | _string_ | Username. |
 
 ##### Return
 
 ( _[SMTPConfig](../../objects/SMTPConfig)_ )
 
+Current SMTPConfig object.
 
 ---
 

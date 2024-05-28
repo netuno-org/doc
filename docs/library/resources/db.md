@@ -809,39 +809,6 @@ List of data records found.
 
 ---
 
-## findAll
-
----
-
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">findAll</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **tableName** | _string_ |   |
-
-##### Return
-
-( _java.util.List_ )
-
-
----
-
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">findAll</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">example</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **tableName** | _string_ |   |
-| **example** | _[Values](../../objects/Values)_ |   |
-
-##### Return
-
-( _java.util.List_ )
-
-
----
-
 ## findFirst
 
 ---
