@@ -364,10 +364,10 @@ ID (numeric identifier) of the logged-in user's group.
 
 ---
 
-#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[Group](../../resources/Group)</span>
+#### <span style="font-weight: normal">_group</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[Group](../../resources/group)</span>
 ##### Return
 
-( _[Group](../../resources/Group)_ )
+( _[Group](../../resources/group)_ )
 
 
 ---

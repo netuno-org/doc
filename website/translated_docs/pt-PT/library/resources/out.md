@@ -45,7 +45,7 @@ Se fechou a resposta do pedido HTTP.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -54,12 +54,12 @@ Se fechou a resposta do pedido HTTP.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -69,12 +69,12 @@ Se fechou a resposta do pedido HTTP.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -85,12 +85,12 @@ Se fechou a resposta do pedido HTTP.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -99,12 +99,12 @@ Se fechou a resposta do pedido HTTP.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -114,12 +114,12 @@ Se fechou a resposta do pedido HTTP.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -130,52 +130,52 @@ Se fechou a resposta do pedido HTTP.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 | **skip** | _long_ |   |
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">copy</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">skip</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 | **skip** | _long_ |   |
 | **size** | _long_ |   |
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -241,14 +241,14 @@ Lista de réplicas.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Inicia uma nova instância de saída de dados.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 A nova instância do recurso de Output.
 
@@ -282,7 +282,7 @@ A nova instância do recurso de Output.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -291,12 +291,12 @@ A nova instância do recurso de Output.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -305,12 +305,12 @@ A nova instância do recurso de Output.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -319,26 +319,26 @@ A nova instância do recurso de Output.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **json** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **json** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">json</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -347,7 +347,7 @@ A nova instância do recurso de Output.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -364,7 +364,7 @@ A nova instância do recurso de Output.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">jsonHTMLEscape</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">jsonHTMLEscape</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -373,7 +373,7 @@ A nova instância do recurso de Output.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -390,7 +390,7 @@ A nova instância do recurso de Output.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">jsonIdentFactor</span>(<span style="color: #FF8000">jsonIdentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">jsonIdentFactor</span>(<span style="color: #FF8000">jsonIdentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -399,7 +399,7 @@ A nova instância do recurso de Output.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -442,7 +442,7 @@ O fluxo de saída de dados original.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o resultado booleano.
@@ -455,13 +455,13 @@ Envia o resultado booleano.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">carater</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">carater</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o caráter.
@@ -474,13 +474,13 @@ Envia o caráter.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o resultado booleano.
@@ -493,13 +493,13 @@ Envia o resultado booleano.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o resultado booleano.
@@ -512,13 +512,13 @@ Envia o resultado booleano.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o número.
@@ -531,13 +531,13 @@ Envia o número.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Converte o objeto para texto e envia.
@@ -550,13 +550,13 @@ Converte o objeto para texto e envia.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o conteúdo de texto.
@@ -569,13 +569,13 @@ Envia o conteúdo de texto.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o resultado booleano.
@@ -588,13 +588,13 @@ Envia o resultado booleano.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o resultado booleano.
@@ -607,7 +607,7 @@ Envia o resultado booleano.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
@@ -617,7 +617,7 @@ Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">printf</span>(<span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">objects</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">printf</span>(<span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">objects</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -627,7 +627,7 @@ Saída de dados atual.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -636,20 +636,20 @@ Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>() : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>() : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia uma quebra de linha.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o resultado booleano com uma quebra de linha.
@@ -662,13 +662,13 @@ Envia o resultado booleano com uma quebra de linha.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">carater</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">carater</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o caráter com uma quebra de linha.
@@ -681,13 +681,13 @@ Envia o caráter com uma quebra de linha.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o resultado booleano com uma quebra de linha.
@@ -700,13 +700,13 @@ Envia o resultado booleano com uma quebra de linha.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o resultado booleano com uma quebra de linha.
@@ -719,13 +719,13 @@ Envia o resultado booleano com uma quebra de linha.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">numero</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o número com uma quebra de linha.
@@ -738,13 +738,13 @@ Envia o número com uma quebra de linha.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Converte o objeto para texto e envia com uma quebra de linha.
@@ -757,13 +757,13 @@ Converte o objeto para texto e envia com uma quebra de linha.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o conteúdo de texto com uma quebra de linha.
@@ -776,13 +776,13 @@ Envia o conteúdo de texto com uma quebra de linha.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o resultado booleano com uma quebra de linha.
@@ -795,13 +795,13 @@ Envia o resultado booleano com uma quebra de linha.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">bool</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Descrição
 
 Envia o resultado booleano com uma quebra de linha.
@@ -814,7 +814,7 @@ Envia o resultado booleano com uma quebra de linha.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 Saída de dados atual.
 
@@ -824,7 +824,7 @@ Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">setJSONHTMLEscape</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">setJSONHTMLEscape</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -833,7 +833,7 @@ Saída de dados atual.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -842,7 +842,7 @@ Saída de dados atual.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">setJSONIdentFactor</span>(<span style="color: #FF8000">jsonIdentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">setJSONIdentFactor</span>(<span style="color: #FF8000">jsonIdentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -851,7 +851,7 @@ Saída de dados atual.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -893,7 +893,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">write</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">write</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -902,12 +902,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">write</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">off</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">len</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">write</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">off</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">len</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -918,12 +918,12 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">write</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">write</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -932,7 +932,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -941,7 +941,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeBoolean</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeBoolean</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -950,7 +950,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -959,7 +959,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeByte</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeByte</span>(<span style="color: #FF8000">b</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -968,7 +968,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -977,7 +977,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeChar</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeChar</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -986,7 +986,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -995,7 +995,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeDouble</span>(<span style="color: #FF8000">d</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeDouble</span>(<span style="color: #FF8000">d</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1004,7 +1004,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -1013,7 +1013,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeFloat</span>(<span style="color: #FF8000">f</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeFloat</span>(<span style="color: #FF8000">f</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1022,7 +1022,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -1031,7 +1031,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeInt</span>(<span style="color: #FF8000">i</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeInt</span>(<span style="color: #FF8000">i</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1040,7 +1040,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -1049,7 +1049,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeLong</span>(<span style="color: #FF8000">l</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeLong</span>(<span style="color: #FF8000">l</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1058,7 +1058,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---
@@ -1067,7 +1067,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 
-#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeShort</span>(<span style="color: #FF8000">s</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/Out)</span>
+#### <span style="font-weight: normal">_out</span>.<span style="color: #008000">writeShort</span>(<span style="color: #FF8000">s</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Out](../../resources/out)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1076,7 +1076,7 @@ Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ##### Retorno
 
-( _[Out](../../resources/Out)_ )
+( _[Out](../../resources/out)_ )
 
 
 ---

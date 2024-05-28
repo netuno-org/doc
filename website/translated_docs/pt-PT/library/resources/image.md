@@ -117,13 +117,13 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">attributedString</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">attributes</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">java.text.AttributedString</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">attributedString</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">attributes</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">java.text.AttributedString</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **text** | _string_ |   |
-| **attributes** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **attributes** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 
 ##### Retorno
 
@@ -303,7 +303,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">crop</span>(<span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">crop</span>(<span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -315,7 +315,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -324,7 +324,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawArc</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">startAngle</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcAngle</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawArc</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">startAngle</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcAngle</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -339,7 +339,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -348,7 +348,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawBackground</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawBackground</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -357,7 +357,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -366,7 +366,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -377,12 +377,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -394,12 +394,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -412,12 +412,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -431,12 +431,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">dx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">dx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -453,12 +453,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">dx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">dx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -476,12 +476,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -495,12 +495,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -515,12 +515,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -532,12 +532,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -550,12 +550,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">at</span>: <span style="font-weight: normal; font-style: italic;">java.awt.geom.AffineTransform</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>, <span style="color: #FF8000">at</span>: <span style="font-weight: normal; font-style: italic;">java.awt.geom.AffineTransform</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -565,12 +565,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.image.BufferedImage</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.image.BufferedImage</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -581,12 +581,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.image.BufferedImage</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.image.BufferedImage</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -598,50 +598,50 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../../resources/Image)_ |   |
+| **image** | _[Image](../../resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../../resources/Image)_ |   |
+| **image** | _[Image](../../resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **rotation** | _double_ |   |
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../../resources/Image)_ |   |
+| **image** | _[Image](../../resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **width** | _int_ |   |
@@ -649,17 +649,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../../resources/Image)_ |   |
+| **image** | _[Image](../../resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **width** | _int_ |   |
@@ -668,17 +668,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>, <span style="color: #FF8000">dx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>, <span style="color: #FF8000">dx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../../resources/Image)_ |   |
+| **image** | _[Image](../../resources/image)_ |   |
 | **dx1** | _int_ |   |
 | **dxy1** | _int_ |   |
 | **dx2** | _int_ |   |
@@ -690,17 +690,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>, <span style="color: #FF8000">dx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>, <span style="color: #FF8000">dx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dxy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sx2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">sy2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../../resources/Image)_ |   |
+| **image** | _[Image](../../resources/image)_ |   |
 | **dx1** | _int_ |   |
 | **dxy1** | _int_ |   |
 | **dx2** | _int_ |   |
@@ -713,17 +713,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../../resources/Image)_ |   |
+| **image** | _[Image](../../resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **width** | _int_ |   |
@@ -732,17 +732,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../../resources/Image)_ |   |
+| **image** | _[Image](../../resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **width** | _int_ |   |
@@ -752,34 +752,34 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../../resources/Image)_ |   |
+| **image** | _[Image](../../resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **bgColor** | _java.awt.Color_ |   |
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">bgColor</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../../resources/Image)_ |   |
+| **image** | _[Image](../../resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **bgColor** | _java.awt.Color_ |   |
@@ -787,22 +787,22 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>, <span style="color: #FF8000">at</span>: <span style="font-weight: normal; font-style: italic;">java.awt.geom.AffineTransform</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawImage</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>, <span style="color: #FF8000">at</span>: <span style="font-weight: normal; font-style: italic;">java.awt.geom.AffineTransform</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../../resources/Image)_ |   |
+| **image** | _[Image](../../resources/image)_ |   |
 | **at** | _java.awt.geom.AffineTransform_ |   |
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -811,7 +811,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawLine</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">x2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y2</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawLine</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">x2</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y2</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -824,7 +824,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -833,7 +833,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawOval</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawOval</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -846,7 +846,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -855,24 +855,24 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[I</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[I</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">int[]</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">int[]</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **color** | _java.awt.Color_ |   |
-| **xPoints** | _[I_ |   |
-| **yPoints** | _[I_ |   |
+| **xPoints** | _int[]_ |   |
+| **yPoints** | _int[]_ |   |
 | **nPoints** | _int_ |   |
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -883,12 +883,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -900,12 +900,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -916,12 +916,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -933,7 +933,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -942,24 +942,24 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolyline</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[I</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[I</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolyline</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">int[]</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">int[]</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **color** | _java.awt.Color_ |   |
-| **xPoints** | _[I_ |   |
-| **yPoints** | _[I_ |   |
+| **xPoints** | _int[]_ |   |
+| **yPoints** | _int[]_ |   |
 | **nPoints** | _int_ |   |
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolyline</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolyline</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -970,12 +970,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolyline</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolyline</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -987,12 +987,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolyline</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolyline</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1003,12 +1003,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolyline</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawPolyline</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1020,7 +1020,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -1029,7 +1029,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1042,12 +1042,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1061,7 +1061,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -1070,7 +1070,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawRoundRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcWidth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcHeight</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawRoundRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcWidth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcHeight</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1085,12 +1085,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawRoundRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcWidth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcHeight</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawRoundRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcWidth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcHeight</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1106,7 +1106,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -1115,7 +1115,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">font</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">font</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1128,12 +1128,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">font</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">font</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1147,12 +1147,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">font</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">at</span>: <span style="font-weight: normal; font-style: italic;">java.awt.geom.AffineTransform</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">font</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">at</span>: <span style="font-weight: normal; font-style: italic;">java.awt.geom.AffineTransform</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1166,12 +1166,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.text.AttributedString</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.text.AttributedString</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1182,12 +1182,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.text.AttributedString</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.text.AttributedString</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1199,12 +1199,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.text.AttributedString</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">at</span>: <span style="font-weight: normal; font-style: italic;">java.awt.geom.AffineTransform</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">drawText</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.text.AttributedString</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">at</span>: <span style="font-weight: normal; font-style: italic;">java.awt.geom.AffineTransform</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1216,7 +1216,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -1244,7 +1244,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillArc</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">startAngle</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcAngle</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillArc</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">startAngle</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcAngle</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1259,7 +1259,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -1268,7 +1268,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillOval</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillOval</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1281,7 +1281,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -1290,24 +1290,24 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[I</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[I</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">int[]</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">int[]</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **color** | _java.awt.Color_ |   |
-| **xPoints** | _[I_ |   |
-| **yPoints** | _[I_ |   |
+| **xPoints** | _int[]_ |   |
+| **yPoints** | _int[]_ |   |
 | **nPoints** | _int_ |   |
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1318,12 +1318,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1335,12 +1335,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1351,12 +1351,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillPolygon</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">xPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">yPoints</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">nPoints</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1368,7 +1368,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -1377,7 +1377,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1390,12 +1390,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1409,7 +1409,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -1418,7 +1418,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillRoundRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcWidth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcHeight</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillRoundRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcWidth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcHeight</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1433,12 +1433,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillRoundRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcWidth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcHeight</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">fillRoundRect</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Color</span>, <span style="color: #FF8000">x</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">y</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcWidth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arcHeight</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">rotation</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1454,7 +1454,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -1495,13 +1495,13 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **type** | _int_ |   |
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 
 ##### Retorno
 
@@ -1510,13 +1510,13 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">style</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">style</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **type** | _int_ |   |
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 | **style** | _int_ |   |
 | **size** | _float_ |   |
 
@@ -1588,12 +1588,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 
 ##### Retorno
 
@@ -1602,12 +1602,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 | **size** | _float_ |   |
 
 ##### Retorno
@@ -1617,12 +1617,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">style</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">style</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 | **style** | _int_ |   |
 | **size** | _float_ |   |
 
@@ -1819,7 +1819,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1829,12 +1829,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">image</span>: <span style="font-weight: normal; font-style: italic;">java.awt.Image</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1843,12 +1843,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1857,12 +1857,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">javax.imageio.stream.ImageInputStream</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">javax.imageio.stream.ImageInputStream</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1871,12 +1871,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1885,12 +1885,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1899,21 +1899,21 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -1930,7 +1930,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">jpegCompression</span>(<span style="color: #FF8000">jpegCompression</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">jpegCompression</span>(<span style="color: #FF8000">jpegCompression</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1939,7 +1939,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -1983,7 +1983,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">output</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">output</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1992,7 +1992,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -2038,10 +2038,10 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">resetGraphics</span>() : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">resetGraphics</span>() : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -2050,7 +2050,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">resize</span>(<span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">resize</span>(<span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2060,7 +2060,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -2069,7 +2069,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2079,12 +2079,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">javax.imageio.stream.ImageOutputStream</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">javax.imageio.stream.ImageOutputStream</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2094,12 +2094,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2109,12 +2109,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2124,22 +2124,22 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 | **type** | _string_ |   |
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---
@@ -2148,7 +2148,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">setJPEGCompression</span>(<span style="color: #FF8000">jpegCompression</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/Image)</span>
+#### <span style="font-weight: normal">_image</span>.<span style="color: #008000">setJPEGCompression</span>(<span style="color: #FF8000">jpegCompression</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Image](../../resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2157,7 +2157,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../../resources/Image)_ )
+( _[Image](../../resources/image)_ )
 
 
 ---

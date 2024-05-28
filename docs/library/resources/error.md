@@ -120,7 +120,7 @@ Creates a new class Values that results from the error.
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">data</span>(<span style="color: #FF8000">retorno</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Error](../../resources/Error)</span>
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">data</span>(<span style="color: #FF8000">retorno</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Error](../../resources/error)</span>
 ##### Description
 
 Creates a new class Values that results from the error.
@@ -133,7 +133,7 @@ Creates a new class Values that results from the error.
 
 ##### Return
 
-( _[Error](../../resources/Error)_ )
+( _[Error](../../resources/error)_ )
 
 
 ---

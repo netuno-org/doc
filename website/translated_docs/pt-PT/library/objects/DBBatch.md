@@ -54,10 +54,10 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### <span style="color: #008000">execute</span>() : <span style="font-weight: normal; font-style: italic;">[I</span>
+#### <span style="color: #008000">execute</span>() : <span style="font-weight: normal; font-style: italic;">int[]</span>
 ##### Retorno
 
-( _[I_ )
+( _int[]_ )
 
 
 ---

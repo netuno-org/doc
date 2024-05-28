@@ -29,7 +29,7 @@ O caminho absoluto do storage.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Descrição
 
 Inicia um novo storage para a pasta onde ficam os ficheiros de uma tabela que representa um formulário.
@@ -42,13 +42,13 @@ Inicia um novo storage para a pasta onde ficam os ficheiros de uma tabela que re
 
 ##### Retorno
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 Novo storage iniciado para a tabela de base de dados.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Descrição
 
 Inicia um novo storage para a pasta onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
@@ -62,13 +62,13 @@ Inicia um novo storage para a pasta onde ficam os ficheiros de uma coluna espec�
 
 ##### Retorno
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 Novo storage iniciado para a coluna de uma tabela de base de dados.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Descrição
 
 Inicia um novo storage para um caminho específico onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
@@ -83,13 +83,13 @@ Inicia um novo storage para um caminho específico onde ficam os ficheiros de um
 
 ##### Retorno
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 Novo storage iniciado para o caminho específico a partir de uma coluna em uma tabela de base de dados.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">nomeFicheiro</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">tabela</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">nomeFicheiro</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Descrição
 
 Inicia um novo storage para um caminho específico onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
@@ -105,7 +105,7 @@ Inicia um novo storage para um caminho específico onde ficam os ficheiros de um
 
 ##### Retorno
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 Novo storage iniciado para o caminho específico a partir de uma coluna em uma tabela de base de dados.
 
@@ -115,10 +115,10 @@ Novo storage iniciado para o caminho específico a partir de uma coluna em uma t
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">ensurePath</span>() : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">ensurePath</span>() : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Retorno
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 
 ---
@@ -161,7 +161,7 @@ Permite interagir com o ficheiro fisicamente.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">pasta</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">pasta</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Descrição
 
 Inicia um novo storage para um caminho específico do filesystem dentro do storage.
@@ -175,13 +175,13 @@ Inicia um novo storage para um caminho específico do filesystem dentro do stora
 
 ##### Retorno
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 Novo storage iniciado para o caminho específico a partir do filesystem do storage.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">pasta</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">nomeFicheiro</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">pasta</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">nomeFicheiro</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Descrição
 
 Inicia um novo storage para um caminho específico do filesystem dentro do storage.
@@ -196,7 +196,7 @@ Inicia um novo storage para um caminho específico do filesystem dentro do stora
 
 ##### Retorno
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 Novo storage iniciado para o caminho específico a partir do filesystem do storage.
 
@@ -491,7 +491,7 @@ Se é uma pasta.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">newRandomFile</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">newRandomFile</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Descrição
 
 Gera um novo storage a partir do storage atual mas para um ficheiro com um nome randómico e que ainda não exista e assim possa ser guardado sem conflitos.
@@ -504,7 +504,7 @@ Gera um novo storage a partir do storage atual mas para um ficheiro com um nome 
 
 ##### Retorno
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 Novo storage para um novo ficheiro com um nome randómico inexistente.
 

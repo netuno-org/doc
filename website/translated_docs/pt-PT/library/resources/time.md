@@ -2347,13 +2347,13 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneIdOf</span>(<span style="color: #FF8000">zoneId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">aliasMap</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>
+#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneIdOf</span>(<span style="color: #FF8000">zoneId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">aliasMap</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **zoneId** | _string_ |   |
-| **aliasMap** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **aliasMap** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 
 ##### Retorno
 
@@ -2443,13 +2443,13 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffsetOf</span>(<span style="color: #FF8000">zoneId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">aliasMap</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>
+#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffsetOf</span>(<span style="color: #FF8000">zoneId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">aliasMap</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **zoneId** | _string_ |   |
-| **aliasMap** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **aliasMap** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 
 ##### Retorno
 

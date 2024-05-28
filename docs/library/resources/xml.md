@@ -44,7 +44,7 @@ Objeto que gere a manipulação de documentos XML.
 
 ---
 
-#### <span style="font-weight: normal">_xml</span>.<span style="color: #008000">create</span>() : <span style="font-weight: normal; font-style: italic;">[XML](../../resources/XML)</span>
+#### <span style="font-weight: normal">_xml</span>.<span style="color: #008000">create</span>() : <span style="font-weight: normal; font-style: italic;">[XML](../../resources/xml)</span>
 ##### Description
 
 Cria uma nova instância para manipular XML.
@@ -57,7 +57,7 @@ const xml = _xml.create();
 
 ##### Return
 
-( _[XML](../../resources/XML)_ )
+( _[XML](../../resources/xml)_ )
 
 Nova instância do recurso XML.
 
@@ -267,7 +267,7 @@ Guarda o documento em um ficheiro.
 
 ---
 
-#### <span style="font-weight: normal">_xml</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">documento</span>: <span style="font-weight: normal; font-style: italic;">org.w3c.dom.Document</span>, <span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style="font-weight: normal">_xml</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">documento</span>: <span style="font-weight: normal; font-style: italic;">org.w3c.dom.Document</span>, <span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Guarda o documento no storage da aplicação.
@@ -277,7 +277,7 @@ Guarda o documento no storage da aplicação.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **documento** | _org.w3c.dom.Document_ | Objeto que contém a estrutura e dados do documento de XML. |
-| **storage** | _[Storage](../../resources/Storage)_ | Destino no storage da aplicação onde o documento deve ser guardado. |
+| **storage** | _[Storage](../../resources/storage)_ | Destino no storage da aplicação onde o documento deve ser guardado. |
 
 ##### Return
 

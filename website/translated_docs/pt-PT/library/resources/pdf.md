@@ -1402,7 +1402,7 @@ Retorna o conteudo extraído.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Extrai o conteúdo de PDFs.
@@ -1411,13 +1411,13 @@ Extrai o conteúdo de PDFs.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **conteúdo** | _[File](../../objects/File)_ | Conteúdo a ser extraído. |
+| **armazenamento** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ | Caminho do armazenamento. |
 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
 
-Retorna o conteudo extraído.
+Retorna o conteúdo extraido.
 
 ---
 
@@ -1437,25 +1437,6 @@ Extrai o conteúdo de PDFs.
 ( _[Values](../../objects/Values)_ )
 
 Retorna o conteudo extraído.
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
-##### Descrição
-
-Extrai o conteúdo de PDFs.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
-
-##### Retorno
-
-( _[Values](../../objects/Values)_ )
-
-Retorna o conteúdo extraido.
 
 ---
 
@@ -1562,7 +1543,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1571,7 +1552,7 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
+| **armazenamento** | _[Storage](../../resources/storage)_ | Caminho do armazenamento. |
 
 ##### Retorno
 
@@ -1581,7 +1562,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1590,7 +1571,7 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
+| **armazenamento** | _[Storage](../../resources/storage)_ | Caminho do armazenamento. |
 | **codificação** | _boolean_ | Codificação. |
 
 ##### Retorno
@@ -1601,7 +1582,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1610,7 +1591,7 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
+| **armazenamento** | _[Storage](../../resources/storage)_ | Caminho do armazenamento. |
 | **codificação** | _string_ | Codificação. |
 
 ##### Retorno
@@ -1621,7 +1602,7 @@ Retorna o tipo de letra.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">embedded</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">codificação</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">embedded</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
 ##### Descrição
 
 Cria um tipo de letra.
@@ -1630,7 +1611,7 @@ Cria um tipo de letra.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _[Storage](../../resources/Storage)_ | Caminho do armazenamento. |
+| **armazenamento** | _[Storage](../../resources/storage)_ | Caminho do armazenamento. |
 | **codificação** | _string_ | Codificação. |
 | **embedded** | _boolean_ |   |
 
@@ -1655,6 +1636,7 @@ Obtém o objecto Document do iText para a estrutura do documento PDF.
 
 ( _com.itextpdf.layout.Document_ )
 
+Gere a estrutura do documento.
 
 ---
 
@@ -1671,6 +1653,7 @@ Obtém o objecto PdfDocument do iText para a construção do documento PDF.
 
 ( _com.itextpdf.kernel.pdf.PdfDocument_ )
 
+Gere a construção do documento PDF.
 
 ---
 
@@ -1687,6 +1670,7 @@ Obtém o objecto PdfReader do iText para a leitura do documento PDF.
 
 ( _com.itextpdf.kernel.pdf.PdfReader_ )
 
+Gere a leitura de documento PDF.
 
 ---
 
@@ -1703,6 +1687,7 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ( _com.itextpdf.kernel.pdf.PdfWriter_ )
 
+Gere a escrita dos bytes do arquivo PDF.
 
 ---
 
@@ -1724,12 +1709,12 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">image</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Image</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">image</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Image</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 
 ##### Retorno
 
@@ -1742,7 +1727,7 @@ Obtém o objecto PdfWriter do iText para a escrita dos bytes do arquivo PDF.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[PDF](../../resources/PDF)</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[PDF](../../resources/pdf)</span>
 ##### Descrição
 
 Cria um novo objeto de recurso para a construção de PDFs.
@@ -1755,8 +1740,9 @@ const pdf = _pdf.init();
 
 ##### Retorno
 
-( _[PDF](../../resources/PDF)_ )
+( _[PDF](../../resources/pdf)_ )
 
+Nova instância do recurso PDF.
 
 ---
 
@@ -1843,29 +1829,29 @@ Cria um novo documento.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">tamanhoPagina</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
-Cria um novo documento PDF com o número de páginas inserida.
+Cria um novo documento PDF com tamanho de página específica.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
+| **tamanhoPagina** | _com.itextpdf.kernel.geom.PageSize_ | Tamanho da página. |
 
 ##### Retorno
 
 ( _com.itextpdf.layout.Document_ )
 
-Retorna um novo documento com o número de páginas inseridas.
+Retorna um novo documento com o tamanho de página definida.
 
 ---
 
 #### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
-Cria um novo documento PDF.
+Cria um novo documento PDF com tamanho de página A4.
 
 ##### Atributos
 
@@ -1877,106 +1863,55 @@ Cria um novo documento PDF.
 
 ( _com.itextpdf.layout.Document_ )
 
+Retorna um novo documento com o tamanho de página A4.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">saida</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
-Cria um novo documento PDF com o número de páginas inseridas.
+Cria um novo documento PDF com tamanho de página específica.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _[OutputStream](../../objects/OutputStream)_ | Caminho do ficheiro. |
+| **saida** | _[OutputStream](../../objects/OutputStream)_ | Caminho do ficheiro. |
 | **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
 
 ##### Retorno
 
 ( _com.itextpdf.layout.Document_ )
 
-Retorna um novo documento com o número de páginas inseridas.
+Retorna um novo documento com o tamanho de página definida.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">saida</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">nPaginas</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
-Cria um novo documento PDF com o número de páginas inseridas.
+Cria um novo documento PDF com tamanho de página específica.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ | Caminho do ficheiro. |
+| **saida** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ | Caminho do ficheiro. |
 | **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
 
 ##### Retorno
 
 ( _com.itextpdf.layout.Document_ )
 
-Retorna um novo documento com o número de páginas inseridas.
+Retorna um novo documento com o tamanho de página definida.
 
 ---
 
-## newPdfDocument
+## openDocument
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
-##### Descrição
-
-Cria um novo documento PDF.
-
-##### Retorno
-
-( _com.itextpdf.kernel.pdf.PdfDocument_ )
-
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
-##### Descrição
-
-Cria um novo documento PDF.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **armazenamento** | _[OutputStream](../../objects/OutputStream)_ | Caminho do ficheiro. |
-
-##### Retorno
-
-( _com.itextpdf.kernel.pdf.PdfDocument_ )
-
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newPdfDocument</span>(<span style="color: #FF8000">armazenamento</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
-##### Descrição
-
-Cria um novo documento PDF.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **armazenamento** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ | Caminho do ficheiro. |
-
-##### Retorno
-
-( _com.itextpdf.kernel.pdf.PdfDocument_ )
-
-
----
-
-## openPdfDocument
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Abre o documento PDF referente ao caminho inserido.
@@ -1989,13 +1924,13 @@ Abre o documento PDF referente ao caminho inserido.
 
 ##### Retorno
 
-( _com.itextpdf.kernel.pdf.PdfDocument_ )
+( _com.itextpdf.layout.Document_ )
 
 Retorna o documento PDF aberto.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2005,27 +1940,27 @@ Retorna o documento PDF aberto.
 
 ##### Retorno
 
-( _com.itextpdf.kernel.pdf.PdfDocument_ )
+( _com.itextpdf.layout.Document_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **in** | _[InputStream](../../objects/InputStream)_ |   |
-| **out** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ |   |
+| **out** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ |   |
 
 ##### Retorno
 
-( _com.itextpdf.kernel.pdf.PdfDocument_ )
+( _com.itextpdf.layout.Document_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">caminho</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Abre o documento PDF referente ao caminho inserido.
@@ -2034,42 +1969,42 @@ Abre o documento PDF referente ao caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **caminho** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ | Caminho do ficheiro. |
+| **caminho** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ | Caminho do ficheiro. |
 
 ##### Retorno
 
-( _com.itextpdf.kernel.pdf.PdfDocument_ )
+( _com.itextpdf.layout.Document_ )
 
 Retorna o documento PDF aberto.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ |   |
+| **in** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ |   |
 | **out** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 
-( _com.itextpdf.kernel.pdf.PdfDocument_ )
+( _com.itextpdf.layout.Document_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openPdfDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ |   |
-| **out** | _[Storage](../../resources/Storage) &#124; [File](../../objects/File)_ |   |
+| **in** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ |   |
+| **out** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ |   |
 
 ##### Retorno
 
-( _com.itextpdf.kernel.pdf.PdfDocument_ )
+( _com.itextpdf.layout.Document_ )
 
 
 ---
@@ -2098,16 +2033,16 @@ Definição da página.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">pageSize</span>(<span style="color: #FF8000">page</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">pageSize</span>(<span style="color: #FF8000">pagina</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>
 ##### Descrição
 
-Obtém a definição do tamanho de página, suporta:<br><ul><li>A0</li><li>A1</li><li>A2</li><li>A3</li><li>A4</li><li>A5</li><li>A6</li><li>A7</li><li>A8</li><li>A9</li><li>A10</li><li>B0</li><li>B1</li><li>B2</li><li>B3</li><li>B4</li><li>B5</li><li>B6</li><li>B7</li><li>B8</li><li>B9</li><li>B10</li><li>default</li><li>executive</li><li>ledger</li><li>legal</li><li>letter</li><li>tabloid</li></ul>
+Obtém definição de tamanho de página, códigos de páginas suportados:<br><ul><li>A0</li><li>A1</li><li>A2</li><li>A3</li><li>A4</li><li>A5</li><li>A6</li><li>A7</li><li>A8</li><li>A9</li><li>A10</li><li>B0</li><li>B1</li><li>B2</li><li>B3</li><li>B4</li><li>B5</li><li>B6</li><li>B7</li><li>B8</li><li>B9</li><li>B10</li><li>default</li><li>executive</li><li>ledger</li><li>legal</li><li>letter</li><li>tabloid</li></ul>
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **page** | _string_ |   |
+| **pagina** | _string_ | Código do tipo de página. |
 
 ##### Retorno
 
@@ -2142,17 +2077,22 @@ Cria um parágrafo.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">setDocument</span>(<span style="color: #FF8000">document</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>) : <span style="font-weight: normal; font-style: italic;">[PDF](../../resources/PDF)</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">setDocument</span>(<span style="color: #FF8000">documento</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>) : <span style="font-weight: normal; font-style: italic;">[PDF](../../resources/pdf)</span>
+##### Descrição
+
+Define o objeto de documento PDF do iText.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **document** | _com.itextpdf.layout.Document_ |   |
+| **documento** | _com.itextpdf.layout.Document_ | Objeto de documento do iText. |
 
 ##### Retorno
 
-( _[PDF](../../resources/PDF)_ )
+( _[PDF](../../resources/pdf)_ )
 
+A instância atual do recurso PDF.
 
 ---
 
@@ -2160,26 +2100,7 @@ Cria um parágrafo.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
-##### Descrição
-
-Cria uma tabela com colunas da largura definida.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **largura** | _double[]_ | Largura das colunas da tabela. |
-
-##### Retorno
-
-( _com.itextpdf.layout.element.Table_ )
-
-Retorna uma tabela com a largura das colunas inseridas.
-
----
-
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double[]</span>, <span style="color: #FF8000">colunaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">colunas</span>: <span style="font-weight: normal; font-style: italic;">double[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela.
@@ -2188,8 +2109,7 @@ Cria uma tabela.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **largura** | _double[]_ | Largura das colunas. |
-| **colunaLarga** | _boolean_ | Coluna de tamanho grande. |
+| **colunas** | _double[]_ | Número de colunas. |
 
 ##### Retorno
 
@@ -2199,26 +2119,27 @@ Retorna a tabela criada.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">double[]</span>, <span style="color: #FF8000">tabelaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
-Cria uma tabela com colunas da largura definida.
+Cria uma tabela com a largura das colunas definidas.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **largura** | _float[]_ | Largura das colunas da tabela. |
+| **largura** | _double[]_ | Lista com as larguras de cada coluna da tabela. |
+| **tabelaLarga** | _boolean_ | Define que a tabela é larga. |
 
 ##### Retorno
 
 ( _com.itextpdf.layout.element.Table_ )
 
-Retorna uma tabela com a largura das colunas inseridas.
+Retorna uma tabela com a largura das colunas definidas.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float[]</span>, <span style="color: #FF8000">colunaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">colunas</span>: <span style="font-weight: normal; font-style: italic;">float[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela.
@@ -2227,8 +2148,7 @@ Cria uma tabela.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **largura** | _float[]_ | Largura das colunas. |
-| **colunaLarga** | _boolean_ | Coluna de tamanho grande. |
+| **colunas** | _float[]_ | Número de colunas. |
 
 ##### Retorno
 
@@ -2238,26 +2158,27 @@ Retorna a tabela criada.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">[I</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">float[]</span>, <span style="color: #FF8000">tabelaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
-Cria uma tabela com colunas da largura definida.
+Cria uma tabela com a largura das colunas definidas.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **largura** | _[I_ | Largura das colunas da tabela. |
+| **largura** | _float[]_ | Lista com as larguras de cada coluna da tabela. |
+| **tabelaLarga** | _boolean_ | Define que a tabela é larga. |
 
 ##### Retorno
 
 ( _com.itextpdf.layout.element.Table_ )
 
-Retorna uma tabela com a largura das colunas inseridas.
+Retorna uma tabela com a largura das colunas definidas.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">[I</span>, <span style="color: #FF8000">colunaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">colunas</span>: <span style="font-weight: normal; font-style: italic;">int[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
 Cria uma tabela.
@@ -2266,14 +2187,33 @@ Cria uma tabela.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **largura** | _[I_ | Largura das colunas. |
-| **colunaLarga** | _boolean_ | Coluna de tamanho grande. |
+| **colunas** | _int[]_ | Número de colunas. |
 
 ##### Retorno
 
 ( _com.itextpdf.layout.element.Table_ )
 
 Retorna a tabela criada.
+
+---
+
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">int[]</span>, <span style="color: #FF8000">tabelaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+##### Descrição
+
+Cria uma tabela com a largura das colunas definidas.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **largura** | _int[]_ | Lista com as larguras de cada coluna da tabela. |
+| **tabelaLarga** | _boolean_ | Define que a tabela é larga. |
+
+##### Retorno
+
+( _com.itextpdf.layout.element.Table_ )
+
+Retorna uma tabela com a largura das colunas definidas.
 
 ---
 
@@ -2305,72 +2245,72 @@ Cria uma tabela com a largura das colunas definidas.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **largura** | _java.util.List_ | Largura das colunas da tabela. |
+| **largura** | _java.util.List_ | Lista com as larguras de cada coluna da tabela. |
 
 ##### Retorno
 
 ( _com.itextpdf.layout.element.Table_ )
 
-Retorna uma tabela com colunas da largura inseridas.
+Retorna uma tabela com a largura das colunas definidas.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">colunaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">tabelaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
-Cria uma tabela.
+Cria uma tabela com a largura das colunas definidas.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **largura** | _java.util.List_ | Largura das colunas. |
-| **colunaLarga** | _boolean_ | Coluna de tamanho grande. |
+| **largura** | _java.util.List_ | Lista com as larguras de cada coluna da tabela. |
+| **tabelaLarga** | _boolean_ | Define que a tabela é larga. |
 
 ##### Retorno
 
 ( _com.itextpdf.layout.element.Table_ )
 
-Retorna a tabela criada.
+Retorna uma tabela com a largura das colunas definidas.
 
 ---
 
 #### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
-Cria uma tabela com colunas da largura definida.
+Cria uma tabela com a largura das colunas definidas.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **largura** | _[Values](../../objects/Values)_ | Largura das colunas da tabela. |
+| **largura** | _[Values](../../objects/Values)_ | Lista com as larguras de cada coluna da tabela. |
 
 ##### Retorno
 
 ( _com.itextpdf.layout.element.Table_ )
 
-Retorna uma tabela com a largura das colunas inseridas.
+Retorna uma tabela com a largura das colunas definidas.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">colunaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">largura</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">tabelaLarga</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
 ##### Descrição
 
-Cria uma tabela.
+Cria uma tabela com a largura das colunas definidas.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **largura** | _[Values](../../objects/Values)_ | Largura das colunas. |
-| **colunaLarga** | _boolean_ | Coluna de tamanho grande. |
+| **largura** | _[Values](../../objects/Values)_ | Lista com as larguras de cada coluna da tabela. |
+| **tabelaLarga** | _boolean_ | Define que a tabela é larga. |
 
 ##### Retorno
 
 ( _com.itextpdf.layout.element.Table_ )
 
-Retorna a tabela criada.
+Retorna uma tabela com a largura das colunas definidas.
 
 ---
 
@@ -2458,7 +2398,7 @@ Retorna o HTML.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa para HTML o conteúdo inserido.
@@ -2467,7 +2407,7 @@ Passa para HTML o conteúdo inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **conteúdo** | _[Storage](../../resources/Storage)_ | Conteúdo a passar pra HTML. |
+| **conteúdo** | _[Storage](../../resources/storage)_ | Conteúdo a passar pra HTML. |
 
 ##### Retorno
 
@@ -2538,7 +2478,7 @@ Retorna o HTML.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">conteúdo</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Descrição
 
 Passa o conteúdo inserido para texto.
@@ -2547,7 +2487,7 @@ Passa o conteúdo inserido para texto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **conteúdo** | _[Storage](../../resources/Storage)_ | Conteúdo a passar para texto. |
+| **conteúdo** | _[Storage](../../resources/storage)_ | Conteúdo a passar para texto. |
 
 ##### Retorno
 

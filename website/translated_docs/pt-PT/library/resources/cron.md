@@ -251,7 +251,7 @@ Se foi possível continuar o serviço agendado.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/Cron)</span>
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/cron)</span>
 ##### Descrição
 
 Cria um agendamento de execução de serviço.
@@ -276,13 +276,13 @@ _cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos"
 
 ##### Retorno
 
-( _[Cron](../../resources/Cron)_ )
+( _[Cron](../../resources/cron)_ )
 
 A instância atual do Cron.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/Cron)</span>
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">chave</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/cron)</span>
 ##### Descrição
 
 Cria um agendamento de execução de serviço.
@@ -308,7 +308,7 @@ _cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos"
 
 ##### Retorno
 
-( _[Cron](../../resources/Cron)_ )
+( _[Cron](../../resources/cron)_ )
 
 A instância atual do Cron.
 

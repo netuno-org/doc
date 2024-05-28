@@ -158,7 +158,7 @@ Retorna se está ativado.
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/jwt)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -167,7 +167,7 @@ Retorna se está ativado.
 
 ##### Retorno
 
-( _[JWT](../../resources/JWT)_ )
+( _[JWT](../../resources/jwt)_ )
 
 
 ---
@@ -249,15 +249,15 @@ Retorna os valores codificados.
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/jwt)</span>
 ##### Retorno
 
-( _[JWT](../../resources/JWT)_ )
+( _[JWT](../../resources/jwt)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">secret</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">secret</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/jwt)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -266,12 +266,12 @@ Retorna os valores codificados.
 
 ##### Retorno
 
-( _[JWT](../../resources/JWT)_ )
+( _[JWT](../../resources/jwt)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/jwt)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -280,7 +280,7 @@ Retorna os valores codificados.
 
 ##### Retorno
 
-( _[JWT](../../resources/JWT)_ )
+( _[JWT](../../resources/jwt)_ )
 
 
 ---
@@ -309,7 +309,7 @@ Retorna os valores codificados.
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">key</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">key</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/jwt)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -318,7 +318,7 @@ Retorna os valores codificados.
 
 ##### Retorno
 
-( _[JWT](../../resources/JWT)_ )
+( _[JWT](../../resources/jwt)_ )
 
 
 ---
@@ -327,7 +327,7 @@ Retorna os valores codificados.
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/jwt)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -336,7 +336,7 @@ Retorna os valores codificados.
 
 ##### Retorno
 
-( _[JWT](../../resources/JWT)_ )
+( _[JWT](../../resources/jwt)_ )
 
 
 ---
@@ -345,7 +345,7 @@ Retorna os valores codificados.
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">setHMACKeyFromSecret</span>(<span style="color: #FF8000">secret</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">setHMACKeyFromSecret</span>(<span style="color: #FF8000">secret</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/jwt)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -354,7 +354,7 @@ Retorna os valores codificados.
 
 ##### Retorno
 
-( _[JWT](../../resources/JWT)_ )
+( _[JWT](../../resources/jwt)_ )
 
 
 ---
@@ -363,7 +363,7 @@ Retorna os valores codificados.
 
 ---
 
-#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">setKey</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/JWT)</span>
+#### <span style="font-weight: normal">_jwt</span>.<span style="color: #008000">setKey</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>) : <span style="font-weight: normal; font-style: italic;">[JWT](../../resources/jwt)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -372,7 +372,7 @@ Retorna os valores codificados.
 
 ##### Retorno
 
-( _[JWT](../../resources/JWT)_ )
+( _[JWT](../../resources/jwt)_ )
 
 
 ---

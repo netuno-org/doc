@@ -48,7 +48,7 @@ excel.output("ages.xls");
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">activeSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### `_xls.create()`.<span style="color: #008000">activeSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Sets the spreadsheet that is active.
@@ -61,13 +61,13 @@ Sets the spreadsheet that is active.
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 A instância atual do recurso XLS.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">activeSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### `_xls.create()`.<span style="color: #008000">activeSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Sets the spreadsheet that is active.
@@ -80,7 +80,7 @@ Sets the spreadsheet that is active.
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 The current instance of the XLS resource.
 
@@ -176,7 +176,7 @@ Reference of the position of the last cell with data entered.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -185,7 +185,7 @@ Adds a data table to the spreadsheet.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **config** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Configuration of the data table. |
+| **config** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Configuration of the data table. |
 | **data** | _java.util.List_ | List of data to be inserted. |
 
 ##### Return
@@ -502,7 +502,7 @@ Numeric position of the column.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">create</span>() : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">create</span>() : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Creates a new Excel document.
@@ -515,7 +515,7 @@ const excel = _xls.create();
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 New XLS resource instance.
 
@@ -808,7 +808,7 @@ The reference object of the inserted image.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">anchor</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">anchor</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
 ##### Description
 
 Inserts an image associated with the anchor in a specific spreadsheet.
@@ -818,7 +818,7 @@ Inserts an image associated with the anchor in a specific spreadsheet.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **sheet** | _org.apache.poi.ss.usermodel.Sheet_ | Spreadsheet that will be used to insert the image. |
-| **storage** | _[Storage](../../resources/Storage)_ | Storage reference associated with an image file. |
+| **storage** | _[Storage](../../resources/storage)_ | Storage reference associated with an image file. |
 | **anchor** | _org.apache.poi.ss.usermodel.ClientAnchor_ | Anchor to associate the image. |
 
 ##### Return
@@ -870,7 +870,7 @@ The reference object of the inserted image.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
+#### `_xls.create()`.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
 ##### Description
 
 Insert the image into the specified cell.
@@ -879,7 +879,7 @@ Insert the image into the specified cell.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ | Storage reference associated with an image file. |
+| **storage** | _[Storage](../../resources/storage)_ | Storage reference associated with an image file. |
 | **linha** | _int_ | Line number. |
 | **coluna** | _int_ | Column number. |
 
@@ -891,7 +891,7 @@ The reference object of the inserted image.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">anchor</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
+#### `_xls.create()`.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">anchor</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
 ##### Description
 
 Inserts an image associated with the anchor.
@@ -900,7 +900,7 @@ Inserts an image associated with the anchor.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ | Storage reference associated with an image file. |
+| **storage** | _[Storage](../../resources/storage)_ | Storage reference associated with an image file. |
 | **anchor** | _org.apache.poi.ss.usermodel.ClientAnchor_ | Anchor to associate the image. |
 
 ##### Return
@@ -964,7 +964,7 @@ The reference of the merged cell region.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -977,13 +977,13 @@ Opens an Excel file.
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -997,13 +997,13 @@ Opens an Excel file.
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1016,13 +1016,13 @@ Opens an Excel file.
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1036,13 +1036,13 @@ Opens an Excel file.
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1055,13 +1055,13 @@ Opens an Excel file.
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1075,13 +1075,13 @@ Opens an Excel file.
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1090,17 +1090,17 @@ Opens an Excel file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ | Storage reference where the file will be opened. |
+| **storage** | _[Storage](../../resources/storage)_ | Storage reference where the file will be opened. |
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1109,12 +1109,12 @@ Opens an Excel file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ | Storage reference where the file will be opened. |
+| **storage** | _[Storage](../../resources/storage)_ | Storage reference where the file will be opened. |
 | **password** | _string_ | File password. |
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
@@ -1467,7 +1467,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1476,7 +1476,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/Storage)_ | Excel file reference. |
+| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
 
 ##### Return
 
@@ -1486,7 +1486,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1495,7 +1495,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/Storage)_ | Excel file reference. |
+| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
 | **hiddenSheets** | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
@@ -1506,7 +1506,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1515,7 +1515,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/Storage)_ | Excel file reference. |
+| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
 | **sheetNumber** | _int_ | Spreadsheet number. |
 
 ##### Return
@@ -1526,7 +1526,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1535,7 +1535,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/Storage)_ | Excel file reference. |
+| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
 | **sheetNumber** | _int_ | Spreadsheet number. |
 | **hiddenSheets** | _boolean_ | It also processes hidden spreadsheets. |
 
@@ -1547,7 +1547,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1556,7 +1556,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/Storage)_ | Excel file reference. |
+| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
 | **hiddenSheets** | _string_ | It also processes hidden spreadsheets. |
 
 ##### Return
@@ -1567,7 +1567,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1576,7 +1576,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/Storage)_ | Excel file reference. |
+| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
 | **sheetNumber** | _string_ | Spreadsheet number. |
 | **hiddenSheets** | _boolean_ | It also processes hidden spreadsheets. |
 
@@ -1588,7 +1588,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1597,7 +1597,7 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/Storage)_ | Excel file reference. |
+| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
 | **sheetNumber** | _string_ | Spreadsheet number. |
 | **hiddenSheets** | _int_ | It also processes hidden spreadsheets. |
 
@@ -1609,12 +1609,12 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 | **password** | _string_ |   |
 | **sheetNumber** | _int_ |   |
 | **hiddenSheets** | _boolean_ |   |
@@ -1770,7 +1770,7 @@ Writes the data from the final file to the output.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">save</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### `_xls.create()`.<span style="color: #008000">save</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Description
 
 Writes the data from the final file to the internal storage of the application.
@@ -1779,7 +1779,7 @@ Writes the data from the final file to the internal storage of the application.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ | Storage reference where the file will be saved. |
+| **storage** | _[Storage](../../resources/storage)_ | Storage reference where the file will be saved. |
 
 ##### Return
 
@@ -1792,7 +1792,7 @@ Writes the data from the final file to the internal storage of the application.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Insert data in a specific cell.
@@ -1803,17 +1803,17 @@ Insert data in a specific cell.
 |---|---|---|
 | **row** | _int_ | Line number. |
 | **col** | _int_ | Column number. |
-| **data** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data to be inserted. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data to be inserted. |
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Insert data in a specific cell.
@@ -1828,13 +1828,13 @@ Insert data in a specific cell.
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">cell</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">cell</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Insert data in a specific cell.
@@ -1844,17 +1844,17 @@ Insert data in a specific cell.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **cell** | _org.apache.poi.ss.usermodel.Cell_ | Cell object. |
-| **data** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data to be inserted. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data to be inserted. |
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">cell</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">cell</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Insert data in a specific cell.
@@ -1868,13 +1868,13 @@ Insert data in a specific cell.
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Inserts data into a specific cell in a spreadsheet.
@@ -1886,17 +1886,17 @@ Inserts data into a specific cell in a spreadsheet.
 | **sheet** | _org.apache.poi.ss.usermodel.Sheet_ | Spreadsheet object. |
 | **row** | _int_ | Line number. |
 | **col** | _int_ | Column number. |
-| **data** | _[Config](../../resources/Config) &#124; [Exec](../../resources/Exec) &#124; [Header](../../resources/Header) &#124; [Req](../../resources/Req) &#124; [Res](../../resources/Res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data to be inserted. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data to be inserted. |
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/XLS)</span>
+#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
 ##### Description
 
 Inserts data into a specific cell in a spreadsheet.
@@ -1912,7 +1912,7 @@ Inserts data into a specific cell in a spreadsheet.
 
 ##### Return
 
-( _[XLS](../../resources/XLS)_ )
+( _[XLS](../../resources/xls)_ )
 
 The current instance of the XLS resource.
 

@@ -255,7 +255,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">to</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[URL](../../resources/URL)</span>
+#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">to</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[URL](../../resources/url)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -264,7 +264,7 @@ Recurso de gestão de URLs da aplicação.
 
 ##### Return
 
-( _[URL](../../resources/URL)_ )
+( _[URL](../../resources/url)_ )
 
 
 ---

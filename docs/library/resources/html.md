@@ -186,7 +186,7 @@ File content in HTML.
 
 ---
 
-#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parse</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parse</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
 ##### Description
 
 It performs an interpretation of a content and returns it in HTML.
@@ -195,7 +195,7 @@ It performs an interpretation of a content and returns it in HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ | Path of the file in storage that will be processed. |
+| **storage** | _[Storage](../../resources/storage)_ | Path of the file in storage that will be processed. |
 | **baseUri** | _string_ | Base Url to resolve relative links. |
 | **charset** | _string_ | Character encoding type code. |
 

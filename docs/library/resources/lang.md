@@ -138,20 +138,20 @@ Returns the key and the text inserted.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/Lang)</span>
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/lang)</span>
 ##### Description
 
 Initiates the Lang resource.
 
 ##### Return
 
-( _[Lang](../../resources/Lang)_ )
+( _[Lang](../../resources/lang)_ )
 
 Returns the default lang.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">localeName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/Lang)</span>
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">localeName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/lang)</span>
 ##### Description
 
 Sets the default locale key with a inserted text.
@@ -164,13 +164,13 @@ Sets the default locale key with a inserted text.
 
 ##### Return
 
-( _[Lang](../../resources/Lang)_ )
+( _[Lang](../../resources/lang)_ )
 
 Returns the key and the text inserted.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">localeName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">asDefault</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/Lang)</span>
+#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">localeName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">asDefault</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/lang)</span>
 ##### Description
 
 Sets the default locale key with a inserted text.
@@ -184,7 +184,7 @@ Sets the default locale key with a inserted text.
 
 ##### Return
 
-( _[Lang](../../resources/Lang)_ )
+( _[Lang](../../resources/lang)_ )
 
 Returns the key and the text inserted.
 

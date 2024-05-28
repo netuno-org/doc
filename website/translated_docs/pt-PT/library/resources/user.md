@@ -462,10 +462,10 @@ ID (identificador númerico) do utilizador logado.
 
 ---
 
-#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[User](../../resources/User)</span>
+#### <span style="font-weight: normal">_user</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[User](../../resources/user)</span>
 ##### Retorno
 
-( _[User](../../resources/User)_ )
+( _[User](../../resources/user)_ )
 
 
 ---

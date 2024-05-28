@@ -186,7 +186,7 @@ Conteúdo do ficheiro em HTML.
 
 ---
 
-#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parse</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
+#### <span style="font-weight: normal">_html</span>.<span style="color: #008000">parse</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">baseUri</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.jsoup.nodes.Document</span>
 ##### Descrição
 
 Realiza a interpretação dum conteúdo e retorna-o em HTML.
@@ -195,7 +195,7 @@ Realiza a interpretação dum conteúdo e retorna-o em HTML.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ | Caminho do ficheiro em storage que deverá ser processado. |
+| **storage** | _[Storage](../../resources/storage)_ | Caminho do ficheiro em storage que deverá ser processado. |
 | **baseUri** | _string_ | Url base para resolver links relativos. |
 | **charset** | _string_ | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
 
