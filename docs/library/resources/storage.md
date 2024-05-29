@@ -29,7 +29,7 @@ The absolute storage path.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Description
 
 Starts a new storage for the folder where the files of a table that represent a form are.
@@ -42,13 +42,13 @@ Starts a new storage for the folder where the files of a table that represent a 
 
 ##### Return
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 New storage started for the database table.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Description
 
 Starts a new storage for the folder where the files of a specific column of a table are located that represents a field of a form.
@@ -62,13 +62,13 @@ Starts a new storage for the folder where the files of a specific column of a ta
 
 ##### Return
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 New storage started for a database table column.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific path where the files for a specific column of a table are located that represent a field on a form.
@@ -83,13 +83,13 @@ Starts a new storage for a specific path where the files for a specific column o
 
 ##### Return
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 New storage started for the specific path from a column in a database table.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">database</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific path where the files for a specific column of a table are located that represent a field on a form.
@@ -105,7 +105,7 @@ Starts a new storage for a specific path where the files for a specific column o
 
 ##### Return
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 New storage started for the specific path from a column in a database table.
 
@@ -115,10 +115,10 @@ New storage started for the specific path from a column in a database table.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">ensurePath</span>() : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">ensurePath</span>() : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Return
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 
 ---
@@ -161,7 +161,7 @@ It allows to interact with the file physically.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">folder</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">folder</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific filesystem path within the storage.
@@ -175,13 +175,13 @@ Starts a new storage for a specific filesystem path within the storage.
 
 ##### Return
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 New storage started for the specific path from the storage filesystem.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">folder</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">filesystem</span>(<span style="color: #FF8000">folder</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific filesystem path within the storage.
@@ -196,7 +196,7 @@ Starts a new storage for a specific filesystem path within the storage.
 
 ##### Return
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 New storage started for the specific path from the storage filesystem.
 
@@ -253,6 +253,64 @@ The base path of the storage.
 
 ---
 
+## getInput
+
+---
+
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getInput</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+##### Description
+
+Gets the input object from Netuno for the storage being used.
+
+##### Return
+
+( _[InputStream](../../objects/InputStream)_ )
+
+Data input object from Netuno to the storage in use.
+
+---
+
+## getInputStream
+
+---
+
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getInputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+##### Return
+
+( _[InputStream](../../objects/InputStream)_ )
+
+
+---
+
+## getOutput
+
+---
+
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getOutput</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
+##### Description
+
+Gets the output object from Netuno for the storage being used.
+
+##### Return
+
+( _[OutputStream](../../objects/OutputStream)_ )
+
+Data output object from Netuno to the storage in use.
+
+---
+
+## getOutputStream
+
+---
+
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">getOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
+##### Return
+
+( _[OutputStream](../../objects/OutputStream)_ )
+
+
+---
+
 ## input
 
 ---
@@ -274,14 +332,14 @@ Data input object from Netuno to the storage in use.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Description
 
 Gets the Java input object for the storage being used.
 
 ##### Return
 
-( _java.io.InputStream_ )
+( _[InputStream](../../objects/InputStream)_ )
 
 Java data input object for the storage in use.
 
@@ -433,7 +491,7 @@ If it is a folder.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">newRandomFile</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">newRandomFile</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>
 ##### Description
 
 Generates a new storage from the current storage but for a file with a random name that does not yet exist and thus can be saved without conflicts.
@@ -446,7 +504,7 @@ Generates a new storage from the current storage but for a file with a random na
 
 ##### Return
 
-( _[Storage](../../resources/Storage)_ )
+( _[Storage](../../resources/storage)_ )
 
 New storage for a new file with a non-existent random name.
 
@@ -473,14 +531,14 @@ Data output object from Netuno to the storage in use.
 
 ---
 
-#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
+#### <span style="font-weight: normal">_storage</span>.<span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Description
 
 Gets the Java output object for the storage being used.
 
 ##### Return
 
-( _java.io.OutputStream_ )
+( _[OutputStream](../../objects/OutputStream)_ )
 
 Java data output object for the storage in use.
 

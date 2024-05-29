@@ -13,7 +13,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">basicConsume</span>(<span style="color: #FF8000">settings</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/RabbitMQ)</span>
+#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">basicConsume</span>(<span style="color: #FF8000">settings</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/rabbitMQ)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -22,7 +22,7 @@ Permite enviar e receber mensagens.
 
 ##### Return
 
-( _[RabbitMQ](../../resources/RabbitMQ)_ )
+( _[RabbitMQ](../../resources/rabbitMQ)_ )
 
 
 ---
@@ -67,7 +67,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">serverName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/RabbitMQ)</span>
+#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">serverName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/rabbitMQ)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -76,12 +76,12 @@ Permite enviar e receber mensagens.
 
 ##### Return
 
-( _[RabbitMQ](../../resources/RabbitMQ)_ )
+( _[RabbitMQ](../../resources/rabbitMQ)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">serverName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">connectionName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/RabbitMQ)</span>
+#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">serverName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">connectionName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/rabbitMQ)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -91,12 +91,12 @@ Permite enviar e receber mensagens.
 
 ##### Return
 
-( _[RabbitMQ](../../resources/RabbitMQ)_ )
+( _[RabbitMQ](../../resources/rabbitMQ)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">serverName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">connectionName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">channelName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/RabbitMQ)</span>
+#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">serverName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">connectionName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">channelName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/rabbitMQ)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -107,7 +107,7 @@ Permite enviar e receber mensagens.
 
 ##### Return
 
-( _[RabbitMQ](../../resources/RabbitMQ)_ )
+( _[RabbitMQ](../../resources/rabbitMQ)_ )
 
 
 ---
@@ -116,7 +116,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">rpcConsume</span>(<span style="color: #FF8000">settings</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/RabbitMQ)</span>
+#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">rpcConsume</span>(<span style="color: #FF8000">settings</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/rabbitMQ)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -125,7 +125,7 @@ Permite enviar e receber mensagens.
 
 ##### Return
 
-( _[RabbitMQ](../../resources/RabbitMQ)_ )
+( _[RabbitMQ](../../resources/rabbitMQ)_ )
 
 
 ---

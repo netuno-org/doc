@@ -148,6 +148,20 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
+#### <span style="color: #008000">contentType</span>(<span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **contentType** | _string_ |   |
+
+##### Retorno
+
+( _[File](../../objects/File)_ )
+
+
+---
+
 ## copy
 
 ---
@@ -430,18 +444,30 @@ Retorna o caminho completo até ao presente ficheiro.
 
 ---
 
+## getInput
+
+---
+
+#### <span style="color: #008000">getInput</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+##### Retorno
+
+( _[InputStream](../../objects/InputStream)_ )
+
+
+---
+
 ## getInputStream
 
 ---
 
-#### <span style="color: #008000">getInputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
+#### <span style="color: #008000">getInputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Descrição
 
 Retorna o número estimado de bytes.
 
 ##### Retorno
 
-( _java.io.InputStream_ )
+( _[InputStream](../../objects/InputStream)_ )
 
 
 ---
@@ -480,14 +506,26 @@ Retorna o nome do ficheiro do caminho inserido.
 
 ---
 
+## getOutput
+
+---
+
+#### <span style="color: #008000">getOutput</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
+##### Retorno
+
+( _[OutputStream](../../objects/OutputStream)_ )
+
+
+---
+
 ## getOutputStream
 
 ---
 
-#### <span style="color: #008000">getOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
+#### <span style="color: #008000">getOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Retorno
 
-( _java.io.OutputStream_ )
+( _[OutputStream](../../objects/OutputStream)_ )
 
 
 ---
@@ -578,10 +616,10 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 ---
 
-#### <span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
+#### <span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Retorno
 
-( _java.io.InputStream_ )
+( _[InputStream](../../objects/InputStream)_ )
 
 
 ---
@@ -762,10 +800,10 @@ Retorna o nome do ficheiro.
 
 ---
 
-#### <span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
+#### <span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Retorno
 
-( _java.io.OutputStream_ )
+( _[OutputStream](../../objects/OutputStream)_ )
 
 
 ---
@@ -955,6 +993,24 @@ Guarda o ficheiro no caminho inserido.
 ##### Retorno
 
 ( _string_ )
+
+
+---
+
+## setContentType
+
+---
+
+#### <span style="color: #008000">setContentType</span>(<span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **contentType** | _string_ |   |
+
+##### Retorno
+
+( _[File](../../objects/File)_ )
 
 
 ---

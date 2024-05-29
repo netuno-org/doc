@@ -56,7 +56,7 @@ Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -69,7 +69,7 @@ Define outra configuração que deve ser utilizada.
 
 ##### Retorno
 
-( _[IMAP](../../resources/IMAP)_ )
+( _[IMAP](../../resources/imap)_ )
 
 Objeto IMAP atual.
 
@@ -79,10 +79,10 @@ Objeto IMAP atual.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">connect</span>() : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">connect</span>() : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
 ##### Retorno
 
-( _[IMAP](../../resources/IMAP)_ )
+( _[IMAP](../../resources/imap)_ )
 
 
 ---
@@ -111,7 +111,7 @@ Objeto IMAP atual.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -124,7 +124,7 @@ Define se está habilitado.
 
 ##### Retorno
 
-( _[IMAP](../../resources/IMAP)_ )
+( _[IMAP](../../resources/imap)_ )
 
 Objeto IMAP atual.
 
@@ -208,20 +208,20 @@ Objeto da configuração ativa.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
 ##### Descrição
 
 Inicia uma nova instância do IMAP utilizando a configuração do IMAP da chave `default`.
 
 ##### Retorno
 
-( _[IMAP](../../resources/IMAP)_ )
+( _[IMAP](../../resources/imap)_ )
 
 A nova instância do recurso IMAP com base na configuração do IMAP `default`.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configKey</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configKey</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
 ##### Descrição
 
 Inicia uma nova instância do IMAP a partir de uma configuração específica.
@@ -234,13 +234,13 @@ Inicia uma nova instância do IMAP a partir de uma configuração específica.
 
 ##### Retorno
 
-( _[IMAP](../../resources/IMAP)_ )
+( _[IMAP](../../resources/imap)_ )
 
 A nova instância do recurso IMAP com base na configuração do IMAP especificada.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
 ##### Descrição
 
 Inicia uma nova instância do IMAP a partir de uma configuração que é definida em um objeto de configuração própria.
@@ -253,7 +253,7 @@ Inicia uma nova instância do IMAP a partir de uma configuração que é definid
 
 ##### Retorno
 
-( _[IMAP](../../resources/IMAP)_ )
+( _[IMAP](../../resources/imap)_ )
 
 A nova instância do recurso IMAP com base na configuração definida.
 
@@ -337,7 +337,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">openFolder</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">openFolder</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -346,12 +346,12 @@ Resultado se está ou não ativado.
 
 ##### Retorno
 
-( _[IMAP](../../resources/IMAP)_ )
+( _[IMAP](../../resources/imap)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">openFolder</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">write</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">openFolder</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">write</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -361,7 +361,7 @@ Resultado se está ou não ativado.
 
 ##### Retorno
 
-( _[IMAP](../../resources/IMAP)_ )
+( _[IMAP](../../resources/imap)_ )
 
 
 ---
@@ -370,7 +370,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -383,7 +383,7 @@ Define outra configuração que deve ser utilizada.
 
 ##### Retorno
 
-( _[IMAP](../../resources/IMAP)_ )
+( _[IMAP](../../resources/imap)_ )
 
 Objeto IMAP atual.
 
@@ -393,7 +393,7 @@ Objeto IMAP atual.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -406,7 +406,7 @@ Define se está habilitado.
 
 ##### Retorno
 
-( _[IMAP](../../resources/IMAP)_ )
+( _[IMAP](../../resources/imap)_ )
 
 Objeto IMAP atual.
 
@@ -440,16 +440,16 @@ Objeto IMAP atual.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">with</span>(<span style="color: #FF8000">smtp</span>: <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/SMTP)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/IMAP)</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">with</span>(<span style="color: #FF8000">smtp</span>: <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/smtp)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **smtp** | _[SMTP](../../resources/SMTP)_ |   |
+| **smtp** | _[SMTP](../../resources/smtp)_ |   |
 
 ##### Retorno
 
-( _[IMAP](../../resources/IMAP)_ )
+( _[IMAP](../../resources/imap)_ )
 
 
 ---

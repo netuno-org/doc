@@ -137,7 +137,7 @@ The current SFTP client.
 
 ---
 
-#### <span style="color: #008000">download</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destination</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSFTP](../../objects/SSHSFTP)</span>
+#### <span style="color: #008000">download</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destination</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSFTP](../../objects/SSHSFTP)</span>
 ##### Description
 
 Copies a server file to a local file.
@@ -147,7 +147,7 @@ Copies a server file to a local file.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **remotePath** | _string_ | File path in the server. |
-| **destination** | _java.io.OutputStream_ | Local file of destination to store the remote content. |
+| **destination** | _[OutputStream](../../objects/OutputStream)_ | Local file of destination to store the remote content. |
 
 ##### Return
 
@@ -305,7 +305,7 @@ The file size.
 
 ---
 
-#### <span style="color: #008000">upload</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">source</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSFTP](../../objects/SSHSFTP)</span>
+#### <span style="color: #008000">upload</span>(<span style="color: #FF8000">remotePath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">source</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[SSHSFTP](../../objects/SSHSFTP)</span>
 ##### Description
 
 Sends the file data to be saved in a server file.
@@ -315,7 +315,7 @@ Sends the file data to be saved in a server file.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **remotePath** | _string_ | File path in the server. |
-| **source** | _java.io.InputStream_ | Local file as the source. |
+| **source** | _[InputStream](../../objects/InputStream)_ | Local file as the source. |
 
 ##### Return
 

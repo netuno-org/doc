@@ -99,6 +99,24 @@ _exec.stop();
 
 ---
 
+## afterClose
+
+---
+
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">afterClose</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Function</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **function** | _java.util.function.Function_ |   |
+
+##### Retorno
+
+( _void_ )
+
+
+---
+
 ## as
 
 ---
@@ -856,7 +874,7 @@ _exec.stop();
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -865,12 +883,12 @@ _exec.stop();
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -880,12 +898,12 @@ _exec.stop();
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -894,12 +912,12 @@ _exec.stop();
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -909,7 +927,7 @@ _exec.stop();
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 
 ---
@@ -1331,62 +1349,20 @@ Objeto convertido para Values.
 
 ---
 
-## async
+## beforeClose
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">async</span>(<span style="color: #FF8000">functions</span>: <span style="font-weight: normal; font-style: italic;">[Lorg.graalvm.polyglot.Value;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Async](../../objects/Async)</span>
-##### Descrição
-
-Execução de funções de forma assíncrona.
-
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">beforeClose</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Function</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **functions** | _[Lorg.graalvm.polyglot.Value;[]_ |   |
+| **function** | _java.util.function.Function_ |   |
 
 ##### Retorno
 
-( _[Async](../../objects/Async)_ )
-
-
----
-
-## asyncData
-
----
-
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asyncData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">functions</span>: <span style="font-weight: normal; font-style: italic;">[Lorg.graalvm.polyglot.Value;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Async](../../objects/Async)</span>
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **data** | _java.lang.Object_ |   |
-| **functions** | _[Lorg.graalvm.polyglot.Value;[]_ |   |
-
-##### Retorno
-
-( _[Async](../../objects/Async)_ )
-
-
----
-
-## asyncList
-
----
-
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">asyncList</span>(<span style="color: #FF8000">list</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">[Async](../../objects/Async)</span>
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **list** | _[Values](../../objects/Values)_ |   |
-| **function** | _org.graalvm.polyglot.Value_ |   |
-
-##### Retorno
-
-( _[Async](../../objects/Async)_ )
+( _void_ )
 
 
 ---
@@ -1395,7 +1371,7 @@ Execução de funções de forma assíncrona.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">bind</span>(<span style="color: #FF8000">variavel</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">objeto</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Exec](../../resources/Exec)</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">bind</span>(<span style="color: #FF8000">variavel</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">objeto</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Exec](../../resources/exec)</span>
 ##### Descrição
 
 Realiza a transição de variáveis entre scripts, inclusive entre linguagens de programação diferentes.
@@ -1416,7 +1392,7 @@ _exec    .bind("transitarVar", minhaVarOriginal)    .core("outro-script-talvez-e
 
 ##### Retorno
 
-( _[Exec](../../resources/Exec)_ )
+( _[Exec](../../resources/exec)_ )
 
 
 ---
@@ -1867,6 +1843,65 @@ Define a restrição de segurança em um diretório específico para os objetos 
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
+
+
+---
+
+## functions
+
+---
+
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">functions</span>() : <span style="font-weight: normal; font-style: italic;">[Functions](../../objects/Functions)</span>
+##### Descrição
+
+Gerencia a execução de funções.
+
+##### Retorno
+
+( _[Functions](../../objects/Functions)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">functions</span>(<span style="color: #FF8000">functions</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.util.function.Function;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Functions](../../objects/Functions)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **functions** | _[Ljava.util.function.Function;[]_ |   |
+
+##### Retorno
+
+( _[Functions](../../objects/Functions)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">functions</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Functions](../../objects/Functions)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **data** | _java.lang.Object_ |   |
+
+##### Retorno
+
+( _[Functions](../../objects/Functions)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">functions</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">functions</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.util.function.Function;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Functions](../../objects/Functions)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **data** | _java.lang.Object_ |   |
+| **functions** | _[Ljava.util.function.Function;[]_ |   |
+
+##### Retorno
+
+( _[Functions](../../objects/Functions)_ )
 
 
 ---
@@ -2763,7 +2798,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2772,12 +2807,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2787,12 +2822,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2801,12 +2836,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">getMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2816,7 +2851,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 
 ---
@@ -3618,12 +3653,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">keysToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">keysToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _java.util.Map_ |   |
+| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 | **splitter** | _string_ |   |
 
 ##### Retorno
@@ -3731,12 +3766,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">loadJSON</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">loadJSON</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _java.io.InputStream_ |   |
+| **in** | _[InputStream](../../objects/InputStream)_ |   |
 
 ##### Retorno
 
@@ -3763,12 +3798,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">loadProperties</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">loadProperties</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _java.io.InputStream_ |   |
+| **in** | _[InputStream](../../objects/InputStream)_ |   |
 
 ##### Retorno
 
@@ -3844,10 +3879,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">map</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">map</span>() : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 
 ---
@@ -3882,6 +3917,30 @@ Se está em modo apenas leitura ou não.
 ##### Retorno
 
 ( _java.lang.Object_ )
+
+
+---
+
+## newList
+
+---
+
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">newList</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## newMap
+
+---
+
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">newMap</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Retorno
+
+( _[Values](../../objects/Values)_ )
 
 
 ---
@@ -3932,12 +3991,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">of</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">of</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _java.util.Map_ |   |
+| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 
 ##### Retorno
 
@@ -3978,6 +4037,24 @@ Se está em modo apenas leitura ou não.
 ##### Retorno
 
 ( _[Values](../../objects/Values)_ )
+
+
+---
+
+## onError
+
+---
+
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">onError</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Function</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **function** | _java.util.function.Function_ |   |
+
+##### Retorno
+
+( _void_ )
 
 
 ---
@@ -4038,12 +4115,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">putAll</span>(<span style="color: #FF8000">m</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">putAll</span>(<span style="color: #FF8000">m</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **m** | _java.util.Map_ |   |
+| **m** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 
 ##### Retorno
 
@@ -4280,12 +4357,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">saveJSON</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">saveJSON</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _java.io.OutputStream_ |   |
+| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -4312,12 +4389,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">saveProperties</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">saveProperties</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _java.io.OutputStream_ |   |
+| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -4404,12 +4481,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ignoreCase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ignoreCase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _java.util.Map_ |   |
+| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 | **content** | _string_ |   |
 | **splitter** | _string_ |   |
 | **ignoreCase** | _boolean_ |   |
@@ -5138,10 +5215,10 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toIntArray</span>() : <span style="font-weight: normal; font-style: italic;">[I</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toIntArray</span>() : <span style="font-weight: normal; font-style: italic;">int[]</span>
 ##### Retorno
 
-( _[I_ )
+( _int[]_ )
 
 
 ---
@@ -5342,10 +5419,10 @@ _out.println('Não chega nesta linha.');
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toMap</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">toMap</span>() : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 
 ---
@@ -5497,12 +5574,12 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _java.util.Map_ |   |
+| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 | **splitter** | _string_ |   |
 
 ##### Retorno
@@ -5512,12 +5589,12 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _java.util.Map_ |   |
+| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 | **splitter** | _string_ |   |
 | **excludes** | _[Ljava.lang.String;[]_ |   |
 
@@ -5528,12 +5605,12 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _java.util.Map_ |   |
+| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 | **splitter** | _string_ |   |
 | **excludes** | _[Ljava.lang.String;[]_ |   |
 | **config** | _[Values](../../objects/Values)_ |   |
@@ -5545,12 +5622,12 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="font-weight: normal">_exec</span>.<span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _java.util.Map_ |   |
+| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 | **splitter** | _string_ |   |
 | **config** | _[Values](../../objects/Values)_ |   |
 

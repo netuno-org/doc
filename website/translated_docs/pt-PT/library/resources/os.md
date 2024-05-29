@@ -86,7 +86,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -99,13 +99,13 @@ Define o caminho onde os comandos serão executados.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -118,13 +118,13 @@ Define o caminho onde os comandos serão executados.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -133,11 +133,11 @@ Define o caminho onde os comandos serão executados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **diretorio** | _[Storage](../../resources/Storage)_ | O local onde o comando será executado. |
+| **diretorio** | _[Storage](../../resources/storage)_ | O local onde o comando será executado. |
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 Instância do recurso de sistema operacional.
 
@@ -155,7 +155,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">env</span>(<span style="color: #FF8000">env</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">env</span>(<span style="color: #FF8000">env</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -164,7 +164,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 
 ---
@@ -335,14 +335,14 @@ O nome do sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Descrição
 
 Inicia uma nova instância do OS.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 A nova instância do recurso OS.
 
@@ -521,7 +521,7 @@ O nome do sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandError</span>(<span style="color: #FF8000">readCommandError</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandError</span>(<span style="color: #FF8000">readCommandError</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -530,7 +530,7 @@ O nome do sistema operacional.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 
 ---
@@ -547,7 +547,7 @@ O nome do sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandOutput</span>(<span style="color: #FF8000">readCommandOutput</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandOutput</span>(<span style="color: #FF8000">readCommandOutput</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -556,7 +556,7 @@ O nome do sistema operacional.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 
 ---
@@ -565,7 +565,7 @@ O nome do sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -578,13 +578,13 @@ Define o caminho onde os comandos serão executados.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -597,13 +597,13 @@ Define o caminho onde os comandos serão executados.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">diretorio</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -612,11 +612,11 @@ Define o caminho onde os comandos serão executados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **diretorio** | _[Storage](../../resources/Storage)_ | O local onde o comando será executado. |
+| **diretorio** | _[Storage](../../resources/storage)_ | O local onde o comando será executado. |
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 Instância do recurso de sistema operacional.
 
@@ -626,7 +626,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setEnv</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setEnv</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -635,7 +635,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 
 ---
@@ -644,7 +644,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setReadCommandError</span>(<span style="color: #FF8000">readCommandError</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setReadCommandError</span>(<span style="color: #FF8000">readCommandError</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -653,7 +653,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 
 ---
@@ -662,7 +662,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setReadCommandOutput</span>(<span style="color: #FF8000">readCommandOutput</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setReadCommandOutput</span>(<span style="color: #FF8000">readCommandOutput</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -671,7 +671,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 
 ---
@@ -680,7 +680,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setShell</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setShell</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -689,7 +689,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 
 ---
@@ -698,7 +698,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setWaitFor</span>(<span style="color: #FF8000">waitFor</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setWaitFor</span>(<span style="color: #FF8000">waitFor</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -707,7 +707,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 
 ---
@@ -724,7 +724,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">shell</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">shell</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -733,7 +733,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 
 ---
@@ -750,7 +750,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">waitFor</span>(<span style="color: #FF8000">waitFor</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/OS)</span>
+#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">waitFor</span>(<span style="color: #FF8000">waitFor</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -759,7 +759,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[OS](../../resources/OS)_ )
+( _[OS](../../resources/os)_ )
 
 
 ---

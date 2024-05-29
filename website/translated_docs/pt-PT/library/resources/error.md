@@ -120,7 +120,7 @@ Cria uma nova classe Values com os valores que originaram o erro.
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">data</span>(<span style="color: #FF8000">return</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Error](../../resources/Error)</span>
+#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">data</span>(<span style="color: #FF8000">return</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Error](../../resources/error)</span>
 ##### Descrição
 
 Cria uma nova classe Values que originaram o erro.
@@ -133,7 +133,7 @@ Cria uma nova classe Values que originaram o erro.
 
 ##### Retorno
 
-( _[Error](../../resources/Error)_ )
+( _[Error](../../resources/error)_ )
 
 
 ---

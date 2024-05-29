@@ -374,7 +374,7 @@ Number of records affected by the deletion.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Performs the deletion of records in the database based on the ID or UID passed on the data object.
@@ -399,7 +399,7 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Table name in the database. |
-| **data** | _java.util.Map_ | Data structure that should be deleted based on your ID or UID. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data structure that should be deleted based on your ID or UID. |
 
 ##### Return
 
@@ -448,7 +448,7 @@ Number of records affected by deletion.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">deleteMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">deleteMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">int[]</span>
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -478,13 +478,13 @@ _out.json({deletedData: deletedData})
 
 ##### Return
 
-( _[I_ )
+( _int[]_ )
 
 Array with number of records affected by the deletion for each object inside the list.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">deleteMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">deleteMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">int[]</span>
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -514,13 +514,13 @@ _out.json({deletedData: deletedData})
 
 ##### Return
 
-( _[I_ )
+( _int[]_ )
 
 Array with number of records affected by the deletion for each object inside the list.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">deleteMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">deleteMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int[]</span>
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -550,7 +550,7 @@ _out.json({deletedData: deletedData})
 
 ##### Return
 
-( _[I_ )
+( _int[]_ )
 
 Array with number of records affected by the deletion for each object inside the list.
 
@@ -1058,7 +1058,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DB](../../resources/DB)</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DB](../../resources/db)</span>
 ##### Description
 
 Starts a new DB resource for the connection name that is passed.
@@ -1084,7 +1084,7 @@ _out.json(countries)
 
 ##### Return
 
-( _[DB](../../resources/DB)_ )
+( _[DB](../../resources/db)_ )
 
 The new database feature that uses another database.
 
@@ -1094,7 +1094,7 @@ The new database feature that uses another database.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insert</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insert</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Executes the insertion of new data in the database and returns the id of the same.
@@ -1121,7 +1121,7 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **data** | _java.util.Map_ | Object with the data structure to be inserted. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Object with the data structure to be inserted. |
 
 ##### Return
 
@@ -1170,7 +1170,7 @@ _out.json(
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertIfNotExists</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertIfNotExists</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Executes the insertion of a value if it does not exist or returns the ID if it already exists.
@@ -1191,7 +1191,7 @@ _out.json({insertedData: insertedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **data** | _java.util.Map_ | Object with the data structure to be inserted. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Object with the data structure to be inserted. |
 
 ##### Return
 
@@ -1236,7 +1236,7 @@ ID of the data that was inserted or ID of the existing data.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">int[]</span>
 ##### Description
 
 Executes the insertion of multiple rows into a table of an Array of Objects or a List of Values.
@@ -1265,13 +1265,13 @@ _db.insertMany(
 
 ##### Return
 
-( _[I_ )
+( _int[]_ )
 
 An array with the IDs to the inserted data.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">int[]</span>
 ##### Description
 
 Executes the insertion of multiple rows into a table of an Array of Objects or a List of Values.
@@ -1300,13 +1300,13 @@ _db.insertMany(
 
 ##### Return
 
-( _[I_ )
+( _int[]_ )
 
 An array with the IDs to the inserted data.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">insertMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int[]</span>
 ##### Description
 
 Executes the insertion of multiple rows into a table of an Array of Objects or a List of Values.
@@ -1335,7 +1335,7 @@ _db.insertMany(
 
 ##### Return
 
-( _[I_ )
+( _int[]_ )
 
 An array with the IDs to the inserted data.
 
@@ -1869,7 +1869,7 @@ Content as a safe path (table.name) to use directly in queries.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Executes the insertion or update of a record in the database based on the UID.
@@ -1900,7 +1900,7 @@ _out.json(
 |---|---|---|
 | **table** | _string_ | Table's name in the database. |
 | **uid** | _int_ | Record's UID to be deleted. |
-| **data** | _java.util.Map_ | Object with data structure that should be maintained. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Object with data structure that should be maintained. |
 
 ##### Return
 
@@ -1951,7 +1951,7 @@ Number of records affected by the deletion.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">save</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Executes the insertion or update of a record in the database based on the UID.
@@ -1982,7 +1982,7 @@ _out.json(
 |---|---|---|
 | **table** | _string_ | Table's name in the database. |
 | **uid** | _string_ | Record's UID to be deleted. |
-| **data** | _java.util.Map_ | Object with data structure that should be maintained. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Object with data structure that should be maintained. |
 
 ##### Return
 
@@ -2037,7 +2037,7 @@ Number of records affected by the deletion.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Description
 
 Performs a search on a table returning an object of type DBSearchResult.
@@ -2058,7 +2058,7 @@ _out.json({data: query.getResults(),total: query.getTotal()});
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table in the database that should obtain the data. |
-| **data** | _java.util.Map_ | Data to carry out the search. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data to carry out the search. |
 
 ##### Return
 
@@ -2068,13 +2068,13 @@ Object of type DBSearchResult.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>, <span style="color: #FF8000">wildcards</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">search</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">wildcards</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DBSearchResult](../../objects/DBSearchResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ |   |
-| **data** | _java.util.Map_ |   |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
 | **wildcards** | _boolean_ |   |
 
 ##### Return
@@ -2162,7 +2162,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">store</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">store</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 
@@ -2184,7 +2184,7 @@ _out.json({storedData: storedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **data** | _java.util.Map_ | Object with the data structure to be inserted. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Object with the data structure to be inserted. |
 
 ##### Return
 
@@ -2679,7 +2679,7 @@ Content that is safe to use directly in query as string/varchar/text.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Performs the update of existing data according to the id that comes in the data that is passed.
@@ -2706,7 +2706,7 @@ _out.json(
 |---|---|---|
 | **table** | _string_ | Name of the table containing the records that must be updated. |
 | **id** | _int_ | ID of the registry that will be affected by the update. |
-| **data** | _java.util.Map_ | Object with the data structure that is to be maintained. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Object with the data structure that is to be maintained. |
 
 ##### Return
 
@@ -2753,7 +2753,7 @@ Number of records affected by the update.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">uid</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Performs the update of existing data according to the id that comes in the data that is passed.
@@ -2782,7 +2782,7 @@ _out.json(
 |---|---|---|
 | **table** | _string_ | Name of the table containing the records that must be updated. |
 | **uid** | _string_ | UID of the record that will be affected by the update. |
-| **data** | _java.util.Map_ | Object with data structure that should be maintained. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Object with data structure that should be maintained. |
 
 ##### Return
 
@@ -2831,7 +2831,7 @@ Number of records affected by the update.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">update</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Description
 
 Performs the update of existing data according to the id that comes in the data that is passed.
@@ -2857,7 +2857,7 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table containing the records that must be updated. |
-| **data** | _java.util.Map_ | Object with the data structure that is to be maintained. |
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Object with the data structure that is to be maintained. |
 
 ##### Return
 
@@ -2907,7 +2907,7 @@ Number of records affected by the update.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">updateMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">updateMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">int[]</span>
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -2939,13 +2939,13 @@ _out.json({updatedData: updatedData})
 
 ##### Return
 
-( _[I_ )
+( _int[]_ )
 
 Array with number of records affected by the update for each object inside the list.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">updateMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">updateMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">int[]</span>
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -2977,13 +2977,13 @@ _out.json({updatedData: updatedData})
 
 ##### Return
 
-( _[I_ )
+( _int[]_ )
 
 Array with number of records affected by the update for each object inside the list.
 
 ---
 
-#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">updateMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[I</span>
+#### <span style="font-weight: normal">_db</span>.<span style="color: #008000">updateMany</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">dataItems</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">int[]</span>
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -3015,7 +3015,7 @@ _out.json({updatedData: updatedData})
 
 ##### Return
 
-( _[I_ )
+( _int[]_ )
 
 Array with number of records affected by the update for each object inside the list.
 

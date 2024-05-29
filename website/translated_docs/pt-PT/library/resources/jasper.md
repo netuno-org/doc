@@ -12,12 +12,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToHtmlFile</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToHtmlFile</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 
 ##### Retorno
 
@@ -42,12 +42,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToPdfFile</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToPdfFile</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 
 ##### Retorno
 
@@ -60,12 +60,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToPdfStream</span>(<span style="color: #FF8000">output</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToPdfStream</span>(<span style="color: #FF8000">output</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **output** | _java.io.OutputStream_ |   |
+| **output** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -78,10 +78,10 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Jasper](../../resources/Jasper)</span>
+#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Jasper](../../resources/jasper)</span>
 ##### Retorno
 
-( _[Jasper](../../resources/Jasper)_ )
+( _[Jasper](../../resources/jasper)_ )
 
 
 ---
@@ -109,12 +109,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">setReportFile</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">setReportFile</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../../resources/Storage)_ |   |
+| **storage** | _[Storage](../../resources/storage)_ |   |
 
 ##### Retorno
 

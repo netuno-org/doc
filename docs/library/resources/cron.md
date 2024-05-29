@@ -251,7 +251,7 @@ Whether it was possible to continue the scheduled service.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/Cron)</span>
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/cron)</span>
 ##### Description
 
 Creates a service execution schedule.
@@ -276,13 +276,13 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 
 ##### Return
 
-( _[Cron](../../resources/Cron)_ )
+( _[Cron](../../resources/cron)_ )
 
 The current Cron instance.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/Cron)</span>
+#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/cron)</span>
 ##### Description
 
 Creates a service execution schedule.
@@ -308,7 +308,7 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 
 ##### Return
 
-( _[Cron](../../resources/Cron)_ )
+( _[Cron](../../resources/cron)_ )
 
 The current Cron instance.
 

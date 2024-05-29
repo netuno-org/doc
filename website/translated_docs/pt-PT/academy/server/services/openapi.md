@@ -89,6 +89,9 @@ Exemplo de conteúdo do `in.json`:
 
 ```
 {
+    "tags":[
+      "serviços de produto"
+    ],
     "summary": "Detalhe do Produto",
     "description": "É obtido todos os campos de detalhe do produto especificado.",
     "type": "object",

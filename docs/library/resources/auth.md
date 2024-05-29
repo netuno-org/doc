@@ -41,6 +41,98 @@ All authentication providers settings.
 
 ---
 
+## attempt
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">attempt</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## attemptReject
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">attemptReject</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">attemptReject</span>(<span style="color: #FF8000">reject</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **reject** | _boolean_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+## attemptRejectWithData
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">attemptRejectWithData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">attemptRejectWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _java.util.List_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">attemptRejectWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">attemptRejectWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
 ## check
 
 ---
@@ -106,6 +198,24 @@ Returns the result of the validating authentication data.
 
 ---
 
+## checkUserInJWTGroups
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">checkUserInJWTGroups</span>(<span style="color: #FF8000">userId</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **userId** | _int_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
 ## crypt
 
 ---
@@ -150,6 +260,36 @@ Returns strong password encryption.
 
 ---
 
+## getAttemptRejectWithData
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">getAttemptRejectWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## getJWTGroups
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">getJWTGroups</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
 ## getProviderConfig
 
 ---
@@ -160,6 +300,42 @@ Returns strong password encryption.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **providerCode** | _string_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## getSignInAbortWithData
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">getSignInAbortWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## getSignInExtraData
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">getSignInExtraData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -191,6 +367,30 @@ if (_auth.isAdmin()) {
 ( _boolean_ )
 
 If the user that is authenticated is an **admin** (administrator) returns _true_.
+
+---
+
+## isAttempt
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isAttempt</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## isAttemptReject
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isAttemptReject</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Return
+
+( _boolean_ )
+
 
 ---
 
@@ -316,11 +516,333 @@ If the user is authenticated with JSON Web Token returns _true_.
 
 ---
 
+## isSignInAbort
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">isSignInAbort</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## jwtAccessExpires
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtAccessExpires</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Description
+
+Sets the time of expiration of the token to the settings in configs.
+
+##### Return
+
+( _int_ )
+
+
+---
+
+## jwtCheckToken
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtCheckToken</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+This method verify the token.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **token** | _string_ | Token to be verify. |
+
+##### Return
+
+( _boolean_ )
+
+Returns the validation.
+
+---
+
+## jwtCheckTokenDataExpiration
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtCheckTokenDataExpiration</span>(<span style="color: #FF8000">dbToken</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **dbToken** | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## jwtCreateAccessToken
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtCreateAccessToken</span>(<span style="color: #FF8000">userId</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">contextData</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **userId** | _int_ |   |
+| **contextData** | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtCreateAccessToken</span>(<span style="color: #FF8000">userId</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Description
+
+This method access to the token of a user and returns the content.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **userId** | _[Values](../../objects/Values)_ | Id of user. |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+Returns the content of the user inserted.
+
+---
+
+## jwtDBRecord
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtDBRecord</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **token** | _string_ |   |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## jwtData
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## jwtEnabled
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtEnabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Verify if the JWT is enable.
+
+##### Return
+
+( _boolean_ )
+
+Returns if is enabled.
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtEnabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **enabled** | _boolean_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+## jwtGroups
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtGroups</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## jwtInvalidateToken
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtInvalidateToken</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtInvalidateToken</span>(<span style="color: #FF8000">token</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **token** | _string_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## jwtKey
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtKey</span>() : <span style="font-weight: normal; font-style: italic;">javax.crypto.SecretKey</span>
+##### Return
+
+( _javax.crypto.SecretKey_ )
+
+
+---
+
+## jwtRefreshAccessToken
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtRefreshAccessToken</span>(<span style="color: #FF8000">refreshToken</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Description
+
+Replaces an old token for the new on inserted.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **refreshToken** | _string_ | Replace token. |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+Returns the updated token.
+
+---
+
+## jwtRefreshExpires
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtRefreshExpires</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Description
+
+Updates the time of expiration of the token to the settings in configs.
+
+##### Return
+
+( _int_ )
+
+
+---
+
+## jwtSignIn
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtSignIn</span>(<span style="color: #FF8000">userId</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">contextData</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **userId** | _int_ |   |
+| **contextData** | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+## jwtSignInData
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtSignInData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+## jwtToken
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtToken</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Verify if exists an authenticated token.
+
+##### Return
+
+( _string_ )
+
+Returns the token.
+
+---
+
+## jwtTokenCheck
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">jwtTokenCheck</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Verify if a token exists.
+
+##### Return
+
+( _boolean_ )
+
+Returns the validation.
+
+---
+
 ## load
 
 ---
 
-#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/Auth)</span>
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
 ##### Description
 
 Processes authentication settings.
@@ -334,7 +856,7 @@ _auth.load()
 
 ##### Return
 
-( _[Auth](../../resources/Auth)_ )
+( _[Auth](../../resources/auth)_ )
 
 Returns the default Auth resource.
 
@@ -344,7 +866,7 @@ Returns the default Auth resource.
 
 ---
 
-#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">logout</span>() : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/Auth)</span>
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">logout</span>() : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
 ##### Description
 
 Signs out the user authenticated.
@@ -359,7 +881,7 @@ _auth.logout()
 
 ##### Return
 
-( _[Auth](../../resources/Auth)_ )
+( _[Auth](../../resources/auth)_ )
 
 Returns the default Auth resource.
 
@@ -438,6 +960,314 @@ _log.info('LDAP Provider Enabled', _auth.providerEnabled('ldap'))
 ( _boolean_ )
 
 If the authentication provider is active returns _true_.
+
+---
+
+## setAttemptReject
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">setAttemptReject</span>(<span style="color: #FF8000">reject</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **reject** | _boolean_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+## setAttemptRejectWithData
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">setAttemptRejectWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _java.util.List_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">setAttemptRejectWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">setAttemptRejectWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+## setSignInAbort
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">setSignInAbort</span>(<span style="color: #FF8000">abort</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **abort** | _boolean_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+## setSignInAbortWithData
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">setSignInAbortWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _java.util.List_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">setSignInAbortWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">setSignInAbortWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+## setSignInExtraData
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">setSignInExtraData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _java.util.List_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">setSignInExtraData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">setSignInExtraData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+## signInAbort
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">signInAbort</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">signInAbort</span>(<span style="color: #FF8000">abort</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **abort** | _boolean_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+## signInAbortWithData
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">signInAbortWithData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">signInAbortWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _java.util.List_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">signInAbortWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">signInAbortWithData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+## signInExtraData
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">signInExtraData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">signInExtraData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _java.util.List_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">signInExtraData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
+
+---
+
+#### <span style="font-weight: normal">_auth</span>.<span style="color: #008000">signInExtraData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Auth](../../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **data** | _[Values](../../objects/Values)_ |   |
+
+##### Return
+
+( _[Auth](../../resources/auth)_ )
+
 
 ---
 

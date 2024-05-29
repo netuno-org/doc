@@ -12,11 +12,16 @@ Recurso cliente de FTP.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">abort</span>() : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">abort</span>() : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
+##### Descrição
+
+Interrompe a operação de transferência de dados em andamento.
+
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
+O recurso FTP atual.
 
 ---
 
@@ -24,14 +29,14 @@ Recurso cliente de FTP.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">changeToParentDirectory</span>() : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">changeToParentDirectory</span>() : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Muda para a pasta anterior onde deve ser utilizada para realizar as operações.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -41,7 +46,7 @@ O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">changeWorkingDirectory</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">changeWorkingDirectory</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Define o caminho remoto que deve ser utilizado para realizar as operações.
@@ -54,7 +59,7 @@ Define o caminho remoto que deve ser utilizado para realizar as operações.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -80,20 +85,20 @@ Fecha a conexão FTP com o servidor.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
 
 ##### Retorno
 
-( _org.netuno.psamata.ftp.FTPConfig_ )
+( _[FTPConfig](../../objects/FTPConfig)_ )
 
 Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
@@ -106,13 +111,13 @@ Inicia uma nova configuração própria.
 
 ##### Retorno
 
-( _org.netuno.psamata.ftp.FTPConfig_ )
+( _[FTPConfig](../../objects/FTPConfig)_ )
 
 Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -121,11 +126,11 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _org.netuno.psamata.ftp.FTPConfig_ | Definição da nova configuração. |
+| **config** | _[FTPConfig](../../objects/FTPConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 Objeto FTP atual.
 
@@ -135,14 +140,14 @@ Objeto FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">connect</span>() : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">connect</span>() : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Inicia a conexão com o servidor através do FTP.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -152,7 +157,7 @@ O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">createDirectory</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">createDirectory</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Cria uma pastas no servidor.
@@ -165,7 +170,7 @@ Cria uma pastas no servidor.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -175,7 +180,7 @@ O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">deleteDirectory</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">deleteDirectory</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Remove uma pasta no servidor.
@@ -188,7 +193,7 @@ Remove uma pasta no servidor.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -198,7 +203,7 @@ O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">deleteFile</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">deleteFile</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Remove um arquivo no servidor.
@@ -211,7 +216,7 @@ Remove um arquivo no servidor.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -221,14 +226,14 @@ O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">disconnect</span>() : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">disconnect</span>() : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Realiza a desconexão FTP com o servidor.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -238,7 +243,7 @@ O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">download</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destino</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">download</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destino</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Copia um arquivo no servidor para um arquivo local.
@@ -248,17 +253,17 @@ Copia um arquivo no servidor para um arquivo local.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
-| **destino** | _java.io.OutputStream_ | Arquivo local de destino para armazenar o conteúdo remoto. |
+| **destino** | _[OutputStream](../../objects/OutputStream)_ | Arquivo local de destino para armazenar o conteúdo remoto. |
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">download</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destino</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">download</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destino</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Copia um arquivo no servidor para um arquivo local.
@@ -272,13 +277,13 @@ Copia um arquivo no servidor para um arquivo local.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">download</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destino</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">download</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">destino</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Copia um arquivo no servidor para um arquivo local.
@@ -288,11 +293,11 @@ Copia um arquivo no servidor para um arquivo local.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
-| **destino** | _[Storage](../../resources/Storage)_ | Arquivo local de destino para armazenar o conteúdo remoto. |
+| **destino** | _[Storage](../../resources/storage)_ | Arquivo local de destino para armazenar o conteúdo remoto. |
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -376,7 +381,7 @@ Conteúdo de texto do arquivo remoto no servidor.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -389,7 +394,7 @@ Define se está habilitado.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 Objeto FTP atual.
 
@@ -416,14 +421,14 @@ Cliente FTP original de base.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>
 ##### Descrição
 
 Obtém a configuração que está a ser utilizada.
 
 ##### Retorno
 
-( _org.netuno.psamata.ftp.FTPConfig_ )
+( _[FTPConfig](../../objects/FTPConfig)_ )
 
 Objeto da configuração ativa.
 
@@ -450,20 +455,20 @@ O caminho remoto completo que está sendo utilizado.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Inicia uma nova instância do FTP utilizando a configuração do FTP da chave `default`.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 A nova instância do recurso FTP com base na configuração do FTP `default`.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configKey</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configKey</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Inicia uma nova instância do FTP a partir de uma configuração específica.
@@ -476,13 +481,13 @@ Inicia uma nova instância do FTP a partir de uma configuração específica.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 A nova instância do recurso FTP com base na configuração do FTP especificada.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Inicia uma nova instância do FTP a partir de uma configuração que é definida em um objeto de configuração própria.
@@ -491,11 +496,11 @@ Inicia uma nova instância do FTP a partir de uma configuração que é definida
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _org.netuno.psamata.ftp.FTPConfig_ | Configuração que será utilizada. |
+| **config** | _[FTPConfig](../../objects/FTPConfig)_ | Configuração que será utilizada. |
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 A nova instância do recurso FTP com base na configuração definida.
 
@@ -545,7 +550,7 @@ A lista de itens que está caminho do servidor.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">rename</span>(<span style="color: #FF8000">caminhoAntigo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminhoNovo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">rename</span>(<span style="color: #FF8000">caminhoAntigo</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">caminhoNovo</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Renomeia um arquivo ou pasta no servidor.
@@ -559,7 +564,7 @@ Renomeia um arquivo ou pasta no servidor.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -591,7 +596,7 @@ Resultado do comando.
 #### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">sendCommand</span>(<span style="color: #FF8000">comando</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">args</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
 ##### Descrição
 
-Envia um comando específico.
+Envia um comando específico com argumentos adicionais necessários para o comando FTP.
 
 ##### Atributos
 
@@ -612,7 +617,7 @@ Resultado do comando.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">sendSiteCommand</span>(<span style="color: #FF8000">comando</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">sendSiteCommand</span>(<span style="color: #FF8000">comando</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Envia um comando específico do site.
@@ -625,7 +630,7 @@ Envia um comando específico do site.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -635,7 +640,7 @@ O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.ftp.FTPConfig</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[FTPConfig](../../objects/FTPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -644,11 +649,11 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _org.netuno.psamata.ftp.FTPConfig_ | Definição da nova configuração. |
+| **config** | _[FTPConfig](../../objects/FTPConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 Objeto FTP atual.
 
@@ -658,7 +663,7 @@ Objeto FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">ativo</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -671,7 +676,7 @@ Define se está habilitado.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 Objeto FTP atual.
 
@@ -681,7 +686,7 @@ Objeto FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">upload</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">upload</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Envia os dados de um arquivo para ser salvo no servidor.
@@ -691,17 +696,17 @@ Envia os dados de um arquivo para ser salvo no servidor.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
-| **origem** | _java.io.InputStream_ | Arquivo local de origem. |
+| **origem** | _[InputStream](../../objects/InputStream)_ | Arquivo local de origem. |
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">upload</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">upload</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Envia os dados de um arquivo para ser salvo no servidor.
@@ -715,13 +720,13 @@ Envia os dados de um arquivo para ser salvo no servidor.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">upload</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/Storage)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">upload</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Envia os dados de um arquivo para ser salvo no servidor.
@@ -731,11 +736,11 @@ Envia os dados de um arquivo para ser salvo no servidor.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **caminhoRemoto** | _string_ | Caminho do arquivo no servidor. |
-| **origem** | _[Storage](../../resources/Storage)_ | Arquivo local de origem. |
+| **origem** | _[Storage](../../resources/storage)_ | Arquivo local de origem. |
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -745,7 +750,7 @@ O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">uploadBytes</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">uploadBytes</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Envia um array de bytes para serem salvos em um arquivo no servidor.
@@ -759,7 +764,7 @@ Envia um array de bytes para serem salvos em um arquivo no servidor.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
@@ -769,7 +774,7 @@ O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">uploadText</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">uploadText</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Envia um conteúdo de texto para ser salvado em um arquivo no servidor.
@@ -783,13 +788,13 @@ Envia um conteúdo de texto para ser salvado em um arquivo no servidor.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 
 ---
 
-#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">uploadText</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">encodificacao</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/FTP)</span>
+#### <span style="font-weight: normal">_ftp</span>.<span style="color: #008000">uploadText</span>(<span style="color: #FF8000">caminhoRemoto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">texto</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">encodificacao</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTP](../../resources/ftp)</span>
 ##### Descrição
 
 Envia um conteúdo de texto para ser salvado em um arquivo no servidor.
@@ -804,7 +809,7 @@ Envia um conteúdo de texto para ser salvado em um arquivo no servidor.
 
 ##### Retorno
 
-( _[FTP](../../resources/FTP)_ )
+( _[FTP](../../resources/ftp)_ )
 
 O recurso FTP atual.
 

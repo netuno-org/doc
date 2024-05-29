@@ -118,7 +118,7 @@ O novo objeto de valores genérico.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Iterable</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
@@ -127,7 +127,7 @@ Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **obj** | _java.lang.Iterable_ | Objeto para carregar o novo objeto de valores criado. |
+| **obj** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Objeto para carregar o novo objeto de valores criado. |
 
 ##### Retorno
 
@@ -156,7 +156,7 @@ O novo objeto de valores iniciado com os dados do objeto passado.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.util.Map</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Descrição
 
 Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
@@ -165,7 +165,7 @@ Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **obj** | _java.util.Map_ | Objeto para carregar o novo objeto de valores criado. |
+| **obj** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Objeto para carregar o novo objeto de valores criado. |
 
 ##### Retorno
 
@@ -270,7 +270,7 @@ O novo objeto de valores iniciado como mapa.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">map</span>(<span style="color: #FF8000">valores</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">map</span>(<span style="color: #FF8000">valores</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -283,13 +283,13 @@ Transforma um objeto de valores para um mapa normal.
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">map</span>(<span style="color: #FF8000">valores</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">map</span>(<span style="color: #FF8000">valores</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -302,7 +302,7 @@ Transforma um objeto de valores para um mapa normal.
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 
@@ -576,7 +576,7 @@ Uma nova lista normal com os itens do objeto de valores recebido.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toMap</span>(<span style="color: #FF8000">valores</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toMap</span>(<span style="color: #FF8000">valores</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -589,13 +589,13 @@ Transforma um objeto de valores para um mapa normal.
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toMap</span>(<span style="color: #FF8000">valores</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Map</span>
+#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toMap</span>(<span style="color: #FF8000">valores</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -608,7 +608,7 @@ Transforma um objeto de valores para um mapa normal.
 
 ##### Retorno
 
-( _java.util.Map_ )
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 

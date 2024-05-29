@@ -73,6 +73,7 @@
           "library/objects/DBSearchResult",
           "library/objects/ErrorException",
           "library/objects/File",
+          "library/objects/FTPConfig",
           "library/objects/FTPFile",
           "library/objects/IMAPConfig",
           "library/objects/Index",

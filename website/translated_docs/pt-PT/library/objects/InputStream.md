@@ -66,10 +66,10 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">nullInputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
+#### <span style="color: #008000">nullInputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Retorno
 
-( _java.io.InputStream_ )
+( _[InputStream](../../objects/InputStream)_ )
 
 
 ---
@@ -128,12 +128,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAll</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="color: #008000">readAll</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _java.io.InputStream_ |   |
+| **in** | _[InputStream](../../objects/InputStream)_ |   |
 
 ##### Retorno
 
@@ -142,12 +142,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAll</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="color: #008000">readAll</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _java.io.InputStream_ |   |
+| **in** | _[InputStream](../../objects/InputStream)_ |   |
 | **charset** | _string_ |   |
 
 ##### Retorno
@@ -195,12 +195,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAllBytes</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style="color: #008000">readAllBytes</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _java.io.InputStream_ |   |
+| **in** | _[InputStream](../../objects/InputStream)_ |   |
 
 ##### Retorno
 
@@ -358,12 +358,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readLine</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="color: #008000">readLine</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _java.io.InputStream_ |   |
+| **in** | _[InputStream](../../objects/InputStream)_ |   |
 
 ##### Retorno
 
@@ -510,12 +510,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">transferTo</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style="color: #008000">transferTo</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **arg0** | _java.io.OutputStream_ |   |
+| **arg0** | _[OutputStream](../../objects/OutputStream)_ |   |
 
 ##### Retorno
 

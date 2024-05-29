@@ -61,7 +61,7 @@ Configuration object loaded from received data.
 
 ---
 
-#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/ssh)</span>
 ##### Description
 
 Define outra configuração que deve ser utilizada.
@@ -74,7 +74,7 @@ Define outra configuração que deve ser utilizada.
 
 ##### Return
 
-( _[SSH](../../resources/SSH)_ )
+( _[SSH](../../resources/ssh)_ )
 
 Current SSH resource.
 
@@ -84,14 +84,14 @@ Current SSH resource.
 
 ---
 
-#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">connect</span>() : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">connect</span>() : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/ssh)</span>
 ##### Description
 
 Starts connecting to the server via SSH.
 
 ##### Return
 
-( _[SSH](../../resources/SSH)_ )
+( _[SSH](../../resources/ssh)_ )
 
 Current SSH resource.
 
@@ -101,14 +101,14 @@ Current SSH resource.
 
 ---
 
-#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">disconnect</span>() : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">disconnect</span>() : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/ssh)</span>
 ##### Description
 
 Closes all open sessions and performs SSH disconnection from the server.
 
 ##### Return
 
-( _[SSH](../../resources/SSH)_ )
+( _[SSH](../../resources/ssh)_ )
 
 Current SSH resource.
 
@@ -126,7 +126,7 @@ Current SSH resource.
 
 ---
 
-#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/ssh)</span>
 ##### Description
 
 Sets whether it is enabled.
@@ -139,7 +139,7 @@ Sets whether it is enabled.
 
 ##### Return
 
-( _[SSH](../../resources/SSH)_ )
+( _[SSH](../../resources/ssh)_ )
 
 Current SSH resource.
 
@@ -183,20 +183,20 @@ Object of the active configuration.
 
 ---
 
-#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/ssh)</span>
 ##### Description
 
 Starts a new instance of SSH using the SSH configuration of the `default` key.
 
 ##### Return
 
-( _[SSH](../../resources/SSH)_ )
+( _[SSH](../../resources/ssh)_ )
 
 The new instance of the SSH resource based on the `default` SSH configuration.
 
 ---
 
-#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configKey</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configKey</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/ssh)</span>
 ##### Description
 
 Starts a new instance of SSH from a specific configuration.
@@ -209,13 +209,13 @@ Starts a new instance of SSH from a specific configuration.
 
 ##### Return
 
-( _[SSH](../../resources/SSH)_ )
+( _[SSH](../../resources/ssh)_ )
 
 The new instance of the SSH resource based on the specified SSH configuration.
 
 ---
 
-#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/ssh)</span>
 ##### Description
 
 Starts a new instance of SSH from a configuration that is defined in its own configuration object.
@@ -228,7 +228,7 @@ Starts a new instance of SSH from a configuration that is defined in its own con
 
 ##### Return
 
-( _[SSH](../../resources/SSH)_ )
+( _[SSH](../../resources/ssh)_ )
 
 The new instance of the SSH resource based on the defined configuration.
 
@@ -306,7 +306,7 @@ Result whether or not it is activated.
 
 ---
 
-#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[SSHConfig](../../objects/SSHConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/ssh)</span>
 ##### Description
 
 Define outra configuração que deve ser utilizada.
@@ -319,7 +319,7 @@ Define outra configuração que deve ser utilizada.
 
 ##### Return
 
-( _[SSH](../../resources/SSH)_ )
+( _[SSH](../../resources/ssh)_ )
 
 Current SSH resource.
 
@@ -329,7 +329,7 @@ Current SSH resource.
 
 ---
 
-#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/SSH)</span>
+#### <span style="font-weight: normal">_ssh</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[SSH](../../resources/ssh)</span>
 ##### Description
 
 Sets whether it is enabled.
@@ -342,7 +342,7 @@ Sets whether it is enabled.
 
 ##### Return
 
-( _[SSH](../../resources/SSH)_ )
+( _[SSH](../../resources/ssh)_ )
 
 Current SSH resource.
 

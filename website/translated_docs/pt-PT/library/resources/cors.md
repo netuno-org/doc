@@ -13,7 +13,7 @@ Permite gerir as múltiplas origens e os respectivos cabeçalhos.
 
 ---
 
-#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">add</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/CORS)</span>
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">add</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/cors)</span>
 ##### Descrição
 
 Adiciona as configurações para uma definição de CORS.
@@ -26,7 +26,7 @@ Adiciona as configurações para uma definição de CORS.
 
 ##### Retorno
 
-( _[CORS](../../resources/CORS)_ )
+( _[CORS](../../resources/cors)_ )
 
 Atual instância do CORS.
 
@@ -93,14 +93,14 @@ Se a origem está ativada.
 
 ---
 
-#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/CORS)</span>
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">load</span>() : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/cors)</span>
 ##### Descrição
 
 Executa a verificação da origem e realiza as definições de cabeçalho na resposta do pedido HTTP.
 
 ##### Retorno
 
-( _[CORS](../../resources/CORS)_ )
+( _[CORS](../../resources/cors)_ )
 
 Atual instância do CORS.
 
@@ -110,7 +110,7 @@ Atual instância do CORS.
 
 ---
 
-#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">removeOrigin</span>(<span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/CORS)</span>
+#### <span style="font-weight: normal">_cors</span>.<span style="color: #008000">removeOrigin</span>(<span style="color: #FF8000">origem</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[CORS](../../resources/cors)</span>
 ##### Descrição
 
 Remove a origem em todas as configuração que ela existir.
@@ -123,7 +123,7 @@ Remove a origem em todas as configuração que ela existir.
 
 ##### Retorno
 
-( _[CORS](../../resources/CORS)_ )
+( _[CORS](../../resources/cors)_ )
 
 Se a origem foi desativada com sucesso.
 

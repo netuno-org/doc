@@ -148,6 +148,20 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
+#### <span style="color: #008000">contentType</span>(<span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **contentType** | _string_ |   |
+
+##### Return
+
+( _[File](../../objects/File)_ )
+
+
+---
+
 ## copy
 
 ---
@@ -430,18 +444,30 @@ Returns the full path until the present file
 
 ---
 
+## getInput
+
+---
+
+#### <span style="color: #008000">getInput</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+##### Return
+
+( _[InputStream](../../objects/InputStream)_ )
+
+
+---
+
 ## getInputStream
 
 ---
 
-#### <span style="color: #008000">getInputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
+#### <span style="color: #008000">getInputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Description
 
 Returns the number of estimated bytes
 
 ##### Return
 
-( _java.io.InputStream_ )
+( _[InputStream](../../objects/InputStream)_ )
 
 
 ---
@@ -480,14 +506,26 @@ Returns the name of a file in the inserted path
 
 ---
 
+## getOutput
+
+---
+
+#### <span style="color: #008000">getOutput</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
+##### Return
+
+( _[OutputStream](../../objects/OutputStream)_ )
+
+
+---
+
 ## getOutputStream
 
 ---
 
-#### <span style="color: #008000">getOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
+#### <span style="color: #008000">getOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Return
 
-( _java.io.OutputStream_ )
+( _[OutputStream](../../objects/OutputStream)_ )
 
 
 ---
@@ -578,10 +616,10 @@ Returns the name of the inserted file with a sequence number if the file already
 
 ---
 
-#### <span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.InputStream</span>
+#### <span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
 ##### Return
 
-( _java.io.InputStream_ )
+( _[InputStream](../../objects/InputStream)_ )
 
 
 ---
@@ -762,10 +800,10 @@ Returns the name of a file
 
 ---
 
-#### <span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">java.io.OutputStream</span>
+#### <span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
 ##### Return
 
-( _java.io.OutputStream_ )
+( _[OutputStream](../../objects/OutputStream)_ )
 
 
 ---
@@ -955,6 +993,24 @@ Saves the file in the inserted path
 ##### Return
 
 ( _string_ )
+
+
+---
+
+## setContentType
+
+---
+
+#### <span style="color: #008000">setContentType</span>(<span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **contentType** | _string_ |   |
+
+##### Return
+
+( _[File](../../objects/File)_ )
 
 
 ---
