@@ -8,7 +8,7 @@ sidebar_label: PDF
 
 O Netuno gera arquivos PDF com suporte a imagens, tabelas, fontes, e muito mais.
 
-Através do recurso [PDF](../../../library/resources/pdf) que permite uma abstração low-code do [iTextPDF](https://itextpdf.com/) para as diversas linguagens de programação suportas pelo Netuno.
+Através do recurso [PDF](../../../library/resources/pdf) que permite uma abstração low-code do [iTextPDF](https://itextpdf.com/) para as diversas linguagens de programação suportadas pelo Netuno.
 
 A aplicação que vem com o Netuno denominada **demo** (aplicação de demonstração) contém bastantes exemplos das possíveis implementações de código em várias linguagens, incluindo a demonstração da exportação para PDF através do serviço `export-pdf` que se localiza em:
 
@@ -63,7 +63,7 @@ const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf'))
 
 ### Formato de Página
 
-Para customizar o formato da página basta idicar na criação do documento.
+Para customizar o formato da página basta indicar na criação do documento.
 
 Cria um novo documento para a saída de dados do serviço com páginas no formato **carta**:
 
@@ -91,41 +91,20 @@ Os documentos PDF podem ser criados com a definição do tamanho da página pers
 _pdf.pageSize(50, 30)
 ```
 
-### Editar
+## Cabeçalho HTTP
 
-É possível editar um documento PDF já existente, por exemplo:
+Para criar um serviço na API REST que devolve um arquivo PDF como saída de dados, é preciso adicionar no header o parâmetro de `Content-Type` do protocolo HTTP.
+
+Exemplo de como definir o conteúdo como PDF:
 
 ```javascript
-const pdfDocument = _pdf.openPdfDocument(_app.file('file.pdf'))
+_header.contentType("pdf")
 ```
 
-O documento final gerado será enviado na saída de dados do serviço.
-
-> É muito útil para utilizar um PDF como base, como se fosse um template.
-
-Exemplo para editar um documento no `storage` da aplicação:
-
+O código `pdf` é uma abreviação para:
 
 ```javascript
-const pdfDocument = _pdf.openPdfDocument(_storage.filesystem('server', 'file.pdf'))
-```
-
-Utiliza um documento como base mas salva as alterações em um novo arquivo PDF:
-
-```javascript
-const pdfDocument = _pdf.openPdfDocument(
-    _app.file('documento-base.pdf'),
-    _app.file('documento-final.pdf')
-)
-```
-
-Exemplo usando como base um documento no `storage` mas salva em outro:
-
-```javascript
-const pdfDocument = _pdf.openPdfDocument(
-    _storage.filesystem('server', 'contrato-base.pdf'),
-    _storage.filesystem('server', 'contrato-final.pdf')
-)
+_header.contentType("application/pdf")
 ```
 
 ## Quebra de Página
@@ -140,16 +119,18 @@ pdfDocument.add(
 
 ## Parágrafo
 
-```
+Adiciona um novo parágrafo no documento:
+
+```javascript
 pdfDocument.add(
-    _pdf.paragraph("\n\nTable with flexible columns:\n")
+    _pdf.paragraph("Meu texto aqui:")
         .setFontSize(15)
 )
 ```
 
 Para adicionar um parágrafo em uma posição fixa:
 
-```
+```javascript
 pdfDocument.add(
     _pdf.paragraph("Helvetica Oblique!")
         .setFixedPosition(100, 500, 200)
@@ -157,7 +138,7 @@ pdfDocument.add(
 )
 ```
 
-Sendo que acima, no método `setFixedPosition`, o primeiro parâmetro é a posição X (`100`), já o segundo parâmetro é a posição Y (`500`), e o terceiro parâmetro é a largura (`200`).
+No código acima, no método `setFixedPosition`, o primeiro parâmetro é a posição X (`100`), já o segundo parâmetro é a posição Y (`500`), e o terceiro parâmetro é a largura (`200`).
 
 **Atenção:** se o Y for definido com o valor `0` quer dizer que fica no fundo da página, então para subir é preciso aumentar o valor do Y, quanto maior for o valor do Y mais no topo aparecerá, mas se for demasiado alto para além do comprimento da página então não será visível.
 
@@ -198,7 +179,7 @@ Para utilizar a fonte nos textos deve ser passado a constante da fonte para o pa
 
 ```
 pdfDocument.add(
-    _pdf.paragraph("\n\nUtilizando a fonte em negrito.\n")
+    _pdf.paragraph("Utilizando a fonte em negrito.")
         .setFont(helveticaBold)
         .setFontSize(15)
 )
@@ -215,7 +196,7 @@ pdfDocument.add(
 )
 ```
 
-Repare que o método `scaleAbsolute` é muito útil para redimencionar e ajustar o tamanho da imagem.
+Repare que o método `scaleAbsolute` é muito útil para redimensionar e ajustar o tamanho da imagem.
 
 Em alternativa podemos utilizar um arquivo dentro da aplicação, como neste exemplo:
 
@@ -263,7 +244,7 @@ pdfDocument.add(
     .addCell(
       _pdf.cell()
         .add(
-          _pdf.paragraph("Person")
+          _pdf.paragraph("Pessoa")
             .setFont(helvetica)
             .setFontSize(10)
           )
@@ -287,7 +268,7 @@ Com o método `addCell` permite inserir a definição das células com o seu res
 
 ## Fechar e Salvar o Documento
 
-O documento só é totalmente guardado ou gerado, apenas quando o método `close` for chamado, da seginte forma:
+O documento só é totalmente guardado ou gerado, apenas quando o método `close` for chamado, da seguinte forma:
 
 ```javascript
 pdfDocument.close()
@@ -295,10 +276,98 @@ pdfDocument.close()
 
 Onde o documento é gerado é definido na inicialização, portanto é na inicialização do documento que definimos onde será gerado o documento final, se será na saída de dados do serviço (`output`) ou em arquivo.
 
-## Extrair Dados
+## Editar Arquivo
 
-Para ler um documento PDF podemos utilizar o 
+É possível editar um documento PDF já existente, por exemplo:
 
+```javascript
+const pdfDocument = _pdf.openDocument(_app.file('file.pdf'))
+```
+
+O documento final gerado será enviado na saída de dados do serviço.
+
+> É muito útil para utilizar um PDF como base, como se fosse um template.
+
+Exemplo para editar um documento no `storage` da aplicação:
+
+
+```javascript
+const pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
+```
+
+Utiliza um documento como base mas salva as alterações em um novo arquivo PDF:
+
+```javascript
+const pdfDocument = _pdf.openDocument(
+    _app.file('documento-base.pdf'),
+    _app.file('documento-final.pdf')
+)
+```
+
+Exemplo usando como base um documento no `storage` mas salva em outro:
+
+```javascript
+const pdfDocument = _pdf.openDocument(
+    _storage.filesystem('server', 'contrato-base.pdf'),
+    _storage.filesystem('server', 'contrato-final.pdf')
+)
+```
+
+Com o documento carregado podemos acrescentar conteúdos, e ao fechar com o método `close` no fim é então gerado o documento final com o novo conteúdo adicionado programaticamente.
+
+Exemplo de serviço que utiliza um PDF existente como template para gerar uma saída de arquivo PDF com conteúdo dinâmico adicionado:
+
+```javascript
+_header.contentType("pdf")
+
+const pdfDocument = _pdf.openDocument(_app.file('template-1.pdf'))
+
+pdfDocument.add(
+    _pdf.paragraph("Meu conteúdo dinâmico.")
+        .setFixedPosition(37, 730, 100)
+        .setFontSize(15)
+)
+
+pdfDocument.close()
+```
+
+## Ler Arquivo
+
+Para ler um documento PDF, extraindo as informações de texto.
+
+Utilizamos o método `extract`, que obtém todos os dados do arquivo PDF em um objeto JSON.
+
+```javascript
+const pdfData = _pdf.extract(_app.file('file-1.pdf'))
+
+_out.json(pdfData)
+```
+
+O JSON retornado tem a chave `content` com todo o conteúdo de texto do arquivo PDF, e tem a chave `metadata` com as diversas propriedades do arquivo PDF.
+
+Aqui tem um exemplo do JSON retornado pelo `extract`:
+
+```
+{
+  "content": "Todo conteúdo em texto do arquivo PDF vem aqui...",
+  "metadata":{
+    "Content-Type":"application/pdf",
+    "dc:format":"application/pdf; version=1.4",
+    "dc:title":"Linux 1",
+    "pdf:PDFVersion":"1.4",
+    "pdf:charsPerPage":"580",
+    "pdf:containsDamagedFont":"false",
+    "pdf:containsNonEmbeddedFont":"false",
+    "pdf:docinfo:producer":"Skia/PDF m125 Google Docs Renderer",
+    "pdf:docinfo:title":"File 1",
+    "pdf:encrypted":"false",
+    "xmpTPg:NPages":"3",
+    ...
+  }
+}
+```
+
+Existem muitos outros dados que são obtidos no `metadata` mas que foram omitidos nos `...` para o exemplo não ficar demasiado longo.
 
 ## Converter
 
@@ -312,7 +381,7 @@ Podemos extrair todo o conteúdo do arquivo PDF em texto corrido utilizando o m�
 _pdf.toText(...)
 ```
 
-Exemplo de como utiliza-lo para ler um arquivo na raíz da aplicação:
+Exemplo de como utilizá-lo para ler um arquivo na raíz da aplicação:
 
 ```javascript
 _out.print(_pdf.toText(_app.file('meu-documento.pdf')))
@@ -334,7 +403,7 @@ Podemos extrair todo o conteúdo do arquivo PDF em HTML utilizando o método:
 _pdf.toHTML(...)
 ```
 
-Exemplo de como utiliza-lo para ler um arquivo na raíz da aplicação:
+Exemplo de como utilizá-lo para ler um arquivo na raíz da aplicação:
 
 ```javascript
 _out.print(_pdf.toHTML(_app.file('meu-documento.pdf')))
