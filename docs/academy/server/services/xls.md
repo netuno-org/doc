@@ -6,7 +6,7 @@ sidebar_label: XLS - Excel
 
 ## Introduction
 
-Neptune generates EXCEL files compatible with LibreOffice, OpenOffice, Microsoft Office, Google Drive, etc.
+Netuno generates EXCEL files compatible with LibreOffice, OpenOffice, Microsoft Office, Google Drive, etc.
 
 Through the [XLS](../../../library/resources/xls) resource that allows a low-code abstraction of [Apache POI](https://poi.apache.org/) for the various programming languages supported by Netuno.
 
