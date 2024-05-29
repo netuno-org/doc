@@ -358,9 +358,17 @@
         "title": "File",
         "sidebar_label": "File"
       },
+      "library/objects/FTPConfig": {
+        "title": "FTPConfig",
+        "sidebar_label": "FTPConfig"
+      },
       "library/objects/FTPFile": {
         "title": "FTPFile",
         "sidebar_label": "FTPFile"
+      },
+      "library/objects/Functions": {
+        "title": "Functions",
+        "sidebar_label": "Functions"
       },
       "library/objects/IMAPConfig": {
         "title": "IMAPConfig",
