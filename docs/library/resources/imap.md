@@ -13,6 +13,10 @@ Mailbox query capability through IMAP.
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+##### Description
+
+Closes and terminates the connection to the current IMAP folder.
+
 ##### Return
 
 ( _void_ )
@@ -80,10 +84,15 @@ Current IMAP object.
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">connect</span>() : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+##### Description
+
+Makes the connection to the IMAP server.
+
 ##### Return
 
 ( _[IMAP](../../resources/imap)_ )
 
+IMAPClient object.
 
 ---
 
@@ -92,10 +101,15 @@ Current IMAP object.
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">deletedSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Description
+
+Deletes messages from an IMAP folder and returns the size (in bytes) of deleted messages.
+
 ##### Return
 
 ( _int_ )
 
+Size (in bytes) of deleted messages.
 
 ---
 
@@ -135,10 +149,15 @@ Current IMAP object.
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">getClient</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.mail.IMAPClient</span>
+##### Description
+
+Returns the IMAPClient object where the resource settings are located.
+
 ##### Return
 
 ( _org.netuno.psamata.mail.IMAPClient_ )
 
+IMAPClient object.
 
 ---
 
@@ -156,51 +175,6 @@ Gets the configuration that is being used.
 ( _[IMAPConfig](../../objects/IMAPConfig)_ )
 
 Object of the active configuration.
-
----
-
-## getMail
-
----
-
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">getMail</span>(<span style="color: #FF8000">position</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.mail.Mail</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **position** | _int_ |   |
-
-##### Return
-
-( _org.netuno.psamata.mail.Mail_ )
-
-
----
-
-## getMails
-
----
-
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">getMails</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
-##### Return
-
-( _java.util.List_ )
-
-
----
-
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">getMails</span>(<span style="color: #FF8000">start</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">end</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **start** | _int_ |   |
-| **end** | _int_ |   |
-
-##### Return
-
-( _java.util.List_ )
-
 
 ---
 
@@ -281,16 +255,21 @@ Result whether or not it is activated.
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">mail</span>(<span style="color: #FF8000">position</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.mail.Mail</span>
+##### Description
+
+Returns a specific message in the IMAP folder.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **position** | _int_ |   |
+| **position** | _int_ | Message index |
 
 ##### Return
 
 ( _org.netuno.psamata.mail.Mail_ )
 
+Message.
 
 ---
 
@@ -299,25 +278,35 @@ Result whether or not it is activated.
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">mails</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+##### Description
+
+Returns all messages contained in the folder.
+
 ##### Return
 
 ( _java.util.List_ )
 
+Message list.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">mails</span>(<span style="color: #FF8000">start</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">end</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">mails</span>(<span style="color: #FF8000">start</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">start</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+##### Description
+
+Returns a specific range of messages contained in the IMAP folder.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **start** | _int_ |   |
-| **end** | _int_ |   |
+| **start** | _int_ | First message index |
+| **start** | _int_ | Index of last message. |
 
 ##### Return
 
 ( _java.util.List_ )
 
+Message list.
 
 ---
 
@@ -326,10 +315,15 @@ Result whether or not it is activated.
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">newSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Description
+
+Returns the size (in bytes) of new (unread) messages in an IMAP folder.
+
 ##### Return
 
 ( _int_ )
 
+Size (in bytes) of messages new unread messages.
 
 ---
 
@@ -338,31 +332,41 @@ Result whether or not it is activated.
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">openFolder</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+##### Description
+
+Opens the server's INBOX folder (reading mode).
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **name** | _string_ |   |
+| **name** | _string_ | INBOX folder name. |
 
 ##### Return
 
 ( _[IMAP](../../resources/imap)_ )
 
+Current IMAP feature.
 
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">openFolder</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">write</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+##### Description
+
+Opens the server's INBOX folder, however, specifying whether it is in writing mode or not.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **name** | _string_ |   |
-| **write** | _boolean_ |   |
+| **name** | _string_ | INBOX folder name. |
+| **write** | _boolean_ | Whether or not it is in writing mode. |
 
 ##### Return
 
 ( _[IMAP](../../resources/imap)_ )
 
+Current IMAP feature.
 
 ---
 
@@ -417,10 +421,15 @@ Current IMAP object.
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">size</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Description
+
+Returns the size (in bytes) of messages in an IMAP folder.
+
 ##### Return
 
 ( _int_ )
 
+The size (in bytes) of messages.
 
 ---
 
@@ -429,10 +438,15 @@ Current IMAP object.
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">unreadSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+##### Description
+
+Returns the size (in bytes) of all unread messages in an IMAP folder.
+
 ##### Return
 
 ( _int_ )
 
+Size (in bytes) of unread messages.
 
 ---
 
@@ -441,16 +455,21 @@ Current IMAP object.
 ---
 
 #### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">with</span>(<span style="color: #FF8000">smtp</span>: <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/smtp)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+##### Description
+
+Defines a new SMTP configuration different from the current one.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **smtp** | _[SMTP](../../resources/smtp)_ |   |
+| **smtp** | _[SMTP](../../resources/smtp)_ | SMTP configuration to be used. |
 
 ##### Return
 
 ( _[IMAP](../../resources/imap)_ )
 
+Current IMAP feature.
 
 ---
 
