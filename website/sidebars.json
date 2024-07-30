@@ -95,7 +95,8 @@
           "library/objects/Table",
           "library/objects/Values",
           "library/objects/XLSPosition",
-          "library/objects/Query"
+          "library/objects/Query",
+          "library/objects/Where"
         ]
       }
     ],

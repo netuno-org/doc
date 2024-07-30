@@ -217,14 +217,14 @@ The name of the query's main table.
 
 ---
 
-#### <span style="color: #008000">getWhere</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.Where</span>
+#### <span style="color: #008000">getWhere</span>() : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
 ##### Description
 
 Returns the Where object referring to the main table of the query.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.Where_ )
+( _[Where](../../objects/Where)_ )
 
 Where object of the query's main table.
 
@@ -353,7 +353,7 @@ Current Query object.
 
 ---
 
-#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.Where</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Description
 
 Defines a form to be related to the main table of the query using the Link criteria.
@@ -363,7 +363,7 @@ Defines a form to be related to the main table of the query using the Link crite
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **formLink** | _string_ | Form to be related. |
-| **where** | _org.netuno.tritao.query.where.Where_ | Where object with the conditions referring to the form you want to relate. |
+| **where** | _[Where](../../objects/Where)_ | Where object with the conditions referring to the form you want to relate. |
 
 ##### Return
 
@@ -373,7 +373,7 @@ Current Query object.
 
 ---
 
-#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.Where</span>, <span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.Link</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>, <span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.Link</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Description
 
 Defines a form to be related to the main table of the query using the Link criteria.
@@ -383,7 +383,7 @@ Defines a form to be related to the main table of the query using the Link crite
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **formLink** | _string_ | Form to be related. |
-| **where** | _org.netuno.tritao.query.where.Where_ | Where object with the conditions referring to the form you want to relate. |
+| **where** | _[Where](../../objects/Where)_ | Where object with the conditions referring to the form you want to relate. |
 | **link** | _org.netuno.tritao.query.link.Link_ | Link object with a subrelation. |
 
 ##### Return
@@ -399,17 +399,22 @@ Current Query object.
 ---
 
 #### <span style="color: #008000">order</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines the ordering of the query.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **column** | _string_ |   |
-| **order** | _string_ |   |
+| **column** | _string_ | Column for sorting. |
+| **order** | _string_ | Meaning of ordering. |
 
 ##### Return
 
 ( _[Query](../../objects/Query)_ )
 
+Current Query object.
 
 ---
 
@@ -624,7 +629,7 @@ Current Query object.
 
 ---
 
-#### <span style="color: #008000">setWhere</span>(<span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.Where</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">setWhere</span>(<span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Description
 
 Defines the Where object referring to the main table of the query.
@@ -633,7 +638,7 @@ Defines the Where object referring to the main table of the query.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **where** | _org.netuno.tritao.query.where.Where_ | Where object of the query's main table. |
+| **where** | _[Where](../../objects/Where)_ | Where object of the query's main table. |
 
 ##### Return
 

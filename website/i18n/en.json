@@ -322,10 +322,6 @@
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
-      "library/objects/Async": {
-        "title": "Async",
-        "sidebar_label": "Async"
-      },
       "library/objects/CheckExists": {
         "title": "CheckExists",
         "sidebar_label": "CheckExists"
@@ -402,10 +398,6 @@
         "title": "RemoteResponse",
         "sidebar_label": "RemoteResponse"
       },
-      "library/objects/SCPClient": {
-        "title": "SCPClient",
-        "sidebar_label": "SCPClient"
-      },
       "library/objects/ScriptResult": {
         "title": "ScriptResult",
         "sidebar_label": "ScriptResult"
@@ -418,21 +410,9 @@
         "title": "Service",
         "sidebar_label": "Service"
       },
-      "library/objects/SFTPClient": {
-        "title": "SFTPClient",
-        "sidebar_label": "SFTPClient"
-      },
       "library/objects/SMTPConfig": {
         "title": "SMTPConfig",
         "sidebar_label": "SMTPConfig"
-      },
-      "library/objects/SSHClientSession": {
-        "title": "SSHClientSession",
-        "sidebar_label": "SSHClientSession"
-      },
-      "library/objects/SSHCommandResult": {
-        "title": "SSHCommandResult",
-        "sidebar_label": "SSHCommandResult"
       },
       "library/objects/SSHConfig": {
         "title": "SSHConfig",
@@ -465,6 +445,10 @@
       "library/objects/Values": {
         "title": "Values",
         "sidebar_label": "Values"
+      },
+      "library/objects/Where": {
+        "title": "Where",
+        "sidebar_label": "Where"
       },
       "library/objects/XLSPosition": {
         "title": "XLSPosition",
