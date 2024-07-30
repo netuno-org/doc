@@ -1,0 +1,645 @@
+---
+id: Query
+title: Query
+sidebar_label: Query
+---
+
+Definição da configuração do objeto Query para consultas simplificadas.
+
+---
+
+## all
+
+---
+
+#### <span style="color: #008000">all</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+##### Description
+
+Returns all records resulting from query execution, if none, returns an empty list.
+
+##### Return
+
+( _java.util.List_ )
+
+List of records.
+
+---
+
+## debug
+
+---
+
+#### <span style="color: #008000">debug</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines whether debug is active or not in the query.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **enabled** | _boolean_ | Whether the debug is active or not. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## distinct
+
+---
+
+#### <span style="color: #008000">distinct</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines whether the DISTINCT command will be applied to the query.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **enabled** | _boolean_ | Whether it will be applied or not. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## fields
+
+---
+
+#### <span style="color: #008000">fields</span>(<span style="color: #FF8000">fields</span>: <span style="font-weight: normal; font-style: italic;">[Lorg.netuno.tritao.query.Field;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines the fields that will be obtained in the query
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **fields** | _[Lorg.netuno.tritao.query.Field;[]_ | The fields that will be obtained in the query. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## first
+
+---
+
+#### <span style="color: #008000">first</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Description
+
+Retorna o primeiro registro resultante da execução da consulta, caso nenhum, retorna null.
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+First record of the result.
+
+---
+
+## getFields
+
+---
+
+#### <span style="color: #008000">getFields</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+##### Description
+
+Returns the fields that will be obtained in the query
+
+##### Return
+
+( _java.util.List_ )
+
+The fields that will be obtained in the query
+
+---
+
+## getGroup
+
+---
+
+#### <span style="color: #008000">getGroup</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Group</span>
+##### Description
+
+Returns the query grouping object.
+
+##### Return
+
+( _org.netuno.tritao.query.Group_ )
+
+The query grouping object.
+
+---
+
+## getJoin
+
+---
+
+#### <span style="color: #008000">getJoin</span>() : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+##### Description
+
+Returns the Join objects (related tables) referring to the main table of the query.
+
+##### Return
+
+( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+
+The Join objects (related tables) referring to the main table of the query.
+
+---
+
+## getOrder
+
+---
+
+#### <span style="color: #008000">getOrder</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Order</span>
+##### Description
+
+Returns the query ordering object.
+
+##### Return
+
+( _org.netuno.tritao.query.Order_ )
+
+The query ordering object.
+
+---
+
+## getPagination
+
+---
+
+#### <span style="color: #008000">getPagination</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.pagination.Pagination</span>
+##### Description
+
+Returns the pagination configuration object (if any) of the query.
+
+##### Return
+
+( _org.netuno.tritao.query.pagination.Pagination_ )
+
+The pagination configuration object (if any) of the query.
+
+---
+
+## getTableName
+
+---
+
+#### <span style="color: #008000">getTableName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the name of the query's main table.
+
+##### Return
+
+( _string_ )
+
+The name of the query's main table.
+
+---
+
+## getWhere
+
+---
+
+#### <span style="color: #008000">getWhere</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.Where</span>
+##### Description
+
+Returns the Where object referring to the main table of the query.
+
+##### Return
+
+( _org.netuno.tritao.query.where.Where_ )
+
+Where object of the query's main table.
+
+---
+
+## group
+
+---
+
+#### <span style="color: #008000">group</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines the query grouping object.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **order** | _string_ | The query grouping object. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## isDebug
+
+---
+
+#### <span style="color: #008000">isDebug</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether debug is active or not in the query.
+
+##### Return
+
+( _boolean_ )
+
+Whether debug is active or not in the query.
+
+---
+
+## isDistinct
+
+---
+
+#### <span style="color: #008000">isDistinct</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether the DISTINCT command will be applied to the query.
+
+##### Return
+
+( _boolean_ )
+
+Whether it will be applied or not.
+
+---
+
+## join
+
+---
+
+#### <span style="color: #008000">join</span>(<span style="color: #FF8000">join</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.Relation</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines the Join objects (related tables) referring to the main table of the query.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **join** | _org.netuno.tritao.query.join.Relation_ | The Join objects (related tables) referring to the main table of the query. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## link
+
+---
+
+#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines a form to be related to the main table of the query using the Link criteria.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **formLink** | _string_ | Form to be related. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.Link</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines a form to be related to the main table of the query using the Link criteria.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **formLink** | _string_ | Form to be related. |
+| **link** | _org.netuno.tritao.query.link.Link_ | Link object with a subrelation. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.Where</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines a form to be related to the main table of the query using the Link criteria.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **formLink** | _string_ | Form to be related. |
+| **where** | _org.netuno.tritao.query.where.Where_ | Where object with the conditions referring to the form you want to relate. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.Where</span>, <span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.Link</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines a form to be related to the main table of the query using the Link criteria.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **formLink** | _string_ | Form to be related. |
+| **where** | _org.netuno.tritao.query.where.Where_ | Where object with the conditions referring to the form you want to relate. |
+| **link** | _org.netuno.tritao.query.link.Link_ | Link object with a subrelation. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## order
+
+---
+
+#### <span style="color: #008000">order</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **column** | _string_ |   |
+| **order** | _string_ |   |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+
+---
+
+## page
+
+---
+
+#### <span style="color: #008000">page</span>(<span style="color: #FF8000">pagination</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.pagination.Pagination</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+##### Description
+
+Returns Page with the items resulting from executing the query in a paged form and other pagination data.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **pagination** | _org.netuno.tritao.query.pagination.Pagination_ | Pagination object with pagination settings. |
+
+##### Return
+
+( _[Values](../../objects/Values)_ )
+
+Page with items and other pagination data.
+
+---
+
+## setDebug
+
+---
+
+#### <span style="color: #008000">setDebug</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines whether debug is active or not in the query.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **enabled** | _boolean_ | Whether the debug is active or not. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## setDistinct
+
+---
+
+#### <span style="color: #008000">setDistinct</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines whether the DISTINCT command will be applied to the query.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **enabled** | _boolean_ | Whether it will be applied or not. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## setFields
+
+---
+
+#### <span style="color: #008000">setFields</span>(<span style="color: #FF8000">fields</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines the fields that will be obtained in the query
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **fields** | _java.util.List_ | The fields that will be obtained in the query. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## setGroup
+
+---
+
+#### <span style="color: #008000">setGroup</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Group</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines the query grouping object.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **order** | _org.netuno.tritao.query.Group_ | The query grouping object. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## setJoin
+
+---
+
+#### <span style="color: #008000">setJoin</span>(<span style="color: #FF8000">join</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines the Join objects (related tables) referring to the main table of the query.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **join** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | The Join objects (related tables) referring to the main table of the query. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## setOrder
+
+---
+
+#### <span style="color: #008000">setOrder</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Order</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines the query ordering object.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **order** | _org.netuno.tritao.query.Order_ | The query ordering object. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## setPagination
+
+---
+
+#### <span style="color: #008000">setPagination</span>(<span style="color: #FF8000">pagination</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.pagination.Pagination</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines the pagination configuration object (if any) of the query.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **pagination** | _org.netuno.tritao.query.pagination.Pagination_ | the pagination configuration object of the query. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## setTableName
+
+---
+
+#### <span style="color: #008000">setTableName</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines the name of the query's main table.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **tableName** | _string_ | The name of the query's main table. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+
+## setWhere
+
+---
+
+#### <span style="color: #008000">setWhere</span>(<span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.Where</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines the Where object referring to the main table of the query.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **where** | _org.netuno.tritao.query.where.Where_ | Where object of the query's main table. |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+Current Query object.
+
+---
+

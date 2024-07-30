@@ -390,6 +390,10 @@
         "title": "OutputStream",
         "sidebar_label": "OutputStream"
       },
+      "library/objects/Query": {
+        "title": "Query",
+        "sidebar_label": "Query"
+      },
       "library/objects/RandomString": {
         "title": "RandomString",
         "sidebar_label": "RandomString"
