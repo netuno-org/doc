@@ -213,6 +213,18 @@ Nome da tabela principal da consulta.
 
 ---
 
+## getTablesToPopulate
+
+---
+
+#### <span style="color: #008000">getTablesToPopulate</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+##### Retorno
+
+( _java.util.List_ )
+
+
+---
+
 ## getWhere
 
 ---
@@ -441,6 +453,41 @@ Pagina com os items e demais dados da paginação.
 
 ---
 
+## populate
+
+---
+
+#### <span style="color: #008000">populate</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Field</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **table** | _string_ |   |
+| **filter** | _org.netuno.tritao.query.Field_ |   |
+
+##### Retorno
+
+( _[Query](../../objects/Query)_ )
+
+
+---
+
+#### <span style="color: #008000">populate</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Field</span>, <span style="color: #FF8000">fields</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **table** | _string_ |   |
+| **filter** | _org.netuno.tritao.query.Field_ |   |
+| **fields** | _java.util.List_ |   |
+
+##### Retorno
+
+( _[Query](../../objects/Query)_ )
+
+
+---
+
 ## setDebug
 
 ---
@@ -622,6 +669,24 @@ Define o nome da tabela principal da consulta.
 ( _[Query](../../objects/Query)_ )
 
 Objeto Query atual.
+
+---
+
+## setTablesToPopulate
+
+---
+
+#### <span style="color: #008000">setTablesToPopulate</span>(<span style="color: #FF8000">tablesToPopulate</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **tablesToPopulate** | _java.util.List_ |   |
+
+##### Retorno
+
+( _[Query](../../objects/Query)_ )
+
 
 ---
 

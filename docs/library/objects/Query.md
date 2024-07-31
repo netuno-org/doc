@@ -101,7 +101,7 @@ Current Query object.
 #### <span style="color: #008000">first</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
 ##### Description
 
-Retorna o primeiro registro resultante da execução da consulta, caso nenhum, retorna null.
+Returns the first record resulting from the query execution, if none, returns null.
 
 ##### Return
 
@@ -210,6 +210,18 @@ Returns the name of the query's main table.
 ( _string_ )
 
 The name of the query's main table.
+
+---
+
+## getTablesToPopulate
+
+---
+
+#### <span style="color: #008000">getTablesToPopulate</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+##### Return
+
+( _java.util.List_ )
+
 
 ---
 
@@ -441,6 +453,41 @@ Page with items and other pagination data.
 
 ---
 
+## populate
+
+---
+
+#### <span style="color: #008000">populate</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Field</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **table** | _string_ |   |
+| **filter** | _org.netuno.tritao.query.Field_ |   |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+
+---
+
+#### <span style="color: #008000">populate</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Field</span>, <span style="color: #FF8000">fields</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **table** | _string_ |   |
+| **filter** | _org.netuno.tritao.query.Field_ |   |
+| **fields** | _java.util.List_ |   |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+
+---
+
 ## setDebug
 
 ---
@@ -622,6 +669,24 @@ Defines the name of the query's main table.
 ( _[Query](../../objects/Query)_ )
 
 Current Query object.
+
+---
+
+## setTablesToPopulate
+
+---
+
+#### <span style="color: #008000">setTablesToPopulate</span>(<span style="color: #FF8000">tablesToPopulate</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **tablesToPopulate** | _java.util.List_ |   |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
 
 ---
 

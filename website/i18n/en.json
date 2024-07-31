@@ -330,6 +330,10 @@
         "title": "Column",
         "sidebar_label": "Column"
       },
+      "library/objects/Condition": {
+        "title": "Condition",
+        "sidebar_label": "Condition"
+      },
       "library/objects/DataItem": {
         "title": "DataItem",
         "sidebar_label": "DataItem"

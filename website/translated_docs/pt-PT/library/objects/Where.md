@@ -92,14 +92,14 @@ Demais condições aninhadas do objeto.
 
 ---
 
-#### <span style="color: #008000">getFirstCondition</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.Condition</span>
+#### <span style="color: #008000">getFirstCondition</span>() : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
 ##### Descrição
 
 Retorna a condição base do objeto.
 
 ##### Retorno
 
-( _org.netuno.tritao.query.where.Condition_ )
+( _[Condition](../../objects/Condition)_ )
 
 Condição base do objeto.
 
@@ -212,7 +212,7 @@ Objeto Where atual.
 
 ---
 
-#### <span style="color: #008000">setFirstCondition</span>(<span style="color: #FF8000">firstCondition</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.Condition</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style="color: #008000">setFirstCondition</span>(<span style="color: #FF8000">firstCondition</span>: <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
 ##### Descrição
 
 Define a condição base do objeto.
@@ -221,7 +221,7 @@ Define a condição base do objeto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **firstCondition** | _org.netuno.tritao.query.where.Condition_ | Condição base do objeto. |
+| **firstCondition** | _[Condition](../../objects/Condition)_ | Condição base do objeto. |
 
 ##### Retorno
 

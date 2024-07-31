@@ -1,0 +1,187 @@
+---
+id: Condition
+title: Condition
+sidebar_label: Condition
+---
+
+Definição da configuração do objeto Condition para construção de condições com o objeto Where
+
+---
+
+## getColumn
+
+---
+
+#### <span style="color: #008000">getColumn</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the name of the column to which the condition will be applied.
+
+##### Return
+
+( _string_ )
+
+The name of the column to which the condition will be applied.
+
+---
+
+## getOperator
+
+---
+
+#### <span style="color: #008000">getOperator</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.ConditionOperator</span>
+##### Description
+
+Returns the condition condition operator.
+
+##### Return
+
+( _org.netuno.tritao.query.where.ConditionOperator_ )
+
+The condition condition operator.
+
+---
+
+## getRelationOperator
+
+---
+
+#### <span style="color: #008000">getRelationOperator</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>
+##### Description
+
+Returns the relationship settings.
+
+##### Return
+
+( _org.netuno.tritao.query.where.RelationOperator_ )
+
+The relationship settings.
+
+---
+
+## getSubCondition
+
+---
+
+#### <span style="color: #008000">getSubCondition</span>() : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+##### Description
+
+Returns the next level of conditions within the current condition.
+
+##### Return
+
+( _[Where](../../objects/Where)_ )
+
+The next level of conditions within the current condition.
+
+---
+
+## hasSubCondition
+
+---
+
+#### <span style="color: #008000">hasSubCondition</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+##### Description
+
+Returns whether the current object has subconditions or not.
+
+##### Return
+
+( _boolean_ )
+
+Whether you have it or not.
+
+---
+
+## setColumn
+
+---
+
+#### <span style="color: #008000">setColumn</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
+##### Description
+
+Defines the name of the column to which the condition will be applied.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **column** | _string_ | The name of the column to which the condition will be applied. |
+
+##### Return
+
+( _[Condition](../../objects/Condition)_ )
+
+Current Condition object.
+
+---
+
+## setOperator
+
+---
+
+#### <span style="color: #008000">setOperator</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.ConditionOperator</span>) : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
+##### Description
+
+Defines the condition condition operator.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **column** | _org.netuno.tritao.query.where.ConditionOperator_ | The condition condition operator. |
+
+##### Return
+
+( _[Condition](../../objects/Condition)_ )
+
+Current Condition object.
+
+---
+
+## setRelationOperator
+
+---
+
+#### <span style="color: #008000">setRelationOperator</span>(<span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>) : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
+##### Description
+
+Defines the relationship settings.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **relationOperator** | _org.netuno.tritao.query.where.RelationOperator_ | The relationship settings. |
+
+##### Return
+
+( _[Condition](../../objects/Condition)_ )
+
+Current Condition object.
+
+---
+
+## setSubCondition
+
+---
+
+#### <span style="color: #008000">setSubCondition</span>(<span style="color: #FF8000">subcondition</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
+##### Description
+
+Defines the next level of conditions within the current condition.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **subcondition** | _[Where](../../objects/Where)_ | The next level of conditions within the current condition. |
+
+##### Return
+
+( _[Condition](../../objects/Condition)_ )
+
+Current Condition object.
+
+---
+

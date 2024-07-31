@@ -235,6 +235,24 @@ Gerador do formulário da aplicação programaticamente.
 
 ---
 
+## fields
+
+---
+
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">fields</span>(<span style="color: #FF8000">fields</span>: <span style="font-weight: normal; font-style: italic;">[Lorg.netuno.tritao.query.Field;[]</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **fields** | _[Lorg.netuno.tritao.query.Field;[]_ |   |
+
+##### Retorno
+
+( _java.util.List_ )
+
+
+---
+
 ## get
 
 ---
