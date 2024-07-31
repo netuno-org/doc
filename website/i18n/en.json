@@ -378,6 +378,10 @@
         "title": "InputStream",
         "sidebar_label": "InputStream"
       },
+      "library/objects/Join": {
+        "title": "Join",
+        "sidebar_label": "Join"
+      },
       "library/objects/OSCommand": {
         "title": "OSCommand",
         "sidebar_label": "OSCommand"
