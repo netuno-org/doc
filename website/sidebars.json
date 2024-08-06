@@ -181,7 +181,7 @@
           "academy/server/database/mssql",
           "academy/server/database/multiple-databases",
           "academy/server/database/psql",
-	      "academy/server/database/hikaricp-database-connection-pool"
+	        "academy/server/database/hikaricp-database-connection-pool"
         ]
       },
       {
@@ -199,7 +199,8 @@
           "academy/server/services/xls",
           "academy/server/services/pdf",
           "academy/server/services/ftp",
-          "academy/server/services/ssh"
+          "academy/server/services/ssh",
+          "academy/server/services/query"
         ]
       },
       "academy/server/actions",
