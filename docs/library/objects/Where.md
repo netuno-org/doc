@@ -32,7 +32,7 @@ Current Where object.
 
 ---
 
-#### <span style="color: #008000">and</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style="color: #008000">and</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
 ##### Description
 
 Defines a condition with the conditional AND operator on the Where object.
@@ -42,7 +42,7 @@ Defines a condition with the conditional AND operator on the Where object.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **column** | _string_ | Column to which the condition will be applied. |
-| **relationOperator** | _org.netuno.tritao.query.where.RelationOperator_ | Condition relation operator. |
+| **relationOperator** | _[RelationOperator](../../objects/RelationOperator)_ | Condition relation operator. |
 
 ##### Return
 
@@ -146,7 +146,7 @@ Current Where object.
 
 ---
 
-#### <span style="color: #008000">or</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style="color: #008000">or</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
 ##### Description
 
 Defines a condition with the conditional OR operator on the Where object.
@@ -156,7 +156,7 @@ Defines a condition with the conditional OR operator on the Where object.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **column** | _string_ | Column to which the condition will be applied. |
-| **relationOperator** | _org.netuno.tritao.query.where.RelationOperator_ | Condition relation operator. |
+| **relationOperator** | _[RelationOperator](../../objects/RelationOperator)_ | Condition relation operator. |
 
 ##### Return
 

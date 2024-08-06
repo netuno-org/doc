@@ -98,7 +98,8 @@
           "library/objects/Query",
           "library/objects/Where",
           "library/objects/Join",
-          "library/objects/Condition"
+          "library/objects/Condition",
+          "library/objects/RelationOperator"
         ]
       }
     ],
@@ -194,13 +195,13 @@
           "academy/server/services/openapi",
           "academy/server/services/cors",
           "academy/server/services/queries-programmatically",
+          "academy/server/services/query",
           "academy/server/services/generate-uid-guid",
           "academy/server/services/sending-emails",
           "academy/server/services/xls",
           "academy/server/services/pdf",
           "academy/server/services/ftp",
-          "academy/server/services/ssh",
-          "academy/server/services/query"
+          "academy/server/services/ssh"
         ]
       },
       "academy/server/actions",

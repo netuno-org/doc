@@ -46,14 +46,14 @@ The condition condition operator.
 
 ---
 
-#### <span style="color: #008000">getRelationOperator</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>
+#### <span style="color: #008000">getRelationOperator</span>() : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
 ##### Description
 
 Returns the relationship settings.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.RelationOperator_ )
+( _[RelationOperator](../../objects/RelationOperator)_ )
 
 The relationship settings.
 
@@ -143,7 +143,7 @@ Current Condition object.
 
 ---
 
-#### <span style="color: #008000">setRelationOperator</span>(<span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>) : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
+#### <span style="color: #008000">setRelationOperator</span>(<span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>) : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
 ##### Description
 
 Defines the relationship settings.
@@ -152,7 +152,7 @@ Defines the relationship settings.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relationOperator** | _org.netuno.tritao.query.where.RelationOperator_ | The relationship settings. |
+| **relationOperator** | _[RelationOperator](../../objects/RelationOperator)_ | The relationship settings. |
 
 ##### Return
 

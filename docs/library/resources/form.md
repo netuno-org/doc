@@ -48,7 +48,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">contains</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">contains</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -57,7 +57,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.RelationOperator_ )
+( _[RelationOperator](../../objects/RelationOperator)_ )
 
 
 ---
@@ -170,7 +170,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">different</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">different</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -179,7 +179,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.RelationOperator_ )
+( _[RelationOperator](../../objects/RelationOperator)_ )
 
 
 ---
@@ -188,7 +188,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">endsWith</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">endsWith</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -197,7 +197,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.RelationOperator_ )
+( _[RelationOperator](../../objects/RelationOperator)_ )
 
 
 ---
@@ -429,7 +429,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">greaterOrEqualsThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">greaterOrEqualsThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -438,7 +438,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.RelationOperator_ )
+( _[RelationOperator](../../objects/RelationOperator)_ )
 
 
 ---
@@ -447,7 +447,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">greaterThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">greaterThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -456,7 +456,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.RelationOperator_ )
+( _[RelationOperator](../../objects/RelationOperator)_ )
 
 
 ---
@@ -465,7 +465,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">in</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">in</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -474,7 +474,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.RelationOperator_ )
+( _[RelationOperator](../../objects/RelationOperator)_ )
 
 
 ---
@@ -483,7 +483,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">lessOrEqualsThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">lessOrEqualsThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -492,7 +492,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.RelationOperator_ )
+( _[RelationOperator](../../objects/RelationOperator)_ )
 
 
 ---
@@ -501,7 +501,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">lessThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">lessThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -510,7 +510,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.RelationOperator_ )
+( _[RelationOperator](../../objects/RelationOperator)_ )
 
 
 ---
@@ -754,7 +754,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">startsWith</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">startsWith</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -763,7 +763,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.RelationOperator_ )
+( _[RelationOperator](../../objects/RelationOperator)_ )
 
 
 ---
@@ -787,13 +787,13 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">where</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">where</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **column** | _string_ |   |
-| **relationOperator** | _org.netuno.tritao.query.where.RelationOperator_ |   |
+| **relationOperator** | _[RelationOperator](../../objects/RelationOperator)_ |   |
 
 ##### Return
 
@@ -818,14 +818,14 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">where</span>(<span style="color: #FF8000">operator</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.ConditionOperator</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.RelationOperator</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">where</span>(<span style="color: #FF8000">operator</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.ConditionOperator</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **operator** | _org.netuno.tritao.query.where.ConditionOperator_ |   |
 | **column** | _string_ |   |
-| **relationOperator** | _org.netuno.tritao.query.where.RelationOperator_ |   |
+| **relationOperator** | _[RelationOperator](../../objects/RelationOperator)_ |   |
 
 ##### Return
 
