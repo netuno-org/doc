@@ -6,9 +6,9 @@
     ],
     "Resources & Objects": [
       {
-        "type" : "subcategory",
+        "type": "subcategory",
         "label": "Resources",
-        "ids" : [
+        "ids": [
           "library/resources/app",
           "library/resources/auth",
           "library/resources/component",
@@ -61,30 +61,35 @@
         ]
       },
       {
-        "type" : "subcategory",
+        "type": "subcategory",
         "label": "Objects",
-        "ids" : [
+        "ids": [
           "library/objects/Async",
           "library/objects/CheckExists",
           "library/objects/Column",
-          "library/objects/DataItem",
-          "library/objects/DataSchema",
+          "library/objects/Condition",
           "library/objects/DBBatch",
           "library/objects/DBSearchResult",
+          "library/objects/DataItem",
+          "library/objects/DataSchema",
           "library/objects/ErrorException",
-          "library/objects/File",
           "library/objects/FTPConfig",
           "library/objects/FTPFile",
+          "library/objects/File",
+          "library/objects/Functions",
           "library/objects/IMAPConfig",
           "library/objects/Index",
           "library/objects/InputStream",
+          "library/objects/Join",
+          "library/objects/Link",
           "library/objects/OSCommand",
           "library/objects/OutputStream",
+          "library/objects/Query",
           "library/objects/RandomString",
+          "library/objects/Relation",
+          "library/objects/RelationLink",
+          "library/objects/RelationOperator",
           "library/objects/RemoteResponse",
-          "library/objects/ScriptResult",
-          "library/objects/Sequence",
-          "library/objects/Service",
           "library/objects/SMTPConfig",
           "library/objects/SSHConfig",
           "library/objects/SSHExecResult",
@@ -92,16 +97,13 @@
           "library/objects/SSHSCP",
           "library/objects/SSHSFTP",
           "library/objects/SSHSession",
+          "library/objects/ScriptResult",
+          "library/objects/Sequence",
+          "library/objects/Service",
           "library/objects/Table",
           "library/objects/Values",
-          "library/objects/XLSPosition",
-          "library/objects/Query",
           "library/objects/Where",
-          "library/objects/Join",
-          "library/objects/Condition",
-          "library/objects/RelationOperator",
-          "library/objects/Link",
-          "library/objects/RelationLink"
+          "library/objects/XLSPosition"
         ]
       }
     ],
@@ -124,10 +126,9 @@
       "library/services/error/404",
       "library/services/error/500"
     ],
-    "Base de Dados": [
-    ]
+    "Base de Dados": []
   },
-  "academy" : {
+  "academy": {
     "Academy": [
       "academy/overview",
       "academy/introduction",
@@ -137,9 +138,9 @@
       "academy/api",
       "academy/strategy",
       {
-        "type" : "subcategory",
+        "type": "subcategory",
         "label": "Demo Application",
-        "ids" : [
+        "ids": [
           "academy/start/demonstration/config",
           "academy/start/demonstration/form",
           "academy/start/demonstration/relate",
@@ -157,9 +158,9 @@
       "academy/explore/services",
       "academy/explore/industry",
       {
-        "type" : "subcategory",
+        "type": "subcategory",
         "label": "Graphical Interface",
-        "ids" : [
+        "ids": [
           "academy/explore/graphical-interface/graphical-interface",
           "academy/explore/graphical-interface/forms",
           "academy/explore/graphical-interface/fields",
@@ -176,21 +177,21 @@
     ],
     "Server": [
       {
-        "type" : "subcategory",
+        "type": "subcategory",
         "label": "Database",
-        "ids" : [
+        "ids": [
           "academy/server/database/excel",
           "academy/server/database/h2database",
           "academy/server/database/mssql",
           "academy/server/database/multiple-databases",
           "academy/server/database/psql",
-	        "academy/server/database/hikaricp-database-connection-pool"
+          "academy/server/database/hikaricp-database-connection-pool"
         ]
       },
       {
-        "type" : "subcategory",
+        "type": "subcategory",
         "label": "Services",
-        "ids" : [
+        "ids": [
           "academy/server/services/rest",
           "academy/server/services/websocket",
           "academy/server/services/jwt",
@@ -209,8 +210,8 @@
       "academy/server/actions",
       "academy/server/cron-jobs",
       "academy/server/custom-urls",
-	  "academy/server/setup",
-	  "academy/server/monitor-alerts",
+      "academy/server/setup",
+      "academy/server/monitor-alerts",
       "academy/server/templates",
       "academy/server/development-debug-java",
       "academy/server/nginx-integration"
@@ -223,7 +224,11 @@
       "academy/website/auth-client"
     ]
   },
-  "installation" : {
-    "Get Started" : ["installation", "server-commands-tips", "versions"]
+  "installation": {
+    "Get Started": [
+      "installation",
+      "server-commands-tips",
+      "versions"
+    ]
   }
 }

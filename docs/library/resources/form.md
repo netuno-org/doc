@@ -568,7 +568,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">manyToOne</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.Relation</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">manyToOne</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -578,12 +578,12 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.join.Relation_ )
+( _[Relation](../../objects/Relation)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">manyToOne</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.Relation</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">manyToOne</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -594,7 +594,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.join.Relation_ )
+( _[Relation](../../objects/Relation)_ )
 
 
 ---
@@ -635,7 +635,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">oneToMany</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.Relation</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">oneToMany</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -645,12 +645,12 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.join.Relation_ )
+( _[Relation](../../objects/Relation)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">oneToMany</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.Relation</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">oneToMany</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -661,7 +661,7 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.join.Relation_ )
+( _[Relation](../../objects/Relation)_ )
 
 
 ---

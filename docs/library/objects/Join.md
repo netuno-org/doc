@@ -12,14 +12,14 @@ Definição da configuração do objeto Join para consultas simplificadas.
 
 ---
 
-#### <span style="color: #008000">getRelation</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.Relation</span>
+#### <span style="color: #008000">getRelation</span>() : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
 ##### Description
 
 Returns the object with the relationship configuration.
 
 ##### Return
 
-( _org.netuno.tritao.query.join.Relation_ )
+( _[Relation](../../objects/Relation)_ )
 
 The object with the relationship configuration.
 
@@ -63,7 +63,7 @@ The Where object with the configuration of conditions
 
 ---
 
-#### <span style="color: #008000">setRelation</span>(<span style="color: #FF8000">ralation</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.Relation</span>) : <span style="font-weight: normal; font-style: italic;">[Join](../../objects/Join)</span>
+#### <span style="color: #008000">setRelation</span>(<span style="color: #FF8000">ralation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Join](../../objects/Join)</span>
 ##### Description
 
 Defines the object with the relationship configuration.
@@ -72,7 +72,7 @@ Defines the object with the relationship configuration.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **ralation** | _org.netuno.tritao.query.join.Relation_ | The object with the relationship configuration. |
+| **ralation** | _[Relation](../../objects/Relation)_ | The object with the relationship configuration. |
 
 ##### Return
 

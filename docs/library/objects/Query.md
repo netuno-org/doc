@@ -303,7 +303,7 @@ Whether it will be applied or not.
 
 ---
 
-#### <span style="color: #008000">join</span>(<span style="color: #FF8000">join</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.Relation</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">join</span>(<span style="color: #FF8000">join</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Description
 
 Defines the Join objects (related tables) referring to the main table of the query.
@@ -312,7 +312,7 @@ Defines the Join objects (related tables) referring to the main table of the que
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **join** | _org.netuno.tritao.query.join.Relation_ | The Join objects (related tables) referring to the main table of the query. |
+| **join** | _[Relation](../../objects/Relation)_ | The Join objects (related tables) referring to the main table of the query. |
 
 ##### Return
 

@@ -303,7 +303,7 @@ Se será aplicado ou não.
 
 ---
 
-#### <span style="color: #008000">join</span>(<span style="color: #FF8000">join</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.Relation</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">join</span>(<span style="color: #FF8000">join</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Descrição
 
 Define os objetos Join (tabelas relacionadas) referente a tabela principal da consulta.
@@ -312,7 +312,7 @@ Define os objetos Join (tabelas relacionadas) referente a tabela principal da co
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **join** | _org.netuno.tritao.query.join.Relation_ | Objetos Join (tabelas relacionadas) referente a tabela principal da consulta. |
+| **join** | _[Relation](../../objects/Relation)_ | Objetos Join (tabelas relacionadas) referente a tabela principal da consulta. |
 
 ##### Retorno
 

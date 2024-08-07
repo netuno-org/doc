@@ -414,6 +414,10 @@
         "title": "RandomString",
         "sidebar_label": "RandomString"
       },
+      "library/objects/Relation": {
+        "title": "Relation",
+        "sidebar_label": "Relation"
+      },
       "library/objects/RelationLink": {
         "title": "RelationLink",
         "sidebar_label": "RelationLink"
