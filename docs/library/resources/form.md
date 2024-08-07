@@ -519,7 +519,7 @@ Application form generator programmatically.
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.Link</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -528,12 +528,12 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.link.Link_ )
+( _[Link](../../objects/Link)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.Link</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -543,23 +543,23 @@ Application form generator programmatically.
 
 ##### Return
 
-( _org.netuno.tritao.query.link.Link_ )
+( _[Link](../../objects/Link)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>, <span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.Link</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.Link</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>, <span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **formLink** | _string_ |   |
 | **where** | _[Where](../../objects/Where)_ |   |
-| **link** | _org.netuno.tritao.query.link.Link_ |   |
+| **link** | _[Link](../../objects/Link)_ |   |
 
 ##### Return
 
-( _org.netuno.tritao.query.link.Link_ )
+( _[Link](../../objects/Link)_ )
 
 
 ---

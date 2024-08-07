@@ -345,7 +345,7 @@ Current Query object.
 
 ---
 
-#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.Link</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Description
 
 Defines a form to be related to the main table of the query using the Link criteria.
@@ -355,7 +355,7 @@ Defines a form to be related to the main table of the query using the Link crite
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **formLink** | _string_ | Form to be related. |
-| **link** | _org.netuno.tritao.query.link.Link_ | Link object with a subrelation. |
+| **link** | _[Link](../../objects/Link)_ | Link object with a subrelation. |
 
 ##### Return
 
@@ -385,7 +385,7 @@ Current Query object.
 
 ---
 
-#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>, <span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.Link</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>, <span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Description
 
 Defines a form to be related to the main table of the query using the Link criteria.
@@ -396,7 +396,7 @@ Defines a form to be related to the main table of the query using the Link crite
 |---|---|---|
 | **formLink** | _string_ | Form to be related. |
 | **where** | _[Where](../../objects/Where)_ | Where object with the conditions referring to the form you want to relate. |
-| **link** | _org.netuno.tritao.query.link.Link_ | Link object with a subrelation. |
+| **link** | _[Link](../../objects/Link)_ | Link object with a subrelation. |
 
 ##### Return
 

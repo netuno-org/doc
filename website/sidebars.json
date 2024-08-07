@@ -99,7 +99,8 @@
           "library/objects/Where",
           "library/objects/Join",
           "library/objects/Condition",
-          "library/objects/RelationOperator"
+          "library/objects/RelationOperator",
+          "library/objects/Link"
         ]
       }
     ],

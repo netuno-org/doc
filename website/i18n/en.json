@@ -394,6 +394,10 @@
         "title": "Join",
         "sidebar_label": "Join"
       },
+      "library/objects/Link": {
+        "title": "Link",
+        "sidebar_label": "Link"
+      },
       "library/objects/OSCommand": {
         "title": "OSCommand",
         "sidebar_label": "OSCommand"
