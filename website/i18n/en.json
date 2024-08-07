@@ -362,6 +362,10 @@
         "title": "ErrorException",
         "sidebar_label": "ErrorException"
       },
+      "library/objects/Field": {
+        "title": "Field",
+        "sidebar_label": "Field"
+      },
       "library/objects/File": {
         "title": "File",
         "sidebar_label": "File"

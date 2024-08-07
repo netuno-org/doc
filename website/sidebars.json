@@ -75,6 +75,7 @@
           "library/objects/ErrorException",
           "library/objects/FTPConfig",
           "library/objects/FTPFile",
+          "library/objects/Field",
           "library/objects/File",
           "library/objects/Functions",
           "library/objects/IMAPConfig",
