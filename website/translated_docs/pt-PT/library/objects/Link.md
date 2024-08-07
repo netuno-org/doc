@@ -29,14 +29,14 @@ Nome do formulario.
 
 ---
 
-#### <span style="color: #008000">getRelationLink</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.RelationLink</span>
+#### <span style="color: #008000">getRelationLink</span>() : <span style="font-weight: normal; font-style: italic;">[RelationLink](../../objects/RelationLink)</span>
 ##### Descrição
 
 Retorna a configuração do relacionamento.
 
 ##### Retorno
 
-( _org.netuno.tritao.query.link.RelationLink_ )
+( _[RelationLink](../../objects/RelationLink)_ )
 
 Configuração do relacionamento.
 
@@ -109,7 +109,7 @@ Objeto Link atual.
 
 ---
 
-#### <span style="color: #008000">setRelationLink</span>(<span style="color: #FF8000">relationLink</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.RelationLink</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
+#### <span style="color: #008000">setRelationLink</span>(<span style="color: #FF8000">relationLink</span>: <span style="font-weight: normal; font-style: italic;">[RelationLink](../../objects/RelationLink)</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
 ##### Descrição
 
 Define a configuração do relacionamento.
@@ -118,7 +118,7 @@ Define a configuração do relacionamento.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relationLink** | _org.netuno.tritao.query.link.RelationLink_ | configuração do relacionamento. |
+| **relationLink** | _[RelationLink](../../objects/RelationLink)_ | configuração do relacionamento. |
 
 ##### Retorno
 

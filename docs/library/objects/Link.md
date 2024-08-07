@@ -29,14 +29,14 @@ The name of the form.
 
 ---
 
-#### <span style="color: #008000">getRelationLink</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.RelationLink</span>
+#### <span style="color: #008000">getRelationLink</span>() : <span style="font-weight: normal; font-style: italic;">[RelationLink](../../objects/RelationLink)</span>
 ##### Description
 
 Returns the relationship configuration.
 
 ##### Return
 
-( _org.netuno.tritao.query.link.RelationLink_ )
+( _[RelationLink](../../objects/RelationLink)_ )
 
 Relationship configuration.
 
@@ -109,7 +109,7 @@ Current Link object.
 
 ---
 
-#### <span style="color: #008000">setRelationLink</span>(<span style="color: #FF8000">relationLink</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.link.RelationLink</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
+#### <span style="color: #008000">setRelationLink</span>(<span style="color: #FF8000">relationLink</span>: <span style="font-weight: normal; font-style: italic;">[RelationLink](../../objects/RelationLink)</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
 ##### Description
 
 Defines the relationship configuration.
@@ -118,7 +118,7 @@ Defines the relationship configuration.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relationLink** | _org.netuno.tritao.query.link.RelationLink_ | The relationship configuration. |
+| **relationLink** | _[RelationLink](../../objects/RelationLink)_ | The relationship configuration. |
 
 ##### Return
 

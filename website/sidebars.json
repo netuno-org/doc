@@ -100,7 +100,8 @@
           "library/objects/Join",
           "library/objects/Condition",
           "library/objects/RelationOperator",
-          "library/objects/Link"
+          "library/objects/Link",
+          "library/objects/RelationLink"
         ]
       }
     ],
