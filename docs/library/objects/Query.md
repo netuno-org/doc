@@ -132,14 +132,14 @@ The fields that will be obtained in the query
 
 ---
 
-#### <span style="color: #008000">getGroup</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Group</span>
+#### <span style="color: #008000">getGroup</span>() : <span style="font-weight: normal; font-style: italic;">[Group](../../objects/Group)</span>
 ##### Description
 
 Returns the query grouping object.
 
 ##### Return
 
-( _org.netuno.tritao.query.Group_ )
+( _[Group](../../objects/Group)_ )
 
 The query grouping object.
 
@@ -561,7 +561,7 @@ Current Query object.
 
 ---
 
-#### <span style="color: #008000">setGroup</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Group</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">setGroup</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">[Group](../../objects/Group)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Description
 
 Defines the query grouping object.
@@ -570,7 +570,7 @@ Defines the query grouping object.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **order** | _org.netuno.tritao.query.Group_ | The query grouping object. |
+| **order** | _[Group](../../objects/Group)_ | The query grouping object. |
 
 ##### Return
 

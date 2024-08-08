@@ -382,6 +382,10 @@
         "title": "Functions",
         "sidebar_label": "Functions"
       },
+      "library/objects/Group": {
+        "title": "Group",
+        "sidebar_label": "Group"
+      },
       "library/objects/IMAPConfig": {
         "title": "IMAPConfig",
         "sidebar_label": "IMAPConfig"

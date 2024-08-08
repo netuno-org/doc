@@ -78,6 +78,7 @@
           "library/objects/Field",
           "library/objects/File",
           "library/objects/Functions",
+          "library/objects/Group",
           "library/objects/IMAPConfig",
           "library/objects/Index",
           "library/objects/InputStream",

@@ -132,14 +132,14 @@ Campos que serão obtidos na consulta.
 
 ---
 
-#### <span style="color: #008000">getGroup</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Group</span>
+#### <span style="color: #008000">getGroup</span>() : <span style="font-weight: normal; font-style: italic;">[Group](../../objects/Group)</span>
 ##### Descrição
 
 Retorna o objeto de agrupamento da consulta.
 
 ##### Retorno
 
-( _org.netuno.tritao.query.Group_ )
+( _[Group](../../objects/Group)_ )
 
 Objeto de agrupamento da consulta.
 
@@ -561,7 +561,7 @@ Objeto Query atual.
 
 ---
 
-#### <span style="color: #008000">setGroup</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Group</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">setGroup</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">[Group](../../objects/Group)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Descrição
 
 Define o objeto de agrupamento da consulta.
@@ -570,7 +570,7 @@ Define o objeto de agrupamento da consulta.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **order** | _org.netuno.tritao.query.Group_ | Objeto de ordenação da consulta. |
+| **order** | _[Group](../../objects/Group)_ | Objeto de ordenação da consulta. |
 
 ##### Retorno
 
