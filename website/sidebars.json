@@ -84,6 +84,7 @@
           "library/objects/Join",
           "library/objects/Link",
           "library/objects/OSCommand",
+          "library/objects/Order",
           "library/objects/OutputStream",
           "library/objects/Query",
           "library/objects/RandomString",

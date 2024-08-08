@@ -402,6 +402,10 @@
         "title": "Link",
         "sidebar_label": "Link"
       },
+      "library/objects/Order": {
+        "title": "Order",
+        "sidebar_label": "Order"
+      },
       "library/objects/OSCommand": {
         "title": "OSCommand",
         "sidebar_label": "OSCommand"

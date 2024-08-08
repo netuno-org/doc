@@ -166,14 +166,14 @@ The Join objects (related tables) referring to the main table of the query.
 
 ---
 
-#### <span style="color: #008000">getOrder</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Order</span>
+#### <span style="color: #008000">getOrder</span>() : <span style="font-weight: normal; font-style: italic;">[Order](../../objects/Order)</span>
 ##### Description
 
 Returns the query ordering object.
 
 ##### Return
 
-( _org.netuno.tritao.query.Order_ )
+( _[Order](../../objects/Order)_ )
 
 The query ordering object.
 
@@ -607,7 +607,7 @@ Current Query object.
 
 ---
 
-#### <span style="color: #008000">setOrder</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Order</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">setOrder</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">[Order](../../objects/Order)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Description
 
 Defines the query ordering object.
@@ -616,7 +616,7 @@ Defines the query ordering object.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **order** | _org.netuno.tritao.query.Order_ | The query ordering object. |
+| **order** | _[Order](../../objects/Order)_ | The query ordering object. |
 
 ##### Return
 

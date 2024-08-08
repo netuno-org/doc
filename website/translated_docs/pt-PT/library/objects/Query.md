@@ -166,14 +166,14 @@ Objetos Join (tabelas relacionadas) referente a tabela principal da consulta.
 
 ---
 
-#### <span style="color: #008000">getOrder</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Order</span>
+#### <span style="color: #008000">getOrder</span>() : <span style="font-weight: normal; font-style: italic;">[Order](../../objects/Order)</span>
 ##### Descrição
 
 Retorna o objeto de ordenação da consulta.
 
 ##### Retorno
 
-( _org.netuno.tritao.query.Order_ )
+( _[Order](../../objects/Order)_ )
 
 Objeto de ordenação da consulta.
 
@@ -607,7 +607,7 @@ Objeto Query atual.
 
 ---
 
-#### <span style="color: #008000">setOrder</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.Order</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">setOrder</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">[Order](../../objects/Order)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Descrição
 
 Define o objeto de ordenação da consulta.
@@ -616,7 +616,7 @@ Define o objeto de ordenação da consulta.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **order** | _org.netuno.tritao.query.Order_ | Objeto de ordenação da consulta. |
+| **order** | _[Order](../../objects/Order)_ | Objeto de ordenação da consulta. |
 
 ##### Retorno
 
