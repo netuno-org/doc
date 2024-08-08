@@ -8,6 +8,23 @@ Definição do objeto Field para declarar a coluna retornada em uma consulta com
 
 ---
 
+## getAlias
+
+---
+
+#### <span style="color: #008000">getAlias</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Descrição
+
+Retorna o apelido da coluna que será retornada na consulta.
+
+##### Retorno
+
+( _string_ )
+
+Apelido da coluna.
+
+---
+
 ## getColumn
 
 ---
@@ -25,20 +42,26 @@ Nome da coluna.
 
 ---
 
-## getElias
+## setAlias
 
 ---
 
-#### <span style="color: #008000">getElias</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="color: #008000">setAlias</span>(<span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Field](../../objects/Field)</span>
 ##### Descrição
 
-Retorna o apelido da coluna que será retornada na consulta.
+Define o apelido da coluna que será retornada na consulta.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **coluna** | _string_ | Apelido da coluna. |
 
 ##### Retorno
 
-( _string_ )
+( _[Field](../../objects/Field)_ )
 
-Apelido da coluna.
+Objeto Field atual.
 
 ---
 
@@ -56,29 +79,6 @@ Define o nome da coluna que será retornada na consulta.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **coluna** | _string_ | Nome da coluna. |
-
-##### Retorno
-
-( _[Field](../../objects/Field)_ )
-
-Objeto Field atual.
-
----
-
-## setElias
-
----
-
-#### <span style="color: #008000">setElias</span>(<span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Field](../../objects/Field)</span>
-##### Descrição
-
-Define o apelido da coluna que será retornada na consulta.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **coluna** | _string_ | Apelido da coluna. |
 
 ##### Retorno
 

@@ -116,6 +116,42 @@ Current Relation object.
 
 ---
 
+## leftJoin
+
+---
+
+#### <span style="color: #008000">leftJoin</span>(<span style="color: #FF8000">relation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **relation** | _[Relation](../../objects/Relation)_ |   |
+
+##### Return
+
+( _[Relation](../../objects/Relation)_ )
+
+
+---
+
+## rightJoin
+
+---
+
+#### <span style="color: #008000">rightJoin</span>(<span style="color: #FF8000">relation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **relation** | _[Relation](../../objects/Relation)_ |   |
+
+##### Return
+
+( _[Relation](../../objects/Relation)_ )
+
+
+---
+
 ## setColumn
 
 ---

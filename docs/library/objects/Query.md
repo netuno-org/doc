@@ -322,6 +322,24 @@ Current Query object.
 
 ---
 
+## leftJoin
+
+---
+
+#### <span style="color: #008000">leftJoin</span>(<span style="color: #FF8000">relation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **relation** | _[Relation](../../objects/Relation)_ |   |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+
+---
+
 ## link
 
 ---
@@ -480,6 +498,24 @@ Page with items and other pagination data.
 | **table** | _string_ |   |
 | **filter** | _[Field](../../objects/Field)_ |   |
 | **fields** | _java.util.List_ |   |
+
+##### Return
+
+( _[Query](../../objects/Query)_ )
+
+
+---
+
+## rightJoin
+
+---
+
+#### <span style="color: #008000">rightJoin</span>(<span style="color: #FF8000">relation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **relation** | _[Relation](../../objects/Relation)_ |   |
 
 ##### Return
 

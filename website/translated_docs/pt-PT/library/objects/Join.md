@@ -8,6 +8,18 @@ Definição da configuração do objeto Join para consultas simplificadas.
 
 ---
 
+## getJoinType
+
+---
+
+#### <span style="color: #008000">getJoinType</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.JoinType</span>
+##### Retorno
+
+( _org.netuno.tritao.query.join.JoinType_ )
+
+
+---
+
 ## getRelation
 
 ---
@@ -56,6 +68,24 @@ Retorna o objeto Where com a configuração das condições para a tabela a rela
 ( _[Where](../../objects/Where)_ )
 
 Objeto Where com a configuração das condições
+
+---
+
+## setJoinType
+
+---
+
+#### <span style="color: #008000">setJoinType</span>(<span style="color: #FF8000">joinType</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.JoinType</span>) : <span style="font-weight: normal; font-style: italic;">[Join](../../objects/Join)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **joinType** | _org.netuno.tritao.query.join.JoinType_ |   |
+
+##### Retorno
+
+( _[Join](../../objects/Join)_ )
+
 
 ---
 

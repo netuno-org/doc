@@ -8,6 +8,23 @@ Definição do objeto Field para declarar a coluna retornada em uma consulta com
 
 ---
 
+## getAlias
+
+---
+
+#### <span style="color: #008000">getAlias</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+##### Description
+
+Returns the alias of the column that will be returned in the query.
+
+##### Return
+
+( _string_ )
+
+The alias of the column.
+
+---
+
 ## getColumn
 
 ---
@@ -25,20 +42,26 @@ The name of the column.
 
 ---
 
-## getElias
+## setAlias
 
 ---
 
-#### <span style="color: #008000">getElias</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style="color: #008000">setAlias</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Field](../../objects/Field)</span>
 ##### Description
 
-Returns the alias of the column that will be returned in the query.
+Defines the alias of the column that will be returned in the query.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **column** | _string_ | The alias of the column |
 
 ##### Return
 
-( _string_ )
+( _[Field](../../objects/Field)_ )
 
-The alias of the column.
+Current Field object.
 
 ---
 
@@ -56,29 +79,6 @@ Defines the name of the column that will be returned in the query.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **column** | _string_ | The name of the column |
-
-##### Return
-
-( _[Field](../../objects/Field)_ )
-
-Current Field object.
-
----
-
-## setElias
-
----
-
-#### <span style="color: #008000">setElias</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Field](../../objects/Field)</span>
-##### Description
-
-Defines the alias of the column that will be returned in the query.
-
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **column** | _string_ | The alias of the column |
 
 ##### Return
 
