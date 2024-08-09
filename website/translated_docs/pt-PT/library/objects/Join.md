@@ -13,10 +13,15 @@ Definição da configuração do objeto Join para consultas simplificadas.
 ---
 
 #### <span style="color: #008000">getJoinType</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.JoinType</span>
+##### Descrição
+
+Retorna o tipo da junção do relacionamento.
+
 ##### Retorno
 
 ( _org.netuno.tritao.query.join.JoinType_ )
 
+Tipo da junção.
 
 ---
 
@@ -75,17 +80,22 @@ Objeto Where com a configuração das condições
 
 ---
 
-#### <span style="color: #008000">setJoinType</span>(<span style="color: #FF8000">joinType</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.JoinType</span>) : <span style="font-weight: normal; font-style: italic;">[Join](../../objects/Join)</span>
+#### <span style="color: #008000">setJoinType</span>(<span style="color: #FF8000">juncaoTipo</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.JoinType</span>) : <span style="font-weight: normal; font-style: italic;">[Join](../../objects/Join)</span>
+##### Descrição
+
+Define o tipo da junção do relacionamento.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **joinType** | _org.netuno.tritao.query.join.JoinType_ |   |
+| **juncaoTipo** | _org.netuno.tritao.query.join.JoinType_ | Tipo da junção. |
 
 ##### Retorno
 
 ( _[Join](../../objects/Join)_ )
 
+Objeto Join atual.
 
 ---
 

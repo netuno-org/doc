@@ -303,16 +303,16 @@ Se será aplicado ou não.
 
 ---
 
-#### <span style="color: #008000">join</span>(<span style="color: #FF8000">join</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">join</span>(<span style="color: #FF8000">relacao</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Descrição
 
-Define os objetos Join (tabelas relacionadas) referente a tabela principal da consulta.
+Define uma relacão de tipo INNER JOIN com uma tabela.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **join** | _[Relation](../../objects/Relation)_ | Objetos Join (tabelas relacionadas) referente a tabela principal da consulta. |
+| **relacao** | _[Relation](../../objects/Relation)_ | Relação do tipo INNER JOIN. |
 
 ##### Retorno
 
@@ -326,17 +326,22 @@ Objeto Query atual.
 
 ---
 
-#### <span style="color: #008000">leftJoin</span>(<span style="color: #FF8000">relation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">leftJoin</span>(<span style="color: #FF8000">relacao</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Descrição
+
+Define uma relacão de tipo LEFT JOIN com uma tabela.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relation** | _[Relation](../../objects/Relation)_ |   |
+| **relacao** | _[Relation](../../objects/Relation)_ | Relação do tipo LEFT JOIN. |
 
 ##### Retorno
 
 ( _[Query](../../objects/Query)_ )
 
+Objeto Query atual.
 
 ---
 
@@ -510,17 +515,22 @@ Pagina com os items e demais dados da paginação.
 
 ---
 
-#### <span style="color: #008000">rightJoin</span>(<span style="color: #FF8000">relation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">rightJoin</span>(<span style="color: #FF8000">relacao</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Descrição
+
+Define uma relacão de tipo RIGHT JOIN com uma tabela.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relation** | _[Relation](../../objects/Relation)_ |   |
+| **relacao** | _[Relation](../../objects/Relation)_ | Relação do tipo RIGHT JOIN. |
 
 ##### Retorno
 
 ( _[Query](../../objects/Query)_ )
 
+Objeto Query atual.
 
 ---
 

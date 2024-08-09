@@ -100,13 +100,13 @@ Configurações do filtro.
 #### <span style="color: #008000">join</span>(<span style="color: #FF8000">relacao</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
 ##### Descrição
 
-Define um segundo nivel de relação no objeto atual.
+Define um segundo nivel de relação INNER JOIN no objeto atual.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relacao** | _[Relation](../../objects/Relation)_ | Relação de segundo nivel. |
+| **relacao** | _[Relation](../../objects/Relation)_ | Relação INNER JOIN de segundo nivel. |
 
 ##### Retorno
 
@@ -120,17 +120,22 @@ Objeto Relation atual.
 
 ---
 
-#### <span style="color: #008000">leftJoin</span>(<span style="color: #FF8000">relation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
+#### <span style="color: #008000">leftJoin</span>(<span style="color: #FF8000">relacao</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
+##### Descrição
+
+Define um segundo nivel de relação LEFT JOIN no objeto atual.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relation** | _[Relation](../../objects/Relation)_ |   |
+| **relacao** | _[Relation](../../objects/Relation)_ | Relação LEFT JOIN de segundo nivel. |
 
 ##### Retorno
 
 ( _[Relation](../../objects/Relation)_ )
 
+Objeto Relation atual.
 
 ---
 
@@ -138,17 +143,22 @@ Objeto Relation atual.
 
 ---
 
-#### <span style="color: #008000">rightJoin</span>(<span style="color: #FF8000">relation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
+#### <span style="color: #008000">rightJoin</span>(<span style="color: #FF8000">relacao</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
+##### Descrição
+
+Define um segundo nivel de relação RIGHT JOIN no objeto atual.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relation** | _[Relation](../../objects/Relation)_ |   |
+| **relacao** | _[Relation](../../objects/Relation)_ | Relação RIGHT JOIN de segundo nivel. |
 
 ##### Retorno
 
 ( _[Relation](../../objects/Relation)_ )
 
+Objeto Relation atual.
 
 ---
 

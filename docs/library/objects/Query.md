@@ -303,16 +303,16 @@ Whether it will be applied or not.
 
 ---
 
-#### <span style="color: #008000">join</span>(<span style="color: #FF8000">join</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+#### <span style="color: #008000">join</span>(<span style="color: #FF8000">relation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
 ##### Description
 
-Defines the Join objects (related tables) referring to the main table of the query.
+Defines an INNER JOIN relationship with a table.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **join** | _[Relation](../../objects/Relation)_ | The Join objects (related tables) referring to the main table of the query. |
+| **relation** | _[Relation](../../objects/Relation)_ | INNER JOIN type relationship. |
 
 ##### Return
 
@@ -327,16 +327,21 @@ Current Query object.
 ---
 
 #### <span style="color: #008000">leftJoin</span>(<span style="color: #FF8000">relation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines an LEFT JOIN relationship with a table.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relation** | _[Relation](../../objects/Relation)_ |   |
+| **relation** | _[Relation](../../objects/Relation)_ | LEFT JOIN type relationship. |
 
 ##### Return
 
 ( _[Query](../../objects/Query)_ )
 
+Current Query object.
 
 ---
 
@@ -511,16 +516,21 @@ Page with items and other pagination data.
 ---
 
 #### <span style="color: #008000">rightJoin</span>(<span style="color: #FF8000">relation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Defines an RIGHT JOIN relationship with a table.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relation** | _[Relation](../../objects/Relation)_ |   |
+| **relation** | _[Relation](../../objects/Relation)_ | RIGHT JOIN type relationship. |
 
 ##### Return
 
 ( _[Query](../../objects/Query)_ )
 
+Current Query object.
 
 ---
 
