@@ -13,10 +13,15 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">AND</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.ConditionOperator</span>
+##### Description
+
+Returns an AND conditional operator.
+
 ##### Return
 
 ( _org.netuno.tritao.query.where.ConditionOperator_ )
 
+Conditional operator.
 
 ---
 
@@ -25,10 +30,15 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">OR</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.ConditionOperator</span>
+##### Description
+
+Returns an OR conditional operator.
+
 ##### Return
 
 ( _org.netuno.tritao.query.where.ConditionOperator_ )
 
+Conditional operator.
 
 ---
 
@@ -49,16 +59,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">contains</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
+##### Description
+
+Returns a relational operator that filters any occurrence that includes the given pattern.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **value** | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ | Conditional value. |
 
 ##### Return
 
 ( _[RelationOperator](../../objects/RelationOperator)_ )
 
+Relational operator.
 
 ---
 
@@ -171,16 +186,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">different</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
+##### Description
+
+Returns a relational operator that filters any occurrence that differs from the given pattern.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **value** | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ | Conditional value. |
 
 ##### Return
 
 ( _[RelationOperator](../../objects/RelationOperator)_ )
 
+Relational operator.
 
 ---
 
@@ -189,16 +209,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">endsWith</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
+##### Description
+
+Returns a relational operator that filters any occurrence that ends with the given pattern.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **value** | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ | Conditional value. |
 
 ##### Return
 
 ( _[RelationOperator](../../objects/RelationOperator)_ )
 
+Relational operator.
 
 ---
 
@@ -207,16 +232,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">field</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Field](../../objects/Field)</span>
+##### Description
+
+Returns a field based on the given column.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **column** | _string_ |   |
+| **column** | _string_ | Column name. |
 
 ##### Return
 
 ( _[Field](../../objects/Field)_ )
 
+Objeto Field.
 
 ---
 
@@ -240,16 +270,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">fields</span>(<span style="color: #FF8000">fields</span>: <span style="font-weight: normal; font-style: italic;">[Lorg.netuno.tritao.query.Field;[]</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+##### Description
+
+List of column-based fields to be returned in the query.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **fields** | _[Lorg.netuno.tritao.query.Field;[]_ |   |
+| **fields** | _[Lorg.netuno.tritao.query.Field;[]_ | List of fields. |
 
 ##### Return
 
 ( _java.util.List_ )
 
+List of fields.
 
 ---
 
@@ -430,16 +465,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">greaterOrEqualsThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
+##### Description
+
+Returns a relational operator that filters out any occurrence that is greater or equals than the given pattern.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **value** | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ | Conditional value. |
 
 ##### Return
 
 ( _[RelationOperator](../../objects/RelationOperator)_ )
 
+Relational operator.
 
 ---
 
@@ -448,16 +488,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">greaterThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
+##### Description
+
+Returns a relational operator that filters out any occurrence that is greater than the given pattern.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **value** | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ | Conditional value. |
 
 ##### Return
 
 ( _[RelationOperator](../../objects/RelationOperator)_ )
 
+Relational operator.
 
 ---
 
@@ -466,16 +511,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">in</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
+##### Description
+
+Returns a relational operator that filters any occurrence that is equal to any of the given patterns.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Values](../../objects/Values)_ |   |
+| **values** | _[Values](../../objects/Values)_ | Conditional values. |
 
 ##### Return
 
 ( _[RelationOperator](../../objects/RelationOperator)_ )
 
+Relational operator.
 
 ---
 
@@ -484,16 +534,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">lessOrEqualsThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
+##### Description
+
+Returns a relational operator that filters out any occurrence that is less or equals than the given pattern.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **value** | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ | Conditional value. |
 
 ##### Return
 
 ( _[RelationOperator](../../objects/RelationOperator)_ )
 
+Relational operator.
 
 ---
 
@@ -502,16 +557,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">lessThan</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
+##### Description
+
+Returns a relational operator that filters out any occurrence that is less than the given pattern.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **value** | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ | Conditional value. |
 
 ##### Return
 
 ( _[RelationOperator](../../objects/RelationOperator)_ )
 
+Relational operator.
 
 ---
 
@@ -520,16 +580,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
+##### Description
+
+Returns a relationship with a form.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **formLink** | _string_ |   |
+| **formLink** | _string_ | Name of the form to be related. |
 
 ##### Return
 
 ( _[Link](../../objects/Link)_ )
 
+Objeto Link.
 
 ---
 
@@ -569,17 +634,22 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">manyToOne</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
+##### Description
+
+Returns a new Many To One relationship.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **tableName** | _string_ |   |
-| **column** | _string_ |   |
+| **tableName** | _string_ | Table name. |
+| **column** | _string_ | Column name. |
 
 ##### Return
 
 ( _[Relation](../../objects/Relation)_ )
 
+Many To One relationship.
 
 ---
 
@@ -636,17 +706,22 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">oneToMany</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
+##### Description
+
+Returns a new One To Many relationship.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **tableName** | _string_ |   |
-| **column** | _string_ |   |
+| **tableName** | _string_ | Table name. |
+| **column** | _string_ | Column name. |
 
 ##### Return
 
 ( _[Relation](../../objects/Relation)_ )
 
+One To Many relationship.
 
 ---
 
@@ -671,17 +746,22 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">pagination</span>(<span style="color: #FF8000">page</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">pageSize</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.pagination.Pagination</span>
+##### Description
+
+Returns the object for pagination configuration when using Query's page() method.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **page** | _int_ |   |
-| **pageSize** | _int_ |   |
+| **page** | _int_ | Page number. |
+| **pageSize** | _int_ | Number of elements per page. |
 
 ##### Return
 
 ( _org.netuno.tritao.query.pagination.Pagination_ )
 
+Objeto Pagination.
 
 ---
 
@@ -722,16 +802,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">query</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Query](../../objects/Query)</span>
+##### Description
+
+Returns a new Query object ready to be configured.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **tableName** | _string_ |   |
+| **tableName** | _string_ | Table name. |
 
 ##### Return
 
 ( _[Query](../../objects/Query)_ )
 
+A new Query object
 
 ---
 
@@ -755,16 +840,21 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">startsWith</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
+##### Description
+
+Returns a relational operator that filters any occurrence that starts with the given pattern.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **value** | _java.lang.Object_ |   |
+| **value** | _java.lang.Object_ | Conditional value. |
 
 ##### Return
 
 ( _[RelationOperator](../../objects/RelationOperator)_ )
 
+Relational operator.
 
 ---
 
@@ -773,32 +863,42 @@ Application form generator programmatically.
 ---
 
 #### <span style="font-weight: normal">_form</span>.<span style="color: #008000">where</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+##### Description
+
+Returns a new Where object ready to be configured.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **column** | _string_ |   |
-| **value** | _java.lang.Object_ |   |
+| **column** | _string_ | Column name. |
+| **value** | _java.lang.Object_ | Conditional values. |
 
 ##### Return
 
 ( _[Where](../../objects/Where)_ )
 
+A new Where object
 
 ---
 
-#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">where</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style="font-weight: normal">_form</span>.<span style="color: #008000">where</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+##### Description
+
+Returns a new Where object ready to be configured.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **column** | _string_ |   |
-| **relationOperator** | _[RelationOperator](../../objects/RelationOperator)_ |   |
+| **column** | _string_ | Column name. |
+| **value** | _[RelationOperator](../../objects/RelationOperator)_ | Conditional values. |
 
 ##### Return
 
 ( _[Where](../../objects/Where)_ )
 
+A new Where object
 
 ---
 

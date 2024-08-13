@@ -217,7 +217,8 @@
       "academy/server/monitor-alerts",
       "academy/server/templates",
       "academy/server/development-debug-java",
-      "academy/server/nginx-integration"
+      "academy/server/nginx-integration",
+      "academy/server/code-reuse"
     ],
     "Website": [
       "academy/website/create",

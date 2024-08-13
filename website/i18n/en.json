@@ -89,6 +89,10 @@
         "title": "Actions",
         "sidebar_label": "Actions"
       },
+      "academy/server/code-reuse": {
+        "title": "Code reuse",
+        "sidebar_label": "Code reuse"
+      },
       "academy/server/cron-jobs": {
         "title": "Cron Jobs",
         "sidebar_label": "Cron Jobs"
