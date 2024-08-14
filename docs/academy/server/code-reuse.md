@@ -37,7 +37,7 @@ if (mailAlreadyInUse(mail)) {
     _out.json(
         _val.map()
             .set("result", false)
-            .set("error":"mail already exists")
+            .set("error","mail already exists")
     )
     _exec.stop();
 }
