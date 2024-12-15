@@ -8,7 +8,7 @@ sidebar_label: Integration with NGINX
 
 As _Netuno_, is also a web server and cannot have the same performance and versatility in this field that is obtained with NGINX. However, since its integration with _Netuno_ is easy, we can benefit in this way.
 
-![integracao-nginx1.png](assets/integracao-nginx1.png)
+![integracao-nginx1.png](/docs/assets/integracao-nginx1.png)
 
 ## NGINX Installation
 
@@ -26,8 +26,6 @@ In CentOS, Fedora or RedHat distributions:
 yum install nginx
 ```
 
-<br>
-<br>
 In MacOS X is available in brew and macports.
 
 For Windows you can download from here: http://nginx.org/en/download.html
@@ -45,7 +43,7 @@ To create a new configuration file for the new website at `sites-available/netun
 
 And the contents of this file will be:
 
-```editorconfig
+```text
 server {
     listen 127.0.0.1:80;
     server_name netuno-app-name.localhost;

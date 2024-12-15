@@ -32,8 +32,8 @@ Due to the technological advances of the last decade, allied to the technologies
 These are some of the most relevant technologies:
 
 * **Internet of Things**: It consists in the network connection of physical objects, environments, vehicles and machines through implemented electronic devices that allow the collection and exchange of data. The systems that are based on the Internet of Things, are called Cyber-physical and have sensors and actuators.
-* **Big Data Analytics**: They are very extensive and complex data structures that use new approaches for the capture, analysis and management of information. Applied to Industry 4.0, Big Data technology consists of 6 C's to deal with relevant information: <br>
-Connection to the industrial network, sensors and PLCs, Cloud Technology, Cyber ​​Security, Content, Community (Data sharing), Customization.
+* **Big Data Analytics**: They are very extensive and complex data structures that use new approaches for the capture, analysis and management of information. Applied to Industry 4.0, Big Data technology consists of 6 C's to deal with relevant information:
+  Connection to the industrial network, sensors and PLCs, Cloud Technology, Cyber ​​Security, Content, Community (Data sharing), Customization.
 * **Security**: The security and strength of information systems is the major challenge for the success of Industry 4.0. Transmission failures in communication between machines or a simple atrophy of the system can cause production disruption.
 
 ## Nowadays Impact

@@ -1,7 +1,7 @@
 ---
+sidebar_position: 6
 id: api
 title: API
-sidebar_label: API
 ---
 
 _Netuno_ has its own framework for creating low-code REST APIs, with support for JWT (JSON Web Token) and OpenAPI 3.0.

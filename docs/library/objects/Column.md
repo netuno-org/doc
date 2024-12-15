@@ -22,7 +22,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">changeType</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>changeType</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -31,7 +31,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -40,7 +40,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">drop</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>drop</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -50,7 +50,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -59,7 +59,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">getDefault</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getDefault</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -71,7 +71,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">getKey</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getKey</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -83,7 +83,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">getMaxLength</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>getMaxLength</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -95,7 +95,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -107,7 +107,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">getType</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.manager.Column$Type</span>
+#### <span style={{color: '#008000'}}>getType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.manager.Column$Type</span>
 ##### Return
 
 ( _org.netuno.tritao.db.manager.Column$Type_ )
@@ -119,7 +119,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">isH2</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isH2</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -127,7 +127,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">isH2</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isH2</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -145,7 +145,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">isMSSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMSSQL</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -153,7 +153,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">isMSSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMSSQL</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -171,7 +171,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">isMariaDB</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMariaDB</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -179,7 +179,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">isMariaDB</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMariaDB</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -197,7 +197,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">isNotNull</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isNotNull</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -209,7 +209,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">isPostgreSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isPostgreSQL</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -217,7 +217,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">isPostgreSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isPostgreSQL</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -235,7 +235,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">isPrimaryKey</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isPrimaryKey</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -247,7 +247,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">rename</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">oldName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">newName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>rename</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>oldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>newName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -258,7 +258,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -267,7 +267,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">renameIfExists</span>(<span style="color: #FF8000">table</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">oldName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">newName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>renameIfExists</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>oldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>newName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -278,7 +278,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -287,7 +287,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">sequence</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>sequence</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -299,15 +299,15 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">setDefault</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setDefault</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
 
-#### <span style="color: #008000">setDefault</span>(<span style="color: #FF8000">_default</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setDefault</span>(<span style={{color: '#FF8000'}}>_default</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -316,12 +316,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
 
-#### <span style="color: #008000">setDefault</span>(<span style="color: #FF8000">_default</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setDefault</span>(<span style={{color: '#FF8000'}}>_default</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -330,12 +330,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
 
-#### <span style="color: #008000">setDefault</span>(<span style="color: #FF8000">_default</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setDefault</span>(<span style={{color: '#FF8000'}}>_default</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -344,12 +344,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
 
-#### <span style="color: #008000">setDefault</span>(<span style="color: #FF8000">_default</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setDefault</span>(<span style={{color: '#FF8000'}}>_default</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -358,7 +358,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -367,10 +367,10 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">setDefaultAsCurrentDate</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setDefaultAsCurrentDate</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -379,10 +379,10 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">setDefaultAsCurrentTime</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setDefaultAsCurrentTime</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -391,10 +391,10 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">setDefaultAsCurrentTimeStamp</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setDefaultAsCurrentTimeStamp</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -403,10 +403,10 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">setDefaultAsNewUUID</span>() : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setDefaultAsNewUUID</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -415,7 +415,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">setMaxLength</span>(<span style="color: #FF8000">maxLength</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setMaxLength</span>(<span style={{color: '#FF8000'}}>maxLength</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -424,7 +424,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -433,7 +433,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">setName</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setName</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -442,7 +442,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -451,7 +451,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">setNotNull</span>(<span style="color: #FF8000">notNull</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setNotNull</span>(<span style={{color: '#FF8000'}}>notNull</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -460,7 +460,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -469,7 +469,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">setPrimaryKey</span>(<span style="color: #FF8000">primaryKey</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setPrimaryKey</span>(<span style={{color: '#FF8000'}}>primaryKey</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -478,7 +478,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -487,7 +487,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">setType</span>(<span style="color: #FF8000">typeName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setType</span>(<span style={{color: '#FF8000'}}>typeName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -496,12 +496,12 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
 
-#### <span style="color: #008000">setType</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.manager.Column$Type</span>) : <span style="font-weight: normal; font-style: italic;">[Column](../../objects/Column)</span>
+#### <span style={{color: '#008000'}}>setType</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.manager.Column$Type</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -510,7 +510,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Return
 
-( _[Column](../../objects/Column)_ )
+( _[Column](../objects/Column)_ )
 
 
 ---
@@ -519,7 +519,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">toDefaultDefinition</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toDefaultDefinition</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -531,7 +531,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style="color: #008000">toTypeDefinition</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toTypeDefinition</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )

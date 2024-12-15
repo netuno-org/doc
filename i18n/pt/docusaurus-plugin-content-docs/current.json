@@ -1,0 +1,86 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.academySidebar.category.App Demo": {
+    "message": "App Demo",
+    "description": "The label for category App Demo in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.App Demo.link.generated-index.description": {
+    "message": "Make a development tour changing the demonstration application.",
+    "description": "The generated-index page description for category App Demo in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.User Interface": {
+    "message": "User Interface",
+    "description": "The label for category User Interface in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.User Interface.link.generated-index.description": {
+    "message": "Como funciona a interface de utilização.",
+    "description": "The generated-index page description for category User Interface in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Explore": {
+    "message": "Explorar",
+    "description": "The label for category Explore in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Explore.link.generated-index.description": {
+    "message": "Descubra algumas funcionalidades e conceitos no geral.",
+    "description": "The generated-index page description for category Explore in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Server": {
+    "message": "Server",
+    "description": "The label for category Server in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Server.link.generated-index.description": {
+    "message": "Backend empoderado com low-code, veja alguns tutoriais.",
+    "description": "The generated-index page description for category Server in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Database": {
+    "message": "Database",
+    "description": "The label for category Database in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Database.link.generated-index.description": {
+    "message": "Tutorials for the database management.",
+    "description": "The generated-index page description for category Database in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Service": {
+    "message": "Service",
+    "description": "The label for category Service in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Service.link.generated-index.description": {
+    "message": "Resources tutorials used in services.",
+    "description": "The generated-index page description for category Service in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Website": {
+    "message": "Website",
+    "description": "The label for category Website in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Website.link.generated-index.description": {
+    "message": "Advanced frontend development and integrations.",
+    "description": "The generated-index page description for category Website in sidebar academySidebar"
+  },
+  "sidebar.librarySidebar.category.App Folders": {
+    "message": "Pastas da Aplicação",
+    "description": "The label for category App Folders in sidebar librarySidebar"
+  },
+  "sidebar.librarySidebar.category.App Folders.link.generated-index.description": {
+    "message": "As pastas da aplicação detalhada.",
+    "description": "The generated-index page description for category App Folders in sidebar librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Resources": {
+    "message": "Recursos",
+    "description": "The label for category Resources in sidebar librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Resources.link.generated-index.description": {
+    "message": "Todos os recursos low-code disponíveis.",
+    "description": "The generated-index page description for category Resources in sidebar librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Objects": {
+    "message": "Objetos",
+    "description": "The label for category Objects in sidebar librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Objects.link.generated-index.description": {
+    "message": "Principais objetos low-code disponíveis.",
+    "description": "The generated-index page description for category Objects in sidebar librarySidebar"
+  }
+}

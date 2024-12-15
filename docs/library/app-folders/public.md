@@ -4,7 +4,7 @@ title: Public
 sidebar_label: Public
 ---
 
-## Public/
+## public/
 
 The `public` folder gathers the UI (User Interface) client-side content after compilation. It is sub-organized in the folders: `images`, `scripts` and `styles`.
 

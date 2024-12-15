@@ -12,7 +12,7 @@ Interacts with the server and obtains configuration parameters specified in `con
 
 ---
 
-#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">getHost</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>getHost</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Obtém o hostname de rede ou ip configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
@@ -38,7 +38,7 @@ Network hostname or IP of the Netuno server.
 
 ---
 
-#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>getName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Obtém o nome do servidor do Netuno, especificado no config.js na pasta raíz do Netuno.
@@ -64,7 +64,7 @@ Netuno server name.
 
 ---
 
-#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">getPort</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>getPort</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Obtém o porto de rede configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
@@ -90,7 +90,7 @@ Network port number of the Netuno server.
 
 ---
 
-#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">host</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>host</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Obtém o hostname de rede ou ip configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
@@ -116,7 +116,7 @@ Network hostname or IP of the Netuno server.
 
 ---
 
-#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>name</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Obtém o nome do servidor do Netuno, especificado no config.js na pasta raíz do Netuno.
@@ -142,7 +142,7 @@ Netuno server name.
 
 ---
 
-#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">port</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>port</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Obtém o porto de rede configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
@@ -168,7 +168,7 @@ Network port number of the Netuno server.
 
 ---
 
-#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a message directly to the Netuno server terminal.
@@ -190,7 +190,7 @@ Prints a message directly to the Netuno server terminal.
 
 ---
 
-#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a line with a message directly to the Netuno server terminal.
@@ -212,7 +212,7 @@ Prints a line with a message directly to the Netuno server terminal.
 
 ---
 
-#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">shutdown</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>shutdown</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Desliga o servidor do Netuno.
@@ -231,7 +231,7 @@ _server.shutdown()
 
 ---
 
-#### <span style="font-weight: normal">_server</span>.<span style="color: #008000">shutdown</span>(<span style="color: #FF8000">intervalo</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>shutdown</span>(<span style={{color: '#FF8000'}}>intervalo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Desliga o servidor do Netuno depois de alguns tempo.

@@ -12,7 +12,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>addDataStructure</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -28,7 +28,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">readonly</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>addDataStructure</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>readonly</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -45,7 +45,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">readonly</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>addDataStructure</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>readonly</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>, <span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -63,7 +63,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>addDataStructure</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -80,7 +80,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">readonly</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>addDataStructure</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>readonly</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -98,7 +98,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">addDataStructure</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">readonly</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>addDataStructure</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>readonly</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>, <span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -121,7 +121,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getConfiguration</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.com.Configuration</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getConfiguration</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.com.Configuration</span>
 ##### Return
 
 ( _org.netuno.tritao.com.Configuration_ )
@@ -133,7 +133,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getDataStructure</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getDataStructure</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -145,10 +145,10 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getDesignData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getDesignData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -157,7 +157,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getMode</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getMode</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -169,10 +169,10 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getProperties</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getProperties</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -181,10 +181,10 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getTableData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getTableData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -193,7 +193,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getType</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -205,10 +205,10 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">getValues</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -217,7 +217,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isModeEdit</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>isModeEdit</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -229,7 +229,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isModeEditRestore</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>isModeEditRestore</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -241,7 +241,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isRenderEdit</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>isRenderEdit</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -253,7 +253,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isRenderReportForm</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>isRenderReportForm</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -265,7 +265,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isRenderSearchForm</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>isRenderSearchForm</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -277,7 +277,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isRenderSearchResults</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>isRenderSearchResults</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -289,7 +289,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">isRenderView</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>isRenderView</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -301,7 +301,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style="font-weight: normal">_component</span>.<span style="color: #008000">renderDisplayName</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>renderDisplayName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )

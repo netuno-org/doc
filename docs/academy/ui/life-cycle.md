@@ -1,7 +1,8 @@
 ---
+sidebar_position: 9
 id: life-cycle
 title: Application Life Cycle Events
-sidebar_label: Application Life Cycle Events
+sidebar_label: Life Cycle Events
 ---
 
 A page cannot be safely handled until the application is "ready". Netuno detects this state of readiness for you. 

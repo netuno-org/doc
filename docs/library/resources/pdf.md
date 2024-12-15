@@ -13,7 +13,7 @@ Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iTex
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">areaBreak</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.AreaBreak</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>areaBreak</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.AreaBreak</span>
 ##### Description
 
 Creates an AreaBreak that terminates a previous area type.
@@ -26,7 +26,7 @@ Terminates the previous area and returns a new one.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">areaBreak</span>(<span style="color: #FF8000">pageSize</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.AreaBreak</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>areaBreak</span>(<span style={{color: '#FF8000'}}>pageSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.AreaBreak</span>
 ##### Description
 
 Creates an AreaBreak that terminates a previous area type.
@@ -45,7 +45,7 @@ Terminates the previous area and returns a new one.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">areaBreak</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.AreaBreak</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>areaBreak</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.AreaBreak</span>
 ##### Description
 
 Creates an AreaBreak that terminates a previous area type.
@@ -68,7 +68,7 @@ Terminates the previous area and returns a new one.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type.
@@ -87,7 +87,7 @@ Returns a border width of the type inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -108,7 +108,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -130,7 +130,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -152,7 +152,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -174,7 +174,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -195,7 +195,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -217,7 +217,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a customized border with type, color, width and opacity inserted.
@@ -239,7 +239,7 @@ Returns the created customized border.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type, color, width and opacity inserted.
@@ -261,7 +261,7 @@ Returns a border type, color, width and opacity inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -282,7 +282,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -304,7 +304,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -326,7 +326,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -348,7 +348,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width.
@@ -368,7 +368,7 @@ Returns a border width of the type inserted,coloured black and the width inserte
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -389,7 +389,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -410,7 +410,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -431,7 +431,7 @@ Returns a border type, width and color inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width.
@@ -451,7 +451,7 @@ Returns a border width of the type inserted,coloured black and the width inserte
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -472,7 +472,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -493,7 +493,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -514,7 +514,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width.
@@ -534,7 +534,7 @@ Returns a border width of the type inserted,coloured black and the width inserte
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -555,7 +555,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -576,7 +576,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border</span>
 ##### Description
 
 Creates a border type with a inserted width and opacity.
@@ -601,7 +601,7 @@ Returns a border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -620,7 +620,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -641,7 +641,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -663,7 +663,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -685,7 +685,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -707,7 +707,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -728,7 +728,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -750,7 +750,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a customized 3D border with type,color, width and opacity inserted.
@@ -772,7 +772,7 @@ Returns the created customized 3D border.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -794,7 +794,7 @@ Returns a 3D border type, color, width and opacity inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -815,7 +815,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -837,7 +837,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -859,7 +859,7 @@ Returns a 3D border type,color,width inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type,color, width and opacity inserted.
@@ -881,7 +881,7 @@ Returns a 3D border type,color,width and opacity inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a border type 3D with a inserted width.
@@ -901,7 +901,7 @@ Returns a 3D border width of the type inserted,coloured black and the width inse
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -922,7 +922,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -943,7 +943,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -964,7 +964,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a border type 3D with a inserted width.
@@ -984,7 +984,7 @@ Returns a 3D border width of the type inserted,coloured black and the width inse
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1005,7 +1005,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1026,7 +1026,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1047,7 +1047,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a border type 3D.
@@ -1067,7 +1067,7 @@ Returns a 3D border width of the type inserted,coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1088,7 +1088,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1109,7 +1109,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">border3D</span>(<span style="color: #FF8000">border</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">opacity</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.borders.Border3D</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>border3D</span>(<span style={{color: '#FF8000'}}>border</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>opacity</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.borders.Border3D</span>
 ##### Description
 
 Creates a 3D border type with a inserted width and opacity.
@@ -1134,7 +1134,7 @@ Returns a 3D border type, the width and opacity inserted, coloured black.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">canvas</span>(<span style="color: #FF8000">doc</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>, <span style="color: #FF8000">pageNum</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.PdfCanvas</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>canvas</span>(<span style={{color: '#FF8000'}}>doc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.pdf.PdfDocument</span>, <span style={{color: '#FF8000'}}>pageNum</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.pdf.canvas.PdfCanvas</span>
 ##### Description
 
 Creates an rectangular text area.
@@ -1153,7 +1153,7 @@ Creates an rectangular text area.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">canvas</span>(<span style="color: #FF8000">page</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfPage</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.PdfCanvas</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>canvas</span>(<span style={{color: '#FF8000'}}>page</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.pdf.PdfPage</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.pdf.canvas.PdfCanvas</span>
 ##### Description
 
 Creates an rectangular text area.
@@ -1175,7 +1175,7 @@ Creates an rectangular text area.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">cell</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Cell</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>cell</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Cell</span>
 ##### Description
 
 Creates a new table cell.
@@ -1188,7 +1188,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">cell</span>(<span style="color: #FF8000">rowspan</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colspan</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Cell</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>cell</span>(<span style={{color: '#FF8000'}}>rowspan</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colspan</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Cell</span>
 ##### Description
 
 Creates a new table cell with rowspan or colspan.
@@ -1212,7 +1212,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">color</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>color</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1230,7 +1230,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorCMYK</span>(<span style="color: #FF8000">cyan</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">magenta</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">yellow</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">black</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceCmyk</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>colorCMYK</span>(<span style={{color: '#FF8000'}}>cyan</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>magenta</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>yellow</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>black</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.DeviceCmyk</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1247,7 +1247,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorCMYK</span>(<span style="color: #FF8000">cyan</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">magenta</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">yellow</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">black</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceCmyk</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>colorCMYK</span>(<span style={{color: '#FF8000'}}>cyan</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>magenta</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>yellow</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>black</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.DeviceCmyk</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1264,7 +1264,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorCMYK</span>(<span style="color: #FF8000">cyan</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">magenta</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">yellow</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">black</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceCmyk</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>colorCMYK</span>(<span style={{color: '#FF8000'}}>cyan</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>magenta</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>yellow</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>black</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.DeviceCmyk</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1285,7 +1285,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorGray</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceGray</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>colorGray</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.DeviceGray</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1299,7 +1299,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorGray</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceGray</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>colorGray</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.DeviceGray</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1313,7 +1313,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorGray</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceGray</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>colorGray</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.DeviceGray</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1331,7 +1331,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorRGB</span>(<span style="color: #FF8000">red</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">green</span>: <span style="font-weight: normal; font-style: italic;">double</span>, <span style="color: #FF8000">blue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceRgb</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>colorRGB</span>(<span style={{color: '#FF8000'}}>red</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>green</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>, <span style={{color: '#FF8000'}}>blue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.DeviceRgb</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1347,7 +1347,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorRGB</span>(<span style="color: #FF8000">red</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">green</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">blue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceRgb</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>colorRGB</span>(<span style={{color: '#FF8000'}}>red</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>green</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>blue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.DeviceRgb</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1363,7 +1363,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">colorRGB</span>(<span style="color: #FF8000">red</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">green</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">blue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.DeviceRgb</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>colorRGB</span>(<span style={{color: '#FF8000'}}>red</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>green</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>blue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.DeviceRgb</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1383,7 +1383,7 @@ Returns the created cell.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>extract</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Extracts the content of PDF's.
@@ -1392,17 +1392,17 @@ Extracts the content of PDF's.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../../objects/InputStream)_ | Content to be extracted. |
+| **content** | _[InputStream](../objects/InputStream)_ | Content to be extracted. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Returns the extracted content.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>extract</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Extracts the content of PDFs.
@@ -1411,17 +1411,17 @@ Extracts the content of PDFs.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ | Caminho do armazenamento. |
+| **storage** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ | Caminho do armazenamento. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Returns the extracted content.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">extract</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>extract</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Extracts the content of PDF's.
@@ -1430,11 +1430,11 @@ Extracts the content of PDF's.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../../objects/InputStream)_ | Content to be extracted. |
+| **content** | _[InputStream](../objects/InputStream)_ | Content to be extracted. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Returns the extracted content.
 
@@ -1444,7 +1444,7 @@ Returns the extracted content.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1463,7 +1463,7 @@ Returns the created font.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1472,7 +1472,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[File](../../objects/File)_ | Storage path. |
+| **storage** | _[File](../objects/File)_ | Storage path. |
 
 ##### Return
 
@@ -1482,7 +1482,7 @@ Returns the created font.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1491,7 +1491,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[File](../../objects/File)_ | Storage path. |
+| **storage** | _[File](../objects/File)_ | Storage path. |
 | **encoding** | _boolean_ | Font encoding. |
 
 ##### Return
@@ -1502,7 +1502,7 @@ Returns the created font.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1511,7 +1511,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[File](../../objects/File)_ | Storage path. |
+| **storage** | _[File](../objects/File)_ | Storage path. |
 | **encoding** | _string_ | Font encoding. |
 
 ##### Return
@@ -1522,7 +1522,7 @@ Returns the created font.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">embedded</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>embedded</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1531,7 +1531,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[File](../../objects/File)_ | Storage path. |
+| **storage** | _[File](../objects/File)_ | Storage path. |
 | **encoding** | _string_ | Font encoding. |
 | **embedded** | _boolean_ |   |
 
@@ -1543,7 +1543,7 @@ Returns the created font.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1552,7 +1552,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ | Storage path. |
+| **storage** | _[Storage](../resources/storage)_ | Storage path. |
 
 ##### Return
 
@@ -1562,7 +1562,7 @@ Returns the created font.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1571,7 +1571,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ | Storage path. |
+| **storage** | _[Storage](../resources/storage)_ | Storage path. |
 | **encoding** | _boolean_ | Font encoding. |
 
 ##### Return
@@ -1582,7 +1582,7 @@ Returns the created font.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1591,7 +1591,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ | Storage path. |
+| **storage** | _[Storage](../resources/storage)_ | Storage path. |
 | **encoding** | _string_ | Font encoding. |
 
 ##### Return
@@ -1602,7 +1602,7 @@ Returns the created font.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">font</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">encoding</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">embedded</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>embedded</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1611,7 +1611,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ | Storage path. |
+| **storage** | _[Storage](../resources/storage)_ | Storage path. |
 | **encoding** | _string_ | Font encoding. |
 | **embedded** | _boolean_ |   |
 
@@ -1627,7 +1627,7 @@ Returns the created font.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>getDocument</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Obtém o objecto Document do iText para a estrutura do documento PDF.
@@ -1644,7 +1644,7 @@ Gere a estrutura do documento.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getPdfDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfDocument</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>getPdfDocument</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Description
 
 Gets the PdfDocument object of the iText to build the PDf document.
@@ -1661,7 +1661,7 @@ Manage the PDF document build.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getPdfReader</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfReader</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>getPdfReader</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.pdf.PdfReader</span>
 ##### Description
 
 Gets the PdfReader object of the iText to read the PDF document.
@@ -1678,7 +1678,7 @@ Manage the PDF document read.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">getPdfWriter</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.PdfWriter</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>getPdfWriter</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.pdf.PdfWriter</span>
 ##### Description
 
 Gets the PdfWriter object of the iText to bytes write in the PDF file.
@@ -1695,12 +1695,12 @@ Manage the bytes write in the PDF file.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">image</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Image</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>image</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Image</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../../objects/File)_ |   |
+| **file** | _[File](../objects/File)_ |   |
 
 ##### Return
 
@@ -1709,12 +1709,12 @@ Manage the bytes write in the PDF file.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">image</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Image</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>image</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Image</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ |   |
+| **storage** | _[Storage](../resources/storage)_ |   |
 
 ##### Return
 
@@ -1727,7 +1727,7 @@ Manage the bytes write in the PDF file.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[PDF](../../resources/pdf)</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[PDF](../resources/pdf)</span>
 ##### Description
 
 Creates a new resource object to build PDFs.
@@ -1740,7 +1740,7 @@ const pdf = _pdf.init();
 
 ##### Return
 
-( _[PDF](../../resources/pdf)_ )
+( _[PDF](../resources/pdf)_ )
 
 New instance of the PDF resource.
 
@@ -1750,7 +1750,7 @@ New instance of the PDF resource.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">line</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>line</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
 ##### Description
 
 Creates a customized border with type,color, width and opacity inserted.
@@ -1771,7 +1771,7 @@ Returns the created customized border.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">line</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>line</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
 ##### Description
 
 Creates a customized line with type,color, width inserted.
@@ -1792,7 +1792,7 @@ Returns the created customized line.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">line</span>(<span style="color: #FF8000">line</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.colors.Color</span>, <span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>line</span>(<span style={{color: '#FF8000'}}>line</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.colors.Color</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.pdf.canvas.draw.ILineDrawer</span>
 ##### Description
 
 Creates a line type with color and width inserted.
@@ -1817,7 +1817,7 @@ Returns the line type, color and width inserted.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>() : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Cria um novo documento.
@@ -1829,7 +1829,7 @@ Cria um novo documento.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">pageSize</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>pageSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a PDF document with specific page size.
@@ -1848,7 +1848,7 @@ Returns PDF document with the page size defined.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a new PDF document with A4 page size.
@@ -1857,7 +1857,7 @@ Creates a new PDF document with A4 page size.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](../objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -1867,7 +1867,7 @@ Returns PDF document with the page size A4.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>, <span style="color: #FF8000">pageSize</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>, <span style={{color: '#FF8000'}}>pageSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a PDF document with specific page size.
@@ -1876,7 +1876,7 @@ Creates a PDF document with specific page size.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../../objects/OutputStream)_ | File path. |
+| **out** | _[OutputStream](../objects/OutputStream)_ | File path. |
 | **pageSize** | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
@@ -1887,7 +1887,7 @@ Returns PDF document with the page size defined.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">newDocument</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">pageSize</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>, <span style={{color: '#FF8000'}}>pageSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a PDF document with specific page size.
@@ -1896,7 +1896,7 @@ Creates a PDF document with specific page size.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ | File path. |
+| **out** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ | File path. |
 | **pageSize** | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
@@ -1911,7 +1911,7 @@ Returns PDF document with the page size defined.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Opens a PDF documment corresponding to the inserted path.
@@ -1920,7 +1920,7 @@ Opens a PDF documment corresponding to the inserted path.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **path** | _[InputStream](../../objects/InputStream)_ | File path. |
+| **path** | _[InputStream](../objects/InputStream)_ | File path. |
 
 ##### Return
 
@@ -1930,13 +1930,13 @@ Returns PDF document openned.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../../objects/InputStream)_ |   |
-| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
+| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **out** | _[OutputStream](../objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -1945,13 +1945,13 @@ Returns PDF document openned.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../../objects/InputStream)_ |   |
-| **out** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ |   |
+| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **out** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ |   |
 
 ##### Return
 
@@ -1960,7 +1960,7 @@ Returns PDF document openned.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Opens a PDF documment corresponding to the inserted path.
@@ -1969,7 +1969,7 @@ Opens a PDF documment corresponding to the inserted path.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **path** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ | File path. |
+| **path** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ | File path. |
 
 ##### Return
 
@@ -1979,13 +1979,13 @@ Returns PDF document openned.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ |   |
-| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
+| **in** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ |   |
+| **out** | _[OutputStream](../objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -1994,13 +1994,13 @@ Returns PDF document openned.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">openDocument</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>, <span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage) &#124; [File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ |   |
-| **out** | _[Storage](../../resources/storage) &#124; [File](../../objects/File)_ |   |
+| **in** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ |   |
+| **out** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ |   |
 
 ##### Return
 
@@ -2013,7 +2013,7 @@ Returns PDF document openned.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">pageSize</span>(<span style="color: #FF8000">width</span>: <span style="font-weight: normal; font-style: italic;">float</span>, <span style="color: #FF8000">height</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>pageSize</span>(<span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>
 ##### Description
 
 Gets the page size definition from the width and height.
@@ -2033,10 +2033,10 @@ Page Definition.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">pageSize</span>(<span style="color: #FF8000">page</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.kernel.geom.PageSize</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>pageSize</span>(<span style={{color: '#FF8000'}}>page</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>
 ##### Description
 
-Gets page size definition, pages codes supported:<br><ul><li>A0</li><li>A1</li><li>A2</li><li>A3</li><li>A4</li><li>A5</li><li>A6</li><li>A7</li><li>A8</li><li>A9</li><li>A10</li><li>B0</li><li>B1</li><li>B2</li><li>B3</li><li>B4</li><li>B5</li><li>B6</li><li>B7</li><li>B8</li><li>B9</li><li>B10</li><li>default</li><li>executive</li><li>ledger</li><li>legal</li><li>letter</li><li>tabloid</li></ul>
+Gets page size definition, pages codes supported:<br/><ul><li>A0</li><li>A1</li><li>A2</li><li>A3</li><li>A4</li><li>A5</li><li>A6</li><li>A7</li><li>A8</li><li>A9</li><li>A10</li><li>B0</li><li>B1</li><li>B2</li><li>B3</li><li>B4</li><li>B5</li><li>B6</li><li>B7</li><li>B8</li><li>B9</li><li>B10</li><li>default</li><li>executive</li><li>ledger</li><li>legal</li><li>letter</li><li>tabloid</li></ul>
 
 ##### Attributes
 
@@ -2055,7 +2055,7 @@ Gets page size definition, pages codes supported:<br><ul><li>A0</li><li>A1</li><
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">paragraph</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Paragraph</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>paragraph</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Paragraph</span>
 ##### Description
 
 Creates a paragraph.
@@ -2077,7 +2077,7 @@ Creates a paragraph.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">setDocument</span>(<span style="color: #FF8000">document</span>: <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.Document</span>) : <span style="font-weight: normal; font-style: italic;">[PDF](../../resources/pdf)</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>setDocument</span>(<span style={{color: '#FF8000'}}>document</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[PDF](../resources/pdf)</span>
 ##### Description
 
 Sets the PDF document object of the iText.
@@ -2090,7 +2090,7 @@ Sets the PDF document object of the iText.
 
 ##### Return
 
-( _[PDF](../../resources/pdf)_ )
+( _[PDF](../resources/pdf)_ )
 
 The current instance of the PDF resource.
 
@@ -2100,7 +2100,7 @@ The current instance of the PDF resource.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columns</span>: <span style="font-weight: normal; font-style: italic;">double[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columns</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a new table.
@@ -2119,7 +2119,7 @@ Returns the created table.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">double[]</span>, <span style="color: #FF8000">largeTable</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columnWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double[]</span>, <span style={{color: '#FF8000'}}>largeTable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width defined.
@@ -2139,7 +2139,7 @@ Returns a table with the columns width has been defined.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columns</span>: <span style="font-weight: normal; font-style: italic;">float[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columns</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a new table.
@@ -2158,7 +2158,7 @@ Returns the created table.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">float[]</span>, <span style="color: #FF8000">largeTable</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columnWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float[]</span>, <span style={{color: '#FF8000'}}>largeTable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width defined.
@@ -2178,7 +2178,7 @@ Returns a table with the columns width has been defined.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columns</span>: <span style="font-weight: normal; font-style: italic;">int[]</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columns</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a new table.
@@ -2197,7 +2197,7 @@ Returns the created table.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">int[]</span>, <span style="color: #FF8000">largeTable</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columnWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>largeTable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width defined.
@@ -2217,7 +2217,7 @@ Returns a table with the columns width has been defined.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columns</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columns</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a new table.
@@ -2236,7 +2236,7 @@ Returns the created table.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columnWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width defined.
@@ -2255,7 +2255,7 @@ Returns a table with the columns width has been defined.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">largeTable</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columnWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>largeTable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width defined.
@@ -2275,7 +2275,7 @@ Returns a table with the columns width has been defined.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columnWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width defined.
@@ -2284,7 +2284,7 @@ Creates a table with the columns width defined.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **columnWidth** | _[Values](../../objects/Values)_ | List of widths of each table column. |
+| **columnWidth** | _[Values](../objects/Values)_ | List of widths of each table column. |
 
 ##### Return
 
@@ -2294,7 +2294,7 @@ Returns a table with the columns width has been defined.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">table</span>(<span style="color: #FF8000">columnWidth</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">largeTable</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columnWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>largeTable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width defined.
@@ -2303,7 +2303,7 @@ Creates a table with the columns width defined.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **columnWidth** | _[Values](../../objects/Values)_ | List of widths of each table column. |
+| **columnWidth** | _[Values](../objects/Values)_ | List of widths of each table column. |
 | **largeTable** | _boolean_ | Define as large table. |
 
 ##### Return
@@ -2318,7 +2318,7 @@ Returns a table with the columns width has been defined.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">text</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">com.itextpdf.layout.element.Text</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>text</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Text</span>
 ##### Description
 
 Creates new text with the inserted text.
@@ -2341,7 +2341,7 @@ Returns the text content.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2350,7 +2350,7 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../../objects/InputStream)_ | Content to HTML. |
+| **content** | _[InputStream](../objects/InputStream)_ | Content to HTML. |
 
 ##### Return
 
@@ -2360,7 +2360,7 @@ Returns the Html.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2369,7 +2369,7 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[File](../../objects/File)_ | Content to HTML. |
+| **content** | _[File](../objects/File)_ | Content to HTML. |
 
 ##### Return
 
@@ -2379,7 +2379,7 @@ Returns the Html.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2388,7 +2388,7 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../../objects/InputStream)_ | Content to HTML. |
+| **content** | _[InputStream](../objects/InputStream)_ | Content to HTML. |
 
 ##### Return
 
@@ -2398,7 +2398,7 @@ Returns the Html.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2407,7 +2407,7 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[Storage](../../resources/storage)_ | Content to HTML. |
+| **content** | _[Storage](../resources/storage)_ | Content to HTML. |
 
 ##### Return
 
@@ -2421,7 +2421,7 @@ Returns the Html.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -2430,7 +2430,7 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../../objects/InputStream)_ | Content to text. |
+| **content** | _[InputStream](../objects/InputStream)_ | Content to text. |
 
 ##### Return
 
@@ -2440,7 +2440,7 @@ Returns the Html.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -2449,7 +2449,7 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[File](../../objects/File)_ | Content to text. |
+| **content** | _[File](../objects/File)_ | Content to text. |
 
 ##### Return
 
@@ -2459,7 +2459,7 @@ Returns the Html.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -2468,7 +2468,7 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../../objects/InputStream)_ | Content to text. |
+| **content** | _[InputStream](../objects/InputStream)_ | Content to text. |
 
 ##### Return
 
@@ -2478,7 +2478,7 @@ Returns the Html.
 
 ---
 
-#### <span style="font-weight: normal">_pdf</span>.<span style="color: #008000">toText</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -2487,7 +2487,7 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[Storage](../../resources/storage)_ | Content to text. |
+| **content** | _[Storage](../resources/storage)_ | Content to text. |
 
 ##### Return
 

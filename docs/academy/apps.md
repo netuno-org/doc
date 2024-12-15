@@ -1,4 +1,5 @@
 ---
+sidebar_position: 5
 id: apps
 title: Apps
 sidebar_label: Apps

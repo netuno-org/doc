@@ -12,7 +12,7 @@ Application data type converter.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">arrayToList</span>(<span style="color: #FF8000">array</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>arrayToList</span>(<span style={{color: '#FF8000'}}>array</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Description
 
 Converts an array of primitive types to a list (collection).
@@ -31,11 +31,54 @@ New list with all array elements.
 
 ---
 
+## bytesFromText
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>bytesFromText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
+##### Description
+
+Converts a text to byte array.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ | Text content. |
+
+##### Return
+
+( _byte[]_ )
+
+Returns the byte array obtained from text.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>bytesFromText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
+##### Description
+
+Converts a text to byte array.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ | Text content. |
+| **charset** | _string_ | Character encoding code. |
+
+##### Return
+
+( _byte[]_ )
+
+Returns the byte array obtained from text.
+
+---
+
 ## fromBase64
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromBase64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>fromBase64</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts Base64 content to a decoded string.
@@ -54,7 +97,7 @@ Returns the decoded string that was in Base64.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromBase64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>fromBase64</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts Base64 content to a decoded string.
@@ -77,7 +120,7 @@ Returns the decoded string that was in Base64.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromBase64AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>fromBase64AsBytes</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Converts the Base64 content to the original decoded byte array.
@@ -96,7 +139,7 @@ Returns decoded bytes that were in Base64.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromBase64AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>fromBase64AsBytes</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Converts the Base64 content to the original decoded byte array.
@@ -119,7 +162,7 @@ Returns decoded bytes that were in Base64.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>fromHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Transforms the encoding of special HTML characters to plain text.
@@ -149,7 +192,7 @@ Text with encoding of special characters in HTML transformed to normal text.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">fromJSON</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>fromJSON</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Transforms the encoding of special characters from JSON to normal text.
@@ -175,11 +218,54 @@ Text with encoding of special characters in JSON transformed to normal text.
 
 ---
 
+## textFromBytes
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>textFromBytes</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Converts a byte array to text.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **bytes** | _byte[]_ | Byte array. |
+
+##### Return
+
+( _string_ )
+
+Returns the text obtained from the byte array.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>textFromBytes</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Converts a byte array to text.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **bytes** | _byte[]_ | Byte array. |
+| **charset** | _string_ | Character encoding code. |
+
+##### Return
+
+( _string_ )
+
+Returns the text obtained from the byte array.
+
+---
+
 ## toBase64
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toBase64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toBase64</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts the content to a Base64 encoded string.
@@ -198,7 +284,7 @@ Returns the encoded string in Base64.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toBase64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toBase64</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts the content to a Base64 encoded string.
@@ -221,7 +307,7 @@ Returns the encoded string in Base64.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toBase64AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toBase64AsBytes</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Converts the content to a Base64 encoded string.
@@ -240,7 +326,7 @@ Returns the encoded string in Base64.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toBase64AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toBase64AsBytes</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Convert the content into Base64 encoding.
@@ -263,7 +349,7 @@ Returns Base64 encoded bytes.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toByte</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toByte</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>
 ##### Description
 
 Converts the received value to **byte**.
@@ -288,7 +374,7 @@ Returns the value received in **byte**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toByte</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toByte</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>
 ##### Description
 
 Converts the received value to **byte**.
@@ -313,7 +399,7 @@ Returns the value received in **byte**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toByte</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toByte</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>
 ##### Description
 
 Converts the received value to **byte**.
@@ -342,7 +428,7 @@ Returns the value received in **byte**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toDouble</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toDouble</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Description
 
 Converts the received value to **double**.
@@ -367,7 +453,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toDouble</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toDouble</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Description
 
 Converts the received value to **double**.
@@ -392,7 +478,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toDouble</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toDouble</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Description
 
 Converts the received value to **double**.
@@ -417,7 +503,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toDouble</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toDouble</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Description
 
 Converts the received value to **double**.
@@ -442,7 +528,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toDouble</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toDouble</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Description
 
 Converts the received value to **double**.
@@ -471,7 +557,7 @@ Retorna o valor recebido em **double**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toError</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Error</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toError</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Error</span>
 ##### Description
 
 Converts the received object to an Error object.
@@ -505,7 +591,7 @@ Returns the object converted as Error.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toException</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Exception</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toException</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Exception</span>
 ##### Description
 
 Converts the received object to an Exception object.
@@ -539,7 +625,7 @@ Returns the object converted as Exception.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFile</span>(<span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toFile</span>(<span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Description
 
 Starts a file object in memory with the contents of the received bytes.
@@ -554,7 +640,7 @@ Starts a file object in memory with the contents of the received bytes.
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 Object of the started file that allows the manipulation of bytes as a file.
 
@@ -564,7 +650,7 @@ Object of the started file that allows the manipulation of bytes as a file.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFloat</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toFloat</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Description
 
 Converts the received value to **float**.
@@ -589,7 +675,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFloat</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toFloat</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Description
 
 Converts the received value to **float**.
@@ -614,7 +700,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFloat</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toFloat</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Description
 
 Converts the received value to **float**.
@@ -639,7 +725,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFloat</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toFloat</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Description
 
 Converts the received value to **float**.
@@ -664,7 +750,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toFloat</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toFloat</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Description
 
 Converts the received value to **float**.
@@ -693,7 +779,7 @@ Retorna o valor recebido em **float**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toHEX</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toHEX</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Convert bytes to **hexadecimal** with uppercase letters.
@@ -716,7 +802,7 @@ Return bytes received in **hexadecimal** in capital letters.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toHTML</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts special characters in the text to ensure that they are valid in HTML.
@@ -746,7 +832,7 @@ Text formatted with encoding of special characters in HTML.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toHex</span>(<span style="color: #FF8000">bytes</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toHex</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Convert bytes to **hexadecimal** with lowercase letters.
@@ -769,7 +855,7 @@ Return bytes received in **hexadecimal** in lowercase.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toInt</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toInt</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Converts the received value to **int**.
@@ -794,7 +880,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toInt</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toInt</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Converts the received value to **int**.
@@ -819,7 +905,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toInt</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toInt</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Converts the received value to **int**.
@@ -844,7 +930,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toInt</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toInt</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Converts the received value to **int**.
@@ -869,7 +955,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toInt</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toInt</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Converts the received value to **int**.
@@ -898,7 +984,7 @@ Retorna o valor recebido em **int**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts special characters in the text to ensure that they are valid in JSON.
@@ -928,7 +1014,7 @@ Text formatted with encoding of special characters in JSON.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toLong</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toLong</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Description
 
 Converts the received value to **long**.
@@ -953,7 +1039,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toLong</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toLong</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Description
 
 Converts the received value to **long**.
@@ -978,7 +1064,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toLong</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toLong</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Description
 
 Converts the received value to **long**.
@@ -1003,7 +1089,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toLong</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toLong</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Description
 
 Converts the received value to **long**.
@@ -1028,7 +1114,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toLong</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toLong</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Description
 
 Converts the received value to **long**.
@@ -1057,7 +1143,7 @@ Retorna o valor recebido em **long**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toObject</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toObject</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Description
 
 Converts the received object to a generic object type.
@@ -1087,7 +1173,7 @@ Returns as type of generic object.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toShort</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toShort</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Description
 
 Converts the received value to **short**.
@@ -1112,7 +1198,7 @@ Returns the value received in **short**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toShort</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toShort</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Description
 
 Converts the received value to **short**.
@@ -1137,7 +1223,7 @@ Returns the value received in **short**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toShort</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toShort</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Description
 
 Converts the received value to **short**.
@@ -1166,7 +1252,7 @@ Returns the value received in **short**.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toThrowable</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toThrowable</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>
 ##### Description
 
 Converts the received object into a Throwable type error.
@@ -1197,7 +1283,7 @@ Returns the Throwable type error.
 
 ---
 
-#### <span style="font-weight: normal">_convert</span>.<span style="color: #008000">toUUID</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toUUID</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Description
 
 Inicia um objeto de UUID com o conteúdo recebido.

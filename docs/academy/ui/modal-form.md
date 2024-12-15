@@ -1,7 +1,7 @@
 ---
+sidebar_position: 6
 id: modal-form
 title: Modal Form
-sidebar_label: Modal Form
 ---
 
 This method is responsible for adding a form within a modal.
@@ -9,7 +9,7 @@ The modal loads the form in list mode or edit mode.
 
 Before starting with this tutorial, there must be at least one form created in the application.
 
-To learn how to create forms [click here](academy/explore/graphical-interface/forms.md).
+To learn how to create forms [click here](forms.md).
 
 ### Example in list mode
 
@@ -68,7 +68,8 @@ The modal form class exposes some events to connect to modal functionalities. In
 | netuno:back | This event is triggered after clicking the go back button. |
 | netuno:delete | This event is triggered after the deletion of an item. |
 
-The following is an example of the use of the event `netuno:new`.<br>
+The following is an example of the use of the event `netuno:new`.
+
 All you have to do is add it within the `callback` method.
 
 ```javascript

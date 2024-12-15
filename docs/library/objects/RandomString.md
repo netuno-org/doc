@@ -12,7 +12,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### <span style="color: #008000">getRandom</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Random</span>
+#### <span style={{color: '#008000'}}>getRandom</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>
 ##### Return
 
 ( _java.util.Random_ )
@@ -24,7 +24,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### <span style="color: #008000">getSymbols</span>() : <span style="font-weight: normal; font-style: italic;">char[]</span>
+#### <span style={{color: '#008000'}}>getSymbols</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char[]</span>
 ##### Return
 
 ( _char[]_ )
@@ -36,7 +36,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### <span style="color: #008000">getSymbolsString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getSymbolsString</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -48,7 +48,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### <span style="color: #008000">next</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>next</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -60,7 +60,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### <span style="color: #008000">nextString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>nextString</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -72,7 +72,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### <span style="color: #008000">random</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Random</span>
+#### <span style={{color: '#008000'}}>random</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>
 ##### Return
 
 ( _java.util.Random_ )
@@ -84,7 +84,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### <span style="color: #008000">setRandom</span>(<span style="color: #FF8000">random</span>: <span style="font-weight: normal; font-style: italic;">java.util.Random</span>) : <span style="font-weight: normal; font-style: italic;">[RandomString](../../objects/RandomString)</span>
+#### <span style={{color: '#008000'}}>setRandom</span>(<span style={{color: '#FF8000'}}>random</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -93,7 +93,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ##### Return
 
-( _[RandomString](../../objects/RandomString)_ )
+( _[RandomString](../objects/RandomString)_ )
 
 
 ---
@@ -102,7 +102,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### <span style="color: #008000">setSymbols</span>(<span style="color: #FF8000">symbols</span>: <span style="font-weight: normal; font-style: italic;">char[]</span>) : <span style="font-weight: normal; font-style: italic;">[RandomString](../../objects/RandomString)</span>
+#### <span style={{color: '#008000'}}>setSymbols</span>(<span style={{color: '#FF8000'}}>symbols</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -111,12 +111,12 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ##### Return
 
-( _[RandomString](../../objects/RandomString)_ )
+( _[RandomString](../objects/RandomString)_ )
 
 
 ---
 
-#### <span style="color: #008000">setSymbols</span>(<span style="color: #FF8000">symbols</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RandomString](../../objects/RandomString)</span>
+#### <span style={{color: '#008000'}}>setSymbols</span>(<span style={{color: '#FF8000'}}>symbols</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -125,7 +125,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ##### Return
 
-( _[RandomString](../../objects/RandomString)_ )
+( _[RandomString](../objects/RandomString)_ )
 
 
 ---
@@ -134,7 +134,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### <span style="color: #008000">symbols</span>() : <span style="font-weight: normal; font-style: italic;">char[]</span>
+#### <span style={{color: '#008000'}}>symbols</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char[]</span>
 ##### Return
 
 ( _char[]_ )
@@ -146,7 +146,7 @@ O RandomString gera códigos alfanuméricos aleatórios.
 
 ---
 
-#### <span style="color: #008000">symbolsString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>symbolsString</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )

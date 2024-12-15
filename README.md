@@ -1,29 +1,41 @@
-# Netuno Documentation
+# Website
 
-This is the official Netuno Platform documentation available in [doc.netuno.org](https://doc.netuno.org/)
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-Made with [Docusaurus](https://docusaurus.io/).
+### Installation
 
-## Install
+```
+$ yarn
+```
 
-`cd website`
+### Local Development
 
-`cp algoliaConfig-sample.json algoliaConfig.json`
+```
+$ yarn start
+```
 
-`npm install`
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-## Start
+### Build
 
-`cd website`
+```
+$ yarn build
+```
 
-`npm run start`
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-Available locally in [http://localhost:3000/](http://localhost:3000/).
+### Deployment
 
-## Build
+Using SSH:
 
-`cd website`
+```
+$ USE_SSH=true yarn deploy
+```
 
-`npm run build`
+Not using SSH:
 
-Now is ready to publish the online version generated inside the `website/build` folder.
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

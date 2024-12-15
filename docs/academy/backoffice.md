@@ -1,7 +1,7 @@
 ---
+sidebar_position: 3
 id: backoffice
 title: Backoffice
-sidebar_label: Backoffice
 ---
 
 For web development / Mobile applications it is very common to have the concept of backoffice or data management layer.

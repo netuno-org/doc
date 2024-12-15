@@ -20,7 +20,7 @@ Generating general application errors and categorizing the severity of the error
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">create</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[ErrorException](../../objects/ErrorException)</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ErrorException](../objects/ErrorException)</span>
 ##### Description
 
 Creates an error with an description message
@@ -33,7 +33,7 @@ Creates an error with an description message
 
 ##### Return
 
-( _[ErrorException](../../objects/ErrorException)_ )
+( _[ErrorException](../objects/ErrorException)_ )
 
 
 ---
@@ -42,7 +42,7 @@ Creates an error with an description message
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">createError</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Error</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>createError</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Error</span>
 ##### Description
 
 Creates an error with an description message
@@ -64,7 +64,7 @@ Creates an error with an description message
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">createException</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Exception</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>createException</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Exception</span>
 ##### Description
 
 Creates a exception with an description message
@@ -86,7 +86,7 @@ Creates a exception with an description message
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">createThrowable</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>createThrowable</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>
 ##### Description
 
 Creates a throwable with an description message
@@ -108,19 +108,19 @@ Creates a throwable with an description message
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">data</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Creates a new class Values that results from the error. 
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">data</span>(<span style="color: #FF8000">retorno</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Error](../../resources/error)</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>data</span>(<span style={{color: '#FF8000'}}>retorno</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Error](../resources/error)</span>
 ##### Description
 
 Creates a new class Values that results from the error.
@@ -129,11 +129,11 @@ Creates a new class Values that results from the error.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **retorno** | _[Values](../../objects/Values)_ | Values. |
+| **retorno** | _[Values](../objects/Values)_ | Values. |
 
 ##### Return
 
-( _[Error](../../resources/error)_ )
+( _[Error](../resources/error)_ )
 
 
 ---
@@ -142,7 +142,7 @@ Creates a new class Values that results from the error.
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">debug</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>debug</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Return an exception and print a message with the description of the exception and it's object
@@ -160,7 +160,7 @@ Return an exception and print a message with the description of the exception an
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">debug</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>debug</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message with the description of the debug and it's cause
@@ -179,7 +179,7 @@ Print a message with the description of the debug and it's cause
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">debug</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cause</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>debug</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>cause</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message with the description of the debug
@@ -202,7 +202,7 @@ Print a message with the description of the debug
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">error</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>error</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of error.
@@ -220,7 +220,7 @@ Print a message of error.
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">error</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>error</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message with the description of the error and it's cause
@@ -239,7 +239,7 @@ Print a message with the description of the error and it's cause
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">error</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>error</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message with the description of the error and it's object
@@ -262,7 +262,7 @@ Print a message with the description of the error and it's object
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">fatal</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>fatal</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **FATAL** in the log file and in the terminal of Netuno.
@@ -280,7 +280,7 @@ Print a message of type **FATAL** in the log file and in the terminal of Netuno.
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">fatal</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>fatal</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **FATAL** in the log file and in the terminal of Netuno.
@@ -299,7 +299,7 @@ Print a message of type **FATAL** in the log file and in the terminal of Netuno.
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">fatal</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>fatal</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **FATAL** in the log file and in the terminal of Netuno.
@@ -322,7 +322,7 @@ Print a message of type **FATAL** in the log file and in the terminal of Netuno.
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">info</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>info</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message with the description of the debug and it's object
@@ -340,7 +340,7 @@ Print a message with the description of the debug and it's object
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">info</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>info</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of information and a throable
@@ -359,7 +359,7 @@ Print a message of information and a throable
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">info</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">cause</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>info</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>cause</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of information
@@ -382,7 +382,7 @@ Print a message of information
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">is</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>is</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks if an object is from type Error, Exception or Throwable.
@@ -405,7 +405,7 @@ Returns **true** if the object is of type Error, Exception or Throwable.
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">isError</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>isError</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks if an object is from type Error.
@@ -428,7 +428,7 @@ Returns **true** if the object is of type Error.
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">isException</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>isException</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks if an object is from type Exception.
@@ -451,7 +451,7 @@ Returns **true** if the object is of type Exception.
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">isThrowable</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>isThrowable</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks if an object is from type Throwable.
@@ -474,7 +474,7 @@ Returns **true** if the object is of type Throwable.
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">raise</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>raise</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Throws an error according to the type of object passed (Error, Exception or Throwable).
@@ -496,7 +496,7 @@ Throws an error according to the type of object passed (Error, Exception or Thro
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">trace</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>trace</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Returns an exception and a list of methods that caused them with an description mensagem.
@@ -514,7 +514,7 @@ Returns an exception and a list of methods that caused them with an description 
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">trace</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>trace</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Returns an object and a list of methods that caused them with an description mensagem.
@@ -533,7 +533,7 @@ Returns an object and a list of methods that caused them with an description men
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">trace</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>trace</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Returns an throwable and a list of methods that caused them with an description mensagem.
@@ -556,7 +556,7 @@ Returns an throwable and a list of methods that caused them with an description 
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">warn</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>warn</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of warning
@@ -574,7 +574,7 @@ Print a message of warning
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">warn</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>warn</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message with the description of the warning and it's object
@@ -593,7 +593,7 @@ Print a message with the description of the warning and it's object
 
 ---
 
-#### <span style="font-weight: normal">_error</span>.<span style="color: #008000">warn</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>warn</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message with the description of the warning and it's throwable

@@ -1,18 +1,18 @@
 ---
+sidebar_position: 1
 id: overview
 title: Overview
-sidebar_label: Overview
 ---
 
 Netuno is a low-code platform for fast web services creation that facilitates data management with an integrated visual interface, ensuring the creation of web-based applications with high performance.
 
 It reduces development effort and time, as well as production costs in administration, management and industrial areas.
 
-![Netuno Structure](assets/introducao1.png)
+![Netuno Structure](/docs/assets/introducao1.png)
 
 Learn how Netuno further improves your programming experience so you may have a creative and non-repetitive experience while keeping the same performance levels since the development to the execution:
 
-> The Netuno platform is free, [start now](../installation/).
+> The Netuno platform is free, [start now](../get-started/installation).
 
 ### Forms and fields
 
@@ -52,4 +52,4 @@ Using code generators optimized for high performance and using the recent <a hre
 
 Discover how to explore the development in Netuno:
 
-<a class="button" href="tutorials/">Know More</a>
+* [Know More](../get-started/tutorials)

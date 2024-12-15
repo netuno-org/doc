@@ -12,7 +12,7 @@ Os dados referente a um ficheiro FTP.
 
 ---
 
-#### <span style="color: #008000">getGroup</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getGroup</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the group owning the file.
@@ -29,7 +29,7 @@ The name of the group owning the file.
 
 ---
 
-#### <span style="color: #008000">getHardLinkCount</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>getHardLinkCount</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Returns the number of hard links to this file.
@@ -46,7 +46,7 @@ The number of hard links to this file.
 
 ---
 
-#### <span style="color: #008000">getLink</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 If the FTPFile is a symbolic link, this method returns the name of the file being pointed to by the symbolic link. Otherwise it returns null.
@@ -63,7 +63,7 @@ The file pointed to by the symbolic link (null if the FTPFile is not a symbolic 
 
 ---
 
-#### <span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the file.
@@ -80,7 +80,7 @@ The name of the file.
 
 ---
 
-#### <span style="color: #008000">getRawListing</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getRawListing</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the original FTP server raw listing used to initialize the FTPFile.
@@ -97,7 +97,7 @@ The original FTP server raw listing used to initialize the FTPFile.
 
 ---
 
-#### <span style="color: #008000">getSize</span>() : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>getSize</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Description
 
 Returns the file size in bytes.
@@ -114,7 +114,7 @@ The file size in bytes.
 
 ---
 
-#### <span style="color: #008000">getTimestamp</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
+#### <span style={{color: '#008000'}}>getTimestamp</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>
 ##### Description
 
 Returns the file timestamp. This usually the last modification time.
@@ -131,7 +131,7 @@ A Calendar instance representing the file timestamp.
 
 ---
 
-#### <span style="color: #008000">getTimestampInstant</span>() : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{color: '#008000'}}>getTimestampInstant</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Description
 
 Returns the file timestamp. This usually the last modification time.
@@ -148,7 +148,7 @@ A Calendar instance representing the file timestamp.
 
 ---
 
-#### <span style="color: #008000">getUser</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getUser</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the user owning the file. Sometimes this will be a string representation of the user number.
@@ -165,7 +165,7 @@ The name of the user owning the file.
 
 ---
 
-#### <span style="color: #008000">isDirectory</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isDirectory</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether it is a directory.
@@ -182,7 +182,7 @@ Whether or not it is a directory.
 
 ---
 
-#### <span style="color: #008000">isFile</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether it is a file.
@@ -199,7 +199,7 @@ Whether or not it is a file.
 
 ---
 
-#### <span style="color: #008000">isGroupExecutable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isGroupExecutable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether a group has file execute permission or directory listing permission.
@@ -216,7 +216,7 @@ Whether or not it has permission.
 
 ---
 
-#### <span style="color: #008000">isGroupReadable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isGroupReadable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether a group has read permissions.
@@ -233,7 +233,7 @@ Whether or not it has permission.
 
 ---
 
-#### <span style="color: #008000">isGroupWritable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isGroupWritable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether a group has write permissions.
@@ -250,7 +250,7 @@ Whether or not it has permission.
 
 ---
 
-#### <span style="color: #008000">isSymbolicLink</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isSymbolicLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether it is a symbolic link.
@@ -267,7 +267,7 @@ Whether or not it is a symbolic link.
 
 ---
 
-#### <span style="color: #008000">isUnknown</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isUnknown</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether it is a unknown type.
@@ -284,7 +284,7 @@ Whether or not it is a unknown type.
 
 ---
 
-#### <span style="color: #008000">isUserExecutable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isUserExecutable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether the user has file execute permission or directory listing permission.
@@ -301,7 +301,7 @@ Whether or not it has permission.
 
 ---
 
-#### <span style="color: #008000">isUserReadable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isUserReadable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether the user has read permissions
@@ -318,7 +318,7 @@ Whether or not it has read permission.
 
 ---
 
-#### <span style="color: #008000">isUserWritable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isUserWritable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether the user has write permissions
@@ -335,7 +335,7 @@ Whether or not it has write permission.
 
 ---
 
-#### <span style="color: #008000">isValid</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isValid</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether an entry is valid.
@@ -352,7 +352,7 @@ Whether an entry is valid or not.
 
 ---
 
-#### <span style="color: #008000">isWorldExecutable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isWorldExecutable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether you have global file execute permission or directory listing permission.
@@ -369,7 +369,7 @@ Whether or not it has permission.
 
 ---
 
-#### <span style="color: #008000">isWorldReadable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isWorldReadable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether it has global read permission.
@@ -386,7 +386,7 @@ Whether or not it has permission.
 
 ---
 
-#### <span style="color: #008000">isWorldWritable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isWorldWritable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether it has global write permission.
@@ -403,7 +403,7 @@ Whether or not it has permission.
 
 ---
 
-#### <span style="color: #008000">setGroup</span>(<span style="color: #FF8000">group</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setGroup</span>(<span style={{color: '#FF8000'}}>group</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines the name of the group owning the file
@@ -416,7 +416,7 @@ Defines the name of the group owning the file
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -426,7 +426,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setGroupExecutable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setGroupExecutable</span>(<span style={{color: '#FF8000'}}>access</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines file execute permission or directory listing permission for a group.
@@ -439,7 +439,7 @@ Defines file execute permission or directory listing permission for a group.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -449,7 +449,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setGroupReadable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setGroupReadable</span>(<span style={{color: '#FF8000'}}>access</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines read permission for a group.
@@ -462,7 +462,7 @@ Defines read permission for a group.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -472,7 +472,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setGroupWritable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setGroupWritable</span>(<span style={{color: '#FF8000'}}>access</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines write permission for a group.
@@ -485,7 +485,7 @@ Defines write permission for a group.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -495,7 +495,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setHardLinkCount</span>(<span style="color: #FF8000">links</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setHardLinkCount</span>(<span style={{color: '#FF8000'}}>links</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines the number of hard links to this file.
@@ -508,7 +508,7 @@ Defines the number of hard links to this file.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -518,7 +518,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setLink</span>(<span style="color: #FF8000">link</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setLink</span>(<span style={{color: '#FF8000'}}>link</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 If the FTPFile is a symbolic link, use this method to defines the name of the file being pointed to by the symbolic link.
@@ -531,7 +531,7 @@ If the FTPFile is a symbolic link, use this method to defines the name of the fi
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -541,7 +541,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setName</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setName</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines the name of the file.
@@ -554,7 +554,7 @@ Defines the name of the file.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -564,7 +564,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setRawListing</span>(<span style="color: #FF8000">rawListing</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setRawListing</span>(<span style={{color: '#FF8000'}}>rawListing</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines the original FTP server raw listing from which the FTPFile was created.
@@ -577,7 +577,7 @@ Defines the original FTP server raw listing from which the FTPFile was created.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -587,7 +587,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setSize</span>(<span style="color: #FF8000">size</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setSize</span>(<span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines the file size in bytes.
@@ -600,7 +600,7 @@ Defines the file size in bytes.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -610,7 +610,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setTimestamp</span>(<span style="color: #FF8000">date</span>: <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setTimestamp</span>(<span style={{color: '#FF8000'}}>date</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines the file timestamp. This usually the last modification time. The parameter is not cloned, so do not alter its value after calling this method.
@@ -623,7 +623,7 @@ Defines the file timestamp. This usually the last modification time. The paramet
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -633,7 +633,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setUser</span>(<span style="color: #FF8000">user</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setUser</span>(<span style={{color: '#FF8000'}}>user</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines the name of the user owning the file. This may be a string representation of the user number.
@@ -646,7 +646,7 @@ Defines the name of the user owning the file. This may be a string representatio
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -656,7 +656,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setUserExecutable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setUserExecutable</span>(<span style={{color: '#FF8000'}}>access</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines file execute permission or directory listing permission for a user.
@@ -669,7 +669,7 @@ Defines file execute permission or directory listing permission for a user.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -679,7 +679,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setUserReadable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setUserReadable</span>(<span style={{color: '#FF8000'}}>access</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines read permission for a user.
@@ -692,7 +692,7 @@ Defines read permission for a user.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -702,7 +702,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setUserWritable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setUserWritable</span>(<span style={{color: '#FF8000'}}>access</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines write permission for a user.
@@ -715,7 +715,7 @@ Defines write permission for a user.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -725,7 +725,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setWorldExecutable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setWorldExecutable</span>(<span style={{color: '#FF8000'}}>access</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines global file execution permission or directory listing permission.
@@ -738,7 +738,7 @@ Defines global file execution permission or directory listing permission.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -748,7 +748,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setWorldReadable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setWorldReadable</span>(<span style={{color: '#FF8000'}}>access</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines global read permission.
@@ -761,7 +761,7 @@ Defines global read permission.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -771,7 +771,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">setWorldWritable</span>(<span style="color: #FF8000">access</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setWorldWritable</span>(<span style={{color: '#FF8000'}}>access</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 Defines global write permission.
@@ -784,7 +784,7 @@ Defines global write permission.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -794,14 +794,14 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">toDirectory</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>toDirectory</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 indicates that the current object is a directory.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -811,14 +811,14 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">toFile</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>toFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 indicates that the current object is a file.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -828,7 +828,7 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">toFormattedString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toFormattedString</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns a string representation of the FTPFile information.
@@ -841,7 +841,7 @@ String representation of FTPFile information.
 
 ---
 
-#### <span style="color: #008000">toFormattedString</span>(<span style="color: #FF8000">timezone</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toFormattedString</span>(<span style={{color: '#FF8000'}}>timezone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns a string representation of the FTPFile information.
@@ -864,14 +864,14 @@ String representation of FTPFile information.
 
 ---
 
-#### <span style="color: #008000">toSymbolicLink</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>toSymbolicLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 indicates that the current object is a symbolic link.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 
@@ -881,14 +881,14 @@ The current FTPFile object.
 
 ---
 
-#### <span style="color: #008000">toUnknown</span>() : <span style="font-weight: normal; font-style: italic;">[FTPFile](../../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>toUnknown</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
 ##### Description
 
 indicates that the current object is a unknown type.
 
 ##### Return
 
-( _[FTPFile](../../objects/FTPFile)_ )
+( _[FTPFile](../objects/FTPFile)_ )
 
 The current FTPFile object.
 

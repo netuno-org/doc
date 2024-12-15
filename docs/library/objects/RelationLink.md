@@ -12,7 +12,7 @@ Definição da configuração do objeto RelationLink para configurar realcioname
 
 ---
 
-#### <span style="color: #008000">getFormLink</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getFormLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the form to be related.
@@ -29,14 +29,14 @@ The name of the form.
 
 ---
 
-#### <span style="color: #008000">getSubLinks</span>() : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getSubLinks</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Description
 
 Returns the sub relationships
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 The sub relationships.
 
@@ -46,7 +46,7 @@ The sub relationships.
 
 ---
 
-#### <span style="color: #008000">hasSubLinks</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>hasSubLinks</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether the current object has sub relationships.
@@ -63,7 +63,7 @@ Whether you have it or not.
 
 ---
 
-#### <span style="color: #008000">setFormLink</span>(<span style="color: #FF8000">form</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RelationLink](../../objects/RelationLink)</span>
+#### <span style={{color: '#008000'}}>setFormLink</span>(<span style={{color: '#FF8000'}}>form</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationLink](../objects/RelationLink)</span>
 ##### Description
 
 Defines the name of the form to be related.
@@ -76,7 +76,7 @@ Defines the name of the form to be related.
 
 ##### Return
 
-( _[RelationLink](../../objects/RelationLink)_ )
+( _[RelationLink](../objects/RelationLink)_ )
 
 Current RelationLink object.
 
@@ -86,7 +86,7 @@ Current RelationLink object.
 
 ---
 
-#### <span style="color: #008000">setSubLinks</span>(<span style="color: #FF8000">subLinks</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RelationLink](../../objects/RelationLink)</span>
+#### <span style={{color: '#008000'}}>setSubLinks</span>(<span style={{color: '#FF8000'}}>subLinks</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationLink](../objects/RelationLink)</span>
 ##### Description
 
 Defines the sub relationships
@@ -95,11 +95,11 @@ Defines the sub relationships
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **subLinks** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | The sub relationships |
+| **subLinks** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | The sub relationships |
 
 ##### Return
 
-( _[RelationLink](../../objects/RelationLink)_ )
+( _[RelationLink](../objects/RelationLink)_ )
 
 Current RelationLink object.
 

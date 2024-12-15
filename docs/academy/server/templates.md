@@ -21,7 +21,7 @@ In this example we will have a basic HTML template and pass data from the servic
 
 ## Creation of a template
 
-![templates1.png](assets/templates1.png)
+![templates1.png](/docs/assets/templates1.png)
 
 After being in the above directory, we will create a file in `.html`, in this example it will be named `template.html`.
 
@@ -77,7 +77,7 @@ _template.output("template", data);
 
 Lastly, all you have to do is call the service in your browser and something similar to the following will appear:
 
-![templates2.png](assets/templates2.png)
+![templates2.png](/docs/assets/templates2.png)
 
 > Please note that depending on your browser the results shown above may differ.
 

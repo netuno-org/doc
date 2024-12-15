@@ -12,7 +12,7 @@ Algoritmos de encriptação de dados.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">aes256Decrypt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>aes256Decrypt</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Decrypts AES256-encoded content.
@@ -36,7 +36,7 @@ Decrypted original content.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">aes256Encrypt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>aes256Encrypt</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encrypts data with AES256.
@@ -60,7 +60,7 @@ Data encrypted with AES256.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">bcryptCheck</span>(<span style="color: #FF8000">plaintext</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hashed</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>bcryptCheck</span>(<span style={{color: '#FF8000'}}>plaintext</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>hashed</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks if a String and a Salt Hash are the same.
@@ -90,7 +90,7 @@ Verification result, returning true if string and hash are the same.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">bcryptHash</span>(<span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">salt</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>bcryptHash</span>(<span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>salt</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Hash the string and salt.
@@ -120,7 +120,7 @@ Result of String encryption.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">bcryptSalt</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>bcryptSalt</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with cryptHash.
@@ -133,7 +133,7 @@ Data of the content encrypted in cryptHash.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">bcryptSalt</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>bcryptSalt</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with bcryptSalt.
@@ -152,7 +152,7 @@ Data of the content encrypted in bcryptSalt.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">bcryptSalt</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">secureRandom</span>: <span style="font-weight: normal; font-style: italic;">java.security.SecureRandom</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>bcryptSalt</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>secureRandom</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.security.SecureRandom</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with bcryptSalt.
@@ -176,7 +176,7 @@ Data of the content encrypted in bcryptSalt.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">cryptHash</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>cryptHash</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with cryptHash.
@@ -195,7 +195,7 @@ Data of the content encrypted cryptHash.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">cryptHash</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">salt</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>cryptHash</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>, <span style={{color: '#FF8000'}}>salt</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with cryptHash.
@@ -215,7 +215,7 @@ Data of the content encrypted cryptHash.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">cryptHash</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>cryptHash</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with cryptHash.
@@ -234,7 +234,7 @@ Data of the content encrypted cryptHash.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">cryptHash</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">salt</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>cryptHash</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>salt</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with cryptHash.
@@ -258,7 +258,7 @@ Data of the content encrypted cryptHash.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desDecode</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>desDecode</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with Desdecode (Des).
@@ -278,7 +278,7 @@ Binary data of the content encrypted in Desdecode (Des).
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desDecode</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>desDecode</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with Desdecode (Des).
@@ -303,7 +303,7 @@ Binary data of the content encrypted in Desdecode (Des).
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desDecodeBase64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>desDecodeBase64</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with Desdecode (Des) e convertido em base 64.
@@ -328,7 +328,7 @@ Binary data of the content encrypted in Desdecode (Des) and coverted in base 64.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desEncode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>desEncode</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Encodes data with desEncode and returns binary encryption.
@@ -348,7 +348,7 @@ Binary data of the content encrypted in desEncode.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desEncode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>desEncode</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Encodes data with desEncode and returns binary encryption.
@@ -373,7 +373,7 @@ Binary data of the content encrypted in desEncode.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">desEncodeBase64</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>desEncodeBase64</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with desEncode and returns string encryption.
@@ -398,7 +398,7 @@ String data of the content encrypted in desEncode.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>hmac256</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 It encodes the data with HMAC256, which serves to guarantee integrity and authenticity.
@@ -418,7 +418,7 @@ Data encoded with HMAC256.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>hmac256</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 It encodes the data with HMAC256, which serves to guarantee integrity and authenticity.
@@ -442,7 +442,7 @@ Data encoded with HMAC256.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256Base64</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>hmac256Base64</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with HMAC256 and converts to Base64, which serves to guarantee integrity and authenticity.
@@ -462,7 +462,7 @@ Data encoded with HMAC256 and in Base64 format.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256Base64</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>hmac256Base64</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with HMAC256 and converts to Base64, which serves to guarantee integrity and authenticity.
@@ -486,7 +486,7 @@ Data encoded with HMAC256 and in Base64 format.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256Hex</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>hmac256Hex</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with HMAC256 and converts to hexadecimal, which serves to guarantee integrity and authenticity.
@@ -506,7 +506,7 @@ Data encoded with HMAC256 and in hexadecimal format.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">hmac256Hex</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>hmac256Hex</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with HMAC256 and converts to hexadecimal, which serves to guarantee integrity and authenticity.
@@ -530,7 +530,7 @@ Data encoded with HMAC256 and in hexadecimal format.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">md5</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>md5</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Encodes data with MD5 and returns 128-bit encryption.
@@ -553,7 +553,7 @@ Data of the content encrypted in MD5.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">md5Base64</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>md5Base64</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with cryptHash.
@@ -576,7 +576,7 @@ Data of the content encrypted in cryptHash.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">md5Hex</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>md5Hex</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with MD5 and converts the encryption to hexadecimal
@@ -599,7 +599,7 @@ Data of the content encrypted in MD5 and converted in hexadecimal format.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha256</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha256</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with SHA256 (SHA-2) and converts binary encryption to hexadecimal.
@@ -618,7 +618,7 @@ Content encrypted in SHA256 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha256</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha256</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with SHA256 (SHA-2) and converts binary encryption to hexadecimal.
@@ -641,7 +641,7 @@ Content encrypted in SHA256 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha256AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha256AsBytes</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Encodes data with SHA256 (SHA-2) and returns binary encryption.
@@ -660,7 +660,7 @@ Binary data of the content encrypted in SHA256 (SHA-2).
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha256AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha256AsBytes</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Encodes data with SHA256 (SHA-2) and returns binary encryption.
@@ -683,7 +683,7 @@ Binary data of the content encrypted in SHA256 (SHA-2).
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha384</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha384</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with SHA384 (SHA-2) and converts binary encryption to hexadecimal.
@@ -702,7 +702,7 @@ Content encrypted in SHA384 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha384</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha384</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with SHA384 (SHA-2) and converts binary encryption to hexadecimal.
@@ -725,7 +725,7 @@ Content encrypted in SHA384 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha384AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha384AsBytes</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Encodes data with SHA384 (SHA-2) and returns binary encryption.
@@ -744,7 +744,7 @@ Binary data of the content encrypted in SHA384 (SHA-2).
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha384AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha384AsBytes</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Encodes data with SHA384 (SHA-2) and returns binary encryption.
@@ -767,7 +767,7 @@ Binary data of the content encrypted in SHA384 (SHA-2).
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha512</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha512</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with SHA512 (SHA-2) and converts binary encryption to hexadecimal.
@@ -786,7 +786,7 @@ Content encrypted in SHA512 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha512</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha512</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes data with SHA512 (SHA-2) and converts binary encryption to hexadecimal.
@@ -809,7 +809,7 @@ Content encrypted in SHA512 (SHA2) and converted to hexadecimal.
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha512AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha512AsBytes</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Encodes data with SHA512 (SHA-2) and returns binary encryption.
@@ -828,7 +828,7 @@ Binary data of the content encrypted in SHA512 (SHA-2).
 
 ---
 
-#### <span style="font-weight: normal">_crypto</span>.<span style="color: #008000">sha512AsBytes</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_crypto</span>.<span style={{color: '#008000'}}>sha512AsBytes</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Encodes data with SHA512 (SHA-512) and returns binary encryption.

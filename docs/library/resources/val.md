@@ -33,7 +33,7 @@ for (const line of dataList) {
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">cast</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>cast</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Turns an object into values if possible.
@@ -46,7 +46,7 @@ Turns an object into values if possible.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 The object converted to values.
 
@@ -56,7 +56,7 @@ The object converted to values.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">fromJSON</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>fromJSON</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets the values of a string with an array or object in JSON.
@@ -69,7 +69,7 @@ Gets the values of a string with an array or object in JSON.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 The values object loaded with the structure and data obtained with the JSON string.
 
@@ -79,7 +79,7 @@ The values object loaded with the structure and data obtained with the JSON stri
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">global</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>global</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Instance of type Values to store data that is only available during the execution of the HTTP request, it is useful to share data between scripts.
@@ -95,7 +95,7 @@ _out.json(global)
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Data that is shared globally between the different scripts during the execution of the HTTP call.
 
@@ -105,20 +105,20 @@ Data that is shared globally between the different scripts during the execution 
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 The new generic value object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
@@ -127,17 +127,17 @@ Initializes values in a generic way, the first data to be assigned will define w
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **obj** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Object to load the newly created values object. |
+| **obj** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object to load the newly created values object. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 The new values object starts with the data from the passed object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
@@ -150,13 +150,13 @@ Initializes values in a generic way, the first data to be assigned will define w
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 The new values object starts with the data from the passed object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
@@ -165,11 +165,11 @@ Initializes values in a generic way, the first data to be assigned will define w
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **obj** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Object to load the newly created values object. |
+| **obj** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object to load the newly created values object. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 The new values object starts with the data from the passed object.
 
@@ -179,7 +179,7 @@ The new values object starts with the data from the passed object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">is</span>(<span style="color: #FF8000">obj</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>is</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks whether the object is of the value type.
@@ -202,20 +202,20 @@ Result of checking whether it is of type values or not.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">list</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Starts a new object of values but of type list.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 The new values object started as list.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">list</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>list</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Description
 
 Transforms an object from values to a normal list.
@@ -234,7 +234,7 @@ A new normal list of items from the received value object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">list</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>list</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Description
 
 Transforms an object from values to a normal list.
@@ -243,7 +243,7 @@ Transforms an object from values to a normal list.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Values](../../objects/Values)_ | Value object in list mode. |
+| **values** | _[Values](../objects/Values)_ | Value object in list mode. |
 
 ##### Return
 
@@ -257,20 +257,20 @@ A new normal list of items from the received value object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">map</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Starts a new object of values but of type map.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 The new values object started as map.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">map</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -283,13 +283,13 @@ Transforms an object from values to a normal map.
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 A new normal map with the data from the received values object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">map</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -298,11 +298,11 @@ Transforms an object from values to a normal map.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Values](../../objects/Values)_ | Value object in map mode. |
+| **values** | _[Values](../objects/Values)_ | Value object in map mode. |
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 A new normal map with the data from the received values object.
 
@@ -312,7 +312,7 @@ A new normal map with the data from the received values object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">persistent</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>persistent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Values type instance to store data that persists in memory, that is, the data stored here are available for all HTTP requests.
@@ -328,7 +328,7 @@ _out.json(persistent)
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Data that is kept in memory and is available for all requests.
 
@@ -338,7 +338,7 @@ Data that is kept in memory and is available for all requests.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Convert values to JSON.
@@ -357,7 +357,7 @@ String JSON with the structure and data of the values object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Convert values to JSON.
@@ -377,7 +377,7 @@ String JSON with the structure and data of the values object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Convert values to JSON.
@@ -414,7 +414,7 @@ String JSON with the structure and data of the values object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Convert values to JSON.
@@ -434,7 +434,7 @@ String JSON with the structure and data of the values object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Convert values to JSON.
@@ -443,7 +443,7 @@ Convert values to JSON.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+| **values** | _[Values](../objects/Values)_ | Values object to be transformed into JSON format. |
 
 ##### Return
 
@@ -453,7 +453,7 @@ String JSON with the structure and data of the values object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Convert values to JSON.
@@ -462,7 +462,7 @@ Convert values to JSON.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+| **values** | _[Values](../objects/Values)_ | Values object to be transformed into JSON format. |
 | **htmlEscape** | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
 
 ##### Return
@@ -473,7 +473,7 @@ String JSON with the structure and data of the values object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Convert values to JSON.
@@ -498,7 +498,7 @@ _out.println(`${mapString}<br/>`)
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+| **values** | _[Values](../objects/Values)_ | Values object to be transformed into JSON format. |
 | **htmlEscape** | _boolean_ | Turns on automatic HTML formatting of special characters that are in text values, useful for transforming accents. |
 | **indentFactor** | _int_ | Number of spaces that should be used in JSON indentation. |
 
@@ -510,7 +510,7 @@ String JSON with the structure and data of the values object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Convert values to JSON.
@@ -519,7 +519,7 @@ Convert values to JSON.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Values](../../objects/Values)_ | Values object to be transformed into JSON format. |
+| **values** | _[Values](../objects/Values)_ | Values object to be transformed into JSON format. |
 | **indentFactor** | _int_ | Number of spaces that should be used in JSON indentation. |
 
 ##### Return
@@ -534,7 +534,7 @@ String JSON with the structure and data of the values object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toList</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toList</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Description
 
 Transforms an object from values to a normal list.
@@ -553,7 +553,7 @@ A new normal list of items from the received value object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toList</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toList</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Description
 
 Transforms an object from values to a normal list.
@@ -562,7 +562,7 @@ Transforms an object from values to a normal list.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Values](../../objects/Values)_ | Value object in list mode. |
+| **values** | _[Values](../objects/Values)_ | Value object in list mode. |
 
 ##### Return
 
@@ -576,7 +576,7 @@ A new normal list of items from the received value object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toMap</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toMap</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -589,13 +589,13 @@ Transforms an object from values to a normal map.
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 A new normal map with the data from the received values object.
 
 ---
 
-#### <span style="font-weight: normal">_val</span>.<span style="color: #008000">toMap</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toMap</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -604,11 +604,11 @@ Transforms an object from values to a normal map.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Values](../../objects/Values)_ | Value object in map mode. |
+| **values** | _[Values](../objects/Values)_ | Value object in map mode. |
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 A new normal map with the data from the received values object.
 

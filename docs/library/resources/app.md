@@ -12,7 +12,7 @@ General application parameters.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Obtains the application configuration data present in the file in the config folder.
@@ -28,7 +28,7 @@ _out.println(`App Name: ${appName}`);
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Returns a structure with the configuration parameters.
 
@@ -38,7 +38,7 @@ Returns a structure with the configuration parameters.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">configReloaded</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>configReloaded</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks whether the application configuration has been changed.
@@ -65,7 +65,7 @@ Returns whether the configuration was changed and reloaded.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">file</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>file</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Description
 
 Processes files within the application.
@@ -100,7 +100,7 @@ if (jsonFile.exists()) {
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 Returns the file object obtained through the path.
 
@@ -110,7 +110,7 @@ Returns the file object obtained through the path.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">folder</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>folder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Description
 
 Tracks all the files present in the folder of the inserted path.
@@ -123,7 +123,7 @@ Tracks all the files present in the folder of the inserted path.
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 Returns all files present in the folder of the inserted path.
 
@@ -133,7 +133,7 @@ Returns all files present in the folder of the inserted path.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Obtains the application configuration data present in the file in the config folder.
@@ -149,7 +149,7 @@ _out.println(`App Name: ${appName}`);
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Returns a structure with the configuration parameters.
 
@@ -159,7 +159,7 @@ Returns a structure with the configuration parameters.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Description
 
 Processes files within the application.
@@ -194,7 +194,7 @@ if (jsonFile.exists()) {
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 Returns the file object obtained through the path.
 
@@ -204,7 +204,7 @@ Returns the file object obtained through the path.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getFolder</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getFolder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Description
 
 Tracks all the files present in the folder of the inserted path.
@@ -217,7 +217,7 @@ Tracks all the files present in the folder of the inserted path.
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 Returns all files present in the folder of the inserted path.
 
@@ -227,7 +227,7 @@ Returns all files present in the folder of the inserted path.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the name of the application.
@@ -250,7 +250,7 @@ Returns the name of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathBase</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathBase</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -262,7 +262,7 @@ Returns the name of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathConfig</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -274,7 +274,7 @@ Returns the name of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathHome</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathHome</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -286,7 +286,7 @@ Returns the name of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathPublic</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -298,7 +298,7 @@ Returns the name of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathServer</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathServer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -310,7 +310,7 @@ Returns the name of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getPathStorage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathStorage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -322,7 +322,7 @@ Returns the name of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getSettings</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getSettings</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Obtains the application settings data present in the file of the config.
@@ -339,7 +339,7 @@ _out.println(`The maximum limit for tickets is: ${maxTickets}`);
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Returns the custom settings.
 
@@ -349,7 +349,7 @@ Returns the custom settings.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrl</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrl</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application url.
@@ -368,7 +368,7 @@ Returns the URL of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrl</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrl</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the URL prefix defined in the configuration, as a custom URL prefix.
@@ -397,7 +397,7 @@ Returns the location prefix defined in the configuration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlAdmin</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlAdmin</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -409,7 +409,7 @@ Returns the location prefix defined in the configuration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlFileSystem</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlFileSystem</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -421,7 +421,7 @@ Returns the location prefix defined in the configuration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlFileSystemPrivate</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlFileSystemPrivate</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -433,7 +433,7 @@ Returns the location prefix defined in the configuration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlFileSystemPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlFileSystemPublic</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -445,7 +445,7 @@ Returns the location prefix defined in the configuration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlFileSystemServer</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlFileSystemServer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -457,7 +457,7 @@ Returns the location prefix defined in the configuration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlPublic</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -469,7 +469,7 @@ Returns the location prefix defined in the configuration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlServices</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlServices</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -481,7 +481,7 @@ Returns the location prefix defined in the configuration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">getUrlStorage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlStorage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -493,7 +493,7 @@ Returns the location prefix defined in the configuration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">isConfigReloaded</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>isConfigReloaded</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -505,7 +505,7 @@ Returns the location prefix defined in the configuration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">isFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>isFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Verify if a file exists.
@@ -528,7 +528,7 @@ Returns a boolean verification of the existence of the file and tracks it.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">isFolder</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>isFolder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Verify if exists a folder in the inserted path.
@@ -551,7 +551,7 @@ Returns a boolean verification of the existence of the file and tracks it folder
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>name</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the name of the application.
@@ -574,7 +574,7 @@ Returns the name of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathBase</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>pathBase</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application root path.
@@ -597,7 +597,7 @@ Returns the base location of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathConfig</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>pathConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the path to the application config folder.
@@ -620,7 +620,7 @@ Returns the location of the configuration folder.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathHome</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>pathHome</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application root path.
@@ -643,7 +643,7 @@ Returns the base location of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>pathPublic</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the public folder location.
@@ -666,7 +666,7 @@ Returns the public folder location.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathServer</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>pathServer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the server folder location.
@@ -689,7 +689,7 @@ Returns the server folder location.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">pathStorage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>pathStorage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the storage folder location.
@@ -712,7 +712,7 @@ Returns the storage folder location.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">settings</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>settings</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Obtains the application settings data present in the file of the config.
@@ -729,7 +729,7 @@ _out.println(`The maximum limit for tickets is: ${maxTickets}`);
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Returns the custom settings.
 
@@ -739,7 +739,7 @@ Returns the custom settings.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">url</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>url</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application url.
@@ -758,7 +758,7 @@ Returns the URL of the application.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">url</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>url</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the URL prefix defined in the configuration, as a custom URL prefix.
@@ -787,7 +787,7 @@ Returns the location prefix defined in the configuration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlAdmin</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>urlAdmin</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application url for the administration interface.
@@ -810,7 +810,7 @@ Returns the location prefix of the administration.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlFileSystem</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>urlFileSystem</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application url for the filesystem folder.
@@ -833,7 +833,7 @@ Returns the location of the filesystem folder.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlFileSystemPrivate</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>urlFileSystemPrivate</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application url for the private folder.
@@ -856,7 +856,7 @@ Returns the location of the filesystem's private folder.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlFileSystemPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>urlFileSystemPublic</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application url for the filesystem's public folder.
@@ -879,7 +879,7 @@ Returns the location of the filesystem's public folder.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlFileSystemServer</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>urlFileSystemServer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application url for the filesystem's server folder.
@@ -902,7 +902,7 @@ Returns the location of the filesystem's server folder.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlPublic</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>urlPublic</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application url for the public folder.
@@ -925,7 +925,7 @@ Returns the location of the public folder.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlServices</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>urlServices</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application url for the services folder.
@@ -948,7 +948,7 @@ Returns the location of the services.
 
 ---
 
-#### <span style="font-weight: normal">_app</span>.<span style="color: #008000">urlStorage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>urlStorage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the application url for the storage folder.

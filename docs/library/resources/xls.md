@@ -48,7 +48,7 @@ excel.output("ages.xls");
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">activeSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>activeSheet</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Sets the spreadsheet that is active.
@@ -61,13 +61,13 @@ Sets the spreadsheet that is active.
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 A instância atual do recurso XLS.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">activeSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.hssf.usermodel.HSSFSheet</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>activeSheet</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.hssf.usermodel.HSSFSheet</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Sets the spreadsheet that is active.
@@ -80,7 +80,7 @@ Sets the spreadsheet that is active.
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 The current instance of the XLS resource.
 
@@ -90,7 +90,7 @@ The current instance of the XLS resource.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>addDataTable</span>(<span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -105,13 +105,13 @@ Adds a data table to the spreadsheet.
 
 ##### Return
 
-( _[XLSPosition](../../objects/XLSPosition)_ )
+( _[XLSPosition](../objects/XLSPosition)_ )
 
 Reference of the position of the last cell with data entered.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">vertical</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>addDataTable</span>(<span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>vertical</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -127,13 +127,13 @@ Adds a data table to the spreadsheet.
 
 ##### Return
 
-( _[XLSPosition](../../objects/XLSPosition)_ )
+( _[XLSPosition](../objects/XLSPosition)_ )
 
 Reference of the position of the last cell with data entered.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>addDataTable</span>(<span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -144,17 +144,17 @@ Adds a data table to the spreadsheet.
 |---|---|---|
 | **rowIndex** | _int_ | Line number. |
 | **colIndex** | _int_ | Column number. |
-| **data** | _[Values](../../objects/Values)_ | List of data to be inserted. |
+| **data** | _[Values](../objects/Values)_ | List of data to be inserted. |
 
 ##### Return
 
-( _[XLSPosition](../../objects/XLSPosition)_ )
+( _[XLSPosition](../objects/XLSPosition)_ )
 
 Reference of the position of the last cell with data entered.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">vertical</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>addDataTable</span>(<span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>vertical</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -165,18 +165,18 @@ Adds a data table to the spreadsheet.
 |---|---|---|
 | **rowIndex** | _int_ | Line number. |
 | **colIndex** | _int_ | Column number. |
-| **data** | _[Values](../../objects/Values)_ | List of data to be inserted. |
+| **data** | _[Values](../objects/Values)_ | List of data to be inserted. |
 | **vertical** | _boolean_ | Insert data vertically. |
 
 ##### Return
 
-( _[XLSPosition](../../objects/XLSPosition)_ )
+( _[XLSPosition](../objects/XLSPosition)_ )
 
 Reference of the position of the last cell with data entered.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>addDataTable</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -185,18 +185,18 @@ Adds a data table to the spreadsheet.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **config** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Configuration of the data table. |
+| **config** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Configuration of the data table. |
 | **data** | _java.util.List_ | List of data to be inserted. |
 
 ##### Return
 
-( _[XLSPosition](../../objects/XLSPosition)_ )
+( _[XLSPosition](../objects/XLSPosition)_ )
 
 Reference of the position of the last cell with data entered.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>addDataTable</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -212,13 +212,13 @@ Adds a data table to the spreadsheet.
 
 ##### Return
 
-( _[XLSPosition](../../objects/XLSPosition)_ )
+( _[XLSPosition](../objects/XLSPosition)_ )
 
 Reference of the position of the last cell with data entered.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">vertical</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>addDataTable</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>vertical</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -231,12 +231,12 @@ Reference of the position of the last cell with data entered.
 
 ##### Return
 
-( _[XLSPosition](../../objects/XLSPosition)_ )
+( _[XLSPosition](../objects/XLSPosition)_ )
 
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>addDataTable</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
 ##### Description
 
 Adds a data table to the spreadsheet.
@@ -248,17 +248,17 @@ Adds a data table to the spreadsheet.
 | **sheet** | _org.apache.poi.ss.usermodel.Sheet_ | Spreadsheet object. |
 | **rowIndex** | _int_ | Line number. |
 | **colIndex** | _int_ | Column number. |
-| **data** | _[Values](../../objects/Values)_ | List of data to be inserted. |
+| **data** | _[Values](../objects/Values)_ | List of data to be inserted. |
 
 ##### Return
 
-( _[XLSPosition](../../objects/XLSPosition)_ )
+( _[XLSPosition](../objects/XLSPosition)_ )
 
 Reference of the position of the last cell with data entered.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">addDataTable</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">vertical</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>addDataTable</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>vertical</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -266,12 +266,12 @@ Reference of the position of the last cell with data entered.
 | **sheet** | _org.apache.poi.ss.usermodel.Sheet_ |   |
 | **rowIndex** | _int_ |   |
 | **colIndex** | _int_ |   |
-| **data** | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../objects/Values)_ |   |
 | **vertical** | _boolean_ |   |
 
 ##### Return
 
-( _[XLSPosition](../../objects/XLSPosition)_ )
+( _[XLSPosition](../objects/XLSPosition)_ )
 
 
 ---
@@ -280,7 +280,7 @@ Reference of the position of the last cell with data entered.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">anchorType</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor$AnchorType</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>anchorType</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.ClientAnchor$AnchorType</span>
 ##### Description
 
 Generates the type of anchor.
@@ -289,7 +289,7 @@ Generates the type of anchor.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **type** | _string_ | Anchor type name, supports:<br><ul><li>move-and-resize</li><li>dont-move-do-resize</li><li>move-dont-resize</li><li>dont-move-and-resize</li></ul> |
+| **type** | _string_ | Anchor type name, supports:<br/><ul><li>move-and-resize</li><li>dont-move-do-resize</li><li>move-dont-resize</li><li>dont-move-and-resize</li></ul> |
 
 ##### Return
 
@@ -303,7 +303,7 @@ The anchor type configured with the defined type.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">borderStyle</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.BorderStyle</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>borderStyle</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.BorderStyle</span>
 ##### Description
 
 Generates the outline style of the cell borders.
@@ -312,7 +312,7 @@ Generates the outline style of the cell borders.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **type** | _string_ | Name of the border style type, supports:<br><ul><li>none</li><li>thin</li><li>medium</li><li>dashed</li><li>dotted</li><li>thick</li><li>double</li><li>hair</li><li>medium-dashed</li><li>dash-dot</li><li>medium-dash-dot</li></ul> |
+| **type** | _string_ | Name of the border style type, supports:<br/><ul><li>none</li><li>thin</li><li>medium</li><li>dashed</li><li>dotted</li><li>thick</li><li>double</li><li>hair</li><li>medium-dashed</li><li>dash-dot</li><li>medium-dash-dot</li></ul> |
 
 ##### Return
 
@@ -326,7 +326,7 @@ The border outline style configured with the defined type.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">cell</span>(<span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>cell</span>(<span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Cell</span>
 ##### Description
 
 Gets a spreadsheet cell and if it does not exist then it will be created.
@@ -346,7 +346,7 @@ Cell representation object.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">cell</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>cell</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Cell</span>
 ##### Description
 
 Gets a spreadsheet cell and if it does not exist then it will be created.
@@ -371,7 +371,7 @@ Cell representation object.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">cellRangeAddress</span>(<span style="color: #FF8000">firstRow</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">lastRow</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">firstCol</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">lastCol</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.util.CellRangeAddress</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>cellRangeAddress</span>(<span style={{color: '#FF8000'}}>firstRow</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>lastRow</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>firstCol</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>lastCol</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.util.CellRangeAddress</span>
 ##### Description
 
 Generates the region address of the cell area.
@@ -397,7 +397,7 @@ The cell area address reference.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">cellStyle</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.CellStyle</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>cellStyle</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.CellStyle</span>
 ##### Description
 
 Creates a new cell style in the workbook.
@@ -414,7 +414,7 @@ The new cell style created.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">cellStyleFormat</span>(<span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.CellStyle</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>cellStyleFormat</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.CellStyle</span>
 ##### Description
 
 Creates a new cell style with an associated format in the workbook.
@@ -437,7 +437,7 @@ The new cell style created with the configured format.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">color</span>(<span style="color: #FF8000">color</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>color</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Description
 
 Generates the color code based on predefined names.
@@ -446,7 +446,7 @@ Generates the color code based on predefined names.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **color** | _string_ | Color name, supports:<br><ul><li>black</li><li>brown</li><li>olive_green</li><li>dark_green</li><li>dark_teal</li><li>dark_blue</li><li>indigo</li><li>grey_80_percent</li><li>orange</li><li>dark_yellow</li><li>green</li><li>teal</li><li>blue</li><li>blue_grey</li><li>grey_50_percent</li><li>red</li><li>light_orange</li><li>lime</li><li>sea_green</li><li>aqua</li><li>light_blue</li><li>violet</li><li>grey_40_percent</li><li>pink</li><li>gold</li><li>yellow</li><li>bright_green</li><li>turquoise</li><li>dark_red</li><li>sky_blue</li><li>plum</li><li>grey_25_percent</li><li>rose</li><li>light_yellow</li><li>light_green</li><li>light_turquoise</li><li>pale_blue</li><li>lavender</li><li>white</li><li>cornflower_blue</li><li>lemon_chiffon</li><li>maroon</li><li>orchid</li><li>coral</li><li>royal_blue</li><li>light_cornflower_blue</li><li>tan</li><li>automatic</li></ul> |
+| **color** | _string_ | Color name, supports:<br/><ul><li>black</li><li>brown</li><li>olive_green</li><li>dark_green</li><li>dark_teal</li><li>dark_blue</li><li>indigo</li><li>grey_80_percent</li><li>orange</li><li>dark_yellow</li><li>green</li><li>teal</li><li>blue</li><li>blue_grey</li><li>grey_50_percent</li><li>red</li><li>light_orange</li><li>lime</li><li>sea_green</li><li>aqua</li><li>light_blue</li><li>violet</li><li>grey_40_percent</li><li>pink</li><li>gold</li><li>yellow</li><li>bright_green</li><li>turquoise</li><li>dark_red</li><li>sky_blue</li><li>plum</li><li>grey_25_percent</li><li>rose</li><li>light_yellow</li><li>light_green</li><li>light_turquoise</li><li>pale_blue</li><li>lavender</li><li>white</li><li>cornflower_blue</li><li>lemon_chiffon</li><li>maroon</li><li>orchid</li><li>coral</li><li>royal_blue</li><li>light_cornflower_blue</li><li>tan</li><li>automatic</li></ul> |
 
 ##### Return
 
@@ -460,7 +460,7 @@ The color reference.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">columnReference</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>columnReference</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the column reference (letters) based on its numeric position.
@@ -479,7 +479,7 @@ Reference in column letters.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">columnReference</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>columnReference</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Gets the numeric position of the column based on the letter reference.
@@ -502,7 +502,7 @@ Numeric position of the column.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">create</span>() : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>create</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Creates a new Excel document.
@@ -515,7 +515,7 @@ const excel = _xls.create();
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 New XLS resource instance.
 
@@ -525,7 +525,7 @@ New XLS resource instance.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">createSheet</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>createSheet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>
 ##### Description
 
 Creates a new spreadsheet.
@@ -538,7 +538,7 @@ Spreadsheet created.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">createSheet</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>createSheet</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>
 ##### Description
 
 Create a new spreadsheet and define its name.
@@ -561,7 +561,7 @@ Spreadsheet created.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">fillPattern</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.FillPatternType</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>fillPattern</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.FillPatternType</span>
 ##### Description
 
 Generates the background fill pattern.
@@ -570,7 +570,7 @@ Generates the background fill pattern.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **type** | _string_ | Fill pattern type, supports:<br><ul><li>no-fill</li><li>solid-foreground</li><li>fine-dots</li><li>alt-bars</li><li>sparse-dots</li><li>thick-horz-bands</li><li>thick-vert-bands</li><li>thick-backward-diag</li><li>thick-forward-diag</li><li>big-spots</li><li>bricks</li><li>thin-horz-bands</li><li>thin-vert-bands</li><li>thin-backward-diag</li><li>thin-forward-diag</li><li>squares</li><li>diamonds</li><li>less-dots</li><li>least-dots</li></ul> |
+| **type** | _string_ | Fill pattern type, supports:<br/><ul><li>no-fill</li><li>solid-foreground</li><li>fine-dots</li><li>alt-bars</li><li>sparse-dots</li><li>thick-horz-bands</li><li>thick-vert-bands</li><li>thick-backward-diag</li><li>thick-forward-diag</li><li>big-spots</li><li>bricks</li><li>thin-horz-bands</li><li>thin-vert-bands</li><li>thin-backward-diag</li><li>thin-forward-diag</li><li>squares</li><li>diamonds</li><li>less-dots</li><li>least-dots</li></ul> |
 
 ##### Return
 
@@ -584,7 +584,7 @@ The fill pattern configured with the defined type.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">font</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Font</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>font</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Font</span>
 ##### Description
 
 Creates a new font style in the workbook.
@@ -601,7 +601,7 @@ The new font style created.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">format</span>(<span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>format</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Description
 
 Creates a new cell format in the workbook.
@@ -624,7 +624,7 @@ Identifier code for the new format.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">getAllSheets</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>getAllSheets</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Description
 
 List of all spreadsheets.
@@ -641,7 +641,7 @@ All existing spreadsheets in the document.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">getCellData</span>(<span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>getCellData</span>(<span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets an object with data from a spreadsheet cell.
@@ -655,13 +655,13 @@ Gets an object with data from a spreadsheet cell.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Cell data information.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">getCellData</span>(<span style="color: #FF8000">cell</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>getCellData</span>(<span style={{color: '#FF8000'}}>cell</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Cell</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets an object with data from a spreadsheet cell.
@@ -674,13 +674,13 @@ Gets an object with data from a spreadsheet cell.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Cell data information.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">getCellData</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>getCellData</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets an object with data from a spreadsheet cell.
@@ -695,7 +695,7 @@ Gets an object with data from a spreadsheet cell.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Cell data information.
 
@@ -705,7 +705,7 @@ Cell data information.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">getNumberOfSheets</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>getNumberOfSheets</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Gets the total number of spreadsheets.
@@ -722,7 +722,7 @@ The total number of spreadsheets in the document.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">getSheet</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>getSheet</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>
 ##### Description
 
 Get the spreadsheet by number (index).
@@ -741,7 +741,7 @@ Spreadsheet referring to the number (index).
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">getSheet</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>getSheet</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>
 ##### Description
 
 Gets the spreadsheet by name.
@@ -764,7 +764,7 @@ Spreadsheet for the name.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">horizontalAlignment</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.HorizontalAlignment</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>horizontalAlignment</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.HorizontalAlignment</span>
 ##### Description
 
 Generates horizontal alignment.
@@ -773,7 +773,7 @@ Generates horizontal alignment.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **type** | _string_ | Horizontal alignment type name, supports:<br><ul><li>general</li><li>left</li><li>center</li><li>right</li><li>fill</li><li>justify</li><li>center-selection</li><li>distributed</li></ul> |
+| **type** | _string_ | Horizontal alignment type name, supports:<br/><ul><li>general</li><li>left</li><li>center</li><li>right</li><li>fill</li><li>justify</li><li>center-selection</li><li>distributed</li></ul> |
 
 ##### Return
 
@@ -787,7 +787,7 @@ The horizontal alignment configured with the defined type.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">anchor</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>insertPicture</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>anchor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Picture</span>
 ##### Description
 
 Inserts an image associated with the anchor in a specific spreadsheet.
@@ -797,7 +797,7 @@ Inserts an image associated with the anchor in a specific spreadsheet.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **sheet** | _org.apache.poi.ss.usermodel.Sheet_ | Spreadsheet that will be used to insert the image. |
-| **file** | _[File](../../objects/File)_ | Image file. |
+| **file** | _[File](../objects/File)_ | Image file. |
 | **anchor** | _org.apache.poi.ss.usermodel.ClientAnchor_ | Anchor to associate the image. |
 
 ##### Return
@@ -808,7 +808,7 @@ The reference object of the inserted image.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">anchor</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>insertPicture</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>anchor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Picture</span>
 ##### Description
 
 Inserts an image associated with the anchor in a specific spreadsheet.
@@ -818,7 +818,7 @@ Inserts an image associated with the anchor in a specific spreadsheet.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **sheet** | _org.apache.poi.ss.usermodel.Sheet_ | Spreadsheet that will be used to insert the image. |
-| **storage** | _[Storage](../../resources/storage)_ | Storage reference associated with an image file. |
+| **storage** | _[Storage](../resources/storage)_ | Storage reference associated with an image file. |
 | **anchor** | _org.apache.poi.ss.usermodel.ClientAnchor_ | Anchor to associate the image. |
 
 ##### Return
@@ -829,7 +829,7 @@ The reference object of the inserted image.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>insertPicture</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>linha</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Picture</span>
 ##### Description
 
 Insert the image into the specified cell.
@@ -838,7 +838,7 @@ Insert the image into the specified cell.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../../objects/File)_ | Image file. |
+| **file** | _[File](../objects/File)_ | Image file. |
 | **linha** | _int_ | Line number. |
 | **coluna** | _int_ | Column number. |
 
@@ -850,7 +850,7 @@ The reference object of the inserted image.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">anchor</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>insertPicture</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>anchor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Picture</span>
 ##### Description
 
 Inserts an image associated with the anchor.
@@ -859,7 +859,7 @@ Inserts an image associated with the anchor.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../../objects/File)_ | Image file. |
+| **file** | _[File](../objects/File)_ | Image file. |
 | **anchor** | _org.apache.poi.ss.usermodel.ClientAnchor_ | Anchor to associate the image. |
 
 ##### Return
@@ -870,7 +870,7 @@ The reference object of the inserted image.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">linha</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">coluna</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>insertPicture</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>linha</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Picture</span>
 ##### Description
 
 Insert the image into the specified cell.
@@ -879,7 +879,7 @@ Insert the image into the specified cell.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ | Storage reference associated with an image file. |
+| **storage** | _[Storage](../resources/storage)_ | Storage reference associated with an image file. |
 | **linha** | _int_ | Line number. |
 | **coluna** | _int_ | Column number. |
 
@@ -891,7 +891,7 @@ The reference object of the inserted image.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">insertPicture</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">anchor</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Picture</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>insertPicture</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>anchor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.ClientAnchor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Picture</span>
 ##### Description
 
 Inserts an image associated with the anchor.
@@ -900,7 +900,7 @@ Inserts an image associated with the anchor.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ | Storage reference associated with an image file. |
+| **storage** | _[Storage](../resources/storage)_ | Storage reference associated with an image file. |
 | **anchor** | _org.apache.poi.ss.usermodel.ClientAnchor_ | Anchor to associate the image. |
 
 ##### Return
@@ -915,7 +915,7 @@ The reference object of the inserted image.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">mergedRegion</span>(<span style="color: #FF8000">firstRow</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">lastRow</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">firstCol</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">lastCol</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>mergedRegion</span>(<span style={{color: '#FF8000'}}>firstRow</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>lastRow</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>firstCol</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>lastCol</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Performs the merging of cells in the region.
@@ -937,7 +937,7 @@ The reference of the merged cell region.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">mergedRegion</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">firstRow</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">lastRow</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">firstCol</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">lastCol</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>mergedRegion</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>firstRow</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>lastRow</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>firstCol</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>lastCol</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Performs the merging of cells in the passed region in a specific worksheet.
@@ -964,7 +964,7 @@ The reference of the merged cell region.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>open</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -973,17 +973,17 @@ Opens an Excel file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | File data input stream object. |
+| **input** | _[InputStream](../objects/InputStream)_ | File data input stream object. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>open</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -992,18 +992,18 @@ Opens an Excel file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | File data input stream object. |
+| **input** | _[InputStream](../objects/InputStream)_ | File data input stream object. |
 | **password** | _string_ | File password. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>open</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1012,17 +1012,17 @@ Opens an Excel file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../../objects/File)_ | Excel document type file. |
+| **file** | _[File](../objects/File)_ | Excel document type file. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>open</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1031,18 +1031,18 @@ Opens an Excel file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../../objects/File)_ | Excel document type file. |
+| **file** | _[File](../objects/File)_ | Excel document type file. |
 | **password** | _string_ | File password. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>open</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1051,17 +1051,17 @@ Opens an Excel file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | File data input stream object. |
+| **input** | _[InputStream](../objects/InputStream)_ | File data input stream object. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>open</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1070,18 +1070,18 @@ Opens an Excel file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | File data input stream object. |
+| **input** | _[InputStream](../objects/InputStream)_ | File data input stream object. |
 | **password** | _string_ | File password. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>open</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1090,17 +1090,17 @@ Opens an Excel file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ | Storage reference where the file will be opened. |
+| **storage** | _[Storage](../resources/storage)_ | Storage reference where the file will be opened. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">open</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>open</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Opens an Excel file.
@@ -1109,12 +1109,12 @@ Opens an Excel file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ | Storage reference where the file will be opened. |
+| **storage** | _[Storage](../resources/storage)_ | Storage reference where the file will be opened. |
 | **password** | _string_ | File password. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 File opened in a new instance of the XLS resource.
 
@@ -1124,7 +1124,7 @@ File opened in a new instance of the XLS resource.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">output</span>(<span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>output</span>(<span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Performs the sending of data from the final file to the client to download it.
@@ -1146,7 +1146,7 @@ Performs the sending of data from the final file to the client to download it.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">position</span>(<span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">colIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[XLSPosition](../../objects/XLSPosition)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>position</span>(<span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>colIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
 ##### Description
 
 Gets the positioning object.
@@ -1160,7 +1160,7 @@ Gets the positioning object.
 
 ##### Return
 
-( _[XLSPosition](../../objects/XLSPosition)_ )
+( _[XLSPosition](../objects/XLSPosition)_ )
 
 Position reference based on passed coordinates.
 
@@ -1170,7 +1170,7 @@ Position reference based on passed coordinates.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1179,17 +1179,17 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | Excel file reference. |
+| **input** | _[InputStream](../objects/InputStream)_ | Excel file reference. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1198,18 +1198,18 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | Excel file reference. |
+| **input** | _[InputStream](../objects/InputStream)_ | Excel file reference. |
 | **hiddenSheets** | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1218,18 +1218,18 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | Excel file reference. |
+| **input** | _[InputStream](../objects/InputStream)_ | Excel file reference. |
 | **sheetNumber** | _int_ | Spreadsheet number. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1238,18 +1238,18 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | Excel file reference. |
+| **input** | _[InputStream](../objects/InputStream)_ | Excel file reference. |
 | **hiddenSheets** | _string_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1258,19 +1258,19 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | Excel file reference. |
+| **input** | _[InputStream](../objects/InputStream)_ | Excel file reference. |
 | **sheetNumber** | _string_ | Spreadsheet number. |
 | **hiddenSheets** | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1279,36 +1279,36 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[InputStream](../../objects/InputStream)_ | Excel file reference. |
+| **input** | _[InputStream](../objects/InputStream)_ | Excel file reference. |
 | **sheetNumber** | _string_ | Spreadsheet number. |
 | **hiddenSheets** | _int_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../../objects/InputStream)_ |   |
+| **in** | _[InputStream](../objects/InputStream)_ |   |
 | **password** | _string_ |   |
 | **sheetNumber** | _int_ |   |
 | **hiddenSheets** | _boolean_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1317,17 +1317,17 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[File](../../objects/File)_ | Excel file reference. |
+| **input** | _[File](../objects/File)_ | Excel file reference. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1336,18 +1336,18 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[File](../../objects/File)_ | Excel file reference. |
+| **input** | _[File](../objects/File)_ | Excel file reference. |
 | **hiddenSheets** | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1356,18 +1356,18 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[File](../../objects/File)_ | Excel file reference. |
+| **input** | _[File](../objects/File)_ | Excel file reference. |
 | **sheetNumber** | _int_ | Spreadsheet number. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1376,19 +1376,19 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[File](../../objects/File)_ | Excel file reference. |
+| **input** | _[File](../objects/File)_ | Excel file reference. |
 | **sheetNumber** | _int_ | Spreadsheet number. |
 | **hiddenSheets** | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1397,18 +1397,18 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[File](../../objects/File)_ | Excel file reference. |
+| **input** | _[File](../objects/File)_ | Excel file reference. |
 | **hiddenSheets** | _string_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1417,19 +1417,19 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[File](../../objects/File)_ | Excel file reference. |
+| **input** | _[File](../objects/File)_ | Excel file reference. |
 | **sheetNumber** | _string_ | Spreadsheet number. |
 | **hiddenSheets** | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1438,36 +1438,36 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[File](../../objects/File)_ | Excel file reference. |
+| **input** | _[File](../objects/File)_ | Excel file reference. |
 | **sheetNumber** | _string_ | Spreadsheet number. |
 | **hiddenSheets** | _int_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../../objects/File)_ |   |
+| **file** | _[File](../objects/File)_ |   |
 | **password** | _string_ |   |
 | **sheetNumber** | _int_ |   |
 | **hiddenSheets** | _boolean_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1476,17 +1476,17 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
+| **input** | _[Storage](../resources/storage)_ | Excel file reference. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1495,18 +1495,18 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
+| **input** | _[Storage](../resources/storage)_ | Excel file reference. |
 | **hiddenSheets** | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1515,18 +1515,18 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
+| **input** | _[Storage](../resources/storage)_ | Excel file reference. |
 | **sheetNumber** | _int_ | Spreadsheet number. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1535,19 +1535,19 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
+| **input** | _[Storage](../resources/storage)_ | Excel file reference. |
 | **sheetNumber** | _int_ | Spreadsheet number. |
 | **hiddenSheets** | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1556,18 +1556,18 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
+| **input** | _[Storage](../resources/storage)_ | Excel file reference. |
 | **hiddenSheets** | _string_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1576,19 +1576,19 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
+| **input** | _[Storage](../resources/storage)_ | Excel file reference. |
 | **sheetNumber** | _string_ | Spreadsheet number. |
 | **hiddenSheets** | _boolean_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">input</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Reads an Excel file, obtains all data.
@@ -1597,31 +1597,31 @@ Reads an Excel file, obtains all data.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **input** | _[Storage](../../resources/storage)_ | Excel file reference. |
+| **input** | _[Storage](../resources/storage)_ | Excel file reference. |
 | **sheetNumber** | _string_ | Spreadsheet number. |
 | **hiddenSheets** | _int_ | It also processes hidden spreadsheets. |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">read</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">sheetNumber</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hiddenSheets</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>sheetNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hiddenSheets</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ |   |
+| **storage** | _[Storage](../resources/storage)_ |   |
 | **password** | _string_ |   |
 | **sheetNumber** | _int_ |   |
 | **hiddenSheets** | _boolean_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -1630,7 +1630,7 @@ Structure with all the data obtained by reading and processing the Excel files.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">row</span>(<span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Row</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>row</span>(<span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Row</span>
 ##### Description
 
 Gets a row from the spreadsheet and if it does not exist then it will be created.
@@ -1649,7 +1649,7 @@ Line representation object.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">row</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">rowIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Row</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>row</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>rowIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Row</span>
 ##### Description
 
 Gets a row from the spreadsheet and if it does not exist then it will be created.
@@ -1673,7 +1673,7 @@ Line representation object.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">safeSheetName</span>(<span style="color: #FF8000">nameProposal</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>safeSheetName</span>(<span style={{color: '#FF8000'}}>nameProposal</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Transforms the passed text to be a valid spreadsheet name while complying with Excel rules.
@@ -1692,7 +1692,7 @@ Valid name to be used as the name of the spreadsheet.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">safeSheetName</span>(<span style="color: #FF8000">nameProposal</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">replaceChar</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>safeSheetName</span>(<span style={{color: '#FF8000'}}>nameProposal</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>replaceChar</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Transforms the passed text to be a valid spreadsheet name while complying with Excel rules.
@@ -1716,7 +1716,7 @@ Valid name to be used as the name of the spreadsheet.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">save</span>(<span style="color: #FF8000">output</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>output</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Writes the data from the final file to the output.
@@ -1725,7 +1725,7 @@ Writes the data from the final file to the output.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **output** | _[OutputStream](../../objects/OutputStream)_ | Output where the file will be saved. |
+| **output** | _[OutputStream](../objects/OutputStream)_ | Output where the file will be saved. |
 
 ##### Return
 
@@ -1734,7 +1734,7 @@ Writes the data from the final file to the output.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">save</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Writes the data to the final file.
@@ -1743,7 +1743,7 @@ Writes the data to the final file.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../../objects/File)_ | File that will be saved. |
+| **file** | _[File](../objects/File)_ | File that will be saved. |
 
 ##### Return
 
@@ -1752,7 +1752,7 @@ Writes the data to the final file.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">save</span>(<span style="color: #FF8000">output</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>output</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Writes the data from the final file to the output.
@@ -1761,7 +1761,7 @@ Writes the data from the final file to the output.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **output** | _[OutputStream](../../objects/OutputStream)_ | Output where the file will be saved. |
+| **output** | _[OutputStream](../objects/OutputStream)_ | Output where the file will be saved. |
 
 ##### Return
 
@@ -1770,7 +1770,7 @@ Writes the data from the final file to the output.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">save</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Writes the data from the final file to the internal storage of the application.
@@ -1779,7 +1779,7 @@ Writes the data from the final file to the internal storage of the application.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ | Storage reference where the file will be saved. |
+| **storage** | _[Storage](../resources/storage)_ | Storage reference where the file will be saved. |
 
 ##### Return
 
@@ -1792,7 +1792,7 @@ Writes the data from the final file to the internal storage of the application.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>row</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>col</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Insert data in a specific cell.
@@ -1803,17 +1803,17 @@ Insert data in a specific cell.
 |---|---|---|
 | **row** | _int_ | Line number. |
 | **col** | _int_ | Column number. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data to be inserted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data to be inserted. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>row</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>col</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Insert data in a specific cell.
@@ -1824,17 +1824,17 @@ Insert data in a specific cell.
 |---|---|---|
 | **row** | _int_ | Line number. |
 | **col** | _int_ | Column number. |
-| **data** | _[Values](../../objects/Values)_ | Data to be inserted. |
+| **data** | _[Values](../objects/Values)_ | Data to be inserted. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">cell</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>cell</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Cell</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Insert data in a specific cell.
@@ -1844,17 +1844,17 @@ Insert data in a specific cell.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **cell** | _org.apache.poi.ss.usermodel.Cell_ | Cell object. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data to be inserted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data to be inserted. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">cell</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Cell</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>cell</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Cell</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Insert data in a specific cell.
@@ -1864,17 +1864,17 @@ Insert data in a specific cell.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **cell** | _org.apache.poi.ss.usermodel.Cell_ | Cell object. |
-| **data** | _[Values](../../objects/Values)_ | Data to be inserted. |
+| **data** | _[Values](../objects/Values)_ | Data to be inserted. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>row</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>col</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Inserts data into a specific cell in a spreadsheet.
@@ -1886,17 +1886,17 @@ Inserts data into a specific cell in a spreadsheet.
 | **sheet** | _org.apache.poi.ss.usermodel.Sheet_ | Spreadsheet object. |
 | **row** | _int_ | Line number. |
 | **col** | _int_ | Column number. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data to be inserted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data to be inserted. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 The current instance of the XLS resource.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">setCellData</span>(<span style="color: #FF8000">sheet</span>: <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>, <span style="color: #FF8000">row</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">col</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[XLS](../../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>row</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>col</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Inserts data into a specific cell in a spreadsheet.
@@ -1908,11 +1908,11 @@ Inserts data into a specific cell in a spreadsheet.
 | **sheet** | _org.apache.poi.ss.usermodel.Sheet_ | Spreadsheet object. |
 | **row** | _int_ | Line number. |
 | **col** | _int_ | Column number. |
-| **data** | _[Values](../../objects/Values)_ | Data to be inserted. |
+| **data** | _[Values](../objects/Values)_ | Data to be inserted. |
 
 ##### Return
 
-( _[XLS](../../resources/xls)_ )
+( _[XLS](../resources/xls)_ )
 
 The current instance of the XLS resource.
 
@@ -1922,7 +1922,7 @@ The current instance of the XLS resource.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">sheet</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Sheet</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>sheet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>
 ##### Description
 
 To obtain the current spreadsheet that is being used to manipulate the data.
@@ -1945,7 +1945,7 @@ Gets the current spreadsheet.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">units</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>units</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>
 ##### Description
 
 It obtains the types of units predefined in Excel, useful to perform the conversion between pixels and points.
@@ -1962,7 +1962,7 @@ The Apache POI class that helps you manipulate Excel units.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">validSheetName</span>(<span style="color: #FF8000">nameProposal</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>validSheetName</span>(<span style={{color: '#FF8000'}}>nameProposal</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks whether the passed text is a valid spreadsheet name that complies with Excel rules.
@@ -1985,7 +1985,7 @@ Whether it is valid to be used as a spreadsheet name.
 
 ---
 
-#### <span style="font-weight: normal">_xls</span>.<span style="color: #008000">verticalAlignment</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.VerticalAlignment</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>verticalAlignment</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.VerticalAlignment</span>
 ##### Description
 
 Generates vertical alignment.
@@ -1994,7 +1994,7 @@ Generates vertical alignment.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **type** | _string_ | Vertical alignment type name, supports:<br><ul><li>top</li><li>center</li><li>bottom</li><li>justify</li><li>distributed</li></ul> |
+| **type** | _string_ | Vertical alignment type name, supports:<br/><ul><li>top</li><li>center</li><li>bottom</li><li>justify</li><li>distributed</li></ul> |
 
 ##### Return
 
@@ -2008,7 +2008,7 @@ The vertical alignment configured with the defined type.
 
 ---
 
-#### `_xls.create()`.<span style="color: #008000">workbook</span>() : <span style="font-weight: normal; font-style: italic;">org.apache.poi.ss.usermodel.Workbook</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>workbook</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Workbook</span>
 ##### Description
 
 Creates a new Excel document.

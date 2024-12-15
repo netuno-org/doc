@@ -13,14 +13,14 @@ O Remote facilita esta integração e torna simples a integração com web servi
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">acceptJSON</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>acceptJSON</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines that the content will be received in the application/json.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -30,14 +30,14 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">alwaysBodyData</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>alwaysBodyData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Forces data to go in the body of the HTTP header, even in the case of the <code>GET</code> method.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -47,14 +47,14 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asBinary</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>asBinary</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines that the content data received by the remote connection is in binary format, such as downloading files, images, zip, etc...
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -64,14 +64,14 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asForm</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>asForm</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines that the data content will be submitted in the application/x-www-form-urlencoded format.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -81,14 +81,14 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asJSON</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>asJSON</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines that the data content will be submitted in the application/json format.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -98,14 +98,14 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asMultipartFormData</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>asMultipartFormData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines that the data content will be submitted in the multipart/form-data format.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -115,14 +115,14 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">asText</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>asText</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines that the data content will be submitted in the text/plain format.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -132,20 +132,20 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>delete</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Submit the request for remote connection using the DELETE method.
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address it submits the request for remote connection using the DELETE method.
@@ -158,13 +158,13 @@ With the assigned address it submits the request for remote connection using the
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the DELETE method.
@@ -174,17 +174,17 @@ With the assigned address and data map, submit the request for remote connection
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the DELETE method.
@@ -194,17 +194,17 @@ With the assigned address and data map, submit the request for remote connection
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the DELETE method.
@@ -213,17 +213,17 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the DELETE method.
@@ -232,11 +232,11 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
@@ -246,20 +246,20 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>get</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Submit the request for remote connection using the GET method.
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address it submits the request for remote connection using the GET method.
@@ -272,13 +272,13 @@ With the assigned address it submits the request for remote connection using the
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the GET method.
@@ -288,17 +288,17 @@ With the assigned address and data map, submit the request for remote connection
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the GET method.
@@ -308,17 +308,17 @@ With the assigned address and data map, submit the request for remote connection
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the GET method.
@@ -327,17 +327,17 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the GET method.
@@ -346,11 +346,11 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
@@ -360,7 +360,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getAuthorization</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getAuthorization</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -372,7 +372,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getCharset</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getCharset</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -384,7 +384,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getConnectTimeout</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getConnectTimeout</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -396,7 +396,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getContentType</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getContentType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -408,10 +408,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -420,7 +420,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getDefaultSubmitData</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getDefaultSubmitData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -432,10 +432,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getFormData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getFormData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -444,10 +444,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getHeader</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getHeader</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -456,10 +456,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getQS</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getQS</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -468,10 +468,10 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getQueryString</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getQueryString</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -480,7 +480,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getReadTimeout</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getReadTimeout</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -492,7 +492,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getSOAPAction</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getSOAPAction</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -504,7 +504,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getSOAPNS</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getSOAPNS</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -516,7 +516,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getSOAPURL</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getSOAPURL</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -528,7 +528,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getStatusCode</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getStatusCode</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -540,7 +540,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getURL</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getURL</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -552,7 +552,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">getURLPrefix</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getURLPrefix</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -564,20 +564,20 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Starts a new Remote.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 New Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>configName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Starts a new Remote based on the configuration key.
@@ -590,13 +590,13 @@ Starts a new Remote based on the configuration key.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 New Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configName</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>configName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Starts a new Remote based on the configuration key.
@@ -605,11 +605,11 @@ Starts a new Remote based on the configuration key.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **configName** | _[Values](../../objects/Values)_ | Name of the configuration that will be used. |
+| **configName** | _[Values](../objects/Values)_ | Name of the configuration that will be used. |
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 New Remote instance.
 
@@ -619,7 +619,7 @@ New Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isAlwaysDataBody</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>isAlwaysDataBody</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -631,7 +631,7 @@ New Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isBinary</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>isBinary</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -643,7 +643,7 @@ New Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isFollowRedirects</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>isFollowRedirects</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -655,7 +655,7 @@ New Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isForm</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>isForm</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -667,7 +667,7 @@ New Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isJSON</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>isJSON</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -679,7 +679,7 @@ New Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isMultipartFormData</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>isMultipartFormData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -691,7 +691,7 @@ New Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">isText</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>isText</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -703,7 +703,7 @@ New Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned address it submits as JSON for the remote connection.
@@ -717,13 +717,13 @@ Through the HTTP method and assigned address it submits as JSON for the remote c
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data map it submits the data as JSON for the remote connection.
@@ -738,13 +738,13 @@ Through the HTTP method, address and assigned data map it submits the data as JS
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data map it submits the data as JSON for the remote connection.
@@ -755,17 +755,17 @@ Through the HTTP method, address and assigned data map it submits the data as JS
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">json</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data map it submits the data as JSON for the remote connection.
@@ -776,11 +776,11 @@ Through the HTTP method, address and assigned data map it submits the data as JS
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
@@ -790,20 +790,20 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>patch</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Submit the request for remote connection using the PATCH method.
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>patch</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address it submits the request for remote connection using the PATCH method.
@@ -816,13 +816,13 @@ With the assigned address it submits the request for remote connection using the
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>patch</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the PATCH method.
@@ -832,17 +832,17 @@ With the assigned address and data map, submit the request for remote connection
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>patch</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the PATCH method.
@@ -852,17 +852,17 @@ With the assigned address and data map, submit the request for remote connection
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>patch</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the PATCH method.
@@ -871,17 +871,17 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">patch</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>patch</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the PATCH method.
@@ -890,11 +890,11 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
@@ -904,7 +904,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">ping</span>(<span style="color: #FF8000">host</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>ping</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Check whether the server name or IP is available.
@@ -927,7 +927,7 @@ Result if address is available.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">portListening</span>(<span style="color: #FF8000">host</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">port</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>portListening</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>port</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks if the port is available for a server name or IP.
@@ -951,20 +951,20 @@ Result if port is available.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>post</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Submit the request for remote connection using the POST method.
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>post</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address it submits the request for remote connection using the POST method.
@@ -977,13 +977,13 @@ With the assigned address it submits the request for remote connection using the
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>post</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the POST method.
@@ -993,17 +993,17 @@ With the assigned address and data map, submit the request for remote connection
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>post</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the POST method.
@@ -1013,17 +1013,17 @@ With the assigned address and data map, submit the request for remote connection
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>post</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the POST method.
@@ -1032,17 +1032,17 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">post</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>post</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the POST method.
@@ -1051,11 +1051,11 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
@@ -1065,20 +1065,20 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>() : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>put</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Submit the request for remote connection using the PUT method.
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address it submits the request for remote connection using the PUT method.
@@ -1091,13 +1091,13 @@ With the assigned address it submits the request for remote connection using the
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the PUT method.
@@ -1107,17 +1107,17 @@ With the assigned address and data map, submit the request for remote connection
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the assigned address and data map, submit the request for remote connection using the PUT method.
@@ -1127,17 +1127,17 @@ With the assigned address and data map, submit the request for remote connection
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the PUT method.
@@ -1146,17 +1146,17 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">put</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 With the map of assigned data it submits the request for remote connection through the PUT method.
@@ -1165,11 +1165,11 @@ With the map of assigned data it submits the request for remote connection throu
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
@@ -1179,7 +1179,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setAlwaysBodyData</span>(<span style="color: #FF8000">alwaysDataBody</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setAlwaysBodyData</span>(<span style={{color: '#FF8000'}}>alwaysDataBody</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Forces data to go in the body of the HTTP header, even in the case of the <code>GET</code> method.
@@ -1192,7 +1192,7 @@ Forces data to go in the body of the HTTP header, even in the case of the <code>
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1202,7 +1202,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setAuthorization</span>(<span style="color: #FF8000">authorization</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setAuthorization</span>(<span style={{color: '#FF8000'}}>authorization</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines the exact content of the authorization that will header the communication that will be sent on the remote connection.
@@ -1215,13 +1215,13 @@ Defines the exact content of the authorization that will header the communicatio
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setAuthorization</span>(<span style="color: #FF8000">username</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">password</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setAuthorization</span>(<span style={{color: '#FF8000'}}>username</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines the content of the basic authorization with user and password that goes to the header of the communication that will be sent on the remote connection.
@@ -1235,7 +1235,7 @@ Defines the content of the basic authorization with user and password that goes 
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1245,7 +1245,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setBinary</span>(<span style="color: #FF8000">binary</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setBinary</span>(<span style={{color: '#FF8000'}}>binary</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines that the content data received by the remote connection is in binary format, such as downloading files, images, zip, etc...
@@ -1258,7 +1258,7 @@ Defines that the content data received by the remote connection is in binary for
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1268,7 +1268,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setCharset</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setCharset</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines the character encoding to be used for the remote connection.
@@ -1281,7 +1281,7 @@ Defines the character encoding to be used for the remote connection.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1291,7 +1291,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setConnectTimeout</span>(<span style="color: #FF8000">timeout</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setConnectTimeout</span>(<span style={{color: '#FF8000'}}>timeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Sets the timeout to stabilize the remote connection.
@@ -1304,7 +1304,7 @@ Sets the timeout to stabilize the remote connection.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1314,7 +1314,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setContentType</span>(<span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setContentType</span>(<span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines the type of content to be used for the remote connection.
@@ -1327,7 +1327,7 @@ Defines the type of content to be used for the remote connection.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1337,7 +1337,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines the parameterization of the data that will be sent as content of the remote connection, via POST or PUT.
@@ -1346,11 +1346,11 @@ Defines the parameterization of the data that will be sent as content of the rem
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../../objects/Values)_ | Parameter map with data to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Parameter map with data to be submitted. |
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1360,7 +1360,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setDefaultSubmitData</span>(<span style="color: #FF8000">requestHeader</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setDefaultSubmitData</span>(<span style={{color: '#FF8000'}}>requestHeader</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines the default data if there is no other data defined to be sent over the remote connection.
@@ -1373,7 +1373,7 @@ Defines the default data if there is no other data defined to be sent over the r
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1383,7 +1383,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setFollowRedirects</span>(<span style="color: #FF8000">followRedirects</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setFollowRedirects</span>(<span style={{color: '#FF8000'}}>followRedirects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines whether to follow redirects on the remote connection.
@@ -1396,7 +1396,7 @@ Defines whether to follow redirects on the remote connection.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1406,12 +1406,12 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setFormData</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setFormData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -1424,7 +1424,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setHeader</span>(<span style="color: #FF8000">requestHeader</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setHeader</span>(<span style={{color: '#FF8000'}}>requestHeader</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines the header of the request that is submitted on the remote connection.
@@ -1433,11 +1433,11 @@ Defines the header of the request that is submitted on the remote connection.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **requestHeader** | _[Values](../../objects/Values)_ | Header data of the request to be submitted. |
+| **requestHeader** | _[Values](../objects/Values)_ | Header data of the request to be submitted. |
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1447,7 +1447,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setQS</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setQS</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines the parameterization of the query string data, that is, the parameters with data passed in the address of the remote connection.
@@ -1456,11 +1456,11 @@ Defines the parameterization of the query string data, that is, the parameters w
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../../objects/Values)_ | Parameter map with data to be passed in the URL. |
+| **data** | _[Values](../objects/Values)_ | Parameter map with data to be passed in the URL. |
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1470,12 +1470,12 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setQueryString</span>(<span style="color: #FF8000">qs</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setQueryString</span>(<span style={{color: '#FF8000'}}>qs</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **qs** | _[Values](../../objects/Values)_ |   |
+| **qs** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -1488,7 +1488,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setReadTimeout</span>(<span style="color: #FF8000">timeout</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setReadTimeout</span>(<span style={{color: '#FF8000'}}>timeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Sets the time limit for reading data.
@@ -1501,7 +1501,7 @@ Sets the time limit for reading data.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1511,7 +1511,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setSOAPAction</span>(<span style="color: #FF8000">soapAction</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setSOAPAction</span>(<span style={{color: '#FF8000'}}>soapAction</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Defines the SOAP "action " (operation, method, etc.) of the remote connection.
@@ -1524,7 +1524,7 @@ Defines the SOAP "action " (operation, method, etc.) of the remote connection.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1534,7 +1534,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setSOAPNS</span>(<span style="color: #FF8000">soapNS</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setSOAPNS</span>(<span style={{color: '#FF8000'}}>soapNS</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Define the SOAP namespace on the remote connection.
@@ -1547,7 +1547,7 @@ Define the SOAP namespace on the remote connection.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1557,7 +1557,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setSOAPURL</span>(<span style="color: #FF8000">soapURL</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setSOAPURL</span>(<span style={{color: '#FF8000'}}>soapURL</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Sets the SOAP address of the remote connection.
@@ -1570,7 +1570,7 @@ Sets the SOAP address of the remote connection.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1580,7 +1580,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setURL</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Remote](../../resources/remote)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setURL</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
 ##### Description
 
 Sets the address of the remote connection.
@@ -1593,7 +1593,7 @@ Sets the address of the remote connection.
 
 ##### Return
 
-( _[Remote](../../resources/remote)_ )
+( _[Remote](../resources/remote)_ )
 
 The current Remote instance.
 
@@ -1603,7 +1603,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">setURLPrefix</span>(<span style="color: #FF8000">urlPrefix</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setURLPrefix</span>(<span style={{color: '#FF8000'}}>urlPrefix</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1621,7 +1621,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap11</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>soap11</span>(<span style={{color: '#FF8000'}}>soapMethod</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1630,22 +1630,22 @@ The current Remote instance.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap11</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>soap11</span>(<span style={{color: '#FF8000'}}>soapMethod</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **soapMethod** | _string_ |   |
-| **data** | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -1654,7 +1654,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap12</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>soap12</span>(<span style={{color: '#FF8000'}}>soapMethod</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1663,22 +1663,22 @@ The current Remote instance.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">soap12</span>(<span style="color: #FF8000">soapMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>soap12</span>(<span style={{color: '#FF8000'}}>soapMethod</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **soapMethod** | _string_ |   |
-| **data** | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -1687,7 +1687,7 @@ The current Remote instance.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submit</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned address it submits to the remote connection.
@@ -1701,13 +1701,13 @@ Through the HTTP method and assigned address it submits to the remote connection
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submit</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data, submit for remote connection.
@@ -1722,13 +1722,13 @@ Through the HTTP method, address and assigned data, submit for remote connection
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submit</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>querystring</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address, query string, content type and assigned data, it submits to the remote connection.
@@ -1739,17 +1739,17 @@ Through the HTTP method, address, query string, content type and assigned data, 
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
 | **url** | _string_ | Address to be submitted. |
-| **querystring** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data for the querystring. |
+| **querystring** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data for the querystring. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submit</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>querystring</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address, query string, content type and assigned data, it submits to the remote connection.
@@ -1760,19 +1760,19 @@ Through the HTTP method, address, query string, content type and assigned data, 
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
 | **url** | _string_ | Address to be submitted. |
-| **querystring** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data for the querystring. |
+| **querystring** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data for the querystring. |
 | **contentType** | _string_ | Content type code. |
 | **data** | _string_ | Data to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submit</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>querystring</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address, query string, content type and assigned data, it submits to the remote connection.
@@ -1783,17 +1783,17 @@ Through the HTTP method, address, query string, content type and assigned data, 
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
 | **url** | _string_ | Address to be submitted. |
-| **querystring** | _[Values](../../objects/Values)_ | Data for the querystring. |
+| **querystring** | _[Values](../objects/Values)_ | Data for the querystring. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submit</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">querystring</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submit</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>querystring</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address, query string, content type and assigned data, it submits to the remote connection.
@@ -1804,13 +1804,13 @@ Through the HTTP method, address, query string, content type and assigned data, 
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
 | **url** | _string_ | Address to be submitted. |
-| **querystring** | _[Values](../../objects/Values)_ | Data for the querystring. |
+| **querystring** | _[Values](../objects/Values)_ | Data for the querystring. |
 | **contentType** | _string_ | Content type code. |
 | **data** | _string_ | Data to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
@@ -1820,7 +1820,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitForm</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as form for the remote connection.
@@ -1831,17 +1831,17 @@ Through the HTTP method and assigned data map it submits the data as form for th
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitForm</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as form for the remote connection.
@@ -1852,17 +1852,17 @@ Through the HTTP method and assigned data map it submits the data as form for th
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitForm</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as form for the remote connection.
@@ -1872,17 +1872,17 @@ Through the HTTP method and assigned data map it submits the data as form for th
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitForm</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitForm</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as form for the remote connection.
@@ -1892,11 +1892,11 @@ Through the HTTP method and assigned data map it submits the data as form for th
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
@@ -1906,7 +1906,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitJSON</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data map it submits the data as JSON for the remote connection.
@@ -1917,17 +1917,17 @@ Through the HTTP method, address and assigned data map it submits the data as JS
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitJSON</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method, address and assigned data map it submits the data as JSON for the remote connection.
@@ -1938,17 +1938,17 @@ Through the HTTP method, address and assigned data map it submits the data as JS
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
 | **url** | _string_ | Address to be submitted. |
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitJSON</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as JSON for the remote connection.
@@ -1958,17 +1958,17 @@ Through the HTTP method and assigned data map it submits the data as JSON for th
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
-| **data** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | Data map to be submitted. |
+| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style="font-weight: normal">_remote</span>.<span style="color: #008000">submitJSON</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RemoteResponse](../../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitJSON</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Description
 
 Through the HTTP method and assigned data map it submits the data as JSON for the remote connection.
@@ -1978,11 +1978,11 @@ Through the HTTP method and assigned data map it submits the data as JSON for th
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **method** | _string_ | HTTP method code. |
-| **data** | _[Values](../../objects/Values)_ | Data map to be submitted. |
+| **data** | _[Values](../objects/Values)_ | Data map to be submitted. |
 
 ##### Return
 
-( _[RemoteResponse](../../objects/RemoteResponse)_ )
+( _[RemoteResponse](../objects/RemoteResponse)_ )
 
 Submission response, with status, header, content, etc.
 

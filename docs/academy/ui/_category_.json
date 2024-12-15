@@ -1,0 +1,8 @@
+{
+  "label": "User Interface",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "How the user interface works."
+  }
+}

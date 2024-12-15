@@ -12,7 +12,7 @@ Definição da configuração do objeto Link para realcionamento entre formulari
 
 ---
 
-#### <span style="color: #008000">getForm</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getForm</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the query's main form.
@@ -29,14 +29,14 @@ The name of the form.
 
 ---
 
-#### <span style="color: #008000">getRelationLink</span>() : <span style="font-weight: normal; font-style: italic;">[RelationLink](../../objects/RelationLink)</span>
+#### <span style={{color: '#008000'}}>getRelationLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationLink](../objects/RelationLink)</span>
 ##### Description
 
 Returns the relationship configuration.
 
 ##### Return
 
-( _[RelationLink](../../objects/RelationLink)_ )
+( _[RelationLink](../objects/RelationLink)_ )
 
 Relationship configuration.
 
@@ -46,14 +46,14 @@ Relationship configuration.
 
 ---
 
-#### <span style="color: #008000">getWhere</span>() : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>getWhere</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Returns the filter configuration for the Link object's main form.
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 The filters configuration
 
@@ -63,7 +63,7 @@ The filters configuration
 
 ---
 
-#### <span style="color: #008000">link</span>(<span style="color: #FF8000">formLink</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
 ##### Description
 
 Defines a second relationship level on the current Link object.
@@ -76,7 +76,7 @@ Defines a second relationship level on the current Link object.
 
 ##### Return
 
-( _[Link](../../objects/Link)_ )
+( _[Link](../objects/Link)_ )
 
 Current Link object.
 
@@ -86,7 +86,7 @@ Current Link object.
 
 ---
 
-#### <span style="color: #008000">setForm</span>(<span style="color: #FF8000">form</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
+#### <span style={{color: '#008000'}}>setForm</span>(<span style={{color: '#FF8000'}}>form</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
 ##### Description
 
 Defines the name of the query's main form.
@@ -99,7 +99,7 @@ Defines the name of the query's main form.
 
 ##### Return
 
-( _[Link](../../objects/Link)_ )
+( _[Link](../objects/Link)_ )
 
 Current Link object.
 
@@ -109,7 +109,7 @@ Current Link object.
 
 ---
 
-#### <span style="color: #008000">setRelationLink</span>(<span style="color: #FF8000">relationLink</span>: <span style="font-weight: normal; font-style: italic;">[RelationLink](../../objects/RelationLink)</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
+#### <span style={{color: '#008000'}}>setRelationLink</span>(<span style={{color: '#FF8000'}}>relationLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationLink](../objects/RelationLink)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
 ##### Description
 
 Defines the relationship configuration.
@@ -118,11 +118,11 @@ Defines the relationship configuration.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relationLink** | _[RelationLink](../../objects/RelationLink)_ | The relationship configuration. |
+| **relationLink** | _[RelationLink](../objects/RelationLink)_ | The relationship configuration. |
 
 ##### Return
 
-( _[Link](../../objects/Link)_ )
+( _[Link](../objects/Link)_ )
 
 Current Link object.
 
@@ -132,7 +132,7 @@ Current Link object.
 
 ---
 
-#### <span style="color: #008000">setWhere</span>(<span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">[Link](../../objects/Link)</span>
+#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
 ##### Description
 
 Defines the filter configuration for the Link object's main form.
@@ -141,11 +141,11 @@ Defines the filter configuration for the Link object's main form.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **where** | _[Where](../../objects/Where)_ | The filters configuration. |
+| **where** | _[Where](../objects/Where)_ | The filters configuration. |
 
 ##### Return
 
-( _[Link](../../objects/Link)_ )
+( _[Link](../objects/Link)_ )
 
 Current Link object.
 

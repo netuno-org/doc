@@ -1,16 +1,17 @@
 ---
+sidebar_position: 8
 id: implementing-tables-charts
 title: Implementing tables and charts
-sidebar_label: Implementing tables and charts
+sidebar_label: Tables and Charts
 ---
 
 ### Before proceeding
 Before you start this tutorial make sure you know how to create **Forms, Fields, Relationships and Web Rest Services** in which we go deeper into each explanation, in case you don't know it visit the respective links:
 
-* [Forms](academy/explore/graphical-interface/forms.md)
-* [Fields](academy/explore/graphical-interface/fields.md)
-* [Relationship between forms](academy/explore/graphical-interface/relationships-between-forms.md)
-* [Web REST Services](academy/explore/services.md)
+* [Forms](forms.md)
+* [Fields](fields.md)
+* [Relationship between forms](relationships-between-forms.md)
+* [Web REST Services](../explore/services.md)
 
 It is also advisable that, before starting this tutorial, ensure that you have some basic knowledge in _**JavaScript**_, _**React.js**_ and _**HTML**_.
 
@@ -22,7 +23,7 @@ In this tutorial we will explain how to develop a simple application that involv
 
 If you follow all the steps described in this tutorial, your application will look similar to the one shown in the following image:
 
-![implementaçaotabelasgraficos1.png](assets/implementaçaotabelasgraficos1.png)
+![implementaçaotabelasgraficos1.png](/docs/assets/implementaçaotabelasgraficos1.png)
 
 [//]: # (Ligação para efetuar o download da aplicação: [Aplicação](https://www.netuno.org/wp-content/uploads/2018/08/registerhours.zip)
 
@@ -37,7 +38,7 @@ If you follow all the steps described in this tutorial, your application will lo
 ### First Step
 
 The first step will be creating the forms, their relationships and populate them with some data. An image of the structure of the forms and fields used in this tutorial is shown below:
-![implementaçaotabelasgraficos2.png](assets/implementaçaotabelasgraficos2.png)
+![implementaçaotabelasgraficos2.png](/docs/assets/implementaçaotabelasgraficos2.png)
 
 > Note: It isn't necessary to create the id field because Netuno creates it automatically after the table is created.
 

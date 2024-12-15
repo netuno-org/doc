@@ -12,7 +12,7 @@ Mailbox query capability through IMAP.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>close</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Closes and terminates the connection to the current IMAP folder.
@@ -28,20 +28,20 @@ Closes and terminates the connection to the current IMAP folder.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
 ##### Description
 
 Starts a new configuration of its own.
 
 ##### Return
 
-( _[IMAPConfig](../../objects/IMAPConfig)_ )
+( _[IMAPConfig](../objects/IMAPConfig)_ )
 
 Configuration object loaded from received data.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
 ##### Description
 
 Starts a new configuration of its own.
@@ -50,17 +50,17 @@ Starts a new configuration of its own.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **config** | _[Values](../../objects/Values)_ | Configuration definition data structure. |
+| **config** | _[Values](../objects/Values)_ | Configuration definition data structure. |
 
 ##### Return
 
-( _[IMAPConfig](../../objects/IMAPConfig)_ )
+( _[IMAPConfig](../objects/IMAPConfig)_ )
 
 Configuration object loaded from received data.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">config</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>
 ##### Description
 
 Define outra configuração que deve ser utilizada.
@@ -69,11 +69,11 @@ Define outra configuração que deve ser utilizada.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **config** | _[IMAPConfig](../../objects/IMAPConfig)_ | Definition of the new configuration. |
+| **config** | _[IMAPConfig](../objects/IMAPConfig)_ | Definition of the new configuration. |
 
 ##### Return
 
-( _[IMAP](../../resources/imap)_ )
+( _[IMAP](../resources/imap)_ )
 
 Current IMAP object.
 
@@ -83,14 +83,14 @@ Current IMAP object.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">connect</span>() : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>connect</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>
 ##### Description
 
 Makes the connection to the IMAP server.
 
 ##### Return
 
-( _[IMAP](../../resources/imap)_ )
+( _[IMAP](../resources/imap)_ )
 
 IMAPClient object.
 
@@ -100,7 +100,7 @@ IMAPClient object.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">deletedSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>deletedSize</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Deletes messages from an IMAP folder and returns the size (in bytes) of deleted messages.
@@ -117,7 +117,7 @@ Size (in bytes) of deleted messages.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">enabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>enabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -125,7 +125,7 @@ Size (in bytes) of deleted messages.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">enabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>enabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>
 ##### Description
 
 Sets whether it is enabled.
@@ -138,7 +138,7 @@ Sets whether it is enabled.
 
 ##### Return
 
-( _[IMAP](../../resources/imap)_ )
+( _[IMAP](../resources/imap)_ )
 
 Current IMAP object.
 
@@ -148,7 +148,7 @@ Current IMAP object.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">getClient</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.mail.IMAPClient</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>getClient</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.mail.IMAPClient</span>
 ##### Description
 
 Returns the IMAPClient object where the resource settings are located.
@@ -165,14 +165,14 @@ IMAPClient object.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>getConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
 ##### Description
 
 Gets the configuration that is being used.
 
 ##### Return
 
-( _[IMAPConfig](../../objects/IMAPConfig)_ )
+( _[IMAPConfig](../objects/IMAPConfig)_ )
 
 Object of the active configuration.
 
@@ -182,20 +182,20 @@ Object of the active configuration.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>
 ##### Description
 
 Starts a new instance of IMAP using the IMAP configuration of the `default` key.
 
 ##### Return
 
-( _[IMAP](../../resources/imap)_ )
+( _[IMAP](../resources/imap)_ )
 
 The new instance of the IMAP resource based on the `default` IMAP configuration.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">configKey</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>configKey</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>
 ##### Description
 
 Starts a new instance of IMAP from a specific configuration.
@@ -208,13 +208,13 @@ Starts a new instance of IMAP from a specific configuration.
 
 ##### Return
 
-( _[IMAP](../../resources/imap)_ )
+( _[IMAP](../resources/imap)_ )
 
 The new instance of the IMAP resource based on the specified IMAP configuration.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>
 ##### Description
 
 Starts a new instance of IMAP from a configuration that is defined in its own configuration object.
@@ -223,11 +223,11 @@ Starts a new instance of IMAP from a configuration that is defined in its own co
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **config** | _[IMAPConfig](../../objects/IMAPConfig)_ | Configuration that will be used. |
+| **config** | _[IMAPConfig](../objects/IMAPConfig)_ | Configuration that will be used. |
 
 ##### Return
 
-( _[IMAP](../../resources/imap)_ )
+( _[IMAP](../resources/imap)_ )
 
 The new instance of the IMAP resource based on the defined configuration.
 
@@ -237,7 +237,7 @@ The new instance of the IMAP resource based on the defined configuration.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">isEnabled</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>isEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks if it is enabled.
@@ -254,7 +254,7 @@ Result whether or not it is activated.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">mail</span>(<span style="color: #FF8000">position</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.mail.Mail</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>mail</span>(<span style={{color: '#FF8000'}}>position</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.mail.Mail</span>
 ##### Description
 
 Returns a specific message in the IMAP folder.
@@ -277,7 +277,7 @@ Message.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">mails</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>mails</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Description
 
 Returns all messages contained in the folder.
@@ -290,7 +290,7 @@ Message list.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">mails</span>(<span style="color: #FF8000">start</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">start</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>mails</span>(<span style={{color: '#FF8000'}}>start</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>start</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Description
 
 Returns a specific range of messages contained in the IMAP folder.
@@ -314,7 +314,7 @@ Message list.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">newSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>newSize</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Returns the size (in bytes) of new (unread) messages in an IMAP folder.
@@ -331,7 +331,7 @@ Size (in bytes) of messages new unread messages.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">openFolder</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>openFolder</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>
 ##### Description
 
 Opens the server's INBOX folder (reading mode).
@@ -344,13 +344,13 @@ Opens the server's INBOX folder (reading mode).
 
 ##### Return
 
-( _[IMAP](../../resources/imap)_ )
+( _[IMAP](../resources/imap)_ )
 
 Current IMAP feature.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">openFolder</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">write</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>openFolder</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>write</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>
 ##### Description
 
 Opens the server's INBOX folder, however, specifying whether it is in writing mode or not.
@@ -364,7 +364,7 @@ Opens the server's INBOX folder, however, specifying whether it is in writing mo
 
 ##### Return
 
-( _[IMAP](../../resources/imap)_ )
+( _[IMAP](../resources/imap)_ )
 
 Current IMAP feature.
 
@@ -374,7 +374,7 @@ Current IMAP feature.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">setConfig</span>(<span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[IMAPConfig](../../objects/IMAPConfig)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>setConfig</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>
 ##### Description
 
 Define outra configuração que deve ser utilizada.
@@ -383,11 +383,11 @@ Define outra configuração que deve ser utilizada.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **config** | _[IMAPConfig](../../objects/IMAPConfig)_ | Definition of the new configuration. |
+| **config** | _[IMAPConfig](../objects/IMAPConfig)_ | Definition of the new configuration. |
 
 ##### Return
 
-( _[IMAP](../../resources/imap)_ )
+( _[IMAP](../resources/imap)_ )
 
 Current IMAP object.
 
@@ -397,7 +397,7 @@ Current IMAP object.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">setEnabled</span>(<span style="color: #FF8000">enabled</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>
 ##### Description
 
 Sets whether it is enabled.
@@ -410,7 +410,7 @@ Sets whether it is enabled.
 
 ##### Return
 
-( _[IMAP](../../resources/imap)_ )
+( _[IMAP](../resources/imap)_ )
 
 Current IMAP object.
 
@@ -420,7 +420,7 @@ Current IMAP object.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">size</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>size</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Returns the size (in bytes) of messages in an IMAP folder.
@@ -437,7 +437,7 @@ The size (in bytes) of messages.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">unreadSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>unreadSize</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Returns the size (in bytes) of all unread messages in an IMAP folder.
@@ -454,7 +454,7 @@ Size (in bytes) of unread messages.
 
 ---
 
-#### <span style="font-weight: normal">_imap</span>.<span style="color: #008000">with</span>(<span style="color: #FF8000">smtp</span>: <span style="font-weight: normal; font-style: italic;">[SMTP](../../resources/smtp)</span>) : <span style="font-weight: normal; font-style: italic;">[IMAP](../../resources/imap)</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>with</span>(<span style={{color: '#FF8000'}}>smtp</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>
 ##### Description
 
 Defines a new SMTP configuration different from the current one.
@@ -463,11 +463,11 @@ Defines a new SMTP configuration different from the current one.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **smtp** | _[SMTP](../../resources/smtp)_ | SMTP configuration to be used. |
+| **smtp** | _[SMTP](../resources/smtp)_ | SMTP configuration to be used. |
 
 ##### Return
 
-( _[IMAP](../../resources/imap)_ )
+( _[IMAP](../resources/imap)_ )
 
 Current IMAP feature.
 

@@ -12,7 +12,7 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### <span style="color: #008000">add</span>(<span style="color: #FF8000">sql</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DBBatch](../../objects/DBBatch)</span>
+#### <span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>sql</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBBatch](../objects/DBBatch)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -21,7 +21,7 @@ Manages the execution of massive batch commands to the database.
 
 ##### Return
 
-( _[DBBatch](../../objects/DBBatch)_ )
+( _[DBBatch](../objects/DBBatch)_ )
 
 
 ---
@@ -30,7 +30,7 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### <span style="color: #008000">clear</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>clear</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -42,7 +42,7 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### <span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>close</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -54,7 +54,7 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### <span style="color: #008000">execute</span>() : <span style="font-weight: normal; font-style: italic;">int[]</span>
+#### <span style={{color: '#008000'}}>execute</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Return
 
 ( _int[]_ )
@@ -66,7 +66,7 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### <span style="color: #008000">put</span>(<span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[DBBatch](../../objects/DBBatch)</span>
+#### <span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBBatch](../objects/DBBatch)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -75,7 +75,7 @@ Manages the execution of massive batch commands to the database.
 
 ##### Return
 
-( _[DBBatch](../../objects/DBBatch)_ )
+( _[DBBatch](../objects/DBBatch)_ )
 
 
 ---

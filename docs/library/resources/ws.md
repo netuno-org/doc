@@ -12,10 +12,34 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">allSessionsEndpoints</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>allSessionsEndpoints</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
+
+
+---
+
+## awaitStream
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>awaitStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## binaryStreamed
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>binaryStreamed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
+##### Return
+
+( _byte[]_ )
 
 
 ---
@@ -24,13 +48,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">broadcast</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>broadcast</span>(<span style={{color: '#FF8000'}}>endpointName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **endpointName** | _string_ |   |
-| **data** | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -43,14 +67,14 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">broadcastAsService</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>broadcastAsService</span>(<span style={{color: '#FF8000'}}>endpointName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **endpointName** | _string_ |   |
 | **path** | _string_ |   |
-| **message** | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -59,13 +83,48 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">broadcastAsService</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>broadcastAsService</span>(<span style={{color: '#FF8000'}}>endpointName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **endpointName** | _string_ |   |
-| **message** | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../objects/Values)_ |   |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+## broadcastBinary
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>broadcastBinary</span>(<span style={{color: '#FF8000'}}>endpointName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **endpointName** | _string_ |   |
+| **content** | _byte[]_ |   |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>broadcastBinary</span>(<span style={{color: '#FF8000'}}>endpointName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **endpointName** | _string_ |   |
+| **path** | _string_ |   |
+| **content** | _byte[]_ |   |
 
 ##### Return
 
@@ -78,14 +137,14 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">broadcastService</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>broadcastService</span>(<span style={{color: '#FF8000'}}>endpointName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **endpointName** | _string_ |   |
 | **path** | _string_ |   |
-| **message** | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -94,17 +153,52 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">broadcastService</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>broadcastService</span>(<span style={{color: '#FF8000'}}>endpointName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **endpointName** | _string_ |   |
-| **message** | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
 ( _boolean_ )
+
+
+---
+
+## broadcastText
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>broadcastText</span>(<span style={{color: '#FF8000'}}>endpointName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **endpointName** | _string_ |   |
+| **message** | _string_ |   |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>broadcastText</span>(<span style={{color: '#FF8000'}}>endpointName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **endpointName** | _string_ |   |
+| **path** | _string_ |   |
+| **message** | _string_ |   |
+
+##### Return
+
+( _void_ )
 
 
 ---
@@ -113,7 +207,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>close</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -121,7 +215,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">close</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>close</span>(<span style={{color: '#FF8000'}}>sessionId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -139,7 +233,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">closeCode</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>closeCode</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -151,10 +245,10 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">closeData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>closeData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -163,7 +257,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">closeReason</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>closeReason</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -175,7 +269,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">closeSession</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>closeSession</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -189,7 +283,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">closeSession</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">reason</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>closeSession</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>reason</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -209,10 +303,10 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -221,15 +315,15 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">data</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">data</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>data</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -238,7 +332,7 @@ Management of connections and communication with customers.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -247,7 +341,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">fullPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>fullPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -255,7 +349,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">fullPath</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>fullPath</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -273,10 +367,10 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getAllSessionsEndpoints</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getAllSessionsEndpoints</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -285,7 +379,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getCloseCode</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getCloseCode</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -297,10 +391,10 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getCloseData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getCloseData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -309,7 +403,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getCloseReason</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getCloseReason</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -321,10 +415,10 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getConfig</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -333,15 +427,15 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getData</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getData</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -350,7 +444,7 @@ Management of connections and communication with customers.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -359,7 +453,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getFullPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getFullPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -367,7 +461,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getFullPath</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getFullPath</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -385,7 +479,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getMessage</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.resource.WS$WSMessage</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getMessage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.resource.WS$WSMessage</span>
 ##### Return
 
 ( _org.netuno.tritao.resource.WS$WSMessage_ )
@@ -397,15 +491,15 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getPath</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getPath</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getPath</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -414,7 +508,7 @@ Management of connections and communication with customers.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -423,10 +517,10 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getQS</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getQS</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -435,15 +529,15 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getSession</span>() : <span style="font-weight: normal; font-style: italic;">javax.websocket.Session</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getSession</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>jakarta.websocket.Session</span>
 ##### Return
 
-( _javax.websocket.Session_ )
+( _jakarta.websocket.Session_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getSession</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">javax.websocket.Session</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getSession</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>jakarta.websocket.Session</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -452,7 +546,7 @@ Management of connections and communication with customers.
 
 ##### Return
 
-( _javax.websocket.Session_ )
+( _jakarta.websocket.Session_ )
 
 
 ---
@@ -461,15 +555,15 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getSessionEndpoint</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getSessionEndpoint</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getSessionEndpoint</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getSessionEndpoint</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -478,7 +572,7 @@ Management of connections and communication with customers.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -487,10 +581,22 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">getSessionId</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getSessionId</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
+
+
+---
+
+## isBinaryStreamed
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>isBinaryStreamed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
 
 
 ---
@@ -499,7 +605,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">isClose</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>isClose</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -511,7 +617,31 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">isConnect</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>isConnect</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## isStream
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>isStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## isTextStreamed
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>isTextStreamed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -523,7 +653,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">message</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.resource.WS$WSMessage</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>message</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.resource.WS$WSMessage</span>
 ##### Return
 
 ( _org.netuno.tritao.resource.WS$WSMessage_ )
@@ -535,15 +665,15 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">path</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>path</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">path</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>path</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -552,7 +682,7 @@ Management of connections and communication with customers.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -561,78 +691,10 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">qs</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>qs</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
-
-
----
-
-## rawBroadcast
-
----
-
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">rawBroadcast</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **endpointName** | _string_ |   |
-| **message** | _string_ |   |
-
-##### Return
-
-( _void_ )
-
-
----
-
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">rawBroadcast</span>(<span style="color: #FF8000">endpointName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **endpointName** | _string_ |   |
-| **path** | _string_ |   |
-| **message** | _string_ |   |
-
-##### Return
-
-( _void_ )
-
-
----
-
-## rawSend
-
----
-
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">rawSend</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **content** | _string_ |   |
-
-##### Return
-
-( _boolean_ )
-
-
----
-
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">rawSend</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **sessionId** | _string_ |   |
-| **content** | _string_ |   |
-
-##### Return
-
-( _boolean_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -641,7 +703,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">send</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>send</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -655,7 +717,7 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">send</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>send</span>(<span style={{color: '#FF8000'}}>sessionId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -670,13 +732,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">send</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>send</span>(<span style={{color: '#FF8000'}}>sessionId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **sessionId** | _string_ |   |
-| **content** | _[Values](../../objects/Values)_ |   |
+| **content** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -685,12 +747,12 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">send</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>send</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[Values](../../objects/Values)_ |   |
+| **content** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -703,13 +765,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sendAsService</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>sendAsService</span>(<span style={{color: '#FF8000'}}>sessionId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **sessionId** | _string_ |   |
-| **message** | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -718,12 +780,45 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sendAsService</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>sendAsService</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **message** | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../objects/Values)_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## sendBinary
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>sendBinary</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **content** | _byte[]_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>sendBinary</span>(<span style={{color: '#FF8000'}}>sessionId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **sessionId** | _string_ |   |
+| **content** | _byte[]_ |   |
 
 ##### Return
 
@@ -736,13 +831,13 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sendService</span>(<span style="color: #FF8000">sessionId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>sendService</span>(<span style={{color: '#FF8000'}}>sessionId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **sessionId** | _string_ |   |
-| **message** | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -751,12 +846,45 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sendService</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>sendService</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **message** | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../objects/Values)_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## sendText
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>sendText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **content** | _string_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>sendText</span>(<span style={{color: '#FF8000'}}>sessionId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **sessionId** | _string_ |   |
+| **content** | _string_ |   |
 
 ##### Return
 
@@ -769,15 +897,15 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">session</span>() : <span style="font-weight: normal; font-style: italic;">javax.websocket.Session</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>session</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>jakarta.websocket.Session</span>
 ##### Return
 
-( _javax.websocket.Session_ )
+( _jakarta.websocket.Session_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">session</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">javax.websocket.Session</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>session</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>jakarta.websocket.Session</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -786,7 +914,7 @@ Management of connections and communication with customers.
 
 ##### Return
 
-( _javax.websocket.Session_ )
+( _jakarta.websocket.Session_ )
 
 
 ---
@@ -795,15 +923,15 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sessionEndpoint</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>sessionEndpoint</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sessionEndpoint</span>(<span style="color: #FF8000">id</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>sessionEndpoint</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -812,7 +940,7 @@ Management of connections and communication with customers.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -821,7 +949,33 @@ Management of connections and communication with customers.
 
 ---
 
-#### <span style="font-weight: normal">_ws</span>.<span style="color: #008000">sessionId</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>sessionId</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Return
+
+( _string_ )
+
+
+---
+
+## textStreamed
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>textStreamed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Return
+
+( _string_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>textStreamed</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **charset** | _string_ |   |
+
 ##### Return
 
 ( _string_ )

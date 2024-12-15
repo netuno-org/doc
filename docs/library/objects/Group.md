@@ -12,7 +12,7 @@ Definição do objeto Group para agrupamento de resultados com Query.
 
 ---
 
-#### <span style="color: #008000">getColumn</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getColumn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the column that will be used to perform the grouping.
@@ -29,7 +29,7 @@ The name of the column.
 
 ---
 
-#### <span style="color: #008000">setColumn</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Group](../../objects/Group)</span>
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](../objects/Group)</span>
 ##### Description
 
 Defines the column that will be used to perform the grouping.
@@ -42,7 +42,7 @@ Defines the column that will be used to perform the grouping.
 
 ##### Return
 
-( _[Group](../../objects/Group)_ )
+( _[Group](../objects/Group)_ )
 
 Current Group object.
 

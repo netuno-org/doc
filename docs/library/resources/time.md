@@ -12,7 +12,7 @@ Gestão de dados temporal baseada no **java.time**.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">castToChronoLocalDate</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.time.chrono.ChronoLocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>castToChronoLocalDate</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.chrono.ChronoLocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -30,7 +30,7 @@ Gestão de dados temporal baseada no **java.time**.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">castToTemporal</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.time.temporal.Temporal</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>castToTemporal</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.Temporal</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -48,7 +48,7 @@ Gestão de dados temporal baseada no **java.time**.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">castToTemporalAcessor</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>castToTemporalAcessor</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>
 ##### Description
 
 Converte o objeeto passado para TemporalAcessor.
@@ -70,7 +70,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">chronoField</span>(<span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.temporal.ChronoField</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>chronoField</span>(<span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.ChronoField</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -88,7 +88,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">chronoUnit</span>(<span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.temporal.ChronoUnit</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>chronoUnit</span>(<span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.ChronoUnit</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -106,7 +106,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">clock</span>() : <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>clock</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>
 ##### Return
 
 ( _java.time.Clock_ )
@@ -118,7 +118,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">clockFixed</span>(<span style="color: #FF8000">fixedInstant</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>, <span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>clockFixed</span>(<span style={{color: '#FF8000'}}>fixedInstant</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>, <span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -137,7 +137,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">clockOffset</span>(<span style="color: #FF8000">baseClock</span>: <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>, <span style="color: #FF8000">offsetDuration</span>: <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>clockOffset</span>(<span style={{color: '#FF8000'}}>baseClock</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>, <span style={{color: '#FF8000'}}>offsetDuration</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -156,7 +156,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">clockSystem</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>clockSystem</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -174,7 +174,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">clockSystemUTC</span>() : <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>clockSystemUTC</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>
 ##### Return
 
 ( _java.time.Clock_ )
@@ -186,7 +186,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">clockTick</span>(<span style="color: #FF8000">baseClock</span>: <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>, <span style="color: #FF8000">tickDuration</span>: <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>clockTick</span>(<span style={{color: '#FF8000'}}>baseClock</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>, <span style={{color: '#FF8000'}}>tickDuration</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -205,7 +205,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">clockTickMinutes</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>clockTickMinutes</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -223,7 +223,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">clockTickSeconds</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>clockTickSeconds</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -241,7 +241,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">currentMilis</span>() : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>currentMilis</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Return
 
 ( _long_ )
@@ -253,7 +253,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">date</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>date</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>
 ##### Return
 
 ( _java.util.Date_ )
@@ -265,7 +265,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">dateFrom</span>(<span style="color: #FF8000">instant</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>dateFrom</span>(<span style={{color: '#FF8000'}}>instant</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -283,7 +283,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">dateTimeFormatter</span>() : <span style="font-weight: normal; font-style: italic;">java.time.format.DateTimeFormatter</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>dateTimeFormatter</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.format.DateTimeFormatter</span>
 ##### Return
 
 ( _java.time.format.DateTimeFormatter_ )
@@ -291,7 +291,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">dateTimeFormatter</span>(<span style="color: #FF8000">pattern</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.format.DateTimeFormatter</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>dateTimeFormatter</span>(<span style={{color: '#FF8000'}}>pattern</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.format.DateTimeFormatter</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -305,7 +305,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">dateTimeFormatter</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">locale</span>: <span style="font-weight: normal; font-style: italic;">java.util.Locale</span>) : <span style="font-weight: normal; font-style: italic;">java.time.format.DateTimeFormatter</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>dateTimeFormatter</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>locale</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Locale</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.format.DateTimeFormatter</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -324,7 +324,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">dateTimeFormatterBuilder</span>() : <span style="font-weight: normal; font-style: italic;">java.time.format.DateTimeFormatterBuilder</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>dateTimeFormatterBuilder</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.format.DateTimeFormatterBuilder</span>
 ##### Return
 
 ( _java.time.format.DateTimeFormatterBuilder_ )
@@ -336,7 +336,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">decimalStyle</span>() : <span style="font-weight: normal; font-style: italic;">java.time.format.DecimalStyle</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>decimalStyle</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.format.DecimalStyle</span>
 ##### Return
 
 ( _java.time.format.DecimalStyle_ )
@@ -344,7 +344,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">decimalStyle</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.format.DecimalStyle</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>decimalStyle</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.format.DecimalStyle</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -362,7 +362,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">duration</span>() : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>duration</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Return
 
 ( _java.time.Duration_ )
@@ -370,7 +370,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">duration</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>duration</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -388,7 +388,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">durationBetween</span>(<span style="color: #FF8000">startInclusive</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.Temporal</span>, <span style="color: #FF8000">endExclusive</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.Temporal</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>durationBetween</span>(<span style={{color: '#FF8000'}}>startInclusive</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.Temporal</span>, <span style={{color: '#FF8000'}}>endExclusive</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.Temporal</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -407,7 +407,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">durationFrom</span>(<span style="color: #FF8000">temporalAmount</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAmount</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>durationFrom</span>(<span style={{color: '#FF8000'}}>temporalAmount</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAmount</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -425,7 +425,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">durationOf</span>(<span style="color: #FF8000">amount</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">unit</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalUnit</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>durationOf</span>(<span style={{color: '#FF8000'}}>amount</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>unit</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalUnit</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -444,7 +444,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">durationOfDays</span>(<span style="color: #FF8000">days</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>durationOfDays</span>(<span style={{color: '#FF8000'}}>days</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -462,7 +462,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">durationOfHours</span>(<span style="color: #FF8000">hours</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>durationOfHours</span>(<span style={{color: '#FF8000'}}>hours</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -480,7 +480,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">durationOfMillis</span>(<span style="color: #FF8000">millis</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>durationOfMillis</span>(<span style={{color: '#FF8000'}}>millis</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -498,7 +498,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">durationOfMinutes</span>(<span style="color: #FF8000">minutes</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>durationOfMinutes</span>(<span style={{color: '#FF8000'}}>minutes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -516,7 +516,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">durationOfNanos</span>(<span style="color: #FF8000">nanos</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>durationOfNanos</span>(<span style={{color: '#FF8000'}}>nanos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -534,7 +534,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">durationOfSeconds</span>(<span style="color: #FF8000">seconds</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>durationOfSeconds</span>(<span style={{color: '#FF8000'}}>seconds</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -548,7 +548,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">durationOfSeconds</span>(<span style="color: #FF8000">seconds</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">nanoAdjustment</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Duration</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>durationOfSeconds</span>(<span style={{color: '#FF8000'}}>seconds</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>nanoAdjustment</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Duration</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -567,7 +567,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">gregorianCalendar</span>() : <span style="font-weight: normal; font-style: italic;">java.util.GregorianCalendar</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>gregorianCalendar</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.GregorianCalendar</span>
 ##### Return
 
 ( _java.util.GregorianCalendar_ )
@@ -575,7 +575,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">gregorianCalendar</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.GregorianCalendar</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>gregorianCalendar</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.GregorianCalendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -591,7 +591,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">gregorianCalendar</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hourOfDay</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.GregorianCalendar</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>gregorianCalendar</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hourOfDay</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.GregorianCalendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -609,7 +609,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">gregorianCalendar</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hourOfDay</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">second</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.GregorianCalendar</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>gregorianCalendar</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hourOfDay</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>second</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.GregorianCalendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -628,7 +628,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">gregorianCalendar</span>(<span style="color: #FF8000">aLocale</span>: <span style="font-weight: normal; font-style: italic;">java.util.Locale</span>) : <span style="font-weight: normal; font-style: italic;">java.util.GregorianCalendar</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>gregorianCalendar</span>(<span style={{color: '#FF8000'}}>aLocale</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Locale</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.GregorianCalendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -642,7 +642,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">gregorianCalendar</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.util.TimeZone</span>) : <span style="font-weight: normal; font-style: italic;">java.util.GregorianCalendar</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>gregorianCalendar</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.TimeZone</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.GregorianCalendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -656,7 +656,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">gregorianCalendar</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.util.TimeZone</span>, <span style="color: #FF8000">aLocale</span>: <span style="font-weight: normal; font-style: italic;">java.util.Locale</span>) : <span style="font-weight: normal; font-style: italic;">java.util.GregorianCalendar</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>gregorianCalendar</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.TimeZone</span>, <span style={{color: '#FF8000'}}>aLocale</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Locale</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.GregorianCalendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -675,7 +675,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">gregorianCalendarConstant</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>gregorianCalendarConstant</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -693,7 +693,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">instant</span>() : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>instant</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Return
 
 ( _java.time.Instant_ )
@@ -701,7 +701,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">instant</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>instant</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -715,7 +715,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">instant</span>(<span style="color: #FF8000">clock</span>: <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>instant</span>(<span style={{color: '#FF8000'}}>clock</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -733,7 +733,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">instantFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>instantFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -751,7 +751,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">instantOfEpochMilli</span>(<span style="color: #FF8000">epochMilli</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>instantOfEpochMilli</span>(<span style={{color: '#FF8000'}}>epochMilli</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -769,7 +769,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">instantOfEpochSecond</span>(<span style="color: #FF8000">epochsecond</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>instantOfEpochSecond</span>(<span style={{color: '#FF8000'}}>epochsecond</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -783,7 +783,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">instantOfEpochSecond</span>(<span style="color: #FF8000">epochsecond</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">nanoAdjustment</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>instantOfEpochSecond</span>(<span style={{color: '#FF8000'}}>epochsecond</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>nanoAdjustment</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -802,7 +802,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">instantParse</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>instantParse</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.CharSequence</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -820,7 +820,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">isoFields</span>(<span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.temporal.IsoFields</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>isoFields</span>(<span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.IsoFields</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -838,7 +838,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">julianFields</span>(<span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.temporal.JulianFields</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>julianFields</span>(<span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.JulianFields</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -856,7 +856,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDate</span>() : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDate</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Return
 
 ( _java.time.LocalDate_ )
@@ -864,7 +864,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDate</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDate</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -878,7 +878,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDate</span>(<span style="color: #FF8000">clock</span>: <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDate</span>(<span style={{color: '#FF8000'}}>clock</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -892,7 +892,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDate</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDate</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -910,7 +910,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -928,7 +928,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -944,7 +944,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">java.time.Month</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Month</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -964,7 +964,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateOfEpochDay</span>(<span style="color: #FF8000">epochDay</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateOfEpochDay</span>(<span style={{color: '#FF8000'}}>epochDay</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -982,7 +982,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateOfYearDay</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dayOfYear</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateOfYearDay</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dayOfYear</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1001,7 +1001,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateParse</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateParse</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.CharSequence</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1015,7 +1015,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateParse</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>, <span style="color: #FF8000">dateTimeFormatter</span>: <span style="font-weight: normal; font-style: italic;">java.time.format.DateTimeFormatter</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateParse</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.CharSequence</span>, <span style={{color: '#FF8000'}}>dateTimeFormatter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.format.DateTimeFormatter</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1034,7 +1034,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTime</span>() : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTime</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Return
 
 ( _java.time.LocalDateTime_ )
@@ -1042,7 +1042,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTime</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTime</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1056,7 +1056,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTime</span>(<span style="color: #FF8000">clock</span>: <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTime</span>(<span style={{color: '#FF8000'}}>clock</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1070,7 +1070,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTime</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTime</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1088,7 +1088,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1106,7 +1106,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1124,7 +1124,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">second</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>second</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1143,7 +1143,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">second</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">nanoOfSecond</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>second</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>nanoOfSecond</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1163,7 +1163,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">java.time.Month</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Month</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1181,7 +1181,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">java.time.Month</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">second</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Month</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>second</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1200,7 +1200,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">java.time.Month</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">second</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">nanoOfSecond</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Month</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>second</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>nanoOfSecond</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1220,7 +1220,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeOf</span>(<span style="color: #FF8000">date</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>, <span style="color: #FF8000">time</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeOf</span>(<span style={{color: '#FF8000'}}>date</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>, <span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1239,7 +1239,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeOfEpochSecond</span>(<span style="color: #FF8000">epochSecond</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">nanoOfSecond</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeOfEpochSecond</span>(<span style={{color: '#FF8000'}}>epochSecond</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>nanoOfSecond</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>offset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1259,7 +1259,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeOfInstant</span>(<span style="color: #FF8000">instant</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>, <span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeOfInstant</span>(<span style={{color: '#FF8000'}}>instant</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>, <span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1278,7 +1278,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeParse</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeParse</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.CharSequence</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1292,7 +1292,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localDateTimeParse</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>, <span style="color: #FF8000">dateTimeFormatter</span>: <span style="font-weight: normal; font-style: italic;">java.time.format.DateTimeFormatter</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localDateTimeParse</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.CharSequence</span>, <span style={{color: '#FF8000'}}>dateTimeFormatter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.format.DateTimeFormatter</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1311,7 +1311,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTime</span>() : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTime</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Return
 
 ( _java.time.LocalTime_ )
@@ -1319,7 +1319,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTime</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTime</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1333,7 +1333,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTime</span>(<span style="color: #FF8000">clock</span>: <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTime</span>(<span style={{color: '#FF8000'}}>clock</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1347,7 +1347,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTime</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTime</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1365,7 +1365,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTimeFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTimeFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1383,7 +1383,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTimeOf</span>(<span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTimeOf</span>(<span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1398,7 +1398,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTimeOf</span>(<span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">second</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTimeOf</span>(<span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>second</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1414,7 +1414,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTimeOf</span>(<span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">second</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">nanoOfSecond</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTimeOf</span>(<span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>second</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>nanoOfSecond</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1435,7 +1435,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTimeOfNanoOfDay</span>(<span style="color: #FF8000">nanoOfDay</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTimeOfNanoOfDay</span>(<span style={{color: '#FF8000'}}>nanoOfDay</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1453,7 +1453,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTimeOfSecondOfDay</span>(<span style="color: #FF8000">secondOfDay</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTimeOfSecondOfDay</span>(<span style={{color: '#FF8000'}}>secondOfDay</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1471,7 +1471,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTimeParse</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTimeParse</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.CharSequence</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1485,7 +1485,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">localTimeParse</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>, <span style="color: #FF8000">dateTimeFormatter</span>: <span style="font-weight: normal; font-style: italic;">java.time.format.DateTimeFormatter</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>localTimeParse</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.CharSequence</span>, <span style={{color: '#FF8000'}}>dateTimeFormatter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.format.DateTimeFormatter</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1504,7 +1504,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">month</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Month</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>month</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Month</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1522,7 +1522,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">monthDay</span>() : <span style="font-weight: normal; font-style: italic;">java.time.MonthDay</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>monthDay</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.MonthDay</span>
 ##### Return
 
 ( _java.time.MonthDay_ )
@@ -1530,7 +1530,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">monthDay</span>(<span style="color: #FF8000">clock</span>: <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>) : <span style="font-weight: normal; font-style: italic;">java.time.MonthDay</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>monthDay</span>(<span style={{color: '#FF8000'}}>clock</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.MonthDay</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1544,7 +1544,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">monthDay</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.MonthDay</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>monthDay</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.MonthDay</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1562,7 +1562,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">monthDayFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.MonthDay</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>monthDayFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.MonthDay</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1580,7 +1580,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">monthDayOf</span>(<span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.MonthDay</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>monthDayOf</span>(<span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.MonthDay</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1595,7 +1595,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">monthDayOf</span>(<span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">java.time.Month</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.MonthDay</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>monthDayOf</span>(<span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Month</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.MonthDay</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1614,7 +1614,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">monthOf</span>(<span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Month</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>monthOf</span>(<span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Month</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1632,7 +1632,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">monthValueOf</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Month</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>monthValueOf</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Month</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1650,7 +1650,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetDateTime</span>() : <span style="font-weight: normal; font-style: italic;">java.time.OffsetDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetDateTime</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetDateTime</span>
 ##### Return
 
 ( _java.time.OffsetDateTime_ )
@@ -1658,7 +1658,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetDateTime</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetDateTime</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1676,7 +1676,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetDateTimeFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetDateTimeFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1694,7 +1694,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetDateTimeOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">second</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">nanoOfSecond</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetDateTimeOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>second</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>nanoOfSecond</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>offset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1715,7 +1715,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetDateTimeOf</span>(<span style="color: #FF8000">date</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>, <span style="color: #FF8000">time</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>, <span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetDateTimeOf</span>(<span style={{color: '#FF8000'}}>date</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>, <span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>, <span style={{color: '#FF8000'}}>offset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1731,7 +1731,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetDateTimeOf</span>(<span style="color: #FF8000">dateTime</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>, <span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetDateTimeOf</span>(<span style={{color: '#FF8000'}}>dateTime</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>, <span style={{color: '#FF8000'}}>offset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1750,7 +1750,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetDateTimeOfInstant</span>(<span style="color: #FF8000">instant</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>, <span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetDateTimeOfInstant</span>(<span style={{color: '#FF8000'}}>instant</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>, <span style={{color: '#FF8000'}}>offset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1769,7 +1769,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetTime</span>() : <span style="font-weight: normal; font-style: italic;">java.time.OffsetTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetTime</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetTime</span>
 ##### Return
 
 ( _java.time.OffsetTime_ )
@@ -1777,7 +1777,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetTime</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetTime</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1791,7 +1791,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetTime</span>(<span style="color: #FF8000">clock</span>: <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetTime</span>(<span style={{color: '#FF8000'}}>clock</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1805,7 +1805,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetTime</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetTime</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1823,7 +1823,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetTimeFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetTimeFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1841,7 +1841,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetTimeOf</span>(<span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">second</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">nanoOfSecond</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetTimeOf</span>(<span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>second</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>nanoOfSecond</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>offset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1859,7 +1859,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetTimeOf</span>(<span style="color: #FF8000">time</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>, <span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetTimeOf</span>(<span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>, <span style={{color: '#FF8000'}}>offset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1878,7 +1878,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">offsetTimeOfInstant</span>(<span style="color: #FF8000">instant</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>, <span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.OffsetTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>offsetTimeOfInstant</span>(<span style={{color: '#FF8000'}}>instant</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>, <span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.OffsetTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1897,7 +1897,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">period</span>() : <span style="font-weight: normal; font-style: italic;">java.time.Period</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>period</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Period</span>
 ##### Return
 
 ( _java.time.Period_ )
@@ -1905,7 +1905,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">period</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Period</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>period</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Period</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1923,7 +1923,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">periodFrom</span>(<span style="color: #FF8000">temporalAmount</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAmount</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Period</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>periodFrom</span>(<span style={{color: '#FF8000'}}>temporalAmount</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAmount</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Period</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1941,7 +1941,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">periodOf</span>(<span style="color: #FF8000">years</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">months</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">days</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Period</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>periodOf</span>(<span style={{color: '#FF8000'}}>years</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>months</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>days</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Period</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1961,7 +1961,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">periodOfDays</span>(<span style="color: #FF8000">days</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Period</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>periodOfDays</span>(<span style={{color: '#FF8000'}}>days</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Period</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1979,7 +1979,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">periodOfMonths</span>(<span style="color: #FF8000">months</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Period</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>periodOfMonths</span>(<span style={{color: '#FF8000'}}>months</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Period</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1997,7 +1997,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">periodOfWeeks</span>(<span style="color: #FF8000">weeks</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Period</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>periodOfWeeks</span>(<span style={{color: '#FF8000'}}>weeks</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Period</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2015,7 +2015,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">periodOfYears</span>(<span style="color: #FF8000">years</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Period</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>periodOfYears</span>(<span style={{color: '#FF8000'}}>years</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Period</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2033,7 +2033,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">simpleDateFormat</span>(<span style="color: #FF8000">format</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.text.SimpleDateFormat</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>simpleDateFormat</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.text.SimpleDateFormat</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2051,7 +2051,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">unit</span>(<span style="color: #FF8000">field</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.concurrent.TimeUnit</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>unit</span>(<span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.concurrent.TimeUnit</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2069,7 +2069,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">valueRangeOf</span>(<span style="color: #FF8000">min</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">max</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.temporal.ValueRange</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>valueRangeOf</span>(<span style={{color: '#FF8000'}}>min</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>max</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.ValueRange</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2084,7 +2084,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">valueRangeOf</span>(<span style="color: #FF8000">min</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">maxSmallest</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">maxLargest</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.temporal.ValueRange</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>valueRangeOf</span>(<span style={{color: '#FF8000'}}>min</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>maxSmallest</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>maxLargest</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.ValueRange</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2100,7 +2100,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">valueRangeOf</span>(<span style="color: #FF8000">minSmallest</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">minLargest</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">maxSmallest</span>: <span style="font-weight: normal; font-style: italic;">long</span>, <span style="color: #FF8000">maxLargest</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">java.time.temporal.ValueRange</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>valueRangeOf</span>(<span style={{color: '#FF8000'}}>minSmallest</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>minLargest</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>maxSmallest</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>maxLargest</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.ValueRange</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2121,7 +2121,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">year</span>() : <span style="font-weight: normal; font-style: italic;">java.time.Year</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>year</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Year</span>
 ##### Return
 
 ( _java.time.Year_ )
@@ -2129,7 +2129,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">year</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Year</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>year</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Year</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2143,7 +2143,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">year</span>(<span style="color: #FF8000">clock</span>: <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Year</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>year</span>(<span style={{color: '#FF8000'}}>clock</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Year</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2157,7 +2157,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">year</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Year</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>year</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Year</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2175,7 +2175,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">yearFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Year</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>yearFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Year</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2193,7 +2193,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">yearMonth</span>() : <span style="font-weight: normal; font-style: italic;">java.time.YearMonth</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>yearMonth</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.YearMonth</span>
 ##### Return
 
 ( _java.time.YearMonth_ )
@@ -2201,7 +2201,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">yearMonth</span>(<span style="color: #FF8000">clock</span>: <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>) : <span style="font-weight: normal; font-style: italic;">java.time.YearMonth</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>yearMonth</span>(<span style={{color: '#FF8000'}}>clock</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.YearMonth</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2215,7 +2215,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">yearMonth</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.YearMonth</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>yearMonth</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.YearMonth</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2233,7 +2233,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">yearMonthFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.YearMonth</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>yearMonthFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.YearMonth</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2251,7 +2251,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">yearMonthOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.YearMonth</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>yearMonthOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.YearMonth</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2266,7 +2266,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">yearMonthOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">java.time.Month</span>) : <span style="font-weight: normal; font-style: italic;">java.time.YearMonth</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>yearMonthOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Month</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.YearMonth</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2285,7 +2285,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">yearOf</span>(<span style="color: #FF8000">isoYear</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Year</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>yearOf</span>(<span style={{color: '#FF8000'}}>isoYear</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Year</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2303,7 +2303,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneId</span>() : <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneId</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
 ##### Return
 
 ( _java.time.ZoneId_ )
@@ -2315,7 +2315,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneIdFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneIdFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2333,7 +2333,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneIdOf</span>(<span style="color: #FF8000">zoneId</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneIdOf</span>(<span style={{color: '#FF8000'}}>zoneId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2347,13 +2347,13 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneIdOf</span>(<span style="color: #FF8000">zoneId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">aliasMap</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneIdOf</span>(<span style={{color: '#FF8000'}}>zoneId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>aliasMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **zoneId** | _string_ |   |
-| **aliasMap** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **aliasMap** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
 
 ##### Return
 
@@ -2366,7 +2366,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneIdOfOffset</span>(<span style="color: #FF8000">prefix</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneIdOfOffset</span>(<span style={{color: '#FF8000'}}>prefix</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>offset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2385,7 +2385,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffset</span>() : <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffset</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>
 ##### Return
 
 ( _java.time.ZoneOffset_ )
@@ -2393,7 +2393,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffset</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffset</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2411,7 +2411,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffsetFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2429,7 +2429,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffsetOf</span>(<span style="color: #FF8000">offsetId</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetOf</span>(<span style={{color: '#FF8000'}}>offsetId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2443,13 +2443,13 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffsetOf</span>(<span style="color: #FF8000">zoneId</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">aliasMap</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetOf</span>(<span style={{color: '#FF8000'}}>zoneId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>aliasMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **zoneId** | _string_ |   |
-| **aliasMap** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **aliasMap** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
 
 ##### Return
 
@@ -2462,7 +2462,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffsetOfHours</span>(<span style="color: #FF8000">hours</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetOfHours</span>(<span style={{color: '#FF8000'}}>hours</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2480,7 +2480,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffsetOfHoursMinutes</span>(<span style="color: #FF8000">hours</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minutes</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetOfHoursMinutes</span>(<span style={{color: '#FF8000'}}>hours</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minutes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2499,7 +2499,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffsetOfHoursMinutesSeconds</span>(<span style="color: #FF8000">hours</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minutes</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">seconds</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetOfHoursMinutesSeconds</span>(<span style={{color: '#FF8000'}}>hours</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minutes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>seconds</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2519,7 +2519,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffsetOfOffset</span>(<span style="color: #FF8000">prefix</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetOfOffset</span>(<span style={{color: '#FF8000'}}>prefix</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>offset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2538,7 +2538,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zoneOffsetOfTotalSeconds</span>(<span style="color: #FF8000">totalSeconds</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetOfTotalSeconds</span>(<span style={{color: '#FF8000'}}>totalSeconds</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2556,7 +2556,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTime</span>() : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTime</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Return
 
 ( _java.time.ZonedDateTime_ )
@@ -2564,7 +2564,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTime</span>(<span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTime</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2578,7 +2578,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTime</span>(<span style="color: #FF8000">clock</span>: <span style="font-weight: normal; font-style: italic;">java.time.Clock</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTime</span>(<span style={{color: '#FF8000'}}>clock</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Clock</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2592,7 +2592,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTime</span>(<span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTime</span>(<span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2610,7 +2610,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTimeFrom</span>(<span style="color: #FF8000">temporalAccessor</span>: <span style="font-weight: normal; font-style: italic;">java.time.temporal.TemporalAccessor</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTimeFrom</span>(<span style={{color: '#FF8000'}}>temporalAccessor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.temporal.TemporalAccessor</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2628,7 +2628,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTimeOf</span>(<span style="color: #FF8000">year</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">month</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">dayOfMonth</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">hour</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">minute</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">second</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">nanoOfSecond</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTimeOf</span>(<span style={{color: '#FF8000'}}>year</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>month</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dayOfMonth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>hour</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>minute</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>second</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>nanoOfSecond</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2649,7 +2649,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTimeOf</span>(<span style="color: #FF8000">date</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>, <span style="color: #FF8000">time</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>, <span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTimeOf</span>(<span style={{color: '#FF8000'}}>date</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>, <span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>, <span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2665,7 +2665,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTimeOf</span>(<span style="color: #FF8000">localDateTime</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>, <span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTimeOf</span>(<span style={{color: '#FF8000'}}>localDateTime</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>, <span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2684,7 +2684,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTimeOfInstant</span>(<span style="color: #FF8000">instant</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>, <span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTimeOfInstant</span>(<span style={{color: '#FF8000'}}>instant</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>, <span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2699,7 +2699,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTimeOfInstant</span>(<span style="color: #FF8000">localDateTime</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>, <span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>, <span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTimeOfInstant</span>(<span style={{color: '#FF8000'}}>localDateTime</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>, <span style={{color: '#FF8000'}}>offset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>, <span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2719,7 +2719,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTimeOfLocal</span>(<span style="color: #FF8000">localDateTime</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>, <span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>, <span style="color: #FF8000">preferredOffset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTimeOfLocal</span>(<span style={{color: '#FF8000'}}>localDateTime</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>, <span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>, <span style={{color: '#FF8000'}}>preferredOffset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2735,7 +2735,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTimeOfLocal</span>(<span style="color: #FF8000">localDateTime</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>, <span style="color: #FF8000">offset</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneOffset</span>, <span style="color: #FF8000">zone</span>: <span style="font-weight: normal; font-style: italic;">java.time.ZoneId</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTimeOfLocal</span>(<span style={{color: '#FF8000'}}>localDateTime</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>, <span style={{color: '#FF8000'}}>offset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneOffset</span>, <span style={{color: '#FF8000'}}>zone</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2755,7 +2755,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTimeParse</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTimeParse</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.CharSequence</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2769,7 +2769,7 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style="font-weight: normal">_time</span>.<span style="color: #008000">zonedDateTimeParse</span>(<span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>, <span style="color: #FF8000">dateTimeFormatter</span>: <span style="font-weight: normal; font-style: italic;">java.time.format.DateTimeFormatter</span>) : <span style="font-weight: normal; font-style: italic;">java.time.ZonedDateTime</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zonedDateTimeParse</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.CharSequence</span>, <span style={{color: '#FF8000'}}>dateTimeFormatter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.format.DateTimeFormatter</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZonedDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |

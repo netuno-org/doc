@@ -12,12 +12,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToHtmlFile</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_jasper</span>.<span style={{color: '#008000'}}>exportToHtmlFile</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ |   |
+| **storage** | _[Storage](../resources/storage)_ |   |
 
 ##### Return
 
@@ -30,7 +30,7 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToPdf</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{fontWeight: 'normal'}}>_jasper</span>.<span style={{color: '#008000'}}>exportToPdf</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Return
 
 ( _byte[]_ )
@@ -42,12 +42,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToPdfFile</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_jasper</span>.<span style={{color: '#008000'}}>exportToPdfFile</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ |   |
+| **storage** | _[Storage](../resources/storage)_ |   |
 
 ##### Return
 
@@ -60,12 +60,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">exportToPdfStream</span>(<span style="color: #FF8000">output</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_jasper</span>.<span style={{color: '#008000'}}>exportToPdfStream</span>(<span style={{color: '#FF8000'}}>output</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **output** | _[OutputStream](../../objects/OutputStream)_ |   |
+| **output** | _[OutputStream](../objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -78,10 +78,10 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Jasper](../../resources/jasper)</span>
+#### <span style={{fontWeight: 'normal'}}>_jasper</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Jasper](../resources/jasper)</span>
 ##### Return
 
-( _[Jasper](../../resources/jasper)_ )
+( _[Jasper](../resources/jasper)_ )
 
 
 ---
@@ -90,12 +90,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">loadPrinter</span>(<span style="color: #FF8000">parameters</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">dataSource</span>: <span style="font-weight: normal; font-style: italic;">[Lorg.netuno.psamata.Values;[]</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_jasper</span>.<span style={{color: '#008000'}}>loadPrinter</span>(<span style={{color: '#FF8000'}}>parameters</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>dataSource</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lorg.netuno.psamata.Values;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **parameters** | _[Values](../../objects/Values)_ |   |
+| **parameters** | _[Values](../objects/Values)_ |   |
 | **dataSource** | _[Lorg.netuno.psamata.Values;[]_ |   |
 
 ##### Return
@@ -109,12 +109,12 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style="font-weight: normal">_jasper</span>.<span style="color: #008000">setReportFile</span>(<span style="color: #FF8000">storage</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_jasper</span>.<span style={{color: '#008000'}}>setReportFile</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../../resources/storage)_ |   |
+| **storage** | _[Storage](../resources/storage)_ |   |
 
 ##### Return
 

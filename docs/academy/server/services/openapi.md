@@ -7,10 +7,12 @@ sidebar_label: OpenAPI
 ## Introduction
 
 An open API, also called public API, is an application programming interface made publicly available to software developers. 
-<br>Open APIs are published on the internet and shared freely, allowing the owner of a network-accessible service to give a universal access to consumers.
+
+Open APIs are published on the internet and shared freely, allowing the owner of a network-accessible service to give a universal access to consumers.
 
 An API is a software intermediary that makes it possible for application programs to interact with each other and share data. 
-<br>It's often used regarding REST APIs that expose a specific service or software functionality while protecting the rest of the application.
+
+It's often used regarding REST APIs that expose a specific service or software functionality while protecting the rest of the application.
 
 > About <a href="https://www.openapis.org/" target="_blank">OpenAPI</a>.
 

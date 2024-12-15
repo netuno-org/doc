@@ -12,7 +12,7 @@ Definição da configuração do objeto Where para construção de condições n
 
 ---
 
-#### <span style="color: #008000">and</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>and</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Defines a condition with the conditional AND operator on the Where object.
@@ -26,13 +26,13 @@ Defines a condition with the conditional AND operator on the Where object.
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 Current Where object.
 
 ---
 
-#### <span style="color: #008000">and</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>and</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>relationOperator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationOperator](../objects/RelationOperator)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Defines a condition with the conditional AND operator on the Where object.
@@ -42,17 +42,17 @@ Defines a condition with the conditional AND operator on the Where object.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **column** | _string_ | Column to which the condition will be applied. |
-| **relationOperator** | _[RelationOperator](../../objects/RelationOperator)_ | Condition relation operator. |
+| **relationOperator** | _[RelationOperator](../objects/RelationOperator)_ | Condition relation operator. |
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 Current Where object.
 
 ---
 
-#### <span style="color: #008000">and</span>(<span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>and</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Defines a second level conditions with the conditional AND operator on the Where object.
@@ -61,11 +61,11 @@ Defines a second level conditions with the conditional AND operator on the Where
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **where** | _[Where](../../objects/Where)_ | Where object of the next level. |
+| **where** | _[Where](../objects/Where)_ | Where object of the next level. |
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 Current Where object.
 
@@ -75,14 +75,14 @@ Current Where object.
 
 ---
 
-#### <span style="color: #008000">getConditions</span>() : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getConditions</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Description
 
 Returns the other nested conditions of the object.
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 The other nested conditions of the object.
 
@@ -92,14 +92,14 @@ The other nested conditions of the object.
 
 ---
 
-#### <span style="color: #008000">getFirstCondition</span>() : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>getFirstCondition</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
 ##### Description
 
 Returns the base condition of the object.
 
 ##### Return
 
-( _[Condition](../../objects/Condition)_ )
+( _[Condition](../objects/Condition)_ )
 
 The base condition of the object.
 
@@ -109,7 +109,7 @@ The base condition of the object.
 
 ---
 
-#### <span style="color: #008000">getTable</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getTable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the table to which the condition will be applied.
@@ -126,7 +126,7 @@ The name of the table to which the condition will be applied.
 
 ---
 
-#### <span style="color: #008000">or</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>or</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Defines a condition with the conditional OR operator on the Where object.
@@ -140,13 +140,13 @@ Defines a condition with the conditional OR operator on the Where object.
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 Current Where object.
 
 ---
 
-#### <span style="color: #008000">or</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>or</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>relationOperator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationOperator](../objects/RelationOperator)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Defines a condition with the conditional OR operator on the Where object.
@@ -156,17 +156,17 @@ Defines a condition with the conditional OR operator on the Where object.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **column** | _string_ | Column to which the condition will be applied. |
-| **relationOperator** | _[RelationOperator](../../objects/RelationOperator)_ | Condition relation operator. |
+| **relationOperator** | _[RelationOperator](../objects/RelationOperator)_ | Condition relation operator. |
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 Current Where object.
 
 ---
 
-#### <span style="color: #008000">or</span>(<span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>or</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Defines a second level conditions with the conditional OR operator on the Where object.
@@ -175,11 +175,11 @@ Defines a second level conditions with the conditional OR operator on the Where 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **where** | _[Where](../../objects/Where)_ | Where object of the next level. |
+| **where** | _[Where](../objects/Where)_ | Where object of the next level. |
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 Current Where object.
 
@@ -189,7 +189,7 @@ Current Where object.
 
 ---
 
-#### <span style="color: #008000">setConditions</span>(<span style="color: #FF8000">conditions</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>setConditions</span>(<span style={{color: '#FF8000'}}>conditions</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Defines the other nested conditions of the object.
@@ -198,11 +198,11 @@ Defines the other nested conditions of the object.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **conditions** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ | The other nested conditions of the object. |
+| **conditions** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | The other nested conditions of the object. |
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 Current Where object.
 
@@ -212,7 +212,7 @@ Current Where object.
 
 ---
 
-#### <span style="color: #008000">setFirstCondition</span>(<span style="color: #FF8000">firstCondition</span>: <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>setFirstCondition</span>(<span style={{color: '#FF8000'}}>firstCondition</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Defines the base condition of the object.
@@ -221,11 +221,11 @@ Defines the base condition of the object.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **firstCondition** | _[Condition](../../objects/Condition)_ | The base condition of the object. |
+| **firstCondition** | _[Condition](../objects/Condition)_ | The base condition of the object. |
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 Current Where object.
 
@@ -235,7 +235,7 @@ Current Where object.
 
 ---
 
-#### <span style="color: #008000">setTable</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>setTable</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Defines the name of the table to which the condition will be applied.
@@ -248,7 +248,7 @@ Defines the name of the table to which the condition will be applied.
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 Current Where object.
 

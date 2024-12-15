@@ -18,7 +18,7 @@ config.env = 'development'
 
 ---
 
-#### <span style="font-weight: normal">_env</span>.<span style="color: #008000">current</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_env</span>.<span style={{color: '#008000'}}>current</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Name of the environment that is configured in Netuno.
@@ -41,7 +41,7 @@ The name of the current environment.
 
 ---
 
-#### <span style="font-weight: normal">_env</span>.<span style="color: #008000">is</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_env</span>.<span style={{color: '#008000'}}>is</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Serves to check the current environment, useful in `if` conditions.
@@ -64,7 +64,7 @@ Whether the configured environment has the same name.
 
 ---
 
-#### <span style="font-weight: normal">_env</span>.<span style="color: #008000">isGraal</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_env</span>.<span style={{color: '#008000'}}>isGraal</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Serves to check if you are using Graal.

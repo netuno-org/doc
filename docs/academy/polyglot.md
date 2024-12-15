@@ -1,7 +1,7 @@
 ---
+sidebar_position: 4
 id: polyglot
 title: Polyglot
-sidebar_label: Polyglot
 ---
 
 _Netuno_ has polyglot service which allows you to run services simultaneously that are built in different languages, database and operating systems, without increase of processing weight.

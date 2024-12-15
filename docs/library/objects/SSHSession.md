@@ -12,7 +12,7 @@ Sessão SSH para executar comandos.
 
 ---
 
-#### <span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>close</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Closes the current session.
@@ -28,7 +28,7 @@ Closes the current session.
 
 ---
 
-#### <span style="color: #008000">closed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>closed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks if the session is still open.
@@ -45,7 +45,7 @@ True if it is open.
 
 ---
 
-#### <span style="color: #008000">exec</span>(<span style="color: #FF8000">command</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](../objects/SSHExecResult)</span>
 ##### Description
 
 Execute commands remotely via SSH on the server.
@@ -58,13 +58,13 @@ Execute commands remotely via SSH on the server.
 
 ##### Return
 
-( _[SSHExecResult](../../objects/SSHExecResult)_ )
+( _[SSHExecResult](../objects/SSHExecResult)_ )
 
 Command execution result.
 
 ---
 
-#### <span style="color: #008000">exec</span>(<span style="color: #FF8000">command</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">timeout</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[SSHExecResult](../../objects/SSHExecResult)</span>
+#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>timeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](../objects/SSHExecResult)</span>
 ##### Description
 
 Execute commands remotely via SSH on the server.
@@ -78,7 +78,7 @@ Execute commands remotely via SSH on the server.
 
 ##### Return
 
-( _[SSHExecResult](../../objects/SSHExecResult)_ )
+( _[SSHExecResult](../objects/SSHExecResult)_ )
 
 Command execution result.
 
@@ -88,7 +88,7 @@ Command execution result.
 
 ---
 
-#### <span style="color: #008000">isClosed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isClosed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )

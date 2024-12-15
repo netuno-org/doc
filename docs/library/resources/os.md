@@ -12,7 +12,7 @@ Performs the execution of commands in the operating system, manipulation of file
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">command</span>(<span style="color: #FF8000">command</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>) : <span style="font-weight: normal; font-style: italic;">[OSCommand](../../objects/OSCommand)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>command</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OSCommand](../objects/OSCommand)</span>
 ##### Description
 
 Executes a command in the operating system and obtains the result of the execution, the first item is the command and the following are parameters.
@@ -25,13 +25,13 @@ Executes a command in the operating system and obtains the result of the executi
 
 ##### Return
 
-( _[OSCommand](../../objects/OSCommand)_ )
+( _[OSCommand](../objects/OSCommand)_ )
 
 Result of executing the command in the operating system, including the output.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">command</span>(<span style="color: #FF8000">command</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[OSCommand](../../objects/OSCommand)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>command</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OSCommand](../objects/OSCommand)</span>
 ##### Description
 
 Executes a command in the operating system and obtains the result of the execution, the first item is the command and the following are parameters.
@@ -44,13 +44,13 @@ Executes a command in the operating system and obtains the result of the executi
 
 ##### Return
 
-( _[OSCommand](../../objects/OSCommand)_ )
+( _[OSCommand](../objects/OSCommand)_ )
 
 Result of executing the command in the operating system, including the output.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">command</span>(<span style="color: #FF8000">command</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[OSCommand](../../objects/OSCommand)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>command</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OSCommand](../objects/OSCommand)</span>
 ##### Description
 
 Executes a command in the operating system and obtains the result of the execution, the first item is the command and the following are parameters.
@@ -59,11 +59,11 @@ Executes a command in the operating system and obtains the result of the executi
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **command** | _[Values](../../objects/Values)_ | The command and optional parameters that will be executed. |
+| **command** | _[Values](../objects/Values)_ | The command and optional parameters that will be executed. |
 
 ##### Return
 
-( _[OSCommand](../../objects/OSCommand)_ )
+( _[OSCommand](../objects/OSCommand)_ )
 
 Result of executing the command in the operating system, including the output.
 
@@ -73,7 +73,7 @@ Result of executing the command in the operating system, including the output.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>directory</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the path where the commands will be executed.
@@ -86,7 +86,7 @@ The location where the command will be executed.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>directory</span>(<span style={{color: '#FF8000'}}>directory</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -99,13 +99,13 @@ Defines the path where the commands will be executed.
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>directory</span>(<span style={{color: '#FF8000'}}>directory</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -114,17 +114,17 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **directory** | _[File](../../objects/File)_ | The location where the command will be executed. |
+| **directory** | _[File](../objects/File)_ | The location where the command will be executed. |
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">directory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>directory</span>(<span style={{color: '#FF8000'}}>directory</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -133,11 +133,11 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **directory** | _[Storage](../../resources/storage)_ | The location where the command will be executed. |
+| **directory** | _[Storage](../resources/storage)_ | The location where the command will be executed. |
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 Instance of the operating system resource.
 
@@ -147,24 +147,24 @@ Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">env</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>env</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">env</span>(<span style="color: #FF8000">env</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>env</span>(<span style={{color: '#FF8000'}}>env</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **env** | _[Values](../../objects/Values)_ |   |
+| **env** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 
 ---
@@ -173,7 +173,7 @@ Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">file</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>file</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of files and folders relative to the passed path, in this case the path must be a **file**.
@@ -186,7 +186,7 @@ Gets the object of manipulation of files and folders relative to the passed path
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 Instance of the file and folder manipulation object relative to the passed path, in this case a **file**.
 
@@ -196,7 +196,7 @@ Instance of the file and folder manipulation object relative to the passed path,
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">folder</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>folder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of folders and files relative to the passed path, in this case the path must be a **folder**.
@@ -209,7 +209,7 @@ Gets the object of manipulation of folders and files relative to the passed path
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 Instance of the file and folder manipulation object relative to the passed path, in this case a **folder**.
 
@@ -219,7 +219,7 @@ Instance of the file and folder manipulation object relative to the passed path,
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getDirectory</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getDirectory</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the path where the commands will be executed.
@@ -236,10 +236,10 @@ The location where the command will be executed.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getEnv</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getEnv</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -248,7 +248,7 @@ The location where the command will be executed.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of files and folders relative to the passed path, in this case the path must be a **file**.
@@ -261,7 +261,7 @@ Gets the object of manipulation of files and folders relative to the passed path
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 Instance of the file and folder manipulation object relative to the passed path, in this case a **file**.
 
@@ -271,7 +271,7 @@ Instance of the file and folder manipulation object relative to the passed path,
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getFolder</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getFolder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of folders and files relative to the passed path, in this case the path must be a **folder**.
@@ -284,7 +284,7 @@ Gets the object of manipulation of folders and files relative to the passed path
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 Instance of the file and folder manipulation object relative to the passed path, in this case a **folder**.
 
@@ -294,7 +294,7 @@ Instance of the file and folder manipulation object relative to the passed path,
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the name of the operating system.
@@ -311,7 +311,7 @@ The name of the operating system.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getShell</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getShell</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -323,7 +323,7 @@ The name of the operating system.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">getWaitFor</span>() : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getWaitFor</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Return
 
 ( _long_ )
@@ -335,14 +335,14 @@ The name of the operating system.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Description
 
 Starts a new instance of the OS.
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 The new instance of the OS resource.
 
@@ -352,7 +352,7 @@ The new instance of the OS resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>isFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks whether the path is a **file**.
@@ -375,7 +375,7 @@ Whether or not it is a **file**.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isFolder</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>isFolder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks whether the path is a **folder**.
@@ -398,7 +398,7 @@ Whether or not it is a **folder**.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isLinux</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>isLinux</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks whether the operating system is Linux.
@@ -415,7 +415,7 @@ Whether or not the operating system Linux.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isMac</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>isMac</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks whether the operating system is Mac OS X.
@@ -432,7 +432,7 @@ Whether or not the operating system Mac OS X.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isOS</span>(<span style="color: #FF8000">osType</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>isOS</span>(<span style={{color: '#FF8000'}}>osType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks the operating system based on the past name which can be Linux, Mac or Windows.
@@ -455,7 +455,7 @@ Whether or not the operating system is indicated.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isReadCommandError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>isReadCommandError</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -467,7 +467,7 @@ Whether or not the operating system is indicated.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isReadCommandOutput</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>isReadCommandOutput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -479,7 +479,7 @@ Whether or not the operating system is indicated.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">isWindows</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>isWindows</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks whether the operating system is Windows.
@@ -496,7 +496,7 @@ Whether or not the operating system Windows.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>name</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the name of the operating system.
@@ -513,7 +513,7 @@ The name of the operating system.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>readCommandError</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -521,7 +521,7 @@ The name of the operating system.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandError</span>(<span style="color: #FF8000">readCommandError</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>readCommandError</span>(<span style={{color: '#FF8000'}}>readCommandError</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -530,7 +530,7 @@ The name of the operating system.
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 
 ---
@@ -539,7 +539,7 @@ The name of the operating system.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandOutput</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>readCommandOutput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -547,7 +547,7 @@ The name of the operating system.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">readCommandOutput</span>(<span style="color: #FF8000">readCommandOutput</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>readCommandOutput</span>(<span style={{color: '#FF8000'}}>readCommandOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -556,7 +556,7 @@ The name of the operating system.
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 
 ---
@@ -565,7 +565,7 @@ The name of the operating system.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>setDirectory</span>(<span style={{color: '#FF8000'}}>directory</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -578,13 +578,13 @@ Defines the path where the commands will be executed.
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>setDirectory</span>(<span style={{color: '#FF8000'}}>directory</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -593,17 +593,17 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **directory** | _[File](../../objects/File)_ | The location where the command will be executed. |
+| **directory** | _[File](../objects/File)_ | The location where the command will be executed. |
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setDirectory</span>(<span style="color: #FF8000">directory</span>: <span style="font-weight: normal; font-style: italic;">[Storage](../../resources/storage)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>setDirectory</span>(<span style={{color: '#FF8000'}}>directory</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Description
 
 Defines the path where the commands will be executed.
@@ -612,11 +612,11 @@ Defines the path where the commands will be executed.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **directory** | _[Storage](../../resources/storage)_ | The location where the command will be executed. |
+| **directory** | _[Storage](../resources/storage)_ | The location where the command will be executed. |
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 Instance of the operating system resource.
 
@@ -626,16 +626,16 @@ Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setEnv</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>setEnv</span>(<span style={{color: '#FF8000'}}>shell</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **shell** | _[Values](../../objects/Values)_ |   |
+| **shell** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 
 ---
@@ -644,7 +644,7 @@ Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setReadCommandError</span>(<span style="color: #FF8000">readCommandError</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>setReadCommandError</span>(<span style={{color: '#FF8000'}}>readCommandError</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -653,7 +653,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 
 ---
@@ -662,7 +662,7 @@ Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setReadCommandOutput</span>(<span style="color: #FF8000">readCommandOutput</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>setReadCommandOutput</span>(<span style={{color: '#FF8000'}}>readCommandOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -671,7 +671,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 
 ---
@@ -680,7 +680,7 @@ Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setShell</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>setShell</span>(<span style={{color: '#FF8000'}}>shell</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -689,7 +689,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 
 ---
@@ -698,7 +698,7 @@ Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">setWaitFor</span>(<span style="color: #FF8000">waitFor</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>setWaitFor</span>(<span style={{color: '#FF8000'}}>waitFor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -707,7 +707,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 
 ---
@@ -716,7 +716,7 @@ Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">shell</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>shell</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -724,7 +724,7 @@ Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">shell</span>(<span style="color: #FF8000">shell</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>shell</span>(<span style={{color: '#FF8000'}}>shell</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -733,7 +733,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 
 ---
@@ -742,7 +742,7 @@ Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">waitFor</span>() : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>waitFor</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Return
 
 ( _long_ )
@@ -750,7 +750,7 @@ Instance of the operating system resource.
 
 ---
 
-#### <span style="font-weight: normal">_os</span>.<span style="color: #008000">waitFor</span>(<span style="color: #FF8000">waitFor</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[OS](../../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>waitFor</span>(<span style={{color: '#FF8000'}}>waitFor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -759,7 +759,7 @@ Instance of the operating system resource.
 
 ##### Return
 
-( _[OS](../../resources/os)_ )
+( _[OS](../resources/os)_ )
 
 
 ---

@@ -25,7 +25,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">add</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">element</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>element</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -35,12 +35,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">add</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -49,7 +49,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -58,7 +58,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">addAll</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>addAll</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -73,7 +73,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">addAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>addAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -91,7 +91,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">as</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>as</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -100,12 +100,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">as</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">oDefault</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>as</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>oDefault</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -115,7 +115,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -124,7 +124,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>asBoolean</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -138,7 +138,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>asBoolean</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -153,7 +153,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>asBoolean</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -167,7 +167,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>asBoolean</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -186,7 +186,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
+#### <span style={{color: '#008000'}}>asByte</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -200,7 +200,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
+#### <span style={{color: '#008000'}}>asByte</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -215,7 +215,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asByte</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
+#### <span style={{color: '#008000'}}>asByte</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -234,7 +234,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
+#### <span style={{color: '#008000'}}>asCalendar</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -248,7 +248,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
+#### <span style={{color: '#008000'}}>asCalendar</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -267,7 +267,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
+#### <span style={{color: '#008000'}}>asDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -281,7 +281,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
+#### <span style={{color: '#008000'}}>asDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -300,7 +300,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{color: '#008000'}}>asDouble</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -314,7 +314,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{color: '#008000'}}>asDouble</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -329,7 +329,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{color: '#008000'}}>asDouble</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -343,7 +343,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{color: '#008000'}}>asDouble</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -362,7 +362,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asFile</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{color: '#008000'}}>asFile</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -371,7 +371,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 
 ---
@@ -380,7 +380,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{color: '#008000'}}>asFloat</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -394,7 +394,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{color: '#008000'}}>asFloat</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -409,7 +409,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{color: '#008000'}}>asFloat</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -423,7 +423,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{color: '#008000'}}>asFloat</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -442,7 +442,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asHTMLDecode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>asHTMLDecode</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -460,7 +460,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asHTMLEncode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>asHTMLEncode</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -478,7 +478,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{color: '#008000'}}>asInstant</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -492,7 +492,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{color: '#008000'}}>asInstant</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -511,7 +511,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>asInt</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -525,7 +525,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>asInt</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -540,7 +540,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asInt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>asInt</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -559,7 +559,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -573,7 +573,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -588,7 +588,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -603,7 +603,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -619,7 +619,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -633,7 +633,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -648,7 +648,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -663,7 +663,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -683,7 +683,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{color: '#008000'}}>asLocalDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -697,7 +697,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{color: '#008000'}}>asLocalDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -716,7 +716,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{color: '#008000'}}>asLocalDateTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -730,7 +730,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{color: '#008000'}}>asLocalDateTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -749,7 +749,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{color: '#008000'}}>asLocalTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -763,7 +763,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{color: '#008000'}}>asLocalTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -782,7 +782,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>asLong</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -796,7 +796,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>asLong</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -811,7 +811,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>asLong</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -825,7 +825,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>asLong</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -844,7 +844,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -853,12 +853,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="color: #008000">asMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -868,12 +868,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="color: #008000">asMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -882,12 +882,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="color: #008000">asMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -897,7 +897,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -906,7 +906,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
+#### <span style={{color: '#008000'}}>asSQLDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -920,7 +920,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
+#### <span style={{color: '#008000'}}>asSQLDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -939,7 +939,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
+#### <span style={{color: '#008000'}}>asSQLTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -953,7 +953,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
+#### <span style={{color: '#008000'}}>asSQLTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -972,7 +972,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
+#### <span style={{color: '#008000'}}>asSQLTimestamp</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -986,7 +986,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
+#### <span style={{color: '#008000'}}>asSQLTimestamp</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1005,7 +1005,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{color: '#008000'}}>asShort</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1019,7 +1019,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{color: '#008000'}}>asShort</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1034,7 +1034,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{color: '#008000'}}>asShort</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1048,7 +1048,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{color: '#008000'}}>asShort</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1067,7 +1067,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>asString</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1081,7 +1081,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>asString</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1096,7 +1096,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>asString</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1110,7 +1110,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>asString</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1125,7 +1125,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charsetName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>asString</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charsetName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1145,7 +1145,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>asUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1159,7 +1159,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>asUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1174,7 +1174,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>asUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1193,7 +1193,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>asUUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1207,7 +1207,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>asUUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1222,7 +1222,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>asUUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1241,7 +1241,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style="color: #008000">asValues</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the index and then casts to Values (Dictionary or List).
@@ -1254,13 +1254,13 @@ Gets the object associated with the index and then casts to Values (Dictionary o
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">asValues</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the index and then casts to Values (Dictionary or List).
@@ -1274,13 +1274,13 @@ Gets the object associated with the index and then casts to Values (Dictionary o
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">asValues</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the key and then casts to Values (Dictionary or List).
@@ -1293,13 +1293,13 @@ Gets the object associated with the key and then casts to Values (Dictionary or 
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">asValues</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the key and then casts to Values (Dictionary or List).
@@ -1313,7 +1313,7 @@ Gets the object associated with the key and then casts to Values (Dictionary or 
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Object converted to Values.
 
@@ -1323,7 +1323,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">clear</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>clear</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -1335,10 +1335,10 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">cloneJSON</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>cloneJSON</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -1347,7 +1347,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">compute</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>compute</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1366,7 +1366,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">computeIfAbsent</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Function</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>computeIfAbsent</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1385,7 +1385,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">computeIfPresent</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>computeIfPresent</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1404,7 +1404,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">contains</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>contains</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1418,7 +1418,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">contains</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>contains</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1437,7 +1437,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">containsAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>containsAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1455,7 +1455,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">containsKey</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>containsKey</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1473,7 +1473,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">containsValue</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>containsValue</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1491,7 +1491,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">ensureJail</span>(<span style="color: #FF8000">jailPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>ensureJail</span>(<span style={{color: '#FF8000'}}>jailPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Set the security restriction on a specific directory for processed objects of the file type, it can only be set once.
@@ -1513,7 +1513,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">entrySet</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
+#### <span style={{color: '#008000'}}>entrySet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set</span>
 ##### Return
 
 ( _java.util.Set_ )
@@ -1525,7 +1525,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">filter</span>(<span style="color: #FF8000">p</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Predicate</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>filter</span>(<span style={{color: '#FF8000'}}>p</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Predicate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1534,12 +1534,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">filter</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>filter</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1548,7 +1548,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -1557,7 +1557,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">find</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1567,12 +1567,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">find</span>(<span style="color: #FF8000">p</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Predicate</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>p</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Predicate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1586,7 +1586,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">find</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1600,16 +1600,16 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">find</span>(<span style="color: #FF8000">filter</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **filter** | _[Values](../../objects/Values)_ |   |
+| **filter** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -1618,7 +1618,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">forEach</span>(<span style="color: #FF8000">action</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiConsumer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>forEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiConsumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1632,7 +1632,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">forEach</span>(<span style="color: #FF8000">action</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.Consumer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>forEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1646,7 +1646,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">forEach</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>forEach</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1664,10 +1664,10 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">forceList</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>forceList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -1676,10 +1676,10 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">forceMap</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>forceMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -1688,7 +1688,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">fromJSON</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>fromJSON</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1697,12 +1697,12 @@ Set the security restriction on a specific directory for processed objects of th
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">fromJSON</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.psamata.net.Remote$Response</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>fromJSON</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1711,7 +1711,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -1720,7 +1720,7 @@ Set the security restriction on a specific directory for processed objects of th
 
 ---
 
-#### <span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Description
 
 Gets the original object associated with the key.
@@ -1739,7 +1739,7 @@ Original object without conversions.
 
 ---
 
-#### <span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Description
 
 Gets the original object associated with the key.
@@ -1758,7 +1758,7 @@ Original object without conversions.
 
 ---
 
-#### <span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Description
 
 Gets the original object associated with the key.
@@ -1777,7 +1777,7 @@ Original object without conversions.
 
 ---
 
-#### <span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">type</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Description
 
 Gets the original object associated with the key, but cast for the specified class type.
@@ -1801,7 +1801,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>getBoolean</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1815,7 +1815,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>getBoolean</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1830,7 +1830,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>getBoolean</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1844,7 +1844,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getBoolean</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>getBoolean</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1863,7 +1863,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
+#### <span style={{color: '#008000'}}>getByte</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1877,7 +1877,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getByte</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
+#### <span style={{color: '#008000'}}>getByte</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1892,7 +1892,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getByte</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
+#### <span style={{color: '#008000'}}>getByte</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1906,7 +1906,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getByte</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">byte</span>) : <span style="font-weight: normal; font-style: italic;">byte</span>
+#### <span style={{color: '#008000'}}>getByte</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1925,7 +1925,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
+#### <span style={{color: '#008000'}}>getCalendar</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1939,7 +1939,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getCalendar</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Calendar</span>
+#### <span style={{color: '#008000'}}>getCalendar</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1958,7 +1958,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
+#### <span style={{color: '#008000'}}>getDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1972,7 +1972,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.util.Date</span>
+#### <span style={{color: '#008000'}}>getDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1991,7 +1991,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{color: '#008000'}}>getDouble</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2005,7 +2005,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getDouble</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{color: '#008000'}}>getDouble</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2020,7 +2020,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{color: '#008000'}}>getDouble</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2034,7 +2034,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getDouble</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">double</span>
+#### <span style={{color: '#008000'}}>getDouble</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2053,7 +2053,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getFile</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2062,7 +2062,7 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 
 ---
@@ -2071,7 +2071,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{color: '#008000'}}>getFloat</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2085,7 +2085,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getFloat</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{color: '#008000'}}>getFloat</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2100,7 +2100,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{color: '#008000'}}>getFloat</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2114,7 +2114,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getFloat</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">float</span>
+#### <span style={{color: '#008000'}}>getFloat</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2133,7 +2133,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getForceList</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>getForceList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -2145,7 +2145,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getForceMap</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>getForceMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -2157,7 +2157,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getHTMLDecode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getHTMLDecode</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2175,7 +2175,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getHTMLEncode</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getHTMLEncode</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2193,7 +2193,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{color: '#008000'}}>getInstant</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2207,7 +2207,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getInstant</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>) : <span style="font-weight: normal; font-style: italic;">java.time.Instant</span>
+#### <span style={{color: '#008000'}}>getInstant</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2226,7 +2226,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>getInt</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2240,7 +2240,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getInt</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>getInt</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2255,7 +2255,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getInt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>getInt</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2269,7 +2269,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getInt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>getInt</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2288,7 +2288,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getKeys</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
+#### <span style={{color: '#008000'}}>getKeys</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set</span>
 ##### Return
 
 ( _java.util.Set_ )
@@ -2300,7 +2300,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2314,7 +2314,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2329,7 +2329,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2344,7 +2344,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getList</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2360,7 +2360,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2374,7 +2374,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2389,7 +2389,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2404,7 +2404,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getList</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">claz</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2424,7 +2424,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{color: '#008000'}}>getLocalDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2438,7 +2438,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getLocalDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDate</span>
+#### <span style={{color: '#008000'}}>getLocalDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2457,7 +2457,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{color: '#008000'}}>getLocalDateTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2471,7 +2471,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getLocalDateTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalDateTime</span>
+#### <span style={{color: '#008000'}}>getLocalDateTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2490,7 +2490,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{color: '#008000'}}>getLocalTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2504,7 +2504,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getLocalTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>) : <span style="font-weight: normal; font-style: italic;">java.time.LocalTime</span>
+#### <span style={{color: '#008000'}}>getLocalTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2523,7 +2523,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>getLong</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2537,7 +2537,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getLong</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>getLong</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2552,7 +2552,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>getLong</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2566,7 +2566,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getLong</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>getLong</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2585,7 +2585,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2594,12 +2594,12 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="color: #008000">getMap</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2609,12 +2609,12 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="color: #008000">getMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2623,12 +2623,12 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 
 ---
 
-#### <span style="color: #008000">getMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2638,7 +2638,7 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -2647,7 +2647,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getMethod</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getMethod</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -2659,7 +2659,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getOrDefault</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>getOrDefault</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2678,7 +2678,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
+#### <span style={{color: '#008000'}}>getSQLDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2692,7 +2692,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getSQLDate</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Date</span>
+#### <span style={{color: '#008000'}}>getSQLDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2711,7 +2711,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
+#### <span style={{color: '#008000'}}>getSQLTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2725,7 +2725,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getSQLTime</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Time</span>
+#### <span style={{color: '#008000'}}>getSQLTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2744,7 +2744,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
+#### <span style={{color: '#008000'}}>getSQLTimestamp</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2758,7 +2758,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getSQLTimestamp</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>) : <span style="font-weight: normal; font-style: italic;">java.sql.Timestamp</span>
+#### <span style={{color: '#008000'}}>getSQLTimestamp</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2777,7 +2777,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getService</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getService</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -2789,7 +2789,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{color: '#008000'}}>getShort</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2803,7 +2803,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getShort</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{color: '#008000'}}>getShort</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2818,7 +2818,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{color: '#008000'}}>getShort</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2832,7 +2832,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getShort</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">short</span>
+#### <span style={{color: '#008000'}}>getShort</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2851,7 +2851,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getSize</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>getSize</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -2863,7 +2863,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getStatusCode</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>getStatusCode</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -2875,7 +2875,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getString</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2889,7 +2889,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getString</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getString</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2904,7 +2904,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getString</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2918,7 +2918,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getString</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2933,7 +2933,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getString</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charsetName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getString</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charsetName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2953,7 +2953,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>getUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2967,7 +2967,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>getUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2982,7 +2982,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>getUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3001,7 +3001,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style="color: #008000">getURLCharacterEncoding</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getURLCharacterEncoding</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Gets the character encoding to be used in formatting for URL (_QueryString_).
@@ -3018,7 +3018,7 @@ Character encoding code.
 
 ---
 
-#### <span style="color: #008000">getUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>getUUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3032,7 +3032,7 @@ Character encoding code.
 
 ---
 
-#### <span style="color: #008000">getUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>getUUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3047,7 +3047,7 @@ Character encoding code.
 
 ---
 
-#### <span style="color: #008000">getUUID</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>) : <span style="font-weight: normal; font-style: italic;">java.util.UUID</span>
+#### <span style={{color: '#008000'}}>getUUID</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3066,7 +3066,7 @@ Character encoding code.
 
 ---
 
-#### <span style="color: #008000">getValues</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>
+#### <span style={{color: '#008000'}}>getValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>
 ##### Description
 
 Gets all object values stored in both dictionary and list mode.
@@ -3079,7 +3079,7 @@ List of all obtained values.
 
 ---
 
-#### <span style="color: #008000">getValues</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the index and then casts to Values (Dictionary or List).
@@ -3092,13 +3092,13 @@ Gets the object associated with the index and then casts to Values (Dictionary o
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">getValues</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the index and then casts to Values (Dictionary or List).
@@ -3112,13 +3112,13 @@ Gets the object associated with the index and then casts to Values (Dictionary o
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">getValues</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the key and then casts to Values (Dictionary or List).
@@ -3131,13 +3131,13 @@ Gets the object associated with the key and then casts to Values (Dictionary or 
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">getValues</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Gets the object associated with the key and then casts to Values (Dictionary or List).
@@ -3151,7 +3151,7 @@ Gets the object associated with the key and then casts to Values (Dictionary or 
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Object converted to Values.
 
@@ -3161,7 +3161,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">has</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>has</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3175,7 +3175,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">has</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>has</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3189,7 +3189,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">has</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>has</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3208,7 +3208,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">hasKey</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>hasKey</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3226,7 +3226,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">hasValue</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>hasValue</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3244,7 +3244,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">in</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>in</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -3252,7 +3252,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">in</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>in</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3261,7 +3261,7 @@ Object converted to Values.
 
 ##### Return
 
-( _[DataSchema](../../objects/DataSchema)_ )
+( _[DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -3270,7 +3270,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">indexOf</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>indexOf</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3288,7 +3288,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">is</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>is</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3306,7 +3306,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">isEmpty</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isEmpty</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -3318,7 +3318,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">isIn</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isIn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -3330,7 +3330,7 @@ Object converted to Values.
 
 ---
 
-#### <span style="color: #008000">isJail</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isJail</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Check if the restriction is active for all associated files to be loaded only from a specific directory.
@@ -3347,7 +3347,7 @@ If the restriction on associated files is active.
 
 ---
 
-#### <span style="color: #008000">isList</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -3355,7 +3355,7 @@ If the restriction on associated files is active.
 
 ---
 
-#### <span style="color: #008000">isList</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isList</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3373,7 +3373,7 @@ If the restriction on associated files is active.
 
 ---
 
-#### <span style="color: #008000">isLockedAsReadOnly</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isLockedAsReadOnly</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Check if it is locked in read-only mode.
@@ -3390,7 +3390,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">isMap</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -3398,7 +3398,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">isMap</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMap</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3416,7 +3416,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">isMergeable</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMergeable</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3434,7 +3434,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">isMethod</span>(<span style="color: #FF8000">otherMethod</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMethod</span>(<span style={{color: '#FF8000'}}>otherMethod</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3452,7 +3452,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">isOut</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isOut</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -3464,7 +3464,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">iterator</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Iterator</span>
+#### <span style={{color: '#008000'}}>iterator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Iterator</span>
 ##### Return
 
 ( _java.util.Iterator_ )
@@ -3476,7 +3476,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">join</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>join</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3494,7 +3494,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">keySet</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
+#### <span style={{color: '#008000'}}>keySet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set</span>
 ##### Return
 
 ( _java.util.Set_ )
@@ -3506,7 +3506,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">keys</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
+#### <span style={{color: '#008000'}}>keys</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set</span>
 ##### Return
 
 ( _java.util.Set_ )
@@ -3518,7 +3518,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">keysSorted</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Set</span>
+#### <span style={{color: '#008000'}}>keysSorted</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set</span>
 ##### Return
 
 ( _java.util.Set_ )
@@ -3530,7 +3530,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">keysToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>keysToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3544,12 +3544,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">keysToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>keysToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
 | **splitter** | _string_ |   |
 
 ##### Return
@@ -3563,7 +3563,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">lastIndexOf</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>lastIndexOf</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3581,7 +3581,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">length</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>length</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -3593,7 +3593,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">list</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -3601,7 +3601,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">list</span>(<span style="color: #FF8000">cls</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>list</span>(<span style={{color: '#FF8000'}}>cls</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3619,7 +3619,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">listIterator</span>() : <span style="font-weight: normal; font-style: italic;">java.util.ListIterator</span>
+#### <span style={{color: '#008000'}}>listIterator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.ListIterator</span>
 ##### Return
 
 ( _java.util.ListIterator_ )
@@ -3627,7 +3627,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">listIterator</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.ListIterator</span>
+#### <span style={{color: '#008000'}}>listIterator</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.ListIterator</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3645,7 +3645,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">listOfValues</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>listOfValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -3657,12 +3657,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">loadJSON</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>loadJSON</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../../objects/InputStream)_ |   |
+| **in** | _[InputStream](../objects/InputStream)_ |   |
 
 ##### Return
 
@@ -3671,7 +3671,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">loadJSON</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>loadJSON</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.Reader</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3689,12 +3689,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">loadProperties</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>loadProperties</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../../objects/InputStream)_ |   |
+| **in** | _[InputStream](../objects/InputStream)_ |   |
 
 ##### Return
 
@@ -3703,7 +3703,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">loadProperties</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>loadProperties</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.Reader</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3717,7 +3717,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">loadProperties</span>(<span style="color: #FF8000">properties</span>: <span style="font-weight: normal; font-style: italic;">java.util.Properties</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>loadProperties</span>(<span style={{color: '#FF8000'}}>properties</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Properties</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3735,7 +3735,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">loadPropertiesFromString</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>loadPropertiesFromString</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3753,14 +3753,14 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">lockAsReadOnly</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>lockAsReadOnly</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Check if it is locked in read-only mode.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Whether it is in read-only mode or not.
 
@@ -3770,10 +3770,10 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">map</span>() : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>map</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -3782,7 +3782,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">merge</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>merge</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3791,12 +3791,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">merge</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg2</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>merge</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3816,7 +3816,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">method</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>method</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -3824,7 +3824,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">method</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>method</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3833,7 +3833,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[DataSchema](../../objects/DataSchema)_ )
+( _[DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -3842,10 +3842,10 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">newList</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>newList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -3854,10 +3854,10 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">newMap</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>newMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -3866,7 +3866,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">of</span>(<span style="color: #FF8000">array</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>array</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3875,12 +3875,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">of</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3894,7 +3894,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">of</span>(<span style="color: #FF8000">list</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>list</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3903,21 +3903,21 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">of</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -3926,7 +3926,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">ofList</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>ofList</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3935,7 +3935,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -3944,7 +3944,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">ofMap</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>ofMap</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3953,7 +3953,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -3962,7 +3962,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">out</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>out</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -3970,7 +3970,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">out</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>out</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3979,7 +3979,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[DataSchema](../../objects/DataSchema)_ )
+( _[DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -3988,7 +3988,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">push</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>push</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -3997,7 +3997,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -4006,7 +4006,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">put</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4021,7 +4021,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">put</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4040,12 +4040,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">putAll</span>(<span style="color: #FF8000">m</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>putAll</span>(<span style={{color: '#FF8000'}}>m</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **m** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **m** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
 
 ##### Return
 
@@ -4058,7 +4058,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">putIfAbsent</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>putIfAbsent</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4077,7 +4077,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">remove</span>(<span style="color: #FF8000">i</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>remove</span>(<span style={{color: '#FF8000'}}>i</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4091,7 +4091,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">remove</span>(<span style="color: #FF8000">o</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>remove</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4105,7 +4105,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">remove</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>remove</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4124,7 +4124,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">removeAll</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>removeAll</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -4132,7 +4132,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">removeAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>removeAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4150,7 +4150,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">replace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>replace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4165,7 +4165,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">replace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">arg2</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>replace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4185,7 +4185,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">replaceAll</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.BiFunction</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>replaceAll</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4199,7 +4199,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">replaceAll</span>(<span style="color: #FF8000">operator</span>: <span style="font-weight: normal; font-style: italic;">java.util.function.UnaryOperator</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>replaceAll</span>(<span style={{color: '#FF8000'}}>operator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.UnaryOperator</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4213,7 +4213,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">replaceAll</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>replaceAll</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4231,7 +4231,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">retainAll</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>retainAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4249,7 +4249,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">safeString</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>safeString</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4263,7 +4263,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">safeString</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">defaultValue</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>safeString</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4282,12 +4282,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">saveJSON</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>saveJSON</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](../objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -4296,7 +4296,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">saveJSON</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>saveJSON</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.Writer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4314,12 +4314,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">saveProperties</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>saveProperties</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](../objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -4328,7 +4328,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">saveProperties</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>saveProperties</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.Writer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4346,7 +4346,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4360,7 +4360,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ignoreCase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ignoreCase</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4375,7 +4375,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4390,7 +4390,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">search</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ignoreCase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ignoreCase</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4406,12 +4406,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">search</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">ignoreCase</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ignoreCase</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
 | **content** | _string_ |   |
 | **splitter** | _string_ |   |
 | **ignoreCase** | _boolean_ |   |
@@ -4427,7 +4427,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">service</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>service</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -4435,7 +4435,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">service</span>(<span style="color: #FF8000">service</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>service</span>(<span style={{color: '#FF8000'}}>service</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4444,7 +4444,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[DataSchema](../../objects/DataSchema)_ )
+( _[DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -4453,7 +4453,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">set</span>(<span style="color: #FF8000">index</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">element</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>set</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>element</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4463,12 +4463,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">set</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>set</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4478,7 +4478,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -4487,7 +4487,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setForceList</span>(<span style="color: #FF8000">forceList</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setForceList</span>(<span style={{color: '#FF8000'}}>forceList</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4496,7 +4496,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -4505,7 +4505,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setForceMap</span>(<span style="color: #FF8000">forceMap</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setForceMap</span>(<span style={{color: '#FF8000'}}>forceMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4514,7 +4514,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -4523,7 +4523,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setIfFalse</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfFalse</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4533,7 +4533,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -4542,7 +4542,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4552,12 +4552,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4567,12 +4567,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4582,12 +4582,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4597,12 +4597,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfGreaterThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4612,7 +4612,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -4621,7 +4621,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4631,12 +4631,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4646,12 +4646,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4661,12 +4661,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4676,12 +4676,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfLowerThanZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4691,7 +4691,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -4700,7 +4700,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setIfNotEmpty</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfNotEmpty</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4710,7 +4710,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -4719,7 +4719,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4729,12 +4729,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4744,12 +4744,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4759,12 +4759,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4774,12 +4774,12 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">setIfNotZero</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">short</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4789,7 +4789,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -4798,7 +4798,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setIfTrue</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setIfTrue</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4808,7 +4808,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -4817,7 +4817,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setIn</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>setIn</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4826,7 +4826,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[DataSchema](../../objects/DataSchema)_ )
+( _[DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -4835,7 +4835,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setMethod</span>(<span style="color: #FF8000">method</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>setMethod</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4844,7 +4844,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[DataSchema](../../objects/DataSchema)_ )
+( _[DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -4853,7 +4853,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setNull</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>setNull</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4862,7 +4862,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -4871,7 +4871,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setOut</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>setOut</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4880,7 +4880,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[DataSchema](../../objects/DataSchema)_ )
+( _[DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -4889,7 +4889,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setService</span>(<span style="color: #FF8000">service</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>setService</span>(<span style={{color: '#FF8000'}}>service</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4898,7 +4898,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[DataSchema](../../objects/DataSchema)_ )
+( _[DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -4907,7 +4907,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setStatusCode</span>(<span style="color: #FF8000">statusCode</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>setStatusCode</span>(<span style={{color: '#FF8000'}}>statusCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4916,7 +4916,7 @@ Whether it is in read-only mode or not.
 
 ##### Return
 
-( _[DataSchema](../../objects/DataSchema)_ )
+( _[DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -4925,7 +4925,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style="color: #008000">setURLCharacterEncoding</span>(<span style="color: #FF8000">characterEncoding</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>setURLCharacterEncoding</span>(<span style={{color: '#FF8000'}}>characterEncoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Defines the character encoding to be used in formatting for URL (_QueryString_).
@@ -4947,7 +4947,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">size</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>size</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -4959,7 +4959,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">sizeOfList</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>sizeOfList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -4971,7 +4971,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">sizeOfMap</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>sizeOfMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -4983,7 +4983,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">sort</span>(<span style="color: #FF8000">c</span>: <span style="font-weight: normal; font-style: italic;">java.util.Comparator</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>sort</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Comparator</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -4997,7 +4997,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">sort</span>(<span style="color: #FF8000">function</span>: <span style="font-weight: normal; font-style: italic;">org.graalvm.polyglot.Value</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>sort</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5015,7 +5015,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">spliterator</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Spliterator</span>
+#### <span style={{color: '#008000'}}>spliterator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Spliterator</span>
 ##### Return
 
 ( _java.util.Spliterator_ )
@@ -5027,7 +5027,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">statusCode</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>statusCode</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -5035,7 +5035,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">statusCode</span>(<span style="color: #FF8000">statusCode</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>statusCode</span>(<span style={{color: '#FF8000'}}>statusCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataSchema](../objects/DataSchema)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5044,7 +5044,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ##### Return
 
-( _[DataSchema](../../objects/DataSchema)_ )
+( _[DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -5053,7 +5053,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">subList</span>(<span style="color: #FF8000">fromIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">toIndex</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>subList</span>(<span style={{color: '#FF8000'}}>fromIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>toIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5072,7 +5072,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toArray</span>() : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>
+#### <span style={{color: '#008000'}}>toArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>
 ##### Return
 
 ( _[Ljava.lang.Object;[]_ )
@@ -5080,7 +5080,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toArray</span>(<span style="color: #FF8000">a</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>
+#### <span style={{color: '#008000'}}>toArray</span>(<span style={{color: '#FF8000'}}>a</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5098,7 +5098,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toByteArray</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{color: '#008000'}}>toByteArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Return
 
 ( _byte[]_ )
@@ -5110,7 +5110,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toDoubleArray</span>() : <span style="font-weight: normal; font-style: italic;">double[]</span>
+#### <span style={{color: '#008000'}}>toDoubleArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double[]</span>
 ##### Return
 
 ( _double[]_ )
@@ -5122,7 +5122,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toFloatArray</span>() : <span style="font-weight: normal; font-style: italic;">float[]</span>
+#### <span style={{color: '#008000'}}>toFloatArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float[]</span>
 ##### Return
 
 ( _float[]_ )
@@ -5134,39 +5134,39 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toFormMap</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>toFormMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">toFormMap</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>toFormMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **key** | _string_ |   |
-| **data** | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
 
-#### <span style="color: #008000">toFormMap</span>(<span style="color: #FF8000">data</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{color: '#008000'}}>toFormMap</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../../objects/Values)_ |   |
+| **data** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -5175,7 +5175,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toIntArray</span>() : <span style="font-weight: normal; font-style: italic;">int[]</span>
+#### <span style={{color: '#008000'}}>toIntArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Return
 
 ( _int[]_ )
@@ -5187,7 +5187,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toJSON</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toJSON</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -5195,7 +5195,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toJSON</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5209,7 +5209,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toJSON</span>(<span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5224,7 +5224,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toJSON</span>(<span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5238,7 +5238,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5252,7 +5252,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5267,7 +5267,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5283,7 +5283,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toJSON</span>(<span style="color: #FF8000">values</span>: <span style="font-weight: normal; font-style: italic;">java.util.List</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5302,7 +5302,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toJSONObject</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>toJSONObject</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5321,7 +5321,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toJSONString</span>(<span style="color: #FF8000">object</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>, <span style="color: #FF8000">htmlEscape</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>, <span style="color: #FF8000">indentFactor</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toJSONString</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5341,7 +5341,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toList</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>toList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -5349,7 +5349,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toList</span>(<span style="color: #FF8000">cls</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Class</span>) : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>toList</span>(<span style={{color: '#FF8000'}}>cls</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5367,7 +5367,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toLongArray</span>() : <span style="font-weight: normal; font-style: italic;">long[]</span>
+#### <span style={{color: '#008000'}}>toLongArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long[]</span>
 ##### Return
 
 ( _long[]_ )
@@ -5379,10 +5379,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toMap</span>() : <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>toMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
 ##### Return
 
-( _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ )
+( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
 
 
 ---
@@ -5391,7 +5391,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toProperties</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>toProperties</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -5403,7 +5403,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toShortArray</span>() : <span style="font-weight: normal; font-style: italic;">short[]</span>
+#### <span style={{color: '#008000'}}>toShortArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short[]</span>
 ##### Return
 
 ( _short[]_ )
@@ -5415,7 +5415,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">toStringArray</span>() : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>
+#### <span style={{color: '#008000'}}>toStringArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>
 ##### Return
 
 ( _[Ljava.lang.String;[]_ )
@@ -5427,7 +5427,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">unset</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>
+#### <span style={{color: '#008000'}}>unset</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5445,7 +5445,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">unsetAll</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>unsetAll</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -5457,7 +5457,7 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style="color: #008000">values</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Collection</span>
+#### <span style={{color: '#008000'}}>values</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>
 ##### Description
 
 Gets all object values stored in both dictionary and list mode.
@@ -5474,7 +5474,7 @@ List of all obtained values.
 
 ---
 
-#### <span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5488,7 +5488,7 @@ List of all obtained values.
 
 ---
 
-#### <span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -5503,14 +5503,14 @@ List of all obtained values.
 
 ---
 
-#### <span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **splitter** | _string_ |   |
 | **excludes** | _[Ljava.lang.String;[]_ |   |
-| **config** | _[Values](../../objects/Values)_ |   |
+| **config** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -5519,13 +5519,13 @@ List of all obtained values.
 
 ---
 
-#### <span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **splitter** | _string_ |   |
-| **config** | _[Values](../../objects/Values)_ |   |
+| **config** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -5534,12 +5534,12 @@ List of all obtained values.
 
 ---
 
-#### <span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
 | **splitter** | _string_ |   |
 
 ##### Return
@@ -5549,31 +5549,14 @@ List of all obtained values.
 
 ---
 
-#### <span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
-| **splitter** | _string_ |   |
-| **excludes** | _[Ljava.lang.String;[]_ |   |
-
-##### Return
-
-( _string_ )
-
-
----
-
-#### <span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">excludes</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
 | **splitter** | _string_ |   |
 | **excludes** | _[Ljava.lang.String;[]_ |   |
-| **config** | _[Values](../../objects/Values)_ |   |
 
 ##### Return
 
@@ -5582,14 +5565,31 @@ List of all obtained values.
 
 ---
 
-#### <span style="color: #008000">valuesToString</span>(<span style="color: #FF8000">map</span>: <span style="font-weight: normal; font-style: italic;">[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)</span>, <span style="color: #FF8000">splitter</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../../resources/config) &#124; [Exec](../../resources/exec) &#124; [Header](../../resources/header) &#124; [Req](../../resources/req) &#124; [Res](../../resources/res) &#124; [Values](../../objects/Values) &#124; [DataSchema](../../objects/DataSchema)_ |   |
+| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
 | **splitter** | _string_ |   |
-| **config** | _[Values](../../objects/Values)_ |   |
+| **excludes** | _[Ljava.lang.String;[]_ |   |
+| **config** | _[Values](../objects/Values)_ |   |
+
+##### Return
+
+( _string_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **splitter** | _string_ |   |
+| **config** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 

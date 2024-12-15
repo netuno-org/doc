@@ -16,7 +16,7 @@ To analyze log messages of type TRACE, DEBUG or INFO, you need to change the lev
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">debug</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>debug</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **DEBUG** in the log file and in the terminal of Netuno.
@@ -34,7 +34,7 @@ Print a message of type **DEBUG** in the log file and in the terminal of Netuno.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">debug</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>debug</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **DEBUG** in the log file and in the terminal of Netuno.
@@ -57,7 +57,7 @@ Print a message of type **DEBUG** in the log file and in the terminal of Netuno.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">error</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>error</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **ERROR** in the log file and in the terminal of Netuno.
@@ -75,7 +75,7 @@ Print a message of type **ERROR** in the log file and in the terminal of Netuno.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">error</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>error</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **ERROR** in the log file and in the terminal of Netuno.
@@ -98,7 +98,7 @@ Print a message of type **ERROR** in the log file and in the terminal of Netuno.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">fatal</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>fatal</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **FATAL** in the log file and in the terminal of Netuno.
@@ -116,7 +116,7 @@ Print a message of type **FATAL** in the log file and in the terminal of Netuno.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">fatal</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>fatal</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **FATAL** in the log file and in the terminal of Netuno.
@@ -139,7 +139,7 @@ Print a message of type **FATAL** in the log file and in the terminal of Netuno.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">info</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>info</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **INFORMATION** in the log file and in the terminal of Netuno.
@@ -157,7 +157,7 @@ Print a message of type **INFORMATION** in the log file and in the terminal of N
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">info</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>info</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **INFORMATION** in the log file and in the terminal of Netuno.
@@ -180,7 +180,7 @@ Print a message of type **INFORMATION** in the log file and in the terminal of N
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">char[]</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -198,7 +198,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -216,7 +216,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -234,7 +234,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -252,7 +252,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -270,7 +270,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -288,7 +288,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -306,7 +306,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -324,7 +324,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">print</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a direct message without any context in the Netuno terminal.
@@ -346,7 +346,7 @@ Prints a direct message without any context in the Netuno terminal.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">char[]</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -364,7 +364,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -382,7 +382,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">char</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -400,7 +400,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">double</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -418,7 +418,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">float</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -436,7 +436,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -454,7 +454,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -472,7 +472,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -490,7 +490,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">println</span>(<span style="color: #FF8000">content</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Prints a line with the direct message without any context in the Netuno terminal.
@@ -512,7 +512,7 @@ Prints a line with the direct message without any context in the Netuno terminal
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">trace</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>trace</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **TRACE** in the log file and in the terminal of Netuno.
@@ -530,7 +530,7 @@ Print a message of type **TRACE** in the log file and in the terminal of Netuno.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">trace</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>trace</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **TRACE** in the log file and in the terminal of Netuno.
@@ -553,7 +553,7 @@ Print a message of type **TRACE** in the log file and in the terminal of Netuno.
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">warn</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>warn</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **WARNING** in the log file and in the terminal of Netuno.
@@ -571,7 +571,7 @@ Print a message of type **WARNING** in the log file and in the terminal of Netun
 
 ---
 
-#### <span style="font-weight: normal">_log</span>.<span style="color: #008000">warn</span>(<span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">throwable</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_log</span>.<span style={{color: '#008000'}}>warn</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>throwable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Print a message of type **WARNING** in the log file and in the terminal of Netuno.

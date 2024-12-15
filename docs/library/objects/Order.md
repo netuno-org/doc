@@ -12,7 +12,7 @@ Definição do objeto Order para ordenação de resultados usando o Query.
 
 ---
 
-#### <span style="color: #008000">getColumn</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getColumn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the column that will be used in sorting.
@@ -29,7 +29,7 @@ The name of the column.
 
 ---
 
-#### <span style="color: #008000">getOrder</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getOrder</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the sorting direction.
@@ -46,7 +46,7 @@ The sorting direction.
 
 ---
 
-#### <span style="color: #008000">setColumn</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Order](../../objects/Order)</span>
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](../objects/Order)</span>
 ##### Description
 
 Defines the column that will be used in sorting.
@@ -59,7 +59,7 @@ Defines the column that will be used in sorting.
 
 ##### Return
 
-( _[Order](../../objects/Order)_ )
+( _[Order](../objects/Order)_ )
 
 Current Order object.
 
@@ -69,7 +69,7 @@ Current Order object.
 
 ---
 
-#### <span style="color: #008000">setOrder</span>(<span style="color: #FF8000">order</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Order](../../objects/Order)</span>
+#### <span style={{color: '#008000'}}>setOrder</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](../objects/Order)</span>
 ##### Description
 
 Defines the sorting direction.
@@ -82,7 +82,7 @@ Defines the sorting direction.
 
 ##### Return
 
-( _[Order](../../objects/Order)_ )
+( _[Order](../objects/Order)_ )
 
 Current Order object.
 

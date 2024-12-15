@@ -19,11 +19,12 @@ Before you start developing, take a look at the available commands.
 ```shell
 ./netuno version
 ```
-<br>
 
 ## Install
-Before starting developing you need to install Netuno 
-<br>To help you install Netuno go to [Installation ](https://doc.netuno.org/docs/en/installation/)
+
+Before starting developing you need to install Netuno. 
+
+To help you install Netuno go to [Installation ](https://doc.netuno.org/docs/en/installation/)
 
 #### Details 
 
@@ -79,8 +80,6 @@ Before starting developing you need to install Netuno
 ./netuno install yes 
 ```
 
-<br>
-
 ## Server
 
 Start the Netuno server to start developing your applications.
@@ -89,7 +88,8 @@ Start the Netuno server to start developing your applications.
 ./netuno server
 ```
 
-> The default port is 9000. <br>
+> The default port is 9000.
+> 
 > After starting up the server you only need to access through the link : http://localhost:9000/
 
 #### Details
@@ -152,8 +152,6 @@ By default, the Netuno directory is set to the webapp name, the webapp folder is
 ./netuno server web=webapp
 ```
 
-<br>
-
 ## License
 
 To start developing you just need to register.
@@ -190,8 +188,6 @@ To start developing you just need to register.
 ./netuno license mail='your_email@gmail.com' type='community'
 ```
 
-<br>
-
 ## Application
 
 Create your applications easily.
@@ -223,18 +219,20 @@ By default,Netuno has a demo application that starts when the Netuno server is s
 ./netuno app database=employee
 ```
 
-> The database name may contain number and letters, if the name has more than one word it should be separated as follows. <br>
- Ex: employee_db
+> The database name may contain number and letters, if the name has more than one word it should be separated as follows.
+>
+> Ex: employee_db
 
 #### Example of how to pre-define the database type
 
 ```shell
 ./netuno app engine=pg
 ```
-> These are the accepted database types: <br>PostgreSQL - pg <br>
- MariaDB - mariadb <br>
- Microsoft SQL Server - mssql <br>
- H2 Database - h2 <br>
+> These are the accepted database types: 
+> PostgreSQL - pg
+> MariaDB - mariadb
+> Microsoft SQL Server - mssql
+> H2 Database - h2
 
 #### Example of how to pre-define the database server address
 
@@ -247,11 +245,11 @@ By default,Netuno has a demo application that starts when the Netuno server is s
 ```shell
 ./netuno app language=en_US locale=en_US
 ```
->The following languages exist: <br>
- Portuguese - pt_PT<br>
- Brazilian - en_BR <br>
- English - en_US <br>
- Spanish - es_ES <br>
+> The following languages exist:
+> Portuguese - pt_PT
+> Brazilian - en_BR
+> English - en_US
+> Spanish - es_ES
 
 
 #### Example of how to create an application or rebuild an existing application

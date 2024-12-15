@@ -53,7 +53,7 @@ Below are indications of how the configuration should be performed.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">checkExists</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>checkExists</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks if the scheduled service key exists.
@@ -85,7 +85,7 @@ Whether the scheduled service was found.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">config</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Configures periodic scheduling by importing the configuration file.
@@ -101,7 +101,7 @@ Configures periodic scheduling by importing the configuration file.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">delete</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Removes a service execution schedule.
@@ -131,7 +131,7 @@ Whether it was possible to delete the scheduled service.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">interrupt</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>interrupt</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Interrupts a service execution schedule.
@@ -161,7 +161,7 @@ Whether it was possible to stop the scheduled service.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">pause</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>pause</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Changes the execution state to **pause**, in this state the associated service is not executed.
@@ -191,7 +191,7 @@ Whether it was possible to pause the scheduled service.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">remove</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>remove</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Removes a service execution schedule.
@@ -221,7 +221,7 @@ Whether it was possible to delete the scheduled service.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">resume</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>resume</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Changes the execution state to **resume**, after a schedule is in the _pause_ state, it can be reactivated via _resume_.
@@ -251,7 +251,7 @@ Whether it was possible to continue the scheduled service.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/cron)</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedule</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Cron](../resources/cron)</span>
 ##### Description
 
 Creates a service execution schedule.
@@ -276,13 +276,13 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 
 ##### Return
 
-( _[Cron](../../resources/cron)_ )
+( _[Cron](../resources/cron)_ )
 
 The current Cron instance.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedule</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">config</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">params</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[Cron](../../resources/cron)</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedule</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Cron](../resources/cron)</span>
 ##### Description
 
 Creates a service execution schedule.
@@ -304,11 +304,11 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 | **key** | _string_ | Job ID key name. |
 | **config** | _string_ | Cron Scheduling Time Expression, see table above. |
 | **url** | _string_ | URL to be run by the job. |
-| **params** | _[Values](../../objects/Values)_ | Data to pass as a parameter to service. |
+| **params** | _[Values](../objects/Values)_ | Data to pass as a parameter to service. |
 
 ##### Return
 
-( _[Cron](../../resources/cron)_ )
+( _[Cron](../resources/cron)_ )
 
 The current Cron instance.
 
@@ -318,14 +318,14 @@ The current Cron instance.
 
 ---
 
-#### <span style="font-weight: normal">_cron</span>.<span style="color: #008000">schedules</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedules</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 List of all application service schedules.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 The list of all scheduled services of the application that are configured in Cron.
 

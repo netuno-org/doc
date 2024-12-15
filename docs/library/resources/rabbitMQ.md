@@ -13,16 +13,16 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">basicConsume</span>(<span style="color: #FF8000">settings</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/rabbitMQ)</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>basicConsume</span>(<span style={{color: '#FF8000'}}>settings</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RabbitMQ](../resources/rabbitMQ)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **settings** | _[Values](../../objects/Values)_ |   |
+| **settings** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
-( _[RabbitMQ](../../resources/rabbitMQ)_ )
+( _[RabbitMQ](../resources/rabbitMQ)_ )
 
 
 ---
@@ -31,7 +31,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">channel</span>() : <span style="font-weight: normal; font-style: italic;">com.rabbitmq.client.Channel</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>channel</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.rabbitmq.client.Channel</span>
 ##### Return
 
 ( _com.rabbitmq.client.Channel_ )
@@ -43,7 +43,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">connection</span>() : <span style="font-weight: normal; font-style: italic;">com.rabbitmq.client.Connection</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>connection</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.rabbitmq.client.Connection</span>
 ##### Return
 
 ( _com.rabbitmq.client.Connection_ )
@@ -55,7 +55,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">connectionFactory</span>() : <span style="font-weight: normal; font-style: italic;">com.rabbitmq.client.ConnectionFactory</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>connectionFactory</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.rabbitmq.client.ConnectionFactory</span>
 ##### Return
 
 ( _com.rabbitmq.client.ConnectionFactory_ )
@@ -67,7 +67,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">serverName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/rabbitMQ)</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>serverName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RabbitMQ](../resources/rabbitMQ)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -76,12 +76,12 @@ Permite enviar e receber mensagens.
 
 ##### Return
 
-( _[RabbitMQ](../../resources/rabbitMQ)_ )
+( _[RabbitMQ](../resources/rabbitMQ)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">serverName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">connectionName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/rabbitMQ)</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>serverName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>connectionName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RabbitMQ](../resources/rabbitMQ)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -91,12 +91,12 @@ Permite enviar e receber mensagens.
 
 ##### Return
 
-( _[RabbitMQ](../../resources/rabbitMQ)_ )
+( _[RabbitMQ](../resources/rabbitMQ)_ )
 
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">serverName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">connectionName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">channelName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/rabbitMQ)</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>serverName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>connectionName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>channelName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RabbitMQ](../resources/rabbitMQ)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -107,7 +107,7 @@ Permite enviar e receber mensagens.
 
 ##### Return
 
-( _[RabbitMQ](../../resources/rabbitMQ)_ )
+( _[RabbitMQ](../resources/rabbitMQ)_ )
 
 
 ---
@@ -116,16 +116,16 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">rpcConsume</span>(<span style="color: #FF8000">settings</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">[RabbitMQ](../../resources/rabbitMQ)</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>rpcConsume</span>(<span style={{color: '#FF8000'}}>settings</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RabbitMQ](../resources/rabbitMQ)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **settings** | _[Values](../../objects/Values)_ |   |
+| **settings** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
-( _[RabbitMQ](../../resources/rabbitMQ)_ )
+( _[RabbitMQ](../resources/rabbitMQ)_ )
 
 
 ---
@@ -134,7 +134,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">rpcPublish</span>(<span style="color: #FF8000">queueName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>rpcPublish</span>(<span style={{color: '#FF8000'}}>queueName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -149,7 +149,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">rpcPublish</span>(<span style="color: #FF8000">queueName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>rpcPublish</span>(<span style={{color: '#FF8000'}}>queueName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -165,13 +165,13 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">rpcPublish</span>(<span style="color: #FF8000">queueName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>rpcPublish</span>(<span style={{color: '#FF8000'}}>queueName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **queueName** | _string_ |   |
-| **message** | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../objects/Values)_ |   |
 
 ##### Return
 
@@ -180,13 +180,13 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">rpcPublish</span>(<span style="color: #FF8000">queueName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">message</span>: <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>rpcPublish</span>(<span style={{color: '#FF8000'}}>queueName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **queueName** | _string_ |   |
-| **message** | _[Values](../../objects/Values)_ |   |
+| **message** | _[Values](../objects/Values)_ |   |
 | **charset** | _string_ |   |
 
 ##### Return
@@ -200,7 +200,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">serverConfig</span>(<span style="color: #FF8000">server</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>serverConfig</span>(<span style={{color: '#FF8000'}}>server</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -209,7 +209,7 @@ Permite enviar e receber mensagens.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---
@@ -218,7 +218,7 @@ Permite enviar e receber mensagens.
 
 ---
 
-#### <span style="font-weight: normal">_rabbitMQ</span>.<span style="color: #008000">serversConfig</span>(<span style="color: #FF8000">server</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_rabbitMQ</span>.<span style={{color: '#008000'}}>serversConfig</span>(<span style={{color: '#FF8000'}}>server</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -227,7 +227,7 @@ Permite enviar e receber mensagens.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 
 ---

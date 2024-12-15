@@ -12,7 +12,7 @@ Definição do objeto Field para declarar a coluna retornada em uma consulta com
 
 ---
 
-#### <span style="color: #008000">getAlias</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getAlias</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the alias of the column that will be returned in the query.
@@ -29,7 +29,7 @@ The alias of the column.
 
 ---
 
-#### <span style="color: #008000">getColumn</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getColumn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the column that will be returned in the query.
@@ -46,7 +46,7 @@ The name of the column.
 
 ---
 
-#### <span style="color: #008000">setAlias</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Field](../../objects/Field)</span>
+#### <span style={{color: '#008000'}}>setAlias</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Field](../objects/Field)</span>
 ##### Description
 
 Defines the alias of the column that will be returned in the query.
@@ -59,7 +59,7 @@ Defines the alias of the column that will be returned in the query.
 
 ##### Return
 
-( _[Field](../../objects/Field)_ )
+( _[Field](../objects/Field)_ )
 
 Current Field object.
 
@@ -69,7 +69,7 @@ Current Field object.
 
 ---
 
-#### <span style="color: #008000">setColumn</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Field](../../objects/Field)</span>
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Field](../objects/Field)</span>
 ##### Description
 
 Defines the name of the column that will be returned in the query.
@@ -82,7 +82,7 @@ Defines the name of the column that will be returned in the query.
 
 ##### Return
 
-( _[Field](../../objects/Field)_ )
+( _[Field](../objects/Field)_ )
 
 Current Field object.
 

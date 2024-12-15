@@ -1,0 +1,8 @@
+{
+  "label": "Service",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Resources tutorials used in services."
+  }
+}

@@ -12,7 +12,7 @@ Recurso de atribuição de linguagem.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">code</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>code</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns all the locale.
@@ -28,7 +28,7 @@ Returns all the locale.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Searchs for a key.
@@ -47,7 +47,7 @@ Returns the match key.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">get</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">formats</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Object;[]</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>formats</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -66,7 +66,7 @@ Returns the match key.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getCode</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>getCode</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns all the locale.
@@ -82,7 +82,7 @@ Returns all the locale.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getLocale</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Locale</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>getLocale</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Locale</span>
 ##### Description
 
 Returns the of the locale.
@@ -98,7 +98,7 @@ Returns the of the locale.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>getName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the of the locale.
@@ -114,7 +114,7 @@ Returns the of the locale.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">getOrDefault</span>(<span style="color: #FF8000">key</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">text</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>getOrDefault</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Sets the default locale key with a inserted text.
@@ -138,20 +138,20 @@ Returns the key and the text inserted.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>() : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/lang)</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lang](../resources/lang)</span>
 ##### Description
 
 Initiates the Lang resource.
 
 ##### Return
 
-( _[Lang](../../resources/lang)_ )
+( _[Lang](../resources/lang)_ )
 
 Returns the default lang.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">localeName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/lang)</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>localeName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lang](../resources/lang)</span>
 ##### Description
 
 Sets the default locale key with a inserted text.
@@ -164,13 +164,13 @@ Sets the default locale key with a inserted text.
 
 ##### Return
 
-( _[Lang](../../resources/lang)_ )
+( _[Lang](../resources/lang)_ )
 
 Returns the key and the text inserted.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">init</span>(<span style="color: #FF8000">localeName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">asDefault</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">[Lang](../../resources/lang)</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>localeName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>asDefault</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lang](../resources/lang)</span>
 ##### Description
 
 Sets the default locale key with a inserted text.
@@ -184,7 +184,7 @@ Sets the default locale key with a inserted text.
 
 ##### Return
 
-( _[Lang](../../resources/lang)_ )
+( _[Lang](../resources/lang)_ )
 
 Returns the key and the text inserted.
 
@@ -194,7 +194,7 @@ Returns the key and the text inserted.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">locale</span>() : <span style="font-weight: normal; font-style: italic;">java.util.Locale</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>locale</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Locale</span>
 ##### Description
 
 Returns the of the locale.
@@ -210,7 +210,7 @@ Returns the of the locale.
 
 ---
 
-#### <span style="font-weight: normal">_lang</span>.<span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>name</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the of the locale.

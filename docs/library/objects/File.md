@@ -12,7 +12,7 @@ O objeto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### <span style="color: #008000">available</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>available</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Returns the number of estimated bytes left to read a file
@@ -28,7 +28,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">baseName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>baseName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -40,7 +40,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">bufferedReader</span>() : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
+#### <span style={{color: '#008000'}}>bufferedReader</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.BufferedReader</span>
 ##### Return
 
 ( _java.io.BufferedReader_ )
@@ -48,7 +48,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">bufferedReader</span>(<span style="color: #FF8000">bufferSize</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
+#### <span style={{color: '#008000'}}>bufferedReader</span>(<span style={{color: '#FF8000'}}>bufferSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.BufferedReader</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -62,7 +62,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">bufferedReader</span>(<span style="color: #FF8000">bufferSize</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
+#### <span style={{color: '#008000'}}>bufferedReader</span>(<span style={{color: '#FF8000'}}>bufferSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.BufferedReader</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -77,7 +77,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">bufferedReader</span>(<span style="color: #FF8000">bufferSize</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">java.nio.charset.Charset</span>) : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
+#### <span style={{color: '#008000'}}>bufferedReader</span>(<span style={{color: '#FF8000'}}>bufferSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.BufferedReader</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -92,7 +92,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">bufferedReader</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
+#### <span style={{color: '#008000'}}>bufferedReader</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.BufferedReader</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -106,7 +106,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">bufferedReader</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">java.nio.charset.Charset</span>) : <span style="font-weight: normal; font-style: italic;">java.io.BufferedReader</span>
+#### <span style={{color: '#008000'}}>bufferedReader</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.BufferedReader</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -124,7 +124,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">bytes</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{color: '#008000'}}>bytes</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Returns the number of estimated bytes left to read a file
@@ -140,7 +140,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">contentType</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>contentType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -148,7 +148,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">contentType</span>(<span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{color: '#008000'}}>contentType</span>(<span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -157,7 +157,7 @@ Returns the number of estimated bytes left to read a file
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 
 ---
@@ -166,7 +166,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">copy</span>(<span style="color: #FF8000">destPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>destPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Copies the file to the inserted path
@@ -184,7 +184,7 @@ Copies the file to the inserted path
 
 ---
 
-#### <span style="color: #008000">copy</span>(<span style="color: #FF8000">destPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">override</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>destPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>override</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Copies the file of the inserted path with override option if exists a file
@@ -207,7 +207,7 @@ Copies the file of the inserted path with override option if exists a file
 
 ---
 
-#### <span style="color: #008000">copyFiles</span>(<span style="color: #FF8000">destPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">extension</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>copyFiles</span>(<span style={{color: '#FF8000'}}>destPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>extension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Copies the files by the inserted extension to the inserted path.
@@ -230,7 +230,7 @@ Copies the files by the inserted extension to the inserted path.
 
 ---
 
-#### <span style="color: #008000">delete</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>delete</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Deletes the file of the inserted file
@@ -246,7 +246,7 @@ Deletes the file of the inserted file
 
 ---
 
-#### <span style="color: #008000">deleteAll</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>deleteAll</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Deletes a file/directory and recursive all the subs
@@ -258,7 +258,7 @@ Deletes a file/directory and recursive all the subs
 
 ---
 
-#### <span style="color: #008000">deleteAll</span>(<span style="color: #FF8000">extension</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>deleteAll</span>(<span style={{color: '#FF8000'}}>extension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Deletes a file/directory by the file extension
@@ -280,7 +280,7 @@ Deletes a file/directory by the file extension
 
 ---
 
-#### <span style="color: #008000">deleteFiles</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>deleteFiles</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Deletes a file/directory and recursive all the subs
@@ -292,7 +292,7 @@ Deletes a file/directory and recursive all the subs
 
 ---
 
-#### <span style="color: #008000">deleteFiles</span>(<span style="color: #FF8000">stringExtension</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>deleteFiles</span>(<span style={{color: '#FF8000'}}>stringExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Deletes a file of a inserted extension and recursive all the subs
@@ -314,7 +314,7 @@ Deletes a file of a inserted extension and recursive all the subs
 
 ---
 
-#### <span style="color: #008000">ensureJail</span>(<span style="color: #FF8000">jailPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{color: '#008000'}}>ensureJail</span>(<span style={{color: '#FF8000'}}>jailPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -323,7 +323,7 @@ Deletes a file of a inserted extension and recursive all the subs
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 
 ---
@@ -332,7 +332,7 @@ Deletes a file of a inserted extension and recursive all the subs
 
 ---
 
-#### <span style="color: #008000">exists</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>exists</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns a boolean result that verify if the inserted path exists
@@ -348,7 +348,7 @@ Returns a boolean result that verify if the inserted path exists
 
 ---
 
-#### <span style="color: #008000">extension</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>extension</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -360,7 +360,7 @@ Returns a boolean result that verify if the inserted path exists
 
 ---
 
-#### <span style="color: #008000">fullPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>fullPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Allows to get the complete path of the file.
@@ -376,7 +376,7 @@ Allows to get the complete path of the file.
 
 ---
 
-#### <span style="color: #008000">getBaseName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getBaseName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the base name of the present file
@@ -392,7 +392,7 @@ Returns the base name of the present file
 
 ---
 
-#### <span style="color: #008000">getBytes</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{color: '#008000'}}>getBytes</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Description
 
 Returns the number of estimated bytes left to read a file
@@ -408,7 +408,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">getContentType</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getContentType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -420,7 +420,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">getExtension</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getExtension</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -432,7 +432,7 @@ Returns the number of estimated bytes left to read a file
 
 ---
 
-#### <span style="color: #008000">getFullPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getFullPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the full path until the present file
@@ -448,10 +448,10 @@ Returns the full path until the present file
 
 ---
 
-#### <span style="color: #008000">getInput</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>getInput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
 ##### Return
 
-( _[InputStream](../../objects/InputStream)_ )
+( _[InputStream](../objects/InputStream)_ )
 
 
 ---
@@ -460,14 +460,14 @@ Returns the full path until the present file
 
 ---
 
-#### <span style="color: #008000">getInputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>getInputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
 ##### Description
 
 Returns the number of estimated bytes
 
 ##### Return
 
-( _[InputStream](../../objects/InputStream)_ )
+( _[InputStream](../objects/InputStream)_ )
 
 
 ---
@@ -476,7 +476,7 @@ Returns the number of estimated bytes
 
 ---
 
-#### <span style="color: #008000">getName</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of a file
@@ -488,7 +488,7 @@ Returns the name of a file
 
 ---
 
-#### <span style="color: #008000">getName</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getName</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of a file in the inserted path
@@ -510,10 +510,10 @@ Returns the name of a file in the inserted path
 
 ---
 
-#### <span style="color: #008000">getOutput</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>getOutput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
 ##### Return
 
-( _[OutputStream](../../objects/OutputStream)_ )
+( _[OutputStream](../objects/OutputStream)_ )
 
 
 ---
@@ -522,10 +522,10 @@ Returns the name of a file in the inserted path
 
 ---
 
-#### <span style="color: #008000">getOutputStream</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>getOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
 ##### Return
 
-( _[OutputStream](../../objects/OutputStream)_ )
+( _[OutputStream](../objects/OutputStream)_ )
 
 
 ---
@@ -534,7 +534,7 @@ Returns the name of a file in the inserted path
 
 ---
 
-#### <span style="color: #008000">getPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the path
@@ -550,7 +550,7 @@ Returns the path
 
 ---
 
-#### <span style="color: #008000">getPhysicalPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getPhysicalPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -562,7 +562,7 @@ Returns the path
 
 ---
 
-#### <span style="color: #008000">getSequenceName</span>(<span style="color: #FF8000">targetPath</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getSequenceName</span>(<span style={{color: '#FF8000'}}>targetPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the inserted file with a sequence number if the file already exists with the original name
@@ -581,7 +581,7 @@ Returns the name of the inserted file with a sequence number if the file already
 
 ---
 
-#### <span style="color: #008000">getSequenceName</span>(<span style="color: #FF8000">targetPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getSequenceName</span>(<span style={{color: '#FF8000'}}>targetPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the inserted file with a sequence number if the file already exists with the original name
@@ -604,10 +604,10 @@ Returns the name of the inserted file with a sequence number if the file already
 
 ---
 
-#### <span style="color: #008000">input</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>input</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
 ##### Return
 
-( _[InputStream](../../objects/InputStream)_ )
+( _[InputStream](../objects/InputStream)_ )
 
 
 ---
@@ -616,10 +616,10 @@ Returns the name of the inserted file with a sequence number if the file already
 
 ---
 
-#### <span style="color: #008000">inputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>inputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
 ##### Return
 
-( _[InputStream](../../objects/InputStream)_ )
+( _[InputStream](../objects/InputStream)_ )
 
 
 ---
@@ -628,7 +628,7 @@ Returns the name of the inserted file with a sequence number if the file already
 
 ---
 
-#### <span style="color: #008000">isBaseName</span>(<span style="color: #FF8000">baseName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isBaseName</span>(<span style={{color: '#FF8000'}}>baseName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -646,7 +646,7 @@ Returns the name of the inserted file with a sequence number if the file already
 
 ---
 
-#### <span style="color: #008000">isDirectory</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isDirectory</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns a boolean result that verify if the inserted path is a directory
@@ -662,7 +662,7 @@ Returns a boolean result that verify if the inserted path is a directory
 
 ---
 
-#### <span style="color: #008000">isExtension</span>(<span style="color: #FF8000">extension</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isExtension</span>(<span style={{color: '#FF8000'}}>extension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -680,7 +680,7 @@ Returns a boolean result that verify if the inserted path is a directory
 
 ---
 
-#### <span style="color: #008000">isFile</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns a boolean result that verify if the inserted path is a file
@@ -696,7 +696,7 @@ Returns a boolean result that verify if the inserted path is a file
 
 ---
 
-#### <span style="color: #008000">isJail</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isJail</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Does a authentication if the file has his location limited to another folder
@@ -712,7 +712,7 @@ Does a authentication if the file has his location limited to another folder
 
 ---
 
-#### <span style="color: #008000">lastModified</span>() : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>lastModified</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Description
 
 Returns the hour that the file of the inserted path was last modified
@@ -728,7 +728,7 @@ Returns the hour that the file of the inserted path was last modified
 
 ---
 
-#### <span style="color: #008000">list</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Description
 
 Returns a list of all the files and directories on the inserted path
@@ -744,7 +744,7 @@ Returns a list of all the files and directories on the inserted path
 
 ---
 
-#### <span style="color: #008000">mkdir</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>mkdir</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Creates a directory in the present path.
@@ -760,7 +760,7 @@ Creates a directory in the present path.
 
 ---
 
-#### <span style="color: #008000">mkdirs</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>mkdirs</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -772,7 +772,7 @@ Creates a directory in the present path.
 
 ---
 
-#### <span style="color: #008000">name</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>name</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of a file
@@ -788,10 +788,10 @@ Returns the name of a file
 
 ---
 
-#### <span style="color: #008000">output</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>output</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
 ##### Return
 
-( _[OutputStream](../../objects/OutputStream)_ )
+( _[OutputStream](../objects/OutputStream)_ )
 
 
 ---
@@ -800,10 +800,10 @@ Returns the name of a file
 
 ---
 
-#### <span style="color: #008000">outputStream</span>() : <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>outputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
 ##### Return
 
-( _[OutputStream](../../objects/OutputStream)_ )
+( _[OutputStream](../objects/OutputStream)_ )
 
 
 ---
@@ -812,7 +812,7 @@ Returns the name of a file
 
 ---
 
-#### <span style="color: #008000">path</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>path</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the path of the file/directory
@@ -829,7 +829,7 @@ Returns a boolean verification of the existence of the file and tracks it folder
 
 ---
 
-#### <span style="color: #008000">physicalPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>physicalPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Allows to get the path of the file.
@@ -845,7 +845,7 @@ Allows to get the path of the file.
 
 ---
 
-#### <span style="color: #008000">reader</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
+#### <span style={{color: '#008000'}}>reader</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.Reader</span>
 ##### Return
 
 ( _java.io.Reader_ )
@@ -857,7 +857,7 @@ Allows to get the path of the file.
 
 ---
 
-#### <span style="color: #008000">readerBOM</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
+#### <span style={{color: '#008000'}}>readerBOM</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.Reader</span>
 ##### Return
 
 ( _java.io.Reader_ )
@@ -865,7 +865,7 @@ Allows to get the path of the file.
 
 ---
 
-#### <span style="color: #008000">readerBOM</span>(<span style="color: #FF8000">charsetName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>
+#### <span style={{color: '#008000'}}>readerBOM</span>(<span style={{color: '#FF8000'}}>charsetName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.Reader</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -883,7 +883,7 @@ Allows to get the path of the file.
 
 ---
 
-#### <span style="color: #008000">rename</span>(<span style="color: #FF8000">newName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>rename</span>(<span style={{color: '#FF8000'}}>newName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Renames a file with the new name inserted
@@ -905,7 +905,7 @@ Renames a file with the new name inserted
 
 ---
 
-#### <span style="color: #008000">renameTo</span>(<span style="color: #FF8000">destPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>renameTo</span>(<span style={{color: '#FF8000'}}>destPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Renames the file of the inserted file
@@ -927,7 +927,7 @@ Renames the file of the inserted file
 
 ---
 
-#### <span style="color: #008000">save</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Object</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Saves the file in the inserted path
@@ -945,7 +945,7 @@ Saves the file in the inserted path
 
 ---
 
-#### <span style="color: #008000">save</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Saves the file in the inserted path
@@ -967,7 +967,7 @@ Saves the file in the inserted path
 
 ---
 
-#### <span style="color: #008000">sequenceName</span>(<span style="color: #FF8000">targetPath</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>sequenceName</span>(<span style={{color: '#FF8000'}}>targetPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -982,7 +982,7 @@ Saves the file in the inserted path
 
 ---
 
-#### <span style="color: #008000">sequenceName</span>(<span style="color: #FF8000">targetPath</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">fileName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>sequenceName</span>(<span style={{color: '#FF8000'}}>targetPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1001,7 +1001,7 @@ Saves the file in the inserted path
 
 ---
 
-#### <span style="color: #008000">setContentType</span>(<span style="color: #FF8000">contentType</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[File](../../objects/File)</span>
+#### <span style={{color: '#008000'}}>setContentType</span>(<span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1010,7 +1010,7 @@ Saves the file in the inserted path
 
 ##### Return
 
-( _[File](../../objects/File)_ )
+( _[File](../objects/File)_ )
 
 
 ---
@@ -1019,7 +1019,7 @@ Saves the file in the inserted path
 
 ---
 
-#### <span style="color: #008000">writer</span>() : <span style="font-weight: normal; font-style: italic;">java.io.Writer</span>
+#### <span style={{color: '#008000'}}>writer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.Writer</span>
 ##### Return
 
 ( _java.io.Writer_ )

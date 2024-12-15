@@ -12,7 +12,7 @@ Definição da configuração do objeto Condition para construção de condiçõ
 
 ---
 
-#### <span style="color: #008000">getColumn</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getColumn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the column to which the condition will be applied.
@@ -29,7 +29,7 @@ The name of the column to which the condition will be applied.
 
 ---
 
-#### <span style="color: #008000">getOperator</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.ConditionOperator</span>
+#### <span style={{color: '#008000'}}>getOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.where.ConditionOperator</span>
 ##### Description
 
 Returns the condition condition operator.
@@ -46,14 +46,14 @@ The condition condition operator.
 
 ---
 
-#### <span style="color: #008000">getRelationOperator</span>() : <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>
+#### <span style={{color: '#008000'}}>getRelationOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationOperator](../objects/RelationOperator)</span>
 ##### Description
 
 Returns the relationship settings.
 
 ##### Return
 
-( _[RelationOperator](../../objects/RelationOperator)_ )
+( _[RelationOperator](../objects/RelationOperator)_ )
 
 The relationship settings.
 
@@ -63,14 +63,14 @@ The relationship settings.
 
 ---
 
-#### <span style="color: #008000">getSubCondition</span>() : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>getSubCondition</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Returns the next level of conditions within the current condition.
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 The next level of conditions within the current condition.
 
@@ -80,7 +80,7 @@ The next level of conditions within the current condition.
 
 ---
 
-#### <span style="color: #008000">hasSubCondition</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>hasSubCondition</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether the current object has subconditions or not.
@@ -97,7 +97,7 @@ Whether you have it or not.
 
 ---
 
-#### <span style="color: #008000">setColumn</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
 ##### Description
 
 Defines the name of the column to which the condition will be applied.
@@ -110,7 +110,7 @@ Defines the name of the column to which the condition will be applied.
 
 ##### Return
 
-( _[Condition](../../objects/Condition)_ )
+( _[Condition](../objects/Condition)_ )
 
 Current Condition object.
 
@@ -120,7 +120,7 @@ Current Condition object.
 
 ---
 
-#### <span style="color: #008000">setOperator</span>(<span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.where.ConditionOperator</span>) : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setOperator</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.where.ConditionOperator</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
 ##### Description
 
 Defines the condition condition operator.
@@ -133,7 +133,7 @@ Defines the condition condition operator.
 
 ##### Return
 
-( _[Condition](../../objects/Condition)_ )
+( _[Condition](../objects/Condition)_ )
 
 Current Condition object.
 
@@ -143,7 +143,7 @@ Current Condition object.
 
 ---
 
-#### <span style="color: #008000">setRelationOperator</span>(<span style="color: #FF8000">relationOperator</span>: <span style="font-weight: normal; font-style: italic;">[RelationOperator](../../objects/RelationOperator)</span>) : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setRelationOperator</span>(<span style={{color: '#FF8000'}}>relationOperator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationOperator](../objects/RelationOperator)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
 ##### Description
 
 Defines the relationship settings.
@@ -152,11 +152,11 @@ Defines the relationship settings.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relationOperator** | _[RelationOperator](../../objects/RelationOperator)_ | The relationship settings. |
+| **relationOperator** | _[RelationOperator](../objects/RelationOperator)_ | The relationship settings. |
 
 ##### Return
 
-( _[Condition](../../objects/Condition)_ )
+( _[Condition](../objects/Condition)_ )
 
 Current Condition object.
 
@@ -166,7 +166,7 @@ Current Condition object.
 
 ---
 
-#### <span style="color: #008000">setSubCondition</span>(<span style="color: #FF8000">subcondition</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">[Condition](../../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setSubCondition</span>(<span style={{color: '#FF8000'}}>subcondition</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
 ##### Description
 
 Defines the next level of conditions within the current condition.
@@ -175,11 +175,11 @@ Defines the next level of conditions within the current condition.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **subcondition** | _[Where](../../objects/Where)_ | The next level of conditions within the current condition. |
+| **subcondition** | _[Where](../objects/Where)_ | The next level of conditions within the current condition. |
 
 ##### Return
 
-( _[Condition](../../objects/Condition)_ )
+( _[Condition](../objects/Condition)_ )
 
 Current Condition object.
 

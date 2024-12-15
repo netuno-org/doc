@@ -12,7 +12,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">available</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>available</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -24,7 +24,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">close</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>close</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -36,7 +36,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">mark</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>mark</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -54,7 +54,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">markSupported</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>markSupported</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -66,10 +66,10 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">nullInputStream</span>() : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>nullInputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
 ##### Return
 
-( _[InputStream](../../objects/InputStream)_ )
+( _[InputStream](../objects/InputStream)_ )
 
 
 ---
@@ -78,7 +78,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">read</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>read</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Return
 
 ( _int_ )
@@ -86,7 +86,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">read</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -100,14 +100,14 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">read</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arg2</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>read</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>, <span style={{color: '#FF8000'}}>off</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **arg0** | _byte[]_ |   |
-| **arg1** | _int_ |   |
-| **arg2** | _int_ |   |
+| **bytes** | _byte[]_ |   |
+| **off** | _int_ |   |
+| **length** | _int_ |   |
 
 ##### Return
 
@@ -120,7 +120,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAll</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readAll</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -128,12 +128,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAll</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../../objects/InputStream)_ |   |
+| **in** | _[InputStream](../objects/InputStream)_ |   |
 
 ##### Return
 
@@ -142,12 +142,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAll</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../../objects/InputStream)_ |   |
+| **in** | _[InputStream](../objects/InputStream)_ |   |
 | **charset** | _string_ |   |
 
 ##### Return
@@ -157,7 +157,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAll</span>(<span style="color: #FF8000">r</span>: <span style="font-weight: normal; font-style: italic;">java.io.Reader</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>r</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.Reader</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -175,7 +175,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAllAndClose</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readAllAndClose</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -187,7 +187,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAllBytes</span>() : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{color: '#008000'}}>readAllBytes</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Return
 
 ( _byte[]_ )
@@ -195,13 +195,25 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAllBytes</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{color: '#008000'}}>readAllBytes</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../../objects/InputStream)_ |   |
+| **in** | _[InputStream](../objects/InputStream)_ |   |
 
+##### Return
+
+( _byte[]_ )
+
+
+---
+
+## readAllBytesAndClose
+
+---
+
+#### <span style={{color: '#008000'}}>readAllBytesAndClose</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Return
 
 ( _byte[]_ )
@@ -213,7 +225,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAllBytesFromFile</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{color: '#008000'}}>readAllBytesFromFile</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -227,7 +239,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAllBytesFromFile</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{color: '#008000'}}>readAllBytesFromFile</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -241,7 +253,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readAllBytesFromFile</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">java.nio.file.Path</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{color: '#008000'}}>readAllBytesFromFile</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.file.Path</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -259,7 +271,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readFromFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -273,7 +285,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.io.File</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readFromFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -288,7 +300,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readFromFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -302,7 +314,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readFromFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -317,7 +329,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.nio.file.Path</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readFromFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.file.Path</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -331,7 +343,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readFromFile</span>(<span style="color: #FF8000">path</span>: <span style="font-weight: normal; font-style: italic;">java.nio.file.Path</span>, <span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readFromFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.file.Path</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -350,7 +362,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readLine</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readLine</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -358,12 +370,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readLine</span>(<span style="color: #FF8000">in</span>: <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readLine</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../../objects/InputStream)_ |   |
+| **in** | _[InputStream](../objects/InputStream)_ |   |
 
 ##### Return
 
@@ -376,7 +388,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readNBytes</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">byte[]</span>, <span style="color: #FF8000">arg1</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">arg2</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>readNBytes</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arg2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -392,7 +404,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readNBytes</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">byte[]</span>
+#### <span style={{color: '#008000'}}>readNBytes</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -410,7 +422,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readString</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readString</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -418,7 +430,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readString</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">java.nio.charset.Charset</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readString</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -436,7 +448,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readStringAndClose</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readStringAndClose</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -444,7 +456,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">readStringAndClose</span>(<span style="color: #FF8000">charset</span>: <span style="font-weight: normal; font-style: italic;">java.nio.charset.Charset</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>readStringAndClose</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -462,7 +474,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">reset</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>reset</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -474,7 +486,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">skip</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>skip</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -492,7 +504,7 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">skipNBytes</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">long</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>skipNBytes</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -510,12 +522,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">transferTo</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">long</span>
+#### <span style={{color: '#008000'}}>transferTo</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **arg0** | _[OutputStream](../../objects/OutputStream)_ |   |
+| **arg0** | _[OutputStream](../objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -528,16 +540,30 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">writeTo</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>writeTo</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](../objects/OutputStream)_ |   |
 
 ##### Return
 
-( _[InputStream](../../objects/InputStream)_ )
+( _[InputStream](../objects/InputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>writeTo</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+
+##### Return
+
+( _[InputStream](../objects/InputStream)_ )
 
 
 ---
@@ -546,16 +572,30 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style="color: #008000">writeToAndClose</span>(<span style="color: #FF8000">out</span>: <span style="font-weight: normal; font-style: italic;">[OutputStream](../../objects/OutputStream)</span>) : <span style="font-weight: normal; font-style: italic;">[InputStream](../../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>writeToAndClose</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](../objects/OutputStream)_ |   |
 
 ##### Return
 
-( _[InputStream](../../objects/InputStream)_ )
+( _[InputStream](../objects/InputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>writeToAndClose</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+
+##### Return
+
+( _[InputStream](../objects/InputStream)_ )
 
 
 ---

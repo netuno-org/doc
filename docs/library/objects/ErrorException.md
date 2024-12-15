@@ -12,7 +12,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">addSuppressed</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>addSuppressed</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -30,7 +30,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">fillInStackTrace</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
+#### <span style={{color: '#008000'}}>fillInStackTrace</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>
 ##### Return
 
 ( _java.lang.Throwable_ )
@@ -42,7 +42,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getCause</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
+#### <span style={{color: '#008000'}}>getCause</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>
 ##### Return
 
 ( _java.lang.Throwable_ )
@@ -54,7 +54,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getLocalizedMessage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getLocalizedMessage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -66,7 +66,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getLogDebug</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getLogDebug</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -78,7 +78,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getLogError</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getLogError</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -90,7 +90,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getLogFatal</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getLogFatal</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -102,7 +102,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getLogInfo</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getLogInfo</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -114,7 +114,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getLogMessage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getLogMessage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -126,7 +126,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getLogTrace</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getLogTrace</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -138,7 +138,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getLogWarn</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getLogWarn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -150,7 +150,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getMessage</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getMessage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -162,7 +162,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getStackTrace</span>() : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.StackTraceElement;[]</span>
+#### <span style={{color: '#008000'}}>getStackTrace</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.StackTraceElement;[]</span>
 ##### Return
 
 ( _[Ljava.lang.StackTraceElement;[]_ )
@@ -174,7 +174,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">getSuppressed</span>() : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.Throwable;[]</span>
+#### <span style={{color: '#008000'}}>getSuppressed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Throwable;[]</span>
 ##### Return
 
 ( _[Ljava.lang.Throwable;[]_ )
@@ -186,7 +186,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">initCause</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>) : <span style="font-weight: normal; font-style: italic;">java.lang.Throwable</span>
+#### <span style={{color: '#008000'}}>initCause</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -204,7 +204,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">isAppendError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isAppendError</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -216,7 +216,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">isLogDebug</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isLogDebug</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -228,7 +228,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">isLogError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isLogError</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -240,7 +240,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">isLogFatal</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isLogFatal</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -252,7 +252,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">isLogInfo</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isLogInfo</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -264,7 +264,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">isLogTrace</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isLogTrace</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -276,7 +276,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">isLogWarn</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isLogWarn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -288,7 +288,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">printStackTrace</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>printStackTrace</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -296,7 +296,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">printStackTrace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.io.PrintStream</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>printStackTrace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.PrintStream</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -310,7 +310,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">printStackTrace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">java.io.PrintWriter</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>printStackTrace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.PrintWriter</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -328,7 +328,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setAppendError</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setAppendError</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -346,7 +346,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogDebug</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogDebug</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -360,7 +360,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogDebug</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogDebug</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -378,7 +378,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogError</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogError</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -392,7 +392,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogError</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogError</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -410,7 +410,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogFatal</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogFatal</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -424,7 +424,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogFatal</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogFatal</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -442,7 +442,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogInfo</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogInfo</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -456,7 +456,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogInfo</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogInfo</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -474,7 +474,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogTrace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogTrace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -488,7 +488,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogTrace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogTrace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -506,7 +506,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogWarn</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogWarn</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -520,7 +520,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setLogWarn</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.ProteuError</span>
+#### <span style={{color: '#008000'}}>setLogWarn</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.ProteuError</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -538,7 +538,7 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style="color: #008000">setStackTrace</span>(<span style="color: #FF8000">arg0</span>: <span style="font-weight: normal; font-style: italic;">[Ljava.lang.StackTraceElement;[]</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>setStackTrace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.StackTraceElement;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |

@@ -170,6 +170,6 @@ if (results) {
 _out.json(processedResults);
 ```
 
-If you have any questions please do not hesitate to contact us or through the forum.
+If you have any questions please do not hesitate to contact us, more indications in this website footer.
 
 Good development!

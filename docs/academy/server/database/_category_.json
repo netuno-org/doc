@@ -1,0 +1,8 @@
+{
+  "label": "Database",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Tutorials for the database management."
+  }
+}

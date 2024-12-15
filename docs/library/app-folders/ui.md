@@ -8,15 +8,15 @@ sidebar_label: UI
 
 As the name suggests, under `UI` is the logic of the application's user interface.
 
-> To develop source code, either from backend or frontend, we recommend the free ATOM code editor or the paid WebStorm IDE. <br>
-  Link Atom: <a href="https://atom.io/" target="_blank">https://atom.io/</a>
-  Link WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">https://www.jetbrains.com/webstorm/</a>
+> To develop source code, either from backend or frontend, we recommend these free code editors:
+> - Link Visual Studio Code: <a href="https://atom.io/" target="_blank">https://code.visualstudio.com/</a>
+> - Link Atom: <a href="https://atom.io/" target="_blank">https://atom.io/</a>
+> - Link WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">https://www.jetbrains.com/webstorm/</a>
 
-  ### UI folder structure
+### UI folder structure
 
 
-  ```plaintext
-
+```plaintext
 ├─ ui/
      ├─ src/
      │  ├─ containers/

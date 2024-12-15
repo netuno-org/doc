@@ -4,7 +4,7 @@ title: Config
 sidebar_label: Config
 ---
 
-## Pasta config
+## config/
 
 The application configurations are available in this folder, consisting of Netuno settings and access to external components. This directory has these files:
 

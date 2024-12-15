@@ -1,0 +1,8 @@
+{
+  "label": "Explore",
+  "position": 12,
+  "link": {
+    "type": "generated-index",
+    "description": "Discover some general features and concepts."
+  }
+}

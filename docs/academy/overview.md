@@ -1,7 +1,7 @@
 ---
+sidebar_position: 1
 id: overview
 title: Overview
-sidebar_label: Overview
 ---
 
 Technology is a very vast topic. Tech skills will resume a way of doing almost anything, from building a computer to sharpening a stick. Technologies can be learned, however requires loads of practice and time spent. 
@@ -21,7 +21,7 @@ The frontend of the web application can be developed from a selection of 8 frame
 
 You can choose the popular `React` or other frameworks like `Bootstrap`, `JQuery`. They are fully integrated in _Netuno_ and can be created with only drag and drop functionality in **Netuno Visual Editor**.
 
->_Netuno_ platform is free, [start now](../installation/).
+>_Netuno_ platform is free, [start now](../get-started/installation).
 
 Not to forget _Netuno_ allows multiple integrations to the web applications: `Mail`, `SMS`, `PDF` and even `Firebase`. 
 

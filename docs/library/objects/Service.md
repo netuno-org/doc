@@ -12,7 +12,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">allow</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>allow</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -24,7 +24,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">cancel</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>cancel</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -36,7 +36,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">core</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>core</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -54,7 +54,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">defaultEmptyOutput</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>defaultEmptyOutput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -66,7 +66,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">deny</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>deny</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )
@@ -78,7 +78,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">execute</span>(<span style="color: #FF8000">file</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -96,7 +96,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">getInstance</span>(<span style="color: #FF8000">proteu</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.Proteu</span>) : <span style="font-weight: normal; font-style: italic;">[Service](../../objects/Service)</span>
+#### <span style={{color: '#008000'}}>getInstance</span>(<span style={{color: '#FF8000'}}>proteu</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.Proteu</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Service](../objects/Service)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -105,7 +105,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ##### Return
 
-( _[Service](../../objects/Service)_ )
+( _[Service](../objects/Service)_ )
 
 
 ---
@@ -114,7 +114,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">getMethod</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getMethod</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -126,7 +126,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">getMethods</span>() : <span style="font-weight: normal; font-style: italic;">java.util.List</span>
+#### <span style={{color: '#008000'}}>getMethods</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -138,7 +138,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">getPath</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -150,7 +150,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">isAllowed</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isAllowed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -162,7 +162,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">isDenied</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isDenied</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -174,7 +174,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">isGeneratingOpenAPIDefinition</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isGeneratingOpenAPIDefinition</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -186,7 +186,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">isMethod</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMethod</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -198,7 +198,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">isNotFoundDefaultError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isNotFoundDefaultError</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -210,7 +210,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">method</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>method</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -222,7 +222,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">notFoundDefaultError</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>notFoundDefaultError</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -230,7 +230,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">notFoundDefaultError</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>notFoundDefaultError</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -248,7 +248,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">path</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>path</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -260,7 +260,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">setNotFoundDefaultError</span>(<span style="color: #FF8000">value</span>: <span style="font-weight: normal; font-style: italic;">boolean</span>) : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{color: '#008000'}}>setNotFoundDefaultError</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -278,7 +278,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style="color: #008000">wasCancelled</span>() : <span style="font-weight: normal; font-style: italic;">java.lang.Boolean</span>
+#### <span style={{color: '#008000'}}>wasCancelled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Boolean</span>
 ##### Return
 
 ( _java.lang.Boolean_ )

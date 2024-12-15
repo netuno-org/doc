@@ -12,7 +12,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">contains</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>contains</span>(<span style={{color: '#FF8000'}}>string</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -30,7 +30,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">download</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.proteu.Download</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>download</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.Download</span>
 ##### Return
 
 ( _org.netuno.proteu.Download_ )
@@ -42,7 +42,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">endsWith</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>endsWith</span>(<span style={{color: '#FF8000'}}>string</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -60,7 +60,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">equalsIgnoreCase</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>equalsIgnoreCase</span>(<span style={{color: '#FF8000'}}>string</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -78,7 +78,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">indexOf</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>indexOf</span>(<span style={{color: '#FF8000'}}>string</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -96,7 +96,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">isDownloadable</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>isDownloadable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -108,7 +108,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">isEmpty</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>isEmpty</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -120,7 +120,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">lastIndexOf</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>lastIndexOf</span>(<span style={{color: '#FF8000'}}>string</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -138,7 +138,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">replace</span>(<span style="color: #FF8000">_old</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>, <span style="color: #FF8000">_new</span>: <span style="font-weight: normal; font-style: italic;">java.lang.CharSequence</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>replace</span>(<span style={{color: '#FF8000'}}>_old</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.CharSequence</span>, <span style={{color: '#FF8000'}}>_new</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.CharSequence</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -157,7 +157,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">replaceAll</span>(<span style="color: #FF8000">_old</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">_new</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>replaceAll</span>(<span style={{color: '#FF8000'}}>_old</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>_new</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -176,7 +176,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">request</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>request</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -188,7 +188,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">scheme</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>scheme</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -200,7 +200,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">split</span>(<span style="color: #FF8000">regex</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Ljava.lang.String;[]</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>split</span>(<span style={{color: '#FF8000'}}>regex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -218,7 +218,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">startsWith</span>(<span style="color: #FF8000">string</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>startsWith</span>(<span style={{color: '#FF8000'}}>string</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -236,7 +236,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">substring</span>(<span style="color: #FF8000">start</span>: <span style="font-weight: normal; font-style: italic;">int</span>, <span style="color: #FF8000">end</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>substring</span>(<span style={{color: '#FF8000'}}>start</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>end</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -255,7 +255,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">to</span>(<span style="color: #FF8000">url</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[URL](../../resources/url)</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>to</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[URL](../resources/url)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -264,7 +264,7 @@ Recurso de gestão de URLs da aplicação.
 
 ##### Return
 
-( _[URL](../../resources/url)_ )
+( _[URL](../resources/url)_ )
 
 
 ---
@@ -273,7 +273,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">uri</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>uri</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -285,7 +285,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style="font-weight: normal">_url</span>.<span style="color: #008000">url</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>url</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )

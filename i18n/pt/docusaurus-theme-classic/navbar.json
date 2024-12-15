@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Netuno",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Netuno Documentation",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Get Started": {
+    "message": "Comece Já",
+    "description": "Navbar item with label Get Started"
+  },
+  "item.label.Academy": {
+    "message": "Academia",
+    "description": "Navbar item with label Academy"
+  },
+  "item.label.Library": {
+    "message": "Biblioteca",
+    "description": "Navbar item with label Library"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

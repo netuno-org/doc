@@ -4,7 +4,7 @@ title: Sending Emails
 sidebar_label: Sending Emails
 ---
 ## Before we begin
-Before proceeding make sure you have the basics in _**JavaScript**_ and that you already have the Netuno basics with the step-by-step available at [Academy](/docs/en/academy/overview/).
+Before proceeding make sure you have the basics in _**JavaScript**_ and that you already have the Netuno basics with the step-by-step available at [Academy](../../overview).
 
 ## Sending emails with Netuno
 
@@ -204,7 +204,7 @@ smtp.send()
 
 Finally, if everything has been set up correctly, you will receive an email similar to the following:
 
-![envio-emails1.png](assets/envio-emails1.png)
+![envio-emails1.png](/docs/assets/envio-emails1.png)
 
 > Note that depending on your email client it may differ from the image above.
 

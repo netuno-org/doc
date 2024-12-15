@@ -1,25 +1,26 @@
 ---
+sidebar_position: 2
 id: introduction
 title: Introduction
-sidebar_label: Introduction
 ---
 
 This section contains the vast majority of back-end logic about Netuno. You will find definitions, explanations and code snippets that will help you go through a functional logic on how to build your WebSite from Netuno.
 
-> The Netuno platform is free, [start now](../installation/).
+> The Netuno platform is free, [start now](../get-started/installation).
 
 ### Tutorials
 
 Discover how to explore the development in Netuno:
 
-<a class="button" href="tutorials/">Know More</a>
+* [Know More](../get-started/tutorials)
 
-### Objects
+## Objects
 This section contains information about the Netuno Objects, namely Values.
 
-* [Values](library/objects/values.md)
+* [Values](objects/Values.md)
 
-### Resources
+## Resources
+
 It contains all the information about the programming support resources available from Netuno.
 
 Using Netuno's features you can do more in less time, save on lines of code and headaches.

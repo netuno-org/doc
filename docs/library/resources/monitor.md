@@ -12,14 +12,14 @@ It allows to obtain the performance data.
 
 ---
 
-#### <span style="font-weight: normal">_monitor</span>.<span style="color: #008000">performanceData</span>() : <span style="font-weight: normal; font-style: italic;">[Values](../../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_monitor</span>.<span style={{color: '#008000'}}>performanceData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Obtains performance data such as CPU, Memory and Disk utilization of the Neptune server process as well as the computer in general.
 
 ##### Return
 
-( _[Values](../../objects/Values)_ )
+( _[Values](../objects/Values)_ )
 
 Performance data such as CPU, Memory and Disk.
 
@@ -29,7 +29,7 @@ Performance data such as CPU, Memory and Disk.
 
 ---
 
-#### <span style="font-weight: normal">_monitor</span>.<span style="color: #008000">stats</span>() : <span style="font-weight: normal; font-style: italic;">void</span>
+#### <span style={{fontWeight: 'normal'}}>_monitor</span>.<span style={{color: '#008000'}}>stats</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Presents statistical information on performance, such as CPU, Memory and Disk data, in the terminal and in the logs.

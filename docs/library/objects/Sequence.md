@@ -21,7 +21,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">commandNextValue</span>(<span style="color: #FF8000">sequenceName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>commandNextValue</span>(<span style={{color: '#FF8000'}}>sequenceName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -39,7 +39,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">create</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
+#### <span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Sequence](../objects/Sequence)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -48,12 +48,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Return
 
-( _[Sequence](../../objects/Sequence)_ )
+( _[Sequence](../objects/Sequence)_ )
 
 
 ---
 
-#### <span style="color: #008000">create</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">startWith</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
+#### <span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>startWith</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Sequence](../objects/Sequence)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -63,7 +63,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Return
 
-( _[Sequence](../../objects/Sequence)_ )
+( _[Sequence](../objects/Sequence)_ )
 
 
 ---
@@ -72,7 +72,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">drop</span>(<span style="color: #FF8000">name</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
+#### <span style={{color: '#008000'}}>drop</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Sequence](../objects/Sequence)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -81,7 +81,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Return
 
-( _[Sequence](../../objects/Sequence)_ )
+( _[Sequence](../objects/Sequence)_ )
 
 
 ---
@@ -90,7 +90,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">getCurrentValue</span>(<span style="color: #FF8000">sequenceName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>getCurrentValue</span>(<span style={{color: '#FF8000'}}>sequenceName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -108,7 +108,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">getKey</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getKey</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -120,7 +120,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">isH2</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isH2</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -128,7 +128,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">isH2</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isH2</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -146,7 +146,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">isMSSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMSSQL</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -154,7 +154,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">isMSSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMSSQL</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -172,7 +172,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">isMariaDB</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMariaDB</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -180,7 +180,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">isMariaDB</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isMariaDB</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -198,7 +198,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">isPostgreSQL</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isPostgreSQL</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -206,7 +206,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">isPostgreSQL</span>(<span style="color: #FF8000">builder</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.db.Builder</span>) : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>isPostgreSQL</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -224,7 +224,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">rename</span>(<span style="color: #FF8000">oldName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">newName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
+#### <span style={{color: '#008000'}}>rename</span>(<span style={{color: '#FF8000'}}>oldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>newName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Sequence](../objects/Sequence)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -234,7 +234,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Return
 
-( _[Sequence](../../objects/Sequence)_ )
+( _[Sequence](../objects/Sequence)_ )
 
 
 ---
@@ -243,7 +243,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">renameIfExists</span>(<span style="color: #FF8000">oldName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">newName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
+#### <span style={{color: '#008000'}}>renameIfExists</span>(<span style={{color: '#FF8000'}}>oldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>newName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Sequence](../objects/Sequence)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -253,7 +253,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Return
 
-( _[Sequence](../../objects/Sequence)_ )
+( _[Sequence](../objects/Sequence)_ )
 
 
 ---
@@ -262,7 +262,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">restart</span>(<span style="color: #FF8000">sequenceName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">nextValue</span>: <span style="font-weight: normal; font-style: italic;">int</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
+#### <span style={{color: '#008000'}}>restart</span>(<span style={{color: '#FF8000'}}>sequenceName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>nextValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Sequence](../objects/Sequence)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -272,12 +272,12 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Return
 
-( _[Sequence](../../objects/Sequence)_ )
+( _[Sequence](../objects/Sequence)_ )
 
 
 ---
 
-#### <span style="color: #008000">restart</span>(<span style="color: #FF8000">sequenceName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>, <span style="color: #FF8000">column</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Sequence](../../objects/Sequence)</span>
+#### <span style={{color: '#008000'}}>restart</span>(<span style={{color: '#FF8000'}}>sequenceName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Sequence](../objects/Sequence)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -288,7 +288,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Return
 
-( _[Sequence](../../objects/Sequence)_ )
+( _[Sequence](../objects/Sequence)_ )
 
 
 ---
@@ -297,7 +297,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">sequence</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>sequence</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -309,7 +309,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style="color: #008000">supported</span>() : <span style="font-weight: normal; font-style: italic;">boolean</span>
+#### <span style={{color: '#008000'}}>supported</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )

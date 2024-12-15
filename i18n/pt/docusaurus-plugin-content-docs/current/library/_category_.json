@@ -1,0 +1,8 @@
+{
+  "label": "Biblioteca",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Todos os recursos e objetos."
+  }
+}

@@ -12,7 +12,7 @@ Definição da configuração do objeto Join para consultas simplificadas.
 
 ---
 
-#### <span style="color: #008000">getJoinType</span>() : <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.JoinType</span>
+#### <span style={{color: '#008000'}}>getJoinType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.join.JoinType</span>
 ##### Description
 
 Returns the type of the joint or the relationship.
@@ -29,14 +29,14 @@ The type of the joint
 
 ---
 
-#### <span style="color: #008000">getRelation</span>() : <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>
+#### <span style={{color: '#008000'}}>getRelation</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>
 ##### Description
 
 Returns the object with the relationship configuration.
 
 ##### Return
 
-( _[Relation](../../objects/Relation)_ )
+( _[Relation](../objects/Relation)_ )
 
 The object with the relationship configuration.
 
@@ -46,7 +46,7 @@ The object with the relationship configuration.
 
 ---
 
-#### <span style="color: #008000">getTable</span>() : <span style="font-weight: normal; font-style: italic;">string</span>
+#### <span style={{color: '#008000'}}>getTable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the relationship's main table.
@@ -63,14 +63,14 @@ The name of the relationship's main table.
 
 ---
 
-#### <span style="color: #008000">getWhere</span>() : <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>
+#### <span style={{color: '#008000'}}>getWhere</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Returns the Where object with the configuration of conditions for the table to be related.
 
 ##### Return
 
-( _[Where](../../objects/Where)_ )
+( _[Where](../objects/Where)_ )
 
 The Where object with the configuration of conditions
 
@@ -80,7 +80,7 @@ The Where object with the configuration of conditions
 
 ---
 
-#### <span style="color: #008000">setJoinType</span>(<span style="color: #FF8000">joinType</span>: <span style="font-weight: normal; font-style: italic;">org.netuno.tritao.query.join.JoinType</span>) : <span style="font-weight: normal; font-style: italic;">[Join](../../objects/Join)</span>
+#### <span style={{color: '#008000'}}>setJoinType</span>(<span style={{color: '#FF8000'}}>joinType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.join.JoinType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
 ##### Description
 
 Defines the type of the joint or the relationship.
@@ -93,7 +93,7 @@ Defines the type of the joint or the relationship.
 
 ##### Return
 
-( _[Join](../../objects/Join)_ )
+( _[Join](../objects/Join)_ )
 
 Current Join object.
 
@@ -103,7 +103,7 @@ Current Join object.
 
 ---
 
-#### <span style="color: #008000">setRelation</span>(<span style="color: #FF8000">ralation</span>: <span style="font-weight: normal; font-style: italic;">[Relation](../../objects/Relation)</span>) : <span style="font-weight: normal; font-style: italic;">[Join](../../objects/Join)</span>
+#### <span style={{color: '#008000'}}>setRelation</span>(<span style={{color: '#FF8000'}}>ralation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
 ##### Description
 
 Defines the object with the relationship configuration.
@@ -112,11 +112,11 @@ Defines the object with the relationship configuration.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **ralation** | _[Relation](../../objects/Relation)_ | The object with the relationship configuration. |
+| **ralation** | _[Relation](../objects/Relation)_ | The object with the relationship configuration. |
 
 ##### Return
 
-( _[Join](../../objects/Join)_ )
+( _[Join](../objects/Join)_ )
 
 Current Join object.
 
@@ -126,7 +126,7 @@ Current Join object.
 
 ---
 
-#### <span style="color: #008000">setTable</span>(<span style="color: #FF8000">tableName</span>: <span style="font-weight: normal; font-style: italic;">string</span>) : <span style="font-weight: normal; font-style: italic;">[Join](../../objects/Join)</span>
+#### <span style={{color: '#008000'}}>setTable</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
 ##### Description
 
 Defines the name of the relationship's main table.
@@ -139,7 +139,7 @@ Defines the name of the relationship's main table.
 
 ##### Return
 
-( _[Join](../../objects/Join)_ )
+( _[Join](../objects/Join)_ )
 
 Current Join object.
 
@@ -149,7 +149,7 @@ Current Join object.
 
 ---
 
-#### <span style="color: #008000">setWhere</span>(<span style="color: #FF8000">where</span>: <span style="font-weight: normal; font-style: italic;">[Where](../../objects/Where)</span>) : <span style="font-weight: normal; font-style: italic;">[Join](../../objects/Join)</span>
+#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
 ##### Description
 
 Defines the Where object with the configuration of conditions for the table to be related.
@@ -158,11 +158,11 @@ Defines the Where object with the configuration of conditions for the table to b
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **where** | _[Where](../../objects/Where)_ | The Where object with the configuration of conditions |
+| **where** | _[Where](../objects/Where)_ | The Where object with the configuration of conditions |
 
 ##### Return
 
-( _[Join](../../objects/Join)_ )
+( _[Join](../objects/Join)_ )
 
 Current Join object.
 

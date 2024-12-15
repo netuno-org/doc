@@ -12,7 +12,7 @@ Contains the reference of the position of a cell in the spreadsheet, with indica
 
 ---
 
-#### <span style="color: #008000">col</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>col</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 The index number of the column related to the position.
@@ -29,7 +29,7 @@ The index of the column.
 
 ---
 
-#### <span style="color: #008000">getCol</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>getCol</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 The index number of the column related to the position.
@@ -46,7 +46,7 @@ The index of the column.
 
 ---
 
-#### <span style="color: #008000">getRow</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>getRow</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 The index number of the row related to the position.
@@ -63,7 +63,7 @@ The index of the row.
 
 ---
 
-#### <span style="color: #008000">row</span>() : <span style="font-weight: normal; font-style: italic;">int</span>
+#### <span style={{color: '#008000'}}>row</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 The index number of the row related to the position.

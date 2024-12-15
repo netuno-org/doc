@@ -7,8 +7,10 @@ sidebar_label: CORS
 ## Introduction
 
 In this section, we will explain what _Cross-Origin Resource Sharing_ (CORS) is, describe some common examples of cross-origin resource sharing.
-<br>CORS is a browser mechanism which enables controlled access to resources located outside of a given domain. It extends and adds flexibility to the same-origin policy (SOP). 
-<br>However, it also provides potential for cross-domain based attacks, if a website's CORS policy is poorly configured and implemented. CORS is not a protection against Cross-Origin attacks such as _Cross-Site Request Forgery_ (CSRF).
+
+CORS is a browser mechanism which enables controlled access to resources located outside of a given domain. It extends and adds flexibility to the same-origin policy (SOP). 
+
+However, it also provides potential for cross-domain based attacks, if a website's CORS policy is poorly configured and implemented. CORS is not a protection against Cross-Origin attacks such as _Cross-Site Request Forgery_ (CSRF).
 
 When should be implemented:
 
