@@ -193,7 +193,7 @@ Os scripts server-side das apps foram simplificados, como os de configuração e
 
 ##### Monitorização e Alertas
 
-[Monitorização da performance permite disparar alertas.](/docs/pt-PT/library/advanced/monitor-alerts) E também:
+[Monitorização da performance permite disparar alertas.](../academy/server/monitor-alerts) E também:
 
 - Melhor cálculos e demonstração do CPU e memória em logs.
 - Processa o espaço ocupado e disponível em disco.
@@ -236,7 +236,7 @@ Resolvido vazamento de memória com ficheiros que ficavam abertos.
 
 Atualização da versão do Jetty e adicionado o suporte ao HTTP2.
 
-Integração com o [HikariCP - DB Connection Pool](/docs/pt-PT/library/advanced/hikaricp-database-connection-pool/), melhor gestão das conexões à base de dados.
+Integração com o [HikariCP - DB Connection Pool](../academy/server/database/hikaricp-database-connection-pool), melhor gestão das conexões à base de dados.
 
 ##### Recursos
 

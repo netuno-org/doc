@@ -192,7 +192,7 @@ The server-side scripts for apps have been simplified, like the configuration an
 
 ##### Monitor and Alerts
 
-[Performance monitoring lets you trigger alerts.](/docs/en/library/advanced/monitor-alerts) Also:
+[Performance monitoring lets you trigger alerts.](../academy/server/monitor-alerts) Also:
 
 - Better calculations and demonstration of CPU and memory in logs.
 - Processes occupied and available disk space.
@@ -235,7 +235,7 @@ Fixed memory leak with files that were left open.
 
 Jetty version upgrade and HTTP2 support added.
 
-Integration with [HikariCP - DB Connection Pool](/docs/en/library/advanced/hikaricp-database-connection-pool/), better database connection management.
+Integration with [HikariCP - DB Connection Pool](../academy/server/database/hikaricp-database-connection-pool), better database connection management.
 
 ##### Resources
 

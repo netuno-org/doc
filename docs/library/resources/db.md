@@ -180,7 +180,7 @@ if (!_db.checkExists().column("client", "description")) {
 ##### Description
 
 Gets the connection configuration to the database being used.
-The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/tutorials/multiple-databases) tutorial.
+The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
