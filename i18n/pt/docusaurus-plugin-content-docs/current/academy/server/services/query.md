@@ -140,7 +140,88 @@ Ao final do exemplo acima invocamos o metodo `page()` passando como parâmetro o
 	"totalElements": 2,
 	"totalPages": 1
 }
-```    
+```
+
+### Guardar Registos
+
+```
+const result = _form.query(
+    'people'
+).insert(
+    _val.map()
+        .set("name", "Caio Andrade")
+        .set("email", "caio@mail.com")
+);
+```
+
+### Atualizar Registos
+
+Através do objeto Query você pode atualizar o registos da consulta de forma fácil e intuitiva.
+
+```
+_form.query(
+    'people',
+)
+.link(
+    'job',
+    _form.where('code', 'trainee')
+).updateFirst(
+    _val.map()
+        .set("name", "new name")
+        .set("email", "mynewemail@mail.com")
+);
+```
+
+> O método `updateFirst()` atualiza o primeiro resultado da lista de registos da consulta. 
+
+Através do objeto Query também é possivel atualizar todos as ocorrências da consulta.
+
+```
+_form.query(
+    'people',
+)
+.link(
+    'job',
+    _form.where('code', 'trainee')
+).updateAll(
+    _val.map()
+       .set("active", false)
+);
+```
+
+> `Importante`. O método `updateAll()` irá atualizar todas a ocorrências da consulta, então atenção ap utilizar este.
+
+> Alé disso você pode usar outros métodos combinado como `order()` e `limit()` para melhorar suas consultas.
+
+### Deletar Registos
+
+O objeto Query também permite que você delete registos retornados na consulta de forma simples.
+
+```
+_form.query(
+    `people`
+)
+.link(
+    'job',
+    _form.where('code', 'trainee')
+).deleteFirst();
+```
+> O método `deleteFirst()` deleta o primeira resultado da lista de registos. 
+
+Além disso é possivel também deletar todas as ocorrências da consulta.
+
+```
+_form.query(
+    `people`
+)
+.link(
+    'job',
+    _form.where('code', 'trainee')
+).deleteAll();
+```
+> `Importante`. O método `deleteAll()` irá deletar todas as ocorrências da consulta, então atenção ao usar este.
+
+> Assim como os demais é possível combinar outros métodos como `order()` e `limit()` para melhorar os resultados.
 
 ## Operadores de Relação
 

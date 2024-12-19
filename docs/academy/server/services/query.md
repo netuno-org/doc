@@ -120,27 +120,106 @@ const page = query.page(_form.pagination(1,10));
 At the end of the example above, we invoke the `page()` method passing as a parameter the `pagination` object that has the pagination preferences. This will return a page object with the equivalent attributes, example:
 
 ```
+{
+"hasNext": false,
+"hasPrevious": false,
+"items": [
     {
-	"hasNext": false,
-	"hasPrevious": false,
-	"items": [
-		{
-			"job_code": "trainee",
-			"people_active": true,
-			"people_name": "Junior Freitas"
-		},
-		{
-			"job_code": "manager",
-			"people_active": true,
-			"people_name": "Caio Andrade"
-		}
-	],
-	"pageNumber": 1,
-	"pageSize": 10,
-	"totalElements": 2,
-	"totalPages": 1
+        "job_code": "trainee",
+        "people_active": true,
+        "people_name": "Junior Freitas"
+    },
+    {
+        "job_code": "manager",
+        "people_active": true,
+        "people_name": "Caio Andrade"
+    }
+],
+"pageNumber": 1,
+"pageSize": 10,
+"totalElements": 2,
+"totalPages": 1
 }
-```    
+```
+
+### Insert New Records
+
+```
+const result = _form.query(
+    'people'
+).insert(
+    _val.map()
+        .set("name", "Caio Andrade")
+        .set("email", "caio@mail.com")
+);
+```
+
+### Update Records
+
+With Query object you are able to update the records of a query in a simple way.
+
+```
+_form.query(
+    'people',
+)
+.link(
+    'job',
+    _form.where('code', 'trainee')
+).updateFirst(
+    _val.map()
+        .set("name", "new name")
+        .set("email", "mynewemail@mail.com")
+);
+```
+> The method `updateFirst()` update first result of the list records. 
+
+With the Query object it is also possible to update all occurrences of a query.
+
+```
+_form.query(
+    'people',
+)
+.link(
+    'job',
+    _form.where('code', 'trainee')
+).updateAll(
+    _val.map()
+       .set("active", false)
+);
+```
+> `Warning`. The method `updateAll()` will update all records of the query result.
+
+> You can also use other methods to filter like `order()`, `limit()` to improve your queries.
+
+### Delete Records
+
+The Query object allows you to delete the records returned by the query in a simple and intuitive way.
+
+```
+_form.query(
+    `people`
+)
+.link(
+    'job',
+    _form.where('code', 'trainee')
+).deleteFirst();
+```
+> The method `deleteFirst()` delete first result of the list records. 
+
+With the Query object it is also possible to delete all occurrences of a query.
+
+```
+_form.query(
+    `people`
+)
+.link(
+    'job',
+    _form.where('code', 'trainee')
+).deleteAll();
+```
+> `Warning`. The method `deleteAll()` will delete all records of the query result.
+
+> You can also use other methods to filter like `order()`, `limit()` to improve your queries.
 
 ## Relationship Operators
 
