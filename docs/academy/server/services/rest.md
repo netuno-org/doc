@@ -10,9 +10,9 @@ _Representational State Transfer_ (REST) is an architectural style that specifie
 
 > About <a href="https://developer.mozilla.org/en-US/docs/Glossary/REST" target="_blank">REST</a>
 
-_Netuno_ services are built on REST API
+_Netuno_ services are built on REST API.
 
-### ALL
+## ALL
 
 To build a _Netuno_ service that answers to any type of HTTP method:
 
@@ -22,7 +22,7 @@ In the browser, this service will be performed for all types of requests at the 
 
 - http://localhost:9000/services/my-service
 
-### GET
+## GET
 
 For listing or data retrieval operations, GET-type addresses are normally used.
 
@@ -35,33 +35,33 @@ Into your browser this service will be only executed for the GET request type at
 
 - GET http://localhost:9000/services/list
 
-### POST
+## POST
 
-POST addresses are normally used for operations that store data.
+POST addresses are normally used for operations that create or generate new data.
 
 To create a service on _Netuno_ that only responds to the POST method type, create the code file using one of the following options:
 
-- `📂 server/services/save/post.js`
-- `📂 server/services/save.post.js`
+- `📂 server/services/create/post.js`
+- `📂 server/services/create.post.js`
 
 This service will be performed only for the POST request type at the address below:
 
-- POST http://localhost:9000/services/save
+- POST http://localhost:9000/services/create
 
-### PUT
+## PUT
 
-PUT addresses are normally used for operations that create new data records.
+PUT addresses are normally used for operations that change or update data records.
 
 To create a service on _Netuno_ that only responds to the PUT method type, create the code file using one of the below options:
 
-- `📂 server/services/build/put.js`
-- `📂 server/services/build.put.js`
+- `📂 server/services/save/put.js`
+- `📂 server/services/save.put.js`
 
 This service will be only performed for the PUT order type at the below address:
 
-- PUT http://localhost:9000/services/build
+- PUT http://localhost:9000/services/save
 
-### DELETE
+## DELETE
 
 DELETE addresses are normally used for operations that will delete new data records.
 
@@ -74,7 +74,7 @@ This service will be only executed for the DELETE order type at the address belo
 
 - DELETE http://localhost:9000/services/remove
 
-### OPTIONS
+## OPTIONS
 
 Integrating with the frontend, during the CORS validation process, the browser makes an OPTIONS call.
 
@@ -97,14 +97,14 @@ This service will be executed for the order type OPTIONS at the address:
 
 - OPTIONS http://localhost:9000/services/list
 
-## Test Execution
+## Clients and Test Execution
 
 To run tests on services with the specific type of method, you can use your own programs that perform tests on the REST API, see below example:
 
 - <a href="https://www.postman.com/" target="_blank">Postman</a>
 - <a href="https://insomnia.rest/" target="_blank">Insominia</a>
 
-### CURL
+## CURL
 
 The following `curl` command on the terminal the user will be able to execute type of test.
 
@@ -136,7 +136,7 @@ curl -X POST -d 'name=Test&email=email@example.com' http://localhost:9000/servic
 
 > The parameter `-d` sends with Content-Type: `application/x-www-form-urlencoded`
 
-#### JSON
+### JSON
 
 To send in JSON format, it is necessary to specify the content type:
 

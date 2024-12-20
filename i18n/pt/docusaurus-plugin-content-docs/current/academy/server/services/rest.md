@@ -12,7 +12,7 @@ Os pedidos REST são endereços online que retornam informação de dados proces
 
 A construção da API REST é feita com base nos Serviços do Netuno.
 
-### ALL
+## ALL
 
 Para criar um serviço no Netuno que responda a qualquer tipo de método HTTP:
 
@@ -22,7 +22,7 @@ No browser, este serviço será executado para todos os tipos de pedidos no ende
 
 - http://localhost:9000/services/meu-servico
 
-### GET
+## GET
 
 Os endereços do tipo GET são normalmente utilizados para operações de listagem ou de obtenção de dados.
 
@@ -35,35 +35,35 @@ No browser, este serviço será executado apenas para o tipo de pedido GET no en
 
 - GET http://localhost:9000/services/lista
 
-### POST
+## POST
 
-Os endereços do tipo POST são normalmente utilizados para operações que guardam dados.
+Os endereços do tipo POST são normalmente utilizados para operações que cria ou gera novos dados.
 
 Para criar um serviço no Netuno que responda apenas para o tipo de método POST, crie o arquivo de código utilizando uma destas formas:
 
-- `📂 server/services/guardar/post.js`
-- `📂 server/services/guardar.post.js`
+- `📂 server/services/criar/post.js`
+- `📂 server/services/criar.post.js`
 
 Este serviço será executado apenas para o tipo de pedido POST no endereço:
 
-- POST http://localhost:9000/services/guardar
+- POST http://localhost:9000/services/criar
 
-### PUT
+## PUT
 
-Os endereços do tipo PUT são normalmente utilizados para operações que cria novos registos de dados.
+Os endereços do tipo PUT são normalmente utilizados para operações que altera registros de dados.
 
 Para criar um serviço no Netuno que responda apenas para o tipo de método PUT, crie o arquivo de código utilizando uma destas formas:
 
-- `📂 server/services/criar/put.js`
-- `📂 server/services/criar.put.js`
+- `📂 server/services/salvar/put.js`
+- `📂 server/services/salvar.put.js`
 
 Este serviço será executado apenas para o tipo de pedido PUT no endereço:
 
-- PUT http://localhost:9000/services/criar
+- PUT http://localhost:9000/services/salvar
 
-### DELETE
+## DELETE
 
-Os endereços do tipo DELETE são normalmente utilizados para operações que eliminam novos registos de dados.
+Os endereços do tipo DELETE são normalmente utilizados para operações que eliminam novos registros de dados.
 
 Para criar um serviço no Netuno que responda apenas para o tipo de método DELETE, crie o arquivo de código utilizando uma destas formas:
 
@@ -74,7 +74,7 @@ Este serviço será executado apenas para o tipo de pedido DELETE no endereço:
 
 - DELETE http://localhost:9000/services/eliminar
 
-### OPTIONS
+## OPTIONS
 
 Na integração com o frontend, durante o processo de validação do CORS, o browser realiza a chamada do tipo OPTIONS.
 
@@ -97,14 +97,14 @@ Este serviço será executado para o tipo de pedido OPTIONS no endereço:
 
 - OPTIONS http://localhost:9000/services/listar
 
-## Executar Testes
+## Clientes e Execução de Testes
 
 Para executar testes aos serviços com o tipo de método específico, pode utilizar programas próprios que realizam testes sobre API REST, como:
 
 - <a href="https://www.postman.com/" target="_blank">Postman</a>
 - <a href="https://insomnia.rest/" target="_blank">Insominia</a>
 
-### CURL
+## CURL
 
 Com o comando `curl` no terminal pode realizar qualquer tipo de teste.
 
@@ -136,7 +136,7 @@ curl -X POST -d 'nome=Test&email=email@exemplo.com' http://localhost:9000/servic
 
 > O parâmetro `-d` envia com o Content-Type: `application/x-www-form-urlencoded`
 
-#### JSON
+### JSON
 
 Para enviar em formato JSON é necessário especificar o tipo de conteúdo:
 
