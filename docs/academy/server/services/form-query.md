@@ -1,7 +1,7 @@
 ---
-id: query
-title: Query
-sidebar_label: Query
+id: form-query
+title: Form Query
+sidebar_label: Form Query
 ---
 
 ## Before You Starting

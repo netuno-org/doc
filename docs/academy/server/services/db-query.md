@@ -1,7 +1,7 @@
 ---
-id: queries-programmatically
-title: Queries Programmatically
-sidebar_label: Queries Programmatically
+id: db-query
+title: Database Query
+sidebar_label: DB Query
 ---
 
 ## Before you start
