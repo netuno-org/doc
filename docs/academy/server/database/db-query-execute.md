@@ -1,14 +1,14 @@
 ---
-id: db-query
-title: Database Query
-sidebar_label: DB Query
+id: db-query-execute
+title: Query and Execute - Direct Database Commands
+sidebar_label: Query & Execute
 ---
 
 ## Before you start
 
 In order to understand this tutorial as effectively as possible, we advise you to make sure you have some basic knowledge in _**JavaScript, SQL**_ and know how to create services on Netuno
 
-If you do not know how to create services please visit [Web REST Services](rest).
+If you do not know how to create services please visit [Web REST Services](../services/rest).
 
 ## Query Creation
 

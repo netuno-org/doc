@@ -31,7 +31,7 @@ Tutoriais relativos às funcionalidades presentes na Interface do Netuno:
 Tutoriais que explicam como desenvolver o frontend e o backend do Netuno, com suporte para várias linguagens de programação:
 
 * [Serviços Web REST](../academy/server/services/rest.md)
-* [Queries Programaticamente](../academy/server/services/db-query)
+* [Queries Programaticamente](../academy/server/database/db-query-execute)
 * [Templates](../academy/server/templates.md)
 * [Desenvolvimento e debug em Java](../academy/server/development-debug-java.md)
 * [Envio de Emails](../academy/server/services/sending-emails.md)

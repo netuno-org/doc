@@ -1,12 +1,17 @@
 ---
-id: form-query
-title: Form Query
-sidebar_label: Form Query
+id: db-form-operations
+title: Form e as Operações de Base de Dados
+sidebar_label: DB Form
 ---
+
+## EM DESENVOLVIMENTO
+
+Atenção, em fase experimental, portanto a cada nova versão do Netuno pode haver grandes alterações, não é garantida a retrocompatibilidade.
 
 ## Antes de Começar
 
 Antes de proceder certifique-se de que tem noções de SQL, relacionamento entre tabelas tais como `Many To One`, `One To Many` e etc. Além disso é necessario conhecimento prévio sobre os `Forms` do Netuno e como são organizados para conseguir extrair o maximo do objeto `Query`.
+
 > O `Query` esta disponível no Netuno somente apartir da versão `v7:20240606.1441`
 
 ## Introdução

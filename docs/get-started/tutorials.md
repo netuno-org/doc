@@ -27,7 +27,7 @@ Tutorials regarding the present features in _Netuno_ interface:
 Tutorials that explain how to build frontend and backend in  _Netuno_ supporting a large of programming languages:
 
 * [REST Web Services](../academy/server/services/rest.md)
-* [Programming Queries](../academy/server/services/db-query)
+* [Programming Queries](../academy/server/database/db-query-execute)
 * [Templates](../academy/server/templates.md)
 * [Development and debugging in Java](../academy/server/development-debug-java.md)
 * [Email Sending](../academy/server/services/sending-emails.md)
