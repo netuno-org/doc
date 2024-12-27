@@ -65,7 +65,7 @@ Inicia a consola web no porto do Netuno **9000** e permite e acesso de IPs exter
 
 A JDBC URL para conectar na base de dados deverá ser:
 
-`jdbc:h2:./apps/minha_app/dbs/minha_db;IGNORECASE=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE;MODE=PostgreSQL;DATABASE_TO_UPPER=FALSE;DB_CLOSE_ON_EXIT=TRUE;FILE_LOCK=NO;`
+`jdbc:h2:./apps/minha_app/dbs/minha_db;MODE=PostgreSQL;CASE_INSENSITIVE_IDENTIFIERS=TRUE;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_ON_EXIT=TRUE;`
 
 > Substituir a parte da `minha_app` pelo nome da app e `minha_db` pelo nome da base de dados correspondente.
 

@@ -63,7 +63,7 @@ Start your web console on the port **9000**  _Netuno_, giving you access to all 
 
 The following link JDBC URL will be to connect to the database:
 
-`jdbc:h2:./apps/my_app/dbs/my_db;IGNORECASE=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE;MODE=PostgreSQL;DATABASE_TO_UPPER=FALSE;DB_CLOSE_ON_EXIT=TRUE;FILE_LOCK=NO;`
+`jdbc:h2:./apps/my_app/dbs/my_db;MODE=PostgreSQL;CASE_INSENSITIVE_IDENTIFIERS=TRUE;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_ON_EXIT=TRUE;`
 
 > Replace `my_app` with any name You like to give to your  `app` and `my_db` by any name that you wish to give to your `database`.
 
