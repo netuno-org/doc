@@ -42,6 +42,18 @@ The name of the column.
 
 ---
 
+## getValue
+
+---
+
+#### <span style={{color: '#008000'}}>getValue</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+##### Return
+
+( _java.lang.Object_ )
+
+
+---
+
 ## setAlias
 
 ---
@@ -85,6 +97,24 @@ Defines the name of the column that will be returned in the query.
 ( _[Field](../objects/Field)_ )
 
 Current Field object.
+
+---
+
+## setValue
+
+---
+
+#### <span style={{color: '#008000'}}>setValue</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Field](../objects/Field)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.lang.Object_ |   |
+
+##### Return
+
+( _[Field](../objects/Field)_ )
+
 
 ---
 

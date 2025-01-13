@@ -4,7 +4,7 @@ title: Where
 sidebar_label: Where
 ---
 
-Definição da configuração do objeto Where para construção de condições nas consultas com o o objeto Query.
+Definição da configuração do objeto Where para construção de condições nas consultas com o recurso _db.form()
 
 ---
 
@@ -12,7 +12,7 @@ Definição da configuração do objeto Where para construção de condições n
 
 ---
 
-#### <span style={{color: '#008000'}}>and</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{color: '#008000'}}>and</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Descrição
 
 Define uma condição com o operador condicional AND no objeto Where.
@@ -22,27 +22,6 @@ Define uma condição com o operador condicional AND no objeto Where.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **coluna** | _string_ | Coluna a qual será aplicado a condição. |
-| **coluna** | _java.lang.Object_ | Valor da condição. |
-
-##### Retorno
-
-( _[Where](../objects/Where)_ )
-
-Objeto Where atual.
-
----
-
-#### <span style={{color: '#008000'}}>and</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>relationOperator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationOperator](../objects/RelationOperator)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
-##### Descrição
-
-Define uma condição com o operador condicional AND no objeto Where.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **coluna** | _string_ | Coluna a qual será aplicado a condição. |
-| **relationOperator** | _[RelationOperator](../objects/RelationOperator)_ | Operador de relação da condição. |
 
 ##### Retorno
 
@@ -71,37 +50,112 @@ Objeto Where atual.
 
 ---
 
+## contains
+
+---
+
+#### <span style={{color: '#008000'}}>contains</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que inclua o padrão informado.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valor** | _java.lang.Object_ | Volor da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
+
+---
+
+## different
+
+---
+
+#### <span style={{color: '#008000'}}>different</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que diferente do padrão informado.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valor** | _java.lang.Object_ | Volor da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
+
+---
+
+## endsWith
+
+---
+
+#### <span style={{color: '#008000'}}>endsWith</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que termina com o padrão informado.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valor** | _java.lang.Object_ | Volor da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
+
+---
+
+## equal
+
+---
+
+#### <span style={{color: '#008000'}}>equal</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que seja exata ao padrão informado.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valor** | _java.lang.Object_ | Volor da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
+
+---
+
 ## getConditions
 
 ---
 
-#### <span style={{color: '#008000'}}>getConditions</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getConditions</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Descrição
 
 Retorna as demais condições aninhadas do objeto.
 
 ##### Retorno
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _java.util.List_ )
 
 Demais condições aninhadas do objeto.
-
----
-
-## getFirstCondition
-
----
-
-#### <span style={{color: '#008000'}}>getFirstCondition</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
-##### Descrição
-
-Retorna a condição base do objeto.
-
-##### Retorno
-
-( _[Condition](../objects/Condition)_ )
-
-Condição base do objeto.
 
 ---
 
@@ -122,31 +176,205 @@ Nome da tabela a qual será aplicado a condição.
 
 ---
 
-## or
+## greaterOrEqualsThan
 
 ---
 
-#### <span style={{color: '#008000'}}>or</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{color: '#008000'}}>greaterOrEqualsThan</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Descrição
 
-Define uma condição com o operador condicional OR no objeto Where.
+Operador relacional que filtra qualquer ocorrência que seja maior ou igual que o padrão informado.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **coluna** | _string_ | Coluna a qual será aplicado a condição. |
-| **valor** | _java.lang.Object_ | Valor da condição. |
+| **valor** | _java.lang.Object_ | Volor da condição. |
 
 ##### Retorno
 
 ( _[Where](../objects/Where)_ )
 
-Objeto Where atual.
+Operador relacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>or</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>relationOperator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationOperator](../objects/RelationOperator)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+## greaterThan
+
+---
+
+#### <span style={{color: '#008000'}}>greaterThan</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que seja maior que o padrão informado.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valor** | _java.lang.Object_ | Volor da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
+
+---
+
+## in
+
+---
+
+#### <span style={{color: '#008000'}}>in</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que seja igual a algum dos padrões informados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valores** | _[Ljava.lang.Object;[]_ | Volores da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
+
+---
+
+#### <span style={{color: '#008000'}}>in</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que seja igual a algum dos padrões informados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valores** | _java.lang.Object_ | Volores da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
+
+---
+
+## inRaw
+
+---
+
+#### <span style={{color: '#008000'}}>inRaw</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **value** | _java.lang.Object_ |   |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+
+---
+
+## lessOrEqualsThan
+
+---
+
+#### <span style={{color: '#008000'}}>lessOrEqualsThan</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que seja menor ou igual que o padrão informado.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valor** | _java.lang.Object_ | Volor da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
+
+---
+
+## lessThan
+
+---
+
+#### <span style={{color: '#008000'}}>lessThan</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que seja menor que o padrão informado.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valor** | _java.lang.Object_ | Volor da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
+
+---
+
+## notIn
+
+---
+
+#### <span style={{color: '#008000'}}>notIn</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que seja diferente de algum dos padrões informados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valores** | _[Ljava.lang.Object;[]_ | Volores da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
+
+---
+
+#### <span style={{color: '#008000'}}>notIn</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que seja diferente de algum dos padrões informados.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valores** | _java.lang.Object_ | Volores da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
+
+---
+
+## or
+
+---
+
+#### <span style={{color: '#008000'}}>or</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Descrição
 
 Define uma condição com o operador condicional OR no objeto Where.
@@ -156,7 +384,6 @@ Define uma condição com o operador condicional OR no objeto Where.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **coluna** | _string_ | Coluna a qual será aplicado a condição. |
-| **relationOperator** | _[RelationOperator](../objects/RelationOperator)_ | Operador de relação da condição. |
 
 ##### Retorno
 
@@ -189,7 +416,7 @@ Objeto Where atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setConditions</span>(<span style={{color: '#FF8000'}}>conditions</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{color: '#008000'}}>setConditions</span>(<span style={{color: '#FF8000'}}>conditions</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Descrição
 
 Define as demais condições aninhadas do objeto.
@@ -198,30 +425,7 @@ Define as demais condições aninhadas do objeto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **conditions** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Demais condições aninhadas do objeto. |
-
-##### Retorno
-
-( _[Where](../objects/Where)_ )
-
-Objeto Where atual.
-
----
-
-## setFirstCondition
-
----
-
-#### <span style={{color: '#008000'}}>setFirstCondition</span>(<span style={{color: '#FF8000'}}>firstCondition</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
-##### Descrição
-
-Define a condição base do objeto.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **firstCondition** | _[Condition](../objects/Condition)_ | Condição base do objeto. |
+| **conditions** | _java.util.List_ | Demais condições aninhadas do objeto. |
 
 ##### Retorno
 
@@ -251,6 +455,29 @@ Define o nome da tabela a qual será aplicado a condição.
 ( _[Where](../objects/Where)_ )
 
 Objeto Where atual.
+
+---
+
+## startsWith
+
+---
+
+#### <span style={{color: '#008000'}}>startsWith</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Descrição
+
+Operador relacional que filtra qualquer ocorrência que inicia com o padrão informado.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **valor** | _java.lang.Object_ | Volor da condição. |
+
+##### Retorno
+
+( _[Where](../objects/Where)_ )
+
+Operador relacional.
 
 ---
 

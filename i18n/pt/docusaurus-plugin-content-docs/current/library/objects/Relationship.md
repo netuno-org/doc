@@ -1,7 +1,7 @@
 ---
-id: Relation
-title: Relation
-sidebar_label: Relation
+id: Relationship
+title: Relationship
+sidebar_label: Relationship
 ---
 
 Definição da configuração do objeto Relation para configurar relacionamentos entre tabelas com Join.
@@ -63,14 +63,14 @@ Nome da tabela.
 
 ---
 
-#### <span style={{color: '#008000'}}>getType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.join.RelationType</span>
+#### <span style={{color: '#008000'}}>getType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.RelationshipType</span>
 ##### Descrição
 
 Retorna o tipo do relacionamento.
 
 ##### Retorno
 
-( _org.netuno.tritao.query.join.RelationType_ )
+( _org.netuno.tritao.db.form.join.RelationshipType_ )
 
 Tipo do relacionamento.
 
@@ -97,7 +97,7 @@ Configurações do filtro.
 
 ---
 
-#### <span style={{color: '#008000'}}>join</span>(<span style={{color: '#FF8000'}}>relacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>
+#### <span style={{color: '#008000'}}>join</span>(<span style={{color: '#FF8000'}}>relacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
 ##### Descrição
 
 Define um segundo nivel de relação INNER JOIN no objeto atual.
@@ -106,11 +106,11 @@ Define um segundo nivel de relação INNER JOIN no objeto atual.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relacao** | _[Relation](../objects/Relation)_ | Relação INNER JOIN de segundo nivel. |
+| **relacao** | _[Relationship](../objects/Relationship)_ | Relação INNER JOIN de segundo nivel. |
 
 ##### Retorno
 
-( _[Relation](../objects/Relation)_ )
+( _[Relationship](../objects/Relationship)_ )
 
 Objeto Relation atual.
 
@@ -120,7 +120,7 @@ Objeto Relation atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>leftJoin</span>(<span style={{color: '#FF8000'}}>relacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>
+#### <span style={{color: '#008000'}}>leftJoin</span>(<span style={{color: '#FF8000'}}>relacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
 ##### Descrição
 
 Define um segundo nivel de relação LEFT JOIN no objeto atual.
@@ -129,11 +129,11 @@ Define um segundo nivel de relação LEFT JOIN no objeto atual.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relacao** | _[Relation](../objects/Relation)_ | Relação LEFT JOIN de segundo nivel. |
+| **relacao** | _[Relationship](../objects/Relationship)_ | Relação LEFT JOIN de segundo nivel. |
 
 ##### Retorno
 
-( _[Relation](../objects/Relation)_ )
+( _[Relationship](../objects/Relationship)_ )
 
 Objeto Relation atual.
 
@@ -143,7 +143,7 @@ Objeto Relation atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>rightJoin</span>(<span style={{color: '#FF8000'}}>relacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>
+#### <span style={{color: '#008000'}}>rightJoin</span>(<span style={{color: '#FF8000'}}>relacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
 ##### Descrição
 
 Define um segundo nivel de relação RIGHT JOIN no objeto atual.
@@ -152,11 +152,11 @@ Define um segundo nivel de relação RIGHT JOIN no objeto atual.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relacao** | _[Relation](../objects/Relation)_ | Relação RIGHT JOIN de segundo nivel. |
+| **relacao** | _[Relationship](../objects/Relationship)_ | Relação RIGHT JOIN de segundo nivel. |
 
 ##### Retorno
 
-( _[Relation](../objects/Relation)_ )
+( _[Relationship](../objects/Relationship)_ )
 
 Objeto Relation atual.
 
@@ -166,7 +166,7 @@ Objeto Relation atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
 ##### Descrição
 
 Define o nome da coluna que será usada no relacionamento.
@@ -179,7 +179,7 @@ Define o nome da coluna que será usada no relacionamento.
 
 ##### Retorno
 
-( _[Relation](../objects/Relation)_ )
+( _[Relationship](../objects/Relationship)_ )
 
 Objeto Relation atual.
 
@@ -189,7 +189,7 @@ Objeto Relation atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSubRelations</span>(<span style={{color: '#FF8000'}}>subRelacionamentos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>
+#### <span style={{color: '#008000'}}>setSubRelations</span>(<span style={{color: '#FF8000'}}>subRelacionamentos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
 ##### Descrição
 
 Define os sub relacionamentos do objeto atual.
@@ -202,7 +202,7 @@ Define os sub relacionamentos do objeto atual.
 
 ##### Retorno
 
-( _[Relation](../objects/Relation)_ )
+( _[Relationship](../objects/Relationship)_ )
 
 Objeto Relation atual.
 
@@ -212,7 +212,7 @@ Objeto Relation atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setTableName</span>(<span style={{color: '#FF8000'}}>tabelaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>
+#### <span style={{color: '#008000'}}>setTableName</span>(<span style={{color: '#FF8000'}}>tabelaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
 ##### Descrição
 
 Define o nome da tabela a ser relacionado.
@@ -225,7 +225,7 @@ Define o nome da tabela a ser relacionado.
 
 ##### Retorno
 
-( _[Relation](../objects/Relation)_ )
+( _[Relationship](../objects/Relationship)_ )
 
 Objeto Relation atual.
 
@@ -235,7 +235,7 @@ Objeto Relation atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setType</span>(<span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.join.RelationType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>
+#### <span style={{color: '#008000'}}>setType</span>(<span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.RelationshipType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
 ##### Descrição
 
 Define o tipo do relacionamento.
@@ -244,11 +244,11 @@ Define o tipo do relacionamento.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **tipo** | _org.netuno.tritao.query.join.RelationType_ | Tipo do relacionamento. |
+| **tipo** | _org.netuno.tritao.db.form.join.RelationshipType_ | Tipo do relacionamento. |
 
 ##### Retorno
 
-( _[Relation](../objects/Relation)_ )
+( _[Relationship](../objects/Relationship)_ )
 
 Objeto Relation atual.
 
@@ -258,7 +258,7 @@ Objeto Relation atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>filtro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>
+#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>filtro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
 ##### Descrição
 
 Define as configurações do filtro.
@@ -271,7 +271,7 @@ Define as configurações do filtro.
 
 ##### Retorno
 
-( _[Relation](../objects/Relation)_ )
+( _[Relationship](../objects/Relationship)_ )
 
 Objeto Relation atual.
 

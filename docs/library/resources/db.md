@@ -180,7 +180,7 @@ if (!_db.checkExists().column("client", "description")) {
 ##### Description
 
 Gets the connection configuration to the database being used.
-The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
+The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/tutorials/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -895,6 +895,44 @@ The query with the parameters ready to be used.
 
 ---
 
+## form
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>form</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+##### Description
+
+Returns a new Operation object ready to be configured.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **tableName** | _string_ | Table name. |
+
+##### Return
+
+( _[Operation](../objects/Operation)_ )
+
+A new Operation object
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>form</span>(<span style={{color: '#FF8000'}}>formName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **formName** | _string_ |   |
+| **where** | _[Where](../objects/Where)_ |   |
+
+##### Return
+
+( _[Operation](../objects/Operation)_ )
+
+
+---
+
 ## get
 
 ---
@@ -973,7 +1011,7 @@ The item data found or null if it does not exist.
 ##### Description
 
 Gets the connection configuration to the database being used.
-The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
+The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/tutorials/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1062,8 +1100,7 @@ if (!_db.checkExists().index("client", "name")) {
 ##### Description
 
 Starts a new DB resource for the connection name that is passed.
-The connection details must be defined in the application's environment configuration document, more information in the [Multiple Databases](
-../../academy/server/database/multiple-databases) tutorial.
+The connection details must be defined in the application's environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1455,6 +1492,164 @@ _out.print(`The OTHER DB connection is: ${db_OTHER_ConnectionName}\n`)
 ( _string_ )
 
 Name of the connection configuration to the database being used.
+
+---
+
+## link
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Description
+
+Returns a relationship with a form.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **formLink** | _string_ | Name of the form to be related. |
+
+##### Return
+
+( _[Link](../objects/Link)_ )
+
+Objeto Link.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **formLink** | _string_ |   |
+| **where** | _[Where](../objects/Where)_ |   |
+
+##### Return
+
+( _[Link](../objects/Link)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>, <span style={{color: '#FF8000'}}>link</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **formLink** | _string_ |   |
+| **where** | _[Where](../objects/Where)_ |   |
+| **link** | _[Link](../objects/Link)_ |   |
+
+##### Return
+
+( _[Link](../objects/Link)_ )
+
+
+---
+
+## manyToOne
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>manyToOne</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
+##### Description
+
+Returns a new Many To One relationship.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **tableName** | _string_ | Table name. |
+| **column** | _string_ | Column name. |
+
+##### Return
+
+( _[Relationship](../objects/Relationship)_ )
+
+Many To One relationship.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>manyToOne</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **tableName** | _string_ |   |
+| **column** | _string_ |   |
+| **where** | _[Where](../objects/Where)_ |   |
+
+##### Return
+
+( _[Relationship](../objects/Relationship)_ )
+
+
+---
+
+## oneToMany
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>oneToMany</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
+##### Description
+
+Returns a new One To Many relationship.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **tableName** | _string_ | Table name. |
+| **column** | _string_ | Column name. |
+
+##### Return
+
+( _[Relationship](../objects/Relationship)_ )
+
+One To Many relationship.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>oneToMany</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **tableName** | _string_ |   |
+| **column** | _string_ |   |
+| **where** | _[Where](../objects/Where)_ |   |
+
+##### Return
+
+( _[Relationship](../objects/Relationship)_ )
+
+
+---
+
+## pagination
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>pagination</span>(<span style={{color: '#FF8000'}}>page</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>pageSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.pagination.Pagination</span>
+##### Description
+
+Returns the object for pagination configuration when using Query's page() method.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **page** | _int_ | Page number. |
+| **pageSize** | _int_ | Number of elements per page. |
+
+##### Return
+
+( _org.netuno.tritao.db.form.pagination.Pagination_ )
+
+Objeto Pagination.
 
 ---
 
@@ -3019,6 +3214,42 @@ _out.json({updatedData: updatedData})
 ( _int[]_ )
 
 Array with number of records affected by the update for each object inside the list.
+
+---
+
+## where
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>where</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Description
+
+Returns a new Where object ready to be configured.
+
+##### Return
+
+( _[Where](../objects/Where)_ )
+
+A new Where object
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>where</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+##### Description
+
+Returns a new Where object ready to be configured.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **column** | _string_ | Column name. |
+
+##### Return
+
+( _[Where](../objects/Where)_ )
+
+A new Where object
 
 ---
 

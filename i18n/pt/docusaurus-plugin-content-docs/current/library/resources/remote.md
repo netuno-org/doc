@@ -452,6 +452,24 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
+## getHostAddress
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getHostAddress</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **host** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
 ## getQS
 
 ---
@@ -557,6 +575,29 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ( _string_ )
 
+
+---
+
+## hostAddress
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>hostAddress</span>(<span style={{color: '#FF8000'}}>servidor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o endereço IP de um anfitrião.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **servidor** | _string_ | Nome do anfitrião. |
+
+##### Retorno
+
+( _string_ )
+
+Endereço IP do anfitrião.
 
 ---
 
@@ -914,6 +955,26 @@ Verifica se o nome de servidor ou IP está disponível.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **servidor** | _string_ | Nome ou IP do servidor. |
+
+##### Retorno
+
+( _boolean_ )
+
+Resultado se endereço está disponível.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>ping</span>(<span style={{color: '#FF8000'}}>servidor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tempoLimite</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se o nome de servidor ou IP está disponível.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **servidor** | _string_ | Nome ou IP do servidor. |
+| **tempoLimite** | _int_ | Tempo limite para realizar o ping em milissegundos. |
 
 ##### Retorno
 

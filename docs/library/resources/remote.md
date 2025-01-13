@@ -452,6 +452,24 @@ Submission response, with status, header, content, etc.
 
 ---
 
+## getHostAddress
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getHostAddress</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **host** | _string_ |   |
+
+##### Return
+
+( _string_ )
+
+
+---
+
 ## getQS
 
 ---
@@ -557,6 +575,29 @@ Submission response, with status, header, content, etc.
 
 ( _string_ )
 
+
+---
+
+## hostAddress
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>hostAddress</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Get the IP address of a host.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **host** | _string_ | Host name. |
+
+##### Return
+
+( _string_ )
+
+Host IP address.
 
 ---
 
@@ -914,6 +955,26 @@ Check whether the server name or IP is available.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **host** | _string_ | Server name or IP. |
+
+##### Return
+
+( _boolean_ )
+
+Result if address is available.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>ping</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>timeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Check whether the server name or IP is available.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **host** | _string_ | Server name or IP. |
+| **timeout** | _int_ | Timeout to perform ping in milliseconds. |
 
 ##### Return
 

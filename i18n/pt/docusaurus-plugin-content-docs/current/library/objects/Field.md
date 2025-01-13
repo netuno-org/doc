@@ -42,6 +42,18 @@ Nome da coluna.
 
 ---
 
+## getValue
+
+---
+
+#### <span style={{color: '#008000'}}>getValue</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+##### Retorno
+
+( _java.lang.Object_ )
+
+
+---
+
 ## setAlias
 
 ---
@@ -85,6 +97,24 @@ Define o nome da coluna que será retornada na consulta.
 ( _[Field](../objects/Field)_ )
 
 Objeto Field atual.
+
+---
+
+## setValue
+
+---
+
+#### <span style={{color: '#008000'}}>setValue</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Field](../objects/Field)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **value** | _java.lang.Object_ |   |
+
+##### Retorno
+
+( _[Field](../objects/Field)_ )
+
 
 ---
 

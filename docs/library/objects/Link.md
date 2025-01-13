@@ -29,14 +29,14 @@ The name of the form.
 
 ---
 
-#### <span style={{color: '#008000'}}>getRelationLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationLink](../objects/RelationLink)</span>
+#### <span style={{color: '#008000'}}>getRelationLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>
 ##### Description
 
 Returns the relationship configuration.
 
 ##### Return
 
-( _[RelationLink](../objects/RelationLink)_ )
+( _[RelationshipLink](../objects/RelationshipLink)_ )
 
 Relationship configuration.
 
@@ -109,7 +109,7 @@ Current Link object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setRelationLink</span>(<span style={{color: '#FF8000'}}>relationLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationLink](../objects/RelationLink)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>setRelationLink</span>(<span style={{color: '#FF8000'}}>relationLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
 ##### Description
 
 Defines the relationship configuration.
@@ -118,7 +118,7 @@ Defines the relationship configuration.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relationLink** | _[RelationLink](../objects/RelationLink)_ | The relationship configuration. |
+| **relationLink** | _[RelationshipLink](../objects/RelationshipLink)_ | The relationship configuration. |
 
 ##### Return
 

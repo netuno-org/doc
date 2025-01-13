@@ -1,7 +1,7 @@
 ---
-id: Condition
-title: Condition
-sidebar_label: Condition
+id: ConditionalOperator
+title: ConditionalOperator
+sidebar_label: ConditionalOperator
 ---
 
 Definição da configuração do objeto Condition para construção de condições com o objeto Where
@@ -29,14 +29,14 @@ Nome da coluna a qual será aplicado a condição.
 
 ---
 
-#### <span style={{color: '#008000'}}>getOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.where.ConditionOperator</span>
+#### <span style={{color: '#008000'}}>getOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.where.ConditionalOperatorType</span>
 ##### Descrição
 
 Retorna o operador da condição.
 
 ##### Retorno
 
-( _org.netuno.tritao.query.where.ConditionOperator_ )
+( _org.netuno.tritao.db.form.where.ConditionalOperatorType_ )
 
 Retorna o operador da condição.
 
@@ -46,14 +46,14 @@ Retorna o operador da condição.
 
 ---
 
-#### <span style={{color: '#008000'}}>getRelationOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationOperator](../objects/RelationOperator)</span>
+#### <span style={{color: '#008000'}}>getRelationOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](../objects/RelationalOperator)</span>
 ##### Descrição
 
 Retorna as configurações da relação.
 
 ##### Retorno
 
-( _[RelationOperator](../objects/RelationOperator)_ )
+( _[RelationalOperator](../objects/RelationalOperator)_ )
 
 Configurações da relação.
 
@@ -97,7 +97,7 @@ Se possui ou não.
 
 ---
 
-#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
 ##### Descrição
 
 Define o nome da coluna a qual será aplicado a condição.
@@ -110,7 +110,7 @@ Define o nome da coluna a qual será aplicado a condição.
 
 ##### Retorno
 
-( _[Condition](../objects/Condition)_ )
+( _[ConditionalOperator](../objects/ConditionalOperator)_ )
 
 Objeto Condition atual.
 
@@ -120,7 +120,7 @@ Objeto Condition atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setOperator</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.where.ConditionOperator</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setOperator</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.where.ConditionalOperatorType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
 ##### Descrição
 
 Define o operador da condição.
@@ -129,11 +129,11 @@ Define o operador da condição.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **coluna** | _org.netuno.tritao.query.where.ConditionOperator_ | O operador da condição. |
+| **coluna** | _org.netuno.tritao.db.form.where.ConditionalOperatorType_ | O operador da condição. |
 
 ##### Retorno
 
-( _[Condition](../objects/Condition)_ )
+( _[ConditionalOperator](../objects/ConditionalOperator)_ )
 
 Objeto Condition atual.
 
@@ -143,7 +143,7 @@ Objeto Condition atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setRelationOperator</span>(<span style={{color: '#FF8000'}}>operadorRelacional</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationOperator](../objects/RelationOperator)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setRelationOperator</span>(<span style={{color: '#FF8000'}}>operadorRelacional</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](../objects/RelationalOperator)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
 ##### Descrição
 
 Define as configurações da relação.
@@ -152,11 +152,11 @@ Define as configurações da relação.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **operadorRelacional** | _[RelationOperator](../objects/RelationOperator)_ | Configurações da relação. |
+| **operadorRelacional** | _[RelationalOperator](../objects/RelationalOperator)_ | Configurações da relação. |
 
 ##### Retorno
 
-( _[Condition](../objects/Condition)_ )
+( _[ConditionalOperator](../objects/ConditionalOperator)_ )
 
 Objeto Condition atual.
 
@@ -166,7 +166,7 @@ Objeto Condition atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSubCondition</span>(<span style={{color: '#FF8000'}}>subcondicao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setSubCondition</span>(<span style={{color: '#FF8000'}}>subcondicao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
 ##### Descrição
 
 Define um proximo nivel de condições dentro da condição atual.
@@ -179,7 +179,7 @@ Define um proximo nivel de condições dentro da condição atual.
 
 ##### Retorno
 
-( _[Condition](../objects/Condition)_ )
+( _[ConditionalOperator](../objects/ConditionalOperator)_ )
 
 Objeto Condition atual.
 

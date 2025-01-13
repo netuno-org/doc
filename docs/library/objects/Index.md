@@ -21,7 +21,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### <span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>Index</span>
+#### <span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Index](../objects/Index)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -31,7 +31,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ##### Return
 
-( _Index_ )
+( _[Index](../objects/Index)_ )
 
 
 ---

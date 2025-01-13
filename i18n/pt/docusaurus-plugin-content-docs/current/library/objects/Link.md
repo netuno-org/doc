@@ -29,14 +29,14 @@ Nome do formulario.
 
 ---
 
-#### <span style={{color: '#008000'}}>getRelationLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationLink](../objects/RelationLink)</span>
+#### <span style={{color: '#008000'}}>getRelationLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>
 ##### Descrição
 
 Retorna a configuração do relacionamento.
 
 ##### Retorno
 
-( _[RelationLink](../objects/RelationLink)_ )
+( _[RelationshipLink](../objects/RelationshipLink)_ )
 
 Configuração do relacionamento.
 
@@ -109,7 +109,7 @@ Objeto Link atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setRelationLink</span>(<span style={{color: '#FF8000'}}>relationLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationLink](../objects/RelationLink)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>setRelationLink</span>(<span style={{color: '#FF8000'}}>relationLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
 ##### Descrição
 
 Define a configuração do relacionamento.
@@ -118,7 +118,7 @@ Define a configuração do relacionamento.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relationLink** | _[RelationLink](../objects/RelationLink)_ | configuração do relacionamento. |
+| **relationLink** | _[RelationshipLink](../objects/RelationshipLink)_ | configuração do relacionamento. |
 
 ##### Retorno
 

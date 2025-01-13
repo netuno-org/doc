@@ -12,14 +12,14 @@ Definição da configuração do objeto Join para consultas simplificadas.
 
 ---
 
-#### <span style={{color: '#008000'}}>getJoinType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.join.JoinType</span>
+#### <span style={{color: '#008000'}}>getJoinType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>
 ##### Descrição
 
 Retorna o tipo da junção do relacionamento.
 
 ##### Retorno
 
-( _org.netuno.tritao.query.join.JoinType_ )
+( _org.netuno.tritao.db.form.join.JoinType_ )
 
 Tipo da junção.
 
@@ -29,14 +29,14 @@ Tipo da junção.
 
 ---
 
-#### <span style={{color: '#008000'}}>getRelation</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>
+#### <span style={{color: '#008000'}}>getRelation</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
 ##### Descrição
 
 Retorna o objeto com a configuração do relacionamento.
 
 ##### Retorno
 
-( _[Relation](../objects/Relation)_ )
+( _[Relationship](../objects/Relationship)_ )
 
 Objeto com a configuração do relacionamento.
 
@@ -80,7 +80,7 @@ Objeto Where com a configuração das condições
 
 ---
 
-#### <span style={{color: '#008000'}}>setJoinType</span>(<span style={{color: '#FF8000'}}>juncaoTipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.join.JoinType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
+#### <span style={{color: '#008000'}}>setJoinType</span>(<span style={{color: '#FF8000'}}>juncaoTipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
 ##### Descrição
 
 Define o tipo da junção do relacionamento.
@@ -89,7 +89,7 @@ Define o tipo da junção do relacionamento.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **juncaoTipo** | _org.netuno.tritao.query.join.JoinType_ | Tipo da junção. |
+| **juncaoTipo** | _org.netuno.tritao.db.form.join.JoinType_ | Tipo da junção. |
 
 ##### Retorno
 
@@ -103,7 +103,7 @@ Objeto Join atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setRelation</span>(<span style={{color: '#FF8000'}}>relacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relation](../objects/Relation)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
+#### <span style={{color: '#008000'}}>setRelation</span>(<span style={{color: '#FF8000'}}>relacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
 ##### Descrição
 
 Define o objeto com a configuração do relacionamento.
@@ -112,7 +112,7 @@ Define o objeto com a configuração do relacionamento.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relacao** | _[Relation](../objects/Relation)_ | Objeto com a configuração do relacionamento. |
+| **relacao** | _[Relationship](../objects/Relationship)_ | Objeto com a configuração do relacionamento. |
 
 ##### Retorno
 

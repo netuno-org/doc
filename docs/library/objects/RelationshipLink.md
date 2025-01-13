@@ -1,7 +1,7 @@
 ---
-id: RelationLink
-title: RelationLink
-sidebar_label: RelationLink
+id: RelationshipLink
+title: RelationshipLink
+sidebar_label: RelationshipLink
 ---
 
 Definição da configuração do objeto RelationLink para configurar realcionamentos entre formularios.
@@ -63,7 +63,7 @@ Whether you have it or not.
 
 ---
 
-#### <span style={{color: '#008000'}}>setFormLink</span>(<span style={{color: '#FF8000'}}>form</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationLink](../objects/RelationLink)</span>
+#### <span style={{color: '#008000'}}>setFormLink</span>(<span style={{color: '#FF8000'}}>form</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>
 ##### Description
 
 Defines the name of the form to be related.
@@ -76,7 +76,7 @@ Defines the name of the form to be related.
 
 ##### Return
 
-( _[RelationLink](../objects/RelationLink)_ )
+( _[RelationshipLink](../objects/RelationshipLink)_ )
 
 Current RelationLink object.
 
@@ -86,7 +86,7 @@ Current RelationLink object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSubLinks</span>(<span style={{color: '#FF8000'}}>subLinks</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationLink](../objects/RelationLink)</span>
+#### <span style={{color: '#008000'}}>setSubLinks</span>(<span style={{color: '#FF8000'}}>subLinks</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>
 ##### Description
 
 Defines the sub relationships
@@ -99,7 +99,7 @@ Defines the sub relationships
 
 ##### Return
 
-( _[RelationLink](../objects/RelationLink)_ )
+( _[RelationshipLink](../objects/RelationshipLink)_ )
 
 Current RelationLink object.
 

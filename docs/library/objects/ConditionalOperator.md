@@ -1,7 +1,7 @@
 ---
-id: Condition
-title: Condition
-sidebar_label: Condition
+id: ConditionalOperator
+title: ConditionalOperator
+sidebar_label: ConditionalOperator
 ---
 
 Definição da configuração do objeto Condition para construção de condições com o objeto Where
@@ -29,14 +29,14 @@ The name of the column to which the condition will be applied.
 
 ---
 
-#### <span style={{color: '#008000'}}>getOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.where.ConditionOperator</span>
+#### <span style={{color: '#008000'}}>getOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.where.ConditionalOperatorType</span>
 ##### Description
 
 Returns the condition condition operator.
 
 ##### Return
 
-( _org.netuno.tritao.query.where.ConditionOperator_ )
+( _org.netuno.tritao.db.form.where.ConditionalOperatorType_ )
 
 The condition condition operator.
 
@@ -46,14 +46,14 @@ The condition condition operator.
 
 ---
 
-#### <span style={{color: '#008000'}}>getRelationOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationOperator](../objects/RelationOperator)</span>
+#### <span style={{color: '#008000'}}>getRelationOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](../objects/RelationalOperator)</span>
 ##### Description
 
 Returns the relationship settings.
 
 ##### Return
 
-( _[RelationOperator](../objects/RelationOperator)_ )
+( _[RelationalOperator](../objects/RelationalOperator)_ )
 
 The relationship settings.
 
@@ -97,7 +97,7 @@ Whether you have it or not.
 
 ---
 
-#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
 ##### Description
 
 Defines the name of the column to which the condition will be applied.
@@ -110,7 +110,7 @@ Defines the name of the column to which the condition will be applied.
 
 ##### Return
 
-( _[Condition](../objects/Condition)_ )
+( _[ConditionalOperator](../objects/ConditionalOperator)_ )
 
 Current Condition object.
 
@@ -120,7 +120,7 @@ Current Condition object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setOperator</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.query.where.ConditionOperator</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setOperator</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.where.ConditionalOperatorType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
 ##### Description
 
 Defines the condition condition operator.
@@ -129,11 +129,11 @@ Defines the condition condition operator.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **column** | _org.netuno.tritao.query.where.ConditionOperator_ | The condition condition operator. |
+| **column** | _org.netuno.tritao.db.form.where.ConditionalOperatorType_ | The condition condition operator. |
 
 ##### Return
 
-( _[Condition](../objects/Condition)_ )
+( _[ConditionalOperator](../objects/ConditionalOperator)_ )
 
 Current Condition object.
 
@@ -143,7 +143,7 @@ Current Condition object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setRelationOperator</span>(<span style={{color: '#FF8000'}}>relationOperator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationOperator](../objects/RelationOperator)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setRelationOperator</span>(<span style={{color: '#FF8000'}}>relationOperator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](../objects/RelationalOperator)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
 ##### Description
 
 Defines the relationship settings.
@@ -152,11 +152,11 @@ Defines the relationship settings.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relationOperator** | _[RelationOperator](../objects/RelationOperator)_ | The relationship settings. |
+| **relationOperator** | _[RelationalOperator](../objects/RelationalOperator)_ | The relationship settings. |
 
 ##### Return
 
-( _[Condition](../objects/Condition)_ )
+( _[ConditionalOperator](../objects/ConditionalOperator)_ )
 
 Current Condition object.
 
@@ -166,7 +166,7 @@ Current Condition object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSubCondition</span>(<span style={{color: '#FF8000'}}>subcondition</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Condition](../objects/Condition)</span>
+#### <span style={{color: '#008000'}}>setSubCondition</span>(<span style={{color: '#FF8000'}}>subcondition</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
 ##### Description
 
 Defines the next level of conditions within the current condition.
@@ -179,7 +179,7 @@ Defines the next level of conditions within the current condition.
 
 ##### Return
 
-( _[Condition](../objects/Condition)_ )
+( _[ConditionalOperator](../objects/ConditionalOperator)_ )
 
 Current Condition object.
 
