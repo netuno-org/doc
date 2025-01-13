@@ -12,7 +12,7 @@ Please note that this is an experimental phase, so each new version of Netuno ma
 
 Before proceeding, check that there are notions of SQL, relationships between tables such as `Many To One`, `One To Many` and so on. Furthermore, prior knowledge of Netuno's Forms and how they are organized is necessary to get the most out of the Query object.
 
-> `Query` is only available on Netuno from version `v7:20240606.1441`.
+> `DB Form` is only available on Netuno from version `v7:20240606.1441`.
 
 ## Introduction
 
@@ -24,38 +24,36 @@ At the heart of Query is the ability to structure SQL commands using objects and
 
 ## Practical Examples of Use
 
-The `Query` Object is accessible from the `_form` resource, once invoked you have in your hands the base query that can be configured using the methods and objects available in it.
+The `DB Form` is accessible from the `_db.form("form")` resource, once invoked you have in your hands the base that can be configured using the methods and objects available in it.
 
 ### Search All
 
 ```
-const query = _form.query(
-    'people',
-    _form.where('name', _form.startsWith('jail'))
+const query = _db.form('people')
+.where(
+    _db.where('name').startsWith('jail')
     .and(
-         _form.where('email', _form.contains('jai'))
-         .or('email', _form.endsWith('com'))
+         _db.where('email').contains('jai')
+         .or('email').endsWith('com')
      )
 )
-.link('job', _form.where('code', 'manager'))
+.link('job', _db.where('code').equal('manager'))
 .join(
-    _form.manyToOne(
+    _db.manyToOne(
         'netuno_user', 
         'people_user_id',  
-        _form.where('mail', _form.startsWith('jai'))
+        _db.where('mail').startsWith('jai')
     ).join(
-        _form.manyToOne(
+        _db.manyToOne(
             'netuno_group',
             'group_id',
-            _form.where('code', 'people')
+            _db.where('code').equal('people')
         )
     )
 )
-.fields(
-    _form.field("people.name", "people_name"),
-    _form.field("people.active", "people_active"),
-    _form.field("people.uid", "people_uid")
-)
+.get("people.name", "people_name"),
+.get("people.active", "people_active"),
+.get("people.uid", "people_uid")
 .debug(true)
 .distinct(true)
 
@@ -68,9 +66,8 @@ In the example above we make a query for the `people` table relating it to two o
 - `link` : Method that relates the main table to another table using the Netuno `Form` criteria.
 - `join` : Method that receives a relationship object between tables.
 - `manyToOne` : Object that defines the type of relationship between tables, in this case a `Many To One` relationship.
-- `fields` : Method that receives the fields (columns) that will be returned in the query.
-- `field` : Object that represents the field (column) that will be returned.
 - `debug` : Method that determines whether the constructed query will be printed to the console.
+- `get` : Method that defines which fields will be returned in the operation.
 - `distinct` : Method that determines whether the `DISTINCT` command will be applied to the query.
 - `all` : Method that executes the query and returns the results in list form.
 
@@ -79,20 +76,16 @@ In the example above we make a query for the `people` table relating it to two o
 ### Get First Record
 
 ```
-const query = _form.query(
-    'people',
-    _form.where('name', _form.startsWith('jail'))
-    .and('email', _form.in(
-        _val.list().add('first@mail.com').add('second@mail.com')
-        )
-    )
+const query = _db.form('people')
+.where(
+    _db.where('name').startsWith('jail')
+    .and('email').in(
+        _val.list().add('first@mail.com').add('second@mail.com'))
 )
 .link('job')
-.fields(
-    _form.field("people.name", "people_name"),
-    _form.field("people.active", "people_active"),
-    _form.field("job.code", "job_code")
-)
+.get("people.name", "people_name"),
+.get("people.active", "people_active"),
+.get("job.code", "job_code")
 .order('people.age', 'desc')
 .debug(true)
 
@@ -103,22 +96,20 @@ At the end of the example above we invoke the `first()` method, this returns the
 ### Result With Pagination
 
 ```
-const query = _form.query(
+const query = _db.form(
     'people'
 )
 .link(
     'job', 
-    _form.link('task')
+    _db.link('task')
 )
-.fields(
-    _form.field("people.name", "people_name"),
-    _form.field("people.active", "people_active"),
-    _form.field("job.code", "job_code")
-)
+.get("people.name", "people_name"),
+.get("people.active", "people_active"),
+.get("job.code", "job_code")
 .group("people.id")
 .debug(true)
 
-const page = query.page(_form.pagination(1,10));
+const page = query.page(_db.pagination(1,10));
 ```
 > The page number in the Pagination object starts from 1, so the example above is equivalent to: `offset = 0` and `limit = 10`. 
 
@@ -150,49 +141,32 @@ At the end of the example above, we invoke the `page()` method passing as a para
 ### Insert New Records
 
 ```
-const result = _form.query(
+const result = _db.form(
     'people'
-).insert(
-    _val.map()
-        .set("name", "Caio Andrade")
-        .set("email", "caio@mail.com")
-);
+)
+.set("name", "Caio Andrade")
+.set("email", "caio@mail.com")
+.insert();
 ```
 
 ### Update Records
 
-With Query object you are able to update the records of a query in a simple way.
+With DB Form you are able to update the records of a query in a simple way.
 
 ```
-_form.query(
+_db.form(
     'people',
 )
 .link(
     'job',
-    _form.where('code', 'trainee')
-).updateFirst(
-    _val.map()
-        .set("name", "new name")
-        .set("email", "mynewemail@mail.com")
-);
-```
-> The method `updateFirst()` update first result of the list records. 
-
-With the Query object it is also possible to update all occurrences of a query.
-
-```
-_form.query(
-    'people',
+    _db.where('code').equal('trainee')
 )
-.link(
-    'job',
-    _form.where('code', 'trainee')
-).updateAll(
-    _val.map()
-       .set("active", false)
-);
+.set("name", "new name")
+.set("email", "mynewemail@mail.com")
+.update();
 ```
-> `Warning`. The method `updateAll()` will update all records of the query result.
+
+> `Warning`. The method `update` will update all query result records, so build your operation correctly to avoid inconsistencies..
 
 > You can also use other methods to filter like `order()`, `limit()` to improve your queries.
 
@@ -201,43 +175,31 @@ _form.query(
 The Query object allows you to delete the records returned by the query in a simple and intuitive way.
 
 ```
-_form.query(
+_db.form(
     `people`
 )
 .link(
     'job',
-    _form.where('code', 'trainee')
-).deleteFirst();
+    _db.where('code').equal('trainee')
+).delete();
 ```
-> The method `deleteFirst()` delete first result of the list records. 
-
-With the Query object it is also possible to delete all occurrences of a query.
-
-```
-_form.query(
-    `people`
-)
-.link(
-    'job',
-    _form.where('code', 'trainee')
-).deleteAll();
-```
-> `Warning`. The method `deleteAll()` will delete all records of the query result.
+> `Warning`. The method `delete()` will delete all records of the query result.
 
 > You can also use other methods to filter like `order()`, `limit()` to improve your queries.
 
 ## Relationship Operators
 
-In the `Where` object, relationships are defined through relationship operators that are accessible from the `_form` resource, below are the types of relationship operators supported by `Where`:
--  `_form.startsWith('value')`
--  `_form.endsWith('value')`
--  `_form.contains('value')`
--  `_form.in(_val.list())`
--  `_form.greaterThan(value)`
--  `_form.lessThan(value)`
--  `_form.greaterOrEqualsThan(value)`
--  `_form.lessOrEqualsThan(value)`
--  `_form.different(value)`
+Below are the types of relationship operators supported by `Where`:
 
-> For exact comparisons, the value can be passed directly into the `Where` object `_form.where('campo', 'valor')`
+-  `equal('value')`
+-  `startsWith('value')`
+-  `endsWith('value')`
+-  `contains('value')`
+-  `in(_val.list())`
+-  `notIn(_val.list())`
+-  `greaterThan(value)`
+-  `lessThan(value)`
+-  `greaterOrEqualsThan(value)`
+-  `lessOrEqualsThan(value)`
+-  `different(value)`
 
