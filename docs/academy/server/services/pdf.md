@@ -47,7 +47,13 @@ If nothing is defined, it will be generated in the service's data output, for ex
 const pdfDocument = _pdf.newDocument()
 ```
 
-If you are going to generate the document in a new file, for example:
+To generate a PDF file inside the application's `docs` folder, you can do it like this:
+
+```javascript
+const pdfDocument = _pdf.newDocument(_app.file('docs/file.pdf').output())
+```
+
+If you are going to generate the document in a new file outside of the Application, for example:
 
 ```javascript
 const pdfDocument = _pdf.newDocument(_os.file('/tmp/file.pdf'))
@@ -148,7 +154,7 @@ In the code above, in the `setFixedPosition` method, the first parameter is the 
 
 To define a native font we can do it as follows:
 
-```
+```javascript
 const helvetica = _pdf.font("helvetica")
 const helveticaBold = _pdf.font("helvetica-bold")
 const helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
@@ -157,19 +163,19 @@ const helveticaOblique = _pdf.font("helvetica-oblique")
 
 To define a customized font, we can use `storage`:
 
-```
+```javascript
 const viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
 ```
 
 We can also use a file inside the application, as this example shows that the font is inside the `fonts` folder in the application root:
 
-```
+```javascript
 const roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
 ```
 
 Or use a file in any path on the system, so in this example the font is inside the `fonts` folder which is inside the system's temporary files folder:
 
-```
+```javascript
 const roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
 ```
 
@@ -177,7 +183,7 @@ const roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
 
 To use the font in texts, the font constant must be passed to the paragraph, like this:
 
-```
+```javascript
 pdfDocument.add(
     _pdf.paragraph("Using bold font.")
         .setFont(helveticaBold)
@@ -189,7 +195,7 @@ pdfDocument.add(
 
 Inserting images into the programmatically generated PDF document is done in this way:
 
-```
+```javascript
 pdfDocument.add(
     _pdf.image(_storage.filesystem("server", "samples/export-pdf", "logo.png"))
         .scaleAbsolute(120, 36)
@@ -200,19 +206,19 @@ Note that the `scaleAbsolute` method is very useful for resizing and adjusting t
 
 Alternatively, we can use a file within the application, as in this example:
 
-```
+```javascript
 const imageLogo = _pdf.image(_app.file("public/images/logo.png")
 ```
 
 Or use a file in any path on the system, as in this example:
 
-```
+```javascript
 const imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
 ```
 
 To add an image in a fixed position:
 
-```
+```javascript
 pdfDocument.add(
     imageLogo
         .scaleAbsolute(120, 36)
