@@ -47,16 +47,22 @@ Se nada for definido, ele será gerado na saída de dados do serviço, por exemp
 const pdfDocument = _pdf.newDocument()
 ```
 
-Se for gerar o documento em um novo arquivo, por exemplo:
+Para gerar um arquivo PDF dentro da pasta `docs` da aplicação, pode ser feito assim:
 
 ```javascript
-const pdfDocument = _pdf.newDocument(_os.file('/tmp/file.pdf'))
+const pdfDocument = _pdf.newDocument(_app.file('docs/file.pdf').output())
+```
+
+Se for gerar o documento em um novo arquivo fora da Aplicação, por exemplo:
+
+```javascript
+const pdfDocument = _pdf.newDocument(_os.file('/tmp/file.pdf').output())
 ```
 
 Ou ainda no `storage` da aplicação:
 
 ```javascript
-const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf'))
+const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf').output())
 ```
 
 > Por padrão o documento é criado com o formato de página **A4**.
@@ -148,7 +154,7 @@ No código acima, no método `setFixedPosition`, o primeiro parâmetro é a posi
 
 Para definir uma fonte nativa podemos fazer da seguinte forma:
 
-```
+```javascript
 const helvetica = _pdf.font("helvetica")
 const helveticaBold = _pdf.font("helvetica-bold")
 const helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
@@ -157,19 +163,19 @@ const helveticaOblique = _pdf.font("helvetica-oblique")
 
 Já para definir uma fonte customizada à medida, podemos utilizar `storage`:
 
-```
+```javascript
 const viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
 ```
 
 Também podemos utilizar um arquivo dentro da aplicação, como neste exemplo demonstra que a fonte está dentro da pasta `fonts` na raíz da aplicação:
 
-```
+```javascript
 const roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
 ```
 
 Ou ainda utilizar um arquivo em qualquer caminho do sistema, então neste exemplo a fonte está dentro da pasta `fonts` que está dentro da pasta de arquivos temporários do sistema:
 
-```
+```javascript
 const roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
 ```
 
@@ -177,7 +183,7 @@ const roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
 
 Para utilizar a fonte nos textos deve ser passado a constante da fonte para o parágrafo, desta forma:
 
-```
+```javascript
 pdfDocument.add(
     _pdf.paragraph("Utilizando a fonte em negrito.")
         .setFont(helveticaBold)
@@ -189,7 +195,7 @@ pdfDocument.add(
 
 A inserção de imagens no documento PDF gerado programaticamente é feita desta forma:
 
-```
+```javascript
 pdfDocument.add(
     _pdf.image(_storage.filesystem("server", "samples/export-pdf", "logo.png"))
         .scaleAbsolute(120, 36)
@@ -200,19 +206,19 @@ Repare que o método `scaleAbsolute` é muito útil para redimensionar e ajustar
 
 Em alternativa podemos utilizar um arquivo dentro da aplicação, como neste exemplo:
 
-```
+```javascript
 const imageLogo = _pdf.image(_app.file("public/images/logo.png")
 ```
 
 Ou ainda utilizar um arquivo em qualquer caminho do sistema, como neste exemplo:
 
-```
+```javascript
 const imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
 ```
 
 Para adicionar uma imagem em uma posição fixa:
 
-```
+```javascript
 pdfDocument.add(
     imageLogo
         .scaleAbsolute(120, 36)
