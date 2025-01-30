@@ -115,7 +115,7 @@ const page = query.page(_db.pagination(1,10));
 
 Ao final do exemplo acima invocamos o metodo `page()` passando como parâmetro o objeto `pagination` que possui as preferências da paginação. Este retornará um objeto página com os atributos equivalentes, exemplo:
 
-```javascript
+```json
     {
 	"hasNext": false,
 	"hasPrevious": false,
