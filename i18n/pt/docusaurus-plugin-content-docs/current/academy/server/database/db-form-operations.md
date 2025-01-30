@@ -28,7 +28,7 @@ O `DB Form` é acessivel apartir do recurso `_db.form('form')`, uma vez invocado
 
 ### Buscar Todos
 
-```
+```javascript
 const query = _db.form('people')
 .where(
     _db.where('name').startsWith('jail')
@@ -75,7 +75,7 @@ No exemplo acima fazemos uma consulta para a tabela `people` relacionando com ma
 
 ### Obter o Primeiro Registo
 
-```
+```javascript
 const query = _db.form('people')
 .where(
     _db.where('name').startsWith('jail')
@@ -95,7 +95,7 @@ Ao final do exemplo acima invocamos o método `first()`, este retorna a primeira
 
 ### Resultado Com Paginação
 
-```
+```javascript
 const query = _db.form(
     'people'
 )
@@ -115,7 +115,7 @@ const page = query.page(_db.pagination(1,10));
 
 Ao final do exemplo acima invocamos o metodo `page()` passando como parâmetro o objeto `pagination` que possui as preferências da paginação. Este retornará um objeto página com os atributos equivalentes, exemplo:
 
-```
+```javascript
     {
 	"hasNext": false,
 	"hasPrevious": false,
@@ -140,7 +140,7 @@ Ao final do exemplo acima invocamos o metodo `page()` passando como parâmetro o
 
 ### Guardar Registos
 
-```
+```javascript
 const result = _db.form(
     'people'
 )
@@ -153,7 +153,7 @@ const result = _db.form(
 
 Através do objeto DB Form você pode atualizar o registos da consulta de forma fácil e intuitiva.
 
-```
+```javascript
 _db.form(
     'people',
 )
@@ -174,7 +174,7 @@ _db.form(
 
 O DB Form também permite que você delete registos retornados na consulta de forma simples.
 
-```
+```javascript
 _db.form(
     `people`
 )
