@@ -28,7 +28,7 @@ The `DB Form` is accessible from the `_db.form("form")` resource, once invoked y
 
 ### Search All
 
-```
+```javascript
 const query = _db.form('people')
 .where(
     _db.where('name').startsWith('jail')
@@ -75,7 +75,7 @@ In the example above we make a query for the `people` table relating it to two o
 
 ### Get First Record
 
-```
+```javascript
 const query = _db.form('people')
 .where(
     _db.where('name').startsWith('jail')
@@ -95,7 +95,7 @@ At the end of the example above we invoke the `first()` method, this returns the
 
 ### Result With Pagination
 
-```
+```javascript
 const query = _db.form(
     'people'
 )
@@ -115,7 +115,7 @@ const page = query.page(_db.pagination(1,10));
 
 At the end of the example above, we invoke the `page()` method passing as a parameter the `pagination` object that has the pagination preferences. This will return a page object with the equivalent attributes, example:
 
-```
+```javascript
 {
 "hasNext": false,
 "hasPrevious": false,
@@ -140,7 +140,7 @@ At the end of the example above, we invoke the `page()` method passing as a para
 
 ### Insert New Records
 
-```
+```javascript
 const result = _db.form(
     'people'
 )
@@ -153,7 +153,7 @@ const result = _db.form(
 
 With DB Form you are able to update the records of a query in a simple way.
 
-```
+```javascript
 _db.form(
     'people',
 )
@@ -174,7 +174,7 @@ _db.form(
 
 The Query object allows you to delete the records returned by the query in a simple and intuitive way.
 
-```
+```javascript
 _db.form(
     `people`
 )
