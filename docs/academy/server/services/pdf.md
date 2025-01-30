@@ -352,7 +352,7 @@ The returned JSON has the key `content` with all the text content of the PDF fil
 
 Here is an example of the JSON returned by `extract`:
 
-```
+```json
 {
   "content": "All text content of the PDF file goes here...",
   "metadata":{
