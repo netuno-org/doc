@@ -56,13 +56,13 @@ const pdfDocument = _pdf.newDocument(_app.file('docs/file.pdf').output())
 If you are going to generate the document in a new file outside of the Application, for example:
 
 ```javascript
-const pdfDocument = _pdf.newDocument(_os.file('/tmp/file.pdf'))
+const pdfDocument = _pdf.newDocument(_os.file('/tmp/file.pdf').output())
 ```
 
 Or even in the application `storage`:
 
 ```javascript
-const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf'))
+const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf').output())
 ```
 
 > By default, the document is created in **A4** page format.
@@ -80,13 +80,13 @@ const pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
 Creates a new document for a file in the application root with the **B3** page format:
 
 ```javascript
-const pdfDocument = _pdf.newDocument(_app.file('file.pdf'), _pdf.pageSize("B3"))
+const pdfDocument = _pdf.newDocument(_app.file('file.pdf').output(), _pdf.pageSize("B3"))
 ```
 
 Creates a new document in the application's `storage` with the **legal** page format:
 
 ```javascript
-const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf'), _pdf.pageSize("legal"))
+const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf').output(), _pdf.pageSize("legal"))
 ```
 
 > See the documentation on [setting page sizes](../../../library/resources/pdf/#pagesize).
