@@ -80,13 +80,13 @@ const pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
 Cria um novo documento para um arquivo na raíz da aplicação com o formato de página **B3**:
 
 ```javascript
-const pdfDocument = _pdf.newDocument(_app.file('file.pdf'), _pdf.pageSize("B3"))
+const pdfDocument = _pdf.newDocument(_app.file('file.pdf').output(), _pdf.pageSize("B3"))
 ```
 
 Cria um novo documento no `storage` da aplicação com o formato de página **legal**:
 
 ```javascript
-const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf'), _pdf.pageSize("legal"))
+const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf').output(), _pdf.pageSize("legal"))
 ```
 
 > Veja a documentação sobre a [definição do tamanho das páginas](../../../library/resources/pdf/#pagesize).
@@ -353,7 +353,7 @@ O JSON retornado tem a chave `content` com todo o conteúdo de texto do arquivo 
 
 Aqui tem um exemplo do JSON retornado pelo `extract`:
 
-```
+```json
 {
   "content": "Todo conteúdo em texto do arquivo PDF vem aqui...",
   "metadata":{
