@@ -164,7 +164,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método DELETE.
@@ -174,7 +174,7 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **endereco** | _string_ | Endereço que será submetido. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -204,7 +204,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método DELETE.
@@ -213,7 +213,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -278,7 +278,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método GET.
@@ -288,7 +288,7 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **endereco** | _string_ | Endereço que será submetido. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -318,7 +318,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método GET.
@@ -327,7 +327,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -785,7 +785,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -796,7 +796,7 @@ Através do método HTTP, endereço e mapa de dados atribuído submete os dados 
 |---|---|---|
 | **metodo** | _string_ | Código do método HTTP. |
 | **endereco** | _string_ | Endereço que será submetido. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -863,7 +863,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>patch</span>(<span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>patch</span>(<span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método PATCH.
@@ -873,7 +873,7 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **endereco** | _string_ | Endereço que será submetido. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -903,7 +903,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>patch</span>(<span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>patch</span>(<span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método PATCH.
@@ -912,7 +912,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1044,7 +1044,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>post</span>(<span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>post</span>(<span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método POST.
@@ -1054,7 +1054,7 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **endereco** | _string_ | Endereço que será submetido. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1084,7 +1084,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>post</span>(<span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>post</span>(<span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método POST.
@@ -1093,7 +1093,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1158,7 +1158,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão remota através do método PUT.
@@ -1168,7 +1168,7 @@ Com o endereço e mapa de dados atríbudos, submete o pedido para a conexão rem
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **endereco** | _string_ | Endereço que será submetido. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1198,7 +1198,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Com o mapa de dados atríbudos submete o pedido para a conexão remota através do método PUT.
@@ -1207,7 +1207,7 @@ Com o mapa de dados atríbudos submete o pedido para a conexão remota através 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1467,17 +1467,22 @@ A instância atual do Remote.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setFormData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setFormData</span>(<span style={{color: '#FF8000'}}>dadosFormulario</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
+##### Descrição
+
+Define os dados que serão submetidos como formulário na conexão remota.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **data** | _[Values](../objects/Values)_ |   |
+| **dadosFormulario** | _[Values](../objects/Values)_ | Dados de formulário que será submetido. |
 
 ##### Retorno
 
-( _org.netuno.psamata.net.Remote_ )
+( _[Remote](../resources/remote)_ )
 
+A instância atual do Remote.
 
 ---
 
@@ -1531,17 +1536,22 @@ A instância atual do Remote.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setQueryString</span>(<span style={{color: '#FF8000'}}>qs</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setQueryString</span>(<span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
+##### Descrição
+
+Define a parametrização de dados da query string, ou seja, os parâmetros com dados passados no endereço da conexão remota.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **qs** | _[Values](../objects/Values)_ |   |
+| **dados** | _[Values](../objects/Values)_ | Mapa de parâmetros com dados para serem passados na URL. |
 
 ##### Retorno
 
-( _org.netuno.psamata.net.Remote_ )
+( _[Remote](../resources/remote)_ )
 
+A instância atual do Remote.
 
 ---
 
@@ -1664,17 +1674,22 @@ A instância atual do Remote.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setURLPrefix</span>(<span style={{color: '#FF8000'}}>urlPrefix</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>setURLPrefix</span>(<span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Remote](../resources/remote)</span>
+##### Descrição
+
+Define o prefixo do endereço da conexão remota.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **urlPrefix** | _string_ |   |
+| **endereco** | _string_ | Prefixo do endereço que será submetido. |
 
 ##### Retorno
 
-( _org.netuno.psamata.net.Remote_ )
+( _[Remote](../resources/remote)_ )
 
+A instância atual do Remote.
 
 ---
 
@@ -1789,7 +1804,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submit</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>querystring</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submit</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>querystring</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço, query string, tipo de conteúdo e dados atribuídos, submete para a conexão remota.
@@ -1800,7 +1815,7 @@ Através do método HTTP, endereço, query string, tipo de conteúdo e dados atr
 |---|---|---|
 | **metodo** | _string_ | Código do método HTTP. |
 | **endereco** | _string_ | Endereço que será submetido. |
-| **querystring** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Dados para a querystring. |
+| **querystring** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Dados para a querystring. |
 
 ##### Retorno
 
@@ -1810,7 +1825,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submit</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>querystring</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>tipoConteudo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submit</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>querystring</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>tipoConteudo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço, query string, tipo de conteúdo e dados atribuídos, submete para a conexão remota.
@@ -1821,7 +1836,7 @@ Através do método HTTP, endereço, query string, tipo de conteúdo e dados atr
 |---|---|---|
 | **metodo** | _string_ | Código do método HTTP. |
 | **endereco** | _string_ | Endereço que será submetido. |
-| **querystring** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Dados para a querystring. |
+| **querystring** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Dados para a querystring. |
 | **tipoConteudo** | _string_ | Código do tipo de conteúdo. |
 | **dados** | _string_ | Dados que serão submetido. |
 
@@ -1881,7 +1896,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitForm</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitForm</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como formulário para a conexão remota.
@@ -1892,7 +1907,7 @@ Através do método HTTP e mapa de dados atribuído submete os dados como formul
 |---|---|---|
 | **metodo** | _string_ | Código do método HTTP. |
 | **endereco** | _string_ | Endereço que será submetido. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1923,7 +1938,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitForm</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitForm</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como formulário para a conexão remota.
@@ -1933,7 +1948,7 @@ Através do método HTTP e mapa de dados atribuído submete os dados como formul
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **metodo** | _string_ | Código do método HTTP. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -1967,7 +1982,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitJSON</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitJSON</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>endereco</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP, endereço e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -1978,7 +1993,7 @@ Através do método HTTP, endereço e mapa de dados atribuído submete os dados 
 |---|---|---|
 | **metodo** | _string_ | Código do método HTTP. |
 | **endereco** | _string_ | Endereço que será submetido. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 
@@ -2009,7 +2024,7 @@ Resposta da submissão, com o estado, cabeçalho, conteúdo, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitJSON</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>submitJSON</span>(<span style={{color: '#FF8000'}}>metodo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
 ##### Descrição
 
 Através do método HTTP e mapa de dados atribuído submete os dados como JSON para a conexão remota.
@@ -2019,7 +2034,7 @@ Através do método HTTP e mapa de dados atribuído submete os dados como JSON p
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **metodo** | _string_ | Código do método HTTP. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Mapa de dados que serão submetido. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Mapa de dados que serão submetido. |
 
 ##### Retorno
 

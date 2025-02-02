@@ -60,12 +60,12 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>forms</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>forms</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **forms** | _[Ljava.lang.String;[]_ |   |
+| **forms** | _java.lang.String[]_ |   |
 
 ##### Return
 
@@ -202,14 +202,14 @@ The query grouping object.
 
 ---
 
-#### <span style={{color: '#008000'}}>getJoin</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getJoin</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Description
 
 Returns the Join objects (related tables) referring to the main table of the query.
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 The Join objects (related tables) referring to the main table of the query.
 
@@ -750,7 +750,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setJoin</span>(<span style={{color: '#FF8000'}}>join</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setJoin</span>(<span style={{color: '#FF8000'}}>join</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
 ##### Description
 
 Defines the Join objects (related tables) referring to the main table of the query.
@@ -759,7 +759,7 @@ Defines the Join objects (related tables) referring to the main table of the que
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **join** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | The Join objects (related tables) referring to the main table of the query. |
+| **join** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | The Join objects (related tables) referring to the main table of the query. |
 
 ##### Return
 

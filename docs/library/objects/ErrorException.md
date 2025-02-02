@@ -162,10 +162,10 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style={{color: '#008000'}}>getStackTrace</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.StackTraceElement;[]</span>
+#### <span style={{color: '#008000'}}>getStackTrace</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.StackTraceElement[]</span>
 ##### Return
 
-( _[Ljava.lang.StackTraceElement;[]_ )
+( _java.lang.StackTraceElement[]_ )
 
 
 ---
@@ -174,10 +174,10 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style={{color: '#008000'}}>getSuppressed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Throwable;[]</span>
+#### <span style={{color: '#008000'}}>getSuppressed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable[]</span>
 ##### Return
 
-( _[Ljava.lang.Throwable;[]_ )
+( _java.lang.Throwable[]_ )
 
 
 ---
@@ -538,12 +538,12 @@ Exception caused by a generic error on the platform, presents the details of the
 
 ---
 
-#### <span style={{color: '#008000'}}>setStackTrace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.StackTraceElement;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{color: '#008000'}}>setStackTrace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.StackTraceElement[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **arg0** | _[Ljava.lang.StackTraceElement;[]_ |   |
+| **arg0** | _java.lang.StackTraceElement[]_ |   |
 
 ##### Return
 

@@ -378,13 +378,13 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **format** | _string_ |   |
-| **objects** | _[Ljava.lang.Object;[]_ |   |
+| **objects** | _java.lang.Object[]_ |   |
 
 ##### Return
 
@@ -397,13 +397,13 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>printfAndClose</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printfAndClose</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **format** | _string_ |   |
-| **objects** | _[Ljava.lang.Object;[]_ |   |
+| **objects** | _java.lang.Object[]_ |   |
 
 ##### Return
 

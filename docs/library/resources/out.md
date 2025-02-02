@@ -324,12 +324,12 @@ The new instance of the Output feature.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>json</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>json</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **json** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **json** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
@@ -636,13 +636,13 @@ Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **format** | _string_ |   |
-| **objects** | _[Ljava.lang.Object;[]_ |   |
+| **objects** | _java.lang.Object[]_ |   |
 
 ##### Return
 

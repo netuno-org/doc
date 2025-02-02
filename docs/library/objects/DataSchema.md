@@ -844,7 +844,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ---
 
-#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -853,12 +853,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -868,12 +868,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -882,12 +882,12 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -897,7 +897,7 @@ if (_dataSchema.isMethod('POST')) {
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 
 ---
@@ -2585,7 +2585,7 @@ Original object converted to the type of the defined class.
 
 ---
 
-#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2594,12 +2594,12 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2609,12 +2609,12 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2623,12 +2623,12 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -2638,7 +2638,7 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 
 ---
@@ -3544,12 +3544,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style={{color: '#008000'}}>keysToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>keysToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 | **splitter** | _string_ |   |
 
 ##### Return
@@ -3770,10 +3770,10 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style={{color: '#008000'}}>map</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>map</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 
 ---
@@ -3866,12 +3866,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>array</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>array</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **array** | _[Ljava.lang.Object;[]_ |   |
+| **array** | _java.lang.Object[]_ |   |
 
 ##### Return
 
@@ -3908,12 +3908,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
@@ -4040,12 +4040,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style={{color: '#008000'}}>putAll</span>(<span style={{color: '#FF8000'}}>m</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{color: '#008000'}}>putAll</span>(<span style={{color: '#FF8000'}}>m</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **m** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **m** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
@@ -4406,12 +4406,12 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ignoreCase</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ignoreCase</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 | **content** | _string_ |   |
 | **splitter** | _string_ |   |
 | **ignoreCase** | _boolean_ |   |
@@ -5072,24 +5072,24 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style={{color: '#008000'}}>toArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>
+#### <span style={{color: '#008000'}}>toArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>
 ##### Return
 
-( _[Ljava.lang.Object;[]_ )
+( _java.lang.Object[]_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>toArray</span>(<span style={{color: '#FF8000'}}>a</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>
+#### <span style={{color: '#008000'}}>toArray</span>(<span style={{color: '#FF8000'}}>a</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **a** | _[Ljava.lang.Object;[]_ |   |
+| **a** | _java.lang.Object[]_ |   |
 
 ##### Return
 
-( _[Ljava.lang.Object;[]_ )
+( _java.lang.Object[]_ )
 
 
 ---
@@ -5379,10 +5379,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style={{color: '#008000'}}>toMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>toMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 
 ---
@@ -5415,10 +5415,10 @@ Defines the character encoding to be used in formatting for URL (_QueryString_).
 
 ---
 
-#### <span style={{color: '#008000'}}>toStringArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>
+#### <span style={{color: '#008000'}}>toStringArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>
 ##### Return
 
-( _[Ljava.lang.String;[]_ )
+( _java.lang.String[]_ )
 
 
 ---
@@ -5488,13 +5488,13 @@ List of all obtained values.
 
 ---
 
-#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **splitter** | _string_ |   |
-| **excludes** | _[Ljava.lang.String;[]_ |   |
+| **excludes** | _java.lang.String[]_ |   |
 
 ##### Return
 
@@ -5503,13 +5503,13 @@ List of all obtained values.
 
 ---
 
-#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **splitter** | _string_ |   |
-| **excludes** | _[Ljava.lang.String;[]_ |   |
+| **excludes** | _java.lang.String[]_ |   |
 | **config** | _[Values](../objects/Values)_ |   |
 
 ##### Return
@@ -5534,12 +5534,12 @@ List of all obtained values.
 
 ---
 
-#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 | **splitter** | _string_ |   |
 
 ##### Return
@@ -5549,14 +5549,14 @@ List of all obtained values.
 
 ---
 
-#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 | **splitter** | _string_ |   |
-| **excludes** | _[Ljava.lang.String;[]_ |   |
+| **excludes** | _java.lang.String[]_ |   |
 
 ##### Return
 
@@ -5565,14 +5565,14 @@ List of all obtained values.
 
 ---
 
-#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 | **splitter** | _string_ |   |
-| **excludes** | _[Ljava.lang.String;[]_ |   |
+| **excludes** | _java.lang.String[]_ |   |
 | **config** | _[Values](../objects/Values)_ |   |
 
 ##### Return
@@ -5582,12 +5582,12 @@ List of all obtained values.
 
 ---
 
-#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 | **splitter** | _string_ |   |
 | **config** | _[Values](../objects/Values)_ |   |
 

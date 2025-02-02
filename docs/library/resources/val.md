@@ -118,7 +118,7 @@ The new generic value object.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
@@ -127,7 +127,7 @@ Initializes values in a generic way, the first data to be assigned will define w
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **obj** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object to load the newly created values object. |
+| **obj** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.lang.Iterable_ | Object to load the newly created values object. |
 
 ##### Return
 
@@ -156,7 +156,7 @@ The new values object starts with the data from the passed object.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Initializes values in a generic way, the first data to be assigned will define whether it will be list or map.
@@ -165,7 +165,7 @@ Initializes values in a generic way, the first data to be assigned will define w
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **obj** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object to load the newly created values object. |
+| **obj** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Object to load the newly created values object. |
 
 ##### Return
 
@@ -270,7 +270,7 @@ The new values object started as map.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -283,13 +283,13 @@ Transforms an object from values to a normal map.
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 A new normal map with the data from the received values object.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -302,7 +302,7 @@ Transforms an object from values to a normal map.
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 A new normal map with the data from the received values object.
 
@@ -576,7 +576,7 @@ A new normal list of items from the received value object.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toMap</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toMap</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -589,13 +589,13 @@ Transforms an object from values to a normal map.
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 A new normal map with the data from the received values object.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toMap</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toMap</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Description
 
 Transforms an object from values to a normal map.
@@ -608,7 +608,7 @@ Transforms an object from values to a normal map.
 
 ##### Return
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 A new normal map with the data from the received values object.
 

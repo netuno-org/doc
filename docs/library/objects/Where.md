@@ -226,7 +226,7 @@ Relational operator.
 
 ---
 
-#### <span style={{color: '#008000'}}>in</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{color: '#008000'}}>in</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Relational operator that filters any occurrence that is equal to any of the given patterns.
@@ -235,7 +235,7 @@ Relational operator that filters any occurrence that is equal to any of the give
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Ljava.lang.Object;[]_ | Conditional values. |
+| **values** | _java.lang.Object[]_ | Conditional values. |
 
 ##### Return
 
@@ -332,7 +332,7 @@ Relational operator.
 
 ---
 
-#### <span style={{color: '#008000'}}>notIn</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{color: '#008000'}}>notIn</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Description
 
 Relational operator that filters any occurrence that is different any of the given patterns.
@@ -341,7 +341,7 @@ Relational operator that filters any occurrence that is different any of the giv
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Ljava.lang.Object;[]_ | Conditional values. |
+| **values** | _java.lang.Object[]_ | Conditional values. |
 
 ##### Return
 

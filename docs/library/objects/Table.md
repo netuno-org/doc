@@ -21,13 +21,13 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### <span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>columns</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lorg.netuno.tritao.db.manager.Column;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](../objects/Table)</span>
+#### <span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>columns</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](../objects/Table)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **name** | _string_ |   |
-| **columns** | _[Lorg.netuno.tritao.db.manager.Column;[]_ |   |
+| **columns** | _[Column](../objects/Column)[]_ |   |
 
 ##### Return
 

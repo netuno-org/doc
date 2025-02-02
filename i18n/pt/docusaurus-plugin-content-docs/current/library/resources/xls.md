@@ -176,7 +176,7 @@ Referência da posição da última célula com dados inserida.
 
 ---
 
-#### `_xls.create()`.<span style={{color: '#008000'}}>addDataTable</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>addDataTable</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLSPosition](../objects/XLSPosition)</span>
 ##### Descrição
 
 Adiciona uma tabela de dados na folha de cálculos.
@@ -185,7 +185,7 @@ Adiciona uma tabela de dados na folha de cálculos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Configuração da tabela de dados. |
+| **config** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Configuração da tabela de dados. |
 | **dados** | _java.util.List_ | Lista de dados que serão inseridos. |
 
 ##### Retorno
@@ -1792,7 +1792,7 @@ Realiza a escrita dos dados do ficheiro final para o storage interno da aplicaç
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>linha</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>linha</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Descrição
 
 Insere dados numa célula específica.
@@ -1803,7 +1803,7 @@ Insere dados numa célula específica.
 |---|---|---|
 | **linha** | _int_ | Número da linha. |
 | **coluna** | _int_ | Número da coluna. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Dados que serão inseridos. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Dados que serão inseridos. |
 
 ##### Retorno
 
@@ -1834,7 +1834,7 @@ A instância atual do recurso XLS.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>celula</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Cell</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>celula</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Cell</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Descrição
 
 Insere dados numa célula específica.
@@ -1844,7 +1844,7 @@ Insere dados numa célula específica.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **celula** | _org.apache.poi.ss.usermodel.Cell_ | Objeto da célula. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Dados que serão inseridos. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Dados que serão inseridos. |
 
 ##### Retorno
 
@@ -1874,7 +1874,7 @@ A instância atual do recurso XLS.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>folhaCalculos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>linha</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>setCellData</span>(<span style={{color: '#FF8000'}}>folhaCalculos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>, <span style={{color: '#FF8000'}}>linha</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Descrição
 
 Insere dados numa célula específica em uma planilha de cálculos.
@@ -1886,7 +1886,7 @@ Insere dados numa célula específica em uma planilha de cálculos.
 | **folhaCalculos** | _org.apache.poi.ss.usermodel.Sheet_ | Objeto da folha de cálculos. |
 | **linha** | _int_ | Número da linha. |
 | **coluna** | _int_ | Número da coluna. |
-| **dados** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Dados que serão inseridos. |
+| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Dados que serão inseridos. |
 
 ##### Retorno
 

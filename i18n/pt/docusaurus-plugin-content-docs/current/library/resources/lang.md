@@ -47,13 +47,13 @@ Retorna a chave correspondente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>formats</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>formats</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **key** | _string_ |   |
-| **formats** | _[Ljava.lang.Object;[]_ |   |
+| **formats** | _java.lang.Object[]_ |   |
 
 ##### Retorno
 

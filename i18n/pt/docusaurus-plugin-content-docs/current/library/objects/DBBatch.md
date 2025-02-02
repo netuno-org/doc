@@ -66,12 +66,12 @@ Gere a execução de comandos massivos em lote à base de dados.
 
 ---
 
-#### <span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBBatch](../objects/DBBatch)</span>
+#### <span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBBatch](../objects/DBBatch)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **params** | _[Ljava.lang.Object;[]_ |   |
+| **params** | _java.lang.Object[]_ |   |
 
 ##### Retorno
 

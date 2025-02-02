@@ -479,10 +479,10 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getMessage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.resource.WS$WSMessage</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>getMessage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[WSMessage](../objects/WSMessage)</span>
 ##### Retorno
 
-( _org.netuno.tritao.resource.WS$WSMessage_ )
+( _[WSMessage](../objects/WSMessage)_ )
 
 
 ---
@@ -653,10 +653,10 @@ Gestão das conexões e comunicação com os clientes.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>message</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.resource.WS$WSMessage</span>
+#### <span style={{fontWeight: 'normal'}}>_ws</span>.<span style={{color: '#008000'}}>message</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[WSMessage](../objects/WSMessage)</span>
 ##### Retorno
 
-( _org.netuno.tritao.resource.WS$WSMessage_ )
+( _[WSMessage](../objects/WSMessage)_ )
 
 
 ---

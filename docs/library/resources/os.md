@@ -12,7 +12,7 @@ Performs the execution of commands in the operating system, manipulation of file
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>command</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.String;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OSCommand](../objects/OSCommand)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>command</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OSCommand](../objects/OSCommand)</span>
 ##### Description
 
 Executes a command in the operating system and obtains the result of the execution, the first item is the command and the following are parameters.
@@ -21,7 +21,7 @@ Executes a command in the operating system and obtains the result of the executi
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **command** | _[Ljava.lang.String;[]_ | The command and optional parameters that will be executed. |
+| **command** | _java.lang.String[]_ | The command and optional parameters that will be executed. |
 
 ##### Return
 

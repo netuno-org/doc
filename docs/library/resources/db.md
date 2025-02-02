@@ -220,7 +220,7 @@ Current date.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>date</span>(<span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>date</span>(<span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
 ##### Description
 
 Through the long number that identifies the exact date, it creates a new Date object to be used in database operations.
@@ -229,7 +229,7 @@ Through the long number that identifies the exact date, it creates a new Date ob
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **time** | _java.lang.Long_ | Long number for the exact date. |
+| **time** | _long_ | Long number for the exact date. |
 
 ##### Return
 
@@ -374,7 +374,7 @@ Number of records affected by the deletion.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Performs the deletion of records in the database based on the ID or UID passed on the data object.
@@ -399,7 +399,7 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Table name in the database. |
-| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data structure that should be deleted based on your ID or UID. |
+| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Data structure that should be deleted based on your ID or UID. |
 
 ##### Return
 
@@ -448,7 +448,7 @@ Number of records affected by deletion.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>deleteMany</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dataItems</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>deleteMany</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dataItems</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -474,7 +474,7 @@ _out.json({deletedData: deletedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **dataItems** | _[Ljava.lang.Object;[]_ | Array or list of objects with the data structure to be inserted. |
+| **dataItems** | _java.lang.Object[]_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
@@ -645,7 +645,7 @@ Number of lines affected by the executed command.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>sqlCommand</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>sqlCommand</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Execute commands directly on the database, commands such as inserts and updates can be executed as required.
@@ -664,7 +664,7 @@ const rowsAffected = _db.execute(`
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **sqlCommand** | _string_ | SQL command that will be executed directly on the database. |
-| **params** | _[Ljava.lang.Object;[]_ | The sequence of parameter values that are injected into the command. |
+| **params** | _java.lang.Object[]_ | The sequence of parameter values that are injected into the command. |
 
 ##### Return
 
@@ -1132,7 +1132,7 @@ The new database feature that uses another database.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insert</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insert</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Executes the insertion of new data in the database and returns the id of the same.
@@ -1159,7 +1159,7 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object with the data structure to be inserted. |
+| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Object with the data structure to be inserted. |
 
 ##### Return
 
@@ -1208,7 +1208,7 @@ _out.json(
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insertIfNotExists</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insertIfNotExists</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Executes the insertion of a value if it does not exist or returns the ID if it already exists.
@@ -1229,7 +1229,7 @@ _out.json({insertedData: insertedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object with the data structure to be inserted. |
+| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Object with the data structure to be inserted. |
 
 ##### Return
 
@@ -1274,7 +1274,7 @@ ID of the data that was inserted or ID of the existing data.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insertMany</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dataItems</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insertMany</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dataItems</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Description
 
 Executes the insertion of multiple rows into a table of an Array of Objects or a List of Values.
@@ -1299,7 +1299,7 @@ _db.insertMany(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **dataItems** | _[Ljava.lang.Object;[]_ | Array or list of objects with the data structure to be inserted. |
+| **dataItems** | _java.lang.Object[]_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 
@@ -1707,7 +1707,7 @@ List of data obtained with the direct query to the database.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1728,7 +1728,7 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **query** | _string_ | Command that will be executed on the database to get records. |
-| **params** | _[Ljava.lang.Object;[]_ | List of parameter values that will be injected into the database query. |
+| **params** | _java.lang.Object[]_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
@@ -1833,7 +1833,7 @@ The first data record obtained with the direct database query.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>queryFirst</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>queryFirst</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Description
 
 Run an SQL query directly on the database and get only the first record. Be very careful with SQL Injection.
@@ -1853,7 +1853,7 @@ _log.info('The first product found:', productFound)
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **query** | _string_ | Command that will be executed on the database to get the record. |
-| **params** | _[Ljava.lang.Object;[]_ | List of parameter values that will be injected into the database query. |
+| **params** | _java.lang.Object[]_ | List of parameter values that will be injected into the database query. |
 
 ##### Return
 
@@ -2065,7 +2065,7 @@ Content as a safe path (table.name) to use directly in queries.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Executes the insertion or update of a record in the database based on the UID.
@@ -2096,7 +2096,7 @@ _out.json(
 |---|---|---|
 | **table** | _string_ | Table's name in the database. |
 | **uid** | _int_ | Record's UID to be deleted. |
-| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object with data structure that should be maintained. |
+| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Object with data structure that should be maintained. |
 
 ##### Return
 
@@ -2147,7 +2147,7 @@ Number of records affected by the deletion.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Executes the insertion or update of a record in the database based on the UID.
@@ -2178,7 +2178,7 @@ _out.json(
 |---|---|---|
 | **table** | _string_ | Table's name in the database. |
 | **uid** | _string_ | Record's UID to be deleted. |
-| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object with data structure that should be maintained. |
+| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Object with data structure that should be maintained. |
 
 ##### Return
 
@@ -2233,7 +2233,7 @@ Number of records affected by the deletion.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](../objects/DBSearchResult)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](../objects/DBSearchResult)</span>
 ##### Description
 
 Performs a search on a table returning an object of type DBSearchResult.
@@ -2254,7 +2254,7 @@ _out.json({data: query.getResults(),total: query.getTotal()});
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table in the database that should obtain the data. |
-| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Data to carry out the search. |
+| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Data to carry out the search. |
 
 ##### Return
 
@@ -2264,13 +2264,13 @@ Object of type DBSearchResult.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>, <span style={{color: '#FF8000'}}>wildcards</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](../objects/DBSearchResult)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>wildcards</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](../objects/DBSearchResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ |   |
-| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 | **wildcards** | _boolean_ |   |
 
 ##### Return
@@ -2358,7 +2358,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>store</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>store</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 
@@ -2380,7 +2380,7 @@ _out.json({storedData: storedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object with the data structure to be inserted. |
+| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Object with the data structure to be inserted. |
 
 ##### Return
 
@@ -2467,7 +2467,7 @@ Current time.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>time</span>(<span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>time</span>(<span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
 ##### Description
 
 Through the long number that identifies the exact time, it creates a new Time object to be used in database operations.
@@ -2476,7 +2476,7 @@ Through the long number that identifies the exact time, it creates a new Time ob
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **time** | _java.lang.Long_ | Long number referring to the exact time. |
+| **time** | _long_ | Long number referring to the exact time. |
 
 ##### Return
 
@@ -2560,7 +2560,7 @@ Current date and time.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>timestamp</span>(<span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>timestamp</span>(<span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>
 ##### Description
 
 Through the long number that identifies the exact time, it creates a new Timestamp object to be used in database operations.
@@ -2569,7 +2569,7 @@ Through the long number that identifies the exact time, it creates a new Timesta
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **time** | _java.lang.Long_ | Long number referring to the exact time. |
+| **time** | _long_ | Long number referring to the exact time. |
 
 ##### Return
 
@@ -2875,7 +2875,7 @@ Content that is safe to use directly in query as string/varchar/text.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Performs the update of existing data according to the id that comes in the data that is passed.
@@ -2902,7 +2902,7 @@ _out.json(
 |---|---|---|
 | **table** | _string_ | Name of the table containing the records that must be updated. |
 | **id** | _int_ | ID of the registry that will be affected by the update. |
-| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object with the data structure that is to be maintained. |
+| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Object with the data structure that is to be maintained. |
 
 ##### Return
 
@@ -2949,7 +2949,7 @@ Number of records affected by the update.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Performs the update of existing data according to the id that comes in the data that is passed.
@@ -2978,7 +2978,7 @@ _out.json(
 |---|---|---|
 | **table** | _string_ | Name of the table containing the records that must be updated. |
 | **uid** | _string_ | UID of the record that will be affected by the update. |
-| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object with data structure that should be maintained. |
+| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Object with data structure that should be maintained. |
 
 ##### Return
 
@@ -3027,7 +3027,7 @@ Number of records affected by the update.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Performs the update of existing data according to the id that comes in the data that is passed.
@@ -3053,7 +3053,7 @@ _out.json(
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table containing the records that must be updated. |
-| **data** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Object with the data structure that is to be maintained. |
+| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Object with the data structure that is to be maintained. |
 
 ##### Return
 
@@ -3103,7 +3103,7 @@ Number of records affected by the update.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>updateMany</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dataItems</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>updateMany</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dataItems</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Description
 
 Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
@@ -3131,7 +3131,7 @@ _out.json({updatedData: updatedData})
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **dataItems** | _[Ljava.lang.Object;[]_ | Array or list of objects with the data structure to be inserted. |
+| **dataItems** | _java.lang.Object[]_ | Array or list of objects with the data structure to be inserted. |
 
 ##### Return
 

@@ -29,14 +29,14 @@ Nome da coluna.
 
 ---
 
-#### <span style={{color: '#008000'}}>getSubRelations</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>
+#### <span style={{color: '#008000'}}>getSubRelations</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
 ##### Descrição
 
 Retorna os sub relacionamentos do objeto atual.
 
 ##### Retorno
 
-( _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ )
+( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
 
 Sub relacionamentos
 
@@ -189,7 +189,7 @@ Objeto Relation atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSubRelations</span>(<span style={{color: '#FF8000'}}>subRelacionamentos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
+#### <span style={{color: '#008000'}}>setSubRelations</span>(<span style={{color: '#FF8000'}}>subRelacionamentos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
 ##### Descrição
 
 Define os sub relacionamentos do objeto atual.
@@ -198,7 +198,7 @@ Define os sub relacionamentos do objeto atual.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **subRelacionamentos** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ | Sub relacionamentos. |
+| **subRelacionamentos** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Sub relacionamentos. |
 
 ##### Retorno
 

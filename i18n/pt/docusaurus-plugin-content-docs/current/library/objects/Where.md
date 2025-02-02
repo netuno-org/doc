@@ -226,7 +226,7 @@ Operador relacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>in</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{color: '#008000'}}>in</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Descrição
 
 Operador relacional que filtra qualquer ocorrência que seja igual a algum dos padrões informados.
@@ -235,7 +235,7 @@ Operador relacional que filtra qualquer ocorrência que seja igual a algum dos p
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **valores** | _[Ljava.lang.Object;[]_ | Volores da condição. |
+| **valores** | _java.lang.Object[]_ | Volores da condição. |
 
 ##### Retorno
 
@@ -332,7 +332,7 @@ Operador relacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>notIn</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{color: '#008000'}}>notIn</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
 ##### Descrição
 
 Operador relacional que filtra qualquer ocorrência que seja diferente de algum dos padrões informados.
@@ -341,7 +341,7 @@ Operador relacional que filtra qualquer ocorrência que seja diferente de algum 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **valores** | _[Ljava.lang.Object;[]_ | Volores da condição. |
+| **valores** | _java.lang.Object[]_ | Volores da condição. |
 
 ##### Retorno
 

@@ -90,13 +90,13 @@ Recurso de geração de rápida de relatórios.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jasper</span>.<span style={{color: '#008000'}}>loadPrinter</span>(<span style={{color: '#FF8000'}}>parameters</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>dataSource</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lorg.netuno.psamata.Values;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_jasper</span>.<span style={{color: '#008000'}}>loadPrinter</span>(<span style={{color: '#FF8000'}}>parameters</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>dataSource</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **parameters** | _[Values](../objects/Values)_ |   |
-| **dataSource** | _[Lorg.netuno.psamata.Values;[]_ |   |
+| **dataSource** | _[Values](../objects/Values)[]_ |   |
 
 ##### Retorno
 

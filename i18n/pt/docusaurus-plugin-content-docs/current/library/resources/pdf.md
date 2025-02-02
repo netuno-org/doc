@@ -1402,7 +1402,7 @@ Retorna o conteudo extraído.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>extract</span>(<span style={{color: '#FF8000'}}>armazenamento</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>extract</span>(<span style={{color: '#FF8000'}}>armazenamento</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
 ##### Descrição
 
 Extrai o conteúdo de PDFs.
@@ -1411,7 +1411,7 @@ Extrai o conteúdo de PDFs.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ | Caminho do armazenamento. |
+| **armazenamento** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ | Caminho do armazenamento. |
 
 ##### Retorno
 
@@ -1887,7 +1887,7 @@ Retorna um novo documento com o tamanho de página definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>saida</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>, <span style={{color: '#FF8000'}}>nPaginas</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>saida</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>, <span style={{color: '#FF8000'}}>nPaginas</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Cria um novo documento PDF com tamanho de página específica.
@@ -1896,7 +1896,7 @@ Cria um novo documento PDF com tamanho de página específica.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **saida** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ | Caminho do ficheiro. |
+| **saida** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ | Caminho do ficheiro. |
 | **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
 
 ##### Retorno
@@ -1945,13 +1945,13 @@ Retorna o documento PDF aberto.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **in** | _[InputStream](../objects/InputStream)_ |   |
-| **out** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ |   |
+| **out** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ |   |
 
 ##### Retorno
 
@@ -1960,7 +1960,7 @@ Retorna o documento PDF aberto.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Descrição
 
 Abre o documento PDF referente ao caminho inserido.
@@ -1969,7 +1969,7 @@ Abre o documento PDF referente ao caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **caminho** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ | Caminho do ficheiro. |
+| **caminho** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -1979,12 +1979,12 @@ Retorna o documento PDF aberto.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ |   |
+| **in** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ |   |
 | **out** | _[OutputStream](../objects/OutputStream)_ |   |
 
 ##### Retorno
@@ -1994,13 +1994,13 @@ Retorna o documento PDF aberto.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ |   |
-| **out** | _[Storage](../resources/storage) &#124; [File](../objects/File)_ |   |
+| **in** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ |   |
+| **out** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ |   |
 
 ##### Retorno
 

@@ -66,12 +66,12 @@ Manages the execution of massive batch commands to the database.
 
 ---
 
-#### <span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Ljava.lang.Object;[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBBatch](../objects/DBBatch)</span>
+#### <span style={{color: '#008000'}}>put</span>(<span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBBatch](../objects/DBBatch)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **params** | _[Ljava.lang.Object;[]_ |   |
+| **params** | _java.lang.Object[]_ |   |
 
 ##### Return
 

@@ -2347,13 +2347,13 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneIdOf</span>(<span style={{color: '#FF8000'}}>zoneId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>aliasMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneIdOf</span>(<span style={{color: '#FF8000'}}>zoneId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>aliasMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **zoneId** | _string_ |   |
-| **aliasMap** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **aliasMap** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
@@ -2443,13 +2443,13 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetOf</span>(<span style={{color: '#FF8000'}}>zoneId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>aliasMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetOf</span>(<span style={{color: '#FF8000'}}>zoneId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>aliasMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **zoneId** | _string_ |   |
-| **aliasMap** | _[Config](../resources/config) &#124; [Exec](../resources/exec) &#124; [Header](../resources/header) &#124; [Req](../resources/req) &#124; [Res](../resources/res) &#124; [Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema)_ |   |
+| **aliasMap** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
