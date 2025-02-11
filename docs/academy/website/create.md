@@ -6,181 +6,207 @@ sidebar_label: ReactJS Create
 
 ## ReactJS Application
 
-Please execute in the root of your _Netuno_ app:
+In the root of your Netuno application, run:
 
-`npx create-react-app website`
+`npm create vite`
 
-A new directory called `website` will be created with this command where the ReactJS application will be contained.
-After creating the ReactJS application, see below:
+When asked: `Ok to proceed? (y)`
+
+Type `y` and press the [ENTER] key.
+
+Next, with the question: `? Project name: ›`
+
+Type `website` and press the [ENTER] key.
+
+Next, comes the question: `? Select a framework:`
+
+Use the arrow keys on your keyboard, and press the down key until you select the `React` option and press the [ENTER] key.
+
+To finish, the following question: `? Select a variant:`
+
+Use the arrow keys on your keyboard, and press the down key until you select the `JavaScript` option and press the [ENTER] key.
+
+This command will create a new directory called `📂 website` where the ReactJS application will be contained.
+
+After creating the ReactJS application, run the following command to install the dependencies:
 
 ```
 cd website
-npm run start
+npm install
 ```
 
-You will be able to restart the app at the following address [http://localhost:3000](http://localhost:3000).
+With this, you can start the React application with the command:
 
->With `CTRL+C` into the terminal, the user will be able to end up the ReactJS app.
+`npm run dev`
 
-## Installation of Dependencies
+This will start the application at [http://localhost:5173/](http://localhost:5173/), or at another address with a different port number. Either way, simply open this address in your browser to view the developments.
 
-NPM packages are strongly advise to be installed, as they are very useful for ReactJS applications developement with _Netuno_ (for more info click on the link below):
+> To end the ReactJS application at any time, in the terminal, simply press `CTRL+C` simultaneously.
+
+## Installing Dependencies
+
+We strongly recommend that you install the following NPM packages, as they are very useful for developing ReactJS applications with Netuno (click on each link to get more information about each one):
 
 * [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 * [antd](https://www.npmjs.com/package/antd)
-* [babel-plugin-import](https://www.npmjs.com/package/babel-plugin-import)
-* [react-app-rewired](https://www.npmjs.com/package/react-app-rewired)
-* [customize-cra](https://www.npmjs.com/package/customize-cra)
-* [less-loader](https://www.npmjs.com/package/less-loader)
+* [@ant-design/icons](https://www.npmjs.com/package/@ant-design/icons)
 * [less](https://www.npmjs.com/package/less)
 * [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client)
 
-To install any packages listed, run the below commands in the terminal:
+To install the packages listed above, simply run the following set of commands in the terminal:
 
 ```
-npm install -S react-router-dom
-npm install -S antd
-npm install -S babel-plugin-import
-npm install -S react-app-rewired
-npm install -S customize-cra
-npm install -S less-loader
-npm install -S less
-npm install -S @netuno/service-client
+npm install --save react-router-dom
+npm install --save antd
+npm install --save @ant-design/icons
+npm install --save less
+npm install --save @netuno/service-client
 ```
 
-Or either the user can also install all-in-one:
+Alternatively, you can also install all packages at once:
 
 ```
-npm i -S react-router-dom antd babel-plugin-import react-app-rewired customize-cra less-loader less @netuno/service-client
+npm i -S react-router-dom antd @ant-design/icons less @netuno/service-client
 ```
 
 ## Configurations
 
-After run the commands and for the compilation run smoothly go to `📂 website/package.json` and change where the following are located:
-
-```
-"scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-},
-```
-
-For the following:
-
-```
-"scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject"
-},
-```
-
-> Just in case the user are developing with `Less`, when compiling, they are likely to find the error `TypeError: this.getOptions is not a function`. To solve this issue please run the `npm i less-loader@6.2.0` command in the` 📂 website` directory to make the compilation of `Less` compatible with ReactJS.
-
-Will be necessary to create a new file `📂 website/config-overrides.js`, which will also allow you to perform style customizations in Ant.Design, please see the initial:
+After running the commands above, you can force a default port address, go to `📂 website/vite.config.js` and add the `server` configuration as follows:
 
 ```javascript
-const { override, fixBabelImports, addLessLoader } = require('customize-cra');
- 
-module.exports = override(
-  fixBabelImports('import', {
-    libraryName: 'antd',
-    libraryDirectory: 'es',
-    style: true,
-  }),
-  addLessLoader({
-    lessOptions: {
-      javascriptEnabled: true,
-      modifyVars: {
-       '@primary-color': '#78A2CC',
-       '@layout-header-background': '#ffffff',
-       '@font-size-base': '16px',
-       '@border-radius-base': '20px'
-      },
+export default defineConfig({
+    server: {
+        port: 3000,
+        strictPort: true
     },
-  }),
-);
+    plugins: [
+        react()
+    ]
+})
 ```
+
+Now when starting with the command `npm run dev` it will always use the port `3000`.
+
+### Less
+
+Change all `.css` files that are in `website/src` to the `.less` extension.
+
+> Don't forget to make this change in the JSX code in the lines that `import` the `.css` files, change to `.less`.
+
+LESS allows for a more structured and modern CSS development.
+
+### Customizing the Ant.Design Theme
+
+To customize the colors of Ant.Design use the `ConfigProvider` component in `App.jsx`.
+
+For example:
+
+```jsx
+import { ConfigProvider, Button } from 'antd';
+...
+function App() {
+    ...
+    return (
+        <ConfigProvider theme={{ token: { colorPrimary: '#00b96b' } }}>
+        ...
+            <Button type="primary">My Button with Custom Color</Button>
+        ...
+        </ConfigProvider>
+    );
+}
+...
+```
+
+This way you can adjust any Ant.Design styling configuration.
 
 ### Dark Theme
 
-Install the module inside the website folder to make it possible to use the dark Ant.Design theme;
+It is also possible to use the dark theme of Ant.Design, to do this simply import the `theme` that contains the dark mode and apply it to the `ConfigProvider`:
 
-```
-npm install -S @ant-design/dark-theme
-```
-
-`📂 website/config-overrides.js` is defined to use the dark theme and allows you to customize the style, see below:
-
-```javascript
-const darkTheme = require('@ant-design/dark-theme');
-
-const { override, fixBabelImports, addLessLoader } = require('customize-cra');
-
-darkTheme.default['@primary-color'] = '#AECBD6';
-darkTheme.default['@font-size-base'] = '16px';
-darkTheme.default['@border-radius-base'] = '20px';
-
-module.exports = override(
-  fixBabelImports('import', {
-    libraryName: 'antd',
-    libraryDirectory: 'es',
-    style: true,
-  }),
-  addLessLoader({
-    lessOptions: {
-      javascriptEnabled: true,
-      modifyVars: darkTheme.default
-    },
-  }),
-);
+```jsx
+import { ConfigProvider, Button, theme } from 'antd';
+...
+    <ConfigProvider theme={{
+        token: {
+            colorPrimary: '#FF6500'
+        },
+        algorithm: theme.darkAlgorithm,
+    }}>
+        ...
+        <Button type="primary">My Button with Custom Color</Button>
+        ...
+    </ConfigProvider>
+...
 ```
 
-##### Restyle
+### Restyle
 
-Note that: code samples from `📂 website/config-overrides.js` as above, you can easily change the Ant.Design variables defined in `Less`, to know more about Ant.Design customization:
+Note that in the `ConfigProvider` parameterizations above, it is possible to easily change the Ant.Design style, more about Ant.Design customization:
 
 - [Customize Theme](https://ant.design/docs/react/customize-theme)
-- [Less Variables](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less)
 
-## Automatic start of ReactJS application with _Netuno_
+In each Ant.Design component there are possible Design Token configurations, for example in Buttons:
 
-_Netuno_ allows you to start the ReactJS app together with the server process of the _Netuno_ application.
+- [Button - Design Token](https://ant.design/components/button#design-token)
 
-> All compilation messages in ReactJS app will be integrated in the same terminal as the _Netuno_ app.
-
-For this matter you simply add to the `commands` settings of the _Netuno_ application in` 📂 config/_development.json` as below:
-
+```jsx
+<ConfigProvider theme={{
+    token: {
+        colorPrimary: '#00b96b',
+        fontSize: 18,
+    },
+    components: {
+        Button: {
+            defaultBg: '#D6BD98',
+            defaultColor: '#1D1616',
+            primaryColor: '#000B58',
+            textTextColor: '#181C14',
+        }
+    }
+}}>
+    ...
+    <Button type="primary">My Button with Custom Color</Button>
+    ...
+</ConfigProvider>
 ```
+
+## Automatically start your ReactJS application with Netuno
+
+Netuno allows you to start your ReactJS application together with the Netuno application server process.
+
+> All the ReactJS application compilation messages will be integrated into the same terminal as the Netuno application.
+
+To do this, simply add the following to the Netuno application's `commands` configuration in `📂 config/_development.json`:
+
+```json
 {
     ...
     "commands": [
-        ...,
+        ...
         {
             "path": "website",
-            "command": "npm run start",
+            "command": "npm run dev",
+            "install": "npm install",
             "enabled": true
         }
     ]
+    ...
 }
 ```
 
-> Whenever editing configuration files of the _Netuno_ application, it will be necessary to restart the application so that will update the changes.
+> Whenever you edit the Netuno application's configuration files, you will need to restart the application so that it can take on the new changes.
 
-Finally start/restart your _Netuno_ app to check its operation.
+Finally, start/restart your Netuno application to check that it is working.
 
-## CORS Configuration (Cross-Origin Resource Sharing)
+## CORS (Cross-Origin Resource Sharing) Configuration
 
-To configure CORS configuration to avoid possible communication errors between the ReactJS app and the _Netuno_ app through services:
+To configure CORS to avoid possible errors between the ReactJS application and the Netuno application communicating through services, go to:
 
 - `📂 config/_development.json`
 
-add:
+Check if the `cors` configuration already exists or add this example:
 
-```
+```json
 {
     ...
     "cors": [
@@ -193,25 +219,58 @@ add:
 }
 ```
 
-You can create the services you want without encountering CORS errors, once this configuration is implemented:
+> If `origins` contains a `*`, it means that any front-end address will be supported, for example:
+> - `"origins": [ "*" ]`
+
+With this configuration implemented, you can create the services you want without encountering CORS errors.
 
 > More about [CORS](../server/services/cors.md)
 
 ### HTTP OPTIONS
 
-The browser performs a call with the HTTP protocol OPTIONS method to the same address as the service, to perform the validation of whether or not it can actually execute the service.
+The browser executes a call with the OPTIONS method of the HTTP protocol to the same address as the service, to validate whether or not it can actually execute the service.
 
-Therefore, the services need to respond to the OPTIONS method of the HTTP protocol to run without any issues.
+Therefore, services need to respond to the OPTIONS method of the HTTP protocol to work without problems.
 
-In this case make sure that together with the services used on the website you have the version of the code for `options`, which can be done as follows for an example service:
+To do this, make sure that the services used on the website have the version of the code for `options`, which can be done as follows for an example service:
 
 - 📂 `server/services/example/options.js`
 - 📂 `server/services/example.options.js`
 
-The content may be:
+The content can be just:
 
 ```
 _out.json(_val.map().set("result", true))
 ```
 
 > More about [HTTP methods and Services](../server/services/rest.md).
+
+## Environment Variables
+
+You can define the environment variables by creating the `website/.env` file, with the variable definitions, for example:
+
+```
+NODE_ENV=development
+```
+
+Or by configuring the Netuno application, for example in:
+
+- `📂 config/_development.json`
+
+And defining the environment variables in the command configuration in the `env` parameterization, for example:
+
+```json
+{
+    ...
+    "commands": [
+        ...,
+        {
+            "env": ["NODE_ENV=development"],
+            "path": "website",
+            "command": "npm run start",
+            "install": "npm install --force",
+            "enabled": true
+        }
+    ]
+}
+```

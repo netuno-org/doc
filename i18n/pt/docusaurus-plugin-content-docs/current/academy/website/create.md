@@ -127,11 +127,11 @@ Também é possível utilizar o tema escuro do Ant.Design, para isto basta impor
 import { ConfigProvider, Button, theme } from 'antd';
 ...
     <ConfigProvider theme={{
-            token: {
-                colorPrimary: '#FF6500'
-            },
-            algorithm: theme.darkAlgorithm,
-        }}>
+        token: {
+            colorPrimary: '#FF6500'
+        },
+        algorithm: theme.darkAlgorithm,
+    }}>
         ...
         <Button type="primary">Meu Botão com Cor Customizada</Button>
         ...
@@ -151,19 +151,19 @@ Em cada componente do Ant.Design tem as configurações possíveis de Design Tok
 
 ```jsx
 <ConfigProvider theme={{
-        token: {
-            colorPrimary: '#00b96b',
-            fontSize: 18,
-        },
-        components: {
-            Button: {
-                defaultBg: '#D6BD98',
-                defaultColor: '#1D1616',
-                primaryColor: '#000B58',
-                textTextColor: '#181C14',
-            }
+    token: {
+        colorPrimary: '#00b96b',
+        fontSize: 18,
+    },
+    components: {
+        Button: {
+            defaultBg: '#D6BD98',
+            defaultColor: '#1D1616',
+            primaryColor: '#000B58',
+            textTextColor: '#181C14',
         }
-    }}>
+    }
+}}>
     ...
     <Button type="primary">Meu Botão com Cor Customizada</Button>
     ...
@@ -265,7 +265,7 @@ E definindo as variáveis de ambiente na configuração do comando na parametriz
     "commands": [
         ...,
         {
-            "env": ["NODE_ENV=development"]
+            "env": ["NODE_ENV=development"],
             "path": "website",
             "command": "npm run start",
             "install": "npm install --force",
