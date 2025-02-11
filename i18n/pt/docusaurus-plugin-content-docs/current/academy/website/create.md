@@ -8,19 +8,40 @@ sidebar_label: Criar com ReactJS
 
 Na raíz da sua aplicação Netuno, execute:
 
-`npx create-react-app website`
+`npm create vite`
 
-Este comando irá criar um novo diretório denominado `website` onde estará contida a aplicação ReactJS. 
-Após ter criado a aplicação ReactJS inicie-a da seguinte forma:
+Ao perguntar: `Ok to proceed? (y)`
+
+Digite `y` e pressione a tecla [ ENTER ].
+
+De seguida com a pergunta: `? Project name: ›`
+
+Digite `website` e pressione a tecla [ ENTER ].
+
+Na sequência vem a pergunta: `? Select a framework:`
+
+Utilize as setas do teclado, e pressione a tecla para baixo até a escolha da opção `React` e pressione a telca [ ENTER ].
+
+Para finalizar, a seguitne pergunta: `? Select a variant:`
+
+Utilize as setas do teclado, e pressione a tecla para baixo até a escolha da opção `JavaScript` e pressione a telca [ ENTER ].
+
+Este comando irá criar um novo diretório denominado `📂 website` onde estará contida a aplicação ReactJS. 
+
+Após ter criado a aplicação ReactJS, execute da seguinte forma para instalar as dependências:
 
 ```
 cd website
-npm run start
+npm install
 ```
 
-Isto fará com que a aplicação seja iniciada no endereço [http://localhost:3000](http://localhost:3000).
+Com isso é possível iniciar a aplicação React com o comando:
 
-> Para terminar a aplicação ReactJS em qualquer altura, no terminal, basta pressionar `CTRL+C` simultaneamente
+`npm run dev`
+
+Isto fará com que a aplicação seja iniciada no endereço [http://localhost:5173/](http://localhost:5173/), ou em outro endereço com outro número de porta, de qualquer forma basta abrir este endereço no browser para visualizar os desenvolvimentos.
+
+> Para terminar a aplicação ReactJS em qualquer altura, no terminal, basta pressionar `CTRL+C` simultaneamente.
 
 ## Instalação de Dependências
 
@@ -29,93 +50,60 @@ Aconselhamos vivamente que instale os seguintes pacotes NPM, visto serem bastant
 * [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 * [antd](https://www.npmjs.com/package/antd)
 * [@ant-design/icons](https://www.npmjs.com/package/@ant-design/icons)
-* [craco-less](https://www.npmjs.com/package/craco-less)
+* [less](https://www.npmjs.com/package/less)
 * [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client)
 
-Para instalar os pacotes acima listados basta correr o seguinte conjunto de comandos no terminal:
+Para instalar os pacotes acima listados basta executar o seguinte conjunto de comandos no terminal:
 
 ```
 npm install --save react-router-dom
 npm install --save antd
 npm install --save @ant-design/icons
-npm install --save craco-less --force
+npm install --save less
 npm install --save @netuno/service-client
 ```
 
 Em alternativa também pode instalar todos os pacotes de uma única vez:
 
 ```
-npm i -S --force react-router-dom antd @ant-design/icons craco-less @netuno/service-client
+npm i -S react-router-dom antd @ant-design/icons less @netuno/service-client
 ```
 
 ## Configurações
 
-Após correr os comandos acima, para a compilação funcionar corretamente dirija-se a `📂 website/package.json` e altere onde se encontra o seguinte excerto:
-
-```
-"scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-},
-```
-
-Para o seguinte:
-
-```
-"scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "craco eject",
-    "watch": "craco start --watch"
-},
-```
-
-É necessário criar um novo ficheiro `📂 website/craco.config.js`, que permitirá também realizar customizações de style no Ant.Design, o conteúdo inicial pode ser:
+Após executar os comandos acima, pode forçar um endereço de porta padrão, dirija-se a `📂 website/vite.config.js` e acrescente a configuração do `server` da seguinte forma:
 
 ```javascript
-const CracoLessPlugin = require('craco-less');
-
-module.exports = {
+export default defineConfig({
+  server: {
+    port: 3000,
+    strictPort: true
+  },
   plugins: [
-    {
-      plugin: CracoLessPlugin,
-      options: {
-        lessLoaderOptions: {
-          lessOptions: {
-            modifyVars: {
-              '@my-variable-example: '#1178FF',
-            },
-            javascriptEnabled: true,
-          },
-        },
-      },
-    },
-  ],
-};
+    react()
+  ]
+})
 ```
+
+Agora ao iniciar com o comando `npm run dev` vai utilizar sempre a porta `3000`.
 
 ### Less
 
 Altere todos os ficheiros `.css` que estão em `website/src` para a extensão `.less`.
 
-> Não esqueça de realizar está alteração no código JS nas linhas que faz o `import` dos ficheiros `less`.
+> Não esqueça de realizar está alteração no código JSX nas linhas que faz o `import` dos ficheiros `.css`, alterar para `.less`.
 
-O LESS pertime um desenvolvimento mais estruturado e moderno do CSS.
+O LESS permite um desenvolvimento mais estruturado e moderno do CSS.
 
 ### Customização do Tema do Ant.Design
 
-Para customizar as cores do Ant.Design utilize o componente `ConfigProvider` no `App.js`.
+Para customizar as cores do Ant.Design utilize o componente `ConfigProvider` no `App.jsx`.
 
 Por exemplo:
 
-```
+```jsx
 import { ConfigProvider, Button } from 'antd';
-
 ...
-
 function App() {
     ...
     return (
@@ -126,32 +114,61 @@ function App() {
         </ConfigProvider>
     );
 }
-
 ...
-
 ```
 
 Assim é possível ajustar qualquer configuração de estilização do Ant.Design.
 
-
-
-
-E no seu ficheiro LESS principal, por exemplo no `App.less`, importe o CSS do Ant.Desig:
-
-`@import '~antd/dist/antd.less';`
-
 ### Dark Theme
 
-Também é possível utilizar o tema escuro do Ant.Design, para isto basta importar o LESS do dark mode no seu `App.less`:
+Também é possível utilizar o tema escuro do Ant.Design, para isto basta importar o `theme` que contém o dark mode e aplicar no `ConfigProvider`:
 
-`@import '~antd/lib/style/themes/dark.less';`
+```jsx
+import { ConfigProvider, Button, theme } from 'antd';
+...
+    <ConfigProvider theme={{
+            token: {
+                colorPrimary: '#FF6500'
+            },
+            algorithm: theme.darkAlgorithm,
+        }}>
+        ...
+        <Button type="primary">Meu Botão com Cor Customizada</Button>
+        ...
+    </ConfigProvider>
+...
+```
 
-##### Restyle
+### Restyle
 
-Repare que nos exemplos de código do `📂 website/craco.config.js` acima é possível alterar facilmente as variáveis do Ant.Design definidas no Less, mais sobre a customização do Ant.Design:
+Repare que nas parametrizações do `ConfigProvider` acima, é possível alterar facilmente o estilo do Ant.Design, mais sobre a customização do Ant.Design:
 
 - [Customize Theme](https://ant.design/docs/react/customize-theme)
-- [Less Variables](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less)
+
+Em cada componente do Ant.Design tem as configurações possíveis de Design Token, por exemplo nos Botões:
+
+- [Button - Design Token](https://ant.design/components/button#design-token)
+
+```jsx
+<ConfigProvider theme={{
+        token: {
+            colorPrimary: '#00b96b',
+            fontSize: 18,
+        },
+        components: {
+            Button: {
+                defaultBg: '#D6BD98',
+                defaultColor: '#1D1616',
+                primaryColor: '#000B58',
+                textTextColor: '#181C14',
+            }
+        }
+    }}>
+    ...
+    <Button type="primary">Meu Botão com Cor Customizada</Button>
+    ...
+</ConfigProvider>
+```
 
 ## Início automático da aplicação ReactJS com o Netuno
 
@@ -161,18 +178,19 @@ O Netuno permite-lhe iniciar a aplicação em ReactJS juntamente com o processo 
 
 Para tal basta adicionar à configuração `commands` da aplicação Netuno em `📂 config/_development.json` o seguinte:
 
-```
+```json
 {
     ...
     "commands": [
-        ...,
+        ...
         {
             "path": "website",
-            "command": "npm run start",
-            "install": "npm install --force",
+            "command": "npm run dev",
+            "install": "npm install",
             "enabled": true
         }
     ]
+    ...
 }
 ```
 
@@ -188,7 +206,7 @@ Para configurar o CORS para evitar possíveis erros entre comunicação da aplic
 
 Repare se já existe a configuração de `cors` ou adicione este exemplo:
 
-```
+```json
 {
     ...
     "cors": [
@@ -232,9 +250,7 @@ _out.json(_val.map().set("result", true))
 Pode ser definida a configuração das variávies de ambiente através da criação do ficheiro `website/.env`, com as definições das variáveis, por exemplo:
 
 ```
-PORT=3001
-WDS_SOCKET_PORT=21031
-DANGEROUSLY_DISABLE_HOST_CHECK=true
+NODE_ENV=development
 ```
 
 Ou através da configuração da aplicação do Netuno, por exemplo em:
@@ -243,13 +259,13 @@ Ou através da configuração da aplicação do Netuno, por exemplo em:
 
 E definindo as variáveis de ambiente na configuração do comando na parametrização `env`, por exemplo:
 
-```
+```json
 {
     ...
     "commands": [
         ...,
         {
-            "env": ["PORT=3001", "WDS_SOCKET_PORT=21031", "DANGEROUSLY_DISABLE_HOST_CHECK=true"]
+            "env": ["NODE_ENV=development"]
             "path": "website",
             "command": "npm run start",
             "install": "npm install --force",
@@ -258,50 +274,3 @@ E definindo as variáveis de ambiente na configuração do comando na parametriz
     ]
 }
 ```
-
-### Definir o Porto do Front-end
-
-Pode definir qual será o porto utilizado pelo front-end em vez do porto padrão `3000`.
-
-Para definir outro porto para executar o front-end, defina a variável de ambiente `PORT`, como por exemplo:
-
-```
-PORT=3001
-```
-
-Depois de definir a variável de ambiente deve reiniciar o servidor do frontend e o problema deverá ser ultrapassado.
-
-### Definir Porto Externo do WebSocket
-
-Caso o front-end não atualize automaticamente as alterações realizadas em código, pode querer dizer que a conexão com o WebSocket do webpack está a falhar.
-
-Veja na console do browser se aparece a seguinte mensagem de erro:
-
-`WebSocket connection to 'ws://my.host.com:3000/ws' failed: WebSocketClient`
-
-Isto acontece quando utilizamos roteamento de portos, ou seja o porto do front-end acedido pelo browser não é o padrão `3000`, então temos que sinalizar qual é o porto do front-end para ser utilizado com o WebSocket do webpack.
-
-Para definir o porto do front-end para as conexões de WebSocket, defina a variável de ambiente `WDS_SOCKET_PORT`, como por exemplo:
-
-```
-WDS_SOCKET_PORT=21031
-```
-
-Depois de definir a variável de ambiente deve reiniciar o servidor do frontend e o problema deverá ser ultrapassado.
-
-
-### Permitir Host "Inválido"
-
-Caso o servidor do frontend que utiliza o webpack gerar uma página de erro com a seguinte mensagem: 
-
-`Invalid Host Header`
-
-Isto quer dizer que o acesso está sendo feito externamente, o qual não é permitido.
-
-Para forçar a permissão de que pode aceitar acessos externos, deve ser configurada a variável de ambeinte `DANGEROUSLY_DISABLE_HOST_CHECK`, por exemplo:
-
-```
-DANGEROUSLY_DISABLE_HOST_CHECK=true
-```
-
-Depois de definir a variável de ambiente deve reiniciar o servidor do frontend e o problema deverá ser ultrapassado.
