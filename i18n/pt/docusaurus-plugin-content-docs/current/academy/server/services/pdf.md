@@ -246,26 +246,27 @@ Repare:
 
 ```javascript
 pdfDocument.add(
-  _pdf.table(1)
+  _pdf.table(1) // Número de colunas, neste caso apenas 1.
     .addCell(
       _pdf.cell()
         .add(
           _pdf.paragraph("Pessoa")
             .setFont(helvetica)
             .setFontSize(10)
-          )
-          .setBorder(_pdf.border("solid", 2))
-          .setBackgroundColor(_pdf.colorRGB(1, 0, 0))
         )
+        .setBorder(_pdf.border("solid", 2))
+        .setBackgroundColor(_pdf.colorRGB(1, 0, 0))
+    )
     .addCell(
       _pdf.cell()
         .add(
           _pdf.paragraph("Nicole")
             .setFont(helvetica)
             .setFontSize(10)
-          )
-          .setBackgroundColor(_pdf.colorGray(0.5)
-      )
+        )
+        .setBackgroundColor(_pdf.colorGray(0.5))
+    )
+)
 ```
 
 Com o método `addCell` permite inserir a definição das células com o seu respectivo conteúdo.
