@@ -4,7 +4,7 @@ id: databases
 title: Base de Dados
 ---
 
-Recorde que já foi criado o formulário **Tarefa** com o campo **Nome**, que são os nomes de _Exibição_.
+Recorde que já foi criado o formulário **Tarefa** com o campo **Nome**, os nomes de _Exibição_.
 
 Isto implica que já foi criada na base de dados a tabela **tarefa** com a coluna **nome**, cujos nomes foram inicialmente definidos na criação.
 
@@ -18,7 +18,7 @@ Esta interface encontra-se no ambiente **Construir** e no menu em **Gestão** > 
 
 Experimente executar os seguintes comandos:
 
-```
+``` sql 
 select nome from tarefa;
 
 select * from tarefa;
@@ -32,7 +32,7 @@ Repare que ao clicar em **Executar** é gerada uma tabela de resultados para cad
 
 Realize agora uma consulta mais complexa relacionando todas as tabelas:
 
-```
+``` sql
 SELECT tarefa.nome, registo.inicio, registo.fim, trabalhador.nome
 FROM tarefa
   INNER JOIN registo ON tarefa.id = registo.tarefa_id

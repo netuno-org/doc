@@ -196,5 +196,5 @@ Only to the type of HTTP method desired, it is supported to restrict services.
 
 To integrate with the frontend it can be done at the lowest level using `fetch`.
 
-To streamline and standardize the implementation, the NPM module [@ netuno / service-client] (https://www.npmjs.com/package/@netuno/service-client) is available.
+To streamline and standardize the implementation, the NPM module [@ netuno / service-client](https://www.npmjs.com/package/@netuno/service-client) is available.
 

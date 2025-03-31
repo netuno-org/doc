@@ -46,6 +46,6 @@ The **"Column"** must be filled with the value 1 and the **Line** with the value
 
 The **Link** will be defined with the value `task:name`.
 
-Which means it will related to the present **task** table showing some information in the collumn **name**.
+Which means it will be related to the present **task** table showing some information in the collumn **name**.
 
 Click **Save** when you finish.

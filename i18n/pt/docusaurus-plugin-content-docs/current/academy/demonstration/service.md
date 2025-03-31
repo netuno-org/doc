@@ -46,7 +46,7 @@ O nome do novo ficheiro deverá ser `trabalhadores.js`, vamos criar um serviço 
 
 Basta agora realizar a codificação do nosso serviço, que será assim:
 
-```
+```js title="/apps/demo/server/services/trabalhadores.js"
 /**
 *** Formata o objeto passado em JSON e realiza o seu output.
 */

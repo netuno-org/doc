@@ -4,43 +4,64 @@ id: form
 title: Form
 ---
 
-## Building a Form
+## Create Form
 
-To start to build a form just click on the top right hand side button, where it says **"Build"**.
+To create a form, click in the top right-hand corner on the button that says **Build**.
 
-As you can see here is the development area, where data can be managed, structure, analyzed also you will be able to do some queries and view the data model diagram.
+This is the developer's area, where you can develop the entire data structure, run database queries, analyse the data model diagram and much more.
 
-On your left-hand sidebar just click on **"Management"** then will display some options that you will choose **"Forms"**.
+The construction of the forms can be found in the menu that says **Management** and then in the option **Forms**.
 
-In this step please type **"Task"** on the **"Display Name"**. Please note that the name in the field was automatically filled in lowercase letters, which means that this name will be given to the database table that will be created along with your form, and the _Display Name_ is the one that will appear to the end-user in the **"View"** area.
+Type `Task' in the **Display Name** of the form, note that the **Name** field has been automatically filled in with lower case letters, the _Name_ field is the name that will be given to the database table, which will be created together with the creation of the form, and the _Display Name_ is what will appear to the end user in the **View** area.
 
-Every form will be always associated with the database table where the data will be stored.
+Each form always has an associated database table where the information is stored.
 
-After filling in all these `Names` just click **"Save"** below.
+With the _Form Names_ filled in, click on **Save**.
 
-Have a look on your left sidebar and will show a new menu option with all `Names` built, in this case **"Task"**.
-Click on **Task** now to enter the field for this form.
+Now on the left-hand side you have a new menu option with the name of the form created: **Task**.
 
-## Building a Field
+After clicking on **Task** in the menu, you enter the field management of the _Task_ form.
 
-In this step just type `Name` in the **Display Name** to create the new field that will store your `Task` _Name_.
+## Create Field
 
-Which will be the field to store the name of the departments.
+Fill in `Name` in the **Display Name** to create the new field that will store the name of the tasks.
 
-And notice again that the field **Name** was automatically filled with lowercase letters, this will be the name of the database column created and storing the data in this field.
+This will be the field to store the name of the departments.
 
-While you activate the option **"Primary Key"** will prevent that departments could have repeated names.
+And note again that the **Name** field has been automatically filled in with lower case letters, this will be the name of the column created in the database to store the data for this field.
 
-Your should also click on option **Not Null** which will require you to complete this field when creating and editing departments.
+Activate the **Primary Key** option, which will prevent departments from having a repeated name.
 
-Below you have the option **"Type"** just choose **_text_** this means that our field is _text_ type.
+Also activate the **Not Null** option, which will make filling in this field compulsory when creating or editing departments.
+
+Under type, choose **text** which will indicate that our field is of type _text_.
+
+Finally, click on the **Save** option to save the whole process.
 
 ## View
 
-Completing all the previous steps you will be able to see your final result clicking on the top right-hand side option **"View"**.
+After successfully completing the previous steps, let's visualise the final result.
 
->Note that you have a new option on the side bar menu: **Task**.
+To do this, click on the **Visualise** button in the top right-hand corner.
 
-By clicking on **Task** you will be able to create, edit, search, delete these Tasks and also to manipulate data.
+Notice that you now have a new option in the side menu: **Task**.
 
-Watch the video below where you can follow all the steps on how to manage your data and see the outcome.
+By clicking on the **Task** menu you will be able to create, edit, search for and delete tasks. In other words, you'll be able to manipulate the data.
+
+This is the result of the end user being able to manipulate the system's data.
+
+## Upload Data
+
+Now you can insert the records of the **Tasks**.
+
+Click on the `[ + New content ]` button in the top right-hand corner, fill in the **Name** field and click on the `[ Save ]` button.
+
+You can insert example tasks, such as:
+
+- Support
+- Commercial
+- Meeting
+- Invoicing
+- Billing
+
+

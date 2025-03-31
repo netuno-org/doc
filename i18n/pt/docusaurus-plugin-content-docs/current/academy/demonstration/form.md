@@ -10,7 +10,7 @@ Para criar um formulário clique no canto superior direito no botão que diz **C
 
 Aqui é a área do desenvolvedor, onde poderá desenvolver toda a estrutura de dados, executar consultas à base de dados, analisar o diagrama do modelo de dados e muito mais.
 
-A construção dos formulário encontra-se no menu onde diz **Gestão** e depois na opção **Formulários**.
+A construção dos formulários encontra-se no menu onde diz **Gestão** e depois na opção **Formulários**.
 
 Escreva `Tarefa` no **Nome de Exibição** do formulário, repare que o campo **Nome** foi automaticamente preenchido com letras minúsculas, o campo _Nome_ é o nome que será dado à tabela em base de dados, que será criada juntamente com a criação do formulário, e o _Nome de Exibição_ é o que aparecerá para o utilizador final na área de **Visualizar**.
 
@@ -30,7 +30,7 @@ Este será o campo para armazenar o nome dos departamentos.
 
 E repare novamente que o campo **Nome** foi automaticamente preenchido com letras minúsculas, este será o nome da coluna criada em base de dados para armazenar os dados deste campo.
 
-Ative a opção **Chave Primária** que vai evitar que hajam departamentos com o nome repetido.
+Ativar a opção **Chave primária**, que impedirá que os departamentos tenham um nome repetido.
 
 Também ative a opção **Não Nulo** que vai tornar o preenchimento deste campo obrigatório na criação ou edição dos departamentos.
 
@@ -49,7 +49,7 @@ Repare que agora tem uma nova opção no menu lateral: **Tarefa**
 
 Ao clicar no menu em **Tarefa** vai poder criar, editar, pesquisar e apagar as tarefas. Isto é, vai poder realizar a manipulação dos dados.
 
-Este é o resultado para o utilizador final poder manipular o dados do sistema.
+Este é o resultado para o utilizador final poder manipular os dados do sistema.
 
 ## Carregar Dados
 

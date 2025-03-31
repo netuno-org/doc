@@ -90,8 +90,8 @@ var dbWebsiteWP = _db.init("website-wp")
 var dbAppDotNet = _db.init("app-dot-net")
 ```
 
-Cada variável contem uma instância do recurso *_db* associado a base de dados corresponde a chave que indentifica a conexão definida nas configurações da aplicação.
+Cada variável contem uma instância do recurso *_db* associado a base de dados corresponde a chave que identifica a conexão definida nas configurações da aplicação.
 
 Assim utilizando estas variáveis poderá realizar as operações de base de dados como queries, inserts, updates e deletes.
 
-Para mais informações sobre as operações de base de dados consulte a documentação do recurso: [_db](../../resources/db)
+Para mais informações sobre as operações de base de dados consulte a documentação do recurso: [_db](../../../library/resources/db)

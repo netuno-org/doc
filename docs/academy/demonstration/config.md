@@ -20,7 +20,7 @@ In here find and open the file in any text/code editor:
 
 Find and change both of these accordingly to your language:
 
-```
+``` json title="/apps/demo/config/development.json"
 "language": "en_GB",
 "locale": "en_GB", 
 ```
@@ -33,7 +33,7 @@ Here's a list of all the currently accepted values:
 
 Find this in the same file:
 
-```json
+``` json title="/apps/demo/config/development.json"
 ...
     "db": {
         "default": {
@@ -58,7 +58,7 @@ And replace the database ```"name"``` value field accordingly to your language, 
 With Netuno you have the ability to run multiple commands that run with the server boot and output to the same console. By default the Demo app brings configured, but disabled, to launch the command ``` npm run watch ``` that automatically compiles any changes to backoffice code files. 
 You can find this configuration in:
 
-```json
+``` json title="/apps/demo/config/development.json"
 ...
     "commands": [
         {
@@ -72,8 +72,8 @@ You can find this configuration in:
 
 > To see this feature in action, enable the command with `"enabled": true` and restart your Netuno Server. 
 
-* ```"enabled"``` - enables or disables the commands from running with server boot (can be either ```true``` or ```false``` respectively);
-* ```"path"``` - the path relative to the app directory where the command will run;
-* ```"command"``` - the command to run;
+* ```"enabled"``` - enables or disables the commands from running with server boot (can be either ```true``` or ```false``` respectively)
+* ```"path"``` - the path relative to the app directory where the command will run
+* ```"command"``` - the command to run
 
 >You can add as many as you want, just make sure you follow the same object structure.

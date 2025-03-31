@@ -16,6 +16,18 @@ $ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+This command will start the local development server with the default language, which is English.
+
+### Developing for several languages
+
+Docusaurus has limitations for using several languages at the same time in the local environment, so you need to execute this command to run a specific language.
+
+```
+$ yarn run start --locate pt 
+```
+After the code `--locate` just need to insert the name of the file inside the `i18n` in this case we are using the Portuguese `pt` translation.
+
+
 ### Build
 
 ```

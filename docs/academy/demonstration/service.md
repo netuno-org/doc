@@ -46,7 +46,7 @@ The name of the new file should be `📂 workers.js`, we will create a service w
 
 All you need to do now is to _Code_ our service, which will be as below:
 
-```js
+```js title="/apps/demo/server/services/workers.js"
 /**
 *** Formats the past object in JSON and performs its output.
 */
