@@ -29,12 +29,15 @@ Insira e ajuste os seguintes parâmetros:
 
 ```
     ...
-    "jwt": {
-        "enabled": true,
-        "secret": "@MyComp1exSecr3t",
-        "access_expires": 60,
-        "refresh_expires": 1440,
-        "algorithm": "HS512"
+    "auth": {
+        "jwt": {
+            "enabled": true,
+            "secret": "SegredoTemQueTer32Characteres!!!",
+            "expires": {
+                "access": 1440,
+                "refresh": 1440
+            }
+        }
     },
     ...
 ```
@@ -43,12 +46,23 @@ No parâmetro `secret` coloque uma sequência de caracteres complexa e aleatóri
 
 Os parâmetros de `expires` são definidos em minutos, por exemplo: `60` equivale a 1 hora e `1440` a um dia.
 
-No `algorithm` são suportados os seguintes mecanismos:
+### Acesso Restrito à Grupos
 
-- [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) com [SHA-2](https://en.wikipedia.org/wiki/SHA-2): `ES256`, `ES384` ou `ES512`
-- [HMAC](https://en.wikipedia.org/wiki/HMAC) com [SHA-2](https://en.wikipedia.org/wiki/SHA-2): `HS256`, `HS384` ou `HS512`
-- [RSASSA-PSS](https://en.wikipedia.org/wiki/Probabilistic_signature_scheme) com [SHA-2](https://en.wikipedia.org/wiki/SHA-2): `PS256`, `PS384` ou `PS512`
-- [RSASSA-PKCS1](https://en.wikipedia.org/wiki/PKCS_1) com [SHA-2](https://en.wikipedia.org/wiki/SHA-2): `RS256`, `RS384` ou `RS512`
+Adicionalmente pode ser passado o parâmetro `groups`, que define o código dos Grupos de utilizadores que podem autenticar com JWT, por exemplo:
+
+```
+    ...
+    "auth": {
+        "jwt": {
+            ...
+            "groups": ["cliente", "fornecedor"],
+            ...
+        }
+    },
+    ...
+```
+
+No exemplo acima, apenas os utilizadores que pertendem ao grupo dos Clientes, sendo o código do grupo `cliente`, ou dos Fornecedores, sendo o código do grupo `fornecedor`, apenas estes podem autenticar com JWT. 
 
 ## Como Obter o Access Token
 

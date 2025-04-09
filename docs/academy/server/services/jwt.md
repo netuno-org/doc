@@ -61,26 +61,40 @@ Enter and adjust the following parameters:
 
 ```
     ...
-    "jwt": {
-        "enabled": true,
-        "secret": "@MyComp1exSecr3t",
-        "access_expires": 60,
-        "refresh_expires": 1440,
-        "algorithm": "HS512"
+    "auth": {
+        "jwt": {
+            "enabled": true,
+            "secret": "ThisSecretMustContains32Chars!!!",
+            "expires": {
+                "access": 1440,
+                "refresh": 1440
+            }
+        }
     },
     ...
 ```
 
 In the `secret` parameter, place a complex and random character `string` as it is the key that will guarantee the security of the JWT Token encryption.
 
-The `expression` parameters defined in minutes, as example:` 60` equals 1 hour and `1440` equals one day.
+The `expires` parameters defined in minutes, as example: `60` equals 1 hour and `1440` equals one day.
 
-The following mechanisms are supported in the algorithm:
+### Access Groups
 
-- [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) com [SHA-2](https://en.wikipedia.org/wiki/SHA-2): `ES256`, `ES384` ou `ES512`
-- [HMAC](https://en.wikipedia.org/wiki/HMAC) com [SHA-2](https://en.wikipedia.org/wiki/SHA-2): `HS256`, `HS384` ou `HS512`
-- [RSASSA-PSS](https://en.wikipedia.org/wiki/Probabilistic_signature_scheme) com [SHA-2](https://en.wikipedia.org/wiki/SHA-2): `PS256`, `PS384` ou `PS512`
-- [RSASSA-PKCS1](https://en.wikipedia.org/wiki/PKCS_1) com [SHA-2](https://en.wikipedia.org/wiki/SHA-2): `RS256`, `RS384` ou `RS512`
+Additionally, the `groups` parameter can be passed, which defines the code of the User Groups that can authenticate with JWT, for example:
+
+```
+    ...
+    "auth": {
+        "jwt": {
+            ...
+            "groups": ["customer", "supplier"],
+            ...
+        }
+    },
+    ...
+```
+
+In the example above, only users who belong to the Customers group, with the group code being `customer`, or Suppliers, with the group code being `supplier`, can authenticate with JWT.
 
 ## How to obtain Token Access
 
