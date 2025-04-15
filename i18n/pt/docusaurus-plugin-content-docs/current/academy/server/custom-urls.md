@@ -48,4 +48,4 @@ Define o endereço da URL inicial dos serviços web da API REST, o padrão é `/
 
 A customização das URLs é importante, tanto para torná-la mais intuitiva como poder torná-la mais complexa e aumentar a segurança.
 
-Por exemplo, no endereço de administração pode ser colocado um prefixo com uma sequência de caracteres aleatórios, só quem sabe decor terá acesso, assim vai dificultar que seja acessível facilmente e vai evitar ataques.
+Por exemplo, no endereço de administração pode ser colocado um prefixo com uma sequência de caracteres aleatórios, assim só quem souber decor acederá o endereço de acesso, isso dificulta o acesso e evita ataques.
