@@ -187,6 +187,209 @@ Com a interface gerada do lado direito é possível entender melhor todos os ser
 
 Também permite gerar automaticamente clientes para outras tecnologias.
 
+## Programaticamente
+
+Na pasta `_schema` podemos utilizar arquivos `.js` que serão executados junto com a geração da definição da OpenAI, mas também no processo de validação de input e output dos serviços.
+
+Através da programação do schema podemos gerar validações dinâmicas, por exemplo:
+- Apenas aceitar um código que existe na base de dados.
+- Com o `UID` obtém o registro em base de dados e partilha com os serviços.
+- Caso seja `POST` ou `PUT` gera um tipo de schema diferente do que é gerado no caso do `DELETE`.
+
+### Exemplo com Lista de Valores
+
+Imagine que temos um serviço que recebe o código de uma determinada categoria.
+
+Não podemos receber qualquer valor como código, por que pode ser um valor que não corresponde a um código válido de categoria.
+
+Então podemos restringir que os códigos aceites são apenas os que estão cadastrados em base de dados.
+
+Cria-se o schema em: `server/services/_schema/categoria/codigos.js`
+
+```javascript
+const dbCategorias = _db.query("SELECT codigo FROM categoria")
+
+const listaCodigos = _val.list()
+
+for (const dbCategoria of dbCategorias) {
+    listaCodigos.add(dbCategoria.getString("codigo"))
+}
+
+_dataSchema
+    .set('type', 'string')
+    .set(
+        'enum',
+        listaCodigos
+    )
+```
+
+> No `listaCodigos` vai conter todos os códigos de categorias registrados na base de dados.
+
+No serviço podemos ter o seguinte `JSON` que utiliza o schema `categoria/codigos`:
+
+```json
+{
+  "summary": "Lista os Produtos na Categoria",
+  "description": "Obtém todos os produtos associados a uma determinada categoria.",
+  "type": "object",
+  "properties": {
+    "categoria": {
+      "type": "object",
+      "properties": {
+        "codigo": {
+          "_schema": "categoria/codigos"
+        }
+      },
+      "required": [
+        "codigo"
+      ]
+    }
+  },
+  "required": [
+    "categoria"
+  ]
+}
+```
+
+Desta forma conseguimos garantir que apenas executa o serviço se o código for válido.
+
+### Exemplo com Objeto Global
+
+Imagine que temos diversos serviços que recebem o `UID` do cliente e em cada serviço temos que aceder à base de dados para obter o os dados do cliente relacionado com o seu `UID`.
+
+Podemos centralizar isso num schema programado que através do `UID` do cliente recebido, obtém os dados do cliente em base de dados, e armazena em um objeto global que é acessível no código dos serviços.
+
+Assim os dados do cliente são sempre carregados globalmente e automaticamente quando recebemos um `UID` de cliente.
+
+Criamos um schema programado em: `server/services/_schema/cliente.js`
+
+```javascript
+const cliente = _req.getValues('cliente', _val.map())
+
+if (!_service.isGeneratingOpenAPIDefinition()) {
+    const dbCliente = _db.get('cliente', cliente.getString("uid"))
+    
+    if (dbClient == null) {
+        _header.status(404)
+        _out.json(
+            _val.map()
+                .set('error', true)
+                .set('code', 'cliente-nao-encontrado')
+        )
+        _service.cancel()
+    }
+    
+    _val.global().set('cliente', dbCliente)
+}
+
+_dataSchema.set('type', 'object')
+    .set(
+        'properties',
+        _val.map()
+            .set(
+                'uid',
+                _val.map()
+                    .set('type', 'uid')
+            )
+    )
+    .set(
+        'required',
+        _val.list()
+            .add('uid')
+    )
+```
+
+> Com o `_service.isGeneratingOpenAPIDefinition()` podemos validar se é a geração da definição do OpenAPI, caso contrário é uma execução de um pedido HTTP.
+> 
+> Caso o `UID` do cliente não seja encontrado, então retorna o 404 e interrompe a execução do serviço.
+> 
+> Repare que utilizamos o `_val.global()`, que permite partilhar dados globalmente entre todos os arquivos de código que forem executados no processamento do pedido HTTP.
+
+No seguimento do exemplo, temos um serviço que lista as compras realizadas pelo cliente.
+
+Temos a validação de input para o serviço em: `server/services/cliente/compras/post.in.json`
+
+```json
+{
+    "summary": "Lista de Compras",
+    "description": "Lista as compras realizadas pelo cliente.",
+    "type": "object",
+    "properties": {
+        "cliente": {
+            "_schema": "cliente"
+        }
+    },
+    "required": [
+        "cliente"
+    ]
+}
+```
+
+> Repare que o valor do `"_schema"` do cliente é o nome do arquivo de código que programamos no schema anteriormente. 
+
+E no código do serviço das compras de clientes em: `server/services/cliente/compras/post.js`
+
+```javascript
+const dbCliente = _val.global().getValues('cliente')
+...
+```
+
+Através do `_val.global()` obtemos os dados do cliente na base de dados que foi carregado pelo código do schema automaticamente.
+
+### Exemplo com Método HTTP
+
+Podemos retornar um schema diferente para cada tipo de método HTTP.
+
+Por exemplo podemos gerar um schema por código para operações de criar, editar ou remover portas de rede:
+
+- Caso seja POST realiza a operação de criação, então não contém o UID mas exige o nome e número de porta.
+- Caso seja PUT realiza a operação de edição, precisa exigir o UID, o nome e o número da porta de rede.
+- Quando for PUT ou DELETE precisa do UID para realizar as respectivas operações de edição e remoção. 
+
+```javascript
+const properties = _val.map()
+const required = _val.list()
+
+if (_dataSchema.isMethod('PUT') || _dataSchema.isMethod('DELETE')) {
+    properties.set(
+        'uid',
+        _val.map()
+            .set('type', 'uid')
+    )
+    required.add('uid')
+}
+
+if (!_dataSchema.isMethod('DELETE')) {
+    properties
+        .set(
+            'name',
+            _val.map()
+                .set('type', 'string-not-empty')
+                .set('pattern', '^[a-zA-Z0-9-_\\.]{1,16}$')
+        )
+        .set(
+            'port',
+            _val.map()
+                .set('type', 'integer')
+                .set('minimum', portMinimum)
+                .set('maximum', portMaximum)
+        )
+    required
+        .add('name')
+        .add('port')
+}
+
+_dataSchema.set('type', 'object')
+    .set(
+        'properties',
+        properties
+    )
+    .set(
+        'required',
+        required
+    )
+```
+
 ## Conclusão
 
 Com o suporte da OpenAPI podemos criar regras de validação utilizando o JSON Schema, o que oferece as seguintes vantagens:
