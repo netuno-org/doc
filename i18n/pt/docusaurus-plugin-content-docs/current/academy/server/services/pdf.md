@@ -421,3 +421,10 @@ Ou ainda utilizando um arquivo no `storage` da aplicação:
 ```javascript
 _out.print(_pdf.toHTML(_storage.filesystem('server', 'meu-documento.pdf')))
 ```
+
+## Videos
+
+Segue alguns videos exemplificativos de como realizar a geração de arquivos PDF programaticamente:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/OyUzHr9hi0c?si=eTecDP0i0P_9rhG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
