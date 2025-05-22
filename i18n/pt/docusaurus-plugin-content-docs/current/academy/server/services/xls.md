@@ -618,3 +618,10 @@ No caso de datas e horas temos mais estes parâmetros adicionais:
 
 - `value` - Valor em byte do erro gerado.
 - `code` - No caso de haver erros no cálculo da fórmula fornece aqui o código do erro ocorrido.
+
+## Videos
+
+Segue alguns videos exemplificativos de como realizar a geração de arquivos Excel/XLSX programaticamente:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
