@@ -222,3 +222,150 @@ Se abrir no browser o URL:
 Vai retornar apenas o `Ok` e no terminal vai aparecer a mensagem `Job de teste!`.
 
 > No ambiente de `development` a validação do `secret` não tem efeito, por isso pode executar sem passar qualquer `secret` e vai funcionar, mas noutro ambiente, como o de produção já é levado em consideração.
+
+## Muitas Tarefas
+
+Quando há a necessidade de ser criado muitas tarefas agendadas, convém aumentar o número de threads utilizadas para a execução
+paralela das diversas tarefas agendadas.
+
+Essa configuração é feita no arquivo `config.js` que se encontra na raíz do Netuno, acrescentando a linha de exemplo:
+
+```javascript
+config.cronThreadCount = 10
+```
+
+> Por padrão esta configuração permite apenas 3 threads.
+> 
+> Deve ter em atenção para aumentar o número de threads de acordo com o número de cores do CPU.
+
+Utilizar poucas threads para executar muitos agendamentos paralelos pode resultar na paragem da execução das tarefas agendadas.
+
+Portanto se houver casos em que as tarefas ficam presas após algum tempo, provavelmente está sendo executado demasiadas 
+tarefas em paralelo, então é necessário aumentaro número de threads.
+
+## Programaticamente
+
+O Netuno permite configurar e controlar os Cron Jobs programaticamente.
+
+Isto quer dizer que através do código podemos gerir tudo.
+
+### Criar Nova Tarefa
+
+Para criar uma nova tarefa, criamos o seu agendamento através do [`_cron.schedule`](../../library/resources/cron#schedule).
+
+O [`_cron.schedule`](../../library/resources/cron#schedule) recebe os seguintes parâmetros:
+
+1. Chave de identificação da tarefa: `key`.
+2. Configuração do tempo de agendamento para a execução.
+3. Endereço do serviço que deve ser executado, ou seja a: `URL`.
+4. Parâmetros adicionais que são enviados na chamada do serviço.
+
+```javascript
+_cron.schedule(
+    'minha-tarefa',
+    '0 0/60 * * * ?',
+    `/services/jobs/produto-atualiza`,
+    _val.map()
+        .set('id', 123)
+)
+```
+
+Se for necessário criar as tarefas automaticamente na inicialização da aplicação, pode então ser codificado este automatismo no arquivo:
+
+- `server/core/_init.js`
+
+Onde este arquivo é executado sempre que aplicação é inicializada pelo servidor do Netuno.
+
+### Remover Tarefa
+
+Para remover uma determinada tarefa utilizamos o [`_cron.remove(key)`](../../library/resources/cron#remove).
+
+Onde a `key` é a chave de identificação da tarefa.
+
+Veja o exemplo:
+
+```javascript
+_cron.remove('minha-tarefa')
+```
+
+### Listar Tarefas
+
+Através do [`_cron.schedules()`](../../library/resources/cron#schedules) podemos listar todas as tarefas configuradas.
+
+Exemplo de como listar todas as tarefas agendadas: 
+
+```javascript
+const list = _cron.schedules()
+_out.println('<table>')
+_out.println('<tr>')
+_out.println(`  <td>Chave</td>`)
+_out.println(`  <td>URL</td>`)
+_out.println(`  <td>Par&acirc;metros</td>`)
+_out.println(`  <td>Descri&ccedil;&atilde;o</td>`)
+_out.println(`  <td>&Uacute;ltima Execu&ccedil;&atilde;o</td>`)
+_out.println(`  <td>Pr&oacute;xima Execu&ccedil;&atilde;o</td>`)
+_out.println(`  <td>Prioridade</td>`)
+_out.println('</tr>')
+for (const schedule of list) {
+        _out.println('<tr>')
+        _out.println(`  <td>${schedule.getString('key')}</td>`)
+        _out.println(`  <td>${schedule.getString('url')}</td>`)
+        _out.println(`  <td>${schedule.getValues('params').toJSON()}</td>`)
+        _out.println(`  <td>${schedule.get('detail').getDescription()}</td>`)
+        _out.println(`  <td>${schedule.get('trigger').getPreviousFireTime()}</td>`)
+        _out.println(`  <td>${schedule.get('trigger').getNextFireTime()}</td>`)
+        _out.println(`  <td>${schedule.get('trigger').getPriority()}</td>`)
+        _out.println('</tr>')
+}
+_out.println('</table>')
+```
+
+### Pausar Tarefas
+
+Através do [`_cron.pause(key)`](../../library/resources/cron#pause) podemos pausar a execução de uma determinada tarefa.
+
+Exemplo de como pausar todas as tarefas agendadas:
+
+```javascript
+const list = _cron.schedules()
+_out.println('<table>')
+_out.println('<tr>')
+_out.println(`  <td>Chave</td>`)
+_out.println(`  <td>Parado</td>`)
+_out.println('</tr>')
+for (const schedule of list) {
+    _out.println('<tr>')
+    _out.println(`  <td>${schedule.getString('key')}</td>`)
+    _out.println(`  <td>${_cron.pause(schedule.getString('key'))}</td>`)
+    _out.println('</tr>')
+}
+_out.println('</table>')
+```
+
+> Repare na utilização do `_cron.pause` no exemplo acima.
+
+### Retomar Tarefas
+
+Através do [`_cron.resume(key)`](../../library/resources/cron#resume) podemos retomar a execução de uma determinada tarefa.
+
+Exemplo de como retomar todas as tarefas agendadas, e apresenta quando as tarefas serão executadas:
+
+```javascript
+const list = _cron.schedules()
+_out.println('<table>')
+_out.println('<tr>')
+_out.println(`  <td>Chave</td>`)
+_out.println(`  <td>Reativado</td>`)
+_out.println(`  <td>Pr&oacute;xima Execu&ccedil;&atilde;o</td>`)
+_out.println('</tr>')
+for (const schedule of list) {
+    _out.println('<tr>')
+    _out.println(`  <td>${schedule.getString('key')}</td>`)
+    _out.println(`  <td>${_cron.resume(schedule.getString('key'))}</td>`)
+    _out.println(`  <td>${schedule.get('trigger').getNextFireTime()}</td>`)
+    _out.println('</tr>')
+}
+_out.println('</table>')
+```
+
+> Repare na utilização do `_cron.resume` no exemplo acima.
