@@ -73,7 +73,7 @@ npm i -S react-router-dom antd @ant-design/icons less @netuno/service-client
 
 After running the commands above, you can force a default port address, go to `📂 website/vite.config.js` and add the `server` configuration as follows:
 
-```javascript
+```javascript title="website/vite.config.js"
 export default defineConfig({
     server: {
         port: 3000,
@@ -178,7 +178,7 @@ Netuno allows you to start your ReactJS application together with the Netuno app
 
 To do this, simply add the following to the Netuno application's `commands` configuration in `📂 config/_development.json`:
 
-```json
+```json title="config/_development.json"
 {
     ...
     "commands": [
@@ -206,7 +206,7 @@ To configure CORS to avoid possible errors between the ReactJS application and t
 
 Check if the `cors` configuration already exists or add this example:
 
-```json
+```json title="config/_development.json"
 {
     ...
     "cors": [
@@ -259,7 +259,7 @@ Or by configuring the Netuno application, for example in:
 
 And defining the environment variables in the command configuration in the `env` parameterization, for example:
 
-```json
+```json title="config/_development.json"
 {
     ...
     "commands": [
