@@ -73,7 +73,7 @@ npm i -S react-router-dom antd @ant-design/icons less @netuno/service-client
 
 Após executar os comandos acima, pode forçar um endereço de porta padrão, dirija-se a `📂 website/vite.config.js` e acrescente a configuração do `server` da seguinte forma:
 
-```javascript
+```javascript title="website/vite.config.js"
 export default defineConfig({
   server: {
     port: 3000,
@@ -101,7 +101,7 @@ Para customizar as cores do Ant.Design utilize o componente `ConfigProvider` no 
 
 Por exemplo:
 
-```jsx
+```jsx title="website/src/App.jsx"
 import { ConfigProvider, Button } from 'antd';
 ...
 function App() {
@@ -178,7 +178,7 @@ O Netuno permite-lhe iniciar a aplicação em ReactJS juntamente com o processo 
 
 Para tal basta adicionar à configuração `commands` da aplicação Netuno em `📂 config/_development.json` o seguinte:
 
-```json
+```json title="config/_development.json"
 {
     ...
     "commands": [
@@ -206,7 +206,7 @@ Para configurar o CORS para evitar possíveis erros entre comunicação da aplic
 
 Repare se já existe a configuração de `cors` ou adicione este exemplo:
 
-```json
+```json title="config/_development.json"
 {
     ...
     "cors": [
@@ -259,7 +259,7 @@ Ou através da configuração da aplicação do Netuno, por exemplo em:
 
 E definindo as variáveis de ambiente na configuração do comando na parametrização `env`, por exemplo:
 
-```json
+```json title="config/_development.json"
 {
     ...
     "commands": [
