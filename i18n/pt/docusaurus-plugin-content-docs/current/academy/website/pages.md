@@ -26,7 +26,7 @@ npm install -S antd
 
 No ficheiro `App.js` que é encontrado na pasta `src` da aplicação ReactJS, ou seja `website/src`, adicine a importação dos módulos da seguinte forma:
 
-```
+```javascript title="src/App.jsx"
 import {
   BrowserRouter as Router,
   Switch, Route, Link
@@ -37,7 +37,7 @@ import { Layout, Menu } from 'antd';
 
 Depois das importações adicione as constantes:
 
-```
+```javascript title="src/App.jsx"
 const { Header, Footer, Content } = Layout;
 
 const { SubMenu } = Menu;
@@ -45,7 +45,7 @@ const { SubMenu } = Menu;
 
 Nesta fase inicial o retorno do componente App poderá ser da seguinte forma:
 
-```
+```jsx title="src/App.jsx"
   return (
     <Router>
       <Layout>
@@ -85,11 +85,11 @@ Criar a página de entrada, que será o componente `Home` e estará associado ao
 
 O ficheiro do componente desta página será:
 
-- `pages/Home/index.js`
+- `pages/Home/index.jsx`
 
 O código deste arquivos pode ser:
 
-```
+```jsx title="src/pages/Home/index.jsx"
 import React from 'react';
 
 export default ()=> {
@@ -111,7 +111,7 @@ O ficheiro do componente desta página será:
 
 O código deste arquivos pode ser:
 
-```
+```jsx title="src/pages/Info/index.jsx"
 import React from 'react';
 
 export default ()=> {
@@ -131,7 +131,7 @@ Também deverá ser adicionado os componentes de `Route` que associa o endereço
 
 Desta forma deverá ser estruturado o retorno do componente `App` da seguinte forma:
 
-```
+```jsx title="src/App.jsx"
   return (
     <Router>
       <Layout>
