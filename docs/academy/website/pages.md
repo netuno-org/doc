@@ -26,7 +26,7 @@ npm install -S antd
 
 In the `App.js` file which is found in the `src` folder of the ReactJS application, ie `website/src`, add the modules import as 👇:
 
-```
+```javascript title="src/App.jsx"
 import {
   BrowserRouter as Router,
   Switch, Route, Link
@@ -37,7 +37,7 @@ import { Layout, Menu } from 'antd';
 
 After imports add the constants:
 
-```
+```javascript title="src/App.jsx"
 const { Header, Footer, Content } = Layout;
 
 const { SubMenu } = Menu;
@@ -45,7 +45,7 @@ const { SubMenu } = Menu;
 
 The return of the App component in this initial phase can be as follows:
 
-```
+```jsx title="src/App.jsx"
   return (
     <Router>
       <Layout>
@@ -86,11 +86,11 @@ Develop a home page, which will be the `Home` component and will be associated w
 
 The component file on this page will be:
 
-- `pages/Home/index.js`
+- `pages/Home/index.jsx`
 
 The code for this files are:
 
-```
+```jsx title="src/pages/Home/index.jsx"
 import React from 'react';
 
 export default ()=> {
@@ -108,11 +108,11 @@ Develop an example content page, which will be the `Info` component and will be 
 
 The component file on this page will be:
 
-- `pages/Info/index.js`
+- `pages/Info/index.jsx`
 
 The code for this files will be:
 
-```
+```jsx title="src/pages/Info/index.jsx"
 import React from 'react';
 
 export default ()=> {
@@ -132,7 +132,7 @@ The `Route` components that associate the address to the referring page componen
 
 For this reason, the return of the `App` component should be structured as 👇:
 
-```
+```jsx title="src/App.jsx"
   return (
     <Router>
       <Layout>
