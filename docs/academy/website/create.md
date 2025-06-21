@@ -8,21 +8,21 @@ sidebar_label: ReactJS Create
 
 In the root of your Netuno application, run:
 
-`npm create vite`
+`pnpm create vite`
 
 When asked: `Ok to proceed? (y)`
 
 Type `y` and press the [ENTER] key.
 
-Next, with the question: `? Project name: ›`
+Next, with the question: `Project name: ›`
 
 Type `website` and press the [ENTER] key.
 
-Next, comes the question: `? Select a framework:`
+Next, comes the question: `Select a framework:`
 
 Use the arrow keys on your keyboard, and press the down key until you select the `React` option and press the [ENTER] key.
 
-To finish, the following question: `? Select a variant:`
+To finish, the following question: `Select a variant:`
 
 Use the arrow keys on your keyboard, and press the down key until you select the `JavaScript` option and press the [ENTER] key.
 
@@ -32,12 +32,12 @@ After creating the ReactJS application, run the following command to install the
 
 ```
 cd website
-npm install
+pnpm install
 ```
 
 With this, you can start the React application with the command:
 
-`npm run dev`
+`pnpm run dev`
 
 This will start the application at [http://localhost:5173/](http://localhost:5173/), or at another address with a different port number. Either way, simply open this address in your browser to view the developments.
 
@@ -56,17 +56,17 @@ We strongly recommend that you install the following NPM packages, as they are v
 To install the packages listed above, simply run the following set of commands in the terminal:
 
 ```
-npm install --save react-router-dom
-npm install --save antd
-npm install --save @ant-design/icons
-npm install --save less
-npm install --save @netuno/service-client
+pnpm install --save react-router-dom
+pnpm install --save antd
+pnpm install --save @ant-design/icons
+pnpm install --save less
+pnpm install --save @netuno/service-client
 ```
 
 Alternatively, you can also install all packages at once:
 
 ```
-npm i -S react-router-dom antd @ant-design/icons less @netuno/service-client
+pnpm install react-router-dom antd @ant-design/icons less @netuno/service-client
 ```
 
 ## Configurations
@@ -85,7 +85,7 @@ export default defineConfig({
 })
 ```
 
-Now when starting with the command `npm run dev` it will always use the port `3000`.
+Now when starting with the command `pnpm run dev` it will always use the port `3000`.
 
 ### Less
 
@@ -185,8 +185,8 @@ To do this, simply add the following to the Netuno application's `commands` conf
         ...
         {
             "path": "website",
-            "command": "npm run dev",
-            "install": "npm install",
+            "command": "pnpm run dev",
+            "install": "pnpm install",
             "enabled": true
         }
     ]
@@ -226,25 +226,6 @@ With this configuration implemented, you can create the services you want withou
 
 > More about [CORS](../server/services/cors.md)
 
-### HTTP OPTIONS
-
-The browser executes a call with the OPTIONS method of the HTTP protocol to the same address as the service, to validate whether or not it can actually execute the service.
-
-Therefore, services need to respond to the OPTIONS method of the HTTP protocol to work without problems.
-
-To do this, make sure that the services used on the website have the version of the code for `options`, which can be done as follows for an example service:
-
-- 📂 `server/services/example/options.js`
-- 📂 `server/services/example.options.js`
-
-The content can be just:
-
-```
-_out.json(_val.map().set("result", true))
-```
-
-> More about [HTTP methods and Services](../server/services/rest.md).
-
 ## Environment Variables
 
 You can define the environment variables by creating the `website/.env` file, with the variable definitions, for example:
@@ -267,8 +248,8 @@ And defining the environment variables in the command configuration in the `env`
         {
             "env": ["NODE_ENV=development"],
             "path": "website",
-            "command": "npm run start",
-            "install": "npm install --force",
+            "command": "pnpm run start",
+            "install": "pnpm install",
             "enabled": true
         }
     ]
