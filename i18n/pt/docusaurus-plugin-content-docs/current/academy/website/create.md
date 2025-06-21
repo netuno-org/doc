@@ -1,4 +1,5 @@
 ---
+sidebar_position: 2
 id: create
 title: Criar com ReactJS
 sidebar_label: Criar com ReactJS
@@ -8,21 +9,21 @@ sidebar_label: Criar com ReactJS
 
 Na raíz da sua aplicação Netuno, execute:
 
-`npm create vite`
+`pnpm create vite`
 
 Ao perguntar: `Ok to proceed? (y)`
 
 Digite `y` e pressione a tecla [ ENTER ].
 
-De seguida com a pergunta: `? Project name: ›`
+De seguida com a pergunta: `Project name:`
 
 Digite `website` e pressione a tecla [ ENTER ].
 
-Na sequência vem a pergunta: `? Select a framework:`
+Na sequência vem a pergunta: `Select a framework:`
 
 Utilize as setas do teclado, e pressione a tecla para baixo até a escolha da opção `React` e pressione a telca [ ENTER ].
 
-Para finalizar, a seguitne pergunta: `? Select a variant:`
+Para finalizar, a seguitne pergunta: `Select a variant:`
 
 Utilize as setas do teclado, e pressione a tecla para baixo até a escolha da opção `JavaScript` e pressione a telca [ ENTER ].
 
@@ -32,12 +33,12 @@ Após ter criado a aplicação ReactJS, execute da seguinte forma para instalar 
 
 ```
 cd website
-npm install
+pnpm install
 ```
 
 Com isso é possível iniciar a aplicação React com o comando:
 
-`npm run dev`
+`pnpm run dev`
 
 Isto fará com que a aplicação seja iniciada no endereço [http://localhost:5173/](http://localhost:5173/), ou em outro endereço com outro número de porta, de qualquer forma basta abrir este endereço no browser para visualizar os desenvolvimentos.
 
@@ -56,17 +57,17 @@ Aconselhamos vivamente que instale os seguintes pacotes NPM, visto serem bastant
 Para instalar os pacotes acima listados basta executar o seguinte conjunto de comandos no terminal:
 
 ```
-npm install --save react-router-dom
-npm install --save antd
-npm install --save @ant-design/icons
-npm install --save less
-npm install --save @netuno/service-client
+pnpm install react-router-dom
+pnpm install antd
+pnpm install @ant-design/icons
+pnpm install less
+pnpm install @netuno/service-client
 ```
 
 Em alternativa também pode instalar todos os pacotes de uma única vez:
 
 ```
-npm i -S react-router-dom antd @ant-design/icons less @netuno/service-client
+pnpm install react-router-dom antd @ant-design/icons less @netuno/service-client
 ```
 
 ## Configurações
@@ -85,7 +86,7 @@ export default defineConfig({
 })
 ```
 
-Agora ao iniciar com o comando `npm run dev` vai utilizar sempre a porta `3000`.
+Agora ao iniciar com o comando `pnpm run dev` vai utilizar sempre a porta `3000`.
 
 ### Less
 
@@ -185,8 +186,8 @@ Para tal basta adicionar à configuração `commands` da aplicação Netuno em `
         ...
         {
             "path": "website",
-            "command": "npm run dev",
-            "install": "npm install",
+            "command": "pnpm run dev",
+            "install": "pnpm install",
             "enabled": true
         }
     ]
@@ -226,25 +227,6 @@ Estando esta configuração implementada pode criar os serviços que pretender s
 
 > Mais sobre [CORS](../server/services/cors.md)
 
-### HTTP OPTIONS
-
-O browser executa uma chamada com o método OPTIONS do protocolo HTTP para o mesmo endereço do serviço, para realizar a validação se pode ou não realmente executar o serviço.
-
-Assim os serviços precisam responder para o método OPTIONS do protocolo HTTP para funcionar sem problemas.
-
-Para tal certifique que junto aos serviços utilizados no website tem a versão do código para `options`, que pode ser feito da seguinte forma para um serviço de exemplo:
-
-- 📂 `server/services/exemplo/options.js`
-- 📂 `server/services/exemplo.options.js`
-
-O conteúdo poderá ser apenas:
-
-```
-_out.json(_val.map().set("result", true))
-```
-
-> Mais sobre [métodos HTTP e os Serviços](../server/services/rest.md).
-
 ## Variáveis de Ambiente
 
 Pode ser definida a configuração das variávies de ambiente através da criação do ficheiro `website/.env`, com as definições das variáveis, por exemplo:
@@ -267,8 +249,8 @@ E definindo as variáveis de ambiente na configuração do comando na parametriz
         {
             "env": ["NODE_ENV=development"],
             "path": "website",
-            "command": "npm run start",
-            "install": "npm install --force",
+            "command": "pnpm run start",
+            "install": "pnpm install",
             "enabled": true
         }
     ]
