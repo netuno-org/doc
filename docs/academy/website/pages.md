@@ -1,41 +1,64 @@
 ---
 id: pages
-title: Pages & Routers
-sidebar_label: Pages & Routers
+title: Pages and React Router
+sidebar_label: Pages & React Router
 ---
 
 ## Introduction
 
-When the web application gets complex or when it's a website, developing pages will be a very common need.
+Creating pages is a common need when the web application becomes complex or there is a need to present
+different content, this is especially common when it comes to a website or a platform.
 
-It is possible to create the page mechanism with the [React Router](https://reactrouter.com), when developing with ReactJS.
+In development with React, it is possible to create the navigation mechanism between pages with [React Router](https://reactrouter.com).
+
+The steps below must be executed within your frontend project in React.
+
+If it is a frontend integrated with Netuno, you must then perform the steps below within the Netuno application folder but
+where you have the frontend project, for example in:
+
+- `📂 website/`
+
+## Installation
+
+Make sure you have the React Router module installed in your project:
+
+```
+pnpm install react-router
+```
+
+And Ant.Design, which will be used to create the general structure:
+
+```
+pnpm install antd
+```
 
 ## Configuration
 
-Make sure you have installed the React Router module in the `website` folder:
+To begin, we must edit the `main.jsx` found in the `📂 src` folder, we need to place the `BrowserRoute` like this:
 
-```
-npm install -S react-router-dom 
+```javascript title="src/main.jsx"
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from "react-router";
+import App from './App.jsx';
+
+createRoot(document.getElementById('root')).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+);
 ```
 
-Also from `Ant.Design`, which will be used to develop the general structure:
+**Very important:** If this is a newly created frontend, you must remove all types of CSS/Style and unnecessary imports
+such as images, to avoid improper behavior.
 
-```
-npm install -S antd
-```
-
-In the `App.js` file which is found in the `src` folder of the ReactJS application, ie `website/src`, add the modules import as 👇:
+In `App.js`, which is also found in the `📂 src` folder, add the module import as follows:
 
 ```javascript title="src/App.jsx"
-import {
-  BrowserRouter as Router,
-  Switch, Route, Link
-} from "react-router-dom";
-
+import { Routes, Route, Link } from 'react-router';
 import { Layout, Menu } from 'antd';
 ```
 
-After imports add the constants:
+After importing, add the constants:
 
 ```javascript title="src/App.jsx"
 const { Header, Footer, Content } = Layout;
@@ -43,128 +66,149 @@ const { Header, Footer, Content } = Layout;
 const { SubMenu } = Menu;
 ```
 
-The return of the App component in this initial phase can be as follows:
+In this initial phase, the App component's return may be as follows:
 
 ```jsx title="src/App.jsx"
+  ...
   return (
-    <Router>
-      <Layout>
+    <Layout>
         <Header>
-          <Menu mode="horizontal">
-            <Menu.Item>
-              <Link to="/">Home</Link>
-            </Menu.Item>
-          </Menu>
+            <Menu mode="horizontal">
+                <Menu.Item>
+                    <Link to="/">Home</Link>
+                </Menu.Item>
+                <Menu.Item>
+                    <Link to="/info">Info</Link>
+                </Menu.Item>
+            </Menu>
         </Header>
         <Content>
-          <Switch>
-            <Route path="/">
-              <>Home</>
-            </Route>
-          </Switch>
+            <Routes>
+                { /* The pages routes will be here! */ }
+            </Routes>
         </Content>
         <Footer>Footer</Footer>
-      </Layout>
-    </Router>
+    </Layout>
   );
-
+  ...
 ```
 
-React Router components are structured with the `Ant.Design` page structure components.
+This way, React Router components are structured with Ant.Design page structure components.
 
-The `Link` component points to `/`, which will load the `Route` associated with the path `path="/"`.
+## Create Pages
 
-## Developing New Webpages
+Pages are in separate components, each page is represented by its own component in React.
 
-The pages stay in separate components, each page is represented by its own component in _ReactJS_.
-
-Best practice is to place page components inside a folder called `pages`.
+A good practice is to place the page components inside a folder called `📂 pages`.
 
 ### Home
 
-Develop a home page, which will be the `Home` component and will be associated with the `/` path.
+Create the entry page, which will be the `Home` component and will be associated with the `/` path.
 
-The component file on this page will be:
+The component file for this page will be:
 
 - `pages/Home/index.jsx`
 
-The code for this files are:
+The code for this file can be:
 
 ```jsx title="src/pages/Home/index.jsx"
-import React from 'react';
+import {useNavigate} from 'react-router';
+import {Button} from 'antd';
 
-export default ()=> {
-    return (
-        <div>
-            <h1>Home</h1>
-        </div>
-    );
+function Home() {
+  return (
+    <div>
+      <h1>Home</h1>
+      <Button onClick={()=> navigate('/info')}>
+        Go to the Information page
+      </Button>
+    </div>
+  );
 };
+
+export default Home;
 ```
+
+> The button changes the page programmatically using the `navigate` function, it is an alternative to the `Link` component.
 
 ### Info
 
-Develop an example content page, which will be the `Info` component and will be associated with the `/info` path.
+Create an example content page, which will be the `Info` component and will be associated with the `/info` path.
 
-The component file on this page will be:
+The component file for this page will be:
 
 - `pages/Info/index.jsx`
 
-The code for this files will be:
+The code for this file can be:
 
 ```jsx title="src/pages/Info/index.jsx"
-import React from 'react';
+import {useNavigate} from 'react-router';
+import {Button} from 'antd';
 
-export default ()=> {
+function Info() {
+    const navigate = useNavigate();
     return (
         <div>
             <h1>Info</h1>
+            <Button onClick={()=> navigate('/')}>
+                Back to Home
+            </Button>
         </div>
     );
-};
+}
+
+export default Info;
 ```
+
+> The button changes the page programmatically using the `navigate` function, it is an alternative to the `Link` component.
+
+## Import Pages
+
+At the beginning of `App.jsx`, import the components of the pages that were created.
+
+```jsx title="src/App.jsx"
+import Home from './pages/Home';
+import Info from './pages/Info';
+```
+
+With the imported pages, it is possible to relate each page to a specific address, for example `/`, `/info`, etc.
+
+The page address can also be understood as a route, or `Route`.
+
+Therefore, in `App.jsx` where the routes or better `Routes` are defined, you will define the address and the component of the pages as follows:
+
+```jsx title="src/App.jsx"
+  ...
+  <Routes>
+    <Route path="/" element={<Home/>}/>
+    <Route path="/info" element={<Info/>}/>
+  </Routes>
+  ...
+```
+
+> The `path` is the address and the `element` is the component of the page.
+
+Note that in the `Menu` we have items with the `Link` that point to the addresses of the pages, therefore the `to` attribute in the `Link` indicates that it should load the corresponding `Route` that has the same value associated with the `path`.
+
+In the browser you can directly type these addresses and the respective components, which are the pages, should appear.
 
 ## Navigation
 
-To carry out the navigation of the developed pages, components of the type `Link` must be added in the `Menu` that point to the referring address.
+To perform more page navigation options, you should add `Link` components to the `Menu` that point to the respective address.
 
-The `Route` components that associate the address to the referring page component should also be added.
+You should also add `Route` components that associate the address with the corresponding page component.
 
-For this reason, the return of the `App` component should be structured as 👇:
+With the `navigate` function, you can programmatically change pages, for example in these situations:
 
-```jsx title="src/App.jsx"
-  return (
-    <Router>
-      <Layout>
-        <Header>
-          <Menu mode="horizontal">
-            <Menu.Item>
-              <Link to="/">Home</Link>
-            </Menu.Item>
-            <Menu.Item>
-              <Link to="/info">Info</Link>
-            </Menu.Item>
-          </Menu>
-        </Header>
-        <Content>
-          <Switch>
-            <Route path="/info">
-              <Info/>
-            </Route>
-            <Route path="/">
-              <Home/>
-            </Route>
-          </Switch>
-        </Content>
-        <Footer>Footer</Footer>
-      </Layout>
-    </Router>
-  );
-```
+1. On the login page, after the data has been successfully validated, the page should change automatically.
+2. After registering an account, when the data has been successfully saved, the page should automatically change to the login page.
 
-## Summarizing
+When the user interacts directly with the navigation by clicking, then we use the `Link` component.
 
-`ReactJS` with React Router it is possible to define multiple pages and perform navigation between them.
+For other cases where the page change occurs at a specific moment during the code execution, then we use the `navigate` function obtained with `useNavigate`.
 
-In the other hand, `Ant.Design` helps to build the structure of the page and offers several useful components to build complex interfaces.
+## Conclusion
 
+With ReactJS, it is possible to define multiple pages and navigate between them.
+
+Ant.Design helps you build the page structure and offers several useful components for building complex and responsive interfaces.
