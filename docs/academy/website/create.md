@@ -1,10 +1,10 @@
 ---
 id: create
-title: ReactJS Create
-sidebar_label: ReactJS Create
+title: React Create
+sidebar_label: React Create
 ---
 
-## ReactJS Application
+## React Application
 
 In the root of your Netuno application, run:
 
@@ -26,9 +26,9 @@ To finish, the following question: `Select a variant:`
 
 Use the arrow keys on your keyboard, and press the down key until you select the `JavaScript` option and press the [ENTER] key.
 
-This command will create a new directory called `📂 website` where the ReactJS application will be contained.
+This command will create a new directory called `📂 website` where the React application will be contained.
 
-After creating the ReactJS application, run the following command to install the dependencies:
+After creating the React application, run the following command to install the dependencies:
 
 ```
 cd website
@@ -41,13 +41,13 @@ With this, you can start the React application with the command:
 
 This will start the application at [http://localhost:5173/](http://localhost:5173/), or at another address with a different port number. Either way, simply open this address in your browser to view the developments.
 
-> To end the ReactJS application at any time, in the terminal, simply press `CTRL+C` simultaneously.
+> To end the React application at any time, in the terminal, simply press `CTRL+C` simultaneously.
 
 ## Installing Dependencies
 
-We strongly recommend that you install the following NPM packages, as they are very useful for developing ReactJS applications with Netuno (click on each link to get more information about each one):
+We strongly recommend that you install the following NPM packages, as they are very useful for developing React applications with Netuno (click on each link to get more information about each one):
 
-* [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+* [react-router](https://www.npmjs.com/package/react-router-dom)
 * [antd](https://www.npmjs.com/package/antd)
 * [@ant-design/icons](https://www.npmjs.com/package/@ant-design/icons)
 * [less](https://www.npmjs.com/package/less)
@@ -56,17 +56,17 @@ We strongly recommend that you install the following NPM packages, as they are v
 To install the packages listed above, simply run the following set of commands in the terminal:
 
 ```
-pnpm install --save react-router-dom
-pnpm install --save antd
-pnpm install --save @ant-design/icons
-pnpm install --save less
-pnpm install --save @netuno/service-client
+pnpm install react-router
+pnpm install antd
+pnpm install @ant-design/icons
+pnpm install less
+pnpm install @netuno/service-client
 ```
 
 Alternatively, you can also install all packages at once:
 
 ```
-pnpm install react-router-dom antd @ant-design/icons less @netuno/service-client
+pnpm install react-router antd @ant-design/icons less @netuno/service-client
 ```
 
 ## Configurations
@@ -170,11 +170,11 @@ In each Ant.Design component there are possible Design Token configurations, for
 </ConfigProvider>
 ```
 
-## Automatically start your ReactJS application with Netuno
+## Automatically start your React application with Netuno
 
-Netuno allows you to start your ReactJS application together with the Netuno application server process.
+Netuno allows you to start your React application together with the Netuno application server process.
 
-> All the ReactJS application compilation messages will be integrated into the same terminal as the Netuno application.
+> All the React application compilation messages will be integrated into the same terminal as the Netuno application.
 
 To do this, simply add the following to the Netuno application's `commands` configuration in `📂 config/_development.json`:
 
@@ -200,7 +200,7 @@ Finally, start/restart your Netuno application to check that it is working.
 
 ## CORS (Cross-Origin Resource Sharing) Configuration
 
-To configure CORS to avoid possible errors between the ReactJS application and the Netuno application communicating through services, go to:
+To configure CORS to avoid possible errors between the React application and the Netuno application communicating through services, go to:
 
 - `📂 config/_development.json`
 
