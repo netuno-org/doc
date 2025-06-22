@@ -1,11 +1,11 @@
 ---
 sidebar_position: 2
 id: create
-title: Criar com ReactJS
-sidebar_label: Criar com ReactJS
+title: Criar com React
+sidebar_label: Criar com React
 ---
 
-## Aplicação ReactJS
+## Aplicação React
 
 Na raíz da sua aplicação Netuno, execute:
 
@@ -27,9 +27,9 @@ Para finalizar, a seguitne pergunta: `Select a variant:`
 
 Utilize as setas do teclado, e pressione a tecla para baixo até a escolha da opção `JavaScript` e pressione a telca [ ENTER ].
 
-Este comando irá criar um novo diretório denominado `📂 website` onde estará contida a aplicação ReactJS. 
+Este comando irá criar um novo diretório denominado `📂 website` onde estará contida a aplicação React. 
 
-Após ter criado a aplicação ReactJS, execute da seguinte forma para instalar as dependências:
+Após ter criado a aplicação React, execute da seguinte forma para instalar as dependências:
 
 ```
 cd website
@@ -42,13 +42,13 @@ Com isso é possível iniciar a aplicação React com o comando:
 
 Isto fará com que a aplicação seja iniciada no endereço [http://localhost:5173/](http://localhost:5173/), ou em outro endereço com outro número de porta, de qualquer forma basta abrir este endereço no browser para visualizar os desenvolvimentos.
 
-> Para terminar a aplicação ReactJS em qualquer altura, no terminal, basta pressionar `CTRL+C` simultaneamente.
+> Para terminar a aplicação React em qualquer altura, no terminal, basta pressionar `CTRL+C` simultaneamente.
 
 ## Instalação de Dependências
 
-Aconselhamos vivamente que instale os seguintes pacotes NPM, visto serem bastante úteis para o desenvolvimento de aplicações ReactJS com Netuno (clique em cada link para obter mais informações sobre cada um):
+Aconselhamos vivamente que instale os seguintes pacotes NPM, visto serem bastante úteis para o desenvolvimento de aplicações React com Netuno (clique em cada link para obter mais informações sobre cada um):
 
-* [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+* [react-router](https://www.npmjs.com/package/react-router)
 * [antd](https://www.npmjs.com/package/antd)
 * [@ant-design/icons](https://www.npmjs.com/package/@ant-design/icons)
 * [less](https://www.npmjs.com/package/less)
@@ -57,7 +57,7 @@ Aconselhamos vivamente que instale os seguintes pacotes NPM, visto serem bastant
 Para instalar os pacotes acima listados basta executar o seguinte conjunto de comandos no terminal:
 
 ```
-pnpm install react-router-dom
+pnpm install react-router
 pnpm install antd
 pnpm install @ant-design/icons
 pnpm install less
@@ -67,7 +67,7 @@ pnpm install @netuno/service-client
 Em alternativa também pode instalar todos os pacotes de uma única vez:
 
 ```
-pnpm install react-router-dom antd @ant-design/icons less @netuno/service-client
+pnpm install react-router antd @ant-design/icons less @netuno/service-client
 ```
 
 ## Configurações
@@ -171,11 +171,11 @@ Em cada componente do Ant.Design tem as configurações possíveis de Design Tok
 </ConfigProvider>
 ```
 
-## Início automático da aplicação ReactJS com o Netuno
+## Início automático da aplicação React com o Netuno
 
-O Netuno permite-lhe iniciar a aplicação em ReactJS juntamente com o processo de servidor da aplicação Netuno.
+O Netuno permite-lhe iniciar a aplicação em React juntamente com o processo de servidor da aplicação Netuno.
 
-> Todas as mensagens de compilação da aplicação em ReactJS estarão integradas no mesmo terminal que a aplicação Netuno.
+> Todas as mensagens de compilação da aplicação em React estarão integradas no mesmo terminal que a aplicação Netuno.
 
 Para tal basta adicionar à configuração `commands` da aplicação Netuno em `📂 config/_development.json` o seguinte:
 
@@ -201,7 +201,7 @@ Por fim inicie/reinicie a sua aplicação Netuno para comprovar o seu funcioname
 
 ## Configuração de CORS (Cross-Origin Resource Sharing)
 
-Para configurar o CORS para evitar possíveis erros entre comunicação da aplicação ReactJS com a aplicação Netuno através de serviços, dirija-se a:
+Para configurar o CORS para evitar possíveis erros entre comunicação da aplicação React com a aplicação Netuno através de serviços, dirija-se a:
 
 - `📂 config/_development.json`
 
