@@ -3,20 +3,20 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.academySidebar.category.App Demo": {
-    "message": "App Demo",
+  "sidebar.academySidebar.category.Demonstration": {
+    "message": "Demonstração",
     "description": "The label for category App Demo in sidebar academySidebar"
   },
-  "sidebar.academySidebar.category.App Demo.link.generated-index.description": {
-    "message": "Make a development tour changing the demonstration application.",
+  "sidebar.academySidebar.category.Demonstration.link.generated-index.description": {
+    "message": "Faça um tour de desenvolvimento, alterando o aplicativo de demonstração padrão.",
     "description": "The generated-index page description for category App Demo in sidebar academySidebar"
   },
   "sidebar.academySidebar.category.User Interface": {
-    "message": "User Interface",
+    "message": "Interface de Utilização",
     "description": "The label for category User Interface in sidebar academySidebar"
   },
   "sidebar.academySidebar.category.User Interface.link.generated-index.description": {
-    "message": "Como funciona a interface de utilização.",
+    "message": "Como funciona a interface de utilização, a construção de formulários e a gestão dos dados.",
     "description": "The generated-index page description for category User Interface in sidebar academySidebar"
   },
   "sidebar.academySidebar.category.Explore": {
@@ -27,12 +27,20 @@
     "message": "Descubra algumas funcionalidades e conceitos no geral.",
     "description": "The generated-index page description for category Explore in sidebar academySidebar"
   },
-  "sidebar.academySidebar.category.Server": {
-    "message": "Server",
+  "sidebar.academySidebar.category.Understand": {
+    "message": "Entendimento",
+    "description": "The label for category Explore in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Understand.link.generated-index.description": {
+    "message": "Aplicabilidade geral da plataforma, potencial estratégico.",
+    "description": "The generated-index page description for category Explore in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Server - Backend": {
+    "message": "Server - Backend",
     "description": "The label for category Server in sidebar academySidebar"
   },
-  "sidebar.academySidebar.category.Server.link.generated-index.description": {
-    "message": "Backend empoderado com low-code, veja alguns tutoriais.",
+  "sidebar.academySidebar.category.Server - Backend.link.generated-index.description": {
+    "message": "Backend empoderado com low-code, veja alguns tutoriais de como programar.",
     "description": "The generated-index page description for category Server in sidebar academySidebar"
   },
   "sidebar.academySidebar.category.Database": {
@@ -51,11 +59,11 @@
     "message": "Resources tutorials used in services.",
     "description": "The generated-index page description for category Service in sidebar academySidebar"
   },
-  "sidebar.academySidebar.category.Website": {
+  "sidebar.academySidebar.category.Website - Frontend": {
     "message": "Website",
     "description": "The label for category Website in sidebar academySidebar"
   },
-  "sidebar.academySidebar.category.Website.link.generated-index.description": {
+  "sidebar.academySidebar.category.Website - Frontend.link.generated-index.description": {
     "message": "Advanced frontend development and integrations.",
     "description": "The generated-index page description for category Website in sidebar academySidebar"
   },
