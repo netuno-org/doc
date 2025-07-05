@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 5
 id: next-steps
 title: Next Steps
 ---

@@ -1,6 +1,6 @@
 {
-  "label": "Website",
-  "position": 14,
+  "label": "Website - Frontend",
+  "position": 10,
   "link": {
     "type": "generated-index",
     "description": "Advanced frontend development and integrations."
