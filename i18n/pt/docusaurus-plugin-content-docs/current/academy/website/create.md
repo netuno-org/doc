@@ -5,48 +5,100 @@ title: Criar com React
 sidebar_label: Criar com React
 ---
 
-## Aplicação React
+Este processo de criação pode ser aplicado em outros contextos, por exemplo para criar qualquer tipo de projeto
+React, neste caso fazer as devidas adaptações de nome e a pasta onde os comandos são executados.
 
-Na raíz da sua aplicação Netuno, execute:
+A base de entendimento é que será criada a camada web, ou seja o frontend da nossa aplicação Netuno.
+
+Por isso é assumido que será criado dentro da aplicação Netuno o `website`, nome padrão para a camada de frontend
+mas que pode ser qualquer outro nome desejado.
+
+## Pré-requisitos
+
+Deve ter o Netuno instalado:
+
+- [Instalação do Netuno.](../../get-started/installation)
+
+Devido a melhor performance entre outras vantagens deve ter o PNPM e o Bun instalados:
+
+- [Instalar o PNPM e o Bun.](pnpm-bun)
+
+## Criação
+
+Para criar uma aplicação React dentro de uma aplicação Netuno normalmente chamamos de `website`.
+
+Então com o **terminal** dentro da **raíz da sua aplicação** Netuno, que normalmente fica dentro da pasta:
+
+- `netuno/apps/MINHA_APP`
+
+> Onde `MINHA_APP` é o nome da aplicação Netuno.
+
+Execute o comando:
 
 `pnpm create vite`
 
-Ao perguntar: `Ok to proceed? (y)`
-
-Digite `y` e pressione a tecla [ ENTER ].
-
 De seguida com a pergunta: `Project name:`
 
-Digite `website` e pressione a tecla [ ENTER ].
+Digite `website` e pressione a tecla `ENTER`.
 
 Na sequência vem a pergunta: `Select a framework:`
 
-Utilize as setas do teclado, e pressione a tecla para baixo até a escolha da opção `React` e pressione a telca [ ENTER ].
+Utilize as setas do teclado, e pressione a tecla para baixo até a escolha da opção `React` e pressione a tecla 
+`ENTER`.
 
 Para finalizar, a seguitne pergunta: `Select a variant:`
 
-Utilize as setas do teclado, e pressione a tecla para baixo até a escolha da opção `JavaScript` e pressione a telca [ ENTER ].
+Utilize as setas do teclado, e pressione a tecla para baixo até a escolha da opção `JavaScript` e pressione a 
+telca `ENTER`.
 
-Este comando irá criar um novo diretório denominado `📂 website` onde estará contida a aplicação React. 
+Este comando irá criar um novo diretório denominado `📂 website` onde estará contida o frontend com React. 
 
-Após ter criado a aplicação React, execute da seguinte forma para instalar as dependências:
+Após ter criado o frontend com React, execute da seguinte forma para instalar as dependências:
 
 ```
 cd website
 pnpm install
 ```
 
-Com isso é possível iniciar a aplicação React com o comando:
+Abra a pasta da sua aplicação Netuno no seu editor preferido (como o VSCode, WebStorm, entre outros), e
+entre na pasta `website` que foi criada.
+
+## Executar
+
+Antes de executar deve alterar o arquivo `package.json` para executar os comandos de script com o **Bun**.
+
+Alterer os `scripts` no `package.json` da seguinte forma:
+
+```json title="package.json"
+...
+    "scripts": {
+        "dev": "bunx --bun vite",
+        "build": "bunx --bun vite build ",
+        "watch": "bunx --bun vite build --watch",
+        "preview": "bunx --bun vite preview"
+    },
+...
+```
+
+> Deve colocar o prefixo `bunx --bun` nos `scripts`. 
+
+Agora é possível iniciar o servidor de frontend com React utilizando o comando:
 
 `pnpm run dev`
 
-Isto fará com que a aplicação seja iniciada no endereço [http://localhost:5173/](http://localhost:5173/), ou em outro endereço com outro número de porta, de qualquer forma basta abrir este endereço no browser para visualizar os desenvolvimentos.
+Isto fará com que o frontend esteja disponível no endereço [http://localhost:5173/](http://localhost:5173/), normalmente ou em outro 
+endereço com outro número de porta poderá aparecer no terminal, de qualquer forma basta abrir no browser o endereço
+apresentado no terminal.
 
-> Para terminar a aplicação React em qualquer altura, no terminal, basta pressionar `CTRL+C` simultaneamente.
+> Para terminar a execucão no terminal prescione as teclas `CTRL` e `C` simultaneamente.
 
 ## Instalação de Dependências
 
-Aconselhamos vivamente que instale os seguintes pacotes NPM, visto serem bastante úteis para o desenvolvimento de aplicações React com Netuno (clique em cada link para obter mais informações sobre cada um):
+Caso esteja executando o servidor de frontend no terminal, ou seja `pnpm run dev`, é recomendado parar, prescione 
+as teclas `CTRL` e `C` simultaneamente.
+
+Aconselhamos vivamente que instale os seguintes pacotes NPM, visto serem bastante úteis para o desenvolvimento de 
+aplicações React com Netuno (clique em cada link para obter mais informações sobre cada um):
 
 * [react-router](https://www.npmjs.com/package/react-router)
 * [antd](https://www.npmjs.com/package/antd)
@@ -72,7 +124,8 @@ pnpm install react-router antd @ant-design/icons less @netuno/service-client
 
 ## Configurações
 
-Após executar os comandos acima, pode forçar um endereço de porta padrão, dirija-se a `📂 website/vite.config.js` e acrescente a configuração do `server` da seguinte forma:
+Após executar os comandos acima, pode forçar um endereço de porta padrão, dirija-se a `📂 website/vite.config.js` 
+e acrescente a configuração do `server` da seguinte forma:
 
 ```javascript title="website/vite.config.js"
 export default defineConfig({
@@ -92,7 +145,8 @@ Agora ao iniciar com o comando `pnpm run dev` vai utilizar sempre a porta `3000`
 
 Altere todos os ficheiros `.css` que estão em `website/src` para a extensão `.less`.
 
-> Não esqueça de realizar está alteração no código JSX nas linhas que faz o `import` dos ficheiros `.css`, alterar para `.less`.
+> Não esqueça de realizar está alteração no código JSX nas linhas que faz o `import` dos ficheiros `.css`, alterar 
+> para `.less`.
 
 O LESS permite um desenvolvimento mais estruturado e moderno do CSS.
 
@@ -122,7 +176,8 @@ Assim é possível ajustar qualquer configuração de estilização do Ant.Desig
 
 ### Dark Theme
 
-Também é possível utilizar o tema escuro do Ant.Design, para isto basta importar o `theme` que contém o dark mode e aplicar no `ConfigProvider`:
+Também é possível utilizar o tema escuro do Ant.Design, para isto basta importar o `theme` que contém o dark mode 
+e aplicar no `ConfigProvider`:
 
 ```jsx
 import { ConfigProvider, Button, theme } from 'antd';
@@ -142,7 +197,8 @@ import { ConfigProvider, Button, theme } from 'antd';
 
 ### Restyle
 
-Repare que nas parametrizações do `ConfigProvider` acima, é possível alterar facilmente o estilo do Ant.Design, mais sobre a customização do Ant.Design:
+Repare que nas parametrizações do `ConfigProvider` acima, é possível alterar facilmente o estilo do Ant.Design, 
+mais sobre a customização do Ant.Design:
 
 - [Customize Theme](https://ant.design/docs/react/customize-theme)
 
@@ -171,7 +227,7 @@ Em cada componente do Ant.Design tem as configurações possíveis de Design Tok
 </ConfigProvider>
 ```
 
-## Início automático da aplicação React com o Netuno
+## Início automático do frontend com o Netuno
 
 O Netuno permite-lhe iniciar a aplicação em React juntamente com o processo de servidor da aplicação Netuno.
 
@@ -195,17 +251,23 @@ Para tal basta adicionar à configuração `commands` da aplicação Netuno em `
 }
 ```
 
-> Sempre que editar ficheiros de configuração da aplicação Netuno será necessário reiniciar a aplicação para que esta possa assumir as novas alterações.
+> Sempre que editar ficheiros de configuração da aplicação Netuno será necessário reiniciar a aplicação para que 
+> esta possa assumir as novas alterações.
 
 Por fim inicie/reinicie a sua aplicação Netuno para comprovar o seu funcionamento.
 
 ## Configuração de CORS (Cross-Origin Resource Sharing)
 
-Para configurar o CORS para evitar possíveis erros entre comunicação da aplicação React com a aplicação Netuno através de serviços, dirija-se a:
+Para configurar o CORS e evitar possíveis erros entre comunicação do frontend com os serviços da aplicação Netuno,
+edite a configuração da aplicação em:
 
 - `📂 config/_development.json`
 
-Repare se já existe a configuração de `cors` ou adicione este exemplo:
+Repare se já existe a configuração de `cors`, e se estiver no `origins` o `*`, então serve bem para o desenvolvimento
+podendo ficar assim.
+
+Caso não haja a configuração de `cors`, então adicione com base neste exemplo, sendo que o endereço deve ser o
+mesmo endereço do frontend:
 
 ```json title="config/_development.json"
 {
@@ -222,14 +284,17 @@ Repare se já existe a configuração de `cors` ou adicione este exemplo:
 
 > Se o `origins` conter um `*` quer dizer que qualquer endereço de front-end será suportado, por exemplo:
 > - `"origins": [ "*" ]`
+> Normalmente utilizamos o `*` em desenvolvimento.
 
-Estando esta configuração implementada pode criar os serviços que pretender sem encontrar erros de CORS.
+Estando a configuração implementada pode integrar os serviços de API que pretender com o
+frontend, sem problemas com a segurança de CORS.
 
 > Mais sobre [CORS](../server/services/cors.md)
 
 ## Variáveis de Ambiente
 
-Pode ser definida a configuração das variávies de ambiente através da criação do ficheiro `website/.env`, com as definições das variáveis, por exemplo:
+Pode ser definida a configuração das variávies de ambiente através da criação do ficheiro `website/.env`, com as 
+definições das variáveis, por exemplo:
 
 ```
 NODE_ENV=development
