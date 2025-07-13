@@ -35,12 +35,12 @@
     "message": "Aplicabilidade geral da plataforma, potencial estratégico.",
     "description": "The generated-index page description for category Explore in sidebar academySidebar"
   },
-  "sidebar.academySidebar.category.Server - Backend": {
-    "message": "Server - Backend",
+  "sidebar.academySidebar.category.Server Backend": {
+    "message": "Server Backend",
     "description": "The label for category Server in sidebar academySidebar"
   },
-  "sidebar.academySidebar.category.Server - Backend.link.generated-index.description": {
-    "message": "Backend empoderado com low-code, veja alguns tutoriais de como programar.",
+  "sidebar.academySidebar.category.Server Backend.link.generated-index.description": {
+    "message": "Tutoriais sobre o backend integrado ao desenvolvimento low-code poliglota.",
     "description": "The generated-index page description for category Server in sidebar academySidebar"
   },
   "sidebar.academySidebar.category.Database": {
@@ -59,20 +59,20 @@
     "message": "Resources tutorials used in services.",
     "description": "The generated-index page description for category Service in sidebar academySidebar"
   },
-  "sidebar.academySidebar.category.Website - Frontend": {
-    "message": "Website",
+  "sidebar.academySidebar.category.Website Frontend": {
+    "message": "Website Frontend",
     "description": "The label for category Website in sidebar academySidebar"
   },
   "sidebar.academySidebar.category.Website - Frontend.link.generated-index.description": {
-    "message": "Advanced frontend development and integrations.",
+    "message": "Desenvolvimento frontend avançado e integrações.",
     "description": "The generated-index page description for category Website in sidebar academySidebar"
   },
-  "sidebar.librarySidebar.category.App Folders": {
-    "message": "Pastas da Aplicação",
+  "sidebar.librarySidebar.category.App Structure": {
+    "message": "Estrutura da Aplicação",
     "description": "The label for category App Folders in sidebar librarySidebar"
   },
-  "sidebar.librarySidebar.category.App Folders.link.generated-index.description": {
-    "message": "As pastas da aplicação detalhada.",
+  "sidebar.librarySidebar.category.App Structure.link.generated-index.description": {
+    "message": "A estrutura de pastas e arquivos das aplicação em detalhe.",
     "description": "The generated-index page description for category App Folders in sidebar librarySidebar"
   },
   "sidebar.librarySidebar.category.Resources": {
