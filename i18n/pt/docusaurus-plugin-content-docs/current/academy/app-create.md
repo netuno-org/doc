@@ -12,40 +12,69 @@ A aplicação deste tutorial consiste num formulário Modal e exportação PDF.
 
 #### Comando para criar uma aplicação.
 
+Para criar uma nova aplicação na plataforma Netuno utilize o comando:
+
 ```shell
-./netuno app name=minhaapp
+./netuno app
+```
+
+Será perguntado o nome da nova aplicação, o tipo de base de dados e o idioma.
+
+Em alternativa pode passar o nome da nova aplicação diretamente no comando:
+
+```shell
+./netuno app name=simples
 ```
 
 #### Comando para iniciar o servidor.
 
+Com a nova aplicação criada é deve ser iniciado o servidor da plataforma Netuno com o nome da nova aplicação:
+
 ```shell
-./netuno server app=minhaapp
+./netuno server app=simples
 ```
+
+Desta forma o servidor utiliza a aplicação indicada como sendo a aplicação padrão.
 
 A partir de agora pode começar a desenvolver a sua aplicação.
 
-Todos os ficheiros para desenvolvimento encontram-se em `📂 apps/minhaapp`.
+Todos os arquivos para o desenvolvimento estão em `📂 apps/simples`.
 
-Por omissão, para aceder ao backoffice no ecrã de login insira as credenciais.
+Caso no login do backoffice seja pedido as credenciais utilize o padrão:
 
 **Utilizador:** `dev`
 
 **Senha:** `dev`
 
+## Editor de Código
+
+Utilize o seu editor de código preferido, recomendamos o VSCodium ou o WebStorm.
+
+Abra a pasta da aplicação no seu editor:
+
+- `📂 apps/simples`.
+
+Dentro desta pasta contém todos os arquivos da nova aplicação e é onde todo o desenvolvimento é realizado.
+
+A documentação que detalha a estrutura de arquivos e pastas da aplicação está aqui:
+
+- [Pastas da Aplicação](../category/app-structure)
+
 ## Criar uma Aplicação Simples
 
 Agora que já temos uma base de conhecimentos do Netuno, vamos criar uma aplicação do início ao fim.
-Vamos adicionar ao ecrã inicial um botão para carregar o formulário numa modal e outro para gerar um PDF.
+
+Vamos adicionar na tela inicial um botão para carregar o formulário numa modal e outro para gerar um PDF.
 
 Seguiremos estes passos:
 
-* Modificar o HTML principal do dashboard
-* Adicionar dois botões com React
-* Construir o botão do `Abrir Formulário Modal`
-* Construir o botão `Exportar PDF`
-* Desenvolver o serviço que cria o PDF
+* Modificar o HTML principal do dashboard.
+* Adicionar dois botões com React.
+* Construir o botão do `Abrir Formulário Modal`.
+* Construir o botão `Exportar PDF`.
+* Desenvolver o serviço que cria o PDF.
 
-No final verá a aplicação demonstrada na seguinte imagem.
+No final de deste tutorial a aplicação deverá ficar assim:
 
 ![Primeira App - 1](/docs/assets/comece/primeiraapp1.png)
 
@@ -53,7 +82,7 @@ No final verá a aplicação demonstrada na seguinte imagem.
 
 Vamos começar!
 
-### Modificar o HTML principal da dashboard
+### Modificar o Template de Dashboard
 
 Seguindo o tutorial em que ensinamos os [comandos para criar uma aplicação](#comandos-para-criar-uma-aplicação), aceda ao diretório da aplicação, neste exemplo denominada de `minhaapp`.
 
