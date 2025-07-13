@@ -1,4 +1,5 @@
 ---
+sidebar_position: 8
 id: industry
 title: Industry
 sidebar_label: Industry
