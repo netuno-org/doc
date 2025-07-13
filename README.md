@@ -1,53 +1,25 @@
-# Website
-
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+# Netuno Documentation
 
 ### Installation
 
 ```
-$ yarn
+$ pnpm install
 ```
 
-### Local Development
+### Start EN
 
 ```
-$ yarn start
+$ pnpm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-This command will start the local development server with the default language, which is English.
-
-### Developing for several languages
-
-Docusaurus has limitations for using several languages at the same time in the local environment, so you need to execute this command to run a specific language.
+### Start PT
 
 ```
-$ yarn run start --locate pt 
+$ pnpm run start --locale pt
 ```
-After the code `--locate` just need to insert the name of the file inside the `i18n` in this case we are using the Portuguese `pt` translation.
-
 
 ### Build
 
 ```
-$ yarn build
+$ pnpm run build
 ```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
