@@ -25,6 +25,18 @@ Nome do formulario.
 
 ---
 
+## getJoinType
+
+---
+
+#### <span style={{color: '#008000'}}>getJoinType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>
+##### Retorno
+
+( _org.netuno.tritao.db.form.join.JoinType_ )
+
+
+---
+
 ## getRelationLink
 
 ---
@@ -82,6 +94,25 @@ Objeto Link atual.
 
 ---
 
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Descrição
+
+Define um segundo nivel de relacionamento no objeto Link atual.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formLink** | _[Link](../objects/Link)_ | Nome do formulario a relacionar. |
+
+##### Retorno
+
+( _[Link](../objects/Link)_ )
+
+Objeto Link atual.
+
+---
+
 ## setForm
 
 ---
@@ -102,6 +133,24 @@ Define o nome do formulario principal da consulta.
 ( _[Link](../objects/Link)_ )
 
 Objeto Link atual.
+
+---
+
+## setJoinType
+
+---
+
+#### <span style={{color: '#008000'}}>setJoinType</span>(<span style={{color: '#FF8000'}}>joinType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **joinType** | _org.netuno.tritao.db.form.join.JoinType_ |   |
+
+##### Retorno
+
+( _[Link](../objects/Link)_ )
+
 
 ---
 
@@ -148,6 +197,65 @@ Define a configuração dos filtros para o formulario principal do objeto Link.
 ( _[Link](../objects/Link)_ )
 
 Objeto Link atual.
+
+---
+
+## where
+
+---
+
+#### <span style={{color: '#008000'}}>where</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Descrição
+
+Define a configuração dos filtros para o formulario principal do objeto Link.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **where** | _[Where](../objects/Where)_ | configuração dos filtros. |
+
+##### Retorno
+
+( _[Link](../objects/Link)_ )
+
+Objeto Link atual.
+
+---
+
+## withInner
+
+---
+
+#### <span style={{color: '#008000'}}>withInner</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Retorno
+
+( _[Link](../objects/Link)_ )
+
+
+---
+
+## withLeft
+
+---
+
+#### <span style={{color: '#008000'}}>withLeft</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Retorno
+
+( _[Link](../objects/Link)_ )
+
+
+---
+
+## withRight
+
+---
+
+#### <span style={{color: '#008000'}}>withRight</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Retorno
+
+( _[Link](../objects/Link)_ )
+
 
 ---
 

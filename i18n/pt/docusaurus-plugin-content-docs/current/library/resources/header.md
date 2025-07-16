@@ -1405,6 +1405,18 @@ Objeto convertido para Values.
 
 ---
 
+## clientIP
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_header</span>.<span style={{color: '#008000'}}>clientIP</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
+
+
+---
+
 ## cloneJSON
 
 ---

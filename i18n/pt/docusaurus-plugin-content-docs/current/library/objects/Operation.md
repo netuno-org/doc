@@ -147,11 +147,11 @@ Primeiro registro do resultado.
 
 ---
 
-## getFields
+## getFieldsToGet
 
 ---
 
-#### <span style={{color: '#008000'}}>getFields</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>getFieldsToGet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Descrição
 
 Retorna os campos que serão obtidos na consulta.
@@ -161,6 +161,18 @@ Retorna os campos que serão obtidos na consulta.
 ( _java.util.List_ )
 
 Campos que serão obtidos na consulta.
+
+---
+
+## getFieldsToSet
+
+---
+
+#### <span style={{color: '#008000'}}>getFieldsToSet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+##### Retorno
+
+( _java.util.List_ )
+
 
 ---
 
@@ -291,6 +303,25 @@ Objeto Where da tabela principal da consulta.
 ---
 
 ## group
+
+---
+
+#### <span style={{color: '#008000'}}>group</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+##### Descrição
+
+Define o objeto de agrupamento da consulta.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **order** | _java.lang.String[]_ | Objeto de ordenação da consulta. |
+
+##### Retorno
+
+( _[Operation](../objects/Operation)_ )
+
+Objeto Query atual.
 
 ---
 
@@ -507,6 +538,25 @@ Objeto Query atual.
 
 ---
 
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+##### Descrição
+
+Define um formulario para ser relacionado com a tabela principal da consulta usando os criterios do Link.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formLink** | _[Link](../objects/Link)_ | Formulario a ser relacionada. |
+
+##### Retorno
+
+( _[Operation](../objects/Operation)_ )
+
+Objeto Query atual.
+
+---
+
 ## order
 
 ---
@@ -677,11 +727,11 @@ Objeto Query atual.
 
 ---
 
-## setFields
+## setFieldsToGet
 
 ---
 
-#### <span style={{color: '#008000'}}>setFields</span>(<span style={{color: '#FF8000'}}>campos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setFieldsToGet</span>(<span style={{color: '#FF8000'}}>campos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
 ##### Descrição
 
 Define os campos que serão obtidos na consulta.
@@ -697,6 +747,24 @@ Define os campos que serão obtidos na consulta.
 ( _[Operation](../objects/Operation)_ )
 
 Objeto Query atual.
+
+---
+
+## setFieldsToSet
+
+---
+
+#### <span style={{color: '#008000'}}>setFieldsToSet</span>(<span style={{color: '#FF8000'}}>fieldsToSet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **fieldsToSet** | _java.util.List_ |   |
+
+##### Retorno
+
+( _[Operation](../objects/Operation)_ )
+
 
 ---
 

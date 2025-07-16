@@ -17,6 +17,61 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
+## coalesce
+
+---
+
+#### <span style={{color: '#008000'}}>coalesce</span>(<span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **params** | _java.lang.String[]_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
+## columnDataType
+
+---
+
+#### <span style={{color: '#008000'}}>columnDataType</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.com.ComponentData</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **data** | _org.netuno.tritao.com.ComponentData_ |   |
+
+##### Retorno
+
+( _[Column](../objects/Column)_ )
+
+
+---
+
+## concatenation
+
+---
+
+#### <span style={{color: '#008000'}}>concatenation</span>(<span style={{color: '#FF8000'}}>param1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>param2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **param1** | _string_ |   |
+| **param2** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
 ## create
 
 ---
@@ -36,6 +91,75 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
+## getBuilder
+
+---
+
+#### <span style={{color: '#008000'}}>getBuilder</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>
+##### Retorno
+
+( _org.netuno.tritao.db.Builder_ )
+
+
+---
+
+## getDataValue
+
+---
+
+#### <span style={{color: '#008000'}}>getDataValue</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.com.ComponentData</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **data** | _org.netuno.tritao.com.ComponentData_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>getDataValue</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.com.ComponentData</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **data** | _org.netuno.tritao.com.ComponentData_ |   |
+| **value** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
+## getExecutor
+
+---
+
+#### <span style={{color: '#008000'}}>getExecutor</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.DBExecutor</span>
+##### Retorno
+
+( _org.netuno.tritao.db.DBExecutor_ )
+
+
+---
+
+## getHili
+
+---
+
+#### <span style={{color: '#008000'}}>getHili</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.hili.Hili</span>
+##### Retorno
+
+( _org.netuno.tritao.hili.Hili_ )
+
+
+---
+
 ## getKey
 
 ---
@@ -44,6 +168,49 @@ if (!_db.checkExists().index("client", "name")) {
 ##### Retorno
 
 ( _string_ )
+
+
+---
+
+## getManager
+
+---
+
+#### <span style={{color: '#008000'}}>getManager</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.manager.ManagerBase</span>
+##### Retorno
+
+( _org.netuno.tritao.db.manager.ManagerBase_ )
+
+
+---
+
+## getProteu
+
+---
+
+#### <span style={{color: '#008000'}}>getProteu</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.Proteu</span>
+##### Retorno
+
+( _org.netuno.proteu.Proteu_ )
+
+
+---
+
+## insertInto
+
+---
+
+#### <span style={{color: '#008000'}}>insertInto</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **tableName** | _string_ |   |
+| **data** | _[Values](../objects/Values)_ |   |
+
+##### Retorno
+
+( _int_ )
 
 
 ---
@@ -66,6 +233,24 @@ if (!_db.checkExists().index("client", "name")) {
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **builder** | _org.netuno.tritao.db.Builder_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+## isId
+
+---
+
+#### <span style={{color: '#008000'}}>isId</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **id** | _string_ |   |
 
 ##### Retorno
 
@@ -152,6 +337,24 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
+## searchComparison
+
+---
+
+#### <span style={{color: '#008000'}}>searchComparison</span>(<span style={{color: '#FF8000'}}>param</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **param** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
 ## sequence
 
 ---
@@ -160,6 +363,24 @@ if (!_db.checkExists().index("client", "name")) {
 ##### Retorno
 
 ( _boolean_ )
+
+
+---
+
+## unaccent
+
+---
+
+#### <span style={{color: '#008000'}}>unaccent</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **input** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
 
 
 ---

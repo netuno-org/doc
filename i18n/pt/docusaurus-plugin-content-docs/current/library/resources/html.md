@@ -290,6 +290,20 @@ Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTM
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>safelist</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.safety.Safelist</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **type** | _string_ |   |
+
+##### Retorno
+
+( _org.jsoup.safety.Safelist_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>safelist</span>(<span style={{color: '#FF8000'}}>copy</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.safety.Safelist</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.safety.Safelist</span>
 ##### Atributos
 

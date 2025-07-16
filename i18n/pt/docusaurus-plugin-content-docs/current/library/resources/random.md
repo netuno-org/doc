@@ -101,13 +101,28 @@ Retorna um texto de 24 caracteres aleatórios.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>symbols</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
+#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>withSymbols</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **length** | _int_ |   |
-| **symbols** | _string_ |   |
+| **withSymbols** | _boolean_ |   |
+
+##### Retorno
+
+( _[RandomString](../objects/RandomString)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>chars</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **length** | _int_ |   |
+| **chars** | _string_ |   |
 
 ##### Retorno
 
@@ -131,14 +146,30 @@ Retorna um texto de 24 caracteres aleatórios.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>random</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>, <span style={{color: '#FF8000'}}>symbols</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
+#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>random</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>, <span style={{color: '#FF8000'}}>withSymbols</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **length** | _int_ |   |
 | **random** | _java.util.Random_ |   |
-| **symbols** | _string_ |   |
+| **withSymbols** | _boolean_ |   |
+
+##### Retorno
+
+( _[RandomString](../objects/RandomString)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>random</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>, <span style={{color: '#FF8000'}}>chars</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **length** | _int_ |   |
+| **random** | _java.util.Random_ |   |
+| **chars** | _string_ |   |
 
 ##### Retorno
 

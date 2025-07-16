@@ -133,6 +133,68 @@ Todas as configurações dos provedores de autenticação.
 
 ---
 
+## attemptsInterval
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsInterval</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Descrição
+
+Número em minutos para definir o intervalo de tempo para realizar o bloqueio da conta.
+
+##### Retorno
+
+( _int_ )
+
+Retorna o número de minutos para o intervalo de tempo para a conta bloqueada.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsInterval</span>(<span style={{color: '#FF8000'}}>attemptsInterval</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **attemptsInterval** | _int_ |   |
+
+##### Retorno
+
+( _[Auth](../resources/auth)_ )
+
+
+---
+
+## attemptsMaxFails
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsMaxFails</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Descrição
+
+Número máximo de tentativas de autenticação falhadas consecutivamente para realizar o bloqueio da conta.
+
+##### Retorno
+
+( _int_ )
+
+Retorna o número máximo de tentativas consecutivas falhadas para bloquear a autenticação.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsMaxFails</span>(<span style={{color: '#FF8000'}}>attemptsMaxFails</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **attemptsMaxFails** | _int_ |   |
+
+##### Retorno
+
+( _[Auth](../resources/auth)_ )
+
+
+---
+
 ## check
 
 ---

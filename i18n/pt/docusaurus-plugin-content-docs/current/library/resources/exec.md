@@ -1618,6 +1618,18 @@ _exec.core("outro-script-talvez-em-outro-linguagem");
 
 ---
 
+## debug
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>debug</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Retorno
+
+( _void_ )
+
+
+---
+
 ## ensureJail
 
 ---
