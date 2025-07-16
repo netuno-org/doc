@@ -4,61 +4,113 @@ title: UI
 sidebar_label: UI
 ---
 
-## ui/
+Custom backoffice frontend and dashboards.
 
-As the name suggests, under `UI` is the logic of the application's user interface.
+## User Interface
 
-> To develop source code, either from backend or frontend, we recommend these free code editors:
-> - Link Visual Studio Code: <a href="https://atom.io/" target="_blank">https://code.visualstudio.com/</a>
-> - Link Atom: <a href="https://atom.io/" target="_blank">https://atom.io/</a>
-> - Link WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">https://www.jetbrains.com/webstorm/</a>
+As the name suggests, the `📂 ui` folder contains the application's user interface logic.
 
-### UI folder structure
+It allows development to change the application's backoffice behavior.
 
+You can generate custom dashboards, add or change features, and more.
 
-```plaintext
-├─ ui/
-     ├─ src/
-     │  ├─ containers/
-     │  ├─ components/
-     │  ├─ style/
-     │  └─ index.js
-     ├─ .babelrc
-     ├─ .gitignore
-     ├─ package.json
-     ├─ package-lock.json
-     ├─ README.md
-     └─ webpack.config.js
-  ```
+To develop the application's general code, whether backend or frontend, we recommend free code editors, such as:
 
+- VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
+- Atom: <a href="https://atom.io/" target="_blank">atom.io</a>
+- VS Code: <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
+- WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
 
-  ### src/
+## Folder Structure
 
-  The `src` folder gathers the frontend application source code. It contains the organization of React components with different atomic values, respectively `components` and `containers`.
+<pre class="doc-structure__tree">
+<span>./<b>ui</b>/</span>
+&nbsp;<span>├─ ./<b>src</b>/</span>
+&nbsp;│   <span>├─ ./<b>components</b>/</span>
+&nbsp;│   │   <span>└─ ./<b>MyButton</b>/</span>
+&nbsp;│   │       <span>└─ ./<b>index.jsx</b></span>
+&nbsp;│   <span>├─ ./<b>containers</b>/</span>
+&nbsp;│   │   <span>└─ ./<b>DashboardContainer</b>/</span>
+&nbsp;│   │       <span>├─ ./<b>index.jsx</b></span>
+&nbsp;│   │       <span>└─ ./<b>index.less</b></span>
+&nbsp;│   <span>├─ ./<b>styles</b>/</span>
+&nbsp;│   │   <span>└─ ./<b>main.less</b></span>
+&nbsp;│   <span>└─ ./<b>index.jsx</b></span>
+&nbsp;<span>├─ ./<b>package.json</b></span>
+&nbsp;<span>├─ ./<b>vite.config.js</b></span>
+&nbsp;<span>└─ ./<b>README.md</b></span>
+</pre>
 
-  > If you intend to remove the src folder or change the name to create your structure don't forget to change the webpack configuration in the `webpack.config.js` file.
+## Source
 
-  #### containers/
-  
-  The `containers` folder is intended for _container components_ React of higher atomic value, that is, they translate a larger amount of logic.
-  
-  #### components/
-  
-  The `components` folder is intended for React _components_ of lower atomic value, that is, they translate a smaller amount of logic. Typically a simpler behavior that will be reused in multiple containers or even another component.
+The `📂 src` folder contains the frontend application code. This folder contains the organization of React components, respectively `components` and `containers`.
 
-  #### style/
-  
-  The `styles` folder is typically for global styles of various application containers. Although there is no strong pattern in this field, we suggest an organization of the specific styles of the component or container next to it in the components or containers folder, respectively.
-   
-  ### Webpack and Compilers
-   
-  In order to generate the compiled and optimized version of the application, to be processed by the browser, it is necessary to run the respective compilers. 
-  These are configured in the `webpack.config.js` file where you can check the action flow, the _loaders_ and their options.
-  By default, `JSX, JS, LESS and CSS` files are processed. 
-  
-  The `.babelrc` file is in JSON format and translates the parameters and modules used by this _toolchain_ which works mostly as a syntax converter. In this configuration it is also possible to locate the AntDesign component library that is included by default in all Netuno's projects. For more information about Ant Design <a href="https://ant.design/" target="_blank">https://ant.design/</a> 
-  
-  ### Package Manager
-  
-  The files `package.json` and `package-lock.json` are used by the NPM package manager to install all necessary frontend dependencies. Whether they are project dependencies or just development dependencies, like webpack. Alternatively to NPM other package managers such as YARN can also be used.
-   
+### Containers
+
+The `📂 containers` folder is intended for containers, which are React components for areas with the most interactions.
+
+That is, they are components with more functionality, typically covering a considerable area of the screen, and can aggregate other components depending on their scope.
+
+For example, it presents an orders table with a filter form, and also a graph aggregating
+the monthly total, all within a container. Each component could be a separate component but is aggregated into the orders container on the dashboard.
+
+### Components
+
+The `📂 components` folder is intended for reusable components in React. They typically implement
+very specific functionalities that are useful for integration into other components or containers.
+
+It typically contains simpler behavior, very focused on its purpose for a specific context,
+which can be reused in multiple containers or even in other components.
+
+Examples of components could be a specific table, a form, a type of chart, among others.
+
+### Styles
+
+The `📂 styles` folder typically serves as global styles for the application's various containers. Although there isn't
+a strong standard in this area, we suggest organizing styles specific to the `component` or `container` within it, that is, internally in the respective component folder.
+
+## Vite
+
+This generates the final JavaScript code version containing the application's UI, compiled and
+optimized, and processed and used by the browser. You need to run the respective compilation
+of the frontend code, which is coded in React/JSX.
+
+This compilation is performed by [Vite](https://vite.dev/), and its configuration and other instructions are located in the
+file:
+
+- `vite.config.js`
+
+Which is located at the root of the `📂 ui` folder.
+
+## Package Manager
+
+The `package.json` file is used by the dependency module manager. We recommend using
+[PNPM](https://pnpm.io/) to install all the necessary frontend dependencies.
+
+And the execution commands use [Bun](https://bun.sh/), which is another important recommendation.
+
+Therefore, we recommend installing [Bun](https://bun.sh/) and [PNPM](https://pnpm.io/).
+
+## Instructions
+
+The `README.md` file contains installation and execution instructions.
+
+To install the dependencies, run:
+
+- `pnpm install`
+
+And to run the compilation of the frontend code in development:
+
+- `pnpm run watch`
+
+Or if this is the final and definitive compilation optimized for production:
+
+- `pnpm run build`
+
+By default, the compilation creates the following files:
+
+- `../public/scripts/ui.js`
+- `../public/scripts/ui.js.map`
+- `../public/styles/ui.css`
+
+These files are integrated into Netuno's processing to perform the necessary customizations on the application's backoffice pages, such as dashboards and specific features.
