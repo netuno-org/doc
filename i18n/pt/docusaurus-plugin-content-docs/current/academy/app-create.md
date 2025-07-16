@@ -30,6 +30,11 @@ Para criar uma nova aplicação na plataforma Netuno utilize o comando:
 
 Será perguntado o nome da nova aplicação, o tipo de base de dados e o idioma.
 
+> Escolha o tipo de base de dados do tipo **H2 Database**, para os desenvolvimentos iniciais é mais prático.
+> 
+> O **H2 Database** é uma base de dados embutida com o servidor do Netuno, então não precisa instalar nada e nem 
+> configurar um servidor de base de dados.
+
 Em alternativa pode passar o nome da nova aplicação diretamente no comando:
 
 ```shell
