@@ -25,6 +25,18 @@ The name of the form.
 
 ---
 
+## getJoinType
+
+---
+
+#### <span style={{color: '#008000'}}>getJoinType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>
+##### Return
+
+( _org.netuno.tritao.db.form.join.JoinType_ )
+
+
+---
+
 ## getRelationLink
 
 ---
@@ -82,6 +94,25 @@ Current Link object.
 
 ---
 
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Description
+
+Defines a second relationship level on the current Link object.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **formLink** | _[Link](../objects/Link)_ | Name of the form to be listed. |
+
+##### Return
+
+( _[Link](../objects/Link)_ )
+
+Current Link object.
+
+---
+
 ## setForm
 
 ---
@@ -102,6 +133,24 @@ Defines the name of the query's main form.
 ( _[Link](../objects/Link)_ )
 
 Current Link object.
+
+---
+
+## setJoinType
+
+---
+
+#### <span style={{color: '#008000'}}>setJoinType</span>(<span style={{color: '#FF8000'}}>joinType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **joinType** | _org.netuno.tritao.db.form.join.JoinType_ |   |
+
+##### Return
+
+( _[Link](../objects/Link)_ )
+
 
 ---
 
@@ -148,6 +197,65 @@ Defines the filter configuration for the Link object's main form.
 ( _[Link](../objects/Link)_ )
 
 Current Link object.
+
+---
+
+## where
+
+---
+
+#### <span style={{color: '#008000'}}>where</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Description
+
+Defines the filter configuration for the Link object's main form.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **where** | _[Where](../objects/Where)_ | The filters configuration. |
+
+##### Return
+
+( _[Link](../objects/Link)_ )
+
+Current Link object.
+
+---
+
+## withInner
+
+---
+
+#### <span style={{color: '#008000'}}>withInner</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Return
+
+( _[Link](../objects/Link)_ )
+
+
+---
+
+## withLeft
+
+---
+
+#### <span style={{color: '#008000'}}>withLeft</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Return
+
+( _[Link](../objects/Link)_ )
+
+
+---
+
+## withRight
+
+---
+
+#### <span style={{color: '#008000'}}>withRight</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+##### Return
+
+( _[Link](../objects/Link)_ )
+
 
 ---
 

@@ -277,3 +277,26 @@ Current Relation object.
 
 ---
 
+## where
+
+---
+
+#### <span style={{color: '#008000'}}>where</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
+##### Description
+
+Defines the filter settings.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **where** | _[Where](../objects/Where)_ | The filter settings. |
+
+##### Return
+
+( _[Relationship](../objects/Relationship)_ )
+
+Current Relation object.
+
+---
+

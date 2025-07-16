@@ -67,7 +67,7 @@ A instância atual do recurso XLS.
 
 ---
 
-#### `_xls.create()`.<span style={{color: '#008000'}}>activeSheet</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.hssf.usermodel.HSSFSheet</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>activeSheet</span>(<span style={{color: '#FF8000'}}>sheet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.apache.poi.ss.usermodel.Sheet</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
 ##### Description
 
 Sets the spreadsheet that is active.
@@ -76,7 +76,7 @@ Sets the spreadsheet that is active.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **index** | _org.apache.poi.hssf.usermodel.HSSFSheet_ | Spreadsheet reference object. |
+| **sheet** | _org.apache.poi.ss.usermodel.Sheet_ | Spreadsheet reference object. |
 
 ##### Return
 
@@ -437,7 +437,7 @@ The new cell style created with the configured format.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>color</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>color</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Description
 
 Generates the color code based on predefined names.
@@ -450,7 +450,7 @@ Generates the color code based on predefined names.
 
 ##### Return
 
-( _short_ )
+( _java.lang.Object_ )
 
 The color reference.
 
@@ -511,6 +511,29 @@ Creates a new Excel document.
 
 ```javascript
 const excel = _xls.create();
+```
+
+##### Return
+
+( _[XLS](../resources/xls)_ )
+
+New XLS resource instance.
+
+---
+
+## create2007
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>create2007</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XLS](../resources/xls)</span>
+##### Description
+
+Creates a new Excel 97-2007 document, in the old format.
+
+##### How To Use
+
+```javascript
+const excel = _xls.create2007();
 ```
 
 ##### Return

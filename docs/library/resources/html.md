@@ -290,6 +290,20 @@ Object of [JSOUP](https://jsoup.org) that allows interaction with the HTML code.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>safelist</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.safety.Safelist</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **type** | _string_ |   |
+
+##### Return
+
+( _org.jsoup.safety.Safelist_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>safelist</span>(<span style={{color: '#FF8000'}}>copy</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.safety.Safelist</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.safety.Safelist</span>
 ##### Attributes
 

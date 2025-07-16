@@ -133,6 +133,68 @@ All authentication providers settings.
 
 ---
 
+## attemptsInterval
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsInterval</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Description
+
+Number in minutes to set the time interval to perform account blocking.
+
+##### Return
+
+( _int_ )
+
+Returns the number of minutes for the time interval for the locked account.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsInterval</span>(<span style={{color: '#FF8000'}}>attemptsInterval</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **attemptsInterval** | _int_ |   |
+
+##### Return
+
+( _[Auth](../resources/auth)_ )
+
+
+---
+
+## attemptsMaxFails
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsMaxFails</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Description
+
+Maximum number of consecutive failed authentication attempts to trigger account lockout.
+
+##### Return
+
+( _int_ )
+
+Returns the maximum number of consecutive failed attempts to block authentication.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsMaxFails</span>(<span style={{color: '#FF8000'}}>attemptsMaxFails</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **attemptsMaxFails** | _int_ |   |
+
+##### Return
+
+( _[Auth](../resources/auth)_ )
+
+
+---
+
 ## check
 
 ---

@@ -147,11 +147,11 @@ First record of the result.
 
 ---
 
-## getFields
+## getFieldsToGet
 
 ---
 
-#### <span style={{color: '#008000'}}>getFields</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>getFieldsToGet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Description
 
 Returns the fields that will be obtained in the query
@@ -161,6 +161,18 @@ Returns the fields that will be obtained in the query
 ( _java.util.List_ )
 
 The fields that will be obtained in the query
+
+---
+
+## getFieldsToSet
+
+---
+
+#### <span style={{color: '#008000'}}>getFieldsToSet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+##### Return
+
+( _java.util.List_ )
+
 
 ---
 
@@ -291,6 +303,25 @@ Where object of the query's main table.
 ---
 
 ## group
+
+---
+
+#### <span style={{color: '#008000'}}>group</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+##### Description
+
+Defines the query grouping object.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **order** | _java.lang.String[]_ | The query grouping object. |
+
+##### Return
+
+( _[Operation](../objects/Operation)_ )
+
+Current Query object.
 
 ---
 
@@ -507,6 +538,25 @@ Current Query object.
 
 ---
 
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+##### Description
+
+Defines a form to be related to the main table of the query using the Link criteria.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **formLink** | _[Link](../objects/Link)_ | Form to be related. |
+
+##### Return
+
+( _[Operation](../objects/Operation)_ )
+
+Current Query object.
+
+---
+
 ## order
 
 ---
@@ -677,11 +727,11 @@ Current Query object.
 
 ---
 
-## setFields
+## setFieldsToGet
 
 ---
 
-#### <span style={{color: '#008000'}}>setFields</span>(<span style={{color: '#FF8000'}}>fields</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setFieldsToGet</span>(<span style={{color: '#FF8000'}}>fields</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
 ##### Description
 
 Defines the fields that will be obtained in the query
@@ -697,6 +747,24 @@ Defines the fields that will be obtained in the query
 ( _[Operation](../objects/Operation)_ )
 
 Current Query object.
+
+---
+
+## setFieldsToSet
+
+---
+
+#### <span style={{color: '#008000'}}>setFieldsToSet</span>(<span style={{color: '#FF8000'}}>fieldsToSet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **fieldsToSet** | _java.util.List_ |   |
+
+##### Return
+
+( _[Operation](../objects/Operation)_ )
+
 
 ---
 

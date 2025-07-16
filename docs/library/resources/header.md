@@ -18,6 +18,7 @@ Main functions:
 - [host](#host)
 - [port](#port)
 - [scheme](#scheme)
+- [clientIP](#clientip)
 - [contentType](#contenttype)
 - [contentTypePDF](#contenttypepdf)
 - [contentTypeJSON](#contenttypejson)
@@ -1400,6 +1401,18 @@ Object converted to Values.
 ##### Return
 
 ( _void_ )
+
+
+---
+
+## clientIP
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_header</span>.<span style={{color: '#008000'}}>clientIP</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Return
+
+( _string_ )
 
 
 ---
