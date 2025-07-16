@@ -4,7 +4,7 @@ title: Config
 sidebar_label: Config
 ---
 
-Arquivos de configurações gerais da aplicação.
+General application settings.
 
 ## Pasta das Configurações
 
