@@ -4,38 +4,56 @@ title: Storage
 sidebar_label: Storage
 ---
 
-## storage/
+Files integrated into the code or database.
 
-The `storage` folder has the property to securely store user information segmented by access levels.
+## General Storage
 
-#### Storage folder structure
+The `📂 storage` folder is intended to securely store general files that are useful in the application's processing.
 
-In the `storage` folder you will find the following structure:
+## Folder Structure
 
-```plaintext
-└─ storage/
-   ├─ database/
-   └─ filesystem
-      ├─ private
-      ├─ public
-      └─ server    
-```
-### database/
-The `database` folder is used to store files or images of forms 
+The `📂 storage` folder has the following structure:
 
-### filesystem/
-The `filesystem` folder enables access restrictions.
+<pre class="doc-structure__tree">
+<span>./<b>storage</b>/</span>
+&nbsp;<span>├─ ./<b>database</b>/</span>
+&nbsp;<span>└─ ./<b>filesystem</b>/</span>
+&nbsp;    <span>├─ ./<b>private</b>/</span>
+&nbsp;    <span>├─ ./<b>public</b>/</span>
+&nbsp;    <span>└─ ./<b>server</b>/</span>
+</pre>
 
-The restrictions are divided into the following: 
+## Database
 
-##### private/
+The `📂 database` folder is used to store files or images related to the database.
 
-The `private` folder can only be accessed (via url to the file or folder) for reading or writing by users authenticated in the application.
+It's not practical to store files directly in the database, as it compromises backups and data synchronization, considerably increasing the size of the database due to the space taken up by many files.
 
-##### public/
+Therefore, for any data form that has a file or image upload field, the final file is organized and saved here, and only the final file name is saved in the database field.
 
-The `public` folder is available for external access to any personnel who know its URL.
+If the data structure contains files, then to perform a full application backup, you must back up this folder in addition to the database backup.
 
-##### server/
+## General File System
 
-The `server` folder only allows reading and writing from code in the application. Therefore, no user can access its content directly from the URL.
+The `📂 filesystem` folder allows you to organize, with access restrictions, general files that are useful to the
+application.
+
+Any file that is directly useful in the application code should be stored here.
+
+The restrictions are divided into:
+
+### Private
+
+The `📂 private` folder should only be read or written to by authenticated users in the application.
+
+### Public
+
+The `📂 public` folder is useful for external access.
+
+### Server
+
+The `📂 server` folder only allows reading and writing from the application's internal code.
+
+Therefore, no internal or external users can access its contents.
+
+Its contents are only accessible through the code.
