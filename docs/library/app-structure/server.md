@@ -4,95 +4,143 @@ title: Server
 sidebar_label: Server
 ---
 
-## server/
+Backend and API Development.
 
-The `server` folder contains a set of files and folders that form the application backend.
+## Server Folder
 
-#### Server folder structure
+The `📂 server` folder contains a set of files and folders that make up the application's backend.
 
-In the `server` folder you will find the following structure:
+Everything in the `📂 server` folder is used for backend server processing, such as integrations, API,
+database, security and authentication, Cron Jobs, and much more.
 
-```plaintext
-└─ server/
-   ├─ actions/
-   ├─ core/
-   │  ├─ _config.js/
-   │  ├─ _init.js/
-   │  ├─ _request_close.js/
-   │  ├─ _request_end.js/
-   │  ├─ _request_error.js/
-   │  ├─ _request_start.js/
-   │  ├─ _request_url.js/
-   │  ├─ _service_config.js/
-   │  ├─ _service_end.js/
-   │  ├─ _service_error.js/
-   │  └─ _service_start.js/   
-   ├─ services/
-   │  ├─ firebase/
-   │  │  ├─ listener/
-   │  ├─ jobs/
-   ├─ setup/
-   │  └─ _end.js/   
-   │  └─ _schema-form-xxx.js/   
-   │  └─ _start.js/   
-   └─ templates/
-      ├─ dev/
-      │  └─ dashboard.html
-      ├─ dashboard.html
-      ├─ scripts.html
-      ├─ scripts_dev.html
-      ├─ scripts_login.html
-      ├─ styles.html
-      ├─ styles_dev.html
-      └─ styles_login.html      
-```
+## Folder Structure
 
-### actions/
-Under `actions` you can add custom actions (hooks) in the CRUD operations of the forms.
-### core/
+The `📂 server` folder has the following structure:
 
-The `core` folder allows code injection in special situations.
+<pre class="doc-structure__tree">
+<span>./<b>server</b>/</span>
+&nbsp;<span>├─ ./<b>actions</b>/</span>
+&nbsp;<span>├─ ./<b>components</b>/</span>
+&nbsp;<span>├─ ./<b>core</b>/</span>
+&nbsp;│   <span>├─ ./<b>_config.js</b></span>
+&nbsp;│   <span>├─ ./<b>_init.js</b></span>
+&nbsp;│   <span>├─ ./<b>_request_close.js</b></span>
+&nbsp;│   <span>├─ ./<b>_request_end.js</b></span>
+&nbsp;│   <span>├─ ./<b>_request_error.js</b></span>
+&nbsp;│   <span>├─ ./<b>_request_start.js</b></span>
+&nbsp;│   <span>├─ ./<b>_request_url.js</b></span>
+&nbsp;│   <span>├─ ./<b>_service_config.js</b></span>
+&nbsp;│   <span>├─ ./<b>_service_end.js</b></span>
+&nbsp;│   <span>├─ ./<b>_service_error.js</b></span>
+&nbsp;│   <span>└─ ./<b>_service_start.js</b></span>
+&nbsp;<span>├─ ./<b>reports</b>/</span>
+&nbsp;<span>├─ ./<b>services</b>/</span>
+&nbsp;<span>├─ ./<b>setup</b>/</span>
+&nbsp;│   <span>├─ ./<b>_end.js</b></span>
+&nbsp;│   <span>└─ ./<b>_start.js</b></span>
+&nbsp;<span>└─ ./<b>templates</b>/</span>
+&nbsp;    <span>├─ ./<b>&#95;</b>/</span>
+&nbsp;    <span>├─ ./<b>dev</b>/</span>
+&nbsp;    │   <span>└─ ./<b>dashboard.html</b></span>
+&nbsp;    <span>├─ ./<b>dashboard.html</b></span>
+&nbsp;    <span>├─ ./<b>scripts.html</b></span>
+&nbsp;    <span>├─ ./<b>scripts_dev.html</b></span>
+&nbsp;    <span>├─ ./<b>scripts_login.html</b></span>
+&nbsp;    <span>├─ ./<b>styles.html</b></span>
+&nbsp;    <span>├─ ./<b>styles_dev.html</b></span>
+&nbsp;    <span>└─ ./<b>styles_login.html</b></span>
+</pre>
 
-`_config.js` is where server-side application settings are configured.
+## Actions
 
-`_init.js` is for the resource initialization parameters of the server application.
+In `📂 actions`, you can add custom actions (_hooks_) to the CRUD operations of forms
+automatically generated for the back office. Depending on the data structure, many data interventions can be
+performed here.
 
-`_request_close.js` `_request_end.js` `_request_error.js` `_request_start.js` `_request_url.js` allow you to parameterize the requests to the server by injecting code at different execution times. 
+For example, when reviewing a customer, it is necessary to delete all their orders, or when creating a new product, it must
+be integrated with another system. In short, any development directly related to data can be done
+here.
 
-`_service_config.js` `_service_end.js` `_service_error.js`  `_service_start.js` are *hooks* of different moments in the applicational life click where logic can be introduced.
+Actions are inspired by database triggers, but at the code execution level.
 
-### services/
+Therefore, specific operations can be programmed for creating, modifying, and deleting data.
 
-It is in the `services` folder that the services that make up the application API are created. 
+## Components
 
-`firebase/listener` If enabled, the behaviour for when a firebase service field update is received must be described.
+`📂 components` are used to define custom field types in back office forms, which
+can perform data manipulation themselves.
 
-`jobs` If enabled, the schedule as well as the code to be executed by cronjobs services must be described.
+Components can be created through scripts to provide a new, specific field type in the application.
 
-Export-pdf.js' Taking as an example a service to generate PDF's, it would be in this directory that would be programmed the invocation behavior of the PDF library and the return of the PDF to the client. These can be written in Javascript, Python, Java, Kotlin, Ruby or Groovy. 
+## Core
 
-No additional settings are required depending on the programming language used, all you need to do is create the service file with the correct extension.
- 
+The `📂 core` folder allows code injection into the HTTP request processing flow.
 
-### setup/
+It is also used to share code between different services and others.
 
-`setup` is automatically powered by Netuno engine with the database schemas and their data.
+`_config.js` is executed after the configuration is loaded for each HTTP request. It is executed after the environment configuration script found in the application's `📂 config` folder.
 
-`_end.js` hook executed after loading the schema(s).
- 
-`_schema-form-bla.js` schema file with the information created from forms, fields and data of a given form, e.g. bla.
- 
-`_start.js` hook executed before the schema(s) is(are) loaded.
- 
- ### templates/
+`_init.js` is used to inject instructions when the application is initialized for the first time.
 
-The `templates` folder contains the HTML content of the application pages.
+### HTTP Request Processing
 
-The `dev` folder contains the 'dashboard.html' file which allows the creation of the desktop construction mode.
+The corresponding scripts are executed in the HTTP request processing flow for any URL in the application:
 
-`dashboard.html` contains the HTML of the working area of the construction or viewing mode, according to its location.
+- `_request_start.js` is executed when the HTTP request arrives at the Netuno server.
+- `_request_url.js` is executed when the URL is processed by Netuno; the URL can be changed to another destination.
+- `_request_close.js` is executed when the HTTP request response is closed. - `_request_end.js` is executed when the HTTP request is definitively completed.
+- `_request_error.js` is executed when an error occurs while processing the HTTP request.
 
-`scripts.html` , `scripts_dev.html` and `scripts_login.html` have the same purpose but for different places. The first concerns scripts injected in the construction mode, the next relates to the viewing mode and the last relates to the application's authentication module, allowing the insertion of scripts with the particularity that these scripts prevail over others already defined.
+### API Service Processing
 
-`styles.html`, `styles_dev.html` and `styles_login.html`, similar to the scripts, constitute the HTML referring to the styles for the visualization, construction and application authentication modules, respectively.
+The following scripts are executed in the processing flow of any application's API service:
 
+- `_service_config.js` is executed before starting the service execution. It is used to define the service execution settings, among other things. It can be used to define whether or not the service can be executed, i.e., a security control over access to the API service.
+- `_service_start.js` is executed as soon as a service begins processing.
+- `_service_end.js` is executed after a service has finished processing.
+- `_service_error.js` is executed when an error occurs while processing a service.
+
+## Services - API
+
+The services that make up the application API are created in the `📂 services` folder.
+
+Services can be written in various languages: Javascript, Python, Java, Kotlin, Ruby, or Groovy.
+
+Since Netuno is polyglot, any script file can be modified to another supported programming language;
+the file extension simply matches the language.
+
+No additional configuration is required depending on the programming language used; simply create the service file with the correct extension corresponding to the programming language.
+
+## Setup
+
+The `📂 setup` folder contains the code automatically generated by the Netuno engine that defines the database schemas.
+
+It is also where we can place the data loading, which is essential for the application to function.
+
+The `_start.js` script is executed before the database construction process begins.
+
+The `_end.js` script is executed after the database construction process is complete.
+
+As the data structure is built, Netuno automatically creates the code in the `📂 setup` folder
+necessary for the entire data structure to be recreated in a new database, or to recreate any missing code in
+another database where the application may eventually run.
+
+## Templates
+
+The `📂 templates` folder contains the HTML content of the application's backoffice pages, which are generated by the Netuno server.
+
+The `📂 dev` folder contains the `dashboard.html` file, which allows you to change the workspace in developer
+build mode.
+
+The `dashboard.html` folder, located in the templates root, contains the HTML for the general backoffice workspace.
+
+### Native Templates
+
+In the `📂 _` folder, any general template can be replaced, meaning Netuno's default templates can be
+changed.
+
+- [Here are Netuno's native templates.](https://github.com/netuno-org/platform/tree/main/bundle/base/web/netuno/templates/sbadmin)
+
+If the folder and/or file names match those of the native templates within this folder, then the template found in this folder will be used instead of the native template.
+
+In other words, simply replicate the same structure of the native template within the `📂 _` folder to replace it.
