@@ -4,7 +4,7 @@ id: app-create
 title: Criar Aplicação
 ---
 
-Criando uma nova aplicação fullstack na plataforma.
+Criando uma nova aplicação full stack na plataforma.
 
 Uma visão geral do frontend, base de dados, e serviço de API.
 
@@ -155,8 +155,8 @@ Automáticamente o campo de `Nome da coluna` é preenchido com `nome` em minúsc
 
 Ative do lado direito as opções de:
 
-- `Exibir no filtro` - que permite pesquisar pelo campo `Nome`.
-- `Exibir no resultado` - que vai fazer apresentação do campo `Nome` na tabela de resultados.
+- `Permitir Filtrar` - que permite pesquisar pelo campo `Nome`.
+- `Exibir no Resultado` - que vai fazer apresentação do campo `Nome` na tabela de resultados.
 
 > Veja mais sobre campos [aqui](ui/fields).
 
@@ -229,7 +229,7 @@ Repare que os botões estão sendo importados no início do código, mas estes a
 
 Então vamos criar o código dos botões, que serão componentes.
 
-## Botão do Formulário na Modal
+## Botão para Formulário em Modal
 
 Vamos criar uma pasta `BotaoClienteModal` e dentro dele o arquivo `index.jsx`, no seguinte caminho:
 
