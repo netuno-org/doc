@@ -1,328 +1,471 @@
 ---
 sidebar_position: 3
 id: app-create
-title: Application Create
+title: Create Application
 ---
 
-## Commands to create an application
+Creating a new full-stack application on the platform.
 
-After [configuring the platform](../get-started/installation), Here are the basic commands to create an application and start the server.
+An overview of the frontend, database, and API service.
 
-The application of this tutorial consists of a Modal form and PDF export.
+## Introduction
 
-#### Command to create an application.
+After [installing the platform](../get-started/installation), we present below the basic commands for creating
+an application and starting the server.
+
+Although Netuno is polyglot and supports several languages, in this tutorial we will only use JavaScript.
+
+The application in this tutorial consists of a form in a Modal and a PDF export.
+
+## Command to Create a New Application
+
+Open the terminal where the Netuno platform is installed.
+
+To create a new application on the Netuno platform, use the command:
+
+```shell
+./netuno app
+```
+
+You will be asked for the name of the new application, the database type, and the language.
+
+> Choose the **H2 Database** database type; it's more practical for initial development.
+>
+> **H2 Database** is a database built into the Netuno server, so you don't need to install anything or
+> configure a database server.
+
+Alternatively, you can pass the name of the new application directly in the command:
 
 ```shell
 ./netuno app name=myapp
 ```
 
-#### Command to start the server.
+### Command to Start the Server
+
+With the new application created, the Netuno platform server must be started with the new application's name:
 
 ```shell
 ./netuno server app=myapp
 ```
 
-From now on you can start developing your application.
+This way, the server uses the specified application as the default application.
 
-All the files for development are in `/apps/myapp`.
+From now on, you can start developing your application.
 
-By default, to access the backoffice on the login screen enter the credentials.
+All development files are located in `📂 apps/myapp`.
 
-**User:** `dev`
+If you are prompted for credentials during the back office login, use the default:
+
+**Username:** `dev`
 
 **Password:** `dev`
 
-## Create a Simple Application
+## Code Editor
 
-Now that we have a Netuno knowledge base, we will create an application from start to finish.
-We will add a button to the start screen to load the form in a modal and another to generate a PDF.
+Use your preferred code editor.
 
-We will follow these steps:
+To develop the application's general code, whether backend or frontend, we recommend free code editors, such as:
 
-* Modify the main dashboard HTML
-* Add two buttons with React
-* Build the `Open Modal Form button`
-* Build the `Export PDF` button
-* Develop the service that generates the PDF
+- VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
+- Atom: <a href="https://atom.io/" target="_blank">atom.io</a>
+- VS Code: <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
+- WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
 
-At the end you will see the application as shown in the following image.
+Open the application folder in your editor:
 
-![First App - 1](/docs/assets/comece/primeiraapp1.png)
+- `📂 apps/myapp`
 
-![First App - 2](/docs/assets/comece/primeiraapp2.png)
+This folder contains all the files for the new application and is where all development takes place.
+
+Documentation detailing the application's file and folder structure:
+
+- [Application Folders](../category/app-structure)
+
+## Step Summary
+
+Now that we have a basic understanding of Netuno, let's create an application from start to finish.
+
+We'll add a button to the home screen to load the customer form in a modal and another button to
+export the customer list as a PDF file.
+
+We'll follow these steps:
+
+* Analyze the location of the dashboard's main HTML.
+* Add two buttons with React.
+* Build the button to open the customer form.
+* Build the button to export the customer list as a PDF.
+* Develop the service that generates the PDF file with the customer list.
 
 Let's get started!
 
-### Modify the main dashboard HTML
+## Dashboard Template
 
-Following the tutorial where we teach the [commands to create an application](#commands-to-create-an-application), access the application directory, in this example named `myapp`.
-
-Open the file that has the main HTML of the dashboard, which is in the following directory.
-
-File location
+Inside the new application's files, open the file containing the dashboard's main HTML, located in the following path:
 
 ```plaintext
-/apps/myapp/server/templates/dashboard.html
+server/templates/dashboard.html
 ```
 
-Copy this HTML and paste it into the `dashboard.html`
+At the end of `dashboard.html` is the `div` where React is injected:
 
-```html
-<div class="row">
-    <div class="col-lg-12">
-        <div class="with-form">
-            <h1 class="page-header">My work area</h1>
-            <p>Open a Modal Form and Export a PDF</p>
-        </div>
-    </div>
-</div>
-
+```html title="server/templates/dashboard.html"
+...
 <div id="app-dashboard"></div>
 ```
 
-### Add the two buttons with React
+This `div` with the id `app-dashboard` is where the dashboard starts. By default, the dashboard is created in React.
 
-Now access the file that has the main dashboard javascript. This file was built in React, and it's where we'll add the two buttons.
+The React part of the dashboard is in the `📂 ui` folder, where dashboards and other features are developed.
 
-File location
+## Creating the Customer Form
 
-```plaintext
-/apps/myapp/ui/src/containers/DashboardContainer.jsx
+In this step, we'll need to create a new form called `Customer` and a new field called `Name`.
+
+On the back office page, we'll find the `Build` button in the top right corner.
+
+Clicking the `Build` button takes us to the form development area.
+
+In the menu, under `Management` and then `Forms` is where we can create a new form.
+
+Fill in the `Display Name` field:
+
+- `Customer`
+
+The `Table Name` field is automatically filled in with `customer` in lowercase, because in databases
+it's recommended that the name be in lowercase.
+
+Now you can save your first form by clicking the button below:
+
+- `Save`
+
+> See more about creating forms [here](ui/forms).
+
+When the form is created, the 'Customer' option appears on the left side, under `Fields`. Click on
+'Customer' to create the new 'Name' field.
+
+Fill in the field's `Display Name`:
+
+- `Name`
+
+The `Column Name` field is automatically filled with `name` in lowercase, because in databases
+it is recommended that the name be in lowercase.
+
+Activate the options on the right side:
+
+- `Allow Filtering` - which allows you to search by the `Name` field.
+- `Display in Result` - which will display the 'Name' field in the results table.
+
+> See more about fields [here](ui/fields).
+
+Now you can save your first field by clicking the button below:
+
+- `Save`
+
+In the upper right corner of the page, there is the `Preview` button.
+
+Using the `Visualize` button, we return to the back office and see our `Customer` form in the menu.
+
+Open the `Customer` form and, on the right side, we have the button to `Add` a new customer.
+
+Enter some customers into the system.
+
+## Database Query
+
+Back in the developer's build area, click the `Build` button.
+
+In the `Management` menu, open the `Query` option.
+
+Here in `Query`, we can execute SQL commands directly in the database.
+
+Run the command:
+
+```sql
+SELECT * FROM customer
 ```
 
-Copy and paste this code into the file `DashboardContainer.jsx`
+This way, you can query or manipulate system information directly in the database.
 
-```javascript
-import React, { Component } from "react";
-import ButtonModal from '../components/ButtonModal/index.jsx';
-import ButtonPDF from '../components/ButtonPDF/index.jsx';
+You can return to the back office by clicking the `Visualize` button.
 
-export default class DashboardContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        };
-    }
+## Add the Two Buttons
 
-    render() {
-        return (
-            <div className="my-dashboard">
-                <ButtonModal />
-                <ButtonPDF />
-            </div>
-        );
-    }
-}
-```
+Inside the `📂 ui` folder, open the file containing the dashboard's main JavaScript, located at:
 
-### Build the Open Modal Form Button
+- `📂 src/containers`
 
-In this step, we will create a form called `Test` and a field called `Name`.
+Containers are areas with broader functionality; in this case, a dashboard can contain
+multiple things.
 
-Learn how to create forms [here](ui/forms.md).
-Learn how to create fields [here](ui/fields.md).
+Copy and paste this code into the `DashboardContainer/index.jsx` file:
 
-Then go to the form you created, open the element inspector in the browser and look for the uid in the attribute `netuno-form-uid`, it will be important for the next step.
+```javascript title="ui/src/containers/DashboardContainer/index.jsx"
+import { Space } from 'antd';
 
-![First App - 3](/docs/assets/comece/primeiraapp3.png)
+import CustomerModalButton from '../../components/CustomerModalButton';
+import PDFButton from '../../components/PDFButton';
 
-![First App - 4](/docs/assets/comece/primeiraapp4.png)
+import "./index.less";
 
-Now, open again the file you edited earlier `dashboard.html` and add the code before:
-
- ```html
- <div id="app-dashboard"></div>
- ```
-
-and edit the `netuno-form-uid` attribute with the one from the previous step.
-
-```html
-<div id="dashboard-modal-test" class="modal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-            </div>
-            <div class="modal-body">
-                <div id="dashboard-modal-test-netuno-form" netuno-form netuno-form-uid="UID" netuno-form-name="test" netuno-form-edit-only="" netuno-zone="dashboard-test">
-                    <div class="netuno-form-edit"  netuno-form-edit="test"></div>
-                </div>
-            </div>
+function DashboardContainer() {
+    return (
+        <div className="my-dashboard">
+            <Space>
+                <CustomerModalButton />
+                <PDFButton />
+            </Space>
         </div>
-    </div>
-</div>
-```
-Let's create a directory `ButtonModal` and inside it the file `index.jsx`, in the following directory.
+    );
+}
 
- File location
-
-```plaintext
-/apps/myapp/ui/src/components/
+export default DashboardContainer;
 ```
 
-Now open again the file you created before `index.jsx` and add the code below:
+This file is built in React, and now we have the two buttons imported into the dashboard.
 
-Note in the following code, that the method `netuno.modal.create()` opens the form called `Test`.
+Note that the buttons are being imported at the beginning of the code, but these button files don't exist yet.
 
-In the callback you can test the action events in the form.
+So let's create the code for the buttons, which will be components.
 
-File location
+## Button to Form in Modal
 
-```plaintext
-/apps/myapp/ui/src/components/ButtonModal/index.jsx
-```
+Let's create a `CustomerModalButton` folder and within it the `index.jsx` file, in the following path:
 
-Code
+- `📂 ui/src/components/`
 
-```javascript
-import React, { Component } from "react";
+Components are very specific features with a well-defined purpose that can be imported and used in other components, 
+but are typically used in containers.
 
-export default class ButtonModal extends Component {
-    constructor() {
-        super();
-        this.state = {};
-        this.handleClick = this.handleClick.bind(this);
-    }
+Create the `CustomerModalButton` folder; it should look like this:
 
-    handleClick(event) {
+- `📂 ui/src/components/CustomerModalButton`
+
+And inside the `CustomerModalButton` folder, create the code file `index.jsx`:
+
+- `📂 ui/src/components/CustomerModalButton/index.jsx`
+
+In the file you created, `index.jsx`, add the code below:
+
+```javascript title="ui/src/components/CustomerModalButton/index.jsx"
+import { Button } from 'antd';
+
+function CustomerModalButton() {
+    const onClick = () => {
         netuno.modal.create({
-            name: 'test',
+            name: 'customer',
             callback: function (modal) {
                 let form = modal.find('[netuno-form]');
 
                 form.on('netuno:new', () => {
-                    console.log('You clicked new');
+                    console.log('Creating a new Customer.');
                 });
 
                 form.on('netuno:save', () => {
                     netuno.modal.hide(modal)
-                    console.log('You clicked save');
+                    console.log('Saved a Customer.');
+                });
+
+                form.on('netuno:delete', () => {
+                    netuno.modal.hide(modal)
+                    console.log('Removed a Customer.');
                 });
 
                 form.on('netuno:back', () => {
-                    console.log('You clicked back');
+                    console.log('Clicked back.');
                 });
 
                 netuno.loadForm(form);
                 netuno.modal.show(modal);
             }
         });
-    }
-
-    render() {
-        return (
-            <button
-                onClick={this.handleClick}
-                className="btn btn-default">
-                Open Modal Form
-            </button>
-        );
-    }
+    };
+    return (
+        <div>
+            <Button type="primary" onClick={ onClick }>
+                Open Customer Form
+            </Button>
+        </div>
+    );
 }
+
+export default CustomerModalButton;
 ```
 
-### Build the Export PDF button
+Notice in the code above that the `netuno.modal.create(...)` method opens the form named `Customer`.
 
-The button to generate PDF will depend on a responsible service to create the PDF that will be called when there is a click on the `Generate PDF` button. Let's see how to do this service below.
+In the callback, you can observe the events of the actions performed while using the form.
 
-Before we see the button code we will create a new directory `ButtonPDF` and inside it the file `index.jsx`, in the following directory:
+Now one of the buttons is finalized, and the import of this button into `DashboardContainer` will work.
 
- File location
+## Export PDF Button
 
-```plaintext
-/apps/myapp/ui/src/components/
-```
+The button to generate the PDF will depend on a service responsible for creating the PDF file that will be called 
+when the `Generate PDF` button is clicked.
 
-Now open again the file you created before `index.jsx` and add the following code:
+> We'll see how to do this service below, but first let's create the button in React.
 
+Let's create a new folder `PDFButton` and inside it the file `index.jsx`, in the following path:
 
-File location
+- `ui/src/components/PDFButton/index.jsx`
 
-```plaintext
-/apps/myapp/ui/src/components/ButtonPDF/index.jsx
-```
+Now, open the new `index.jsx` file and add the code below:
 
-Code
+```javascript title="ui/src/components/PDFButton/index.jsx"
+import { Button } from 'antd';
 
-```javascript
-import React, { Component } from "react";
-
-export default class ButtonPDF extends Component {
-    constructor() {
-        super();
-    }
-
-    render() {
-        return (
-            <a
-                target='_blank'
-                href='/services/export-pdf.netuno'
-                className="btn btn-default">
-                Export PDF
-            </a>
-        );
-    }
+function PDFButton() {
+    return (
+        <div>
+            <Button
+                type="primary"
+                href="/services/customer/pdf-export"
+                target="blank">
+                Generate PDF
+            </Button>
+        </div>
+    );
 }
+
+export default PDFButton;
 ```
 
-### Develop the service that creates the PDF
+This button will open the service address in a new tab, which generates a PDF file with the list of customers
+registered in the system.
 
-Finally, below is the code of the service that will be responsible for generating the PDF.
+The last button is complete, and the import of this button into the `DashboardContainer` will
+work.
 
-Note the previous code excerpt where we only need to add the `url` of the service in the _`href`_ attribute of the button.
+That's it! Now we can compile the frontend in React to test everything.
 
-Let's create the following file _`export-pdf.js`_, in the following directory:
+## Compiling the Frontend
 
-File location
+React needs to be compiled to generate the final JavaScript that can be processed by the browser.
 
-```plaintext
-/apps/myapp/server/services/
+Open the terminal in the application folder and go to the `ui` folder, from the Netuno root:
+
+- `📂 apps/myapp/ui`
+
+Run the command:
+
+- `pnpm run build`
+
+This will perform the production-optimized compilation of the frontend.
+
+> Refresh the backend page in the browser to see the changes.
+
+If you want to avoid constantly manually running the compilation command with each change to the frontend code,
+run the quick development build that watches for file changes, so the quick build
+is executed automatically:
+
+- `pnpm run watch`
+
+> To see each change, refresh the backoffice page in the browser.
+
+Compilation errors are displayed in the terminal.
+
+Runtime errors are displayed in the browser console; remember to check for errors.
+
+### Integrated Compilation
+
+Another alternative is to integrate the compilation commands with the Netuno server, consolidating everything into
+a single terminal. This avoids having multiple terminals open and optimizes the use of having everything in a 
+single central terminal.
+
+Open the application configuration file in your editor:
+
+- `config/_development.json`
+
+Change `enabled` to `true`.
+
+```json title="config/_development.json"
+  ...
+  "commands": [{
+    "command": "pnpm run watch",
+    "enabled": true,
+    "install": "pnpm install",
+    "path": "ui"
+  }],
+  ...
 ```
-Copy and paste the following code into the _`export-pdf.js`_ file
 
-```javascript
+Restart the Netuno server for this new configuration to take effect.
+
+> To stop the Netuno server from running in the terminal, close it by pressing CTRL + C in the terminal.
+
+Restart the Netuno server by indicating the application:
+
+```shell
+./netuno server app=myapp
+```
+
+Notice that the Netuno server is now automatically executing the frontend compilation commands.
+
+All integrated into the same terminal.
+
+## Service that generates the PDF
+
+Since the `Generate PDF` button doesn't work yet, this is because the API service that
+generates the PDF itself still needs to be programmed.
+
+To conclude, here's the code for the service that will be responsible for generating the PDF.
+
+Note the previous code snippet for the `Generate PDF` button; we only need to add the service's URL to the button's _`href`_ attribute.
+
+Let's create the `📂 customer` folder and the following file, `pdf-export.js`, in:
+
+- `server/services/customer/pdf-export.js`
+
+> Inside the `📂 server` folder is where we develop the backend API.
+
+Copy and paste the following code:
+
+```javascript title="server/services/customer/pdf-export.js"
 _header.contentType('pdf')
 
-var pdfDocument = _pdf.newDocument(_pdf.pageSize('A5'));
-
-var viksiScript = _pdf.font(_storage.filesystem('server', 'samples/export-pdf', 'viksi-script.ttf'), true);
-var helvetica = _pdf.font('helvetica');
+const pdfDocument = _pdf.newDocument(_pdf.pageSize('A5'));
 
 pdfDocument.add(
-    _pdf.image(_storage.filesystem('server', 'samples/export-pdf', 'logo.png'))
-        .scaleAbsolute(120, 36)
-)
-
-pdfDocument.add(
-    _pdf.paragraph('My Custom Font!')
-        .setFont(viksiScript)
-        .setFontSize(30)
+    _pdf.paragraph('Customers List:')
+        .setFontSize(16)
         .setFontColor(_pdf.color("#1abc9c"))
 )
 
-pdfDocument.add(
-    _pdf.paragraph('Helvetica!')
-        .setFont(helvetica)
-        .setFontSize(15)
-)
+const dbCustomers = _db.form('customer').all()
+
+for (const dbCustomer of dbCustomers) {
+    pdfDocument.add(
+        _pdf.paragraph(dbCustomer.getString('nome'))
+            .setFontSize(12)
+            .setFontColor(_pdf.color("#748dae"))
+    )
+}
 
 pdfDocument.close()
 ```
 
-It is important to analyze the `_storage.filesystem()` method.
+You can check the service is running by opening the following address in your browser:
 
-And this way we import the files into the PDF or any other resource.
+- http://localhost:9000/services/customer/pdf-export
 
-To complete the import, let's copy the `export-pdf` folder from the following directory:
+Any execution errors will appear in the Netuno server terminal.
 
-File location
+Now, the `Generate PDF` button on the dashboard works properly.
 
-```plaintext
-/apps/demo/storage/filesystem/server/samples/
-```
-Then we will paste the folder in the following directory:
+## Conclusion
 
-```plaintext
-/apps/myapp/storage/filesystem/server/samples/
-```
-There you go! Now you can do your tests.
+This tutorial provided an overview of custom frontend development by modifying the dashboard, creating forms and 
+fields, performing SQL queries on a database, and creating an API service on the backend.
+
+We also demonstrated how to integrate frontend commands with the Netuno backend server in a single centralized 
+terminal, speeding up development by avoiding scattered queries across multiple terminals.
+
+Note how quickly a form was created to record and manipulate information in a database.
+
+See how agile the development of API services on the backend is, without the need to restart the server for each 
+code change, which is not typically the case with other technologies.
+
+The Netuno platform is designed to accelerate and optimize full-stack development.
+
+Continue exploring Netuno further and definitely speed up your development work.
+
+Join our Discord server, follow us on social media, and watch tutorial videos on our YouTube channel. Links are 
+at the end of this page.
