@@ -4,7 +4,7 @@ title: MariaDB (MySQL)
 sidebar_label: MariaDB (MySQL)
 ---
 
-## Introdução
+## Introduction
 
 <a href="https://mariadb.org/" target="_blank">MariaDB</a> is the innovative open-source relational database compatible with **MySQL**.
 
