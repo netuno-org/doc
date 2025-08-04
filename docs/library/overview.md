@@ -12,7 +12,7 @@ It reduces development effort and time, as well as production costs in administr
 
 Learn how Netuno further improves your programming experience so you may have a creative and non-repetitive experience while keeping the same performance levels since the development to the execution:
 
-> The Netuno platform is free, [start now](../get-started/installation).
+> The Netuno platform is free, [start now](/docs/get-started/installation).
 
 ### Forms and fields
 
@@ -52,4 +52,4 @@ Using code generators optimized for high performance and using the recent <a hre
 
 Discover how to explore the development in Netuno:
 
-* [Know More](../get-started/tutorials)
+* [Know More](/docs/get-started/tutorials)
