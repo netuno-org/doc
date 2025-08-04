@@ -6,18 +6,18 @@ title: Introdução
 
 Esta secção contém a grande maioria da lógica de back-end sobre o Netuno. Irá encontrar definições, explicações e excertos de código que o ajudarão a percorrer uma lógica funcional sobre como construir o seu WebSite a partir do Netuno.
 
-> A plataforma Netuno é gratuita, [comece já](../get-started/installation).
+> A plataforma Netuno é gratuita, [comece já](/docs/get-started/installation).
 
 ## Tutoriais
 
 Descubra como explorar o desenvolvimento no Netuno:
 
-[Saber Mais](../get-started/tutorials)
+[Saber Mais](/docs/get-started/tutorials)
 
 ## Objetos
 Esta secção contém a informação acerca dos Objetos do Netuno, nomeadamente Values.
 
-* [Values](objects/Values.md)
+* [Values](/docs/library/objects/Values)
 
 ## Recursos
 Contém toda a informação acerca dos recursos de auxilio à programação disponbilizados pelo Netuno.
