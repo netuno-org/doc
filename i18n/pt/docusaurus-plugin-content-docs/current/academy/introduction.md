@@ -22,7 +22,7 @@ No decorrer da aprendizagem isto acaba por ser desenvolvido indiretamente, mas m
 
 O Netuno simplifica muitas camadas no desenvolvimento de soluções web, aplicações, backoffice e API REST, mas é preciso o fator humano com a sua criatividade e inteligência para fazer com que tudo aconteça.
 
-> A plataforma Netuno é gratuita, [comece já](../get-started/installation).
+> A plataforma Netuno é gratuita, [comece já](/docs/get-started/installation).
 
 Por isso avance com confiança sabendo que vai conseguir e quando estiver perdido por que não pedir ajuda?
 
