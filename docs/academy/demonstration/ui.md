@@ -8,11 +8,11 @@ title: Interface & Design
 
 The user interface _(UI)_ is the point of human-computer interaction and communication in a device. Will be performed inside the **ui** folder and is also the way through which a user interacts with an application or a website.
 
-The _UI_ folder contains by default the development environment in <a href="https://reactjs.org/" target="_blank">ReactJS</a>, with <a href="https://ant.design/" target="_blank">Ant.Design</a> and <a href="http://lesscss.org/" target="_blank">Less</a>, while using <a href="https://webpack.js.org/" target="_blank">Webpack</a>.
+The _UI_ folder contains by default the development environment in <a href="https://reactjs.org/" target="_blank">ReactJS</a>, with <a href="https://ant.design/" target="_blank">Ant.Design</a> and <a href="http://lesscss.org/" target="_blank">Less</a>, while using <a href="https://vite.dev/" target="_blank">Vite</a>.
 
 These technologies are widely used today, however, this pre-defined environment will be not limited to these technologies themselves.
 
-The user is free to use any other technology like **VueJS**, **MaterialUI**, **Sass**, **Bootstrap**, **TypeScript**, others. They can just change within the `📂 folder ui` the settings of `📂 package.json` and `📂 webpack.config.js` for the technologies they will choose.
+The user is free to use any other technology like **VueJS**, **MaterialUI**, **Sass**, **Bootstrap**, **TypeScript**, others. They can just change within the `📂 folder ui` the settings of `📂 package.json` and `📂 vite.config.js` for the technologies they will choose.
 
 > ### Integrated Terminal
 >
@@ -33,7 +33,7 @@ Assuming you have Visual Studio Code or another editor open with the **Demo** ap
 
 Open the file below in the editor:
 
-`📂 ui/src/containers/DashboardContainer/index.js`
+`📂 ui/src/containers/DashboardContainer/index.jsx`
 
 Next step will be to change this existing code.
 
@@ -119,21 +119,24 @@ This will call the method that runs the service <a href="http://localhost:9000/s
 
 ### Compilation
 
-**Save** the file and then notice that at the **terminal** where you have Netuno running it will appear the result of the new compilation of the **ui**, adding lines from the compilation result of the <a href="https://reactjs.org/" target="_blank">ReactJS</a> + <a href="https://webpack.js.org/" target="_blank">WebPack</a>.
+**Save** the file and then notice that at the **terminal** where you have Netuno running it will appear the result of the new compilation of the **ui**, adding lines from the compilation result of the <a href="https://reactjs.org/" target="_blank">ReactJS</a> + <a href="https://vite.dev/" target="_blank">Vite</a>.
 
 The expected outcome into **terminal** should be like this:
 
 ```
-Hash: abe630735cdaa909166b
-Version: webpack 4.41.2
-Time: 969ms
-Built at: 01/12/2019 21:42:28
-     Asset      Size  Chunks                   Chunk Names
-   main.js  3.11 MiB    main  [emitted]        main
-main.js.map  3.47 MiB    main  [emitted] [dev]  main
-Entrypoint main = main.js main.js.map
-[./src/containers/DashboardContainer/index.jsx] 4.22 KiB {main} [built]
-   + 425 hidden modules
+vite v5.4.19 building for production...
+
+(!) outDir .../public is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+
+watching for file changes...
+
+build started...
+✓ 2983 modules transformed.
+../public/styles/ui.css    0.08 kB │ gzip:   0.09 kB
+../public/scripts/ui.js  338.81 kB │ gzip: 105.17 kB
+built in 2110ms.
 ```
 
 If there is an error with the compilation then it will appear into the **terminal** with an indication issue.
