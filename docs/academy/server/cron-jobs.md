@@ -249,9 +249,9 @@ This means that through code we can manage everything.
 
 ### Create New Task
 
-To create a new task, we create its schedule through [`_cron.schedule`](../../library/resources/cron#schedule).
+To create a new task, we create its schedule through [`_cron.schedule`](/docs/library/resources/cron#schedule).
 
-The [`_cron.schedule`](../../library/resources/cron#schedule) receives the following parameters:
+The [`_cron.schedule`](/docs/library/resources/cron#schedule) receives the following parameters:
 
 1. Task identification key: `key`.
 2. Configuration of the scheduling time for execution.
@@ -276,7 +276,7 @@ Where this file is executed whenever the application is started by the Netuno se
 
 ### Remove Task
 
-To remove a specific task we use [`_cron.remove(key)`](../../library/resources/cron#remove).
+To remove a specific task we use [`_cron.remove(key)`](/docs/library/resources/cron#remove).
 
 Where `key` is the task identification key.
 
@@ -288,7 +288,7 @@ _cron.remove('my-task')
 
 ### List Tasks
 
-Through [`_cron.schedules()`](../../library/resources/cron#schedules) we can list all configured tasks.
+Through [`_cron.schedules()`](/docs/library/resources/cron#schedules) we can list all configured tasks.
 
 Example of how to list all scheduled tasks:
 
@@ -320,7 +320,7 @@ _out.println('</table>')
 
 ### Pause Tasks
 
-Using [`_cron.pause(key)`](../../library/resources/cron#pause) we can pause the execution of a specific task.
+Using [`_cron.pause(key)`](/docs/library/resources/cron#pause) we can pause the execution of a specific task.
 
 Example of how to pause all scheduled tasks:
 
@@ -344,7 +344,7 @@ _out.println('</table>')
 
 ### Resume Tasks
 
-Using [`_cron.resume(key)`](../../library/resources/cron#resume) we can resume the execution of a specific task.
+Using [`_cron.resume(key)`](/docs/library/resources/cron#resume) we can resume the execution of a specific task.
 
 Example of how to resume all scheduled tasks, and shows when the tasks will be executed:
 

@@ -224,7 +224,7 @@ Check if the `cors` configuration already exists or add this example:
 
 With this configuration implemented, you can create the services you want without encountering CORS errors.
 
-> More about [CORS](../server/services/cors.md)
+> More about [CORS](/docs/academy/server/services/cors)
 
 ## Environment Variables
 

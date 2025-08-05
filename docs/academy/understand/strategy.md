@@ -52,7 +52,7 @@ Netuno is being used in various fields, such as:
 - In the generation of reports.
 - And much more...
 
-> The Netuno platform is free, [start now](../get-started/installation).
+> The Netuno platform is free, [start now](/docs/get-started/installation).
 
 With the automatic data management interface that supports user and group profiles, it is possible to use Netuno as a backoffice but also as an application interface for the end user, because it quickly allows you to create an experimental prototype of the project and start testing and filing your data structure to provide a strong foundation for the programming that will be carried out.
 
@@ -72,7 +72,7 @@ Conquer new challenges through the advantages that Netuno offers, gain time and 
 
 ![Netuno is the platform for launching Web projects](/docs/assets/business/introduction-conquest.jpg "Netuno is the platform for launching Web projects.")
 
-[Start now](../get-started/installation) explore Netuno and enjoy these and other advantages you will discover.
+[Start now](/docs/get-started/installation) explore Netuno and enjoy these and other advantages you will discover.
 
 You can also collaborate with us when requesting new features you need or report unwanted situations.
 

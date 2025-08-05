@@ -54,4 +54,4 @@ The diagram mode allows the user to have an overview of the forms created as wel
 
 Save the form and move on to the next step: creating fields!
 
-See [here](fields.md) how to start creating fields.
+See [here](/docs/academy/ui/fields) how to start creating fields.

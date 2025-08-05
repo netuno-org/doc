@@ -4,7 +4,7 @@ title: Sending Emails
 sidebar_label: Sending Emails
 ---
 ## Before we begin
-Before proceeding make sure you have the basics in _**JavaScript**_ and that you already have the Netuno basics with the step-by-step available at [Academy](../../overview).
+Before proceeding make sure you have the basics in _**JavaScript**_ and that you already have the Netuno basics with the step-by-step available at [Academy](/docs/academy/overview).
 
 ## Sending emails with Netuno
 

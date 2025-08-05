@@ -8,7 +8,7 @@ sidebar_label: XLS - Excel
 
 Netuno generates EXCEL files compatible with LibreOffice, OpenOffice, Microsoft Office, Google Drive, etc.
 
-Through the [XLS](../../../library/resources/xls) resource that allows a low-code abstraction of [Apache POI](https://poi.apache.org/) for the various programming languages supported by Netuno.
+Through the [XLS](/docs/library/resources/xls) resource that allows a low-code abstraction of [Apache POI](https://poi.apache.org/) for the various programming languages supported by Netuno.
 
 We can either generate XLSX, XLS or ODS files.
 
@@ -362,7 +362,7 @@ const newSheet = excel.createSheet('New Sheet')
 
 > In cell, image and data manipulation methods, the reference to the spreadsheet object can be assigned to the first parameter.
 >
-> It depends on which sheet is active, it is possible to change the active sheet with the [activeSheet](../../../library/resources/xls#activesheet) method.
+> It depends on which sheet is active, it is possible to change the active sheet with the [activeSheet](/docs/library/resources/xls#activesheet) method.
 
 Example of how to insert an image into the new spreadsheet:
 
