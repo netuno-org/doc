@@ -8,11 +8,11 @@ title: Interface & Design
 
 O desenvolvimento do frontend, ou seja, o que é processado visualmente pelo browser, é realizado dentro da pasta **ui**.
 
-Como padrão, nesta pasta encontra-se o ambiente de desenvolvimento desenvolvido em <a href="https://reactjs.org/" target="_blank">ReactJS</a> com <a href="https://ant.design/" target="_blank">Ant.Design</a> e <a href="http://lesscss.org/" target="_blank">Less</a>, compilado utilizando o <a href="https://webpack.js.org/" target="_blank">Webpack</a>.
+Como padrão, nesta pasta encontra-se o ambiente de desenvolvimento desenvolvido em <a href="https://reactjs.org/" target="_blank">ReactJS</a> com <a href="https://ant.design/" target="_blank">Ant.Design</a> e <a href="http://lesscss.org/" target="_blank">Less</a>, compilado utilizando o <a href="https://vite.dev/" target="_blank">Vite</a>.
 
 Apesar de o ambiente padrão se encontrar configurado para estas tecnologias, visto serem bastante utilizadas hoje em dia, não se encontra limitado às mesmas.
 
-Caso pretenda utilizar outra tecnologia como VueJS, MaterialUI, Sass, Bootstrap, TypeScript, etc... basta alterar dentro da pasta `📂 ui` as configurações do `📂 package.json` e do `📂 webpack.config.js` para as tecnologias que preferir mais.
+Caso pretenda utilizar outra tecnologia como VueJS, MaterialUI, Sass, Bootstrap, TypeScript, etc... basta alterar dentro da pasta `📂 ui` as configurações do `📂 package.json` e do `📂 vite.config.js` para as tecnologias que preferir mais.
 
 > ### Terminal Integrado
 >
@@ -32,7 +32,7 @@ Com estes dados vamos e apresentá-los numa tabela e um gráfico.
 
 Assumindo que tem o Visual Studio Code ou outro editor de texto aberto com a aplicação de **demo**_nstração_ abra o seguinte ficheiro no editor:
 
-`📂 ui/src/containers/DashboardContainer/index.js`
+`📂 ui/src/containers/DashboardContainer/index.jsx`
 
 Vamos alterar este código já existente.
 
@@ -118,21 +118,24 @@ Esta nova linha de código vai chamar o método que executa o serviço <a href="
 
 ### Compilação
 
-**Grave** o ficheiro e logo a seguir repare que no **terminal** onde tem o Netuno em execução vai aparecer o resultado da nova compilação do **ui**, com novas linhas do resultado de compilação do <a href="https://reactjs.org/" target="_blank">ReactJS</a> + <a href="https://webpack.js.org/" target="_blank">WebPack</a>.
+**Grave** o ficheiro e logo a seguir repare que no **terminal** onde tem o Netuno em execução vai aparecer o resultado da nova compilação do **ui**, com novas linhas do resultado de compilação do <a href="https://reactjs.org/" target="_blank">ReactJS</a> + <a href="https://vite.dev/" target="_blank">Vite</a>.
 
 O output esperado no **terminal** deverá ser algo semelhante ao seguinte:
 
 ```
-Hash: abe630735cdaa909166b
-Version: webpack 4.41.2
-Time: 969ms
-Built at: 01/12/2019 21:42:28
-     Asset      Size  Chunks                   Chunk Names
-   main.js  3.11 MiB    main  [emitted]        main
-main.js.map  3.47 MiB    main  [emitted] [dev]  main
-Entrypoint main = main.js main.js.map
-[./src/containers/DashboardContainer/index.jsx] 4.22 KiB {main} [built]
-   + 425 hidden modules
+vite v5.4.19 building for production...
+
+(!) outDir .../public is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+
+watching for file changes...
+
+build started...
+✓ 2983 modules transformed.
+../public/styles/ui.css    0.08 kB │ gzip:   0.09 kB
+../public/scripts/ui.js  338.81 kB │ gzip: 105.17 kB
+built in 2110ms.
 ```
 
 Caso haja algum erro na compilação então aparecerá no **terminal** a indicação do problema.

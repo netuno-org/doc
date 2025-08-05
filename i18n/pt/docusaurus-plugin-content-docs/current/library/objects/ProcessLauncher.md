@@ -20,7 +20,7 @@ Gerencia a execução de processos, permite executar programas externos e comand
 
 ---
 
-#### <span style={{color: '#008000'}}>autoCloseOutputStreams</span>(<span style={{color: '#FF8000'}}>autoCloseOutputStreams</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>autoCloseOutputStreams</span>(<span style={{color: '#FF8000'}}>autoCloseOutputStreams</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -29,7 +29,7 @@ Gerencia a execução de processos, permite executar programas externos e comand
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -46,7 +46,7 @@ Gerencia a execução de processos, permite executar programas externos e comand
 
 ---
 
-#### <span style={{color: '#008000'}}>await</span>(<span style={{color: '#FF8000'}}>wait</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>await</span>(<span style={{color: '#FF8000'}}>wait</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -55,7 +55,7 @@ Gerencia a execução de processos, permite executar programas externos e comand
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -91,7 +91,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>directory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>directory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -104,13 +104,13 @@ Define o caminho onde os comandos serão executados.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>directory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>directory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -119,17 +119,17 @@ Define o caminho onde os comandos serão executados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **diretorio** | _[File](../objects/File)_ | O local onde o comando será executado. |
+| **diretorio** | _[File](/docs/library/objects/File)_ | O local onde o comando será executado. |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>directory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>directory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -138,11 +138,11 @@ Define o caminho onde os comandos serão executados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **diretorio** | _[Storage](../resources/storage)_ | O local onde o comando será executado. |
+| **diretorio** | _[Storage](/docs/library/resources/storage)_ | O local onde o comando será executado. |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 Instância do recurso de sistema operacional.
 
@@ -152,24 +152,24 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>env</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>env</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>env</span>(<span style={{color: '#FF8000'}}>env</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>env</span>(<span style={{color: '#FF8000'}}>env</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **env** | _[Values](../objects/Values)_ |   |
+| **env** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -178,12 +178,12 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>errorOutput</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
+#### <span style={{color: '#008000'}}>errorOutput</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **err** | _[OutputStream](../objects/OutputStream)_ |   |
+| **err** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -222,38 +222,38 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>errorOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>errorOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Retorno
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>errorOutputStream</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>errorOutputStream</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **err** | _[OutputStream](../objects/OutputStream)_ |   |
+| **err** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>errorOutputStream</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>errorOutputStream</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **err** | _[OutputStream](../objects/OutputStream)_ |   |
+| **err** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -262,7 +262,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](../objects/ProcessResult)</span>
+#### <span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
 ##### Descrição
 
 Executa um comando no sistema operacional e obtém o resultado da execução, o primeiro item é o comando e os seguintes são parâmetros.
@@ -275,13 +275,13 @@ Executa um comando no sistema operacional e obtém o resultado da execução, o 
 
 ##### Retorno
 
-( _[ProcessResult](../objects/ProcessResult)_ )
+( _[ProcessResult](/docs/library/objects/ProcessResult)_ )
 
 Resultado da execução do comando no sistema operacional, incluí o output.
 
 ---
 
-#### <span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](../objects/ProcessResult)</span>
+#### <span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
 ##### Descrição
 
 Executa um comando no sistema operacional e obtém o resultado da execução, o primeiro item é o comando e os seguintes são parâmetros.
@@ -294,13 +294,13 @@ Executa um comando no sistema operacional e obtém o resultado da execução, o 
 
 ##### Retorno
 
-( _[ProcessResult](../objects/ProcessResult)_ )
+( _[ProcessResult](/docs/library/objects/ProcessResult)_ )
 
 Resultado da execução do comando no sistema operacional, incluí o output.
 
 ---
 
-#### <span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](../objects/ProcessResult)</span>
+#### <span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
 ##### Descrição
 
 Executa um comando no sistema operacional e obtém o resultado da execução, o primeiro item é o comando e os seguintes são parâmetros.
@@ -309,11 +309,11 @@ Executa um comando no sistema operacional e obtém o resultado da execução, o 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **comando** | _[Values](../objects/Values)_ | O comando e parâmetros opcionais que serão executados. |
+| **comando** | _[Values](/docs/library/objects/Values)_ | O comando e parâmetros opcionais que serão executados. |
 
 ##### Retorno
 
-( _[ProcessResult](../objects/ProcessResult)_ )
+( _[ProcessResult](/docs/library/objects/ProcessResult)_ )
 
 Resultado da execução do comando no sistema operacional, incluí o output.
 
@@ -323,7 +323,7 @@ Resultado da execução do comando no sistema operacional, incluí o output.
 
 ---
 
-#### <span style={{color: '#008000'}}>executeAsync</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](../objects/ProcessResult)</span>
+#### <span style={{color: '#008000'}}>executeAsync</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -332,12 +332,12 @@ Resultado da execução do comando no sistema operacional, incluí o output.
 
 ##### Retorno
 
-( _[ProcessResult](../objects/ProcessResult)_ )
+( _[ProcessResult](/docs/library/objects/ProcessResult)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>executeAsync</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](../objects/ProcessResult)</span>
+#### <span style={{color: '#008000'}}>executeAsync</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -346,21 +346,21 @@ Resultado da execução do comando no sistema operacional, incluí o output.
 
 ##### Retorno
 
-( _[ProcessResult](../objects/ProcessResult)_ )
+( _[ProcessResult](/docs/library/objects/ProcessResult)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>executeAsync</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](../objects/ProcessResult)</span>
+#### <span style={{color: '#008000'}}>executeAsync</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **command** | _[Values](../objects/Values)_ |   |
+| **command** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
-( _[ProcessResult](../objects/ProcessResult)_ )
+( _[ProcessResult](/docs/library/objects/ProcessResult)_ )
 
 
 ---
@@ -398,10 +398,10 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>getEnv</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getEnv</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -422,10 +422,10 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>getErrorOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>getErrorOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Retorno
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -470,10 +470,10 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>getOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>getOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Retorno
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -550,7 +550,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>inheritErrorOutput</span>(<span style={{color: '#FF8000'}}>inheritErrorOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>inheritErrorOutput</span>(<span style={{color: '#FF8000'}}>inheritErrorOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -559,7 +559,7 @@ O local onde o comando será executado.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -576,7 +576,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>inheritOutput</span>(<span style={{color: '#FF8000'}}>inheritOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>inheritOutput</span>(<span style={{color: '#FF8000'}}>inheritOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -585,7 +585,7 @@ O local onde o comando será executado.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -718,16 +718,16 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>output</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>output</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -762,24 +762,24 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>outputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>outputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Retorno
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>outputStream</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>outputStream</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -796,7 +796,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>readErrorOutput</span>(<span style={{color: '#FF8000'}}>readErrorOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>readErrorOutput</span>(<span style={{color: '#FF8000'}}>readErrorOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -805,7 +805,7 @@ O local onde o comando será executado.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -822,7 +822,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>readOutput</span>(<span style={{color: '#FF8000'}}>readOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>readOutput</span>(<span style={{color: '#FF8000'}}>readOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -831,7 +831,7 @@ O local onde o comando será executado.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -848,7 +848,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>redirectErrorStream</span>(<span style={{color: '#FF8000'}}>redirectErrorStream</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>redirectErrorStream</span>(<span style={{color: '#FF8000'}}>redirectErrorStream</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -857,7 +857,7 @@ O local onde o comando será executado.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -866,7 +866,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>setAutoCloseOutputStreams</span>(<span style={{color: '#FF8000'}}>autoCloseOutputStreams</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setAutoCloseOutputStreams</span>(<span style={{color: '#FF8000'}}>autoCloseOutputStreams</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -875,7 +875,7 @@ O local onde o comando será executado.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -884,7 +884,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>setAwait</span>(<span style={{color: '#FF8000'}}>wait</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setAwait</span>(<span style={{color: '#FF8000'}}>wait</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -893,7 +893,7 @@ O local onde o comando será executado.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -916,7 +916,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>setDirectory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setDirectory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -929,13 +929,13 @@ Define o caminho onde os comandos serão executados.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setDirectory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setDirectory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -944,17 +944,17 @@ Define o caminho onde os comandos serão executados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **diretorio** | _[File](../objects/File)_ | O local onde o comando será executado. |
+| **diretorio** | _[File](/docs/library/objects/File)_ | O local onde o comando será executado. |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setDirectory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setDirectory</span>(<span style={{color: '#FF8000'}}>diretorio</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Descrição
 
 Define o caminho onde os comandos serão executados.
@@ -963,11 +963,11 @@ Define o caminho onde os comandos serão executados.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **diretorio** | _[Storage](../resources/storage)_ | O local onde o comando será executado. |
+| **diretorio** | _[Storage](/docs/library/resources/storage)_ | O local onde o comando será executado. |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 Instância do recurso de sistema operacional.
 
@@ -977,16 +977,16 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setEnv</span>(<span style={{color: '#FF8000'}}>env</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setEnv</span>(<span style={{color: '#FF8000'}}>env</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **env** | _[Values](../objects/Values)_ |   |
+| **env** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -995,12 +995,12 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setErrorOutput</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
+#### <span style={{color: '#008000'}}>setErrorOutput</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **err** | _[OutputStream](../objects/OutputStream)_ |   |
+| **err** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -1031,12 +1031,12 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setErrorOutputStream</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
+#### <span style={{color: '#008000'}}>setErrorOutputStream</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **err** | _[OutputStream](../objects/OutputStream)_ |   |
+| **err** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -1045,16 +1045,16 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setErrorOutputStream</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setErrorOutputStream</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **err** | _[OutputStream](../objects/OutputStream)_ |   |
+| **err** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1063,16 +1063,16 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setErrorStream</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setErrorStream</span>(<span style={{color: '#FF8000'}}>err</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **err** | _[OutputStream](../objects/OutputStream)_ |   |
+| **err** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1081,7 +1081,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setExitDelay</span>(<span style={{color: '#FF8000'}}>timeLimit</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setExitDelay</span>(<span style={{color: '#FF8000'}}>timeLimit</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1090,7 +1090,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1099,7 +1099,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setInheritErrorOutput</span>(<span style={{color: '#FF8000'}}>inheritErrorOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setInheritErrorOutput</span>(<span style={{color: '#FF8000'}}>inheritErrorOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1108,7 +1108,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1117,7 +1117,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setInheritOutput</span>(<span style={{color: '#FF8000'}}>inheritOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setInheritOutput</span>(<span style={{color: '#FF8000'}}>inheritOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1126,7 +1126,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1171,16 +1171,16 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setOutput</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setOutput</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1207,16 +1207,16 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setOutputStream</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setOutputStream</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1225,7 +1225,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setReadErrorOutput</span>(<span style={{color: '#FF8000'}}>readErrorOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setReadErrorOutput</span>(<span style={{color: '#FF8000'}}>readErrorOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1234,7 +1234,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1243,7 +1243,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setReadOutput</span>(<span style={{color: '#FF8000'}}>readOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setReadOutput</span>(<span style={{color: '#FF8000'}}>readOutput</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1252,7 +1252,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1261,7 +1261,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setRedirectErrorStream</span>(<span style={{color: '#FF8000'}}>redirectErrorStream</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setRedirectErrorStream</span>(<span style={{color: '#FF8000'}}>redirectErrorStream</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1270,7 +1270,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1279,7 +1279,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setShell</span>(<span style={{color: '#FF8000'}}>shell</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setShell</span>(<span style={{color: '#FF8000'}}>shell</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1288,7 +1288,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1297,7 +1297,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setShellCommand</span>(<span style={{color: '#FF8000'}}>shellCommand</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setShellCommand</span>(<span style={{color: '#FF8000'}}>shellCommand</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1306,7 +1306,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1315,7 +1315,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setShellParameter</span>(<span style={{color: '#FF8000'}}>shellParameter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setShellParameter</span>(<span style={{color: '#FF8000'}}>shellParameter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1324,7 +1324,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1351,7 +1351,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setWaitFor</span>(<span style={{color: '#FF8000'}}>waitFor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>setWaitFor</span>(<span style={{color: '#FF8000'}}>waitFor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1360,7 +1360,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1377,7 +1377,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>shell</span>(<span style={{color: '#FF8000'}}>shell</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>shell</span>(<span style={{color: '#FF8000'}}>shell</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1386,7 +1386,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1403,7 +1403,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>shellCommand</span>(<span style={{color: '#FF8000'}}>shellCommand</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>shellCommand</span>(<span style={{color: '#FF8000'}}>shellCommand</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1412,7 +1412,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1429,7 +1429,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>shellParameter</span>(<span style={{color: '#FF8000'}}>shellParameter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>shellParameter</span>(<span style={{color: '#FF8000'}}>shellParameter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1438,7 +1438,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1455,7 +1455,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>timeLimit</span>(<span style={{color: '#FF8000'}}>timeLimit</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>timeLimit</span>(<span style={{color: '#FF8000'}}>timeLimit</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1464,7 +1464,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---
@@ -1481,7 +1481,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>waitFor</span>(<span style={{color: '#FF8000'}}>waitFor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{color: '#008000'}}>waitFor</span>(<span style={{color: '#FF8000'}}>waitFor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1490,7 +1490,7 @@ Instância do recurso de sistema operacional.
 
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---

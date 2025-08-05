@@ -199,7 +199,7 @@ Whether it is active or inactive on the current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setConnectTimeout</span>(<span style={{color: '#FF8000'}}>conectionTimeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setConnectTimeout</span>(<span style={{color: '#FF8000'}}>conectionTimeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
 Defines the conection timeout of the current object.
@@ -212,7 +212,7 @@ Defines the conection timeout of the current object.
 
 ##### Return
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Returns the current object.
 
@@ -222,7 +222,7 @@ Returns the current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setDebug</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setDebug</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
 Defines whether it is activated or not.
@@ -235,7 +235,7 @@ Defines whether it is activated or not.
 
 ##### Return
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Current object.
 
@@ -245,7 +245,7 @@ Current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
 Defines the state of the object, whether it is activated or not.
@@ -258,7 +258,7 @@ Defines the state of the object, whether it is activated or not.
 
 ##### Return
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Current object.
 
@@ -268,7 +268,7 @@ Current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setHost</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setHost</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
 Defines the host of the current object.
@@ -281,7 +281,7 @@ Defines the host of the current object.
 
 ##### Return
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Returns the current object.
 
@@ -291,7 +291,7 @@ Returns the current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setPassiveMode</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setPassiveMode</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
 Defines whether modo passivo is active or inactive on the current object.
@@ -304,7 +304,7 @@ Defines whether modo passivo is active or inactive on the current object.
 
 ##### Return
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Returns the current object.
 
@@ -314,7 +314,7 @@ Returns the current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setPassword</span>(<span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setPassword</span>(<span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
 Defines the password of the current object.
@@ -327,7 +327,7 @@ Defines the password of the current object.
 
 ##### Return
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Returns the current object.
 
@@ -337,7 +337,7 @@ Returns the current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setPort</span>(<span style={{color: '#FF8000'}}>port</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setPort</span>(<span style={{color: '#FF8000'}}>port</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
 Defines the port of the current object.
@@ -350,7 +350,7 @@ Defines the port of the current object.
 
 ##### Return
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Returns the current object.
 
@@ -360,7 +360,7 @@ Returns the current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSSL</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setSSL</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
 Defines whether SSL is active or inactive on the current object.
@@ -373,7 +373,7 @@ Defines whether SSL is active or inactive on the current object.
 
 ##### Return
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Returns the current object.
 
@@ -383,7 +383,7 @@ Returns the current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSecureImplicit</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setSecureImplicit</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
 Defines whether FTPS implícito is active or inactive on the current object.
@@ -396,7 +396,7 @@ Defines whether FTPS implícito is active or inactive on the current object.
 
 ##### Return
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Returns the current object.
 
@@ -406,7 +406,7 @@ Returns the current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setTLS</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setTLS</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
 Defines whether TSL is active or inactive on the current object.
@@ -419,7 +419,7 @@ Defines whether TSL is active or inactive on the current object.
 
 ##### Return
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Returns the current object.
 
@@ -429,7 +429,7 @@ Returns the current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setUsername</span>(<span style={{color: '#FF8000'}}>username</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setUsername</span>(<span style={{color: '#FF8000'}}>username</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
 Defines the username of the current object.
@@ -442,7 +442,7 @@ Defines the username of the current object.
 
 ##### Return
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Returns the current object.
 

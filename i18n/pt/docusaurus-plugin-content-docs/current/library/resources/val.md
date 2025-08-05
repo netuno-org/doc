@@ -33,7 +33,7 @@ for (const linha of listaDeDados) {
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>cast</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>cast</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Transforma um objeto em valores se possível.
@@ -46,7 +46,7 @@ Transforma um objeto em valores se possível.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O objeto convertido para valores.
 
@@ -56,7 +56,7 @@ O objeto convertido para valores.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>fromJSON</span>(<span style={{color: '#FF8000'}}>texto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>fromJSON</span>(<span style={{color: '#FF8000'}}>texto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém o values de uma string com array ou objecto em JSON.
@@ -69,7 +69,7 @@ Obtém o values de uma string com array ou objecto em JSON.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O objeto de valores carregado com a estrutura e dados obtidos com a string JSON.
 
@@ -79,7 +79,7 @@ O objeto de valores carregado com a estrutura e dados obtidos com a string JSON.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>global</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>global</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Instância do tipo Values para armazenar dados que ficam disponíveis apenas durante a execução do pedido HTTP, é útil para partilhar dados entre scripts.
@@ -95,7 +95,7 @@ _out.json(global)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados que são partilhados globalmente entre os diversos scripts durante a execução da chamada HTTP.
 
@@ -105,20 +105,20 @@ Dados que são partilhados globalmente entre os diversos scripts durante a execu
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O novo objeto de valores genérico.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
@@ -127,17 +127,17 @@ Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **obj** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.lang.Iterable_ | Objeto para carregar o novo objeto de valores criado. |
+| **obj** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable_ | Objeto para carregar o novo objeto de valores criado. |
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O novo objeto de valores iniciado com os dados do objeto passado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
@@ -150,13 +150,13 @@ Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O novo objeto de valores iniciado com os dados do objeto passado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá se será lista ou mapa.
@@ -165,11 +165,11 @@ Inicializa valores de modo genérico, o primeiro dado a ser atribuído definirá
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **obj** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Objeto para carregar o novo objeto de valores criado. |
+| **obj** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Objeto para carregar o novo objeto de valores criado. |
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O novo objeto de valores iniciado com os dados do objeto passado.
 
@@ -202,14 +202,14 @@ Resultado da verificação se é do tipo valores ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Inicia um novo objeto de valores mas do tipo lista.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O novo objeto de valores iniciado como lista.
 
@@ -234,7 +234,7 @@ Uma nova lista normal com os itens do objeto de valores recebido.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>list</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>list</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Descrição
 
 Transforma um objeto de valores para uma lista normal.
@@ -243,7 +243,7 @@ Transforma um objeto de valores para uma lista normal.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **valores** | _[Values](../objects/Values)_ | Objeto de valores no modo lista. |
+| **valores** | _[Values](/docs/library/objects/Values)_ | Objeto de valores no modo lista. |
 
 ##### Retorno
 
@@ -257,20 +257,20 @@ Uma nova lista normal com os itens do objeto de valores recebido.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Inicia um novo objeto de valores mas do tipo mapa.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O novo objeto de valores iniciado como mapa.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -283,13 +283,13 @@ Transforma um objeto de valores para um mapa normal.
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>map</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -298,11 +298,11 @@ Transforma um objeto de valores para um mapa normal.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **valores** | _[Values](../objects/Values)_ | Objeto de valores no modo mapa. |
+| **valores** | _[Values](/docs/library/objects/Values)_ | Objeto de valores no modo mapa. |
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 
@@ -312,7 +312,7 @@ Uma novo mapa normal com os dados do objeto de valores recebido.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>persistent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>persistent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Instância do tipo Values para armazenar dados que persistem na memória, ou seja os dados aqui guardados ficam disponíveis por todos os pedidos HTTP.
@@ -328,7 +328,7 @@ _out.json(persistente)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados que são mantidos em memória e que estão disponíveis para todas as solicitações.
 
@@ -434,7 +434,7 @@ String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Descrição
 
 Converte o values para JSON.
@@ -443,7 +443,7 @@ Converte o values para JSON.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **valores** | _[Values](../objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
+| **valores** | _[Values](/docs/library/objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
 
 ##### Retorno
 
@@ -453,7 +453,7 @@ String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>emHTML</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>emHTML</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Descrição
 
 Converte o values para JSON.
@@ -462,7 +462,7 @@ Converte o values para JSON.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **valores** | _[Values](../objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
+| **valores** | _[Values](/docs/library/objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
 | **emHTML** | _boolean_ | Ativa a formatação automática em HTML dos caracteres especiais que estão nos valores de texto, útil para a transformação de acentos. |
 
 ##### Retorno
@@ -473,7 +473,7 @@ String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>emHTML</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>, <span style={{color: '#FF8000'}}>indentacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>emHTML</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>, <span style={{color: '#FF8000'}}>indentacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Descrição
 
 Converte o values para JSON.
@@ -498,7 +498,7 @@ _out.println(`${mapaString}<br/>`)
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **valores** | _[Values](../objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
+| **valores** | _[Values](/docs/library/objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
 | **emHTML** | _boolean_ | Ativa a formatação automática em HTML dos caracteres especiais que estão nos valores de texto, útil para a transformação de acentos. |
 | **indentacao** | _int_ | Quantidade de espaços que deve ser utilizado na indentação do JSON. |
 
@@ -510,7 +510,7 @@ String JSON com a estrutura e dados do objeto de valores.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>indentacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>indentacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Descrição
 
 Converte o values para JSON.
@@ -519,7 +519,7 @@ Converte o values para JSON.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **valores** | _[Values](../objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
+| **valores** | _[Values](/docs/library/objects/Values)_ | Objeto de valores para ser transformado no formato JSON. |
 | **indentacao** | _int_ | Quantidade de espaços que deve ser utilizado na indentação do JSON. |
 
 ##### Retorno
@@ -553,7 +553,7 @@ Uma nova lista normal com os itens do objeto de valores recebido.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toList</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toList</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Descrição
 
 Transforma um objeto de valores para uma lista normal.
@@ -562,7 +562,7 @@ Transforma um objeto de valores para uma lista normal.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **valores** | _[Values](../objects/Values)_ | Objeto de valores no modo lista. |
+| **valores** | _[Values](/docs/library/objects/Values)_ | Objeto de valores no modo lista. |
 
 ##### Retorno
 
@@ -576,7 +576,7 @@ Uma nova lista normal com os itens do objeto de valores recebido.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toMap</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toMap</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -589,13 +589,13 @@ Transforma um objeto de valores para um mapa normal.
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toMap</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_val</span>.<span style={{color: '#008000'}}>toMap</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Descrição
 
 Transforma um objeto de valores para um mapa normal.
@@ -604,11 +604,11 @@ Transforma um objeto de valores para um mapa normal.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **valores** | _[Values](../objects/Values)_ | Objeto de valores no modo mapa. |
+| **valores** | _[Values](/docs/library/objects/Values)_ | Objeto de valores no modo mapa. |
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 Uma novo mapa normal com os dados do objeto de valores recebido.
 

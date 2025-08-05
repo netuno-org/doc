@@ -8,7 +8,7 @@ sidebar_label: Query & Execute
 
 In order to understand this tutorial as effectively as possible, we advise you to make sure you have some basic knowledge in _**JavaScript, SQL**_ and know how to create services on Netuno
 
-If you do not know how to create services please visit [Web REST Services](../services/rest).
+If you do not know how to create services please visit [Web REST Services](/docs/academy/server/services/rest).
 
 ## Query Creation
 

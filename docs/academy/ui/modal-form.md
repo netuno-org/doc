@@ -9,7 +9,7 @@ The modal loads the form in list mode or edit mode.
 
 Before starting with this tutorial, there must be at least one form created in the application.
 
-To learn how to create forms [click here](forms.md).
+To learn how to create forms [click here](/docs/academy/ui/forms).
 
 ### Example in list mode
 

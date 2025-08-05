@@ -13,7 +13,7 @@ Permite gerir as múltiplas origens e os respectivos cabeçalhos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_cors</span>.<span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[CORS](../resources/cors)</span>
+#### <span style={{fontWeight: 'normal'}}>_cors</span>.<span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[CORS](/docs/library/resources/cors)</span>
 ##### Descrição
 
 Adiciona as configurações para uma definição de CORS.
@@ -22,11 +22,11 @@ Adiciona as configurações para uma definição de CORS.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _[Values](../objects/Values)_ | A nova configuração de CORS. |
+| **config** | _[Values](/docs/library/objects/Values)_ | A nova configuração de CORS. |
 
 ##### Retorno
 
-( _[CORS](../resources/cors)_ )
+( _[CORS](/docs/library/resources/cors)_ )
 
 Atual instância do CORS.
 
@@ -36,14 +36,14 @@ Atual instância do CORS.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_cors</span>.<span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_cors</span>.<span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém todas as configurações de CORS.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Todas as definições de CORS configuradas.
 
@@ -53,14 +53,14 @@ Todas as definições de CORS configuradas.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_cors</span>.<span style={{color: '#008000'}}>getAll</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_cors</span>.<span style={{color: '#008000'}}>getAll</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém todas as configurações de CORS.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Todas as definições de CORS configuradas.
 
@@ -93,14 +93,14 @@ Se a origem está ativada.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_cors</span>.<span style={{color: '#008000'}}>load</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[CORS](../resources/cors)</span>
+#### <span style={{fontWeight: 'normal'}}>_cors</span>.<span style={{color: '#008000'}}>load</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[CORS](/docs/library/resources/cors)</span>
 ##### Descrição
 
 Executa a verificação da origem e realiza as definições de cabeçalho na resposta do pedido HTTP.
 
 ##### Retorno
 
-( _[CORS](../resources/cors)_ )
+( _[CORS](/docs/library/resources/cors)_ )
 
 Atual instância do CORS.
 
@@ -110,7 +110,7 @@ Atual instância do CORS.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_cors</span>.<span style={{color: '#008000'}}>removeOrigin</span>(<span style={{color: '#FF8000'}}>origem</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[CORS](../resources/cors)</span>
+#### <span style={{fontWeight: 'normal'}}>_cors</span>.<span style={{color: '#008000'}}>removeOrigin</span>(<span style={{color: '#FF8000'}}>origem</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[CORS](/docs/library/resources/cors)</span>
 ##### Descrição
 
 Remove a origem em todas as configuração que ela existir.
@@ -123,7 +123,7 @@ Remove a origem em todas as configuração que ela existir.
 
 ##### Retorno
 
-( _[CORS](../resources/cors)_ )
+( _[CORS](/docs/library/resources/cors)_ )
 
 Se a origem foi desativada com sucesso.
 

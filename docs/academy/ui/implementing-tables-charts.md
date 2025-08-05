@@ -8,10 +8,10 @@ sidebar_label: Tables and Charts
 ### Before proceeding
 Before you start this tutorial make sure you know how to create **Forms, Fields, Relationships and Web Rest Services** in which we go deeper into each explanation, in case you don't know it visit the respective links:
 
-* [Forms](forms.md)
-* [Fields](fields.md)
-* [Relationship between forms](relationships-between-forms.md)
-* [Web REST Services](../explore/services.md)
+* [Forms](/docs/academy/ui/forms)
+* [Fields](/docs/academy/ui/fields)
+* [Relationship between forms](/docs/academy/ui/relationships-between-forms)
+* [Web REST Services](/docs/academy/explore/services)
 
 It is also advisable that, before starting this tutorial, ensure that you have some basic knowledge in _**JavaScript**_, _**React.js**_ and _**HTML**_.
 

@@ -12,7 +12,7 @@ Vai encontrar no Netuno uma simplificação devido a agregação das melhores so
 
 O Netuno facilita a curva de aprendizagem através da interface de criação de formulários que intuitivamente gera a base de dados onde quem está a começar visualiza e experimenta logo o resultado final e garante melhor coerência da sua nova base de dados.
 
-> A plataforma Netuno é gratuita, [comece já](../get-started/installation/).
+> A plataforma Netuno é gratuita, [comece já](/docs/get-started/installation).
 
 Com a programação low-code dos web services permite rapidamente desenvolver o domínio em construir API REST complexas e tirar partido da integração com outros sistemas, aplicações móveis, portais e lojas.
 

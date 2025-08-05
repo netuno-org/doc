@@ -12,7 +12,7 @@ Reduz o esforço e tempo de desenvolvimento, assim como os custos de produção 
 
 Saiba como o Netuno favorece a sua experiência de programação para que tenha uma programação criativa e não repetitiva, mantendo os níveis de performance desde o desenvolvimento até à execução: 
 
-> A plataforma Netuno é gratuita, [comece já](../get-started/installation).
+> A plataforma Netuno é gratuita, [comece já](/docs/get-started/installation).
 
 ## Formulários e campos
 
@@ -52,4 +52,4 @@ Utilizando geradores de código otimizados para grande performance e usando a re
 
 Descubra como explorar o desenvolvimento no Netuno:
 
-[Saber Mais](../get-started/tutorials)
+[Saber Mais](/docs/get-started/tutorials)

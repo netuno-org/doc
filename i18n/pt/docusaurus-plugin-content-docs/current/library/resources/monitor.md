@@ -12,7 +12,7 @@ Permite obter os dados de performance.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_monitor</span>.<span style={{color: '#008000'}}>performanceData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_monitor</span>.<span style={{color: '#008000'}}>performanceData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de performance como utilização do CPU, Memória e Disco do processo do servidor do Netuno como do computador no geral.
@@ -31,7 +31,7 @@ _log.info(
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados de performance como CPU, Memória e Disco.
 

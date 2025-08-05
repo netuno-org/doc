@@ -4,7 +4,7 @@ title: MariaDB (MySQL)
 sidebar_label: MariaDB (MySQL)
 ---
 
-## Introdução
+## Introduction
 
 <a href="https://mariadb.org/" target="_blank">MariaDB</a> is the innovative open-source relational database compatible with **MySQL**.
 
@@ -126,4 +126,4 @@ Advanced settings can be used such as:
 }
 ```
 
-> See more about [Database connection settings with HikariCP](./hikaridb-database-connection-pool).
+> See more about [Database connection settings with HikariCP](/docs/academy/server/database/hikaridb-database-connection-pool).

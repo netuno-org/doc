@@ -192,16 +192,16 @@ Algumas ideias do que pode fazer agora.
 
 Se é novo no Netuno, inicie criando o seu primeiro formulário:
 
-[[ Iniciar ]](../academy/demonstration/config)
+[[ Iniciar ]](/docs/academy/demonstration/config)
 
 #### Tutoriais
 
 Descubra como explorar o desenvolvimento no Netuno:
 
-[[ Saber Mais ]](tutorials)
+[[ Saber Mais ]](/docs/get-started/tutorials)
 
 #### Projetos
 
 Para aplicar o Netuno em qualquer tipo de negócio: 
 
-[[ Mais Informações ]](../academy/strategy)
+[[ Mais Informações ]](/docs/academy/understand/backoffice)

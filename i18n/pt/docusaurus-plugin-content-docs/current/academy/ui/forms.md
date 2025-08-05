@@ -54,4 +54,4 @@ O modo diagrama permite ao utilizador ter uma visão geral dos formulários cria
 
 Guarde o formulário e passe para o passo seguinte: criação de campos!
 
-Veja [aqui](fields.md) como começar a criar campos.
+Veja [aqui](/docs/academy/ui/fields) como começar a criar campos.

@@ -189,16 +189,16 @@ Here is what can be done with _Netuno_ 👇
 
 If you are new on _Netuno_ then start by build your first form:
 
-[[ Begin ]](../academy/demonstration/config)
+[[ Begin ]](/docs/academy/demonstration/config)
 
 ### Tutorials
 
 Discover how to explore the development on _Netuno_
 
-[[ Know More ]](tutorials)
+[[ Know More ]](/docs/get-started/tutorials)
 
 ### Projects
 
 _Netuno_ can be applied in any kind of business: 
 
-[[ More Information ]](../academy/strategy)
+[[ More Information ]](/docs/academy/understand/backoffice)

@@ -29,7 +29,7 @@ List of records.
 
 ---
 
-#### <span style={{color: '#008000'}}>debug</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>debug</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines whether debug is active or not in the query.
@@ -42,7 +42,7 @@ Defines whether debug is active or not in the query.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -52,15 +52,15 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>delete</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>delete</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>forms</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>forms</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -69,7 +69,7 @@ Current Query object.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -78,7 +78,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>distinct</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>distinct</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines whether the DISTINCT command will be applied to the query.
@@ -91,7 +91,7 @@ Defines whether the DISTINCT command will be applied to the query.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -101,14 +101,14 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>first</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>first</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Returns the first record resulting from the query execution, if none, returns null.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 First record of the result.
 
@@ -118,7 +118,7 @@ First record of the result.
 
 ---
 
-#### <span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -127,12 +127,12 @@ First record of the result.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -142,7 +142,7 @@ First record of the result.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 
 ---
@@ -197,14 +197,14 @@ The name of the query's main table.
 
 ---
 
-#### <span style={{color: '#008000'}}>getGroup</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](../objects/Group)</span>
+#### <span style={{color: '#008000'}}>getGroup</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](/docs/library/objects/Group)</span>
 ##### Description
 
 Returns the query grouping object.
 
 ##### Return
 
-( _[Group](../objects/Group)_ )
+( _[Group](/docs/library/objects/Group)_ )
 
 The query grouping object.
 
@@ -214,14 +214,14 @@ The query grouping object.
 
 ---
 
-#### <span style={{color: '#008000'}}>getJoin</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{color: '#008000'}}>getJoin</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Description
 
 Returns the Join objects (related tables) referring to the main table of the query.
 
 ##### Return
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 The Join objects (related tables) referring to the main table of the query.
 
@@ -243,14 +243,14 @@ The Join objects (related tables) referring to the main table of the query.
 
 ---
 
-#### <span style={{color: '#008000'}}>getOrder</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](../objects/Order)</span>
+#### <span style={{color: '#008000'}}>getOrder</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](/docs/library/objects/Order)</span>
 ##### Description
 
 Returns the query ordering object.
 
 ##### Return
 
-( _[Order](../objects/Order)_ )
+( _[Order](/docs/library/objects/Order)_ )
 
 The query ordering object.
 
@@ -289,14 +289,14 @@ The pagination configuration object (if any) of the query.
 
 ---
 
-#### <span style={{color: '#008000'}}>getWhere</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{color: '#008000'}}>getWhere</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
 ##### Description
 
 Returns the Where object referring to the main table of the query.
 
 ##### Return
 
-( _[Where](../objects/Where)_ )
+( _[Where](/docs/library/objects/Where)_ )
 
 Where object of the query's main table.
 
@@ -306,7 +306,7 @@ Where object of the query's main table.
 
 ---
 
-#### <span style={{color: '#008000'}}>group</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>group</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the query grouping object.
@@ -319,13 +319,13 @@ Defines the query grouping object.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>group</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>group</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the query grouping object.
@@ -338,7 +338,7 @@ Defines the query grouping object.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -348,10 +348,10 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>insert</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>insert</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -394,7 +394,7 @@ Whether it will be applied or not.
 
 ---
 
-#### <span style={{color: '#008000'}}>join</span>(<span style={{color: '#FF8000'}}>relation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>join</span>(<span style={{color: '#FF8000'}}>relation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines an INNER JOIN relationship with a table.
@@ -403,11 +403,11 @@ Defines an INNER JOIN relationship with a table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relation** | _[Relationship](../objects/Relationship)_ | INNER JOIN type relationship. |
+| **relation** | _[Relationship](/docs/library/objects/Relationship)_ | INNER JOIN type relationship. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -417,7 +417,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>leftJoin</span>(<span style={{color: '#FF8000'}}>relation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>leftJoin</span>(<span style={{color: '#FF8000'}}>relation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines an LEFT JOIN relationship with a table.
@@ -426,11 +426,11 @@ Defines an LEFT JOIN relationship with a table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relation** | _[Relationship](../objects/Relationship)_ | LEFT JOIN type relationship. |
+| **relation** | _[Relationship](/docs/library/objects/Relationship)_ | LEFT JOIN type relationship. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -440,7 +440,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>limit</span>(<span style={{color: '#FF8000'}}>limit</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>limit</span>(<span style={{color: '#FF8000'}}>limit</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -449,7 +449,7 @@ Current Query object.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 
 ---
@@ -458,7 +458,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines a form to be related to the main table of the query using the Link criteria.
@@ -471,13 +471,13 @@ Defines a form to be related to the main table of the query using the Link crite
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>link</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>link</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines a form to be related to the main table of the query using the Link criteria.
@@ -487,17 +487,17 @@ Defines a form to be related to the main table of the query using the Link crite
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **formLink** | _string_ | Form to be related. |
-| **link** | _[Link](../objects/Link)_ | Link object with a subrelation. |
+| **link** | _[Link](/docs/library/objects/Link)_ | Link object with a subrelation. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines a form to be related to the main table of the query using the Link criteria.
@@ -507,17 +507,17 @@ Defines a form to be related to the main table of the query using the Link crite
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **formLink** | _string_ | Form to be related. |
-| **where** | _[Where](../objects/Where)_ | Where object with the conditions referring to the form you want to relate. |
+| **where** | _[Where](/docs/library/objects/Where)_ | Where object with the conditions referring to the form you want to relate. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>, <span style={{color: '#FF8000'}}>link</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>, <span style={{color: '#FF8000'}}>link</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines a form to be related to the main table of the query using the Link criteria.
@@ -527,18 +527,18 @@ Defines a form to be related to the main table of the query using the Link crite
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **formLink** | _string_ | Form to be related. |
-| **where** | _[Where](../objects/Where)_ | Where object with the conditions referring to the form you want to relate. |
-| **link** | _[Link](../objects/Link)_ | Link object with a subrelation. |
+| **where** | _[Where](/docs/library/objects/Where)_ | Where object with the conditions referring to the form you want to relate. |
+| **link** | _[Link](/docs/library/objects/Link)_ | Link object with a subrelation. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines a form to be related to the main table of the query using the Link criteria.
@@ -547,11 +547,11 @@ Defines a form to be related to the main table of the query using the Link crite
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **formLink** | _[Link](../objects/Link)_ | Form to be related. |
+| **formLink** | _[Link](/docs/library/objects/Link)_ | Form to be related. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -561,7 +561,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>order</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>order</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the ordering of the query.
@@ -575,7 +575,7 @@ Defines the ordering of the query.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -585,7 +585,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>page</span>(<span style={{color: '#FF8000'}}>pagination</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.pagination.Pagination</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>page</span>(<span style={{color: '#FF8000'}}>pagination</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.pagination.Pagination</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Returns Page with the items resulting from executing the query in a paged form and other pagination data.
@@ -598,7 +598,7 @@ Returns Page with the items resulting from executing the query in a paged form a
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Page with items and other pagination data.
 
@@ -608,7 +608,7 @@ Page with items and other pagination data.
 
 ---
 
-#### <span style={{color: '#008000'}}>populate</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.Field</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>populate</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.Field</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -618,12 +618,12 @@ Page with items and other pagination data.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>populate</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.Field</span>, <span style={{color: '#FF8000'}}>fields</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>populate</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.Field</span>, <span style={{color: '#FF8000'}}>fields</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -634,7 +634,7 @@ Page with items and other pagination data.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 
 ---
@@ -643,7 +643,7 @@ Page with items and other pagination data.
 
 ---
 
-#### <span style={{color: '#008000'}}>rightJoin</span>(<span style={{color: '#FF8000'}}>relation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>rightJoin</span>(<span style={{color: '#FF8000'}}>relation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines an RIGHT JOIN relationship with a table.
@@ -652,11 +652,11 @@ Defines an RIGHT JOIN relationship with a table.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relation** | _[Relationship](../objects/Relationship)_ | RIGHT JOIN type relationship. |
+| **relation** | _[Relationship](/docs/library/objects/Relationship)_ | RIGHT JOIN type relationship. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -666,7 +666,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>set</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>set</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -676,7 +676,7 @@ Current Query object.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 
 ---
@@ -685,7 +685,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setDebug</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setDebug</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines whether debug is active or not in the query.
@@ -698,7 +698,7 @@ Defines whether debug is active or not in the query.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -708,7 +708,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setDistinct</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setDistinct</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines whether the DISTINCT command will be applied to the query.
@@ -721,7 +721,7 @@ Defines whether the DISTINCT command will be applied to the query.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -731,7 +731,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setFieldsToGet</span>(<span style={{color: '#FF8000'}}>fields</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setFieldsToGet</span>(<span style={{color: '#FF8000'}}>fields</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the fields that will be obtained in the query
@@ -744,7 +744,7 @@ Defines the fields that will be obtained in the query
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -754,7 +754,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setFieldsToSet</span>(<span style={{color: '#FF8000'}}>fieldsToSet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setFieldsToSet</span>(<span style={{color: '#FF8000'}}>fieldsToSet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -763,7 +763,7 @@ Current Query object.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 
 ---
@@ -772,7 +772,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setFormName</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setFormName</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the name of the query's main table.
@@ -785,7 +785,7 @@ Defines the name of the query's main table.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -795,7 +795,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setGroup</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](../objects/Group)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setGroup</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](/docs/library/objects/Group)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the query grouping object.
@@ -804,11 +804,11 @@ Defines the query grouping object.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **order** | _[Group](../objects/Group)_ | The query grouping object. |
+| **order** | _[Group](/docs/library/objects/Group)_ | The query grouping object. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -818,7 +818,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setJoin</span>(<span style={{color: '#FF8000'}}>join</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setJoin</span>(<span style={{color: '#FF8000'}}>join</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the Join objects (related tables) referring to the main table of the query.
@@ -827,11 +827,11 @@ Defines the Join objects (related tables) referring to the main table of the que
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **join** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | The Join objects (related tables) referring to the main table of the query. |
+| **join** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | The Join objects (related tables) referring to the main table of the query. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -841,7 +841,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setLimit</span>(<span style={{color: '#FF8000'}}>limit</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setLimit</span>(<span style={{color: '#FF8000'}}>limit</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -850,7 +850,7 @@ Current Query object.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 
 ---
@@ -859,7 +859,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setOrder</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](../objects/Order)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setOrder</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](/docs/library/objects/Order)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the query ordering object.
@@ -868,11 +868,11 @@ Defines the query ordering object.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **order** | _[Order](../objects/Order)_ | The query ordering object. |
+| **order** | _[Order](/docs/library/objects/Order)_ | The query ordering object. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -882,7 +882,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setPagination</span>(<span style={{color: '#FF8000'}}>pagination</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.pagination.Pagination</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setPagination</span>(<span style={{color: '#FF8000'}}>pagination</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.pagination.Pagination</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the pagination configuration object (if any) of the query.
@@ -895,7 +895,7 @@ Defines the pagination configuration object (if any) of the query.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -905,7 +905,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setTablesToPopulate</span>(<span style={{color: '#FF8000'}}>tablesToPopulate</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setTablesToPopulate</span>(<span style={{color: '#FF8000'}}>tablesToPopulate</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -914,7 +914,7 @@ Current Query object.
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 
 ---
@@ -923,7 +923,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the Where object referring to the main table of the query.
@@ -932,11 +932,11 @@ Defines the Where object referring to the main table of the query.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **where** | _[Where](../objects/Where)_ | Where object of the query's main table. |
+| **where** | _[Where](/docs/library/objects/Where)_ | Where object of the query's main table. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 
@@ -946,10 +946,10 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>update</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>update</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -958,7 +958,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>where</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{color: '#008000'}}>where</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the Where object referring to the main table of the query.
@@ -967,11 +967,11 @@ Defines the Where object referring to the main table of the query.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **where** | _[Where](../objects/Where)_ | Where object of the query's main table. |
+| **where** | _[Where](/docs/library/objects/Where)_ | Where object of the query's main table. |
 
 ##### Return
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Current Query object.
 

@@ -66,10 +66,10 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>nullInputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>nullInputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Return
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 
 ---
@@ -128,12 +128,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 
 ##### Return
 
@@ -142,12 +142,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **charset** | _string_ |   |
 
 ##### Return
@@ -195,12 +195,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>readAllBytes</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
+#### <span style={{color: '#008000'}}>readAllBytes</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 
 ##### Return
 
@@ -370,12 +370,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>readLine</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>readLine</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 
 ##### Return
 
@@ -522,12 +522,12 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>transferTo</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
+#### <span style={{color: '#008000'}}>transferTo</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **arg0** | _[OutputStream](../objects/OutputStream)_ |   |
+| **arg0** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -540,30 +540,30 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeTo</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>writeTo</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Return
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeTo</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>writeTo</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Return
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 
 ---
@@ -572,30 +572,30 @@ sidebar_label: InputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeToAndClose</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>writeToAndClose</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Return
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeToAndClose</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>writeToAndClose</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Return
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 
 ---

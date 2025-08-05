@@ -125,7 +125,7 @@ Permite maior facilidade em manipular código HTML, utiliza o [JSOUP](https://js
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>parse</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>baseUri</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.nodes.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>parse</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>baseUri</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.nodes.Document</span>
 ##### Descrição
 
 Realiza a interpretação dum conteúdo e retorna-o em HTML.
@@ -134,7 +134,7 @@ Realiza a interpretação dum conteúdo e retorna-o em HTML.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **input** | _[InputStream](../objects/InputStream)_ | Conteúdo de um ficheiro HTML a ser processado. |
+| **input** | _[InputStream](/docs/library/objects/InputStream)_ | Conteúdo de um ficheiro HTML a ser processado. |
 | **baseUri** | _string_ | Url base para resolver links relativos. |
 | **charset** | _string_ | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
 
@@ -165,7 +165,7 @@ Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTM
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>parse</span>(<span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>baseUri</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.nodes.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>parse</span>(<span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>baseUri</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.nodes.Document</span>
 ##### Descrição
 
 Realiza a interpretação do conteúdo dum ficheiro e retorna-o em HTML.
@@ -174,7 +174,7 @@ Realiza a interpretação do conteúdo dum ficheiro e retorna-o em HTML.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **ficheiro** | _[File](../objects/File)_ | Ficheiro que será processado. |
+| **ficheiro** | _[File](/docs/library/objects/File)_ | Ficheiro que será processado. |
 | **baseUri** | _string_ | Url base para resolver links relativos. |
 | **charset** | _string_ | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
 
@@ -186,7 +186,7 @@ Conteúdo do ficheiro em HTML.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>parse</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>baseUri</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.nodes.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>parse</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>baseUri</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.nodes.Document</span>
 ##### Descrição
 
 Realiza a interpretação dum conteúdo e retorna-o em HTML.
@@ -195,7 +195,7 @@ Realiza a interpretação dum conteúdo e retorna-o em HTML.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ | Caminho do ficheiro em storage que deverá ser processado. |
+| **storage** | _[Storage](/docs/library/resources/storage)_ | Caminho do ficheiro em storage que deverá ser processado. |
 | **baseUri** | _string_ | Url base para resolver links relativos. |
 | **charset** | _string_ | Código do tipo de codificação de caracteres. Exemplo:UTF-8. |
 

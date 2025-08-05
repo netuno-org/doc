@@ -39,7 +39,7 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### <span style={{color: '#008000'}}>columnDataType</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.com.ComponentData</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
+#### <span style={{color: '#008000'}}>columnDataType</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.com.ComponentData</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](/docs/library/objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -48,7 +48,7 @@ if (_db.checkExists().table("clients")) {
 
 ##### Return
 
-( _[Column](../objects/Column)_ )
+( _[Column](/docs/library/objects/Column)_ )
 
 
 ---
@@ -76,17 +76,17 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### <span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>columns</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](../objects/Table)</span>
+#### <span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>columns</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](/docs/library/objects/Column)[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](/docs/library/objects/Table)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **name** | _string_ |   |
-| **columns** | _[Column](../objects/Column)[]_ |   |
+| **columns** | _[Column](/docs/library/objects/Column)[]_ |   |
 
 ##### Return
 
-( _[Table](../objects/Table)_ )
+( _[Table](/docs/library/objects/Table)_ )
 
 
 ---
@@ -95,7 +95,7 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### <span style={{color: '#008000'}}>drop</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](../objects/Table)</span>
+#### <span style={{color: '#008000'}}>drop</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](/docs/library/objects/Table)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -104,7 +104,7 @@ if (_db.checkExists().table("clients")) {
 
 ##### Return
 
-( _[Table](../objects/Table)_ )
+( _[Table](/docs/library/objects/Table)_ )
 
 
 ---
@@ -218,13 +218,13 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### <span style={{color: '#008000'}}>insertInto</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{color: '#008000'}}>insertInto</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **tableName** | _string_ |   |
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
@@ -359,10 +359,10 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### <span style={{color: '#008000'}}>newColumn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
+#### <span style={{color: '#008000'}}>newColumn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](/docs/library/objects/Column)</span>
 ##### Return
 
-( _[Column](../objects/Column)_ )
+( _[Column](/docs/library/objects/Column)_ )
 
 
 ---
@@ -371,7 +371,7 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### <span style={{color: '#008000'}}>rename</span>(<span style={{color: '#FF8000'}}>oldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>newName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](../objects/Table)</span>
+#### <span style={{color: '#008000'}}>rename</span>(<span style={{color: '#FF8000'}}>oldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>newName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](/docs/library/objects/Table)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -381,7 +381,7 @@ if (_db.checkExists().table("clients")) {
 
 ##### Return
 
-( _[Table](../objects/Table)_ )
+( _[Table](/docs/library/objects/Table)_ )
 
 
 ---
@@ -390,7 +390,7 @@ if (_db.checkExists().table("clients")) {
 
 ---
 
-#### <span style={{color: '#008000'}}>renameIfExists</span>(<span style={{color: '#FF8000'}}>oldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>newName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](../objects/Table)</span>
+#### <span style={{color: '#008000'}}>renameIfExists</span>(<span style={{color: '#FF8000'}}>oldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>newName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](/docs/library/objects/Table)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -400,7 +400,7 @@ if (_db.checkExists().table("clients")) {
 
 ##### Return
 
-( _[Table](../objects/Table)_ )
+( _[Table](/docs/library/objects/Table)_ )
 
 
 ---

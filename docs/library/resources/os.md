@@ -12,7 +12,7 @@ Performs the execution of commands in the operating system, manipulation of file
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>file</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>file</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of files and folders relative to the passed path, in this case the path must be a **file**.
@@ -25,7 +25,7 @@ Gets the object of manipulation of files and folders relative to the passed path
 
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Instance of the file and folder manipulation object relative to the passed path, in this case a **file**.
 
@@ -35,7 +35,7 @@ Instance of the file and folder manipulation object relative to the passed path,
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>folder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>folder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of folders and files relative to the passed path, in this case the path must be a **folder**.
@@ -48,7 +48,7 @@ Gets the object of manipulation of folders and files relative to the passed path
 
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Instance of the file and folder manipulation object relative to the passed path, in this case a **folder**.
 
@@ -58,7 +58,7 @@ Instance of the file and folder manipulation object relative to the passed path,
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of files and folders relative to the passed path, in this case the path must be a **file**.
@@ -71,7 +71,7 @@ Gets the object of manipulation of files and folders relative to the passed path
 
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Instance of the file and folder manipulation object relative to the passed path, in this case a **file**.
 
@@ -81,7 +81,7 @@ Instance of the file and folder manipulation object relative to the passed path,
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getFolder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getFolder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
 Gets the object of manipulation of folders and files relative to the passed path, in this case the path must be a **folder**.
@@ -94,7 +94,7 @@ Gets the object of manipulation of folders and files relative to the passed path
 
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Instance of the file and folder manipulation object relative to the passed path, in this case a **folder**.
 
@@ -121,14 +121,14 @@ The name of the operating system.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](/docs/library/resources/os)</span>
 ##### Description
 
 Starts a new instance of the OS.
 
 ##### Return
 
-( _[OS](../resources/os)_ )
+( _[OS](/docs/library/resources/os)_ )
 
 The new instance of the OS resource.
 
@@ -138,10 +138,10 @@ The new instance of the OS resource.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>initProcess</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>initProcess</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Return
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---

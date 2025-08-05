@@ -267,7 +267,7 @@ Whether or not it is active.
 
 ---
 
-#### <span style={{color: '#008000'}}>setAuthMechanisms</span>(<span style={{color: '#FF8000'}}>authMechanisms</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setAuthMechanisms</span>(<span style={{color: '#FF8000'}}>authMechanisms</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines which authentication mechanisms will be used in the current configuration.
@@ -280,7 +280,7 @@ Defines which authentication mechanisms will be used in the current configuratio
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -290,7 +290,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setAuthNTLMDomain</span>(<span style={{color: '#FF8000'}}>authNTLMDomain</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setAuthNTLMDomain</span>(<span style={{color: '#FF8000'}}>authNTLMDomain</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines the NTLM domain in the current configuration.
@@ -303,7 +303,7 @@ Defines the NTLM domain in the current configuration.
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -313,7 +313,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setDebug</span>(<span style={{color: '#FF8000'}}>debug</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setDebug</span>(<span style={{color: '#FF8000'}}>debug</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines whether the current object is in debug mode active.
@@ -326,7 +326,7 @@ Defines whether the current object is in debug mode active.
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -336,7 +336,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines whether the current configuration is active.
@@ -349,7 +349,7 @@ Defines whether the current configuration is active.
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -359,7 +359,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setHost</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setHost</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines the host of the current configuration.
@@ -372,7 +372,7 @@ Defines the host of the current configuration.
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -382,7 +382,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setPassword</span>(<span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setPassword</span>(<span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines the current configuration password.
@@ -395,7 +395,7 @@ Defines the current configuration password.
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -405,7 +405,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setPort</span>(<span style={{color: '#FF8000'}}>port</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setPort</span>(<span style={{color: '#FF8000'}}>port</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines the port of the current configuration.
@@ -418,7 +418,7 @@ Defines the port of the current configuration.
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -428,7 +428,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setProtocol</span>(<span style={{color: '#FF8000'}}>protocol</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setProtocol</span>(<span style={{color: '#FF8000'}}>protocol</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines the protocol used in the current configuration.
@@ -441,7 +441,7 @@ Defines the protocol used in the current configuration.
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -451,7 +451,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setQuitWait</span>(<span style={{color: '#FF8000'}}>quitWait</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setQuitWait</span>(<span style={{color: '#FF8000'}}>quitWait</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines whether in the current configuration the client must wait for the server's response to the QUIT command before closing the connection.
@@ -464,7 +464,7 @@ Defines whether in the current configuration the client must wait for the server
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -474,7 +474,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSSL</span>(<span style={{color: '#FF8000'}}>ssl</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setSSL</span>(<span style={{color: '#FF8000'}}>ssl</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines whether SSL is enabled in the current configuration.
@@ -487,7 +487,7 @@ Defines whether SSL is enabled in the current configuration.
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -497,7 +497,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSocketFactoryClass</span>(<span style={{color: '#FF8000'}}>socketFactoryClass</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setSocketFactoryClass</span>(<span style={{color: '#FF8000'}}>socketFactoryClass</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines the name of the class to be used in the current configuration's SocketFactory.
@@ -510,7 +510,7 @@ Defines the name of the class to be used in the current configuration's SocketFa
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -520,7 +520,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSocketFactoryFallback</span>(<span style={{color: '#FF8000'}}>ssl</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setSocketFactoryFallback</span>(<span style={{color: '#FF8000'}}>ssl</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines whether the configuration should attempt to use the system default SocketFactory if the specified SocketFactory fails.
@@ -533,7 +533,7 @@ Defines whether the configuration should attempt to use the system default Socke
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -543,7 +543,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSocketFactoryPort</span>(<span style={{color: '#FF8000'}}>socketFactoryPort</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setSocketFactoryPort</span>(<span style={{color: '#FF8000'}}>socketFactoryPort</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines the port to be used in the current configuration's SocketFactory.
@@ -556,7 +556,7 @@ Defines the port to be used in the current configuration's SocketFactory.
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current SMTPConfig object.
 
@@ -566,7 +566,7 @@ Current SMTPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setTLS</span>(<span style={{color: '#FF8000'}}>ssl</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setTLS</span>(<span style={{color: '#FF8000'}}>ssl</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines whether TLS is enabled in the current configuration.
@@ -579,7 +579,7 @@ Defines whether TLS is enabled in the current configuration.
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 
@@ -589,7 +589,7 @@ Current IMAPConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setUsername</span>(<span style={{color: '#FF8000'}}>username</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](../objects/IMAPConfig)</span>
+#### <span style={{color: '#008000'}}>setUsername</span>(<span style={{color: '#FF8000'}}>username</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>
 ##### Description
 
 Defines the current configuration username.
@@ -602,7 +602,7 @@ Defines the current configuration username.
 
 ##### Return
 
-( _[IMAPConfig](../objects/IMAPConfig)_ )
+( _[IMAPConfig](/docs/library/objects/IMAPConfig)_ )
 
 Current IMAPConfig object.
 

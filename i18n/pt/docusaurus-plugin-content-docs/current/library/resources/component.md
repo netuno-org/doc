@@ -145,10 +145,10 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getDesignData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getDesignData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -169,10 +169,10 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getProperties</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getProperties</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -181,10 +181,10 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getTableData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getTableData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -205,10 +205,10 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---

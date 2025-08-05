@@ -8,7 +8,7 @@ sidebar_label: Generate Unique ID's (UID/GUID)
 
 Before proceeding make sure you know how to create **REST Web Services**, in case you don't visit the following link:
 
-* [Web Rest Services](rest)
+* [Web Rest Services](/docs/academy/server/services/rest)
 
 It is also advisable that, before you start this tutorial, you make sure you have some basic notions in _**JavaScript**_.
 

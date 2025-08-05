@@ -251,7 +251,7 @@ Whether it was possible to continue the scheduled service.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedule</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Cron](../resources/cron)</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedule</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Cron](/docs/library/resources/cron)</span>
 ##### Description
 
 Creates a service execution schedule.
@@ -276,13 +276,13 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 
 ##### Return
 
-( _[Cron](../resources/cron)_ )
+( _[Cron](/docs/library/resources/cron)_ )
 
 The current Cron instance.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedule</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Cron](../resources/cron)</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedule</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Cron](/docs/library/resources/cron)</span>
 ##### Description
 
 Creates a service execution schedule.
@@ -304,11 +304,11 @@ _cron.schedule("updatePrices", "1 * * * * ?", "/services/jobs/update-prices",
 | **key** | _string_ | Job ID key name. |
 | **config** | _string_ | Cron Scheduling Time Expression, see table above. |
 | **url** | _string_ | URL to be run by the job. |
-| **params** | _[Values](../objects/Values)_ | Data to pass as a parameter to service. |
+| **params** | _[Values](/docs/library/objects/Values)_ | Data to pass as a parameter to service. |
 
 ##### Return
 
-( _[Cron](../resources/cron)_ )
+( _[Cron](/docs/library/resources/cron)_ )
 
 The current Cron instance.
 
@@ -318,14 +318,14 @@ The current Cron instance.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedules</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedules</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 List of all application service schedules.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 The list of all scheduled services of the application that are configured in Cron.
 

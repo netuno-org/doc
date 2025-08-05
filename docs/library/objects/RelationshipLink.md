@@ -29,14 +29,14 @@ The name of the form.
 
 ---
 
-#### <span style={{color: '#008000'}}>getSubLinks</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{color: '#008000'}}>getSubLinks</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Description
 
 Returns the sub relationships
 
 ##### Return
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 The sub relationships.
 
@@ -63,7 +63,7 @@ Whether you have it or not.
 
 ---
 
-#### <span style={{color: '#008000'}}>setFormLink</span>(<span style={{color: '#FF8000'}}>form</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>
+#### <span style={{color: '#008000'}}>setFormLink</span>(<span style={{color: '#FF8000'}}>form</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](/docs/library/objects/RelationshipLink)</span>
 ##### Description
 
 Defines the name of the form to be related.
@@ -76,7 +76,7 @@ Defines the name of the form to be related.
 
 ##### Return
 
-( _[RelationshipLink](../objects/RelationshipLink)_ )
+( _[RelationshipLink](/docs/library/objects/RelationshipLink)_ )
 
 Current RelationLink object.
 
@@ -86,7 +86,7 @@ Current RelationLink object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSubLinks</span>(<span style={{color: '#FF8000'}}>subLinks</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>
+#### <span style={{color: '#008000'}}>setSubLinks</span>(<span style={{color: '#FF8000'}}>subLinks</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](/docs/library/objects/RelationshipLink)</span>
 ##### Description
 
 Defines the sub relationships
@@ -95,11 +95,11 @@ Defines the sub relationships
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **subLinks** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | The sub relationships |
+| **subLinks** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | The sub relationships |
 
 ##### Return
 
-( _[RelationshipLink](../objects/RelationshipLink)_ )
+( _[RelationshipLink](/docs/library/objects/RelationshipLink)_ )
 
 Current RelationLink object.
 

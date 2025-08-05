@@ -625,7 +625,7 @@ Returns the object converted as Exception.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toFile</span>(<span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toFile</span>(<span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
 Starts a file object in memory with the contents of the received bytes.
@@ -640,7 +640,7 @@ Starts a file object in memory with the contents of the received bytes.
 
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Object of the started file that allows the manipulation of bytes as a file.
 

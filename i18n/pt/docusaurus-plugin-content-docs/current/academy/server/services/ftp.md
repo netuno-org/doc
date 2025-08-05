@@ -12,7 +12,7 @@ Suporta múltiplas conexões simultâneas, e ainda FTPS.
 
 Isso graças a implementação Java e open-source <a target="_blank" href="https://github.com/apache/commons-net">Apache Commons Net</a>, que é o que permite ao Netuno fornecer estas funcionalidadas a todas linguagens de script através do recurso `_ftp`.
 
-> Mais sobre o recurso [FTP](../../../library/resources/ftp) do Netuno.
+> Mais sobre o recurso [FTP](/docs/library/resources/ftp) do Netuno.
 
 ## Configuração
 
@@ -164,4 +164,4 @@ for (const i of ftp.list("caminho/pasta")) {
 }
 ```
 
-> Retorna uma lista de objetos do tipo [FTPFile](../../../library/objects/FTPFile).
+> Retorna uma lista de objetos do tipo [FTPFile](/docs/library/objects/FTPFile).

@@ -199,7 +199,7 @@ Se está ativo ou inactivo no objeto atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setConnectTimeout</span>(<span style={{color: '#FF8000'}}>conectionTimeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setConnectTimeout</span>(<span style={{color: '#FF8000'}}>conectionTimeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Descrição
 
 Define tempo limite de conexão do objeto atual.
@@ -212,7 +212,7 @@ Define tempo limite de conexão do objeto atual.
 
 ##### Retorno
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Retorna o objeto atual.
 
@@ -222,7 +222,7 @@ Retorna o objeto atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setDebug</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setDebug</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Descrição
 
 Define se está ou não ativado.
@@ -235,7 +235,7 @@ Define se está ou não ativado.
 
 ##### Retorno
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Objeto atual.
 
@@ -245,7 +245,7 @@ Objeto atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Descrição
 
 Define o estado do objeto, se está ou não ativado.
@@ -258,7 +258,7 @@ Define o estado do objeto, se está ou não ativado.
 
 ##### Retorno
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Objeto atual.
 
@@ -268,7 +268,7 @@ Objeto atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setHost</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setHost</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Descrição
 
 Define o host do objeto atual.
@@ -281,7 +281,7 @@ Define o host do objeto atual.
 
 ##### Retorno
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Retorna o objeto atual.
 
@@ -291,7 +291,7 @@ Retorna o objeto atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setPassiveMode</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setPassiveMode</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Descrição
 
 Define se o modo passivo está ativo ou inactivo no objeto atual.
@@ -304,7 +304,7 @@ Define se o modo passivo está ativo ou inactivo no objeto atual.
 
 ##### Retorno
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Retorna o objeto atual.
 
@@ -314,7 +314,7 @@ Retorna o objeto atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setPassword</span>(<span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setPassword</span>(<span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Descrição
 
 Define a palavra-passe do objeto atual.
@@ -327,7 +327,7 @@ Define a palavra-passe do objeto atual.
 
 ##### Retorno
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Retorna o objeto atual.
 
@@ -337,7 +337,7 @@ Retorna o objeto atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setPort</span>(<span style={{color: '#FF8000'}}>porta</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setPort</span>(<span style={{color: '#FF8000'}}>porta</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Descrição
 
 Define a porta do objeto atual.
@@ -350,7 +350,7 @@ Define a porta do objeto atual.
 
 ##### Retorno
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Retorna o objeto atual.
 
@@ -360,7 +360,7 @@ Retorna o objeto atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSSL</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setSSL</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Descrição
 
 Define se o SSL está ativo ou inactivo no objeto atual.
@@ -373,7 +373,7 @@ Define se o SSL está ativo ou inactivo no objeto atual.
 
 ##### Retorno
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Retorna o objeto atual.
 
@@ -383,7 +383,7 @@ Retorna o objeto atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSecureImplicit</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setSecureImplicit</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Descrição
 
 Define se o FTPS implícito está ativo ou inactivo no objeto atual.
@@ -396,7 +396,7 @@ Define se o FTPS implícito está ativo ou inactivo no objeto atual.
 
 ##### Retorno
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Retorna o objeto atual.
 
@@ -406,7 +406,7 @@ Retorna o objeto atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setTLS</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setTLS</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Descrição
 
 Define se o TSL está ativo ou inactivo no objeto atual.
@@ -419,7 +419,7 @@ Define se o TSL está ativo ou inactivo no objeto atual.
 
 ##### Retorno
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Retorna o objeto atual.
 
@@ -429,7 +429,7 @@ Retorna o objeto atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setUsername</span>(<span style={{color: '#FF8000'}}>username</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](../objects/FTPConfig)</span>
+#### <span style={{color: '#008000'}}>setUsername</span>(<span style={{color: '#FF8000'}}>username</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Descrição
 
 Define o utilizador do objeto atual.
@@ -442,7 +442,7 @@ Define o utilizador do objeto atual.
 
 ##### Retorno
 
-( _[FTPConfig](../objects/FTPConfig)_ )
+( _[FTPConfig](/docs/library/objects/FTPConfig)_ )
 
 Retorna o objeto atual.
 

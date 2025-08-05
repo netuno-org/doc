@@ -96,7 +96,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style={{color: '#008000'}}>getInstance</span>(<span style={{color: '#FF8000'}}>proteu</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.Proteu</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Service](../objects/Service)</span>
+#### <span style={{color: '#008000'}}>getInstance</span>(<span style={{color: '#FF8000'}}>proteu</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.Proteu</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Service](/docs/library/objects/Service)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -105,7 +105,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ##### Return
 
-( _[Service](../objects/Service)_ )
+( _[Service](/docs/library/objects/Service)_ )
 
 
 ---

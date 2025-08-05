@@ -45,7 +45,7 @@ Verdadeiro se estiver aberta
 
 ---
 
-#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](../objects/SSHExecResult)</span>
+#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](/docs/library/objects/SSHExecResult)</span>
 ##### Descrição
 
 Executa comandos remotamente através do SSH no servidor.
@@ -58,13 +58,13 @@ Executa comandos remotamente através do SSH no servidor.
 
 ##### Retorno
 
-( _[SSHExecResult](../objects/SSHExecResult)_ )
+( _[SSHExecResult](/docs/library/objects/SSHExecResult)_ )
 
 Resultado da execução do comando.
 
 ---
 
-#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>timeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](../objects/SSHExecResult)</span>
+#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>timeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](/docs/library/objects/SSHExecResult)</span>
 ##### Descrição
 
 Executa comandos remotamente através do SSH no servidor.
@@ -78,7 +78,7 @@ Executa comandos remotamente através do SSH no servidor.
 
 ##### Retorno
 
-( _[SSHExecResult](../objects/SSHExecResult)_ )
+( _[SSHExecResult](/docs/library/objects/SSHExecResult)_ )
 
 Resultado da execução do comando.
 

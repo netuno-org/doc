@@ -14,7 +14,7 @@ A API REST do backend permite aos serviços privados obterem o contexto de auten
 
 ![jwt-flow](/docs/assets/academy/server/services/jwt/flow-pt.png)
 
-Normalmente a API REST fica num subdomínio diferente do website, o que implica configurações de [CORS (Cross-Origin Resource Sharing)](cors).
+Normalmente a API REST fica num subdomínio diferente do website, o que implica configurações de [CORS (Cross-Origin Resource Sharing)](/docs/academy/server/services/cors).
 
 Isto acontece devido aos browsers bloquearem a utilização de serviços e outros tipos de recursos em endereços externos, com o objetivo de evitar ataques de obtenção de dados confidenciais.
 

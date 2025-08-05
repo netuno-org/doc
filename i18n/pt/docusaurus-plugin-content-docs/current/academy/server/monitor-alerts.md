@@ -364,7 +364,7 @@ Pode ser implementado o envio da alarmística através de email, SMS, ou até gu
 
 Também pode ser utilizado qualquer tipo de `url` e assim o alerta pode ser disparado para outras tecnologias como em NodeJS, PHP, .NET, Rails, Laravel, Sails, etc...
 
-No caso do Netuno pode ser implementado um serviço para o envio de email seguindo as indicações do tutorial de [Envio de E-mails](/docs/pt-PT/library/tutorials/sending-emails).
+No caso do Netuno pode ser implementado um serviço para o envio de email seguindo as indicações do tutorial de [Envio de E-mails](/docs/academy/server/services/sending-emails).
 
 Segue abaixo como implementar um exemplo completo adaptado à alarmística de monitorização.
 

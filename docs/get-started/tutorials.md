@@ -5,6 +5,7 @@ title: Tutorials
 ---
 
 ## Introduction
+
 Welcome to the Netuno Platform! Here you can find step-by-step tutorials to help to undertand the most importants geatures in _Netuno_.
 
 The purpose of this section is to cover some common scenarios that users will encounter while using _Netuno_.
@@ -13,27 +14,28 @@ The purpose of this section is to cover some common scenarios that users will en
 
 
 ## Graphical Interface
+
 Tutorials regarding the present features in _Netuno_ interface:
 
-* [Get to know the graphic interface](../academy/ui/graphical-interface.md)
-* [Forms](../academy/ui/forms.md)
-* [Fields](../academy/ui/fields.md)
-* [Forms Relationships](../academy/ui/relationships-between-forms.md)
-* [Groups and Users Interface](../academy/ui/user-groups.md)
-* [Queries Interface](../academy/ui/queries-interface.md)
-* [Modal Form](../academy/ui/modal-form.md)
+* [Get to know the graphic interface](/docs/academy/ui/graphical-interface)
+* [Forms](/docs/academy/ui/forms)
+* [Fields](/docs/academy/ui/fields)
+* [Forms Relationships](/docs/academy/ui/relationships-between-forms)
+* [Groups and Users Interface](/docs/academy/ui/user-groups)
+* [Queries Interface](/docs/academy/ui/queries-interface)
+* [Modal Form](/docs/academy/ui/modal-form)
 
 ## Development
-Tutorials that explain how to build frontend and backend in  _Netuno_ supporting a large of programming languages:
+Tutorials that explain how to build frontend and backend in _Netuno_ supporting a large of programming languages:
 
-* [REST Web Services](../academy/server/services/rest.md)
-* [Programming Queries](../academy/server/database/db-query-execute)
-* [Templates](../academy/server/templates.md)
-* [Development and debugging in Java](../academy/server/development-debug-java.md)
-* [Email Sending](../academy/server/services/sending-emails.md)
-* [Generate Unique ID's (UID/GUID)](../academy/server/services/generate-uid-guid.md)
-* [MSSQL Configuration](../academy/server/database/mssql.md)
-* [Multiple Databases](../academy/server/database/multiple-databases.md)
-* [JWT Token](../academy/server/services/jwt.md)
+* [REST Web Services](/docs/academy/server/services/rest)
+* [Programming Queries](/docs/academy/server/database/db-query-execute)
+* [Templates](/docs/academy/server/templates)
+* [Development and debugging in Java](/docs/academy/server/development-debug-java)
+* [Email Sending](/docs/academy/server/services/sending-emails)
+* [Generate Unique ID's (UID/GUID)](/docs/academy/server/services/generate-uid-guid)
+* [MSSQL Configuration](/docs/academy/server/database/mssql)
+* [Multiple Databases](/docs/academy/server/database/multiple-databases)
+* [JWT Token](/docs/academy/server/services/jwt)
 
->Visit our ``Question How`` section on the Documentation page that will give a idea on how to use our Documentation.
+>Visit our ``Question How`` section on the Documentation page that will give an idea on how to use our Documentation.

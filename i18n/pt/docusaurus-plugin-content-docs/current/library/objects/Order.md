@@ -46,7 +46,7 @@ Direção da ordenação.
 
 ---
 
-#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](../objects/Order)</span>
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](/docs/library/objects/Order)</span>
 ##### Descrição
 
 Define a coluna que será usada na ordenação.
@@ -59,7 +59,7 @@ Define a coluna que será usada na ordenação.
 
 ##### Retorno
 
-( _[Order](../objects/Order)_ )
+( _[Order](/docs/library/objects/Order)_ )
 
 Objeto Order atual.
 
@@ -69,7 +69,7 @@ Objeto Order atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setOrder</span>(<span style={{color: '#FF8000'}}>ordenacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](../objects/Order)</span>
+#### <span style={{color: '#008000'}}>setOrder</span>(<span style={{color: '#FF8000'}}>ordenacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](/docs/library/objects/Order)</span>
 ##### Descrição
 
 Define a direção da ordenação.
@@ -82,7 +82,7 @@ Define a direção da ordenação.
 
 ##### Retorno
 
-( _[Order](../objects/Order)_ )
+( _[Order](/docs/library/objects/Order)_ )
 
 Objeto Order atual.
 

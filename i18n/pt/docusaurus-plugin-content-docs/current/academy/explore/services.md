@@ -8,9 +8,9 @@ sidebar_label: Serviços
 
 Antes de criar serviços Web REST certifique-se que sabe criar **Formulários, Campos** e **Relações**, caso não o saiba visite as seguintes ligações:
 
-* [Formulários](../ui/forms)
-* [Campos](../ui/fields)
-* [Relações entre formulários](../ui/relationships-between-forms)
+* [Formulários](/docs/academy/ui/forms)
+* [Campos](/docs/academy/ui/fields)
+* [Relações entre formulários](/docs/academy/ui/relationships-between-forms)
 
 É também aconselhável que, antes de começar este tutorial, se certifique que tem noções básicas em _**JavaScript, React.js**_ e _**HTML**_.
 

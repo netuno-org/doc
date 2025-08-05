@@ -93,7 +93,7 @@ Código auxiliar do grupo do utilizador logado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>dadosGrupo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>dadosGrupo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Cria o novo grupo.
@@ -115,7 +115,7 @@ _group.create(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dadosGrupo** | _[Values](../objects/Values)_ | Dados do grupo que vai ser criado. |
+| **dadosGrupo** | _[Values](/docs/library/objects/Values)_ | Dados do grupo que vai ser criado. |
 
 ##### Retorno
 
@@ -129,7 +129,7 @@ ID do grupo que foi criado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>createIfNotExists</span>(<span style={{color: '#FF8000'}}>dadosGrupo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>createIfNotExists</span>(<span style={{color: '#FF8000'}}>dadosGrupo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
 Cria o utilizador caso não exista ainda.
@@ -151,7 +151,7 @@ _group.createIfNotExists(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dadosGrupo** | _[Values](../objects/Values)_ | Dados do grupo que vai ser criado caso não exista ainda. |
+| **dadosGrupo** | _[Values](/docs/library/objects/Values)_ | Dados do grupo que vai ser criado caso não exista ainda. |
 
 ##### Retorno
 
@@ -165,7 +165,7 @@ Foi criado com sucesso.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém toda a informação de dados do grupo do utilizador que está autenticado.
@@ -179,7 +179,7 @@ _out.json(_group.data())
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Todos os dados do grupo do utilizador logado.
 
@@ -189,7 +189,7 @@ Todos os dados do grupo do utilizador logado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>firstByCode</span>(<span style={{color: '#FF8000'}}>codigo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>firstByCode</span>(<span style={{color: '#FF8000'}}>codigo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um grupo a partir do código alternativo.
@@ -210,7 +210,7 @@ _out.json(grupo)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do grupo encontrado com o código alternativo.
 
@@ -220,7 +220,7 @@ Dados do grupo encontrado com o código alternativo.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>firstByMail</span>(<span style={{color: '#FF8000'}}>mail</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>firstByMail</span>(<span style={{color: '#FF8000'}}>mail</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um grupo a partir do e-mail.
@@ -241,7 +241,7 @@ _out.json(grupo)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do grupo encontrado com o e-mail.
 
@@ -251,7 +251,7 @@ Dados do grupo encontrado com o e-mail.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>firstByName</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>firstByName</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um grupo a partir do nome.
@@ -272,7 +272,7 @@ _out.json(grupo)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do utilizador encontrado com o nome.
 
@@ -282,7 +282,7 @@ Dados do utilizador encontrado com o nome.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um grupo a partir do ID (identificador numérico).
@@ -303,13 +303,13 @@ _out.json(grupo)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do grupo encontrado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>idOuUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>idOuUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um grupo a partir do ID (identificador numérico) ou do UUID (identificador único universal).
@@ -330,7 +330,7 @@ _out.json(grupo)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do grupo encontrado.
 
@@ -364,10 +364,10 @@ ID (identificador númerico) do grupo do utilizador logado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>load</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](../resources/group)</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>load</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](/docs/library/resources/group)</span>
 ##### Retorno
 
-( _[Group](../resources/group)_ )
+( _[Group](/docs/library/resources/group)_ )
 
 
 ---
@@ -466,7 +466,7 @@ Lista de dados dos grupos encontrados.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>searchFirst</span>(<span style={{color: '#FF8000'}}>termo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>searchFirst</span>(<span style={{color: '#FF8000'}}>termo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 O primeiro resultado da pesquisa de grupos que tem alguma ocorrência nos dados do termo passado.
@@ -487,7 +487,7 @@ _out.json(grupo)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do grupo encontrado.
 
@@ -521,7 +521,7 @@ UUID (identificador único universal) do grupo do utilizador logado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dadosGrupo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dadosGrupo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
 Atualiza os dados do grupo referente ao ID passado.
@@ -543,7 +543,7 @@ _group.update(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **id** | _int_ | O ID (identificador númerico) do grupo. |
-| **dadosGrupo** | _[Values](../objects/Values)_ | Dados do grupo para atualizar a informação armazenada em base de dados. |
+| **dadosGrupo** | _[Values](/docs/library/objects/Values)_ | Dados do grupo para atualizar a informação armazenada em base de dados. |
 
 ##### Retorno
 
@@ -553,7 +553,7 @@ Foi atualizado com sucesso.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
 Atualiza os dados do grupo referente ao ID passado.
@@ -573,7 +573,7 @@ _group.update(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dadosUtilizador** | _[Values](../objects/Values)_ | Dados do grupo para atualizar a informação armazenada em base de dados. |
+| **dadosUtilizador** | _[Values](/docs/library/objects/Values)_ | Dados do grupo para atualizar a informação armazenada em base de dados. |
 
 ##### Retorno
 

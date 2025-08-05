@@ -126,4 +126,4 @@ Pode ser utilizada configurações avançadas como:
 }
 ```
 
-> Veja mais sobre as [configurações de conexão à Base de Dados com o HikariCP](./hikaricp-database-connection-pool).
+> Veja mais sobre as [configurações de conexão à Base de Dados com o HikariCP](/docs/academy/server/database/hikaricp-database-connection-pool).

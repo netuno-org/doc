@@ -5,7 +5,7 @@ sidebar_label: Envio de Emails
 ---
 ## Antes de começar
 
-Antes de proceder certifique-se que que tem noções básicas em _**JavaScript**_ e que já tem as noções básicas do Netuno com o passo-a-passo disponível na [Academia](../../overview).
+Antes de proceder certifique-se que que tem noções básicas em _**JavaScript**_ e que já tem as noções básicas do Netuno com o passo-a-passo disponível na [Academia](/docs/academy/overview).
 
 ## Demonstração do Envio de Emails
 

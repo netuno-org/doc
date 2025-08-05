@@ -50,7 +50,7 @@ O Netuno está a ser utilizado em diversos tipos de projetos, como:
 - Na geração de relatórios.
 - E muito mais...
 
-> Sabia que o Netuno é gratuito e com o código aberto? [Comece já](../get-started/installation).
+> Sabia que o Netuno é gratuito e com o código aberto? [Comece já](/docs/get-started/installation).
 
 Com a interface automática de gestão de dados que suporta perfis de utilizadores e grupos, é possível utilizar o Netuno como backoffice, mas também como interface aplicacional para o utilizador final, pois rapidamente permite criar um protótipo experimental do projeto, começar a testar e a limar a sua estrutura de dados para fornecer um forte alicerce para a programação que será realizada.
 
@@ -70,7 +70,7 @@ Conquiste novos desafios através das vantagens que o Netuno oferece, ganhe temp
 
 ![Netuno é a plataforma de lançamento de projetos Web](/docs/assets/business/introduction-conquest.jpg "Netuno é a plataforma de lançamento de projetos Web.")
 
-[Comece já](../get-started/installation) a explorar o Netuno e desfrute estas e outras vantagens que irá descobrir.
+[Comece já](/docs/get-started/installation) a explorar o Netuno e desfrute estas e outras vantagens que irá descobrir.
 
 Também pode colaborar connosco ao pedir novas funcionalidades que precise ou reportar situações indesejadas.
 

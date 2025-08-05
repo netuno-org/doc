@@ -8,7 +8,7 @@ sidebar_label: Gerar ID’s Únicos (UID/GUID)
 
 Antes de proceder certifique-se que sabe criar **Serviços Web REST**, caso não o saiba visite a seguinte ligação:
 
-* [Serviços Web Rest](rest)
+* [Serviços Web Rest](/docs/academy/server/services/rest)
 
 É também aconselhável que, antes de começar este tutorial, se certifique que tem noções básicas em _**JavaScript**_.
 

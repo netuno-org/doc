@@ -17,11 +17,11 @@ mas que pode ser qualquer outro nome desejado.
 
 Deve ter o Netuno instalado:
 
-- [Instalação do Netuno.](../../get-started/installation)
+- [Instalação do Netuno.](/docs/get-started/installation)
 
 Devido a melhor performance entre outras vantagens deve ter o PNPM e o Bun instalados:
 
-- [Instalar o PNPM e o Bun.](pnpm-bun)
+- [Instalar o PNPM e o Bun.](/docs/academy/website/pnpm-bun)
 
 ## Criação
 
@@ -289,7 +289,7 @@ mesmo endereço do frontend:
 Estando a configuração implementada pode integrar os serviços de API que pretender com o
 frontend, sem problemas com a segurança de CORS.
 
-> Mais sobre [CORS](../server/services/cors.md)
+> Mais sobre [CORS](/docs/academy/server/services/cors)
 
 ## Variáveis de Ambiente
 

@@ -13,9 +13,9 @@ The purpose of these relationships is to allow forms to access information from 
 This tutorial is divided into steps that we advise you to follow in their order.
 
 ## Requirements
-Before creating the relationships it is ** mandatory** to have at least two forms created, in case you don't know how to do it visit this address: [Forms Creation](forms.md).
+Before creating the relationships it is ** mandatory** to have at least two forms created, in case you don't know how to do it visit this address: [Forms Creation](/docs/academy/ui/forms).
 
-And in order to be able to link form fields it is also ** mandatory** the creation of fields for the respective forms and we advise you to fill in some information. In case you do not know how to do it, please go to [Creation of Fields](fields.md).
+And in order to be able to link form fields it is also ** mandatory** the creation of fields for the respective forms and we advise you to fill in some information. In case you do not know how to do it, please go to [Creation of Fields](/docs/academy/ui/fields).
 
 ## 1 - Choose one of the forms
 

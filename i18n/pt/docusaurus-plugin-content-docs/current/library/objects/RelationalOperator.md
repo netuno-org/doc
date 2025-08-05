@@ -12,14 +12,14 @@ Definição da configuração da relação do objeto Conditional.
 
 ---
 
-#### <span style={{color: '#008000'}}>getInValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getInValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Retorna os valores que serão usados na relação em caso de utilização do operador relacional IN.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Valores da relação.
 
@@ -63,7 +63,7 @@ Valor da relação.
 
 ---
 
-#### <span style={{color: '#008000'}}>setInValues</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](../objects/RelationalOperator)</span>
+#### <span style={{color: '#008000'}}>setInValues</span>(<span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](/docs/library/objects/RelationalOperator)</span>
 ##### Descrição
 
 Define os valores que serão usados na relação em caso de utilização do operador relacional IN.
@@ -72,11 +72,11 @@ Define os valores que serão usados na relação em caso de utilização do oper
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **valores** | _[Values](../objects/Values)_ | Valores da relação. |
+| **valores** | _[Values](/docs/library/objects/Values)_ | Valores da relação. |
 
 ##### Retorno
 
-( _[RelationalOperator](../objects/RelationalOperator)_ )
+( _[RelationalOperator](/docs/library/objects/RelationalOperator)_ )
 
 Objeto RelationOperator atual.
 
@@ -86,7 +86,7 @@ Objeto RelationOperator atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setOperatorType</span>(<span style={{color: '#FF8000'}}>tipoOperador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.where.RelationalOperatorType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](../objects/RelationalOperator)</span>
+#### <span style={{color: '#008000'}}>setOperatorType</span>(<span style={{color: '#FF8000'}}>tipoOperador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.where.RelationalOperatorType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](/docs/library/objects/RelationalOperator)</span>
 ##### Descrição
 
 Define o tipo do operador relacional.
@@ -99,7 +99,7 @@ Define o tipo do operador relacional.
 
 ##### Retorno
 
-( _[RelationalOperator](../objects/RelationalOperator)_ )
+( _[RelationalOperator](/docs/library/objects/RelationalOperator)_ )
 
 Objeto RelationOperator atual.
 
@@ -109,7 +109,7 @@ Objeto RelationOperator atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setValue</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](../objects/RelationalOperator)</span>
+#### <span style={{color: '#008000'}}>setValue</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](/docs/library/objects/RelationalOperator)</span>
 ##### Descrição
 
 Define o valor usado na relação.
@@ -122,7 +122,7 @@ Define o valor usado na relação.
 
 ##### Retorno
 
-( _[RelationalOperator](../objects/RelationalOperator)_ )
+( _[RelationalOperator](/docs/library/objects/RelationalOperator)_ )
 
 Objeto RelationOperator atual.
 

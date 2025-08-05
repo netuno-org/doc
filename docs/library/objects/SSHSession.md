@@ -45,7 +45,7 @@ True if it is open.
 
 ---
 
-#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](../objects/SSHExecResult)</span>
+#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](/docs/library/objects/SSHExecResult)</span>
 ##### Description
 
 Execute commands remotely via SSH on the server.
@@ -58,13 +58,13 @@ Execute commands remotely via SSH on the server.
 
 ##### Return
 
-( _[SSHExecResult](../objects/SSHExecResult)_ )
+( _[SSHExecResult](/docs/library/objects/SSHExecResult)_ )
 
 Command execution result.
 
 ---
 
-#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>timeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](../objects/SSHExecResult)</span>
+#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>timeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](/docs/library/objects/SSHExecResult)</span>
 ##### Description
 
 Execute commands remotely via SSH on the server.
@@ -78,7 +78,7 @@ Execute commands remotely via SSH on the server.
 
 ##### Return
 
-( _[SSHExecResult](../objects/SSHExecResult)_ )
+( _[SSHExecResult](/docs/library/objects/SSHExecResult)_ )
 
 Command execution result.
 

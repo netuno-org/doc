@@ -66,10 +66,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>getFirebaseValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getFirebaseValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -90,10 +90,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>getOldRecord</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getOldRecord</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -102,10 +102,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>getRecord</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getRecord</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -114,10 +114,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>getRelationItem</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getRelationItem</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -126,10 +126,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>getRelationTable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getRelationTable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -186,10 +186,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>getValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -462,7 +462,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setCounter</span>(<span style={{color: '#FF8000'}}>counter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setCounter</span>(<span style={{color: '#FF8000'}}>counter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -471,7 +471,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -480,7 +480,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setErrorMessage</span>(<span style={{color: '#FF8000'}}>errorMessage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setErrorMessage</span>(<span style={{color: '#FF8000'}}>errorMessage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -489,7 +489,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -498,7 +498,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setErrorTitle</span>(<span style={{color: '#FF8000'}}>errorTitle</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setErrorTitle</span>(<span style={{color: '#FF8000'}}>errorTitle</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -507,7 +507,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -516,7 +516,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setField</span>(<span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setField</span>(<span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -525,7 +525,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -534,7 +534,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setFirebase</span>(<span style={{color: '#FF8000'}}>firebase</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setFirebase</span>(<span style={{color: '#FF8000'}}>firebase</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -543,7 +543,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -552,16 +552,16 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setFirebaseValues</span>(<span style={{color: '#FF8000'}}>firebaseValues</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setFirebaseValues</span>(<span style={{color: '#FF8000'}}>firebaseValues</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **firebaseValues** | _[Values](../objects/Values)_ |   |
+| **firebaseValues** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -570,7 +570,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setId</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setId</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -579,7 +579,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -588,7 +588,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setProgrammatically</span>(<span style={{color: '#FF8000'}}>programmatically</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setProgrammatically</span>(<span style={{color: '#FF8000'}}>programmatically</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -597,7 +597,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -606,12 +606,12 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setRecord</span>(<span style={{color: '#FF8000'}}>record</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{color: '#008000'}}>setRecord</span>(<span style={{color: '#FF8000'}}>record</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **record** | _[Values](../objects/Values)_ |   |
+| **record** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
@@ -624,16 +624,16 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setRelationItem</span>(<span style={{color: '#FF8000'}}>relationItem</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setRelationItem</span>(<span style={{color: '#FF8000'}}>relationItem</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relationItem** | _[Values](../objects/Values)_ |   |
+| **relationItem** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -642,16 +642,16 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setRelationTable</span>(<span style={{color: '#FF8000'}}>relationTable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setRelationTable</span>(<span style={{color: '#FF8000'}}>relationTable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relationTable** | _[Values](../objects/Values)_ |   |
+| **relationTable** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -660,7 +660,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setStatus</span>(<span style={{color: '#FF8000'}}>status</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.DataItem$Status</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setStatus</span>(<span style={{color: '#FF8000'}}>status</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.DataItem$Status</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -669,7 +669,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -678,10 +678,10 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setStatusWithError</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setStatusWithError</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -690,7 +690,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setTable</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setTable</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -699,7 +699,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -708,7 +708,7 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setUid</span>(<span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setUid</span>(<span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -717,7 +717,7 @@ if (_dataItem.isUpdate()) {
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---
@@ -726,16 +726,16 @@ if (_dataItem.isUpdate()) {
 
 ---
 
-#### <span style={{color: '#008000'}}>setValues</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](../objects/DataItem)</span>
+#### <span style={{color: '#008000'}}>setValues</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DataItem](/docs/library/objects/DataItem)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **values** | _[Values](../objects/Values)_ |   |
+| **values** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[DataItem](../objects/DataItem)_ )
+( _[DataItem](/docs/library/objects/DataItem)_ )
 
 
 ---

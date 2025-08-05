@@ -10,7 +10,7 @@ Uma visão geral do frontend, base de dados, e serviço de API.
 
 ## Introdução
 
-Após [instalar a plataforma](../get-started/installation), apresentamos a seguir os comandos básicos para criar 
+Após [instalar a plataforma](/docs/get-started/installation), apresentamos a seguir os comandos básicos para criar 
 uma aplicação e iniciar o servidor.
 
 Apesar do Netuno ser poliglota e suportar diveresas linguagens, neste tutorial vamos utilizar apenas a linguagem 
@@ -81,7 +81,7 @@ Dentro desta pasta contém todos os arquivos da nova aplicação e é onde todo 
 
 A documentação que detalha a estrutura de arquivos e pastas da aplicação:
 
-- [Pastas da Aplicação](../category/app-structure)
+- [Pastas da Aplicação](/docs/category/app-structure)
 
 ## Resumo das Etapas
 
@@ -141,7 +141,7 @@ Agora pode salvar o seu primeiro formulário clicando no botão abaixo:
 
 - `Salvar`
 
-> Veja mais sobre como criar formulários [aqui](ui/forms).
+> Veja mais sobre como criar formulários [aqui](/docs/academy/ui/forms).
 
 Quando o formulário é criado aparece do lado esquerdo, no menu em `Campos`, a opção `Cliente`, clique no
 `Cliente` para criar o novo campo de `Nome`.
@@ -160,7 +160,7 @@ Ative do lado direito as opções de:
 
 Em `Tipo` escolha a opção: `text - Campo de texto`
 
-> Veja mais sobre campos [aqui](ui/fields).
+> Veja mais sobre campos [aqui](/docs/academy/ui/fields).
 
 Agora pode salvar o seu primeiro campo clicando no botão abaixo:
 

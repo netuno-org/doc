@@ -29,14 +29,14 @@ Nome do formulario.
 
 ---
 
-#### <span style={{color: '#008000'}}>getSubLinks</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{color: '#008000'}}>getSubLinks</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Descrição
 
 Retorna os sub relacionamentos.
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 Sub relacionamentos.
 
@@ -63,7 +63,7 @@ Se possui ou não.
 
 ---
 
-#### <span style={{color: '#008000'}}>setFormLink</span>(<span style={{color: '#FF8000'}}>formulario</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>
+#### <span style={{color: '#008000'}}>setFormLink</span>(<span style={{color: '#FF8000'}}>formulario</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](/docs/library/objects/RelationshipLink)</span>
 ##### Descrição
 
 Define o nome do formulario a ser relacionado.
@@ -76,7 +76,7 @@ Define o nome do formulario a ser relacionado.
 
 ##### Retorno
 
-( _[RelationshipLink](../objects/RelationshipLink)_ )
+( _[RelationshipLink](/docs/library/objects/RelationshipLink)_ )
 
 Objeto RelationLink atual.
 
@@ -86,7 +86,7 @@ Objeto RelationLink atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSubLinks</span>(<span style={{color: '#FF8000'}}>subRelacionamentos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>
+#### <span style={{color: '#008000'}}>setSubLinks</span>(<span style={{color: '#FF8000'}}>subRelacionamentos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](/docs/library/objects/RelationshipLink)</span>
 ##### Descrição
 
 Define os sub relacionamentos.
@@ -95,11 +95,11 @@ Define os sub relacionamentos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **subRelacionamentos** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Sub relacionamentos. |
+| **subRelacionamentos** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Sub relacionamentos. |
 
 ##### Retorno
 
-( _[RelationshipLink](../objects/RelationshipLink)_ )
+( _[RelationshipLink](/docs/library/objects/RelationshipLink)_ )
 
 Objeto RelationLink atual.
 

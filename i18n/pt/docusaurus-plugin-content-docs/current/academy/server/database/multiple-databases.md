@@ -94,4 +94,4 @@ Cada variável contem uma instância do recurso *_db* associado a base de dados 
 
 Assim utilizando estas variáveis poderá realizar as operações de base de dados como queries, inserts, updates e deletes.
 
-Para mais informações sobre as operações de base de dados consulte a documentação do recurso: [_db](../../../library/resources/db)
+Para mais informações sobre as operações de base de dados consulte a documentação do recurso: [_db](/docs/library/resources/db)

@@ -8,10 +8,10 @@ sidebar_label: Tabelas e Gráficos
 ### Antes de Começar
 Antes de começar este tutorial certifique-se que sabe criar **Formulários, Campos, Relações e Serviços Web Rest** onde aprofundamos mais cada explicação, caso não o saiba visite as respetivas ligações:
 
-* [Formulários](forms.md)
-* [Campos](fields.md)
-* [Relações entre formulários](relationships-between-forms.md)
-* [Serviços Web REST](../explore/services.md)
+* [Formulários](/docs/academy/ui/forms)
+* [Campos](/docs/academy/ui/fields)
+* [Relações entre formulários](/docs/academy/ui/relationships-between-forms)
+* [Serviços Web REST](/docs/academy/explore/services)
 
 É também aconselhável que, antes de começar este tutorial, se certifique que tem noções básicas em _**JavaScript**_, _**React.js**_ e _**HTML**_.
 

@@ -4,7 +4,7 @@ title: SSH
 sidebar_label: SSH
 ---
 
-Feature to connect, transfer files and execute commands via SSH.
+Resource to connect, transfer files and execute commands via SSH.
 
 ---
 
@@ -29,20 +29,20 @@ Current SSH object.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>
 ##### Description
 
 Starts a new configuration of its own.
 
 ##### Return
 
-( _[SSHConfig](../objects/SSHConfig)_ )
+( _[SSHConfig](/docs/library/objects/SSHConfig)_ )
 
 Configuration object loaded from received data.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>
 ##### Description
 
 Starts a new configuration of its own.
@@ -51,17 +51,17 @@ Starts a new configuration of its own.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **config** | _[Values](../objects/Values)_ | Configuration definition data structure. |
+| **config** | _[Values](/docs/library/objects/Values)_ | Configuration definition data structure. |
 
 ##### Return
 
-( _[SSHConfig](../objects/SSHConfig)_ )
+( _[SSHConfig](/docs/library/objects/SSHConfig)_ )
 
 Configuration object loaded from received data.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](../resources/ssh)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](/docs/library/resources/ssh)</span>
 ##### Description
 
 Define outra configuração que deve ser utilizada.
@@ -70,11 +70,11 @@ Define outra configuração que deve ser utilizada.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **config** | _[SSHConfig](../objects/SSHConfig)_ | Definition of the new configuration. |
+| **config** | _[SSHConfig](/docs/library/objects/SSHConfig)_ | Definition of the new configuration. |
 
 ##### Return
 
-( _[SSH](../resources/ssh)_ )
+( _[SSH](/docs/library/resources/ssh)_ )
 
 Current SSH resource.
 
@@ -84,14 +84,14 @@ Current SSH resource.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>connect</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](../resources/ssh)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>connect</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](/docs/library/resources/ssh)</span>
 ##### Description
 
 Starts connecting to the server via SSH.
 
 ##### Return
 
-( _[SSH](../resources/ssh)_ )
+( _[SSH](/docs/library/resources/ssh)_ )
 
 Current SSH resource.
 
@@ -101,14 +101,14 @@ Current SSH resource.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>disconnect</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](../resources/ssh)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>disconnect</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](/docs/library/resources/ssh)</span>
 ##### Description
 
 Closes all open sessions and performs SSH disconnection from the server.
 
 ##### Return
 
-( _[SSH](../resources/ssh)_ )
+( _[SSH](/docs/library/resources/ssh)_ )
 
 Current SSH resource.
 
@@ -126,7 +126,7 @@ Current SSH resource.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>enabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](../resources/ssh)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>enabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](/docs/library/resources/ssh)</span>
 ##### Description
 
 Sets whether it is enabled.
@@ -139,7 +139,7 @@ Sets whether it is enabled.
 
 ##### Return
 
-( _[SSH](../resources/ssh)_ )
+( _[SSH](/docs/library/resources/ssh)_ )
 
 Current SSH resource.
 
@@ -166,14 +166,14 @@ Original base SSH client
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>getConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>getConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>
 ##### Description
 
 Gets the configuration that is being used.
 
 ##### Return
 
-( _[SSHConfig](../objects/SSHConfig)_ )
+( _[SSHConfig](/docs/library/objects/SSHConfig)_ )
 
 Object of the active configuration.
 
@@ -183,20 +183,20 @@ Object of the active configuration.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](../resources/ssh)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](/docs/library/resources/ssh)</span>
 ##### Description
 
 Starts a new instance of SSH using the SSH configuration of the `default` key.
 
 ##### Return
 
-( _[SSH](../resources/ssh)_ )
+( _[SSH](/docs/library/resources/ssh)_ )
 
 The new instance of the SSH resource based on the `default` SSH configuration.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>configKey</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](../resources/ssh)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>configKey</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](/docs/library/resources/ssh)</span>
 ##### Description
 
 Starts a new instance of SSH from a specific configuration.
@@ -209,13 +209,13 @@ Starts a new instance of SSH from a specific configuration.
 
 ##### Return
 
-( _[SSH](../resources/ssh)_ )
+( _[SSH](/docs/library/resources/ssh)_ )
 
 The new instance of the SSH resource based on the specified SSH configuration.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](../resources/ssh)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](/docs/library/resources/ssh)</span>
 ##### Description
 
 Starts a new instance of SSH from a configuration that is defined in its own configuration object.
@@ -224,11 +224,11 @@ Starts a new instance of SSH from a configuration that is defined in its own con
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **config** | _[SSHConfig](../objects/SSHConfig)_ | Configuration that will be used. |
+| **config** | _[SSHConfig](/docs/library/objects/SSHConfig)_ | Configuration that will be used. |
 
 ##### Return
 
-( _[SSH](../resources/ssh)_ )
+( _[SSH](/docs/library/resources/ssh)_ )
 
 The new instance of the SSH resource based on the defined configuration.
 
@@ -238,14 +238,14 @@ The new instance of the SSH resource based on the defined configuration.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>initSCP</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](../objects/SSHSCP)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>initSCP</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](/docs/library/objects/SSHSCP)</span>
 ##### Description
 
 Starts SCP session to manage folders and transfer files.
 
 ##### Return
 
-( _[SSHSCP](../objects/SSHSCP)_ )
+( _[SSHSCP](/docs/library/objects/SSHSCP)_ )
 
 The SCP session started to execute commands.
 
@@ -255,14 +255,14 @@ The SCP session started to execute commands.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>initSFTP</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSFTP](../objects/SSHSFTP)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>initSFTP</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSFTP](/docs/library/objects/SSHSFTP)</span>
 ##### Description
 
 Starts SFTP session to manage folders and transfer files.
 
 ##### Return
 
-( _[SSHSFTP](../objects/SSHSFTP)_ )
+( _[SSHSFTP](/docs/library/objects/SSHSFTP)_ )
 
 The SFTP session started to execute commands.
 
@@ -272,14 +272,14 @@ The SFTP session started to execute commands.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>initSession</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSession](../objects/SSHSession)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>initSession</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSession](/docs/library/objects/SSHSession)</span>
 ##### Description
 
 Starts SSH session to execute commands.
 
 ##### Return
 
-( _[SSHSession](../objects/SSHSession)_ )
+( _[SSHSession](/docs/library/objects/SSHSession)_ )
 
 The session started to execute commands.
 
@@ -306,7 +306,7 @@ Result whether or not it is activated.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>setConfig</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](../resources/ssh)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>setConfig</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](/docs/library/resources/ssh)</span>
 ##### Description
 
 Define outra configuração que deve ser utilizada.
@@ -315,11 +315,11 @@ Define outra configuração que deve ser utilizada.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **config** | _[SSHConfig](../objects/SSHConfig)_ | Definition of the new configuration. |
+| **config** | _[SSHConfig](/docs/library/objects/SSHConfig)_ | Definition of the new configuration. |
 
 ##### Return
 
-( _[SSH](../resources/ssh)_ )
+( _[SSH](/docs/library/resources/ssh)_ )
 
 Current SSH resource.
 
@@ -329,7 +329,7 @@ Current SSH resource.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](../resources/ssh)</span>
+#### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](/docs/library/resources/ssh)</span>
 ##### Description
 
 Sets whether it is enabled.
@@ -342,7 +342,7 @@ Sets whether it is enabled.
 
 ##### Return
 
-( _[SSH](../resources/ssh)_ )
+( _[SSH](/docs/library/resources/ssh)_ )
 
 Current SSH resource.
 

@@ -81,12 +81,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>affineTransform</span>(<span style={{color: '#FF8000'}}>tx</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>affineTransform</span>(<span style={{color: '#FF8000'}}>tx</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **tx** | _[Values](../objects/Values)_ |   |
+| **tx** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
@@ -117,13 +117,13 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>attributedString</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>attributes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.text.AttributedString</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>attributedString</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>attributes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.text.AttributedString</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **text** | _string_ |   |
-| **attributes** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **attributes** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 
 ##### Retorno
 
@@ -132,13 +132,13 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>attributedString</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>attributes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.text.AttributedString</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>attributedString</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>attributes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.text.AttributedString</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **text** | _string_ |   |
-| **attributes** | _[Values](../objects/Values)_ |   |
+| **attributes** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
@@ -303,7 +303,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>crop</span>(<span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>crop</span>(<span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -315,7 +315,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -324,7 +324,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawArc</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>startAngle</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcAngle</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawArc</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>startAngle</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcAngle</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -339,7 +339,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -348,7 +348,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawBackground</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawBackground</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -357,7 +357,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -366,7 +366,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -377,12 +377,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -394,12 +394,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -412,12 +412,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -431,12 +431,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>dx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>dx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -453,12 +453,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>dx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>dx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -476,12 +476,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -495,12 +495,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -515,12 +515,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -532,12 +532,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -550,12 +550,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>at</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>, <span style={{color: '#FF8000'}}>at</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -565,12 +565,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.image.BufferedImage</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.image.BufferedImage</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -581,12 +581,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.image.BufferedImage</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.image.BufferedImage</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -598,50 +598,50 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../resources/image)_ |   |
+| **image** | _[Image](/docs/library/resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../resources/image)_ |   |
+| **image** | _[Image](/docs/library/resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **rotation** | _double_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../resources/image)_ |   |
+| **image** | _[Image](/docs/library/resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **width** | _int_ |   |
@@ -649,17 +649,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../resources/image)_ |   |
+| **image** | _[Image](/docs/library/resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **width** | _int_ |   |
@@ -668,17 +668,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>, <span style={{color: '#FF8000'}}>dx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>, <span style={{color: '#FF8000'}}>dx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../resources/image)_ |   |
+| **image** | _[Image](/docs/library/resources/image)_ |   |
 | **dx1** | _int_ |   |
 | **dxy1** | _int_ |   |
 | **dx2** | _int_ |   |
@@ -690,17 +690,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>, <span style={{color: '#FF8000'}}>dx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>, <span style={{color: '#FF8000'}}>dx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dxy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sx2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>sy2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../resources/image)_ |   |
+| **image** | _[Image](/docs/library/resources/image)_ |   |
 | **dx1** | _int_ |   |
 | **dxy1** | _int_ |   |
 | **dx2** | _int_ |   |
@@ -713,17 +713,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../resources/image)_ |   |
+| **image** | _[Image](/docs/library/resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **width** | _int_ |   |
@@ -732,17 +732,17 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../resources/image)_ |   |
+| **image** | _[Image](/docs/library/resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **width** | _int_ |   |
@@ -752,34 +752,34 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../resources/image)_ |   |
+| **image** | _[Image](/docs/library/resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **bgColor** | _java.awt.Color_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>bgColor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../resources/image)_ |   |
+| **image** | _[Image](/docs/library/resources/image)_ |   |
 | **x** | _int_ |   |
 | **y** | _int_ |   |
 | **bgColor** | _java.awt.Color_ |   |
@@ -787,22 +787,22 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>, <span style={{color: '#FF8000'}}>at</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawImage</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>, <span style={{color: '#FF8000'}}>at</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **image** | _[Image](../resources/image)_ |   |
+| **image** | _[Image](/docs/library/resources/image)_ |   |
 | **at** | _java.awt.geom.AffineTransform_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -811,7 +811,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawLine</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>x2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawLine</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>x2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -824,7 +824,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -833,7 +833,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawOval</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawOval</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -846,7 +846,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -855,7 +855,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -867,12 +867,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -883,12 +883,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -900,40 +900,40 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **color** | _java.awt.Color_ |   |
-| **xPoints** | _[Values](../objects/Values)_ |   |
-| **yPoints** | _[Values](../objects/Values)_ |   |
+| **xPoints** | _[Values](/docs/library/objects/Values)_ |   |
+| **yPoints** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **color** | _java.awt.Color_ |   |
-| **xPoints** | _[Values](../objects/Values)_ |   |
-| **yPoints** | _[Values](../objects/Values)_ |   |
+| **xPoints** | _[Values](/docs/library/objects/Values)_ |   |
+| **yPoints** | _[Values](/docs/library/objects/Values)_ |   |
 | **nPoints** | _int_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -942,7 +942,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -954,12 +954,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -970,12 +970,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -987,40 +987,40 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **color** | _java.awt.Color_ |   |
-| **xPoints** | _[Values](../objects/Values)_ |   |
-| **yPoints** | _[Values](../objects/Values)_ |   |
+| **xPoints** | _[Values](/docs/library/objects/Values)_ |   |
+| **yPoints** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **color** | _java.awt.Color_ |   |
-| **xPoints** | _[Values](../objects/Values)_ |   |
-| **yPoints** | _[Values](../objects/Values)_ |   |
+| **xPoints** | _[Values](/docs/library/objects/Values)_ |   |
+| **yPoints** | _[Values](/docs/library/objects/Values)_ |   |
 | **nPoints** | _int_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -1029,7 +1029,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1042,12 +1042,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1061,7 +1061,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -1070,7 +1070,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawRoundRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcHeight</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawRoundRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcHeight</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1085,12 +1085,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawRoundRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcHeight</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawRoundRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcHeight</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1106,7 +1106,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -1115,7 +1115,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>font</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>font</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1128,12 +1128,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>font</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>font</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1147,12 +1147,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>font</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>at</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>font</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>, <span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>at</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1166,12 +1166,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.text.AttributedString</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.text.AttributedString</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1182,12 +1182,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.text.AttributedString</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.text.AttributedString</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1199,12 +1199,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.text.AttributedString</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>at</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.text.AttributedString</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>at</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1216,7 +1216,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -1225,7 +1225,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>file</span>(<span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>file</span>(<span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1235,7 +1235,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 
 ---
@@ -1244,7 +1244,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillArc</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>startAngle</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcAngle</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillArc</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>startAngle</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcAngle</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1259,7 +1259,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -1268,7 +1268,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillOval</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillOval</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1281,7 +1281,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -1290,7 +1290,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1302,12 +1302,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1318,12 +1318,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1335,40 +1335,40 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **color** | _java.awt.Color_ |   |
-| **xPoints** | _[Values](../objects/Values)_ |   |
-| **yPoints** | _[Values](../objects/Values)_ |   |
+| **xPoints** | _[Values](/docs/library/objects/Values)_ |   |
+| **yPoints** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **color** | _java.awt.Color_ |   |
-| **xPoints** | _[Values](../objects/Values)_ |   |
-| **yPoints** | _[Values](../objects/Values)_ |   |
+| **xPoints** | _[Values](/docs/library/objects/Values)_ |   |
+| **yPoints** | _[Values](/docs/library/objects/Values)_ |   |
 | **nPoints** | _int_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -1377,7 +1377,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1390,12 +1390,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1409,7 +1409,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -1418,7 +1418,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillRoundRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcHeight</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillRoundRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcHeight</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1433,12 +1433,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillRoundRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcHeight</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillRoundRect</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>x</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>y</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>arcHeight</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>rotation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1454,7 +1454,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -1463,13 +1463,13 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **type** | _int_ |   |
-| **file** | _[File](../objects/File)_ |   |
+| **file** | _[File](/docs/library/objects/File)_ |   |
 
 ##### Retorno
 
@@ -1478,13 +1478,13 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>style</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>style</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **type** | _int_ |   |
-| **file** | _[File](../objects/File)_ |   |
+| **file** | _[File](/docs/library/objects/File)_ |   |
 | **style** | _int_ |   |
 | **size** | _float_ |   |
 
@@ -1495,13 +1495,13 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **type** | _int_ |   |
-| **storage** | _[Storage](../resources/storage)_ |   |
+| **storage** | _[Storage](/docs/library/resources/storage)_ |   |
 
 ##### Retorno
 
@@ -1510,13 +1510,13 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>style</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>style</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **type** | _int_ |   |
-| **storage** | _[Storage](../resources/storage)_ |   |
+| **storage** | _[Storage](/docs/library/resources/storage)_ |   |
 | **style** | _int_ |   |
 | **size** | _float_ |   |
 
@@ -1543,12 +1543,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **file** | _[File](../objects/File)_ |   |
+| **file** | _[File](/docs/library/objects/File)_ |   |
 
 ##### Retorno
 
@@ -1557,12 +1557,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **file** | _[File](../objects/File)_ |   |
+| **file** | _[File](/docs/library/objects/File)_ |   |
 | **size** | _float_ |   |
 
 ##### Retorno
@@ -1572,12 +1572,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>style</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>style</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **file** | _[File](../objects/File)_ |   |
+| **file** | _[File](/docs/library/objects/File)_ |   |
 | **style** | _int_ |   |
 | **size** | _float_ |   |
 
@@ -1588,12 +1588,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ |   |
+| **storage** | _[Storage](/docs/library/resources/storage)_ |   |
 
 ##### Retorno
 
@@ -1602,12 +1602,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ |   |
+| **storage** | _[Storage](/docs/library/resources/storage)_ |   |
 | **size** | _float_ |   |
 
 ##### Retorno
@@ -1617,12 +1617,12 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>style</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>style</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Font</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ |   |
+| **storage** | _[Storage](/docs/library/resources/storage)_ |   |
 | **style** | _int_ |   |
 | **size** | _float_ |   |
 
@@ -1704,7 +1704,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1714,7 +1714,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 
 ---
@@ -1819,7 +1819,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1829,12 +1829,12 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>image</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Image</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1843,26 +1843,40 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **file** | _java.io.File_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>javax.imageio.stream.ImageInputStream</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
+
+##### Retorno
+
+( _[Image](/docs/library/resources/image)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>javax.imageio.stream.ImageInputStream</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1871,49 +1885,49 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **file** | _[File](../objects/File)_ |   |
+| **file** | _[File](/docs/library/objects/File)_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ |   |
+| **storage** | _[Storage](/docs/library/resources/storage)_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -1930,7 +1944,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>jpegCompression</span>(<span style={{color: '#FF8000'}}>jpegCompression</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>jpegCompression</span>(<span style={{color: '#FF8000'}}>jpegCompression</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1939,7 +1953,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -1983,7 +1997,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>output</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>output</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1992,7 +2006,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -2038,10 +2052,10 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>resetGraphics</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>resetGraphics</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -2050,7 +2064,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>resize</span>(<span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>resize</span>(<span style={{color: '#FF8000'}}>width</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>height</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2060,7 +2074,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -2069,22 +2083,37 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **file** | _java.io.File_ |   |
 | **type** | _string_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>javax.imageio.stream.ImageOutputStream</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
+| **type** | _string_ |   |
+
+##### Retorno
+
+( _[Image](/docs/library/resources/image)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>javax.imageio.stream.ImageOutputStream</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2094,52 +2123,52 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **file** | _[File](../objects/File)_ |   |
+| **file** | _[File](/docs/library/objects/File)_ |   |
 | **type** | _string_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 | **type** | _string_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ |   |
+| **storage** | _[Storage](/docs/library/resources/storage)_ |   |
 | **type** | _string_ |   |
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---
@@ -2148,7 +2177,7 @@ Recurso manipulação de imagens.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>setJPEGCompression</span>(<span style={{color: '#FF8000'}}>jpegCompression</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](../resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>setJPEGCompression</span>(<span style={{color: '#FF8000'}}>jpegCompression</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2157,7 +2186,7 @@ Recurso manipulação de imagens.
 
 ##### Retorno
 
-( _[Image](../resources/image)_ )
+( _[Image](/docs/library/resources/image)_ )
 
 
 ---

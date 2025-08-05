@@ -6,7 +6,7 @@ sidebar_label: Cron Jobs
 
 ## Antes de começar
 
-Antes de proceder certifique-se que que tem noções básicas em _**JavaScript**_ e que já tem as noções básicas do Netuno com o passo-a-passo disponível na [Academia](/docs/pt-PT/academy/overview/).
+Antes de proceder certifique-se que que tem noções básicas em _**JavaScript**_ e que já tem as noções básicas do Netuno com o passo-a-passo disponível na [Academia](/docs/academy/overview).
 
 ## Introdução
 
@@ -20,7 +20,7 @@ Este tipo de operações periódicas são conhecidas como Cron Jobs ou em portug
 
 Cada aplicação do Netuno pode ter inúmeros Cron Jobs, e os Cron Jobs do Netuno tanto podem executar serviços e URLs internos, como também URLs externos.
 
-> Para mais informações verifique a documentação do recurso [cron](/docs/pt-PT/library/resources/cron).
+> Para mais informações verifique a documentação do recurso [cron](/docs/library/resources/cron).
 
 ## Como Funciona
 
@@ -196,7 +196,7 @@ _out.print("Ok")
 
 No JSON de configuração da sua aplicação, ajuste a parametrização da seguinte forma:
 
-```javascript
+```json
 {
     ...
     "cron": {
@@ -251,9 +251,9 @@ Isto quer dizer que através do código podemos gerir tudo.
 
 ### Criar Nova Tarefa
 
-Para criar uma nova tarefa, criamos o seu agendamento através do [`_cron.schedule`](../../library/resources/cron#schedule).
+Para criar uma nova tarefa, criamos o seu agendamento através do [`_cron.schedule`](/docs/library/resources/cron#schedule).
 
-O [`_cron.schedule`](../../library/resources/cron#schedule) recebe os seguintes parâmetros:
+O [`_cron.schedule`](/docs/library/resources/cron#schedule) recebe os seguintes parâmetros:
 
 1. Chave de identificação da tarefa: `key`.
 2. Configuração do tempo de agendamento para a execução.
@@ -278,7 +278,7 @@ Onde este arquivo é executado sempre que aplicação é inicializada pelo servi
 
 ### Remover Tarefa
 
-Para remover uma determinada tarefa utilizamos o [`_cron.remove(key)`](../../library/resources/cron#remove).
+Para remover uma determinada tarefa utilizamos o [`_cron.remove(key)`](/docs/library/resources/cron#remove).
 
 Onde a `key` é a chave de identificação da tarefa.
 
@@ -290,7 +290,7 @@ _cron.remove('minha-tarefa')
 
 ### Listar Tarefas
 
-Através do [`_cron.schedules()`](../../library/resources/cron#schedules) podemos listar todas as tarefas configuradas.
+Através do [`_cron.schedules()`](/docs/library/resources/cron#schedules) podemos listar todas as tarefas configuradas.
 
 Exemplo de como listar todas as tarefas agendadas: 
 
@@ -322,7 +322,7 @@ _out.println('</table>')
 
 ### Pausar Tarefas
 
-Através do [`_cron.pause(key)`](../../library/resources/cron#pause) podemos pausar a execução de uma determinada tarefa.
+Através do [`_cron.pause(key)`](/docs/library/resources/cron#pause) podemos pausar a execução de uma determinada tarefa.
 
 Exemplo de como pausar todas as tarefas agendadas:
 
@@ -346,7 +346,7 @@ _out.println('</table>')
 
 ### Retomar Tarefas
 
-Através do [`_cron.resume(key)`](../../library/resources/cron#resume) podemos retomar a execução de uma determinada tarefa.
+Através do [`_cron.resume(key)`](/docs/library/resources/cron#resume) podemos retomar a execução de uma determinada tarefa.
 
 Exemplo de como retomar todas as tarefas agendadas, e apresenta quando as tarefas serão executadas:
 

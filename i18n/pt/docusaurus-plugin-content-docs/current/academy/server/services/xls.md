@@ -8,7 +8,7 @@ sidebar_label: XLS - Excel
 
 O Netuno gera arquivos EXCEL compatível com o LibreOffice, OpenOffice, Microsoft Office, Google Drive, etc.
 
-Através do recurso [XLS](../../../library/resources/xls) que permite uma abstração low-code do [Apache POI](https://poi.apache.org/) para as diversas linguagens de programação suportas pelo Netuno.
+Através do recurso [XLS](/docs/library/resources/xls) que permite uma abstração low-code do [Apache POI](https://poi.apache.org/) para as diversas linguagens de programação suportas pelo Netuno.
 
 Podemos tanto gerar arquivos XLSX, XLS ou ODS.
 
@@ -362,7 +362,7 @@ const novaPlanilha = excel.createSheet('Nova Planilha')
 
 > Nos métodos de manipulação de células, imagens e dados, pode ser adicionado no primeiro parâmetro a referência do objeto da planilha.
 >
-> Depende de qual planilha esteja ativa, é possivel alterar a planilha ativa com o método [activeSheet](../../../library/resources/xls#activesheet).
+> Depende de qual planilha esteja ativa, é possivel alterar a planilha ativa com o método [activeSheet](/docs/library/resources/xls#activesheet).
 
 Exemplo de como inserir uma imagem na nova planilha:
 

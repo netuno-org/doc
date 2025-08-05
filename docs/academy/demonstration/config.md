@@ -6,7 +6,8 @@ title: Config
 
 ## Demo app basic configuration
 
-We'll only cover the necessary steps to configure the Demo App, for a more in-depth look please go to [Basic Configuration of an Application](../explore/configuration)
+We'll only cover the necessary steps to configure the Demo App, for a more in-depth look please go to 
+[Basic Configuration of an Application](/docs/academy/explore/configuration)
 
 Inside the Netuno root folder find the folder:
 
@@ -42,7 +43,7 @@ Find this in the same file:
             "port": "",
             "host": "",
             "name": "demo_en",
-            "username": ""
+            "username": "sa"
         }
     },
 ...

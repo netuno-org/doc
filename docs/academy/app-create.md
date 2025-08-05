@@ -10,7 +10,7 @@ An overview of the frontend, database, and API service.
 
 ## Introduction
 
-After [installing the platform](../get-started/installation), we present below the basic commands for creating
+After [installing the platform](/docs/get-started/installation), we present below the basic commands for creating
 an application and starting the server.
 
 Although Netuno is polyglot and supports several languages, in this tutorial we will only use JavaScript.
@@ -79,7 +79,7 @@ This folder contains all the files for the new application and is where all deve
 
 Documentation detailing the application's file and folder structure:
 
-- [Application Folders](../category/app-structure)
+- [Application Folders](/docs/category/app-structure)
 
 ## Step Summary
 
@@ -138,7 +138,7 @@ Now you can save your first form by clicking the button below:
 
 - `Save`
 
-> See more about creating forms [here](ui/forms).
+> See more about creating forms [here](/docs/academy/ui/forms).
 
 When the form is created, the 'Customer' option appears on the left side, under `Fields`. Click on
 'Customer' to create the new 'Name' field.
@@ -155,7 +155,7 @@ Activate the options on the right side:
 - `Allow Filtering` - which allows you to search by the `Name` field.
 - `Display in Result` - which will display the 'Name' field in the results table.
 
-> See more about fields [here](ui/fields).
+> See more about fields [here](/docs/academy/ui/fields).
 
 Now you can save your first field by clicking the button below:
 

@@ -12,7 +12,7 @@ General application parameters.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Obtains the application configuration data present in the file in the config folder.
@@ -28,7 +28,7 @@ _out.println(`App Name: ${appName}`);
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Returns a structure with the configuration parameters.
 
@@ -65,7 +65,7 @@ Returns whether the configuration was changed and reloaded.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>file</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>file</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
 Processes files within the application.
@@ -100,7 +100,7 @@ if (jsonFile.exists()) {
 
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Returns the file object obtained through the path.
 
@@ -110,7 +110,7 @@ Returns the file object obtained through the path.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>folder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>folder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
 Tracks all the files present in the folder of the inserted path.
@@ -123,7 +123,7 @@ Tracks all the files present in the folder of the inserted path.
 
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Returns all files present in the folder of the inserted path.
 
@@ -133,7 +133,7 @@ Returns all files present in the folder of the inserted path.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Obtains the application configuration data present in the file in the config folder.
@@ -149,7 +149,7 @@ _out.println(`App Name: ${appName}`);
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Returns a structure with the configuration parameters.
 
@@ -159,7 +159,7 @@ Returns a structure with the configuration parameters.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
 Processes files within the application.
@@ -194,7 +194,7 @@ if (jsonFile.exists()) {
 
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Returns the file object obtained through the path.
 
@@ -204,7 +204,7 @@ Returns the file object obtained through the path.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getFolder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getFolder</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
 Tracks all the files present in the folder of the inserted path.
@@ -217,7 +217,7 @@ Tracks all the files present in the folder of the inserted path.
 
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Returns all files present in the folder of the inserted path.
 
@@ -322,7 +322,7 @@ Returns the name of the application.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getSettings</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getSettings</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Obtains the application settings data present in the file of the config.
@@ -339,7 +339,7 @@ _out.println(`The maximum limit for tickets is: ${maxTickets}`);
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Returns the custom settings.
 
@@ -712,7 +712,7 @@ Returns the storage folder location.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>settings</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>settings</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Obtains the application settings data present in the file of the config.
@@ -729,7 +729,7 @@ _out.println(`The maximum limit for tickets is: ${maxTickets}`);
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Returns the custom settings.
 

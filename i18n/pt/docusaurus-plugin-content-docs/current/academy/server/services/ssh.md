@@ -12,7 +12,7 @@ Suporta múltiplas conexões simultâneas, e ainda SCP e SFTP.
 
 Isso graças a implementação Java e open-source <a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a>, que é o que permite ao Netuno fornecer estas funcionalidadas a todas linguagens de script através do recurso `_ssh`.
 
-> Mais sobre o recurso [SSH](../../../library/resources/ssh) do Netuno.
+> Mais sobre o recurso [SSH](/docs/library/resources/ssh) do Netuno.
 
 ## Configuração
 
@@ -112,7 +112,7 @@ if (sshComandoResultado.ok()) {
 }
 ```
 
-> O objeto retornado pelo comando é o [SSHExecResult](../../../library/objects/SSHExecResult).
+> O objeto retornado pelo comando é o [SSHExecResult](/docs/library/objects/SSHExecResult).
 
 Lembre de fechar sempre a sessão:
 
@@ -139,7 +139,7 @@ Para iniciar uma nova sessão SFTP:
 const sftp = ssh.initSFTP();
 ```
 
-> Inicia o objeto de cliente da sessão sendo do tipo [SSHSFTP](../../../library/objects/SSHSFTP).
+> Inicia o objeto de cliente da sessão sendo do tipo [SSHSFTP](/docs/library/objects/SSHSFTP).
 
 Criar uma nova pasta remotamente:
 
@@ -188,7 +188,7 @@ for (const i of sftp.list("caminho/pasta")) {
 }
 ```
 
-> Retorna uma lista de objetos do tipo [SSHFile](../../../library/objects/SSHFile).
+> Retorna uma lista de objetos do tipo [SSHFile](/docs/library/objects/SSHFile).
 
 Lembre de fechar sempre a sessão SFTP:
 

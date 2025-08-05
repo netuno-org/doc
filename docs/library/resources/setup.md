@@ -4,7 +4,7 @@ title: Setup
 sidebar_label: Setup
 ---
 
-Recurso de configuração dos componentes da aplicação.
+Configuration management and definition of the database structure.
 
 ---
 

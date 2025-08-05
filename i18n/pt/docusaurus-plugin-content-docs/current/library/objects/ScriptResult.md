@@ -36,7 +36,7 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ---
 
-#### <span style={{color: '#008000'}}>whenError</span>(<span style={{color: '#FF8000'}}>func</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](../objects/ScriptResult)</span>
+#### <span style={{color: '#008000'}}>whenError</span>(<span style={{color: '#FF8000'}}>func</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -45,12 +45,12 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ##### Retorno
 
-( _[ScriptResult](../objects/ScriptResult)_ )
+( _[ScriptResult](/docs/library/objects/ScriptResult)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>whenError</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](../objects/ScriptResult)</span>
+#### <span style={{color: '#008000'}}>whenError</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -59,7 +59,7 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ##### Retorno
 
-( _[ScriptResult](../objects/ScriptResult)_ )
+( _[ScriptResult](/docs/library/objects/ScriptResult)_ )
 
 
 ---
@@ -68,7 +68,7 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ---
 
-#### <span style={{color: '#008000'}}>whenSucceed</span>(<span style={{color: '#FF8000'}}>func</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Runnable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](../objects/ScriptResult)</span>
+#### <span style={{color: '#008000'}}>whenSucceed</span>(<span style={{color: '#FF8000'}}>func</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Runnable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -77,12 +77,12 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ##### Retorno
 
-( _[ScriptResult](../objects/ScriptResult)_ )
+( _[ScriptResult](/docs/library/objects/ScriptResult)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>whenSucceed</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](../objects/ScriptResult)</span>
+#### <span style={{color: '#008000'}}>whenSucceed</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -91,7 +91,7 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ##### Retorno
 
-( _[ScriptResult](../objects/ScriptResult)_ )
+( _[ScriptResult](/docs/library/objects/ScriptResult)_ )
 
 
 ---

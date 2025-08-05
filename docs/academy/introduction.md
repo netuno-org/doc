@@ -20,7 +20,7 @@ You will be required to think out of the box as an essential high level of conce
 
 In the `Course Academy` you will end up with far more programming knowledge. So no excuses and hands on work because Netuno will simplify web solutions, applications, backoffice and Rest API and also your development.
 
-> The Netuno is a free plataform [Start Now](../get-started/installation).
+> The Netuno is a free plataform [Start Now](/docs/get-started/installation).
 
 So go ahead and 
 `MAKE EACH DAY YOUR MASTERPIECE` - JOHN WOODEN

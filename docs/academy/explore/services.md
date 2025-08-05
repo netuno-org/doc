@@ -8,9 +8,9 @@ sidebar_label: Services
 
 Before creating Web REST services make sure you know how to create **Forms, Fields** and **Relationships**, in case you don't know it visit the following links:
 
-* [Forms](../ui/forms.md)
-* [Fields](../ui/fields.md)
-* [Form relationships](../ui/relationships-between-forms.md)
+* [Forms](/docs/academy/ui/forms)
+* [Fields](/docs/academy/ui/fields)
+* [Form relationships](/docs/academy/ui/relationships-between-forms)
 
 It is also advisable that, before starting this tutorial, you make sure you have the basics in _**JavaScript, React.js**_ and _**HTML**_.
 
