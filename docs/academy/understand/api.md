@@ -6,7 +6,7 @@ title: API
 
 _Netuno_ has its own framework for creating low-code REST APIs, with support for JWT (JSON Web Token) and OpenAPI 3.0.
 
-> More Info about [Open API](https://doc.netuno.org/docs/en/academy/server/services/openapi/)
+> More info about [Open API](/docs/academy/server/services/openapi).
 
 The entire development framework of web services in _Netuno_ is very versatile allowing any type of development to be carried out.
 
@@ -18,7 +18,7 @@ Nevertheless when there are no solutions in the _Netuno_ framework, it is possib
 
 [JWT.io](https://jwt.io/) is the standard specification for passing data from the session context to the client via JSON object.
 
-> More Info about [JWT Token](https://doc.netuno.org/docs/en/academy/server/services/jwt/)
+> More info about [JWT Token](/docs/academy/server/services/jwt).
 
 Therefore, the server does not need to store the sensitive data of the users logged in, instead it becomes a token that is passed on to the client and later on each request this token must be returned.
 

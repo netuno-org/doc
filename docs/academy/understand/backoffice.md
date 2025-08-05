@@ -21,7 +21,7 @@ Also very common to have the following requirements:
 
 Developing the backoffice often takes as much or more time spent than developing the final application.
 
-Also very common for the back office to provide the [REST API](https://doc.netuno.org/docs/en/academy/server/services/openapi/) with web services that will allow the communication of datta business with the final application or the frontend.
+Also very common for the back office to provide the [REST API](/docs/academy/server/services/openapi) with web services that will allow the communication of datta business with the final application or the frontend.
 
 ![Backoffice.](/docs/assets/business/business-backoffice.svg "Backoffice.")
 
@@ -29,7 +29,7 @@ _Netuno_ brings a powerful backoffice engine where without code it is possible t
 
 > Users and Groups Management, Log Records and Access Controls
 
-Allows you to create with low-code dashboards, reports and the [REST API](https://doc.netuno.org/docs/en/academy/server/services/openapi/) (web services) integrated with [JWT Token](https://doc.netuno.org/docs/en/academy/server/services/jwt/).
+Allows you to create with low-code dashboards, reports and the [REST API](/docs/academy/server/services/openapi) (web services) integrated with [JWT Token](/docs/academy/server/services/jwt).
 
 > _Netuno_ will offer all the functionalities that can be tailored to your Business.
 

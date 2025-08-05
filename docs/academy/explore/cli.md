@@ -24,7 +24,7 @@ Before you start developing, take a look at the available commands.
 
 Before starting developing you need to install Netuno. 
 
-To help you install Netuno go to [Installation ](https://doc.netuno.org/docs/en/installation/)
+To help you install Netuno go to [Installation ](/docs/get-started/installation)
 
 #### Details 
 
