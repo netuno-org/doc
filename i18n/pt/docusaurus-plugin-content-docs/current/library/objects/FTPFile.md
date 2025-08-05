@@ -403,7 +403,7 @@ Se tem ou não permissão.
 
 ---
 
-#### <span style={{color: '#008000'}}>setGroup</span>(<span style={{color: '#FF8000'}}>grupo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setGroup</span>(<span style={{color: '#FF8000'}}>grupo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define o nome do grupo proprietário do arquivo.
@@ -416,7 +416,7 @@ Define o nome do grupo proprietário do arquivo.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -426,7 +426,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setGroupExecutable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setGroupExecutable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define permissão de execução de arquivo ou permissão de listagem de diretório para um grupo.
@@ -439,7 +439,7 @@ Define permissão de execução de arquivo ou permissão de listagem de diretór
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -449,7 +449,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setGroupReadable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setGroupReadable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define permissão de leitura para um grupo.
@@ -462,7 +462,7 @@ Define permissão de leitura para um grupo.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -472,7 +472,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setGroupWritable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setGroupWritable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define permissão de escrita para um grupo.
@@ -485,7 +485,7 @@ Define permissão de escrita para um grupo.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -495,7 +495,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setHardLinkCount</span>(<span style={{color: '#FF8000'}}>links</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setHardLinkCount</span>(<span style={{color: '#FF8000'}}>links</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define o número de links físicos para este arquivo.
@@ -508,7 +508,7 @@ Define o número de links físicos para este arquivo.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -518,7 +518,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setLink</span>(<span style={{color: '#FF8000'}}>link</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setLink</span>(<span style={{color: '#FF8000'}}>link</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Se FTPFile for um link simbólico, use este método para definir o nome do arquivo apontado pelo link simbólico.
@@ -531,7 +531,7 @@ Se FTPFile for um link simbólico, use este método para definir o nome do arqui
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -541,7 +541,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setName</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setName</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define o nome do arquivo.
@@ -554,7 +554,7 @@ Define o nome do arquivo.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -564,7 +564,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setRawListing</span>(<span style={{color: '#FF8000'}}>rawListing</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setRawListing</span>(<span style={{color: '#FF8000'}}>rawListing</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define a listagem bruta do servidor FTP original a partir da qual o FTPFile foi criado.
@@ -577,7 +577,7 @@ Define a listagem bruta do servidor FTP original a partir da qual o FTPFile foi 
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -587,7 +587,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSize</span>(<span style={{color: '#FF8000'}}>tamanho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setSize</span>(<span style={{color: '#FF8000'}}>tamanho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define o tamanho do arquivo em bytes.
@@ -600,7 +600,7 @@ Define o tamanho do arquivo em bytes.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -610,7 +610,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setTimestamp</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setTimestamp</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define o momento de data/hora do arquivo. Geralmente é o horário da última modificação. O parâmetro não é clonado, portanto não altere seu valor após chamar este método.
@@ -623,7 +623,7 @@ Define o momento de data/hora do arquivo. Geralmente é o horário da última mo
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -633,7 +633,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setUser</span>(<span style={{color: '#FF8000'}}>utilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setUser</span>(<span style={{color: '#FF8000'}}>utilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define o nome do utilizador proprietário do arquivo. Pode ser uma representação em string do número do utilizador.
@@ -646,7 +646,7 @@ Define o nome do utilizador proprietário do arquivo. Pode ser uma representaç�
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -656,7 +656,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setUserExecutable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setUserExecutable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define permissão de execução de arquivo ou permissão de listagem de diretório para um utilizador.
@@ -669,7 +669,7 @@ Define permissão de execução de arquivo ou permissão de listagem de diretór
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -679,7 +679,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setUserReadable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setUserReadable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define permissão de leitura para um utilizador.
@@ -692,7 +692,7 @@ Define permissão de leitura para um utilizador.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -702,7 +702,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setUserWritable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setUserWritable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define permissão de escrita para um utilizador.
@@ -715,7 +715,7 @@ Define permissão de escrita para um utilizador.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -725,7 +725,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setWorldExecutable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setWorldExecutable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define permissão global de execução de arquivo ou permissão de listagem de diretório.
@@ -738,7 +738,7 @@ Define permissão global de execução de arquivo ou permissão de listagem de d
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -748,7 +748,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setWorldReadable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setWorldReadable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define permissão global de leitura.
@@ -761,7 +761,7 @@ Define permissão global de leitura.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -771,7 +771,7 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setWorldWritable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>setWorldWritable</span>(<span style={{color: '#FF8000'}}>acesso</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Define permissão global de escrita.
@@ -784,7 +784,7 @@ Define permissão global de escrita.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -794,14 +794,14 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>toDirectory</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>toDirectory</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Indica que o objeto é um diretório.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -811,14 +811,14 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>toFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>toFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Indica que o objeto é um arquivo.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -864,14 +864,14 @@ Representação de string das informações do FTPFile.
 
 ---
 
-#### <span style={{color: '#008000'}}>toSymbolicLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>toSymbolicLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Indica que o objeto é um link simbólico.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 
@@ -881,14 +881,14 @@ Objeto FTPFile atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>toUnknown</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](../objects/FTPFile)</span>
+#### <span style={{color: '#008000'}}>toUnknown</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPFile](/docs/library/objects/FTPFile)</span>
 ##### Descrição
 
 Indica que o objeto é um tipo desconhecido.
 
 ##### Retorno
 
-( _[FTPFile](../objects/FTPFile)_ )
+( _[FTPFile](/docs/library/objects/FTPFile)_ )
 
 Objeto FTPFile atual.
 

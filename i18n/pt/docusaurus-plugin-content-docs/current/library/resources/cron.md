@@ -251,7 +251,7 @@ Se foi possível continuar o serviço agendado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedule</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Cron](../resources/cron)</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedule</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Cron](/docs/library/resources/cron)</span>
 ##### Descrição
 
 Cria um agendamento de execução de serviço.
@@ -276,13 +276,13 @@ _cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos"
 
 ##### Retorno
 
-( _[Cron](../resources/cron)_ )
+( _[Cron](/docs/library/resources/cron)_ )
 
 A instância atual do Cron.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedule</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Cron](../resources/cron)</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedule</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Cron](/docs/library/resources/cron)</span>
 ##### Descrição
 
 Cria um agendamento de execução de serviço.
@@ -304,11 +304,11 @@ _cron.schedule("atualizaPrecos", "1 * * * * ?", "/services/jobs/atualiza-precos"
 | **chave** | _string_ | Nome chave de identificação do job. |
 | **config** | _string_ | Expressão horária de agendamento do Cron, ver tabela acima. |
 | **url** | _string_ | URL a ser executada pelo job. |
-| **params** | _[Values](../objects/Values)_ | Dados a passar como parametro ao serviço. |
+| **params** | _[Values](/docs/library/objects/Values)_ | Dados a passar como parametro ao serviço. |
 
 ##### Retorno
 
-( _[Cron](../resources/cron)_ )
+( _[Cron](/docs/library/resources/cron)_ )
 
 A instância atual do Cron.
 
@@ -318,14 +318,14 @@ A instância atual do Cron.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedules</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_cron</span>.<span style={{color: '#008000'}}>schedules</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Lista de todos os agendamentos de serviços da aplicação.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 A lista de todos os serviços agendados da aplicação que estão configurados no Cron.
 

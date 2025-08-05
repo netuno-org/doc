@@ -41,14 +41,14 @@ Nome do formulario.
 
 ---
 
-#### <span style={{color: '#008000'}}>getRelationLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>
+#### <span style={{color: '#008000'}}>getRelationLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](/docs/library/objects/RelationshipLink)</span>
 ##### Descrição
 
 Retorna a configuração do relacionamento.
 
 ##### Retorno
 
-( _[RelationshipLink](../objects/RelationshipLink)_ )
+( _[RelationshipLink](/docs/library/objects/RelationshipLink)_ )
 
 Configuração do relacionamento.
 
@@ -58,14 +58,14 @@ Configuração do relacionamento.
 
 ---
 
-#### <span style={{color: '#008000'}}>getWhere</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{color: '#008000'}}>getWhere</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
 ##### Descrição
 
 Retorna a configuração dos filtros para o formulario principal do objeto Link.
 
 ##### Retorno
 
-( _[Where](../objects/Where)_ )
+( _[Where](/docs/library/objects/Where)_ )
 
 Configuração dos filtros.
 
@@ -75,7 +75,7 @@ Configuração dos filtros.
 
 ---
 
-#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Descrição
 
 Define um segundo nivel de relacionamento no objeto Link atual.
@@ -88,13 +88,13 @@ Define um segundo nivel de relacionamento no objeto Link atual.
 
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 Objeto Link atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Descrição
 
 Define um segundo nivel de relacionamento no objeto Link atual.
@@ -103,11 +103,11 @@ Define um segundo nivel de relacionamento no objeto Link atual.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **formLink** | _[Link](../objects/Link)_ | Nome do formulario a relacionar. |
+| **formLink** | _[Link](/docs/library/objects/Link)_ | Nome do formulario a relacionar. |
 
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 Objeto Link atual.
 
@@ -117,7 +117,7 @@ Objeto Link atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setForm</span>(<span style={{color: '#FF8000'}}>formulario</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>setForm</span>(<span style={{color: '#FF8000'}}>formulario</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Descrição
 
 Define o nome do formulario principal da consulta.
@@ -130,7 +130,7 @@ Define o nome do formulario principal da consulta.
 
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 Objeto Link atual.
 
@@ -140,7 +140,7 @@ Objeto Link atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setJoinType</span>(<span style={{color: '#FF8000'}}>joinType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>setJoinType</span>(<span style={{color: '#FF8000'}}>joinType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -149,7 +149,7 @@ Objeto Link atual.
 
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 
 ---
@@ -158,7 +158,7 @@ Objeto Link atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setRelationLink</span>(<span style={{color: '#FF8000'}}>relationLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](../objects/RelationshipLink)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>setRelationLink</span>(<span style={{color: '#FF8000'}}>relationLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](/docs/library/objects/RelationshipLink)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Descrição
 
 Define a configuração do relacionamento.
@@ -167,11 +167,11 @@ Define a configuração do relacionamento.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relationLink** | _[RelationshipLink](../objects/RelationshipLink)_ | configuração do relacionamento. |
+| **relationLink** | _[RelationshipLink](/docs/library/objects/RelationshipLink)_ | configuração do relacionamento. |
 
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 Objeto Link atual.
 
@@ -181,7 +181,7 @@ Objeto Link atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Descrição
 
 Define a configuração dos filtros para o formulario principal do objeto Link.
@@ -190,11 +190,11 @@ Define a configuração dos filtros para o formulario principal do objeto Link.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **where** | _[Where](../objects/Where)_ | configuração dos filtros. |
+| **where** | _[Where](/docs/library/objects/Where)_ | configuração dos filtros. |
 
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 Objeto Link atual.
 
@@ -204,7 +204,7 @@ Objeto Link atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>where</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>where</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Descrição
 
 Define a configuração dos filtros para o formulario principal do objeto Link.
@@ -213,11 +213,11 @@ Define a configuração dos filtros para o formulario principal do objeto Link.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **where** | _[Where](../objects/Where)_ | configuração dos filtros. |
+| **where** | _[Where](/docs/library/objects/Where)_ | configuração dos filtros. |
 
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 Objeto Link atual.
 
@@ -227,10 +227,10 @@ Objeto Link atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>withInner</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>withInner</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 
 ---
@@ -239,10 +239,10 @@ Objeto Link atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>withLeft</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>withLeft</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 
 ---
@@ -251,10 +251,10 @@ Objeto Link atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>withRight</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{color: '#008000'}}>withRight</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 
 ---

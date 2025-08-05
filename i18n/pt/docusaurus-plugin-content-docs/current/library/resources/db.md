@@ -60,7 +60,7 @@ Os dados encontrados na tabela ou null caso não exista.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>batch</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBBatch](../objects/DBBatch)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>batch</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBBatch](/docs/library/objects/DBBatch)</span>
 ##### Descrição
 
 Inicia o processamento em lote de execuções em base de dados.
@@ -79,13 +79,13 @@ const resultados = batchComParametros.execute()
 
 ##### Retorno
 
-( _[DBBatch](../objects/DBBatch)_ )
+( _[DBBatch](/docs/library/objects/DBBatch)_ )
 
 Gestor da execução de operações em lote.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>batch</span>(<span style={{color: '#FF8000'}}>comandoSQL</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBBatch](../objects/DBBatch)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>batch</span>(<span style={{color: '#FF8000'}}>comandoSQL</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBBatch](/docs/library/objects/DBBatch)</span>
 ##### Descrição
 
 Inicia o processamento em lote de execuções em base de dados, com base em um único comando que será executado múltiplas vezes com variação dos dados.
@@ -110,7 +110,7 @@ const resultados = batchComParametros.execute()
 
 ##### Retorno
 
-( _[DBBatch](../objects/DBBatch)_ )
+( _[DBBatch](/docs/library/objects/DBBatch)_ )
 
 Gestor da execução de operações em lote.
 
@@ -120,7 +120,7 @@ Gestor da execução de operações em lote.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>checkExists</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[CheckExists](../objects/CheckExists)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>checkExists</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[CheckExists](/docs/library/objects/CheckExists)</span>
 ##### Descrição
 
 Verifica se sequências, tabelas, colunas e indexes existem na base de dados.
@@ -139,7 +139,7 @@ if (!_db.checkExists().table("client")) {
 
 ##### Retorno
 
-( _[CheckExists](../objects/CheckExists)_ )
+( _[CheckExists](/docs/library/objects/CheckExists)_ )
 
 
 ---
@@ -148,7 +148,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>column</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](../objects/Column)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>column</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](/docs/library/objects/Column)</span>
 ##### Descrição
 
 Realiza a manipulação de colunas em base de dados.
@@ -167,7 +167,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ##### Retorno
 
-( _[Column](../objects/Column)_ )
+( _[Column](/docs/library/objects/Column)_ )
 
 
 ---
@@ -176,7 +176,7 @@ if (!_db.checkExists().column("client", "description")) {
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém a configuração de conexão à base de dados que está a ser utilizada.
@@ -197,7 +197,7 @@ _out.print(`A OUTRA conexão da db é: ${db_OUTRA_Config.toJSON()}\n`)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Configuração da conexão à base de dados que está a ser utilizada.
 
@@ -374,7 +374,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a eliminação de registos na base de dados baseado no ID ou UID passado no objeto de dados.
@@ -399,7 +399,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados. |
-| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
+| **dados** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
 
 ##### Retorno
 
@@ -409,7 +409,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a eliminação de registos na base de dados baseado no ID ou UID passado no objeto de dados.
@@ -434,7 +434,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados. |
-| **dados** | _[Values](../objects/Values)_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
+| **dados** | _[Values](/docs/library/objects/Values)_ | Estrutura de dados que deverá ser eliminada baseado no seu ID ou UID. |
 
 ##### Retorno
 
@@ -520,7 +520,7 @@ Array com a quantidade de registos afetados pela eliminação para cada objeto d
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>deleteMany</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>listaDados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>deleteMany</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>listaDados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Descrição
 
 Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -546,7 +546,7 @@ _out.json({dadosEliminados: dadosEliminados})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **listaDados** | _[Values](../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **listaDados** | _[Values](/docs/library/objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -707,7 +707,7 @@ Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comandoSQL</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>parametros</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comandoSQL</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>parametros</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa comandos diretamente na base de dados, pode ser executados comandos como inserts e updates à medida.
@@ -730,7 +730,7 @@ const linhasAfetadas = _db.execute(`
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **comandoSQL** | _string_ | Comando SQL que será executado diretamente na base de dados. |
-| **parametros** | _[Values](../objects/Values)_ | Lista dos valores dos parâmetros que são injetados no comando. |
+| **parametros** | _[Values](/docs/library/objects/Values)_ | Lista dos valores dos parâmetros que são injetados no comando. |
 
 ##### Retorno
 
@@ -744,7 +744,7 @@ Número de linhas afetadas pelo comando executado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Descrição
 
 A partir de um objeto que tem a estrutura parecida com uma consulta SQL, obtém uma lista dos dados encontrados nas condições de pesquisa.
@@ -799,7 +799,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome tabela. |
-| **params** | _[Values](../objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
+| **params** | _[Values](/docs/library/objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
 
 ##### Retorno
 
@@ -813,7 +813,7 @@ Lista dos registos de dados encontrados.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>findFirst</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>findFirst</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 A partir de um objeto que tem a estrutura parecida com uma consulta SQL, obtém uma lista dos dados encontrados nas condições de pesquisa.
@@ -843,11 +843,11 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome tabela. |
-| **params** | _[Values](../objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
+| **params** | _[Values](/docs/library/objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados da linha de registo encontrado.
 
@@ -857,7 +857,7 @@ Dados da linha de registo encontrado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>findQuery</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>findQuery</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Descrição
 
 A partir de um objeto que tem a estrutura parecida com uma consulta SQL, gera uma query para ser efectuado um select.
@@ -885,7 +885,7 @@ const record = _db.findQuery(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome tabela. |
-| **params** | _[Values](../objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
+| **params** | _[Values](/docs/library/objects/Values)_ | Definição da consulta, suporta limitar colunas (_columns_), adicionar condições (_where_), ordenação (_order_), entre outros. |
 
 ##### Retorno
 
@@ -899,7 +899,7 @@ A query com os parâmetros pronta a ser utilizada.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>form</span>(<span style={{color: '#FF8000'}}>tabelaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>form</span>(<span style={{color: '#FF8000'}}>tabelaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Descrição
 
 Retorna um novo objeto Operation pronto para ser configurado.
@@ -912,23 +912,23 @@ Retorna um novo objeto Operation pronto para ser configurado.
 
 ##### Retorno
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 Novo objeto Operation.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>form</span>(<span style={{color: '#FF8000'}}>formName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](../objects/Operation)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>form</span>(<span style={{color: '#FF8000'}}>formName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **formName** | _string_ |   |
-| **where** | _[Where](../objects/Where)_ |   |
+| **where** | _[Where](/docs/library/objects/Where)_ |   |
 
 ##### Retorno
 
-( _[Operation](../objects/Operation)_ )
+( _[Operation](/docs/library/objects/Operation)_ )
 
 
 ---
@@ -937,7 +937,7 @@ Novo objeto Operation.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados do registo na base de dados, através do nome da tabela e do ID.
@@ -964,13 +964,13 @@ _out.json(dbRegistoCliente);
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Os dados do item encontrado ou null caso não exista.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados do registo na base de dados, através do nome da tabela e do UID.
@@ -997,7 +997,7 @@ _out.json(dbRegistoCliente);
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Os dados do item encontrado ou null caso não exista.
 
@@ -1007,7 +1007,7 @@ Os dados do item encontrado ou null caso não exista.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>getConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>getConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém a configuração de conexão à base de dados que está a ser utilizada.
@@ -1028,7 +1028,7 @@ _out.print(`A OUTRA conexão da db é: ${db_OUTRA_Config.toJSON()}\n`)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Configuração da conexão à base de dados que está a ser utilizada.
 
@@ -1069,7 +1069,7 @@ Nome da configuração de conexão à base de dados que está a ser utilizada.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>index</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Index](../objects/Index)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>index</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Index](/docs/library/objects/Index)</span>
 ##### Descrição
 
 Realiza a manipulação de indexes em base de dados.
@@ -1087,7 +1087,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ##### Retorno
 
-( _[Index](../objects/Index)_ )
+( _[Index](/docs/library/objects/Index)_ )
 
 
 ---
@@ -1096,7 +1096,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DB](../resources/db)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DB](/docs/library/resources/db)</span>
 ##### Descrição
 
 Inicia um novo recurso de DB para o nome de conexão que é passada.
@@ -1122,7 +1122,7 @@ _out.json(paises)
 
 ##### Retorno
 
-( _[DB](../resources/db)_ )
+( _[DB](/docs/library/resources/db)_ )
 
 O novo recurso de base de dados que utiliza uma outra base de dados.
 
@@ -1132,7 +1132,7 @@ O novo recurso de base de dados que utiliza uma outra base de dados.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insert</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insert</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a inserção de novos dados na base de dados e retorna o id dos mesmos.
@@ -1159,7 +1159,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
+| **dados** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1168,7 +1168,7 @@ _out.json(
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insert</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insert</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a inserção de novos dados na base de dados e retorna o id dos mesmos.
@@ -1195,7 +1195,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **dados** | _[Values](../objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
+| **dados** | _[Values](/docs/library/objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1208,7 +1208,7 @@ _out.json(
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insertIfNotExists</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insertIfNotExists</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a inserção de um valor caso ele não exista ou retorna o ID caso já exista.
@@ -1229,7 +1229,7 @@ _out.json({dadosInseridos: dadosInseridos})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
+| **dados** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1239,7 +1239,7 @@ ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insertIfNotExists</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insertIfNotExists</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a inserção de um valor caso ele não exista ou retorna o ID caso já exista.
@@ -1260,7 +1260,7 @@ _out.json({dadosInseridos: dadosInseridos})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **dados** | _[Values](../objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
+| **dados** | _[Values](/docs/library/objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -1344,7 +1344,7 @@ Array com os IDs dos dados inseridos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insertMany</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>listaDados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>insertMany</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>listaDados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Descrição
 
 Executa a inserção várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores.
@@ -1369,7 +1369,7 @@ _db.insertMany(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **listaDados** | _[Values](../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **listaDados** | _[Values](/docs/library/objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -1499,7 +1499,7 @@ Nome da configuração de conexão à base de dados que está a ser utilizada.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Descrição
 
 Retorna uma relação com um formulário.
@@ -1512,39 +1512,39 @@ Retorna uma relação com um formulário.
 
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 Objeto Link.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **formLink** | _string_ |   |
-| **where** | _[Where](../objects/Where)_ |   |
+| **where** | _[Where](/docs/library/objects/Where)_ |   |
 
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>, <span style={{color: '#FF8000'}}>link</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](../objects/Link)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>, <span style={{color: '#FF8000'}}>link</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **formLink** | _string_ |   |
-| **where** | _[Where](../objects/Where)_ |   |
-| **link** | _[Link](../objects/Link)_ |   |
+| **where** | _[Where](/docs/library/objects/Where)_ |   |
+| **link** | _[Link](/docs/library/objects/Link)_ |   |
 
 ##### Retorno
 
-( _[Link](../objects/Link)_ )
+( _[Link](/docs/library/objects/Link)_ )
 
 
 ---
@@ -1553,7 +1553,7 @@ Objeto Link.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>manyToOne</span>(<span style={{color: '#FF8000'}}>tabelaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>colunaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>manyToOne</span>(<span style={{color: '#FF8000'}}>tabelaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>colunaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Descrição
 
 Retorna uma nova relação do tipo Many To One.
@@ -1567,24 +1567,24 @@ Retorna uma nova relação do tipo Many To One.
 
 ##### Retorno
 
-( _[Relationship](../objects/Relationship)_ )
+( _[Relationship](/docs/library/objects/Relationship)_ )
 
 Relação do tipo Many To One.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>manyToOne</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>manyToOne</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tableName** | _string_ |   |
 | **column** | _string_ |   |
-| **where** | _[Where](../objects/Where)_ |   |
+| **where** | _[Where](/docs/library/objects/Where)_ |   |
 
 ##### Retorno
 
-( _[Relationship](../objects/Relationship)_ )
+( _[Relationship](/docs/library/objects/Relationship)_ )
 
 
 ---
@@ -1593,7 +1593,7 @@ Relação do tipo Many To One.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>oneToMany</span>(<span style={{color: '#FF8000'}}>tabelaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>colunaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>oneToMany</span>(<span style={{color: '#FF8000'}}>tabelaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>colunaNome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Descrição
 
 Retorna uma nova relação do tipo One To Many.
@@ -1607,24 +1607,24 @@ Retorna uma nova relação do tipo One To Many.
 
 ##### Retorno
 
-( _[Relationship](../objects/Relationship)_ )
+( _[Relationship](/docs/library/objects/Relationship)_ )
 
 Relação do tipo One To Many.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>oneToMany</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>oneToMany</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tableName** | _string_ |   |
 | **column** | _string_ |   |
-| **where** | _[Where](../objects/Where)_ |   |
+| **where** | _[Where](/docs/library/objects/Where)_ |   |
 
 ##### Retorno
 
-( _[Relationship](../objects/Relationship)_ )
+( _[Relationship](/docs/library/objects/Relationship)_ )
 
 
 ---
@@ -1769,7 +1769,7 @@ Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados. Muita cuidado com SQL Injection.
@@ -1790,7 +1790,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **query** | _string_ | Comando que será executado na base de dados para obter registos. |
-| **params** | _[Values](../objects/Values)_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| **params** | _[Values](/docs/library/objects/Values)_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
@@ -1804,7 +1804,7 @@ Lista de dados obtidos com a query direta à base de dados.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>queryFirst</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>queryFirst</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
@@ -1827,13 +1827,13 @@ _log.info('O primeiro produto encontrado:', produtoEncontrado)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>queryFirst</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>queryFirst</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
@@ -1857,13 +1857,13 @@ _log.info('O primeiro produto encontrado:', produtoEncontrado)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>queryFirst</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>queryFirst</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
@@ -1887,13 +1887,13 @@ _log.info('O primeiro produto encontrado:', produtoEncontrado)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O primeiro registo de dados obtido com a query direta à base de dados.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>queryFirst</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>queryFirst</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Execute uma query SQL diretamente na base de dados e obtém apenas o primeiro registo. Muita cuidado com SQL Injection.
@@ -1913,11 +1913,11 @@ _log.info('O primeiro produto encontrado:', produtoEncontrado)
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **query** | _string_ | Comando que será executado na base de dados para obter o registo. |
-| **params** | _[Values](../objects/Values)_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
+| **params** | _[Values](/docs/library/objects/Values)_ | Lista de parâmetros de valores que serão injetados no comando (_query_) de base de dados. |
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 O primeiro registo de dados obtido com a query direta à base de dados.
 
@@ -2065,7 +2065,7 @@ Conteúdo como caminho (tabela.nome) seguro para utilizar diretamente em queries
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -2096,7 +2096,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados. |
 | **uid** | _int_ | UID do registo a eliminar. |
-| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2106,7 +2106,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -2137,7 +2137,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados. |
 | **uid** | _int_ | UID do registo a eliminar. |
-| **dados** | _[Values](../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Values](/docs/library/objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2147,7 +2147,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -2178,7 +2178,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados. |
 | **uid** | _string_ | UID do registo a eliminar. |
-| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2188,7 +2188,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a inserção ou atualização de um registo na base de dados baseado no UID.
@@ -2219,7 +2219,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados. |
 | **uid** | _string_ | UID do registo a eliminar. |
-| **dados** | _[Values](../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Values](/docs/library/objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2233,7 +2233,7 @@ Quantidade de registos afetados pela eliminação.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](../objects/DBSearchResult)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](/docs/library/objects/DBSearchResult)</span>
 ##### Descrição
 
 Executa uma pesquisa a uma tabela retornando um objeto do tipo DBSearchResult.
@@ -2254,33 +2254,33 @@ _out.json({data: query.getResults(),total: query.getTotal()});
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve obter os dados. |
-| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Dados para se efectuar a pesquisa. |
+| **dados** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Dados para se efectuar a pesquisa. |
 
 ##### Retorno
 
-( _[DBSearchResult](../objects/DBSearchResult)_ )
+( _[DBSearchResult](/docs/library/objects/DBSearchResult)_ )
 
 Objeto do tipo DBSearchResult.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>wildcards</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](../objects/DBSearchResult)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>wildcards</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](/docs/library/objects/DBSearchResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **table** | _string_ |   |
-| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 | **wildcards** | _boolean_ |   |
 
 ##### Retorno
 
-( _[DBSearchResult](../objects/DBSearchResult)_ )
+( _[DBSearchResult](/docs/library/objects/DBSearchResult)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](../objects/DBSearchResult)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](/docs/library/objects/DBSearchResult)</span>
 ##### Descrição
 
 Executa uma pesquisa a uma tabela retornando um objeto do tipo DBSearchResult.
@@ -2301,28 +2301,28 @@ _out.json({data: query.getResults(),total: query.getTotal()});
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve obter os dados. |
-| **dados** | _[Values](../objects/Values)_ | Dados para se efectuar a pesquisa. |
+| **dados** | _[Values](/docs/library/objects/Values)_ | Dados para se efectuar a pesquisa. |
 
 ##### Retorno
 
-( _[DBSearchResult](../objects/DBSearchResult)_ )
+( _[DBSearchResult](/docs/library/objects/DBSearchResult)_ )
 
 Objeto do tipo DBSearchResult.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>wildcards</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](../objects/DBSearchResult)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>wildcards</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](/docs/library/objects/DBSearchResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **table** | _string_ |   |
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 | **wildcards** | _boolean_ |   |
 
 ##### Retorno
 
-( _[DBSearchResult](../objects/DBSearchResult)_ )
+( _[DBSearchResult](/docs/library/objects/DBSearchResult)_ )
 
 
 ---
@@ -2331,7 +2331,7 @@ Objeto do tipo DBSearchResult.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>sequence</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Sequence](../objects/Sequence)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>sequence</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Sequence](/docs/library/objects/Sequence)</span>
 ##### Descrição
 
 Realiza a manipulação de sequências em base de dados.
@@ -2349,7 +2349,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ##### Retorno
 
-( _[Sequence](../objects/Sequence)_ )
+( _[Sequence](/docs/library/objects/Sequence)_ )
 
 
 ---
@@ -2358,7 +2358,7 @@ if (!_db.checkExists().sequence("client", "name")) {
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>store</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>store</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a atualização de um valor caso ele exista baseando-se numa chave primária ou uma inserção quando nenhum dado existe com a mesma chave primária. Este tipo de operação é útil quando não é possível utilizar IDs em determinadas operações.
@@ -2379,7 +2379,7 @@ _out.json({dadosStore: dadosStore})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
+| **dados** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -2389,7 +2389,7 @@ ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>store</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>store</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a atualização de um valor caso ele exista baseando-se numa chave primária ou uma inserção quando nenhum dado existe com a mesma chave primária. Este tipo de operação é útil quando não é possível utilizar IDs em determinadas operações.
@@ -2410,7 +2410,7 @@ _out.json({dadosStore: dadosStore})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **dados** | _[Values](../objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
+| **dados** | _[Values](/docs/library/objects/Values)_ | Objeto com a estrutura de dados que será inserido. |
 
 ##### Retorno
 
@@ -2424,7 +2424,7 @@ ID do dado que foi inserido ou ID do dado já existente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>table</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](../objects/Table)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>table</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Table](/docs/library/objects/Table)</span>
 ##### Descrição
 
 Verifica se sequências, tabelas, colunas e indexes existem na base de dados.
@@ -2443,7 +2443,7 @@ if (!_db.checkExists().table("client")) {
 
 ##### Retorno
 
-( _[Table](../objects/Table)_ )
+( _[Table](/docs/library/objects/Table)_ )
 
 
 ---
@@ -2873,7 +2873,7 @@ Conteúdo que é seguro utilizar diretamente em query como string/varchar/texto.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -2900,7 +2900,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
 | **id** | _int_ | ID do registo que será afetado pela atualização. |
-| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2910,7 +2910,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -2937,7 +2937,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
 | **id** | _int_ | ID do registo que será afetado pela atualização. |
-| **dados** | _[Values](../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Values](/docs/library/objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2947,7 +2947,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com um id específico.
@@ -2976,7 +2976,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
 | **uid** | _string_ | UID do registo que será afetado pela atualização. |
-| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -2986,7 +2986,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com um id específico.
@@ -3015,7 +3015,7 @@ _out.json(
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
 | **uid** | _string_ | UID do registo que será afetado pela atualização. |
-| **dados** | _[Values](../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Values](/docs/library/objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -3025,7 +3025,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -3051,7 +3051,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
-| **dados** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -3061,7 +3061,7 @@ Quantidade de registos afetados pela atualização.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Executa a atualização de dados existentes de acordo com o id ou uid que vem nos dados que são passados.
@@ -3087,7 +3087,7 @@ _out.json(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela que contém os registos que devem ser atualizados. |
-| **dados** | _[Values](../objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
+| **dados** | _[Values](/docs/library/objects/Values)_ | Objeto com a estrutura de dados que deverá ser atualizado. |
 
 ##### Retorno
 
@@ -3177,7 +3177,7 @@ Array com a quantidade de registos alterados para cada objeto dentro da lista.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>updateMany</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>listaDados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>updateMany</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>listaDados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Descrição
 
 Executa a atualização várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
@@ -3205,7 +3205,7 @@ _out.json({dados: dadosAlterados})
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **listaDados** | _[Values](../objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **listaDados** | _[Values](/docs/library/objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
 
 ##### Retorno
 
@@ -3219,20 +3219,20 @@ Array com a quantidade de registos alterados para cada objeto dentro da lista.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>where</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>where</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
 ##### Descrição
 
 Retorna um novo objeto Where pronto para ser configurado.
 
 ##### Retorno
 
-( _[Where](../objects/Where)_ )
+( _[Where](/docs/library/objects/Where)_ )
 
 Novo objeto Where.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>where</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>where</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
 ##### Descrição
 
 Retorna um novo objeto Where pronto para ser configurado.
@@ -3245,7 +3245,7 @@ Retorna um novo objeto Where pronto para ser configurado.
 
 ##### Retorno
 
-( _[Where](../objects/Where)_ )
+( _[Where](/docs/library/objects/Where)_ )
 
 Novo objeto Where.
 

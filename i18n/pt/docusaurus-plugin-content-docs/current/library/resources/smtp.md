@@ -12,7 +12,7 @@ Recurso de envio de e-mail por SMTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -23,17 +23,17 @@ Adiciona ficheiro de anexo ao e-mail.
 |---|---|---|
 | **nome** | _string_ | O nome do anexo. |
 | **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| **ficheiro** | _[File](../objects/File)_ | O ficheiro. |
+| **ficheiro** | _[File](/docs/library/objects/File)_ | O ficheiro. |
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>idConteudo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>idConteudo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -44,18 +44,18 @@ Adiciona ficheiro de anexo ao e-mail.
 |---|---|---|
 | **nome** | _string_ | O nome do anexo. |
 | **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| **ficheiro** | _[File](../objects/File)_ | O ficheiro. |
+| **ficheiro** | _[File](/docs/library/objects/File)_ | O ficheiro. |
 | **idConteudo** | _string_ | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>idConteudo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>emLinha</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>idConteudo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>emLinha</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Adiciona ficheiro de anexo ao e-mail.
@@ -66,79 +66,79 @@ Adiciona ficheiro de anexo ao e-mail.
 |---|---|---|
 | **nome** | _string_ | O nome do anexo. |
 | **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| **ficheiro** | _[File](../objects/File)_ | O ficheiro. |
-| **idConteudo** | _string_ | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
-| **emLinha** | _boolean_ | Se é ou não para ser injetado no conteúdo. |
-
-##### Retorno
-
-( _[SMTP](../resources/smtp)_ )
-
-Objeto SMTP atual.
-
----
-
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
-##### Descrição
-
-Adiciona ficheiro de anexo ao e-mail.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **nome** | _string_ | O nome do anexo. |
-| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| **ficheiro** | _[Storage](../resources/storage)_ | O ficheiro. |
-
-##### Retorno
-
-( _[SMTP](../resources/smtp)_ )
-
-Objeto SMTP atual.
-
----
-
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>idConteudo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
-##### Descrição
-
-Adiciona ficheiro de anexo ao e-mail.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **nome** | _string_ | O nome do anexo. |
-| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| **ficheiro** | _[Storage](../resources/storage)_ | O ficheiro. |
-| **idConteudo** | _string_ | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
-
-##### Retorno
-
-( _[SMTP](../resources/smtp)_ )
-
-Objeto SMTP atual.
-
----
-
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>idConteudo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>emLinha</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
-##### Descrição
-
-Adiciona ficheiro de anexo ao e-mail.
-
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **nome** | _string_ | O nome do anexo. |
-| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
-| **ficheiro** | _[Storage](../resources/storage)_ | O ficheiro. |
+| **ficheiro** | _[File](/docs/library/objects/File)_ | O ficheiro. |
 | **idConteudo** | _string_ | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
 | **emLinha** | _boolean_ | Se é ou não para ser injetado no conteúdo. |
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
+
+Objeto SMTP atual.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
+##### Descrição
+
+Adiciona ficheiro de anexo ao e-mail.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **nome** | _string_ | O nome do anexo. |
+| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
+| **ficheiro** | _[Storage](/docs/library/resources/storage)_ | O ficheiro. |
+
+##### Retorno
+
+( _[SMTP](/docs/library/resources/smtp)_ )
+
+Objeto SMTP atual.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>idConteudo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
+##### Descrição
+
+Adiciona ficheiro de anexo ao e-mail.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **nome** | _string_ | O nome do anexo. |
+| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
+| **ficheiro** | _[Storage](/docs/library/resources/storage)_ | O ficheiro. |
+| **idConteudo** | _string_ | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
+
+##### Retorno
+
+( _[SMTP](/docs/library/resources/smtp)_ )
+
+Objeto SMTP atual.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>attachment</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>idConteudo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>emLinha</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
+##### Descrição
+
+Adiciona ficheiro de anexo ao e-mail.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **nome** | _string_ | O nome do anexo. |
+| **tipo** | _string_ | O tipo de conteúdo do anexo, por exemplo image/png, text/html, application/zip, e muitos outros... |
+| **ficheiro** | _[Storage](/docs/library/resources/storage)_ | O ficheiro. |
+| **idConteudo** | _string_ | O ID do anexo para ser utilizado no conteúdo HTML como `<img src="cid:anexo"/>`. |
+| **emLinha** | _boolean_ | Se é ou não para ser injetado no conteúdo. |
+
+##### Retorno
+
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -161,7 +161,7 @@ O e-mail de quem vai receber o e-mail como cópia oculta.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>bcc</span>(<span style={{color: '#FF8000'}}>bcc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>bcc</span>(<span style={{color: '#FF8000'}}>bcc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define quem recebe uma cópia escondida do e-mail.
@@ -174,7 +174,7 @@ Define quem recebe uma cópia escondida do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -197,7 +197,7 @@ O e-mail de quem vai receber o e-mail como cópia.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>cc</span>(<span style={{color: '#FF8000'}}>cc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>cc</span>(<span style={{color: '#FF8000'}}>cc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define quem recebe uma cópia do e-mail.
@@ -210,7 +210,7 @@ Define quem recebe uma cópia do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -220,20 +220,20 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](../objects/SMTPConfig)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>config</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
 
 ##### Retorno
 
-( _[SMTPConfig](../objects/SMTPConfig)_ )
+( _[SMTPConfig](/docs/library/objects/SMTPConfig)_ )
 
 Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](../objects/SMTPConfig)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Descrição
 
 Inicia uma nova configuração própria.
@@ -242,17 +242,17 @@ Inicia uma nova configuração própria.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _[Values](../objects/Values)_ | Estrutura de dados da definição da configuração. |
+| **config** | _[Values](/docs/library/objects/Values)_ | Estrutura de dados da definição da configuração. |
 
 ##### Retorno
 
-( _[SMTPConfig](../objects/SMTPConfig)_ )
+( _[SMTPConfig](/docs/library/objects/SMTPConfig)_ )
 
 Objeto de configuração carregada a partir dos dados recebidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](../objects/SMTPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -261,11 +261,11 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _[SMTPConfig](../objects/SMTPConfig)_ | Definição da nova configuração. |
+| **config** | _[SMTPConfig](/docs/library/objects/SMTPConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -295,7 +295,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>enabled</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>enabled</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -308,7 +308,7 @@ Define se está habilitado.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -331,7 +331,7 @@ O endereço de e-mail de quem envia.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>from</span>(<span style={{color: '#FF8000'}}>de</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>from</span>(<span style={{color: '#FF8000'}}>de</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define o endereço do remetente do e-mail.
@@ -344,7 +344,7 @@ Define o endereço do remetente do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -388,14 +388,14 @@ O e-mail de quem vai receber o e-mail como cópia.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>getConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](../objects/SMTPConfig)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>getConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Descrição
 
 Obtém a configuração que está a ser utilizada.
 
 ##### Retorno
 
-( _[SMTPConfig](../objects/SMTPConfig)_ )
+( _[SMTPConfig](/docs/library/objects/SMTPConfig)_ )
 
 Objeto da configuração ativa.
 
@@ -549,7 +549,7 @@ O endereço de e-mail de quem recebe.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>html</span>(<span style={{color: '#FF8000'}}>html</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>html</span>(<span style={{color: '#FF8000'}}>html</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -558,7 +558,7 @@ O endereço de e-mail de quem recebe.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 
 ---
@@ -567,20 +567,20 @@ O endereço de e-mail de quem recebe.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Inicia uma nova instância do SMTP utilizando a configuração do STMP da chave `default`.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>configKey</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>configKey</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Inicia uma nova instância do SMTP a partir de uma configuração específica.
@@ -593,13 +593,13 @@ Inicia uma nova instância do SMTP a partir de uma configuração específica.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 A nova instância do recurso SMTP com base na configuração do SMTP especificada.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](../objects/SMTPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Inicia uma nova instância do SMTP a partir de uma configuração que é definida em um objeto de configuração própria.
@@ -608,11 +608,11 @@ Inicia uma nova instância do SMTP a partir de uma configuração que é definid
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _[SMTPConfig](../objects/SMTPConfig)_ | Configuração que será utilizada. |
+| **config** | _[SMTPConfig](/docs/library/objects/SMTPConfig)_ | Configuração que será utilizada. |
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 A nova instância do recurso SMTP com base na configuração definida.
 
@@ -659,7 +659,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>multipartSubtype</span>(<span style={{color: '#FF8000'}}>html</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>multipartSubtype</span>(<span style={{color: '#FF8000'}}>html</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -668,7 +668,7 @@ Resultado se está ou não ativado.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 
 ---
@@ -685,7 +685,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>replyTo</span>(<span style={{color: '#FF8000'}}>replyTo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>replyTo</span>(<span style={{color: '#FF8000'}}>replyTo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -694,7 +694,7 @@ Resultado se está ou não ativado.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 
 ---
@@ -733,7 +733,7 @@ Realiza o envio do e-mail.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setBcc</span>(<span style={{color: '#FF8000'}}>bcc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setBcc</span>(<span style={{color: '#FF8000'}}>bcc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define quem recebe uma cópia escondida do e-mail.
@@ -746,7 +746,7 @@ Define quem recebe uma cópia escondida do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -756,7 +756,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setCc</span>(<span style={{color: '#FF8000'}}>cc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setCc</span>(<span style={{color: '#FF8000'}}>cc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define quem recebe uma cópia do e-mail.
@@ -769,7 +769,7 @@ Define quem recebe uma cópia do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -779,7 +779,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setConfig</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](../objects/SMTPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setConfig</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define outra configuração que deve ser utilizada.
@@ -788,11 +788,11 @@ Define outra configuração que deve ser utilizada.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **config** | _[SMTPConfig](../objects/SMTPConfig)_ | Definição da nova configuração. |
+| **config** | _[SMTPConfig](/docs/library/objects/SMTPConfig)_ | Definição da nova configuração. |
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -802,7 +802,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define se está habilitado.
@@ -815,7 +815,7 @@ Define se está habilitado.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -825,7 +825,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setFrom</span>(<span style={{color: '#FF8000'}}>de</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setFrom</span>(<span style={{color: '#FF8000'}}>de</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define o endereço do remetente do e-mail.
@@ -838,7 +838,7 @@ Define o endereço do remetente do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -848,7 +848,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setHTML</span>(<span style={{color: '#FF8000'}}>html</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setHTML</span>(<span style={{color: '#FF8000'}}>html</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define o HTML do corpo do e-mail.
@@ -861,7 +861,7 @@ Define o HTML do corpo do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -871,7 +871,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setMultipartSubtype</span>(<span style={{color: '#FF8000'}}>multipartSubtipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setMultipartSubtype</span>(<span style={{color: '#FF8000'}}>multipartSubtipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define o subtipo do multipart como por exemplo `mixed`, `alternative`, `digest` e `parallel`.
@@ -884,7 +884,7 @@ Define o subtipo do multipart como por exemplo `mixed`, `alternative`, `digest` 
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -894,7 +894,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setReplyTo</span>(<span style={{color: '#FF8000'}}>replyTo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setReplyTo</span>(<span style={{color: '#FF8000'}}>replyTo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define quem deve ser respondido ao e-mail.
@@ -907,7 +907,7 @@ Define quem deve ser respondido ao e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -917,7 +917,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setSubject</span>(<span style={{color: '#FF8000'}}>titulo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setSubject</span>(<span style={{color: '#FF8000'}}>titulo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define o título do e-mail.
@@ -930,7 +930,7 @@ Define o título do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -940,7 +940,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setSubjectPrefix</span>(<span style={{color: '#FF8000'}}>tituloPrefixo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setSubjectPrefix</span>(<span style={{color: '#FF8000'}}>tituloPrefixo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define o prefixo do título do e-mail.
@@ -953,7 +953,7 @@ Define o prefixo do título do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -963,7 +963,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setText</span>(<span style={{color: '#FF8000'}}>texto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setText</span>(<span style={{color: '#FF8000'}}>texto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define o texto do corpo do e-mail.
@@ -976,7 +976,7 @@ Define o texto do corpo do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -986,7 +986,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setTo</span>(<span style={{color: '#FF8000'}}>para</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setTo</span>(<span style={{color: '#FF8000'}}>para</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define o endereço do destinatário do e-mail.
@@ -999,7 +999,7 @@ Define o endereço do destinatário do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -1022,7 +1022,7 @@ O título que vai ir no e-mail.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>subject</span>(<span style={{color: '#FF8000'}}>titulo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>subject</span>(<span style={{color: '#FF8000'}}>titulo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define o título do e-mail.
@@ -1035,7 +1035,7 @@ Define o título do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -1053,7 +1053,7 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>subjectPrefix</span>(<span style={{color: '#FF8000'}}>subjectPrefix</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>subjectPrefix</span>(<span style={{color: '#FF8000'}}>subjectPrefix</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1062,7 +1062,7 @@ Objeto SMTP atual.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 
 ---
@@ -1084,7 +1084,7 @@ O texto que vai ir no e-mail.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>text</span>(<span style={{color: '#FF8000'}}>texto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>text</span>(<span style={{color: '#FF8000'}}>texto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define o texto do corpo do e-mail.
@@ -1097,7 +1097,7 @@ Define o texto do corpo do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -1120,7 +1120,7 @@ O endereço de e-mail de quem recebe.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>to</span>(<span style={{color: '#FF8000'}}>para</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>to</span>(<span style={{color: '#FF8000'}}>para</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Descrição
 
 Define o endereço do destinatário do e-mail.
@@ -1133,7 +1133,7 @@ Define o endereço do destinatário do e-mail.
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 Objeto SMTP atual.
 
@@ -1143,16 +1143,16 @@ Objeto SMTP atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>with</span>(<span style={{color: '#FF8000'}}>imap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](../resources/imap)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](../resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>with</span>(<span style={{color: '#FF8000'}}>imap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](/docs/library/resources/imap)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **imap** | _[IMAP](../resources/imap)_ |   |
+| **imap** | _[IMAP](/docs/library/resources/imap)_ |   |
 
 ##### Retorno
 
-( _[SMTP](../resources/smtp)_ )
+( _[SMTP](/docs/library/resources/smtp)_ )
 
 
 ---

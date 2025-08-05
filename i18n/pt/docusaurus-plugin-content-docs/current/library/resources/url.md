@@ -1,7 +1,7 @@
 ---
 id: url
-title: Url
-sidebar_label: Url
+title: URL
+sidebar_label: URL
 ---
 
 Recurso de gestão de URLs da aplicação.
@@ -255,7 +255,7 @@ Recurso de gestão de URLs da aplicação.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>to</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[URL](../resources/url)</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>to</span>(<span style={{color: '#FF8000'}}>url</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[URL](/docs/library/resources/url)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -264,7 +264,7 @@ Recurso de gestão de URLs da aplicação.
 
 ##### Retorno
 
-( _[URL](../resources/url)_ )
+( _[URL](/docs/library/resources/url)_ )
 
 
 ---

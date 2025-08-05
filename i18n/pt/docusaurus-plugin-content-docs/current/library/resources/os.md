@@ -12,7 +12,7 @@ Realiza a execução de comandos no sistema operativo, manipulação de ficheiro
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>file</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>file</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Descrição
 
 Obtém o objeto de manipulação de pastas e ficheiros relativo ao caminho passado, neste caso o caminho deverá ser uma **ficheiro**.
@@ -25,7 +25,7 @@ Obtém o objeto de manipulação de pastas e ficheiros relativo ao caminho passa
 
 ##### Retorno
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Instância do objeto de manipulação de ficheiros e pastas relativo ao caminho passado, neste caso uma **ficheiro**.
 
@@ -35,7 +35,7 @@ Instância do objeto de manipulação de ficheiros e pastas relativo ao caminho 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>folder</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>folder</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Descrição
 
 Obtém o objeto de manipulação de pastas e ficheiros relativo ao caminho passado, neste caso o caminho deverá ser uma **pasta**.
@@ -48,7 +48,7 @@ Obtém o objeto de manipulação de pastas e ficheiros relativo ao caminho passa
 
 ##### Retorno
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Instância do objeto de manipulação de ficheiros e pastas relativo ao caminho passado, neste caso uma **pasta**.
 
@@ -58,7 +58,7 @@ Instância do objeto de manipulação de ficheiros e pastas relativo ao caminho 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Descrição
 
 Obtém o objeto de manipulação de pastas e ficheiros relativo ao caminho passado, neste caso o caminho deverá ser uma **ficheiro**.
@@ -71,7 +71,7 @@ Obtém o objeto de manipulação de pastas e ficheiros relativo ao caminho passa
 
 ##### Retorno
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Instância do objeto de manipulação de ficheiros e pastas relativo ao caminho passado, neste caso uma **ficheiro**.
 
@@ -81,7 +81,7 @@ Instância do objeto de manipulação de ficheiros e pastas relativo ao caminho 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getFolder</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getFolder</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Descrição
 
 Obtém o objeto de manipulação de pastas e ficheiros relativo ao caminho passado, neste caso o caminho deverá ser uma **pasta**.
@@ -94,7 +94,7 @@ Obtém o objeto de manipulação de pastas e ficheiros relativo ao caminho passa
 
 ##### Retorno
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 Instância do objeto de manipulação de ficheiros e pastas relativo ao caminho passado, neste caso uma **pasta**.
 
@@ -121,14 +121,14 @@ O nome do sistema operacional.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](../resources/os)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OS](/docs/library/resources/os)</span>
 ##### Descrição
 
 Inicia uma nova instância do OS.
 
 ##### Retorno
 
-( _[OS](../resources/os)_ )
+( _[OS](/docs/library/resources/os)_ )
 
 A nova instância do recurso OS.
 
@@ -138,10 +138,10 @@ A nova instância do recurso OS.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>initProcess</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](../objects/ProcessLauncher)</span>
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>initProcess</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessLauncher](/docs/library/objects/ProcessLauncher)</span>
 ##### Retorno
 
-( _[ProcessLauncher](../objects/ProcessLauncher)_ )
+( _[ProcessLauncher](/docs/library/objects/ProcessLauncher)_ )
 
 
 ---

@@ -4,7 +4,7 @@ title: Req
 sidebar_label: Req
 ---
 
-Recurso de obtenção de dados dos pedidos HTTP.
+Permite realizar a obtenção de dados dos pedidos HTTP, ou seja da requisição.
 
 ---
 
@@ -12,7 +12,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>element</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>element</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -22,12 +22,12 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -36,7 +36,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -78,10 +78,10 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -90,7 +90,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>as</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>as</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -99,12 +99,12 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>as</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>oDefault</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>as</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>oDefault</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -114,7 +114,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -361,7 +361,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asFile</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asFile</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -370,7 +370,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Retorno
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 
 ---
@@ -843,7 +843,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -852,12 +852,12 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -867,12 +867,12 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -881,12 +881,12 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -896,7 +896,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 
 ---
@@ -1240,7 +1240,7 @@ Recurso de obtenção de dados dos pedidos HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>indice</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>indice</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
@@ -1253,13 +1253,13 @@ Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lis
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Objeto convertido para Values.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>indice</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>valorPadrao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>indice</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>valorPadrao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
@@ -1273,13 +1273,13 @@ Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lis
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Objeto convertido para Values.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -1292,13 +1292,13 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Objeto convertido para Values.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valorPadrao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>asValues</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valorPadrao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -1312,7 +1312,7 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Objeto convertido para Values.
 
@@ -1334,10 +1334,10 @@ Objeto convertido para Values.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>cloneJSON</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>cloneJSON</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -1524,7 +1524,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>filter</span>(<span style={{color: '#FF8000'}}>p</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Predicate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>filter</span>(<span style={{color: '#FF8000'}}>p</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Predicate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1533,12 +1533,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>filter</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>filter</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1547,7 +1547,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -1556,7 +1556,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1566,7 +1566,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -1599,16 +1599,16 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **filter** | _[Values](../objects/Values)_ |   |
+| **filter** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -1663,10 +1663,10 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>forceList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>forceList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -1675,10 +1675,10 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>forceMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>forceMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -1687,7 +1687,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>fromJSON</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>fromJSON</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1696,12 +1696,12 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>fromJSON</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>fromJSON</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1710,7 +1710,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -1719,10 +1719,10 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>get</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>get</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -2060,7 +2060,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2069,7 +2069,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 
 ---
@@ -2592,7 +2592,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2601,12 +2601,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2616,12 +2616,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2630,12 +2630,12 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2645,7 +2645,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 
 ---
@@ -3050,7 +3050,7 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>indice</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>indice</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
@@ -3063,13 +3063,13 @@ Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lis
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Objeto convertido para Values.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>indice</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>valorPadrao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>indice</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>valorPadrao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lista).
@@ -3083,13 +3083,13 @@ Obtém o objeto associado ao índice e converte para Valores (Dicionário ou Lis
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Objeto convertido para Values.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -3102,13 +3102,13 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Objeto convertido para Values.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valorPadrao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>getValues</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valorPadrao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista).
@@ -3122,7 +3122,7 @@ Obtém o objeto associado à chave e converte para Valores (Dicionário ou Lista
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Objeto convertido para Values.
 
@@ -3447,12 +3447,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>keysToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>keysToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 | **splitter** | _string_ |   |
 
 ##### Retorno
@@ -3560,12 +3560,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>loadJSON</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>loadJSON</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 
 ##### Retorno
 
@@ -3592,12 +3592,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>loadProperties</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>loadProperties</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 
 ##### Retorno
 
@@ -3656,14 +3656,14 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>lockAsReadOnly</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>lockAsReadOnly</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Verfica se está bloqueado em modo de apenas leitura.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Se está em modo apenas leitura ou não.
 
@@ -3673,10 +3673,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>map</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>map</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 
 ---
@@ -3685,7 +3685,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>merge</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>merge</span>(<span style={{color: '#FF8000'}}>object</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3694,7 +3694,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -3719,10 +3719,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>newList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>newList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -3731,10 +3731,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>newMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>newMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -3743,7 +3743,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>array</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>array</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3752,7 +3752,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -3771,7 +3771,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>list</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>list</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3780,21 +3780,21 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -3803,7 +3803,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>ofList</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>ofList</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3812,7 +3812,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -3821,7 +3821,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>ofMap</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>ofMap</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3830,7 +3830,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -3839,10 +3839,10 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>post</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>post</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -3851,7 +3851,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>push</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>push</span>(<span style={{color: '#FF8000'}}>o</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3860,7 +3860,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -3903,12 +3903,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>putAll</span>(<span style={{color: '#FF8000'}}>m</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>putAll</span>(<span style={{color: '#FF8000'}}>m</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **m** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **m** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 
 ##### Retorno
 
@@ -4145,12 +4145,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>saveJSON</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>saveJSON</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -4177,12 +4177,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>saveProperties</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>saveProperties</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
 
@@ -4269,12 +4269,12 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ignoreCase</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>ignoreCase</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 | **content** | _string_ |   |
 | **splitter** | _string_ |   |
 | **ignoreCase** | _boolean_ |   |
@@ -4290,7 +4290,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>set</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>element</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>set</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>element</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4300,12 +4300,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>set</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>set</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4315,7 +4315,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -4324,7 +4324,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setForceList</span>(<span style={{color: '#FF8000'}}>forceList</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setForceList</span>(<span style={{color: '#FF8000'}}>forceList</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4333,7 +4333,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -4342,7 +4342,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setForceMap</span>(<span style={{color: '#FF8000'}}>forceMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setForceMap</span>(<span style={{color: '#FF8000'}}>forceMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4351,7 +4351,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -4360,7 +4360,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfFalse</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfFalse</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4370,7 +4370,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -4379,7 +4379,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4389,12 +4389,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4404,12 +4404,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4419,12 +4419,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4434,12 +4434,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfGreaterThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4449,7 +4449,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -4458,7 +4458,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4468,12 +4468,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4483,12 +4483,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4498,12 +4498,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4513,12 +4513,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfLowerThanZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4528,7 +4528,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -4537,7 +4537,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotEmpty</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotEmpty</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4547,7 +4547,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -4556,7 +4556,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4566,12 +4566,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4581,12 +4581,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4596,12 +4596,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4611,12 +4611,12 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfNotZero</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4626,7 +4626,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -4635,7 +4635,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfTrue</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setIfTrue</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4645,7 +4645,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -4654,7 +4654,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setNull</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>setNull</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4663,7 +4663,7 @@ Se está em modo apenas leitura ou não.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -4855,39 +4855,39 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>toFormMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>toFormMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>toFormMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>toFormMap</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **key** | _string_ |   |
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>toFormMap</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>toFormMap</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -5100,10 +5100,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>toMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>toMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Retorno
 
-( _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ )
+( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
 
 
 ---
@@ -5140,6 +5140,38 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 ##### Retorno
 
 ( _java.lang.String[]_ )
+
+
+---
+
+## typedForEach
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>typedForEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiConsumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **action** | _java.util.function.BiConsumer_ |   |
+
+##### Retorno
+
+( _void_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>typedForEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **action** | _java.util.function.Consumer_ |   |
+
+##### Retorno
+
+( _void_ )
 
 
 ---
@@ -5224,14 +5256,14 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **splitter** | _string_ |   |
 | **excludes** | _java.lang.String[]_ |   |
-| **config** | _[Values](../objects/Values)_ |   |
+| **config** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
@@ -5240,13 +5272,13 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **splitter** | _string_ |   |
-| **config** | _[Values](../objects/Values)_ |   |
+| **config** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 
@@ -5255,12 +5287,12 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 | **splitter** | _string_ |   |
 
 ##### Retorno
@@ -5270,31 +5302,14 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
-| **splitter** | _string_ |   |
-| **excludes** | _java.lang.String[]_ |   |
-
-##### Retorno
-
-( _string_ )
-
-
----
-
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
-##### Atributos
-
-| NOME | TIPO | DESCRIÇÃO |
-|---|---|---|
-| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 | **splitter** | _string_ |   |
 | **excludes** | _java.lang.String[]_ |   |
-| **config** | _[Values](../objects/Values)_ |   |
 
 ##### Retorno
 
@@ -5303,14 +5318,31 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 | **splitter** | _string_ |   |
-| **config** | _[Values](../objects/Values)_ |   |
+| **excludes** | _java.lang.String[]_ |   |
+| **config** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_req</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **splitter** | _string_ |   |
+| **config** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
 

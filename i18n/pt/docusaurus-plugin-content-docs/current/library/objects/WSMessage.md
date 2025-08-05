@@ -36,10 +36,10 @@ Objeto que contém os detalhes das mensagens obtidas através dos clientes nas c
 
 ---
 
-#### <span style={{color: '#008000'}}>getJSON</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getJSON</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -108,10 +108,10 @@ Objeto que contém os detalhes das mensagens obtidas através dos clientes nas c
 
 ---
 
-#### <span style={{color: '#008000'}}>json</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>json</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---

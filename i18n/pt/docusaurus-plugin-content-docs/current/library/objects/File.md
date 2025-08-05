@@ -148,7 +148,7 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ---
 
-#### <span style={{color: '#008000'}}>contentType</span>(<span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{color: '#008000'}}>contentType</span>(<span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -157,7 +157,7 @@ Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
 
 ##### Retorno
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 
 ---
@@ -314,7 +314,7 @@ Apaga ficheiros designados pela extensão inserida e recursivamente nas subpasta
 
 ---
 
-#### <span style={{color: '#008000'}}>ensureJail</span>(<span style={{color: '#FF8000'}}>jailPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{color: '#008000'}}>ensureJail</span>(<span style={{color: '#FF8000'}}>jailPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -323,7 +323,7 @@ Apaga ficheiros designados pela extensão inserida e recursivamente nas subpasta
 
 ##### Retorno
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 
 ---
@@ -448,10 +448,10 @@ Retorna o caminho completo até ao presente ficheiro.
 
 ---
 
-#### <span style={{color: '#008000'}}>getInput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>getInput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Retorno
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 
 ---
@@ -460,14 +460,14 @@ Retorna o caminho completo até ao presente ficheiro.
 
 ---
 
-#### <span style={{color: '#008000'}}>getInputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>getInputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Descrição
 
 Retorna o número estimado de bytes.
 
 ##### Retorno
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 
 ---
@@ -510,10 +510,10 @@ Retorna o nome do ficheiro do caminho inserido.
 
 ---
 
-#### <span style={{color: '#008000'}}>getOutput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>getOutput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Retorno
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -522,10 +522,10 @@ Retorna o nome do ficheiro do caminho inserido.
 
 ---
 
-#### <span style={{color: '#008000'}}>getOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>getOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Retorno
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -604,10 +604,10 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 ---
 
-#### <span style={{color: '#008000'}}>input</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>input</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Retorno
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 
 ---
@@ -616,10 +616,10 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 ---
 
-#### <span style={{color: '#008000'}}>inputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{color: '#008000'}}>inputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Retorno
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 
 ---
@@ -788,10 +788,10 @@ Retorna o nome do ficheiro.
 
 ---
 
-#### <span style={{color: '#008000'}}>output</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>output</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Retorno
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -800,10 +800,10 @@ Retorna o nome do ficheiro.
 
 ---
 
-#### <span style={{color: '#008000'}}>outputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>outputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Retorno
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -1001,7 +1001,7 @@ Guarda o ficheiro no caminho inserido.
 
 ---
 
-#### <span style={{color: '#008000'}}>setContentType</span>(<span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{color: '#008000'}}>setContentType</span>(<span style={{color: '#FF8000'}}>contentType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1010,7 +1010,7 @@ Guarda o ficheiro no caminho inserido.
 
 ##### Retorno
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 
 ---

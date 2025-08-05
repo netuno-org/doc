@@ -7,7 +7,7 @@ sidebar_label: XML
 Este recurso utiliza o mecanismo nativo do Java para criar e interpretar _XML_, baseado no `javax.xml` e no `org.w3c.dom`.
 
 ```javascript
-//Criar ficheiro XML
+// Criar ficheiro XML
 const xml = _xml.create();
 const document = xml.builder().newDocument();
 const root = document.createElement("root");
@@ -44,7 +44,7 @@ Objeto que gere a manipulação de documentos XML.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_xml</span>.<span style={{color: '#008000'}}>create</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XML](../resources/xml)</span>
+#### <span style={{fontWeight: 'normal'}}>_xml</span>.<span style={{color: '#008000'}}>create</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[XML](/docs/library/resources/xml)</span>
 ##### Descrição
 
 Cria uma nova instância para manipular XML.
@@ -57,7 +57,7 @@ const xml = _xml.create();
 
 ##### Retorno
 
-( _[XML](../resources/xml)_ )
+( _[XML](/docs/library/resources/xml)_ )
 
 Nova instância do recurso XML.
 
@@ -148,7 +148,7 @@ Realiza o output do ficheiro XML final para o cliente realizar o download final 
 
 ---
 
-#### `_xml.create()`.<span style={{color: '#008000'}}>parse</span>(<span style={{color: '#FF8000'}}>fluxoEntrada</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>
+#### `_xml.create()`.<span style={{color: '#008000'}}>parse</span>(<span style={{color: '#FF8000'}}>fluxoEntrada</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>
 ##### Descrição
 
 Através de um fluxo de entrada de dados de XML obtém o objeto de representação do documento para ser interpretado e processado.
@@ -157,7 +157,7 @@ Através de um fluxo de entrada de dados de XML obtém o objeto de representaç�
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fluxoEntrada** | _[InputStream](../objects/InputStream)_ | Fluxo de entrada de dados em XML. |
+| **fluxoEntrada** | _[InputStream](/docs/library/objects/InputStream)_ | Fluxo de entrada de dados em XML. |
 
 ##### Retorno
 
@@ -206,7 +206,7 @@ Objeto de representação do documento XML obtido.
 
 ---
 
-#### `_xml.create()`.<span style={{color: '#008000'}}>parse</span>(<span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>
+#### `_xml.create()`.<span style={{color: '#008000'}}>parse</span>(<span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>
 ##### Descrição
 
 Através de um ficheiro XML obtém o objeto de representação do documento XML para ser interpretado e processado.
@@ -215,7 +215,7 @@ Através de um ficheiro XML obtém o objeto de representação do documento XML 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **ficheiro** | _[File](../objects/File)_ | Ficheiro XML para ser interpretado e processado. |
+| **ficheiro** | _[File](/docs/library/objects/File)_ | Ficheiro XML para ser interpretado e processado. |
 
 ##### Retorno
 
@@ -229,7 +229,7 @@ Objeto de representação do documento XML obtido.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_xml</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>documento</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>, <span style={{color: '#FF8000'}}>fluxoSaida</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_xml</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>documento</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>, <span style={{color: '#FF8000'}}>fluxoSaida</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Descrição
 
 Guarda o documento em um fluxo de dados de saída.
@@ -239,7 +239,7 @@ Guarda o documento em um fluxo de dados de saída.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **documento** | _org.w3c.dom.Document_ | Objeto que contém a estrutura e dados do documento de XML. |
-| **fluxoSaida** | _[OutputStream](../objects/OutputStream)_ | Fluxo de dados de saída onde o documento deve ser guardado. |
+| **fluxoSaida** | _[OutputStream](/docs/library/objects/OutputStream)_ | Fluxo de dados de saída onde o documento deve ser guardado. |
 
 ##### Retorno
 
@@ -248,7 +248,7 @@ Guarda o documento em um fluxo de dados de saída.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_xml</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>documento</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_xml</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>documento</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>, <span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Descrição
 
 Guarda o documento em um ficheiro.
@@ -258,7 +258,7 @@ Guarda o documento em um ficheiro.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **documento** | _org.w3c.dom.Document_ | Objeto que contém a estrutura e dados do documento de XML. |
-| **ficheiro** | _[File](../objects/File)_ | Ficheiro de destino onde o documento deve ser guardado. |
+| **ficheiro** | _[File](/docs/library/objects/File)_ | Ficheiro de destino onde o documento deve ser guardado. |
 
 ##### Retorno
 
@@ -267,7 +267,7 @@ Guarda o documento em um ficheiro.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_xml</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>documento</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>, <span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_xml</span>.<span style={{color: '#008000'}}>save</span>(<span style={{color: '#FF8000'}}>documento</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>, <span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Descrição
 
 Guarda o documento no storage da aplicação.
@@ -277,7 +277,7 @@ Guarda o documento no storage da aplicação.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **documento** | _org.w3c.dom.Document_ | Objeto que contém a estrutura e dados do documento de XML. |
-| **storage** | _[Storage](../resources/storage)_ | Destino no storage da aplicação onde o documento deve ser guardado. |
+| **storage** | _[Storage](/docs/library/resources/storage)_ | Destino no storage da aplicação onde o documento deve ser guardado. |
 
 ##### Retorno
 

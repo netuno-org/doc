@@ -138,20 +138,20 @@ Retorna a chave e o texto inseridos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lang](../resources/lang)</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lang](/docs/library/resources/lang)</span>
 ##### Descrição
 
 Inicia o recurso Lang .
 
 ##### Retorno
 
-( _[Lang](../resources/lang)_ )
+( _[Lang](/docs/library/resources/lang)_ )
 
 Retorna o lang por definição.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lang](../resources/lang)</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lang](/docs/library/resources/lang)</span>
 ##### Descrição
 
 Define a chave do locale de predefinição com um texto inserido.
@@ -164,13 +164,13 @@ Define a chave do locale de predefinição com um texto inserido.
 
 ##### Retorno
 
-( _[Lang](../resources/lang)_ )
+( _[Lang](/docs/library/resources/lang)_ )
 
 Retorna a chave e o texto inseridos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>porDefeito</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lang](../resources/lang)</span>
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>porDefeito</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Lang](/docs/library/resources/lang)</span>
 ##### Descrição
 
 Define a chave do locale de predefinição com um texto inserido.
@@ -184,7 +184,7 @@ Define a chave do locale de predefinição com um texto inserido.
 
 ##### Retorno
 
-( _[Lang](../resources/lang)_ )
+( _[Lang](/docs/library/resources/lang)_ )
 
 Retorna a chave e o texto inseridos.
 

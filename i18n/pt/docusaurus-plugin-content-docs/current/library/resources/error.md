@@ -20,7 +20,7 @@ Geração erros gerais da aplicação e categorizar a gravidade do erro com os t
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>mensagem</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ErrorException](../objects/ErrorException)</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>mensagem</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ErrorException](/docs/library/objects/ErrorException)</span>
 ##### Descrição
 
 Cria um erro com uma mensagem de descrição.
@@ -33,7 +33,7 @@ Cria um erro com uma mensagem de descrição.
 
 ##### Retorno
 
-( _[ErrorException](../objects/ErrorException)_ )
+( _[ErrorException](/docs/library/objects/ErrorException)_ )
 
 
 ---
@@ -108,19 +108,19 @@ Cria um throwable com uma mensagem de descrição.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Cria uma nova classe Values com os valores que originaram o erro.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>data</span>(<span style={{color: '#FF8000'}}>return</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Error](../resources/error)</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>data</span>(<span style={{color: '#FF8000'}}>return</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Error](/docs/library/resources/error)</span>
 ##### Descrição
 
 Cria uma nova classe Values que originaram o erro.
@@ -129,11 +129,11 @@ Cria uma nova classe Values que originaram o erro.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **return** | _[Values](../objects/Values)_ | Valores. |
+| **return** | _[Values](/docs/library/objects/Values)_ | Valores. |
 
 ##### Retorno
 
-( _[Error](../resources/error)_ )
+( _[Error](/docs/library/resources/error)_ )
 
 
 ---

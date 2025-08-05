@@ -29,14 +29,14 @@ Tipo da junção.
 
 ---
 
-#### <span style={{color: '#008000'}}>getRelation</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>
+#### <span style={{color: '#008000'}}>getRelation</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Descrição
 
 Retorna o objeto com a configuração do relacionamento.
 
 ##### Retorno
 
-( _[Relationship](../objects/Relationship)_ )
+( _[Relationship](/docs/library/objects/Relationship)_ )
 
 Objeto com a configuração do relacionamento.
 
@@ -63,14 +63,14 @@ Nome da tabela principal do relacionamento.
 
 ---
 
-#### <span style={{color: '#008000'}}>getWhere</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{color: '#008000'}}>getWhere</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
 ##### Descrição
 
 Retorna o objeto Where com a configuração das condições para a tabela a relacionar.
 
 ##### Retorno
 
-( _[Where](../objects/Where)_ )
+( _[Where](/docs/library/objects/Where)_ )
 
 Objeto Where com a configuração das condições
 
@@ -80,7 +80,7 @@ Objeto Where com a configuração das condições
 
 ---
 
-#### <span style={{color: '#008000'}}>setJoinType</span>(<span style={{color: '#FF8000'}}>juncaoTipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
+#### <span style={{color: '#008000'}}>setJoinType</span>(<span style={{color: '#FF8000'}}>juncaoTipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](/docs/library/objects/Join)</span>
 ##### Descrição
 
 Define o tipo da junção do relacionamento.
@@ -93,7 +93,7 @@ Define o tipo da junção do relacionamento.
 
 ##### Retorno
 
-( _[Join](../objects/Join)_ )
+( _[Join](/docs/library/objects/Join)_ )
 
 Objeto Join atual.
 
@@ -103,7 +103,7 @@ Objeto Join atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setRelation</span>(<span style={{color: '#FF8000'}}>relacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](../objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
+#### <span style={{color: '#008000'}}>setRelation</span>(<span style={{color: '#FF8000'}}>relacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](/docs/library/objects/Join)</span>
 ##### Descrição
 
 Define o objeto com a configuração do relacionamento.
@@ -112,11 +112,11 @@ Define o objeto com a configuração do relacionamento.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **relacao** | _[Relationship](../objects/Relationship)_ | Objeto com a configuração do relacionamento. |
+| **relacao** | _[Relationship](/docs/library/objects/Relationship)_ | Objeto com a configuração do relacionamento. |
 
 ##### Retorno
 
-( _[Join](../objects/Join)_ )
+( _[Join](/docs/library/objects/Join)_ )
 
 Objeto Join atual.
 
@@ -126,7 +126,7 @@ Objeto Join atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setTable</span>(<span style={{color: '#FF8000'}}>nomeTabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
+#### <span style={{color: '#008000'}}>setTable</span>(<span style={{color: '#FF8000'}}>nomeTabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](/docs/library/objects/Join)</span>
 ##### Descrição
 
 Define o nome da tabela principal do relacionamento.
@@ -139,7 +139,7 @@ Define o nome da tabela principal do relacionamento.
 
 ##### Retorno
 
-( _[Join](../objects/Join)_ )
+( _[Join](/docs/library/objects/Join)_ )
 
 Objeto Join atual.
 
@@ -149,7 +149,7 @@ Objeto Join atual.
 
 ---
 
-#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>condicao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](../objects/Join)</span>
+#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>condicao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](/docs/library/objects/Join)</span>
 ##### Descrição
 
 Define o objeto Where com a configuração das condições para a tabela a relacionar.
@@ -158,11 +158,11 @@ Define o objeto Where com a configuração das condições para a tabela a relac
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **condicao** | _[Where](../objects/Where)_ | Objeto Where com a configuração das condições |
+| **condicao** | _[Where](/docs/library/objects/Where)_ | Objeto Where com a configuração das condições |
 
 ##### Retorno
 
-( _[Join](../objects/Join)_ )
+( _[Join](/docs/library/objects/Join)_ )
 
 Objeto Join atual.
 

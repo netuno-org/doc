@@ -69,15 +69,15 @@ Lista dos utilizadores encontrados para o código alternativo.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>allProvidersData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>allProvidersData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>allProvidersData</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>allProvidersData</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -86,7 +86,7 @@ Lista dos utilizadores encontrados para o código alternativo.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -119,7 +119,7 @@ Código auxiliar do utilizador logado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Cria o novo utilizador.
@@ -145,7 +145,7 @@ _user.create(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dadosUtilizador** | _[Values](../objects/Values)_ | Dados do utilizador que vai ser criado. |
+| **dadosUtilizador** | _[Values](/docs/library/objects/Values)_ | Dados do utilizador que vai ser criado. |
 
 ##### Retorno
 
@@ -159,7 +159,7 @@ ID do utilizador que foi criado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>createIfNotExists</span>(<span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>createIfNotExists</span>(<span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
 Cria o utilizador caso não exista ainda.
@@ -185,7 +185,7 @@ _user.createIfNotExists(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dadosUtilizador** | _[Values](../objects/Values)_ | Dados do utilizador que vai ser criado caso não exista ainda. |
+| **dadosUtilizador** | _[Values](/docs/library/objects/Values)_ | Dados do utilizador que vai ser criado caso não exista ainda. |
 
 ##### Retorno
 
@@ -199,7 +199,7 @@ Foi criado com sucesso.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém toda a informação de dados do utilizador que está autenticado.
@@ -213,7 +213,7 @@ _out.json(_user.data())
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Todos os dados do utilizador logado.
 
@@ -223,7 +223,7 @@ Todos os dados do utilizador logado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>firstByCode</span>(<span style={{color: '#FF8000'}}>codigo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>firstByCode</span>(<span style={{color: '#FF8000'}}>codigo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do código alternativo.
@@ -244,7 +244,7 @@ _out.json(utilizador)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do utilizador encontrado com o código alternativo.
 
@@ -254,7 +254,7 @@ Dados do utilizador encontrado com o código alternativo.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>firstByMail</span>(<span style={{color: '#FF8000'}}>mail</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>firstByMail</span>(<span style={{color: '#FF8000'}}>mail</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do e-mail.
@@ -275,7 +275,7 @@ _out.json(utilizador)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do utilizador encontrado com o e-mail.
 
@@ -285,7 +285,7 @@ Dados do utilizador encontrado com o e-mail.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>firstByName</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>firstByName</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do nome completo.
@@ -306,7 +306,7 @@ _out.json(utilizador)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do utilizador encontrado com o nome completo.
 
@@ -316,7 +316,7 @@ Dados do utilizador encontrado com o nome completo.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>firstByUser</span>(<span style={{color: '#FF8000'}}>utilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>firstByUser</span>(<span style={{color: '#FF8000'}}>utilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do nome de utilizador, mesmo nome utilizado no login.
@@ -337,7 +337,7 @@ _out.json(utilizador)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do utilizador encontrado com o nome de utilizador.
 
@@ -347,7 +347,7 @@ Dados do utilizador encontrado com o nome de utilizador.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do ID (identificador numérico).
@@ -368,13 +368,13 @@ _out.json(utilizador)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do utilizador encontrado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>idOuUidOuUsername</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>idOuUidOuUsername</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 Obtém os dados de um utilizador a partir do ID (identificador numérico), ou do UUID (identificador único universal) ou ainda o nome de utilizador.
@@ -395,7 +395,7 @@ _out.json(utilizador)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do utilizador encontrado.
 
@@ -462,10 +462,10 @@ ID (identificador númerico) do utilizador logado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>load</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[User](../resources/user)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>load</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[User](/docs/library/resources/user)</span>
 ##### Retorno
 
-( _[User](../resources/user)_ )
+( _[User](/docs/library/resources/user)_ )
 
 
 ---
@@ -564,7 +564,7 @@ Nome completo do utilizador logado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>providerData</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>providerData</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -574,12 +574,12 @@ Nome completo do utilizador logado.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>providerData</span>(<span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>providerData</span>(<span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -588,7 +588,7 @@ Nome completo do utilizador logado.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -597,7 +597,7 @@ Nome completo do utilizador logado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>providerDataByUid</span>(<span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>providerDataByUid</span>(<span style={{color: '#FF8000'}}>uid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -606,7 +606,7 @@ Nome completo do utilizador logado.
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -714,7 +714,7 @@ Lista de dados dos utilizadores encontrados.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>searchFirst</span>(<span style={{color: '#FF8000'}}>termo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>searchFirst</span>(<span style={{color: '#FF8000'}}>termo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 
 O primeiro resultado da pesquisa de utilizadores que tem alguma ocorrência nos dados do termo passado.
@@ -735,7 +735,7 @@ _out.json(utilizador)
 
 ##### Retorno
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Dados do utilizador encontrado.
 
@@ -868,7 +868,7 @@ UUID (identificador único universal) do utilizador logado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
 Atualiza os dados do utilizador referente ao ID passado.
@@ -891,7 +891,7 @@ _user.update(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **id** | _int_ | O ID (identificador numérico) do utilizador. |
-| **dadosUtilizador** | _[Values](../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
+| **dadosUtilizador** | _[Values](/docs/library/objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
 
 ##### Retorno
 
@@ -901,7 +901,7 @@ Foi atualizado com sucesso.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>alterarPassword</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>alterarPassword</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
 Atualiza os dados do utilizador referente ao ID passado.
@@ -924,7 +924,7 @@ _user.update(
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **id** | _int_ | O ID (identificador numérico) do utilizador. |
-| **dadosUtilizador** | _[Values](../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
+| **dadosUtilizador** | _[Values](/docs/library/objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
 | **alterarPassword** | _boolean_ | Se deve realizar a alteração da palavra-passe ou senha. |
 
 ##### Retorno
@@ -935,7 +935,7 @@ Foi atualizado com sucesso.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
 Atualiza os dados do utilizador referente ao ID definido na estrutura de dados passada.
@@ -956,7 +956,7 @@ _user.update(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dadosUtilizador** | _[Values](../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
+| **dadosUtilizador** | _[Values](/docs/library/objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
 
 ##### Retorno
 
@@ -966,7 +966,7 @@ Foi atualizado com sucesso.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>alterarPassword</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>update</span>(<span style={{color: '#FF8000'}}>dadosUtilizador</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>alterarPassword</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
 Atualiza os dados do utilizador referente ao ID definido na estrutura de dados passada.
@@ -987,7 +987,7 @@ _user.update(
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **dadosUtilizador** | _[Values](../objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
+| **dadosUtilizador** | _[Values](/docs/library/objects/Values)_ | Dados do utilizador para atualizar a informação armazenada em base de dados. |
 | **alterarPassword** | _boolean_ | Se deve realizar a alteração da palavra-passe ou senha. |
 
 ##### Retorno
