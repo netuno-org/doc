@@ -6,7 +6,7 @@ sidebar_label: Cron Jobs
 
 ## Antes de começar
 
-Antes de proceder certifique-se que que tem noções básicas em _**JavaScript**_ e que já tem as noções básicas do Netuno com o passo-a-passo disponível na [Academia](/docs/pt-PT/academy/overview/).
+Antes de proceder certifique-se que que tem noções básicas em _**JavaScript**_ e que já tem as noções básicas do Netuno com o passo-a-passo disponível na [Academia](/docs/academy/overview).
 
 ## Introdução
 
@@ -20,7 +20,7 @@ Este tipo de operações periódicas são conhecidas como Cron Jobs ou em portug
 
 Cada aplicação do Netuno pode ter inúmeros Cron Jobs, e os Cron Jobs do Netuno tanto podem executar serviços e URLs internos, como também URLs externos.
 
-> Para mais informações verifique a documentação do recurso [cron](/docs/pt-PT/library/resources/cron).
+> Para mais informações verifique a documentação do recurso [cron](/docs/library/resources/cron).
 
 ## Como Funciona
 
