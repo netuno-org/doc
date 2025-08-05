@@ -4,7 +4,7 @@ title: Storage
 sidebar_label: Storage
 ---
 
-Recursos de gestão de ficheiros da aplicação.
+Application file management resources that are located in the `storage` folder.
 
 ---
 
@@ -29,7 +29,7 @@ The absolute storage path.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Starts a new storage for the folder where the files of a table that represent a form are.
@@ -42,13 +42,13 @@ Starts a new storage for the folder where the files of a table that represent a 
 
 ##### Return
 
-( _[Storage](../resources/storage)_ )
+( _[Storage](/docs/library/resources/storage)_ )
 
 New storage started for the database table.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Starts a new storage for the folder where the files of a specific column of a table are located that represents a field of a form.
@@ -62,13 +62,13 @@ Starts a new storage for the folder where the files of a specific column of a ta
 
 ##### Return
 
-( _[Storage](../resources/storage)_ )
+( _[Storage](/docs/library/resources/storage)_ )
 
 New storage started for a database table column.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific path where the files for a specific column of a table are located that represent a field on a form.
@@ -83,13 +83,13 @@ Starts a new storage for a specific path where the files for a specific column o
 
 ##### Return
 
-( _[Storage](../resources/storage)_ )
+( _[Storage](/docs/library/resources/storage)_ )
 
 New storage started for the specific path from a column in a database table.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific path where the files for a specific column of a table are located that represent a field on a form.
@@ -105,7 +105,7 @@ Starts a new storage for a specific path where the files for a specific column o
 
 ##### Return
 
-( _[Storage](../resources/storage)_ )
+( _[Storage](/docs/library/resources/storage)_ )
 
 New storage started for the specific path from a column in a database table.
 
@@ -115,10 +115,10 @@ New storage started for the specific path from a column in a database table.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>ensurePath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>ensurePath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Return
 
-( _[Storage](../resources/storage)_ )
+( _[Storage](/docs/library/resources/storage)_ )
 
 
 ---
@@ -144,14 +144,14 @@ The file extension.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>file</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>file</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
 File manipulation object of the storage being used.
 
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 It allows to interact with the file physically.
 
@@ -161,7 +161,7 @@ It allows to interact with the file physically.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>folder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>folder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific filesystem path within the storage.
@@ -175,13 +175,13 @@ Starts a new storage for a specific filesystem path within the storage.
 
 ##### Return
 
-( _[Storage](../resources/storage)_ )
+( _[Storage](/docs/library/resources/storage)_ )
 
 New storage started for the specific path from the storage filesystem.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>folder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>folder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific filesystem path within the storage.
@@ -196,7 +196,7 @@ Starts a new storage for a specific filesystem path within the storage.
 
 ##### Return
 
-( _[Storage](../resources/storage)_ )
+( _[Storage](/docs/library/resources/storage)_ )
 
 New storage started for the specific path from the storage filesystem.
 
@@ -206,14 +206,14 @@ New storage started for the specific path from the storage filesystem.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>folder</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>folder</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
 Folder manipulation object of the storage being used.
 
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 It allows to interact with the folder physically.
 
@@ -257,14 +257,14 @@ The base path of the storage.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getInput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getInput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Description
 
 Gets the input object from Netuno for the storage being used.
 
 ##### Return
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 Data input object from Netuno to the storage in use.
 
@@ -274,10 +274,10 @@ Data input object from Netuno to the storage in use.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getInputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getInputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Return
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 
 ---
@@ -286,14 +286,14 @@ Data input object from Netuno to the storage in use.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getOutput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getOutput</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Description
 
 Gets the output object from Netuno for the storage being used.
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 Data output object from Netuno to the storage in use.
 
@@ -303,10 +303,10 @@ Data output object from Netuno to the storage in use.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -315,14 +315,14 @@ Data output object from Netuno to the storage in use.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>input</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>input</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Description
 
 Gets the input object from Netuno for the storage being used.
 
 ##### Return
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 Data input object from Netuno to the storage in use.
 
@@ -332,14 +332,14 @@ Data input object from Netuno to the storage in use.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>inputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>inputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
 ##### Description
 
 Gets the Java input object for the storage being used.
 
 ##### Return
 
-( _[InputStream](../objects/InputStream)_ )
+( _[InputStream](/docs/library/objects/InputStream)_ )
 
 Java data input object for the storage in use.
 
@@ -491,7 +491,7 @@ If it is a folder.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>newRandomFile</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>newRandomFile</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Generates a new storage from the current storage but for a file with a random name that does not yet exist and thus can be saved without conflicts.
@@ -504,7 +504,7 @@ Generates a new storage from the current storage but for a file with a random na
 
 ##### Return
 
-( _[Storage](../resources/storage)_ )
+( _[Storage](/docs/library/resources/storage)_ )
 
 New storage for a new file with a non-existent random name.
 
@@ -514,14 +514,14 @@ New storage for a new file with a non-existent random name.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>output</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>output</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Description
 
 Gets the output object from Netuno for the storage being used.
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 Data output object from Netuno to the storage in use.
 
@@ -531,14 +531,14 @@ Data output object from Netuno to the storage in use.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>outputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>outputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Description
 
 Gets the Java output object for the storage being used.
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 Java data output object for the storage in use.
 
@@ -624,7 +624,7 @@ Java text input object (_BOM_) for the storage in use.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>saveFile</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>saveFile</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Save the file in the current storage path.
@@ -633,7 +633,7 @@ Save the file in the current storage path.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../objects/File)_ | File that will be saved in the current storage. |
+| **file** | _[File](/docs/library/objects/File)_ | File that will be saved in the current storage. |
 
 ##### Return
 

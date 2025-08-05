@@ -20,7 +20,7 @@ Generating general application errors and categorizing the severity of the error
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ErrorException](../objects/ErrorException)</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>message</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ErrorException](/docs/library/objects/ErrorException)</span>
 ##### Description
 
 Creates an error with an description message
@@ -33,7 +33,7 @@ Creates an error with an description message
 
 ##### Return
 
-( _[ErrorException](../objects/ErrorException)_ )
+( _[ErrorException](/docs/library/objects/ErrorException)_ )
 
 
 ---
@@ -108,19 +108,19 @@ Creates a throwable with an description message
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Creates a new class Values that results from the error. 
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>data</span>(<span style={{color: '#FF8000'}}>retorno</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Error](../resources/error)</span>
+#### <span style={{fontWeight: 'normal'}}>_error</span>.<span style={{color: '#008000'}}>data</span>(<span style={{color: '#FF8000'}}>retorno</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Error](/docs/library/resources/error)</span>
 ##### Description
 
 Creates a new class Values that results from the error.
@@ -129,11 +129,11 @@ Creates a new class Values that results from the error.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **retorno** | _[Values](../objects/Values)_ | Values. |
+| **retorno** | _[Values](/docs/library/objects/Values)_ | Values. |
 
 ##### Return
 
-( _[Error](../resources/error)_ )
+( _[Error](/docs/library/resources/error)_ )
 
 
 ---

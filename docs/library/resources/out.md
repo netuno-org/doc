@@ -12,14 +12,14 @@ Response feature to HTTP requests.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>close</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>close</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Closes the sending of HTTP response data.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 
 ---
@@ -45,7 +45,7 @@ The response to the HTTP request has been closed.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Copies all data from an InputStream to Proteu's standard output (OutputStream), starting from the beginning of the input stream.
@@ -56,17 +56,17 @@ It is a straightforward utility method, ideal for complete transfers of binary c
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ | Input stream from which data will be read and transferred to the output. |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ | Input stream from which data will be read and transferred to the output. |
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Copies data from an InputStream to the current output (Proteu OutputStream), optionally skipping the first bytes specified by skip.
@@ -77,18 +77,18 @@ This method is a simplified version of the copy method with limited size, useful
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ | The input stream from which data will be read. |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ | The input stream from which data will be read. |
 | **skip** | _long_ | Number of bytes to skip before starting the copy. Use 0 to start from the beginning. |
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Copies data from an InputStream to the current output (OutputStream associated with Out), with optional support for skipping bytes and limiting the total size copied.
@@ -99,19 +99,19 @@ This method is useful for efficient transfers of binary streams, with precise co
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ | The input stream from which the data will be read. |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ | The input stream from which the data will be read. |
 | **skip** | _long_ | Number of bytes to skip before starting the copy (use 0 to skip none). |
 | **size** | _long_ | Maximum number of bytes to copy (use -1 to copy to the end of the stream). |
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Copies all content from a file to the response output (OutputStream).
@@ -122,17 +122,17 @@ This method is a convenience that encapsulates the creation of an InputStream fr
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../objects/File)_ | The file from which the data will be copied. |
+| **file** | _[File](/docs/library/objects/File)_ | The file from which the data will be copied. |
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Copies data from a file to the response output (OutputStream), skipping an initial number of bytes.
@@ -143,18 +143,18 @@ This method is a convenience that abstracts the creation of an InputStream from 
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../objects/File)_ | The file from which the data will be copied. |
+| **file** | _[File](/docs/library/objects/File)_ | The file from which the data will be copied. |
 | **skip** | _long_ | Number of bytes to be skipped at the beginning of the file. |
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Copies a range of data from a file to the output (OutputStream) of the Proteu instance.
@@ -165,19 +165,19 @@ This method is a convenience that encapsulates opening the InputStream of the fi
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../objects/File)_ | The file from which the data will be copied. |
+| **file** | _[File](/docs/library/objects/File)_ | The file from which the data will be copied. |
 | **skip** | _long_ | Number of bytes to be skipped at the beginning of the file. |
 | **size** | _long_ | Number of bytes to be copied after the skip. If size is negative (< 0), all remaining content will be copied. |
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Copies all content from a Storage resource to the current output, without skipping bytes at the beginning and without a size limit.
@@ -188,17 +188,17 @@ This method is a simplified way of calling copy(Storage storage, long skip, long
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ | The storage resource representing the file to be copied. |
+| **storage** | _[Storage](/docs/library/resources/storage)_ | The storage resource representing the file to be copied. |
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Copies data from a Storage resource to the current output, starting reading after skipping a specified number of bytes (skip).
@@ -209,18 +209,18 @@ This method is a convenient way to call copy(Storage storage, long skip, long si
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ | The storage resource representing the file to be copied. |
+| **storage** | _[Storage](/docs/library/resources/storage)_ | The storage resource representing the file to be copied. |
 | **skip** | _long_ | Number of bytes to be skipped at the beginning of the file. |
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>copy</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>skip</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Copies the entire contents of a file to the response output (OutputStream).
@@ -231,13 +231,13 @@ This method is a convenience that encapsulates the creation of an InputStream fr
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ | The storage resource representing the file to be copied. |
+| **storage** | _[Storage](/docs/library/resources/storage)_ | The storage resource representing the file to be copied. |
 | **skip** | _long_ | Number of bytes to be skipped at the beginning of the file. |
 | **size** | _long_ | Maximum number of bytes to copy after the skip |
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -316,14 +316,14 @@ List of replicas.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Starts a new instance of output.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 The new instance of the Output feature.
 
@@ -357,7 +357,7 @@ The new instance of the Output feature.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends a response in JSON format to the client. This method sets the appropriate headers to ensure that the response is not cached and that the content is treated as valid JSON.
@@ -370,13 +370,13 @@ Sends a response in JSON format to the client. This method sets the appropriate 
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>String</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>String</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends a response in JSON format to the client. This method sets the appropriate headers to ensure that the response is not cached and that the content is treated as valid JSON.
@@ -389,13 +389,13 @@ Sends a response in JSON format to the client. This method sets the appropriate 
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Generates a formatted JSON response from an array of objects. The content is automatically structured based on a list of objects of type Values.
@@ -408,13 +408,13 @@ Generates a formatted JSON response from an array of objects. The content is aut
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Generates a JSON response from a Map, using an instance of Values to structure the average content of the sample
@@ -423,17 +423,17 @@ Generates a JSON response from a Map, using an instance of Values to structure t
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **Values** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ | The data contained in the Map will be automatically converted to JSON. |
+| **Values** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | The data contained in the Map will be automatically converted to JSON. |
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Generates a formatted JSON response from an instance of the Values class.
@@ -442,11 +442,11 @@ Generates a formatted JSON response from an instance of the Values class.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **Values** | _[Values](../objects/Values)_ | Object containing the data that will be automatically converted to JSON. |
+| **Values** | _[Values](/docs/library/objects/Values)_ | Object containing the data that will be automatically converted to JSON. |
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -471,7 +471,7 @@ Returns true if HTML escaping is enabled, otherwise returns false.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>jsonHTMLEscape</span>(<span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>jsonHTMLEscape</span>(<span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Defines whether special HTML characters should be escaped in the generated JSON response.
@@ -486,7 +486,7 @@ When enabled (true), characters such as &lt; , &gt; , &amp; and &bsol; will be c
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -510,7 +510,7 @@ Returns the value of the JSON indentation factor.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>jsonIdentFactor</span>(<span style={{color: '#FF8000'}}>int</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>jsonIdentFactor</span>(<span style={{color: '#FF8000'}}>int</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sets the indentation factor used when generating the JSON response.
@@ -524,7 +524,7 @@ This value determines how many spaces will be used to indent each level of the J
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -551,14 +551,14 @@ List of replicas.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>output</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>output</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Description
 
 Provides the original output stream.
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 The original output stream..
 
@@ -568,7 +568,7 @@ The original output stream..
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result.
@@ -581,13 +581,13 @@ Sends the boolean result.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>number</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>number</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the number.
@@ -600,13 +600,13 @@ Sends the number.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>character</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>character</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the character.
@@ -619,13 +619,13 @@ Sends the character.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result.
@@ -638,13 +638,13 @@ Sends the boolean result.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result.
@@ -657,13 +657,13 @@ Sends the boolean result.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result.
@@ -676,13 +676,13 @@ Sends the boolean result.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Converts the object to text and sends it.
@@ -695,13 +695,13 @@ Converts the object to text and sends it.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the text content.
@@ -714,13 +714,13 @@ Sends the text content.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result.
@@ -733,13 +733,13 @@ Sends the boolean result.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result.
@@ -752,7 +752,7 @@ Sends the boolean result.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
@@ -762,7 +762,7 @@ Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -772,7 +772,7 @@ Current data output.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 
 ---
@@ -781,20 +781,20 @@ Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends a line break.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result with a line break.
@@ -807,13 +807,13 @@ Sends the boolean result with a line break.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>number</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>number</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the number with a line break.
@@ -826,13 +826,13 @@ Sends the number with a line break.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>character</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>character</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the character with a line break.
@@ -845,13 +845,13 @@ Sends the character with a line break.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result with a line break.
@@ -864,13 +864,13 @@ Sends the boolean result with a line break.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result with a line break.
@@ -883,13 +883,13 @@ Sends the boolean result with a line break.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result with a line break.
@@ -902,13 +902,13 @@ Sends the boolean result with a line break.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>obj</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Converts the object to text and sends it with a line break.
@@ -921,13 +921,13 @@ Converts the object to text and sends it with a line break.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the text content with a line break.
@@ -940,13 +940,13 @@ Sends the text content with a line break.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result with a line break.
@@ -959,13 +959,13 @@ Sends the boolean result with a line break.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sends the boolean result with a line break.
@@ -978,7 +978,7 @@ Sends the boolean result with a line break.
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Current data output.
 
@@ -988,7 +988,7 @@ Current data output.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>setJSONHTMLEscape</span>(<span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>setJSONHTMLEscape</span>(<span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Defines whether the generated JSON content should escape special HTML characters (such as &lt;, &gt;, &amp;, etc.).
@@ -1003,7 +1003,7 @@ This method is an alias or helper method that delegates directly to jsonHTMLEsca
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -1013,7 +1013,7 @@ Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>setJSONIdentFactor</span>(<span style={{color: '#FF8000'}}>jsonIdentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>setJSONIdentFactor</span>(<span style={{color: '#FF8000'}}>jsonIdentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Sets the indentation factor (spacing) used when generating pretty-printed JSON output.
@@ -1033,7 +1033,7 @@ This method is a shortcut that internally delegates to jsonIdentFactor(int jsonI
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -1076,7 +1076,7 @@ The HTTP request response has started and the header has already been sent.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>write</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>write</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Writes all bytes of an array directly to binary output.
@@ -1091,13 +1091,13 @@ The method delegates writing to the output stream associated with Proteu, ensuri
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>write</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>, <span style={{color: '#FF8000'}}>off</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>len</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>write</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>, <span style={{color: '#FF8000'}}>off</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>len</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Writes a specific sequence of bytes from an array to binary output.
@@ -1114,13 +1114,13 @@ This method allows you to write only a portion of the array, starting from a giv
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>write</span>(<span style={{color: '#FF8000'}}>int</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>write</span>(<span style={{color: '#FF8000'}}>int</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Writes a single byte to the body of the HTTP response.
@@ -1137,7 +1137,7 @@ It is useful for manually constructing responses byte by byte or for custom writ
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -1147,7 +1147,7 @@ Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeBoolean</span>(<span style={{color: '#FF8000'}}>boolean</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeBoolean</span>(<span style={{color: '#FF8000'}}>boolean</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Writes a Boolean value to the binary output.
@@ -1161,7 +1161,7 @@ The value true is represented as 1 (byte) and false as 0, and is written directl
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -1171,7 +1171,7 @@ Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeByte</span>(<span style={{color: '#FF8000'}}>int</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeByte</span>(<span style={{color: '#FF8000'}}>int</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Writes a single byte to the HTTP response stream.
@@ -1186,7 +1186,7 @@ This method is ideal for direct binary output, such as raw data or file contents
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -1196,7 +1196,7 @@ Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeChar</span>(<span style={{color: '#FF8000'}}>char</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeChar</span>(<span style={{color: '#FF8000'}}>char</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Writes a Unicode character (UTF-16) as two bytes in the binary output.
@@ -1211,7 +1211,7 @@ The character is divided into two 8-bit parts: the most significant byte and the
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -1221,7 +1221,7 @@ Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeDouble</span>(<span style={{color: '#FF8000'}}>double</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeDouble</span>(<span style={{color: '#FF8000'}}>double</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Writes a double value (64 bits, floating point) to the binary output.
@@ -1235,7 +1235,7 @@ The number is converted to its 8-byte binary representation according to the IEE
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -1245,7 +1245,7 @@ Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeFloat</span>(<span style={{color: '#FF8000'}}>float</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeFloat</span>(<span style={{color: '#FF8000'}}>float</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Writes a floating point value (32 bits, floating point) to the binary output.
@@ -1259,7 +1259,7 @@ The value is converted to its 4-byte binary representation according to the IEEE
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -1269,7 +1269,7 @@ Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeInt</span>(<span style={{color: '#FF8000'}}>int</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeInt</span>(<span style={{color: '#FF8000'}}>int</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Writes an integer value (32 bits) to the HTTP response stream as four bytes in big-endian order (from the most significant byte to the least significant byte).
@@ -1286,7 +1286,7 @@ Internally, each byte of the integer is extracted with bit shifts and sent indiv
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -1296,7 +1296,7 @@ Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeLong</span>(<span style={{color: '#FF8000'}}>long</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeLong</span>(<span style={{color: '#FF8000'}}>long</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Writes a long value (64 bits) to the binary output.
@@ -1310,7 +1310,7 @@ The value is converted to a sequence of 8 bytes in big-endian format (most signi
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 
@@ -1320,7 +1320,7 @@ Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeShort</span>(<span style={{color: '#FF8000'}}>boolean</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](../resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>writeShort</span>(<span style={{color: '#FF8000'}}>boolean</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Writes a Boolean value (true or false) to the binary output.
@@ -1336,7 +1336,7 @@ This method is useful when you need to transmit data at the byte level, such as 
 
 ##### Return
 
-( _[Out](../resources/out)_ )
+( _[Out](/docs/library/resources/out)_ )
 
 Returns the Out object itself
 

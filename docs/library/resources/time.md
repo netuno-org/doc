@@ -4,7 +4,7 @@ title: Time
 sidebar_label: Time
 ---
 
-Gestão de dados temporal baseada no **java.time**.
+Temporal data management based on **java.time**.
 
 ---
 
@@ -2347,13 +2347,13 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneIdOf</span>(<span style={{color: '#FF8000'}}>zoneId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>aliasMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneIdOf</span>(<span style={{color: '#FF8000'}}>zoneId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>aliasMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **zoneId** | _string_ |   |
-| **aliasMap** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **aliasMap** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
@@ -2443,13 +2443,13 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetOf</span>(<span style={{color: '#FF8000'}}>zoneId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>aliasMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>zoneOffsetOf</span>(<span style={{color: '#FF8000'}}>zoneId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>aliasMap</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.ZoneId</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **zoneId** | _string_ |   |
-| **aliasMap** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **aliasMap** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 

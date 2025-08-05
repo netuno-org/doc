@@ -48,25 +48,25 @@ Object that contains the details of the response obtained through the remote con
 
 ---
 
-#### <span style={{color: '#008000'}}>dataSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>dataSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Gets the data that was sent over the remote connection.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 All data that was sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>dataSent</span>(<span style={{color: '#FF8000'}}>dataSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
+#### <span style={{color: '#008000'}}>dataSent</span>(<span style={{color: '#FF8000'}}>dataSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **dataSent** | _[Values](../objects/Values)_ |   |
+| **dataSent** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
@@ -91,10 +91,10 @@ All data that was sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>file</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{color: '#008000'}}>file</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 
 ---
@@ -103,25 +103,25 @@ All data that was sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>formDataSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>formDataSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Gets the data that was sent over the remote connection.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 All data that was sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>formDataSent</span>(<span style={{color: '#FF8000'}}>dataSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
+#### <span style={{color: '#008000'}}>formDataSent</span>(<span style={{color: '#FF8000'}}>dataSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **dataSent** | _[Values](../objects/Values)_ |   |
+| **dataSent** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
@@ -170,10 +170,10 @@ All data that was sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>getDataSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getDataSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -194,10 +194,10 @@ All data that was sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>getFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>
+#### <span style={{color: '#008000'}}>getFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Return
 
-( _[File](../objects/File)_ )
+( _[File](/docs/library/objects/File)_ )
 
 
 ---
@@ -206,10 +206,10 @@ All data that was sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>getFormDataSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getFormDataSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -218,10 +218,10 @@ All data that was sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>getHeader</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getHeader</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -230,10 +230,10 @@ All data that was sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>getJSON</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getJSON</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -259,10 +259,10 @@ HTTP method code that was submitted.
 
 ---
 
-#### <span style={{color: '#008000'}}>getQSSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getQSSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -271,10 +271,10 @@ HTTP method code that was submitted.
 
 ---
 
-#### <span style={{color: '#008000'}}>getQueryStringSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>getQueryStringSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -307,10 +307,10 @@ HTTP method code that was submitted.
 
 ---
 
-#### <span style={{color: '#008000'}}>header</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>header</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -379,10 +379,10 @@ HTTP method code that was submitted.
 
 ---
 
-#### <span style={{color: '#008000'}}>json</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>json</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -404,7 +404,7 @@ HTTP method code that was submitted.
 
 ---
 
-#### <span style={{color: '#008000'}}>method</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{color: '#008000'}}>method</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](/docs/library/objects/RemoteResponse)</span>
 ##### Description
 
 Defines the HTTP method code that was used for the remote connection.
@@ -417,7 +417,7 @@ Defines the HTTP method code that was used for the remote connection.
 
 ##### Return
 
-( _[RemoteResponse](../objects/RemoteResponse)_ )
+( _[RemoteResponse](/docs/library/objects/RemoteResponse)_ )
 
 Remote connection submission response.
 
@@ -439,25 +439,25 @@ Remote connection submission response.
 
 ---
 
-#### <span style={{color: '#008000'}}>qsSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>qsSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Gets the parameters of the query string that was sent on the remote connection.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 All query string parameters that were sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>qsSent</span>(<span style={{color: '#FF8000'}}>qsSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
+#### <span style={{color: '#008000'}}>qsSent</span>(<span style={{color: '#FF8000'}}>qsSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **qsSent** | _[Values](../objects/Values)_ |   |
+| **qsSent** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
@@ -470,25 +470,25 @@ All query string parameters that were sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>queryStringSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{color: '#008000'}}>queryStringSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Gets the parameters of the query string that was sent on the remote connection.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 All query string parameters that were sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>queryStringSent</span>(<span style={{color: '#FF8000'}}>qs</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
+#### <span style={{color: '#008000'}}>queryStringSent</span>(<span style={{color: '#FF8000'}}>qs</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **qs** | _[Values](../objects/Values)_ |   |
+| **qs** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
@@ -501,7 +501,7 @@ All query string parameters that were sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>setBytes</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{color: '#008000'}}>setBytes</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](/docs/library/objects/RemoteResponse)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -510,7 +510,7 @@ All query string parameters that were sent.
 
 ##### Return
 
-( _[RemoteResponse](../objects/RemoteResponse)_ )
+( _[RemoteResponse](/docs/library/objects/RemoteResponse)_ )
 
 
 ---
@@ -519,7 +519,7 @@ All query string parameters that were sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>setContent</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{color: '#008000'}}>setContent</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](/docs/library/objects/RemoteResponse)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -528,7 +528,7 @@ All query string parameters that were sent.
 
 ##### Return
 
-( _[RemoteResponse](../objects/RemoteResponse)_ )
+( _[RemoteResponse](/docs/library/objects/RemoteResponse)_ )
 
 
 ---
@@ -537,12 +537,12 @@ All query string parameters that were sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>setDataSent</span>(<span style={{color: '#FF8000'}}>dataSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
+#### <span style={{color: '#008000'}}>setDataSent</span>(<span style={{color: '#FF8000'}}>dataSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **dataSent** | _[Values](../objects/Values)_ |   |
+| **dataSent** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
@@ -555,7 +555,7 @@ All query string parameters that were sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>setError</span>(<span style={{color: '#FF8000'}}>error</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{color: '#008000'}}>setError</span>(<span style={{color: '#FF8000'}}>error</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](/docs/library/objects/RemoteResponse)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -564,7 +564,7 @@ All query string parameters that were sent.
 
 ##### Return
 
-( _[RemoteResponse](../objects/RemoteResponse)_ )
+( _[RemoteResponse](/docs/library/objects/RemoteResponse)_ )
 
 
 ---
@@ -573,12 +573,12 @@ All query string parameters that were sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>setFormDataSent</span>(<span style={{color: '#FF8000'}}>dataSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
+#### <span style={{color: '#008000'}}>setFormDataSent</span>(<span style={{color: '#FF8000'}}>dataSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **dataSent** | _[Values](../objects/Values)_ |   |
+| **dataSent** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
@@ -591,16 +591,16 @@ All query string parameters that were sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>setHeader</span>(<span style={{color: '#FF8000'}}>header</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{color: '#008000'}}>setHeader</span>(<span style={{color: '#FF8000'}}>header</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](/docs/library/objects/RemoteResponse)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **header** | _[Values](../objects/Values)_ |   |
+| **header** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[RemoteResponse](../objects/RemoteResponse)_ )
+( _[RemoteResponse](/docs/library/objects/RemoteResponse)_ )
 
 
 ---
@@ -609,7 +609,7 @@ All query string parameters that were sent.
 
 ---
 
-#### <span style={{color: '#008000'}}>setMethod</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{color: '#008000'}}>setMethod</span>(<span style={{color: '#FF8000'}}>method</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](/docs/library/objects/RemoteResponse)</span>
 ##### Description
 
 Defines the HTTP method code that was used for the remote connection.
@@ -622,7 +622,7 @@ Defines the HTTP method code that was used for the remote connection.
 
 ##### Return
 
-( _[RemoteResponse](../objects/RemoteResponse)_ )
+( _[RemoteResponse](/docs/library/objects/RemoteResponse)_ )
 
 Remote connection submission response.
 
@@ -632,12 +632,12 @@ Remote connection submission response.
 
 ---
 
-#### <span style={{color: '#008000'}}>setQSSent</span>(<span style={{color: '#FF8000'}}>qsSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
+#### <span style={{color: '#008000'}}>setQSSent</span>(<span style={{color: '#FF8000'}}>qsSent</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **qsSent** | _[Values](../objects/Values)_ |   |
+| **qsSent** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
@@ -650,12 +650,12 @@ Remote connection submission response.
 
 ---
 
-#### <span style={{color: '#008000'}}>setQueryStringSent</span>(<span style={{color: '#FF8000'}}>qs</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
+#### <span style={{color: '#008000'}}>setQueryStringSent</span>(<span style={{color: '#FF8000'}}>qs</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **qs** | _[Values](../objects/Values)_ |   |
+| **qs** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
@@ -668,7 +668,7 @@ Remote connection submission response.
 
 ---
 
-#### <span style={{color: '#008000'}}>setStatusCode</span>(<span style={{color: '#FF8000'}}>statusCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](../objects/RemoteResponse)</span>
+#### <span style={{color: '#008000'}}>setStatusCode</span>(<span style={{color: '#FF8000'}}>statusCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](/docs/library/objects/RemoteResponse)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -677,7 +677,7 @@ Remote connection submission response.
 
 ##### Return
 
-( _[RemoteResponse](../objects/RemoteResponse)_ )
+( _[RemoteResponse](/docs/library/objects/RemoteResponse)_ )
 
 
 ---

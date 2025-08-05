@@ -187,7 +187,7 @@ Defines whether compression is active on the current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setConnectTimeout</span>(<span style={{color: '#FF8000'}}>connectTimeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>
+#### <span style={{color: '#008000'}}>setConnectTimeout</span>(<span style={{color: '#FF8000'}}>connectTimeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>
 ##### Description
 
 Defines the connection timeout of the current object.
@@ -200,7 +200,7 @@ Defines the connection timeout of the current object.
 
 ##### Return
 
-( _[SSHConfig](../objects/SSHConfig)_ )
+( _[SSHConfig](/docs/library/objects/SSHConfig)_ )
 
 The current SSHConfig object.
 
@@ -210,7 +210,7 @@ The current SSHConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setDebug</span>(<span style={{color: '#FF8000'}}>debug</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>
+#### <span style={{color: '#008000'}}>setDebug</span>(<span style={{color: '#FF8000'}}>debug</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>
 ##### Description
 
 Defines whether the current object is in debug mode.
@@ -223,7 +223,7 @@ Defines whether the current object is in debug mode.
 
 ##### Return
 
-( _[SSHConfig](../objects/SSHConfig)_ )
+( _[SSHConfig](/docs/library/objects/SSHConfig)_ )
 
 The current SSHConfig object.
 
@@ -233,7 +233,7 @@ The current SSHConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>
+#### <span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>
 ##### Description
 
 Defines whether the current object is active.
@@ -246,7 +246,7 @@ Defines whether the current object is active.
 
 ##### Return
 
-( _[SSHConfig](../objects/SSHConfig)_ )
+( _[SSHConfig](/docs/library/objects/SSHConfig)_ )
 
 The current SSHConfig object.
 
@@ -256,7 +256,7 @@ The current SSHConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setHost</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>
+#### <span style={{color: '#008000'}}>setHost</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>
 ##### Description
 
 Defines the host of the current object.
@@ -269,7 +269,7 @@ Defines the host of the current object.
 
 ##### Return
 
-( _[SSHConfig](../objects/SSHConfig)_ )
+( _[SSHConfig](/docs/library/objects/SSHConfig)_ )
 
 The current SSHConfig object.
 
@@ -279,7 +279,7 @@ The current SSHConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setPassword</span>(<span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>
+#### <span style={{color: '#008000'}}>setPassword</span>(<span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>
 ##### Description
 
 Defines the password of the current object.
@@ -292,7 +292,7 @@ Defines the password of the current object.
 
 ##### Return
 
-( _[SSHConfig](../objects/SSHConfig)_ )
+( _[SSHConfig](/docs/library/objects/SSHConfig)_ )
 
 The current SSHConfig object.
 
@@ -302,7 +302,7 @@ The current SSHConfig object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setPort</span>(<span style={{color: '#FF8000'}}>port</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>
+#### <span style={{color: '#008000'}}>setPort</span>(<span style={{color: '#FF8000'}}>port</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>
 ##### Description
 
 Defines the port of the current object.
@@ -315,7 +315,7 @@ Defines the port of the current object.
 
 ##### Return
 
-( _[SSHConfig](../objects/SSHConfig)_ )
+( _[SSHConfig](/docs/library/objects/SSHConfig)_ )
 
 The current SSHConfig object.
 
@@ -347,7 +347,7 @@ Defines the public key of the current object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setUsername</span>(<span style={{color: '#FF8000'}}>username</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](../objects/SSHConfig)</span>
+#### <span style={{color: '#008000'}}>setUsername</span>(<span style={{color: '#FF8000'}}>username</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>
 ##### Description
 
 Defines the username of the current object.
@@ -360,7 +360,7 @@ Defines the username of the current object.
 
 ##### Return
 
-( _[SSHConfig](../objects/SSHConfig)_ )
+( _[SSHConfig](/docs/library/objects/SSHConfig)_ )
 
 The current SSHConfig object.
 

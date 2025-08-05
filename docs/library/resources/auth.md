@@ -19,7 +19,7 @@ if (_auth.isJWT() && _auth.isAdmin()) {
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>allProvidersConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>allProvidersConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Gets all the authentication providers configuration.
@@ -35,7 +35,7 @@ _log.info('Authentication Providers Configuration', allProvidersConfig)
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 All authentication providers settings.
 
@@ -65,7 +65,7 @@ All authentication providers settings.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptReject</span>(<span style={{color: '#FF8000'}}>reject</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptReject</span>(<span style={{color: '#FF8000'}}>reject</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -74,7 +74,7 @@ All authentication providers settings.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -83,15 +83,15 @@ All authentication providers settings.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptRejectWithData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptRejectWithData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -100,35 +100,35 @@ All authentication providers settings.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -150,7 +150,7 @@ Returns the number of minutes for the time interval for the locked account.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsInterval</span>(<span style={{color: '#FF8000'}}>attemptsInterval</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsInterval</span>(<span style={{color: '#FF8000'}}>attemptsInterval</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -159,7 +159,7 @@ Returns the number of minutes for the time interval for the locked account.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -181,7 +181,7 @@ Returns the maximum number of consecutive failed attempts to block authenticatio
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsMaxFails</span>(<span style={{color: '#FF8000'}}>attemptsMaxFails</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsMaxFails</span>(<span style={{color: '#FF8000'}}>attemptsMaxFails</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -190,7 +190,7 @@ Returns the maximum number of consecutive failed attempts to block authenticatio
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -314,10 +314,10 @@ Returns strong password encryption.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getAllProvidersConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getAllProvidersConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -326,16 +326,16 @@ Returns strong password encryption.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getAttemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getAttemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -344,10 +344,10 @@ Returns strong password encryption.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getJWTGroups</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getJWTGroups</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -356,7 +356,7 @@ Returns strong password encryption.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getProviderConfig</span>(<span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getProviderConfig</span>(<span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -365,7 +365,7 @@ Returns strong password encryption.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -374,16 +374,16 @@ Returns strong password encryption.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getSignInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getSignInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -392,16 +392,16 @@ Returns strong password encryption.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getSignInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getSignInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -633,12 +633,12 @@ Returns the validation.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtCheckTokenDataExpiration</span>(<span style={{color: '#FF8000'}}>dbToken</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtCheckTokenDataExpiration</span>(<span style={{color: '#FF8000'}}>dbToken</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **dbToken** | _[Values](../objects/Values)_ |   |
+| **dbToken** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
@@ -651,22 +651,22 @@ Returns the validation.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtCreateAccessToken</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>contextData</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtCreateAccessToken</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>contextData</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **userId** | _int_ |   |
-| **contextData** | _[Values](../objects/Values)_ |   |
+| **contextData** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtCreateAccessToken</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtCreateAccessToken</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 This method access to the token of a user and returns the content.
@@ -675,11 +675,11 @@ This method access to the token of a user and returns the content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **userId** | _[Values](../objects/Values)_ | Id of user. |
+| **userId** | _[Values](/docs/library/objects/Values)_ | Id of user. |
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Returns the content of the user inserted.
 
@@ -689,7 +689,7 @@ Returns the content of the user inserted.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtDBRecord</span>(<span style={{color: '#FF8000'}}>token</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtDBRecord</span>(<span style={{color: '#FF8000'}}>token</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -698,7 +698,7 @@ Returns the content of the user inserted.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -707,10 +707,10 @@ Returns the content of the user inserted.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -732,7 +732,7 @@ Returns if is enabled.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -741,7 +741,7 @@ Returns if is enabled.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -750,10 +750,10 @@ Returns if is enabled.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtGroups</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtGroups</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -800,7 +800,7 @@ Returns if is enabled.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtRefreshAccessToken</span>(<span style={{color: '#FF8000'}}>refreshToken</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtRefreshAccessToken</span>(<span style={{color: '#FF8000'}}>refreshToken</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Replaces an old token for the new on inserted.
@@ -813,7 +813,7 @@ Replaces an old token for the new on inserted.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Returns the updated token.
 
@@ -839,17 +839,17 @@ Updates the time of expiration of the token to the settings in configs.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtSignIn</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>contextData</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtSignIn</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>contextData</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **userId** | _int_ |   |
-| **contextData** | _[Values](../objects/Values)_ |   |
+| **contextData** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -858,10 +858,10 @@ Updates the time of expiration of the token to the settings in configs.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtSignInData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtSignInData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -904,7 +904,7 @@ Returns the validation.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>load</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>load</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Description
 
 Processes authentication settings.
@@ -918,7 +918,7 @@ _auth.load()
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 Returns the default Auth resource.
 
@@ -928,7 +928,7 @@ Returns the default Auth resource.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>logout</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>logout</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Description
 
 Signs out the user authenticated.
@@ -943,7 +943,7 @@ _auth.logout()
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 Returns the default Auth resource.
 
@@ -953,7 +953,7 @@ Returns the default Auth resource.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>providerConfig</span>(<span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>providerConfig</span>(<span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Gets one specific authentication provider configuration.
@@ -981,7 +981,7 @@ _log.info('LDAP Provider Configuration', _auth.providerConfig('ldap'))
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 The authentication provider configuration.
 
@@ -1029,7 +1029,7 @@ If the authentication provider is active returns _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptReject</span>(<span style={{color: '#FF8000'}}>reject</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptReject</span>(<span style={{color: '#FF8000'}}>reject</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1038,7 +1038,7 @@ If the authentication provider is active returns _true_.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -1047,7 +1047,7 @@ If the authentication provider is active returns _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1056,35 +1056,35 @@ If the authentication provider is active returns _true_.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -1093,7 +1093,7 @@ If the authentication provider is active returns _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInAbort</span>(<span style={{color: '#FF8000'}}>abort</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInAbort</span>(<span style={{color: '#FF8000'}}>abort</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1102,7 +1102,7 @@ If the authentication provider is active returns _true_.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -1111,7 +1111,7 @@ If the authentication provider is active returns _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1120,35 +1120,35 @@ If the authentication provider is active returns _true_.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -1157,7 +1157,7 @@ If the authentication provider is active returns _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1166,35 +1166,35 @@ If the authentication provider is active returns _true_.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -1211,7 +1211,7 @@ If the authentication provider is active returns _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbort</span>(<span style={{color: '#FF8000'}}>abort</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbort</span>(<span style={{color: '#FF8000'}}>abort</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1220,7 +1220,7 @@ If the authentication provider is active returns _true_.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -1229,15 +1229,15 @@ If the authentication provider is active returns _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbortWithData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbortWithData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1246,35 +1246,35 @@ If the authentication provider is active returns _true_.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
@@ -1283,15 +1283,15 @@ If the authentication provider is active returns _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInExtraData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInExtraData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1300,35 +1300,35 @@ If the authentication provider is active returns _true_.
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values) &#124; [DataSchema](../objects/DataSchema) | java.util.Map_ |   |
+| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](../resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **data** | _[Values](../objects/Values)_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Return
 
-( _[Auth](../resources/auth)_ )
+( _[Auth](/docs/library/resources/auth)_ )
 
 
 ---

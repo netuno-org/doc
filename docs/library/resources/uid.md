@@ -1,10 +1,10 @@
 ---
 id: uid
-title: Uid
-sidebar_label: Uid
+title: UID
+sidebar_label: UID
 ---
 
-Gerador de _unique identifier descriptor_ (uid).
+Generates universally unique identifiers (uuid/guid).
 
 ---
 

@@ -12,7 +12,7 @@ Orchestrates the execution of functions.
 
 ---
 
-#### <span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](../objects/Functions)</span>
+#### <span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -21,7 +21,7 @@ Orchestrates the execution of functions.
 
 ##### Return
 
-( _[Functions](../objects/Functions)_ )
+( _[Functions](/docs/library/objects/Functions)_ )
 
 
 ---
@@ -30,7 +30,7 @@ Orchestrates the execution of functions.
 
 ---
 
-#### <span style={{color: '#008000'}}>atEnd</span>(<span style={{color: '#FF8000'}}>end</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](../objects/Functions)</span>
+#### <span style={{color: '#008000'}}>atEnd</span>(<span style={{color: '#FF8000'}}>end</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -39,7 +39,7 @@ Orchestrates the execution of functions.
 
 ##### Return
 
-( _[Functions](../objects/Functions)_ )
+( _[Functions](/docs/library/objects/Functions)_ )
 
 
 ---
@@ -56,7 +56,7 @@ Orchestrates the execution of functions.
 
 ---
 
-#### <span style={{color: '#008000'}}>data</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](../objects/Functions)</span>
+#### <span style={{color: '#008000'}}>data</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -65,7 +65,7 @@ Orchestrates the execution of functions.
 
 ##### Return
 
-( _[Functions](../objects/Functions)_ )
+( _[Functions](/docs/library/objects/Functions)_ )
 
 
 ---
@@ -110,7 +110,7 @@ Orchestrates the execution of functions.
 
 ---
 
-#### <span style={{color: '#008000'}}>setAtEnd</span>(<span style={{color: '#FF8000'}}>end</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](../objects/Functions)</span>
+#### <span style={{color: '#008000'}}>setAtEnd</span>(<span style={{color: '#FF8000'}}>end</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -119,7 +119,7 @@ Orchestrates the execution of functions.
 
 ##### Return
 
-( _[Functions](../objects/Functions)_ )
+( _[Functions](/docs/library/objects/Functions)_ )
 
 
 ---
@@ -128,7 +128,7 @@ Orchestrates the execution of functions.
 
 ---
 
-#### <span style={{color: '#008000'}}>setData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](../objects/Functions)</span>
+#### <span style={{color: '#008000'}}>setData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -137,7 +137,7 @@ Orchestrates the execution of functions.
 
 ##### Return
 
-( _[Functions](../objects/Functions)_ )
+( _[Functions](/docs/library/objects/Functions)_ )
 
 
 ---
@@ -146,10 +146,10 @@ Orchestrates the execution of functions.
 
 ---
 
-#### <span style={{color: '#008000'}}>start</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](../objects/Functions)</span>
+#### <span style={{color: '#008000'}}>start</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
 ##### Return
 
-( _[Functions](../objects/Functions)_ )
+( _[Functions](/docs/library/objects/Functions)_ )
 
 
 ---

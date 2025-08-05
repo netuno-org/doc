@@ -104,7 +104,7 @@ Returns the signature algorithm type object.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>data</span>(<span style={{color: '#FF8000'}}>token</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>data</span>(<span style={{color: '#FF8000'}}>token</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -113,7 +113,7 @@ Returns the signature algorithm type object.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
@@ -122,7 +122,7 @@ Returns the signature algorithm type object.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>decode</span>(<span style={{color: '#FF8000'}}>token</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>decode</span>(<span style={{color: '#FF8000'}}>token</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Encodes the values of the header and body inserted.
@@ -135,7 +135,7 @@ Encodes the values of the header and body inserted.
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Returns the values decoded.
 
@@ -158,7 +158,7 @@ Returns if is enabled.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>enabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](../resources/jwt)</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>enabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](/docs/library/resources/jwt)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -167,7 +167,7 @@ Returns if is enabled.
 
 ##### Return
 
-( _[JWT](../resources/jwt)_ )
+( _[JWT](/docs/library/resources/jwt)_ )
 
 
 ---
@@ -176,7 +176,7 @@ Returns if is enabled.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>encode</span>(<span style={{color: '#FF8000'}}>body</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>encode</span>(<span style={{color: '#FF8000'}}>body</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes the body value inserted.
@@ -185,7 +185,7 @@ Encodes the body value inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **body** | _[Values](../objects/Values)_ | Body value. |
+| **body** | _[Values](/docs/library/objects/Values)_ | Body value. |
 
 ##### Return
 
@@ -195,7 +195,7 @@ Returns the value enconded.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>encode</span>(<span style={{color: '#FF8000'}}>header</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>body</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>encode</span>(<span style={{color: '#FF8000'}}>header</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>body</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Encodes the values of the header and body inserted.
@@ -204,8 +204,8 @@ Encodes the values of the header and body inserted.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **header** | _[Values](../objects/Values)_ | Header value. |
-| **body** | _[Values](../objects/Values)_ | Body value. |
+| **header** | _[Values](/docs/library/objects/Values)_ | Header value. |
+| **body** | _[Values](/docs/library/objects/Values)_ | Body value. |
 
 ##### Return
 
@@ -249,15 +249,15 @@ Returns the values encoded.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](../resources/jwt)</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](/docs/library/resources/jwt)</span>
 ##### Return
 
-( _[JWT](../resources/jwt)_ )
+( _[JWT](/docs/library/resources/jwt)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>secret</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](../resources/jwt)</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>secret</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](/docs/library/resources/jwt)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -266,12 +266,12 @@ Returns the values encoded.
 
 ##### Return
 
-( _[JWT](../resources/jwt)_ )
+( _[JWT](/docs/library/resources/jwt)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>javax.crypto.SecretKey</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](../resources/jwt)</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>init</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>javax.crypto.SecretKey</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](/docs/library/resources/jwt)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -280,7 +280,7 @@ Returns the values encoded.
 
 ##### Return
 
-( _[JWT](../resources/jwt)_ )
+( _[JWT](/docs/library/resources/jwt)_ )
 
 
 ---
@@ -309,7 +309,7 @@ Returns the values encoded.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>key</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>javax.crypto.SecretKey</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](../resources/jwt)</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>key</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>javax.crypto.SecretKey</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](/docs/library/resources/jwt)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -318,7 +318,7 @@ Returns the values encoded.
 
 ##### Return
 
-( _[JWT](../resources/jwt)_ )
+( _[JWT](/docs/library/resources/jwt)_ )
 
 
 ---
@@ -327,7 +327,7 @@ Returns the values encoded.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](../resources/jwt)</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](/docs/library/resources/jwt)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -336,7 +336,7 @@ Returns the values encoded.
 
 ##### Return
 
-( _[JWT](../resources/jwt)_ )
+( _[JWT](/docs/library/resources/jwt)_ )
 
 
 ---
@@ -345,7 +345,7 @@ Returns the values encoded.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>setHMACKeyFromSecret</span>(<span style={{color: '#FF8000'}}>secret</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](../resources/jwt)</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>setHMACKeyFromSecret</span>(<span style={{color: '#FF8000'}}>secret</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](/docs/library/resources/jwt)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -354,7 +354,7 @@ Returns the values encoded.
 
 ##### Return
 
-( _[JWT](../resources/jwt)_ )
+( _[JWT](/docs/library/resources/jwt)_ )
 
 
 ---
@@ -363,7 +363,7 @@ Returns the values encoded.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>setKey</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>javax.crypto.SecretKey</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](../resources/jwt)</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>setKey</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>javax.crypto.SecretKey</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[JWT](/docs/library/resources/jwt)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -372,7 +372,7 @@ Returns the values encoded.
 
 ##### Return
 
-( _[JWT](../resources/jwt)_ )
+( _[JWT](/docs/library/resources/jwt)_ )
 
 
 ---
@@ -381,7 +381,7 @@ Returns the values encoded.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>token</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>token</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Generates a token through jwtBuilder.
@@ -390,7 +390,7 @@ Generates a token through jwtBuilder.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **Values** | _[Values](../objects/Values)_ | Values for the jwtBuilder. |
+| **Values** | _[Values](/docs/library/objects/Values)_ | Values for the jwtBuilder. |
 
 ##### Return
 

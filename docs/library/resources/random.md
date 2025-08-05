@@ -4,7 +4,7 @@ title: Random
 sidebar_label: Random
 ---
 
-Geração de valores aleatórios.
+Generation of random data, such as keys, identifiers, passwords, etc.
 
 ---
 
@@ -74,20 +74,20 @@ Returns a seed.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
+#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](/docs/library/objects/RandomString)</span>
 ##### Description
 
 Generates a random text of 24 caracteres.
 
 ##### Return
 
-( _[RandomString](../objects/RandomString)_ )
+( _[RandomString](/docs/library/objects/RandomString)_ )
 
 Returns a 24 characters random string.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
+#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](/docs/library/objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -96,12 +96,12 @@ Returns a 24 characters random string.
 
 ##### Return
 
-( _[RandomString](../objects/RandomString)_ )
+( _[RandomString](/docs/library/objects/RandomString)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>withSymbols</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
+#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>withSymbols</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](/docs/library/objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -111,12 +111,12 @@ Returns a 24 characters random string.
 
 ##### Return
 
-( _[RandomString](../objects/RandomString)_ )
+( _[RandomString](/docs/library/objects/RandomString)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>chars</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
+#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>chars</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](/docs/library/objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -126,12 +126,12 @@ Returns a 24 characters random string.
 
 ##### Return
 
-( _[RandomString](../objects/RandomString)_ )
+( _[RandomString](/docs/library/objects/RandomString)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>random</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
+#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>random</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](/docs/library/objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -141,12 +141,12 @@ Returns a 24 characters random string.
 
 ##### Return
 
-( _[RandomString](../objects/RandomString)_ )
+( _[RandomString](/docs/library/objects/RandomString)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>random</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>, <span style={{color: '#FF8000'}}>withSymbols</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
+#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>random</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>, <span style={{color: '#FF8000'}}>withSymbols</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](/docs/library/objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -157,12 +157,12 @@ Returns a 24 characters random string.
 
 ##### Return
 
-( _[RandomString](../objects/RandomString)_ )
+( _[RandomString](/docs/library/objects/RandomString)_ )
 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>random</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>, <span style={{color: '#FF8000'}}>chars</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](../objects/RandomString)</span>
+#### <span style={{fontWeight: 'normal'}}>_random</span>.<span style={{color: '#008000'}}>initString</span>(<span style={{color: '#FF8000'}}>length</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>random</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Random</span>, <span style={{color: '#FF8000'}}>chars</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RandomString](/docs/library/objects/RandomString)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -173,7 +173,7 @@ Returns a 24 characters random string.
 
 ##### Return
 
-( _[RandomString](../objects/RandomString)_ )
+( _[RandomString](/docs/library/objects/RandomString)_ )
 
 
 ---

@@ -45,7 +45,7 @@ True if it is open.
 
 ---
 
-#### <span style={{color: '#008000'}}>download</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>destination</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](../objects/SSHSCP)</span>
+#### <span style={{color: '#008000'}}>download</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>destination</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](/docs/library/objects/SSHSCP)</span>
 ##### Description
 
 Copies a server file to a local file.
@@ -55,17 +55,17 @@ Copies a server file to a local file.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **remotePath** | _string_ | File path in the server. |
-| **destination** | _[OutputStream](../objects/OutputStream)_ | Local file of destination to store the remote content. |
+| **destination** | _[OutputStream](/docs/library/objects/OutputStream)_ | Local file of destination to store the remote content. |
 
 ##### Return
 
-( _[SSHSCP](../objects/SSHSCP)_ )
+( _[SSHSCP](/docs/library/objects/SSHSCP)_ )
 
 The current SFTP client.
 
 ---
 
-#### <span style={{color: '#008000'}}>download</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>destination</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](../objects/SSHSCP)</span>
+#### <span style={{color: '#008000'}}>download</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>destination</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](/docs/library/objects/SSHSCP)</span>
 ##### Description
 
 Copies a server file to a local file.
@@ -75,11 +75,11 @@ Copies a server file to a local file.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **remotePath** | _string_ | File path in the server. |
-| **destination** | _[File](../objects/File)_ | Local file of destination to store the remote content. |
+| **destination** | _[File](/docs/library/objects/File)_ | Local file of destination to store the remote content. |
 
 ##### Return
 
-( _[SSHSCP](../objects/SSHSCP)_ )
+( _[SSHSCP](/docs/library/objects/SSHSCP)_ )
 
 The current SFTP client.
 
@@ -167,7 +167,7 @@ Text content of the remote file in the server.
 
 ---
 
-#### <span style={{color: '#008000'}}>upload</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](../objects/SSHSCP)</span>
+#### <span style={{color: '#008000'}}>upload</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](/docs/library/objects/SSHSCP)</span>
 ##### Description
 
 Sends the file data to be saved in a server file.
@@ -177,17 +177,17 @@ Sends the file data to be saved in a server file.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **remotePath** | _string_ | File path in the server. |
-| **source** | _[InputStream](../objects/InputStream)_ | Local file as the source. |
+| **source** | _[InputStream](/docs/library/objects/InputStream)_ | Local file as the source. |
 
 ##### Return
 
-( _[SSHSCP](../objects/SSHSCP)_ )
+( _[SSHSCP](/docs/library/objects/SSHSCP)_ )
 
 The current SFTP client.
 
 ---
 
-#### <span style={{color: '#008000'}}>upload</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](../objects/SSHSCP)</span>
+#### <span style={{color: '#008000'}}>upload</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](/docs/library/objects/SSHSCP)</span>
 ##### Description
 
 Sends the file data to be saved in a server file.
@@ -197,11 +197,11 @@ Sends the file data to be saved in a server file.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **remotePath** | _string_ | File path in the server. |
-| **source** | _[File](../objects/File)_ | Local file as the source. |
+| **source** | _[File](/docs/library/objects/File)_ | Local file as the source. |
 
 ##### Return
 
-( _[SSHSCP](../objects/SSHSCP)_ )
+( _[SSHSCP](/docs/library/objects/SSHSCP)_ )
 
 The current SFTP client.
 
@@ -211,7 +211,7 @@ The current SFTP client.
 
 ---
 
-#### <span style={{color: '#008000'}}>uploadBytes</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](../objects/SSHSCP)</span>
+#### <span style={{color: '#008000'}}>uploadBytes</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](/docs/library/objects/SSHSCP)</span>
 ##### Description
 
 Sends a byte array to be saved in a server file.
@@ -225,7 +225,7 @@ Sends a byte array to be saved in a server file.
 
 ##### Return
 
-( _[SSHSCP](../objects/SSHSCP)_ )
+( _[SSHSCP](/docs/library/objects/SSHSCP)_ )
 
 The current SFTP client.
 
@@ -235,7 +235,7 @@ The current SFTP client.
 
 ---
 
-#### <span style={{color: '#008000'}}>uploadText</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](../objects/SSHSCP)</span>
+#### <span style={{color: '#008000'}}>uploadText</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](/docs/library/objects/SSHSCP)</span>
 ##### Description
 
 Sends a text content to be saved in a server file.
@@ -249,13 +249,13 @@ Sends a text content to be saved in a server file.
 
 ##### Return
 
-( _[SSHSCP](../objects/SSHSCP)_ )
+( _[SSHSCP](/docs/library/objects/SSHSCP)_ )
 
 The current SFTP client.
 
 ---
 
-#### <span style={{color: '#008000'}}>uploadText</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](../objects/SSHSCP)</span>
+#### <span style={{color: '#008000'}}>uploadText</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHSCP](/docs/library/objects/SSHSCP)</span>
 ##### Description
 
 Sends a text content to be saved in a server file.
@@ -270,7 +270,7 @@ Sends a text content to be saved in a server file.
 
 ##### Return
 
-( _[SSHSCP](../objects/SSHSCP)_ )
+( _[SSHSCP](/docs/library/objects/SSHSCP)_ )
 
 The current SFTP client.
 

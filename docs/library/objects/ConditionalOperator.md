@@ -46,14 +46,14 @@ The condition condition operator.
 
 ---
 
-#### <span style={{color: '#008000'}}>getRelationOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](../objects/RelationalOperator)</span>
+#### <span style={{color: '#008000'}}>getRelationOperator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](/docs/library/objects/RelationalOperator)</span>
 ##### Description
 
 Returns the relationship settings.
 
 ##### Return
 
-( _[RelationalOperator](../objects/RelationalOperator)_ )
+( _[RelationalOperator](/docs/library/objects/RelationalOperator)_ )
 
 The relationship settings.
 
@@ -63,14 +63,14 @@ The relationship settings.
 
 ---
 
-#### <span style={{color: '#008000'}}>getSubCondition</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>
+#### <span style={{color: '#008000'}}>getSubCondition</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
 ##### Description
 
 Returns the next level of conditions within the current condition.
 
 ##### Return
 
-( _[Where](../objects/Where)_ )
+( _[Where](/docs/library/objects/Where)_ )
 
 The next level of conditions within the current condition.
 
@@ -97,7 +97,7 @@ Whether you have it or not.
 
 ---
 
-#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](/docs/library/objects/ConditionalOperator)</span>
 ##### Description
 
 Defines the name of the column to which the condition will be applied.
@@ -110,7 +110,7 @@ Defines the name of the column to which the condition will be applied.
 
 ##### Return
 
-( _[ConditionalOperator](../objects/ConditionalOperator)_ )
+( _[ConditionalOperator](/docs/library/objects/ConditionalOperator)_ )
 
 Current Condition object.
 
@@ -120,7 +120,7 @@ Current Condition object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setOperator</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.where.ConditionalOperatorType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
+#### <span style={{color: '#008000'}}>setOperator</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.where.ConditionalOperatorType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](/docs/library/objects/ConditionalOperator)</span>
 ##### Description
 
 Defines the condition condition operator.
@@ -133,7 +133,7 @@ Defines the condition condition operator.
 
 ##### Return
 
-( _[ConditionalOperator](../objects/ConditionalOperator)_ )
+( _[ConditionalOperator](/docs/library/objects/ConditionalOperator)_ )
 
 Current Condition object.
 
@@ -143,7 +143,7 @@ Current Condition object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setRelationOperator</span>(<span style={{color: '#FF8000'}}>relationOperator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](../objects/RelationalOperator)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
+#### <span style={{color: '#008000'}}>setRelationOperator</span>(<span style={{color: '#FF8000'}}>relationOperator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationalOperator](/docs/library/objects/RelationalOperator)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](/docs/library/objects/ConditionalOperator)</span>
 ##### Description
 
 Defines the relationship settings.
@@ -152,11 +152,11 @@ Defines the relationship settings.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **relationOperator** | _[RelationalOperator](../objects/RelationalOperator)_ | The relationship settings. |
+| **relationOperator** | _[RelationalOperator](/docs/library/objects/RelationalOperator)_ | The relationship settings. |
 
 ##### Return
 
-( _[ConditionalOperator](../objects/ConditionalOperator)_ )
+( _[ConditionalOperator](/docs/library/objects/ConditionalOperator)_ )
 
 Current Condition object.
 
@@ -166,7 +166,7 @@ Current Condition object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setSubCondition</span>(<span style={{color: '#FF8000'}}>subcondition</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](../objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](../objects/ConditionalOperator)</span>
+#### <span style={{color: '#008000'}}>setSubCondition</span>(<span style={{color: '#FF8000'}}>subcondition</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ConditionalOperator](/docs/library/objects/ConditionalOperator)</span>
 ##### Description
 
 Defines the next level of conditions within the current condition.
@@ -175,11 +175,11 @@ Defines the next level of conditions within the current condition.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **subcondition** | _[Where](../objects/Where)_ | The next level of conditions within the current condition. |
+| **subcondition** | _[Where](/docs/library/objects/Where)_ | The next level of conditions within the current condition. |
 
 ##### Return
 
-( _[ConditionalOperator](../objects/ConditionalOperator)_ )
+( _[ConditionalOperator](/docs/library/objects/ConditionalOperator)_ )
 
 Current Condition object.
 

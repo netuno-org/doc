@@ -24,10 +24,10 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>closeMirrors</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>closeMirrors</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -36,10 +36,10 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>finish</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>finish</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -120,10 +120,10 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>nullOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>nullOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -132,7 +132,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -141,12 +141,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -155,12 +155,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -169,12 +169,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -183,12 +183,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -197,12 +197,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -211,12 +211,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -225,12 +225,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -239,12 +239,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -253,7 +253,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -262,7 +262,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -271,12 +271,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -285,12 +285,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -299,12 +299,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -313,12 +313,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -327,12 +327,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -341,12 +341,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -355,12 +355,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -369,7 +369,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -378,7 +378,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -388,7 +388,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -397,7 +397,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>printfAndClose</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printfAndClose</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -407,7 +407,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -416,15 +416,15 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>println</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>println</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -433,12 +433,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -447,12 +447,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -461,12 +461,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -475,12 +475,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -489,12 +489,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -503,12 +503,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -517,12 +517,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -531,12 +531,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -545,7 +545,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -554,15 +554,15 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>printlnAndClose</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printlnAndClose</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -571,12 +571,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -585,12 +585,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -599,12 +599,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -613,12 +613,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -627,12 +627,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -641,12 +641,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -655,12 +655,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -669,7 +669,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -678,7 +678,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -687,7 +687,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -696,7 +696,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>setNotify</span>(<span style={{color: '#FF8000'}}>outputNotify</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.io.OutputStreamNotify</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>setNotify</span>(<span style={{color: '#FF8000'}}>outputNotify</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.io.OutputStreamNotify</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -705,7 +705,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -714,7 +714,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>setStart</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>setStart</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -723,7 +723,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -732,10 +732,10 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>start</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>start</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -792,7 +792,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -801,12 +801,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -815,12 +815,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -829,12 +829,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -843,12 +843,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -857,12 +857,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -871,12 +871,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -885,12 +885,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -899,7 +899,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -908,7 +908,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeBoolean</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeBoolean</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -917,7 +917,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -926,7 +926,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeByte</span>(<span style={{color: '#FF8000'}}>b</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeByte</span>(<span style={{color: '#FF8000'}}>b</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -935,7 +935,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -944,7 +944,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeBytes</span>(<span style={{color: '#FF8000'}}>s</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeBytes</span>(<span style={{color: '#FF8000'}}>s</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -953,7 +953,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -962,7 +962,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeChar</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeChar</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -971,7 +971,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -980,7 +980,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeChars</span>(<span style={{color: '#FF8000'}}>s</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeChars</span>(<span style={{color: '#FF8000'}}>s</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -989,7 +989,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -998,7 +998,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeDouble</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeDouble</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1007,7 +1007,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -1016,7 +1016,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeFile</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeFile</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1025,12 +1025,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeFile</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeFile</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1039,12 +1039,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeFile</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.file.Path</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeFile</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.file.Path</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1053,7 +1053,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -1062,7 +1062,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeFileAndClose</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeFileAndClose</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1071,12 +1071,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeFileAndClose</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeFileAndClose</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1085,12 +1085,12 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
 
-#### <span style={{color: '#008000'}}>writeFileAndClose</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.file.Path</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeFileAndClose</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.file.Path</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1099,7 +1099,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -1108,7 +1108,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeFloat</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeFloat</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1117,7 +1117,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -1126,7 +1126,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeInt</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeInt</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1135,7 +1135,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -1144,7 +1144,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeLong</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeLong</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1153,7 +1153,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---
@@ -1162,7 +1162,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeShort</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeShort</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -1171,7 +1171,7 @@ sidebar_label: OutputStream
 
 ##### Return
 
-( _[OutputStream](../objects/OutputStream)_ )
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
 
 ---

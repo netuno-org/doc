@@ -1383,7 +1383,7 @@ Returns the created cell.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>extract</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>extract</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Extracts the content of PDF's.
@@ -1392,17 +1392,17 @@ Extracts the content of PDF's.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../objects/InputStream)_ | Content to be extracted. |
+| **content** | _[InputStream](/docs/library/objects/InputStream)_ | Content to be extracted. |
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Returns the extracted content.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>extract</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>extract</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Extracts the content of PDFs.
@@ -1411,17 +1411,17 @@ Extracts the content of PDFs.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ | Caminho do armazenamento. |
+| **storage** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ | Caminho do armazenamento. |
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Returns the extracted content.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>extract</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>extract</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Description
 
 Extracts the content of PDF's.
@@ -1430,11 +1430,11 @@ Extracts the content of PDF's.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../objects/InputStream)_ | Content to be extracted. |
+| **content** | _[InputStream](/docs/library/objects/InputStream)_ | Content to be extracted. |
 
 ##### Return
 
-( _[Values](../objects/Values)_ )
+( _[Values](/docs/library/objects/Values)_ )
 
 Returns the extracted content.
 
@@ -1463,7 +1463,7 @@ Returns the created font.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1472,7 +1472,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[File](../objects/File)_ | Storage path. |
+| **storage** | _[File](/docs/library/objects/File)_ | Storage path. |
 
 ##### Return
 
@@ -1482,7 +1482,7 @@ Returns the created font.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1491,7 +1491,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[File](../objects/File)_ | Storage path. |
+| **storage** | _[File](/docs/library/objects/File)_ | Storage path. |
 | **encoding** | _boolean_ | Font encoding. |
 
 ##### Return
@@ -1502,7 +1502,7 @@ Returns the created font.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1511,7 +1511,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[File](../objects/File)_ | Storage path. |
+| **storage** | _[File](/docs/library/objects/File)_ | Storage path. |
 | **encoding** | _string_ | Font encoding. |
 
 ##### Return
@@ -1522,7 +1522,7 @@ Returns the created font.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>embedded</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>embedded</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1531,7 +1531,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[File](../objects/File)_ | Storage path. |
+| **storage** | _[File](/docs/library/objects/File)_ | Storage path. |
 | **encoding** | _string_ | Font encoding. |
 | **embedded** | _boolean_ |   |
 
@@ -1543,7 +1543,7 @@ Returns the created font.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1552,7 +1552,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ | Storage path. |
+| **storage** | _[Storage](/docs/library/resources/storage)_ | Storage path. |
 
 ##### Return
 
@@ -1562,7 +1562,7 @@ Returns the created font.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1571,7 +1571,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ | Storage path. |
+| **storage** | _[Storage](/docs/library/resources/storage)_ | Storage path. |
 | **encoding** | _boolean_ | Font encoding. |
 
 ##### Return
@@ -1582,7 +1582,7 @@ Returns the created font.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1591,7 +1591,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ | Storage path. |
+| **storage** | _[Storage](/docs/library/resources/storage)_ | Storage path. |
 | **encoding** | _string_ | Font encoding. |
 
 ##### Return
@@ -1602,7 +1602,7 @@ Returns the created font.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>embedded</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>font</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>encoding</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>embedded</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.font.PdfFont</span>
 ##### Description
 
 Creates a font.
@@ -1611,7 +1611,7 @@ Creates a font.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ | Storage path. |
+| **storage** | _[Storage](/docs/library/resources/storage)_ | Storage path. |
 | **encoding** | _string_ | Font encoding. |
 | **embedded** | _boolean_ |   |
 
@@ -1718,12 +1718,12 @@ Returns the horizontal alignment type.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>image</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Image</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>image</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Image</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **file** | _[File](../objects/File)_ |   |
+| **file** | _[File](/docs/library/objects/File)_ |   |
 
 ##### Return
 
@@ -1732,12 +1732,12 @@ Returns the horizontal alignment type.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>image</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Image</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>image</span>(<span style={{color: '#FF8000'}}>storage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Image</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](../resources/storage)_ |   |
+| **storage** | _[Storage](/docs/library/resources/storage)_ |   |
 
 ##### Return
 
@@ -1750,7 +1750,7 @@ Returns the horizontal alignment type.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[PDF](../resources/pdf)</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[PDF](/docs/library/resources/pdf)</span>
 ##### Description
 
 Creates a new resource object to build PDFs.
@@ -1763,7 +1763,7 @@ const pdf = _pdf.init();
 
 ##### Return
 
-( _[PDF](../resources/pdf)_ )
+( _[PDF](/docs/library/resources/pdf)_ )
 
 New instance of the PDF resource.
 
@@ -1871,7 +1871,7 @@ Returns PDF document with the page size defined.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a new PDF document with A4 page size.
@@ -1880,7 +1880,7 @@ Creates a new PDF document with A4 page size.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -1890,7 +1890,7 @@ Returns PDF document with the page size A4.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>, <span style={{color: '#FF8000'}}>pageSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>, <span style={{color: '#FF8000'}}>pageSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a PDF document with specific page size.
@@ -1899,7 +1899,7 @@ Creates a PDF document with specific page size.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[OutputStream](../objects/OutputStream)_ | File path. |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ | File path. |
 | **pageSize** | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
@@ -1910,7 +1910,7 @@ Returns PDF document with the page size defined.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>, <span style={{color: '#FF8000'}}>pageSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>(<span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO</span>, <span style={{color: '#FF8000'}}>pageSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.geom.PageSize</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Creates a PDF document with specific page size.
@@ -1919,7 +1919,7 @@ Creates a PDF document with specific page size.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ | File path. |
+| **out** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ | File path. |
 | **pageSize** | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
@@ -1934,7 +1934,7 @@ Returns PDF document with the page size defined.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Opens a PDF documment corresponding to the inserted path.
@@ -1943,7 +1943,7 @@ Opens a PDF documment corresponding to the inserted path.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **path** | _[InputStream](../objects/InputStream)_ | File path. |
+| **path** | _[InputStream](/docs/library/objects/InputStream)_ | File path. |
 
 ##### Return
 
@@ -1953,13 +1953,13 @@ Returns PDF document openned.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -1968,13 +1968,13 @@ Returns PDF document openned.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
-| **out** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
+| **out** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
 
 ##### Return
 
@@ -1983,7 +1983,7 @@ Returns PDF document openned.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
 Opens a PDF documment corresponding to the inserted path.
@@ -1992,7 +1992,7 @@ Opens a PDF documment corresponding to the inserted path.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **path** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ | File path. |
+| **path** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ | File path. |
 
 ##### Return
 
@@ -2002,13 +2002,13 @@ Returns PDF document openned.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](../objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ |   |
-| **out** | _[OutputStream](../objects/OutputStream)_ |   |
+| **in** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
+| **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Return
 
@@ -2017,13 +2017,13 @@ Returns PDF document openned.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>openDocument</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO</span>, <span style={{color: '#FF8000'}}>out</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ |   |
-| **out** | _[Storage](../resources/storage) &#124; [File](../objects/File) | org.netuno.psamata.io.IO_ |   |
+| **in** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
+| **out** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
 
 ##### Return
 
@@ -2157,7 +2157,7 @@ The new paragraph object with the text.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>setDocument</span>(<span style={{color: '#FF8000'}}>document</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[PDF](../resources/pdf)</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>setDocument</span>(<span style={{color: '#FF8000'}}>document</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[PDF](/docs/library/resources/pdf)</span>
 ##### Description
 
 Sets the PDF document object of the iText.
@@ -2170,7 +2170,7 @@ Sets the PDF document object of the iText.
 
 ##### Return
 
-( _[PDF](../resources/pdf)_ )
+( _[PDF](/docs/library/resources/pdf)_ )
 
 The current instance of the PDF resource.
 
@@ -2434,7 +2434,7 @@ Returns a table with the columns width has been defined.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columnWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columnWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width defined.
@@ -2443,7 +2443,7 @@ Creates a table with the columns width defined.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **columnWidth** | _[Values](../objects/Values)_ | List of widths of each table column. |
+| **columnWidth** | _[Values](/docs/library/objects/Values)_ | List of widths of each table column. |
 
 ##### Return
 
@@ -2453,7 +2453,7 @@ Returns a table with the columns width has been defined.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columnWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](../objects/Values)</span>, <span style={{color: '#FF8000'}}>largeTable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>columnWidth</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>, <span style={{color: '#FF8000'}}>largeTable</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.element.Table</span>
 ##### Description
 
 Creates a table with the columns width defined.
@@ -2462,7 +2462,7 @@ Creates a table with the columns width defined.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **columnWidth** | _[Values](../objects/Values)_ | List of widths of each table column. |
+| **columnWidth** | _[Values](/docs/library/objects/Values)_ | List of widths of each table column. |
 | **largeTable** | _boolean_ | Define as large table. |
 
 ##### Return
@@ -2523,7 +2523,7 @@ Returns the alignment type for text.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2532,7 +2532,7 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../objects/InputStream)_ | Content to HTML. |
+| **content** | _[InputStream](/docs/library/objects/InputStream)_ | Content to HTML. |
 
 ##### Return
 
@@ -2542,7 +2542,7 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2551,7 +2551,7 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[File](../objects/File)_ | Content to HTML. |
+| **content** | _[File](/docs/library/objects/File)_ | Content to HTML. |
 
 ##### Return
 
@@ -2561,7 +2561,7 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2570,7 +2570,7 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../objects/InputStream)_ | Content to HTML. |
+| **content** | _[InputStream](/docs/library/objects/InputStream)_ | Content to HTML. |
 
 ##### Return
 
@@ -2580,7 +2580,7 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts the inserted content to HTML.
@@ -2589,7 +2589,7 @@ Converts the inserted content to HTML.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[Storage](../resources/storage)_ | Content to HTML. |
+| **content** | _[Storage](/docs/library/resources/storage)_ | Content to HTML. |
 
 ##### Return
 
@@ -2603,15 +2603,15 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **startPage** | _int_ |   |
 | **endPage** | _int_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -2623,15 +2623,15 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **startPage** | _int_ |   |
 | **endPage** | _int_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -2643,14 +2643,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 
@@ -2661,14 +2661,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -2680,14 +2680,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 
@@ -2698,14 +2698,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -2717,13 +2717,13 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 
@@ -2734,48 +2734,13 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
-| **filePrefixName** | _string_ |   |
-| **fileExtension** | _string_ |   |
-| **dpi** | _int_ |   |
-
-##### Return
-
-( _void_ )
-
-
----
-
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
-| **filePrefixName** | _string_ |   |
-| **fileExtension** | _string_ |   |
-
-##### Return
-
-( _void_ )
-
-
----
-
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -2787,15 +2752,50 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[File](../objects/File)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
+| **filePrefixName** | _string_ |   |
+| **fileExtension** | _string_ |   |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
+| **filePrefixName** | _string_ |   |
+| **fileExtension** | _string_ |   |
+| **dpi** | _int_ |   |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **source** | _[File](/docs/library/objects/File)_ |   |
 | **startPage** | _int_ |   |
 | **endPage** | _int_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -2807,15 +2807,15 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[File](../objects/File)_ |   |
+| **source** | _[File](/docs/library/objects/File)_ |   |
 | **startPage** | _int_ |   |
 | **endPage** | _int_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -2827,14 +2827,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[File](../objects/File)_ |   |
+| **source** | _[File](/docs/library/objects/File)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 
@@ -2845,14 +2845,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[File](../objects/File)_ |   |
+| **source** | _[File](/docs/library/objects/File)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -2864,14 +2864,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[File](../objects/File)_ |   |
+| **source** | _[File](/docs/library/objects/File)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 
@@ -2882,14 +2882,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[File](../objects/File)_ |   |
+| **source** | _[File](/docs/library/objects/File)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -2901,13 +2901,13 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[File](../objects/File)_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **source** | _[File](/docs/library/objects/File)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 
@@ -2918,48 +2918,13 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[File](../objects/File)_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
-| **filePrefixName** | _string_ |   |
-| **fileExtension** | _string_ |   |
-| **dpi** | _int_ |   |
-
-##### Return
-
-( _void_ )
-
-
----
-
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **source** | _[File](../objects/File)_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
-| **filePrefixName** | _string_ |   |
-| **fileExtension** | _string_ |   |
-
-##### Return
-
-( _void_ )
-
-
----
-
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **source** | _[File](../objects/File)_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **source** | _[File](/docs/library/objects/File)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -2971,15 +2936,50 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[Storage](../resources/storage)_ |   |
+| **source** | _[File](/docs/library/objects/File)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
+| **filePrefixName** | _string_ |   |
+| **fileExtension** | _string_ |   |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **source** | _[File](/docs/library/objects/File)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
+| **filePrefixName** | _string_ |   |
+| **fileExtension** | _string_ |   |
+| **dpi** | _int_ |   |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **source** | _[Storage](/docs/library/resources/storage)_ |   |
 | **startPage** | _int_ |   |
 | **endPage** | _int_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -2991,15 +2991,15 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[Storage](../resources/storage)_ |   |
+| **source** | _[Storage](/docs/library/resources/storage)_ |   |
 | **startPage** | _int_ |   |
 | **endPage** | _int_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -3011,14 +3011,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[Storage](../resources/storage)_ |   |
+| **source** | _[Storage](/docs/library/resources/storage)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 
@@ -3029,14 +3029,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[Storage](../resources/storage)_ |   |
+| **source** | _[Storage](/docs/library/resources/storage)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -3048,14 +3048,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[Storage](../resources/storage)_ |   |
+| **source** | _[Storage](/docs/library/resources/storage)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 
@@ -3066,14 +3066,14 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[Storage](../resources/storage)_ |   |
+| **source** | _[Storage](/docs/library/resources/storage)_ |   |
 | **pageNumber** | _int_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -3085,13 +3085,13 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[Storage](../resources/storage)_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **source** | _[Storage](/docs/library/resources/storage)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 
@@ -3102,13 +3102,13 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[Storage](../resources/storage)_ |   |
-| **destinationPath** | _[File](../objects/File)_ |   |
+| **source** | _[Storage](/docs/library/resources/storage)_ |   |
+| **destinationPath** | _[File](/docs/library/objects/File)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -3120,13 +3120,13 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[Storage](../resources/storage)_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **source** | _[Storage](/docs/library/resources/storage)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 
@@ -3137,13 +3137,13 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImage</span>(<span style={{color: '#FF8000'}}>source</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>destinationPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>, <span style={{color: '#FF8000'}}>filePrefixName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **source** | _[Storage](../resources/storage)_ |   |
-| **destinationPath** | _[Storage](../resources/storage)_ |   |
+| **source** | _[Storage](/docs/library/resources/storage)_ |   |
+| **destinationPath** | _[Storage](/docs/library/resources/storage)_ |   |
 | **filePrefixName** | _string_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -3159,12 +3159,12 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImageAsByteArray</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[[B</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImageAsByteArray</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>startPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>endPage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[[B</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **startPage** | _int_ |   |
 | **endPage** | _int_ |   |
 | **fileExtension** | _string_ |   |
@@ -3177,12 +3177,12 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImageAsByteArray</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[[B</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImageAsByteArray</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[[B</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **pageNumber** | _int_ |   |
 | **fileExtension** | _string_ |   |
 
@@ -3193,12 +3193,12 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImageAsByteArray</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[[B</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImageAsByteArray</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>pageNumber</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[[B</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **pageNumber** | _int_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
@@ -3210,12 +3210,12 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImageAsByteArray</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[[B</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImageAsByteArray</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[[B</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **fileExtension** | _string_ |   |
 
 ##### Return
@@ -3225,12 +3225,12 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImageAsByteArray</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[[B</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toImageAsByteArray</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>fileExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dpi</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[[B</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[InputStream](../objects/InputStream)_ |   |
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
 | **fileExtension** | _string_ |   |
 | **dpi** | _int_ |   |
 
@@ -3245,7 +3245,7 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -3254,7 +3254,7 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../objects/InputStream)_ | Content to text. |
+| **content** | _[InputStream](/docs/library/objects/InputStream)_ | Content to text. |
 
 ##### Return
 
@@ -3264,7 +3264,7 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](../objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -3273,7 +3273,7 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[File](../objects/File)_ | Content to text. |
+| **content** | _[File](/docs/library/objects/File)_ | Content to text. |
 
 ##### Return
 
@@ -3283,7 +3283,7 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](../objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -3292,7 +3292,7 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[InputStream](../objects/InputStream)_ | Content to text. |
+| **content** | _[InputStream](/docs/library/objects/InputStream)_ | Content to text. |
 
 ##### Return
 
@@ -3302,7 +3302,7 @@ Returns the Html.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](../resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>toText</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Converts to text the inserted content.
@@ -3311,7 +3311,7 @@ Converts to text the inserted content.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **content** | _[Storage](../resources/storage)_ | Content to text. |
+| **content** | _[Storage](/docs/library/resources/storage)_ | Content to text. |
 
 ##### Return
 

@@ -29,7 +29,7 @@ The name of the column.
 
 ---
 
-#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](../objects/Group)</span>
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](/docs/library/objects/Group)</span>
 ##### Description
 
 Defines the column that will be used to perform the grouping.
@@ -42,7 +42,7 @@ Defines the column that will be used to perform the grouping.
 
 ##### Return
 
-( _[Group](../objects/Group)_ )
+( _[Group](/docs/library/objects/Group)_ )
 
 Current Group object.
 
