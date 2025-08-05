@@ -9,7 +9,7 @@ A modal carrega o formulário no modo de listagem ou no modo de edição.
 
 Antes de começar com o formulário modal, é preciso que exista pelo menos um formulário criado na aplicação.
 
-Para saber como criar formulários [clique aqui](forms.md).
+Para saber como criar formulários [clique aqui](/docs/academy/ui/forms).
 
 ### Exemplo em modo listagem
 

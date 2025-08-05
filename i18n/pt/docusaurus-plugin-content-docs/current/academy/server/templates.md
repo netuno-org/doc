@@ -7,7 +7,7 @@ sidebar_label: Templates
 ## Antes de começar
 Antes de criar serviços que chamam templates certifique-se que sabe criar **Serviços Web REST**, caso não o saiba visite a seguintes ligação:
 
-* [Serviços Web Rest](services/rest)
+* [Serviços Web Rest](/docs/academy/server/services/rest)
 
 É também aconselhável que, antes de começar este tutorial, se certifique que tem noções básicas em _**JavaScript**_.
 

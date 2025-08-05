@@ -8,7 +8,7 @@ sidebar_label: PDF
 
 O Netuno gera arquivos PDF com suporte a imagens, tabelas, fontes, e muito mais.
 
-Através do recurso [PDF](../../../library/resources/pdf) que permite uma abstração low-code do [iTextPDF](https://itextpdf.com/) para as diversas linguagens de programação suportadas pelo Netuno.
+Através do recurso [PDF](/docs/library/resources/pdf) que permite uma abstração low-code do [iTextPDF](https://itextpdf.com/) para as diversas linguagens de programação suportadas pelo Netuno.
 
 A aplicação que vem com o Netuno denominada **demo** (aplicação de demonstração) contém bastantes exemplos das possíveis implementações de código em várias linguagens, incluindo a demonstração da exportação para PDF através do serviço `export-pdf` que se localiza em:
 
@@ -89,7 +89,7 @@ Cria um novo documento no `storage` da aplicação com o formato de página **le
 const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf').output(), _pdf.pageSize("legal"))
 ```
 
-> Veja a documentação sobre a [definição do tamanho das páginas](../../../library/resources/pdf/#pagesize).
+> Veja a documentação sobre a [definição do tamanho das páginas](/docs/library/resources/pdf/#pagesize).
 
 Os documentos PDF podem ser criados com a definição do tamanho da página personalizado, para isso utilize o `pageSize` passando o valor da largura e altura da página, por exemplo:
 

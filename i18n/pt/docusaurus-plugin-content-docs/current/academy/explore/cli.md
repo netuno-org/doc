@@ -23,7 +23,7 @@ Antes de começar a desenvolver, dê uma vista nos comandos disponíveis.
 ## Instalar
 
 Antes de começar a desenvolver necessita de instalar o Netuno
-Para o ajudar a instalar o Netuno vá à [Instalação](../../get-started/installation)
+Para o ajudar a instalar o Netuno vá à [Instalação](/docs/get-started/installation)
 
 ##### Detalhes 
 

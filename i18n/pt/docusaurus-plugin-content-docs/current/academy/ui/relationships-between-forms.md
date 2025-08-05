@@ -13,9 +13,9 @@ O objetivo destas relações é permitir que formulários possam aceder a inform
 Este tutorial está dividido por passos que aconselhamos que siga na respetiva ordem.
 
 ## Requisitos
-Antes de criar as relações é **obrigatório** ter pelo menos dois formulários criados, caso não saiba como o fazer visite este endereço: [Criação de Formulários](forms.md).
+Antes de criar as relações é **obrigatório** ter pelo menos dois formulários criados, caso não saiba como o fazer visite este endereço: [Criação de Formulários](/docs/academy/ui/forms).
 
-E de forma a poder relacionar campos de formulários é **obrigatório** também a criação de campos para os respetivos formulários e aconselhamos que preencha com alguma informação. Caso não o saiba fazer dirija-se a [Criação de Campos](fields.md).
+E de forma a poder relacionar campos de formulários é **obrigatório** também a criação de campos para os respetivos formulários e aconselhamos que preencha com alguma informação. Caso não o saiba fazer dirija-se a [Criação de Campos](/docs/academy/ui/fields).
 
 ## 1º - Escolher um dos formulários
 
