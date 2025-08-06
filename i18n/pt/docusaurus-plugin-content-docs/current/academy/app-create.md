@@ -63,7 +63,7 @@ Caso no login do backoffice seja pedido as credenciais utilize o padrão:
 
 ## Editor de Código
 
-Utilize o seu editor de código preferido.
+Utilize o seu editor de código à escolha.
 
 Para realizar o desenvolvimento do código geral da aplicação, seja backend ou frontend, recomendamos editores de
 código que são gratuitos, como:
@@ -126,7 +126,7 @@ Nesta etapa, vamos ter que criar um novo formulário chamado `Cliente` e com um 
 
 Na página do backoffice temos no canto superior direito o botão `Construir`.
 
-Ao clicar no botão `Construir` entramos na área de desenvolvimento dos formulários.
+Ao clicar no botão `Construir` vai abrir a área de desenvolvimento dos formulários.
 
 No menu, em `Gestão` e depois em `Formulários` é onde podemos criar um novo formulário.
 
@@ -134,7 +134,7 @@ Preencha no `Nome de exibição`:
 
 - `Cliente`
 
-Automáticamente o campo de `Nome da tabela` é preenchido com `cliente` em minúsculas, por que em base de dados
+Automáticamente o campo `Nome da tabela` é preenchido com `cliente` em minúsculas, pois em base de dados
 é recomendado que o nome seja em letras minúsculas.
 
 Agora pode salvar o seu primeiro formulário clicando no botão abaixo:
@@ -143,20 +143,22 @@ Agora pode salvar o seu primeiro formulário clicando no botão abaixo:
 
 > Veja mais sobre como criar formulários [aqui](/docs/academy/ui/forms).
 
-Quando o formulário é criado aparece do lado esquerdo, no menu em `Campos`, a opção `Cliente`, clique aí no
+Quando o formulário é criado aparece do lado esquerdo, no menu em `Campos`, a opção `Cliente`, clique no
 `Cliente` para criar o novo campo de `Nome`.
 
 Preencha no `Nome de exibição` do campo:
 
 - `Nome`
 
-Automáticamente o campo de `Nome da coluna` é preenchido com `nome` em minúsculas, por que em base de dados
+Automáticamente o campo `Nome da coluna` é preenchido com `nome` em minúsculas, pois em base de dados
 é recomendado que o nome seja em letras minúsculas.
 
 Ative do lado direito as opções de:
 
 - `Permitir Filtrar` - que permite pesquisar pelo campo `Nome`.
 - `Exibir no Resultado` - que vai fazer apresentação do campo `Nome` na tabela de resultados.
+
+Em `Tipo` escolha a opção: `text - Campo de texto`
 
 > Veja mais sobre campos [aqui](/docs/academy/ui/fields).
 
@@ -178,7 +180,7 @@ Ao voltar na área de construção do desenvolvedor, no botão de `Construir`.
 
 No menu de `Gestão`, abra a opção de `Query`.
 
-Aqui em `Query` podemos executar comandos SQL diretamente na base de dados.
+Em `Query` podemos executar comandos SQL diretamente na base de dados.
 
 Execute o comando:
 
@@ -190,7 +192,7 @@ Assim pode consultar ou manipular as informações do sistema diretamente em bas
 
 Pode voltar ao backoffice clicando no botão de `Visualizar`.
 
-## Adicionar os Dois Botões
+## Adicionar os Dois Botões com React.
 
 Dentro da pasta `📂 ui` abra o arquivo que tem o JavaScript principal do dashboard, dentro de:
 
@@ -238,7 +240,7 @@ Vamos criar uma pasta `BotaoClienteModal` e dentro dele o arquivo `index.jsx`, n
 Os componentes (`components`) são funcionalidades bem específicas, com um propósito bem definido, que podem ser
 importados e utilizados em outros componentes, mas tipicamente são utilizados nos contentores.
 
-Crie a pasta `BotaoClienteModal`, deve ficar assim:
+Crie a pasta `BotaoClienteModal`, deve ficar desta forma:
 
 - `📂 ui/src/components/BotaoClienteModal`
 
@@ -303,7 +305,7 @@ funcionar.
 ## Botão para Exportar PDF
 
 O botão para gerar o PDF vai depender de um serviço responsável por criar o arquivo PDF que será chamado 
-quando houver um clique no botão `Gerar PDF`.
+quando acontecer um clique no botão `Gerar PDF`.
 
 > Vamos ver como fazer este serviço mais abaixo, mas antes vamos criar o botão em React.
 
@@ -407,7 +409,7 @@ Tudo integrado no mesmo terminal.
 
 ## Serviço que gera o PDF
 
-Como o botão para `Exportar PDF` não funciona ainda, isto se deve por que falta programar o serviço de API que 
+Como o botão para `Exportar PDF` não funciona ainda, pois falta programar o serviço de API que 
 gera o PDf em si. 
 
 Então para finalizar, apresenta-se o código do serviço que será responsável por gerar o PDF.

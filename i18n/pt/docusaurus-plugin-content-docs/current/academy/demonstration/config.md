@@ -6,8 +6,7 @@ title: Configuração
 
 ## Configuração básica da aplicação Demo
 
-Neste tópico vamos apenas cobrir os passos necessários para o mínimo correto funcionamento da aplicação Demo, para 
-uma análise em pormenor por favor dirija-se a [Configurações Básicas de uma Aplicação](/docs/academy/explore/configuration)
+Neste tópico vamos apenas cobrir os passos necessários para o mínimo correto funcionamento da aplicação Demo, para uma análise em pormenor por favor acesse [Configurações Básicas de uma Aplicação](/docs/academy/explore/configuration).
 
 Dentro do diretório de raíz do Netuno dirija-se à seguinte pasta:
 
