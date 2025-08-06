@@ -4,8 +4,11 @@ title: Val
 sidebar_label: Val
 ---
 
-Recurso para interagir com listas ou mapas com chaves e valores (dicionários). 
-O valores é um objeto de armazenamento dados que pode ser representado como uma lista ou como um mapa de dados (dicionário). Uma vez inicializado como uma dessas estruturas, lista ou mapa, não poderá mais ser alterado para a outra.
+Recurso para interagir com listas ou mapas com chaves e valores (dicionários).
+
+Permite o armazenamento de dados que pode ser representado como uma lista ou como um mapa de dados (dicionário).
+
+Uma vez inicializado como uma dessas estruturas, ou seja, como uma lista ou como um mapa, então não poderá mais ser utilizada como outra.
 
 ```javascript
 const mapaDeDados = _val.map()

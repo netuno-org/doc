@@ -5,6 +5,7 @@ sidebar_label: Env
 ---
 
 Permite consultar o ambiente de desenvolvimento que é configurado no ficheiro `config.js` que encontra-se na raíz do Netuno.
+
 É utilizada a configuração da aplicação que tem o respectivo nome do ambiente.
 
 ```javascript
