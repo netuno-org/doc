@@ -5,8 +5,11 @@ sidebar_label: Exec
 ---
 
 Functionalities to aid code execution.
+
 It performs the execution of other scripts, it also supports the execution of scripts in other programming languages.
+
 Executes the indicated script, returning its output.
+
 Main functions:
 - [bind](#bind)
 - [core](#core)

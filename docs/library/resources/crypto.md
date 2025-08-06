@@ -4,7 +4,7 @@ title: Crypto
 sidebar_label: Crypto
 ---
 
-Algoritmos de encriptação de dados.
+Data encryption algorithms.
 
 ---
 

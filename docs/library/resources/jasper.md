@@ -4,7 +4,7 @@ title: Jasper
 sidebar_label: Jasper
 ---
 
-Recurso de geração de rápida de relatórios.
+Integration with [Jasper](https://www.jaspersoft.com/) reports.
 
 ---
 

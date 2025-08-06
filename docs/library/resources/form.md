@@ -4,7 +4,7 @@ title: Form
 sidebar_label: Form
 ---
 
-Application form generator programmatically.
+Responsible for managing application forms programmatically.
 
 ---
 

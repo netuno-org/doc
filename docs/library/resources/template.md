@@ -5,6 +5,7 @@ sidebar_label: Template
 ---
 
 Template management resource.
+
 This resource allows manipulation of templates based on the [Apache Velocity](https://velocity.apache.org/engine/2.4.1/user-guide.html) templating engine.
 
 ---

@@ -5,6 +5,7 @@ sidebar_label: Env
 ---
 
 Allows you to consult the development environment that is configured in the `config.js` file which is found in the root of Netuno.
+
 The configuration of the application that has its environment name is used.
 
 ```javascript

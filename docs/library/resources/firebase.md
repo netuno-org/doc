@@ -4,7 +4,7 @@ title: Firebase
 sidebar_label: Firebase
 ---
 
-Recurso de comunicação com o Firebase.
+Firebase integration feature.
 
 ---
 

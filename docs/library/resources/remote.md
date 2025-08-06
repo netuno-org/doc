@@ -5,6 +5,7 @@ sidebar_label: Remote
 ---
 
 Remote API invocation capability.
+
 Remote facilitates this integration and makes it simple to integratewith external web services via REST, JSON, and SOAP.
 
 ---
