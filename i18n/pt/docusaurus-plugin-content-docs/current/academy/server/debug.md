@@ -37,89 +37,6 @@ o código está parado.
 - Execução de Código (_Code Execution_): Podemos executar qualquer código temporariamente, para realizar algum
 teste no ponto em que a execução está parada para depuração.
 
-## Configuração para Depuração Remota
-
-Ao executar o Netuno localmente não deverá ser necessário nenhuma configuração.
-
-Por que no desenvolvimento local o `host` do endereço do WebSocket é configurado automaticamente.
-
-Nos endereços locais normalmente utilizam estes valores como `host`:
-
-- `localhost`
-- `127.0.0.1`
-- `192.168.1.*` - Exemplo de qualquer IP de rede local.
-- `minha-app.local.netu.no`
-
-> Endereços locais não precisam de qualquer configuração, portanto esta etapa pode ser pulada.
-
-Já em produção ou no desenvolvimento remoto como em container ou VPN, poderá ser necessário definir o endereço 
-externo (IP ou domínio) que está sendo utilizado para a conexão de WebSocket.
-
-Neste caso, navegue dentro da aplicação que está sendo desenvolvida até no arquivo de configuração de ambiente.
-Neste exemplo, iremos utilizar o arquivo de ambiente de desenvolvimento, que fica em:
-
-- 📂 `config/_development.json`
-
-Verifique se por acaso já não existe a configuração, se não existir adicione no fim do arquivo de configuração 
-(em formato JSON) os parâmetros de configuração do endereço externo para ser utilizado na conexão do WebSocket, 
-como por exemplo:
-
-```json
-{
-    ...
-    "dev": {
-        "ws": {
-          "host": "dev.netuno.org"
-        }
-    },
-    ...
-}
-```
-
-> A informação da porta não deve ser adicionada ao endereço de `host` no WebSocket.
-
-Também pode ser passado vários endereços de `host` em um array:
-
-```json
-{
-    ...
-    "dev": {
-        "ws": {
-          "host": [ "meu-container.dev.netuno.org", "meu-projeto.com" ]
-        }
-    },
-    ...
-}
-```
-
-### Proxy em Produção (NGINX)
-
-Em produção é comum ser utilizado algum servidor web que faz proxy reverso, como o NGINX. 
-
-Para a depuração funcionar através de proxy é então necessário adicionar uma configuração específica para
-encaminhar o tráfego relacionado com o endereço de WebSocket:
-
-```
-server {
-    listen 443 ssl;
-    server_name meu-projeto.com;
-    
-    ...
-    
-    location /dev/ws/ {
-        proxy_pass http://127.0.0.1:9000;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "Upgrade";
-        proxy_http_version 1.1;
-        proxy_read_timeout 86400s;
-        proxy_send_timeout 86400s;
-        add_header X-Frame-Options "";
-    }
-}
-```
-
 ## Ponto de Interrupção (_Breakpoint_)
 
 O ponto de interrupção (_breakpoint_) é onde no código a execução deve ser pausada para iniciar o processo de
@@ -170,6 +87,89 @@ Clicamos no símbolo de código azul e podemos colocar o código que pretendemos
 
 O código executado é apresentado na lista abaixo com a indicação de que o código foi executado com sucesso, caso 
 haja algum erro então a mensagem de erro é apresentada junto com o código.
+
+## Configuração para Depuração Remota
+
+Ao executar o Netuno localmente não deverá ser necessário nenhuma configuração.
+
+Por que no desenvolvimento local o `host` do endereço do WebSocket é configurado automaticamente.
+
+Nos endereços locais normalmente utilizam estes valores como `host`:
+
+- `localhost`
+- `127.0.0.1`
+- `192.168.1.*` - Exemplo de qualquer IP de rede local.
+- `minha-app.local.netu.no`
+
+> Endereços locais não precisam de qualquer configuração, portanto esta etapa pode ser pulada.
+
+Já em produção ou no desenvolvimento remoto como em container ou VPN, poderá ser necessário definir o endereço
+externo (IP ou domínio) que está sendo utilizado para a conexão de WebSocket.
+
+Neste caso, navegue dentro da aplicação que está sendo desenvolvida até no arquivo de configuração de ambiente.
+Neste exemplo, iremos utilizar o arquivo de ambiente de desenvolvimento, que fica em:
+
+- 📂 `config/_development.json`
+
+Verifique se por acaso já não existe a configuração, se não existir adicione no fim do arquivo de configuração
+(em formato JSON) os parâmetros de configuração do endereço externo para ser utilizado na conexão do WebSocket,
+como por exemplo:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": "dev.netuno.org"
+        }
+    },
+    ...
+}
+```
+
+> A informação da porta não deve ser adicionada ao endereço de `host` no WebSocket.
+
+Também pode ser passado vários endereços de `host` em um array:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": [ "meu-container.dev.netuno.org", "meu-projeto.com" ]
+        }
+    },
+    ...
+}
+```
+
+### Proxy em Produção (NGINX)
+
+Em produção é comum ser utilizado algum servidor web que faz proxy reverso, como o NGINX.
+
+Para a depuração funcionar através de proxy é então necessário adicionar uma configuração específica para
+encaminhar o tráfego relacionado com o endereço de WebSocket:
+
+```
+server {
+    listen 443 ssl;
+    server_name meu-projeto.com;
+    
+    ...
+    
+    location /dev/ws/ {
+        proxy_pass http://127.0.0.1:9000;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+}
+```
 
 ## Conclusão
 
