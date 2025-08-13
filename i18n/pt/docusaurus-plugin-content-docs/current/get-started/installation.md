@@ -5,16 +5,18 @@ title: Instalação
 sidebar_label: Instalação
 ---
 
-Instalação da plataforma Netuno, poliglota e open source.
+Instalação da plataforma low-code Netuno, poliglota e open source.
+
+> Construa aplicações full stack robustas com low-code.
 
 ## Pré-requisitos
 
-Netuno uses the installed **Java** only to run the initial installation process.
+O Netuno utiliza o **Java** instalado apenas para executar o processo de instalação inicial.
 
-During the Netuno installation, [GraalVM](https://www.graalvm.org/) is automatically installed in the Netuno folder,
-and [GraalVM](https://www.graalvm.org/) **Java** is then used to run Netuno.
+Durante a instalação do Netuno é automaticamente instalada a [GraalVM](https://www.graalvm.org/) na pasta do Netuno,
+sendo o **Java** da [GraalVM](https://www.graalvm.org/) utilizado para a execução do Netuno posteriormente.
 
-> Installing the front-end prerequisites is optional and is only required for full-stack development.
+> A instalação dos pré-requisitos de front-end são opcionais, apenas para o desenvolvimento full stack.
 
 ### Back-end: Java
 
@@ -43,7 +45,7 @@ são superiores porque demonstram melhores resultados práticos no desenvolvimen
 - Veja como [instalar o PNPM e o Bun](/docs/academy/website/pnpm-bun).
 
 Todos os projetos de exemplo do Netuno e na geração de novas aplicações, estão adaptados para funcionar com o 
-**Bun** e o **PNPM**.
+Bun e o PNPM.
 
 > Certifique que utiliza as versões mais recentes das tecnologias.
 
@@ -51,9 +53,9 @@ Caso queira utilizar o **Node** e o **NPM**, ou outra tecnologia qualquer, é se
 
 ## Considerações
 
-Ao executar o comando de instalação abaixo será alterado o caminho no terminal de onde estava para dentro da nova pasta do **netuno** que será criada.
+Ao executar o comando de instalação abaixo será alterado o caminho no terminal de onde estava para dentro da nova pasta do `📁 netuno` que será criada.
 
-Caso precise executar novamente o comando de instalação será preciso corrigir o caminho e provavelmente remover a pasta do **netuno** que foi criada.
+Caso precise executar novamente o comando de instalação será preciso corrigir o caminho e provavelmente remover a pasta do `📁 netuno` que foi criada.
 
 ## Versão Estável
 
