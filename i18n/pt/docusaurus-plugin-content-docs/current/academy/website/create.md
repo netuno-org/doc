@@ -246,15 +246,20 @@ Para tal basta adicionar à configuração `commands` da aplicação Netuno em `
             "install": "pnpm install",
             "enabled": true
         }
-    ]
+    ],
     ...
 }
 ```
 
-> Sempre que editar ficheiros de configuração da aplicação Netuno será necessário reiniciar a aplicação para que 
-> esta possa assumir as novas alterações.
+> Sempre que editar arquivos de configuração da aplicação Netuno é necessário reiniciar o servidor para que possa
+> assumir as novas alterações.
 
-Por fim inicie/reinicie a sua aplicação Netuno para comprovar o seu funcionamento.
+Por fim inicie/reinicie o servidor com a sua aplicação Netuno para comprovar o seu funcionamento.
+
+E agora tudo ficará integrado em apenas um terminal centralizado, evitando assim que tenha vários terminais 
+dispersos, mais sobre:
+
+- [Terminal Centralizado](/docs/academy/explore/centralized-terminal)
 
 ## Configuração de CORS (Cross-Origin Resource Sharing)
 
@@ -318,6 +323,7 @@ E definindo as variáveis de ambiente na configuração do comando na parametriz
             "install": "pnpm install",
             "enabled": true
         }
-    ]
+    ],
+    ...
 }
 ```
