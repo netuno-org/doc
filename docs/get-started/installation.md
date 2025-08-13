@@ -4,7 +4,18 @@ id: installation
 title: Installation
 ---
 
+Installation of the Netuno low-code, polyglot and open source platform.
+
+> Build robust full-stack applications with low-code.
+
 ## Requirements
+
+Netuno uses the installed **Java** only to run the initial installation process.
+
+During the Netuno installation, [GraalVM](https://www.graalvm.org/) is automatically installed in the Netuno folder,
+and [GraalVM](https://www.graalvm.org/) **Java** is then used to run Netuno.
+
+> Installing the front-end prerequisites is optional and is only required for full-stack development.
 
 ### Back-end: Java
 
@@ -40,9 +51,9 @@ If you want to use **Node** and **NPM**, or any other technology, it is always p
 
 ## Considerations
 
-Running the installation command below will change the path in the terminal from where you were to the new **Netuno** folder that will be created.
+Running the installation command below will change the path in the terminal from where you were to the new `📁 netuno` folder that will be created.
 
-If is needed to run the installation command line again you will need to correct the path and probably remove the **Netuno** folder that was created.
+If is needed to run the installation command line again you will need to correct the path and probably remove the `📁 netuno` folder that was created.
 
 ## Stable Version
 
