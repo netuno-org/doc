@@ -14,12 +14,19 @@ These technologies are widely used today, however, this pre-defined environment 
 
 The user is free to use any other technology like **VueJS**, **MaterialUI**, **Sass**, **Bootstrap**, **TypeScript**, others. They can just change within the `📂 folder ui` the settings of `📂 package.json` and `📂 vite.config.js` for the technologies they will choose.
 
-> ### Integrated Terminal
->
-> Always when _Netuno_ server starts it will also execute the <a href="https://www.npmjs.com/" target="_blank">NPM</a> with the command `➡️ npm run watch` inside the `📂 ui` folder of the running application. In this case it will be the application **demo**_nstraction_.>
-> The output of <a href="https://www.npmjs.com/" target="_blank">NPM</a> is integrated in the same output of the _Netuno_ server, so there is only one terminal with the integrated output of the server and the compilation of **U**_ser_ **I**_nterface_.
+> More about the [integrated and centralized terminal](/docs/academy/explore/centralized-terminal).
 
-## Service Expend
+## Prerequisites
+
+Before you begin, it's important to make sure you have [PNPM](https://pnpm.io/) and [Bun](https://bun.sh/) installed.
+
+> See how to [install PNPM and Bun](/docs/academy/website/pnpm-bun).
+
+To better understand how the user interface works, we recommend:
+
+- [More about the Front-End UI Layer.](/docs/academy/ui/ui-layer)
+
+## Consume the Service
 
 As it was already created in the previous step the service **workers** in `📂 server/services/workers.js` through the Visual Studio Code, which provides the information in <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank">JSON</a> in the address:
 
@@ -124,19 +131,24 @@ This will call the method that runs the service <a href="http://localhost:9000/s
 The expected outcome into **terminal** should be like this:
 
 ```
-vite v5.4.19 building for production...
+> ui@1.0.0 watch netuno/apps/demo/ui
+> bunx --bun vite build --watch
 
-(!) outDir .../public is not inside project root and will not be emptied.
-Use --emptyOutDir to override.
-
+vite v7.1.2 building for production...
 
 watching for file changes...
 
+(!) outDir netuno/apps/demo/public is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
 build started...
-✓ 2983 modules transformed.
-../public/styles/ui.css    0.08 kB │ gzip:   0.09 kB
-../public/scripts/ui.js  338.81 kB │ gzip: 105.17 kB
-built in 2110ms.
+transforming...
+✓ 4008 modules transformed.
+
+rendering chunks...
+computing gzip size...
+../public/scripts/ui.js  1,433.96 kB │ gzip: 421.89 kB
+built in 2128ms.
 ```
 
 If there is an error with the compilation then it will appear into the **terminal** with an indication issue.
