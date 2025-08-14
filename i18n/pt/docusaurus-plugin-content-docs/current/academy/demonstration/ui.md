@@ -14,11 +14,17 @@ Apesar de o ambiente padrão se encontrar configurado para estas tecnologias, vi
 
 Caso pretenda utilizar outra tecnologia como VueJS, MaterialUI, Sass, Bootstrap, TypeScript, etc... basta alterar dentro da pasta `📂 ui` as configurações do `📂 package.json` e do `📂 vite.config.js` para as tecnologias que preferir mais.
 
-> ### Terminal Integrado
->
-> Sempre que o servidor do Netuno inicia, também executa o <a href="https://www.npmjs.com/" target="_blank">NPM</a> com o comando `➡️ npm run watch` dentro da pasta `📂 ui` da aplicação em execução. Que neste caso deverá ser a aplicação **demo**_nstração_.
->
-> O output do <a href="https://www.npmjs.com/" target="_blank">NPM</a> é integrado no mesmo output do servidor do Netuno, assim apenas há um único terminal com o output integrado do servidor e da compilação da **U**_ser_ **I**_nterface_.
+> Mais sobre o [terminal integrado e centralizado](/docs/academy/explore/centralized-terminal).
+
+## Pré-Requisitos
+
+Antes de começar é importante certificar que tem o [PNPM](https://pnpm.io/) e o [Bun](https://bun.sh/) instalados.
+
+> Veja como [instalar o PNPM e o Bun](/docs/academy/website/pnpm-bun).
+
+Para entender melhor como a interface de utilização funciona recomendamos:
+
+- [Mais sobre a Camada UI de front-end.](/docs/academy/ui/ui-layer)
 
 ## Consumir o Serviço
 
@@ -123,19 +129,24 @@ Esta nova linha de código vai chamar o método que executa o serviço <a href="
 O output esperado no **terminal** deverá ser algo semelhante ao seguinte:
 
 ```
-vite v5.4.19 building for production...
+> ui@1.0.0 watch netuno/apps/demo/ui
+> bunx --bun vite build --watch
 
-(!) outDir .../public is not inside project root and will not be emptied.
-Use --emptyOutDir to override.
-
+vite v7.1.2 building for production...
 
 watching for file changes...
 
+(!) outDir netuno/apps/demo/public is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
 build started...
-✓ 2983 modules transformed.
-../public/styles/ui.css    0.08 kB │ gzip:   0.09 kB
-../public/scripts/ui.js  338.81 kB │ gzip: 105.17 kB
-built in 2110ms.
+transforming...
+✓ 4008 modules transformed.
+
+rendering chunks...
+computing gzip size...
+../public/scripts/ui.js  1,433.96 kB │ gzip: 421.89 kB
+built in 2128ms.
 ```
 
 Caso haja algum erro na compilação então aparecerá no **terminal** a indicação do problema.
