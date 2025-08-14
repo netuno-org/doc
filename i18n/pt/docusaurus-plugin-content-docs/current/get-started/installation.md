@@ -65,7 +65,7 @@ Para instalar a versão estável siga os passos de instalação abaixo:
 
 ### Linux ou macOS
 
-É comum haver o comando `wget` e o `curl`, execute no terminal para verificar.
+É comum haver o comando `cURL` e o `Wget`, execute no terminal para verificar.
 
 Para criar a pasta do Netuno, execute no **terminal**:
 
@@ -75,16 +75,16 @@ mkdir -p netuno && cd netuno
 
 Escolha uma dos seguintes métodos de **download**:
 
-* Download com o *WGET*:
-
-```plaintext
-wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
-```
-
 * Download com o *cURL*:
 
 ```plaintext
 curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -o netuno-setup.jar
+```
+
+* Download com o *Wget*:
+
+```plaintext
+wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
 ```
 
 Depois de realizar um dos passos anteriores, avance para a **instalação do Netuno**:
@@ -125,7 +125,7 @@ Para instalar a versão em desenvolvimento siga os passos de instalação abaixo
 
 ### Linux ou macOS
 
-É comum haver o comando `wget` e o `curl`, execute no terminal para verificar.
+É comum haver o comando `cURL` e o `Wget`, execute no terminal para verificar.
 
 Para criar a pasta do Netuno, execute no **terminal**:
 
@@ -135,16 +135,16 @@ mkdir -p netuno && cd netuno
 
 Escolha uma dos seguintes métodos de **download**:
 
-* Download com o *WGET*:
-
-```plaintext
-wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
-```
-
 * Download com o *cURL*:
 
 ```plaintext
 curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -o netuno-setup.jar
+```
+
+* Download com o *Wget*:
+
+```plaintext
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
 ```
 
 Depois de realizar um dos passos anteriores, avance para a **instalação do Netuno**:
