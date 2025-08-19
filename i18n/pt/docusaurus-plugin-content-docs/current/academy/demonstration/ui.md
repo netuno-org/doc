@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 id: ui
 title: Interface & Design
 ---
@@ -12,25 +12,27 @@ Como padrão, nesta pasta encontra-se o ambiente de desenvolvimento desenvolvido
 
 Apesar de o ambiente padrão se encontrar configurado para estas tecnologias, visto serem bastante utilizadas hoje em dia, não se encontra limitado às mesmas.
 
-Caso pretenda utilizar outra tecnologia como VueJS, MaterialUI, Sass, Bootstrap, TypeScript, etc... basta alterar dentro da pasta `📂 ui` as configurações do `📂 package.json` e do `📂 vite.config.js` para as tecnologias que preferir mais.
+Caso pretenda utilizar outra tecnologia como **VueJS**, **MaterialUI**, **Sass**, **Bootstrap**, **TypeScript**, etc... basta alterar dentro da pasta `📂 ui` as configurações do `📂 package.json` e do `📂 vite.config.js` para as tecnologias que preferir mais.
 
 > ### Terminal Integrado
 >
-> Sempre que o servidor do Netuno inicia, também executa o <a href="https://www.npmjs.com/" target="_blank">NPM</a> com o comando `➡️ npm run watch` dentro da pasta `📂 ui` da aplicação em execução. Que neste caso deverá ser a aplicação **demo**_nstração_.
+> Sempre que o servidor do Netuno inicia, também executa o <a href="https://www.npmjs.com/" target="_blank">NPM</a> com o comando `➡️ npm run watch` dentro da pasta `📂 ui` da aplicação em execução. Que neste caso deverá ser a aplicação **Demo**.
 >
 > O output do <a href="https://www.npmjs.com/" target="_blank">NPM</a> é integrado no mesmo output do servidor do Netuno, assim apenas há um único terminal com o output integrado do servidor e da compilação da **U**_ser_ **I**_nterface_.
 
-## Consumir o Serviço
+## Expadandir o Serviço
 
 Após ter sido criado o serviço **trabalhadores** em `📂 server/services/trabalhadores.js` através do Visual Studio Code que diponibiliza a informação em <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> no endereço:
 
 * <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/trabalhadores</a>
 
-O próximo passo é consumi-lo para apresentar os dados na inteface do browser.
+O próximo passo é expadandi-lo para apresentar os dados na inteface do browser.
 
 Com estes dados vamos e apresentá-los numa tabela e um gráfico.
 
-Assumindo que tem o Visual Studio Code ou outro editor de texto aberto com a aplicação de **demo**_nstração_ abra o seguinte ficheiro no editor:
+Assumindo que tem o Visual Studio Code ou outro editor de texto aberto com a aplicação **Demo**.
+
+Abra o seguinte ficheiro no editor:
 
 `📂 ui/src/containers/DashboardContainer/index.jsx`
 
@@ -82,7 +84,7 @@ Insira o código abaixo:
     };
 ```
 
-O que este código acima faz é passar os dados das trabalhadores para o _state_ do componente em <a href="https://reactjs.org/" target="_blank">ReactJS</a>, isto através da execução do serviço **trabalhadores** que, ao receber os dados em <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> , armazena os mesmos no _state_ através da execução do `setTrabalhadores`.
+O que este código acima faz é passar os dados dos **trabalhadores** para o _state_ do componente em <a href="https://reactjs.org/" target="_blank">ReactJS</a>, isto através da execução do serviço **trabalhadores** que, ao receber os dados em <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> , armazena os mesmos no _state_ através da execução do `setTrabalhadores`.
 
 No código final os métodos deverão ficar estruturados desta forma:
 
