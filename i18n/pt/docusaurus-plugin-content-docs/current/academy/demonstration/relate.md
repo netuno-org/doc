@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 id: relate
 title: Relacionar Dados
 ---
@@ -10,7 +10,7 @@ Anteriormente, criámos a nossa gestão de tarefas, mas só assim não tem grand
 
 Precisamos de saber qual o trabalhador que realizou uma tarefa e qual foi o tempo gasto.
 
-Vamos então relacionar as tarefas com o **Registo** de horas.
+Vamos então relacionar as **Tarefas** com o **Registo** de horas.
 
 ### Campo do Tipo Select
 
