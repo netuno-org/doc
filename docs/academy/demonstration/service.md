@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 id: service
 title: Service
 ---
@@ -72,6 +72,8 @@ for (const dbRecord of dbRecords) {
 
 _out.json(list);
 ```
+
+> Make sure there is data loaded in the Tasks and that they are related to the Registry, otherwise the result will be empty.
 
 The `_db.query` receives a string with a database query and performs its execution by transforming the obtained data into a list of objects of type key/value, i.e. column/data.
 
