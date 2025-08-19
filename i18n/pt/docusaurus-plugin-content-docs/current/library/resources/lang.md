@@ -4,7 +4,7 @@ title: Lang
 sidebar_label: Lang
 ---
 
-Recurso de atribuição de linguagem.
+Faz a gestão de textos com tradução para os diversos idiomas.
 
 ---
 

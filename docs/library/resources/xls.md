@@ -5,6 +5,7 @@ sidebar_label: XLS
 ---
 
 Create and read _Excel_ files, support for _XLS_ files as _XLSX_ files.
+
 This feature uses the [Apache POI](https://poi.apache.org/ "Apache POI") library.
 
 ```javascript

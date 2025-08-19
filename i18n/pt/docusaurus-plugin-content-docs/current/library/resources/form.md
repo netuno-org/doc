@@ -4,7 +4,7 @@ title: Form
 sidebar_label: Form
 ---
 
-Gerador do formulário da aplicação programaticamente.
+Responsável por realizar a gestão dos formulários da aplicação programaticamente.
 
 ---
 

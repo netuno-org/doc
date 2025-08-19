@@ -4,7 +4,8 @@ title: CORS
 sidebar_label: CORS
 ---
 
-Controls the Cross-Origin Resource Sharing (CORS).<br/>
+Controls the Cross-Origin Resource Sharing (CORS).
+
 Allows you to manage multiple origins and their headers.
 
 ---

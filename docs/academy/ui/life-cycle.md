@@ -1,7 +1,7 @@
 ---
-sidebar_position: 9
+sidebar_position: 7
 id: life-cycle
-title: Application Life Cycle Events
+title: Interface Life Cycle Events
 sidebar_label: Life Cycle Events
 ---
 

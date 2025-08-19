@@ -1,5 +1,4 @@
 ---
-sidebar_position: 8
 id: implementing-tables-charts
 title: Implementação de tabelas e gráficos
 sidebar_label: Tabelas e Gráficos

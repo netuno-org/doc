@@ -5,6 +5,7 @@ sidebar_label: RabbitMQ
 ---
 
 Integração com o RabbitMQ.
+
 Permite enviar e receber mensagens.
 
 ---

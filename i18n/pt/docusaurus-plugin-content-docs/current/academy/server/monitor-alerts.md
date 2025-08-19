@@ -4,6 +4,8 @@ title: Monitorização e Alertas
 sidebar_label: Monitorização e Alertas
 ---
 
+Alarmística sobre a utilização de hardware do servidor.
+
 ## Introdução
 
 O servidor do Netuno tem encapsulado o mecanismo de monitorização de performance que permite analisar o impacto do sistema de software no consumo do hardware.

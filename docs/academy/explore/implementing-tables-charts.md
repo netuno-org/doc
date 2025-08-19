@@ -1,5 +1,4 @@
 ---
-sidebar_position: 8
 id: implementing-tables-charts
 title: Implementing tables and charts
 sidebar_label: Tables and Charts

@@ -1,10 +1,10 @@
 ---
 id: jwt
-title: Jwt
-sidebar_label: Jwt
+title: JWT
+sidebar_label: JWT
 ---
 
-Recurso de geração de JSON Web Tokens.
+Manipulação de JSON Web Tokens.
 
 ---
 

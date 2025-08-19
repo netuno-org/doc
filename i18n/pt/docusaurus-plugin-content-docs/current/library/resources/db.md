@@ -5,6 +5,7 @@ sidebar_label: DB
 ---
 
 Recurso de carregamento de datasources.
+
 Este recurso permite o carregamento do datasource que mais lhe for conveniente, suporta conexão com MariaDB, MSSQLServer, PostgreSQL, H2 e Oracle.
 
 ```javascript

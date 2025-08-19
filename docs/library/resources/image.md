@@ -4,7 +4,7 @@ title: Image
 sidebar_label: Image
 ---
 
-Recurso manipulação de imagens.
+Resource for manipulating images programmatically.
 
 ---
 

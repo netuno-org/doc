@@ -189,14 +189,22 @@ To do this, simply add the following to the Netuno application's `commands` conf
             "install": "pnpm install",
             "enabled": true
         }
-    ]
+    ],
     ...
 }
 ```
 
-> Whenever you edit the Netuno application's configuration files, you will need to restart the application so that it can take on the new changes.
+> Whenever you edit the Netuno application's configuration files, you must restart the server so that
+> the new changes can be applied.
 
-Finally, start/restart your Netuno application to check that it is working.
+Finally, start/restart the server with your Netuno application to verify its functionality.
+
+And now everything will be integrated into a single centralized terminal, thus avoiding having multiple scattered
+terminals.
+
+More information:
+
+- [Centralized Terminal](/docs/academy/explore/centralized-terminal)
 
 ## CORS (Cross-Origin Resource Sharing) Configuration
 
@@ -252,6 +260,7 @@ And defining the environment variables in the command configuration in the `env`
             "install": "pnpm install",
             "enabled": true
         }
-    ]
+    ],
+    ...
 }
 ```

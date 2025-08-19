@@ -5,6 +5,7 @@ sidebar_label: DB
 ---
 
 Datasource loading resource.
+
 This resource allows you to load the datasource that suits you best, supports connection to MariaDB, MSSQLServer, PostgreSQL, H2 and Oracle.
 
 ```javascript

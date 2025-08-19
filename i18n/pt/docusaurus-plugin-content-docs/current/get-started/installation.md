@@ -5,33 +5,57 @@ title: Instalação
 sidebar_label: Instalação
 ---
 
+Instalação da plataforma low-code Netuno, poliglota e open source.
+
+> Construa aplicações full stack robustas com low-code.
+
 ## Pré-requisitos
 
-### Java
+O Netuno utiliza o **Java** instalado apenas para executar o processo de instalação inicial.
 
-Certifique-se que tem o Java instalado, executando no terminal o commando:
+Durante a instalação do Netuno é automaticamente instalada a [GraalVM](https://www.graalvm.org/) na pasta do Netuno,
+sendo o **Java** da [GraalVM](https://www.graalvm.org/) utilizado para a execução do Netuno posteriormente.
+
+> A instalação dos pré-requisitos de front-end são opcionais, apenas para o desenvolvimento full stack.
+
+### Back-end: Java
+
+Certifique-se que tem o **Java** instalado, executando no terminal o commando:
 
 `java -version`
 
-A versão do Java deverá ser a versão 11.
+A versão do **Java** deverá ser a **11 ou superior**.
 
-Ou, caso não tenha, então instale o Java <a href="https://adoptopenjdk.net/" target="_blank">AdoptOpenJDK</a>.
+Caso não tenha instalado, então instale o **Java open source** para **Windows** e **macOS** em:
 
-### NPM
+- <a href="https://adoptium.net/pt-BR" target="_blank">Java OpenJDK Eclipse Temurin</a>
 
-Não é obrigatório mas convém que o NPM esteja instalado para poder compilar a user interface _(frontend)_ das aplicações:
+No **Linux** **Ubuntu** ou **Debian**, utilize o comando:
 
-`npm -version`
+- `apt install default-jdk-headless`
 
-A versão do NPM deverá ser a versão 6 ou superior.
+### Front-end: Bun & PNPM
 
-Ou, caso não tenha, então instale o <a href="https://nodejs.org/" target="_blank">NodeJS</a> que traz consigo o NPM.
+Não é obrigatório mas é recomendado que o **Bun** e o **PNPM** estejam instalados para poder compilar a UI (_user interface_, 
+_front-end_) das aplicações.
+
+Em vez de utilizar o **Node** e o **NPM**, por que o **Bun** e o **PNPM** são mais otimizados e rápidos, no geral 
+são superiores porque demonstram melhores resultados práticos no desenvolvimento.
+
+- Veja como [instalar o PNPM e o Bun](/docs/academy/website/pnpm-bun).
+
+Todos os projetos de exemplo do Netuno e na geração de novas aplicações, estão adaptados para funcionar com o 
+Bun e o PNPM.
+
+> Certifique que utiliza as versões mais recentes das tecnologias.
+
+Caso queira utilizar o **Node** e o **NPM**, ou outra tecnologia qualquer, é sempre possível, fica ao seu critério.
 
 ## Considerações
 
-Ao executar o comando de instalação abaixo será alterado o caminho no terminal de onde estava para dentro da nova pasta do **netuno** que será criada.
+Ao executar o comando de instalação abaixo será alterado o caminho no terminal de onde estava para dentro da nova pasta do `📁 netuno` que será criada.
 
-Caso precise executar novamente o comando de instalação será preciso corrigir o caminho e provavelmente remover a pasta do **netuno** que foi criada.
+Caso precise executar novamente o comando de instalação será preciso corrigir o caminho e provavelmente remover a pasta do `📁 netuno` que foi criada.
 
 ## Versão Estável
 
@@ -39,9 +63,9 @@ A versão estável é uma versão segura e pronta para ser utilizada em produç�
 
 Para instalar a versão estável siga os passos de instalação abaixo:
 
-### Linux ou Mac OS X
+### Linux ou macOS
 
-É comum haver o comando `wget` e o `curl`, execute no terminal para verificar.
+É comum haver o comando `cURL` e o `Wget`, execute no terminal para verificar.
 
 Para criar a pasta do Netuno, execute no **terminal**:
 
@@ -51,16 +75,16 @@ mkdir -p netuno && cd netuno
 
 Escolha uma dos seguintes métodos de **download**:
 
-* Download com o *WGET*:
-
-```plaintext
-wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
-```
-
 * Download com o *cURL*:
 
 ```plaintext
 curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -o netuno-setup.jar
+```
+
+* Download com o *Wget*:
+
+```plaintext
+wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
 ```
 
 Depois de realizar um dos passos anteriores, avance para a **instalação do Netuno**:
@@ -71,7 +95,7 @@ Depois de realizar um dos passos anteriores, avance para a **instalação do Net
 java -jar netuno-setup.jar install
 ```
 
-> No MAC OS X, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
+> No **macOS**, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
 > `sudo xattr -r -d com.apple.quarantine .`
 
 ### Windows
@@ -99,9 +123,9 @@ A versão atual em teste é uma versão em desenvolvimento, contém as funcional
 
 Para instalar a versão em desenvolvimento siga os passos de instalação abaixo:
 
-### Linux ou Mac OS X
+### Linux ou macOS
 
-É comum haver o comando `wget` e o `curl`, execute no terminal para verificar.
+É comum haver o comando `cURL` e o `Wget`, execute no terminal para verificar.
 
 Para criar a pasta do Netuno, execute no **terminal**:
 
@@ -111,16 +135,16 @@ mkdir -p netuno && cd netuno
 
 Escolha uma dos seguintes métodos de **download**:
 
-* Download com o *WGET*:
-
-```plaintext
-wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
-```
-
 * Download com o *cURL*:
 
 ```plaintext
 curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -o netuno-setup.jar
+```
+
+* Download com o *Wget*:
+
+```plaintext
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
 ```
 
 Depois de realizar um dos passos anteriores, avance para a **instalação do Netuno**:
@@ -131,7 +155,7 @@ Depois de realizar um dos passos anteriores, avance para a **instalação do Net
 java -jar netuno-setup.jar install version=testing
 ```
 
-> No MAC OS X, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
+> No **macOS**, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
 > `sudo xattr -r -d com.apple.quarantine .`
 
 ### Windows

@@ -1,6 +1,6 @@
 ---
-sidebar_position: 7
-id: user-groups
+sidebar_position: 6
+id: groups-users
 title: Grupos e Utilizadores
 ---
 

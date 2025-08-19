@@ -4,8 +4,9 @@ title: PDF
 sidebar_label: PDF
 ---
 
-Recurso de exportação de ficheiros PDF.
-Este recurso permite criar e exportar um ficheiro PDF, utiliza a biblioteca iText para gerar os PDFs
+Allows you to read, create and modify PDF files.
+
+The [iText](https://itextpdf.com/) library is used to generate PDFs.
 
 ---
 

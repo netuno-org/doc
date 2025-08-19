@@ -4,6 +4,8 @@ title: Monitor and Alerts
 sidebar_label: Monitor and Alerts
 ---
 
+Alarms about server hardware utilization.
+
 ## Introduction
 
 The Netuno server has encapsulated the performance monitoring mechanism that allows the impact of the software system on hardware consumption to be analysed.

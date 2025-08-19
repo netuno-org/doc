@@ -4,33 +4,56 @@ id: installation
 title: Installation
 ---
 
+Installation of the Netuno low-code, polyglot and open source platform.
+
+> Build robust full-stack applications with low-code.
+
 ## Requirements
 
-### Java
+Netuno uses the installed **Java** only to run the initial installation process.
 
-Make sure you have Java installed by running the below command into the terminal:
+During the Netuno installation, [GraalVM](https://www.graalvm.org/) is automatically installed in the Netuno folder,
+and [GraalVM](https://www.graalvm.org/) **Java** is then used to run Netuno.
+
+> Installing the front-end prerequisites is optional and is only required for full-stack development.
+
+### Back-end: Java
+
+Make sure you have **Java** installed by running the following command in the terminal:
 
 `java -version`
 
-Java version should be version 11.
+The **Java** version should be **11 or above**.
 
-Or install Java <a href="https://adoptopenjdk.net/" target="_blank">AdoptOpenJDK</a>.
+If you don't have it installed, install **Java open source** for **Windows** and **macOS** at:
 
-### NPM
+- <a href="https://adoptium.net/pt-BR" target="_blank">Java OpenJDK Eclipse Temurin</a>
 
-It is not mandatory but NPM should be installed in order to compile the user interface _(frontend)_ of applications:
+On **Linux** **Ubuntu** or **Debian**, use the command:
 
-`npm -version`
+- `apt install default-jdk-headless`
 
-The NPM version should be version 6 or higher.
+### Front-end: Bun & PNPM
 
-Or install the <a href="https://nodejs.org/" target="_blank">NodeJS</a> that the NPM will also be installed.
+It is not mandatory, but it is recommended that **Bun** and **PNPM** be installed to compile the UI (_user 
+interface_, _front-end_) of applications.
+
+Instead of using **Node** and **NPM**, **Bun** and **PNPM** are more optimized and faster. Overall, they are 
+superior because they demonstrate better practical results in development.
+
+- See how to [install PNPM and Bun](/docs/academy/website/pnpm-bun).
+
+All Netuno example projects and the generation of new applications are adapted to work with **Bun** and **PNPM**.
+
+> Make sure you use the latest versions of these technologies.
+
+If you want to use **Node** and **NPM**, or any other technology, it is always possible; it is up to you.
 
 ## Considerations
 
-Running the installation command below will change the path in the terminal from where you were to the new **Netuno** folder that will be created.
+Running the installation command below will change the path in the terminal from where you were to the new `📁 netuno` folder that will be created.
 
-If is needed to run the installation command line again you will need to correct the path and probably remove the **Netuno** folder that was created.
+If is needed to run the installation command line again you will need to correct the path and probably remove the `📁 netuno` folder that was created.
 
 ## Stable Version
 
@@ -38,9 +61,9 @@ The stable release is a safe and production-ready.
 
 To install the stable version, follow the installation steps below:
 
-### Linux or Mac OS X
+### Linux or macOS
 
-It is common to have `wget` and `curl` command, run in terminal to check.
+It is common to have `cURL` and `Wget` command, run in terminal to check.
 
 To create the Netuno directory, execute in the **terminal**:
 
@@ -50,16 +73,16 @@ mkdir -p netuno && cd netuno
 
 Choose one of the following methods of **download**:
 
-* Download with *WGET*:
-
-```plaintext
-wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
-```
-
 * Download with *cURL*:
 
 ```plaintext
 curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -o netuno-setup.jar
+```
+
+* Download with *Wget*:
+
+```plaintext
+wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
 ```
 
 After performing one of the previous steps, proceed to the **Netuno's installation**:
@@ -70,7 +93,7 @@ After performing one of the previous steps, proceed to the **Netuno's installati
 java -jar netuno-setup.jar install
 ```
 
-> On MAC OS X, you need to disable the quarantine, thus inside the `netuno` home folder, please run:
+> On **macOS**, you need to disable the quarantine, thus inside the `netuno` home folder, please run:
 > `sudo xattr -r -d com.apple.quarantine .`
 
 ### Windows
@@ -97,9 +120,9 @@ The current version being tested is a development version, contains the latest f
 
 To install the testing version, follow the installation steps below:
 
-### Linux or Mac OS X
+### Linux or macOS
 
-It is common to have `wget` and `curl` command, run in terminal to check.
+It is common to have `cURL` and `Wget` command, run in terminal to check.
 
 To create the Netuno directory, execute in the **terminal**:
 
@@ -109,16 +132,16 @@ mkdir -p netuno && cd netuno
 
 Choose one of the following methods of **download**:
 
-* Download with *WGET*:
-
-```plaintext
-wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
-```
-
 * Download with *cURL*:
 
 ```plaintext
 curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -o netuno-setup.jar
+```
+
+* Download with *Wget*:
+
+```plaintext
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
 ```
 
 After performing one of the previous steps, proceed to the **Netuno's installation**:
@@ -129,7 +152,7 @@ After performing one of the previous steps, proceed to the **Netuno's installati
 java -jar netuno-setup.jar install version=testing
 ```
 
-> On MAC OS X, you need to disable the quarantine, thus inside the `netuno` home folder, please run:
+> On **macOS**, you need to disable the quarantine, thus inside the `netuno` home folder, please run:
 > `sudo xattr -r -d com.apple.quarantine .`
 
 ### Windows

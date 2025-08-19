@@ -13,23 +13,28 @@ The purpose of this section is to cover some common scenarios that users will en
 `Create`, `Update` and `Delete` your forms and fields, perform `queries` directly into the database.
 
 
-## Graphical Interface
+## Front-end Graphical Interface
 
-Tutorials regarding the present features in _Netuno_ interface:
+Tutorials related to the features present in the Netuno front-end interface:
 
 * [Get to know the graphic interface](/docs/academy/ui/graphical-interface)
 * [Forms](/docs/academy/ui/forms)
 * [Fields](/docs/academy/ui/fields)
 * [Forms Relationships](/docs/academy/ui/relationships-between-forms)
-* [Groups and Users Interface](/docs/academy/ui/user-groups)
+* [Groups and Users Interface](/docs/academy/ui/groups-users)
 * [Queries Interface](/docs/academy/ui/queries-interface)
-* [Modal Form](/docs/academy/ui/modal-form)
+* [Modal Form](/docs/academy/explore/modal-form)
 
-## Development
-Tutorials that explain how to build frontend and backend in _Netuno_ supporting a large of programming languages:
+Among much more, explore our [Academy](https://doc.netuno.org/docs/academy/overview).
+
+## Back-end Development
+
+Here are some tutorials that explain how to develop the Netuno backend with low-code and support for multiple
+programming languages:
 
 * [REST Web Services](/docs/academy/server/services/rest)
 * [Programming Queries](/docs/academy/server/database/db-query-execute)
+* [DB Form Operations](/docs/academy/server/database/db-form-operations)
 * [Templates](/docs/academy/server/templates)
 * [Development and debugging in Java](/docs/academy/server/development-debug-java)
 * [Email Sending](/docs/academy/server/services/sending-emails)
@@ -38,4 +43,7 @@ Tutorials that explain how to build frontend and backend in _Netuno_ supporting 
 * [Multiple Databases](/docs/academy/server/database/multiple-databases)
 * [JWT Token](/docs/academy/server/services/jwt)
 
->Visit our ``Question How`` section on the Documentation page that will give an idea on how to use our Documentation.
+Among much more, explore our [Academy](https://doc.netuno.org/docs/academy/overview).
+
+> To submit your idea for a new tutorial that would be relevant to be implemented in the documentation,
+> [create a new issue on GitHub](https://github.com/netuno-org/doc) with the request for the new tutorial.

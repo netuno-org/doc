@@ -4,8 +4,11 @@ title: Val
 sidebar_label: Val
 ---
 
-Resource to interact with lists or maps with keys and values (dictionaries). 
-Values is a data storage object that can be represented as a list or as a data map (dictionary). Once initialized as one of these structures, list or map, it can no longer be changed to the other.
+Resource to interact with lists or maps with keys and values (dictionaries).
+
+Allows the storage of data that can be represented as a list or as a data map (dictionary).
+
+Once initialized as one of these structures, that is, as a list or as a map, it can no longer be used as another.
 
 ```javascript
 const dataMap = _val.map()
