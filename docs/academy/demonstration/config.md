@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 id: config
 title: Config
 ---
@@ -56,7 +56,8 @@ And replace the database ```"name"``` value field accordingly to your language, 
 
 ### Configuring the commands that run with Netuno
 
-With Netuno you have the ability to run multiple commands that run with the server boot and output to the same console. By default the Demo app brings configured, but disabled, to launch the command `pnpm run watch` that automatically compiles any changes to backoffice code files. 
+With Netuno you have the ability to run multiple commands that run with the server boot and output to the same console. By default the Demo app brings configured, but disabled, to launch the command `pnpm run watch` that automatically compiles any changes to backoffice code files.
+
 You can find this configuration in:
 
 ``` json title="/apps/demo/config/development.json"

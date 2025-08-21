@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 id: form
 title: Form
 ---
@@ -12,7 +12,7 @@ This is the developer's area, where you can develop the entire data structure, r
 
 The construction of the forms can be found in the menu that says **Management** and then in the option **Forms**.
 
-Type `Task' in the **Display Name** of the form, note that the **Name** field has been automatically filled in with lower case letters, the _Name_ field is the name that will be given to the database table, which will be created together with the creation of the form, and the _Display Name_ is what will appear to the end user in the **View** area.
+Type `Task` in the **Display Name** of the form, note that the **Name** field has been automatically filled in with lower case letters, the _Name_ field is the name that will be given to the database table, which will be created together with the creation of the form, and the _Display Name_ is what will appear to the end user in the **View** area.
 
 Each form always has an associated database table where the information is stored.
 

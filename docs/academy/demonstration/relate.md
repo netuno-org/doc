@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 id: relate
 title: Relate Data
 sidebar_label: Relate Data
@@ -17,35 +17,43 @@ You will need to co-relate **Tasks** with the **Record** and their hours/time sp
 
 Clicking on **"Build"** after that going to the form field management **"Record"** you will create a new field where the the settings of the **"Display Name"** should be `Task`.
 
-The configuration **Name** was set automatically with `task`, however you should add `_id` as suffix as the following example:
+The **Name** configuration was automatically filled with `task`, but we must add the suffix `_id`, to the **Name** `task` you add `_id` resulting in `task_id`.
 
-`task` + `_id` = `task_id`.
+> #### This is important
+> The **Name** must always end in `_id`!
+>
+> Since it is a standard for field names that are related to each other, it makes it easier to distinguish them from others.
 
-> #### Please Note
-> The **Name** should always end with: `_id` as good practice, also to make relationships distinct, significant, and easier to be naming.
+In the _Type_ configuration, choose the **select** option.
 
-At _Type_ settings will choose the **select** option.
+Remember to mark this field as required by enabling the **Not Null** setting, as it's important to know what the worker performed at the scheduled time.
 
-Please select it as  **"Not Null"** as this field is mandatory i.e. just clicking on **Not Null** as it is important to know what the employee has done at the time schedule.
+Note that the _Primary Key_ option should remain disabled because there will be many records for the same task.
 
-As will be more records for the same Task, the Primary Key option should be OFF.
-
-The **"Column"** must be filled with the value 1 and the **Line** with the value 2, as this new _Task_ field has to show before the fields date and time.
+And fill the **Column** with the value 1 and the **Line** with the value 2, so that this new _Task_ field appears before the date and time fields.
 
 ### Link
 
->Note that this type of field has a specific criteria of the **Data Relatioship**
+Note that this field type has a **Link** parameter below.
 
-1.Click on _Add_;
+The link is what creates the data relationship.
 
-2.Click on the **task** the option that shows in the open window;
+To configure, click _Add_, then click the **task** option, which appears in the window that opened, then **name**, and finally, just _Close_ the window.
 
-3.Click on the **name**;
+This way, the **Link** has been defined with the value `task:name`.
 
-4._Close_ the window.
+This means you will link to the **task** table, displaying the data from the **name** column.
 
-The **Link** will be defined with the value `task:name`.
+To finish, click **Save**.
 
-Which means it will be related to the present **task** table showing some information in the collumn **name**.
+### Changing Data
 
-Click **Save** when you finish.
+Now, when you view the results in the **Register**, you'll see an additional **Task** column, which is missing data.
+
+Edit some records by clicking on the line in the results table.
+
+The **Register** edit form has a field that allows you to select the **Task**. When you save with the associated task, the task column will appear populated in the lookup table.
+
+The **Registers** are now associated with a **Task** and become related.
+
+Save the changes to some records with the associated task.

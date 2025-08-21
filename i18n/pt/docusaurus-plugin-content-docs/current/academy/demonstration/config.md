@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 id: config
 title: Configuração
 ---
@@ -56,6 +56,7 @@ E mude o campo da base de dados ```"name"``` conforme o seu idioma, por exemplo:
 ### Configuração dos comandos que executam com o Netuno
 
 O Netuno permite executar múltiplos comandos com o executar inicial do servidor que imprimimem todos para a mesma consola. Por predefinição a aplicação Demo traz consigo, mas desativado, o comando `pnpm run watch` que compila automaticamente qualquer alteração efetuada em ficheiros de código do backoffice.
+
 Consegue encontrar esta cnfiguração em:
 
 ``` json title="/apps/demo/config/development.json"

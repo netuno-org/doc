@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 id: ui
 title: Interface & Design
 ---
@@ -14,7 +14,11 @@ These technologies are widely used today, however, this pre-defined environment 
 
 The user is free to use any other technology like **VueJS**, **MaterialUI**, **Sass**, **Bootstrap**, **TypeScript**, others. They can just change within the `📂 folder ui` the settings of `📂 package.json` and `📂 vite.config.js` for the technologies they will choose.
 
-> More about the [integrated and centralized terminal](/docs/academy/explore/centralized-terminal).
+> ### Integrated Terminal
+>
+> Always when _Netuno_ server starts it will also execute the <a href="https://www.npmjs.com/" target="_blank">NPM</a> with the command `➡️ npm run watch` inside the `📂 ui` folder of the running application. In this case it will be the application **demo**_nstraction_.
+>
+> The output of <a href="https://www.npmjs.com/" target="_blank">NPM</a> is integrated in the same output of the _Netuno_ server, so there is only one terminal with the integrated output of the server and the compilation of **U**_ser_ **I**_nterface_.
 
 ## Prerequisites
 
@@ -153,9 +157,11 @@ built in 2128ms.
 
 If there is an error with the compilation then it will appear into the **terminal** with an indication issue.
 
-So far we have performed your service spend **workers** and the obtained data is stored into the `DashboardContainer` component that will be available for use in the `return`.
+So far we have consumed our **workers** service in which the data obtained is stored in the `state` of the `DashboardContainer` component, which is then available to be used in the `return`.
 
 ## Present the Data
+
+It is necessary to present the data visually in the interface that the user sees in the browser.
 
 To present the data on your browser should be change the `return` method, which processes the visual aspect of the components in <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
 
