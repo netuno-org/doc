@@ -4,5 +4,237 @@ title: Actions
 sidebar_label: Actions
 ---
 
-Coming soon...
+Customizations in Database Operations.
 
+## Introduction
+
+Data manipulation is performed all the time, and it's common to have rules such as:
+
+- Removing a customer requires deleting their history.
+- Canceling a product requires removing it from orders and adjusting the total amount.
+- Completing a purchase requires sending the data to another system that handles distribution.
+
+Actions are used precisely for this purpose, injecting code to be executed in specific situations
+when data manipulation occurs.
+
+When inserting or changing information, the save (_save_) and save (_saved_) actions are executed:
+
+- `save`: Before executing the command in the database.
+- `saved`: After executing the command in the database.
+
+When **removing**, **deleting**, or **deleting** information, the remove and remove actions are executed.
+
+- `remove`: Before executing the database command.
+- `removed`: After executing the database command.
+
+So, when we change something in a form, with operations to create, modify, or remove information, distinct 
+database operations are executed, and the corresponding actions are executed.
+
+> Have you heard of database triggers? The database trigger is executed whenever there are
+> data modifications, so actions are similar to triggers, only at the code level.
+
+Remember that each type of operation executes a different command in the database, namely:
+
+- Create: `insert into ...`
+- Change: `update ...`
+- Delete: `delete from ...`
+
+When we execute one of these database commands using `_db.execute(...)`, no action will be executed,
+because the command is executed directly in the database without being possible to interact with the actions.
+
+> In the action code, you can use any resource from the polyglot low-code framework.
+
+Actions are executed when data manipulation occurs in the backoffice forms auto-generated
+by Netuno, or when we execute database operations in the code using:
+
+- `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExits(...)`, `_db.insertMany(...)`, among others.
+
+- `_db.update(...)`, `_db.form(...).update()`, `_db.updateMany(...)`, among others.
+- `_db.delete(...)`, `_db.form(...).delete()`, `_db.insertMany(...)`, among others.
+
+In other words, when we use any mechanism from the polyglot low-code framework in our code to perform data 
+manipulation operations, the corresponding action will be executed if it exists.
+
+However, if a command is executed directly on the database, the action will not be executed.
+
+> It is recommended to avoid executing commands directly on the database to avoid bypassing the data manipulation 
+> mechanisms that Netuno offers.
+
+In the action code, you can perform any operation associated with data manipulation.
+
+## Data Item
+
+The data item (`_dataItem`) is a resource in the polyglot low-code framework that contains all the data 
+relationships that are being created, modified, or deleted.
+
+Through the `_dataItem` resource, we can access all the information and check details of the ongoing operation.
+
+> See the [DataItem](/docs/library/objects/DataItem) object documentation for more details on what
+> the `_dataItem` resource supports.
+
+**Note:** The `_dataItem` resource is only available in the action code.
+
+## Save, Change, or Create New
+
+To create an action that will run when a new record is created, or when something is changed, the script
+for this action will be called `save`, which means that something is being saved to the database, for example:
+
+- `my_app/server/actions/my_form/save.js`
+
+> This action is executed before executing the database command.
+
+When executing code after the data has been saved to the database, we use the `saved` action, for example:
+
+- `my_app/server/actions/my_form/saved.js`
+
+> This action is executed after executing the database command.
+
+In other words, within the application, in the `server/actions` folder, we create a subfolder with the name of 
+the form (table), and inside it, we place a script called `save` or `saved`, which contains the respective code 
+to be executed before or after the database command.
+
+To determine whether data is being created, we can use an `if` statement to check the result of the 
+`_dataItem.isInsert()` method, for example:
+
+```javascript title="my_app/server/actions/my_form/save.js"
+if (_dataItem.isInsert()) {
+    // New data is being created...
+}
+```
+
+To determine whether data is being changed, we can use an `if` statement to check the result of the 
+`_dataItem.isUpdate()` method, for example:
+
+```javascript title="my_app/server/actions/my_form/saved.js"
+if (_dataItem.isUpdate()) {
+    // Data is being changed...
+}
+```
+
+### Get the ID
+
+To get the ID (identifier) of the item being changed:
+
+```javascript
+_dataItem.getId()
+```
+
+### Check What's Changed
+
+To check what's being changed, we can use `getOldRecord()` to get the old data from the
+database and compare it with the new data `getRecord()`, for example:
+
+```javascript
+if (_dataItem.getOldRecord().getString('email') !== _dataItem.getRecord().getString('email')) {
+    // Warning: The email is being changed!
+}
+```
+
+### Generate Error
+
+You can generate an error to prevent the operation from progressing. The error is usually generated before
+executing the database command, so in the `save` action, for example:
+
+```javascript title="my_app/server/actions/my_form/save.js"
+_dataItem.setStatusWithError()
+    .setErrorTitle('Email')
+    .setErrorMessage('Email address cannot be changed.')
+```
+
+### Check for Error
+
+You can check for an error when executing the database command. Various errors can occur,
+for example:
+
+- Duplicate email addresses are not allowed.
+- A required field was not filled out correctly.
+- Among many others.
+
+Error checking is usually performed after executing the database command, so in the `saved` action, for example:
+
+```javascript title="my_app/server/actions/my_form/saved.js"
+if (_dataItem.isError()) {
+// An error occurred and the data could not be saved...
+}
+```
+
+### Setup
+
+It is possible to have a specific `action` that runs only when data changes are made during the
+database setup.
+
+For example:
+
+- `my_app/server/actions/my_form/setup_save.js`
+- `my_app/server/actions/my_form/setup_saved.js`
+
+## Remove, Delete, or Elimination
+
+To create an action that will run when a record is removed, the script for this action will be called
+`remove`, which means that something is being deleted from the database, for example:
+
+- `my_app/server/actions/my_form/remove.js`
+
+> This action is executed before executing the database command.
+
+When executing code after the data has been saved to the database, we use the `removed` action, for example:
+
+- `my_app/server/actions/my_form/removed.js`
+
+> This action is executed after executing the database command.
+
+In other words, within the application, in the `server/actions` folder, we create a subfolder with the name of 
+the form (table), and inside it, we place a script called `remove` or `removed`, which contains the respective 
+code to be executed before or after the database command.
+
+### Conflict with Relationships
+
+Depending on the data model, it may happen that when removing a record that is being used in a relationship with
+another table, which is also another form, it cannot be removed to avoid breaking the relationship.
+
+Then, in the `removed` action that runs after the database removal command, we can check if this error occurs as 
+follows:
+
+```javascript title="my_app/server/actions/my_form/removed.js"
+if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
+    _log.error(
+        'Could not remove because there is a relationship with table '
+        + _dataItem.getRelationTable() +' using ID ' + _dataItem.getRelationItem().getInt('id')
+    )
+}
+```
+
+Alternatively, in the `remove` action, which runs before the database command that deletes the record,
+we can implement the "cleanup" of other records that may be related, for example:
+
+```javascript title="my_app/server/actions/my_form/remove.js"
+_db.form('other_form')
+    .where(
+        _db.where('my_form_id')
+            .equals(_dataItem.getRecord().getInt('id'))
+    )
+    .delete()
+```
+
+### Setup
+
+It is possible to have a specific `action` that is executed only when data is removed during the database setup.
+
+For example:
+
+- `my_app/server/actions/my_form/setup_remove.js`
+- `my_app/server/actions/my_form/setup_removed.js`
+
+## Conclusion
+
+With actions, we can centralize specific operations related to the manipulation of certain data.
+
+It allows us to share code that provides useful mechanisms to ensure integrity, facilitate tasks, perform
+integrations, perform parallel operations, have additional checks, and much more.
+
+Coding actions is simple and extremely useful; it can be extended using any other feature of the polyglot 
+low-code framework.
+
+> In the action code, you can use any feature of the polyglot low-code framework.
+
+Consider using actions, and you can quickly see how the ease gained can enhance many useful strategies.
