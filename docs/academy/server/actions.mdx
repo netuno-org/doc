@@ -4,6 +4,9 @@ title: Actions
 sidebar_label: Actions
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Customizations in Database Operations.
 
 ## Introduction
@@ -96,20 +99,82 @@ to be executed before or after the database command.
 To determine whether data is being created, we can use an `if` statement to check the result of the 
 `_dataItem.isInsert()` method, for example:
 
-```javascript title="my_app/server/actions/my_form/save.js"
-if (_dataItem.isInsert()) {
-    // New data is being created...
-}
-```
+<Tabs>
+    <TabItem value="js" label="JavaScript" default>
+        ```javascript title="my_app/server/actions/my_form/save.js"
+        if (_dataItem.isInsert()) {
+            // New data is being created...
+        }
+        ```
+    </TabItem>
+    <TabItem value="py" label="Python">
+        ```python title="my_app/server/actions/my_form/save.py"
+        if _dataItem.isInsert():
+            # New data is being created...
+        ```
+    </TabItem>
+    <TabItem value="rb" label="Ruby">
+        ```rb title="my_app/server/actions/my_form/save.rb"
+        if _dataItem.isInsert()
+            # New data is being created...
+        end
+        ```
+    </TabItem>
+    <TabItem value="kts" label="Kotlin">
+        ```kotlin title="my_app/server/actions/my_form/save.kts"
+        if (_dataItem.isInsert()) {
+            // New data is being created...
+        }
+        ```
+    </TabItem>
+    <TabItem value="groovy" label="Groovy">
+        ```kotlin title="my_app/server/actions/my_form/save.groovy"
+        if (_dataItem.isInsert()) {
+            // New data is being created...
+        }
+        ```
+    </TabItem>
+</Tabs>
 
 To determine whether data is being changed, we can use an `if` statement to check the result of the 
 `_dataItem.isUpdate()` method, for example:
 
-```javascript title="my_app/server/actions/my_form/saved.js"
-if (_dataItem.isUpdate()) {
-    // Data is being changed...
-}
-```
+<Tabs>
+    <TabItem value="js" label="JavaScript" default>
+        ```javascript title="my_app/server/actions/my_form/saved.js"
+        if (_dataItem.isUpdate()) {
+            // Data is being changed...
+        }
+        ```
+    </TabItem>
+    <TabItem value="py" label="Python">
+        ```python title="my_app/server/actions/my_form/saved.py"
+        if _dataItem.isUpdate():
+            # Data is being changed...
+        ```
+    </TabItem>
+    <TabItem value="rb" label="Ruby">
+        ```rb title="my_app/server/actions/my_form/saved.rb"
+        if _dataItem.isUpdate()
+            # Data is being changed...
+        end
+        ```
+    </TabItem>
+    <TabItem value="kts" label="Kotlin">
+        ```kotlin title="my_app/server/actions/my_form/saved.kts"
+        if (_dataItem.isUpdate()) {
+            // Data is being changed...
+        }
+        ```
+    </TabItem>
+    <TabItem value="groovy" label="Groovy">
+        ```kotlin title="my_app/server/actions/my_form/saved.groovy"
+        if (_dataItem.isUpdate()) {
+            // New data is being created...
+        }
+        ```
+    </TabItem>
+</Tabs>
 
 ### Get the ID
 
