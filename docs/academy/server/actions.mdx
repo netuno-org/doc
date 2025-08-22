@@ -4,8 +4,8 @@ title: Actions
 sidebar_label: Actions
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
 
 Customizations in Database Operations.
 
@@ -82,13 +82,17 @@ Through the `_dataItem` resource, we can access all the information and check de
 To create an action that will run when a new record is created, or when something is changed, the script
 for this action will be called `save`, which means that something is being saved to the database, for example:
 
-- `my_app/server/actions/my_form/save.js`
+<PolyglotPath files={[
+    'my_app/server/actions/my_form/save'
+]} />
 
 > This action is executed before executing the database command.
 
 When executing code after the data has been saved to the database, we use the `saved` action, for example:
 
-- `my_app/server/actions/my_form/saved.js`
+<PolyglotPath files={[
+    'my_app/server/actions/my_form/saved'
+]} />
 
 > This action is executed after executing the database command.
 
@@ -99,112 +103,133 @@ to be executed before or after the database command.
 To determine whether data is being created, we can use an `if` statement to check the result of the 
 `_dataItem.isInsert()` method, for example:
 
-<Tabs>
-    <TabItem value="js" label="JavaScript" default>
-        ```javascript title="my_app/server/actions/my_form/save.js"
-        if (_dataItem.isInsert()) {
-            // New data is being created...
-        }
-        ```
-    </TabItem>
-    <TabItem value="py" label="Python">
-        ```python title="my_app/server/actions/my_form/save.py"
-        if _dataItem.isInsert():
-            # New data is being created...
-        ```
-    </TabItem>
-    <TabItem value="rb" label="Ruby">
-        ```rb title="my_app/server/actions/my_form/save.rb"
-        if _dataItem.isInsert()
-            # New data is being created...
-        end
-        ```
-    </TabItem>
-    <TabItem value="kts" label="Kotlin">
-        ```kotlin title="my_app/server/actions/my_form/save.kts"
-        if (_dataItem.isInsert()) {
-            // New data is being created...
-        }
-        ```
-    </TabItem>
-    <TabItem value="groovy" label="Groovy">
-        ```kotlin title="my_app/server/actions/my_form/save.groovy"
-        if (_dataItem.isInsert()) {
-            // New data is being created...
-        }
-        ```
-    </TabItem>
-</Tabs>
+<PolyglotCode
+    file="my_app/server/actions/my_form/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isInsert()) {
+                    // New data is being created...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isInsert():
+                    # New data is being created...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isInsert()
+                    # New data is being created...
+                end
+            `
+        },
+    ]}
+/>
 
 To determine whether data is being changed, we can use an `if` statement to check the result of the 
 `_dataItem.isUpdate()` method, for example:
 
-<Tabs>
-    <TabItem value="js" label="JavaScript" default>
-        ```javascript title="my_app/server/actions/my_form/saved.js"
-        if (_dataItem.isUpdate()) {
-            // Data is being changed...
-        }
-        ```
-    </TabItem>
-    <TabItem value="py" label="Python">
-        ```python title="my_app/server/actions/my_form/saved.py"
-        if _dataItem.isUpdate():
-            # Data is being changed...
-        ```
-    </TabItem>
-    <TabItem value="rb" label="Ruby">
-        ```rb title="my_app/server/actions/my_form/saved.rb"
-        if _dataItem.isUpdate()
-            # Data is being changed...
-        end
-        ```
-    </TabItem>
-    <TabItem value="kts" label="Kotlin">
-        ```kotlin title="my_app/server/actions/my_form/saved.kts"
-        if (_dataItem.isUpdate()) {
-            // Data is being changed...
-        }
-        ```
-    </TabItem>
-    <TabItem value="groovy" label="Groovy">
-        ```kotlin title="my_app/server/actions/my_form/saved.groovy"
-        if (_dataItem.isUpdate()) {
-            // New data is being created...
-        }
-        ```
-    </TabItem>
-</Tabs>
+<PolyglotCode
+    file="my_app/server/actions/my_form/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isUpdate()) {
+                    // Data is being changed...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isUpdate():
+                    # Data is being changed...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isUpdate()
+                    # Data is being changed...
+                end
+            `
+        },
+    ]}
+/>
 
 ### Get the ID
 
 To get the ID (identifier) of the item being changed:
 
-```javascript
-_dataItem.getId()
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.getId()
+            `
+        },
+    ]}
+/>
 
 ### Check What's Changed
 
 To check what's being changed, we can use `getOldRecord()` to get the old data from the
 database and compare it with the new data `getRecord()`, for example:
 
-```javascript
-if (_dataItem.getOldRecord().getString('email') !== _dataItem.getRecord().getString('email')) {
-    // Warning: The email is being changed!
-}
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")) {
+                    // Warning: The email is being changed!
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email"):
+                    # Warning: The email is being changed!
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")
+                    # Warning: The email is being changed!
+                end
+            `
+        },
+    ]}
+/>
 
 ### Generate Error
 
 You can generate an error to prevent the operation from progressing. The error is usually generated before
 executing the database command, so in the `save` action, for example:
 
-```javascript title="my_app/server/actions/my_form/save.js"
-_dataItem.setStatusWithError()
-    .setErrorTitle('Email')
-    .setErrorMessage('Email address cannot be changed.')
-```
+<PolyglotCode
+    file="my_app/server/actions/my_form/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.setStatusWithError()
+                    .setErrorTitle("Email")
+                    .setErrorMessage("Email address cannot be changed.")
+            `
+        },
+    ]}
+/>
 
 ### Check for Error
 
@@ -217,11 +242,34 @@ for example:
 
 Error checking is usually performed after executing the database command, so in the `saved` action, for example:
 
-```javascript title="my_app/server/actions/my_form/saved.js"
-if (_dataItem.isError()) {
-// An error occurred and the data could not be saved...
-}
-```
+<PolyglotCode
+    file="my_app/server/actions/my_form/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isError()) {
+                    // An error occurred and the data could not be saved...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isError():
+                    # An error occurred and the data could not be saved...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isError()
+                    # An error occurred and the data could not be saved...
+                end
+            `
+        },
+    ]}
+/>
 
 ### Setup
 
@@ -230,21 +278,27 @@ database setup.
 
 For example:
 
-- `my_app/server/actions/my_form/setup_save.js`
-- `my_app/server/actions/my_form/setup_saved.js`
+<PolyglotPath files={[
+    'my_app/server/actions/my_form/setup_save',
+    'my_app/server/actions/my_form/setup_saved'
+]} />
 
 ## Remove, Delete, or Elimination
 
 To create an action that will run when a record is removed, the script for this action will be called
 `remove`, which means that something is being deleted from the database, for example:
 
-- `my_app/server/actions/my_form/remove.js`
+<PolyglotPath files={[
+    'my_app/server/actions/my_form/remove'
+]} />
 
 > This action is executed before executing the database command.
 
 When executing code after the data has been saved to the database, we use the `removed` action, for example:
 
-- `my_app/server/actions/my_form/removed.js`
+<PolyglotPath files={[
+    'my_app/server/actions/my_form/removed'
+]} />
 
 > This action is executed after executing the database command.
 
@@ -260,26 +314,63 @@ another table, which is also another form, it cannot be removed to avoid breakin
 Then, in the `removed` action that runs after the database removal command, we can check if this error occurs as 
 follows:
 
-```javascript title="my_app/server/actions/my_form/removed.js"
-if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
-    _log.error(
-        'Could not remove because there is a relationship with table '
-        + _dataItem.getRelationTable() +' using ID ' + _dataItem.getRelationItem().getInt('id')
-    )
-}
-```
+<PolyglotCode
+    file="my_app/server/actions/my_form/removed"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
+                    _log.error(
+                        "Could not remove because there is a relationship with table "
+                        + _dataItem.getRelationTable() +" using ID " + _dataItem.getRelationItem().getInt("id")
+                    )
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isStatusAsError() and _dataItem.isStatusAsRelations():
+                    _log.error(
+                        "Could not remove because there is a relationship with table "
+                        + _dataItem.getRelationTable() +" using ID " + _dataItem.getRelationItem().getInt("id")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations())
+                    _log.error(
+                        "Could not remove because there is a relationship with table "
+                        + _dataItem.getRelationTable() +" using ID " + _dataItem.getRelationItem().getInt("id")
+                    )
+                end
+            `
+        },
+    ]}
+/>
 
 Alternatively, in the `remove` action, which runs before the database command that deletes the record,
 we can implement the "cleanup" of other records that may be related, for example:
 
-```javascript title="my_app/server/actions/my_form/remove.js"
-_db.form('other_form')
-    .where(
-        _db.where('my_form_id')
-            .equals(_dataItem.getRecord().getInt('id'))
-    )
-    .delete()
-```
+<PolyglotCode
+    file="my_app/server/actions/my_form/remove"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _db.form("other_form")
+                    .where(
+                        _db.where("my_form_id")
+                            .equals(_dataItem.getRecord().getInt("id"))
+                    )
+                    .delete()
+            `
+        },
+    ]}
+/>
 
 ### Setup
 
@@ -287,8 +378,10 @@ It is possible to have a specific `action` that is executed only when data is re
 
 For example:
 
-- `my_app/server/actions/my_form/setup_remove.js`
-- `my_app/server/actions/my_form/setup_removed.js`
+<PolyglotPath files={[
+    'my_app/server/actions/my_form/setup_remove',
+    'my_app/server/actions/my_form/setup_removed'
+]} />
 
 ## Conclusion
 
