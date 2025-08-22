@@ -4,6 +4,9 @@ title: Ações (Actions)
 sidebar_label: Actions
 ---
 
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
 Customizações nas operações de base de dados.
 
 ## Introdução
@@ -81,14 +84,18 @@ que está acontecendo.
 Para criar uma action que será executada quando for criado um novo registro, ou quando for alterado algo, o script
 desta action será chamado de `save`, que quer dizer que algo está sendo salvaguardo em base de dados, por exemplo:
 
-- `minha_app/server/actions/meu_formulario/save.js`
+<PolyglotPath files={[
+    'minha_app/server/actions/meu_formulario/save'
+]} />
 
 > Está ação é executada antes de executar o comando de base de dados.
 
 Quando for para executar código após os dados serem salvaguardados em base de dados, então utilizamos a ação 
 `saved`, por exemplo:
 
-- `minha_app/server/actions/meu_formulario/saved.js`
+<PolyglotPath files={[
+    'minha_app/server/actions/meu_formulario/saved'
+]} />
 
 > Está ação é executada após ter sido executado o comando de base de dados.
 
@@ -99,50 +106,133 @@ ou depois do comando de base de dados.
 Para distinguir se é uma criação de dados podemos verificar com um `if` o resultado do método 
 `_dataItem.isInsert()`, por exemplo:
 
-```javascript title="minha_app/server/actions/meu_formulario/save.js"
-if (_dataItem.isInsert()) {
-    // Está sendo criado novos dados...
-}
-```
+<PolyglotCode
+    file="minha_app/server/actions/meu_formulario/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isInsert()) {
+                    // Está sendo criado novos dados...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isInsert():
+                    # Está sendo criado novos dados...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isInsert()
+                    # Está sendo criado novos dados...
+                end
+            `
+        },
+    ]}
+/>
 
 Para distinguir se é uma alteração de dados podemos verificar com um `if` o resultado do método 
 `_dataItem.isUpdate()`, por exemplo:
 
-```javascript title="minha_app/server/actions/meu_formulario/saved.js"
-if (_dataItem.isUpdate()) {
-    // Está sendo alterado os dados...
-}
-```
+<PolyglotCode
+    file="minha_app/server/actions/meu_formulario/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isUpdate()) {
+                    // Está sendo alterado os dados...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isUpdate():
+                    # Está sendo alterado os dados...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isUpdate()
+                    # Está sendo alterado os dados...
+                end
+            `
+        },
+    ]}
+/>
 
 ### Obter o ID
 
 Para obter o ID (identificador) do item que está sendo alterado:
 
-```javascript
-_dataItem.getId()
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.getId()
+            `
+        },
+    ]}
+/>
 
 ### Verificar o que é Modificado
 
 Para verificar o que está sendo modificado, podemos utilizar o `getOldRecord()` para obter os dados antigos em
 base de dados e comparar com os novos dados `getRecord()`, por exemplo:
 
-```javascript
-if (_dataItem.getOldRecord().getString('email') !== _dataItem.getRecord().getString('email')) {
-    // Atenção: O e-mail está sendo alterado!
-}
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")) {
+                    // Atenção: O e-mail está sendo alterado!
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email"):
+                    # Atenção: O e-mail está sendo alterado!
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")
+                    # Atenção: O e-mail está sendo alterado!
+                end
+            `
+        },
+    ]}
+/>
 
 ### Gerar Erro
 
 É possível gerar um erro para impedir que a operação avance, a geração do erro normalmente é feita antes de 
 executar o comando de base de dados, portanto na ação `save`, por exemplo:
 
-```javascript title="minha_app/server/actions/meu_formulario/save.js"
-_dataItem.setStatusWithError()
-    .setErrorTitle('E-mail')
-    .setErrorMessage('Não é permitido alterar o e-mail.')
-```
+<PolyglotCode
+    file="minha_app/server/actions/meu_formulario/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.setStatusWithError()
+                    .setErrorTitle("Email")
+                    .setErrorMessage("Não é permitido alterar o e-mail.")
+            `
+        },
+    ]}
+/>
 
 ### Verificar se houve Erro
 
@@ -156,11 +246,34 @@ por exemplo:
 A verificação de erros é realizada normalmente após a execução do comando de base de dados, portanto na ação 
 `saved`, por exemplo:
 
-```javascript title="minha_app/server/actions/meu_formulario/saved.js"
-if (_dataItem.isError()) {
-    // Ocorreu algum erro e não foi possível salvar os dados...
-}
-```
+<PolyglotCode
+    file="minha_app/server/actions/meu_formulario/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isError()) {
+                    // Ocorreu algum erro e não foi possível salvar os dados...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isError():
+                    # Ocorreu algum erro e não foi possível salvar os dados...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isError()
+                    # Ocorreu algum erro e não foi possível salvar os dados...
+                end
+            `
+        },
+    ]}
+/>
 
 ### Setup
 
@@ -169,22 +282,28 @@ configuração (_setup_) da base de dados.
 
 Por exemplo:
 
-- `minha_app/server/actions/meu_formulario/setup_save.js`
-- `minha_app/server/actions/meu_formulario/setup_saved.js`
+<PolyglotPath files={[
+    'minha_app/server/actions/meu_formulario/setup_save',
+    'minha_app/server/actions/meu_formulario/setup_saved',
+]} />
 
 ## Remover, Apagar, ou Eliminar (_Remove_)
 
 Para criar uma action que será executada quando for removido algum registro, o script desta action será chamado 
 de `remove`, que quer dizer que algo está sendo eliminado em base de dados, por exemplo:
 
-- `minha_app/server/actions/meu_formulario/remove.js`
+<PolyglotPath files={[
+    'minha_app/server/actions/meu_formulario/setup_remove',
+]} />
 
 > Está ação é executada antes de executar o comando de base de dados.
 
 Quando for para executar código após os dados serem salvaguardados em base de dados, então utilizamos a ação
 `removed`, por exemplo:
 
-- `minha_app/server/actions/meu_formulario/removed.js`
+<PolyglotPath files={[
+    'minha_app/server/actions/meu_formulario/setup_removed',
+]} />
 
 > Está ação é executada após ter sido executado o comando de base de dados.
 
@@ -200,26 +319,63 @@ outra tabela, que também é outro formulário, não possa ser removido para evi
 Então na ação `removed` que executa após o comando de base de dados de remoção, podemos verificar se acontece este
 erro da seguinte forma:
 
-```javascript title="minha_app/server/actions/meu_formulario/removed.js"
-if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
-    _log.error(
-        'Não foi possível remover porque há relação com a tabela '
-        + _dataItem.getRelationTable() +' utilizando o ID '+ _dataItem.getRelationItem().getInt('id')
-    )
-}
-```
+<PolyglotCode
+    file="minha_app/server/actions/meu_formulario/removed"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
+                    _log.error(
+                        "Não foi possível remover porque há relação com a tabela "
+                        + _dataItem.getRelationTable() +" utilizando o ID " + _dataItem.getRelationItem().getInt("id")
+                    )
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isStatusAsError() and _dataItem.isStatusAsRelations():
+                    _log.error(
+                        "Não foi possível remover porque há relação com a tabela "
+                        + _dataItem.getRelationTable() +" utilizando o ID " + _dataItem.getRelationItem().getInt("id")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations())
+                    _log.error(
+                        "Não foi possível remover porque há relação com a tabela "
+                        + _dataItem.getRelationTable() +" utilizando o ID " + _dataItem.getRelationItem().getInt("id")
+                    )
+                end
+            `
+        },
+    ]}
+/>
 
 Podemos em alternativa na ação `remove`, que executa antes de realizar o comando de base que apaga o registro,
 implementar a "limpeza" de outros registros que podem ter relação, por exemplo:
 
-```javascript title="minha_app/server/actions/meu_formulario/remove.js"
-_db.form('outro_formulario')
-    .where(
-        _db.where('meu_formulario_id')
-            .equals(_dataItem.getRecord().getInt('id'))
-    )
-    .delete()
-```
+<PolyglotCode
+    file="minha_app/server/actions/meu_formulario/remove"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _db.form("outro_formulario")
+                    .where(
+                        _db.where("meu_formulario_id")
+                            .equals(_dataItem.getRecord().getInt("id"))
+                    )
+                    .delete()
+            `
+        },
+    ]}
+/>
 
 ### Setup
 
@@ -228,8 +384,10 @@ configuração (_setup_) da base de dados.
 
 Por exemplo:
 
-- `minha_app/server/actions/meu_formulario/setup_remove.js`
-- `minha_app/server/actions/meu_formulario/setup_removed.js`
+<PolyglotPath files={[
+    'minha_app/server/actions/meu_formulario/setup_remove',
+    'minha_app/server/actions/meu_formulario/setup_removed',
+]} />
 
 ## Conclusão
 
