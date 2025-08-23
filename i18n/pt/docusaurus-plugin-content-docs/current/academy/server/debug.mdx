@@ -4,6 +4,8 @@ title: Depuração (Debug)
 sidebar_label: Depurar
 ---
 
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
 Permite analisar a execução do código em tempo real.
 
 ## Introdução 
@@ -43,11 +45,18 @@ O ponto de interrupção (_breakpoint_) é onde no código a execução deve ser
 depuração.
 
 Para iniciar a depuração em qualquer código e de qualquer linguagem suportada pelo Netuno, como JavaScript, Python,
-Kotlin, Ruby, ou Groovy, no local em que deseja iniciar, coloque:
+Ruby, Kotlin ou Groovy, no local em que deseja iniciar a depuração, coloque o seguinte código:
 
-```javascript
-_exec.debug()
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _exec.debug()
+            `
+        },
+    ]}
+/>
 
 > Como o Netuno é poliglota, funciona com qualquer linguagem suportada, como: JavaScript, Python, Kotlin, Ruby, 
 > ou Groovy.
