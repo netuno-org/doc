@@ -44,7 +44,7 @@ Just use the corresponding extension:
 
 Explore the examples of web services that come in the application **demo**_nstration_, at:
 
-`/apps/demo/server/services/samples`
+- `/apps/demo/server/services/samples`
 
 And also explore the documentation of our **library** to know in detail the resources available.
 
