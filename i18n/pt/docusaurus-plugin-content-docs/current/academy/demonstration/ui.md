@@ -58,11 +58,11 @@ Adicione uma nova entrada para guardar os dados dos trabalhadores da seguinte fo
 
 Ou seja, acrescente a nova linha `const [trabalhadores, setTrabalhadores] = useState([]);` de estado.
 
-### Criar Método `carregarTrabalhadores`
+### Criar função `carregarTrabalhadores`
 
-Mais abaixo repare que existe um método chamado `carregarTrabalhadores`, este método realiza a obtenção dos dados dos trabalhadores que aparecem no dashboard atualmente.
+Mais abaixo repare que existe uma função chamada `carregarTrabalhadores`, esta função realiza a obtenção dos dados dos trabalhadores que aparecem no dashboard atualmente.
 
-Este método também serve para carregar os dados dos trabalhadores.
+> Esta função é usada para carregar os dados dos trabalhadores.
 
 Insira o código abaixo:
 
@@ -92,7 +92,7 @@ Insira o código abaixo:
 
 O que este código acima faz é passar os dados dos **trabalhadores** para o _state_ do componente em <a href="https://reactjs.org/" target="_blank">ReactJS</a>, isto através da execução do serviço **trabalhadores** que, ao receber os dados em <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> , armazena os mesmos no _state_ através da execução do `setTrabalhadores`.
 
-No código final os métodos deverão ficar estruturados desta forma:
+O código final deverá ficar estruturados desta forma:
 
 ```jsx
     useEffect(() => {
@@ -108,13 +108,13 @@ No código final os métodos deverão ficar estruturados desta forma:
     );
 ```
 
-> Onde os `...` são as diversas linhas de código omitidas dentro dos respectivos métodos
+> Onde os `...` são as diversas linhas de código omitidas dentro dos respectivos blocos.
 
-### Executar o novo método `useEffect`
+### Executar o hook `useEffect`
 
-Agora falta executar o nosso novo método `useEffect` quando o componente é "montado", este método é executado quando o componente é construído na apresentação visual do browser.
+Agora falta executar o nosso hook `useEffect` quando o componente é "montado", este hook é executado quando o componente é construído na apresentação visual do browser.
 
-Para isto basta, um pouco mais acima, acrescentar a linha de código `carregarTrabalhadores();` dentro do método `useEffect` desta forma:
+Para isto basta, um pouco mais acima, acrescentar a linha de código `carregarTrabalhadores();` dentro do hook `useEffect` desta forma:
 
 ```jsx
     useEffect(() => {
@@ -122,7 +122,7 @@ Para isto basta, um pouco mais acima, acrescentar a linha de código `carregarTr
     }, []);
 ```
 
-Esta nova linha de código vai chamar o método que executa o serviço <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/trabalhadores</a>, que foi criado anteriormente, para obter os dados em JSON e guardá-los no `state` (_estado_) do componente para ser apresentado no return (_visualização_).
+Esta nova linha de código vai chamar a função que executa o serviço <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/trabalhadores</a>, que foi criado anteriormente, para obter os dados em JSON e guardá-los no `state` (_estado_) do componente para ser apresentado no return (_visualização_).
 
 ### Compilação
 
@@ -159,9 +159,9 @@ Até aqui realizámos o consumo do nosso serviço **trabalhadores** em que os da
 
 Falta apresentar os dados visualmente na interface que o utilizador vê no browser.
 
-Para apresentar os dados no browser temos que alterar o método `return`, que processa o aspecto visual dos componentes em <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
+Para apresentar os dados no browser temos que alterar o `return`, que processa o aspecto visual dos componentes em <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
 
-No fim do código do `DashboardContainer` encontrará o método: `return ( ... );`
+No fim do código do `DashboardContainer` encontrará o: `return ( ... );`
 
 Vamos alterá-lo adicionando apenas mais uma linha de código para conter mais um componente `DataVisualization` que vai apresentar os dados referentes às **trabalhadores**, o código deverá ficar da seguinte forma:
 
