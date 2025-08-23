@@ -62,17 +62,17 @@ Add a new entry to save the task data, like this:
 
 In other words, add the new `const [workers, setWorkers] = useState([]);` state line.
 
-### Creating the Method `loadWorkers`
+### Creating the `loadWorkers` function
 
-Note that there is a method called `loadWorkers` this method performs the data retrieval of the workers that currently appears on the dashboard.
+Note that there is a function called `loadWorkers`, this function performs the data retrieval of the workers that currently appears on the dashboard.
 
-The method created above will load the task data.
+> This function is used to load the workers data.
 
 Insert the code below:
 
 ```jsx
     /**
-    *** 🚀 Upload the Workers data.
+    *** 🚀 Load the Workers data.
     ***    Through the execution of the service:
     **     http://localhost:9000/services/workers
     */
@@ -96,7 +96,7 @@ Insert the code below:
 
 What this code does is to perform the service **workers** and with the obtained data from the <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a> stores in the _state_ of the component <a href="https://reactjs.org/" target="_blank">ReactJS</a> in **workers**, performing the execution of `setWorkers` passing the workers data.
 
-In the final code the methods should be structured in this way, for example:
+The final code should be structured in this way, for example:
 
 ```jsx
     useEffect(() => {
@@ -112,13 +112,13 @@ In the final code the methods should be structured in this way, for example:
     );
 ```
 
-> Where the `...` are the various lines of code within their respective methods
+> Where the `...` are the various lines of code within their respective block.
 
-### Run the new `useEffect` method
+### Run the `useEffect` hook
 
-Now we need to run our new `useEffect` method when the component is "assembled", this method is run when the component is built in the visual presentation of the browser.
+Now we need to run our `useEffect` hook when the component is "assembled", this hook runs when the component is built in the visual presentation of the browser.
 
-To do this just on the top add the line of code `loadWorkers();` within the `useEffect` method, which will look like this:
+To do this just on the top add the line of code `loadWorkers();` within the `useEffect` hook, which will look like this:
 
 ```jsx
     useEffect(() => {
@@ -126,7 +126,7 @@ To do this just on the top add the line of code `loadWorkers();` within the `use
     }, []);
 ```
 
-This will call the method that runs the service <a href="http://localhost:9000/services/workers" target="_blank">http://localhost:9000/services/workers</a> that was created to get the data in JSON and save it to the `state` (_status_) of the component to be presented in the render (_view_).
+This will call the function that runs the service <a href="http://localhost:9000/services/workers" target="_blank">http://localhost:9000/services/workers</a> that was created to get the data in JSON and save it to the `state` (_status_) of the component to be presented in the render (_view_).
 
 ### Compilation
 
@@ -163,9 +163,9 @@ So far we have consumed our **workers** service in which the data obtained is st
 
 It is necessary to present the data visually in the interface that the user sees in the browser.
 
-To present the data on your browser should be change the `return` method, which processes the visual aspect of the components in <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
+To present the data on your browser should be change the `return`, which processes the visual aspect of the components in <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
 
-At the end of the `DashboardContainer` code you will find the method: `return ( ... );`
+At the end of the `DashboardContainer` code you will find: `return ( ... );`
 
 For this step you just need to add one more line of code to contain one more `DataVisualization` component, but now to display the **workers** data, the code should look like this:
 
