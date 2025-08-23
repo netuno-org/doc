@@ -4,6 +4,8 @@ title: Debug
 sidebar_label: Debug
 ---
 
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
 Allows you to analyze code execution in real time.
 
 ## Introduction
@@ -40,12 +42,19 @@ Debugging can be divided into three main mechanisms:
 
 The breakpoint is where execution in the code should be paused to begin the debugging process.
 
-To start debugging any code in any language supported by Netuno, such as JavaScript, Python, Kotlin, Ruby, or 
-Groovy, at the location where you want to start, type:
+To start debugging any code in any language supported by Netuno, such as JavaScript, Python,
+Ruby, Kotlin, or Groovy, place the following code where you want to start debugging:
 
-```javascript
-_exec.debug()
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _exec.debug()
+            `
+        },
+    ]}
+/>
 
 > Since Netuno is polyglot, it works with any supported language, such as JavaScript, Python, Kotlin, Ruby,
 > or Groovy.
