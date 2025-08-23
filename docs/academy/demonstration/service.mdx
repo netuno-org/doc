@@ -91,15 +91,15 @@ All you need to do now is to _Code_ our service, which will be as below:
                 #
                 # Transforms query data into JSON output.
                 #
-                dbRecords = _db.query("""
-                    SELECT DISTINCT
+                dbRecords = _db.query(
+                    """SELECT DISTINCT
                         worker.name, SUM(DATEDIFF(HOUR, record.start, record.end)) AS total
                     FROM worker INNER JOIN record
                         ON worker.id = record.worker_id
                     WHERE worker.active = true AND record.active = true
                     GROUP BY worker.name
-                    ORDER BY total ASC
-                """)
+                    ORDER BY total ASC"""
+                )
 
                 list = _val.list()
 
@@ -148,15 +148,15 @@ All you need to do now is to _Code_ our service, which will be as below:
                 /**
                 *** Transforms query data into JSON output.
                 */
-                val dbRecords = _db.query("""
-                    SELECT DISTINCT
+                val dbRecords = _db.query(
+                    """SELECT DISTINCT
                         worker.name, SUM(DATEDIFF(HOUR, record.start, record.end)) AS total
                     FROM worker INNER JOIN record
                         ON worker.id = record.worker_id
                     WHERE worker.active = true AND record.active = true
                     GROUP BY worker.name
-                    ORDER BY total ASC
-                """);
+                    ORDER BY total ASC"""
+                );
 
                 val list = _val.list();
 
