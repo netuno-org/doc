@@ -44,7 +44,7 @@ Basta utilizar a extensão correspondente:
 
 Explore os exemplos de web services que vêm na aplicação **demo**_nstração_, em:
 
-`/apps/demo/server/services/samples`
+- `/apps/demo/server/services/samples`
 
 E explore também a documentação da nossa **biblioteca** para conhecer em detalhe os recursos disponíveis.
 
