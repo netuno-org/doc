@@ -4,6 +4,9 @@ id: app-create
 title: Create Application
 ---
 
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
 Creating a new full-stack application on the platform.
 
 An overview of the frontend, database, and API service.
@@ -410,37 +413,151 @@ To conclude, here's the code for the service that will be responsible for genera
 
 Note the previous code snippet for the `Generate PDF` button; we only need to add the service's URL to the button's _`href`_ attribute.
 
-Let's create the `📂 customer` folder and the following file, `pdf-export.js`, in:
+Let's create the `📂 client` folder and the following `pdf-export` code file, use the respective extension of your
+preferred backend language, such as:
 
-- `server/services/customer/pdf-export.js`
+<PolyglotPath files={[
+    'server/services/client/pdf-export'
+]} />
 
 > Inside the `📂 server` folder is where we develop the backend API.
 
-Copy and paste the following code:
+Use the following code to generate the PDF file:
 
-```javascript title="server/services/customer/pdf-export.js"
-_header.contentType('pdf')
+<PolyglotCode
+    file="server/services/client/pdf-export"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
 
-const pdfDocument = _pdf.newDocument(_pdf.pageSize('A5'));
+                const pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
 
-pdfDocument.add(
-    _pdf.paragraph('Customers List:')
-        .setFontSize(16)
-        .setFontColor(_pdf.color("#1abc9c"))
-)
+                pdfDocument.add(
+                    _pdf.paragraph("Customers List:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
 
-const dbCustomers = _db.form('customer').all()
+                const dbCustomers = _db.form("customer").all()
 
-for (const dbCustomer of dbCustomers) {
-    pdfDocument.add(
-        _pdf.paragraph(dbCustomer.getString('nome'))
-            .setFontSize(12)
-            .setFontColor(_pdf.color("#748dae"))
-    )
-}
+                for (const dbCustomer of dbCustomers) {
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("nome"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
 
-pdfDocument.close()
-```
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Customers List:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbCustomers = _db.form("customer").all()
+
+                for dbCustomer in dbCustomers:
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("nome"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Customers List:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbCustomers = _db.form("customer").all()
+
+                dbCustomers.each do |dbCustomer|
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("nome"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                end
+
+                pdfDocument.close()
+`
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _header.contentType("pdf")
+
+                val pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Customers List:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                val dbCustomers = _db.form("customer").all()
+
+                dbCustomers.forEach {
+                    pdfDocument.add(
+                        _pdf.paragraph(it.getString("nome"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _header.contentType("pdf")
+
+                def pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Customers List:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                def dbCustomers = _db.form("customer").all()
+
+                for (dbCustomer in dbCustomers) {
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("nome"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+    ]}
+/>
 
 You can check the service is running by opening the following address in your browser:
 
