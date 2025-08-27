@@ -1,33 +1,54 @@
 ---
 id: jwt
-title: JWT - JSON Web Token
-sidebar_label: JWT - JSON Web Token
+title: Autenticação JWT (JSON Web Token)
+sidebar_label: Autenticação JWT
 ---
+
+Configuração e utilização da autenticação com token.
 
 ## Introdução
 
-O JWT (Json Web Token) é um padrão para garantir a segurança e contexto da autenticação em aplicações web, onde o frontend se encontra desacoplado do backend.
+O JWT (JSON Web Token) é um padrão para garantir a segurança e contexto da autenticação em aplicações web, onde o 
+frontend se encontra desacoplado do backend.
 
-É comum ser utilizado quando o frontend de uma aplicação web é desenvolvida em ReactJS, AngularJS, VueJS, etc... e o backend proporciona uma API REST para fornecer os dados dinâmicos da aplicação.
+É comum ser utilizado quando o frontend de uma aplicação web é desenvolvida em ReactJS, AngularJS, VueJS, etc. e o 
+backend proporciona uma API REST para fornecer e receber dados dinâmicos da aplicação.
 
-A API REST do backend permite aos serviços privados obterem o contexto de autenticação associado ao utilizador autenticado através do JWT Token.
+> O token (JWT) é um código seguro que identifica o usuário.
+
+Com o JWT (JSON Web Token) a API REST do backend permite aos serviços privados obterem o contexto de autenticação, 
+para saber quem é o usuário autenticado, ou seja, a partir do token podemos saber qual é o usuário, sendo que o 
+token no caso é JWT (JSON Web Token).
 
 ![jwt-flow](/docs/assets/academy/server/services/jwt/flow-pt.png)
 
-Normalmente a API REST fica num subdomínio diferente do website, o que implica configurações de [CORS (Cross-Origin Resource Sharing)](/docs/academy/server/services/cors).
+## CORS
 
-Isto acontece devido aos browsers bloquearem a utilização de serviços e outros tipos de recursos em endereços externos, com o objetivo de evitar ataques de obtenção de dados confidenciais.
+A API REST pode ficar num subdomínio diferente do website, o que implica configurações de 
+[CORS (Cross-Origin Resource Sharing)](/docs/academy/server/services/cors) para os serviços poderem ser acedidos.
+
+Portanto, caso a API REST esteja em um domínio/subdomínio diferente do frontend, mesmo utilizando JWT, é necessário
+que o CORS esteja corretamente configurado.
+
+> CORS é uma política de segurança de consumo de recursos em domínios, subdomínios ou portas, diferentes.
+> Para garantir que um endereço pode realmente integrar com outro endereço.
+
+Isto acontece devido aos navegadores bloquearem a utilização de serviços, ou outros tipos de recursos, em endereços 
+externos, visando evitar ataques de obtenção de dados confidenciais.
 
 ## Ativação e Configuração
 
-Para ativar e configurar o JWT Token na sua aplicação no Netuno é necessário editar o ficheiro de configuração da aplicação referente ao ambiente que está a utilizar, como:
+Para ativar e configurar o JWT na sua aplicação no Netuno, é necessário editar o arquivo de configuração da 
+aplicação referente ao ambiente que está a utilizar, como:
 
-- `📂 config/_development.json`
-- `📂 config/_production.json`
+- `config/_development.json`
+- `config/_production.json`
+
+> Depende do ambiente configurado no Netuno, no arquivo `netuno/config.js` ver a parametrização do `config.env`.
 
 Insira e ajuste os seguintes parâmetros:
 
-```
+```json
     ...
     "auth": {
         "jwt": {
@@ -42,15 +63,17 @@ Insira e ajuste os seguintes parâmetros:
     ...
 ```
 
-No parâmetro `secret` coloque uma sequência de caracteres complexa e aleatória, visto ser a chave que vai garantir a segurança da encriptação do JWT Token.
+No parâmetro `secret` coloque uma sequência de caracteres complexa e aleatória, é a chave que vai garantir a 
+segurança da encriptação do JWT.
 
-Os parâmetros de `expires` são definidos em minutos, por exemplo: `60` equivale a 1 hora e `1440` a um dia.
+Os parâmetros de `expires` são definidos em minutos, por exemplo: `60` que equivale a 1 hora e `1440` a um dia.
 
 ### Acesso Restrito à Grupos
 
-Adicionalmente pode ser passado o parâmetro `groups`, que define o código dos Grupos de utilizadores que podem autenticar com JWT, por exemplo:
+Adicionalmente pode ser passado o parâmetro `groups`, que define o código de Grupos dos usuários que podem 
+autenticar com JWT, por exemplo:
 
-```
+```json
     ...
     "auth": {
         "jwt": {
@@ -62,25 +85,37 @@ Adicionalmente pode ser passado o parâmetro `groups`, que define o código dos 
     ...
 ```
 
-No exemplo acima, apenas os utilizadores que pertendem ao grupo dos Clientes, sendo o código do grupo `cliente`, ou dos Fornecedores, sendo o código do grupo `fornecedor`, apenas estes podem autenticar com JWT. 
+No exemplo acima, apenas os usuários que pertencem aos grupos dos:
+
+- Clientes, sendo o código do grupo `cliente`.
+- Fornecedores, sendo o código do grupo `fornecedor`
+
+Apenas os usuários nestes grupos podem autenticar com JWT. 
 
 ## Como Obter o Access Token
 
-Para obter o Access Token o Netuno fornece o serviço `_auth` que valida a autenticação e, se a mesma for bem sucedida, devolve o Access Token e o Refresh Token.
+Para obter o _Access Token_ do JWT o Netuno fornece o serviço `_auth` que valida a autenticação e, se a mesma for 
+bem sucedida, devolve o _Access Token_ e o _Refresh Token_.
 
-O Access Token é obtido da seguinte forma:
+O _Access Token_ é obtido da seguinte forma:
 
-<script dangerouslySetInnerHTML={{ __html: `alert('a');window.addEventListener("message", function(e) {debugger;var i = e.data.split(":")[1];var h = e.data.split(":")[2];if (e.data.split(":")[0] == "swimlanes-io" && i && h) {document.getElementById("__sw-io-" + i).setAttribute("style","height:" + h + "px");}}, false);`}}></script>
-<div id="__sw-io-lVPwE">
-    <iframe style={{border:'none', width:'100%', height:'100%'}} scrolling="no" src="https://cdn.swimlanes.io/dist/embeded.html#lVPLbtNAFN3PV1xlXacVIBaRAAURaLOAgNxNN/Zg3zoD9lxnHm5axAfwF3SFWPAV/rHeGcdNKIsKLyzPfc055x5rcjgDsdhi4Z0EAoumU/0vgpLgPTqvaSZEfhzDBdrjTHq3fvXlyr1wxmMuxEJ3SmquJgulLMMboaZKafBO1eqGYwYQWmntFZlyJvI8F98E8DPxPFfLBiczmJTYTY6G8Fg7hsX32PTWkHaoS1hsHfcRJC93GGHetkxD6Ein/wEGHfHkAAuylL6izhgDf3/CS4N2DUPsLzCyYII2cyETbsbr5frzu0J9UMuz85vz6XQ64uMJvnZcEzS4j8XB+/Z08+TizdkzXX10F+nyoDtWZO66jbRfozRoxhxuW8VjMhVGPH1+Ep4de7GnCgkzf6jGPX8xr8hI6H9DS9b2fzqsAYcFG9h4WW88moNFo0XdUd0pVqv/CQ2WqpRHUFBDPMGE3qatH/igQZ8MB0paQ5WRDaudyGRoZ7grXuJgDMjmUdqd6MAkTlGWDIKzp2m6YuMwnsorJgSXZBoZLmPOczYbGfaQU6RnMGgF/y7mv+yxkiY43aF/TATOc2FEHWBB19/WoYDb+ttRUz5HqWLtoeWtUx2zRuBfBrVTRSjFXfOhQcm71jteTSCvYC/n9PGl3wE=#lVPwE"></iframe>
+<script dangerouslySetInnerHTML={{ __html: `window.addEventListener("message", function(e) {var i = e.data.split(":")[1];var h = e.data.split(":")[2];if (e.data.split(":")[0] == "swimlanes-io" && i && h) {document.getElementById("__sw-io-" + i).setAttribute("style","height:" + h + "px");}}, false);`}}></script>
+<div id="__sw-io-hVPQ">
+    <iframe style={{border:'none', width:'100%', height:'100%'}} scrolling="no" src="https://cdn.swimlanes.io/dist/embeded.html#hVPLjtNAELzPV7RyjrMIEAeLhwLLos0BhMgKaS9x42nwBHvGmUf2gfYD+IwVhxUHvsI/Ro8fiUkOzMGyZ7rKVdU9Z9Zon5CWkLyE9+SDNjCv6xTmwZP2KsfmofllYPF5CdL0FUIbTym8KbBCMODIblXzYEAS4L+wHSQVIjtpC3NyJysuK16tr/wLbwNlQrzVW8VUDiTK+CQILjT3Vhkg5tcFRoIsWzujxQ8BvCaB6TRWNElhImk7mXbbNTp3ZawctsVdBApxtnP6PEnGVns3zU+w5A1TytbuFHJTRUnefCfdakLW7qIifrf01ZIrjmVhHqtWLSpqoJtF8eVdrj6oxfnF7cVsNhuUMj6UnmtiCLu9lnYPX24eX56eP9XfPvrL5WKEbitW/qZuA3hNaMkOZ3RdK6ZZqUjx5NmjuI5zOOx45w7Z8qe+o7EffFgO/RwaH4OBzmgXDzS/oTbONX+2VAJdUx48WtgELDeB7GhEEHDP1/+/jdowgY3Qqi4PxqWikHQfhg2ckuP8mRZiq+lQCduJ02WsukWvjIaCUJKdHtJnWeF9Lebj2hS6HOG4af8boiEa5AhNL8XRGmHb3JdKske+F9Hy6L5waH1UPHLttO3HfneRpJn9BQ==#hVPQ"></iframe>
 </div>
 
-Exemplo de como obter o Access Token através do [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API):
+## Fetch - JavaScript Puro
 
-```
-let token = null;
+O JavaScript nos navegadores fornece o `fetch` para integrar com os serviços da API REST do backend.
 
-yield fetch("http://localhost:9000/services/_auth", {
+Segue alguns exemplos de como realizar a autenticação com o JWT e a renovação do token.
+
+### Autenticação
+
+Exemplo de como obter o _Access Token_ com o [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API):
+
+```javascript
+fetch("http://localhost:9000/services/_auth", {
     method: 'post',
     headers: {
         'Content-Type': 'application/json',
@@ -92,49 +127,46 @@ yield fetch("http://localhost:9000/services/_auth", {
         jwt: true
     })
 }).then((response) => {
-	if (response.status != 403) {
-        raiseInvalidLogin();
-        return null;
-    }
-    if (response.status != 200) {
-    	console.log(`Autenticação falhou com o status ${response.status}`);
-    	raiseRequestFailed();
+	if (response.status != 200) {
+        if (response.status != 403) {
+            console.log('Autenticação falhou com o status inesperado:', response.status);
+        }
+        alert('Login inválido.');
         return null;
     }
     return response.json();
 }).then((res) => {
-    token = res;
+    if (res && res.result === true) {
+        console.log(`Meu Acccess Token: ${res.access_token}`);
+        console.log(`Meu Refresh Token: ${res.refresh_token}`);
+        console.log(`Expira em: ${res.expires_in} minutos`);
+        sessionStorage.setItem('token', JSON.stringify(res));
+    }
 }).catch((error)=> {
-	console.log(error);
-	raiseConnectionError();
+    console.log(error);
+    alert('Houve um problema técnico, tente novamente mais tarde.');
 });
-
-if (token && token.result === true) {
-	console.log(`Meu Acccess Token: ${token.access_token}`);
-	console.log(`Meu Refresh Token: ${token.refresh_token}`);
-	console.log(`Expira em: ${token.expires_in} minutos`);
-	sessionStorage.setItem("token", JSON.stringify(token));
-}
 ```
 
-Repare que o `token` deverá ficar guardado como sessão, portanto é preferível utilizar a [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) em vez do [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) quando se tratar de informação sensível.
+Repare que o `token` deverá ficar guardado como sessão, portanto é preferível utilizar a [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) 
+em vez do [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) para maior segurança.
 
-Com o `refresh_token` é possível gerar um novo `token` antes do tempo e expiração (`expires_in` em minutos).
+Com o `refresh_token` é possível gerar um novo `token` antes do tempo de expiração (`expires_in` em minutos).
 
-## Como Utilizar o Access Token
+### Utilizar o _Access Token_ em outros Serviços
 
-Para executar serviços programados à medida que exijam autenticação prévia em aplicações Netuno, deve passar o Access Token no Header do protocolo HTTP:
+Para executar serviços programados à medida que exijam autenticação prévia em aplicações Netuno, deve passar o 
+_Access Token_ no Header do protocolo HTTP, como valor da chave _Authorization_, por exemplo:
 
 `Authorization: Bearer eyJhbGciOiJIUzU...`
 
-Exemplo de como executar um serviço programado à medida através do frontend utilizando o [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API):
+Exemplo de como executar um serviço programado à medida através do frontend utilizando o [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API), onde o 
+`Authorization` é passado nos `headers`:
 
-```
+```javascript
 const token = JSON.parse(sessionStorage.getItem("token"));
 
-let data = null;
-
-yield fetch("http://localhost:9000/services/meu-servico-programado-a-medida", {
+fetch("http://localhost:9000/services/meu-servico", {
     method: 'post',
     credentials: 'include',
     headers: {
@@ -148,36 +180,43 @@ yield fetch("http://localhost:9000/services/meu-servico-programado-a-medida", {
 }).then((response) => {
     if (response.status != 200) {
     	console.log(`Serviço falhou com o status ${response.status}.`);
-    	raiseRequestFailed();
+        if (response.status == 403) {
+            alert('Não autenticado.');
+        } else {
+            alert('Houve uma falha com o serviço.');
+        }
         return null;
     }
     return response.json();
 }).then((res) => {
-    data = res;
+    if (res) {
+        console.log(`Dados de resposta do meu serviço:`, res);
+        alert('Serviço executado com sucesso.');
+    }
 }).catch((error)=> {
-	console.log(error);
-	raiseConnectionError();
+    console.log(error);
+    alert('Houve um problema técnico, tente novamente mais tarde.');
 });
-
-if (data === true) {
-	console.log(`Dados de resposta do meu serviço:`, data);
-}
 ```
 
-Repare que, nos Headers do HTTP, no parâmetro `Authorization` é utilizado o `token_type` e o `access_token` obtidos do objeto JWT Token guardado na [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage).
+Repare que, nos Headers do HTTP, no parâmetro `Authorization` é utilizado o `token_type` e o `access_token` 
+obtidos do objeto JWT guardado previamente na autenticação no 
+[sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage).
 
-## Atualização (Refresh Token)
+### Atualizar com o _Refresh Token_
 
-Para atualizar o token deve chamar novamente o serviço `_auth`, mas além do parâmetro do `jwt: true` é necessário passar também o parâmetro do `refresh_token` com o valor recebido na autenticação bem sucedida anterior.
+Para atualizar o token, e prolongar a autenticação, deve chamar novamente o serviço `_auth`, mas além do parâmetro
+do `jwt: true` é necessário passar também o parâmetro do `refresh_token` com o valor recebido na autenticação bem 
+sucedida anteriormente.
 
 A atualização do token deve ser feita antes do tempo de expiração (`expires_in` em minutos).
 
-Por exemplo:
+Então para prolongar a autenticação e renovar o token, veja o exemplo:
 
-```
-let token = null;
+```javascript
+const token = JSON.parse(sessionStorage.getItem("token"));
 
-yield fetch("http://localhost:9000/services/_auth", {
+fetch("http://localhost:9000/services/_auth", {
     method: 'post',
     headers: {
         'Content-Type': 'application/json',
@@ -188,32 +227,31 @@ yield fetch("http://localhost:9000/services/_auth", {
         jwt: true
     })
 }).then((response) => {
-	if (response.status != 403) {
-        raiseInvalidLogin();
-        return null;
-    }
     if (response.status != 200) {
-    	console.log(`Autenticação falhou com o status ${response.status}`);
-    	raiseRequestFailed();
+        if (response.status != 403) {
+            console.log('A renovação do token falhou com o status inesperado:', response.status);
+        }
+        alert('Renovação do acesso com token inválido.');
         return null;
     }
     return response.json();
 }).then((res) => {
-    token = res;
+    if (res && res.result === true) {
+        console.log(`Meu Novo Acccess Token: ${res.access_token}`);
+        console.log(`Meu Novo Refresh Token: ${res.refresh_token}`);
+        console.log(`Expira em: ${res.expires_in} minutos`);
+        sessionStorage.setItem("token", JSON.stringify(res));
+    }
 }).catch((error)=> {
-	console.log(error);
-	raiseConnectionError();
+    console.log(error);
+    alert('Houve um problema técnico, tente novamente mais tarde.');
 });
-
-if (token && token.result === true) {
-	console.log(`Meu Novo Acccess Token: ${token.access_token}`);
-	console.log(`Meu Novo Refresh Token: ${token.refresh_token}`);
-    console.log(`Expira em: ${token.expires_in} minutos`);
-	sessionStorage.setItem("token", JSON.stringify(token));
-}
 ```
 
-Ao obter o novo token deve passar a utiliza-lo, ao invés do anterior (antigo) nas próximas chamadas de serviços.
+Ao obter o novo token deve passar a utiliza-lo, ao invés do anterior (antigo) nas próximas chamadas aos serviços.
+
+Desta forma a autenticação é prolongada com sucessivas renovações do token, é uma forma de garantir que o usuário
+continua autenticado.
 
 ## Auth Client - NPM
 
@@ -221,54 +259,185 @@ Para facilmente realizar a integração com o frontend é disponibilizado o mód
 
 - [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client)
 
-Comando de instalação: `npm i -S @netuno/auth-client`
+No frontend pode realizar a instalação com o [PNPM](https://pnpm.io/installation): 
 
-Este módulo depende do [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client), ao definir o endereço dos serviços, como:
+- `pnpm install @netuno/auth-client`
 
-```
+> Pode ser utilizado outro gestor de dependências de frontend como NPM, YARN, ou outro.
+
+### Configuração
+
+Este módulo depende do [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client), ao definir o 
+endereço dos serviços, por exemplo:
+
+```javascript
+import _service from '@netuno/service-client';
+...
 _service.config({
     prefix: 'http://localhost:9000/services/'
 });
 ```
 
-Com isto poderá efetuar o login:
+O `auth-client` utiliza o prefixo do `service-client` para construir internamente o endereço do serviço `_auth`, 
+neste caso, seguindo o exemplo será:
 
-```
-    _auth.login({
-        username: "admin",
-        password: "secret",
-        success: ()=> {
-            alert("Success.");
-        },
-        fail: ()=> {
-            alert("Fail.");
-        }
-    });
-```
+- `http://localhost:9000/services/_auth`
 
-E para atualizar o token:
+Então este endereço é construído automaticamente utilizando o prefixo de endereço dos serviços da API REST 
+da aplicação Netuno.
 
-```
-    _auth.refreshToken({
-        success: ()=> {
-            alert("Success.");
-        },
-        fail: ()=> {
-            alert("Fail.");
-        }
-    });
+Veja como customizar as configurações do `auth-client`:
+
+```javascript
+_auth.config({
+    storage: 'local', // session é o valor padrão.
+    onLogin: () => { alert("Logged in!"); },
+    onLogout: () => { alert("Logged out!"); }
+});
 ```
 
-Por fim, para terminar a sessão:
+Caso queira que o token seja salvo no `localStorage` então é necessário definir na configuração o 
+`storage: 'local'`, porque por padrão é `storage: 'session'` utilizando o `sessionStorage`.
 
+### Autenticação
+
+Para efetuar o login utilizando o `_auth`:
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
+_auth.login({
+    username: "admin",
+    password: "secret",
+    success: ()=> {
+        alert("Success.");
+    },
+    fail: ()=> {
+        alert("Fail.");
+    }
+});
 ```
+
+O token é salvo automaticamente, no `session` (`sessionStorage`) ou `local` (`localStorage`), dependendo da 
+configuração, por padrão é `session`.
+
+### Atualizar o Token
+
+Exemplo de como atualizar o token:
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
+_auth.refreshToken({
+    success: ()=> {
+        alert("Success.");
+    },
+    fail: ()=> {
+        alert("Fail.");
+    }
+});
+```
+
+O token é salvo automaticamente, no `session` (`sessionStorage`) ou `local` (`localStorage`), dependendo da
+configuração, por padrão é `session`.
+
+### Remover o Token
+
+Exemplo de como terminar a sessão, ou seja, o processo de sair e eliminar o token:
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
 _auth.logout();
 ```
 
+O token é removido do `sessionStorage` ou do `localStorage` dependendo da configuração, o padrão é o 
+`sessionStorage`.
+
+## Backend - Serviços da API REST
+
+Se o header `Authorization` é passado na integração com os serviços com um token válido, então é possível 
+identificar qual é o usuário e o grupo.
+
+No backend podemos utilizar o recurso `_user` e o `_group`, que identifica qual é o usuário e o grupo 
+respectivamente.
+
+Para ver os dados do usuário autenticado utilizamos o recurso [User](/docs/library/resources/user), por exemplo:
+
+```javascript
+_log.info(
+    "Usuário autenticado:",
+    _val.map()
+        .set("id", _user.id())
+        .set("nome", _user.name())
+        .set("codigo", _user.code())
+        .set("tudo", _user.data())
+)
+```
+
+Para ver o grupo do usuário autenticado utilizamos o recurso [Group](/docs/library/resources/group), por exemplo:
+
+```javascript
+_log.info(
+    "Grupo autenticado:",
+    _val.map()
+        .set("id", _group.id())
+        .set("nome", _group.name())
+        .set("codigo", _group.code())
+        .set("tudo", _group.data())
+)
+```
+
+### Segurança
+
+Caso o token seja inválido, ou se não for passado o `Authorization`, então o Netuno garante que o serviço não
+é executado, exceto se o serviço estiver configurado como acesso público, por padrão os serviços são privados.
+
+> Para gerir se o serviço é público ou privado configure na sua aplicação em: `server/core/_service_config.js`
+
+Sendo que em desenvolvimento o Netuno permite executar os serviços privados diretamente sem autenticação, por
+questões de praticidade, porque a maioria dos serviços programados normalmente não precisam do contexto de
+autenticação, então torna-se mais simples no geral o desenvolvimento e os testes.
+
+Não sendo em desenvolvimento por, exemplo em produção, então os serviços apenas podem ser executados com
+autenticação, como é óbvio.
+
+### Recurso de Autenticação
+
+Normalmente o recurso `_user` e `_group` são suficientes, mas há situações que queremos realizar operações mais 
+avançadas e neste caso temos o recurso `_auth`.
+
+O recurso `_auth`, é o recurso principal de autenticação, gere as configurações e tem todas as operações 
+relacionadas com o processo de autenticação.
+
+> Para saber mais, veja a documentação do recurso [Auth](/docs/library/resources/auth).
+
+## ReAuthKit
+
+O Netuno fornece um projeto base para criar plataformas com autenticação online, que tem a criação de conta, 
+login, perfil, avatar, recuperação da senha, e muito mais.
+
+Confere aí no GitHub:
+
+- [ReAuthKit](https://github.com/netuno-org/reauthkit)
+
+> O ReAuthKit é uma aplicação Netuno com o frontend feito em React, Ant.Design e React Router, e a base de dados 
+> em PostgreSQL.
+
+Com o ReAuthKit acelera muito a criação de novos projetos com autenticação, porque já tem todos os mecanismos
+ necessários para qualquer projeto que necessite de autenticação.
+
 ## Conclusão
 
-De forma simples, é possível configurar e ativar a autenticação com JWT (Json Web Token) nas aplicações.
+De forma simples, é possível configurar e ativar a autenticação com JWT (JSON Web Token) nas aplicações.
 
-A integração do JWT no frontend pode ser feito ao mais baixo nível utilizando diretamente o `fetch`.
+> Utilize a autenticação com JWT para desenvolver serviços seguros na API REST.
 
-Para agilizar e padronizar a implementação é disponibilizado o módulo NPM [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client).
+A integração do JWT no frontend pode ser utilizando diretamente com o `fetch`.
+
+Para agilizar e padronizar a implementação é disponibilizado o módulo NPM [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client), que pode ser
+utilizado com qualquer tecnologia de frontend.
+
+Sempre que for preciso identificar o usuário na execução de serviços da API REST utilize a autenticação com JWT.
+
+No backend é muito simples a configuração e a obtenção do usuário autenticado. 
