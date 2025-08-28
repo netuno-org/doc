@@ -4,6 +4,8 @@ title: Autenticação JWT (JSON Web Token)
 sidebar_label: Autenticação JWT
 ---
 
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
 Configuração e utilização da autenticação com token.
 
 ## Introdução
@@ -364,29 +366,43 @@ respectivamente.
 
 Para ver os dados do usuário autenticado utilizamos o recurso [User](/docs/library/resources/user), por exemplo:
 
-```javascript
-_log.info(
-    "Usuário autenticado:",
-    _val.map()
-        .set("id", _user.id())
-        .set("nome", _user.name())
-        .set("codigo", _user.code())
-        .set("tudo", _user.data())
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(
+                    "Usuário autenticado:",
+                    _val.map()
+                        .set("id", _user.id())
+                        .set("nome", _user.name())
+                        .set("codigo", _user.code())
+                        .set("tudo", _user.data())
+                )
+            `
+        },
+    ]}
+/>
 
 Para ver o grupo do usuário autenticado utilizamos o recurso [Group](/docs/library/resources/group), por exemplo:
 
-```javascript
-_log.info(
-    "Grupo autenticado:",
-    _val.map()
-        .set("id", _group.id())
-        .set("nome", _group.name())
-        .set("codigo", _group.code())
-        .set("tudo", _group.data())
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(
+                    "Grupo autenticado:",
+                    _val.map()
+                        .set("id", _group.id())
+                        .set("nome", _group.name())
+                        .set("codigo", _group.code())
+                        .set("tudo", _group.data())
+                )
+            `
+        },
+    ]}
+/>
 
 ### Segurança
 
