@@ -4,6 +4,8 @@ title: JWT Authentication (JSON Web Token)
 sidebar_label: JWT Authentication
 ---
 
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
 Setting up and using token authentication.
 
 ## Introduction
@@ -369,29 +371,43 @@ respectively.
 
 To view the authenticated user's data, we use the [User](/docs/library/resources/user) resource, for example:
 
-```javascript
-_log.info(
-    "Authenticated user:",
-    _val.map()
-        .set("id", _user.id())
-        .set("name", _user.name())
-        .set("code", _user.code())
-        .set("all", _user.data())
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(
+                    "Authenticated user:",
+                    _val.map()
+                        .set("id", _user.id())
+                        .set("name", _user.name())
+                        .set("code", _user.code())
+                        .set("all", _user.data())
+                )
+            `
+        },
+    ]}
+/>
 
 To see the authenticated user's group, we use the [Group](/docs/library/resources/group) resource, for example:
 
-```javascript
-_log.info(
-    "Authenticated group:",
-    _val.map()
-        .set("id", _group.id())
-        .set("name", _group.name())
-        .set("code", _group.code())
-        .set("all", _group.data())
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(
+                    "Authenticated group:",
+                    _val.map()
+                        .set("id", _group.id())
+                        .set("name", _group.name())
+                        .set("code", _group.code())
+                        .set("all", _group.data())
+                )
+            `
+        },
+    ]}
+/>
 
 ### Security
 
