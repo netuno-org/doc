@@ -4,6 +4,9 @@ title: PDF
 sidebar_label: PDF
 ---
 
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
 ## Introduction
 
 Netuno generates PDF files with support for images, tables, fonts, and more.
@@ -12,28 +15,9 @@ Through the [PDF](/docs/library/resources/pdf) resource that allows a low-code a
 
 The application that comes with Netuno called **demo** (demonstration application) contains many examples of possible code implementations in various languages, including a demonstration of exporting to PDF through the `export-pdf` service located at:
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Groovy-->
-```plaintext
-/apps/demo/server/services/samples/groovy/export-pdf.groovy
-```
-<!--JavaScript-->
-```plaintext
-/apps/demo/server/services/samples/javascript/export-pdf.js
-```
-<!--Kotlin-->
-```plaintext
-/apps/demo/server/services/samples/kotlin/export-pdf.kts
-```
-<!--Python-->
-```plaintext
-/apps/demo/server/services/samples/python/export-pdf.py
-```
-<!--Ruby-->
-```plaintext
-/apps/demo/server/services/samples/ruby/export-pdf.rb
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-pdf`
+]} />
 
 ## Initialization
 
@@ -43,27 +27,152 @@ When creating the document, you define where it will be generated.
 
 If nothing is defined, it will be generated in the service's data output, for example:
 
-```javascript
-const pdfDocument = _pdf.newDocument()
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument()
+            `
+        },
+    ]}
+/>
 
 To generate a PDF file inside the application's `docs` folder, you can do it like this:
 
-```javascript
-const pdfDocument = _pdf.newDocument(_app.file('docs/file.pdf').output())
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_app.file("docs/file.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("docs/file.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("docs/file.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_app.file("docs/file.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_app.file("docs/file.pdf").output())
+            `
+        },
+    ]}
+/>
+
 
 If you are going to generate the document in a new file outside of the Application, for example:
 
-```javascript
-const pdfDocument = _pdf.newDocument(_os.file('/tmp/file.pdf').output())
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_os.file("/tmp/file.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_os.file("/tmp/file.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_os.file("/tmp/file.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_os.file("/tmp/file.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_os.file("/tmp/file.pdf").output())
+            `
+        },
+    ]}
+/>
 
 Or even in the application `storage`:
 
-```javascript
-const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf').output())
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output())
+            `
+        },
+    ]}
+/>
 
 > By default, the document is created in **A4** page format.
 
@@ -73,29 +182,129 @@ To customize the page format, simply indicate it when creating the document.
 
 Creates a new document to output data from the service with pages in **letter** format:
 
-```javascript
-const pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+    ]}
+/>
 
 Creates a new document for a file in the application root with the **B3** page format:
 
-```javascript
-const pdfDocument = _pdf.newDocument(_app.file('file.pdf').output(), _pdf.pageSize("B3"))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_app.file("file.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("file.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("file.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_app.file("file.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_app.file("file.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+    ]}
+/>
 
 Creates a new document in the application's `storage` with the **legal** page format:
 
-```javascript
-const pdfDocument = _pdf.newDocument(_storage.filesystem('server', 'file.pdf').output(), _pdf.pageSize("legal"))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+    ]}
+/>
 
 > See the documentation on [setting page sizes](/docs/library/resources/pdf/#pagesize).
 
 PDF documents can be created with a custom page size definition. To do this, use `pageSize` by passing the value of the page width and height, for example:
 
-```javascript
-_pdf.pageSize(50, 30)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.pageSize(50, 30)
+            `
+        },
+    ]}
+/>
 
 ## HTTP Header
 
@@ -103,46 +312,83 @@ To create a service in the REST API that returns a PDF file as data output, you 
 
 Example of how to set content as PDF:
 
-```javascript
-_header.contentType("pdf")
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+            `
+        },
+    ]}
+/>
 
 The `pdf` code is an abbreviation for:
 
-```javascript
-_header.contentType("application/pdf")
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("application/pdf")
+            `
+        },
+    ]}
+/>
 
 ## Page Break
 
 To create a new page, `areaBreak` is used:
 
-```javascript
-pdfDocument.add(
-    _pdf.areaBreak()
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.areaBreak()
+                )
+            `
+        },
+    ]}
+/>
 
 ## Paragraph
 
 Add a new paragraph in the document:
 
-```javascript
-pdfDocument.add(
-    _pdf.paragraph("My text here...")
-        .setFontSize(15)
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.paragraph("My text here...")
+                        .setFontSize(15)
+                )
+            `
+        },
+    ]}
+/>
 
 To add a paragraph at a fixed position:
 
-```javascript
-pdfDocument.add(
-    _pdf.paragraph("Helvetica Oblique!")
-        .setFixedPosition(100, 500, 200)
-        .setFontSize(15)
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    pdfDocument.add(
+                        _pdf.paragraph("My fixed text...")
+                            .setFixedPosition(100, 500, 200)
+                            .setFontSize(15)
+                    )
+                )
+            `
+        },
+    ]}
+/>
 
 In the code above, in the `setFixedPosition` method, the first parameter is the X position (`100`), the second parameter is the Y position (`500`), and the third parameter is the width (`200`).
 
@@ -154,77 +400,298 @@ In the code above, in the `setFixedPosition` method, the first parameter is the 
 
 To define a native font we can do it as follows:
 
-```javascript
-const helvetica = _pdf.font("helvetica")
-const helveticaBold = _pdf.font("helvetica-bold")
-const helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
-const helveticaOblique = _pdf.font("helvetica-oblique")
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const helvetica = _pdf.font("helvetica")
+                const helveticaBold = _pdf.font("helvetica-bold")
+                const helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                const helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                helvetica = _pdf.font("helvetica")
+                helveticaBold = _pdf.font("helvetica-bold")
+                helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                helvetica = _pdf.font("helvetica")
+                helveticaBold = _pdf.font("helvetica-bold")
+                helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val helvetica = _pdf.font("helvetica")
+                val helveticaBold = _pdf.font("helvetica-bold")
+                val helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                val helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def helvetica = _pdf.font("helvetica")
+                def helveticaBold = _pdf.font("helvetica-bold")
+                def helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                def helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+    ]}
+/>
 
 To define a customized font, we can use `storage`:
 
-```javascript
-const viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
-```
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+    ]}
+/>
 
 We can also use a file inside the application, as this example shows that the font is inside the `fonts` folder in the application root:
 
-```javascript
-const roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+    ]}
+/>
+
 
 Or use a file in any path on the system, so in this example the font is inside the `fonts` folder which is inside the system's temporary files folder:
 
-```javascript
-const roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+    ]}
+/>
 
 > Documentation with all [iText Font](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/kernel/font/PdfFont.html) object methods.
 
 To use the font in texts, the font constant must be passed to the paragraph, like this:
 
-```javascript
-pdfDocument.add(
-    _pdf.paragraph("Using bold font.")
-        .setFont(helveticaBold)
-        .setFontSize(15)
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.paragraph("Using bold font.")
+                        .setFont(helveticaBold)
+                        .setFontSize(15)
+                )
+            `
+        },
+    ]}
+/>
 
 ## Image
 
 Inserting images into the programmatically generated PDF document is done in this way:
 
-```javascript
-pdfDocument.add(
-    _pdf.image(_storage.filesystem("server", "samples/export-pdf", "logo.png"))
-        .scaleAbsolute(120, 36)
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.image(_storage.filesystem("server", "samples/export-pdf", "logo.png"))
+                        .scaleAbsolute(120, 36)
+                )
+            `
+        },
+    ]}
+/>
 
 Note that the `scaleAbsolute` method is very useful for resizing and adjusting the image size.
 
 Alternatively, we can use a file within the application, as in this example:
 
-```javascript
-const imageLogo = _pdf.image(_app.file("public/images/logo.png")
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+    ]}
+/>
 
 Or use a file in any path on the system, as in this example:
 
-```javascript
-const imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+    ]}
+/>
 
 To add an image in a fixed position:
 
-```javascript
-pdfDocument.add(
-    imageLogo
-        .scaleAbsolute(120, 36)
-        .setFixedPosition(100, 500)
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    imageLogo
+                        .scaleAbsolute(120, 36)
+                        .setFixedPosition(100, 500)
+                )
+            `
+        },
+    ]}
+/>
 
 Since above, in the `setFixedPosition` method, the first parameter is the X position (`100`), the second parameter is the Y position (`500`).
 
@@ -244,30 +711,37 @@ As we have added two cells in the table, so the second cell goes to the next row
 
 Repair:
 
-```javascript
-pdfDocument.add(
-  _pdf.table(1) // Number of columns, in this case just 1.
-    .addCell(
-      _pdf.cell()
-        .add(
-          _pdf.paragraph("Person")
-            .setFont(helvetica)
-            .setFontSize(10)
-        )
-        .setBorder(_pdf.border("solid", 2))
-        .setBackgroundColor(_pdf.colorRGB(1, 0, 0))
-    )
-    .addCell(
-      _pdf.cell()
-        .add(
-          _pdf.paragraph("Nicole")
-            .setFont(helvetica)
-            .setFontSize(10)
-        )
-        .setBackgroundColor(_pdf.colorGray(0.5))
-    )
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.table(1)
+                        .addCell(
+                            _pdf.cell()
+                                .add(
+                                    _pdf.paragraph("Person")
+                                        .setFont(helvetica)
+                                        .setFontSize(10)
+                                )
+                                .setBorder(_pdf.border("solid", 2))
+                                .setBackgroundColor(_pdf.colorRGB(1, 0, 0))
+                        )
+                        .addCell(
+                            _pdf.cell()
+                                .add(
+                                    _pdf.paragraph("Nicole")
+                                        .setFont(helvetica)
+                                        .setFontSize(10)
+                                )
+                                .setBackgroundColor(_pdf.colorGray(0.5))
+                        )
+                )
+            `
+        },
+    ]}
+/>
 
 With the `addCell` method you can insert the definition of cells with their respective content.
 
@@ -277,9 +751,16 @@ With the `addCell` method you can insert the definition of cells with their resp
 
 The document is only fully saved or generated, only when the `close` method is called, as follows:
 
-```javascript
-pdfDocument.close()
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.close()
+            `
+        },
+    ]}
+/>
 
 Where the document is generated is defined at initialization, so it is at document initialization that we define where the final document will be generated, whether it will be in the service's data output (`output`) or in a file.
 
@@ -287,9 +768,40 @@ Where the document is generated is defined at initialization, so it is at docume
 
 You can edit an existing PDF document, for example:
 
-```javascript
-const pdfDocument = _pdf.openDocument(_app.file('file.pdf'))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(_app.file("file.pdf"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(_app.file("file.pdf"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(_app.file("file.pdf"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(_app.file("file.pdf"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(_app.file("file.pdf"))
+            `
+        },
+    ]}
+/>
 
 The final generated document will be sent in the service's data output.
 
@@ -297,45 +809,234 @@ The final generated document will be sent in the service's data output.
 
 Example for editing a document in the application `storage`:
 
-```javascript
-const pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
+            `
+        },
+    ]}
+/>
 
 Uses a document as a base but saves changes to a new PDF file:
 
-```javascript
-const pdfDocument = _pdf.openDocument(
-    _app.file('documento-base.pdf'),
-    _app.file('documento-final.pdf')
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(
+                    _app.file("document-base.pdf"),
+                    _app.file("document-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _app.file("document-base.pdf"),
+                    _app.file("document-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _app.file("document-base.pdf"),
+                    _app.file("document-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(
+                    _app.file("document-base.pdf"),
+                    _app.file("document-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(
+                    _app.file("document-base.pdf"),
+                    _app.file("document-final.pdf")
+                )
+            `
+        },
+    ]}
+/>
 
 Example using a document in `storage` as a base but saving it in another:
 
-```javascript
-const pdfDocument = _pdf.openDocument(
-    _storage.filesystem('server', 'contrato-base.pdf'),
-    _storage.filesystem('server', 'contrato-final.pdf')
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "agreement-base.pdf"),
+                    _storage.filesystem("server", "agreement-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "agreement-base.pdf"),
+                    _storage.filesystem("server", "agreement-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "agreement-base.pdf"),
+                    _storage.filesystem("server", "agreement-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "agreement-base.pdf"),
+                    _storage.filesystem("server", "agreement-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "agreement-base.pdf"),
+                    _storage.filesystem("server", "agreement-final.pdf")
+                )
+            `
+        },
+    ]}
+/>
 
 With the document loaded, we can add content, and when closing with the `close` method at the end, the final document is generated with the new content added programmatically.
 
 Example of a service that uses an existing PDF as a template to generate a PDF file output with dynamic content added:
 
-```javascript
-_header.contentType("pdf")
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
 
-const pdfDocument = _pdf.openDocument(_app.file('template-1.pdf'))
+                const pdfDocument = _pdf.openDocument(_app.file("template-1.pdf"))
 
-pdfDocument.add(
-    _pdf.paragraph("My dynamic content.")
-        .setFixedPosition(37, 730, 100)
-        .setFontSize(15)
-)
+                pdfDocument.add(
+                    _pdf.paragraph("My dynamic content.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
 
-pdfDocument.close()
-```
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.openDocument(_app.file("template-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("My dynamic content.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.openDocument(_app.file("template-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("My dynamic content.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _header.contentType("pdf")
+
+                val pdfDocument = _pdf.openDocument(_app.file("template-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("My dynamic content.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _header.contentType("pdf")
+
+                def pdfDocument = _pdf.openDocument(_app.file("template-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("My dynamic content.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+    ]}
+/>
+
 
 ## Read File
 
@@ -343,11 +1044,50 @@ To read a PDF document, extracting the text information.
 
 We use the `extract` method, which obtains all the data from the PDF file in a JSON object.
 
-```javascript
-const pdfData = _pdf.extract(_app.file('file-1.pdf'))
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfData = _pdf.extract(_app.file("file-1.pdf"))
 
-_out.json(pdfData)
-```
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfData = _pdf.extract(_app.file("file-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfData = _pdf.extract(_app.file("file-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfData = _pdf.extract(_app.file("file-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfData = _pdf.extract(_app.file("file-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+    ]}
+/>
 
 The returned JSON has the key `content` with all the text content of the PDF file, and has the key `metadata` with the various properties of the PDF file.
 
@@ -383,38 +1123,80 @@ It is possible to programmatically convert PDF to text or even HTML.
 
 We can extract the entire content of the PDF file in plain text using the method:
 
-```javascript
-_pdf.toText(...)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.toText(...)
+            `
+        },
+    ]}
+/>
 
 Example of how to use it to read a file in the application root:
 
-```javascript
-_out.print(_pdf.toText(_app.file('my-document.pdf')))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toText(_app.file("my-document.pdf")))
+            `
+        },
+    ]}
+/>
 
 Or using a file in the application's `storage`:
 
-```javascript
-_out.print(_pdf.toText(_storage.filesystem('server', 'my-document.pdf')))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toText(_storage.filesystem("server", "my-document.pdf")))
+            `
+        },
+    ]}
+/>
 
 ### HTML
 
 We can extract the entire content of the PDF file into HTML using the method:
 
-```javascript
-_pdf.toHTML(...)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.toHTML(...)
+            `
+        },
+    ]}
+/>
 
 Example of how to use it to read a file in the application root:
 
-```javascript
-_out.print(_pdf.toHTML(_app.file('my-document.pdf')))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toHTML(_app.file("my-document.pdf")))
+            `
+        },
+    ]}
+/>
 
 Or using a file in the application's `storage`:
 
-```javascript
-_out.print(_pdf.toHTML(_storage.filesystem('server', 'my-document.pdf')))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toHTML(_storage.filesystem("server", "my-document.pdf")))
+            `
+        },
+    ]}
+/>
