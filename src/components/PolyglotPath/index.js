@@ -23,7 +23,7 @@ function PolyglotPath({files}) {
                     const list = (
                         <ul>
                             {files.map((file) =>
-                                <li><code>{file}.{extension}</code></li>
+                                <li><code>{file.replace('%lang%', lang)}.{extension}</code></li>
                             )}
                         </ul>
                     )
