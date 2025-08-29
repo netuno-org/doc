@@ -20,7 +20,7 @@ Navigate within the application you are developing to the environment configurat
 
 Check if the URL configuration does not already exist. If it does not exist, add the URL configuration parameters at the end of the configuration file (in JSON format), for example:
 
-```
+```json
 {
     ...
     "url": {

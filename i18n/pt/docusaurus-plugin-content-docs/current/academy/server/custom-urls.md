@@ -20,7 +20,7 @@ Navegue dentro da aplicação que está a desenvolver até ao ficheiro de config
 
 Verifique se já não existe a configuração de URL, se não existir adicione no fim do ficheiro de configuração (em formato JSON) os parâmetros de configuração de URL, como por exemplo:
 
-```
+```json
 {
     ...
     "url": {
