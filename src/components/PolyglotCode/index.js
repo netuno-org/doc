@@ -6,10 +6,38 @@ function PolyglotCode({file, codes}) {
     const langs = ['javascript', 'python', 'ruby', 'kotlin', 'groovy'];
     for (const l of langs) {
         if (!codes.find(({lang}) => l === lang)) {
-            const code = {...codes[0]};
+            let code = null;
+            if (l === 'ruby') {
+                code = {...codes.find(({lang}) => 'python' === lang)};
+            } else if (l === 'python') {
+                code = {...codes.find(({lang}) => 'ruby' === lang)};
+            }
+            if (!code || Object.keys(code).length === 0) {
+                code = {...codes[0]};
+            }
             code.lang = l;
             codes.push(code);
         }
+    }
+    const langsConst = {
+        javascript: 'const ',
+        python: '',
+        ruby: '',
+        kotlin: 'val ',
+        groovy: 'def ',
+    };
+    for (const code of codes) {
+        code.code = code.code.replaceAll(/$(\s+)const\s+/gmi, "$1"+ langsConst[code.lang]);
+    }
+    const langsComment = {
+        javascript: '// ',
+        python: '# ',
+        ruby: '# ',
+        kotlin: '// ',
+        groovy: '// ',
+    };
+    for (const code of codes) {
+        code.code = code.code.replaceAll(/(\s+)\/\/\s+/g, "$1"+ langsComment[code.lang]);
     }
     return (
         <div style={{marginBottom: '40px'}}>
