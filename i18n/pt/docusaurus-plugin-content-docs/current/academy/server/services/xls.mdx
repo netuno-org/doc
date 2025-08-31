@@ -630,8 +630,8 @@ Para listar todas as planilhas existentes no documento.
             lang: 'javascript',
             code: `
                 // Lista todas as planilhas.
-                const todasAsPlanilhas = excel.getAllSheets()
-                for (const sheet of todasAsPlanilhas) {
+                const todasPlanilhas = excel.getAllSheets()
+                for (const sheet of todasPlanilhas) {
                     ...
                 }
             `
@@ -640,8 +640,8 @@ Para listar todas as planilhas existentes no documento.
             lang: 'python',
             code: `
                 # Lista todas as planilhas.
-                const todasAsPlanilhas = excel.getAllSheets()
-                for sheet in todasAsPlanilhas:
+                todasPlanilhas = excel.getAllSheets()
+                for sheet in todasPlanilhas:
                     ...
             `
         },
@@ -649,8 +649,8 @@ Para listar todas as planilhas existentes no documento.
             lang: 'ruby',
             code: `
                 # Lista todas as planilhas.
-                todasAsPlanilhas = excel.getAllSheets()
-                todasAsPlanilhas.each do |sheet|
+                todasPlanilhas = excel.getAllSheets()
+                todasPlanilhas.each do |sheet|
                     ...
                 end
             `
@@ -659,8 +659,8 @@ Para listar todas as planilhas existentes no documento.
             lang: 'kotlin',
             code: `
                 // Lista todas as planilhas.
-                todasAsPlanilhas = excel.getAllSheets()
-                todasAsPlanilhas.forEach {
+                val todasPlanilhas = excel.getAllSheets()
+                todasPlanilhas.forEach {
                     ...
                 }
             `
@@ -669,8 +669,8 @@ Para listar todas as planilhas existentes no documento.
             lang: 'groovy',
             code: `
                 // Lista todas as planilhas.
-                todasAsPlanilhas = excel.getAllSheets()
-                for (sheet in todasAsPlanilhas) {
+                def todasPlanilhas = excel.getAllSheets()
+                for (sheet in todasPlanilhas) {
                     ...
                 }
             `
