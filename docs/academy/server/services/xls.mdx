@@ -4,6 +4,9 @@ title: XLS - Excel
 sidebar_label: XLS - Excel
 ---
 
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
 ## Introduction
 
 Netuno generates EXCEL files compatible with LibreOffice, OpenOffice, Microsoft Office, Google Drive, etc.
@@ -14,36 +17,24 @@ We can either generate XLSX, XLS or ODS files.
 
 The application that comes with Netuno called **demo** (demonstration application) contains many examples of possible code implementations in various languages, including a demonstration of exporting spreadsheets through the `export-excel` service located at:
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Groovy-->
-```plaintext
-/apps/demo/server/services/samples/groovy/export-excel.groovy
-```
-<!--JavaScript-->
-```plaintext
-/apps/demo/server/services/samples/javascript/export-excel.js
-```
-<!--Kotlin-->
-```plaintext
-/apps/demo/server/services/samples/kotlin/export-excel.kts
-```
-<!--Python-->
-```plaintext
-/apps/demo/server/services/samples/python/export-excel.py
-```
-<!--Ruby-->
-```plaintext
-/apps/demo/server/services/samples/ruby/export-excel.rb
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-excel`
+]} />
 
 ## Initialization
 
 To start using the resource XLS:
 
-```javascript
-const excel = _xls.create()
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.create()
+            `
+        },
+    ]}
+/>
 
 Creates the object with the context of the new file that will be built, with an empty spreadsheet.
 
@@ -55,39 +46,81 @@ So, as shown in the example that comes with the `demo` application, the formatti
 
 To format dates:
 
-```javascript
-const styleDate = excel.cellStyleFormat("dd/mm/yy")
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleDate = excel.cellStyleFormat("dd/mm/yy")
+            `
+        },
+    ]}
+/>
 
 To format times:
 
-```javascript
-const styleTime = excel.cellStyleFormat("hh:mm:ss")
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleTime = excel.cellStyleFormat("hh:mm:ss")
+            `
+        },
+    ]}
+/>
 
 To format dates with times:
 
-```javascript
-const styleDateTime = excel.cellStyleFormat("dd/mm/yyyy hh:mm:ss")
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleDateTime = excel.cellStyleFormat("dd/mm/yyyy hh:mm:ss")
+            `
+        },
+    ]}
+/>
 
 To format **euro** money amounts:
 
-```javascript
-const styleMoneyEuro = excel.cellStyleFormat("€#,##0.00;\\-€#,##0.00")
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleMoneyEuro = excel.cellStyleFormat("€#,##0.00;\\-€#,##0.00")
+            `
+        },
+    ]}
+/>
 
 To format money values in **reais**:
 
-```javascript
-const styleMoneyReal = excel.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleMoneyReal = excel.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
+            `
+        },
+    ]}
+/>
 
 To format values as **percentage**:
 
-```javascript
-const stylePercentage = excel.cellStyleFormat("0.00%")
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stylePercentage = excel.cellStyleFormat("0.00%")
+            `
+        },
+    ]}
+/>
 
 ## Appearance
 
@@ -97,37 +130,58 @@ So, as shown in the example in the `demo` application, appearances are defined a
 
 Example of defining colors and alignment:
 
-```javascript
-const styleHeader = excel.cellStyle()
-styleHeader.setFillPattern(_xls.fillPattern("solid-foreground"))
-styleHeader.setFillBackgroundColor(_xls.color("black"))
-styleHeader.setAlignment(_xls.horizontalAlignment("center"))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleHeader = excel.cellStyle()
+                styleHeader.setFillPattern(_xls.fillPattern("solid-foreground"))
+                styleHeader.setFillBackgroundColor(_xls.color("black"))
+                styleHeader.setAlignment(_xls.horizontalAlignment("center"))
+            `
+        },
+    ]}
+/>
 
 > Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Style object in Apache POI</a>.
 
 Border style definition:
 
-```javascript
-const styleData = excel.cellStyle()
-styleData.setBorderBottom(_xls.borderStyle('thin'))
-styleData.setBorderTop(_xls.borderStyle('thin'))
-styleData.setBorderLeft(_xls.borderStyle('thin'))
-styleData.setBorderRight(_xls.borderStyle('thin'))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleData = excel.cellStyle()
+                styleData.setBorderBottom(_xls.borderStyle("thin"))
+                styleData.setBorderTop(_xls.borderStyle("thin"))
+                styleData.setBorderLeft(_xls.borderStyle("thin"))
+                styleData.setBorderRight(_xls.borderStyle("thin"))
+            `
+        },
+    ]}
+/>
 
 > Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Style object in Apache POI</a>.
 
 Creates a new font style for the text, and associates the font definitions with a specific cell style that already exists:
 
-```javascript
-const fontTitle = excel.font()
-fontTitle.setBold(true)
-fontTitle.setFontHeightInPoints(14)
-fontTitle.setColor(_xls.color('yellow'))
-// Define a fonte do styleHeader
-styleHeader.setFont(fontTitle)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fontTitle = excel.font()
+                fontTitle.setBold(true)
+                fontTitle.setFontHeightInPoints(14)
+                fontTitle.setColor(_xls.color("yellow"))
+                // Define a fonte do styleHeader
+                styleHeader.setFont(fontTitle)
+            `
+        },
+    ]}
+/>
 
 > Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFFont.html" target="_blank">Font object in Apache POI</a>.
 
@@ -135,23 +189,37 @@ styleHeader.setFont(fontTitle)
 
 To insert an image into the spreadsheet located at `storage/samples/export-excel/logo.png` internally in the application:
 
-```javascript
-excel.insertPicture(
-    _storage.filesystem("server", "samples/export-excel", "logo.png"),
-    1, // Column Number
-    1  // Line Number
-).resize(2.3)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _storage.filesystem("server", "samples/export-excel", "logo.png"),
+                    1, // Número da Coluna
+                    1  // Número da Linha
+                ).resize(2.3)
+            `
+        },
+    ]}
+/>
 
 To insert an image that is in the application at `public/images/logo.png`:
 
-```javascript
-excel.insertPicture(
-    _app.file("public/images/logo.png"),
-    10, // Column Number
-    1  // Line Number
-).resize(1.5)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _app.file("public/images/logo.png"),
+                    10, // Número da Coluna
+                    1  // Número da Linha
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
 
 Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Image object in Apache POI</a>.
 
@@ -170,37 +238,66 @@ The order of the parameters are:
 
 In this example below, all cells from column 10 to column 15 that are in line 3 will be merged:
 
-```
-excel.mergedRegion(2, 9, 2, 14)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.mergedRegion(2, 9, 2, 14)
+            `
+        },
+    ]}
+/>
 
 ## Cells
 
 To get the object that represents a cell:
 
-```
-// Gets the cell in column B and row 2:
-const celula = excel.cell(1, 1)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Obtém a célula que está na coluna B e na linha 2:
+                const celula = excel.cell(1, 1)
+            `
+        },
+    ]}
+/>
+
 > Numeric positioning references always start at **zero**.
 
 Example of how to show the cell formula into the output log:
 
-```
-// Log the formula in line 2 and column B.
-_log.info(
-    'Cell Formula B2: '+ excel.cell(1, 1).getCellFormula()
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Loga a fórmula da linha 2 e coluna B.
+                _log.info(
+                    "Fórmula Célula B2: "+ excel.cell(1, 1).getCellFormula()
+                )
+            `
+        },
+    ]}
+/>
 
 Example of how to get the text value of a cell:
 
-```
-// Logs the text value of the cell in row 2 and column B.
-_log.info(
-    'B2 Cell Text Value: '+ excel.cell(1, 1).getStringCellValue()
-)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Loga o valor de texto da célula da linha 2 e coluna B.
+                _log.info(
+                    "Valor Célula B2: "+ excel.cell(1, 1).getStringCellValue()
+                )
+            `
+        },
+    ]}
+/>
 
 > Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCell.html" target="_blank">Cell object in Apache POI</a>.
 
@@ -209,10 +306,17 @@ _log.info(
 
 To get the object that represents a line:
 
-```
-// Gets the object that represents line 2.
-const linha = excel.row(1)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Obtem o objeto que representa a linha 2.
+                const linha = excel.row(1)
+            `
+        },
+    ]}
+/>
 
 > Numeric positioning references always start at **zero**
 
@@ -234,34 +338,41 @@ Next we add a list of lines, where each line contains another list for the colum
 
 Complete example:
 
-```javascript
-excel.addDataTable(
-    6, 1,
-    _val.list() // Lines
-        .add(
-            _val.list() // Columns
-                .add(
-                    _val.map() // Cell
-                        .set("value", "Name")
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list() // Lines
+                        .add(
+                            _val.list() // Columns
+                                .add(
+                                    _val.map() // Cell
+                                        .set("value", "Name")
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Age")
+                                )
+                        )
+                        .add( // Another Line
+                            _val.list()
+                                .add( // First Column
+                                    _val.map()
+                                        .set("value", "Mary")
+                                )
+                                .add( // Second Column
+                                    _val.map()
+                                        .set("value", 26)
+                                )
+                        )
                 )
-                .add(
-                    _val.map()
-                        .set("value", "Age")
-                )
-        )
-        .add( // Another Line
-            _val.list()
-                .add( // First Column
-                    _val.map()
-                        .set("value", "Mary")
-                )
-                .add( // Second Column
-                    _val.map()
-                        .set("value", 26)
-                )
-        )
-)
-```
+            `
+        },
+    ]}
+/>
 
 ### Appearance
 
@@ -269,25 +380,32 @@ In the cell map we can associate the styles already created, using for example t
 
 Here is an example of how to associate styles in cells:
 
-```javascript
-excel.addDataTable(
-    6, 1,
-    _val.list()
-        .add(
-            _val.list()
-                .add(
-                    _val.map()
-                        .set("value", "Name")
-                        .set("style", styleHeader)
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map()
+                                        .set("value", "Name")
+                                        .set("style", styleHeader)
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Age")
+                                        .set("style", styleHeader)
+                                )
+                        )
                 )
-                .add(
-                    _val.map()
-                        .set("value", "Age")
-                        .set("style", styleHeader)
-                )
-        )
-)
-```
+            `
+        },
+    ]}
+/>
 
 ### Formulas
 
@@ -295,70 +413,91 @@ To insert formulas we use the `formula` key in the cell definitions map.
 
 In this example, all the values in the other cells will be added together in the last cell:
 
-```javascript
-excel.addDataTable(
-    6, 1,
-    _val.list()
-        .add(
-            _val.list()
-                .add(_val.map().set("value", 45))
-                .add(_val.map().set("value", 26))
-        )
-        .add(
-            _val.list()
-                .add(_val.map().set("value", 51))
-                .add(_val.map().set("value", 30))
-        )
-        .add(
-            _val.list()
-                .add(
-                    _val.map().set("value", "Total")
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Total")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
                 )
-                .add(
-                    _val.map().set("formula", "SUM(B7:C8)")
-                )
-        )
-)
-```
+            `
+        },
+    ]}
+/>
 
 To obtain the column letter from the column number, the columnReference method can be used, which can help in defining the formulas. The same method can also be used to obtain the column number from the reference letter, for example:
 
-```javascript
-excel.addDataTable(
-    6, _xls.columnReference('B'),
-    _val.list()
-        .add(
-            _val.list()
-                .add(_val.map().set("value", 45))
-                .add(_val.map().set("value", 26))
-        )
-        .add(
-            _val.list()
-                .add(_val.map().set("value", 51))
-                .add(_val.map().set("value", 30))
-        )
-        .add(
-            _val.list()
-                .add(
-                    _val.map().set("value", "Total")
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, _xls.columnReference('B'),
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Total")
+                                )
+                                .add(
+                                    _val.map().set(
+                                        "formula",
+                                        "SUM("+ _xls.columnReference(1) +"7:"+ _xls.columnReference(2) +"8)"
+                                )
+                            )
+                        )
                 )
-                .add(
-                    _val.map().set(
-                        "formula",
-                        `SUM(${_xls.columnReference(1)}7:${_xls.columnReference(2)}8)`
-                )
-            )
-        )
-)
-```
+            `
+        },
+    ]}
+/>
 
 ## Spreadsheets
 
 To create a new __spreadsheet__ within the document itself, observe the following example:
 
-```javascript
-const newSheet = excel.createSheet('New Sheet')
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const newSheet = excel.createSheet("New Sheet")
+            `
+        },
+    ]}
+/>
 
 > In cell, image and data manipulation methods, the reference to the spreadsheet object can be assigned to the first parameter.
 >
@@ -366,43 +505,57 @@ const newSheet = excel.createSheet('New Sheet')
 
 Example of how to insert an image into the new spreadsheet:
 
-```javascript
-excel.insertPicture(
-    newSheet,
-    _app.file("public/images/logo.png"),
-    10, // Column Number
-    1  // Line Number
-).resize(1.5)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    novaPlanilha,
+                    _app.file("public/images/logo.png"),
+                    10, // Column Number
+                    1  // Line Number
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
 
 Example of how to insert a data table into the new spreadsheet:
 
-```javascript
-excel.addDataTable(
-    newSheet,
-    6, 1,
-    _val.list()
-        .add(
-            _val.list()
-                .add(_val.map().set("value", 45))
-                .add(_val.map().set("value", 26))
-        )
-        .add(
-            _val.list()
-                .add(_val.map().set("value", 51))
-                .add(_val.map().set("value", 30))
-        )
-        .add(
-            _val.list()
-                .add(
-                    _val.map().set("value", "Total")
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    newSheet,
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Total")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
                 )
-                .add(
-                    _val.map().set("formula", "SUM(B7:C8)")
-                )
-        )
-)
-```
+            `
+        },
+    ]}
+/>
 
 ### Activate
 
@@ -412,10 +565,17 @@ So, to avoid having to constantly indicate in the methods which spreadsheet shou
 
 See two ways to activate a specific spreadsheet, first with object reference and then second with the index of the spreadsheet:
 
-```javascript
-excel.activeSheet(mySheet) // Spreadsheet reference object.
-excel.activeSheet(1) // Index of the spreadsheet that will be activated.
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.activeSheet(mySheet) // Spreadsheet reference object.
+                excel.activeSheet(1) // Index of the spreadsheet that will be activated.
+            `
+        },
+    ]}
+/>
 
 ### Useful Resources
 
@@ -423,34 +583,101 @@ Examples of other useful methods for manipulating spreadsheets.
 
 Get a sheet by name:
 
-```javascript
-// Gets the sheet from its name.
-const mySheet = excel.getSheet('Sheet Name')
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Gets the sheet from its name.
+                const mySheet = excel.getSheet('Sheet Name')
+            `
+        },
+    ]}
+/>
 
 Get a spreadsheet by its index:
 
-```javascript
-// Gets the spreadsheet from the respective number.
-const minhaPlanilha = excel.getSheet(1)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Gets the spreadsheet from the respective number.
+                const mySheet = excel.getSheet(1)
+            `
+        },
+    ]}
+/>
 
 To get the total number of sheets:
 
-```javascript
-// Total number of sheets.
-const totalDePlanilhas = excel.getNumberOfSheets()
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Total number of sheets.
+                const totalSheets = excel.getNumberOfSheets()
+            `
+        },
+    ]}
+/>
 
 To list all existing sheets in the document.
 
-```javascript
-// List all sheets.
-const todasAsPlanilhas = excel.getAllSheets()
-for (const sheet of todasAsPlanilhas) {
-    ...
-}
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // List all sheets.
+                const allSheets = excel.getAllSheets()
+                for (const sheet of allSheets) {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                # List all sheets.
+                allSheets = excel.getAllSheets()
+                for sheet in allSheets:
+                    ...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                # List all sheets.
+                allSheets = excel.getAllSheets()
+                allSheets.each do |sheet|
+                    ...
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                // List all sheets.
+                val allSheets = excel.getAllSheets()
+                allSheets.forEach {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                // List all sheets.
+                def allSheets = excel.getAllSheets()
+                for (sheet in allSheets) {
+                    ...
+                }
+            `
+        },
+    ]}
+/>
 
 > Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Spreadsheet object in Apache POI</a>.
 
@@ -460,21 +687,42 @@ In the `save` and `output` methods, the final file binary is generated.
 
 Sends the generated file as the service's `output`:
 
-```javascript
-excel.output('file.xls')
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.output("file.xlsx")
+            `
+        },
+    ]}
+/>
 
 To save the generated file in the application's `storage/filesystem` folder:
 
-```javascript
-excel.save(_storage.filesystem('server', 'file.xls'))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_storage.filesystem("server", "file.xlsx"))
+            `
+        },
+    ]}
+/>
 
 To save the generated file in the `/tmp` folder from the HD file system:
 
-```javascript
-excel.save(_os.file('/tmp/file.xls'))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_os.file("/tmp/file.xlsx"))
+            `
+        },
+    ]}
+/>
 
 ## Edit File
 
@@ -484,21 +732,42 @@ Below are some examples of how you can open files.
 
 Open a file in the application root:
 
-```javascript
-const excel = _xls.open(_app.file('file.xls'))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_app.file("file.xlsx"))
+            `
+        },
+    ]}
+/>
 
 To open the file generated in the application's `storage/filesystem` folder:
 
-```javascript
-const excel = _xls.open(_storage.filesystem('server', 'file.xls'))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_storage.filesystem("server", "file.xlsx"))
+            `
+        },
+    ]}
+/>
 
 And also to open the file in the `/tmp` folder from the HD file system:
 
-```javascript
-const excel = _xls.open(_os.file('/tmp/file.xls'))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_os.file("/tmp/file.xlsx"))
+            `
+        },
+    ]}
+/>
 
 In the examples above, the Excel constant will contain the editing object with the context of the respective file, so it is possible to carry out any type of manipulation.
 
@@ -510,38 +779,59 @@ To directly change the same file, it can be done using `inputStream`.
 
 Here is an example of how to change the value of a cell:
 
-```javascript
-const fileInput = _app.file('file.xls').inputStream()
-const excel = _xls.open(fileInput)
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fileInput = _app.file("file.xlsx").inputStream()
+                const excel = _xls.open(fileInput)
 
-excel.setCellData(
-    10, 1,
-    _val.map()
-        .set(
-            "value",
-            excel.getCellData(10, 1).getInt("value") + 10
-        )
-)
+                excel.setCellData(
+                    10, 1,
+                    _val.map()
+                        .set(
+                            "value",
+                            excel.getCellData(10, 1).getInt("value") + 10
+                        )
+                )
 
-fileInput.close() // Closes the open file.
-excel.save(_app.file('file.xls')) // Save the new version.
-```
+                fileInput.close() // Closes the open file.
+                excel.save(_app.file("file.xlsx")) // Save the new version.
+            `
+        },
+    ]}
+/>
 
 ## Read File
 
 Extracting data from Excel files is done using the `read` method.
 
-```
-const data = _xls.read(_app.file('file.xlsx'))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dados = _xls.read(_app.file("file.xlsx"))
+            `
+        },
+    ]}
+/>
 
 The data is obtained in an object structure of the Values type with Lists, for the spreadsheets, rows and columns, and Maps (key and value) for the cells.
 
 To visualize all the data, we can put as data output from the service:
 
-```
-_out.json(data)
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.json(dados)
+            `
+        },
+    ]}
+/>
 
 To carry out the interaction we have to keep in mind that the data structure is organized in the following order:
 
@@ -551,23 +841,110 @@ To carry out the interaction we have to keep in mind that the data structure is 
 
 Example of a complete interaction:
 
-```
-for (const sheet of data.getValues('sheets')) {
-    _out.println(`<h4>Spreadsheet: ${sheet.getInt('index')} - ${sheet.getString('name')}</h4>`)
-    for (const row of planilha.getValues('rows')) {
-        _out.println(`<h4>Row: ${row.getInt('row')}</h4>`)
-        _out.println('<p>')
-        for (const column of row.getValues('columns')) {
-            _out.print(`${column.getInt('row')}:${column.getInt('column')}`)
-            _out.print(` # ${column.getString('address')}`)
-            _out.print(` # ${column.getString('type')}`)
-            _out.print(` # ${column.getString('value')}`)
-            _out.println('<br>')
-        }
-        _out.println('</p>')
-    }
-}
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const sheet of data.getValues("sheets")) {
+                    _out.println(\`<h4>Spreadsheet: \${sheet.getInt("index")} - \${sheet.getString("name")}</h4>\`)
+                    for (const row of sheet.getValues("rows")) {
+                        _out.println(\`<h4>Row: \${row.getInt("row")}</h4>\`)
+                        _out.println("<p>")
+                        for (const column of row.getValues("columns")) {
+                            _out.print(\`\${column.getInt("row")}:\${column.getInt("column")}\`)
+                            _out.print(\` # \${column.getString("address")}\`)
+                            _out.print(\` # \${column.getString("type")}\`)
+                            _out.print(\` # \${column.getString("value")}\`)
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for sheet in data.getValues("sheets"):
+                    _out.println("<h4>Spreadsheet: "+ sheet.getInt("index") +" - "+ sheet.getString("name") +"</h4>")
+                    for row in sheet.getValues("rows"):
+                        _out.println("<h4>Row: "+ row.getInt("row") +"</h4>")
+                        _out.println("<p>")
+                        for column in row.getValues("columns"):
+                            _out.print(column.getInt("row") +":"+ column.getInt("column"))
+                            _out.print(" # "+ column.getString("address"))
+                            _out.print(" # "+ column.getString("type"))
+                            _out.print(" # "+ column.getString("value"))
+                            _out.println("<br>")
+                        _out.println("</p>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                data.getValues("sheets").each do |sheet|
+                    _out.println("<h4>Spreadsheet: #{sheet.getInt("index")} - #{sheet.getString("name")}</h4>")
+                    sheet.getValues("rows").each do |row|
+                        _out.println("<h4>Row: #{row.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        row.getValues("columns").each do |column|
+                            _out.print("#{column.getInt("row")}:#{column.getInt("column")}")
+                            _out.print(" # #{column.getString("address")}")
+                            _out.print(" # #{column.getString("type")}")
+                            _out.print(" # #{column.getString("value")}")
+                            _out.println("<br>")
+                        end
+                        _out.println("</p>")
+                    end
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                data.getValues("sheets").forEach {
+                    val sheet = it
+                    _out.println("<h4>Spreadsheet: \${sheet.getInt("index")} - \${sheet.getString("name")}</h4>")
+                    sheet.getValues("rows").forEach {
+                        val row = it
+                        _out.println("<h4>Row: \${row.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        row.getValues("columns").forEach {
+                            val column = it
+                            _out.print("\${column.getInt("row")}:\${column.getInt("column")}")
+                            _out.print(" # \${column.getString("address")}")
+                            _out.print(" # \${column.getString("type")}")
+                            _out.print(" # \${column.getString("value")}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (sheet in data.getValues("sheets")) {
+                    _out.println("<h4>Spreadsheet: "+ sheet.getInt("index") +" - "+ sheet.getString("name") +"</h4>")
+                    for (row in sheet.getValues("rows")) {
+                        _out.println("<h4>Row: "+ row.getInt("row") +"</h4>")
+                        _out.println("<p>")
+                        for (column in row.getValues("columns")) {
+                            _out.print(column.getInt("row") +":"+ column.getInt("column"))
+                            _out.print(" # "+ column.getString("address"))
+                            _out.print(" # "+ column.getString("type"))
+                            _out.print(" # "+ column.getString("value"))
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+    ]}
+/>
 
 The cell type is obtained through the code:
 
