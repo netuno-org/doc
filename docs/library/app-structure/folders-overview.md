@@ -22,7 +22,7 @@ See the complete structure of a newly created application from the Netuno root f
 &nbsp;<span>├─ ./<b>apps</b>/</span>
 &nbsp;│   <span>└─ ./<b>demo</b>/</span>
 &nbsp;│   │   <span>└─ ./...</span>
-&nbsp;│   <span>└─ ./<b>minha_app</b>/</span>
+&nbsp;│   <span>└─ ./<b>my_app</b>/</span>
 &nbsp;│       <span>├─ ./<b>config</b>/</span>
 &nbsp;│       <span>├─ ./<b>db</b>/</span>
 &nbsp;│       <span>├─ ./<b>docs</b>/</span>
@@ -47,9 +47,9 @@ See the complete structure of a newly created application from the Netuno root f
 &nbsp;<span>└─ ./...</span>
 </pre>
 
-> The 'apps' folder contains all the applications available on Netuno.
+> The `apps` folder contains all the applications available on Netuno.
 
-Initially, this folder already contains the 'demo' application, which, as the name suggests, is a demonstration of Netuno's features.
+Initially, this folder already contains the `demo` application, which, as the name suggests, is a demonstration of Netuno's features.
 
 When a new application is created, a new folder is added containing the same hierarchy of subfolders, as shown above.
 
