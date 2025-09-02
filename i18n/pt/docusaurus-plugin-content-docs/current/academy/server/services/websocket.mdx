@@ -27,7 +27,7 @@ de dados ao vivo, ou seja, quando existe a necessidade de realizar comunicação
 
 De forma simplificada a diferença entre a comunicação clássica HTTP e o WebSocket:
 
-![classic-http-vs-websoket](/docs/assets/academy/server/services/websocket/comparison-pt.svg)
+![classic-http-vs-websoket](/docs/assets/academy/server/services/websocket/comparison-pt.png)
 
 Do lado do servidor é criado um `endpoint`, endereço que permite estabelecer conexões com WebSocket.
 
@@ -354,7 +354,6 @@ em `stream`, ou seja, é um fluxo aberto e contínuo de mensagens que tando pode
     ]}
 />
 
-
 O `if` com o `_ws.isStream()` faz com que verifique se realmente é um pedido interno gerido pelo WebSocket para
 realizar o stream.
 
@@ -453,14 +452,14 @@ serviço que será executado.
                     "admin", // Nome do endpoint do WebSocket.
                     "/", // Caminho configurado no endpoint (path).
                     _val.map() // Parametrização do serviço que será executado.
-                        .set("service", "/services/room/participants")
+                        .set("service", "/services/room/participant/list")
                 )
             `
         },
     ]}
 />
 
-Neste exemplo o conteúdo de output gerado pelo serviço `room/participants` será enviado para todos que estiverem
+Neste exemplo o conteúdo de output gerado pelo serviço `room/participant/list` será enviado para todos que estiverem
 conectados no endpoint `admin`.
 
 ## WS Client - NPM
@@ -469,7 +468,9 @@ Para realizar facilmente a integração com o frontend, é disponibilizado o mó
 
 - https://www.npmjs.com/package/@netuno/ws-client
 
-Comando de instalação: `npm i -S @netuno/ws-client`
+Comando de instalação:
+
+- `pnpm install @netuno/ws-client`
 
 ```js
 _ws.config({
@@ -492,6 +493,58 @@ _ws.config({
 });
 ```
 
+A seguir pode iniciar a conexão:
+
+```js
+_ws.connect();
+```
+
+### Executar Serviço via WebSocket
+
+Podemos executar serviços da API REST através da conexão WebSocket, isso quer dizer que não será realizado nenhum
+pedido HTTP, então os dados do pedido são enviados como mensagem, e a resposta do serviço é obtida como uma
+mensagem recebida de volta.
+
+Antes de iniciar devemos criar um observador da resposta do serviço, por exemplo:
+
+```js
+const listenerRef = _ws.addListener({
+    method: 'GET', // Opcional, por padrão é GET.
+    service: 'caminho/do/meu/servico/aqui',
+    success: (data) => {
+        console.log('Resposta do serviço executado via WebSocket:', data);
+    },
+    fail: (error)=> {
+        console.log('O serviço executado via WebSocket falhou:', error);
+    }
+});
+```
+
+Agora podemos enviar um pedido de execução do serviço, sendo que a resposta do serviço será obtida no observador
+criado acima, executamos o serviço assim:
+
+```js
+_ws.sendService({
+    method: 'GET', // Opcional, outro método HTTP pode ser utilizado.
+    service: 'caminho/do/meu/servico/aqui',
+    data: {
+        message: 'Olá...'
+    }
+});
+```
+
+Para remover o observador adicionado, utilize:
+
+```js
+_ws.removeListener(listenerRef);
+```
+
+E para fechar a conexão WebSocket:
+
+```js
+_ws.close();
+```
+
 ## NGINX Proxy Reverso
 
 No NGINX o proxy reverso pode ser configurado desta forma:
@@ -511,6 +564,7 @@ No NGINX o proxy reverso pode ser configurado desta forma:
     }
 ```
 
-> Na linha 3 onde define o `Host` deve ser ajustado a parte da `minha-app` para o nome da aplicação no Netuno que
-suporta WebSocket.
+> Na linha 3 onde define o `Host` deve ser ajustado a parte da `minha-app` para o nome correspondente da
+> aplicação Netuno. Se houver `_` no nome da aplicação então no endereço do `Host` será substituído por `-`,
+> por exemplo, a aplicação `minha_app` passa a ter o valor do `Host` assim `minha-app.local.netu.no`.
 
