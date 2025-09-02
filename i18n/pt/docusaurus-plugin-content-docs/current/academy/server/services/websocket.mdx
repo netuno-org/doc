@@ -4,6 +4,10 @@ title: WebSocket
 sidebar_label: WebSocket
 ---
 
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Mensagens instantâneas entre o servidor e o cliente.
+
 ## Introdução
 
 Com WebSocket é possível estabelecer uma conexão permanente entre o servidor e o navegador do cliente.
@@ -73,40 +77,40 @@ Insira e ajuste os seguintes parâmetros:
     ...
 ```
 
-##### endpoints
+#### endpoints
 
 É um array que permite definir que o servidor vai suportar WebSocket através dos múltiplos endereços públicos
 específicados (_endpoints_), então cada endpoint é um endereço público que suporta receber conexões via
 WebSockets a partir dos navegadores.
 
-##### name
+#### name
 
 Nome de identificação do endpoint.
 
-##### enabled
+#### enabled
 
 Permite ativar e desativar o endpoint, o padrão é `true` (ativo).
 
-##### sendTimeout
+#### sendTimeout
 
 Limite de tempo máximo para enviar uma mensagem para os clientes, o padrão é `60000` milissegundos, ou seja, equivale
 a 1 minuto.
 
-##### idleTimeout
+#### idleTimeout
 
 Limite de tempo máximo para a inatividade na conexão, o padrão é `300000` milissegundos, ou seja, equivale a 5 minutos.
 
-##### maxText
+#### maxText
 
 Limite em bytes para o tamanho máximo do comprimento da mensagem, o padrão é `1048576` equivalente a 1 megabyte.
 
-##### public
+#### public
 
 Define a base do endereço público que permitirá receber as conexões via WebSocket vinda dos navegadores.
 
 O endereço final é constituído pelo valor da configuração `public` seguido pelo que está definido no `path`.
 
-##### path
+#### path
 
 Define a parte final do caminho do endereço público, pode ser dinâmico, o que permite criar por exemplos múltiplos
 canais separados, por exemplo é útil para criar múltiplas salas.
@@ -131,46 +135,244 @@ Endereço da base de serviço de back-end da aplicação que processa as conexõ
 
 ## Serviço para os Endpoints
 
-### PUT
+### POST = nova conexão
 
 É executado o serviço configurado com o método `POST` quando uma nova conexão é estabelecida, por exemplo:
 
-- `server/services/ws/room/post.js`
+<PolyglotCode
+    file="server/services/ws/room/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uidRoom = _ws.path().getString("uid")
+                const dbRoom = _db.get("room", uidRoom)
 
-```js
-const uidRoom = _ws.path().getString("uid")
-const dbRoom = _db.get('room', uidRoom)
+                if (dbRoom == null) {
+                    _log.warn(\`Invalid room \${uidRoom}.\`)
+                    _ws.close()
+                } else {
+                    _log.info(\`New WebSocket Session: \${_ws.sessionId()}\`)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                uidRoom = _ws.path().getString("uid")
+                dbRoom = _db.get("room", uidRoom)
 
-if (dbRoom == null) {
-    _log.warn(`Invalid room ${uidRoom}.`)
-    _ws.close()
-} else {
-    _log.info(`New WebSocket Session: ${_ws.sessionId()}`)
-}
-```
+                if dbRoom == null:
+                    _log.warn("Invalid room "+ uidRoom +".")
+                    _ws.close()
+                else:
+                    _log.info("New WebSocket Session: "+ _ws.sessionId())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                uidRoom = _ws.path().getString("uid")
+                dbRoom = _db.get("room", uidRoom)
+
+                if dbRoom == null
+                    _log.warn("Invalid room #{uidRoom}.")
+                    _ws.close()
+                else
+                    _log.info("New WebSocket Session: #{_ws.sessionId()}")
+                end
+`
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val uidRoom = _ws.path().getString("uid")
+                val dbRoom = _db.get("room", uidRoom)
+
+                if (dbRoom == null) {
+                    _log.warn("Invalid room \${uidRoom}.")
+                    _ws.close()
+                } else {
+                    _log.info("New WebSocket Session: \${_ws.sessionId()}")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def uidRoom = _ws.path().getString("uid")
+                def dbRoom = _db.get("room", uidRoom)
+
+                if (dbRoom == null) {
+                    _log.warn("Invalid room "+ uidRoom +".")
+                    _ws.close()
+                } else {
+                    _log.info("New WebSocket Session: "+ _ws.sessionId())
+                }
+            `
+        },
+    ]}
+/>
 
 > Normalmente o `_ws.sessionId()` é guardado em base de dados para ser utilizado em futuras comunicações.
 
-### PUT
+### PUT = nova mensagem
 
 Se a mensagem recebida não for em formato JSON, ou se for um JSON que não está no formato suportado para execução de
 um serviço específico (`service`), então será executado este serviço genérico:
 
-- `server/services/ws/room/put.js`
+<PolyglotCode
+    file="server/services/ws/room/put"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`The session \${_ws.sessionId()} sent this message: \${_ws.message()}\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info("The session "+ _ws.sessionId() +" sent this message: "+ _ws.message())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("The session #{_ws.sessionId()} sent this message: #{_ws.message()}")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("The session \${_ws.sessionId()} sent this message: \${_ws.message()}")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("The session "+ _ws.sessionId() +" sent this message: "+ _ws.message())
+            `
+        },
+    ]}
+/>
 
-```js
-_log.info(`The session ${_ws.sessionId()} sent this message: ${_ws.message()}`)
-```
-
-### DELETE
+### DELETE = fechou a conexão
 
 É executado quando acontece uma desconexão do navegador do cliente.
 
-- `server/services/ws/room/delete.js`
+<PolyglotCode
+    file="server/services/ws/room/delete"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`Session \${_ws.sessionId()} has disconnected.\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info("Session "+ _ws.sessionId() +" has disconnected.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("Session #{_ws.sessionId()} has disconnected.")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("Session \${_ws.sessionId()} has disconnected.")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("Session "+ _ws.sessionId() +" has disconnected.")
+            `
+        },
+    ]}
+/>
 
-```js
-_log.info(`Session ${_ws.sessionId()} has disconnected.`)
-```
+
+### GET = fluxo contínuo de mensagens
+
+Inicia a execução quando acontece uma nova conexão do navegador do cliente, e a execução é mantida até finalizar
+a conexão.
+
+Ou seja, o serviço para o método HTTP `GET` fica recebendo as mensagens que estão vindo do cliente continuamente
+em `stream`, ou seja, é um fluxo aberto e contínuo de mensagens que tando pode receber como enviar.
+
+<PolyglotCode
+    file="server/services/ws/room/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_ws.isStream()) {
+                    while (_ws.awaitStream()) {
+                        if (_ws.isBinaryStreamed()) {
+                            _log.info("Nova mensagem binária recebida: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        } else if (_ws.isTextStreamed()) {
+                            _log.info("Nova mensagem de texto recebida: "+ _ws.textStreamed())
+                        }
+                        _ws.sendText("Ok! A mensagem foi recebida com sucesso.")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _ws.isStream():
+                    while _ws.awaitStream():
+                        if _ws.isBinaryStreamed():
+                            _log.info("Nova mensagem binária recebida: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elif _ws.isTextStreamed():
+                            _log.info("Nova mensagem de texto recebida: "+ _ws.textStreamed())
+                        _ws.sendText("Ok! A mensagem foi recebida com sucesso.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _ws.isStream()
+                    while _ws.awaitStream()
+                        if _ws.isBinaryStreamed()
+                            _log.info("Nova mensagem binária recebida: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elsif _ws.isTextStreamed()
+                            _log.info("Nova mensagem de texto recebida: "+ _ws.textStreamed())
+                        end
+                        _ws.sendText("Ok! A mensagem foi recebida com sucesso.")
+                    end
+                end
+            `
+        },
+    ]}
+/>
+
+
+O `if` com o `_ws.isStream()` faz com que verifique se realmente é um pedido interno gerido pelo WebSocket para
+realizar o stream.
+
+No `while` com o `_ws.awaitStream()` fica aguardando que um novo fluxo de mensagem chegue, ou seja, aguarda a
+chegada de uma nova mensagem. Assim que houver uma nova mensagem é executado o código interno do `while`.
+
+> O `_ws.awaitStream()` funciona como um loop infinito aguardando uma nova mensagem.
+
+Então nos `ifs` internos do `while` é verificado o tipo de mensagem, se a mensagem é binária ou de texto, em ambos
+os casos é apresentado nos logs o conteúdo destas mensagens. Repare que qualquer formato de mensagem pode ser
+utilizado, podendo ser processadas de qualquer maneira que seja conveniente.
+
+Finalmente no `_ws.sendText` é enviada uma mensagem de resposta ao cliente, confirma a recepção.
+
+> Cada execução do serviço `GET` será uma conexão de ativa.
+
+Quando a conexão com o endpoint do WebSocket for finalizada então a execução deste serviço é finalizada
+internamente.
 
 ## Comunicação
 
@@ -179,26 +381,34 @@ _log.info(`Session ${_ws.sessionId()} has disconnected.`)
 Executa o serviço e envia o output gerado para um cliente específico conectado através do WebSocket, utiliza o ID de
 conexão do cliente (`sessionId`).
 
-##### Exemplo
+#### Exemplo da Chamada de Serviço
 
-Este código pode ficar no método POST do serviço de endpoint (`service`), está a ser utilizado o `_ws.sessionId()` que
-obtém o ID da sessão de conexão do cliente, se o identificador de sessão estivesse guardado em base de dados o
-`sendService` poderia ser executado em qualquer outro serviço a qualquer momento.
+O código abaixo pode ser utilizado no serviço de método PUT do endpoint (`service`), repare que está sendo
+utilizado o `_ws.sessionId()` que obtém o ID da sessão de conexão do cliente, se o identificador de sessão
+estiver guardado em base de dados o `sendService` poderia ser executado em qualquer outro serviço a qualquer
+momento.
 
-```js
-const uid = _ws.path().getString("uid")
-_ws.sendService(
-        _ws.sessionId(), // Identificação da conexão atual do WebSocket.
-        _val.map() // Parametrização do serviço que será executado.
-            .set("method", "POST")
-            .set("service", "/services/room/participant/new")
-            .set(
-                "data", // Parâmetros que serão passados para o serviço e recebidos através do _req.
-                _val.map()
-                    .set("uid", uid)
-            )
-    )
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uid = _ws.path().getString("uid")
+                _ws.sendService(
+                    _ws.sessionId(), // Identificação da conexão atual do WebSocket.
+                    _val.map() // Parametrização do serviço que será executado.
+                        .set("method", "POST")
+                        .set("service", "/services/room/participant/new")
+                        .set(
+                            "data", // Parâmetros que serão passados para o serviço e recebidos através do _req.
+                            _val.map()
+                                .set("uid", uid)
+                        )
+                )
+            `
+        },
+    ]}
+/>
 
 Ou seja, na configuração o `path` que está configurado no `endpoint` tem o valor `/{uid}`, assim permite o cliente
 conectar através do endereço público:
@@ -209,12 +419,20 @@ Então o valor do `uid` será `d641f095-30eb-4025-a39c-b2e3e497eab7`.
 
 Após será executado o serviço que fica na URL `/services/room/participant/new` e o valor do `uid` é passado.
 
-O `uid` pode ser obtido no código do serviço que é executado, como um parâmetro do pedido HTTP, por exemplo:
+O `uid` pode ser obtido no código do serviço que é executado, como um parâmetro do pedido HTTP, veja um exemplo:
 
-```js
-// No código do Serviço da App: /server/services/room/participant/new.js
-const uid = _req.getString('uid')
-```
+<PolyglotCode
+    file="/server/services/room/participant/new"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // O UID enviado é obtido diretamente no request.
+                const uid = _req.getString('uid')
+            `
+        },
+    ]}
+/>
 
 ### broadcastService
 
@@ -223,18 +441,27 @@ serviço que será executado.
 
 > O output do serviço será enviado para todas as conexões ativas no `endpoint` especificado.
 
-##### Exemplo
+#### Exemplo de Broadcast
 
-```js
-_ws.broadcastService(
-        "admin", // Nome do endpoint do WebSocket.
-        "/", // Caminho configurado no endpoint (path).
-        _val.map() // Parametrização do serviço que será executado.
-            .set("service", "/services/room/participants")
-    )
-```
+<PolyglotCode
+    file="/server/services/room/participant/new"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _ws.broadcastService(
+                    "admin", // Nome do endpoint do WebSocket.
+                    "/", // Caminho configurado no endpoint (path).
+                    _val.map() // Parametrização do serviço que será executado.
+                        .set("service", "/services/room/participants")
+                )
+            `
+        },
+    ]}
+/>
 
-Como no exemplo 
+Neste exemplo o conteúdo de output gerado pelo serviço `room/participants` será enviado para todos que estiverem
+conectados no endpoint `admin`.
 
 ## WS Client - NPM
 
