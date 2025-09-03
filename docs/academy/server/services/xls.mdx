@@ -137,7 +137,7 @@ Example of defining colors and alignment:
             code: `
                 const styleHeader = excel.cellStyle()
                 styleHeader.setFillPattern(_xls.fillPattern("solid-foreground"))
-                styleHeader.setFillBackgroundColor(_xls.color("black"))
+                styleHeader.setFillBackgroundColor(excel.color("black"))
                 styleHeader.setAlignment(_xls.horizontalAlignment("center"))
             `
         },
@@ -175,7 +175,7 @@ Creates a new font style for the text, and associates the font definitions with 
                 const fontTitle = excel.font()
                 fontTitle.setBold(true)
                 fontTitle.setFontHeightInPoints(14)
-                fontTitle.setColor(_xls.color("yellow"))
+                fontTitle.setColor(excel.color("yellow"))
                 // Define a fonte do styleHeader
                 styleHeader.setFont(fontTitle)
             `
@@ -589,7 +589,7 @@ Get a sheet by name:
             lang: 'javascript',
             code: `
                 // Gets the sheet from its name.
-                const mySheet = excel.getSheet('Sheet Name')
+                const mySheet = excel.getSheet("Sheet Name")
             `
         },
     ]}
@@ -867,15 +867,15 @@ Example of a complete interaction:
             lang: 'python',
             code: `
                 for sheet in data.getValues("sheets"):
-                    _out.println("<h4>Spreadsheet: "+ sheet.getInt("index") +" - "+ sheet.getString("name") +"</h4>")
+                    _out.println(f"<h4>Spreadsheet: {sheet.getInt('index')} - {sheet.getString('name')}</h4>")
                     for row in sheet.getValues("rows"):
-                        _out.println("<h4>Row: "+ row.getInt("row") +"</h4>")
+                        _out.println(f"<h4>Row: {row.getInt('row')}</h4>")
                         _out.println("<p>")
                         for column in row.getValues("columns"):
-                            _out.print(column.getInt("row") +":"+ column.getInt("column"))
-                            _out.print(" # "+ column.getString("address"))
-                            _out.print(" # "+ column.getString("type"))
-                            _out.print(" # "+ column.getString("value"))
+                            _out.print(f"{column.getInt('row')}:{column.getInt('column')}")
+                            _out.print(f" # {column.getString('address')}")
+                            _out.print(f" # {column.getString('type')}")
+                            _out.print(f" # {column.getString('value')}")
                             _out.println("<br>")
                         _out.println("</p>")
             `
@@ -927,15 +927,15 @@ Example of a complete interaction:
             lang: 'groovy',
             code: `
                 for (sheet in data.getValues("sheets")) {
-                    _out.println("<h4>Spreadsheet: "+ sheet.getInt("index") +" - "+ sheet.getString("name") +"</h4>")
+                    _out.println("<h4>Spreadsheet: \${sheet.getInt('index')} - \${sheet.getString('name')}</h4>")
                     for (row in sheet.getValues("rows")) {
-                        _out.println("<h4>Row: "+ row.getInt("row") +"</h4>")
+                        _out.println("<h4>Row: \${row.getInt('row')}</h4>")
                         _out.println("<p>")
                         for (column in row.getValues("columns")) {
-                            _out.print(column.getInt("row") +":"+ column.getInt("column"))
-                            _out.print(" # "+ column.getString("address"))
-                            _out.print(" # "+ column.getString("type"))
-                            _out.print(" # "+ column.getString("value"))
+                            _out.print("\${column.getInt('row')}:\${column.getInt('column')}")
+                            _out.print(" # \${column.getString('address')}")
+                            _out.print(" # \${column.getString('type')}")
+                            _out.print(" # \${column.getString('value')}")
                             _out.println("<br>")
                         }
                         _out.println("</p>")
