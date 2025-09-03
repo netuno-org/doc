@@ -4,6 +4,9 @@ title: REST Web Services
 sidebar_label: REST Web Services
 ---
 
+import PolyglotPath from "@site/src/components/PolyglotPath";
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
 ## Introduction
 
 _Representational State Transfer_ (REST) is an architectural style that specifies constraints, such as the uniform interface, that if applied to a web service induce desirable properties, such as `performance`, `scalability`, and `modifiability`, that enable services to work best on the Web.
@@ -16,7 +19,9 @@ _Netuno_ services are built on REST API.
 
 To build a _Netuno_ service that answers to any type of HTTP method:
 
-- `📂 server/services/my-service.js`
+<PolyglotPath files={[
+    `server/services/my-service`
+]} />
 
 In the browser, this service will be performed for all types of requests at the address:
 
@@ -28,8 +33,10 @@ For listing or data retrieval operations, GET-type addresses are normally used.
 
 To create a service on _Netuno_ that only respondes to the GET method type, use one of the following:
 
-- `📂 server/services/list/get.js`
-- `📂 server/services/list.get.js`
+<PolyglotPath files={[
+    `server/services/list/get`,
+    `server/services/list.get`
+]} />
 
 Into your browser this service will be only executed for the GET request type at the address.
 
@@ -41,8 +48,10 @@ POST addresses are normally used for operations that create or generate new data
 
 To create a service on _Netuno_ that only responds to the POST method type, create the code file using one of the following options:
 
-- `📂 server/services/create/post.js`
-- `📂 server/services/create.post.js`
+<PolyglotPath files={[
+    `server/services/create/post`,
+    `server/services/create.post`
+]} />
 
 This service will be performed only for the POST request type at the address below:
 
@@ -54,8 +63,10 @@ PUT addresses are normally used for operations that change or update data record
 
 To create a service on _Netuno_ that only responds to the PUT method type, create the code file using one of the below options:
 
-- `📂 server/services/save/put.js`
-- `📂 server/services/save.put.js`
+<PolyglotPath files={[
+    `server/services/save/put`,
+    `server/services/save.put`
+]} />
 
 This service will be only performed for the PUT order type at the below address:
 
@@ -67,8 +78,10 @@ DELETE addresses are normally used for operations that will delete new data reco
 
 To create a service on _Netuno_ that will only answer to the DELETE method type, create the code file using one of the following options:
 
-- `📂 server/services/remove/delete.js`
-- `📂 server/services/remove.delete.js`
+<PolyglotPath files={[
+    `server/services/remove/delete`,
+    `server/services/remove.delete`
+]} />
 
 This service will be only executed for the DELETE order type at the address below:
 
@@ -82,16 +95,28 @@ Integrating with the frontend, during the CORS validation process, the browser m
 
 To create a service on _Netuno_ that will only answer to the OPTIONS method type, create the file code using one of the following options:
 
-- `📂 server/services/list/options.js`
-- `📂 server/services/list.options.js`
+<PolyglotPath files={[
+    `server/services/list/options`,
+    `server/services/list.options`
+]} />
 
 It should be implemented for all services that are integrated in an external frontend, such as a website.
 
 See below the code line used:
 
-```javascript
-_out.json(_val.map().set("result", true))
-```
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.json(
+                    _val.map().set("result", true)
+                )
+            `
+        },
+    ]}
+/>
+
 
 This service will be executed for the order type OPTIONS at the address:
 
