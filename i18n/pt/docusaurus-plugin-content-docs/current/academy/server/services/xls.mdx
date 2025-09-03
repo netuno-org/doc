@@ -137,7 +137,7 @@ Exemplo para a definição de cores e alinhamento:
             code: `
                 const styleHeader = excel.cellStyle()
                 styleHeader.setFillPattern(_xls.fillPattern("solid-foreground"))
-                styleHeader.setFillBackgroundColor(_xls.color("black"))
+                styleHeader.setFillBackgroundColor(excel.color("black"))
                 styleHeader.setAlignment(_xls.horizontalAlignment("center"))
             `
         },
@@ -175,7 +175,7 @@ Cria um novo estilo de fonte para o texto, associa as definições da fonte em u
                 const fontTitle = excel.font()
                 fontTitle.setBold(true)
                 fontTitle.setFontHeightInPoints(14)
-                fontTitle.setColor(_xls.color("yellow"))
+                fontTitle.setColor(excel.color("yellow"))
                 // Define a fonte do styleHeader
                 styleHeader.setFont(fontTitle)
             `
@@ -866,15 +866,15 @@ Exemplo de uma interação completa:
             lang: 'python',
             code: `
                 for planilha in dados.getValues("sheets"):
-                    _out.println("<h4>Planilha: "+ planilha.getInt("index") +" - "+ planilha.getString("name") +"</h4>")
+                    _out.println(f"<h4>Planilha: {planilha.getInt('index')} - {planilha.getString('name')}</h4>")
                     for linha in planilha.getValues("rows"):
-                        _out.println("<h4>Linha: "+ linha.getInt("row") +"</h4>")
+                        _out.println(f"<h4>Linha: {linha.getInt('row')}</h4>")
                         _out.println("<p>")
                         for coluna in linha.getValues("columns"):
-                            _out.print(coluna.getInt("row") +":"+ coluna.getInt("column"))
-                            _out.print(" # "+ coluna.getString("address"))
-                            _out.print(" # "+ coluna.getString("type"))
-                            _out.print(" # "+ coluna.getString("value"))
+                            _out.print(f"{coluna.getInt('row')}:{coluna.getInt('column')}")
+                            _out.print(f" # {coluna.getString('address')}")
+                            _out.print(f" # {coluna.getString('type')}")
+                            _out.print(f" # {coluna.getString('value')}")
                             _out.println("<br>")
                         _out.println("</p>")
             `
@@ -926,15 +926,15 @@ Exemplo de uma interação completa:
             lang: 'groovy',
             code: `
                 for (planilha in dados.getValues("sheets")) {
-                    _out.println("<h4>Planilha: "+ planilha.getInt("index") +" - "+ planilha.getString("name") +"</h4>")
+                    _out.println("<h4>Planilha: \${planilha.getInt('index')} - \${planilha.getString('name')}</h4>")
                     for (linha in planilha.getValues("rows")) {
-                        _out.println("<h4>Linha: "+ linha.getInt("row") +"</h4>")
+                        _out.println("<h4>Linha: \${linha.getInt('row')}</h4>")
                         _out.println("<p>")
                         for (coluna in linha.getValues("columns")) {
-                            _out.print(coluna.getInt("row") +":"+ coluna.getInt("column"))
-                            _out.print(" # "+ coluna.getString("address"))
-                            _out.print(" # "+ coluna.getString("type"))
-                            _out.print(" # "+ coluna.getString("value"))
+                            _out.print("\${coluna.getInt('row')}:\${coluna.getInt('column')}")
+                            _out.print(" # \${coluna.getString('address')}")
+                            _out.print(" # \${coluna.getString('type')}")
+                            _out.print(" # \${coluna.getString('value')}")
                             _out.println("<br>")
                         }
                         _out.println("</p>")
