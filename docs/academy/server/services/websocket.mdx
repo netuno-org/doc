@@ -162,10 +162,10 @@ The service configured with the `POST` method is executed when a new connection 
                 dbRoom = _db.get("room", uidRoom)
 
                 if dbRoom == null:
-                    _log.warn("Invalid room "+ uidRoom +".")
+                    _log.warn(f"Invalid room {uidRoom}.")
                     _ws.close()
                 else:
-                    _log.info("New WebSocket Session: "+ _ws.sessionId())
+                    _log.info(f"New WebSocket Session: {_ws.sessionId()}")
             `
         },
         {
@@ -203,10 +203,10 @@ The service configured with the `POST` method is executed when a new connection 
                 def dbRoom = _db.get("room", uidRoom)
 
                 if (dbRoom == null) {
-                    _log.warn("Invalid room "+ uidRoom +".")
+                    _log.warn("Invalid room \${uidRoom}.")
                     _ws.close()
                 } else {
-                    _log.info("New WebSocket Session: "+ _ws.sessionId())
+                    _log.info("New WebSocket Session: \${_ws.sessionId()}")
                 }
             `
         },
@@ -232,7 +232,7 @@ running a specific service, then this generic service will be executed:
         {
             lang: 'python',
             code: `
-                _log.info("The session "+ _ws.sessionId() +" sent this message: "+ _ws.message())
+                _log.info(f"The session {_ws.sessionId()} sent this message: {_ws.message()}")
             `
         },
         {
@@ -250,7 +250,7 @@ running a specific service, then this generic service will be executed:
         {
             lang: 'groovy',
             code: `
-                _log.info("The session "+ _ws.sessionId() +" sent this message: "+ _ws.message())
+                _log.info("The session \${_ws.sessionId()} sent this message: \${_ws.message()}")
             `
         },
     ]}
@@ -272,7 +272,7 @@ Executed when the client browser disconnects.
         {
             lang: 'python',
             code: `
-                _log.info("Session "+ _ws.sessionId() +" has disconnected.")
+                _log.info(f"Session {_ws.sessionId()} has disconnected.")
             `
         },
         {
@@ -290,7 +290,7 @@ Executed when the client browser disconnects.
         {
             lang: 'groovy',
             code: `
-                _log.info("Session "+ _ws.sessionId() +" has disconnected.")
+                _log.info("Session \${_ws.sessionId()} has disconnected.")
             `
         },
     ]}
