@@ -163,10 +163,10 @@ Endereço da base de serviço de back-end da aplicação que processa as conexõ
                 dbRoom = _db.get("room", uidRoom)
 
                 if dbRoom == null:
-                    _log.warn("Invalid room "+ uidRoom +".")
+                    _log.warn(f"Invalid room {uidRoom}.")
                     _ws.close()
                 else:
-                    _log.info("New WebSocket Session: "+ _ws.sessionId())
+                    _log.info(f"New WebSocket Session: {_ws.sessionId()}")
             `
         },
         {
@@ -204,10 +204,10 @@ Endereço da base de serviço de back-end da aplicação que processa as conexõ
                 def dbRoom = _db.get("room", uidRoom)
 
                 if (dbRoom == null) {
-                    _log.warn("Invalid room "+ uidRoom +".")
+                    _log.warn("Invalid room \${uidRoom}.")
                     _ws.close()
                 } else {
-                    _log.info("New WebSocket Session: "+ _ws.sessionId())
+                    _log.info("New WebSocket Session: \${_ws.sessionId()}")
                 }
             `
         },
@@ -233,7 +233,7 @@ um serviço específico (`service`), então será executado este serviço genér
         {
             lang: 'python',
             code: `
-                _log.info("The session "+ _ws.sessionId() +" sent this message: "+ _ws.message())
+                _log.info(f"The session {_ws.sessionId()} sent this message: {_ws.message()}")
             `
         },
         {
@@ -251,7 +251,7 @@ um serviço específico (`service`), então será executado este serviço genér
         {
             lang: 'groovy',
             code: `
-                _log.info("The session "+ _ws.sessionId() +" sent this message: "+ _ws.message())
+                _log.info("The session \${_ws.sessionId()} sent this message: \${_ws.message()}")
             `
         },
     ]}
@@ -273,7 +273,7 @@ um serviço específico (`service`), então será executado este serviço genér
         {
             lang: 'python',
             code: `
-                _log.info("Session "+ _ws.sessionId() +" has disconnected.")
+                _log.info(f"Session {_ws.sessionId()} has disconnected.")
             `
         },
         {
@@ -291,7 +291,7 @@ um serviço específico (`service`), então será executado este serviço genér
         {
             lang: 'groovy',
             code: `
-                _log.info("Session "+ _ws.sessionId() +" has disconnected.")
+                _log.info("Session \${_ws.sessionId()} has disconnected.")
             `
         },
     ]}
