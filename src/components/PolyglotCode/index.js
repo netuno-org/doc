@@ -17,9 +17,9 @@ function PolyglotCode({file, codes}) {
             }
             code.lang = l;
             if (l === 'ruby') {
-                code.code = code.code.replaceAll(/([\[(,\s=ˆ])True([\]),\s$])/g, "$1true$2");
+                code.code = code.code.replaceAll(/([\[(,\s=ˆ])True([\]),\s$])/gm, "$1true$2");
             } else if (l === 'python') {
-                code.code = code.code.replaceAll(/([\[(,\s=ˆ])true([\]),\s$])/g, "$1True$2");
+                code.code = code.code.replaceAll(/([\[(,\s=ˆ])true([\]),\s$])/gm, "$1True$2");
             }
             codes.push(code);
         }
@@ -32,7 +32,7 @@ function PolyglotCode({file, codes}) {
         groovy: 'def ',
     };
     for (const code of codes) {
-        code.code = code.code.replaceAll(/$(\s+)const\s+/g, "$1"+ langsConst[code.lang]);
+        code.code = code.code.replaceAll(/$(\s+)const\s+/gm, "$1"+ langsConst[code.lang]);
     }
     const langsComment = {
         javascript: '// ',
@@ -42,7 +42,7 @@ function PolyglotCode({file, codes}) {
         groovy: '// ',
     };
     for (const code of codes) {
-        code.code = code.code.replaceAll(/(\s+)\/\/\s+/g, "$1"+ langsComment[code.lang]);
+        code.code = code.code.replaceAll(/(\s+)\/\/\s+/gm, "$1"+ langsComment[code.lang]);
     }
     return (
         <div style={{marginBottom: '40px'}}>
