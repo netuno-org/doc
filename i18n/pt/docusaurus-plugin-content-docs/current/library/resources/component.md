@@ -297,11 +297,11 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-## renderDisplayName
+## renderTitle
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>renderDisplayName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>renderTitle</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Retorno
 
 ( _void_ )
