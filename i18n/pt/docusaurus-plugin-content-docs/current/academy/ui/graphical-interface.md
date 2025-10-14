@@ -9,42 +9,53 @@ O Netuno está divido em 2 modos, o modo "Visualizar" e o "Construir". Na **visu
 
 ### Visualizar
 
-![visualizar.png](/docs/assets/visualizar.png)  
+Este é o ambiente frontend onde os usuários interagem com a parte visual da aplicação.
+
+![visualizar.png](static/docs/assets/academy/saiba_como/visualizar.png)  
 
 #### 1 - Construir
 
-O botão redireciona-o para o modo "Construir".
+Este botão permite que você acesse o modo de desenvolvimento da aplicação.
 
 #### 2 - Dropdown
 
-No dropdown vai poder terminar sessão e alterar a palavra-passe da sua conta, ou consultar dados do seu utilizador e grupo.
+ Permite selecionar opções para gerenciar sua sessão, tais como fazer logout, alterar a senha da sua conta e consultar dados de seu usuário e grupos.
+
 
 #### 3 - Dashboard
 
-O Frontend programado na pasta `public` da sua app vai aparecer neste espaço.
+Esta é a área central, onde a sua aplicação web frontend, programado na pasta `public` é exibida.
 
 #### 4 - Tabelas formulários
 
-Nesta área pode clicar em cada tabela e preencher como quiser.
-
-#### 5 - Tabelas relatórios
-
-Nesta área é possível gerar PDF's/ Excel's e também usar templates.
+Nesta área, você encontra o acesso a todas as tabelas de dados. Clique para visualizar, adicionar, editar ou excluir dados diretamente através de formulários.
 
 ### Construir
 
-![construir.png](/docs/assets/construir.png)  
+É o ambiente low-code onde você configura e gerencia todos os aspectos da sua aplicação sem a necessidade de escrever um código extensivo.
+
+![construir.png](static/docs/assets/academy/saiba_como/construir.png)  
 
 #### 1 - Visualizar
 
-Este botão faz com que volte para o frontend.
+Permite o retorno imediato ao modo "Visualizar", para verificar o impacto das suas alterações em tempo real.
 
 #### 2 - Dropdown
 
-No dropdown vai poder terminar sessão e alterar a palavra-passe da sua conta
+Permite sair da aplicação.
 
-#### 3 - Gestão de campos
+#### 3 -  Minha área de trabalho
 
-#### 4 - Tabelas formulários
+Esta é a área central, onde a sua aplicação web (frontend, programado na pasta public) é exibida. 
 
-#### 5 - Tabelas relatórios
+#### 4 - Gestão
+
+Esta seção permite gerenciar formulários, relatórios, query e diagramas.
+
+#### 5 - Depurar
+
+Esta seção possibilita o monitoramento e a inspeção do comportamento dos scripts em tempo de execução. Assim, é possível identificar problemas, rastrear valores de variáveis e compreender o fluxo de execução do código.
+
+#### 6 - Gestão de campos
+
+Esta seção permite a gestão da estrutura das suas tabelas de dados. Você pode adicionar, editar ou remover campos e definir o tipo de dado (texto, número, data, etc.) para cada um.
