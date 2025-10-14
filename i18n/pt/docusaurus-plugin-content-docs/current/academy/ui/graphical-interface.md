@@ -5,13 +5,13 @@ title: Saiba Como
 ---
 ## Netuno Admin
 
-O Netuno está divido em 2 modos, o modo "Visualizar" e o "Construir". Na **visualização** é mostrado a parte de interação. Na **construção** é onde é feita toda a manutenção do Netuno.
+A interface do Netuno é dividida em duas áreas de trabalho, com finalidades específicas e diferentes. O modo de *visualização* para interagir e exibir o resultado da aplicação final (Frontend), e o modo de *construção* para desenvolver sua aplicação.
 
 ### Visualizar
 
 Este é o ambiente frontend onde os usuários interagem com a parte visual da aplicação.
 
-![visualizar.png](static/docs/assets/academy/saiba_como/visualizar.png)  
+![visualizar.png](/docs/assets/academy/saiba_como/visualizar.png)
 
 #### 1 - Construir
 
@@ -34,7 +34,7 @@ Nesta área, você encontra o acesso a todas as tabelas de dados. Clique para vi
 
 É o ambiente low-code onde você configura e gerencia todos os aspectos da sua aplicação sem a necessidade de escrever um código extensivo.
 
-![construir.png](static/docs/assets/academy/saiba_como/construir.png)  
+![construir.png](/docs/assets/academy/saiba_como/construir.png)
 
 #### 1 - Visualizar
 
