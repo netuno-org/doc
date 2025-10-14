@@ -585,6 +585,26 @@ Objeto Query atual.
 
 ---
 
+#### <span style={{color: '#008000'}}>page</span>(<span style={{color: '#FF8000'}}>page</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>size</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Descrição
+
+Retorna Pagina com os items resultante da execução da consulta de forma paginada e demais dados da paginação.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **page** | _int_ | Numero da página de rigistos. |
+| **size** | _int_ | Quantidade de registos por página. |
+
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+Pagina com os items e demais dados da paginação.
+
+---
+
 #### <span style={{color: '#008000'}}>page</span>(<span style={{color: '#FF8000'}}>paginacao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.pagination.Pagination</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Descrição
 

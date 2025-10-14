@@ -1630,6 +1630,30 @@ One To Many relationship.
 
 ---
 
+## page
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>page</span>(<span style={{color: '#FF8000'}}>page</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>pageSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.pagination.Pagination</span>
+##### Description
+
+Returns the object for pagination configuration when using Query's page() method.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **page** | _int_ | Page number. |
+| **pageSize** | _int_ | Number of elements per page. |
+
+##### Return
+
+( _org.netuno.tritao.db.form.pagination.Pagination_ )
+
+Objeto Pagination.
+
+---
+
 ## pagination
 
 ---

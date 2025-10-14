@@ -297,11 +297,11 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-## renderDisplayName
+## renderTitle
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>renderDisplayName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>renderTitle</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Return
 
 ( _void_ )

@@ -963,6 +963,7 @@ Gets one specific authentication provider configuration.
 ```javascript
 // Gets authentication provider setting to each provider.
 _log.info('Google Provider Configuration', _auth.providerConfig('google'))
+_log.info('Microsoft Provider Configuration', _auth.providerConfig('microsoft'))
 _log.info('GitHub Provider Configuration', _auth.providerConfig('github'))
 _log.info('Discord Provider Configuration', _auth.providerConfig('discord'))
 _log.info('LDAP Provider Configuration', _auth.providerConfig('ldap'))
@@ -975,6 +976,7 @@ _log.info('LDAP Provider Configuration', _auth.providerConfig('ldap'))
 |---|---|---|
 | **providerCode** | _string_ | Name of the provider configuration key, which can be: |
 |   |   | - google |
+|   |   | - microsoft |
 |   |   | - github |
 |   |   | - discord |
 |   |   | - ldap |
@@ -1001,6 +1003,7 @@ Checks whether the authentication provider is active.
 ```javascript
 // Checks enabled authentication providers.
 _log.info('Google Provider Enabled', _auth.providerEnabled('google'))
+_log.info('Microsoft Provider Enabled', _auth.providerEnabled('microsoft'))
 _log.info('GitHub Provider Enabled', _auth.providerEnabled('github'))
 _log.info('Discord Provider Enabled', _auth.providerEnabled('discord'))
 _log.info('LDAP Provider Enabled', _auth.providerEnabled('ldap'))
@@ -1013,6 +1016,7 @@ _log.info('LDAP Provider Enabled', _auth.providerEnabled('ldap'))
 |---|---|---|
 | **providerCode** | _string_ | Name of the provider configuration key, which can be: |
 |   |   | - google |
+|   |   | - microsoft |
 |   |   | - github |
 |   |   | - discord |
 |   |   | - ldap |

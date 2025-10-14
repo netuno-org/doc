@@ -296,11 +296,11 @@ Responsável por realizar a gestão dos formulários da aplicação programatica
 
 ---
 
-## notNulls
+## mandatoryFields
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>notNulls</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>mandatoryFields</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -314,7 +314,7 @@ Responsável por realizar a gestão dos formulários da aplicação programatica
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>notNulls</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>mandatoryFields</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -328,11 +328,11 @@ Responsável por realizar a gestão dos formulários da aplicação programatica
 
 ---
 
-## primaryKeys
+## uniqueFields
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>primaryKeys</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>uniqueFields</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -346,7 +346,7 @@ Responsável por realizar a gestão dos formulários da aplicação programatica
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>primaryKeys</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>uniqueFields</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
