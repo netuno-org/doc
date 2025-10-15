@@ -12,7 +12,8 @@ A interface do Netuno é dividida em duas áreas de trabalho, com finalidades es
 
 Este é o ambiente frontend onde os usuários interagem com a parte visual da aplicação.
 
-![visualizar.png](/docs/assets/academy/saiba_como/visualizar.png)
+![view-pt.png](/docs/assets/academy/ui/get-to-know/view-pt.png)
+
 
 #### 1 - Construir
 
@@ -22,8 +23,7 @@ Este botão permite que você acesse o modo de desenvolvimento da aplicação.
 
  Permite selecionar opções para gerenciar sua sessão, tais como fazer logout, alterar a senha da sua conta e consultar dados de seu usuário e grupos.
 
-
-#### 3 - Painel
+#### 3 - Minha área de trabalho
 
 Esta é a área central, onde a sua aplicação web frontend, programado na pasta `public` é exibida.
 
@@ -35,7 +35,7 @@ Nesta área, você encontra o acesso a todas as tabelas de dados. Clique para vi
 
 É o ambiente low-code onde você configura e gerencia todos os aspectos da sua aplicação sem a necessidade de escrever um código extensivo.
 
-![construir.png](/docs/assets/academy/saiba_como/construir.png)
+![construction-pt.png](/docs/assets/academy/ui/get-to-know/construction-pt.png)
 
 #### 1 - Visualizar
 
@@ -47,7 +47,7 @@ Permite sair da aplicação.
 
 #### 3 -  Minha área de trabalho
 
-Esta é a área central, onde a sua aplicação web (frontend, programado na pasta public) é exibida. 
+Esta é a área central, onde a sua aplicação web frontend, programado na pasta `public` é exibida. 
 
 #### 4 - Gestão
 
