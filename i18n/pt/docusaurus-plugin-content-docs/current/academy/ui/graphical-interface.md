@@ -18,12 +18,12 @@ Este é o ambiente frontend onde os usuários interagem com a parte visual da ap
 
 Este botão permite que você acesse o modo de desenvolvimento da aplicação.
 
-#### 2 - Dropdown
+#### 2 - Menu suspenso
 
  Permite selecionar opções para gerenciar sua sessão, tais como fazer logout, alterar a senha da sua conta e consultar dados de seu usuário e grupos.
 
 
-#### 3 - Dashboard
+#### 3 - Painel
 
 Esta é a área central, onde a sua aplicação web frontend, programado na pasta `public` é exibida.
 
@@ -41,7 +41,7 @@ Nesta área, você encontra o acesso a todas as tabelas de dados. Clique para vi
 
 Permite o retorno imediato ao modo "Visualizar", para verificar o impacto das suas alterações em tempo real.
 
-#### 2 - Dropdown
+#### 2 - Menu suspenso
 
 Permite sair da aplicação.
 
