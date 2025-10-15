@@ -1,7 +1,8 @@
 ---
 sidebar_position: 1
 id: graphical-interface
-title: Saiba Como
+title: Saiba Como Usar a Interface Gráfica
+sidebar_label: Saiba Como
 ---
 ## Netuno Admin
 
