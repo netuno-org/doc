@@ -51,6 +51,7 @@ Insira e ajuste os seguintes parâmetros:
 ```json
     ...
     "ws": {
+        "hosts": [...], "<-- OPCIONAL": "mais sobre na documentação abaixo.",
         "endpoints": [
             {
                 "name": "pool",
@@ -132,6 +133,85 @@ Então o endereço final no front-end será `/ws/pool/`, com a barra no fim.
 ##### service
 
 Endereço da base de serviço de back-end da aplicação que processa as conexões e a comunicação via WebSocket.
+
+#### hosts
+
+Opcionalmente podemos definir os hosts que os nossos endpoints estão disponíveis, ou seja, na conexão vem o
+endereço do Host no header HTTP, exatamente este host sendo considerado apenas a informação do domínio ou IP e
+descartado a indicação da porta, é o que é utilizado para associar e encontrar o endpoint correspondente.
+
+> Portanto, o endpoint para funcionar corretamente precisa combinar `host` e `public` + `path`, da seguinte forma:
+>
+> `ws://[host]:9000[public][path]`
+>
+> Em produção com NGINX, proxy reverso e SSL deve ficar assim:
+>
+> `wss://[host][public][path]`
+
+O Netuno define alguns domínios locais com o prefixo do nome da app, que associa automaticamente como valor
+padrão para os hosts dos endpoints, além que na app em desenvolvimento adiciona também o `localhost` e o
+`127.0.0.1` aos hosts padrão, por isso a definição dos hosts é opcional, porque há esta configuração automática.
+
+Os seguintes hosts são definidos automaticamente para os endpoints, caso o nome da app seja `minhapp`:
+
+- Este direciona diretamente para o IP local 127.0.0.1:
+  - `minhaapp.local.netu.no`
+- Estes para funcionar é necessário registrar no arquivo de hosts do sistema operacional:
+  - `minhaapp.localhost`
+  - `minhaapp.local`
+
+Caso o nome da app seja `minha_app` então passa a ser estes os hosts automáticos:
+
+- Este direciona diretamente para o IP local 127.0.0.1:
+  - `minha-app.local.netu.no`
+- Estes para funcionar é necessário registrar no arquivo de hosts do sistema operacional:
+  - `minha-app.localhost`
+  - `minha-app.local`
+
+> No domínio não é permitido o `_` (subtraço) e no nome das apps não é permitido o `-` (traço), por isso externamente
+> utilizamos o `-` (traço) no endereço, mas o Netuno transforma automaticamente o `-` (traço) em `_` (subtraço) para
+> encontrar a aplicação certa.
+
+A aplicação padrão ou a aplicação definida na inicialização do servidor do Netuno tem adicionalmente os seguintes
+hosts:
+
+- `localhost`
+- `127.0.0.1`
+
+Para definir hosts customizados utilizamos as seguintes configurações:
+
+```json
+    ...
+    "ws": {
+        "endpoints": [
+            {
+                "hosts": ["meu-dominio1.com", "www.meu-dominio1.com"],
+                ...
+            },
+            {
+                "hosts": ["meu-dominio2.com", "www.meu-dominio2.com"],
+                ...
+            }
+        ]
+    },
+    ...
+```
+
+Caso todos os endpoints funcionem para os mesmos hosts então podemos definir globalmente desta forma:
+
+```json
+    ...
+    "ws": {
+        "hosts": ["meu-dominio.com", "www.meu-dominio1.com"],
+        "endpoints": [
+            ...
+        ]
+    },
+    ...
+```
+
+Certifique que no endereço final do WebSocket utiliza sempre um domínio ou IP que seja um host válido, caso
+contrário não funcionará porque o endpoint não poderá ser encontrado internamente.
 
 ## Serviço para os Endpoints
 
@@ -474,7 +554,7 @@ Comando de instalação:
 
 ```js
 _ws.config({
-    url: 'ws://localhost:9000/ws/example',
+    url: 'ws://localhost:9000/ws/example/',
     servicesPrefix: '/services',
     method: 'GET',
     autoReconnect: true,
@@ -492,6 +572,15 @@ _ws.config({
     }
 });
 ```
+
+> Certifique que a URL combina corretamente os valores configurados no endpoint para `host` e `public` + `path`,
+> da seguinte forma:
+>
+> `ws://[host]:9000[public][path]`
+>
+> Já a URL de produção com a integração do NGINX, proxy reverso e SSL, provavelmente será assim:
+>
+> `wss://[host][public][path]`
 
 A seguir pode iniciar a conexão:
 
@@ -568,3 +657,17 @@ No NGINX o proxy reverso pode ser configurado desta forma:
 > aplicação Netuno. Se houver `_` no nome da aplicação então no endereço do `Host` será substituído por `-`,
 > por exemplo, a aplicação `minha_app` passa a ter o valor do `Host` assim `minha-app.local.netu.no`.
 
+Reinicie o NGINX para que a configuração faça efeito.
+
+Os domínios configurados no NGINX, ou seja, a parametrização do `server_name` não precisa estar nos hosts do
+endpoint na aplicação do Netuno, porque na configuração de proxy acima é alterado o Host no header do HTTP
+para um endereço padrão que já é configurado automaticamente pelo Netuno sempre, des que o prefixo com o nome da
+aplicação esteja correta.
+
+Caso o servidor do NGINX utilize a porta 80, então a URL final será:
+
+- `ws://[host][public][path]`
+
+E com SSL/HTTPS, caso o servidor do NGINX utilize a porta 443, então a URL final será:
+
+- `wss://[host][public][path]`
