@@ -68,7 +68,7 @@ Estes campos definem valores padrão para novos registros e a ordem de exibiçã
 A tela de **Diagrama** oferece uma visualização gráfica de toda a estrutura de dados da sua aplicação. Conhecido como Diagrama de Entidade-Relacionamento (DER), ele exibe todos os formulários (que representam tabelas no banco de dados), seus respectivos campos e as conexões entre eles.
 Esta ferramenta é fundamental para entender rapidamente como as informações da sua aplicação estão organizadas e conectadas, facilitando a análise e o desenvolvimento.
 
-![form-diagram-pt.png](static/docs/assets/academy/ui/forms/form-diagram-pt.png)
+![form-diagram-pt.png](/docs/assets/academy/ui/forms/form-diagram-pt.png)
 
 > Experimente criar vários formulários, campos e visualize no modo diagrama!
 
