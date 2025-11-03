@@ -4,51 +4,83 @@ id: forms
 title: Forms
 ---
 
-## How to create forms
+## How to Create Forms
 
-This tutorial will help you create forms on the Netuno platform.
+Form management is the area where you can create and manage your application's data structures. Each form you create here becomes an interface in the back office for entering, editing, and viewing data, as well as corresponding to a table in the database.
 
-It is divided into two essential and mandatory steps, and a small approach to the **grouping of forms** and the **mode diagram**.
+It is divided into two essential and mandatory steps, accompanied by a brief approach to **form grouping** and **diagram mode**.
 
-![form1.png](/docs/assets/form1.png)
+![form-management-pt.png](/docs/assets/academy/ui/forms/form-management-pt.png)
 
-## 1 - Assigning a Display Name
+## 1 - Form Title
 
-The first thing to do when creating a form is to define a display name.
+This is the name of your form, so enter a clear and intuitive name.
 
-![form2.png](/docs/assets/form2.png)
+It will be displayed in the back office sidebar menu in the following sections: **Forms** (in View mode) and **Manage Fields** (in Build mode).
 
-The display name is the name seen by the user. It is the title of the form, which will appear in the tab **Manage Fields**
+![form-name-title-pt.png](/docs/assets/academy/ui/forms/form-name-title-pt.png)
 
-![form3.png](/docs/assets/form3.png)
+## 2 - Table Name
 
-as in the tab **Forms**, on the display screen.
+This is the technical name that will be used to create the corresponding table in the database. This name is used internally by the system and by developers.
 
-![form4.png](/docs/assets/form4.png)
+**How ​​to fill it out:**
 
-## 2 - Field Name
+- **Manual:** Enter a unique name in the singular, with lowercase letters and without spaces or special characters (use the `snake_case` format, for example: cadastro_cliente).
 
-When you assign a name to the **Display Name**, the **Field Name** is automatically filled with that same name so that it can be easily identified in the database.
+- **Automatic:** Check the **Auto** box next to the field. The system will automatically generate a technical name based on the **Form Title**. This is the recommended practice to maintain consistency.
 
-However, this name can be changed if we want.
+-
 
-![form5.png](/docs/assets/form5.png)
+![form-name-table-pt.png](/docs/assets/academy/ui/forms/form-name-table-pt.png)
 
-This is the name that will identify the form in the database.
+## 3 - Form Grouping (Parent)
 
-## 3 - Form grouping (Father)
+This field allows you to create a hierarchy between forms. By selecting a "Parent," you are defining the current form as a sub-item of the selected form. It will be displayed in the sidebar menu in the following sections: "Forms" (in View mode) and "Manage Fields" (in Build mode) of the associated main form.
 
-It is possible to create a form in order to group other forms in the same context.
+**How ​​to fill in:**
 
-For example, a form **Vehicles** could be created and be the parent form of the forms **Car, Motorcycle**, etc, thus creating an organization by groups, helping in the overview.
+- Leave blank if this is a main form (such as "Client").
 
-## Diagram Mode
+- Select an existing form from the list if you want to create a dependency relationship. For example, an "Addresses" form could have "Client" as its parent.
 
-The diagram mode allows the user to have an overview of the forms created as well as their fields and relationships.
+![form-grouping-parent-pt.png](/docs/assets/academy/ui/forms/form-grouping-parent-pt.png)
 
-![form6.png](/docs/assets/form6.png)
+## 4 - Control Options
 
-> Try creating multiple forms and multiple fields and view in diagram mode!
+These checkboxes activate specific functionalities for the form.
+
+- **Show ID:** Check this option if you want the unique identification (ID) field of each record to be visible in the form's data listing.
+
+- **Active Control:** Activates a status control (Active/Inactive) for each record. This allows you to deactivate an item without having to delete it from the database.
+
+- **User Control:** Causes each record created in the form to be associated with the user who created it. This is useful for tracking who performed each registration.
+
+- **Group Control:** Associates each record with a user group. This option is commonly used to manage data access permissions based on the groups registered in the system.
+
+![form-control-options-pt.png](/docs/assets/academy/ui/forms/form-control-options-pt.png)
+
+## 5 - Sorting Settings and Associated Users
+
+These fields define default values ​​for new records and the display order.
+
+- **Reorder:** Set a number for the order in which this form will appear in the sidebar menu. Smaller numbers (such as 0, 1, 2) appear first.
+
+- **User:** Select a default user to be associated with new records if "User Control" is enabled. "General" means there is no specific user.
+
+- **Group:** Select a default group to be associated with new records if "Group Control" is enabled. "General" means there is no specific group.
+
+![form-sort-settings-and-associated-users-pt.png](/docs/assets/academy/ui/forms/form-sort-settings-and-associated-users-pt.png)
+
+## 6 - Diagram Mode
+
+The **Diagram** screen offers a graphical visualization of your application's entire data structure. Known as an Entity-Relationship Diagram (ERD), it displays all forms (which represent tables in the database), their respective fields, and the connections between them.
+
+This tool is fundamental for quickly understanding how your application's information is organized and connected, facilitating analysis and development.
+
+![form-diagram-pt.png](/docs/assets/academy/ui/forms/form-diagram-pt.png)
+
+> Try creating multiple forms and fields and visualize them in diagram mode!
 
 ## Next Step
 
