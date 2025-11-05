@@ -26,10 +26,11 @@ Ele será exibido no menu lateral do backoffice nas seguintes seções: **Formul
 
 **Como preencher:**
 
-- **Manual:** Digite um nome único com letras minúsculas, sem espaços ou caracteres especiais (use o formato `snake_case`, por exemplo: cadastro_clientes).
+- **Manual:** Digite um nome único no singular, com letras minúsculas e sem espaços ou caracteres especiais (use o formato `snake_case`, por exemplo: cadastro_cliente).
 - **Automático:** Marque a caixa **Auto** ao lado do campo. O sistema irá gerar automaticamente um nome técnico baseado no **Título do formulário**. Esta é a prática recomendada para manter a consistência.
+- 
 
-![forms-name-table-pt.png](/docs/assets/academy/ui/forms/forms-name-table-pt.png)
+![form-name-table-pt.png](/docs/assets/academy/ui/forms/form-name-table-pt.png)
 
 ## 3 - Agrupamento de formulários (Pai)
 
@@ -37,8 +38,8 @@ Este campo permite criar uma hierarquia entre formulários. Ao selecionar um "Pa
 
 **Como preencher:**
 
-- Deixe em branco se este for um formulário principal (como "Clientes").
-- Selecione um formulário existente na lista se quiser criar um relacionamento de dependência. Por exemplo, um formulário "Endereços" poderia ter "Clientes" como pai.
+- Deixe em branco se este for um formulário principal (como "Cliente").
+- Selecione um formulário existente na lista se quiser criar um relacionamento de dependência. Por exemplo, um formulário "Endereços" poderia ter "Cliente" como pai.
 
 ![form-grouping-parent-pt.png](/docs/assets/academy/ui/forms/form-grouping-parent-pt.png)
 
@@ -63,7 +64,7 @@ Estes campos definem valores padrão para novos registros e a ordem de exibiçã
 
 ![form-sort-settings-and-associated-users-pt.png](/docs/assets/academy/ui/forms/form-sort-settings-and-associated-users-pt.png)
 
-## Modo Diagrama
+## 6 - Modo Diagrama
 
 A tela de **Diagrama** oferece uma visualização gráfica de toda a estrutura de dados da sua aplicação. Conhecido como Diagrama de Entidade-Relacionamento (DER), ele exibe todos os formulários (que representam tabelas no banco de dados), seus respectivos campos e as conexões entre eles.
 Esta ferramenta é fundamental para entender rapidamente como as informações da sua aplicação estão organizadas e conectadas, facilitando a análise e o desenvolvimento.
