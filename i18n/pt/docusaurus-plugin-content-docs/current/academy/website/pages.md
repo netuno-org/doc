@@ -63,8 +63,6 @@ Depois das importações adicione as constantes:
 
 ```javascript title="src/App.jsx"
 const { Header, Footer, Content } = Layout;
-
-const { SubMenu } = Menu;
 ```
 
 Nesta fase inicial o retorno do componente App poderá ser da seguinte forma:
@@ -117,6 +115,7 @@ import {useNavigate} from 'react-router';
 import {Button} from 'antd';
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <div>
       <h1>Home</h1>
