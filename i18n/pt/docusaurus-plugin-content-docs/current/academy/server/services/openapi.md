@@ -4,6 +4,8 @@ title: OpenAPI
 sidebar_label: OpenAPI
 ---
 
+Definição do esquema de serviços.
+
 ## Introdução
 
 OpenAPI é uma especificação que padroniza os serviços que são oferecidos pelas APIs REST, ajuda a entender como os serviços estão definidos, como endereço, inputs e outputs.
