@@ -8,9 +8,11 @@ title: Groups and Users
 
 This section covers the creation and editing of passwords, groups, users, and the viewing of log histories, as well as the control of their access permissions, aiming to simplify and organize management.
 
-This menu provides access to your own account settings and system information. You need to access "view mode" and click on "Developer" in the upper right corner of the screen.
+### Menu
 
-### Requirements
+This menu allows access to your own account settings and system information. You need to access "view mode" and click on "Developer" in the upper right corner of the screen.
+
+#### Requirements
 - **Access to Netuno:** You must be logged into your Netuno instance.
 
 - **Created Application:** You must have a previously created application. If you don't have one yet, follow the previous app creation tutorials.
@@ -33,16 +35,19 @@ Allows you to change your own system access password. By clicking on "Developer"
 
 ## User
 
-This is the control center for managing user accounts. By clicking on "Developer" in the upper right corner of the screen, access the "User" section. ### Requirements
+This is the control center for managing user accounts. By clicking on "Developer" in the upper right corner of the screen, access the "User" section. 
+
+#### Requirements
 - Administrator permissions to access and modify users.
 
-**Edit existing user:** A menu to select an already registered user and load their data for editing.
+### 1 - Edit existing user
+A menu to select an already registered user and load their data for editing.
 
 **How ​​to edit a user:** Select a registered user and change the existing information. Click the "Save" button to confirm the change. After this action, a success message will be displayed.
 
 **Add new user:** The basic account identification fields (Name, Username, Password, Email, Group).
 
-#### How to add a new user
+### 2 - Add a new user
 In the "Add new user" section, fill in all fields:
 
 - **Name:** The person's full name.
@@ -63,7 +68,7 @@ In the "Add new user" section, fill in all fields:
 
 - **Save Button:** Click to save the new user in the system.
 
-## User Permissions
+### 3 - User Permissions
 
 The tabbed section ("Forms" and "Reports") allows you to define detailed permissions for the selected or newly created user.
 
@@ -83,7 +88,7 @@ Controls access to data visualization reports. Click the "Reports" tab (next to 
 
 - **Save:** Click the "Save" button at the bottom of the page.
 
-## Action Buttons
+### 4 - Action Buttons
 
 **Save:** Saves all changes made.
 
@@ -103,10 +108,10 @@ This section allows two main actions: "Add" a new group or "Edit" an existing gr
 
 By clicking "Developer" in the upper right corner of the screen, access the "Group" section.
 
-### Requirements
+#### Requirements
 - Have administrator permission to create or modify user groups.
 
-#### How to Add a New Group
+### How to Add a New Group
 
 - Locate the "Add" section.
 
@@ -120,7 +125,7 @@ By clicking "Developer" in the upper right corner of the screen, access the "Gro
 
 - **Email:** Enter a contact email for the group (optional, it can be a distribution email such as "sales@yourcompany.com"). Click the "Save" button.
 
-#### How to Edit an Existing Group
+### How to Edit an Existing Group
 
 - Select the registered group in the "Edit existing group" input at the top of the page.
 
@@ -130,7 +135,7 @@ By clicking "Developer" in the upper right corner of the screen, access the "Gro
 
 - Wait for the group data to automatically fill in the fields (Name, Email, and options).
 
-- Make the desired changes (example: deactivate an old group by changing "Active" or change its name).
+- Make the desired changes (example: deactivate an old group by changing "Active" checkbox or change its name).
 
 After making the changes, click "Save".
 
