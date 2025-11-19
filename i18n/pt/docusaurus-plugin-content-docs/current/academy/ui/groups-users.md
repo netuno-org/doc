@@ -8,9 +8,11 @@ title: Grupos e Usuários
 
 Esta seção aborda a criação e a edição de senhas, grupos, usuários e a visualização de históricos de registros (log), bem como o controle de suas permissões de acesso, visando simplificar e organizar o gerenciamento.
 
-Este menu dá acesso às configurações da sua própria conta e a informações de sistema. É necessário acessar o “modo visualizar” e clicar em "Developer" no canto superior direito da tela. 
+### Menu
 
-### Requisitos
+Este menu permite acessar às configurações da sua própria conta e a informações de sistema. É necessário acessar o “modo visualizar” e clicar em "Developer" no canto superior direito da tela. 
+
+#### Requisitos
 - **Acesso ao Netuno:** É necessário estar logado na sua instância do Netuno.
 - **Aplicação Criada:** É necessário ter uma aplicação previamente criada. Se ainda não tem, siga os tutoriais anteriores de criação de apps.
 - **Formulários:** Tenha pelo menos um ou dois formulários criados pois vamos usá-los como exemplo para definir permissões.
@@ -31,16 +33,17 @@ Permite que você altere sua própria senha de acesso ao sistema. Ao clicar em "
 
 É o centro de controle para o gerenciamento de contas de usuário. Ao clicar em "Developer" no canto superior direito da tela, acesse a seção de “Usuário”.
 
-### Requisitos
+#### Requisitos
 - Ter permissão de administrador para acessar e modificar usuários.
 
-**Editar usuário existente:** Um menu para selecionar um usuário já cadastrado e carregar seus dados para edição.
+ ### 1 - Editar usuário existente
+  Um menu para selecionar um usuário já cadastrado e carregar seus dados para edição.
 
 **Como editar um usuário:** Selecione um usuário cadastrado e altere as informações existentes. Clique no botão ”Salvar” para confirmar a alteração. Após esta ação, uma mensagem de sucesso será exibida.
 
 **Adicionar novo usuário:** Os campos básicos de identificação da conta (Nome, Usuário, Senha, Email, Grupo).
 
-#### Como adicionar um novo usuário
+### 2 - Adicionar novo usuário
 Na seção "Adicionar novo usuário", preencha todos campos:
 
 - **Nome:** O nome completo da pessoa.
@@ -53,7 +56,7 @@ Na seção "Adicionar novo usuário", preencha todos campos:
 - **Permissões:** Configure as permissões de acesso.
 - **Botão de Salvar:** Clique para salvar o novo usuário no sistema.
 
-## Permissões de Usuário 
+### 3 - Permissões do Usuário 
 
 A seção com abas ("Formulários" e "Relatórios") permite definir as permissões detalhadas para o usuário selecionado ou que está sendo criado.
 
@@ -70,7 +73,7 @@ Controla o acesso aos relatórios de visualização de dados. Clique na aba "Rel
 
 - **Salvar:** Clique no botão "Salvar" no final da página.
 
-## Botões de Ação
+### 4 - Botões de Ação
 
 **Salvar:** Salva todas as alterações realizadas.
 
@@ -84,15 +87,16 @@ Controla o acesso aos relatórios de visualização de dados. Clique na aba "Rel
 
 ## Grupo
 
-Esta página é usada para criar e gerenciar grupos de usuários. Um "Grupo" é um perfil (como "Administradores", "Vendas", "Clientes" ou "Gerentes") que define um conjunto de regras e acessos. Isso torna o gerenciamento de permissões muito mais fácil e organizado. 
+Esta página é usada para criar e gerenciar grupos de usuários. 
+Um "Grupo" é um perfil (como "Administradores", "Vendas", "Clientes" ou "Gerentes") que define um conjunto de regras e acessos. Isso torna o gerenciamento de permissões muito mais fácil e organizado. 
 
 Esta seção permite duas ações principais: “Adicionar” um novo grupo ou “Editar” um grupo cadastrado. 
 Ao clicar em "Developer" no canto superior direito da tela, acesse a seção de “Grupo”.
 
-### Requisitos
+#### Requisitos
 - Ter permissão de administrador para criar ou modificar grupos de usuários.
 
-#### Como Adicionar um Novo Grupo
+### Como Adicionar um Novo Grupo
 
 - Localize a seção "Adicionar".
 - **Nome:** Dê um nome claro e descritivo para o grupo (exemplo: "Equipe de Vendas", "Gerência", "Supervisão").Configurar Opções: Defina as opções principais para este grupo: 
@@ -101,13 +105,13 @@ Ao clicar em "Developer" no canto superior direito da tela, acesse a seção de 
 - **Ativo:** Marque esta opção para ativar as configurações no sistema.
 - **Email:** Insira um email de contato para o grupo (opcional, pode ser um email de distribuição como "vendas@suaempresa.com"). Clique no botão "Salvar".
 
-#### Como Editar um Grupo Existente
+### Como Editar um Grupo Existente
 
 - Selecione o grupo cadastrado no input  "Editar grupo existente" no topo da página.
 - Clique na caixa de seleção "Selecionar um grupo".
 - Escolha o grupo que deseja editar na lista.
 - Aguarde os dados do grupo preencherem automaticamente os campos (Nome, Email e as opções).
-- Faça as alterações que desejar (exemplo: desativar um grupo antigo mudando "Ativo" ou alterar seu nome).
+- Faça as alterações que desejar (exemplo: desativar um grupo antigo mudando o checkbox "Ativo" ou alterar seu nome).
 Após fazer as alterações, clique em "Salvar".
 
 ![create-and-edit-groups-pt.png](/docs/assets/academy/ui/groups-users/create-and-edit-groups-pt.png)
@@ -118,13 +122,13 @@ A tela "Histórico de Registros" é a ferramenta de log e auditoria da sua aplic
 
 Quando um usuário criar, editar ou deletar um registro em qualquer formulário (exemplo: "Cliente", "Produto", etc.), o sistema salvará um "log" dessa ação. Esta página permite que você pesquise e filtre todo esse histórico. Isso é essencial para:
 
-> *Segurança:* Monitorar atividades suspeitas ou não autorizadas.
+ - *Segurança:* Monitorar atividades suspeitas ou não autorizadas.
 
-> *Auditoria:* Manter um registro de conformidade de todas as alterações de dados.
+ - *Auditoria:* Manter um registro de conformidade de todas as alterações de dados.
 
-> *Diagnóstico:* Entender como um registro específico chegou ao seu estado atual (exemplo: "quem excluiu este cliente?").
+ - *Diagnóstico:* Entender como um registro específico chegou ao seu estado atual (exemplo: "quem excluiu este cliente?").
 
-#### Como Pesquisar o Histórico de Registros
+### Como Pesquisar o Histórico de Registros
 
 Preencha um ou mais campos (filtros) para encontrar os registros de log que deseja e, em seguida, clicar em "Pesquisar".
 
