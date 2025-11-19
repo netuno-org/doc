@@ -4,6 +4,8 @@ title: OpenAPI
 sidebar_label: OpenAPI
 ---
 
+Definition of the service schema.
+
 ## Introduction
 
 An open API, also called public API, is an application programming interface made publicly available to software developers. 
