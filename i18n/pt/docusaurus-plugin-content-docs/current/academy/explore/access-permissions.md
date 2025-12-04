@@ -83,7 +83,7 @@ O sistema monitora e armazena detalhadamente as seguintes informações de cada 
 
 ## Bloqueio Automático
 
-O Netuno possui um sistema de segurança ativo, que bloqueia o IP de origem quando atividades suspeitas são detectadas (exemplo múltiplas senhas incorretas consecutivas).
+O Netuno possui um sistema de segurança ativo, que bloqueia o IP de origem quando atividades suspeitas são detectadas (exemplo: múltiplas senhas incorretas consecutivas).
 
 ### Configurando as Regras de Bloqueio
 
@@ -131,11 +131,9 @@ Dentro do arquivo JSON, localize a seção `auth`. Se ela não existir, insira o
 
 Se um usuário for bloqueado acidentalmente, apenas um administrador pode liberar o acesso diretamente pelo Back-Office, sem precisar acessar o banco de dados.
 
-
-
 1. Acesse o menu da aplicação no modo **"Visualizar"**, e clique na seção de Usuário;  
 2. No campo de **"Editar um usuário existente"**, pesquise pelo cadastro do usuário bloqueado;   
-3. Na seção de **"Histórico de Autenticação"**, verifique se o status "Access" exibe o ícone de "Cadeado" na cor verde.
+3. Na seção de **"Histórico de Autenticação"**, verifique se o status "Access" exibe o ícone de "Cadeado" na cor verde;
 4. Clique neste ícone para desbloquear o usuário, após esta ação será exibida uma mensagem de sucesso; 
 5. A liberação é imediata, permitindo que o usuário tente efetuar login novamente. 
 
