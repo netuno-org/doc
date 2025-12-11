@@ -12,8 +12,6 @@ The Netuno interface is divided into two workspaces, each with specific and dist
 
 This is the frontend environment where users interact with the visual part of the application.
 
-![view-en.png](/docs/assets/academy/ui/get-to-know/view-en.png) 
-
 #### 1 - Build
 
 This button allows you to access the application development mode.
@@ -30,13 +28,11 @@ This is a central area, where your web application frontend, programmed in the `
 
  In this area, you'll find access to all data tables. Click to view, add, edit, or delete data directly through forms.
 
+![view-en.png](/docs/assets/academy/ui/get-to-know/view-en.png) 
 
 ### Build
 
 It is the low-code environment where you configure and manage all aspects of your application without the need to write extensive code.
-
-![construction-en.png](/docs/assets/academy/ui/get-to-know/construction-en.png)  
-
 
 #### 1 - View
 
@@ -61,3 +57,5 @@ This section allows you to monitor and inspect script behavior at runtime. This 
 #### 6 - Field Management
 
 This section allows you to manage the structure of your data tables. You can add, edit, or remove fields and define the data type (text, number, date, etc.) for each one.
+
+![construction-en.png](/docs/assets/academy/ui/get-to-know/construction-en.png)  
