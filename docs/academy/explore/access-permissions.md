@@ -51,39 +51,49 @@ For detailed information on Group Management, see the [Interface Guide: Users an
 
 ## Data Permission Control
 
-To ensure the functionality of a group, it is crucial to establish what data it is authorized to handle. In Netuno, access control is detailed and applied directly to the Forms (tables) of your application.
+To ensure the functionality of a group or user permissions, it is crucial to establish what data they are authorized to handle. In Netuno, access control is detailed and applied directly to the Forms (tables) of your application.
 
 The system uses a permissions matrix that allows you to define, for each functionality, whether a given group has the necessary authorization to:
 
-- **Consult (Read):** Only view records.
-- **Create (Add):** Insert new records into the database.
-- **Edit (Write):** Modify existing information.
+- **Read:** View records only.
+- **Write:** Insert and edit records in the database.
 - **Delete:** Permanently remove records.
 
 This flexibility ensures the protection of sensitive data, as each employee has restricted access only to the information essential for performing their tasks.
 
+:::tip Visual Guide
+For information on how to configure data permissions, see the [Interface Guide: Users and Groups](/docs/academy/ui/groups-users)
+:::
+
 ## Authentication History
 
-Netuno guarantees system integrity through the automatic logging of all authentication attempts. This security log functions as a "black box," being crucial for auditing all system accesses, both successful and invalid.
+To ensure transparency and control, all access attempts (successful or invalid) are logged and can be viewed in the Authentication History.
 
-The system monitors and stores the following detailed information for each user login attempt:
+The system monitors and stores detailed information for each user login attempt:
 
 - **Source IP:** The network address from which the request originated.
-- **Date and Time:** The exact time of the action.
-- **Status:** Whether access was allowed, denied, or blocked.
 
-### How to View the History
+- **Moment:** The exact time of the action.
 
-1. Access the **Settings > Users** menu.
-2. Locate the desired user and click **Edit**.
-3. Scroll to the **Authentication History** section.
-4. Click the **Clock** icon (🕒) to open the complete list of accesses for that user.
+- **Access:** Whether access was allowed, denied, or blocked.
+
+#### Legend of Access Icons
+
+🟩 **Green padlock/checkmark:** Indicates success. The user provided the correct credentials and the login was authorized. It also indicates that the source IP was unblocked.
+
+🟧 **Orange "X" icon:** Indicates the number of invalid attempts.
+
+🟥 **Red padlock:** Indicates the blocking of the source IP.
 
 ## Automatic Blocking
 
-Netuno has an active security system that blocks the source IP when suspicious activity is detected (example: multiple consecutive incorrect passwords).
+Neptune has an active security system designed to protect your application against attacks and unauthorized access.
 
-### Configuring Blocking Rules
+When suspicious activity is detected, such as multiple consecutive attempts at an invalid login, the system automatically blocks the originating IP address.
+
+Once blocked, the IP will not be able to make new requests for a specified period or until the block is manually removed.
+
+### Configure Blocking Rules
 
 This rule is defined in the **configuration files** of your application environment, either "development.json" or "production.json".
 
@@ -123,19 +133,29 @@ Within the JSON file, locate the section `auth` block. If it doesn't exist, inse
 
 - This process can be configured according to the needs of your application.
 
-## Netuno Interface Unlocking
+### Unlocking via Interface
 
-If a user is accidentally locked out, only an administrator can grant access directly through the Back-Office, without needing to access the database.
+Only a user with "Administrator" permission can grant access directly through the Back-Office without needing to access the database.
 
-1. Access the application menu in **"View"** mode and click on the User section;
-2. In the **"Edit an existing user"** field, search for the locked user's record;
-3. In the **"Authentication History"** section, verify that the "Access" status displays a green "Padlock" icon;
-4. Click this icon to unlock the user; a success message will be displayed after this action;
-5. The unlocking is immediate, allowing the user to try logging in again.
+1. Access the application menu in "View" mode, and click on the **"Configuration > Users"** section.
 
-The user's **"Access"** status will display the "white_check_mark" (green, indicating access granted) and "Padlock" (orange, indicating that denied access attempts have been unlocked) icons.
+![user-configuration-section-en.png](/docs/assets/academy/explore/user-configuration-section-en.png)
 
-This condition will only change after the user successfully logs in.
+2. In the **"Edit existing user"** field, select the desired user.
+
+![select-an-existing-user-en.png](/docs/assets/academy/explore/select-an-existing-user-en.png)
+
+3. In the **"Authentication History"** section, verify that the "Access" status displays the green "Padlock" icon;
+
+![section-authentication-history-en.png](/docs/assets/academy/explore/section-authentication-history-en.png)
+
+4. Click the **Clock** icon to view the user's complete login history.
+
+![authentication-history-en.png](/docs/assets/academy/explore/authentication-history-en.png)
+
+5. Click the green padlock in the **"Access"** column to unlock the user. After this action, a success message will be displayed.
+
+The unlocking is immediate, allowing the user to try logging in again.
 
 ## Integrated Authentications
 

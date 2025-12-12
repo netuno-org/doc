@@ -53,39 +53,47 @@ Para obter informações detalhadas sobre a Gestão de Grupos, consulte o [Guia 
 
 ## Controle de Permissões de Dados
 
-Para garantir a funcionalidade de um grupo, é crucial estabelecer quais dados ele está autorizado a manipular. No Netuno, o controle de acesso é detalhado e aplicado diretamente aos Formulários (tabelas) da sua aplicação.
+Para garantir a funcionalidade de um grupo ou permissões de um usuário, é crucial estabelecer quais dados ele está autorizado a manipular. No Netuno, o controle de acesso é detalhado e aplicado diretamente aos Formulários (tabelas) da sua aplicação.
 
 O sistema utiliza uma matriz de permissões que possibilita definir, para cada funcionalidade, se um determinado grupo possui a devida autorização para:
 
-- **Consultar (Ler):** Apenas visualizar os registros.
-- **Criar (Adicionar):** Inserir novos registros no banco de dados.
-- **Editar (Escrever):** Alterar informações já existentes.
-- **Excluir (Deletar):** Remover registros permanentemente.
+- **Ler:** Apenas visualizar os registros.
+- **Escrever:** Inserir e editar registros no banco de dados.
+- **Deletar:** Remover registros permanentemente.
 
 Essa flexibilidade assegura a proteção dos dados sensíveis, pois cada colaborador tem acesso restrito apenas às informações essenciais para a execução de suas tarefas.
 
+:::tip Guia Visual 
+Para obter informações detalhadas sobre como configurar as permissões de dados, consulte o [Guia da Interface: Usuários e Grupos](/docs/academy/ui/groups-users)
+:::
+
 ## Histórico de Autenticação
 
-O Netuno garante a integridade do sistema através do registro automático de todas as tentativas de autenticação. Esse registro de segurança funciona como uma "caixa preta", sendo crucial para a auditoria de todos os acessos ao sistema, tanto os bem-sucedidos quanto os inválidos.
+Para garantir transparência e controle, todas as tentativas de acesso (bem-sucedidas ou inválidas) são registradas e podem ser consultadas no Histórico de Autenticação.
 
-O sistema monitora e armazena detalhadamente as seguintes informações de cada tentativa de login de usuário:
+O sistema monitora e armazena detalhadamente as informações de cada tentativa de login do usuário:
 
 - **IP de Origem:** O endereço de rede de onde partiu a solicitação.
-- **Data e Hora:** O momento exato da ação.
-- **Status:** Se o acesso foi permitido, negado ou bloqueado.
+- **Momento:** O momento exato da ação.
+- **Acesso:** Se o acesso foi permitido, negado ou bloqueado.
 
-### Como Visualizar o Histórico
+#### Legenda de Ícones de Acesso
 
-1. Acesse o menu **Configuração > Usuários**.
-2. Localize o usuário desejado e clique em **Editar**.
-3. Role até a seção **Authentication History** (Histórico de Autenticação).
-4. Clique no ícone de **Relógio** (🕒) para abrir a lista completa de acessos daquele usuário.
+🟩 **Cadeado/check_mark, na cor verde:** Indica um sucesso. O usuário forneceu as credenciais corretas e o login foi autorizado. Também indica que o IP de origem foi desbloqueado.
+
+🟧 **Ícone com "X", na cor Laranja:** Indica a quantidade de tentativa inválida.
+
+🟥 **Cadeado na cor Vermelho:** Indica o bloqueio do IP de origem.
 
 ## Bloqueio Automático
 
-O Netuno possui um sistema de segurança ativo, que bloqueia o IP de origem quando atividades suspeitas são detectadas (exemplo: múltiplas senhas incorretas consecutivas).
+O Netuno possui um sistema de segurança ativo projetado para proteger sua aplicação contra ataques e acessos não autorizados.
 
-### Configurando as Regras de Bloqueio
+Quando atividades suspeitas são detectadas, como múltiplas tentativas consecutivas de um login inválido, o sistema bloqueia automaticamente o endereço IP de origem. 
+
+Uma vez bloqueado, o IP não conseguirá realizar novas requisições por um período determinado ou até que o bloqueio seja removido manualmente. 
+
+### Configurar Regras de Bloqueio
 
 Essa regra é definida nos **arquivos de configuração** do ambiente da sua aplicação "development.json" ou "production.json".
 
@@ -127,21 +135,25 @@ Dentro do arquivo JSON, localize a seção `auth`. Se ela não existir, insira o
 - Este processo pode ser configurado conforme a necessidade da sua aplicação.
 
 
-## Desbloqueio por Interface do Netuno
+### Desbloquear pela Interface 
 
-Se um usuário for bloqueado acidentalmente, apenas um administrador pode liberar o acesso diretamente pelo Back-Office, sem precisar acessar o banco de dados.
+Apenas um usuário com permissão de "Administrador" pode liberar o acesso diretamente pelo Back-Office sem precisar acessar o banco de dados.
 
-1. Acesse o menu da aplicação no modo **"Visualizar"**, e clique na seção de Usuário;  
-2. No campo de **"Editar um usuário existente"**, pesquise pelo cadastro do usuário bloqueado;   
+1. Acesse o menu da aplicação no modo "Visualizar", e clique na seção de **"Configuração > Usuários"**.
+![user-configuration-section-pt.png](/docs/assets/academy/explore/user-configuration-section-pt.png)
+
+2. No campo de **"Editar usuário existente"**, selecione o usuário desejado.
+![select-an-existing-user-pt.png](/docs/assets/academy/explore/select-an-existing-user-pt.png)
+
 3. Na seção de **"Histórico de Autenticação"**, verifique se o status "Access" exibe o ícone de "Cadeado" na cor verde;
-4. Clique neste ícone para desbloquear o usuário, após esta ação será exibida uma mensagem de sucesso; 
-5. A liberação é imediata, permitindo que o usuário tente efetuar login novamente. 
+![section-authentication-history-pt.png](/docs/assets/academy/explore/section-authentication-history-pt.png)
 
+4. Clique no ícone de **Relógio** para verificar a lista completa de acessos do usuário.
+![authentication-history-pt.png](/docs/assets/academy/explore/authentication-history-pt.png)
 
-O status **"Access"** do usuário exibirá os ícones "white_check_mark" (verde, indicando acesso liberado) e "Cadeado" (laranja, sinalizando que as tentativas de acesso negado foram desbloqueadas). 
+5. Clique no cadeado verde na coluna **"Acesso"** para desbloquear o usuário. Após esta ação, uma mensagem de sucesso é exibida.
 
-Essa condição será alterada apenas após o usuário, efetuar um login com sucesso.
-
+A liberação é imediata, permitindo que o usuário tente efetuar o login novamente. 
 
 
 ## Autenticações Integradas
