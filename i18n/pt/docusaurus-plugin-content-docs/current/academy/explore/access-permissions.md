@@ -153,7 +153,7 @@ Apenas um usuário com permissão de "Administrador" pode liberar o acesso diret
 
 5. Clique no cadeado verde na coluna **"Acesso"** para desbloquear o usuário. Após esta ação, uma mensagem de sucesso é exibida.
 
-A liberação é imediata, permitindo que o usuário tente efetuar o login novamente. 
+A liberação é imediata, permitindo que o usuário tente efetuar o login novamente.
 
 
 ## Autenticações Integradas
