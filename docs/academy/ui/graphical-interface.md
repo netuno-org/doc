@@ -24,7 +24,7 @@ Allows you to select options to manage your session, such as logging out, changi
 
 This is a central area, where your web application frontend, programmed in the `public` folder is displayed.
 
-### 4 - Form tables
+#### 4 - Form tables
 
  In this area, you'll find access to all data tables. Click to view, add, edit, or delete data directly through forms.
 
@@ -50,7 +50,7 @@ This is the central area, where your web application frontend, programmed in the
 
 This section allows you to manage forms, reports, queries and diagrams.
 
-### 5 - Debug
+#### 5 - Debug
 
 This section allows you to monitor and inspect script behavior at runtime. This allows you to identify problems, track variable values, and understand the code execution flow.
 
