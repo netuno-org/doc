@@ -1,0 +1,83 @@
+---
+id: upload
+title: Upload
+sidebar_label: Upload
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Enviar arquivos para a API e salvar em pasta ou na base de dados.
+
+## Introdução
+
+Quando precisamos enviar arquivos para os serviços da API REST temos várias formas
+de realizar este desenvolvimento no Netuno.
+
+Normalmente os arquivos são enviados no corpo do pedido HTTP estruturados no formato
+multipart, é o procedimento mais comum no frontend, por exemplo quando preenchemos um
+formulário e tem aquele campo para escolher um arquivo.
+
+Em alternativa podemos enviar os bytes dos arquivos codificados em Base64 como valor
+em um objeto JSON, quando queremos uma API REST 100% JSON.
+
+## Arquivos
+
+Através do `_req.file` podemos passar o nome do campo e assim obter o objeto do arquivo
+que foi enviado, veja como:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meuArquivo = _req.file("arquivo")
+            `
+        },
+    ]}
+/>
+
+Ou seja, o `_req` tem todos os dados que recebemos no corpo do pedido HTTP.
+
+E através do método `file` permite obter o objeto que representa o arquivo que foi
+enviado.
+
+O valor obtido poderá ser `null` caso não haja nenhum arquivo.
+
+## Imagens
+
+Quando recebemos imagens é comum haver a necessidade para redimenciona-la, para garantir
+uniformidade e para reduzir o espaço ocupado pelas imagens.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meuArquivo = _req.file("arquivo")
+                if (meuArquivo) {
+                    const minhaImagemRedimencionada = _image.init(meuArquivo)
+                        .resize(500, 500)
+                        .file(meuArquivo.name(), "jpeg")
+                }
+            `
+        },
+    ]}
+/>
+
+Com o recurso de programação low-code poliglota [Image](/docs/library/resources/image),
+podemos manipular imagens, cortar, redimencionar, criar novas, etc.
+
+## Como Base64 no JSON
+
+## OpenAPI
+
+## Salvar o Arquivo
+
+### Base de Dados
+
+### Storage
+
+### Pasta
+
+## Conclusão
+
