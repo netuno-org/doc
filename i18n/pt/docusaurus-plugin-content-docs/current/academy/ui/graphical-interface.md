@@ -12,9 +12,6 @@ A interface do Netuno é dividida em duas áreas de trabalho, com finalidades es
 
 Este é o ambiente frontend onde os usuários interagem com a parte visual da aplicação.
 
-![view-pt.png](/docs/assets/academy/ui/get-to-know/view-pt.png)
-
-
 #### 1 - Construir
 
 Este botão permite que você acesse o modo de desenvolvimento da aplicação.
@@ -31,11 +28,11 @@ Esta é a área central, onde a sua aplicação web frontend, programado na past
 
 Nesta área, você encontra o acesso a todas as tabelas de dados. Clique para visualizar, adicionar, editar ou excluir dados diretamente através de formulários.
 
+![view-pt.png](/docs/assets/academy/ui/get-to-know/view-pt.png)
+
 ### Construir
 
 É o ambiente low-code onde você configura e gerencia todos os aspectos da sua aplicação sem a necessidade de escrever um código extensivo.
-
-![construction-pt.png](/docs/assets/academy/ui/get-to-know/construction-pt.png)
 
 #### 1 - Visualizar
 
@@ -60,3 +57,4 @@ Esta seção possibilita o monitoramento e a inspeção do comportamento dos scr
 #### 6 - Gestão de campos
 
 Esta seção permite a gestão da estrutura das suas tabelas de dados. Você pode adicionar, editar ou remover campos e definir o tipo de dado (texto, número, data, etc.) para cada um.
+![construction-pt.png](/docs/assets/academy/ui/get-to-know/construction-pt.png)

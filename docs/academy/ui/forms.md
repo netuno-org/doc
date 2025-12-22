@@ -10,7 +10,7 @@ Form management is the area where you can create and manage your application's d
 
 It is divided into two essential and mandatory steps, accompanied by a brief approach to **form grouping** and **diagram mode**.
 
-![form-management-pt.png](/docs/assets/academy/ui/forms/form-management-pt.png)
+![form-management-en.png](/docs/assets/academy/ui/forms/form-management-en.png)
 
 ## 1 - Form Title
 
@@ -18,7 +18,7 @@ This is the name of your form, so enter a clear and intuitive name.
 
 It will be displayed in the back office sidebar menu in the following sections: **Forms** (in View mode) and **Manage Fields** (in Build mode).
 
-![form-name-title-pt.png](/docs/assets/academy/ui/forms/form-name-title-pt.png)
+![form-name-title-en.png](/docs/assets/academy/ui/forms/form-name-title-en.png)
 
 ## 2 - Table Name
 
@@ -30,9 +30,9 @@ This is the technical name that will be used to create the corresponding table i
 
 - **Automatic:** Check the **Auto** box next to the field. The system will automatically generate a technical name based on the **Form Title**. This is the recommended practice to maintain consistency.
 
--
 
-![form-name-table-pt.png](/docs/assets/academy/ui/forms/form-name-table-pt.png)
+
+![form-name-table-en.png](/docs/assets/academy/ui/forms/form-name-table-en.png)
 
 ## 3 - Form Grouping (Parent)
 
@@ -44,7 +44,7 @@ This field allows you to create a hierarchy between forms. By selecting a "Paren
 
 - Select an existing form from the list if you want to create a dependency relationship. For example, an "Addresses" form could have "Client" as its parent.
 
-![form-grouping-parent-pt.png](/docs/assets/academy/ui/forms/form-grouping-parent-pt.png)
+![form-grouping-parent-en.png](/docs/assets/academy/ui/forms/form-grouping-parent-en.png)
 
 ## 4 - Control Options
 
@@ -58,7 +58,7 @@ These checkboxes activate specific functionalities for the form.
 
 - **Group Control:** Associates each record with a user group. This option is commonly used to manage data access permissions based on the groups registered in the system.
 
-![form-control-options-pt.png](/docs/assets/academy/ui/forms/form-control-options-pt.png)
+![form-control-options-en.png](/docs/assets/academy/ui/forms/form-control-options-en.png)
 
 ## 5 - Sorting Settings and Associated Users
 
@@ -70,7 +70,7 @@ These fields define default values ​​for new records and the display order.
 
 - **Group:** Select a default group to be associated with new records if "Group Control" is enabled. "General" means there is no specific group.
 
-![form-sort-settings-and-associated-users-pt.png](/docs/assets/academy/ui/forms/form-sort-settings-and-associated-users-pt.png)
+![form-sort-settings-and-associated-users-en.png](/docs/assets/academy/ui/forms/form-sort-settings-and-associated-users-en.png)
 
 ## 6 - Diagram Mode
 
@@ -78,7 +78,7 @@ The **Diagram** screen offers a graphical visualization of your application's en
 
 This tool is fundamental for quickly understanding how your application's information is organized and connected, facilitating analysis and development.
 
-![form-diagram-pt.png](/docs/assets/academy/ui/forms/form-diagram-pt.png)
+![form-diagram-en.png](/docs/assets/academy/ui/forms/form-diagram-en.png)
 
 > Try creating multiple forms and fields and visualize them in diagram mode!
 
