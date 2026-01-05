@@ -69,11 +69,232 @@ podemos manipular imagens, cortar, redimencionar, criar novas, etc.
 
 ## Como Base64 no JSON
 
+Para realizar o upload de um arquivo no JSON enviado para o serviço, podemos definir uma propriedade com o valor:
+
+`data:image/png;base64,...`
+
+Onde nos `...` segue a sequência dos bytes do arquivo codificados em Base64.
+
+Sendo que o tipo do arquivo vai a seguir ao `data`, por exemplo:
+
+- PNG: `image/png`.
+- JPG: `image/jpeg`
+- TXT: `text/plain`
+- PDF: `application/pdf`
+- XLSX: `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+
+Veja o exemplo de um arquivo de uma imagem PNG pequena sendo enviada no JSON para um serviço:
+
+```json
+{
+  "file": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpDb2xvclNwYWNlPSIxIgogICBleGlmOlBpeGVsWERpbWVuc2lvbj0iMyIKICAgZXhpZjpQaXhlbFlEaW1lbnNpb249IjMiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMyIKICAgdGlmZjpJbWFnZVdpZHRoPSIzIgogICB0aWZmOlJlc29sdXRpb25Vbml0PSIyIgogICB0aWZmOlhSZXNvbHV0aW9uPSI3Mi8xIgogICB0aWZmOllSZXNvbHV0aW9uPSI3Mi8xIgogICB4bXA6TWV0YWRhdGFEYXRlPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMTItMjlUMTk6MTI6MjdaIj4KICAgPHhtcE1NOkhpc3Rvcnk+CiAgICA8cmRmOlNlcT4KICAgICA8cmRmOmxpCiAgICAgIHhtcE1NOmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHhtcE1NOnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IERlc2lnbmVyIDEuMTAuNSIKICAgICAgeG1wTU06d2hlbj0iMjAyNS0wMi0yM1QyMjoxNDozM1oiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IDMuMC4xIgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+UGhcxwAAAYFpQ0NQc1JHQiBJRUM2MTk2Ni0yLjEAACiRdZG7SwNBEIe/JEqCRhS0sFAIEq3iG4I2ggmigkiIEXw1yZmHkMdxlyDBVrANKIg2vgr9C7QVrAVBUQSx1lbRRuWc84QEMbPMzre/3Rl2Z8EeSSsZvaYPMtm8Fh4PeObmFzzOZ9y004yL3qiiq6Oh0BRV7f0Wmxmvu81a1c/9a/XLcV0Bm0t4RFG1vPCE8NRqXjV5S7hFSUWXhU+EfZpcUPjG1GMWP5mctPjTZC0SDoK9SdiTrOBYBSspLSMsL8ebSReU3/uYL3HHs7MzEjvE29AJM04AD5OMEcRPP8My++lmgB5ZUSW/7yd/mpzkKjKrFNFYIUmKPD5RC1I9LjEhelxGmqLZ/7991RODA1Z1dwBqHw3jtROcm/BVMoyPA8P4OgTHA5xny/m5fRh6E71U1rx70LgOpxdlLbYNZxvQeq9GteiP5BC3JxLwcgwN89B8BXWLVs9+9zm6g8iafNUl7OxCl5xvXPoGe8Rn71E5kqUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAySURBVAiZAScA2P8BJYrEogr//l3h5+qlBP4HCF3n/AAA/wP7WwLu7PKk+eHWAPzWyKSmfRbbIj23ZQAAAABJRU5ErkJggg=="
+}
+```
+
+Podemos obter o arquivo enviado da seguinte forma:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meuArquivo = _req.getFile("file")
+
+                if (meuArquivo) {
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                            .set("name", meuArquivo.name())
+                            .set("sizeBytes", meuArquivo.size())
+                            .set("sizeKB", meuArquivo.sizeKB())
+                    )
+                } else {
+                    _out.json(
+                        _val.map()
+                            .set('result', false)
+                    )
+                }
+            `
+        },
+    ]}
+/>
+
+Exemplo do output gerado pelo serviço acima:
+
+```json
+{
+  "name": "file.png",
+  "result": true,
+  "size": 1849,
+  "sizeKB": 1
+}
+```
+
+### Objeto
+
+Se o arquivo estiver numa estrutura interna do JSON dentro do subobjeto:
+
+```json
+{
+  "person": {
+    "file": "data:image/png;base64,..."
+  }
+}
+```
+
+Pode ser obtido da seguinte forma:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meuArquivo = _req.getValues("person").getFile("avatar")
+            `
+        },
+    ]}
+/>
+
+### Array
+
+Caso o arquivo estiver numa estrutura interna do JSON dentro do array:
+
+```json
+{
+  "files": [
+    "data:image/png;base64,..."
+  ]
+}
+```
+
+Pode ser obtido da seguinte forma:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meuArquivo = _req.getValues("files").getFile(0)
+            `
+        },
+    ]}
+/>
+
 ## OpenAPI
+
+O Netuno suporta a integração com a OpenAPI e utiliza a definição da OpenAPI para validar o pedido HTTP.
+
+> Mais sobre a [OpenAPI no Netuno](/docs/academy/server/services/openapi).
+
+Com o tipo `file` o Netuno valida se o valor começa com o formato de arquivo no JSON, por exemplo:
+
+- `data:image/png;base64,...`
+
+Para validar se está recebendo um arquivo em uma propriedade do objeto JSON:
+
+```json title="post.in.json"
+{
+  "summary": "Upload de Arquivo",
+  "description": "Serviço que recebe um arquivo no objeto JSON.",
+  "type": "object",
+  "properties": {
+    "file": {
+      "type": "file"
+    }
+  },
+  "required": [
+    "file"
+  ]
+}
+```
+
+Para validar se está recebendo uma lista de arquivos em array no JSON:
+
+```json title="post.in.json"
+{
+  "summary": "Upload de Arquivos",
+  "description": "Serviço que recebe uma lista de arquivos em array no JSON.",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "file"
+      }
+    }
+  },
+  "required": [
+    "files"
+  ]
+}
+```
 
 ## Salvar o Arquivo
 
+Normalmente quando recebemos um arquivo no serviço precisamos salvá-lo, como por exemplo:
+
+- **Base de dados**: Arquivo relacionado a um registro, como de um usuário.
+- **Storage**: Pasta interna da aplicação que serve para gerir arquivos no geral.
+- **Pasta**: Colocar o arquivo em uma pasta qualquer do sistema.
+
 ### Base de Dados
+
+Na gestão dos campos dos formulários, o Netuno suporta o tipo `image` e `file`, sendo:
+
+- **Image**: Arquivos de imagem no geral, JPG e PNG.
+- **File**: Qualquer tipo de arquivo.
+
+Imagine que tem um campo de Imagem no formulário Produto, podemos fazer salvar o arquivo enviado via upload da
+seguinte forma:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produtoUid = _req.getString("uid")
+                const produtoImagem = _req.getFile("image")
+
+                if (!produtoImagem) {
+                    _head.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "imagem-obrigatória")
+                    )
+                    _exec.stop()
+                }
+
+                let dbResultado = 0
+                dbResultado = _db.form("produto")
+                    .set("imagem", produtoImagem)
+                    .where(_db.where("uid").equals(produtoUid))
+                    .update()
+
+                // Outra forma:
+                dbResultado = _db.update(
+                    "produto",
+                    produtoUid,
+                    _val.map()
+                        .set("imagem", produtoImagem)
+                )
+
+                if (dbResultado == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                    )
+                } else {
+                    _head.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "uid-produto-não-existe")
+                    )
+                }
+            `
+        },
+    ]}
+/>
 
 ### Storage
 
