@@ -1,6 +1,7 @@
 import { readFile, readdir, writeFile, mkdir } from "fs/promises";
 import { existsSync } from "fs";
 import path from "path";
+import { connect } from "http2";
 
 export function cleanMarkdown(md: string): string {
   // md = md.replace(/^---[\s\S]*?---\s*\n?/, "");
@@ -63,8 +64,23 @@ async function collectMarkdown(dir: string, baseDir = dir): Promise<string[]> {
       let data = await readFile(fullPath, "utf-8");
 
       data = cleanMarkdown(data);
-
-      contents.push(`\n---\n<!-- source: ${relativePath} -->\n---\n\n${data}\n`);
+    
+      let { frontMatter, content } = extractFrontMatter(data);
+      frontMatter = { path:  relativePath.replace(/\\/g, "/").replace(/\.(md|mdx)$/, ""), ...frontMatter}
+      data = data.replace(/^---[\s\S]*?---\s*\n?/, "");
+       
+      contents.push(
+        [
+          "---",
+          ...Object.entries(frontMatter).map(
+            ([key, value]) => `${key}: ${value}`
+          ),
+          "---",
+          "",
+          content,
+          "",
+        ].join("\n")
+      );
     }
   }
 
@@ -93,4 +109,35 @@ export async function generateDoc(lang: string, sourceDir: string, outputDir: st
   console.log(`fulldoc-${lang}.md generated with ${charCount.toLocaleString()} characters`);
   
   return charCount;
+}
+
+
+type FrontMatter = Record<string, string | number>;
+
+export function extractFrontMatter(md: string): {
+  frontMatter: FrontMatter;
+  content: string;
+} {
+  const match = md.match(/^---\s*([\s\S]*?)\s*---\s*/);
+
+  if (!match) {
+    return { frontMatter: {}, content: md };
+  }
+
+  const raw: any = match[1];
+  const content = md.slice(match[0].length);
+
+  const frontMatter: FrontMatter = {};
+
+  raw.split("\n").forEach(line => {
+    const [key, ...rest] = line.split(":");
+    if (!key || rest.length === 0) return;
+
+    const value = rest.join(":").trim();
+
+    frontMatter[key.trim()] =
+      isNaN(Number(value)) ? value : Number(value);
+  });
+
+  return { frontMatter, content };
 }
