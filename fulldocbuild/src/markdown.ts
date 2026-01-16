@@ -2,35 +2,9 @@ import { readFile, readdir, writeFile, mkdir } from "fs/promises";
 import { existsSync } from "fs";
 import path from "path";
 
-
-const replacements: Array<[RegExp, string]> = [
-  [/javascript/gi, "js"],
-  [/typescript/gi, "ts"],
-  [/node\.js/gi, "Node"],
-  [/reactjs/gi, "React"],
-  [/react\.js/gi, "React"],
-  [/express\.js/gi, "Express"],
-  [/vuejs/gi, "Vue"],
-  [/vue\.js/gi, "Vue"],
-  [/angularjs/gi, "Angular"],
-  [/python/gi, "Py"],
-  [/ruby/gi, "Rb"],
-  [/kotlin/gi, "Kt"],
-  [/groovy/gi, "Groovy"],
-
-];
-
-
-function applyReplacements(text: string): string {
-  replacements.forEach(([pattern, replacement]) => {
-    text = text.replace(pattern, replacement);
-  });
-  return text;
-}
-
 export function cleanMarkdown(md: string): string {
-  md = md.replace(/^---[\s\S]*?---\s*\n?/, "");
-  md = md.replace(/<!--[\s\S]*?-->/g, "");
+  // md = md.replace(/^---[\s\S]*?---\s*\n?/, "");
+  // md = md.replace(/<!--[\s\S]*?-->/g, "");
 
   md = md.replace(/data:[^;]+;base64,[A-Za-z0-9+/=]+/g, "[BASE64]");
 
@@ -39,16 +13,16 @@ export function cleanMarkdown(md: string): string {
     const block = blocks[i];
     if (!block) continue;
 
-    // // Se for bloco de código, mantém
-    // if (/^```/.test(block)) continue;
+    // Se for bloco de código, mantém
+    if (/^```/.test(block)) continue;
 
     let text = block;
 
-    // Remove # iniciais de títulos
-    text = text
-      .split("\n")
-      .map((line) => line.replace(/^#{1,6}\s*/, ""))
-      .join("\n");
+    // // Remove # iniciais de títulos
+    // text = text
+    //   .split("\n")
+    //   .map((line) => line.replace(/^#{1,6}\s*/, ""))
+    //   .join("\n");
 
     // Remove emojis
     text = text.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, "");
@@ -65,20 +39,15 @@ export function cleanMarkdown(md: string): string {
     // Remove negrito **
     text = text.replace(/\*\*(.*?)\*\*/g, "$1");
 
-    // Aplica substituições
-    text = applyReplacements(text);
+    // // Remove tags <a>
+    // text = text.replace(/<a[^>]*>(.*?)<\/a>/gi, "$1");
 
-    // Remove tags <a>
-    text = text.replace(/<a[^>]*>(.*?)<\/a>/gi, "$1");
-
- 
 
     blocks[i] = text;
   }
 
   return blocks.join("").trim();
 }
-
 
 async function collectMarkdown(dir: string, baseDir = dir): Promise<string[]> {
   const entries = await readdir(dir, { withFileTypes: true });
