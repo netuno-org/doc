@@ -39,7 +39,7 @@ function PolyglotCode({file, codes}) {
     }];
     for (const code of codes) {
         for (const keyword of keywords) {
-            code.code = code.code.replaceAll(new RegExp("$(\\s+)"+ keyword.javascript.trim() +"\\s+", "gm"), "$1"+ keyword[code.lang]);
+            code.code = code.code.replaceAll(new RegExp("$(\\s*([#/]*)\\s+)"+ keyword.javascript.trim() +"\\s+", "gm"), "$1"+ keyword[code.lang]);
         }
     }
     const langsComment = {
