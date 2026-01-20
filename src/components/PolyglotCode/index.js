@@ -24,15 +24,23 @@ function PolyglotCode({file, codes}) {
             codes.push(code);
         }
     }
-    const langsConst = {
+    const keywords = [{
         javascript: 'const ',
         python: '',
         ruby: '',
         kotlin: 'val ',
+        groovy: 'final ',
+    }, {
+        javascript: 'let ',
+        python: '',
+        ruby: '',
+        kotlin: 'var ',
         groovy: 'def ',
-    };
+    }];
     for (const code of codes) {
-        code.code = code.code.replaceAll(/$(\s+)const\s+/gm, "$1"+ langsConst[code.lang]);
+        for (const keyword of keywords) {
+            code.code = code.code.replaceAll(new RegExp("$(\\s+)"+ keyword.javascript.trim() +"\\s+", "gm"), "$1"+ keyword[code.lang]);
+        }
     }
     const langsComment = {
         javascript: '// ',
