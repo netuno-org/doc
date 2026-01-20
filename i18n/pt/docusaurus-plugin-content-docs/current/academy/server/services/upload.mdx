@@ -246,16 +246,19 @@ Na gestão dos campos dos formulários, o Netuno suporta o tipo `image` e `file`
 Imagine que tem um campo de Imagem no formulário Produto, podemos fazer salvar o arquivo enviado via upload da
 seguinte forma:
 
+#### Exemplo utilizando o DB Form:
+
 <PolyglotCode
+    title="services/produto/post"
     codes={[
         {
             lang: 'javascript',
             code: `
                 const produtoUid = _req.getString("uid")
-                const produtoImagem = _req.getFile("image")
+                const produtoImagem = _req.getFile("imagem")
 
-                if (!produtoImagem) {
-                    _head.status(400)
+                if (produtoImagem == null) {
+                    _header.status(400)
                     _out.json(
                         _val.map()
                             .set("result", false)
@@ -264,14 +267,123 @@ seguinte forma:
                     _exec.stop()
                 }
 
-                let dbResultado = 0
-                dbResultado = _db.form("produto")
+                const dbResultado = _db.form("produto")
                     .set("imagem", produtoImagem)
                     .where(_db.where("uid").equals(produtoUid))
                     .update()
 
-                // Outra forma:
-                dbResultado = _db.update(
+                if (dbResultado.getInt("produto") == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                    )
+                } else {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "uid-produto-não-existe")
+                    )
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produtoUid = _req.getString("uid")
+                produtoImagem = _req.getFile("imagem")
+
+                if produtoImagem is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "imagem-obrigatória")
+                    )
+                    _exec.stop()
+
+                dbResultado = (
+                    _db.form("produto")
+                        .set("imagem", produtoImagem)
+                        .where(_db.where("uid").equals(produtoUid))
+                        .update()
+                )
+
+                if dbResultado.getInt("produto") == 1:
+                    _out.json(
+                        _val.map()
+                            .set("result", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "uid-produto-não-existe")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produto_uid = _req.getString("uid")
+                produto_imagem = _req.getFile("imagem")
+
+                if produto_imagem.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "imagem-obrigatória")
+                  )
+                  _exec.stop
+                end
+
+                db_resultado = _db.form("produto")
+                  .set("imagem", produto_imagem)
+                  .where(_db.where("uid").equals(produto_uid))
+                  .update()
+
+                if db_resultado.getInt("produto") == 1
+                  _out.json(
+                    _val.map()
+                      .set("result", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "uid-produto-não-existe")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Exemplo utilizando o update clássico:
+
+<PolyglotCode
+    title="services/produto/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produtoUid = _req.getString("uid")
+                const produtoImagem = _req.getFile("imagem")
+
+                if (produtoImagem == null) {
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "imagem-obrigatória")
+                    )
+                    _exec.stop()
+                }
+
+                const dbResultado = _db.update(
                     "produto",
                     produtoUid,
                     _val.map()
@@ -284,13 +396,89 @@ seguinte forma:
                             .set("result", true)
                     )
                 } else {
-                    _head.status(404)
+                    _header.status(404)
                     _out.json(
                         _val.map()
                             .set("result", false)
                             .set("error", "uid-produto-não-existe")
                     )
                 }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produtoUid = _req.getString("uid")
+                produtoImagem = _req.getFile("imagem")
+
+                if produtoImagem is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "imagem-obrigatória")
+                    )
+                    _exec.stop()
+
+                dbResultado = (
+                    _db.update(
+                        "produto",
+                        produtoUid,
+                        _val.map()
+                            .set("imagem", produtoImagem)
+                    )
+                )
+
+                if dbResultado == 1:
+                    _out.json(
+                        _val.map()
+                            .set("result", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "uid-produto-não-existe")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produto_uid = _req.getString("uid")
+                produto_imagem = _req.getFile("imagem")
+
+                if produto_imagem.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "imagem-obrigatória")
+                  )
+                  _exec.stop
+                end
+
+                db_resultado = _db.update(
+                  "produto",
+                  produto_uid,
+                  _val.map()
+                    .set("imagem", produto_imagem)
+                )
+
+                if db_resultado == 1
+                  _out.json(
+                    _val.map()
+                      .set("result", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "uid-produto-não-existe")
+                  )
+                end
             `
         },
     ]}
