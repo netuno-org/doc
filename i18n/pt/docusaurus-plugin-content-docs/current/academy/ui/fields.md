@@ -4,36 +4,59 @@ id: fields
 title: Campos
 ---
 
-## Criação de campos
 
-Os campos são os elementos fundamentais do seu formulário, definindo quais informações serão coletadas do usuário e como elas serão armazenadas no base de dados.
 
-Este tutorial irá ajudá-lo na criação e na compreensão dos diferentes tipos de campos disponíveis. E antes de criar campos, é necessário que você já tenha um formulário criado na aplicação.
+Os Campos são os componentes fundamentais e os "blocos de construção" de um formulário no Netuno. Eles representam a interface de interação com o usuário e definem como os dados serão estruturados e armazenados.
 
-![field-management-pt.png](/docs/assets/academy/ui/fields/field-management-pt.png)    
+Na prática, cada campo criado corresponde a uma coluna na tabela do banco de dados, determinando o tipo de informação que o sistema pode processar — como textos, números, datas, seleções e arquivos. 
+
+### Criar e Editar Campos
+
+Estes botões permitem gerenciar o estado geral da edição:
+
+- **Editar campo existente:** Menu suspenso para selecionar um campo já criado e modificar suas configurações.
+
+- **Criar novo campo:** Limpa todos os campos do formulário para iniciar a configuração de um novo elemento do zero.
+
+- **Clonar campo:** Duplica as configurações do campo selecionado para agilizar a criação de itens similares.
+
+![field-edit-existing-pt.png](/docs/assets/academy/ui/fields/field-edit-existing-pt.png)    
 
 ## 1 - Título do Campo
 
-Esta “label” é a instrução visível que orienta o usuário sobre qual informação deve ser inserida. É a etiqueta que diz o que deve ser preenchido. 
+O Título do Campo (tecnicamente conhecido como Label) é a instrução visual que orienta o usuário sobre qual informação deve ser inserida em um formulário. Ele funciona como uma etiqueta identificadora, garantindo que o preenchimento dos dados seja intuitivo e correto.
 
- Ele será exibido na seção de "Gestão de Campos" (no modo de Construir), e no (modo de Visualizar) no   input com o nome da Label "Email" com o a do exemplo abaixo.
+Nesta etapa, o título possui dupla finalidade na plataforma:
 
-![field-title-name-pt.png](/docs/assets/academy/ui/fields/field-title-name-pt.png)  
+- **Na Gestão de Campos (Construir):** Serve para identificar o campo dentro da sua lista de elementos durante o desenvolvimento da aplicação.
+
+![field-title-name-pt.png](/docs/assets/academy/ui/fields/field-title-name-pt.png)
+
+- **Na Interface do Usuário (Visualizar):** É o texto que aparece posicionado logo acima ou ao lado do campo de entrada (input), indicando ao usuário final o que ele deve digitar no formulário.
+
+![field-title-name-content-pt.png](/docs/assets/academy/ui/fields/field-title-name-content-pt.png)
 
 ## 2 - Nome da coluna
 
-Trata-se de um identificador interno, único, que será usado na base de dados e em qualquer lógica de programação. Ele será exibido na tabela (modo de Visualizar) quando um formulário for acessado.
+Diferente do título, o **Nome da Coluna** é o identificador interno e exclusivo do campo, utilizado diretamente no banco de dados e em lógicas de programação. É através deste nome que o sistema localiza a informação na base de dados.
 
-O Netuno preenche automaticamente este campo usando o padrão `snake_case` com base no “Título do campo”. É possível desabilitar este preenchimento ao alterar o “Switch Auto”, porém, deve-se manter o padrão de escrita no singular, com letras minúsculas, sem espaços e sem caracteres especiais.
+**Formatação Automática (Switch Auto):**
+
+O Netuno facilita este processo preenchendo o nome automaticamente com base no "Título do campo". O padrão utilizado é o snake_case.
+
+**Regras de Escrita:** Caso opte por preencher manualmente (desativando o "Auto"), mantenha o nome no singular, use apenas letras minúsculas, e evite espaços ou caracteres especiais.
 
 ![field-column-name-pt.png](/docs/assets/academy/ui/fields/field-column-name-pt.png)  
 
-## 3 - Tipo
-Aqui você define a natureza da informação que será coletada, o que impacta diretamente na aparência do campo para o usuário e como o dado é armazenado no sistema. Selecione os tipos de campo disponíveis na plataforma.
+## 3 - Tipos de dados
+
+A definição do **Tipo de Dado** determina a natureza da informação coletada, impactando diretamente na aparência do campo para o usuário e na forma como o dado é armazenado no sistema.
+
+![field-type-data-pt.png](/docs/assets/academy/ui/fields/field-type-data-pt.png)  
 
 ### 3.1 Campos Textuais
 
-Estes são campos destinados à inserção de texto em diferentes formatos.
+Estes campos são destinados à inserção de texto em diferentes formatos. Eles variam conforme a necessidade de volume de dados.
 
 | Tipo | O que faz? | Exemplo de Uso Prático |
 | :--- | :--- | :--- |
@@ -43,22 +66,18 @@ Estes são campos destinados à inserção de texto em diferentes formatos.
 | texthtml | Cria um editor de texto rico, que permite formatação com HTML. | Criação de conteúdo para um blog, e-mails marketing, páginas de site. |
 | textmd | Cria um editor de texto que suporta a linguagem de marcação Markdown. | Ideal para documentação técnica, postagens de blog para desenvolvedores. |
 
-![field-type-texts-pt.png](/docs/assets/academy/ui/fields/field-type-texts-pt.png)   
-
 ### 3.2 Campos Numéricos
 
-Para coletar informações que são estritamente numéricas.
+Utilizados para coletar informações que são estritamente numéricas.
 
 | Tipo | O que faz? | Exemplo de Uso |
 | :--- | :--- | :--- |
 | textnum | Cria um input para a inserção de números inteiros. | Quantidade em estoque, idade de uma pessoa, número de vagas. |
 | textfloat | Cria um input para a inserção de números com casas decimais. | Preços de produtos (ex: 99.90), peso (ex: 75.5), altura (ex: 1.82). |
 
-![field-type-numbers-pt.png](/docs/assets/academy/ui/fields/field-type-numbers-pt.png)  
-
 ### 3.3 Campos de Seleção
 
-Use estes campos quando precisar escolher entre uma ou mais opções.
+Utilizados quando o usuário deve escolher entre opções pré-definidas.
 
 | Tipo | O que faz? | Exemplo de Uso Prático |
 | :--- | :--- | :--- |
@@ -66,7 +85,6 @@ Use estes campos quando precisar escolher entre uma ou mais opções.
 | multiselect | Cria uma lista de opções onde o usuário pode escolher várias. | Selecionar interesses (esportes, tecnologia), ingredientes de uma pizza. |
 | checkbox | Exibe uma única caixa de seleção (ativar/desativar). | "Aceito os termos de uso", "Lembrar minha senha". |
 | color | Exibe um seletor de cores visual. | Escolher a cor de um produto, personalizar a cor de um evento. |
-
 
 ### 3.4 Campos de Data e Hora
 
@@ -78,18 +96,14 @@ Especializados para a inserção de informações temporais.
 | datetime | Permite a seleção de uma data e de um horário. | Início de um evento, data e hora de uma publicação. |
 | time | Permite a seleção de um horário (horas e minutos). | Horário de funcionamento, hora de um alarme. |
 
-![field-date-and-time-pt.png](/docs/assets/academy/ui/fields/field-date-and-time-pt.png)
-
 ### 3.5 Campos de Arquivos e Mídia
 
-Para fazer o upload de arquivos e imagens para a sua aplicação.
+Utilizado para enviar arquivos e imagens para a sua aplicação.
 
 | Tipo | O que faz? | Exemplo de Uso Prático |
 | :--- | :--- | :--- |
 | file | Cria um campo para o upload de um arquivo qualquer (PDF, DOCX, ZIP). | Anexar um currículo, enviar um comprovante de pagamento. |
 | image | Um campo otimizado para o upload de imagens (JPG, PNG, GIF). | Foto de perfil do usuário, imagem de um produto. |
-
-![field-file-and-media-pt.png](/docs/assets/academy/ui/fields/field-file-and-media-pt.png) 
 
 ### 3.6 Campos Técnicos e Especiais
 
@@ -105,7 +119,9 @@ Estes campos possuem comportamentos automáticos ou servem a propósitos especí
 
 ## 4 - Configurações de Comportamento e Layout
 
-Essa área é o "painel de controle" do seu campo, definindo as regras de negócio, as permissões de acesso e a posição dele no formulário.
+Essa área é o "painel de controle" do seu campo, definindo as regras de negócio e as permissões de acesso.
+
+![field-behavior-and-layout-settings-pt.png](/docs/assets/academy/ui/fields/field-behavior-and-layout-settings-pt.png)
 
 ### 4.1 Regras de Integridade dos Dados
 
@@ -115,7 +131,6 @@ Estas opções garantem a qualidade e a consistência das informações.
 | :--- | :--- | :--- |
 | Valores Únicos (Chave Primária) | Transforma o campo no identificador principal e único, impedindo valores duplicados. | Usar para "CPF", garantindo que não existam dois clientes com o mesmo número. |
 | Obrigatório (Não Nulo) | Torna o preenchimento do campo obrigatório. | Aplicar em campos essenciais como "Nome" e "E-mail". |
-
 
 ### 4.2 Controle de Permissões e Visibilidade
 
@@ -130,30 +145,32 @@ Define onde e como os usuários interagem com os dados deste campo.
 | Permitir ao Criar Novo | Define se o campo deve aparecer no formulário de criação. | Desmarcar para campos de "feedback", que só devem ser preenchidos *após* a criação. |
 | Permitir Exportar | Inclui os dados deste campo ao exportar a listagem (Excel, CSV). | Desmarcar dados internos que não são relevantes para relatórios externos. |
 
-![field-behavior-and-layout-settings-pt.png](/docs/assets/academy/ui/fields/field-behavior-and-layout-settings-pt.png) 
-
 ## 5 - Organização Visual do Formulário
 
-Define o posicionamento do campo no layout.
+Define o posicionamento dos campos no layout.
+
+![field-visual-organization-form-pt.png](/docs/assets/academy/ui/fields/field-visual-organization-form-pt.png)
 
 | Configuração | O que faz? | Exemplo de Uso Prático |
 | :--- | :--- | :--- |
 | Linha | Define a posição vertical do campo no formulário. | Colocar "Nome Completo" na Linha: 1 e "Endereço" na Linha: 2. |
 | Coluna | Define a posição horizontal, permitindo múltiplos campos lado a lado. | Para ter "Cidade" e "Estado" juntos, usar Linha: 3, Coluna: 1 (Cidade) e Coluna: 2 (Estado). |
 
-![field-visual-organization-of-the-form-pt.png](/docs/assets/academy/ui/fields/field-visual-organization-of-the-form-pt.png)
+## 6 - Veja Mais Opções
 
-## 6 - Opções Avançadas de Configuração
+Para um controle mais personalizado, clique no botão "+ Veja Mais Opções".
 
-Para um controle mais refinado, acesse "Exibir mais opções".
+### 6.1 Campo de Descrição
 
-### 6.1 Descrição e Ajuda do Campo
+![field-view-options-description-pt.png](/docs/assets/academy/ui/fields/field-view-options-description-pt.png)
 
 | Configuração | O que faz? | Exemplo de Uso Prático |
 | :--- | :--- | :--- |
 | Descrição | Adiciona um texto de ajuda ou instrução que aparece abaixo do campo. | Em "Senha", usar a descrição para informar as regras: "A senha deve ter no mínimo 8 caracteres...". |
 
-### 6.2 Dimensionamento e Layout
+### 6.2 Dimensionamento do Campo
+
+![field-dimensioning-layout-pt.png](/docs/assets/academy/ui/fields/field-dimensioning-layout-pt.png)
 
 Controle fino sobre o tamanho do campo.
 
@@ -175,14 +192,13 @@ Estabeleça limites para os valores inseridos.
 | Max | Valor máximo (numérico) ou número máximo de caracteres (texto). | Em "Nota (0 a 10)", definir Max como "10". Em "Apelido", Max "20". |
 | Min | Valor mínimo (numérico) ou número mínimo de caracteres (texto). | Em "Quantidade", definir Min como "1". Em "Justificativa", Min "30". |
 
+### 6.4 Controle de Acesso 
 
-### 6.4 Controle de Acesso por Usuário e Grupo
+![field-access-control-pt.png](/docs/assets/academy/ui/fields/field-access-control-pt.png)
 
-Defina quem pode ver e editar o campo.
+Defina grupos e usuários que podem visualizar e editar o campo.
 
 | Configuração | O que faz? | Exemplo de Uso Prático |
 | :--- | :--- | :--- |
 | Vista de Usuário e Vista de Grupo | Restringe a *visualização* do campo apenas para os usuários ou grupos especificados. | "Comissão do Vendedor" ter Vista de Grupo "Gerentes". |
 | Edição de Usuário e Edição de Grupo | Permite que apenas os usuários ou grupos especificados *editem* o campo (os outros veem como "somente leitura"). | "Status do Pedido" ter Edição de Grupo "Logística". |
-
-![field-advanced-configuration-options-pt.png](/docs/assets/academy/ui/fields/field-advanced-configuration-options-pt.png)
