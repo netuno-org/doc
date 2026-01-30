@@ -4,36 +4,57 @@ id: fields
 title: Fields
 ---
 
-## Creating Fields
+Fields are the fundamental components and "building blocks" of a form in Netuno. They represent the user interaction interface and define how data will be structured and stored.
 
-Fields are the fundamental elements of your form, defining what information will be collected from the user and how it will be stored in the database.
+In practice, each created field corresponds to a column in the database table, determining the type of information the system can process—such as text, numbers, dates, selections, and files.
 
-This tutorial will help you create and understand the different types of fields available. Before creating fields, you must already have a form created in the application.
+### Creating and Editing Fields
 
-![field-management-pt.png](/docs/assets/academy/ui/fields/field-management-pt.png)
+These buttons allow you to manage the overall editing status:
+
+- **Edit existing field:** Dropdown menu to select an already created field and modify its settings.
+
+- **Create new field:** Clears all fields in the form to start configuring a new element from scratch.
+
+- **Clone field:** Duplicates the settings of the selected field to speed up the creation of similar items.
+
+![field-edit-existing-en.png](/docs/assets/academy/ui/fields/field-edit-existing-en.png)
 
 ## 1 - Field Title
 
-This "label" is the visible instruction that guides the user on what information should be entered. It's the label that says what should be filled in.
+The Field Title (technically known as Label) is the visual instruction that guides the user on what information should be entered into a form. It functions as an identifying label, ensuring that data entry is intuitive and correct.
 
-It will be displayed in the "Field Management" section (in Build mode), and in the (View mode) in the input with the Label name "Email" as in the example below.
+At this stage, the title has a dual purpose in the platform:
 
-![field-title-name-pt.png](/docs/assets/academy/ui/fields/field-title-name-pt.png)
+- **In Field Management (Build):** It serves to identify the field within its list of elements during application development.
+
+![field-title-name-en.png](/docs/assets/academy/ui/fields/field-title-name-en.png)
+
+- **In the User Interface (View):** This is the text that appears positioned just above or next to the input field, indicating to the end user what they should type in the form.
+
+![field-title-name-content-en.png](/docs/assets/academy/ui/fields/field-title-name-content-en.png)
 
 ## 2 - Column Name
 
-This is a unique internal identifier that will be used in the database and in any programming logic. It will be displayed in the table (View mode) when a form is accessed.
+Unlike the title, the **Column Name** is the internal and unique identifier of the field, used directly in the database and in programming logic. It is through this name that the system locates the information in the database.
 
-Netuno automatically fills this field using the `snake_case` pattern based on the "Field Title". It is possible to disable this filling by changing the "Auto Switch", however, the writing standard must be maintained in the singular, with lowercase letters, without spaces and without special characters.
+**Automatic Formatting (Auto Switch):**
 
-![field-column-name-pt.png](/docs/assets/academy/ui/fields/field-column-name-pt.png)
+Netuno facilitates this process by automatically filling in the name based on the "Field Title". The standard used is snake_case.
 
-## 3 - Type
-Here you define the nature of the information that will be collected, which directly impacts the appearance of the field to the user and how the data is stored in the system. Select the field types available on the platform.
+**Writing Rules:** If you choose to fill in manually (disabling "Auto"), keep the name in the singular, use only lowercase letters, and avoid spaces or special characters.
+
+![field-column-name-en.png](/docs/assets/academy/ui/fields/field-column-name-en.png)
+
+## 3 - Data Types
+
+The definition of the **Data Type** determines the nature of the information collected, directly impacting the appearance of the field to the user and how the data is stored in the system.
+
+![field-type-data-en.png](/docs/assets/academy/ui/fields/field-type-data-en.png)
 
 ### 3.1 Text Fields
 
-These are fields intended for inserting text in different formats.
+These fields are intended for inserting text in different formats. They vary according to the data volume requirement.
 
 | Type | What does it do? | Practical Use Example |
 | :--- | :--- | :--- |
@@ -43,22 +64,18 @@ These are fields intended for inserting text in different formats.
 | texthtml | Creates a rich text editor that allows formatting with HTML. | Content creation for a blog, marketing emails, website pages. |
 | textmd | Creates a text editor that supports the Markdown markup language. | Ideal for technical documentation, blog posts for developers. |
 
-![field-type-texts-pt.png](/docs/assets/academy/ui/fields/field-type-texts-pt.png)
-
 ### 3.2 Numeric Fields
 
-To collect information that is strictly numeric.
+Used to collect information that is strictly numeric.
 
 | Type | What does it do? | Example of Use |
 | :--- | :--- | :--- |
 | textnum | Creates an input for entering integers. | Quantity in stock, a person's age, number of vacancies. |
-| textfloat | Creates an input for entering numbers with decimal places. | Product prices (e.g., 99.90), weight (e.g., 75.5), height (e.g., 1.82). |
-
-![field-type-numbers-pt.png](/docs/assets/academy/ui/fields/field-type-numbers-pt.png)
+| textfloat | Creates an input for entering numbers with decimal places. | Product prices (example: 99.90), weight (example: 75.5), height (example: 1.82). |
 
 ### 3.3 Selection Fields
 
-Use these fields when you need to choose between one or more options.
+Used when the user must choose between predefined options.
 
 | Type | What does it do? | Practical Use Example |
 | :--- | :--- | :--- |
@@ -77,18 +94,15 @@ Specialized for inserting temporal information.
 | datetime | Allows the selection of a date and time. | Start of an event, date and time of a publication. |
 | time | Allows the selection of a time (hours and minutes). | Operating hours, alarm time. |
 
-![field-date-and-time-pt.png](/docs/assets/academy/ui/fields/field-date-and-time-pt.png)
-
 ### 3.5 File and Media Fields
 
-To upload files and images to your application.
+Used to send files and images to your application.
 
 | Type | What does it do? | Practical Use Example |
 | :--- | :--- | :--- |
 | file | Creates a field for uploading any file (PDF, DOCX, ZIP). | Attach a resume, send proof of payment. |
 | image | A field optimized for uploading images (JPG, PNG, GIF). | User profile picture, product image. |
 
-![field-file-and-media-pt.png](/docs/assets/academy/ui/fields/field-file-and-media-pt.png)
 
 ### 3.6 Technical and Special Fields
 
@@ -104,7 +118,9 @@ These fields have automatic behaviors or serve specific system purposes.
 
 ## 4 - Behavior and Layout Settings
 
-This area is the "control panel" for your field, defining business rules, access permissions, and its position on the form.
+This area is the "control panel" for your field, defining business rules and access permissions.
+
+![field-behavior-and-layout-settings-en.png](/docs/assets/academy/ui/fields/field-behavior-and-layout-settings-en.png)
 
 ### 4.1 Data Integrity Rules
 
@@ -115,7 +131,7 @@ These options ensure the quality and consistency of the information.
 | Unique Values ​​(Primary Key) | Transforms the field into the main and unique identifier, preventing duplicate values. | Use for "CPF" (Brazilian Taxpayer ID), ensuring that no two clients have the same number. |
 | Required (Not Null) | Makes filling in the field mandatory. | Apply to essential fields such as "Name" and "Email". |
 
-### 4.2 Permissions and Visibility Control
+### 4.2 Permission and Visibility Control
 
 Defines where and how users interact with the data in this field.
 
@@ -128,32 +144,34 @@ Defines where and how users interact with the data in this field.
 | Allow on Create New | Defines whether the field should appear in the creation form. | Uncheck for "feedback" fields, which should only be filled in *after* creation. |
 | Allow Export | Includes the data from this field when exporting the listing (Excel, CSV). | Uncheck internal data that is not relevant for external reports. |
 
-![field-behavior-and-layout-settings-pt.png](/docs/assets/academy/ui/fields/field-behavior-and-layout-settings-pt.png)
-
 ## 5 - Visual Organization of the Form
 
-Defines the field's position in the layout.
+Defines the positioning of the fields in the layout.
+
+![field-visual-organization-form-en.png](/docs/assets/academy/ui/fields/field-visual-organization-form-en.png)
 
 | Configuration | What does it do? | Practical Use Example |
 | :--- | :--- | :--- |
 | Row | Defines the vertical position of the field in the form. | Place "Full Name" on Row: 1 and "Address" on Row: 2. |
 | Column | Defines the horizontal position, allowing multiple fields side-by-side. | To have "City" and "State" together, use Row: 3, Column: 1 (City) and Column: 2 (State). |
 
-![field-visual-organization-of-the-form-pt.png](/docs/assets/academy/ui/fields/field-visual-organization-of-the-form-pt.png)
+## 6 - View More Options
 
-## 6 - Advanced Configuration Options
+For more customized control, click the "+ View More Options" button.
 
-For more refined control, access "Show more options".
+### 6.1 Description Field
 
-### 6.1 Field Description and Help
+![field-view-options-description-en.png](/docs/assets/academy/ui/fields/field-view-options-description-en.png)
 
 | Configuration | What does it do? | Practical Use Example |
 | :--- | :--- | :--- |
 | Description | Adds help text or instructions that appear below the field. | In "Password", use the description to inform the rules: "The password must be at least 8 characters long...". |
 
-### 6.2 Sizing and Layout
+### 6.2 Field Sizing
 
-Fine control over field size.
+![field-dimensioning-layout-en.png](/docs/assets/academy/ui/fields/field-dimensioning-layout-en.png)
+
+Fine control over the field size.
 
 | Configuration | What does it do? | Practical Use Example |
 | :--- | :--- | :--- |
@@ -164,3 +182,22 @@ Fine control over field size.
 | Rowspan | Allows the cell to expand vertically across multiple lines. | A "Description" textarea that occupies 3 lines of height next to smaller fields. |
 | Colspan | Allows the cell to expand horizontally across multiple columns. | A "Full Address" field (Colspan: 2) above "City" and "State".
 
+### 6.3 Data Validation and Rules
+
+Establish limits for the entered values.
+
+| Configuration | What does it do? | Practical Use Example |
+| :--- | :--- | :--- |
+| Max | Maximum value (numeric) or maximum number of characters (text). | In "Grade (0 to 10)", set Max to "10". In "Nickname", Max "20". |
+| Min | Minimum value (numeric) or minimum number of characters (text). | In "Quantity", set Min to "1". In "Justification", Min "30". |
+
+### 6.4 Access Control
+
+![field-access-control-en.png](/docs/assets/academy/ui/fields/field-access-control-en.png)
+
+Define groups and users who can view and edit the field.
+
+| Configuration | What does it do? | Practical Use Example |
+| :--- | :--- | :--- |
+| User View and Group View | Restricts the *viewing* of the field only to the specified users or groups. | "Salesperson Commission" has a Group View of "Managers". |
+| User Editing and Group Editing | Allows only the specified users or groups to *edit* the field (others see it as "read-only"). | "Order Status" has a Group Editing of "Logistics". | 
