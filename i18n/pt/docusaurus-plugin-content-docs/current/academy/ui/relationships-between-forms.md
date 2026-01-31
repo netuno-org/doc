@@ -7,21 +7,26 @@ sidebar_label: Relações
 
 ## Como criar relações entre formulários
 
-A criação de relações entre formulários é um recurso poderoso para otimizar a gestão de dados. Ao conectar formulários, você evita a duplicação de informações e simplifica o desenvolvimento de suas aplicações, tornando a estrutura de dados mais coesa e eficiente. 
+A criação de relações entre formulários é um recurso essencial para organizar informações de forma inteligente. Ao conectar formulários, você elimina a necessidade de duplicar dados e garante que sua aplicação seja coesa, escalável e fácil de manter.
 
-O Netuno gera automaticamente o diagrama do modelo de dados, exibindo os campos que estabelecem os relacionamentos. O diagrama "Simples", representa os exemplos do guia prático descritos abaixo. 
+Uma das grandes vantagens do Netuno é a capacidade de gerar automaticamente o diagrama do modelo de dados.
 
-A imagem do diagrama "complexo", demonstra o poder desta ferramenta em diferentes níveis de aplicações e suas complexidades.  
+Os relacionamentos definem como os dados de diferentes tabelas interagem entre si. Essa conexão reflete diretamente na interface do usuário (UI), permitindo que campos de um formulário busquem informações em outro automaticamente.
 
-![diagram-template-pt.png](/docs/assets/academy/ui/relationships/diagram-template-pt.png)
+**Diagrama Simples:** Ideal para validar a lógica inicial de pequenos módulos.
 
-> Este guia prático demonstrará, passo a passo, como estabelecer relações do tipo `Select` e `Multi-Select`.
+![simple-diagram-template-pt.png](/docs/assets/academy/ui/relationships/simple-diagram-template-pt.png)
 
-## Criação de campo Relacional do tipo Select
+**Diagrama Complexo:** Demonstra a robustez da ferramenta em aplicações de grande escala, mapeando múltiplas dependências e fluxos de dados.
+ 
+![complex-diagram-template-en.png](/docs/assets/academy/ui/relationships/complex-diagram-template-en.png)
+
+
+## Criação de campo relacional do tipo Select
 
 O campo Select cria um relacionamento entre dois formulários. Ele permite que você escolha um valor de uma lista suspensa (dropdown), em vez de digitá-lo manualmente. Essa lista é preenchida com dados que já existem em outro formulário.
 
-> Usaremos os formulários de **Veículos** e **Cor** como exemplo. 
+Usaremos os formulários de **Veículos** e **Cor** como exemplo. 
 
 **Quando usar?** Use o select quando você tem um relacionamento do tipo "Muitos-para-Um" (N-1).
 
@@ -40,7 +45,9 @@ Antes de começar, certifique-se de que:
 
 ### Criar e Configurar o Select
 
-Adicione o campo _`select`_ no formulário **Veículo** para que ele possa "puxar" os dados do formulário **Cor**.
+Adicione o tipo de campo **select** no formulário **Veículo** para que ele possa "puxar" os dados do formulário **Cor**.
+
+![create-and-configure-the-select-field-pt.png](/docs/assets/academy/ui/relationships/create-and-configure-the-select-field-pt.png)
 
 #### 1 - Acesse o Formulário de Destino
 
@@ -54,13 +61,16 @@ Adicione o campo _`select`_ no formulário **Veículo** para que ele possa "puxa
 
 - **Título do Campo:** Dê um nome amigável que aparecerá para o usuário. **Exemplo:** Cor do Automóvel.
 - **Nome da Coluna:** Este é o nome técnico do campo no banco de dados.
-> **(Boa Prática):** Ao criar um campo relacional, sempre use o sufixo `_id` no **Nome da Coluna**. Isso deixa claro que esta coluna não armazena o texto "Azul", mas sim o ID de referência para o registro "Azul" no formulário **Cor**. **Exemplo:** `cor_automovel_id`.
+
+**Boa Prática:** Ao criar um campo relacional, sempre use o sufixo `_id` no **Nome da Coluna**. Isso deixa claro que esta coluna não armazena o texto "Azul", mas sim o ID de referência para o registro "Azul" no formulário **Cor**. **Exemplo:** `cor_automovel_id`.
 
 #### 4 - Escolha o Tipo de Dados
 
 - No campo **Tipo**, selecione a opção _`select - select`_ na lista.
 
 #### 5 - Configure o Link (A Relação)
+
+![configure-the-link-pt.png](/docs/assets/academy/ui/relationships/configure-the-link-pt.png)
 
 - Ao escolher _`select`_, um novo campo chamado **Link** será exibido.
 - Clique no botão **Configurar**.
@@ -72,20 +82,15 @@ Adicione o campo _`select`_ no formulário **Veículo** para que ele possa "puxa
 
 - Clique no botão **Salvar** na gestão de campos para aplicar todas as suas configurações.
 
-![create-and-configure-the-select-field-pt.png](/docs/assets/academy/ui/relationships/create-and-configure-the-select-field-pt.png)
-
 ### Resultado
 
 Pronto! Agora no modo "visualizar", quando você for adicionar ou editar um registro no formulário **Veículo**, o campo "Cor do Automóvel" será uma lista suspensa (dropdown) que mostrará todas as cores cadastradas no seu formulário Cor.
 
-![select-result-pt.png](/docs/assets/academy/ui/relationships/select-result-pt.png)
-
-
-## Criação de Campo Relacional do tipo Multiselect
+## Criação de campo relacional do tipo Multiselect
 
 O campo **Multiselect** cria um relacionamento "Muitos-para-Muitos" (N-M). Ele permite que você selecione vários itens de uma lista em um único campo.
 
-> Usaremos os formulários de **Pessoa**, **Função** e **Pessoa-Função** como exemplo.
+Usaremos os formulários de **Pessoa**, **Função** e **Pessoa-Função** como exemplo.
 
 **Quando usar?** Use o multiselect quando um registro puder estar ligado a vários outros, e vice-versa.
 **Exemplo:** Muitas Pessoas podem ter muitas Funções.
@@ -108,7 +113,7 @@ Antes de começar, certifique-se de que:
 ### Criar e Configurar o Multiselect 
 A configuração é feita em 4 etapas:
 
-#### Etapa 1: Criar o Formulário de Junção (Pessoa-Função)
+### Etapa 1: criar o formulário de junção (Pessoa-Função)
 Primeiro, vamos criar o formulário "ponte".
 
 1 - **Vá para Gestão > Formulários** e clique em "Criar novo formulário".
@@ -123,7 +128,7 @@ Primeiro, vamos criar o formulário "ponte".
 
 ![create-the-parent-form-for-the-join-pt.png](/docs/assets/academy/ui/relationships/create-the-parent-form-for-the-join-pt.png)
 
-#### Etapa 2: Configurar os Campos do Formulário de Junção
+### Etapa 2: configurar os campos do formulário de junção
 
 Adicione os campos "ponte" ao formulário Pessoa-Função.
 
@@ -133,10 +138,12 @@ Adicione os campos "ponte" ao formulário Pessoa-Função.
 
 **Campo 1 (Link para Pessoa):**
 
+![link-field-for-person-pt.png](/docs/assets/academy/ui/relationships/link-field-for-person-pt.png)
+
 - **Título do campo:** Nome da Pessoa
-- **Nome da coluna:** `nome_pessoa_id` (seguindo a convenção `_id`)
+- **Nome da coluna:** `nome_pessoa_id` (seguindo a convenção **_id**)
 - **Tipo:** `select - select`
-- **Link:** Clique em **Configurar** e selecione o campo principal do formulário **Pessoa** (ex: `pessoa:nome`).
+- **Link:** Clique em **Configurar** e selecione o campo principal do formulário **Pessoa**, exemplo: `pessoa:nome`.
 - Clique em **Salvar**.
 
 **Campo 2 (Link para Função):**
@@ -144,12 +151,12 @@ Adicione os campos "ponte" ao formulário Pessoa-Função.
 - **Título do campo:** Função da Pessoa. 
 - **Nome da coluna:** `funcao_pessoa_id`.
 - **Tipo:** `select - select`.
-- **Link:** Clique em **Configurar** e selecione o campo principal do formulário **Função** (ex: `funcao:funcao_id`).
+- **Link:** Clique em **Configurar** e selecione o campo principal do formulário **Função**, exemplo: `funcao:funcao_id`.
 - Clique em **Salvar**.
 
-![create-and-configure-the-multiselect-field-pt.png](/docs/assets/academy/ui/relationships/create-and-configure-the-multiselect-field-pt.png)
+![field-link-to-person-function-pt.png](/docs/assets/academy/ui/relationships/field-link-to-person-function-pt.png)
 
-#### Etapa 3: Criar o Campo Multiselect no Formulário "Pai"
+### Etapa 3: criar o campo multiselect no formulário "pai"
 
 Com a "ponte" (**Pessoa-Função**) pronta, podemos voltar ao formulário **Pessoa** para criar o campo final.
 
@@ -164,7 +171,7 @@ Com a "ponte" (**Pessoa-Função**) pronta, podemos voltar ao formulário **Pess
 5 - **Tipo:** _`multiselect - multiselect`_.
 
 
-#### Etapa 4: Configurar o Campo Multiselect
+### Etapa 4: configurar o campo multiselect
 
 Ao selecionar o tipo _`multiselect`_, dois novos campos de configuração aparecerão: **Referência** e **Link**.
 
@@ -189,8 +196,6 @@ Ao selecionar o tipo _`multiselect`_, dois novos campos de configuração aparec
 ### Resultado
 
 Pronto! Agora no modo "visualizar", ao adicionar ou editar um registro no formulário **Pessoa**, o campo "Pessoa Função" aparecerá como uma caixa de seleção múltipla. Você poderá escolher várias funções da lista (que vêm do formulário **Função**), e o Netuno salvará automaticamente essas associações dentro do formulário **Pessoa-Função**.
-
-![multiselect-result-pt.png](/docs/assets/academy/ui/relationships/multiselect-result-pt.png)
 
 Caso tenha alguma dúvida, entre em contato conosco por meio da comunidade e outros canais disponíveis no final desta página.
 
