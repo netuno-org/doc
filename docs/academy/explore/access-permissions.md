@@ -101,15 +101,16 @@ This rule is defined in the **configuration files** of your application environm
 
 In the root of your project, navigate to the `config` folder. Open the file corresponding to the environment you want to protect:
 
-* For development: `development.json`
+* For development: `_development.json`
 
-* For production: `production.json`
+* For production: `_production.json`
 
 #### 2. Insert the protection code
 Within the JSON file, locate the section `auth` block. If it doesn't exist, insert the `attempts` block as in the example below:
 
 ```json
 {
+ ...
  "auth": {
      "attempts": {
         "interval": 60,
