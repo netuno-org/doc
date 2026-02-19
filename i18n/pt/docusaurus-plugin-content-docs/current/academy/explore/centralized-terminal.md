@@ -17,11 +17,11 @@ Isto quer dizer que os processo de front-end do ReactJS, Angular, Vue, e qualque
 
 ## Configuração
 
-Dentro da aplicação que está a desenvolver, no ficheiro de configuração de ambiente. Neste exemplo será utilizado o ficheiro de ambiente de desenvolvimento, que está localizado dentro da aplicação em:
+Dentro da aplicação que está a desenvolver, no arquivo de configuração de ambiente. Neste exemplo será utilizado o arquivo de ambiente de desenvolvimento, que está localizado dentro da aplicação em:
 
 - 📂 `config/_development.json`
 
-Verifique se já não existem configurações de comandos, se não existir então adicione no fim do ficheiro de configuração (em formato JSON), os seguintes parâmetros de configuração como exemplo:
+Verifique se já não existem configurações de comandos, se não existir então adicione no fim do arquivo de configuração (em formato JSON), os seguintes parâmetros de configuração como exemplo:
 
 ```
 {
@@ -29,14 +29,14 @@ Verifique se já não existem configurações de comandos, se não existir entã
     "commands": [
         {
             "path": "ui",
-            "command": "npm run watch",
+            "command": "bun run watch",
             "enabled": true
         },
         {
             "env": [ "PORT=21030", "WDS_SOCKET_PORT=21030" ],
             "path": "website",
-            "install": "npm install --force",
-            "command": "npm run start",
+            "install": "bun install",
+            "command": "bun run dev",
             "enabled": true
         }
     ],
@@ -45,8 +45,8 @@ Verifique se já não existem configurações de comandos, se não existir entã
 ```
 
 > Repare que a chave `commands` é um `array`, e dentro pode conter a definição dos diversos comandos, neste caso são 2:
-> 1. Comando para iniciar `npm run watch` dentro da pasta `ui` que está dentro da aplicação.
-> 2. Comando para iniciar `npm run start` dentro da pasta `website` que está dentro da aplicação.
+> 1. Comando para iniciar `bun run watch` dentro da pasta `ui` que está dentro da aplicação.
+> 2. Comando para iniciar `bun run dev` dentro da pasta `website` que está dentro da aplicação.
 
 ### env
 
@@ -58,7 +58,7 @@ Definição do caminho de pastas onde o comando será executado, relativo a raí
 
 ### install
 
-Se o comando iniciar com `npm` ou `yarn`, então é verificado se ainda não existe a pasta `node_modules`, então automaticamente é executado o comando `npm install` ou `yarn install`, de acordo com o prefixo comando.
+Se o comando iniciar com `npm`, `bun`, `pnpm` ou `yarn`, então é verificado se ainda não existe a pasta `node_modules`, então automaticamente é executado o comando `npm install`, ou `bun install`, ou `pnpm install`, ou `yarn install`, respectivamente de acordo com o prefixo comando.
 
 De qualquer maneira o comando de instalação pode ser customizado com esta parametrização, assim sendo o comando de instalação padrão deixa de ser utilizado.
 

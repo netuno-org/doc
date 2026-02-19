@@ -28,14 +28,14 @@ Check if there are no command settings already, if there are not, then add at th
     "commands": [
         {
             "path": "ui",
-            "command": "npm run watch",
+            "command": "bun run watch",
             "enabled": true
         },
         {
             "env": [ "PORT=21030", "WDS_SOCKET_PORT=21030" ],
             "path": "website",
-            "install": "npm install --force",
-            "command": "npm run start",
+            "install": "bun install",
+            "command": "bun run start",
             "enabled": true
         }
     ],
@@ -44,8 +44,8 @@ Check if there are no command settings already, if there are not, then add at th
 ```
 
 > Note that the `commands` key is an `array`, and inside can contain the definition of the different commands, in this case there are 2:
-> 1. Command to start `npm run watch` inside the `ui` folder that is inside the application.
-> 2. Command to start `npm run start` inside the `website` folder that is inside the application.
+> 1. Command to start `bun run watch` inside the `ui` folder that is inside the application.
+> 2. Command to start `bun run dev` inside the `website` folder that is inside the application.
 
 ### env
 
@@ -57,7 +57,7 @@ Definition of the folder path where the command will be executed, relative to th
 
 ### install
 
-If the command starts with `npm` or `yarn`, then it is checked if the `node_modules` folder does not already exist, then automatically is executated the command `npm install` or `yarn install`, according to the command prefix.
+If the command starts with `npm`, `bun`, `pnpm`, or `yarn`, then it checks if the `node_modules` folder does not already exist, and then the command `npm install`, or `bun install`, or `pnpm install`, or `yarn install` is automatically executed, respectively according to the command prefix.
 
 Anyway, the installation command can be customized with this parameterization, so the default installation command is no longer used.
 
