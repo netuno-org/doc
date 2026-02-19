@@ -101,16 +101,17 @@ Essa regra é definida nos **arquivos de configuração** do ambiente da sua apl
 
 Na raiz do seu projeto, navegue até a pasta `config`. Abra o arquivo correspondente ao ambiente que deseja proteger:
 
-* Para desenvolvimento: `development.json`
+* Para desenvolvimento: `_development.json`
 
-* Para produção: `production.json`
+* Para produção: `_production.json`
 
 #### 2. Insira o código de proteção
 Dentro do arquivo JSON, localize a seção `auth`. Se ela não existir, insira o bloco `attempts` conforme o exemplo abaixo:
 
 ```json
 {
-  "auth": {
+ ...
+ "auth": {
     "attempts": {
         "interval": 60,
         "maxFails": 3

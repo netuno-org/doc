@@ -7,29 +7,33 @@ sidebar_label: Relationships
 
 ## How to Create Relationships Between Forms
 
-Creating relationships between forms is a powerful feature for optimizing data management. By connecting forms, you avoid information duplication and simplify the development of your applications, making the data structure more cohesive and efficient.
+Creating relationships between forms is an essential feature for intelligently organizing information. By connecting forms, you eliminate the need to duplicate data and ensure that your application is cohesive, scalable, and easy to maintain.
 
-Netuno automatically generates the data model diagram, displaying the fields that establish the relationships. The "Simple" diagram represents the examples in the practical guide described below.
+One of the great advantages of Netuno is its ability to automatically generate the data model diagram.
 
-The image of the "Complex" diagram demonstrates the power of this tool at different application levels and their complexities.
+Relationships define how data from different tables interact with each other. This connection is directly reflected in the user interface (UI), allowing fields in one form to automatically retrieve information from another.
 
-![diagram-template-pt.png](/docs/assets/academy/ui/relationships/diagram-template-pt.png)
+**Simple Diagram:** Ideal for validating the initial logic of small modules.
 
-> This practical guide will demonstrate, step by step, how to establish `Select` and `Multi-Select` type relationships.
+![simple-diagram-template-pt.png](/docs/assets/academy/ui/relationships/simple-diagram-template-pt.png)
+
+**Complex Diagram:** Demonstrates the robustness of the tool in large-scale applications, mapping multiple dependencies and data flows.
+
+![complex-diagram-template-en.png](/docs/assets/academy/ui/relationships/complex-diagram-template-en.png)
 
 ## Creating a Relational Field of the Select Type
 
-The Select field creates a relationship between two forms. It allows you to choose a value from a dropdown list instead of typing it manually. This list is populated with data that already exists in another form.
+The Select field creates a relationship between two forms. It allows you to choose a value from a dropdown list (drop-down list), instead of typing it manually. This list is populated with data that already exists in another form.
 
-> We will use the **Vehicles** and **Color** forms as examples.
+We will use the **Vehicles** and **Color** forms as examples.
 
 **When to use it?** Use the select when you have a "Many-to-One" (N-1) relationship.
 
-**Example:** Many Vehicles can have a Color. Instead of typing "Blue" every time, you select "Blue" from a list of already registered colors.
+**Example:** Many Vehicles can have a Color. By typing "Blue" each time, you select "Blue" from a list of already registered colors.
 
 - **Destination Form:** Vehicle (where we will create the select field).
 
-- **Source Form:** Color (where the data from the color list comes from).
+- **Source Form:** Color (where the core list data comes from).
 
 ### Requirements
 Before starting, make sure that:
@@ -40,7 +44,9 @@ Before starting, make sure that:
 
 ### Create and Configure the Select
 
-Add the _`select`_ field to the **Vehicle** form so that it can "pull" data from the **Color** form.
+Add the **select** field type to the **Vehicle** form so that it can "pull" the data from the **Color** form.
+
+![create-and-configure-the-select-field-en.png](/docs/assets/academy/ui/relationships/create-and-configure-the-select-field-en.png)
 
 #### 1 - Access the Destination Form
 
@@ -56,13 +62,15 @@ Add the _`select`_ field to the **Vehicle** form so that it can "pull" data from
 
 - **Column Name:** This is the technical name of the field in the database.
 
-> **(Best Practice):** When creating a relational field, always use the suffix `_id` in the **Column Name**. This makes it clear that this column does not store the text "Blue", but rather the reference ID for the "Blue" record in the **Color** form. **Example:** `car_color_id`.
+**Best Practice:** When creating a relational field, always use the suffix `_id` in the **Column Name**. This makes it clear that this column does not store the text "Blue", but rather the reference ID for the "Blue" record in the **Color** form. **Example:** `car_color_id`.
 
 #### 4 - Choose the Data Type
 
 - In the **Type** field, select the option _`select - select`_ from the list.
 
 #### 5 - Configure the Link (The Relationship)
+
+![configure-the-link-en.png](/docs/assets/academy/ui/relationships/configure-the-link-en.png)
 
 - When choosing _`select`_, a new field called **Link** will be displayed.
 
@@ -78,19 +86,16 @@ Add the _`select`_ field to the **Vehicle** form so that it can "pull" data from
 
 - Click the **Save** button in the field management to apply all your settings.
 
-![create-and-configure-the-select-field-pt.png](/docs/assets/academy/ui/relationships/create-and-configure-the-select-field-pt.png)
-
 ### Result
 
 Done! Now in "view" mode, when you add or edit a record in the **Vehicle** form, the "Car Color" field will be a dropdown list showing all the colors registered in your Color form.
 
-![select-result-pt.png](/docs/assets/academy/ui/relationships/select-result-pt.png)
 
-## Creating a Multiselect Relational Field
+## Creating a Multiselect relational field
 
 The **Multiselect** field creates a "Many-to-Many" (N-M) relationship. It allows you to select multiple items from a list in a single field.
 
-> We will use the **Person**, **Function**, and **Person-Function** forms as examples.
+We will use the **Person**, **Function**, and **Person-Function** forms as examples.
 
 **When to use it?** Use multiselect when a record can be linked to several others, and vice versa.
 
@@ -118,7 +123,7 @@ Before starting, make sure that:
 ### Create and Configure the Multiselect
 The configuration is done in 4 steps:
 
-#### Step 1: Create the Join Form (Person-Function)
+### Step 1: create the join form (Person-Function)
 First, let's create the "bridge" form.
 
 1 - **Go to Management > Forms** and click on "Create new form".
@@ -131,9 +136,9 @@ First, let's create the "bridge" form.
 
 5 - Click **Save**.
 
-![create-the-parent-form-for-the-join-pt.png](/docs/assets/academy/ui/relationships/create-the-parent-form-for-the-join-pt.png)
+![create-the-parent-form-for-the-join-en.png](/docs/assets/academy/ui/relationships/create-the-parent-form-for-the-join-en.png)
 
-#### Step 2: Configure the Join Form Fields
+### Step 2: configure the join form fields
 
 Add the "bridge" fields to the Person-Function form.
 
@@ -143,28 +148,30 @@ Add the "bridge" fields to the Person-Function form.
 
 **Field 1 (Link to Person):**
 
-- **Field Title:** Person's Name
-- **Column Name:** `person_name_id` (following the `_id` convention)
+![link-field-for-person-en.png](/docs/assets/academy/ui/relationships/link-field-for-person-en.png)
+
+- **Field Title:** Person Name
+- **Column Name:** `person_name_id` (following the **_id** convention)
 - **Type:** `select - select`
-- **Link:** Click on **Configure** and select the main form field **Person** (example: `person:name`).
+- **Link:** Click on **Configure** and select the main form field **Person**, example: `person:name`.
 
 - Click on **Save**.
 
 **Field 2 (Link to Function):**
 
-- **Field Title:** Person's Function.
+- **Field Title:** Person Function.
 
 - **Column Name:** `person_function_id`.
 
 - **Type:** `select - select`.
 
-- **Link:** Click on **Configure** and select the main form field **Function** (example: `function:function_id`).
+- **Link:** Click on **Configure** and select the main form field **Function**, example: `function:function_id`.
 
 - Click on **Save**.
 
-![create-and-configure-the-multiselect-field-pt.png](/docs/assets/academy/ui/relationships/create-and-configure-the-multiselect-field-pt.png)
+![field-link-to-person-function-en.png](/docs/assets/academy/ui/relationships/field-link-to-person-function-en.png)
 
-#### Step 3: Create the Multiselect Field in the "Parent" Form
+### Step 3: create the multiselect field in the "Parent" Form
 
 With the "bridge" (**Person-Function**) ready, we can return to the **Person** form to create the final field.
 
@@ -178,7 +185,7 @@ With the "bridge" (**Person-Function**) ready, we can return to the **Person** f
 
 5 - **Type:** _`multiselect - multiselect`_.
 
-#### Step 4: Configure the Multiselect Field
+### Step 4: configure the multiselect field
 
 When selecting the `multiselect` type, two new configuration fields will appear: **Reference** and **Link**.
 
@@ -202,13 +209,11 @@ When selecting the `multiselect` type, two new configuration fields will appear:
 
 - Click the **Save** button in field management to apply all your settings.
 
-![configure-the-multiselect-field-pt.png](/docs/assets/academy/ui/relationships/configure-the-multiselect-field-pt.png)
+![configure-the-multiselect-field-en.png](/docs/assets/academy/ui/relationships/configure-the-multiselect-field-en.png)
 
 ### Result
 
 Done! Now in "preview" mode, when adding or editing a record in the **Person** form, the "Person Function" field will appear as a multi-select box. You can choose multiple functions from the list (which come from the **Function** form), and Netuno will automatically save these associations within the **Person-Function** form.
-
-![multiselect-result-pt.png](/docs/assets/academy/ui/relationships/multiselect-result-pt.png)
 
 If you have any questions, please contact us through the community and other channels available at the bottom of this page.
 
