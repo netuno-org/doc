@@ -34,22 +34,23 @@ No **Linux** **Ubuntu** ou **Debian**, utilize o comando:
 
 - `apt install default-jdk-headless`
 
-### Front-end: Bun & PNPM
+### Front-end: Bun
 
-Não é obrigatório mas é recomendado que o **Bun** e o **PNPM** estejam instalados para poder compilar a UI (_user interface_, 
-_front-end_) das aplicações.
+Não é obrigatório, mas é altamente recomendado que o **Bun** esteja instalado para poder compilar a UI 
+(_user interface_, _front-end_, _website_) das aplicações.
 
-Em vez de utilizar o **Node** e o **NPM**, por que o **Bun** e o **PNPM** são mais otimizados e rápidos, no geral 
-são superiores porque demonstram melhores resultados práticos no desenvolvimento.
+Em vez de utilizar o **Node** e o **NPM**, o **Bun** é mais moderno, otimizado e rápido, assim no geral é bem 
+superior porque demonstra melhores resultados práticos para o desempenho do desenvolvimento.
 
-- Veja como [instalar o PNPM e o Bun](/docs/academy/website/pnpm-bun).
+- Veja como [instalar o Bun](/docs/academy/website/bun).
 
 Todos os projetos de exemplo do Netuno e na geração de novas aplicações, estão adaptados para funcionar com o 
-Bun e o PNPM.
+Bun.
 
 > Certifique que utiliza as versões mais recentes das tecnologias.
 
-Caso queira utilizar o **Node** e o **NPM**, ou outra tecnologia qualquer, é sempre possível, fica ao seu critério.
+Caso queira utilizar o **Node** e o **NPM**, **PNPM**, **Yarn**, ou outra tecnologia qualquer, é possível, fica 
+ao seu critério.
 
 ## Considerações
 
