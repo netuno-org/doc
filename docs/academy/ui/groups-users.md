@@ -4,174 +4,190 @@ id: groups-users
 title: Groups and Users
 ---
 
-## Creating/Editing Groups and Users
+## Creation and Editing
 
-This section covers the creation and editing of passwords, groups, users, and the viewing of log histories, as well as the control of their access permissions, aiming to simplify and organize management.
+This section is the administrative center of your application. Here, you manage credentials, privilege levels, and audit activities performed on the system, ensuring that each user has access to exactly what they need.
+
+#### Requirements
+- **Access to Neptune:** You must be logged into your instance and have **Administrator** permissions.
+- **Created Application:** You must have a previously created application. Learn more: [Interface Guide: Create Application](/docs/academy/app-create).
+- **Forms:** Have at least one or two forms created. Learn more: [Interface Guide: Create Form](/docs/academy/ui/forms).
 
 ### Menu
 
-This menu allows access to your own account settings and system information. You need to access "view mode" and click on "Developer" in the upper right corner of the screen.
+Allows access to settings for security management, users, groups, and log monitoring.
 
-#### Requirements
-- **Access to Netuno:** You must be logged into your Netuno instance.
+![access-menu-en.png](/docs/assets/academy/ui/groups-users/access-menu-en.png)
 
-- **Created Application:** You must have a previously created application. If you don't have one yet, follow the previous app creation tutorials.
-
-- **Forms:** Have at least one or two forms created, as we will use them as examples to define permissions.
-
-![access-menu-pt.png](/docs/assets/academy/ui/groups-users/access-menu-pt.png)
+Access "View Mode" and click on "Developer" in the upper right corner of the screen.
 
 ## Password
 
-Allows you to change your own system access password. By clicking on "Developer" in the upper right corner of the screen, access the "Password" section.
+Allows you to change your system access password.
 
-- Enter your current password.
+By clicking on "Developer" in the upper right corner of the screen, access the "Password" section.
 
-- Enter your new password. It must contain at least 8 characters including numbers, uppercase and lowercase letters, and special characters.
+- Enter your old password.
+- Enter your new password. **It must have at least 8 characters including numbers, uppercase and lowercase letters, and special characters.**
+- Confirm the password and click the **Save** button.
+- After this action, a success message will be displayed.
 
-- Confirm the password and click the **Save** button. After this action, a success message will be displayed.
-
-![password-pt.png](/docs/assets/academy/ui/groups-users/password-pt.png)
+![password-en.png](/docs/assets/academy/ui/groups-users/password-en.png)
 
 ## User
 
-This is the control center for managing user accounts. By clicking on "Developer" in the upper right corner of the screen, access the "User" section. 
+This section is the control center for managing user profiles.
+
+By clicking on "Developer" in the upper right corner of the screen, access the "User" section.
 
 #### Requirements
-- Administrator permissions to access and modify users.
+
+- The user to be edited must be previously registered in the database.
 
 ### 1 - Edit existing user
-A menu to select an already registered user and load their data for editing.
+This section describes how to locate and update the information of a user who is already registered in the system.
 
-**How ​​to edit a user:** Select a registered user and change the existing information. Click the "Save" button to confirm the change. After this action, a success message will be displayed.
+![edit-existing-user-en.png](/docs/assets/academy/ui/groups-users/edit-existing-user-en.png)
+
+**How ​​to edit a user:**
+
+- Select a registered user and change the existing information.
+- Click the "Save" button to confirm the change. 
+- After this action, a success message will be displayed.
 
 **Add new user:** The basic account identification fields (Name, Username, Password, Email, Group).
 
 ### 2 - Add a new user
-In the "Add new user" section, fill in all fields:
 
-- **Name:** The person's full name.
+This section allows you to register new users, defining their access credentials and permission levels within the system.
 
-- **Username:** The login name (only lowercase letters and separated by periods, example: zuly.silva).
+![create-new-user-en.png](/docs/assets/academy/ui/groups-users/create-new-user-en.png)
 
-- **Password:** The access password. (must have at least 8 characters, including: lowercase and uppercase letters, numbers and special characters).
-
-- **Email:** The contact email.
-
-- **None:** Allows you to disable the system access password.
-
-- **Group:** Select the main group to which the user belongs (example: "Administrator", "Manager").
-
-- **Active:** Check this option to allow the user to log in.
-
-- **Permissions:** Configure access permissions.
-
-- **Save Button:** Click to save the new user in the system.
+- **Name:** Enter the username.
+- **Username:** Enter the login name - must contain only lowercase letters and be separated by a period.
+- **Password:** Enter the new user's first system access password.
+- **Email:** Enter the contact email.
+- **None:** Allows you to block the user's password to prevent login.
+- **Group:** Select the main group to which the user belongs.
+- **Active:** Allows you to activate or deactivate a user in the system. 
+- **Save Button:** Click to save the new user's information.
 
 ### 3 - User Permissions
 
-The tabbed section ("Forms" and "Reports") allows you to define detailed permissions for the selected or newly created user.
+Permission management is done through an intuitive interface organized by tabs (Forms and Reports).
+
+This allows you to configure in detail what the user can access immediately after creation or during editing.
+
+In the **Read, Write, and Delete** columns, you will find a dropdown menu with different levels of scope:
+
+- **None:** The user has no permission for this action.
+- **Owner:** The user can only interact with records they themselves created.
+- **Group:** The user can interact with records created by any member of their group.
+- **Everything:** Full permission. The user accesses the records of all users and groups.
 
 #### Forms Tab
-Controls access to data entry forms for each listed form, e.g., (Automotive, Vehicles, Registration), define the permissions:
+In this tab, you control the user's interaction with the application's data entry modules.
 
-- **Active:** Check if the user should have access to this form (it will appear in the side menu for them).
+![user-permissions-forms-en.png](/docs/assets/academy/ui/groups-users/user-permissions-forms-en.png)
 
-- **Read:** Define what they can read.
+For each listed form, you must define the following parameters:
 
-- **Write:** Define what they can create or edit.
+- **Active:** Defines visibility. If checked, the form will appear in the sidebar menu for the user.
 
-- **Delete:** Define what they can delete.
+- **Read:** Sets the permission level to view records only.
+
+- **Write:** Defines whether the user has permission to enter new data or edit existing information.
+
+- **Delete:** Defines whether the user has the authority to remove records from the database.
 
 #### Reports Tab
-Controls access to data visualization reports. Click the "Reports" tab (next to "Forms") and check "Active" for the reports the user should have permission to view.
 
-- **Save:** Click the "Save" button at the bottom of the page.
+Similar to forms, this tab controls access to the modules for viewing and extracting analytical data.
+
+![user-permissions-report-en.png](/docs/assets/academy/ui/groups-users/user-permissions-report-en.png)
+
+For a report to be available, the **Active** option must be selected so that the user has permission to view it.
+
+- **Save:** Click the "Save" button to save the changes.
 
 ### 4 - Action Buttons
 
-**Save:** Saves all changes made.
+![action-buttons-en.png](/docs/assets/academy/ui/groups-users/action-buttons-en.png)
 
-**Clear:** Clears all form fields, reverting to the initial "Add new user" state.
+- **Save:** Save all changes made.
 
-**Customize:** A powerful Netuno tool. After saving a user's permissions, you can click "Customize" to view the system exactly as the registered user will use it. This is essential to test if the permissions have been configured correctly.
+- **Clear:** Clear all form fields, reverting to the initial "Add new user" state.
 
-**Delete:** Permanently removes the user's record.
+- **Impersonate:** A powerful Netuno tool. After saving a user's permissions and clicking the **"Impersonate"** button, you can view the system exactly as the registered user will use it. This is essential for testing if the permissions have been configured correctly.
 
-![create-and-edit-users-pt.png](/docs/assets/academy/ui/groups-users/create-and-edit-users-pt.png)
+- **Delete:** Permanently removes the user's record.
 
 ## Group
 
-This page is used to create and manage user groups. A "Group" is a profile (such as "Administrators", "Sales", "Customers", or "Managers") that defines a set of rules and access. This makes managing permissions much easier and more organized.
+This is the central panel for managing access profiles in Netuno, allowing you to perform two actions: **"Add"** a new group and **"Edit"** an existing group.
 
-This section allows two main actions: "Add" a new group or "Edit" an existing group.
+A group functions as a profile or access rule that determines what each set of users can view or do within the system.
 
-By clicking "Developer" in the upper right corner of the screen, access the "Group" section.
+Instead of configuring permissions individually for each user, you define them in the group and link users to it, ensuring scalable and organized administration.
+
+By clicking on **"Developer"** in the upper right corner of the screen, access the **"Group"** section.
 
 #### Requirements
-- Have administrator permission to create or modify user groups.
+
+- **Administrative Access:** You need to have a profile with administrator permissions to create or modify groups.
 
 ### How to Add a New Group
 
+![add-new-group-en.png](/docs/assets/academy/ui/groups-users/add-new-group-en.png)
+
 - Locate the "Add" section.
-
-- **Name:** Give a A clear and descriptive name for the group (example: "Sales Team", "Management", "Supervision"). Configure Options: Define the main options for this group:
-
+- **Name:** Give the group a clear and descriptive name.
 - **Allow Login:** Check this option if users in this group should be able to log in to the system.
-
-- **Administrator:** Check this option only if users in this group have full access to the system (super-users).
-
+- **Administrator:** Check this option only if users in this group have full access to the system.
+- **Email:** Enter a contact email for the group.
 - **Active:** Check this option to activate the settings in the system.
-
-- **Email:** Enter a contact email for the group (optional, it can be a distribution email such as "sales@yourcompany.com"). Click the "Save" button.
+- **Save Button:** Click to save the group settings.
+- **Clear Button:** Click to clear all form fields.
 
 ### How to Edit an Existing Group
 
+![edit-existing-group-en.png](/docs/assets/academy/ui/groups-users/edit-existing-group-en.png)
+
 - Select the registered group in the "Edit existing group" input at the top of the page.
-
 - Click the "Select a group" checkbox.
-
 - Choose the group you want to edit from the list.
-
 - Wait for the group data to automatically fill in the fields (Name, Email, and options).
-
-- Make the desired changes (example: deactivate an old group by changing "Active" checkbox or change its name).
-
-After making the changes, click "Save".
-
-![create-and-edit-groups-pt.png](/docs/assets/academy/ui/groups-users/create-and-edit-groups-pt.png)
+- Make the changes you want and click "Save".
 
 ## Log History
 
-The "Log History" screen is the logging and auditing tool for your application. By clicking "Developer" in the upper right corner of the screen, access the "Log" section.
+The "Log History" screen is the logging and auditing tool for your application.
 
-When a user creates, edits, or deletes a record in any form (example: "Client", "Product", etc.), the system will save a "log" of this action. This page allows you to search and filter all this history. This is essential for:
+When a user creates, edits, or deletes a record in any form, the system saves a log of that action.
 
-> *Security:* Monitoring suspicious or unauthorized activities.
+This page allows you to search and filter all of this history. This is essential for:
 
-> *Auditing:* Maintaining a compliance record of all data changes.
+- *Security:* Monitoring suspicious or unauthorized activities.
 
-> *Diagnosis:* Understanding how a specific record reached its current state (example: "who deleted this client?").
+- *Auditing:* Maintaining a compliance record of all data changes.
+
+- *Diagnostics:* Understanding how a specific record reached its current state. Example: "who deleted this client?".
 
 ### How to Search the Log History
 
-Fill in one or more fields (filters) to find the log records you want, and then click "Search".
+![log-en.png](/docs/assets/academy/ui/groups-users/log-en.png)
+
+Fill in one or more "Filters" fields to find the log records you want to search for, then click the "Search" button.
 
 - Access the "Log History" page.
-
 - Fill in the desired filters to limit your search. It is not necessary to fill in all fields. Example: To see everything the user "Developer" did today:
 - Select "Developer" in the User field.
-
-- In the Start field, select today's date and time "00:00".
-- In the End field, select today's date and time "23:59".
-
+- In the Start field, select today's date and time.
+- In the End field, select today's date and time.
 - Click the "Search" button.
-
 - The results (the list of logs) will be displayed below the search form.
-
-![log-pt.png](/docs/assets/academy/ui/groups-users/log-pt.png)
 
 ## Logout
 
-Click "Logout" to securely end your session on the system. By clicking "Developer" in the upper right corner of the screen, access the Logout section.
+Click "Logout" to securely end your session on the system. 
 
