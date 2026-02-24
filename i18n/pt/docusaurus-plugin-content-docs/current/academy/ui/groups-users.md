@@ -164,11 +164,11 @@ Quando um usuário criar, editar ou deletar um registro em qualquer formulário,
 
 Esta página permite que você pesquise e filtre todo esse histórico. Isso é essencial para:
 
- - *Segurança:* Monitorar atividades suspeitas ou não autorizadas.
+ - **Segurança:** Monitorar atividades suspeitas ou não autorizadas.
 
- - *Auditoria:* Manter um registro de conformidade de todas as alterações de dados.
+ - **Auditoria:** Manter um registro de conformidade de todas as alterações de dados.
 
- - *Diagnóstico:* Entender como um registro específico chegou ao seu estado atual. Exemplo: "quem excluiu este cliente?".
+ - **Diagnóstico:** Entender como um registro específico chegou ao seu estado atual. Exemplo: "quem excluiu este cliente?".
 
 ### Como Pesquisar o Histórico de Registros
 

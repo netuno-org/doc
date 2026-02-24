@@ -167,11 +167,11 @@ When a user creates, edits, or deletes a record in any form, the system saves a 
 
 This page allows you to search and filter all of this history. This is essential for:
 
-- *Security:* Monitoring suspicious or unauthorized activities.
+- **Security:** Monitoring suspicious or unauthorized activities.
 
-- *Auditing:* Maintaining a compliance record of all data changes.
+- **Auditing:** Maintaining a compliance record of all data changes.
 
-- *Diagnostics:* Understanding how a specific record reached its current state. Example: "who deleted this client?".
+- **Diagnostics:** Understanding how a specific record reached its current state. Example: "who deleted this client?".
 
 ### How to Search the Log History
 
