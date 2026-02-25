@@ -349,7 +349,7 @@ Open the terminal in the application folder and go to the `ui` folder, from the 
 
 Run the command:
 
-- `pnpm run build`
+- `bun run build`
 
 This will perform the production-optimized compilation of the frontend.
 
@@ -359,7 +359,7 @@ If you want to avoid constantly manually running the compilation command with ea
 run the quick development build that watches for file changes, so the quick build
 is executed automatically:
 
-- `pnpm run watch`
+- `bun run watch`
 
 > To see each change, refresh the backoffice page in the browser.
 
@@ -382,9 +382,9 @@ Change `enabled` to `true`.
 ```json title="config/_development.json"
   ...
   "commands": [{
-    "command": "pnpm run watch",
+    "command": "bun run watch",
     "enabled": true,
-    "install": "pnpm install",
+    "install": "bun install",
     "path": "ui"
   }],
   ...

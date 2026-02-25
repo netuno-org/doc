@@ -53,7 +53,7 @@ And also explore the documentation of our **library** to know in detail the reso
 
 The development of the frontend on the web has undergone many changes in recent years and the use of <a href="https://webpack.js.org" target="_blank">Webpack</a> has become a standard.
 
-Our choices of technologies such as <a href="https://reactjs.org/" target="_blank">ReactJS</a>, <a href="https://ant.design/" target="_blank">Ant.Design</a> and <a href="http://lesscss.org/" target="_blank">Less</a>, are the technologies that bring an increase in productivity with the highest uptake in the community.
+Our choice of technologies such as <a href="https://reactjs.org/" target="_blank">ReactJS</a>, <a href="https://bun.sh/" target="_blank">Bun</a>, <a href="https://ant.design/" target="_blank">Ant.Design</a> and <a href="http://lesscss.org/" target="_blank">Less</a> are technologies that bring increased productivity with great adoption.
 
 To deepen your knowledge of these technologies explore the various documentations available in text and video format over the Internet.
 

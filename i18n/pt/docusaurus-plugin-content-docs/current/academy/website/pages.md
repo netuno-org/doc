@@ -24,13 +24,13 @@ onde tem o projeto de frontend, por exemplo em:
 Certifique que tem instalado o módulo do React Router no seu projeto:
 
 ```
-pnpm install react-router
+bun install react-router
 ```
 
 E do Ant.Design, que será utilizado para a criar a estrutura geral:
 
 ```
-pnpm install antd
+bun install antd
 ```
 
 ## Configuração
