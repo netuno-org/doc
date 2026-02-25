@@ -45,7 +45,7 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>addAll</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>addAll</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection&lt;java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -60,7 +60,7 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>addAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>addAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection&lt;java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -221,6 +221,35 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asCalendar</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.util.Calendar_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asCalendar</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.util.Calendar_ |   |
+
+##### Retorno
+
+( _java.util.Calendar_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asCalendar</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>
 ##### Atributos
 
@@ -251,6 +280,35 @@ Permite realizar a manipulação da resposta HTTP.
 ---
 
 ## asDate
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.util.Date_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.util.Date_ |   |
+
+##### Retorno
+
+( _java.util.Date_ )
+
 
 ---
 
@@ -346,6 +404,20 @@ Permite realizar a manipulação da resposta HTTP.
 ---
 
 ## asFile
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asFile</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _[File](/docs/library/objects/File)_ )
+
 
 ---
 
@@ -465,6 +537,35 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asInstant</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.time.Instant_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asInstant</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.time.Instant_ |   |
+
+##### Retorno
+
+( _java.time.Instant_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asInstant</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Atributos
 
@@ -546,7 +647,7 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -560,7 +661,7 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -575,7 +676,7 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -590,7 +691,7 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -606,7 +707,7 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -620,7 +721,7 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -635,7 +736,7 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -650,7 +751,7 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -667,6 +768,35 @@ Permite realizar a manipulação da resposta HTTP.
 ---
 
 ## asLocalDate
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asLocalDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.time.LocalDate_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asLocalDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.time.LocalDate_ |   |
+
+##### Retorno
+
+( _java.time.LocalDate_ )
+
 
 ---
 
@@ -703,6 +833,35 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asLocalDateTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.time.LocalDateTime_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asLocalDateTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.time.LocalDateTime_ |   |
+
+##### Retorno
+
+( _java.time.LocalDateTime_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asLocalDateTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Atributos
 
@@ -733,6 +892,35 @@ Permite realizar a manipulação da resposta HTTP.
 ---
 
 ## asLocalTime
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asLocalTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.time.LocalTime_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asLocalTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.time.LocalTime_ |   |
+
+##### Retorno
+
+( _java.time.LocalTime_ )
+
 
 ---
 
@@ -893,6 +1081,35 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asSQLDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.sql.Date_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asSQLDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.sql.Date_ |   |
+
+##### Retorno
+
+( _java.sql.Date_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asSQLDate</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
 ##### Atributos
 
@@ -926,6 +1143,35 @@ Permite realizar a manipulação da resposta HTTP.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asSQLTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.sql.Time_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asSQLTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.sql.Time_ |   |
+
+##### Retorno
+
+( _java.sql.Time_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asSQLTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
 ##### Atributos
 
@@ -956,6 +1202,35 @@ Permite realizar a manipulação da resposta HTTP.
 ---
 
 ## asSQLTimestamp
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asSQLTimestamp</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.sql.Timestamp_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>asSQLTimestamp</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.sql.Timestamp_ |   |
+
+##### Retorno
+
+( _java.sql.Timestamp_ )
+
 
 ---
 
@@ -1306,6 +1581,26 @@ Objeto convertido para Values.
 
 ---
 
+## baseFile
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>baseFile</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **value** | _java.lang.Object_ |   |
+| **key** | _string_ |   |
+| **content** | _string_ |   |
+
+##### Retorno
+
+( _[File](/docs/library/objects/File)_ )
+
+
+---
+
 ## cache
 
 ---
@@ -1352,7 +1647,7 @@ Objeto convertido para Values.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>compute</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>compute</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction&lt;?, ?, ?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1371,7 +1666,7 @@ Objeto convertido para Values.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>computeIfAbsent</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>computeIfAbsent</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function&lt;?, ?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1390,7 +1685,7 @@ Objeto convertido para Values.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>computeIfPresent</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>computeIfPresent</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction&lt;?, ?, ?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1442,7 +1737,7 @@ Objeto convertido para Values.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>containsAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>containsAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1682,7 +1977,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>entrySet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>entrySet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set&lt;java.util.Map$Entry&lt;string, java.lang.Object&gt;&gt;</span>
 ##### Retorno
 
 ( _java.util.Set_ )
@@ -1694,7 +1989,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>filter</span>(<span style={{color: '#FF8000'}}>p</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Predicate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>filter</span>(<span style={{color: '#FF8000'}}>p</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Predicate&lt;java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1741,7 +2036,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>p</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Predicate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>p</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Predicate&lt;java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1787,7 +2082,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>forEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiConsumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>forEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiConsumer&lt;?, ?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1801,7 +2096,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>forEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>forEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1946,7 +2241,7 @@ Objeto original sem conversões.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Descrição
 
 Obtém o objeto original associado a chave, mas convertido para o tipo da classe especificada.
@@ -2094,6 +2389,35 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getCalendar</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.util.Calendar_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getCalendar</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.util.Calendar_ |   |
+
+##### Retorno
+
+( _java.util.Calendar_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getCalendar</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Calendar</span>
 ##### Atributos
 
@@ -2124,6 +2448,35 @@ Objeto original convertido para o tipo da classe definida.
 ---
 
 ## getDate
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.util.Date_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Date</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.util.Date_ |   |
+
+##### Retorno
+
+( _java.util.Date_ )
+
 
 ---
 
@@ -2219,6 +2572,20 @@ Objeto original convertido para o tipo da classe definida.
 ---
 
 ## getFile
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getFile</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _[File](/docs/library/objects/File)_ )
+
 
 ---
 
@@ -2362,6 +2729,35 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getInstant</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.time.Instant_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getInstant</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.time.Instant_ |   |
+
+##### Retorno
+
+( _java.time.Instant_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getInstant</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Instant</span>
 ##### Atributos
 
@@ -2457,7 +2853,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getKeys</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getKeys</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set&lt;string&gt;</span>
 ##### Retorno
 
 ( _java.util.Set_ )
@@ -2469,7 +2865,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2483,7 +2879,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2498,7 +2894,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2513,7 +2909,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2529,7 +2925,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2543,7 +2939,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2558,7 +2954,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2573,7 +2969,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getList</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>claz</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2590,6 +2986,35 @@ Objeto original convertido para o tipo da classe definida.
 ---
 
 ## getLocalDate
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getLocalDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.time.LocalDate_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getLocalDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.time.LocalDate_ |   |
+
+##### Retorno
+
+( _java.time.LocalDate_ )
+
 
 ---
 
@@ -2626,6 +3051,35 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getLocalDateTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.time.LocalDateTime_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getLocalDateTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.time.LocalDateTime_ |   |
+
+##### Retorno
+
+( _java.time.LocalDateTime_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getLocalDateTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>
 ##### Atributos
 
@@ -2656,6 +3110,35 @@ Objeto original convertido para o tipo da classe definida.
 ---
 
 ## getLocalTime
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getLocalTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.time.LocalTime_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getLocalTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.time.LocalTime_ |   |
+
+##### Retorno
+
+( _java.time.LocalTime_ )
+
 
 ---
 
@@ -2816,7 +3299,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getOrDefault</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getOrDefault</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -2832,6 +3315,35 @@ Objeto original convertido para o tipo da classe definida.
 ---
 
 ## getSQLDate
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getSQLDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.sql.Date_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getSQLDate</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.sql.Date_ |   |
+
+##### Retorno
+
+( _java.sql.Date_ )
+
 
 ---
 
@@ -2868,6 +3380,35 @@ Objeto original convertido para o tipo da classe definida.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getSQLTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.sql.Time_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getSQLTime</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.sql.Time_ |   |
+
+##### Retorno
+
+( _java.sql.Time_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getSQLTime</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>
 ##### Atributos
 
@@ -2898,6 +3439,35 @@ Objeto original convertido para o tipo da classe definida.
 ---
 
 ## getSQLTimestamp
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getSQLTimestamp</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+
+##### Retorno
+
+( _java.sql.Timestamp_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getSQLTimestamp</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>defaultValue</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **index** | _int_ |   |
+| **defaultValue** | _java.sql.Timestamp_ |   |
+
+##### Retorno
+
+( _java.sql.Timestamp_ )
+
 
 ---
 
@@ -3199,7 +3769,7 @@ Código da codificação dos caracteres.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>getValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection&lt;?&gt;</span>
 ##### Descrição
 
 Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
@@ -3541,7 +4111,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>iterator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Iterator</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>iterator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Iterator&lt;java.lang.Object&gt;</span>
 ##### Retorno
 
 ( _java.util.Iterator_ )
@@ -3571,7 +4141,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>keySet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>keySet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set&lt;string&gt;</span>
 ##### Retorno
 
 ( _java.util.Set_ )
@@ -3583,7 +4153,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>keys</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>keys</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set&lt;string&gt;</span>
 ##### Retorno
 
 ( _java.util.Set_ )
@@ -3595,7 +4165,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>keysSorted</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>keysSorted</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Set&lt;string&gt;</span>
 ##### Retorno
 
 ( _java.util.Set_ )
@@ -3670,7 +4240,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -3678,7 +4248,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>list</span>(<span style={{color: '#FF8000'}}>cls</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>list</span>(<span style={{color: '#FF8000'}}>cls</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3696,7 +4266,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>listIterator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.ListIterator</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>listIterator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.ListIterator&lt;java.lang.Object&gt;</span>
 ##### Retorno
 
 ( _java.util.ListIterator_ )
@@ -3704,7 +4274,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>listIterator</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.ListIterator</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>listIterator</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.ListIterator&lt;java.lang.Object&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3722,7 +4292,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>listOfValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>listOfValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -3873,7 +4443,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>merge</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>merge</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>, <span style={{color: '#FF8000'}}>arg2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction&lt;?, ?, ?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3929,7 +4499,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>array</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>array</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -3957,7 +4527,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>list</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>of</span>(<span style={{color: '#FF8000'}}>list</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4107,7 +4677,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>putIfAbsent</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>putIfAbsent</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4181,7 +4751,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>removeAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>removeAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection&lt;java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4199,7 +4769,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>replace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>replace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4214,7 +4784,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>replace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>, <span style={{color: '#FF8000'}}>arg2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>replace</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>, <span style={{color: '#FF8000'}}>arg1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>, <span style={{color: '#FF8000'}}>arg2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4234,7 +4804,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>replaceAll</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>replaceAll</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiFunction&lt;?, ?, ?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4248,7 +4818,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>replaceAll</span>(<span style={{color: '#FF8000'}}>operator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.UnaryOperator</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>replaceAll</span>(<span style={{color: '#FF8000'}}>operator</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.UnaryOperator&lt;java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4280,7 +4850,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>retainAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>retainAll</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection&lt;java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4916,7 +5486,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>sort</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Comparator</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>sort</span>(<span style={{color: '#FF8000'}}>c</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Comparator&lt;java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -4948,7 +5518,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>spliterator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Spliterator</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>spliterator</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Spliterator&lt;java.lang.Object&gt;</span>
 ##### Retorno
 
 ( _java.util.Spliterator_ )
@@ -5000,7 +5570,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>subList</span>(<span style={{color: '#FF8000'}}>fromIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>toIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>subList</span>(<span style={{color: '#FF8000'}}>fromIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>toIndex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;java.lang.Object&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5027,7 +5597,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toArray</span>(<span style={{color: '#FF8000'}}>a</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toArray</span>(<span style={{color: '#FF8000'}}>a</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?[]</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5185,7 +5755,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5199,7 +5769,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5214,7 +5784,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>, <span style={{color: '#FF8000'}}>htmlEscape</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5230,7 +5800,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toJSON</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>, <span style={{color: '#FF8000'}}>indentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5288,7 +5858,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -5296,7 +5866,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toList</span>(<span style={{color: '#FF8000'}}>cls</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toList</span>(<span style={{color: '#FF8000'}}>cls</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5362,10 +5932,10 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toStringArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>toStringArray</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string[]</span>
 ##### Retorno
 
-( _java.lang.String[]_ )
+( _string[]_ )
 
 
 ---
@@ -5374,7 +5944,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>typedForEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiConsumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>typedForEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.BiConsumer&lt;?, ?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5388,7 +5958,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>typedForEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>typedForEach</span>(<span style={{color: '#FF8000'}}>action</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -5436,7 +6006,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>values</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>values</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Collection&lt;java.lang.Object&gt;</span>
 ##### Descrição
 
 Obtém todos objeto de valores armazenados tanto no modo dicionário como de lista.
@@ -5467,13 +6037,13 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **splitter** | _string_ |   |
-| **excludes** | _java.lang.String[]_ |   |
+| **excludes** | _string[]_ |   |
 
 ##### Retorno
 
@@ -5482,13 +6052,13 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **splitter** | _string_ |   |
-| **excludes** | _java.lang.String[]_ |   |
+| **excludes** | _string[]_ |   |
 | **config** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno
@@ -5528,14 +6098,14 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 | **splitter** | _string_ |   |
-| **excludes** | _java.lang.String[]_ |   |
+| **excludes** | _string[]_ |   |
 
 ##### Retorno
 
@@ -5544,14 +6114,14 @@ Lista de todos os valores obtidos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>valuesToString</span>(<span style={{color: '#FF8000'}}>map</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>, <span style={{color: '#FF8000'}}>splitter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>excludes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string[]</span>, <span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
 | **splitter** | _string_ |   |
-| **excludes** | _java.lang.String[]_ |   |
+| **excludes** | _string[]_ |   |
 | **config** | _[Values](/docs/library/objects/Values)_ |   |
 
 ##### Retorno

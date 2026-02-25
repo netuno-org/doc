@@ -48,7 +48,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### <span style={{color: '#008000'}}>getResults</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>getResults</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -126,7 +126,7 @@ Resultado da pesquisa realizada à base de dados.
 
 ---
 
-#### <span style={{color: '#008000'}}>setResults</span>(<span style={{color: '#FF8000'}}>results</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](/docs/library/objects/DBSearchResult)</span>
+#### <span style={{color: '#008000'}}>setResults</span>(<span style={{color: '#FF8000'}}>results</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](/docs/library/objects/DBSearchResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |

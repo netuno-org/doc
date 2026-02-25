@@ -12,14 +12,14 @@ O objeto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### <span style={{color: '#008000'}}>available</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{color: '#008000'}}>available</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Descrição
 
-Retorna o número estimado de bytes restantes para a leitura dum ficheiro.
+Retorna o número de bytes para a leitura do arquivo.
 
 ##### Retorno
 
-( _int_ )
+( _long_ )
 
 
 ---
@@ -233,7 +233,7 @@ Copia os ficheiros indicados pela extensão inserida para o caminho indicado.
 #### <span style={{color: '#008000'}}>delete</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
-Apaga o ficheiro do caminho inserido.
+Apaga o arquivo ou a pasta se estiver vazia.
 
 ##### Retorno
 
@@ -249,7 +249,7 @@ Apaga o ficheiro do caminho inserido.
 #### <span style={{color: '#008000'}}>deleteAll</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
-Apaga um determinado ficheiro/diretorio e recursivamente todos os subs.
+Elimina tudo que estiver dentro da pasta, incluindo todas as subpastas e arquivos.
 
 ##### Retorno
 
@@ -258,10 +258,26 @@ Apaga um determinado ficheiro/diretorio e recursivamente todos os subs.
 
 ---
 
-#### <span style={{color: '#008000'}}>deleteAll</span>(<span style={{color: '#FF8000'}}>extension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+## deleteAllFiles
+
+---
+
+#### <span style={{color: '#008000'}}>deleteAllFiles</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
-Apaga um determinado ficheiro/diretorio pela extensão do ficheiro.
+Apaga todos os arquivos dentro da estrutura da pasta incluindo as subpastas.
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>deleteAllFiles</span>(<span style={{color: '#FF8000'}}>extension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Elimina todos os arquivos pela extensão, dentro da estrutura da pasta incluindo as subpastas.
 
 ##### Atributos
 
@@ -283,7 +299,7 @@ Apaga um determinado ficheiro/diretorio pela extensão do ficheiro.
 #### <span style={{color: '#008000'}}>deleteFiles</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
-Apaga um determinado ficheiro/diretório e recursivamente todos os subs.
+Apaga apenas os arquivos dentro da pasta, e não apaga os arquivos em subpastas.
 
 ##### Retorno
 
@@ -295,7 +311,7 @@ Apaga um determinado ficheiro/diretório e recursivamente todos os subs.
 #### <span style={{color: '#008000'}}>deleteFiles</span>(<span style={{color: '#FF8000'}}>extensao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
-Apaga ficheiros designados pela extensão inserida e recursivamente nas subpastas.
+Apaga apenas arquivos com a extensão dentro da pasta, e não apaga nenhum arquivo em subpastas.
 
 ##### Atributos
 
@@ -600,6 +616,18 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 
 ---
 
+## inMemoryFile
+
+---
+
+#### <span style={{color: '#008000'}}>inMemoryFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
 ## input
 
 ---
@@ -692,6 +720,18 @@ Retorna um resultado booleano que verifica se o caminho indicado é um ficheiro.
 
 ---
 
+## isInMemoryFile
+
+---
+
+#### <span style={{color: '#008000'}}>isInMemoryFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
 ## isJail
 
 ---
@@ -728,7 +768,7 @@ Retorna a hora que o ficheiro do caminho indicado foi modificado pela ultima vez
 
 ---
 
-#### <span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[File](/docs/library/objects/File)&gt;</span>
 ##### Descrição
 
 Retorna uma lista de todos os ficheiros e pastas presentes no caminho inserido.
@@ -1011,6 +1051,54 @@ Guarda o ficheiro no caminho inserido.
 ##### Retorno
 
 ( _[File](/docs/library/objects/File)_ )
+
+
+---
+
+## size
+
+---
+
+#### <span style={{color: '#008000'}}>size</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
+##### Retorno
+
+( _long_ )
+
+
+---
+
+## sizeGB
+
+---
+
+#### <span style={{color: '#008000'}}>sizeGB</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
+##### Retorno
+
+( _double_ )
+
+
+---
+
+## sizeKB
+
+---
+
+#### <span style={{color: '#008000'}}>sizeKB</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
+##### Retorno
+
+( _double_ )
+
+
+---
+
+## sizeMB
+
+---
+
+#### <span style={{color: '#008000'}}>sizeMB</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
+##### Retorno
+
+( _double_ )
 
 
 ---

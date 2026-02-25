@@ -133,7 +133,7 @@ Gere a execução dos componentes (representam 1 ou mais campos) que são integr
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getDataStructure</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getDataStructure</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.tritao.com.ComponentData&gt;</span>
 ##### Retorno
 
 ( _java.util.List_ )

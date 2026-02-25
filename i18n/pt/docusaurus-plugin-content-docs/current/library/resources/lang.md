@@ -78,6 +78,30 @@ Retorna todos os locale.
 
 ---
 
+## getCountry
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>getCountry</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
+
+
+---
+
+## getLanguage
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_lang</span>.<span style={{color: '#008000'}}>getLanguage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
+
+
+---
+
 ## getLocale
 
 ---

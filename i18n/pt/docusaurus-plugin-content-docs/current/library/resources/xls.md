@@ -648,7 +648,7 @@ Código identificador do novo formato.
 
 ---
 
-#### `_xls.create()`.<span style={{color: '#008000'}}>getAllSheets</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>getAllSheets</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.apache.poi.ss.usermodel.Sheet&gt;</span>
 ##### Descrição
 
 Lista com todas as folhas de cálculos.
@@ -1969,7 +1969,7 @@ Obtém a folha de cálculos atual.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>units</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>units</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;org.apache.poi.util.Units&gt;</span>
 ##### Descrição
 
 Obtém os tipos de unidades pré definidos no Excel, útil para realizar a conversão entre pixeis e pontos.
