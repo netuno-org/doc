@@ -22,9 +22,9 @@ The user is free to use any other technology like **VueJS**, **MaterialUI**, **S
 
 ## Prerequisites
 
-Before you begin, it's important to make sure you have [PNPM](https://pnpm.io/) and [Bun](https://bun.sh/) installed.
+Before you begin, it's important to make sure you have [Bun](https://bun.sh/) installed.
 
-> See how to [install PNPM and Bun](/docs/academy/website/pnpm-bun).
+> See how to [install Bun](/docs/academy/website/bun).
 
 To better understand how the user interface works, we recommend:
 

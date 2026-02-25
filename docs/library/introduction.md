@@ -17,7 +17,7 @@ Discover how to explore the development in Netuno:
 ## Objects
 This section contains information about the Netuno Objects, namely Values.
 
-* [Values](/docs/objects/Values)
+* [Values](/docs/library/objects/Values)
 
 ## Resources
 

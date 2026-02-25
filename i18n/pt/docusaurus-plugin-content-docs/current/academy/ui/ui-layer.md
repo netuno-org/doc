@@ -18,9 +18,9 @@ dashboards e outros componentes de front-end.
 
 ## Antes de Começar
 
-Certifique que tem instalado o [PNPM](https://pnpm.io/) e o [Bun](https://bun.sh/), que são pré-requisitos, mais sobre como:
+Certifique que tem instalado o [Bun](https://bun.sh/), que é um pré-requisito, mais sobre como:
 
-- [Instalar o PNPM e o Bun](/docs/academy/website/pnpm-bun)
+- [Instalar o Bun](/docs/academy/website/bun)
 
 ## Instalar os Módulos de Dependência
 

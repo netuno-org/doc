@@ -181,7 +181,7 @@ if (!_db.checkExists().column("client", "description")) {
 ##### Description
 
 Gets the connection configuration to the database being used.
-The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/tutorials/multiple-databases) tutorial.
+The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1012,7 +1012,7 @@ The item data found or null if it does not exist.
 ##### Description
 
 Gets the connection configuration to the database being used.
-The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/tutorials/multiple-databases) tutorial.
+The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1043,7 +1043,7 @@ Configuration of the connection to the database being used.
 ##### Description
 
 Gets the name of the database connection configuration being used.
-The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
+The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1126,7 +1126,7 @@ if (!_db.checkExists().index("client", "name")) {
 ##### Description
 
 Starts a new DB resource for the connection name that is passed.
-The connection details must be defined in the application's environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
+The connection details must be defined in the application's environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1498,7 +1498,7 @@ If it is PostgreSQL.
 ##### Description
 
 Gets the name of the database connection configuration being used.
-The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
+The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 

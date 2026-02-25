@@ -36,12 +36,12 @@ programming languages:
 * [Programming Queries](/docs/academy/server/database/db-query-execute)
 * [DB Form Operations](/docs/academy/server/database/db-form-operations)
 * [Templates](/docs/academy/server/templates)
-* [Development and debugging in Java](/docs/academy/server/development-debug-java)
 * [Email Sending](/docs/academy/server/services/sending-emails)
 * [Generate Unique ID's (UID/GUID)](/docs/academy/server/services/generate-uid-guid)
 * [MSSQL Configuration](/docs/academy/server/database/mssql)
 * [Multiple Databases](/docs/academy/server/database/multiple-databases)
 * [JWT Token](/docs/academy/server/services/jwt)
+* [Development and debugging in Java](/docs/academy/server/java-core/setup)
 
 Among much more, explore our [Academy](https://doc.netuno.org/docs/academy/overview).
 

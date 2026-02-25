@@ -181,7 +181,7 @@ if (!_db.checkExists().column("client", "description")) {
 ##### Descrição
 
 Obtém a configuração de conexão à base de dados que está a ser utilizada.
-Os detalhes da conexão está definida no documento de configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](../../academy/server/database/multiple-databases).
+Os detalhes da conexão está definida no documento de configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](/docs/academy/server/database/multiple-databases).
 
 ##### Como Usar
 
@@ -1012,7 +1012,7 @@ Os dados do item encontrado ou null caso não exista.
 ##### Descrição
 
 Obtém a configuração de conexão à base de dados que está a ser utilizada.
-Os detalhes da conexão está definida no documento de configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](../../academy/server/database/multiple-databases).
+Os detalhes da conexão está definida no documento de configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](/docs/academy/server/database/multiple-databases).
 
 ##### Como Usar
 
@@ -1043,7 +1043,7 @@ Configuração da conexão à base de dados que está a ser utilizada.
 ##### Descrição
 
 Obtém o nome da configuração de conexão à base de dados que está a ser utilizada.
-Os detalhes da conexão deve estar definida no documento configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](../../academy/server/database/multiple-databases).
+Os detalhes da conexão deve estar definida no documento configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](/docs/academy/server/database/multiple-databases).
 
 ##### Como Usar
 
@@ -1126,7 +1126,7 @@ if (!_db.checkExists().index("client", "name")) {
 ##### Descrição
 
 Inicia um novo recurso de DB para o nome de conexão que é passada.
-Os detalhes da conexão deverão estar definidas no documento configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](../../academy/server/database/multiple-databases).
+Os detalhes da conexão deverão estar definidas no documento configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](/docs/academy/server/database/multiple-databases).
 
 ##### Como Usar
 
@@ -1498,7 +1498,7 @@ Se é PostgreSQL.
 ##### Descrição
 
 Obtém o nome da configuração de conexão à base de dados que está a ser utilizada.
-Os detalhes da conexão deve estar definida no documento configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](../../academy/server/database/multiple-databases).
+Os detalhes da conexão deve estar definida no documento configuração de ambiente da aplicação, mais informações no tutorial sobre [Multiplas bases de dados](/docs/academy/server/database/multiple-databases).
 
 ##### Como Usar
 
