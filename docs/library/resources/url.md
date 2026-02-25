@@ -200,7 +200,7 @@ Application URL management resource.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>split</span>(<span style={{color: '#FF8000'}}>regex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>split</span>(<span style={{color: '#FF8000'}}>regex</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string[]</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -209,7 +209,7 @@ Application URL management resource.
 
 ##### Return
 
-( _java.lang.String[]_ )
+( _string[]_ )
 
 
 ---

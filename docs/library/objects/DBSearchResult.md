@@ -48,7 +48,7 @@ Result of the research carried out on the database.
 
 ---
 
-#### <span style={{color: '#008000'}}>getResults</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>getResults</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -126,7 +126,7 @@ Result of the research carried out on the database.
 
 ---
 
-#### <span style={{color: '#008000'}}>setResults</span>(<span style={{color: '#FF8000'}}>results</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](/docs/library/objects/DBSearchResult)</span>
+#### <span style={{color: '#008000'}}>setResults</span>(<span style={{color: '#FF8000'}}>results</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[DBSearchResult](/docs/library/objects/DBSearchResult)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |

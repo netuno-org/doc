@@ -259,7 +259,7 @@ Text content of the remote file in the server.
 
 ---
 
-#### <span style={{color: '#008000'}}>list</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>list</span>(<span style={{color: '#FF8000'}}>remotePath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[SSHFile](/docs/library/objects/SSHFile)&gt;</span>
 ##### Description
 
 List of items in a server folder.

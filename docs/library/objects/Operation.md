@@ -12,7 +12,7 @@ Definição da configuração do objeto Operation para operações em base de da
 
 ---
 
-#### <span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Description
 
 Returns all records resulting from query execution, if none, returns an empty list.
@@ -60,12 +60,12 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>forms</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+#### <span style={{color: '#008000'}}>delete</span>(<span style={{color: '#FF8000'}}>forms</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **forms** | _java.lang.String[]_ |   |
+| **forms** | _string[]_ |   |
 
 ##### Return
 
@@ -151,7 +151,7 @@ First record of the result.
 
 ---
 
-#### <span style={{color: '#008000'}}>getFieldsToGet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>getFieldsToGet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.tritao.db.form.Field&gt;</span>
 ##### Description
 
 Returns the fields that will be obtained in the query
@@ -168,7 +168,7 @@ The fields that will be obtained in the query
 
 ---
 
-#### <span style={{color: '#008000'}}>getFieldsToSet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>getFieldsToSet</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.tritao.db.form.Field&gt;</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -277,7 +277,7 @@ The pagination configuration object (if any) of the query.
 
 ---
 
-#### <span style={{color: '#008000'}}>getTablesToPopulate</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>getTablesToPopulate</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.tritao.db.form.populate.Populate&gt;</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -306,7 +306,7 @@ Where object of the query's main table.
 
 ---
 
-#### <span style={{color: '#008000'}}>group</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
+#### <span style={{color: '#008000'}}>group</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the query grouping object.
@@ -315,7 +315,7 @@ Defines the query grouping object.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **order** | _java.lang.String[]_ | The query grouping object. |
+| **order** | _string[]_ | The query grouping object. |
 
 ##### Return
 
@@ -643,7 +643,7 @@ Page with items and other pagination data.
 
 ---
 
-#### <span style={{color: '#008000'}}>populate</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.Field</span>, <span style={{color: '#FF8000'}}>fields</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
+#### <span style={{color: '#008000'}}>populate</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.Field</span>, <span style={{color: '#FF8000'}}>fields</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.tritao.db.form.Field&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -751,7 +751,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setFieldsToGet</span>(<span style={{color: '#FF8000'}}>fields</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setFieldsToGet</span>(<span style={{color: '#FF8000'}}>fields</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.tritao.db.form.Field&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Description
 
 Defines the fields that will be obtained in the query
@@ -774,7 +774,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setFieldsToSet</span>(<span style={{color: '#FF8000'}}>fieldsToSet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setFieldsToSet</span>(<span style={{color: '#FF8000'}}>fieldsToSet</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.tritao.db.form.Field&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -925,7 +925,7 @@ Current Query object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setTablesToPopulate</span>(<span style={{color: '#FF8000'}}>tablesToPopulate</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
+#### <span style={{color: '#008000'}}>setTablesToPopulate</span>(<span style={{color: '#FF8000'}}>tablesToPopulate</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.tritao.db.form.populate.Populate&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Operation](/docs/library/objects/Operation)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |

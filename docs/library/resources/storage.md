@@ -68,7 +68,7 @@ New storage started for a database table column.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>subpath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific path where the files for a specific column of a table are located that represent a field on a form.
@@ -79,7 +79,7 @@ Starts a new storage for a specific path where the files for a specific column o
 |---|---|---|
 | **table** | _string_ | Name of the table that is also the name of the form. |
 | **field** | _string_ | Column name which is also the same as the field name on the form. |
-| **path** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
+| **subpath** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
 
 ##### Return
 
@@ -89,7 +89,7 @@ New storage started for the specific path from a column in a database table.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>field</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>subpath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific path where the files for a specific column of a table are located that represent a field on a form.
@@ -100,7 +100,7 @@ Starts a new storage for a specific path where the files for a specific column o
 |---|---|---|
 | **table** | _string_ | Name of the table that is also the name of the form. |
 | **field** | _string_ | Column name which is also the same as the field name on the form. |
-| **path** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
+| **subpath** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
 | **fileName** | _string_ | Possibility to add the file name separately if there is a very complex, very unusual path structure. |
 
 ##### Return
@@ -116,10 +116,15 @@ New storage started for the specific path from a column in a database table.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>ensurePath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+##### Description
+
+Ensures that the folder path exists in the storage; if it doesn't, it will be created.
+
 ##### Return
 
 ( _[Storage](/docs/library/resources/storage)_ )
 
+The storage instance itself.
 
 ---
 
@@ -147,7 +152,7 @@ The file extension.
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>file</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
-File manipulation object of the storage being used.
+Object for manipulating the file located in the storage being used.
 
 ##### Return
 
@@ -161,7 +166,7 @@ It allows to interact with the file physically.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>folder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>folder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>subpath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific filesystem path within the storage.
@@ -171,7 +176,7 @@ Starts a new storage for a specific filesystem path within the storage.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **folder** | _string_ | Name of the folder inside the `storage/filesystem`, it will usually be public, private or server. |
-| **path** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
+| **subpath** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
 
 ##### Return
 
@@ -181,7 +186,7 @@ New storage started for the specific path from the storage filesystem.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>folder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>folder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>subpath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Starts a new storage for a specific filesystem path within the storage.
@@ -191,7 +196,7 @@ Starts a new storage for a specific filesystem path within the storage.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **folder** | _string_ | Name of the folder inside the `storage/filesystem`, it will usually be public, private or server. |
-| **path** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
+| **subpath** | _string_ | Relative additional path, usually the name of the file, but it can be a more complex path. |
 | **fileName** | _string_ | Possibility to add the file name separately if there is a very complex path structure. |
 
 ##### Return
@@ -209,7 +214,7 @@ New storage started for the specific path from the storage filesystem.
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>folder</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
-Folder manipulation object of the storage being used.
+Object for manipulating the folder located in the storage being used.
 
 ##### Return
 
@@ -366,7 +371,7 @@ If you are using the database folder.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>isExtension</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>isExtension</span>(<span style={{color: '#FF8000'}}>extension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks whether the file name contains the extension.
@@ -375,7 +380,7 @@ Checks whether the file name contains the extension.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **charset** | _string_ | File name extension. |
+| **extension** | _string_ | File name extension. |
 
 ##### Return
 
@@ -398,7 +403,7 @@ Checks whether it is a file.
 
 ( _boolean_ )
 
-If it is a file.
+If is a file.
 
 ---
 
@@ -483,7 +488,7 @@ Checks whether it is a folder.
 
 ( _boolean_ )
 
-If it is a folder.
+If is a folder.
 
 ---
 
@@ -491,7 +496,7 @@ If it is a folder.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>newRandomFile</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>newRandomFile</span>(<span style={{color: '#FF8000'}}>extension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Description
 
 Generates a new storage from the current storage but for a file with a random name that does not yet exist and thus can be saved without conflicts.
@@ -500,7 +505,7 @@ Generates a new storage from the current storage but for a file with a random na
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **charset** | _string_ | File name extension. |
+| **extension** | _string_ | File name extension. |
 
 ##### Return
 
@@ -548,16 +553,16 @@ Java data output object for the storage in use.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>path</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>path</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Description
 
-Gets the path of the storage being used.
+Retrieves the manipulation object for the path in storage that is being used.
 
 ##### Return
 
-( _string_ )
+( _[File](/docs/library/objects/File)_ )
 
-The path of the storage.
+It allows to interact with the path physically.
 
 ---
 
@@ -662,6 +667,23 @@ Defines the base path of the storage to be used.
 ( _boolean_ )
 
 Whether the path is valid and has been defined.
+
+---
+
+## subpath
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>subpath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Gets the subpath of the storage being used.
+
+##### Return
+
+( _string_ )
+
+The subpath of the storage.
 
 ---
 

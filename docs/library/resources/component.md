@@ -133,7 +133,7 @@ Manage the execution of the components (represent 1 or more fields) that are int
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getDataStructure</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_component</span>.<span style={{color: '#008000'}}>getDataStructure</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.tritao.com.ComponentData&gt;</span>
 ##### Return
 
 ( _java.util.List_ )

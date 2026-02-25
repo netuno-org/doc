@@ -12,7 +12,7 @@ Responsible for managing application reports programmatically.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_report</span>.<span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_report</span>.<span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -174,7 +174,7 @@ Responsible for managing application reports programmatically.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_report</span>.<span style={{color: '#008000'}}>getAllComponents</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_report</span>.<span style={{color: '#008000'}}>getAllComponents</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -188,7 +188,7 @@ Responsible for managing application reports programmatically.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_report</span>.<span style={{color: '#008000'}}>getAllComponents</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_report</span>.<span style={{color: '#008000'}}>getAllComponents</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -300,7 +300,7 @@ Responsible for managing application reports programmatically.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_report</span>.<span style={{color: '#008000'}}>mandatoryFields</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_report</span>.<span style={{color: '#008000'}}>mandatoryFields</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;string&gt;</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -314,7 +314,7 @@ Responsible for managing application reports programmatically.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_report</span>.<span style={{color: '#008000'}}>mandatoryFields</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_report</span>.<span style={{color: '#008000'}}>mandatoryFields</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;string&gt;</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |

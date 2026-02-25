@@ -146,7 +146,7 @@ Relational operator.
 
 ---
 
-#### <span style={{color: '#008000'}}>getConditions</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>getConditions</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[ConditionalOperator](/docs/library/objects/ConditionalOperator)&gt;</span>
 ##### Description
 
 Returns the other nested conditions of the object.
@@ -328,6 +328,24 @@ Relational operator.
 
 ---
 
+## notEquals
+
+---
+
+#### <span style={{color: '#008000'}}>notEquals</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.lang.Object_ |   |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+
+---
+
 ## notIn
 
 ---
@@ -416,7 +434,7 @@ Current Where object.
 
 ---
 
-#### <span style={{color: '#008000'}}>setConditions</span>(<span style={{color: '#FF8000'}}>conditions</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+#### <span style={{color: '#008000'}}>setConditions</span>(<span style={{color: '#FF8000'}}>conditions</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[ConditionalOperator](/docs/library/objects/ConditionalOperator)&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
 ##### Description
 
 Defines the other nested conditions of the object.
