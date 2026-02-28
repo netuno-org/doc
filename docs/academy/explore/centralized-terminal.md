@@ -6,23 +6,29 @@ sidebar_label: Centralized Terminal
 
 ## Introduction
 
-Netuno allows to integrate the data output of multiple commands at the same terminal where Netuno server is running.
+Netuno allows you to unify the data output (logs) of multiple commands and processes into a single terminal window—the same one where the main server is running.
 
-When an application is started, depending on its configuration, it may contain several commands configured to be started automatically in parallel, but consolidate all data outputs in the same global output.
+In modern development workflows, where it's common to work with various technologies simultaneously, Netuno acts as a log orchestrator, capable of containing several commands configured to start automatically in parallel, such as front-end processes for ReactJS, Angular, Vue, and any other.
 
-This means that front-end processes from ReactJS, Angular, Vue, and any others, can be started and integrated with Netuno.
-
-> Any process can be started by simply defining its command, for example even another server can be integrated from an auxiliary REST API developed in any other technology.
+> Any process can be started; simply define its command. For example, you can even integrate another server from an auxiliary REST API developed in any other technology.
 
 ## Settings
 
-Inside the application you are developing, in the environment configuration file. In this example the development environment file will be used, which is located inside the application at:
+To integrate external processes, you must edit your application's environment configuration file. In this guide, we will use the development environment as an example.
+
+### File Location
+
+Navigate to your application folder and locate the file:
 
 - 📂 `config/_development.json`
 
-Check if there are no command settings already, if there are not, then add at the end of the configuration file (in JSON format), the following configuration parameters as on this example:
+### Configuration Structure
 
-```
+Configuration is done through the "commands" key, which consists of an array of objects. This allows you to run multiple services in parallel.
+
+Open the file and check if the `"commands"` key already exists. Otherwise, insert it at the end of the file (respecting the JSON format) following the configuration below:
+
+```json
 {
     ...
     "commands": [
@@ -43,36 +49,44 @@ Check if there are no command settings already, if there are not, then add at th
 }
 ```
 
-> Note that the `commands` key is an `array`, and inside can contain the definition of the different commands, in this case there are 2:
-> 1. Command to start `bun run watch` inside the `ui` folder that is inside the application.
-> 2. Command to start `bun run dev` inside the `website` folder that is inside the application.
+> **Note:** In the example above, we configured one command for the "ui" folder and another for the "website" folder, both using the bun manager.
+
+### Parameter Reference
+
+**User Interface (UI):** Executes `bun run watch` within the `ui` directory of your application.
+
+**Website:** Executes `bun run dev` within the `website` folder.
 
 ### env
 
-Definition of the environment variables, this is an array so you can define several variables at the same time.
+Defines the environment variables that the process needs to run. You can define multiple variables simultaneously.
 
 ### path
 
-Definition of the folder path where the command will be executed, relative to the root of the application.
+Defines the folder path where the command will be executed, relative to the application root.
 
 ### install
 
-If the command starts with `npm`, `bun`, `pnpm`, or `yarn`, then it checks if the `node_modules` folder does not already exist, and then the command `npm install`, or `bun install`, or `pnpm install`, or `yarn install` is automatically executed, respectively according to the command prefix.
+Netuno has built-in intelligence for managing package dependencies:
 
-Anyway, the installation command can be customized with this parameterization, so the default installation command is no longer used.
+- **Automatic Detection:** If your command starts with `npm`, `bun`, `pnpm`, or `yarn`, Netuno checks if the `node_modules` folder exists.
+
+- **Intelligent Execution:** If the folder is not found, the corresponding installation command (example: `bun install`) is executed automatically before starting the main process.
+
+- **Customization:** By manually setting the `install` parameter, the default detection is replaced by your custom configuration.
 
 ### command
 
-The command that will be executed and its data output (`output`) will be integrated with Netuno.
+The main command to be executed. All data output will be integrated with Netuno.
 
 ### enabled
 
-Check if the command is enabled or not to be executed at application startup.
+Defines whether the command should (true) or (false) be started automatically with the application.
 
 ## Conclusion
 
-In a simple way, it is possible to integrate several auxiliary process commands that are necessary for the operation of the application, either for development or for production.
+Centralizing commands in Netuno greatly simplifies the workflow.
 
-In development, makes it much easier, because it becomes possible to see all the centralized information in a single terminal, unifying all the processes that are running in parallel.
+Unified visibility allows all information from parallel processes to be consolidated into a single terminal, facilitating real-time monitoring.
 
-When you stop running Netuno, all other processes will also be stopped too.
+Safe shutdown ensures that when the Netuno server stops running, all configured auxiliary processes are also automatically terminated, preventing "background" processes or port locks.
