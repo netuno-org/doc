@@ -32,24 +32,6 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-## core
-
----
-
-#### <span style={{color: '#008000'}}>core</span>(<span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **file** | _string_ |   |
-
-##### Return
-
-( _boolean_ )
-
-
----
-
 ## defaultEmptyOutput
 
 ---
@@ -126,7 +108,7 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style={{color: '#008000'}}>getMethods</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>getMethods</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;string&gt;</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -256,6 +238,26 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
+## runCoreScript
+
+---
+
+#### <span style={{color: '#008000'}}>runCoreScript</span>(<span style={{color: '#FF8000'}}>proteu</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.Proteu</span>, <span style={{color: '#FF8000'}}>hili</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.hili.Hili</span>, <span style={{color: '#FF8000'}}>file</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **proteu** | _org.netuno.proteu.Proteu_ |   |
+| **hili** | _org.netuno.tritao.hili.Hili_ |   |
+| **file** | _string_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
 ## setNotFoundDefaultError
 
 ---
@@ -278,10 +280,10 @@ Manages the execution of the services scripts in `server/services`.
 
 ---
 
-#### <span style={{color: '#008000'}}>wasCancelled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Boolean</span>
+#### <span style={{color: '#008000'}}>wasCancelled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
-( _java.lang.Boolean_ )
+( _boolean_ )
 
 
 ---

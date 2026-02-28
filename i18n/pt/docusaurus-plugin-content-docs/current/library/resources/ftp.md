@@ -527,7 +527,7 @@ Resultado se está ou não ativado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_ftp</span>.<span style={{color: '#008000'}}>list</span>(<span style={{color: '#FF8000'}}>caminhoRemoto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_ftp</span>.<span style={{color: '#008000'}}>list</span>(<span style={{color: '#FF8000'}}>caminhoRemoto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[FTPFile](/docs/library/objects/FTPFile)&gt;</span>
 ##### Descrição
 
 Lista os itens da pasta no servidor.

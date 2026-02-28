@@ -648,7 +648,7 @@ Identifier code for the new format.
 
 ---
 
-#### `_xls.create()`.<span style={{color: '#008000'}}>getAllSheets</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### `_xls.create()`.<span style={{color: '#008000'}}>getAllSheets</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.apache.poi.ss.usermodel.Sheet&gt;</span>
 ##### Description
 
 List of all spreadsheets.
@@ -1969,7 +1969,7 @@ Gets the current spreadsheet.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>units</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class</span>
+#### <span style={{fontWeight: 'normal'}}>_xls</span>.<span style={{color: '#008000'}}>units</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;org.apache.poi.util.Units&gt;</span>
 ##### Description
 
 It obtains the types of units predefined in Excel, useful to perform the conversion between pixels and points.

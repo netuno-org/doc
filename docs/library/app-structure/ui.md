@@ -89,7 +89,7 @@ The `package.json` file is used by the dependency module manager. We recommend u
 
 And the execution commands use [Bun](https://bun.sh/), which is another important recommendation.
 
-Therefore, we recommend installing [Bun](https://bun.sh/) and [PNPM](https://pnpm.io/).
+Therefore, we recommend [Bun](https://bun.sh/) installation.
 
 ## Instructions
 
@@ -97,15 +97,15 @@ The `README.md` file contains installation and execution instructions.
 
 To install the dependencies, run:
 
-- `pnpm install`
+- `bun install`
 
 And to run the compilation of the frontend code in development:
 
-- `pnpm run watch`
+- `bun run watch`
 
 Or if this is the final and definitive compilation optimized for production:
 
-- `pnpm run build`
+- `bun run build`
 
 By default, the compilation creates the following files:
 

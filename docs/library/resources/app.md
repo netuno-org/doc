@@ -246,6 +246,36 @@ Returns the name of the application.
 
 ---
 
+## getPath
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPath</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
+##### Description
+
+Provides the file manipulation object for the path within the application.
+
+##### How To Use
+
+```javascript
+// Create the temp folder in the app's root directory.
+_app.path("temp").mkdir()
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **path** | _string_ | Relative path of the file or folder within the application. |
+
+##### Return
+
+( _[File](/docs/library/objects/File)_ )
+
+Returns the manipulation object to the path.
+
+---
+
 ## getPathBase
 
 ---
@@ -567,6 +597,36 @@ const appName = _app.name();
 ( _string_ )
 
 Returns the name of the application.
+
+---
+
+## path
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>path</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
+##### Description
+
+Provides the file manipulation object for the path within the application.
+
+##### How To Use
+
+```javascript
+// Create the temp folder in the app's root directory.
+_app.path("temp").mkdir()
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **path** | _string_ | Relative path of the file or folder within the application. |
+
+##### Return
+
+( _[File](/docs/library/objects/File)_ )
+
+Returns the manipulation object to the path.
 
 ---
 

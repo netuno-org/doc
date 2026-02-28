@@ -53,7 +53,7 @@ E explore também a documentação da nossa **biblioteca** para conhecer em deta
 
 O desenvolvimento do frontend na web sofreu muitas alterações nos últimos anos e a utilização do <a href="https://vite.dev/" target="_blank">Vite</a> passou a ser um padrão.
 
-As nossas escolhas de tecnologias como <a href="https://reactjs.org/" target="_blank">ReactJS</a>, <a href="https://bun.sh/" target="_blank">Bun</a>, <a href="https://pnpm.io/" target="_blank">PNPM</a>, <a href="https://ant.design/" target="_blank">Ant.Design</a> e <a href="http://lesscss.org/" target="_blank">Less</a>, passam por ser as tecnologias que trazem um aumento de produtividade com maior maior adesão na comunidade.
+As nossas escolhas de tecnologias como <a href="https://reactjs.org/" target="_blank">ReactJS</a>, <a href="https://bun.sh/" target="_blank">Bun</a>, <a href="https://ant.design/" target="_blank">Ant.Design</a> e <a href="http://lesscss.org/" target="_blank">Less</a>, são tecnologias que trazem um aumento de produtividade com grande adesão.
 
 Para aprofundar conhecimentos nestas tecnologias explore as diversas documentações em formato texto e vídeo disponíveis na internet.
 

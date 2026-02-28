@@ -12,14 +12,14 @@ O objeto File é utilizado para interagir com ficheiros e pastas.
 
 ---
 
-#### <span style={{color: '#008000'}}>available</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{color: '#008000'}}>available</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
 ##### Description
 
-Returns the number of estimated bytes left to read a file
+Returns the number of bytes required to read the file.
 
 ##### Return
 
-( _int_ )
+( _long_ )
 
 
 ---
@@ -233,7 +233,7 @@ Copies the files by the inserted extension to the inserted path.
 #### <span style={{color: '#008000'}}>delete</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
-Deletes the file of the inserted file
+Delete the file or folder if it is empty.
 
 ##### Return
 
@@ -249,7 +249,7 @@ Deletes the file of the inserted file
 #### <span style={{color: '#008000'}}>deleteAll</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
-Deletes a file/directory and recursive all the subs
+Delete everything inside the folder, including all subfolders and files.
 
 ##### Return
 
@@ -258,10 +258,26 @@ Deletes a file/directory and recursive all the subs
 
 ---
 
-#### <span style={{color: '#008000'}}>deleteAll</span>(<span style={{color: '#FF8000'}}>extension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+## deleteAllFiles
+
+---
+
+#### <span style={{color: '#008000'}}>deleteAllFiles</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
-Deletes a file/directory by the file extension
+Deletes all files within the folder structure including subfolders.
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>deleteAllFiles</span>(<span style={{color: '#FF8000'}}>extension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Delete all files by extension, within the folder structure including subfolders.
 
 ##### Attributes
 
@@ -283,7 +299,7 @@ Deletes a file/directory by the file extension
 #### <span style={{color: '#008000'}}>deleteFiles</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
-Deletes a file/directory and recursive all the subs
+It only deletes files within the folder; it does not delete files in subfolders.
 
 ##### Return
 
@@ -295,7 +311,7 @@ Deletes a file/directory and recursive all the subs
 #### <span style={{color: '#008000'}}>deleteFiles</span>(<span style={{color: '#FF8000'}}>stringExtension</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
-Deletes a file of a inserted extension and recursive all the subs
+It only deletes files with the extension within the folder, and does not delete any files in subfolders.
 
 ##### Attributes
 
@@ -600,6 +616,18 @@ Returns the name of the inserted file with a sequence number if the file already
 
 ---
 
+## inMemoryFile
+
+---
+
+#### <span style={{color: '#008000'}}>inMemoryFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
 ## input
 
 ---
@@ -692,6 +720,18 @@ Returns a boolean result that verify if the inserted path is a file
 
 ---
 
+## isInMemoryFile
+
+---
+
+#### <span style={{color: '#008000'}}>isInMemoryFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
 ## isJail
 
 ---
@@ -728,7 +768,7 @@ Returns the hour that the file of the inserted path was last modified
 
 ---
 
-#### <span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[File](/docs/library/objects/File)&gt;</span>
 ##### Description
 
 Returns a list of all the files and directories on the inserted path
@@ -1011,6 +1051,54 @@ Saves the file in the inserted path
 ##### Return
 
 ( _[File](/docs/library/objects/File)_ )
+
+
+---
+
+## size
+
+---
+
+#### <span style={{color: '#008000'}}>size</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
+##### Return
+
+( _long_ )
+
+
+---
+
+## sizeGB
+
+---
+
+#### <span style={{color: '#008000'}}>sizeGB</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
+##### Return
+
+( _double_ )
+
+
+---
+
+## sizeKB
+
+---
+
+#### <span style={{color: '#008000'}}>sizeKB</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
+##### Return
+
+( _double_ )
+
+
+---
+
+## sizeMB
+
+---
+
+#### <span style={{color: '#008000'}}>sizeMB</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>
+##### Return
+
+( _double_ )
 
 
 ---

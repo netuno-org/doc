@@ -18,9 +18,9 @@ Caso pretenda utilizar outra tecnologia como **VueJS**, **MaterialUI**, **Sass**
 
 ## Pré-Requisitos
 
-Antes de começar é importante certificar que tem o [PNPM](https://pnpm.io/) e o [Bun](https://bun.sh/) instalados.
+Antes de começar é importante certificar que tem o [Bun](https://bun.sh/) instalado.
 
-> Veja como [instalar o PNPM e o Bun](/docs/academy/website/pnpm-bun).
+> Veja como [instalar o Bun](/docs/academy/website/bun).
 
 Para entender melhor como a interface de utilização funciona recomendamos:
 

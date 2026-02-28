@@ -12,7 +12,7 @@ Orquestra a execução de funções.
 
 ---
 
-#### <span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
+#### <span style={{color: '#008000'}}>add</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function&lt;java.lang.Object[], java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -30,7 +30,7 @@ Orquestra a execução de funções.
 
 ---
 
-#### <span style={{color: '#008000'}}>atEnd</span>(<span style={{color: '#FF8000'}}>end</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
+#### <span style={{color: '#008000'}}>atEnd</span>(<span style={{color: '#FF8000'}}>end</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function&lt;java.lang.Object[], java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -86,7 +86,7 @@ Orquestra a execução de funções.
 
 ---
 
-#### <span style={{color: '#008000'}}>getMetrics</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>getMetrics</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.tritao.resource.Exec$Functions$Metric&gt;</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -98,7 +98,7 @@ Orquestra a execução de funções.
 
 ---
 
-#### <span style={{color: '#008000'}}>metrics</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>metrics</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.tritao.resource.Exec$Functions$Metric&gt;</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -110,7 +110,7 @@ Orquestra a execução de funções.
 
 ---
 
-#### <span style={{color: '#008000'}}>setAtEnd</span>(<span style={{color: '#FF8000'}}>end</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
+#### <span style={{color: '#008000'}}>setAtEnd</span>(<span style={{color: '#FF8000'}}>end</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Function&lt;java.lang.Object[], java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Functions](/docs/library/objects/Functions)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |

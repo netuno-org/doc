@@ -72,7 +72,7 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>getMirrors</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{color: '#008000'}}>getMirrors</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[OutputStream](/docs/library/objects/OutputStream)&gt;</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -109,6 +109,18 @@ sidebar_label: OutputStream
 ---
 
 #### <span style={{color: '#008000'}}>isEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## isStarted
+
+---
+
+#### <span style={{color: '#008000'}}>isStarted</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -674,6 +686,18 @@ sidebar_label: OutputStream
 
 ---
 
+## restart
+
+---
+
+#### <span style={{color: '#008000'}}>restart</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
 ## setEnabled
 
 ---
@@ -702,24 +726,6 @@ sidebar_label: OutputStream
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **outputNotify** | _org.netuno.psamata.io.OutputStreamNotify_ |   |
-
-##### Return
-
-( _[OutputStream](/docs/library/objects/OutputStream)_ )
-
-
----
-
-## setStart
-
----
-
-#### <span style={{color: '#008000'}}>setStart</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **v** | _boolean_ |   |
 
 ##### Return
 

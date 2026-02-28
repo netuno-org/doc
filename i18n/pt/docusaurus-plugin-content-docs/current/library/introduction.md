@@ -15,12 +15,13 @@ Descubra como explorar o desenvolvimento no Netuno:
 [Saber Mais](/docs/get-started/tutorials)
 
 ## Objetos
+
 Esta secção contém a informação acerca dos Objetos do Netuno, nomeadamente Values.
 
 * [Values](/docs/library/objects/Values)
 
 ## Recursos
-Contém toda a informação acerca dos recursos de auxilio à programação disponbilizados pelo Netuno.
+Contém toda a informação acerca dos recursos de auxílio à programação disponbilizados pelo Netuno.
 
 Utilizando os recursos do Netuno é possivel fazer mais em menos tempo, poupe linhas de código e dores de cabeça.
 

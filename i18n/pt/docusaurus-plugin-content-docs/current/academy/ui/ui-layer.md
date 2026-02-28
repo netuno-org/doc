@@ -18,9 +18,9 @@ dashboards e outros componentes de front-end.
 
 ## Antes de Começar
 
-Certifique que tem instalado o [PNPM](https://pnpm.io/) e o [Bun](https://bun.sh/), que são pré-requisitos, mais sobre como:
+Certifique que tem instalado o [Bun](https://bun.sh/), que é um pré-requisito, mais sobre como:
 
-- [Instalar o PNPM e o Bun](/docs/academy/website/pnpm-bun)
+- [Instalar o Bun](/docs/academy/website/bun)
 
 ## Instalar os Módulos de Dependência
 
@@ -34,10 +34,10 @@ cd apps/minha_app/ui/
 Execute o comando de instalação dos módulos de dependência:
 
 ```shell
-pnpm install
+bun install
 ```
 
-> O [PNPM](https://pnpm.io/) é uma alternativa melhorada e mais otimizada que o NPM.
+> O [Bun](https://bun.sh) é uma alternativa melhorada e mais otimizada que o NPM.
 
 ## Compilação Automática
 
@@ -50,7 +50,7 @@ cd apps/minha_app/ui/
 Para compilar o front-end automaticamente a cada alteração de código, execute:
 
 ```shell
-pnpm run watch
+bun run watch
 ```
 
 > Certifique que tem o [Bun](https://bun.sh/) instalado.
@@ -71,7 +71,7 @@ ou seja no `command` com o `path` do `ui` passar o `enabled` para `true`, da seg
     {
       "enabled": true,
       "path": "ui",
-      "command": "pnpm run watch"
+      "command": "bun run watch"
     }
   ],
   ...

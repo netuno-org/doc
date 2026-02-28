@@ -196,7 +196,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>errorOutputLineConsumer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>
+#### <span style={{color: '#008000'}}>errorOutputLineConsumer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;string&gt;</span>
 ##### Retorno
 
 ( _java.util.function.Consumer_ )
@@ -204,7 +204,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>errorOutputLineConsumer</span>(<span style={{color: '#FF8000'}}>consumer</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
+#### <span style={{color: '#008000'}}>errorOutputLineConsumer</span>(<span style={{color: '#FF8000'}}>consumer</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;string&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -262,7 +262,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
+#### <span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
 ##### Descrição
 
 Executa um comando no sistema operacional e obtém o resultado da execução, o primeiro item é o comando e os seguintes são parâmetros.
@@ -271,7 +271,7 @@ Executa um comando no sistema operacional e obtém o resultado da execução, o 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **comando** | _java.lang.String[]_ | O comando e parâmetros opcionais que serão executados. |
+| **comando** | _string[]_ | O comando e parâmetros opcionais que serão executados. |
 
 ##### Retorno
 
@@ -281,7 +281,7 @@ Resultado da execução do comando no sistema operacional, incluí o output.
 
 ---
 
-#### <span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
+#### <span style={{color: '#008000'}}>execute</span>(<span style={{color: '#FF8000'}}>comando</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;string&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
 ##### Descrição
 
 Executa um comando no sistema operacional e obtém o resultado da execução, o primeiro item é o comando e os seguintes são parâmetros.
@@ -323,12 +323,12 @@ Resultado da execução do comando no sistema operacional, incluí o output.
 
 ---
 
-#### <span style={{color: '#008000'}}>executeAsync</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.String[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
+#### <span style={{color: '#008000'}}>executeAsync</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **command** | _java.lang.String[]_ |   |
+| **command** | _string[]_ |   |
 
 ##### Retorno
 
@@ -337,7 +337,7 @@ Resultado da execução do comando no sistema operacional, incluí o output.
 
 ---
 
-#### <span style={{color: '#008000'}}>executeAsync</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
+#### <span style={{color: '#008000'}}>executeAsync</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;string&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ProcessResult](/docs/library/objects/ProcessResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -410,7 +410,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>getErrorOutputLineConsumer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>
+#### <span style={{color: '#008000'}}>getErrorOutputLineConsumer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;string&gt;</span>
 ##### Retorno
 
 ( _java.util.function.Consumer_ )
@@ -434,7 +434,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>getOnFinish</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>
+#### <span style={{color: '#008000'}}>getOnFinish</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;org.netuno.psamata.os.ProcessLauncher$Result&gt;</span>
 ##### Retorno
 
 ( _java.util.function.Consumer_ )
@@ -446,7 +446,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>getOnParallel</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>
+#### <span style={{color: '#008000'}}>getOnParallel</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;org.netuno.psamata.os.ProcessLauncher$ParallelThread&gt;</span>
 ##### Retorno
 
 ( _java.util.function.Consumer_ )
@@ -458,7 +458,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>getOutputLineConsumer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>
+#### <span style={{color: '#008000'}}>getOutputLineConsumer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;string&gt;</span>
 ##### Retorno
 
 ( _java.util.function.Consumer_ )
@@ -666,7 +666,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>onFinish</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>
+#### <span style={{color: '#008000'}}>onFinish</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;org.netuno.psamata.os.ProcessLauncher$Result&gt;</span>
 ##### Retorno
 
 ( _java.util.function.Consumer_ )
@@ -674,7 +674,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>onFinish</span>(<span style={{color: '#FF8000'}}>onFinish</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
+#### <span style={{color: '#008000'}}>onFinish</span>(<span style={{color: '#FF8000'}}>onFinish</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;org.netuno.psamata.os.ProcessLauncher$Result&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -692,7 +692,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>onParallel</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>
+#### <span style={{color: '#008000'}}>onParallel</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;org.netuno.psamata.os.ProcessLauncher$ParallelThread&gt;</span>
 ##### Retorno
 
 ( _java.util.function.Consumer_ )
@@ -700,7 +700,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>onParallel</span>(<span style={{color: '#FF8000'}}>onParallel</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
+#### <span style={{color: '#008000'}}>onParallel</span>(<span style={{color: '#FF8000'}}>onParallel</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;org.netuno.psamata.os.ProcessLauncher$ParallelThread&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -736,7 +736,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>outputLineConsumer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>
+#### <span style={{color: '#008000'}}>outputLineConsumer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;string&gt;</span>
 ##### Retorno
 
 ( _java.util.function.Consumer_ )
@@ -744,7 +744,7 @@ O local onde o comando será executado.
 
 ---
 
-#### <span style={{color: '#008000'}}>outputLineConsumer</span>(<span style={{color: '#FF8000'}}>consumer</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
+#### <span style={{color: '#008000'}}>outputLineConsumer</span>(<span style={{color: '#FF8000'}}>consumer</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;string&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1013,7 +1013,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setErrorOutputLineConsumer</span>(<span style={{color: '#FF8000'}}>consumer</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
+#### <span style={{color: '#008000'}}>setErrorOutputLineConsumer</span>(<span style={{color: '#FF8000'}}>consumer</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;string&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1135,7 +1135,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setOnFinish</span>(<span style={{color: '#FF8000'}}>onFinish</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
+#### <span style={{color: '#008000'}}>setOnFinish</span>(<span style={{color: '#FF8000'}}>onFinish</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;org.netuno.psamata.os.ProcessLauncher$Result&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1153,7 +1153,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setOnParallel</span>(<span style={{color: '#FF8000'}}>onParallel</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
+#### <span style={{color: '#008000'}}>setOnParallel</span>(<span style={{color: '#FF8000'}}>onParallel</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;org.netuno.psamata.os.ProcessLauncher$ParallelThread&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1189,7 +1189,7 @@ Instância do recurso de sistema operacional.
 
 ---
 
-#### <span style={{color: '#008000'}}>setOutputLineConsumer</span>(<span style={{color: '#FF8000'}}>consumer</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
+#### <span style={{color: '#008000'}}>setOutputLineConsumer</span>(<span style={{color: '#FF8000'}}>consumer</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;string&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.os.ProcessLauncher</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |

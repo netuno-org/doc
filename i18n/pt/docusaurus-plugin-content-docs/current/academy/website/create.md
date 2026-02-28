@@ -19,9 +19,9 @@ Deve ter o Netuno instalado:
 
 - [Instalação do Netuno.](/docs/get-started/installation)
 
-Devido a melhor performance entre outras vantagens deve ter o PNPM e o Bun instalados:
+Devido a melhor performance entre outras vantagens deve o Bun instalado:
 
-- [Instalar o PNPM e o Bun.](/docs/academy/website/pnpm-bun)
+- [Instalar o Bun.](/docs/academy/website/bun)
 
 ## Criação
 
@@ -35,7 +35,7 @@ Então com o **terminal** dentro da **raíz da sua aplicação** Netuno, que nor
 
 Execute o comando:
 
-`pnpm create vite`
+`bun create vite`
 
 De seguida com a pergunta: `Project name:`
 
@@ -57,7 +57,7 @@ Após ter criado o frontend com React, execute da seguinte forma para instalar a
 
 ```
 cd website
-pnpm install
+bun install
 ```
 
 Abra a pasta da sua aplicação Netuno no seu editor preferido (como o VSCode, WebStorm, entre outros), e
@@ -84,7 +84,7 @@ Alterer os `scripts` no `package.json` da seguinte forma:
 
 Agora é possível iniciar o servidor de frontend com React utilizando o comando:
 
-`pnpm run dev`
+`bun run dev`
 
 Isto fará com que o frontend esteja disponível no endereço [http://localhost:5173/](http://localhost:5173/), normalmente ou em outro 
 endereço com outro número de porta poderá aparecer no terminal, de qualquer forma basta abrir no browser o endereço
@@ -94,7 +94,7 @@ apresentado no terminal.
 
 ## Instalação de Dependências
 
-Caso esteja executando o servidor de frontend no terminal, ou seja `pnpm run dev`, é recomendado parar, prescione 
+Caso esteja executando o servidor de frontend no terminal, ou seja `bun run dev`, é recomendado parar, prescione 
 as teclas `CTRL` e `C` simultaneamente.
 
 Aconselhamos vivamente que instale os seguintes pacotes NPM, visto serem bastante úteis para o desenvolvimento de 
@@ -109,17 +109,17 @@ aplicações React com Netuno (clique em cada link para obter mais informações
 Para instalar os pacotes acima listados basta executar o seguinte conjunto de comandos no terminal:
 
 ```
-pnpm install react-router
-pnpm install antd
-pnpm install @ant-design/icons
-pnpm install less
-pnpm install @netuno/service-client
+bun install react-router
+bun install antd
+bun install @ant-design/icons
+bun install less
+bun install @netuno/service-client
 ```
 
 Em alternativa também pode instalar todos os pacotes de uma única vez:
 
 ```
-pnpm install react-router antd @ant-design/icons less @netuno/service-client
+bun install react-router antd @ant-design/icons less @netuno/service-client
 ```
 
 ## Configurações
@@ -139,7 +139,7 @@ export default defineConfig({
 })
 ```
 
-Agora ao iniciar com o comando `pnpm run dev` vai utilizar sempre a porta `3000`.
+Agora ao iniciar com o comando `bun run dev` vai utilizar sempre a porta `3000`.
 
 ### Less
 
@@ -242,8 +242,8 @@ Para tal basta adicionar à configuração `commands` da aplicação Netuno em `
         ...
         {
             "path": "website",
-            "command": "pnpm run dev",
-            "install": "pnpm install",
+            "command": "bun run dev",
+            "install": "bun install",
             "enabled": true
         }
     ],
@@ -319,8 +319,8 @@ E definindo as variáveis de ambiente na configuração do comando na parametriz
         {
             "env": ["NODE_ENV=development"],
             "path": "website",
-            "command": "pnpm run start",
-            "install": "pnpm install",
+            "command": "bun run start",
+            "install": "bun install",
             "enabled": true
         }
     ],

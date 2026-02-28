@@ -355,7 +355,7 @@ Abra o terminal dentro da pasta da aplicação e entre dentro da pasta `ui`, a p
 
 Execute o comando:
 
-- `pnpm run build`
+- `bun run build`
 
 Desta forma é realizada a compilação otimizada para produção do frontend.
 
@@ -365,7 +365,7 @@ Caso queira evitar a execução manual constante do comando de compilação a ca
 execute a compilação rápida de desenvolvimento que observa caso algum arquivo seja alterado, então a compilação
 rápida é executada automaticamente:
 
-- `pnpm run watch`
+- `bun run watch`
 
 > Para ver cada alteração atualize a página de backoffice no browser.
 
@@ -388,9 +388,9 @@ Altere o `enabled` para `true`.
 ```json title="config/_development.json"
   ...
   "commands": [{
-    "command": "pnpm run watch",
+    "command": "bun run watch",
     "enabled": true,
-    "install": "pnpm install",
+    "install": "bun install",
     "path": "ui"
   }],
   ...

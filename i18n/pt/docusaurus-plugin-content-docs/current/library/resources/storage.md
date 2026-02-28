@@ -4,7 +4,7 @@ title: Storage
 sidebar_label: Storage
 ---
 
-Recursos de gestão de ficheiros da aplicação que ficam na pasta `storage`.
+Recursos de gestão de arquivos da aplicação que ficam na pasta `storage`.
 
 ---
 
@@ -32,7 +32,7 @@ O caminho absoluto do storage.
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Descrição
 
-Inicia um novo storage para a pasta onde ficam os ficheiros de uma tabela que representa um formulário.
+Inicia um novo storage para a pasta onde ficam os arquivos de uma tabela que representa um formulário.
 
 ##### Atributos
 
@@ -51,7 +51,7 @@ Novo storage iniciado para a tabela de base de dados.
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Descrição
 
-Inicia um novo storage para a pasta onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
+Inicia um novo storage para a pasta onde ficam os arquivos de uma coluna específica de uma tabela que representa um campo de um formulário.
 
 ##### Atributos
 
@@ -68,10 +68,10 @@ Novo storage iniciado para a coluna de uma tabela de base de dados.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>subcaminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Descrição
 
-Inicia um novo storage para um caminho específico onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
+Inicia um novo storage para um caminho específico onde ficam os arquivos de uma coluna específica de uma tabela que representa um campo de um formulário.
 
 ##### Atributos
 
@@ -79,7 +79,7 @@ Inicia um novo storage para um caminho específico onde ficam os ficheiros de um
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela que também é mesmo nome do formulário. |
 | **coluna** | _string_ | Nome da coluna que também é mesmo nome do campo no formulário. |
-| **caminho** | _string_ | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
+| **subcaminho** | _string_ | Caminho adicional relativo, normalmente é o nome do arquivos mas pode ser um caminho mais complexo. |
 
 ##### Retorno
 
@@ -89,10 +89,10 @@ Novo storage iniciado para o caminho específico a partir de uma coluna em uma t
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>nomeFicheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>database</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>subcaminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>nomeArquivo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Descrição
 
-Inicia um novo storage para um caminho específico onde ficam os ficheiros de uma coluna específica de uma tabela que representa um campo de um formulário.
+Inicia um novo storage para um caminho específico onde ficam os arquivos de uma coluna específica de uma tabela que representa um campo de um formulário.
 
 ##### Atributos
 
@@ -100,8 +100,8 @@ Inicia um novo storage para um caminho específico onde ficam os ficheiros de um
 |---|---|---|
 | **tabela** | _string_ | Nome da tabela que também é mesmo nome do formulário. |
 | **coluna** | _string_ | Nome da coluna que também é mesmo nome do campo no formulário. |
-| **caminho** | _string_ | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
-| **nomeFicheiro** | _string_ | Possibilidade de adicionar o nome do ficheiro a parte caso haja uma estrutura de caminho muito complexa, muito pouco usual. |
+| **subcaminho** | _string_ | Caminho adicional relativo, normalmente é o nome do arquivo mas pode ser um caminho mais complexo. |
+| **nomeArquivo** | _string_ | Possibilidade de adicionar o nome do arquivo a parte caso haja uma estrutura de caminho muito complexa, muito pouco usual. |
 
 ##### Retorno
 
@@ -116,10 +116,15 @@ Novo storage iniciado para o caminho específico a partir de uma coluna em uma t
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>ensurePath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+##### Descrição
+
+Garante que o caminho de pastas no storage existe, caso não exista será criado.
+
 ##### Retorno
 
 ( _[Storage](/docs/library/resources/storage)_ )
 
+A própria instância do storage.
 
 ---
 
@@ -130,13 +135,13 @@ Novo storage iniciado para o caminho específico a partir de uma coluna em uma t
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>extension</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Descrição
 
-Obtém a extensão do ficheiro.
+Obtém a extensão do arquivo.
 
 ##### Retorno
 
 ( _string_ )
 
-A extensão do ficheiro.
+A extensão do arquivo.
 
 ---
 
@@ -147,13 +152,13 @@ A extensão do ficheiro.
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>file</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Descrição
 
-Objeto de manipulação de ficheiro do storage que está sendo utilizado.
+Objeto de manipulação do arquivo existente no storage que está sendo utilizado.
 
 ##### Retorno
 
 ( _[File](/docs/library/objects/File)_ )
 
-Permite interagir com o ficheiro fisicamente.
+Permite interagir com o arquivo fisicamente.
 
 ---
 
@@ -161,7 +166,7 @@ Permite interagir com o ficheiro fisicamente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>pasta</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>pasta</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>subcaminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Descrição
 
 Inicia um novo storage para um caminho específico do filesystem dentro do storage.
@@ -171,7 +176,7 @@ Inicia um novo storage para um caminho específico do filesystem dentro do stora
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **pasta** | _string_ | Nome da pasta dentro do `storage/filesystem`, normalmente será public, private ou server. |
-| **caminho** | _string_ | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
+| **subcaminho** | _string_ | Caminho adicional relativo, normalmente é o nome do arquivo mas pode ser um caminho mais complexo. |
 
 ##### Retorno
 
@@ -181,7 +186,7 @@ Novo storage iniciado para o caminho específico a partir do filesystem do stora
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>pasta</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>nomeFicheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>filesystem</span>(<span style={{color: '#FF8000'}}>pasta</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>subcaminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>nomeArquivo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Descrição
 
 Inicia um novo storage para um caminho específico do filesystem dentro do storage.
@@ -191,8 +196,8 @@ Inicia um novo storage para um caminho específico do filesystem dentro do stora
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **pasta** | _string_ | Nome da pasta dentro do `storage/filesystem`, normalmente será public, private ou server. |
-| **caminho** | _string_ | Caminho adicional relativo, normalmente é o nome do ficheiro mas pode ser um caminho mais complexo. |
-| **nomeFicheiro** | _string_ | Possibilidade de adicionar o nome do ficheiro a parte caso haja uma estrutura de caminho muito complexa. |
+| **subcaminho** | _string_ | Caminho adicional relativo, normalmente é o nome do arquivo mas pode ser um caminho mais complexo. |
+| **nomeArquivo** | _string_ | Possibilidade de adicionar o nome do arquivo a parte caso haja uma estrutura de caminho muito complexa. |
 
 ##### Retorno
 
@@ -209,7 +214,7 @@ Novo storage iniciado para o caminho específico a partir do filesystem do stora
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>folder</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Descrição
 
-Objeto de manipulação de pasta do storage que está sendo utilizado.
+Objeto de manipulação da pasta existente no storage que está sendo utilizado.
 
 ##### Retorno
 
@@ -366,22 +371,22 @@ Se está utilizando a pasta de base de dados.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>isExtension</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>isExtension</span>(<span style={{color: '#FF8000'}}>extensao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
-Verifica se o nome ficheiro contém a extensão.
+Verifica se o nome arquivo contém a extensão.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **charset** | _string_ | Extensão no nome do ficheiro. |
+| **extensao** | _string_ | Extensão no nome do arquivo. |
 
 ##### Retorno
 
 ( _boolean_ )
 
-Se o ficheiro contém a extensão definida.
+Se o arquivo contém a extensão definida.
 
 ---
 
@@ -392,13 +397,13 @@ Se o ficheiro contém a extensão definida.
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>isFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Descrição
 
-Verifica se é um ficheiro.
+Verifica se é um arquivo.
 
 ##### Retorno
 
 ( _boolean_ )
 
-Se é um ficheiro.
+Se é um arquivo.
 
 ---
 
@@ -491,22 +496,22 @@ Se é uma pasta.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>newRandomFile</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>newRandomFile</span>(<span style={{color: '#FF8000'}}>extensao</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Storage](/docs/library/resources/storage)</span>
 ##### Descrição
 
-Gera um novo storage a partir do storage atual mas para um ficheiro com um nome randómico e que ainda não exista e assim possa ser guardado sem conflitos.
+Gera um novo storage a partir do storage atual mas para um arquivo com um nome randómico e que ainda não exista e assim possa ser salvado sem conflitos.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **charset** | _string_ | Extensão no nome do ficheiro. |
+| **extensao** | _string_ | Extensão no nome do arquivo. |
 
 ##### Retorno
 
 ( _[Storage](/docs/library/resources/storage)_ )
 
-Novo storage para um novo ficheiro com um nome randómico inexistente.
+Novo storage para um novo arquivo com um nome randómico inexistente.
 
 ---
 
@@ -548,16 +553,16 @@ Objeto de saída de dados do Java para o storage em uso.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>path</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>path</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
 ##### Descrição
 
-Obtém o caminho do storage que está sendo utilizado.
+Obtém o objeto de manipulação para o caminho no storage que está sendo utilizado.
 
 ##### Retorno
 
-( _string_ )
+( _[File](/docs/library/objects/File)_ )
 
-O caminho do storage.
+Permite interagir com a caminho fisicamente.
 
 ---
 
@@ -624,16 +629,16 @@ Objeto de entrada de dados como texto (_BOM_) do Java para o storage em uso.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>saveFile</span>(<span style={{color: '#FF8000'}}>ficheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>saveFile</span>(<span style={{color: '#FF8000'}}>arquivo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Descrição
 
-Guarda o ficheiro no caminho do storage atual.
+Salva o arquivo no caminho do storage atual.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **ficheiro** | _[File](/docs/library/objects/File)_ | Ficheiro que será guardado no `storage` atual. |
+| **arquivo** | _[File](/docs/library/objects/File)_ | Arquivo que será salvado no `storage` atual. |
 
 ##### Retorno
 
@@ -662,6 +667,23 @@ Define o caminho base do storage que será utilizado.
 ( _boolean_ )
 
 Se o caminho é válido e foi definido.
+
+---
+
+## subpath
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>subpath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o subcaminho do storage que está sendo utilizado.
+
+##### Retorno
+
+( _string_ )
+
+O subcaminho do storage.
 
 ---
 

@@ -32,7 +32,7 @@ const OK = _db.query(
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>all</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>all</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Description
 
 Selects all the data from a table.
@@ -181,7 +181,7 @@ if (!_db.checkExists().column("client", "description")) {
 ##### Description
 
 Gets the connection configuration to the database being used.
-The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/tutorials/multiple-databases) tutorial.
+The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -745,7 +745,7 @@ Number of lines affected by the executed command.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>find</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Description
 
 From an object that has the structure similar to an SQL query, you get a list of the data found in the search conditions.
@@ -1012,7 +1012,7 @@ The item data found or null if it does not exist.
 ##### Description
 
 Gets the connection configuration to the database being used.
-The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/tutorials/multiple-databases) tutorial.
+The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1043,7 +1043,7 @@ Configuration of the connection to the database being used.
 ##### Description
 
 Gets the name of the database connection configuration being used.
-The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
+The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1063,6 +1063,31 @@ _out.print(`The OTHER DB connection is: ${db_OTHER_ConnectionName}\n`)
 ( _string_ )
 
 Name of the connection configuration to the database being used.
+
+---
+
+## getVersion
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>getVersion</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
+##### Description
+
+Get the database version number.
+
+##### How To Use
+
+```javascript
+if (_db.isMariaDB() && _db.version() > 10.5) {
+    // The database is MariaDB and the version is higher than 10.5.
+}
+```
+
+##### Return
+
+( _float_ )
+
+The version of the database in numeric format, for example: 10.5
 
 ---
 
@@ -1101,7 +1126,7 @@ if (!_db.checkExists().index("client", "name")) {
 ##### Description
 
 Starts a new DB resource for the connection name that is passed.
-The connection details must be defined in the application's environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
+The connection details must be defined in the application's environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1473,7 +1498,7 @@ If it is PostgreSQL.
 ##### Description
 
 Gets the name of the database connection configuration being used.
-The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
+The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1700,7 +1725,7 @@ Objeto Pagination.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1732,7 +1757,7 @@ List of data obtained with the direct query to the database.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1763,7 +1788,7 @@ List of data obtained with the direct query to the database.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -1794,7 +1819,7 @@ List of data obtained with the direct query to the database.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>query</span>(<span style={{color: '#FF8000'}}>query</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Description
 
 Run a SQL query directly on the database. Be very careful with SQL Injection.
@@ -3239,6 +3264,31 @@ _out.json({updatedData: updatedData})
 ( _int[]_ )
 
 Array with number of records affected by the update for each object inside the list.
+
+---
+
+## version
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>version</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>
+##### Description
+
+Get the database version number.
+
+##### How To Use
+
+```javascript
+if (_db.isMariaDB() && _db.version() > 10.5) {
+    // The database is MariaDB and the version is higher than 10.5.
+}
+```
+
+##### Return
+
+( _float_ )
+
+The version of the database in numeric format, for example: 10.5
 
 ---
 

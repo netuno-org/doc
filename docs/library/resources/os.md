@@ -117,6 +117,36 @@ The name of the operating system.
 
 ---
 
+## getPath
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>getPath</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
+##### Description
+
+Provides the file manipulation object for the path in the system.
+
+##### How To Use
+
+```javascript
+// Creates the folder structure in the system root.
+_os.path("/tmp/netuno").mkdirs()
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **path** | _string_ | Relative path of the file or folder within the application. |
+
+##### Return
+
+( _[File](/docs/library/objects/File)_ )
+
+Returns the manipulation object to the path.
+
+---
+
 ## init
 
 ---
@@ -280,6 +310,36 @@ Gets the name of the operating system.
 ( _string_ )
 
 The name of the operating system.
+
+---
+
+## path
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_os</span>.<span style={{color: '#008000'}}>path</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
+##### Description
+
+Provides the file manipulation object for the path in the system.
+
+##### How To Use
+
+```javascript
+// Creates the folder structure in the system root.
+_os.path("/tmp/netuno").mkdirs()
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **path** | _string_ | Relative path of the file or folder within the application. |
+
+##### Return
+
+( _[File](/docs/library/objects/File)_ )
+
+Returns the manipulation object to the path.
 
 ---
 

@@ -37,12 +37,12 @@ linguagens de programação:
 * [Queries Programaticamente](/docs/academy/server/database/db-query-execute)
 * [Form e as Operações de Base de Dados](/docs/academy/server/database/db-form-operations)
 * [Templates](/docs/academy/server/templates)
-* [Desenvolvimento e debug em Java](/docs/academy/server/development-debug-java)
 * [Envio de Emails](/docs/academy/server/services/sending-emails)
 * [Gerar ID’s Únicos (UID/GUID)](/docs/academy/server/services/generate-uid-guid)
 * [Configuração do MSSQL](/docs/academy/server/database/mssql)
 * [Múltiplas Base de Dados](/docs/academy/server/database/multiple-databases)
 * [JWT Token](/docs/academy/server/services/jwt)
+* [Desenvolvimento e debug em Java](/docs/academy/server/java-core/setup)
 
 Entre muito mais, explore a nossa [Academia](https://doc.netuno.org/docs/academy/overview).
 

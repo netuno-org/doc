@@ -277,7 +277,7 @@ Message.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>mails</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>mails</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.psamata.mail.Mail&gt;</span>
 ##### Description
 
 Returns all messages contained in the folder.
@@ -290,7 +290,7 @@ Message list.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>mails</span>(<span style={{color: '#FF8000'}}>start</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>start</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>mails</span>(<span style={{color: '#FF8000'}}>start</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>start</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;org.netuno.psamata.mail.Mail&gt;</span>
 ##### Description
 
 Returns a specific range of messages contained in the IMAP folder.

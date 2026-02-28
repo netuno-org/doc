@@ -12,7 +12,7 @@ Gestão dos grupos da aplicação e obtenção dos dados do grupo do utilizador 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Descrição
 
 Obtém a lista de dados de todos os grupo.
@@ -36,7 +36,7 @@ Lista de todos os dados de todos os grupos.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>allByCode</span>(<span style={{color: '#FF8000'}}>codigo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>allByCode</span>(<span style={{color: '#FF8000'}}>codigo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Descrição
 
 Obtém todos os grupos a partir do código alternativo.
@@ -433,7 +433,7 @@ Foi apagado com sucesso.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>termo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_group</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>termo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Descrição
 
 Pesquisa os grupos que tem alguma ocorrência nos dados com o texto de pesquisa passado.

@@ -41,6 +41,58 @@ Todas as configurações dos provedores de autenticação.
 
 ---
 
+## altchaAdminEnabled
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>altchaAdminEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>altchaAdminEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **enabled** | _boolean_ |   |
+
+##### Retorno
+
+( _[Auth](/docs/library/resources/auth)_ )
+
+
+---
+
+## altchaEnabled
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>altchaEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>altchaEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **enabled** | _boolean_ |   |
+
+##### Retorno
+
+( _[Auth](/docs/library/resources/auth)_ )
+
+
+---
+
 ## attempt
 
 ---
@@ -91,7 +143,7 @@ Todas as configurações dos provedores de autenticação.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -133,20 +185,41 @@ Todas as configurações dos provedores de autenticação.
 
 ---
 
+## attemptsEnabled
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsEnabled</span>(<span style={{color: '#FF8000'}}>attemptsEnabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **attemptsEnabled** | _boolean_ |   |
+
+##### Retorno
+
+( _[Auth](/docs/library/resources/auth)_ )
+
+
+---
+
 ## attemptsInterval
 
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsInterval</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
-##### Descrição
-
-Número em minutos para definir o intervalo de tempo para realizar o bloqueio da conta.
-
 ##### Retorno
 
 ( _int_ )
 
-Retorna o número de minutos para o intervalo de tempo para a conta bloqueada.
 
 ---
 
@@ -340,11 +413,59 @@ Retorna a encriptação da password segura.
 
 ---
 
+## getJWTAccessExpires
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getJWTAccessExpires</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Retorno
+
+( _int_ )
+
+
+---
+
 ## getJWTGroups
 
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getJWTGroups</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+## getJWTKey
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getJWTKey</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>javax.crypto.SecretKey</span>
+##### Retorno
+
+( _javax.crypto.SecretKey_ )
+
+
+---
+
+## getJWTRefreshExpires
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getJWTRefreshExpires</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Retorno
+
+( _int_ )
+
+
+---
+
+## getJWTSignInData
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getJWTSignInData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
 ##### Retorno
 
 ( _[Values](/docs/library/objects/Values)_ )
@@ -432,6 +553,30 @@ Se o utilizador que está autenticado é **admin** (administrador) então retorn
 
 ---
 
+## isAltchaAdminEnabled
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>isAltchaAdminEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+## isAltchaEnabled
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>isAltchaEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
 ## isAttempt
 
 ---
@@ -453,6 +598,40 @@ Se o utilizador que está autenticado é **admin** (administrador) então retorn
 
 ( _boolean_ )
 
+
+---
+
+## isAttemptsEnabled
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>isAttemptsEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Se está abilitado ou não o bloqueio automático de tentativas de autenticação falhadas.
+
+##### Retorno
+
+( _boolean_ )
+
+Retorna se o bloqueio automático de tentativas consecutivas falhadas na autenticação está ativo.
+
+---
+
+## isAttemptsInterval
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>isAttemptsInterval</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Descrição
+
+Número em minutos para definir o intervalo de tempo para realizar o bloqueio da conta.
+
+##### Retorno
+
+( _int_ )
+
+Retorna o número de minutos para o intervalo de tempo para a conta bloqueada.
 
 ---
 
@@ -531,6 +710,23 @@ if (_auth.isJWT()) {
 ( _boolean_ )
 
 Se o utilizador está autenticado com JSON Web Token retorna _true_.
+
+---
+
+## isJWTEnabled
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>isJWTEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se o JWT está ativo.
+
+##### Retorno
+
+( _boolean_ )
+
+Retorna se está ativado.
 
 ---
 
@@ -720,15 +916,10 @@ Retorna o conteúdo do utilizador inserido.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
-##### Descrição
-
-Verifica se o JWT está ativo.
-
 ##### Retorno
 
 ( _boolean_ )
 
-Retorna se está ativado.
 
 ---
 
@@ -1030,6 +1221,42 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 ---
 
+## setAltchaAdminEnabled
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAltchaAdminEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **enabled** | _boolean_ |   |
+
+##### Retorno
+
+( _[Auth](/docs/library/resources/auth)_ )
+
+
+---
+
+## setAltchaEnabled
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAltchaEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **enabled** | _boolean_ |   |
+
+##### Retorno
+
+( _[Auth](/docs/library/resources/auth)_ )
+
+
+---
+
 ## setAttemptReject
 
 ---
@@ -1052,7 +1279,7 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptRejectWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1094,6 +1321,79 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 ---
 
+## setAttemptsEnabled
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptsEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **enabled** | _boolean_ |   |
+
+##### Retorno
+
+( _[Auth](/docs/library/resources/auth)_ )
+
+
+---
+
+## setAttemptsInterval
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setAttemptsInterval</span>(<span style={{color: '#FF8000'}}>attemptsInterval</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **attemptsInterval** | _int_ |   |
+
+##### Retorno
+
+( _[Auth](/docs/library/resources/auth)_ )
+
+
+---
+
+## setJWTEnabled
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setJWTEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **enabled** | _boolean_ |   |
+
+##### Retorno
+
+( _[Auth](/docs/library/resources/auth)_ )
+
+
+---
+
+## setJWTSignIn
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setJWTSignIn</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>contextData</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **userId** | _int_ |   |
+| **contextData** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _[Auth](/docs/library/resources/auth)_ )
+
+
+---
+
 ## setSignInAbort
 
 ---
@@ -1116,7 +1416,7 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1162,7 +1462,7 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>setSignInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1242,7 +1542,7 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInAbortWithData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1296,7 +1596,7 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>signInExtraData</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Auth](/docs/library/resources/auth)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |

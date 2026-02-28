@@ -67,7 +67,7 @@ Recurso para a manipulação de imagens programaticamente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>affineTransform</span>(<span style={{color: '#FF8000'}}>tx</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>affineTransform</span>(<span style={{color: '#FF8000'}}>tx</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.geom.AffineTransform</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -872,7 +872,7 @@ Recurso para a manipulação de imagens programaticamente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -888,7 +888,7 @@ Recurso para a manipulação de imagens programaticamente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -959,7 +959,7 @@ Recurso para a manipulação de imagens programaticamente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -975,7 +975,7 @@ Recurso para a manipulação de imagens programaticamente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>drawPolyline</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1307,7 +1307,7 @@ Recurso para a manipulação de imagens programaticamente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -1323,7 +1323,7 @@ Recurso para a manipulação de imagens programaticamente.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
+#### <span style={{fontWeight: 'normal'}}>_image</span>.<span style={{color: '#008000'}}>fillPolygon</span>(<span style={{color: '#FF8000'}}>color</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.awt.Color</span>, <span style={{color: '#FF8000'}}>xPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>, <span style={{color: '#FF8000'}}>yPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>, <span style={{color: '#FF8000'}}>nPoints</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Image](/docs/library/resources/image)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |

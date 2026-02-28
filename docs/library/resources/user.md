@@ -12,7 +12,7 @@ Management of the users of the application and obtaining the data of the authent
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>all</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Description
 
 Gets the list of data for all users.
@@ -36,7 +36,7 @@ List of all data for all users.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>allByCode</span>(<span style={{color: '#FF8000'}}>code</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>allByCode</span>(<span style={{color: '#FF8000'}}>code</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Description
 
 Gets all users from the alternative code.
@@ -87,6 +87,102 @@ List of users found for the alternative code.
 ##### Return
 
 ( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+## authHistoryForceUnlock
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>authHistoryForceUnlock</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Return
+
+( _void_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>authHistoryForceUnlock</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **userId** | _int_ |   |
+
+##### Return
+
+( _void_ )
+
+
+---
+
+## authHistoryLatest
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>authHistoryLatest</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>authHistoryLatest</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **userId** | _int_ |   |
+
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+## authHistoryLatestIsLocked
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>authHistoryLatestIsLocked</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>authHistoryLatestIsLocked</span>(<span style={{color: '#FF8000'}}>userId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **userId** | _int_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## checkAuthHistoryConsecutiveFailure
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>checkAuthHistoryConsecutiveFailure</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **id** | _int_ |   |
+
+##### Return
+
+( _boolean_ )
 
 
 ---
@@ -680,7 +776,7 @@ It was successfully deleted.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>term</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>
+#### <span style={{fontWeight: 'normal'}}>_user</span>.<span style={{color: '#008000'}}>search</span>(<span style={{color: '#FF8000'}}>term</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;[Values](/docs/library/objects/Values)&gt;</span>
 ##### Description
 
 Searches for users who have an occurrence in the data with the past search text.

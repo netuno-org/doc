@@ -89,11 +89,11 @@ Que está na raíz da pasta `📂 ui`.
 ## Gestor de Pacotes
 
 O arquivo `package.json` é utilizado pelo gestor dos módulos de dependências, recomendamos o uso do 
-[PNPM](https://pnpm.io/) para instalar todos as dependências necessárias do frontend.
+[Bun](https://bun.sh) para instalar todos as dependências necessárias do frontend.
 
-E os comandos de execução utilizam o [Bun](https://bun.sh/), que é outra recomendação importante.
+E os comandos de execução utilizam o [Bun](https://bun.sh), que é outra recomendação importante.
 
-Portanto recomendamos a instalação do [Bun](https://bun.sh/) e do [PNPM](https://pnpm.io/).
+Portanto, recomendamos a instalação do [Bun](https://bun.sh).
 
 ## Instruções
 
@@ -101,15 +101,15 @@ No arquivo `README.md` contém as instruções de instalação e execução.
 
 Para realizar a instalação das dependências, execute:
 
-- `pnpm install`
+- `bun install`
 
 E para executar a compilação do código de frontend em desenvolvimento:
 
-- `pnpm run watch`
+- `bun run watch`
 
 Ou se for a compilação final e definitiva otimizada para produção:
 
-- `pnpm run build`
+- `bun run build`
 
 Por padrão a compilação cria os seguintes arquivos:
 

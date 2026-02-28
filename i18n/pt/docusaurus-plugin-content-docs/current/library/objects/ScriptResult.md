@@ -8,6 +8,30 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ---
 
+## error
+
+---
+
+#### <span style={{color: '#008000'}}>error</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Throwable</span>
+##### Retorno
+
+( _java.lang.Throwable_ )
+
+
+---
+
+## get
+
+---
+
+#### <span style={{color: '#008000'}}>get</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+##### Retorno
+
+( _java.lang.Object_ )
+
+
+---
+
 ## isError
 
 ---
@@ -32,11 +56,11 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ---
 
-## whenError
+## onError
 
 ---
 
-#### <span style={{color: '#008000'}}>whenError</span>(<span style={{color: '#FF8000'}}>func</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
+#### <span style={{color: '#008000'}}>onError</span>(<span style={{color: '#FF8000'}}>func</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;java.lang.Throwable&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -50,7 +74,7 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ---
 
-#### <span style={{color: '#008000'}}>whenError</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
+#### <span style={{color: '#008000'}}>onError</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
@@ -64,16 +88,16 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ---
 
-## whenSucceed
+## onSuccess
 
 ---
 
-#### <span style={{color: '#008000'}}>whenSucceed</span>(<span style={{color: '#FF8000'}}>func</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Runnable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
+#### <span style={{color: '#008000'}}>onSuccess</span>(<span style={{color: '#FF8000'}}>func</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.function.Consumer&lt;java.lang.Object&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **func** | _java.lang.Runnable_ |   |
+| **func** | _java.util.function.Consumer_ |   |
 
 ##### Retorno
 
@@ -82,7 +106,7 @@ Resultado da exceção de scripts, se ocorreu com sucesso ou se gerou algum erro
 
 ---
 
-#### <span style={{color: '#008000'}}>whenSucceed</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
+#### <span style={{color: '#008000'}}>onSuccess</span>(<span style={{color: '#FF8000'}}>function</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.graalvm.polyglot.Value</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[ScriptResult](/docs/library/objects/ScriptResult)</span>
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
