@@ -87,17 +87,17 @@ uniformidade e para reduzir o espaço ocupado pelas imagens.
         {
             lang: 'ruby',
             code: `
-                meuArquivo = _req.getFile("imagem")
-                if !meuArquivo.nil? && (
-                    meuArquivo.isExtension("jpeg") ||
-                    meuArquivo.isExtension("jpg") ||
-                    meuArquivo.isExtension("png")
+                meu_arquivo = _req.getFile("imagem")
+                if !meu_arquivo.nil? && (
+                    meu_arquivo.isExtension("jpeg") ||
+                    meu_arquivo.isExtension("jpg") ||
+                    meu_arquivo.isExtension("png")
                 )
-                    minhaImagem = _image.init(meuArquivo)
+                    minha_imagem = _image.init(meu_arquivo)
                         .resize(200, 200)
-                        .file(meuArquivo.baseName() +".jpg", "jpeg")
+                        .file(meu_arquivo.baseName() +".jpg", "jpeg")
                     _header.contentTypeJPG()
-                    _out.copy(minhaImagem)
+                    _out.copy(minha_imagem)
                 end
             `
         },
@@ -155,22 +155,66 @@ Podemos obter o arquivo enviado da seguinte forma:
         {
             lang: 'javascript',
             code: `
-                const meuArquivo = _req.getFile("file")
-
-                if (meuArquivo) {
+                const myFile = _req.getFile("file")
+                if (myFile != null) {
                     _out.json(
                         _val.map()
                             .set("result", true)
-                            .set("name", meuArquivo.name())
-                            .set("sizeBytes", meuArquivo.size())
-                            .set("sizeKB", meuArquivo.sizeKB())
+                            .set("name", myFile.name())
+                            .set("sizeBytes", myFile.size())
+                            .set("sizeKB", myFile.sizeKB())
+                            .set("sizeMB", myFile.sizeMB())
+                            .set("sizeGB", myFile.sizeGB())
                     )
                 } else {
                     _out.json(
                         _val.map()
-                            .set('result', false)
+                            .set("result", false)
                     )
                 }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                meuArquivo = _req.getFile("file")
+                if meuArquivo is not None:
+                    _out.json(
+                        _val.map()
+                            .set("result", True)
+                            .set("name", meuArquivo.name())
+                            .set("sizeBytes", meuArquivo.size())
+                            .set("sizeKB", meuArquivo.sizeKB())
+                            .set("sizeMB", meuArquivo.sizeMB())
+                            .set("sizeGB", meuArquivo.sizeGB())
+                    )
+                else:
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                meu_arquivo = _req.getFile("file")
+                if meu_arquivo.nil?
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                            .set("name", meu_arquivo.name())
+                            .set("sizeBytes", meu_arquivo.size())
+                            .set("sizeKB", meu_arquivo.sizeKB())
+                            .set("sizeMB", meu_arquivo.sizeMB())
+                            .set("sizeGB", meu_arquivo.sizeGB())
+                    )
+                else
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                    )
+                end
             `
         },
     ]}
@@ -308,7 +352,7 @@ seguinte forma:
 Repare na utilização do `_db.form`:
 
 <PolyglotCode
-    file="services/produto/post"
+    file="services/produto/imagem/post"
     codes={[
         {
             lang: 'javascript',
@@ -426,7 +470,7 @@ Repare na utilização do `_db.form`:
 Repare na utilização do `_db.update`:
 
 <PolyglotCode
-    file="services/produto/post"
+    file="services/produto/imagem/post"
     codes={[
         {
             lang: 'javascript',
@@ -692,7 +736,7 @@ Para obter o arquivo, pode ser criado um serviço que apresenta o arquivo de ima
 ]}
 />
 
-Repare que o recurso `_storage` é utilizado para obter o arquivo:
+Repare que o recurso `_storage` ([Storage](/docs/library/resources/storage)) é utilizado para obter o arquivo:
 
 <PolyglotCode
     codes={[
@@ -709,8 +753,8 @@ Repare que o recurso `_storage` é utilizado para obter o arquivo:
     ]}
 />
 
-Repare que na base de dados fica armazenado apenas o nome do arquivo, sendo que através do `_storage.database`
-podemos obter o arquivo em si.
+Na base de dados fica armazenado apenas o nome do arquivo, sendo que através do `_storage.database` podemos
+obter o arquivo em si.
 
 ### Storage
 
@@ -740,7 +784,7 @@ O arquivo fica armazenado na pasta `storage` da aplicação, em:
 
 - `storage/filesystem/server/upload/*`
 
-Repare que o recurso `_storage` é utilizado para obter o caminho de pasta e de arquivo:
+> O recurso [Storage](/docs/library/resources/storage) é utilizado para obter o caminho de pasta e de arquivo:
 
 <PolyglotCode
     codes={[
@@ -749,7 +793,7 @@ Repare que o recurso `_storage` é utilizado para obter o caminho de pasta e de 
             code: `
                 _storage.filesystem(
                     "server", // Nome da subpasta no filesystem.
-                    "upload", // Nome da outra subpasta.
+                    "upload", // Nome ou caminho da subpasta interna.
                     arquivo.name() // Nome final do arquivo.
                 )
             `
@@ -817,12 +861,12 @@ podem ser obtidos através do serviço `GET`:
         {
             lang: 'ruby',
             code: `
-                arquivoNome = _req.getString("arquivo")
+                arquivo_nome = _req.getString("arquivo")
 
                 arquivo = _storage.filesystem(
                     "server",
                     "upload",
-                    arquivoNome
+                    arquivo_nome
                 ).file()
 
                 if arquivo.exists() == false
@@ -970,8 +1014,8 @@ podem ser obtidos através do serviço `GET`:
         {
             lang: 'ruby',
             code: `
-                arquivoNome = _req.getString("arquivo")
-                arquivo = _app.file("temp/#{arquivoNome}")
+                arquivo_nome = _req.getString("arquivo")
+                arquivo = _app.file("temp/#{arquivo_nome}")
 
                 if arquivo.exists() == false
                     _header.status(404)
