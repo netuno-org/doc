@@ -6,24 +6,31 @@ sidebar_label: Terminal Centralizado
 
 ## Introdução
 
-O Netuno permite integrar a saída de dados de diversos comandos no mesmo terminal em que o servidor do Netuno está sendo executado.
+O Netuno permite unificar a saída de dados (logs) de múltiplos comandos e processos em uma única janela de terminal — a mesma onde o servidor principal está em execução.
 
-Quando uma aplicação é iniciada, de acordo com a sua configuração, pode conter diversos comandos configurados para serem iniciados automaticamente em paralelo, mas consolida todos as saídas de dados nno mesmo output global.
-
-Isto quer dizer que os processo de front-end do ReactJS, Angular, Vue, e qualquer outro, podem ser iniciados e integrados com o Netuno.
+Em fluxos de desenvolvimento modernos, onde é comum lidar com diversas tecnologias simultaneamente, o Netuno atua como um orquestrador de logs, podendo conter diversos comandos configurados para serem iniciados automaticamente em paralelo, como processos de front-end do ReactJS, Angular, Vue e qualquer outro.
 
 > Qualquer processo pode ser iniciado, basta definir o seu comando, por exemplo até pode ser integrado outro servidor de uma API REST auxiliar desenvolvida em qualquer outra tecnologia.
 
 
 ## Configuração
 
-Dentro da aplicação que está a desenvolver, no arquivo de configuração de ambiente. Neste exemplo será utilizado o arquivo de ambiente de desenvolvimento, que está localizado dentro da aplicação em:
+Para integrar processos externos, você deve editar o arquivo de configuração de ambiente da sua aplicação. Neste guia, utilizaremos o ambiente de desenvolvimento como exemplo.
+
+### Localização do Arquivo
+
+Navegue até a pasta da sua aplicação e localize o arquivo:
 
 - 📂 `config/_development.json`
 
-Verifique se já não existem configurações de comandos, se não existir então adicione no fim do arquivo de configuração (em formato JSON), os seguintes parâmetros de configuração como exemplo:
+### Estrutura de Configuração
 
-```
+
+A configuração é feita através da chave "commands", que consiste em um array de objetos. Isso permite que você execute múltiplos serviços em paralelo.
+
+Abra o arquivo e verifique se a chave `"commands"` já existe. Caso contrário, insira ao final do arquivo (respeitando o formato JSON) seguindo a configuração abaixo:
+
+```json
 {
     ...
     "commands": [
@@ -44,36 +51,43 @@ Verifique se já não existem configurações de comandos, se não existir entã
 }
 ```
 
-> Repare que a chave `commands` é um `array`, e dentro pode conter a definição dos diversos comandos, neste caso são 2:
-> 1. Comando para iniciar `bun run watch` dentro da pasta `ui` que está dentro da aplicação.
-> 2. Comando para iniciar `bun run dev` dentro da pasta `website` que está dentro da aplicação.
+> **Nota:** No exemplo acima, configuramos um comando para a pasta "ui" e outro para a pasta "website", ambos utilizando o gerenciador bun.
+
+### Referência de Parâmetros
+
+**Interface de Usuário (UI):** Executa `bun run watch` dentro do diretório `ui` da sua aplicação.
+
+**Website:** Executa `bun run dev` dentro da pasta `website`. 
 
 ### env
 
-Definição das variáveis de ambiente, é um array então pode ser definidas diversas variáveis ao mesmo tempo.
+Define as variáveis de ambiente que o processo necessita para rodar. Você pode definir múltiplas variáveis simultaneamente.
 
 ### path
 
-Definição do caminho de pastas onde o comando será executado, relativo a raíz da aplicação.
+Define o caminho de pastas onde o comando será executado, relativo a raíz da aplicação.
 
 ### install
 
-Se o comando iniciar com `npm`, `bun`, `pnpm` ou `yarn`, então é verificado se ainda não existe a pasta `node_modules`, então automaticamente é executado o comando `npm install`, ou `bun install`, ou `pnpm install`, ou `yarn install`, respectivamente de acordo com o prefixo comando.
+O Netuno possui uma inteligência integrada para gerenciar dependências de pacotes:
 
-De qualquer maneira o comando de instalação pode ser customizado com esta parametrização, assim sendo o comando de instalação padrão deixa de ser utilizado.
+- **Detecção Automática:** Se o seu comando começar com `npm`, `bun`, `pnpm` ou `yarn`, o Netuno verifica se a pasta `node_modules` existe.
+
+- **Execução Inteligente:** Caso a pasta não seja encontrada, o comando de instalação correspondente (exemplo: `bun install`) é executado automaticamente antes de iniciar o processo principal.
+
+- **Customização:** Ao definir manualmente o parâmetro `install`, a detecção padrão é substituída pela sua configuração personalizada.
 
 ### command
 
-O comando que será executado e a sua saída de dados (`output`) será integrada com o Netuno.
+O comando principal a ser executado. Toda a saída de dados (`output`) será integrada com o Netuno.
 
 ### enabled
 
-Se o comando está ou não ativo para ser executado na inicialização da aplicação.
+Define se o comando deve (true) ou não (false) ser iniciado automaticamente com a aplicação.
 
 ## Conclusão
 
-De forma simples é possível integrar diversos comandos de processos auxiliares que sejam precisos para o funcionamento da aplicação, seja para desenvolvimento como para produção.
+A centralização de comandos no Netuno simplifica muito o fluxo de trabalho.
+A visibilidade unificada permite que todas as informações de processos paralelos sejam consolidadas em um único terminal, facilitando o monitoramento em tempo real.
 
-Em desenvolvimento facilita muito, porque passa a ser possível ver em um único terminal toda a informação centralizada, unificando todos os processos que estão paralelamente em execução.
-
-Ao parar a execução do Netuno, também será encerrado todos os outros processos.
+O encerramento seguro faz com que, ao parar a execução do servidor Netuno, todos os processos auxiliares configurados também sejam encerrados automaticamente, evitando processos "em segundo plano" ou travamentos de porta.

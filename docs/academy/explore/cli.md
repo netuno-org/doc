@@ -4,7 +4,14 @@ title: Command Line
 sidebar_label: Command Line
 ---
 
-Before you start developing, take a look at the available commands.
+
+The Netuno command-line interface is the primary tool for managing your development environment. Through it, you can query system information, manage applications, and quickly configure the server.
+
+#### Requirements
+
+- **Terminal:** You must have a terminal (Command Prompt, PowerShell, or Bash) open in the root folder where Netuno was installed.
+
+These are the initial commands to verify that your environment is ready for use.
 
 | OPTION    | DESCRIPTION    |
 |----------|--------------|
@@ -12,69 +19,73 @@ Before you start developing, take a look at the available commands.
 | `version` | Allows you to view the current version of Netuno |
 
 #### List Available Commands
+
+If you have questions about which operations you can perform, use the help command. It will return a complete list of functions.
+
 ```shell
 ./netuno help
 ```
 #### View Netuno version
+
+It is essential to know which version you are using to ensure compatibility with specific scripts and modules
+
 ```shell
 ./netuno version
 ```
 
 ## Install
 
-Before starting developing you need to install Netuno. 
+Before starting development, it is necessary to install the Netuno engine in your environment. For more information, visit our [Installation](/docs/get-started/installation) page.
 
-To help you install Netuno go to [Installation ](/docs/get-started/installation)
-
-#### Details 
+This section details the parameters that can be used during the installation process to automate or optimize the process.
 
 | OPTION    | DESCRIPTION    |
 |----------|--------------|
-| `checksum` | Allows you to update checksum stored to all bundle files |
-| `force`           | Allows you to force override all local changes |
-| `graal=true/false` | Allows you define if you want to use GraalVM to best performance your apps |
-| `path=[Directory]`| Allows you to set the install path |
-| `remove` | Remove all Netuno files|
-| `version=[version]`| Allows you to select the version of Netuno that should be install, "latest" for the current version in development|
-| `yes` | Allows you to answer all question with an YES and be sure that your changes can be destroyed|
+| `checksum` | Updates the checksum code of all files in the installed package. |
+| `force`           | Forces the replacement of all files, even if there are local changes. |
+| `graal=true/false` | Defines the use of GraalVM to obtain higher performance when running applications. |
+| `path=[Directory]`| Manually defines the path (folder) where Netuno will be installed. |
+| `remove` | Completely removes all files related to Netuno from the system.|
+| `version=[version]`| Selects a specific version to install. Use the latest version for the development version|
+| `yes` | Automatically answers "YES" to all confirmations, ignoring warnings about data loss.|
 
-#### Example of how to update checksum
+#### Example of how to update checksum:
 
 ```shell
 ./netuno install checksum
 ```
-#### Example of how to force all local changes
+#### Example of how to force all local changes:
 
 ```shell
 ./netuno install force
 ```
 
-#### Example of how to desactive GraalVM 
+#### Example of how to desactive GraalVM:
 
 ```shell
 ./netuno install graal=false
 ```
 
-> GraalVM by default is enabled and downloaded automatically on Netuno installation.
+> GraalVM is active by default and is automatically downloaded during Netuno installation.
 
-#### Example of how to set the install path
+#### Example of how to define the installation path:
 
 ```shell
 ./netuno install path ='netunoDir'
 ```
-#### Example of how to remove all Netuno files.
+#### Example of how to remove all Netuno folders:
 
 ```shell
 ./netuno install remove
 ```
 
-#### Example of how to select the version of Netuno that should be install
+#### Example of how to select the Netuno version to be installed:
 
 ```shell
 ./netuno install version='latest'
 ```
 
-#### Example of  how to reply as YES to all questions 
+#### Example of how to reply as YES to all questions:
 
 ```shell
 ./netuno install yes 
@@ -82,54 +93,54 @@ To help you install Netuno go to [Installation ](/docs/get-started/installation)
 
 ## Server
 
-Start the Netuno server to start developing your applications.
+After completing the installation, start the server to begin developing your applications.
+
+To start the server with default settings, run the following command in the Netuno root folder:
 
 ```shell
 ./netuno server
 ```
 
-> The default port is 9000.
-> 
-> After starting up the server you only need to access through the link : http://localhost:9000/
+> By default, the server uses port 9000. Once the terminal indicates that the system is ready, you can access the management panel via the link: http://localhost:9000/
 
-#### Details
-
-By default, the Netuno directory is set to the webapp name, the webapp folder is where all the files for its operation are located.
+This section details the parameters that can be used during the server startup process.
 
 | OPTION    | DESCRIPTION    |
 |----------|--------------|
-| `app=[appname]` | Allows to define which application should be started 
-| `host=[IP/Host Name]` | Allows you to change the host name of Netuno |
-| `launch=true/false` | Allows you to define if Netuno initializes the link in the browser |
-| `npm` | Allows you to run 'npm watch' into the App to auto build the frontend|
-| `port=[Number]` | It allows defining the initialization port of the server |
-| `secret=[password]` | Allows you to define a password to acess the server remote management|
-| `web=[directory]` | Allows you change the default web home folder |
+| `app=[appname]` | Specifically defines which application should be launched | 
+| `host=[IP/Host Name]` | Allows you to change the Netuno hostname |
+| `launch=true/false` | Defines whether Netuno should automatically open the browser |
+| `npm` | Automatically executes the 'npm watch' command to compile the app's frontend in real time |
+| `port=[Number]` | Defines the server's startup port |
+| `secret=[password]` | Defines a security password to allow remote access to the server's management|
+| `web=[directory]` | Changes the default project root folder (web home) |
 
 
-> When you change the directory name, you need to change the folder name to the desired name, as the name will only be changed in the Netuno code.
+By default, Netuno uses the **'webapp'** folder to store all files essential to its operation.
 
-#### Example of how to start the server of a certain application
+**Caution when changing the directory:** If you use the parameter web=[folder] to change the name of the root folder, remember that you must also physically rename the folder in your file system. The command only instructs the Netuno code on where to look for the files; it does not automatically rename folders.
+
+#### Example of how to start the server for a specific application:
 
 ```shell
 ./netuno server app=myapp
 ```
 
-#### Example of how to change the hostname
+#### Example of how to change the hostname:
 
 ```shell
 ./netuno server host=localhost
 ```
 
-#### Example of how to define if Netuno initializes the link in the browser
+#### Example of how to set whether Netuno starts the browser automatically:
 
 ```shell
 ./netuno server launch=false
 ```
 
->By default the Netuno opens the browser and initializes the link
+>By default, Netuno opens the browser and initializes the link http://localhost:9000.
 
-#### Example to run npm to auto build the frontend
+#### Example of how to run npm to automatically build the frontend
 
 ```shell
 ./netuno server npm
@@ -140,13 +151,13 @@ By default, the Netuno directory is set to the webapp name, the webapp folder is
 ./netuno server port=10000
 ```
 
-#### Example of how to define a password to acess the server remote management
+#### Example of how to define a password to acess the server remote management:
 
 ```shell
 ./netuno server secret='p#ssw@rd'
 ```
 
-#### Example of how to change the default web home folder
+#### Example of how to change the default web folder:
 
 ```shell
 ./netuno server web=webapp
@@ -154,22 +165,24 @@ By default, the Netuno directory is set to the webapp name, the webapp folder is
 
 ## License
 
-To start developing you just need to register.
+To start developing with Netuno, you need to register your environment.
+
+To manage your license, use the base command:
 
 ```shell
 ./netuno license
 ```
 
-> There are currently three licenses: Community, Standard and Enterprise
+> Currently, Netuno offers three license types: **Community, Standard, and Enterprise**.
 
-#### Details
+This section details the available actions to configure or query your license.
 
 | OPTION    | DESCRIPTION    |
 |----------|--------------|
-| `create , change` | Allows you to create or change the license	 |
-| `key` | Allows you to view the license key |
-| `mail=[your@mail.com]` | Allows you to set the account email address |
-| `type=[community/standard/enterprise]`| Allows you to set the license type|
+| `create , change` | Starts the process to create a new license or change the current one |
+| `key` | Displays the active license key in your environment |
+| `mail=[your@mail.com]` | Sets the email address associated with the license account |
+| `type=[community/standard/enterprise]`| Sets the license type|
 
 #### Example of how to create a license
 
@@ -177,12 +190,12 @@ To start developing you just need to register.
 ./netuno license create
 ```
 
-#### Example of how to visualize the license key 
+#### Example of how to visualize the license key:
 
 ```shell
 ./netuno license key
 ```
-#### Example of how to set your mail and license type
+#### Example of how to define your email and license type:
 
 ```shell
 ./netuno license mail='your_email@gmail.com' type='community'
@@ -190,90 +203,101 @@ To start developing you just need to register.
 
 ## Application
 
-Create your applications easily.
+With the server configured and the license active, you can expand your ecosystem by creating new solutions.
 
 ```shell
 ./netuno app
 ```
 
-> After the creation of the application if you want to see where the application folder is you can go to the webapp folder, then the apps folder and there you will find the application folder.
+The generated files will be automatically organized within the Netuno folder structure.
 
-#### Details
-By default,Netuno has a demo application that starts when the Netuno server is started.
+To access or edit your application files, navigate to the following path from the system root: **webapp/apps/[your_app_name]**
+
+#### Folder Structure
+
+- **webapp**: This is the root folder containing all the essential files for Netuno to function.
+
+- **apps**: This is the specific folder where all developed or demonstration applications are stored.
+
+- **[your_app_name]**: This is the exclusive folder for the application you just created.
+
+By default, Netuno has a demonstration application that is displayed when the Netuno server starts.
 
 | OPTION    | DESCRIPTION    |
 |----------|--------------|
-| `database=[database name]` | Allows you to define the name of the database |
-| `engine=[name]` | Allows you to define the type of database |
-| `host=[address]` | Allows you to define the database address |
-| `language=[language]`  | Allows you to define the language |
-| `locale=[language]` |  Allows you to define the application locale |
-| `name=[name]`  | Allows you to create an application or rebuild an existing application |
-| `password=[password]`  | Allows to set a password for the database |
-| `port=[number]`  | Allows you to define the database port |
-| `username=[name]`  | Allows to define the username of the database |
+| `database=[database name]` | Defines the database name |
+| `engine=[name]` | Defines the database type |
+| `host=[address]` | Defines the database address |
+| `language=[language]`  | Defines the application language |
+| `locale=[language]` |  Defines the application's local language |
+| `name=[name]`  | Allows you to create an application or rebuild an existing one |
+| `password=[password]`  | Defines a password for the database |
+| `port=[number]`  | Defines the database port |
+| `username=[name]`  | Defines the database username |
 
-#### Example of how to pre-define the database name
+#### Example of how to define the database name:
 
 ```shell
 ./netuno app database=employee
 ```
 
-> The database name may contain number and letters, if the name has more than one word it should be separated as follows.
+> The database name can contain numbers and letters; if the name has more than one word, it must be separated by "_", as follows.
 >
-> Ex: employee_db
+> **Example:** employee_db
 
-#### Example of how to pre-define the database type
+#### Example of how to define the database type:
 
 ```shell
 ./netuno app engine=pg
 ```
-> These are the accepted database types: 
-> PostgreSQL - pg
-> MariaDB - mariadb
-> Microsoft SQL Server - mssql
-> H2 Database - h2
+These are the accepted database types: 
+> - PostgreSQL - **pg**
+> - MariaDB - **mariadb**
+> - Microsoft SQL Server - **mssql**
+> - H2 Database - **h2**
 
-#### Example of how to pre-define the database server address
+#### Example of how to define the database server address:
 
 ```shell
 ./netuno app host=localhost
 ```
 
-#### Example of language and locale pre-setting
+#### Example of how to define the language and locale:
 
 ```shell
 ./netuno app language=en_US locale=en_US
 ```
-> The following languages exist:
-> Portuguese - pt_PT
-> Brazilian - en_BR
-> English - en_US
-> Spanish - es_ES
+The following languages exist:
+> - Portuguese - pt_PT
+> - Brazilian - en_BR
+> - English - en_US
+> - Spanish - es_ES
 
 
-#### Example of how to create an application or rebuild an existing application
+#### Example of how to create or rebuild an application Existing:
 
 ```shell
 ./netuno app name=demo
 ```
 
-#### Example of how to pre-define the database password
+#### Example of how to set the database password:
 
 ```shell
 ./netuno app password=secret
 ```
 
-#### Example of the pre-defined database port
+#### Example of how to set the database port:
 
 ```shell
 ./netuno app port=5432
 ```
-> By default, the PostgreSql port is 5432<br/>
-  By default, the MariaDB port is 3306<br/>
-  By default, the Microsoft SQL Server port is 1433
+By default, the ports correspond to:
 
-#### Example of how to define the database user name
+> - PostgreSQL - **5432**
+> - MariaDB - **3306**
+> - Microsoft SQL Server - **1433**
+
+#### Example of how to set the database username:
 
 ```shell
 ./netuno app username=root
