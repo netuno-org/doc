@@ -14,8 +14,20 @@
   --ifm-color-primary-lighter: #7b7de5;
   --ifm-color-primary-lightest: #8c8de8;
   --ifm-font-size-base: 130%;
-  --ifm-code-font-size: 110%;
+  --ifm-code-font-size: 105%;
+  --ifm-h1-font-size: 3rem;
+  --ifm-h2-font-size: 2.5rem;
+  --ifm-h3-font-size: 2rem;
+  --ifm-h4-font-size: 1.75rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+.markdown > h2 {
+  --ifm-h2-font-size: 2.5rem;
+}
+
+.markdown > h3 {
+  --ifm-h3-font-size: 2rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
