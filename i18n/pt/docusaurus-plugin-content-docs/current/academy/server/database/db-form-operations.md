@@ -4,10 +4,6 @@ title: Form e as Operações de Base de Dados
 sidebar_label: DB Form
 ---
 
-## EM DESENVOLVIMENTO
-
-Atenção, em fase experimental, portanto a cada nova versão do Netuno pode haver grandes alterações, não é garantida a retrocompatibilidade.
-
 ## Antes de Começar
 
 Antes de proceder certifique-se de que tem noções de SQL, relacionamento entre tabelas tais como `Many To One`, `One To Many` e etc. Além disso é necessario conhecimento prévio sobre os `Forms` do Netuno e como são organizados para conseguir extrair o maximo do `DB Form`.
@@ -137,11 +133,21 @@ Ao final do exemplo acima invocamos o metodo `page()` passando como parâmetro o
 
 ### Guardar Registos
 
+Para inserir dados na base de dados utilizamos o método `insert`, por exemplo:
+
 ```javascript
-const result = _db.form('people')
+const dbPeopleInserted = _db.form("people")
     .set("name", "Caio Andrade")
     .set("email", "caio@mail.com")
     .insert();
+```
+
+Com o resultado do `insert` podemos obter o id do registro que foi inserido na base de dados.
+
+Portanto, no `dbPeopleInserted` obtém-se o `id` do registro inserido da seguinte forma:
+
+```javascript
+_log.info("People ID Inserted: "+ dbPeopleInserted.getInt('id'))
 ```
 
 ### Atualizar Registos
