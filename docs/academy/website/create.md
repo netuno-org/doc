@@ -32,7 +32,9 @@ Then, with the **terminal** inside the **root of your Netuno application**, whic
 
 Execute the command:
 
-`bun create vite`
+```shell
+bun create vite
+```
 
 When asked: `Ok to proceed? (y)`
 
@@ -54,16 +56,24 @@ This command will create a new directory called `📂 website` where the React a
 
 After creating the React application, run the following command to install the dependencies:
 
-```
+```shell
 cd website
 bun install
 ```
 
-With this, you can start the React application with the command:
+Open your Netuno application folder in your preferred editor (such as VSCode, WebStorm, etc.), and enter the `website` folder that was created.
 
-`bun run dev`
+## Run
 
-This will start the application at [http://localhost:5173/](http://localhost:5173/), or at another address with a different port number. Either way, simply open this address in your browser to view the developments.
+Now you can start the React frontend server using the command:
+
+```shell
+bun run dev
+```
+
+This will make the frontend available at the address [http://localhost:5173/](http://localhost:5173/), normally or 
+another address with a different port number may appear in the terminal, in any case just open the address shown 
+in the terminal in your browser.
 
 > To end the React application at any time, in the terminal, simply press `CTRL+C` simultaneously.
 
@@ -80,17 +90,17 @@ We strongly recommend that you install the following NPM packages, as they are v
 To install the packages listed above, simply run the following set of commands in the terminal:
 
 ```
-bun install react-router
-bun install antd
-bun install @ant-design/icons
-bun install less
-bun install @netuno/service-client
+bun add react-router
+bun add antd
+bun add @ant-design/icons
+bun add less
+bun add @netuno/service-client
 ```
 
 Alternatively, you can also install all packages at once:
 
 ```
-bun install react-router antd @ant-design/icons less @netuno/service-client
+bun add react-router antd @ant-design/icons less @netuno/service-client
 ```
 
 ## Configurations

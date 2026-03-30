@@ -35,7 +35,9 @@ Então com o **terminal** dentro da **raíz da sua aplicação** Netuno, que nor
 
 Execute o comando:
 
-`bun create vite`
+```shell
+bun create vite
+```
 
 De seguida com a pergunta: `Project name:`
 
@@ -55,7 +57,7 @@ Este comando irá criar um novo diretório denominado `📂 website` onde estar�
 
 Após ter criado o frontend com React, execute da seguinte forma para instalar as dependências:
 
-```
+```shell
 cd website
 bun install
 ```
@@ -65,26 +67,11 @@ entre na pasta `website` que foi criada.
 
 ## Executar
 
-Antes de executar deve alterar o arquivo `package.json` para executar os comandos de script com o **Bun**.
-
-Alterer os `scripts` no `package.json` da seguinte forma:
-
-```json title="package.json"
-...
-    "scripts": {
-        "dev": "bunx --bun vite",
-        "build": "bunx --bun vite build ",
-        "watch": "bunx --bun vite build --watch",
-        "preview": "bunx --bun vite preview"
-    },
-...
-```
-
-> Deve colocar o prefixo `bunx --bun` nos `scripts`. 
-
 Agora é possível iniciar o servidor de frontend com React utilizando o comando:
 
-`bun run dev`
+```shell
+bun run dev
+```
 
 Isto fará com que o frontend esteja disponível no endereço [http://localhost:5173/](http://localhost:5173/), normalmente ou em outro 
 endereço com outro número de porta poderá aparecer no terminal, de qualquer forma basta abrir no browser o endereço
@@ -108,18 +95,18 @@ aplicações React com Netuno (clique em cada link para obter mais informações
 
 Para instalar os pacotes acima listados basta executar o seguinte conjunto de comandos no terminal:
 
-```
-bun install react-router
-bun install antd
-bun install @ant-design/icons
-bun install less
-bun install @netuno/service-client
+```shell
+bun add react-router
+bun add antd
+bun add @ant-design/icons
+bun add less
+bun add @netuno/service-client
 ```
 
 Em alternativa também pode instalar todos os pacotes de uma única vez:
 
-```
-bun install react-router antd @ant-design/icons less @netuno/service-client
+```shell
+bun add react-router antd @ant-design/icons less @netuno/service-client
 ```
 
 ## Configurações
