@@ -4,10 +4,6 @@ title: Form and Database Operations
 sidebar_label: DB Form
 ---
 
-## IN DEVELOPMENT
-
-Please note that this is an experimental phase, so each new version of Netuno may have major changes, and backward compatibility is not guaranteed.
-
 ## Before You Starting
 
 Before proceeding, check that there are notions of SQL, relationships between tables such as `Many To One`, `One To Many` and so on. Furthermore, prior knowledge of Netuno's Forms and how they are organized is necessary to get the most out of the Query object.
@@ -136,11 +132,21 @@ At the end of the example above, we invoke the `page()` method passing as a para
 
 ### Insert New Records
 
+To insert data into the database, we use the `insert` method, for example:
+
 ```javascript
-const result = _db.form('people')
+const dbPeopleInserted = _db.form("people")
     .set("name", "Caio Andrade")
     .set("email", "caio@mail.com")
     .insert();
+```
+
+With the result of `insert`, we can obtain the ID of the record that was inserted into the database.
+
+Therefore, in `dbPeopleInserted`, the ID of the inserted record is obtained as follows:
+
+```javascript
+_log.info("People ID Inserted: "+ dbPeopleInserted.getInt('id'))
 ```
 
 ### Update Records

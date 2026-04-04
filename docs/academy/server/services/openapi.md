@@ -45,7 +45,7 @@ Enter and adjust the following parameters:
 
 Make sure the settings make sense, the example above is for the environment _development_.
 
-> Should be used during development `https`.
+> `https` should be used in production.
 
 ### _openapi.json in Services
 

@@ -4,13 +4,11 @@ title: Form e as Operações de Base de Dados
 sidebar_label: DB Form
 ---
 
-## EM DESENVOLVIMENTO
-
-Atenção, em fase experimental, portanto a cada nova versão do Netuno pode haver grandes alterações, não é garantida a retrocompatibilidade.
-
 ## Antes de Começar
 
-Antes de proceder certifique-se de que tem noções de SQL, relacionamento entre tabelas tais como `Many To One`, `One To Many` e etc. Além disso é necessario conhecimento prévio sobre os `Forms` do Netuno e como são organizados para conseguir extrair o maximo do `DB Form`.
+Antes de proceder certifique-se de que tem noções de SQL, relacionamento entre tabelas tais como "um para muitos" e "muitos para um".
+
+Além disso, é necessário conhecimento prévio sobre os `Forms` do Netuno e como são organizados para conseguir extrair o maximo do DB Form.
 
 ## Introdução
 
@@ -18,13 +16,96 @@ Em desenvolvimento de software muitas vezes precisamos buscar informações em b
 
 ## Como Funciona
 
-No coração do Query está a capacidade de estruturar comandos SQL utilizando objetos e métodos. Em vez de escrever consultas SQL brutas diretamente, o Query permite que você use um mecanismo orientado a objetos para definir consultas de forma programática. Cada consulta é representada como um objeto. Você cria instâncias de classes de consulta que encapsulam diferentes partes do SQL, como seleção, filtragem, agrupamento, etc.
+No coração do DB Form está a capacidade de estruturar comandos SQL utilizando objetos e métodos. Em vez de escrever os comandos SQL diretamente, o DB Form permite que você use um mecanismo orientado a objetos para definir consultas e operações de forma programática.
 
-## Exemplos Práticos de Consultas
+Cada consulta ou operação de base de dados é representada como um objeto.
 
-O `DB Form` é acessivel apartir do recurso `_db.form('form')`, uma vez invocado tens em mãos a consulta base que pode ser configurada usando os metodos e objetos disponíveis no mesmo.
+Você cria instâncias de classes de consulta que encapsulam diferentes partes do SQL, como seleção, filtragem, agrupamento, etc. E também executa as operações de deletar, inserir e atualizar registros.
 
-### Buscar Todos
+## Inicialização
+
+Tudo começa com a inicialização do DB Form que precisa saber qual será o nome de formulário base ou principal que será utilizado, ou seja, os formulários no Netuno representam sempre tabelas em base de dados, portanto é o mesmo que dizer qual é a tabela base ou a tabela principal. 
+
+Nete exemplo iniciamos o DB Form a partir do formulário/tabela `people`:
+
+```javascript
+const dbFormPeople = _db.form("people")
+```
+
+Com o DB Form iniciado podemos realizar consultas ou operações.
+
+## Consulta Simples
+
+O DB Form fornece dois métodos muito comuns para obtenção de dados, além da paginação e resultados distintos, são eles:
+
+- `all` - Todos os registros como uma lista.
+- `first` - Obtém apenas o primeiro registro.
+
+Veja os exemplos a seguir.
+
+Para obter todas as pessoas:
+
+```javascript
+const dbPeoples = _db.form("people")
+    .all()
+```
+
+Para obter apenas uma pessoa:
+
+```javascript
+const dbPeople = _db.form("people")
+    .first()
+```
+
+## Filtros e Condições
+
+Com o where podemos filtrar os dados que respeitam determinadas condições.
+
+Veja alguns exemplos:
+
+```js
+const dbPeople = _db.form("people")
+    .where(_db.where("people_user_id").equals(_user.id))
+    .first()
+```
+
+```js
+const dbPeoples = _db.form("people")
+    .where(
+        _db.where("type").in(_val.list().add("client").add("admin"))
+            .and("email").notEqual(null)
+    ).all()
+```
+
+## Comparações Where
+
+O `_db.where` fornece o objeto [Where](/docs/library/objects/Where) que suporta as seguintes operações de comparação:
+
+Comparações com os operadores numéricos e textuais:
+
+-  `equal(...)` ou `equals(...)` - Verifica a igualdade, é o `=`.
+-  `notEqual(...)` ou `notEquals(...)` - Se é diferente do valor passado, é o `<>`.
+-  `greaterThan(...)` - Se é maior que o valor passado, é o `>`.
+-  `lessThan(...)` - Se é menor que o valor passado, é o `<`.
+-  `greaterOrEqualsThan(...)` - Se é maior ou igual ao valor passado, é o `>=`.
+-  `lessOrEqualsThan(...)` - Se é menor ou igual ao valor passado, é o `<=`.
+
+Condições de texto com o operador `LIKE`:
+
+-  `startsWith('text')` - Se inicia com o determinado prefixo, é o `LIKE '...%'`.
+-  `endsWith('text')` - Se termina com o determinado sufixo, é o `LIKE '%...'`.
+-  `contains('text')` - Se contém o termo, é o `LIKE '%...%'`..
+
+Condições com listas com o operador `IN`:
+
+-  `in(_val.list()...)` - Se é igual a algum valor da lista, é a condição `IN (...)`.
+-  `notIn(_val.list()...)` - Se não é igual a nenhum valor da lista, é a condição `NOT IN (...)`.
+
+## Exemplos Práticos de Consulta
+
+O `DB Form` é acessível a partir do recurso `_db.form('form')`, uma vez invocado tens em mãos a consulta base que pode ser configurada usando os métodos e objetos disponíveis no mesmo.
+
+### Muitos para Um e Resultados Distintos
 
 ```javascript
 const query = _db.form('people')
@@ -71,7 +152,7 @@ No exemplo acima fazemos uma consulta para a tabela `people` relacionando com ma
 
 > O metodo `link` somente deve ser usado quando as tabelas já possuem relação por meio do `Form` do Netuno.
 
-### Obter o Primeiro Registo
+### Primeiro Registro com Relacionamento e Ordenação
 
 ```javascript
 const query = _db.form('people')
@@ -108,9 +189,9 @@ const query = _db.form('people')
 const page = query.page(_db.pagination(1, 10));
 ```
 
-> O numero da página no objeto Pagination inicia apartir de 1, então o exemplo acima é equivalente há: `offset = 0` e `limit = 10`.  
+> O número da página no objeto Pagination inicia a partir de 1, então o exemplo acima é equivalente há: `offset = 0` e `limit = 10`.  
 
-Ao final do exemplo acima invocamos o metodo `page()` passando como parâmetro o objeto `pagination` que possui as preferências da paginação. Este retornará um objeto página com os atributos equivalentes, exemplo:
+Ao final do exemplo acima invocamos o método `page()` passando como parâmetro o objeto `pagination` que possui as preferências da paginação. Este retornará um objeto página com os atributos equivalentes, exemplo:
 
 ```json
 {
@@ -135,18 +216,28 @@ Ao final do exemplo acima invocamos o metodo `page()` passando como parâmetro o
 }
 ```
 
-### Guardar Registos
+## Inserir Registros
+
+Para inserir dados na base de dados utilizamos o método `insert`, por exemplo:
 
 ```javascript
-const result = _db.form('people')
+const dbPeopleInserted = _db.form("people")
     .set("name", "Caio Andrade")
     .set("email", "caio@mail.com")
     .insert();
 ```
 
-### Atualizar Registos
+Com o resultado do `insert` podemos obter o id do registro que foi inserido na base de dados.
 
-Através do objeto DB Form você pode atualizar o registos da consulta de forma fácil e intuitiva.
+Portanto, no `dbPeopleInserted` obtém-se o `id` do registro inserido da seguinte forma:
+
+```javascript
+_log.info("People ID Inserted: "+ dbPeopleInserted.getInt('id'))
+```
+
+## Editar Registros
+
+Através do objeto DB Form você pode atualizar os registros da consulta de forma fácil e intuitiva.
 
 ```javascript
 _db.form('people')
@@ -163,9 +254,9 @@ _db.form('people')
 
 > Alé disso você pode usar outros métodos combinado como `order()` e `limit()` para melhorar suas consultas.
 
-### Deletar Registos
+## Deletar Registos
 
-O DB Form também permite que você delete registos retornados na consulta de forma simples.
+O DB Form também permite que você apagar registros retornados na consulta de forma simples.
 
 ```javascript
 _db.form('people')
@@ -180,19 +271,4 @@ _db.form('people')
 
 > Assim como os demais é possível combinar outros métodos como `order()` e `limit()` para melhorar os resultados.
 
-## Comparisons in `where`
-
-The `_db.where` provides the [Where](/docs/library/objects/Where) object that supports the following comparison operations:
-
--  `equal('value')` - Verifica a igualdade.
--  `startsWith('value')` - Se inica com o determinado prefixo.
--  `endsWith('value')` - Se termina com o determinado sufixo.
--  `contains('value')` - Se contém o termo.
--  `in(_val.list())` - Se é igual a algum valor da lista.
--  `notIn(_val.list())` - Se não é igual a nenhum valor da lista.
--  `greaterThan(value)` - Se é maior que o valor passado.
--  `lessThan(value)` - Se é menor que o valor passado.
--  `greaterOrEqualsThan(value)` - Se é maior ou igual ao valor passado.
--  `lessOrEqualsThan(value)` - Se é menor ou igual ao valor passado.
--  `different(value)` - Se é diferente do valor passado.
 
