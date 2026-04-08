@@ -55,10 +55,8 @@ netuno.modal.create({
   callback: function (modal) {
     // 1. Localiza o contêiner interno destinado a receber o formulário
     let formContainer = modal.find('[netuno-form]');
-    
     // 2. Injeta a lista de dados do formulário no contêiner
     netuno.loadForm(formContainer); 
-    
     // 3. Exibe o modal para o usuário
     netuno.modal.show(modal);
   }
@@ -73,10 +71,8 @@ netuno.modal.create({
   name: 'test',
   callback: function (modal) {
     let formContainer = modal.find('[netuno-form]');
-    
     // Carrega o formulário em modo de inserção (novo registro)
     netuno.loadFormEdit(formContainer); 
-    
     netuno.modal.show(modal);
   }
 });
@@ -85,7 +81,6 @@ netuno.modal.create({
 :::info
 Ao utilizar `netuno.loadFormEdit()` sem passar um **ID**, o Netuno entende que você quer usar a "tela de edição" a partir do zero. Ele carrega a interface com os inputs vazios, prontos para a criação de um novo registro. Nesse cenário, o Netuno dispara internamente o evento `netuno:new`.
 :::
-
 
 ### 3. Modo de Edição
 
@@ -99,10 +94,8 @@ netuno.modal.create({
   name: 'test',
   callback: function (modal) {
     let formContainer = modal.find('[netuno-form]');
-    
     // Injeta os dados do registro 1234 nos campos do formulário
     netuno.loadFormEdit(formContainer, recordId); 
-    
     netuno.modal.show(modal);
   }
 });
@@ -111,7 +104,9 @@ netuno.modal.create({
 
 ## Eventos
 
-O contêiner do formulário (`[netuno-form]`) emite eventos customizados que acompanham o ciclo de vida da interação do usuário. É altamente recomendado o uso desses eventos para disparar lógicas de negócios específicas do seu frontend (como atualizar tabelas em background, exibir alertas, etc).
+O contêiner do formulário (`[netuno-form]`) emite eventos customizados que acompanham o ciclo de vida da interação do usuário. 
+
+É recomendado o uso desses eventos para disparar lógicas de negócios específicas do seu frontend (como atualizar tabelas em background, exibir alertas, etc).
 
 | TIPO DE EVENTO   | DESCRIÇÃO    |
 | ------- |--------------|
@@ -126,7 +121,7 @@ O contêiner do formulário (`[netuno-form]`) emite eventos customizados que aco
 
 Neste exemplo pronto para produção, criamos o modal e adicionamos *listeners* para acompanhar o sucesso das operações do usuário:
 
-```javascript
+```jsx
 netuno.modal.create({
   name: 'test',
   callback: function (modal) {
