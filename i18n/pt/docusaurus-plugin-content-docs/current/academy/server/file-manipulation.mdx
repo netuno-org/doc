@@ -38,7 +38,7 @@ manipulações de arquivos, pastas e caminhos no geral, o que permite realizar o
 - Listar o conteúdo das pastas.
 - Renomear arquivos e pastas.
 - Ler e escrever dados em arquivos.
-- Eliminar pastas e as suas respectivas subpastas e arquivos recursivamente.
+- Eliminar pastas e suas respectivas subpastas e arquivos recursivamente.
 
 ## Aplicação
 
@@ -140,12 +140,12 @@ Obtém um caminho de arquivo ou pasta, independente se existe ou não, por exemp
         {
             lang: 'javascript',
             code: `
-                // O caminho real do arquivo será:
+                // O caminho real da nova pasta será:
                 // storage/filesystem/server/minha/nova-pasta
                 const storagePasta = _storage.filesystem("server", "minha/nova-pasta")
                 const pasta = storagePasta.path()
 
-                // O caminho real do arquivo será:
+                // O caminho real do novo arquivo será:
                 // storage/filesystem/server/minha/pasta/novo-arquivo.txt
                 const storageArquivo = _storage.filesystem("server", "minha/pasta", "novo-arquivo.txt")
                 const arquivo = storageArquivo.path()
@@ -206,7 +206,9 @@ Obtém um caminho de arquivo ou pasta, independente se existe ou não, por exemp
 
 ## Criar Pastas
 
-O método `mkdir` cria uma pasta específica na raíz da aplicação:
+O método `mkdir` cria uma pasta.
+
+No exemplo a seguir cria a pasta específica na raíz da aplicação:
 
 <PolyglotCode
     codes={[
@@ -220,15 +222,16 @@ O método `mkdir` cria uma pasta específica na raíz da aplicação:
     ]}
 />
 
-Para criar uma subpasta pasta basta indicar a seguir a `/`:
+Para criar uma subpasta dentro da pasta existente, indique o caminho completo separando a hierarquia de
+pastas com `/`:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const pasta = _app.path("temp/outra")
-                pasta.mkdir()
+                const subpasta = _app.path("temp/outra")
+                subpasta.mkdir()
             `
         },
     ]}
@@ -242,8 +245,8 @@ de pastas na aplicação, por exemplo:
         {
             lang: 'javascript',
             code: `
-                const pastas = _app.path("temp/a/b/c")
-                pastas.mkdirs()
+                const caminhoPastas = _app.path("temp/a/b/c")
+                caminhoPastas.mkdirs()
             `
         },
     ]}
