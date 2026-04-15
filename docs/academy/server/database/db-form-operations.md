@@ -184,11 +184,12 @@ _db.form('people')
 
 > You can also use other methods to filter like `order()`, `limit()` to improve your queries.
 
-## Relationship Operators
 
-Below are the types of relationship operators supported by [Where](/docs/library/objects/Where):
+## Where Comparisons
 
-- `equal('value')` - Checks for equality.
+The `_db.where` provides the [Where](/docs/library/objects/Where) object that supports the following comparison operations:
+
+- `equal('value')` or `equals('value')` - Checks for equality.
 - `startsWith('value')` - Starts with the given prefix.
 - `endsWith('value')` - Ends with the given suffix.
 - `contains('value')` - Contains the term.
