@@ -140,19 +140,19 @@ Only a user with "Administrator" permission can grant access directly through th
 
 1. Access the application menu in "View" mode, and click on the **"Configuration > Users"** section.
 
-![user-configuration-section-en.png](/docs/assets/academy/explore/user-configuration-section-en.png)
+![user-configuration-section-en.png](/docs/assets/academy/explore/access-permissions/user-configuration-section-en.png)
 
 2. In the **"Edit existing user"** field, select the desired user.
 
-![select-an-existing-user-en.png](/docs/assets/academy/explore/select-an-existing-user-en.png)
+![select-an-existing-user-en.png](/docs/assets/academy/explore/access-permissions/select-an-existing-user-en.png)
 
 3. In the **"Authentication History"** section, verify that the "Access" status displays the green "Padlock" icon;
 
-![section-authentication-history-en.png](/docs/assets/academy/explore/section-authentication-history-en.png)
+![section-authentication-history-en.png](/docs/assets/academy/explore/  access-permissions/section-authentication-history-en.png)
 
 4. Click the **Clock** icon to view the user's complete login history.
 
-![authentication-history-en.png](/docs/assets/academy/explore/authentication-history-en.png)
+![authentication-history-en.png](/docs/assets/academy/explore/access-permissions/authentication-history-en.png)
 
 5. Click the green padlock in the **"Access"** column to unlock the user. After this action, a success message will be displayed.
 

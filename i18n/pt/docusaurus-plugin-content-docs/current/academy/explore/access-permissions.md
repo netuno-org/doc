@@ -141,16 +141,16 @@ Dentro do arquivo JSON, localize a seção `auth`. Se ela não existir, insira o
 Apenas um usuário com permissão de "Administrador" pode liberar o acesso diretamente pelo Back-Office sem precisar acessar o banco de dados.
 
 1. Acesse o menu da aplicação no modo "Visualizar", e clique na seção de **"Configuração > Usuários"**.
-![user-configuration-section-pt.png](/docs/assets/academy/explore/user-configuration-section-pt.png)
+![user-configuration-section-pt.png](/docs/assets/academy/explore/access-permissions/user-configuration-section-pt.png)
 
 2. No campo de **"Editar usuário existente"**, selecione o usuário desejado.
-![select-an-existing-user-pt.png](/docs/assets/academy/explore/select-an-existing-user-pt.png)
+![select-an-existing-user-pt.png](/docs/assets/academy/explore/access-permissions/select-an-existing-user-pt.png)
 
 3. Na seção de **"Histórico de Autenticação"**, verifique se o status "Access" exibe o ícone de "Cadeado" na cor verde;
-![section-authentication-history-pt.png](/docs/assets/academy/explore/section-authentication-history-pt.png)
+![section-authentication-history-pt.png](/docs/assets/academy/explore/access-permissions/section-authentication-history-pt.png)
 
 4. Clique no ícone de **Relógio** para verificar a lista completa de acessos do usuário.
-![authentication-history-pt.png](/docs/assets/academy/explore/authentication-history-pt.png)
+![authentication-history-pt.png](/docs/assets/academy/explore/access-permissions/authentication-history-pt.png)
 
 5. Clique no cadeado verde na coluna **"Acesso"** para desbloquear o usuário. Após esta ação, uma mensagem de sucesso é exibida.
 
