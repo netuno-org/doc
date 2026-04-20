@@ -4,8 +4,6 @@ title: Terminal Centralizado
 sidebar_label: Terminal Centralizado
 ---
 
-## Introdução
-
 O Netuno permite unificar a saída de dados (logs) de múltiplos comandos e processos em uma única janela de terminal — a mesma onde o servidor principal está em execução.
 
 Em fluxos de desenvolvimento modernos, onde é comum lidar com diversas tecnologias simultaneamente, o Netuno atua como um orquestrador de logs, podendo conter diversos comandos configurados para serem iniciados automaticamente em paralelo, como processos de front-end do ReactJS, Angular, Vue e qualquer outro.
