@@ -4,116 +4,249 @@ title: Services
 sidebar_label: Services
 ---
 
-## Before you start
+## Introduction
 
-Before creating Web REST services make sure you know how to create **Forms, Fields** and **Relationships**, in case you don't know it visit the following links:
+REST web services in Netuno are JavaScript scripts executed on the server (back-end) that allow direct interaction with the application's database. Through them, it is possible to:
+
+* Read data from the database
+* Insert new records
+* Update existing data
+* Remove data
+* Execute complex logic involving calculations or data processing.
+
+* Integrate with external systems.
+
+Each service is accessed through a URL (endpoint), which allows web interfaces (front-end), mobile applications, or other external systems to consume your application's data securely and in a standardized way.
+
+#### Prerequisites
+
+* Basic knowledge of **JavaScript, React.js**, and **HTML**.
+
+* Familiarity with SQL and the folder structure of an application.
+
+* Basic knowledge of **Forms**, **Fields**, and **Relationships** is recommended.
+
+If you have any questions about these steps, please refer to:
 
 * [Forms](/docs/academy/ui/forms)
 * [Fields](/docs/academy/ui/fields)
-* [Form relationships](/docs/academy/ui/relationships-between-forms)
+* [Relationships between forms](/docs/academy/ui/relationships-between-forms)
 
-It is also advisable that, before starting this tutorial, you make sure you have the basics in _**JavaScript, React.js**_ and _**HTML**_.
 
-## What do the services allow?
+## First Steps
 
-Web REST services allow you to interact directly with the database allowing you to read data, record new data, delete data and even updates.
+We will use a work time tracking application, where the goal is to calculate the total hours worked by each employee.
 
-Therefore, to demonstrate the creation of a service we will use a simple example: an application in which workers register the entry and exit time in which there is a service that calculates the total number of hours performed by the worker.
+**Application Structure:**
 
-The following is an image of the structure of the application:
+![application-structure-en.png](/docs/assets/academy/explore/services-web-rest/application-structure-en.png)
 
-![servicos-web-rest1.png](/docs/assets/servicos-web-rest1.png)
+:::note
+The **id** field is automatically created and managed by Netuno in all tables; it is not necessary to define it manually.
 
->Note: It isn't necessary to create the id field because Netuno creates it automatically after the table is created.
+:::
 
-## First steps
-The first step will be to create the service, for that, using the text editor _Atom_, we will go to the services folder as shown in the following image:
+The services of a Netuno application are located in the **server/services/** folder.
 
-![servicos-web-rest2.png](/docs/assets/servicos-web-rest2.png)
+#### Folder Structure
 
-> In this example the app has been called 'registerhours', in your case it will be the same structure but with the name you gave to your application.
-
-## Creating the service
-
-When we enter this folder we will create a file ending in _.js_ with a name suitable for the service.
-
-In this example we will name the file _'records.js'_.
-
-> As a standard, the name of the service is written in lowercase letters, and if necessary more than one word, separated by hyphens (-)
-
-In this example we will calculate total hours per worker, that is, calculate the total number of hours performed by the worker based on the entry and exit times.
-
-We will also add data beforehand so that we can get results.
-
-So the first step is to create the database call as follows:
-
-```javascript
-/*
-  To call the service, if you haven't changed the port,
-  go to the link 'http://localhost:9000/services/records.netuno'
-*/
-
-// To perform a simple query we use _db.query() which is a Netuno function
-var records = _db.query(''+
-  ' SELECT DISTINCT '+
-  '   worker.name, '+
-  '   SUM(DATEDIFF(HOUR, record.entry_time, record.exit_time)) AS total '+
-  ' FROM record INNER JOIN worker '+
-  '   ON record.worker_id = worker.id '+
-  ' GROUP BY worker.name'
-);
-
-// To view on screen the results of the query when calling the registry.netuno service
-// we use _out.json(variable)
-_out.json(records)
+```text
+my-app/
+└── server/
+    └── services/
+        ├── workers.js   ← service file
+        └──... 
 ```
 
-> Any service is called by replacing the '.js' extension with '.netuno' or simply by the name of the service without '.js'
+## Creating a Service
 
+Inside the **server/services/** folder, create a new file that will define the URL of your service. For this example, name the file `workers.js`.
 
-If you have followed all the previous steps, the call to service will show something like the following on the screen:
+:::tip
+- Use only **lowercase** letters.
 
-(Note that depending on your browser and the data you entered there may be differences)
+- If the name is compound, separate the words with a **hyphen (-)**.
 
-![servicos-web-rest3.png](/docs/assets/servicos-web-rest3.png)
+- Examples: **workers.js**, **hours-report.js**, **entry-registration.js**.
 
-The next step will be to process the data so that we can make the accounts.
+:::
+## Querying the Database
 
-By replacing the following code:
+Netuno provides the global object **_db** to interact natively with the database.
+
+To execute an SQL query, we use the `_db.query()` method.
 
 ```javascript
-
-// To view on screen the results of the query when calling the registry.netuno service
-// we use _out.json(variable)
-_out.json(records)
+// Performs an SQL query that groups the total hours per worker
+const dbRecords = _db.query(`
+    SELECT DISTINCT
+        worker.name, SUM(DATEDIFF(HOUR, record."start", record."end")) AS total
+    FROM worker INNER JOIN record
+        ON worker.id = record.worker_id
+    WHERE worker.active = true AND record.active = true
+    GROUP BY worker.name
+    ORDER BY total ASC
+`);
 ```
+:::note Understanding the SQL query
 
-The following code excerpt demonstrates what is required for this purpose:
+* **INNER JOIN**: Joins the worker and record tables using the foreign key worker_id.
 
-```javascript
-// Initialize the variable so that it may receive values
-var processedResults = _val.init();
+* **DATEDIFF(HOUR, start, end)**: Calculates the difference in hours between the start and end times.
 
-// Iteration by all records to receive each worker, the respective date and time
-if (records) {
+* **SUM(...) AS total**: Sums all processed hours for each worker.
 
-  for(var index = 0; index < records.size(); index++){
-    
-      var record = records.get(index);
-      
-      var item = _val.init()
-          .set("worker", record.getString("nome"))
-          .set("workerHours", record.getInt("total"))
+* **WHERE ... active = true**: Filters the search to consider only workers and records that have not been deleted (active).
 
-      processedResults.push(item);
+* **GROUP BY worker.name**: Groups the sums by the name of each worker.
 
-  }
+* **ORDER BY total ASC**: Sorts the final result from the smallest to the largest number of hours worked.
+:::
+
+## Processing the Data
+
+The `_db.query()` method returns the data in an internal Neptune format.
+
+To send a clean response in JSON format, it is necessary to transform this data using the global objects **_val.list()** (for arrays) and **_val.map()** (for objects).
+
+```javascript 
+// Creates an empty list to store the processed data
+const list = _val.list();
+
+// Iterates over each record returned by the SQL query
+for (const dbRecord of dbRecords) {
+    list.add(
+        _val.map()
+            .set("name", dbRecord.getString("name"))
+            .set("total", dbRecord.getInt("total"))
+    );
 }
 
-// Display on screen the values
-_out.json(processedResults);
+_out.json(list);
+```
+### Methods Used
+
+| Resource | Description |
+|---------|-----------|
+| **_val.list()** | Creates a list (equivalent to an Array in JS). |
+| **_val.map()** | Creates a key-value object (equivalent to an Object or JSON). |
+| **.add(...)** | Adds a new item to the end of the list. |
+| **.set("chave", valor)** | Sets a new property and its respective value in the map. |
+| **.getString("coluna")** | Extracts the value of the specified column formatted as Text (String). |
+| **.getInt("coluna")** | Extracts the value of the specified column formatted as an integer (Integer). |
+
+
+## Data Return
+
+The **_out** object is used to send the processed list to the client in JSON format.
+
+```javascript
+// Sends the list as an HTTP response in JSON format
+_out.json(list);
 ```
 
-If you have any questions, please do not hesitate to contact us through the means presented at the bottom of the page.
+## Practical Example
+
+In this final step, we consolidate all the concepts learned to create a functional service.
+
+The complete code below queries the database to calculate the total hours worked and returns this data formatted as JSON.
+
+```javascript
+// 1. Query the total hours worked by each active worker
+const dbRecords = _db.query(`
+    SELECT DISTINCT
+        worker.name, SUM(DATEDIFF(HOUR, record."start", record."end")) AS total
+    FROM worker INNER JOIN record
+        ON worker.id = record.worker_id
+    WHERE worker.active = true AND record.active = true
+    GROUP BY worker.name
+    ORDER BY total ASC
+`);
+
+// 2. Create the data structure for the response
+const list = _val.list();
+
+// 3. Processes and maps the results
+for (const dbRecord of dbRecords) {
+    list.add(
+        _val.map()
+            .set("name", dbRecord.getString("name"))
+            .set("total", dbRecord.getInt("total"))
+    );
+}
+// 4. Returns the data in JSON format
+_out.json(list);
+```
+### Accessing the Service
+
+After creating and configuring your service in Netuno, it will be ready to be used and tested directly through the browser or integrated into other applications.
+
+#### Access Methods
+
+The service can be consumed using:
+
+- **Browser:** For quick tests of GET methods.
+
+- **HTTP Clients:** Tools such as Postman, Insomnia, or Thunder Client.
+
+- **Front-end:** Through fetch requests or libraries such as Axios.
+
+#### URL Structure
+
+By default, Netuno automatically maps files created in the services folder to web addresses.
+
+If running locally on the default port, the address will follow this model:
+
+http://localhost:9000/services/workers
+
+:::info How does routing work?
+Netuno uses an automatic routing system based on the file system:
+
+**Source Folder:** All files within server/services/ become routes.
+
+**Mapping:** The file **workers.js** is converted to the endpoint **/services/workers**.
+
+**Extensions:** Note that the **.js** extension is omitted from the URL. Optionally, the **.netuno** suffix can be used (example: /services/workers.netuno), but access without an extension is the recommended default for cleaner results.
+:::
+
+**Example of an HTTP response:**
+
+If there is compatible data in your database, the response returned by the server will be similar to this:
+
+```json
+[
+    {
+        "name": "Leonor Santos",
+        "total": 40
+    },
+    {
+        "name": "Carlos Alves",
+        "total": 35
+    },
+    {
+        "name": "Maria Oliveira",
+        "total": 45
+    }
+]
+```
+
+## Global System Objects
+
+During service development in Netuno, we will frequently use native objects that facilitate communication with the database, request control, and information output.
+
+These objects are pre-configured instances ready for use in your server scripts (.js files). They eliminate the need to import external libraries for fundamental tasks such as SQL queries or reading parameters.
+
+| Object | Description |
+|--------|-----------|
+| **_db**| Execute database operations (query, insert, update, delete). |
+| **_val** | Creation and manipulation of data structures (list, map). |
+| **_out** | Sending responses to the user (JSON, HTML...). |
+| **_req** | Access to parameters sent in the user's request (GET, POST). |
+| **_log**| Log of error or debugging messages in the server console.|
+
+If you have any difficulties or suggestions for improvement, please contact us.
+
+Our team and community are ready to help.
 
 Good development!
+
