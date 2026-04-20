@@ -4,8 +4,6 @@ title: Implementação de tabelas e gráficos
 sidebar_label: Tabelas e Gráficos
 ---
 
-## Introdução
-
 Neste tutorial, criaremos a interface e a lógica de uma aplicação simples, com foco na visualização de dados. O desenvolvimento do projeto abordará os tópicos:
 
 - A criação de **"Formulários"**, **"Campos"** e **"Relações"** para estruturação da base de dados. 
