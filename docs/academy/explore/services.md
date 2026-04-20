@@ -4,8 +4,6 @@ title: Services
 sidebar_label: Services
 ---
 
-## Introduction
-
 REST web services in Netuno are JavaScript scripts executed on the server (back-end) that allow direct interaction with the application's database. Through them, it is possible to:
 
 * Read data from the database
