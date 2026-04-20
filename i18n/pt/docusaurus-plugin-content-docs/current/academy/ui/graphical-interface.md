@@ -4,7 +4,6 @@ id: graphical-interface
 title: Saiba Como Usar a Interface Gráfica
 sidebar_label: Saiba Como
 ---
-## Netuno Admin
 
 A interface do Netuno é dividida em duas áreas de trabalho, com finalidades específicas e diferentes. O modo de *visualização* para interagir e exibir o resultado da aplicação final (Frontend), e o modo de *construção* para desenvolver sua aplicação.
 
