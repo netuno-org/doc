@@ -13,15 +13,70 @@ Para fazer chamadas HTTP internamente para outros serviços ou servidores intern
 
 Inclusive podemos enviar e receber dados em JSON e fazer upload ou download de arquivos.
 
-## Pedido HTTP
-
-### Iniciar a Requisição
+## Inicialização
 
 Para podermos realizar uma chamada HTTP, devemos primeiramente inicia-la, para isso utilizaremos o método init do _remote e então guardaremos o resultado desta operação em uma variável chamada remote para que assim tenhamos como referenciar a requisição:
 
 ```js
 const remote = _remote.init();
 ```
+
+## Configuração
+
+Também podemos definir configurações globais na aplicação, repare neste exemplo completo:
+
+```json
+  ...
+  "remote": { 
+    "exemplo-basic-auth": {
+      "url": "https://exemplo.com/api/rest/exemplo",
+      "form": true,
+      "authorization": {
+        "username": "admin",
+        "password": "pass"
+      },
+      "data": {
+        "param1": "valor 1...",
+        "param2": "valor 2..."
+      }
+    },
+    "exemplo-auth-token": {
+      "urlPrefix": "https://exemplo.com/api",
+      "json": true,
+      "authorization": "Bearer AUTH-TOKEN-AQUI",
+      "connectTimeout": 5000,
+      "readTimeout": 60000,
+    }
+  },
+  ...
+```
+
+Podemos configurar um prefixo de URL (`urlPrefix`) ou a URL completa (`url`).
+
+Podemos definir se a requisição por padrão deve enviar os dados como Form ou JSON.
+
+Suporta enviar autorização básica com login e senha ou token.
+
+E é possível definir os dados padrão que serão enviados (`data`), e ainda os tempos limites de conexão (`connectTimeout`) e leitura (`readTimeout`).
+
+### Como Usar
+
+Para utilizar o recurso Remote com as configurações definidas na aplicação, basta iniciar o recurso com a chave da configuração, por exemplo:
+
+```js
+const resposta = _remote.init("exemplo-basic-auth").post();
+```
+
+E caso seja definida a URL de prefixo:
+
+```js
+const resposta = _remote.init("exemplo-auth-token")
+    .post("/service/data", { param1: 'valor 1', param2: 'valor 2' });
+```
+
+## Pedido HTTP
+
+Veja como podemos iniciar um pedido HTTP utilizando o recurso [Remote](/docs/library/resources/remote).
 
 ### Enviar JSON
 
@@ -34,7 +89,7 @@ const remote = _remote.init().asJSON();
 
 remote.setURL("http://exemplo.com");
 
-remote.post({ dados: 'exemplo', json: true});
+const response = remote.post({ dados: 'exemplo', json: true});
 ```
 
 Assim os dados vão ser enviados como JSON para os métodos HTTP de POST e de PUT, mas para GET e DELETE os dados são sempre enviados na querystring porque para estes métodos não é suportado pelo protocolo HTTP conter corpo com dados.
