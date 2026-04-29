@@ -4,7 +4,6 @@ id: graphical-interface
 title: Learn How to Use the Graphical Interface
 sidebar_label: Get to Know
 ---
-## Netuno Admin
 
 The Netuno interface is divided into two workspaces, each with specific and distinct purposes. *View* mode is for interacting with and displaying the final application result (Frontend), and *Build* mode is for developing your application.
 

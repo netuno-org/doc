@@ -4,8 +4,6 @@ title: Implementing tables and charts
 sidebar_label: Tables and Charts
 ---
 
-## Introduction
-
 In this tutorial, we will create the interface and logic of a simple application, focusing on data visualization. The project development will cover the following topics:
 
 - The creation of **"Forms"**, **"Fields"**, and **"Relationships"** for structuring the database.

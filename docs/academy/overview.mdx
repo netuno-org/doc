@@ -6,74 +6,104 @@ title: Overview
 
 import Image from "@site/src/components/Image";
 
-Learning new technologies is never easy for beginners, where there are increasingly many options and diversity.
+# Netuno Overview
 
-In Netuno, you will find great simplification due to the aggregation of the best available and most used
-solutions, thus reducing the risk of choosing the wrong solution and reducing the time to search for, find, and
-test the ideal solution.
+## Introduction
 
-You will also find considerable flexibility by allowing the use of various programming languages integrated
-with the main databases, with a wide variety of polyglot low-code programming resources that streamline the work.
+Welcome to **Netuno**!
 
-> Do more with fewer lines of code.
+We know that adopting new technologies can be challenging due to the large number of options available on the market. Netuno was created to solve this problem, simplifying development by bringing together the best tools and solutions in one place.
 
-Low-code programming for REST API web services allows for rapid development, enabling the creation of even the
-most complex solutions to leverage integration with other systems, front-end applications, mobile applications,
-portals, stores, etc.
+We are a platform focused on productivity. One of the biggest accelerators in Netuno is the absence of lengthy compilation or build processes.
 
-The speed of development is also due to the fact that server restarts are never necessary; in polyglot
-development, there are no compilations or restarts.
+We offer a fluid and flexible development experience using various programming languages ​​integrated with the main databases.
 
-> Code changes are immediate and in real time.
+Netuno's **low-code** environment is polyglot, allowing you to choose the language that best suits the specific needs of each service.
 
-Supported in all polyglot programming languages, such as:
+> Our motto is simple: **with fewer lines of code, you do more.**
 
-- JavaScript
-- Python
-- Ruby
-- Kotlin
-- Groovy
+## Supported Languages
 
-![Netuno is the platform for learning web development.](/docs/assets/academy/overview.jpg "Netuno is the platform for learning web development.")
+In all development options, you have native support for the following languages:
 
-Netuno simplifies the learning curve through its form creation interface, which intuitively generates the
-database, allows you to view and experiment with the entire data model in the auto-generated back office, and
-serves for refined data consistency testing. Because it has authentication and allows access profiles, it's
-useful for the general management and maintenance of your database.
+* JavaScript
+* Python
+* Ruby
+* Kotlin
+* Groovy
 
-> Auto-generated back office with the database.
+## Productivity at Work
 
-The moment you create the database, you have the back office ready, with relationships, refined search, image
-and file upload, data export, and much more.
+Netuno eliminates development bottlenecks through the following pillars:
 
-> The Netuno platform is open-source, [get started now](/docs/get-started/installation).
+- **Secure Tool Selection:** We reduce your initial research and configuration time. Netuno comes pre-structured with the most efficient solutions currently available.
 
-Those who start will find a fairly short learning curve; in a short time they will be able to perform complex
-tasks.
+- **Multilingual Flexibility:** Work with your preferred programming language within the same ecosystem, using a wide variety of ready-made resources for each specific Web Service.
 
-They will intuitively master databases and web services with high productivity.
+- **Rapid Web Service Creation:** The low-code approach allows you to develop complex REST APIs quickly.
+
+- **Uncomplicated Integration:** Develop the backend quickly and easily connect it to any frontend, mobile applications, corporate portals, or online stores.
+
+- **Real-Time Updates (Hot Reload):** The speed of development is also due to the fact that there is no need to restart the server. In the Netuno ecosystem, there are no compilations and restarts. Code changes are immediate and in real time.
+
+* **Development Agility:** Test your APIs simultaneously while developing. Save the code in Netuno and make the request to your frontend at the same time.
+
+* **Focus on Business Rules:** Let Netuno handle the basic infrastructure and connections. Focus on how your system can deliver more value to the end user.
+
+![Netuno is the platform for learning web development](/docs/assets/academy/overview.jpg "Netuno is the platform for learning web development.")
+
+## Backoffice
+
+The platform simplifies the development journey by unifying the creation of form interfaces with automatic database structuring.
+
+This approach drastically reduces the learning curve, allowing developers to focus on business logic while the platform manages the infrastructure.
+
+This eliminates the need to write manual SQL scripts or create repetitive CRUD (Create, Read, Update, Delete) screens.
+
+When designing a form, you are simultaneously modeling your database and generating a complete administrative interface.
+
+Netuno delivers a ready-to-use administrative ecosystem, which includes:
+
+| Feature | Description |
+| :--- | :--- |
+| **Relationships** | Automatic management of diagrams, foreign keys, and links between tables. |
+| **Advanced Search** | Refined filters for quick record location. |
+| **File Management** | Native components for uploading images and documents. |
+| **Export** | Data extraction in compatible formats for reports. |
+| **Security** | Access profile control and integrated authentication. |
+
+Netuno is **open-source** and allows you to explore the full potential of the tool for free and collaboratively to perform complex tasks with high productivity. [Get started now](/docs/get-started/installation).
 
 ## Database
 
-Database construction is simplified by the automatic generation of the back office, but also by the data diagram.
+Netuno simplifies data management by unifying backoffice creation with the database structure. This construction eliminates the need to manually write complex SQL scripts to create tables.
 
-Netuno automatically generates the data model diagram and displays the fields that create the relationships.
+Through the visual interface, it's possible to define fields and relationships, and the platform synchronizes these definitions with the database, automatically generating the administration interface and data diagram.
+
+## Data Diagram
+
+Netuno automatically generates a dynamic diagram representing your application's data model. This feature is essential for visualizing the information architecture and the links between tables.
 
 <Image src={require("/static/docs/assets/academy/overview/diagram.jpg").default} />
 
-To execute queries, Netuno offers an interface that allows you to save favorite commands, in addition to a log
-of executed commands.
+## Query
+
+Netuno provides a robust and intuitive database console, allowing developers to interact directly with data in an agile and organized way.
+
+It is possible to save complex or recurring commands for quick access in the future.
+The system maintains a history of executed commands, facilitating auditing and recovery of previous query logic.
+
+The console allows the execution of several commands simultaneously. To separate instructions and ensure that Netuno interprets each one correctly, use the double semicolon delimiter `;;`.
 
 <Image src={require("/static/docs/assets/academy/overview/query.jpg").default} />
 
-Multiple database commands can be executed simultaneously.
+## Low-code and Polyglot Development
 
-## Low-code and Polyglot
+Netuno stands out for its flexible architecture, allowing each project to use multiple programming languages ​​simultaneously.
 
-You can create multiple applications, where each application is a project, and in each application you can
-develop with the various languages supported by Netuno.
+It's possible to create several independent applications (projects) and, within each one, write services using the most popular market languages ​​supported by Netuno.
 
-The file extension defines which language engine will be used, for example:
+The platform automatically identifies which execution engine to use based on the file extension created in the server's services folder, for example:
 
 - `.js` - JavaScript
 - `.py` - Python
@@ -81,24 +111,22 @@ The file extension defines which language engine will be used, for example:
 - `.kts` - Kotlin Script
 - `.groovy` - Groovy
 
-See the multilingual services in the demo application that comes standard with Netuno; notice that in the same
-application, multiple languages are used simultaneously:
+## Service Structure
+
+In the demo application that comes with Netuno, you can explore real-world examples of how these languages ​​coexist. The services are located in:
 
 - [apps/demo/server/services/samples](https://github.com/netuno-org/platform/tree/main/bundle/base/apps/demo/server/services/samples)
 
-Use your preferred programming language; for obvious reasons, we do not recommend using multiple programming
-languages in the same project.
-
-The example below demonstrates how to use various polyglot programming features in JavaScript:
+Below is an example of a **JavaScript** service that manages the sending of attachments and user validation:
 
 <Image src={require("/static/docs/assets/academy/overview/code.jpg").default} />
 
-See the documentation for available polyglot programming resources:
+To deepen your understanding of how to get the most out of the platform's multilingual capabilities, explore the resources below:
 
 - [General Documentation of Low-code Polyglot Resources](/docs/category/resources)
 
-Explore, have fun, and contribute by giving your star rating to the main project's code:
+Explore the source code, follow the updates, and **leave a star to support the project:**
 
 - ⭐ [Netuno Platform on GitHub](https://github.com/netuno-org/platform)
 
-If you encounter any problems, please create a new issue; we will be happy to help you.
+If you find any bugs or have suggestions for new features, feel free to open an issue. Our team and community are ready to help.

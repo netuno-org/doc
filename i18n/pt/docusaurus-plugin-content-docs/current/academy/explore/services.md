@@ -4,8 +4,6 @@ title: Serviços
 sidebar_label: Serviços
 ---
 
-## Introdução
-
 Os serviços Web REST no Netuno são scripts em JavaScript executados no servidor (Back-end) que permitem interagir diretamente com a base de dados da aplicação. Através deles, é possível:
 
 * Ler dados da base de dados 
