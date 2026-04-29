@@ -218,6 +218,121 @@ Text with encoding of special characters in JSON transformed to normal text.
 
 ---
 
+## safeFileName
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>safeFileName</span>(<span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Filename that will be converted to ensure security.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **fileName** | _string_ | Filename that will be converted to ensure security. |
+
+##### Return
+
+( _string_ )
+
+Safe file name.
+
+---
+
+## safePath
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>safePath</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Ensures that it is safe to use as a path in the file system or URL, converts \ to /.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **path** | _string_ | The path will be converted to ensure safety. |
+
+##### Return
+
+( _string_ )
+
+Safe path.
+
+---
+
+## safeSystemPath
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>safeSystemPath</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Ensures that it is safe to use as a file path in the system, adapting the / or \ to the correct operating system format.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **path** | _string_ | The path system will be converted to ensure safety. |
+
+##### Return
+
+( _string_ )
+
+Safe system path.
+
+---
+
+## slug
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>slug</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Converts the text to be safely injected into the URL, used to describe the page content in SEO.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ | Content that will be converted. |
+
+##### Return
+
+( _string_ )
+
+Safe text to use in URLs.
+
+---
+
+## stripAccents
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>stripAccents</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Replace accents with the corresponding unaccented letter.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ | Content that will be converted. |
+
+##### Return
+
+( _string_ )
+
+Text without accents.
+
+---
+
 ## textFromBytes
 
 ---
@@ -421,6 +536,29 @@ _convert.toByte(3456)
 ( _byte_ )
 
 Returns the value received in **byte**.
+
+---
+
+## toCharset
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toCharset</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>
+##### Description
+
+Retrieves the object that represents a Java character encoding type.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **name** | _string_ | Name or code of the character encoding type. |
+
+##### Return
+
+( _java.nio.charset.Charset_ )
+
+Returns the object that represents a character encoding type.
 
 ---
 

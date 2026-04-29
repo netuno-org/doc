@@ -218,6 +218,121 @@ Texto com codificação dos caracteres especiais em JSON tranformado para texto 
 
 ---
 
+## safeFileName
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>safeFileName</span>(<span style={{color: '#FF8000'}}>nomeArquivo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Garante que é seguro utilizar como nome de arquivo.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **nomeArquivo** | _string_ | Nome de arquivo que será convertido para garantir a segurança. |
+
+##### Retorno
+
+( _string_ )
+
+Nome de arquivo seguro.
+
+---
+
+## safePath
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>safePath</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Garante que é seguro utilizar como caminho no sistema de arquivos ou na URL, converte \ para /.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **caminho** | _string_ | Caminho que será convertido para garantir a segurança. |
+
+##### Retorno
+
+( _string_ )
+
+Caminho seguro.
+
+---
+
+## safeSystemPath
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>safeSystemPath</span>(<span style={{color: '#FF8000'}}>caminho</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Garante que é seguro utilizar como caminho de arquivos no sistema, adapta a / ou a \ para o formato correto do sistema operacional.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **caminho** | _string_ | Caminho de sistema que será convertido para garantir a segurança. |
+
+##### Retorno
+
+( _string_ )
+
+Caminho de sistema seguro.
+
+---
+
+## slug
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>slug</span>(<span style={{color: '#FF8000'}}>texto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Converte o texto para ser injetado com segurança na URL, utilizado para descrever o conteúdo da página no SEO.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **texto** | _string_ | Conteúdo que será convertido. |
+
+##### Retorno
+
+( _string_ )
+
+Texto seguro para utilizar na URL.
+
+---
+
+## stripAccents
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>stripAccents</span>(<span style={{color: '#FF8000'}}>texto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Substituí acentos pela letra correspondente sem acentuação.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **texto** | _string_ | Conteúdo que será convertido. |
+
+##### Retorno
+
+( _string_ )
+
+Texto sem acentos.
+
+---
+
 ## textFromBytes
 
 ---
@@ -421,6 +536,29 @@ _convert.toByte(3456)
 ( _byte_ )
 
 Retorna o valor recebido em **byte**.
+
+---
+
+## toCharset
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_convert</span>.<span style={{color: '#008000'}}>toCharset</span>(<span style={{color: '#FF8000'}}>nome</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>
+##### Descrição
+
+Obtém o objeto que representa um tipo de codificação de caracteres do Java.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **nome** | _string_ | Nome ou código do tipo de codificação de caracteres. |
+
+##### Retorno
+
+( _java.nio.charset.Charset_ )
+
+Retorna o objeto que representa um tipo de codificação de caracteres.
 
 ---
 

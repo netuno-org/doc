@@ -356,6 +356,18 @@ Current Query object.
 
 ---
 
+## insertAndReturn
+
+---
+
+#### <span style={{color: '#008000'}}>insertAndReturn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
 ## isDebug
 
 ---

@@ -228,12 +228,42 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **bytes** | _string_ |   |
+| **text** | _string_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _string_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
 
 ##### Return
 
@@ -280,6 +310,20 @@ sidebar_label: OutputStream
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **v** | _boolean_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **v** | _byte_ |   |
 
 ##### Return
 
@@ -344,12 +388,42 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **bytes** | _string_ |   |
+| **text** | _string_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _string_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
 
 ##### Return
 
@@ -405,6 +479,38 @@ sidebar_label: OutputStream
 
 ---
 
+#### <span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **format** | _string_ |   |
+| **charset** | _string_ |   |
+| **objects** | _java.lang.Object[]_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **format** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
+| **objects** | _java.lang.Object[]_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
 ## printfAndClose
 
 ---
@@ -415,6 +521,38 @@ sidebar_label: OutputStream
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **format** | _string_ |   |
+| **objects** | _java.lang.Object[]_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>printfAndClose</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **format** | _string_ |   |
+| **charset** | _string_ |   |
+| **objects** | _java.lang.Object[]_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>printfAndClose</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **format** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
 | **objects** | _java.lang.Object[]_ |   |
 
 ##### Return
@@ -520,12 +658,42 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **bytes** | _string_ |   |
+| **text** | _string_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _string_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
 
 ##### Return
 
@@ -580,6 +748,20 @@ sidebar_label: OutputStream
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **v** | _boolean_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **v** | _byte_ |   |
 
 ##### Return
 
@@ -644,12 +826,42 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **bytes** | _string_ |   |
+| **text** | _string_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _string_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
 
 ##### Return
 
@@ -794,122 +1006,6 @@ sidebar_label: OutputStream
 
 ---
 
-## writeAndClose
-
----
-
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **v** | _boolean_ |   |
-
-##### Return
-
-( _[OutputStream](/docs/library/objects/OutputStream)_ )
-
-
----
-
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **v** | _char_ |   |
-
-##### Return
-
-( _[OutputStream](/docs/library/objects/OutputStream)_ )
-
-
----
-
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **v** | _double_ |   |
-
-##### Return
-
-( _[OutputStream](/docs/library/objects/OutputStream)_ )
-
-
----
-
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **v** | _float_ |   |
-
-##### Return
-
-( _[OutputStream](/docs/library/objects/OutputStream)_ )
-
-
----
-
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **v** | _int_ |   |
-
-##### Return
-
-( _[OutputStream](/docs/library/objects/OutputStream)_ )
-
-
----
-
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>bytes</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **bytes** | _string_ |   |
-
-##### Return
-
-( _[OutputStream](/docs/library/objects/OutputStream)_ )
-
-
----
-
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **v** | _long_ |   |
-
-##### Return
-
-( _[OutputStream](/docs/library/objects/OutputStream)_ )
-
-
----
-
-#### <span style={{color: '#008000'}}>writeAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
-##### Attributes
-
-| NAME | TYPE | DESCRIPTION |
-|---|---|---|
-| **v** | _short_ |   |
-
-##### Return
-
-( _[OutputStream](/docs/library/objects/OutputStream)_ )
-
-
----
-
 ## writeBoolean
 
 ---
@@ -950,12 +1046,42 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeBytes</span>(<span style={{color: '#FF8000'}}>s</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeBytes</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **s** | _string_ |   |
+| **text** | _string_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>writeBytes</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _string_ |   |
+
+##### Return
+
+( _[OutputStream](/docs/library/objects/OutputStream)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>writeBytes</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
 
 ##### Return
 
@@ -986,12 +1112,12 @@ sidebar_label: OutputStream
 
 ---
 
-#### <span style={{color: '#008000'}}>writeChars</span>(<span style={{color: '#FF8000'}}>s</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+#### <span style={{color: '#008000'}}>writeChars</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **s** | _string_ |   |
+| **text** | _string_ |   |
 
 ##### Return
 

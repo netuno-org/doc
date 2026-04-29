@@ -278,11 +278,11 @@ Retorna verdadeiro se o escape HTML estiver ativado, caso contrário, retorna fa
 
 ---
 
-## getJSONIdentFactor
+## getJSONIndentFactor
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>getJSONIdentFactor</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>getJSONIndentFactor</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 Método auxiliar que retorna o mesmo valor que jsonIdentFactor(), mantendo a compatibilidade com as convenções de nomenclatura do estilo JavaBeans.
@@ -492,11 +492,11 @@ Retorna o próprio objeto Out
 
 ---
 
-## jsonIdentFactor
+## jsonIndentFactor
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>jsonIdentFactor</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>jsonIndentFactor</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Descrição
 
 O valor atual do fator de indentação utilizado ao gerar a resposta JSON.
@@ -510,7 +510,7 @@ Retorna o valor do fator de indentação JSON.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>jsonIdentFactor</span>(<span style={{color: '#FF8000'}}>int</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>jsonIndentFactor</span>(<span style={{color: '#FF8000'}}>int</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Descrição
 
 Define o fator de indentação usado ao gerar a resposta JSON.
@@ -720,6 +720,36 @@ Saída de dados atual.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _string_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>print</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Descrição
 
@@ -758,6 +788,180 @@ Saída de dados atual.
 
 ---
 
+## printAndClose
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _boolean_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _byte_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _char_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _double_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _float_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _int_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **text** | _java.lang.Object_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **text** | _string_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _string_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **text** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _long_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _short_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
 ## printf
 
 ---
@@ -768,6 +972,38 @@ Saída de dados atual.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **format** | _string_ |   |
+| **objects** | _java.lang.Object[]_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **format** | _string_ |   |
+| **charset** | _string_ |   |
+| **objects** | _java.lang.Object[]_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printf</span>(<span style={{color: '#FF8000'}}>format</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>, <span style={{color: '#FF8000'}}>objects</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **format** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
 | **objects** | _java.lang.Object[]_ |   |
 
 ##### Retorno
@@ -946,6 +1182,36 @@ Saída de dados atual.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>line</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **line** | _string_ |   |
+| **charset** | _string_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>line</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **line** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>println</span>(<span style={{color: '#FF8000'}}>bool</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Descrição
 
@@ -984,6 +1250,180 @@ Saída de dados atual.
 
 ---
 
+## printlnAndClose
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _boolean_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>byte</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _byte_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>char</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _char_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>double</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _double_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>float</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _float_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _int_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>line</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **line** | _java.lang.Object_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>line</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **line** | _string_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>line</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **line** | _string_ |   |
+| **charset** | _string_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>line</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **line** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _long_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>printlnAndClose</span>(<span style={{color: '#FF8000'}}>v</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>short</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **v** | _short_ |   |
+
+##### Retorno
+
+( _[Out](/docs/library/resources/out)_ )
+
+
+---
+
 ## setJSONHTMLEscape
 
 ---
@@ -1010,11 +1450,11 @@ Retorna o próprio objeto Out
 
 ---
 
-## setJSONIdentFactor
+## setJSONIndentFactor
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>setJSONIdentFactor</span>(<span style={{color: '#FF8000'}}>jsonIdentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>setJSONIndentFactor</span>(<span style={{color: '#FF8000'}}>jsonIdentFactor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Descrição
 
 Define o fator de recuo (espaçamento) usado ao gerar uma saída JSON com formatação bonita.

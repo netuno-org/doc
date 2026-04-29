@@ -157,6 +157,21 @@ sidebar_label: InputStream
 
 ---
 
+#### <span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>in</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
 #### <span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>r</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.Reader</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
@@ -171,11 +186,67 @@ sidebar_label: InputStream
 
 ---
 
+#### <span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _java.nio.charset.Charset_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
 ## readAllAndClose
 
 ---
 
 #### <span style={{color: '#008000'}}>readAllAndClose</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>readAllAndClose</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>readAllAndClose</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _java.nio.charset.Charset_ |   |
+
 ##### Retorno
 
 ( _string_ )
@@ -300,6 +371,21 @@ sidebar_label: InputStream
 
 ---
 
+#### <span style={{color: '#008000'}}>readFromFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **path** | _java.io.File_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
 #### <span style={{color: '#008000'}}>readFromFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
@@ -329,6 +415,21 @@ sidebar_label: InputStream
 
 ---
 
+#### <span style={{color: '#008000'}}>readFromFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **path** | _string_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
 #### <span style={{color: '#008000'}}>readFromFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.file.Path</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
@@ -350,6 +451,21 @@ sidebar_label: InputStream
 |---|---|---|
 | **path** | _java.nio.file.Path_ |   |
 | **charset** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>readFromFile</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.file.Path</span>, <span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **path** | _java.nio.file.Path_ |   |
+| **charset** | _java.nio.charset.Charset_ |   |
 
 ##### Retorno
 
@@ -430,6 +546,20 @@ sidebar_label: InputStream
 
 ---
 
+#### <span style={{color: '#008000'}}>readString</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
 #### <span style={{color: '#008000'}}>readString</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
@@ -449,6 +579,20 @@ sidebar_label: InputStream
 ---
 
 #### <span style={{color: '#008000'}}>readStringAndClose</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>readStringAndClose</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _string_ |   |
+
 ##### Retorno
 
 ( _string_ )

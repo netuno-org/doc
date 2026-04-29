@@ -20,6 +20,18 @@ Objeto que contém os detalhes das mensagens obtidas através dos clientes nas c
 
 ---
 
+## data
+
+---
+
+#### <span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
 ## getContent
 
 ---
@@ -28,6 +40,18 @@ Objeto que contém os detalhes das mensagens obtidas através dos clientes nas c
 ##### Retorno
 
 ( _java.lang.Object_ )
+
+
+---
+
+## getData
+
+---
+
+#### <span style={{color: '#008000'}}>getData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---

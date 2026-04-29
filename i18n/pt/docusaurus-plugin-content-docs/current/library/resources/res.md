@@ -4864,6 +4864,44 @@ Se está em modo apenas leitura ou não.
 
 ---
 
+## reversed
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>reversed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
+##### Retorno
+
+( _java.util.List_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>reversed</span>(<span style={{color: '#FF8000'}}>cls</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **cls** | _java.lang.Class_ |   |
+
+##### Retorno
+
+( _java.util.List_ )
+
+
+---
+
+## reversedValues
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_res</span>.<span style={{color: '#008000'}}>reversedValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
 ## safeString
 
 ---

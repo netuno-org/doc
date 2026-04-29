@@ -8,6 +8,18 @@ Definição da configuração do objeto Relation para configurar relacionamentos
 
 ---
 
+## getAlias
+
+---
+
+#### <span style={{color: '#008000'}}>getAlias</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Return
+
+( _string_ )
+
+
+---
+
 ## getColumn
 
 ---
@@ -159,6 +171,24 @@ Defines a second level of RIGHT JOIN relationship on the current object.
 ( _[Relationship](/docs/library/objects/Relationship)_ )
 
 Current Relation object.
+
+---
+
+## setAlias
+
+---
+
+#### <span style={{color: '#008000'}}>setAlias</span>(<span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **alias** | _string_ |   |
+
+##### Return
+
+( _[Relationship](/docs/library/objects/Relationship)_ )
+
 
 ---
 

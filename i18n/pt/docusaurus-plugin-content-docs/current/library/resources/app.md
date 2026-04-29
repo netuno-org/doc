@@ -8,6 +8,42 @@ Parametrizações gerais da aplicação.
 
 ---
 
+## buildServiceFullURL
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>buildServiceFullURL</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **path** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
+## buildServiceURL
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>buildServiceURL</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **path** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
 ## config
 
 ---

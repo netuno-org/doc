@@ -5178,6 +5178,44 @@ A nova instância do recurso SMTP com base na configuração do STMP `default`.
 
 ---
 
+## reversed
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_header</span>.<span style={{color: '#008000'}}>reversed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
+##### Retorno
+
+( _java.util.List_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_header</span>.<span style={{color: '#008000'}}>reversed</span>(<span style={{color: '#FF8000'}}>cls</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Class&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **cls** | _java.lang.Class_ |   |
+
+##### Retorno
+
+( _java.util.List_ )
+
+
+---
+
+## reversedValues
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_header</span>.<span style={{color: '#008000'}}>reversedValues</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
 ## safeString
 
 ---

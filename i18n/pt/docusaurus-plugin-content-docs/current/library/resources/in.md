@@ -96,11 +96,67 @@ Recurso de entrada de dados dos pedidos HTTP.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_in</span>.<span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_in</span>.<span style={{color: '#008000'}}>readAll</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _java.nio.charset.Charset_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
 ## readAllAndClose
 
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_in</span>.<span style={{color: '#008000'}}>readAllAndClose</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_in</span>.<span style={{color: '#008000'}}>readAllAndClose</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_in</span>.<span style={{color: '#008000'}}>readAllAndClose</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _java.nio.charset.Charset_ |   |
+
 ##### Retorno
 
 ( _string_ )
@@ -156,6 +212,20 @@ Recurso de entrada de dados dos pedidos HTTP.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_in</span>.<span style={{color: '#008000'}}>readString</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _string_ |   |
+
+##### Retorno
+
+( _string_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_in</span>.<span style={{color: '#008000'}}>readString</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.nio.charset.Charset</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Atributos
 
@@ -175,6 +245,20 @@ Recurso de entrada de dados dos pedidos HTTP.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_in</span>.<span style={{color: '#008000'}}>readStringAndClose</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_in</span>.<span style={{color: '#008000'}}>readStringAndClose</span>(<span style={{color: '#FF8000'}}>charset</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **charset** | _string_ |   |
+
 ##### Retorno
 
 ( _string_ )

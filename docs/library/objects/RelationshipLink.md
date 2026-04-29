@@ -8,6 +8,18 @@ Definição da configuração do objeto RelationLink para configurar realcioname
 
 ---
 
+## getAlias
+
+---
+
+#### <span style={{color: '#008000'}}>getAlias</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Return
+
+( _string_ )
+
+
+---
+
 ## getFormLink
 
 ---
@@ -56,6 +68,24 @@ Returns whether the current object has sub relationships.
 ( _boolean_ )
 
 Whether you have it or not.
+
+---
+
+## setAlias
+
+---
+
+#### <span style={{color: '#008000'}}>setAlias</span>(<span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](/docs/library/objects/RelationshipLink)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **alias** | _string_ |   |
+
+##### Return
+
+( _[RelationshipLink](/docs/library/objects/RelationshipLink)_ )
+
 
 ---
 
