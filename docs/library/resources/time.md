@@ -1919,6 +1919,25 @@ Converte o objeeto passado para TemporalAcessor.
 
 ---
 
+## periodBetween
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_time</span>.<span style={{color: '#008000'}}>periodBetween</span>(<span style={{color: '#FF8000'}}>startDateInclusive</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>, <span style={{color: '#FF8000'}}>endDateExclusive</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.Period</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **startDateInclusive** | _java.time.LocalDate_ |   |
+| **endDateExclusive** | _java.time.LocalDate_ |   |
+
+##### Return
+
+( _java.time.Period_ )
+
+
+---
+
 ## periodFrom
 
 ---

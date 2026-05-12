@@ -142,6 +142,214 @@ Relational operator.
 
 ---
 
+## equals
+
+---
+
+#### <span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Description
+
+Relational operator that filters any occurrence that is exact to the given pattern.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _boolean_ | Conditional value. |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+Relational operator.
+
+---
+
+#### <span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Number</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Description
+
+Relational operator that filters any occurrence that is exact to the given pattern.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.lang.Number_ | Conditional value. |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+Relational operator.
+
+---
+
+#### <span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **arg0** | _java.lang.Object_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Description
+
+Relational operator that filters any occurrence that is exact to the given pattern.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _string_ | Conditional value. |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+Relational operator.
+
+---
+
+#### <span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Description
+
+Relational operator that filters any occurrence that is exact to the given pattern.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.sql.Date_ | Conditional value. |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+Relational operator.
+
+---
+
+#### <span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Time</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Description
+
+Relational operator that filters any occurrence that is exact to the given pattern.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.sql.Time_ | Conditional value. |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+Relational operator.
+
+---
+
+#### <span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Timestamp</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Description
+
+Relational operator that filters any occurrence that is exact to the given pattern.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.sql.Timestamp_ | Conditional value. |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+Relational operator.
+
+---
+
+#### <span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Description
+
+Relational operator that filters any occurrence that is exact to the given pattern.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.time.LocalDate_ | Conditional value. |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+Relational operator.
+
+---
+
+#### <span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDateTime</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Description
+
+Relational operator that filters any occurrence that is exact to the given pattern.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.time.LocalDateTime_ | Conditional value. |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+Relational operator.
+
+---
+
+#### <span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalTime</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Description
+
+Relational operator that filters any occurrence that is exact to the given pattern.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.time.LocalTime_ | Conditional value. |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+Relational operator.
+
+---
+
+#### <span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.UUID</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Description
+
+Relational operator that filters any occurrence that is exact to the given pattern.
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.util.UUID_ | Conditional value. |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+Relational operator.
+
+---
+
 ## getConditions
 
 ---
@@ -328,6 +536,60 @@ Relational operator.
 
 ---
 
+## notContains
+
+---
+
+#### <span style={{color: '#008000'}}>notContains</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.lang.Object_ |   |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+
+---
+
+## notEndsWith
+
+---
+
+#### <span style={{color: '#008000'}}>notEndsWith</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.lang.Object_ |   |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+
+---
+
+## notEqual
+
+---
+
+#### <span style={{color: '#008000'}}>notEqual</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.lang.Object_ |   |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
+
+---
+
 ## notEquals
 
 ---
@@ -385,6 +647,24 @@ Relational operator that filters any occurrence that is different any of the giv
 ( _[Where](/docs/library/objects/Where)_ )
 
 Relational operator.
+
+---
+
+## notStartsWith
+
+---
+
+#### <span style={{color: '#008000'}}>notStartsWith</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **value** | _java.lang.Object_ |   |
+
+##### Return
+
+( _[Where](/docs/library/objects/Where)_ )
+
 
 ---
 

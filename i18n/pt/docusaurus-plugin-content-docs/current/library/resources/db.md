@@ -278,7 +278,7 @@ Novo objeto do tipo: _java.util.Date_
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>date</span>(<span style={{color: '#FF8000'}}>localDateTime</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>date</span>(<span style={{color: '#FF8000'}}>localDate</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
 ##### Descrição
 
 Através do objeto LocalDateTime cria um novo objeto Date para ser utilizado em operações de base de dados.
@@ -287,7 +287,7 @@ Através do objeto LocalDateTime cria um novo objeto Date para ser utilizado em 
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **localDateTime** | _java.time.LocalDate_ | Objeto do tipo: _java.time.LocalDateTime_ |
+| **localDate** | _java.time.LocalDate_ | Objeto do tipo: _java.time.LocalDate_ |
 
 ##### Retorno
 
@@ -1544,6 +1544,21 @@ Objeto Link.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formLink** | _string_ |   |
+| **alias** | _string_ |   |
+
+##### Retorno
+
+( _[Link](/docs/library/objects/Link)_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Atributos
 
@@ -1599,6 +1614,22 @@ Relação do tipo Many To One.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>manyToOne</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **tableName** | _string_ |   |
+| **alias** | _string_ |   |
+| **column** | _string_ |   |
+
+##### Retorno
+
+( _[Relationship](/docs/library/objects/Relationship)_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>manyToOne</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Atributos
 
@@ -1636,6 +1667,22 @@ Retorna uma nova relação do tipo One To Many.
 ( _[Relationship](/docs/library/objects/Relationship)_ )
 
 Relação do tipo One To Many.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>oneToMany</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **tableName** | _string_ |   |
+| **alias** | _string_ |   |
+| **column** | _string_ |   |
+
+##### Retorno
+
+( _[Relationship](/docs/library/objects/Relationship)_ )
+
 
 ---
 
@@ -2416,7 +2463,10 @@ Executa a atualização de um valor caso ele exista baseando-se numa chave prim�
 ##### Como Usar
 
 ```javascript
-// Se existir algum dado na tabela worker com o campo name (a chave primária nesta tabela)// igual ao inserido na query todos os dados serão atualizados// Se não existir algum dado a informação será inserida na tabelavar dadosStore = _db.store(
+// Se existir algum dado na tabela worker com o campo name (a chave primária nesta tabela)
+// igual ao inserido na query todos os dados serão atualizados
+// Se não existir algum dado a informação será inserida na tabela
+var dadosStore = _db.store(
     'worker',
     _val.map()
         .set('name','Netuno')
@@ -2447,7 +2497,10 @@ Executa a atualização de um valor caso ele exista baseando-se numa chave prim�
 ##### Como Usar
 
 ```javascript
-// Se existir algum dado na tabela worker com o campo name (a chave primária nesta tabela)// igual ao inserido na query todos os dados serão atualizados// Se não existir algum dado a informação será inserida na tabelavar dadosStore = _db.store(
+// Se existir algum dado na tabela worker com o campo name (a chave primária nesta tabela)
+// igual ao inserido na query todos os dados serão atualizados
+// Se não existir algum dado a informação será inserida na tabela
+var dadosStore = _db.store(
     'worker',
     _val.map()
         .set('name','Netuno')

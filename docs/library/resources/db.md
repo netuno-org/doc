@@ -278,7 +278,7 @@ New object of type: _java.util.Date_
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>date</span>(<span style={{color: '#FF8000'}}>localDateTime</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>date</span>(<span style={{color: '#FF8000'}}>localDate</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.time.LocalDate</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.sql.Date</span>
 ##### Description
 
 Using the LocalDateTime object, it creates a new Date object to be used in database operations.
@@ -287,7 +287,7 @@ Using the LocalDateTime object, it creates a new Date object to be used in datab
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **localDateTime** | _java.time.LocalDate_ | Object of type: _java.time.LocalDateTime_ |
+| **localDate** | _java.time.LocalDate_ | Object of type: _java.time.LocalDate_ |
 
 ##### Return
 
@@ -1544,6 +1544,21 @@ Objeto Link.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **formLink** | _string_ |   |
+| **alias** | _string_ |   |
+
+##### Return
+
+( _[Link](/docs/library/objects/Link)_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Attributes
 
@@ -1599,6 +1614,22 @@ Many To One relationship.
 
 ---
 
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>manyToOne</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **tableName** | _string_ |   |
+| **alias** | _string_ |   |
+| **column** | _string_ |   |
+
+##### Return
+
+( _[Relationship](/docs/library/objects/Relationship)_ )
+
+
+---
+
 #### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>manyToOne</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Attributes
 
@@ -1636,6 +1667,22 @@ Returns a new One To Many relationship.
 ( _[Relationship](/docs/library/objects/Relationship)_ )
 
 One To Many relationship.
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>oneToMany</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **tableName** | _string_ |   |
+| **alias** | _string_ |   |
+| **column** | _string_ |   |
+
+##### Return
+
+( _[Relationship](/docs/library/objects/Relationship)_ )
+
 
 ---
 
@@ -2417,7 +2464,10 @@ Performs an update of a value if it exists based on a primary key or an insert w
 ##### How To Use
 
 ```javascript
-// If there is some data on table worker with the name field (the primary key on this table) // equal to the added all the data will be updated// If there isn't it will instead be insertedvar storedData = _db.store(
+// If there is some data on table worker with the name field (the primary key on this table) 
+// equal to the added all the data will be updated
+// If there isn't it will instead be inserted
+var storedData = _db.store(
     'worker',
     _val.map()
         .set('name','Netuno')
@@ -2449,7 +2499,10 @@ Performs an update of a value if it exists based on a primary key or an insert w
 ##### How To Use
 
 ```javascript
-// If there is some data on table worker with the name field (the primary key on this table) // equal to the added all the data will be updated// If there isn't it will instead be insertedvar storedData = _db.store(
+// If there is some data on table worker with the name field (the primary key on this table) 
+// equal to the added all the data will be updated
+// If there isn't it will instead be inserted
+var storedData = _db.store(
     'worker',
     _val.map()
         .set('name','Netuno')

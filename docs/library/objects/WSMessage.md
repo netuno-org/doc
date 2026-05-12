@@ -20,6 +20,18 @@ Object containing the details of messages obtained through clients in WebSocket 
 
 ---
 
+## data
+
+---
+
+#### <span style={{color: '#008000'}}>data</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
 ## getContent
 
 ---
@@ -28,6 +40,18 @@ Object containing the details of messages obtained through clients in WebSocket 
 ##### Return
 
 ( _java.lang.Object_ )
+
+
+---
+
+## getData
+
+---
+
+#### <span style={{color: '#008000'}}>getData</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
 
 
 ---
