@@ -56,6 +56,38 @@ Application URL management resource.
 
 ---
 
+## equals
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>arg0</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **arg0** | _java.lang.Object_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_url</span>.<span style={{color: '#008000'}}>equals</span>(<span style={{color: '#FF8000'}}>string</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **string** | _string_ |   |
+
+##### Return
+
+( _boolean_ )
+
+
+---
+
 ## equalsIgnoreCase
 
 ---
