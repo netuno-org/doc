@@ -5,209 +5,288 @@ title: Instalação
 sidebar_label: Instalação
 ---
 
-Instalação da plataforma low-code Netuno, poliglota e open source.
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-> Construa aplicações full stack robustas com low-code.
+## Introdução
 
-## Pré-requisitos
+Bem-vindo ao guia de instalação do **Netuno**, a plataforma *low-code*, poliglota e *open source* desenvolvida para acelerar a criação dos seus projetos e facilitar a configuração do ambiente de desenvolvimento.
 
-O Netuno utiliza o **Java** instalado apenas para executar o processo de instalação inicial.
+Aqui você constrói aplicações full-stack robustas de forma ágil, combinando a velocidade do low-code com o poder da codificação tradicional.
 
-Durante a instalação do Netuno é automaticamente instalada a [GraalVM](https://www.graalvm.org/) na pasta do Netuno,
-sendo o **Java** da [GraalVM](https://www.graalvm.org/) utilizado para a execução do Netuno posteriormente.
+Antes de começar, verifique o que precisa ter instalado no seu computador.
 
-> A instalação dos pré-requisitos de front-end são opcionais, apenas para o desenvolvimento full stack.
+### Pré-requisitos
 
-### Back-end: Java
+- **Java** *(Apenas para o instalador)*
 
-Certifique-se que tem o **Java** instalado, executando no terminal o commando:
+É necessário ter o **Java** previamente instalado no seu sistema operacional. Ele será usado **exclusivamente** para rodar o script inicial de instalação do Netuno.
 
-`java -version`
+- **GraalVM** *(Instalação Automática)* 
 
-A versão do **Java** deverá ser a **11 ou superior**.
+Durante a instalação, o motor **GraalVM** é baixado e configurado automaticamente dentro da própria pasta do Netuno. A partir desse ponto, o Java do GraalVM isolado será utilizado para rodar a plataforma, garantindo estabilidade e alta performance sem interferir nas configurações globais da sua máquina.
 
-Caso não tenha instalado, então instale o **Java open source** para **Windows** e **macOS** em:
+Para saber mais sobre a tecnologia, acesse: [GraalVM](https://www.graalvm.org/).
 
-- <a href="https://adoptium.net/pt-BR" target="_blank">Java OpenJDK Eclipse Temurin</a>
+:::info Requisitos de Frontend são Opcionais
+A instalação de ferramentas de frontend (como Node.js, NPM ou Yarn) é totalmente opcional. Você só precisará configurá-las se o seu objetivo for desenvolver interfaces avançadas em modo full-stack.
+:::
 
-No **Linux** **Ubuntu** ou **Debian**, utilize o comando:
+### Backend - Java
 
-- `apt install default-jdk-headless`
+Esta etapa garante que o ambiente esteja preparado para executar o instalador da plataforma. É necessário ter o **Java versão 11 ou superior** instalado.
 
-### Front-end: Bun
+Verifique se o Java já está instalado executando o comando abaixo no terminal:
 
-Não é obrigatório, mas é altamente recomendado que o **Bun** esteja instalado para poder compilar a UI 
-(_user interface_, _front-end_, _website_) das aplicações.
+```bash
+java -version
+```
 
-Em vez de utilizar o **Node** e o **NPM**, o **Bun** é mais moderno, otimizado e rápido, assim no geral é bem 
-superior porque demonstra melhores resultados práticos para o desempenho do desenvolvimento.
+Caso não esteja instalado, recomendamos a instalação do **Java open source**:
 
-- Veja como [instalar o Bun](/docs/academy/website/bun).
+- Windows e macOS: [Java OpenJDK Eclipse Temurin](https://adoptium.net/pt-BR)
 
-Todos os projetos de exemplo do Netuno e na geração de novas aplicações, estão adaptados para funcionar com o 
-Bun.
+- Linux (Ubuntu / Debian):
 
-> Certifique que utiliza as versões mais recentes das tecnologias.
+```bash
+apt install default-jdk-headless
+```
 
-Caso queira utilizar o **Node** e o **NPM**, **PNPM**, **Yarn**, ou outra tecnologia qualquer, é possível, fica 
-ao seu critério.
+### Frontend - Bun
 
-## Considerações
+Para desenvolver interfaces de usuário (UI / Frontend), recomendamos o uso do **Bun**, a ferramenta padrão oficial do ecossistema Netuno para compilação de frontend.
 
-Ao executar o comando de instalação abaixo será alterado o caminho no terminal de onde estava para dentro da nova pasta do `📁 netuno` que será criada.
+#### Por que usar o Bun?
 
-Caso precise executar novamente o comando de instalação será preciso corrigir o caminho e provavelmente remover a pasta do `📁 netuno` que foi criada.
+O **Bun** é uma alternativa moderna e altamente otimizada ao Node.js. Ele se destaca no ambiente Netuno por oferecer:
 
-## Versão Estável
+- **Alta Performance:** Execução e instalação de dependências visivelmente mais rápidas.
+- **Produtividade:** Melhor desempenho no fluxo diário de desenvolvimento de interfaces.
+- **Integração Nativa:** Todos os projetos de exemplo e templates do Netuno já vêm pré-configurados para funcionar com Bun.
 
-A versão estável é uma versão segura e pronta para ser utilizada em produção.
+Acesse o guia em: [Instalação do Bun](/docs/academy/website/bun)
 
-Para instalar a versão estável siga os passos de instalação abaixo:
+O Netuno não engessa suas escolhas tecnológicas. Caso prefira, **é possível utilizar Node.js com NPM, PNPM, Yarn** ou qualquer outro gerenciador de pacotes. A escolha da stack de frontend fica inteiramente a seu critério.
+
+:::tip MANTENHA AS FERRAMENTAS ATUALIZADAS
+Independentemente da tecnologia escolhida, utilize sempre as versões mais recentes para garantir compatibilidade, segurança e performance.
+:::
+
+## Instalação
+
+Escolha a versão desejada. A seleção feita aqui se aplicará a todos os blocos de comando desta página.
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Versão Estável" default>
+
+A **Versão Estável** é a edição homologada do Netuno. Ela passou por testes rigorosos e está totalmente pronta para uso em ambientes de produção.
+
+</TabItem>
+  <TabItem value="testing" label="Versão Em Teste">
+
+:::danger NÃO USAR EM PRODUÇÃO
+A **Versão em Teste** contém as funcionalidades mais recentes e as implementações em andamento. Por ser experimental, pode apresentar instabilidades. Recomendamos seu uso apenas para conhecer novas funcionalidades, realizar testes ou contribuir com o ecossistema da plataforma.
+:::
+
+  </TabItem>
+</Tabs>
+
+
+### Comportamento 
+
+Antes de prosseguir, entenda como o script interage com o seu terminal:
+
+1. **Criação da pasta:** O script cria automaticamente uma pasta chamada `netuno`
+   no diretório onde o terminal está aberto.
+2. **Navegação automática:** Após a criação, o terminal é redirecionado para
+   dentro dessa pasta (equivalente a executar `cd netuno`).
+
+:::caution Recuperando uma instalação com falha
+Se a instalação for interrompida, o terminal já estará posicionado **dentro**
+da pasta com falha. Executar o comando novamente criará uma pasta dentro da outra.
+:::
+
+Para limpar o ambiente e recomeçar do zero:
+
+**1. Volte um nível no terminal:**
+
+```bash
+cd ..
+```
+
+**2. Remova a pasta com falha:**
+
+<Tabs groupId="os">
+  <TabItem value="linux-mac" label="Linux ou macOS" default>
+
+```bash
+rm -rf netuno
+```
+
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+rmdir /s /q netuno
+```
+
+  </TabItem>
+</Tabs>
+
+**3. Reinicie a instalação**.
+
 
 ### Linux ou macOS
 
-É comum haver o comando `cURL` e o `Wget`, execute no terminal para verificar.
+A maioria das distribuições Linux e o macOS já incluem o **cURL** ou o **Wget** por padrão. Verifique qual está disponível:
 
-Para criar a pasta do Netuno, execute no **terminal**:
+```bash
+curl --version
+```
+```bash
+wget --version
+```
 
-```plaintext
+Siga as etapas abaixo:
+
+**1. Crie a pasta e acesse-a:**
+
+```bash
 mkdir -p netuno && cd netuno
 ```
 
-Escolha uma dos seguintes métodos de **download**:
+**2. Baixe o instalador** (escolha apenas um método):
 
-* Download com o *cURL*:
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Versão Estável" default>
 
-```plaintext
+**Com cURL:**
+```bash
 curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -o netuno-setup.jar
 ```
 
-* Download com o *Wget*:
-
-```plaintext
+**Com Wget:**
+```bash
 wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
 ```
 
-Depois de realizar um dos passos anteriores, avance para a **instalação do Netuno**:
+  </TabItem>
+  <TabItem value="testing" label="Versão Em Teste">
 
-* Instalação da versão **oficial atual e estável**:
+**Com cURL:**
+```bash
+curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -o netuno-setup.jar
+```
 
-```plaintext
+**Com Wget:**
+```bash
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
+```
+
+  </TabItem>
+</Tabs>
+
+**3. Execute a instalação:**
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Versão Estável" default>
+
+```bash
 java -jar netuno-setup.jar install
 ```
 
-> No **macOS**, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
-> `sudo xattr -r -d com.apple.quarantine .`
+  </TabItem>
+  <TabItem value="testing" label="Versão Em Teste">
+
+```bash
+java -jar netuno-setup.jar install version=testing
+```
+
+  </TabItem>
+</Tabs>
+
+:::caution ATENÇÃO 
+O macOS possui um mecanismo de segurança nativo (Gatekeeper) que pode bloquear aplicativos baixados via terminal.
+:::
+
+Para garantir que o Netuno funcione sem erros de permissão, execute o comando abaixo imediatamente após o passo 3, ainda dentro da pasta `netuno`.
+
+```bash
+sudo xattr -r -d com.apple.quarantine .
+```
+
+O sistema solicitará a senha de administrador do seu Mac para confirmar.
 
 ### Windows
 
-Para instalar a versão **atual em teste** no terminal do **PowerShell**, ou indo no menu iniciar e digitando: `powershell`
+Utilizaremos o **PowerShell** para realizar o download e a instalação. Abra o PowerShell pelo menu Iniciar digitando `powershell`.
 
-Agora copie e cole o commando abaixo e siga as instruções de **instalação**:
+**1. Crie a pasta, acesse-a e baixe o instalador**. Copie o bloco completo e pressione Enter:
 
-```plaintext
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Versão Estável" default>
+
+```powershell
 md netuno; cd netuno
 Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar" -OutFile "netuno-setup.jar"
 ```
 
-Depois de realizar o download anterior, avance para a **instalação do Netuno**:
+  </TabItem>
+  <TabItem value="testing" label="Versão Em Teste">
 
-* Instalação da versão **oficial atual e estável**:
-
-```plaintext
-java -jar netuno-setup.jar install
-```
-
-## Versão Em Teste
-
-A versão atual em teste é uma versão em desenvolvimento, contém as funcionalidades mais recentes mas pode ser instável.
-
-Para instalar a versão em desenvolvimento siga os passos de instalação abaixo:
-
-### Linux ou macOS
-
-É comum haver o comando `cURL` e o `Wget`, execute no terminal para verificar.
-
-Para criar a pasta do Netuno, execute no **terminal**:
-
-```plaintext
-mkdir -p netuno && cd netuno
-```
-
-Escolha uma dos seguintes métodos de **download**:
-
-* Download com o *cURL*:
-
-```plaintext
-curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -o netuno-setup.jar
-```
-
-* Download com o *Wget*:
-
-```plaintext
-wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
-```
-
-Depois de realizar um dos passos anteriores, avance para a **instalação do Netuno**:
-
-* Instalação da versão **atual em teste**:
-
-```plaintext
-java -jar netuno-setup.jar install version=testing
-```
-
-> No **macOS**, você precisa desabilitar a quarentena, portanto, dentro da pasta inicial do `netuno`, execute:
-> `sudo xattr -r -d com.apple.quarantine .`
-
-### Windows
-
-Para instalar a versão **atual em teste** no terminal do **PowerShell**, ou indo no menu iniciar e digitando: `powershell`
-
-Agora copie e cole o commando abaixo e siga as instruções de **instalação**:
-
-```plaintext
+```powershell
 md netuno; cd netuno
 Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar" -OutFile "netuno-setup.jar"
 ```
 
-Depois de realizar o download anterior, avance para a **instalação do Netuno**:
+  </TabItem>
+</Tabs>
 
-* Instalação da versão **atual em teste**:
+**2. Execute a instalação:**
 
-```plaintext
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Versão Estável" default>
+
+```powershell
+java -jar netuno-setup.jar install
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Versão Em Teste">
+
+```powershell
 java -jar netuno-setup.jar install version=testing
 ```
 
+  </TabItem>
+</Tabs>
+
+:::caution ATENÇÃO 
+A instalação padrão geralmente não exige privilégios elevados. Porém, se receber uma mensagem de "Acesso Negado", feche o PowerShell, reabra-o como **Administrador** e execute o comando novamente.
+:::
+
 ## Iniciar a App DEMO
 
-No fim da instalação receberá algumas indicações de como executar o Netuno.
+Ao concluir a instalação, execute o comando abaixo dentro da pasta `netuno` para iniciar o servidor com a aplicação de demonstração:
 
-E para experimentar o Netuno e iniciar o servidor com a aplicação de **demo**_nstração_, siga as instruções abaixo.
-
-
-> ### `./netuno server`
->
-> Inicia o servidor do Netuno com a aplicação padrão de **demo**_nstração_:
+```bash
+./netuno server
+```
 
 ### Abrir a Aplicação no Browser
 
-Após a inicialização do servidor o navegador será lançado e abrirá automaticamente com o endereço do servidor do Netuno local.
+Após a inicialização, o navegador será aberto automaticamente com o endereço do servidor local. Caso isso não aconteça, acesse manualmente um dos endereços abaixo:
 
-Caso o seu navegador não seja lançado automaticamente então abra manualmente no seu navegador o endereço:
-
-* <a href="http://demo.local.netu.no:9000" target="_blank">http://demo.local.netu.no:9000</a>
-
-Ou em:
-
-* <a href="http://localhost:9000" target="_blank">http://localhost:9000</a>
+- [http://demo.local.netu.no:9000](http://demo.local.netu.no:9000)
+- [http://localhost:9000](http://localhost:9000)
 
 ## Parar o Servidor
 
-Para parar o servidor pressione no terminal as teclas:
+Para encerrar o servidor pressione no terminal as teclas:
 
 #### CTRL + C
 
-O terminal finalizará o servidor do Netuno. Para iniciar novamente volte a utilizar os comandos anteriores.
+Para iniciá-lo novamente, utilize o mesmo comando `./netuno server`.
 
 ## Próximos Passos
 
@@ -215,18 +294,18 @@ Algumas ideias do que pode fazer agora.
 
 #### Iniciante
 
-Se é novo no Netuno, inicie criando o seu primeiro formulário:
+Se é novo no Netuno, comece criando o seu primeiro formulário:
 
-[[ Iniciar ]](/docs/academy/demonstration/config)
+[Criar meu primeiro formulário](/docs/academy/demonstration/config)
 
 #### Tutoriais
 
-Descubra como explorar o desenvolvimento no Netuno:
+Explore tutoriais práticos de desenvolvimento com o Netuno:
 
-[[ Saber Mais ]](/docs/get-started/tutorials)
+[Ver tutoriais de desenvolvimento](/docs/get-started/tutorials)
 
 #### Projetos
 
-Para aplicar o Netuno em qualquer tipo de negócio: 
+Veja como aplicar o Netuno em projetos reais de negócio:
 
-[[ Mais Informações ]](/docs/academy/understand/backoffice)
+[Explorar projetos e casos de uso](/docs/academy/understand/backoffice)
