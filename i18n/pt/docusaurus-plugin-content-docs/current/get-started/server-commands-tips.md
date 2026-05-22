@@ -5,31 +5,80 @@ title: Servidor, Comandos & Dicas
 sidebar_label: Servidor, Comandos & Dicas
 ---
 
-Dicas rápidas de como o Servidor do Netuno pode ser iniciado e comandos úteis no geral.
+# Comandos do Servidor
 
-Durante a experiência com o Netuno vai explorar diversos comandos.
+Referência dos principais comandos do Netuno. Execute-os no **terminal**, a partir da pasta onde o Netuno está instalado.
 
-Aqui fica a lista de comandos úteis no geral.
+:::tip
+Não sabe como chegar na pasta do Netuno? Consulte o guia de [Instalação](/docs/get-started/installation).
+:::
 
-Entre no **terminal** na pasta onde tem o Netuno instalado, e poderá executar estas operações:
+---
 
-> ## `./netuno server`
-> Inicia o servidor com a aplicação de **demo**_nstração_.
+### Iniciar o servidor
 
-> ## `./netuno server app=APP_NAME`
-> Inicia o servidor com a aplicação atribuída ao parametro **app** do comando..
+Inicia o servidor com a aplicação de `demonstração`.
 
-> ## `./netuno app`
-> Cria uma nova aplicação no Netuno, será perguntado o nome da aplicação e diversas configurações.
+```bash
+./netuno server
+```
 
-> ## `./netuno help`
-> Todos os comandos e parametrizações disponíveis com as respectivas descrições.
+---
 
-> ## `./netuno stats`
-> Apresenta o detalhe das informações de performance mais recentes e que ficam guardados em `logs/stats-*`.
+### Iniciar o servidor na APP
 
-> ## `./install-stable`
-> Realiza a atualização do Netuno para a versão estável mais recente.
+Inicia o servidor com a aplicação específica definida pelo parâmetro `app`. Caso nenhuma seja definida, será iniciada a aplicação de demonstração.
 
-> ## `./install-testing`
-> Atualiza para a versão mais recente em desenvolvimento.
+```bash
+./netuno server app=APP_NAME
+```
+
+---
+
+### Nova Aplicação
+
+Cria uma nova aplicação do zero, solicitando informações e configurações iniciais.
+
+```bash
+./netuno app
+```
+
+---
+
+### Listar Comandos
+
+Lista todos os comandos e parametrizações disponíveis com as respectivas descrições.
+
+```bash
+./netuno help
+```
+
+---
+
+### Estatísticas de Performance
+
+Apresenta as informações de performance mais recentes, armazenadas em `logs/stats-*`.
+
+```bash
+./netuno stats
+```
+
+---
+
+### Atualização para a Versão Estável
+
+Atualiza o Netuno para a versão estável mais recente.
+
+```bash
+./install-stable
+```
+
+---
+
+### Atualização para a Versão Em Teste
+
+Atualiza o Netuno para a versão mais recente em desenvolvimento.
+
+```bash
+./install-testing
+```
