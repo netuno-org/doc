@@ -5,46 +5,51 @@ title: Versões
 sidebar_label: Versões
 ---
 
-Se está a começar no Netuno faça a instalação normal para utilizar a versão mais recente e estável.
 
-Pode ser instalado outras versões do Netuno e inclusive novas versões experimentais que estão em desenvolvimento.
+# Versões
 
-## Instalação de Versão
+Se você está começando a utilizar o Netuno, recomendamos realizar a **instalação padrão** para garantir o uso da versão mais recente e estável da plataforma.
 
-Todas as versões disponíveis estão em:
+O Netuno também permite instalar versões anteriores específicas ou versões experimentais ainda em desenvolvimento, útil para ambientes de teste ou reprodução de bugs.
 
-- [github.com/netuno-org/platform/releases](https://github.com/netuno-org/platform/releases)
+Antes de instalar ou atualizar para uma versão específica, consulte a lista oficial de releases:
 
-Escolha sua versão e siga as etapas descritas nas notas da release.
+- **Lista de Versões:** [github.com/netuno-org/platform/releases](https://github.com/netuno-org/platform/releases)
 
-Para atualizar para a versão em específico quando já tem uma instalação do Netuno acrescente no comando de instalação o parâmetro da versão (`version`).
+:::tip Dica
+Verifique as notas da release antes de instalar uma versão específica, especialmente em ambientes de produção.
+:::
 
-Por exemplo:
+## Instalação de uma Versão Específica
 
-```
+Para instalar ou atualizar o Netuno para uma versão específica, adicione o parâmetro `version` ao comando de instalação com o identificador da versão desejada.
+
+Escolha o método que melhor se adapta ao seu ambiente:
+
+### Método 1: Instalador Java
+
+Use este método para novas instalações:
+
+```bash
 java -jar netuno-setup.jar install version=20230417.0119
 ```
 
-Ou usando o executor principal na instalação atual:
+### Método 2: Executor Principal
 
-```
+Use este método se o Netuno já está instalado e você quer atualizar para uma versão específica:
+
+```bash
 ./netuno install version=20230417.0119
 ```
 
-Ou utilizando diretamente o **netuno.jar**:
+### Método 3: netuno.jar
 
-```
+```bash
 java -jar netuno.jar install version=20230417.0119
 ```
 
-> Alterar o valor do argumento `version` para a identificação da versão pretendida.
+:::info
+Substitua `20230417.0119` pelo identificador da versão desejada, disponível na **[lista de releases](https://github.com/netuno-org/platform/releases)**.
 
-Assim o Netuno iniciará o processo de instala a versão que foi indicada.
-
-Consulte mais abaixo a lista das versões disponíveis.
-
-## Versões Disponíveis
-
-Todas as versões disponíveis estão em:
-
-- [github.com/netuno-org/platform/releases](https://github.com/netuno-org/platform/releases)
+Após executar o comando, o Netuno iniciará automaticamente o processo de instalação da versão indicada.
+:::
