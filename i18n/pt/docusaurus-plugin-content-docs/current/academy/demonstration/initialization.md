@@ -4,40 +4,47 @@ id: initialization
 title: Inicialização
 ---
 
-## Inicialização da aplicação Demo
 
-Primeiro temos que iniciar a app Demo para começar este tutorial.
+# Inicialização 
 
-Dentro da pasta onde esta instalado a plataforma:
+Inicialização da aplicação Demo
 
-- `📂 /netuno`
+Para dar início a este tutorial, o primeiro passo é iniciar o servidor da aplicação **Demo** e preparar o ambiente de desenvolvimento.
 
-Execute o comando para iniciar a aplicação Demo no terminal:
 
-```shell
+### Inicie o servidor 
+
+Abra o terminal do seu sistema operacional e navegue até a pasta raiz onde a plataforma Netuno está instalada (por exemplo, `📁 /netuno`).
+
+Execute o comando abaixo para iniciar o servidor:
+
+```bash
 ./netuno server
 ```
 
-Se este comando não funcionar tente:
+:::info Alternativa de inicialização
+Caso o comando principal não funcione ou a aplicação Demo não seja carregada por padrão, force a inicialização especificando o parâmetro do aplicativo:
+:::
 
-```shell
+```bash
 ./netuno server app=demo
 ```
 
-## Editor de Código
+### Escolha o Editor de Código
+Você pode utilizar o editor de código de sua preferência para desenvolver tanto o backend quanto o frontend da sua aplicação.
 
-Utilize o seu editor de código à escolha.
+Caso ainda não tenha um, recomendamos as seguintes opções gratuitas e de código aberto:
 
-Para realizar o desenvolvimento do código geral da aplicação, seja backend ou frontend, recomendamos editores de
-código que são gratuitos, como:
-
+- VS Code: <a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a>
 - VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
-- Atom: <a href="https://atom.io/" target="_blank">atom.io</a>
-- VS Code: <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
 - WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
 
-Abra a pasta da aplicação no seu editor:
 
-- `📂 apps/demo`
+#### Abra a pasta do projeto
+Com o editor de código aberto, localize e abra o diretório da aplicação Demo: `📁 apps/demo`.
 
-Dentro desta pasta contém todos os arquivos da nova aplicação e é onde todo o desenvolvimento é realizado.
+Esta pasta contém todos os arquivos e configurações da nova aplicação. É exclusivamente dentro deste diretório que todo o desenvolvimento será realizado.
+
+### Próximos passos
+
+Com o servidor rodando e os arquivos abertos no editor de código, o ambiente está pronto. Avance para a próxima etapa do tutorial para começar a explorar e modificar a aplicação.
