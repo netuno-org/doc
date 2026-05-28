@@ -274,96 +274,94 @@ if the path exists; if it doesn't, it will be created.
 
 Therefore, `ensurePath` guarantees that the folder structure exists.
 
-## Eliminar Arquivos e Pastas
+## Delete Files and Folders
 
-Com o método `delete` podemos tanto remover pastas como arquivos, sendo que as pastas devem estar vazias,
-veja o exemplo:
-
-<PolyglotCode
-    codes={[
-        {
-            lang: 'javascript',
-            code: `
-                // Remove uma pasta vazia:
-                const pastaVazia = _app.folder("pasta/vazia")
-                pastaVazia.delete()
-
-                // Remove um caminho:
-                const arquivo = _app.file("pasta/arquivo.txt")
-                arquivo.delete()
-
-                // Remove um caminho, pasta vazia ou arquivo:
-                const caminho = _app.path("pasta1/arquivo-ou-pasta-vazia")
-                caminho.delete()
-`
-        },
-    ]}
-/>
-
-Com o `deleteAll` permite eliminar tudo, ou seja, todos os arquivos, pastas e subpastas recursivamente:
+With the `delete` method we can remove both folders and files, provided the folders are empty, see the example:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                // Remove a pasta e todo o conteúdo recursivamente:
-                const pastaVazia = _app.folder("pasta/exemplo")
-                pastaVazia.deleteAll()
+                // Remove an empty folder:
+                const emptyFolder = _app.folder("folder/empty")
+                emptyFolder.delete()
 
-                // Remove o caminho de uma pasta e todo o seu conteúdo interno,
-                // incluindo subpastas e arquivos:
-                const caminho = _app.path("caminho/pasta")
-                caminho.deleteAll()
+                // Remove a file:
+                const file = _app.file("folder/file.txt")
+                file.delete()
+
+                // Remove a path, empty folder, or file:
+                const path = _app.path("folder1/file-or-empty-folder")
+                path.delete()
 `
         },
     ]}
 />
 
-Para eliminar apenas os arquivos dentro da pasta e não apagar nada nas subpastas, temos o `deleteFiles`, que permite
-receber uma extensão caso queira remover apenas arquivos com uma extensão específica:
+Using `deleteAll` allows you to delete everything, that is, all files, folders, and subfolders recursively:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                // Remove os arquivos apenas dentro da pasta:
-                const pasta = _app.folder("pasta/exemplo")
-                pasta.deleteFiles()
+                // Remove the folder and all its contents recursively:
+                const emptyFolder = _app.folder("folder/empty")
+                emptyFolder.deleteAll()
 
-                // Remove os arquivos com a extensão JPG apenas dentro da pasta:
-                const caminho = _app.path("caminho/pasta")
-                caminho.deleteFiles("jpg")
+                // Remove the path to a folder and all its contents,
+                // including subfolders and files:
+                const path = _app.path("path/folder")
+                path.deleteAll()
 `
         },
     ]}
 />
 
-Para eliminar apenas os arquivos recursivamente e manter a estrutura de pastas, temos o `deleteAllFiles`, que
-também permite receber uma extensão caso queira remover apenas um tipo de arquivo específico, veja estes dois
-exemplos:
+To delete only the files within the folder and not delete anything in the subfolders, we have `deleteFiles`,
+which allows you to specify an extension if you want to remove only files with a specific extension:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                // Remove todos os arquivos dentro da pasta e subpastas:
-                const pasta = _app.folder("pasta/exemplo")
-                pasta.deleteAllFiles()
+                // Remove files only within the folder:
+                const folder = _app.folder("folder/example")
+                folder.deleteFiles()
 
-                            // Remove todos os arquivos com a extensão JPG dentro da pasta e subpastas:
-                            const caminho = _app.path("caminho/pasta")
-                            caminho.deleteAllFiles("jpg")
+                // Remove files with the JPG extension only within the folder:
+                const path = _app.path("path/folder")
+                path.deleteFiles("jpg")
 `
         },
     ]}
 />
 
-## Renomear ou Mover
+To delete only files recursively and maintain the folder structure, we have `deleteAllFiles`, which also allows
+you to specify an extension if you want to remove only a particular file type. See these two examples:
 
-Para mover uma pasta, é o mesmo que renomeá-la:
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Remove all files within the folder and subfolders:
+                const folder = _app.folder("folder/example")
+                folder.deleteAllFiles()
+
+                // Remove all files with the JPG extension within the folder and subfolders:
+                const path = _app.path("path/folder")
+                path.deleteAllFiles("jpg")
+`
+        },
+    ]}
+/>
+
+## Rename or Move
+
+To move a folder, it's the same as renaming it:
 
 <PolyglotCode
     codes={[
@@ -377,7 +375,7 @@ Para mover uma pasta, é o mesmo que renomeá-la:
     ]}
 />
 
-Para renomear uma pasta e mudá-la de nível na hierarquia de pastas, é o mesmo que mover a pasta:
+To rename a folder and change its level in the folder hierarchy, it's the same as moving the folder:
 
 <PolyglotCode
     codes={[
@@ -391,31 +389,29 @@ Para renomear uma pasta e mudá-la de nível na hierarquia de pastas, é o mesmo
     ]}
 />
 
-E para mover uma subpasta sem mudar o seu nome, basta indicar o novo caminho no método `renameTo`:
+To move a subfolder without changing its name, simply specify the new path in the `renameTo` method:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const folder = _app.folder("test/outra")
-                folder.renameTo("outra")
+                const folder = _app.folder("test/other")
+                folder.renameTo("another")
             `
         },
     ]}
 />
 
-## Salvar Conteúdos em Arquivos
+## Saving Content to Files
 
-A geração de conteúdos em arquivos é feita através do método `output` que fornece um objeto do tipo
-[OutputStream](/docs/library/objects/OutputStream).
+Generating content into files is done using the `output` method, which provides an object of type [OutputStream](/docs/library/objects/OutputStream).
 
-Para escrever os dados no `output` utilizamos o método [printAndClose](/docs/library/objects/OutputStream#printandclosebytes-string--outputstream),
-que imprime o conteúdo no arquivo e fecha o arquivo salvando o conteúdo.
+To write the data to the `output`, we use the [printAndClose](/docs/library/objects/OutputStream#printandclosebytes-string--outputstream) method, which prints the content to the file and closes the file, saving the content.
 
-#### Escrever Arquivo de Texto
+#### Write Text File
 
-Veja o exemplo de como criar um arquivo com conteúdo de texto:
+Here's an example of how to create a file with text content:
 
 <PolyglotCode
     codes={[
@@ -423,19 +419,18 @@ Veja o exemplo de como criar um arquivo com conteúdo de texto:
             lang: 'javascript',
             code: `
                 _app.path("temp").mkdir()
-                const escrita = _app.path("temp/arquivo.txt").output()
-                escrita.printAndClose("Meu texto aqui...")
+                const writer = _app.path("temp/file.txt").output()
+                writer.printAndClose("My text here...")
             `
         },
     ]}
 />
 
-> Sempre que utilizamos o `output` é gerado um novo arquivo, portanto se executar o código novamente o arquivo
-> será recriado.
+> Whenever we use `output`, a new file is generated, so if you run the code again, the file will be recreated.
 
-#### Escrever arquivo JSON
+#### Write JSON file
 
-Veja como podemos salvar dados JSON em arquivos:
+Here's how we can save JSON data to files:
 
 <PolyglotCode
     codes={[
@@ -443,12 +438,12 @@ Veja como podemos salvar dados JSON em arquivos:
             lang: 'javascript',
             code: `
                 _app.path("temp").mkdir()
-                const escrita = _app.path("temp/cliente.json").output()
-                escrita.printAndClose(
+                const writer = _app.path("temp/client.json").output()
+                writer.printAndClose(
                     _val.map()
-                        .set("nome", "Maria Joaquina")
+                        .set("name", "Mary Joanna")
                         .set(
-                            "registros",
+                            "register",
                             _val.list()
                                 .add(1).add(2).add(3)
                         )
@@ -459,150 +454,148 @@ Veja como podemos salvar dados JSON em arquivos:
     ]}
 />
 
-Para gerar o JSON indentado, ou seja, formatado em várias linhas e tabulado, podemos passar o número de espaços
-que será feita a tabulação por exemplo `.toJSON(4)`.
+To generate indented JSON, that is, formatted across multiple lines and tabbed, we can pass the number of spaces
+that will be tabbed, for example `.toJSON(4)`.
 
-> Mais detalhes sobre o método [toJSON em Values](/docs/library/objects/Values#tojsonindentfactor-int--string).
+> More details about the [toJSON in Values](/docs/library/objects/Values#tojsonindentfactor-int--string) method.
 
-## Ler Conteúdos em Arquivos
+## Read Content in Files
 
-A obtenção de conteúdos em arquivos é feita através do método `input` que fornece um objeto do tipo
+Retrieving content from files is done through the `input` method, which provides an object of type
 [InputStream](/docs/library/objects/InputStream).
 
-Para ler os dados no `input` utilizamos o método [readAllAndClose](/docs/library/objects/InputStream#readAllAndClose),
-que processa a leitura do conteúdo no arquivo e fecha o arquivo.
+To read the data from the `input` we use the method [readAllAndClose](/docs/library/objects/InputStream#readAllAndClose),
+which processes the reading of the content in the file and closes the file.
 
-#### Ler Arquivo de Texto
+#### Read Text File
 
-Veja o exemplo de como ler um arquivo e obter o conteúdo de texto:
-
-<PolyglotCode
-    codes={[
-        {
-            lang: 'javascript',
-            code: `
-                const arquivo = _app.file("temp/arquivo.txt")
-                const leitura = arquivo.input()
-                _log.info(leitura.readAllAndClose())
-            `
-        },
-    ]}
-/>
-
-#### Ler arquivo JSON
-
-Veja como podemos processar dados JSON obtidos em arquivos:
+Here's an example of how to read a file and retrieve its text content:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const arquivo = _app.file("temp/arquivo.txt")
-                const leitura = arquivo.input()
-                const dados = _val.fromJSON(leitura.readAllAndClose())
-                _log.info("Dados do Arquivo:", dados)
+                const file = _app.file("temp/file.txt")
+                const reader = file.input()
+                _log.info(reader.readAllAndClose())
             `
         },
     ]}
 />
 
-> Mais detalhes sobre o método [fromJSON do recurso Val](/docs/library/resources/val#fromjson).
+#### Read JSON file
 
-## Particularidades do Storage
+Here's how we can process JSON data obtained from files:
 
-O recurso storage tem alguns métodos para utilização direta.
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const file = _app.file("temp/file.txt")
+                const reader = file.input()
+                const data = _val.fromJSON(reader.readAllAndClose())
+                _log.info("File Data:", data)
+            `
+        },
+    ]}
+/>
 
-Por exemplo, podemos aceder através do storage:
+> More details about the [fromJSON do recurso Val](/docs/library/resources/val#fromjson) method of the Val resource.
+
+## Storage Specifics
+
+The storage feature has several methods for direct use.
+
+For example, we can access it through storage:
 
 - [Storage Output](/docs/library/resources/storage#output)
 - [Storage Input](/docs/library/resources/storage#input)
 
-Isto quer dizer que não precisamos obter o `file` ou `path` para trabalhar com o `input` ou `output`.
+This means that we don't need to get the `file` or `path` to work with `input` or `output`.
 
-#### Escrever Arquivo de Texto no Storage
+#### Write Text File to Storage
 
-Ao iniciar um storage para um arquivo podemos realizar a escrita utilizando o método [output](/docs/library/resources/storage#output), que obtém
-uma instância do objeto [OutputStream](/docs/library/objects/OutputStream) que permite processar e ler os dados.
+When initializing storage for a file, we can perform writing using the [output](/docs/library/resources/storage#output)
+method, which obtains an instance of the [OutputStream](/docs/library/objects/OutputStream) object that allows
+processing and reading the data.
 
-Então com o `OutputStream` o método [printAndClose](/docs/library/objects/OutputStream#printandclosebytes-string--outputstream),
-faz a escrita de texto (`string`) no arquivo e fecha-o.
+So with `OutputStream` the method [printAndClose](/docs/library/objects/OutputStream#printandclosebytes-string--outputstream),
+writes text (`string`) to the file and closes it.
 
-Veja este exemplo:
+See this example:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const txt = _storage.filesystem("server", "temp", "arquivo.txt")
+                const txt = _storage.filesystem("server", "temp", "file.txt")
                 txt.ensurePath()
-                txt.output().printAndClose("Meu texto aqui...")
+                txt.output().printAndClose("My text here...")
             `
         },
     ]}
 />
 
-#### Ler Arquivo de Texto no Storage
+#### Read Text File in Storage
 
-Ao iniciar um storage para um arquivo podemos realizar a leitura utilizando o método [input](/docs/library/resources/storage#input), que obtém
-uma instância do objeto [InputStream](/docs/library/objects/InputStream) que permite processar e ler os dados.
+When initializing storage for a file, we can read it using the [input](/docs/library/resources/storage#input)
+method, which obtains an instance of the [InputStream](/docs/library/objects/InputStream) object that allows
+processing and reading the data.
 
-Então com o `InputStream` o método [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
-faz a leitura de todo arquivo e fecha-o, retornando os dados como texto (`string`).
+So with `InputStream` the method [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
+reads the entire file and closes it, returning the data as text (`string`).
 
-Veja este exemplo:
+See this example:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const txt = _storage.filesystem("server", "temp", "arquivo.txt")
+                const txt = _storage.filesystem("server", "temp", "file.txt")
                 _log.info(txt.input().readAllAndClose())
             `
         },
     ]}
 />
 
-#### Criar arquivo aleatório no Storage
+#### Create a random file in Storage.
 
-O recurso `_storage` permite gerar nomes de arquivos aleatórios, com o método [newRandomFile](/docs/library/resources/storage#newrandomfile).
+The `_storage` resource allows you to generate random filenames using the [newRandomFile](/docs/library/resources/storage#newrandomfile) method.
 
-Deve iniciar um storage para o caminho de uma pasta, e ao executar o método `newRandomFile` é passado a extensão do
-arquivo pretendido.
+You must initialize a storage instance for a folder path, and when executing the `newRandomFile` method, the desired file extension is passed.
 
-O método retorna uma nova instância do storge para o arquivo randômico gerado automaticamente para ser
-utilizado na pasta inicial.
+The method returns a new instance of the storage for the automatically generated random file to be used in the initial folder.
 
-Veja como gerar um arquivo com extensão `TXT` com nome randômico:
+See how to generate a file with the `TXT` extension with a random name:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const pasta = _storage.filesystem("server", "temp")
-                const arquivo = pasta.newRandomFile("txt")
-                arquivo.output().printAndClose("Meu texto aqui...")
+                const folder = _storage.filesystem("server", "temp")
+                const file = folder.newRandomFile("txt")
+                file.output().printAndClose("My text here...")
             `
         },
     ]}
 />
 
-## Conclusão
+## Conclusion
 
-Com a framework low-code poliglota do Netuno podemos realizar todas as principais operações de pastas e arquivos
-diretamente.
+With Netuno's low-code polyglot framework, we can perform all the main folder and file operations directly.
 
-Ao utilizar os recursos específicos para manipular arquivos e pastas na:
+By using the specific resources to manipulate files and folders in:
 
-- `_app` - Aplicação
-- `_storage` - Storage da Aplicação
-- `_os` - Sistema Operacional
+- `_app` - Application
+- `_storage` - Application Storage
+- `_os` - Operating System
 
-> Por questões de boas práticas e organização devemos priorizar a utilização do **storage**, as exceções devem ser
-> apenas casos pontuais e estritamente necessários.
+> For best practices and organizational reasons, we should prioritize the use of **storage**; exceptions should be
+> only for specific and strictly necessary cases.
 
-O Netuno processa o fecho automático dos inputs e outputs no fim do processamento dos serviços, mas por boas
-práticas devemos tentar fechá-los sempre.
+Netuno automatically closes inputs and outputs at the end of service processing, but as a best practice, we should always try to close them.
