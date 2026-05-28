@@ -4,39 +4,49 @@ id: initialization
 title: initialization
 ---
 
-## Demo Application initialization
 
-First we have to start the Demo app to begin this tutorial.
+# Initialization
 
-Inside the folder where the platform is installed:
+Demo application initialization
 
-- `📂 /netuno`
+To begin this tutorial, the first step is to start the **Demo** application server and prepare the development environment.
 
-In the terminal, run the command to start the Demo application:
+### Start the server
+
+Open your operating system terminal and navigate to the root folder where the Netuno platform is installed (for example, `📁 /netuno`).
+
+Run the command below to start the server:
 
 ```shell
 ./netuno server
 ```
 
-If this command doesn't work try:
+:::info Alternative startup method
+If the main command does not work or the Demo application is not loaded by default, force startup by specifying the application parameter:
+:::
 
 ```shell
 ./netuno server app=demo
 ```
 
-## Code Editor
+### Choose your Code Editor
 
-Use your code editor of choice.
+You can use your preferred code editor to develop both the backend and frontend of your application.
 
-To develop the application's general code, whether backend or frontend, we recommend free code editors, such as:
+
+If you don't already have one, we recommend the following free and open-source options:
 
 - VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
-- Atom: <a href="https://atom.io/" target="_blank">atom.io</a>
-- VS Code: <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
+- VS Code: <a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a>
 - WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
 
-Open the application folder in your editor:
+### Open the project folder
 
-- `📂 apps/demo`
+With the code editor open, locate and open the Demo application directory: `📁 apps/demo`.
 
-Inside this folder contains all the files for the new application and is where all the development takes place.
+This folder contains all the files and settings of the new application. All development will be done exclusively within this director.
+
+#### Next steps
+
+With the server running and the files open in the code editor, the environment is ready. Proceed to the next step of the tutorial to begin exploring and modifying the application.
+
