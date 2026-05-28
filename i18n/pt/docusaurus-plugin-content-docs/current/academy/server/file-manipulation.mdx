@@ -288,7 +288,7 @@ veja o exemplo:
                 const pastaVazia = _app.folder("pasta/vazia")
                 pastaVazia.delete()
 
-                // Remove um caminho:
+                // Remove um arquivo:
                 const arquivo = _app.file("pasta/arquivo.txt")
                 arquivo.delete()
 
@@ -370,8 +370,8 @@ Para mover uma pasta, é o mesmo que renomeá-la:
         {
             lang: 'javascript',
             code: `
-                const folder = _app.folder("temp")
-                folder.renameTo("test")
+                const pasta = _app.folder("temp")
+                pasta.renameTo("teste")
             `
         },
     ]}
@@ -384,8 +384,8 @@ Para renomear uma pasta e mudá-la de nível na hierarquia de pastas, é o mesmo
         {
             lang: 'javascript',
             code: `
-                const folder = _app.folder("temp/a/b")
-                folder.renameTo("test/z")
+                const pasta = _app.folder("temp/a/b")
+                pasta.renameTo("test/z")
             `
         },
     ]}
@@ -398,8 +398,8 @@ E para mover uma subpasta sem mudar o seu nome, basta indicar o novo caminho no 
         {
             lang: 'javascript',
             code: `
-                const folder = _app.folder("test/outra")
-                folder.renameTo("outra")
+                const pasta = _app.folder("test/outra")
+                pasta.renameTo("noutra")
             `
         },
     ]}
