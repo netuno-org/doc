@@ -203,7 +203,7 @@ java -jar netuno-setup.jar install version=testing
 macOS has a native security mechanism (Gatekeeper) that can block applications downloaded via the terminal. 
 :::
 
-To ensure that Netuno works without permission errors, run the command below immediately after step 3, still inside the `netuno` folder:
+On **macOS**, to ensure that Netuno works without permission errors, run the command below immediately after step 3, still inside the `netuno` folder:
 
 ```bash
 sudo xattr -r -d com.apple.quarantine .
