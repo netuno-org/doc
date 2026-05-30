@@ -4,39 +4,52 @@ id: config
 title: Config
 ---
 
-## Demo app basic configuration
+# Configure the Application
 
-We'll only cover the necessary steps to configure the Demo App, for a more in-depth look please go to 
-[Basic Configuration of an Application](/docs/academy/explore/configuration)
+This guide presents the initial steps to configure the Demo application language, the database, and enable automatic commands executed with the server.
 
-Inside the Netuno root folder find the folder:
+All changes are made in the `_development.json` configuration file of the **Demo** application, located in the /apps/demo/**config** folder.
 
-* `📂 /apps/demo/config`
+## Prerequisites
 
-In here find and open the file in any text/code editor:
+Before editing the configuration, confirm the following:
 
-* `_development.json`
+- The Demo application has already been created and initialized.
+- You are in the root of the Netuno project.
+- A code editor is open at `/apps/demo/config/development.json`.
+- You will be able to restart the server after saving the changes.
 
-### Configuring the app language
+## Language Configuration
 
-Find and change both of these accordingly to your language:
+### 1. Application
 
-``` json title="/apps/demo/config/development.json"
-"language": "en_GB",
-"locale": "en_GB", 
+In the configuration file, locate the `language` and `locale` fields to change the application language.
+
+```json  title="/apps/demo/config/development.json"
+{
+  "language": "en_US",
+  "locale": "en_US",
+}
 ```
-Here's a list of all the currently accepted values:
 
-* ```"pt_PT" or "pt_BR"``` - for Portuguese
-* ```"en_GB" or "en_US"``` - for English (if you are reading this tutorial we recommend using one of these)
+Set the values according to the desired language:
 
-### Configuring the database language
+- **Portuguese**: `pt_PT` or `pt_BR`
+- **English**: `en_GB` or `en_US`
 
-Find this in the same file:
+### 2. Database
 
-``` json title="/apps/demo/config/development.json"
-...
-    "db": {
+Locate the **"db"** object and then the **"default"** settings.
+
+Change the **"name"** field to define the corresponding database:
+
+- `demo_pt`: Portuguese database.
+- `demo_en`: English database.
+
+```json title="/apps/demo/config/development.json"
+ {
+ ...
+"db": {
         "default": {
             "password": "",
             "engine": "h2",
@@ -47,35 +60,46 @@ Find this in the same file:
         }
     },
 ...
+}
 ```
 
-And replace the database ```"name"``` value field accordingly to your language, like so:
+### 3. Enable Multiple Commands
 
-* ```"name": "demo_pt"``` - for Portuguese
-* ```"name": "demo_en"``` - for English (if you are reading this tutorial we recommend using this)
+Netuno allows multiple commands to run simultaneously during server startup, displaying their outputs in the same console.
 
-### Configuring the commands that run with Netuno
+By default, the **Demo** application includes the `bun run watch` command configured but disabled. This command automatically compiles any changes made to the backoffice code files.
 
-With Netuno you have the ability to run multiple commands that run with the server boot and output to the same console. By default the Demo app brings configured, but disabled, to launch the command `bun run watch` that automatically compiles any changes to backoffice code files.
+To enable it, locate the **"commands"** array and change the value of the **enabled** field from false to **true**.
 
-You can find this configuration in:
-
-``` json title="/apps/demo/config/development.json"
-...
-    "commands": [
+```json  title="/apps/demo/config/development.json"
+"commands": [
         {
-            "enabled": false,
+            "enabled": true,
             "path": "ui",
             "command": "bun run watch"
         }
     ],
-...
 ```
 
-> To see this feature in action, enable the command with `"enabled": true` and restart your Netuno Server. 
+### Parameters of the "commands" Object
 
-* ```"enabled"``` - enables or disables the commands from running with server boot (can be either ```true``` or ```false``` respectively)
-* ```"path"``` - the path relative to the app directory where the command will run
-* ```"command"``` - the command to run
+- `enabled`: enables (true) or disables (false) automatic command execution.
+- `path`: defines the application path (folder) where the command will run.
+- `command`: defines the command that will be executed in the terminal.
 
->You can add as many as you want, just make sure you follow the same object structure.
+:::tip 
+You can add other commands inside the `"commands"` array, as long as you keep the same object structure.
+:::
+
+After saving the configuration file, restart the Netuno server to apply the changes.
+
+## Expected Result
+
+After restarting the server, confirm the following:
+
+- The Demo application is using the configured language.
+- The console shows the execution of the `bun run watch` command, if it is enabled.
+
+## Next Steps
+
+Proceed to the next **Form** step to explore and modify the demo application.
