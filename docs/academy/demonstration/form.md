@@ -4,64 +4,77 @@ id: form
 title: Form
 ---
 
-## Create Form
+# Form
 
-To create a form, click in the top right-hand corner on the button that says **Build**.
+In this demonstration step, you will create the **Task** form and configure the first data field.
 
-This is the developer's area, where you can develop the entire data structure, run database queries, analyse the data model diagram and much more.
+:::info REFERENCE
+For a more detailed explanation of forms, see the [Interface Guide: Forms](doc/docs/academy/ui/forms.md).
+:::
 
-The construction of the forms can be found in the menu that says **Management** and then in the option **Forms**.
+## Objective
 
-Type `Task` in the **Display Name** of the form, note that the **Name** field has been automatically filled in with lower case letters, the _Name_ field is the name that will be given to the database table, which will be created together with the creation of the form, and the _Display Name_ is what will appear to the end user in the **View** area.
+Upon completing this step, you will have:
 
-Each form always has an associated database table where the information is stored.
+- A form called **Task**.
+- An associated table in the database.
+- A required field to store the task name.
+- An interface ready to create, edit, search, and remove records.
 
-With the _Form Names_ filled in, click on **Save**.
+## Prerequisites
 
-Now on the left-hand side you have a new menu option with the name of the form created: **Task**.
+Verify that:
 
-After clicking on **Task** in the menu, you enter the field management of the _Task_ form.
+- The demonstration application has already been created.
+- The configuration step has already been completed.
+- You are in the platform's development area.
 
-## Create Field
+## Create the Form
 
-Fill in `Name` in the **Display Name** to create the new field that will store the name of the tasks.
+1. In the upper right corner, click **Build**.
+2. In the main menu, go to **Management > Forms**.
+3. In **Form Title**, fill in `Task`.
+4. In **Table Name**, enable the **Auto** option.
+5. Click **Save**.
 
-This will be the field to store the name of the departments.
+:::note NOTE
+- **Form Title** defines the name shown in the sidebar menu.
+- **Table Name** defines the technical identifier used in the database.
+:::
 
-And note again that the **Name** field has been automatically filled in with lower case letters, this will be the name of the column created in the database to store the data for this field.
+After saving, the **Task** form will be available in the left sidebar menu.
 
-Activate the **Primary Key** option, which will prevent departments from having a repeated name.
+## Create the First Field
 
-Also activate the **Not Null** option, which will make filling in this field compulsory when creating or editing departments.
+With the form created:
 
-Under type, choose **text** which will indicate that our field is of type _text_.
+1. In the sidebar menu, click **Task**.
+2. In **Display Name**, fill in `Name`.
+3. Verify that the technical name was automatically generated in lowercase.
+4. Enable the **Primary Key** option (unique field).
+5. Enable the **Not Null** option (required field).
+6. In **Type**, select `text`.
+7. Click **Save**.
 
-Finally, click on the **Save** option to save the whole process.
+:::tip TIP
+- **Primary Key** ensures unique values for each record.
+- **Not Null** makes the field required.
+- The `text` type allows storing plain text.
+:::
 
-## View
+## Validate the Result
 
-After successfully completing the previous steps, let's visualise the final result.
+Open the preview area and verify that:
 
-To do this, click on the **Visualise** button in the top right-hand corner.
+- The **Task** form is available.
+- The **Name** field appears for input.
+- It is possible to create a new record.
+- The **Name** field is required.
 
-Notice that you now have a new option in the side menu: **Task**.
+:::info EXPECTED RESULT
+If the configuration is correct, the form will be ready for create, edit, search, and remove record operations.
+:::
 
-By clicking on the **Task** menu you will be able to create, edit, search for and delete tasks. In other words, you'll be able to manipulate the data.
+## Next Steps
 
-This is the result of the end user being able to manipulate the system's data.
-
-## Upload Data
-
-Now you can insert the records of the **Tasks**.
-
-Click on the `[ + New content ]` button in the top right-hand corner, fill in the **Name** field and click on the `[ Save ]` button.
-
-You can insert example tasks, such as:
-
-- Support
-- Commercial
-- Meeting
-- Invoicing
-- Billing
-
-
+Proceed to the next **Database** step to explore and modify the demo application.
