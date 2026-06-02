@@ -4,56 +4,116 @@ id: database
 title: Database
 ---
 
-Remember that the form was created **Task** with the field **Name**, which are the names of _Display_.
+# Database
 
-And this means that the table was created in database **task** and with the column **name**, which are the _Names_ defined in the creation.
+In this step, we will explore the **database** automatically created from the **Task** form defined earlier.
 
-The **names** and not the display names are relevant at the programming level of data access as well as in the construction of database queries.
+When creating the **Task** form with the **Name** field, Netuno created the `task` table with the `name` column in the database, according to the names defined when the form was created.
+
+The **technical names** of the fields (e.g., `task`, `name`, `task_id`) are used in programming and SQL queries, and do not correspond to the display names shown in the interface.
 
 ## Queries
 
-In Netuno you can manipulate the database directly through the interface that Netuno provides to perform operations directly in the database.
+In this section we will execute queries directly in the database using Netuno's management interface.
 
-This interface is in the environment **Construct** and in the menu at **Management** > **Query**.
+1. Access the **Build** environment.
+2. In the menu, click **Management > Query**.
+3. In the query editor, paste and run the commands below.
 
-Try to execute the following queries:
+### Simple Queries
+
+List only the task names:
 
 ```sql
-select name from task;
-
-select * from task;
-
-select * from record;
-
-select * from worker;
+SELECT name
+FROM task;
 ```
 
-Notice that when you click on **Execute** a table of results is generated for each command, useful when executing multiple commands separated by **;** (semicolon).
-
-Now perform a more complex query by listing all tables:
+List all fields from the tasks table:
 
 ```sql
-SELECT task.name, record.start, record.end, worker.name
+SELECT *
+FROM task;
+```
+
+List all fields from the records table:
+
+```sql
+SELECT *
+FROM record;
+```
+
+List all fields from the workers table:
+
+```sql
+SELECT *
+FROM worker;
+```
+
+When clicking **Run**, Netuno generates a results table for **each** command separated by a semicolon (`;`).  
+This is useful when you want to run multiple queries at once.
+
+### Query with Relationships
+
+Now, run a query that joins all tables:
+
+```sql
+SELECT
+  task.name,
+  record.start,
+  record.end,
+  worker.name
 FROM task
-  INNER JOIN record ON task.id = record.task_id
-  INNER JOIN worker ON worker.id = record.worker_id
+INNER JOIN record
+  ON task.id = record.task_id
+INNER JOIN worker
+  ON worker.id = record.worker_id;
 ```
+
+This query returns:
+
+- The task name.
+- The start and end of each record.
+- The name of the worker associated with each record.
+
+It demonstrates how relationships between tables allow combining information from different entities in the application.
 
 ## Diagram
 
-To visualize the whole structure of the database in a more intuitive way we can explore the Database Diagram.
+To visualize the database structure in a more intuitive way, use Netuno's **Diagram**.
 
-The Diagram is available in the environment **Construct** in **Management** > **Diagram**.
+1. Access the **Build** environment.
+2. In the menu, click **Management > Diagram**.
 
-You can zoom and export as image, buttons available on the right hand side.
+In the Diagram you can:
 
-Netuno creates the lines with relationship arrows by configuring the **Links** configured in the fields, as in the case of the **select** type field.
+- Zoom in or out.
+- Export the diagram as an image.
 
-## Considerations
+These actions are available via buttons on the right side of the diagram panel.
 
-Note that it is important to use the suffix **_id** in the name of the fields that relate to **Link** to help distinguish better in the queries and the diagram.
+Netuno automatically creates relationship arrow lines based on the **Links** configuration in the fields (for example, `select`-type fields that point to other tables).
 
-You should also not use plural names such as **task**_s_, **registration**_s_ or **worker**_es_, this is because in addition to the names getting longer it also creates more entropy in its interpretation especially in the case of forms and tasks for mutual relationships.
+## Best Practices
 
-> By default the Name of the forms and fields should always be in the singular.
+When modeling your database in Netuno, follow these best practices:
 
+- Use the `_id` suffix in fields that represent relationships, for example:
+  - `task_id`
+  - `worker_id`
+- Avoid using plural table and field names, such as `tasks`, `records`, or `workers`.
+
+Avoiding the plural helps to:
+
+- Keep names shorter and more readable.
+- Reduce ambiguities when writing queries.
+- Facilitate readability in forms and diagrams, especially when there are multiple relationships.
+
+:::tip **NAMING STANDARD**
+As a standard, always use **singular names** for forms, tables, and fields.  
+Examples: `task`, `record`, `worker`, `task_id`, `worker_id`.
+:::
+
+## Next Step
+
+Proceed to the next step of **Relating Data** to continue with the demonstration application.
