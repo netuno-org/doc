@@ -4,63 +4,78 @@ id: form
 title: Formulário
 ---
 
-## Criar Formulário
 
-Para criar um formulário clique no canto superior direito no botão que diz **Construir**.
+# Formulário
 
-Aqui é a área do desenvolvedor, onde poderá desenvolver toda a estrutura de dados, executar consultas à base de dados, analisar o diagrama do modelo de dados e muito mais.
+Nesta etapa da demonstração, você vai criar o formulário **Tarefa** e configurar o primeiro campo de dados.
 
-A construção dos formulários encontra-se no menu onde diz **Gestão** e depois na opção **Formulários**.
+:::info Referência
+Para uma explicação mais detalhada sobre formulários, consulte o [Guia de Interface: Formulários](/docs/academy/ui/forms).
+:::
 
-Escreva `Tarefa` no **Nome de Exibição** do formulário, repare que o campo **Nome** foi automaticamente preenchido com letras minúsculas, o campo _Nome_ é o nome que será dado à tabela em base de dados, que será criada juntamente com a criação do formulário, e o _Nome de Exibição_ é o que aparecerá para o utilizador final na área de **Visualizar**.
+## Objetivo
 
-Cada formulário tem sempre associado uma tabela em base de dados onde a informação é armazenada.
+Ao concluir esta etapa, você terá:
 
-Com os _Nomes_ do formulário preenchidos, clique em **Guardar**.
+- Um formulário chamado **Tarefa**.
+- Uma tabela associada na banco de dados.
+- Um campo obrigatório para armazenar o nome da tarefa.
+- Uma interface pronta para criar, editar, pesquisar e remover registros.
 
-Agora do lado esquerdo tem uma nova opção no menu com o nome do formulário criado: **Tarefa**
+## Pré-Requisitos
 
-Após clicar no menu em **Tarefa** entra na gestão de campos do formulário _Tarefa_.
+Verifique que:
 
-## Criar Campo
+- A aplicação de demonstração já foi criada.
+- A etapa de configuração já foi concluída.
+- Você está na área de desenvolvimento da plataforma.
 
-Preencha `Nome` no **Nome de Exibição** para criar o novo campo que armazenará o nome das tarefas.
+## Criar o Formulário
 
-Este será o campo para armazenar o nome dos departamentos.
+1. No canto superior direito, clique em **Construir**.
+2. No menu principal, acesse **Gestão > Formulários**.
+3. Em **Título do Formulário**, preencha com `Tarefa`.
+4. Em **Nome da Tabela**, ative a opção **Auto**.
+5. Clique em **Salvar**.
 
-E repare novamente que o campo **Nome** foi automaticamente preenchido com letras minúsculas, este será o nome da coluna criada em base de dados para armazenar os dados deste campo.
+:::note
+- **Título do Formulário** define o nome apresentado no menu lateral.
+- **Nome da Tabela** define o identificador técnico usado na banco de dados.
+:::
 
-Ativar a opção **Chave primária**, que impedirá que os departamentos tenham um nome repetido.
+Após salvar, o formulário **Tarefa** ficará disponível no menu lateral esquerdo.
 
-Também ative a opção **Não Nulo** que vai tornar o preenchimento deste campo obrigatório na criação ou edição dos departamentos.
+## Criar o Primeiro Campo
 
-No tipo escolha **text** que vai indicar que o nosso campo é do tipo _texto_.
+Com o formulário criado:
 
-Por fim, clique na opção **Guardar** para salvar todo o processo.
+1. No menu lateral, clique em **Tarefa**.
+2. Em **Nome de Exibição**, preencha com `Nome`.
+3. Confirme que o nome técnico foi gerado automaticamente com letras minúsculas.
+4. Ative a opção **Chave primária** (campo único).
+5. Ative a opção **Não Nulo** (campo obrigatório).
+6. Em **Tipo**, selecione `text`.
+7. Clique em **Salvar**.
 
+:::tip
+- **Chave primária** garante valores únicos para cada registro.
+- **Não Nulo** torna o preenchimento obrigatório.
+- O tipo `text` permite armazenar texto simples.
+:::
 
-## Visualizar
+## Validar o Resultado
 
-Após a realização dos passos anteriores com sucesso, vamos visualizar o resultado final.
+Abra a área de visualização e confirme que:
 
-Para isto clique no botão **Visualizar** no canto superior direito.
+- O formulário **Tarefa** está disponível.
+- O campo **Nome** aparece para preenchimento.
+- É possível criar um novo registro.
+- O campo **Nome** é obrigatório.
 
-Repare que agora tem uma nova opção no menu lateral: **Tarefa**
+:::info Resultado esperado
+Se a configuração estiver correta, o formulário estará pronto para operações de criação, edição, pesquisa e remoção de registros.
+:::
 
-Ao clicar no menu em **Tarefa** vai poder criar, editar, pesquisar e apagar as tarefas. Isto é, vai poder realizar a manipulação dos dados.
+## Próximos Passos
 
-Este é o resultado para o utilizador final poder manipular os dados do sistema.
-
-## Carregar Dados
-
-Agora pode inserir os registos das **Tarefas**.
-
-Clicar no botão `[ + Novo Item ]` no canto superior direito, preencher o campo **Nome** e clicar no botão `[ Guardar ]`.
-
-Pode inserir tarefas de exemplo, como:
-
-- Suporte
-- Comercial
-- Reunião
-- Faturação
-- Cobrança
+Avance para a próxima etapa de **Banco de Dados** para explorar e modificar a aplicação de demonstração.

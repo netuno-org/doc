@@ -1,59 +1,119 @@
 ---
 sidebar_position: 4
 id: databases
-title: Base de Dados
+title: Banco de Dados
 ---
 
-Recorde que já foi criado o formulário **Tarefa** com o campo **Nome**, os nomes de _Exibição_.
+# Banco de Dados
 
-Isto implica que já foi criada na base de dados a tabela **tarefa** com a coluna **nome**, cujos nomes foram inicialmente definidos na criação.
+Nesta etapa, vamos explorar o **banco de dados** criado automaticamente a partir do formulário **Tarefa** definido anteriormente.
 
-Os **nomes**, e não os nomes de exibição, é que são relevantes a nível de programação de acesso aos dados, assim como na construção de consultas à base de dados.
+Ao criar o formulário **Tarefa** com o campo **Nome**, o Netuno criou no banco de dados a tabela `tarefa` com a coluna `nome`, de acordo com os nomes definidos na criação do formulário.
+
+Os **nomes técnicos** dos campos (por exemplo, `tarefa`, `nome`, `tarefa_id`) são usados na programação e nas consultas SQL, e não correspondem aos nomes de exibição mostrados na interface.
 
 ## Queries
 
-No Netuno é possível manipular a base de dados diretamente através da interface que o Netuno disponibiliza para realizar operações diretamente à base de dados.
+Nesta seção vamos executar queries diretamente no banco de dados usando a interface de gestão do Netuno.
 
-Esta interface encontra-se no ambiente **Construir** e no menu em **Gestão** > **Query**.
+1. Acesse o ambiente **Construir**.
+2. No menu, clique em **Gestão > Query**.
+3. No editor de query, cole e execute os comandos abaixo.
 
-Experimente executar os seguintes comandos:
+### Consultas Simples
 
-``` sql 
-select nome from tarefa;
+Liste apenas o nome das tarefas:
 
-select * from tarefa;
-
-select * from registo;
-
-select * from trabalhador;
+```sql
+SELECT nome
+FROM tarefa;
 ```
 
-Repare que ao clicar em **Executar** é gerada uma tabela de resultados para cada comando, o que é útil ao executar múltiplos comandos separados por **;** (ponto e vírgula).
+Liste todos os campos da tabela de tarefas:
 
-Realize agora uma consulta mais complexa relacionando todas as tabelas:
+```sql
+SELECT *
+FROM tarefa;
+```
 
-``` sql
-SELECT tarefa.nome, registo.inicio, registo.fim, trabalhador.nome
+Liste todos os campos da tabela de registros:
+
+```sql
+SELECT *
+FROM registro;
+```
+
+Liste todos os campos da tabela de trabalhadores:
+
+```sql
+SELECT *
+FROM trabalhador;
+```
+
+Ao clicar em **Executar**, o Netuno gera uma tabela de resultados para **cada** comando separado por ponto e vírgula (`;`).  
+Isso é útil quando você quer executar várias consultas de uma só vez.
+
+### Consulta com Relacionamentos
+
+Agora, execute uma consulta que relaciona todas as tabelas:
+
+```sql
+SELECT
+  tarefa.nome,
+  registro.inicio,
+  registro.fim,
+  trabalhador.nome
 FROM tarefa
-  INNER JOIN registo ON tarefa.id = registo.tarefa_id
-  INNER JOIN trabalhador ON trabalhador.id = registo.trabalhador_id
+INNER JOIN registro
+  ON tarefa.id = registro.tarefa_id
+INNER JOIN trabalhador
+  ON trabalhador.id = registro.trabalhador_id;
 ```
+
+Essa query retorna:
+
+- O nome da tarefa.
+- O início e o fim de cada registro.
+- O nome do trabalhador associado a cada registro.
+
+Ela demonstra como os relacionamentos entre tabelas permitem combinar informações de diferentes entidades da aplicação.
 
 ## Diagrama
 
-Para visualizar toda a estrutura da base de dados, de forma mais intuitiva, podemos explorar o Diagrama da base de dados.
+Para visualizar a estrutura do banco de dados de forma mais intuitiva, use o **Diagrama** do Netuno.
 
-O Diagrama encontra-se disponível no ambiente **Construir** em **Gestão** > **Diagrama**.
+1. Acesse o ambiente **Construir**.
+2. No menu, clique em **Gestão > Diagrama**.
 
-É possível ampliar o diagrama e exportar o mesmo como imagem. Estas ações encontram-se em botões disponíveis do lado direito.
+No Diagrama você pode:
 
-O Netuno cria as linhas com setas de relacionamento através da configuração dos **Links** configurados nos campos, como no caso do campo do tipo **select**.
+- Ampliar ou reduzir o zoom.
+- Exportar o diagrama como imagem.
 
-## Considerações
+Essas ações estão disponíveis em botões do lado direito do painel do diagrama.
 
-Repare que é importante utilizar o sufixo **_id** no nome dos campos que tem relacionamento com **Link** para ajudar a distinguir melhor nas consultas e, consequentemente, no diagrama.
+O Netuno cria automaticamente as linhas com setas de relacionamento com base na configuração de **Links** nos campos (por exemplo, campos do tipo `select` que apontam para outras tabelas).
 
-Também não se devem utilizar nomes no plural, como **tarefa**_s_, **registo**_s_ ou **trabalhador**_es_, isto porque além dos nomes ficarem mais compridos, também se cria mais entropia na sua interpretação, principalmente no caso de formulários e tarefas para múltiplos relacionamentos.
+## Boas Práticas
 
-> Como padrão o Nome dos formulários e campos deverá ser sempre no singular.
+Ao modelar o seu banco de dados no Netuno, siga estas boas práticas:
 
+- Use o sufixo `_id` nos campos que representam relacionamentos, por exemplo:
+  - `tarefa_id`
+  - `trabalhador_id`
+- Evite usar nomes de tabelas e campos no plural, como `tarefas`, `registros` ou `trabalhadores`.
+
+Evitar o plural ajuda a:
+
+- Manter os nomes mais curtos e legíveis.
+- Reduzir ambiguidades ao escrever queries.
+- Facilitar a leitura nos formulários e nos diagramas, principalmente quando há múltiplos relacionamentos.
+
+:::tip Padrão de nomenclatura
+Como padrão, use sempre **nomes no singular** para formulários, tabelas e campos.  
+Exemplos: `tarefa`, `registro`, `trabalhador`, `tarefa_id`, `trabalhador_id`.
+:::
+
+## Próximo Passo
+
+Avance para a próxima etapa de **Relacionar Dados** para continuar com a aplicação de demonstração.
