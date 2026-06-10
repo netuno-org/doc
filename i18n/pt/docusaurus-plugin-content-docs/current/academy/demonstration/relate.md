@@ -2,57 +2,118 @@
 sidebar_position: 5
 id: relate
 title: Relacionar Dados
+description: Relacione tarefas e registros de horas para saber quem executou qual tarefa e quanto tempo foi gasto.
 ---
 
-## Criar Relação Entre os Dados 
+# Relacionar Dados
 
-Anteriormente, criámos a nossa gestão de tarefas, mas só assim não tem grande utilidade prática, porque apenas permite gerir uma lista de tarefas de forma isolada.
+Crie uma relação entre tarefas e registros de horas para saber **quem** executou **qual tarefa** e **quanto tempo** foi gasto.
 
-Precisamos de saber qual o trabalhador que realizou uma tarefa e qual foi o tempo gasto.
+Ao final desta etapa, o formulário **Registro** estará relacionado à tabela **Tarefa**, permitindo visualizar a tarefa associada diretamente na listagem de registros.
 
-Vamos então relacionar as **Tarefas** com o **Registo** de horas.
+## Pré-Requisitos
 
-### Campo do Tipo Select
+Antes de começar, verifique se você já concluiu:
 
-Voltando ao ambiente 'Construir' e indo na gestão de campos do formulário **Registo**, vamos criar um novo campo onde a configuração do **Nome de Exibição** deverá ser `Tarefa`.
+- A criação do formulário **Tarefa** com o campo `nome`.
+- A criação do formulário **Registro** com os campos básicos de horas trabalhadas.
+- A configuração das tabelas correspondentes no **Banco de Dados**.
 
-A configuração do **Nome** ficou preenchida automaticamente com `tarefa`, mas devemos adicionar o sufixo `_id`, ao **Nome** `tarefa` adiciona-se `_id` resultando em `tarefa_id`.
+:::tip
+Para mais detalhes sobre como relacionar dados, consulte o [Guia de Interface: Relações](/docs/academy/ui/relationships-between-forms).
+:::
 
-> #### Isto é importante
-> O **Nome** deverá terminar sempre em `_id`!
->
-> Visto ser um padrão para nomes de campos que fazem relações entre si porque facilita a distinção de outros.
+Até aqui, você criou uma gestão de tarefas e um registro de horas, mas cada lista ainda funciona de forma isolada.  
 
-Na configuração do _Tipo_ escolha a opção **select**.
+É importante relacioná-los, de modo que cada registro de horas indique claramente qual tarefa foi realizada por um colaborador e em qual período.
 
-Lembre-se de marcar este campo como obrigatório através da ativação da configuração **Não Nulo**, visto o seu preenchimento ser importante para saber o que o trabalhador realizou no horário marcado.
+Nesta etapa, você vai:
 
-Note que a opção de _Chave Primária_ deverá manter-se desligada porque vai haver muitos registos para a mesma tarefa.
+- Criar um campo do tipo `select` no formulário **Registro**.
+- Configurar o campo para se relacionar com a tabela **Tarefa**.
+- Atualizar alguns dados para ver a relação funcionando na prática.
 
-E preencha a **Coluna** com o valor 1 e a **Linha** com o valor 2, para este novo campo da _Tarefa_ aparecer antes dos campos de data e hora.
+## Campo do Tipo `select`
 
-### Link
+Adicione um campo que permitirá selecionar a tarefa associada a cada registro de horas.
 
-Note que este tipo de campo tem uma parametrização do **Link** mais em baixo.
+1. No ambiente **Construir**, abra o formulário **Registro** e acesse a gestão de campos.
+2. Crie um novo campo com as seguintes configurações:
+   - **Título do Campo**: `Tarefa`
+   - **Nome da Coluna**: `tarefa_id`
+   - **Tipo**: `select`
+3. Ative a opção **Obrigatório** para garantir que todo registro esteja associado a uma tarefa.
+4. Mantenha a opção de **Valores Únicos** desativada, pois haverá muitos registros para a mesma tarefa.
 
-O link é o que realiza a relação dos dados.
+:::note
+Sugerimos o nome `tarefa_id` para manter um padrão consistente de nomenclatura em todo o modelo de dados.
+:::
 
-Para configurar clique em _Adicionar_, depois clique na opção **tarefa**, que aparece na janela que abriu e depois no **nome** e por fim basta _Fechar_ a janela.
+## Usar o Sufixo `_id`
 
-Desta forma o **Link** foi definido com o valor `tarefa:nome`.
+O nome do campo que faz referência a outro registro deverá terminar com `_id`.  
+Esse padrão facilita identificar que o campo representa uma relação com outra tabela e deixa o modelo de dados mais organizado.
 
-Isto significa que vai relacionar com a tabela **tarefa** apresentando os dados da coluna **nome**.
+:::warning
+Evite usar nomes genéricos como `tarefa` ou `ref_tarefa` para campos de relação.  
+Padronizar com `_id` ajuda a evitar confusão quando você estiver analisando dados ou criando integrações.
+:::
 
-Para concluir clique em **Guardar**.
+## Configurar o Link de Relação
 
-### Alterar os Dados
+Configure o **Link**, que é o responsável por relacionar o campo `tarefa_id` com a tabela de tarefas.
 
-Agora ao _visualizar_ o resultado no **Registo** terá mais uma coluna da **Tarefa**, que está sem dados.
+1. No campo recém-criado (`tarefa_id`), role até a seção de configuração de **Link**.
+2. Clique em **Adicionar**.
+3. Na janela que se abrir:
+   - Selecione a opção **tarefa**.
+   - Em seguida, selecione o campo **nome**.
+   - Feche a janela para aplicar.
 
-Edite alguns registos ao clicar sobre a linha na tabela de resutados.
+Ao finalizar, o **Link** será definido como:
 
-No formulário de edição do **Registo** tem o campo que permite selecionar a **Tarefa**, ao guardar com a tarefa associada a coluna da tarefa aparecerá preenchida na tabela de pesquisa.
+```text
+tarefa:nome
+```
 
-Os **Registos** passam a estar associados com alguma **Tarefa** e ficam relacionados.
+Isso significa que:
 
-Guarde a alteração em alguns registos com a tarefa associada.
+- O relacionamento será feito com a tabela **tarefa**.
+- Na interface, será exibido o valor do campo **nome** da tarefa ao selecionar no campo `Tarefa`.
+
+Clique no botão **Salvar** para salvar a configuração do campo.
+
+:::tip
+Sempre que possível, utilize um campo descritivo (como `nome`) para exibir a informação relacionada, em vez de um identificador técnico ou numérico.
+:::
+
+## Atualizar Registros
+
+Com o campo de relação configurado, ajuste os dados para visualizar o resultado.
+
+1. Acesse a visualização do formulário **Registro**.
+2. Note que agora a tabela de resultados possui uma nova coluna chamada **Tarefa**, que inicialmente estará vazia.
+3. Edite alguns registros:
+   - Clique sobre uma linha na tabela de resultados para abrir o formulário de edição.
+   - No campo **Tarefa**, selecione a tarefa correspondente.
+   - Clique em **Salvar** para salvar.
+
+**Depois de salvar:**
+
+- A coluna **Tarefa** na tabela de resultados passará a exibir o nome da tarefa associada.
+- Cada **Registro** ficará claramente relacionado a uma **Tarefa**, permitindo uma análise mais completa do tempo gasto em cada atividade.
+
+:::note
+Caso existam muitos registros sem tarefa definida, considere fazer a atualização em lotes ou definir uma tarefa padrão temporária, de acordo com a sua política de dados.
+:::
+
+### Resultado Esperado
+
+A listagem de **Registro** deverá exibir:
+
+- Uma coluna **Tarefa** preenchida com os nomes das tarefas associadas.
+- Cada linha representando um registro de horas com sua respectiva tarefa, tornando mais simples identificar onde o tempo foi investido.
+
+## Próximos Passos
+
+No próximo tópico, você verá como criar um **Serviço** para expor esses dados e utilizá-los em outras partes da aplicação, como relatórios ou interfaces personalizadas.
