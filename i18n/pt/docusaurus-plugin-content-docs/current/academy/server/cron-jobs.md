@@ -71,12 +71,12 @@ Verifique se já não existem configurações para o Cron, se não existir adici
             {
                 "name": "meu-job",
                 "config": "0 30 12 * * ?",
-                "url": "http://minha-app.local.netu.no:9000/jobs/meu-job"
+                "url": "http://minha-app.local.netu.no:9000/services/jobs/meu-job"
             },
             {
                 "name": "meu-job",
                 "config": "0 0/2 * * * ?",
-                "url": "http://minha-app.local.netu.no:9000/jobs/meu-outro-job",
+                "url": "http://minha-app.local.netu.no:9000/services/jobs/meu-outro-job",
                 "params": {
                     "secret": "m3u-Ou7ro-S3Gred0",
                     "tipo": "cliente"

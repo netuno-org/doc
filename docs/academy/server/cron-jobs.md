@@ -71,12 +71,12 @@ Check that there are no more configurations for _Cron_, if it does not add the c
             {
                 "name": "my-job",
                 "config": "0 30 12 * * ?",
-                "url": "http://my-app.local.netu.no:9000/jobs/my-job"
+                "url": "http://my-app.local.netu.no:9000/services/jobs/my-job"
             },
             {
                 "name": "my-job",
                 "config": "0 0/2 * * * ?",
-                "url": "http://my-app.local.netu.no:9000/jobs/my-other-job",
+                "url": "http://my-app.local.netu.no:9000/services/jobs/my-other-job",
                 "params": {
                     "secret": "m3u-Ou7ro-S3Gred0",
                     "type": "client"
