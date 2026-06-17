@@ -96,3 +96,37 @@ List of chunks, each with the fields: `index` (position in the sequence), `start
 
 ---
 
+## pdf
+
+---
+
+#### <span style={{color: '#008000'}}>pdf</span>(<span style={{color: '#FF8000'}}>pdfText</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **pdfText** | _string_ |   |
+
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>pdf</span>(<span style={{color: '#FF8000'}}>pdfText</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>chunkSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>overlapSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **pdfText** | _string_ |   |
+| **chunkSize** | _int_ |   |
+| **overlapSize** | _int_ |   |
+
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+

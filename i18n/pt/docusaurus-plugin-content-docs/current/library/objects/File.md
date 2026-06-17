@@ -388,6 +388,18 @@ Permite obter o caminho completo do ficheiro.
 
 ---
 
+## fullURI
+
+---
+
+#### <span style={{color: '#008000'}}>fullURI</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
+
+
+---
+
 ## getBaseName
 
 ---
@@ -1099,6 +1111,18 @@ Guarda o ficheiro no caminho inserido.
 ##### Retorno
 
 ( _double_ )
+
+
+---
+
+## uri
+
+---
+
+#### <span style={{color: '#008000'}}>uri</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
 
 
 ---

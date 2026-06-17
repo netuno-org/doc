@@ -414,7 +414,7 @@ Retorna o próprio objeto Out
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Descrição
 
 Gera uma resposta JSON a partir de um Map, utilizando uma instância de Values para estruturar o conteúdo
@@ -423,7 +423,7 @@ Gera uma resposta JSON a partir de um Map, utilizando uma instância de Values p
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **Values** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Os dados contidos no Mapa serão convertidos automaticamente para JSON.  |
+| **Values** | _java.util.Map_ | Os dados contidos no Mapa serão convertidos automaticamente para JSON.  |
 
 ##### Retorno
 

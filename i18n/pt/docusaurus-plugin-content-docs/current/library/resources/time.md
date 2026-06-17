@@ -2372,7 +2372,7 @@ Converte o objeeto passado para TemporalAcessor.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **zoneId** | _string_ |   |
-| **aliasMap** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **aliasMap** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -2468,7 +2468,7 @@ Converte o objeeto passado para TemporalAcessor.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **zoneId** | _string_ |   |
-| **aliasMap** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **aliasMap** | _java.util.Map_ |   |
 
 ##### Retorno
 

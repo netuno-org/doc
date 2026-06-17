@@ -48,7 +48,7 @@ Retorna os sub relacionamentos do objeto atual.
 
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 Sub relacionamentos
 
@@ -228,7 +228,7 @@ Define os sub relacionamentos do objeto atual.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **subRelacionamentos** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Sub relacionamentos. |
+| **subRelacionamentos** | _java.util.Map_ | Sub relacionamentos. |
 
 ##### Retorno
 

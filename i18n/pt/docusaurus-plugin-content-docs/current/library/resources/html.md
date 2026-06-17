@@ -318,3 +318,33 @@ Objeto do [JSOUP](https://jsoup.org) que permite a interação com o código HTM
 
 ---
 
+## toW3CDom
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>toW3CDom</span>(<span style={{color: '#FF8000'}}>doc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.nodes.Document</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **doc** | _org.jsoup.nodes.Document_ |   |
+
+##### Retorno
+
+( _org.w3c.dom.Document_ )
+
+
+---
+
+## w3cDom
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_html</span>.<span style={{color: '#008000'}}>w3cDom</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.jsoup.helper.W3CDom</span>
+##### Retorno
+
+( _org.jsoup.helper.W3CDom_ )
+
+
+---
+

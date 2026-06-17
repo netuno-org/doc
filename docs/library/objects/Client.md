@@ -554,6 +554,25 @@ OpenAI client instance.
 
 ---
 
+## invokeTool
+
+---
+
+#### <span style={{color: '#008000'}}>invokeTool</span>(<span style={{color: '#FF8000'}}>toolName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>arguments</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **toolName** | _string_ |   |
+| **arguments** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
 ## isInitialized
 
 ---

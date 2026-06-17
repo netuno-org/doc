@@ -123,7 +123,7 @@ Recurso para a manipulação de imagens programaticamente.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **text** | _string_ |   |
-| **attributes** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **attributes** | _java.util.Map_ |   |
 
 ##### Retorno
 

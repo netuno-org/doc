@@ -1038,7 +1038,7 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -1053,7 +1053,7 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -1067,7 +1067,7 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -1082,7 +1082,7 @@ const adminMail = _config.getString('admin-mail');
 
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -2012,7 +2012,7 @@ Define a restrição de segurança em um diretório específico para os objetos 
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Descrição
 
 Obtém o objeto original associado a chave.
@@ -2050,7 +2050,7 @@ Objeto original sem conversões.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Descrição
 
 Obtém o objeto original associado a chave.
@@ -3074,7 +3074,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -3089,7 +3089,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -3103,7 +3103,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -3118,7 +3118,7 @@ Objeto original convertido para o tipo da classe definida.
 
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -4012,7 +4012,7 @@ Se está em modo apenas leitura ou não.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **splitter** | _string_ |   |
 
 ##### Retorno
@@ -4056,7 +4056,7 @@ Se está em modo apenas leitura ou não.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
+#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;java.lang.Object&gt;</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -4236,7 +4236,7 @@ Se está em modo apenas leitura ou não.
 #### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>map</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -4350,7 +4350,7 @@ Se está em modo apenas leitura ou não.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -4456,7 +4456,7 @@ Se está em modo apenas leitura ou não.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **m** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **m** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -4860,7 +4860,7 @@ Se está em modo apenas leitura ou não.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **content** | _string_ |   |
 | **splitter** | _string_ |   |
 | **ignoreCase** | _boolean_ |   |
@@ -5648,7 +5648,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>toList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
+#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>toList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;java.lang.Object&gt;</span>
 ##### Retorno
 
 ( _java.util.List_ )
@@ -5689,7 +5689,7 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 #### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>toMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -5792,6 +5792,58 @@ Define a codificação de caracteres para ser utilizada na formatação para URL
 
 ---
 
+## unvaluedList
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>unvaluedList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;java.lang.Object&gt;</span>
+##### Retorno
+
+( _java.util.List_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>unvaluedList</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;java.lang.Object&gt;</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **values** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _java.util.List_ )
+
+
+---
+
+## unvaluedMap
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>unvaluedMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
+##### Retorno
+
+( _java.util.Map_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_config</span>.<span style={{color: '#008000'}}>unvaluedMap</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **values** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _java.util.Map_ )
+
+
+---
+
 ## values
 
 ---
@@ -5878,7 +5930,7 @@ Lista de todos os valores obtidos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **splitter** | _string_ |   |
 
 ##### Retorno
@@ -5893,7 +5945,7 @@ Lista de todos os valores obtidos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **splitter** | _string_ |   |
 | **excludes** | _string[]_ |   |
 
@@ -5909,7 +5961,7 @@ Lista de todos os valores obtidos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **splitter** | _string_ |   |
 | **excludes** | _string[]_ |   |
 | **config** | _[Values](/docs/library/objects/Values)_ |   |
@@ -5926,7 +5978,7 @@ Lista de todos os valores obtidos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **splitter** | _string_ |   |
 | **config** | _[Values](/docs/library/objects/Values)_ |   |
 
