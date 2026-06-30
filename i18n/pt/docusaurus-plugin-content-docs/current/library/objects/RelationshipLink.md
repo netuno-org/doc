@@ -48,7 +48,7 @@ Retorna os sub relacionamentos.
 
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 Sub relacionamentos.
 
@@ -125,7 +125,7 @@ Define os sub relacionamentos.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **subRelacionamentos** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Sub relacionamentos. |
+| **subRelacionamentos** | _java.util.Map_ | Sub relacionamentos. |
 
 ##### Retorno
 

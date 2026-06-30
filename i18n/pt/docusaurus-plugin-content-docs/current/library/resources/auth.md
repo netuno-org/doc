@@ -162,7 +162,7 @@ Todas as configurações dos provedores de autenticação.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -1298,7 +1298,7 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -1435,7 +1435,7 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -1481,7 +1481,7 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -1561,7 +1561,7 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Retorno
 
@@ -1615,7 +1615,7 @@ Se o provedor de autenticação estiver ativo retorna _true_.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **data** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **data** | _java.util.Map_ |   |
 
 ##### Retorno
 

@@ -96,3 +96,37 @@ Lista de blocos, cada um com os campos: `index` (posição na sequência), `star
 
 ---
 
+## pdf
+
+---
+
+#### <span style={{color: '#008000'}}>pdf</span>(<span style={{color: '#FF8000'}}>pdfText</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **pdfText** | _string_ |   |
+
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>pdf</span>(<span style={{color: '#FF8000'}}>pdfText</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>chunkSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>overlapSize</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **pdfText** | _string_ |   |
+| **chunkSize** | _int_ |   |
+| **overlapSize** | _int_ |   |
+
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+

@@ -25,6 +25,18 @@ Lista de registros.
 
 ---
 
+## count
+
+---
+
+#### <span style={{color: '#008000'}}>count</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Retorno
+
+( _int_ )
+
+
+---
+
 ## debug
 
 ---
@@ -221,7 +233,7 @@ Retorna os objetos Join (tabelas relacionadas) referente a tabela principal da c
 
 ##### Retorno
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 Objetos Join (tabelas relacionadas) referente a tabela principal da consulta.
 
@@ -859,7 +871,7 @@ Define os objetos Join (tabelas relacionadas) referente a tabela principal da co
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **join** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | Objetos Join (tabelas relacionadas) referente a tabela principal da consulta. |
+| **join** | _java.util.Map_ | Objetos Join (tabelas relacionadas) referente a tabela principal da consulta. |
 
 ##### Retorno
 

@@ -1118,7 +1118,7 @@ Existem muitos outros dados que são obtidos no `metadata` mas que foram omitido
 
 É possível converter programaticamente o PDF para texto ou até mesmo para HTML.
 
-### Texto
+### PDF para Texto
 
 Podemos extrair todo o conteúdo do arquivo PDF em texto corrido utilizando o método:
 
@@ -1160,7 +1160,7 @@ Ou ainda utilizando um arquivo no `storage` da aplicação:
 />
 
 
-### HTML
+### PDF para HTML
 
 
 Podemos extrair todo o conteúdo do arquivo PDF em HTML utilizando o método:
@@ -1197,6 +1197,138 @@ Ou ainda utilizando um arquivo no `storage` da aplicação:
             lang: 'javascript',
             code: `
                 _out.print(_pdf.toHTML(_storage.filesystem("server", "meu-documento.pdf")))
+            `
+        },
+    ]}
+/>
+
+### HTML para PDF
+
+
+É possível gerar arquivos PDF a partir de código HTML, utilizando o método:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.fromHTML(...)
+            `
+        },
+    ]}
+/>
+
+Exemplo de como utilizá-lo para gerar um arquivo de download no serviço:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const icon = _app.file("public/images/icon.png");
+
+                const pdfFile = _pdf.fromHTML(\`
+                    <html>
+                        <head>
+                            <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Roboto" rel="stylesheet">
+                            <style>
+                                * {
+                                    font-family: Roboto;
+                                }
+                                div.sidebar {
+                                    position: fixed;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100px;
+                                    background: #1B5886;
+                                }
+                                div.sidebar > div {
+                                    position: absolute;
+                                    top: 350px;
+                                    transform: rotate(-90deg) translate(-50%, -34px);
+                                    font-family: Limelight;
+                                    font-size: 40px;
+                                    color: #89CFF1;
+                                }
+                                main {
+                                    padding-left: 150px;
+                                }
+                                h1 {
+                                    margin: 0 auto;
+                                    text-align: center;
+                                    font-family: Limelight;
+                                    color: #BA250E;
+                                }
+                                table {
+                                    margin: 0 auto;
+                                    border: 1px solid black;
+                                    border-spacing: 0;
+                                    border-collapse: collapse;
+                                }
+                                table > thead {
+                                    background: #40712A;
+                                    color: #fff;
+                                }
+                                table td, table th {
+                                    padding: 5px;
+                                    text-align: center;
+                                }
+                                table > tbody > tr:nth-child(even) {
+                                    background: #e1e1e1;
+                                }
+                                a {
+                                    font-family: Limelight;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    text-decoration: none;
+                                    color: #1E5FB5;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="sidebar">
+                                <div>Demonstração</div>
+                            </div>
+                            <main>
+                                <h1>PDF a partir do HTML</h1>
+                                <div style="text-align: center; margin: 30px 0;">
+                                    <img width="50" src="\${icon.uri()}">
+                                </div>
+                                <p>
+                                    Este é um HTML de exemplo para a geração de um arquivo PDF.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                                    tellus arcu, pharetra quis condimentum eget, dapibus convallis metus.
+                                </p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Idade</th>
+                                        </tr>
+                                    </thread>
+                                    <tbody>
+                                        <tr>
+                                            <td>Maria Luísa</td>
+                                            <td>23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>José Matos</td>
+                                            <td>38</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr style="margin-top: 50px; height: 1px; background: #50B6C6; border: none;"/>
+                                <div>
+                                    <a href="https://netuno.org" target="_blank">Netuno.org</a>
+                                </div>
+                            </main>
+                        </body>
+                    </html>
+                \`);
+
+                _header.contentTypePDF();
+                _out.copy(pdfFile.input());
             `
         },
     ]}

@@ -414,7 +414,7 @@ Returns the Out object itself
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
+#### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>json</span>(<span style={{color: '#FF8000'}}>Values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Out](/docs/library/resources/out)</span>
 ##### Description
 
 Generates a JSON response from a Map, using an instance of Values to structure the average content of the sample
@@ -423,7 +423,7 @@ Generates a JSON response from a Map, using an instance of Values to structure t
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **Values** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | The data contained in the Map will be automatically converted to JSON. |
+| **Values** | _java.util.Map_ | The data contained in the Map will be automatically converted to JSON. |
 
 ##### Return
 

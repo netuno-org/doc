@@ -304,6 +304,38 @@ store.delete('articles', 'doc-001')
 
 ---
 
+## deleteByMetadata
+
+---
+
+#### <span style={{color: '#008000'}}>deleteByMetadata</span>(<span style={{color: '#FF8000'}}>collection</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>metadataFilter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
+##### Description
+
+Removes all documents from a collection that match the provided metadata filter. The filter is mandatory and cannot be null or empty, to prevent accidental deletion of the entire collection. To delete the entire collection use `deleteCollection`.
+
+##### How To Use
+
+```javascript
+const filter = _val.map().set('source', 'web')
+
+store.deleteByMetadata('articles', filter)
+_log.info('Documents with source=web removed.')
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **collection** | _string_ | Name of the collection from which documents will be removed. |
+| **metadataFilter** | _[Values](/docs/library/objects/Values)_ | Object with key-value pairs identifying the documents to remove. Cannot be null or empty. |
+
+##### Return
+
+( _void_ )
+
+
+---
+
 ## deleteCollection
 
 ---
@@ -329,6 +361,71 @@ store.deleteCollection('articles')
 
 ( _void_ )
 
+
+---
+
+## getAll
+
+---
+
+#### <span style={{color: '#008000'}}>getAll</span>(<span style={{color: '#FF8000'}}>collection</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Description
+
+Returns all documents in a collection, without any filtering.
+
+##### How To Use
+
+```javascript
+const documents = store.getAll('articles')
+
+for (const doc of documents) {
+    _log.info(doc.get('id') + ' | ' + doc.get('text'))
+}
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **collection** | _string_ | Name of the collection to query. |
+
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
+
+List of all documents in the collection. Each item contains: `id`, `text`, `embedding`, `metadata` and `timestamp`.
+
+---
+
+#### <span style={{color: '#008000'}}>getAll</span>(<span style={{color: '#FF8000'}}>collection</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>metadataFilter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Description
+
+Returns all documents in a collection that match the provided metadata filter. The filter is applied as exact JSON subset matching (PostgreSQL `@>` operator). For list values, `= ANY()` is used instead of the subset operator.
+
+##### How To Use
+
+```javascript
+const filter = _val.map().set('source', 'web')
+
+const documents = store.getAll('articles', filter)
+
+for (const doc of documents) {
+    _log.info(doc.get('id') + ' | ' + doc.get('text'))
+}
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **collection** | _string_ | Name of the collection to query. |
+| **metadataFilter** | _[Values](/docs/library/objects/Values)_ | Object with key-value pairs to filter documents by their metadata. If null or empty, all documents are returned. |
+
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
+
+List of matching documents. Each item contains: `id`, `text`, `embedding`, `metadata` and `timestamp`.
 
 ---
 

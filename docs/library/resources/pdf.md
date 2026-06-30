@@ -1412,7 +1412,7 @@ Extracts the content of PDFs.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **storage** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ | Caminho do armazenamento. |
+| **storage** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO | Caminho do armazenamento. |
 
 ##### Return
 
@@ -1621,6 +1621,38 @@ Creates a font.
 ( _com.itextpdf.kernel.font.PdfFont_ )
 
 Returns the created font.
+
+---
+
+## fromHTML
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>fromHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **content** | _string_ |   |
+
+##### Return
+
+( _[File](/docs/library/objects/File)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>fromHTML</span>(<span style={{color: '#FF8000'}}>doc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **doc** | _org.w3c.dom.Document_ |   |
+
+##### Return
+
+( _[File](/docs/library/objects/File)_ )
+
 
 ---
 
@@ -1920,7 +1952,7 @@ Creates a PDF document with specific page size.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **out** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ | File path. |
+| **out** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO | File path. |
 | **pageSize** | _com.itextpdf.kernel.geom.PageSize_ | Page size. |
 
 ##### Return
@@ -1975,7 +2007,7 @@ Returns PDF document openned.
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
-| **out** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
+| **out** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO |   |
 
 ##### Return
 
@@ -1993,7 +2025,7 @@ Opens a PDF documment corresponding to the inserted path.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **path** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ | File path. |
+| **path** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO | File path. |
 
 ##### Return
 
@@ -2008,7 +2040,7 @@ Returns PDF document openned.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
+| **in** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO |   |
 | **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Return
@@ -2023,8 +2055,8 @@ Returns PDF document openned.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **in** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
-| **out** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
+| **in** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO |   |
+| **out** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO |   |
 
 ##### Return
 

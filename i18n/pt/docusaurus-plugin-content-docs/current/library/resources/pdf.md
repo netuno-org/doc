@@ -1412,7 +1412,7 @@ Extrai o conteúdo de PDFs.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **armazenamento** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ | Caminho do armazenamento. |
+| **armazenamento** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO | Caminho do armazenamento. |
 
 ##### Retorno
 
@@ -1621,6 +1621,38 @@ Cria um tipo de letra.
 ( _com.itextpdf.kernel.font.PdfFont_ )
 
 Retorna o tipo de letra.
+
+---
+
+## fromHTML
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>fromHTML</span>(<span style={{color: '#FF8000'}}>content</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **content** | _string_ |   |
+
+##### Retorno
+
+( _[File](/docs/library/objects/File)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>fromHTML</span>(<span style={{color: '#FF8000'}}>doc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.w3c.dom.Document</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[File](/docs/library/objects/File)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **doc** | _org.w3c.dom.Document_ |   |
+
+##### Retorno
+
+( _[File](/docs/library/objects/File)_ )
+
 
 ---
 
@@ -1920,7 +1952,7 @@ Cria um novo documento PDF com tamanho de página específica.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **saida** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ | Caminho do ficheiro. |
+| **saida** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO | Caminho do ficheiro. |
 | **nPaginas** | _com.itextpdf.kernel.geom.PageSize_ | Número de páginas. |
 
 ##### Retorno
@@ -1975,7 +2007,7 @@ Retorna o documento PDF aberto.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **in** | _[InputStream](/docs/library/objects/InputStream)_ |   |
-| **out** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
+| **out** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO |   |
 
 ##### Retorno
 
@@ -1993,7 +2025,7 @@ Abre o documento PDF referente ao caminho inserido.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **caminho** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ | Caminho do ficheiro. |
+| **caminho** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO | Caminho do ficheiro. |
 
 ##### Retorno
 
@@ -2008,7 +2040,7 @@ Retorna o documento PDF aberto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
+| **in** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO |   |
 | **out** | _[OutputStream](/docs/library/objects/OutputStream)_ |   |
 
 ##### Retorno
@@ -2023,8 +2055,8 @@ Retorna o documento PDF aberto.
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **in** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
-| **out** | _[Storage](/docs/library/resources/storage) &#124; [File](/docs/library/objects/File) | org.netuno.psamata.io.IO_ |   |
+| **in** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO |   |
+| **out** | _[Storage](/docs/library/resources/storage)_ &#124; _[File](/docs/library/objects/File)_ | org.netuno.psamata.io.IO |   |
 
 ##### Retorno
 

@@ -1074,7 +1074,7 @@ _exec.stop();
 
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -1089,7 +1089,7 @@ _exec.stop();
 
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -1103,7 +1103,7 @@ _exec.stop();
 
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -1118,7 +1118,7 @@ _exec.stop();
 
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -2278,7 +2278,7 @@ _exec.gc();
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Description
 
 Gets the original object associated with the key.
@@ -2316,7 +2316,7 @@ Original object without conversions.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>
+#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>get</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>?</span>
 ##### Description
 
 Gets the original object associated with the key.
@@ -3340,7 +3340,7 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -3355,7 +3355,7 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -3369,7 +3369,7 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -3384,7 +3384,7 @@ Original object converted to the type of the defined class.
 
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -4348,7 +4348,7 @@ Whether it is in read-only mode or not.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **splitter** | _string_ |   |
 
 ##### Return
@@ -4427,7 +4427,7 @@ Whether it is in read-only mode or not.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
+#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>list</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;java.lang.Object&gt;</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -4607,7 +4607,7 @@ Whether it is in read-only mode or not.
 #### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>map</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -4721,7 +4721,7 @@ Whether it is in read-only mode or not.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 
 ##### Return
 
@@ -4845,7 +4845,7 @@ Whether it is in read-only mode or not.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **m** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **m** | _java.util.Map_ |   |
 
 ##### Return
 
@@ -5319,7 +5319,7 @@ Whether it is in read-only mode or not.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **content** | _string_ |   |
 | **splitter** | _string_ |   |
 | **ignoreCase** | _boolean_ |   |
@@ -6214,7 +6214,7 @@ _out.println('Not run this line.');
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>toList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>
+#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>toList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;java.lang.Object&gt;</span>
 ##### Return
 
 ( _java.util.List_ )
@@ -6255,7 +6255,7 @@ _out.println('Not run this line.');
 #### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>toMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 
 ---
@@ -6358,6 +6358,58 @@ _out.println('Not run this line.');
 
 ---
 
+## unvaluedList
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>unvaluedList</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;java.lang.Object&gt;</span>
+##### Return
+
+( _java.util.List_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>unvaluedList</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;java.lang.Object&gt;</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **values** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Return
+
+( _java.util.List_ )
+
+
+---
+
+## unvaluedMap
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>unvaluedMap</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
+##### Return
+
+( _java.util.Map_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_exec</span>.<span style={{color: '#008000'}}>unvaluedMap</span>(<span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **values** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Return
+
+( _java.util.Map_ )
+
+
+---
+
 ## values
 
 ---
@@ -6444,7 +6496,7 @@ List of all obtained values.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **splitter** | _string_ |   |
 
 ##### Return
@@ -6459,7 +6511,7 @@ List of all obtained values.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **splitter** | _string_ |   |
 | **excludes** | _string[]_ |   |
 
@@ -6475,7 +6527,7 @@ List of all obtained values.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **splitter** | _string_ |   |
 | **excludes** | _string[]_ |   |
 | **config** | _[Values](/docs/library/objects/Values)_ |   |
@@ -6492,7 +6544,7 @@ List of all obtained values.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **map** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ |   |
+| **map** | _java.util.Map_ |   |
 | **splitter** | _string_ |   |
 | **config** | _[Values](/docs/library/objects/Values)_ |   |
 

@@ -25,6 +25,18 @@ List of records.
 
 ---
 
+## count
+
+---
+
+#### <span style={{color: '#008000'}}>count</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Return
+
+( _int_ )
+
+
+---
+
 ## debug
 
 ---
@@ -221,7 +233,7 @@ Returns the Join objects (related tables) referring to the main table of the que
 
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 The Join objects (related tables) referring to the main table of the query.
 
@@ -859,7 +871,7 @@ Defines the Join objects (related tables) referring to the main table of the que
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **join** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | The Join objects (related tables) referring to the main table of the query. |
+| **join** | _java.util.Map_ | The Join objects (related tables) referring to the main table of the query. |
 
 ##### Return
 

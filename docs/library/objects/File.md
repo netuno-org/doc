@@ -388,6 +388,18 @@ Allows to get the complete path of the file.
 
 ---
 
+## fullURI
+
+---
+
+#### <span style={{color: '#008000'}}>fullURI</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Return
+
+( _string_ )
+
+
+---
+
 ## getBaseName
 
 ---
@@ -1099,6 +1111,18 @@ Saves the file in the inserted path
 ##### Return
 
 ( _double_ )
+
+
+---
+
+## uri
+
+---
+
+#### <span style={{color: '#008000'}}>uri</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Return
+
+( _string_ )
 
 
 ---
