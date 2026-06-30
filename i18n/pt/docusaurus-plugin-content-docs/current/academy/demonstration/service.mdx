@@ -2,58 +2,63 @@
 sidebar_position: 6
 id: service
 title: Serviço
+description: Aprenda a criar Web Services e APIs REST no Netuno, integrar dados entre sistemas e fornecer dados dinâmicos para o frontend de forma assíncrona.
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 import PolyglotPath from "@site/src/components/PolyglotPath";
 
-Com o Netuno é possível criar _Web Services_ e construir qualquer tipo de **APIs <a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a>** complexas.
+Com o Netuno é possível criar **_Web Services_** e construir qualquer tipo de **APIs <a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a>** complexas para integração de dados entre sistemas.
 
-Os serviços (_<a href="https://pt.wikipedia.org/wiki/Web_service" target="_blank">Web Services</a>_) servem para realizar a integração de dados online, onde um sistema web pode trocar informação com outro.
+:::info O que é um Web Service?
+Um Web Service permite que sistemas troquem informações online de forma padronizada. No Netuno, cada arquivo dentro de `server/services/` se torna automaticamente um endpoint acessível via HTTP.
+:::
 
-Também serve para fornecer os dados para a frontend (_páginas web_) de forma assíncrona, permitindo à frontend carregar a parte visual da página web de forma mais rápida e obter a informação dinâmica através da integração com serviços (_<a href="https://pt.wikipedia.org/wiki/Web_service" target="_blank">Web Services</a>_).
+## Por que usar Web Services?
 
-Isto permite proporcionar uma melhor experiência ao utilizador final, porque não fica à espera que a página toda seja processada pelo servidor e só depois devolvida, mas sim que o servidor envie rapidamente a estrutura da página que será apresentada e só depois é que efetua o carregamento gradual dos dados dinâmicos.
+O uso de serviços assíncronos traz benefícios claros para a experiência do usuário:
 
-## Editor
+- **Carregamento mais rápido:** o servidor entrega a estrutura visual da página imediatamente, sem aguardar o processamento de todos os dados.
+- **Dados dinâmicos sobre demanda:** o frontend solicita apenas os dados necessários, quando necessário.
+- **Integração entre sistemas:** um serviço criado no Netuno pode ser consumido por qualquer aplicação externa (mobile, outro sistema web, etc.).
+- **Melhor experiência do usuário:** o usuário não precisa aguardar o processamento completo da página antes de ver algo na tela.
 
-Para criar um serviço no Netuno é preciso um editor de código.
+## Pré-requisitos
 
-Recomendamos o <a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a>, é gratuito, rápido, bastante simples e intuitivo.
+Antes de começar, certifique-se de que:
 
-Mas caso opte por qualquer outro editor de código funcionará de forma semelhante e todo o processo de desenvolvimento acaba por ser semelhante.
+- O Netuno está instalado e em execução local.
+- A aplicação `demo` foi criada conforme descrito em [Criar Aplicação](../app-create).
+- Há dados cadastrados em **Tarefas** e relacionados com **Registros** (necessário para que o retorno não seja vazio).
 
-## Abrir a Aplicação Demo
+## Configurar o Editor de Código
 
-No Visual Studio Code ao clicar no canto esquerdo no primeiro ícone de ficheiros, tem a opção para **Abrir uma Pasta** (_Open Folder_).
+Para criar e editar serviços no Netuno, utilize um editor de código de sua preferência. Recomendamos o **[Visual Studio Code](https://code.visualstudio.com/download)** por ser gratuito, leve e altamente intuitivo, mas qualquer editor compatível com JavaScript/Python/Groovy funcionará normalmente.
 
-Navegue nos sistema de ficheiros até a pasta onde tem o Netuno instalado.
+## Abrir a Aplicação Demo {#abrir-a-aplicacao-demo}
 
-Dentro da pasta do Netuno vá até ao diretório:
+1. Abra o **Visual Studio Code**.
+2. Clique no ícone de **Arquivos** no painel lateral esquerdo.
+3. Selecione **Abrir Pasta** (File > Open Folder).
+4. Navegue até a pasta de instalação do Netuno.
+5. Selecione o diretório: **`apps/demo`**
+6. Clique em **Abrir**.
 
-* `📂 apps/demo`
+A estrutura de pastas da aplicação `demo` será carregada no painel esquerdo.
 
-E quando estiver dentro da pasta **demo** clique em **Abrir** (_Open_).
+## Criar o Serviço
 
-Repare que a estrutura de pastas e de ficheiros da aplicação **demo** foram carregadas do lado esquerdo.
+Os serviços são processados no lado do **servidor**. Para criar um novo serviço:
 
-## Criar Serviço
-
-Os serviços são processados pelo servidor, assim para criar o serviço é preciso expandir as pastas e ir até a pasta:
-
-* `📂 server/services`
-
-Agora basta clicar com o botão direito em cima da pasta `📂 services` e escolher a opção **Novo Ficheiro** (_New File_).
-
-O nome do novo ficheiro deverá ser:
+1. No painel de arquivos, expanda a estrutura até encontrar a pasta `server/services/`.
+2. Clique com o **botão direito** sobre a pasta `services`.
+3. Selecione **Novo Arquivo** `New File`.
+4. Nomeie o arquivo de acordo com a linguagem que deseja usar:
 
 <PolyglotPath files={[
     'server/services/trabalhadores'
 ]} />
 
-Vamos criar um serviço em <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a>.
-
-Basta agora realizar a codificação do nosso serviço, que será assim:
 
 <PolyglotCode
     file="server/services/trabalhadores"
@@ -64,23 +69,23 @@ Basta agora realizar a codificação do nosso serviço, que será assim:
                 /**
                 *** Transforma os dados da query em output JSON.
                 */
-                const dbRegistos = _db.query(\`
+                const dbRegistros = _db.query(\`
                     SELECT DISTINCT
-                        trabalhador.nome, SUM(DATEDIFF(HOUR, registo.inicio, registo.fim)) AS total
-                    FROM trabalhador INNER JOIN registo
-                        ON trabalhador.id = registo.trabalhador_id
-                    WHERE trabalhador.active = true AND registo.active = true
+                        trabalhador.nome, SUM(DATEDIFF(HOUR, registro.inicio, registro.fim)) AS total
+                    FROM trabalhador INNER JOIN registro
+                        ON trabalhador.id = registro.trabalhador_id
+                    WHERE trabalhador.active = true AND registro.active = true
                     GROUP BY trabalhador.nome
                     ORDER BY total ASC
                 \`);
 
                 const lista = _val.list();
 
-                for (const dbRegisto of dbRegistos) {
+                for (const dbRegistro of dbRegistros) {
                     lista.add(
                         _val.map()
-                            .set("name", dbRegisto.getString("nome"))
-                            .set("total", dbRegisto.getInt("total"))
+                            .set("nome", dbRegistro.getString("nome"))
+                            .set("total", dbRegistro.getInt("total"))
                     );
                 }
 
@@ -93,23 +98,23 @@ Basta agora realizar a codificação do nosso serviço, que será assim:
                 #
                 # Transforma os dados da query em output JSON.
                 #
-                dbRegistos = _db.query(
+                dbRegistros = _db.query(
                     """SELECT DISTINCT
-                        trabalhador.nome, SUM(DATEDIFF(HOUR, registo.inicio, registo.fim)) AS total
-                    FROM trabalhador INNER JOIN registo
-                        ON trabalhador.id = registo.trabalhador_id
-                    WHERE trabalhador.active = true AND registo.active = true
+                        trabalhador.nome, SUM(DATEDIFF(HOUR, registro.inicio, registro.fim)) AS total
+                    FROM trabalhador INNER JOIN registro
+                        ON trabalhador.id = registro.trabalhador_id
+                    WHERE trabalhador.active = true AND registro.active = true
                     GROUP BY trabalhador.nome
                     ORDER BY total ASC"""
                 )
 
                 lista = _val.list()
 
-                for dbRegisto in dbRegistos:
+                for dbRegistro in dbRegistros:
                     lista.add(
                         _val.map()
-                            .set("name", dbRegisto.getString("nome"))
-                            .set("total", dbRegisto.getInt("total"))
+                            .set("nome", dbRegistro.getString("nome"))
+                            .set("total", dbRegistro.getInt("total"))
                     )
 
                 _out.json(lista)
@@ -121,23 +126,23 @@ Basta agora realizar a codificação do nosso serviço, que será assim:
                 #
                 # Transforma os dados da query em output JSON.
                 #
-                dbRegistos = _db.query(%{
+                dbRegistros = _db.query(%{
                     SELECT DISTINCT
-                        trabalhador.nome, SUM(DATEDIFF(HOUR, registo.inicio, registo.fim)) AS total
-                    FROM trabalhador INNER JOIN registo
-                        ON trabalhador.id = registo.trabalhador_id
-                    WHERE trabalhador.active = true AND registo.active = true
+                        trabalhador.nome, SUM(DATEDIFF(HOUR, registro.inicio, registro.fim)) AS total
+                    FROM trabalhador INNER JOIN registro
+                        ON trabalhador.id = registro.trabalhador_id
+                    WHERE trabalhador.active = true AND registro.active = true
                     GROUP BY trabalhador.nome
                     ORDER BY total ASC
                 })
 
                 lista = _val.list()
 
-                dbRegistos.each do |dbRegisto|
+                dbRegistros.each do |dbRegistro|
                     lista.add(
                         _val.map()
-                            .set("name", dbRegisto.getString("nome"))
-                            .set("total", dbRegisto.getInt("total"))
+                            .set("nome", dbRegistro.getString("nome"))
+                            .set("total", dbRegistro.getInt("total"))
                     )
                 end
 
@@ -150,22 +155,22 @@ Basta agora realizar a codificação do nosso serviço, que será assim:
                 /**
                 *** Transforma os dados da query em output JSON.
                 */
-                val dbRegistos = _db.query(
+                val dbRegistros = _db.query(
                     """SELECT DISTINCT
-                        trabalhador.nome, SUM(DATEDIFF(HOUR, registo.inicio, registo.fim)) AS total
-                    FROM trabalhador INNER JOIN registo
-                        ON trabalhador.id = registo.trabalhador_id
-                    WHERE trabalhador.active = true AND registo.active = true
+                        trabalhador.nome, SUM(DATEDIFF(HOUR, registro.inicio, registro.fim)) AS total
+                    FROM trabalhador INNER JOIN registro
+                        ON trabalhador.id = registro.trabalhador_id
+                    WHERE trabalhador.active = true AND registro.active = true
                     GROUP BY trabalhador.nome
                     ORDER BY total ASC"""
                 );
 
                 val lista = _val.list();
 
-                dbRegistos.forEach {
+                dbRegistros.forEach {
                     lista.add(
                         _val.map()
-                            .set("name", it.getString("nome"))
+                            .set("nome", it.getString("nome"))
                             .set("total", it.getInt("total"))
                     );
                 }
@@ -179,23 +184,23 @@ Basta agora realizar a codificação do nosso serviço, que será assim:
                 /**
                 *** Transforma os dados da query em output JSON.
                 */
-                def dbRegistos = _db.query("""\\
+                def dbRegistros = _db.query("""\\
                     SELECT DISTINCT
-                        trabalhador.nome, SUM(DATEDIFF(HOUR, registo.inicio, registo.fim)) AS total
-                    FROM trabalhador INNER JOIN registo
-                        ON trabalhador.id = registo.trabalhador_id
-                    WHERE trabalhador.active = true AND registo.active = true
+                        trabalhador.nome, SUM(DATEDIFF(HOUR, registro.inicio, registro.fim)) AS total
+                    FROM trabalhador INNER JOIN registro
+                        ON trabalhador.id = registro.trabalhador_id
+                    WHERE trabalhador.active = true AND registro.active = true
                     GROUP BY trabalhador.nome
                     ORDER BY total ASC
                 """);
 
                 def lista = _val.list();
 
-                for (dbRegisto in dbRegistos) {
+                for (dbRegistro in dbRegistros) {
                     lista.add(
                         _val.map()
-                            .set("name", dbRegisto.getString("nome"))
-                            .set("total", dbRegisto.getInt("total"))
+                            .set("nome", dbRegistro.getString("nome"))
+                            .set("total", dbRegistro.getInt("total"))
                     );
                 }
 
@@ -205,16 +210,45 @@ Basta agora realizar a codificação do nosso serviço, que será assim:
     ]}
 />
 
-> Certifique há dados carregados nas Tarefas e que estão relacionadas com o Registo, caso contrário o resultado será vazio.
+Implemente o serviço adicionando o código abaixo ao arquivo criado. Este serviço consulta o banco de dados e retorna uma lista de trabalhadores com o total de horas registradas, no formato **JSON**.
 
-O `_db.query` recebe uma string com uma consulta de base de dados e realiza a sua execução transformando os dados obtidos numa lista de objectos do tipo chave-valor, ou seja coluna-dados.
+### Entendendo o Código
 
-O `_out.json` realiza o output (_saída de dados_) para o browser do tipo `ContentType: application/json` e formata o objeto passado para ser estruturado como um objeto <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a>.
+| Objeto/Método | Descrição |
+|---|---|
+| `_db.query()` | Executa uma consulta SQL e retorna uma lista de objetos no formato chave-valor (coluna → dado). |
+| `_val.list()` | Cria uma lista mutável para acumular os resultados. |
+| `_val.map()` | Cria um objeto de mapeamento (chave-valor) para cada linha de resultado. |
+| `_out.json()` | Serializa o objeto para JSON e envia a resposta as solicitações HTTP. |
 
-## Executar o Serviço
+:::warning Dados necessários
+Certifique-se de que há dados cadastrados em **Tarefas** e vinculados a **Registros**. Caso contrário, o endpoint retornará uma lista vazia `[]`.
+:::
 
-Para executar o serviço basta abrir no browser o endereço do serviço criado, que neste caso será:
+## Executar e Testar o Serviço
 
-* <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/trabalhadores</a>
+Com o Netuno em execução, acesse o endpoint no navegador:
 
-Neste caso recomendamos o <a href="https://www.mozilla.org/" target="_blank">Firefox</a> por que permite uma melhor visualização do objeto <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a>.
+:::tip Dica para visualizar o JSON
+Recomendamos o **[Firefox](https://www.mozilla.org/)** para testar endpoints diretamente no navegador, pois ele formata e exibe a resposta JSON de forma legível com destaque de sintaxe. Alternativamente, use extensões como **JSON Viewer** no Chrome ou ferramentas como o **[Postman](https://www.postman.com/)** para testes mais avançados.
+:::
+
+O retorno esperado será um JSON semelhante a:
+
+```json
+[
+  { "name": "Ana Silva", "total": 12 },
+  { "name": "Carlos Mendes", "total": 28 },
+  { "name": "João Costa", "total": 45 }
+]
+```
+
+## Próximos Passos
+
+Agora que seu serviço está funcionando, você pode:
+
+- 📄 **[Interface & Design](./ui)** — integrar este serviço ao frontend da aplicação.
+- 📚 **[Biblioteca de Serviços](../../library/overview)** — explorar os objetos `_db`, `_val`, `_out` e outros disponíveis no Netuno.
+- 🔗 Adicionar **autenticação** e **controle de acesso** ao seu serviço.
+
+___
