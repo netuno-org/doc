@@ -3,57 +3,124 @@ sidebar_position: 5
 id: relate
 title: Relate Data
 sidebar_label: Relate Data
+description: Link tasks and time records to know who performed which task and how much time was spent.
 ---
 
-## Create Relationship Between Data 
+# Relate Data
 
-In the previous stage, you have created your task management, however as you can see only manages a small isolated list of tasks.
+Create a relationship between tasks and time records to know **who** performed **which task** and **how much time** was spent.
 
-For this reason, our next step will be to know if an employee has done a task and the time spent on the same task.
+At the end of this step, the **Record** form will be linked to the **Task** table, allowing you to view the associated task directly in the record listing.
 
-You will need to co-relate **Tasks** with the **Record** and their hours/time spend.
+## Prerequisites
 
-### Selecting Field Type
+Before starting, check if you have already completed:
 
-Clicking on **"Build"** after that going to the form field management **"Record"** you will create a new field where the the settings of the **"Display Name"** should be `Task`.
+- The creation of the **Task** form with the `name` field.
+- The creation of the **Record** form with the basic fields for hours worked.
 
-The **Name** configuration was automatically filled with `task`, but we must add the suffix `_id`, to the **Name** `task` you add `_id` resulting in `task_id`.
+- The configuration of the corresponding tables in the **Database**.
 
-> #### This is important
-> The **Name** must always end in `_id`!
->
-> Since it is a standard for field names that are related to each other, it makes it easier to distinguish them from others.
+:::tip
+For more details on how to relate data, see the [Interface Guide: Relationships](/docs/academy/ui/relationships-between-forms).
+:::
 
-In the _Type_ configuration, choose the **select** option.
+Up to this point, you have created a task management system and a time record, but each list still works in isolation.
 
-Remember to mark this field as required by enabling the **Not Null** setting, as it's important to know what the worker performed at the scheduled time.
+It's important to link them so that each time entry clearly indicates which task was performed by a collaborator and during which period.
 
-Note that the _Primary Key_ option should remain disabled because there will be many records for the same task.
+In this step, you will:
 
-And fill the **Column** with the value 1 and the **Line** with the value 2, so that this new _Task_ field appears before the date and time fields.
+- Create a `select` type field in the **Record** form.
+- Configure the field to relate to the **Task** table.
+- Update some data to see the relationship working in practice.
 
-### Link
+## `select` Type Field
 
-Note that this field type has a **Link** parameter below.
+Add a field that will allow you to select the task associated with each time entry.
 
-The link is what creates the data relationship.
+1. In the **Build** environment, open the **Record** form and access the field management.
 
-To configure, click _Add_, then click the **task** option, which appears in the window that opened, then **name**, and finally, just _Close_ the window.
+2. Create a new field with the following settings:
 
-This way, the **Link** has been defined with the value `task:name`.
+- **Field Title**: `Task`
+- **Column Name**: `task_id`
+- **Type**: `select`
+3. Enable the **Required** option to ensure that every entry is associated with a task.
+4. Keep the **Unique Values** option disabled, as there will be many records for the same task.
 
-This means you will link to the **task** table, displaying the data from the **name** column.
+:::note
+We suggest the name `task_id` to maintain a consistent naming pattern throughout the data model.
+:::
 
-To finish, click **Save**.
+## Use the `_id` Suffix
 
-### Changing Data
+The name of the field that references another record should end with `_id`.
 
-Now, when you view the results in the **Register**, you'll see an additional **Task** column, which is missing data.
+This pattern makes it easier to identify that the field represents a relationship with another table and makes the data model more organized.
 
-Edit some records by clicking on the line in the results table.
+:::warning
+Avoid using generic names like `task` or `ref_task` for relationship fields. 
+Standardizing with `_id` helps avoid confusion when you are analyzing data or creating integrations.
+:::
 
-The **Register** edit form has a field that allows you to select the **Task**. When you save with the associated task, the task column will appear populated in the lookup table.
+## Configure the Relationship Link
 
-The **Registers** are now associated with a **Task** and become related.
+Configure the **Link**, which is responsible for relating the `task_id` field to the tasks table.
 
-Save the changes to some records with the associated task.
+1. In the newly created field (`task_id`), scroll to the **Link** configuration section.
+2. Click **Add**.
+3. In the window that opens:
+
+- Select the **task** option.
+- Then, select the **name** field.
+- Close the window to apply.
+
+Upon completion, the **Link** will be defined as:
+
+```text
+task:name
+```
+
+This means that:
+
+- The relationship will be made with the **task** table.
+- In the interface, the value of the **name** field of the task will be displayed when selected in the `Task` field.
+
+Click the **Save** button to save the field configuration.
+
+:::tip
+Whenever possible, use a descriptive field (such as `name`) to display related information, instead of a technical or numeric identifier.
+:::
+
+## Update Records
+
+With the relationship field configured, adjust the data to view the result.
+
+1. Access the **Record** form view.
+2. Note that the results table now has a new column called **Task**, which will initially be empty.
+3. Edit some records:
+
+- Click on a row in the results table to open the edit form.
+- In the **Task** field, select the corresponding task.
+- Click **Save** to save.
+
+**After saving:**
+
+- The **Task** column in the results table will now display the name of the associated task.
+- Each **Record** will be clearly related to a **Task**, allowing for a more complete analysis of the time spent on each activity.
+
+:::note
+If there are many records without a defined task, consider updating in batches or defining a temporary default task, according to your data policy.
+:::
+
+### Expected Result
+
+The **Record** listing should display:
+
+- A **Task** column populated with the names of the associated tasks.
+- Each row representing a time record with its respective task, making it easier to identify where the time was spent.
+
+## Next Steps
+
+In the next topic, you will see how to create a **Service** to expose this data and use it in other parts of the application, such as reports or custom interfaces.
