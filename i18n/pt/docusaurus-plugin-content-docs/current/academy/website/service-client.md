@@ -1,17 +1,17 @@
 ---
 sidebar_position: 4
 id: service-client
-title: Cliente de Serviços HTTP da API REST
-sidebar_label: Serviços - Cliente
+title: Cliente para Serviços HTTP e API REST
+sidebar_label: Cliente para Serviços
 ---
 
 ## Introdução
 
-No ecosistema de tecnologias do Netuno é fornecido alguns módulos no NPM, como o:
+No ecossistema de tecnologias do Netuno é fornecido alguns módulos no NPM, como o:
 
 - [Service Client](https://www.npmjs.com/package/@netuno/service-client)
 
-> Veja também o repositório [GIT do Service Client](https://github.com/netuno-org/service-client)
+> Veja também o repositório [GIT do Service Client](https://github.com/netuno-org/service-client).
 
 Este módulo serve para realizar as integrações com os serviços desenvolvidos no Netuno, ou seja, os endpoints 
 da API REST desenvolvidos no backend do Netuno, dentro da pasta `server/services` nas aplicações Netuno.
@@ -64,7 +64,7 @@ const _service = require('@netuno/service-client');
 Repare que o nome interno no código é `_service`.
 
 > Por padrão o Netuno utiliza o `_` como prefixo para indicar que é algo interno ou específico como um recurso 
-> ou uma ferramenta, do seu ecosistema.
+> ou uma ferramenta, do seu ecossistema.
 
 Portanto, para manter o padrão devemos utilizar sempre o nome `_service`.
 
@@ -170,12 +170,12 @@ Função de `callback` executada quando o pedido HTTP foi concluído.
 
 É executado sempre, independente se houve sucesso ou erro.
 
-## Utilização no Frontend
+## Utilização
 
 Para executar um serviço com um pedido HTTP definimos os valores
 dos parâmetros que configuram os requisitos do serviço.
 
-Na chave `data` enviamos os dados em si, ou seja todos os parâmetros
+Na chave `data` enviamos os dados em si, ou seja, todos os parâmetros
 de dados que vamos enviar para o serviço de backend.
 
 Veja o exemplo básico de um pedido:
@@ -243,7 +243,7 @@ import _service from '@netuno/service-client';
 const formData = new FormData(document.getElementById("formulario"));
 _service({
   method: "PUT",
-  url: "/cliente",
+  url: "cliente",
   data: formData,
   success: ({json}) => {
     if (json.result === true) {
@@ -253,7 +253,7 @@ _service({
     }
   },
   fail: (e) => {
-    console.log("Error", e);
+    console.log("Erro", e);
   }
 });
 ```
@@ -271,13 +271,13 @@ formData.append('arquivo', document.getElementById("campoArquivo").files[0]);
 formData.append('outroCampo', 'valor...');
 _service({
   method: "PUT",
-  url: "/",
+  url: "/upload",
   data: formData,
   success: ({json}) => {
     alert('Arquivo enviado com sucesso.');
   },
   fail: (e) => {
-    console.log("Reponse Error", e);
+    console.log("Erro na Resposta", e);
   }
 });
 ```
@@ -383,7 +383,7 @@ import { Form, notification } from 'antd';
 import _service from '@netuno/service-client';
 ```
 
-Definir o state de processamento:
+Definir o estado de processamento:
 
 ```js
 const [loading, setLoading] = useState(false);
@@ -451,26 +451,26 @@ function UploadForm() {
   const [loading, setLoading] = useState(false);
   const onFinish = (values)=> {
     const formData = new FormData();
-    formData.append("title", values.title);
-    formData.append("file", values.file.fileList[0].originFileObj);
+    formData.append("titulo", values.titulo);
+    formData.append("arquivo", values.arquivo.fileList[0].originFileObj);
     _service({
       method: "POST",
-      url: "file/save",
+      url: "arquivo/salvar",
       data: formData,
       start: () => {
         setLoading(true);
       },
       success: () => {
         notification.success({
-          title: 'Upload Form',
-          description: 'Your data was successfully saved.'
+          title: 'Formulário',
+          description: 'Seus dados foram salvos com sucesso.'
         });
       },
       fail: (e) => {
         console.error("Upload Form Failed", e);
         notification.error({
-          title: 'Upload Form',
-          description: 'Unable to save your data.'
+          title: 'Formulário',
+          description: 'Não foi possível salvar seus dados.'
         });
       },
       end: () => {
@@ -480,13 +480,13 @@ function UploadForm() {
   };
   return (
     <Form onFinish={onFinish} layout="vertical">
-      <Form.Item label="Title" name="title"
-        rules={[{ required: true, message: 'Please input your title.' }]}
+      <Form.Item label="Título" name="titulo"
+        rules={[{ required: true, message: 'Por favor, insira o título.' }]}
       >
         <Input />
       </Form.Item>
-      <Form.Item label="File" name="file"
-        rules={[{ required: true, message: 'Please choose your file.' }]}
+      <Form.Item label="Arquivo" name="arquivo"
+        rules={[{ required: true, message: 'Por favor, insira o arquivo.' }]}
       >
         <Upload listType="text" maxCount={1}>
           <button type="button" style={{color: 'inherit', cursor: 'inherit', border: 0, background: 'inherit'}}>
@@ -497,7 +497,7 @@ function UploadForm() {
       </Form.Item>
       <Form.Item label={null}>
         <Button type="primary" htmlType="submit" loading={loading}>
-          Submit
+          Salvar
         </Button>
       </Form.Item>
     </Form>
