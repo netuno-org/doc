@@ -23,5 +23,6 @@ yarn-error.log*
 
 package-lock.json
 pnpm-lock.yaml
+bun.lock
 
 docusaurus.config.js
