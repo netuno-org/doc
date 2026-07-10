@@ -82,7 +82,7 @@ public class CalcWeb extends Web {
 
 Agora é só compilar a classe, se certificando de que o arquivo `CalcWeb.class` está na pasta
 - `netuno/core/web/WEB-INF/classes/org/netuno/addon/calc/web/`
-ou o arquivo JAR está na pasta
+ou o arquivo JAR produzido está na pasta
 - `netuno/lib/`
 
 Inicie o Netuno server com qualquer aplicação.
