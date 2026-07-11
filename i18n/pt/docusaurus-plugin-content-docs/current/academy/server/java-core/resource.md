@@ -26,7 +26,7 @@ import org.netuno.tritao.resource.Resource;
 import org.netuno.tritao.resource.ResourceBase;
 
 @Resource(name = "calc")
-public class CalcResource {
+public class CalcResource extends ResourceBase {
 }
 ```
 
