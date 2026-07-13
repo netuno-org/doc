@@ -32,6 +32,9 @@ public class CalcResource extends ResourceBase {
 
 Estender a classe `ResourceBase` nos poupa de ter que inicializar o recurso, bastando chamar `super` com os argumentos corretos:
 ```java
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+
 public CalcResource(Proteu proteu, Hili hili) {
     super(proteu, hili);
 }
