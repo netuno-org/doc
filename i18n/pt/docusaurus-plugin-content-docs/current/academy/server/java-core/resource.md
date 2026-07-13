@@ -97,6 +97,6 @@ Vamos iniciar a nossa aplicação:
 ```
 
 E agora, quando fizermos uma chamada para esse serviço:
-- `localhost:9000/services/calc-test`
+- `http://localhost:9000/services/calc-test`
 
 Ele retornará o valor `130`.

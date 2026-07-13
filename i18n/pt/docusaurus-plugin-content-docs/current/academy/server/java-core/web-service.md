@@ -91,10 +91,10 @@ Inicie o Netuno server com qualquer aplicação:
 ```
 
 Para fazer chamadas a esse serviço, é necessário adicionar `.netuno` ao final da URL:
-- `localhost:9000/addon/calc/Calc.netuno`
+- `http://localhost:9000/addon/calc/Calc.netuno`
 
 Por exemplo, se você fizer uma chamada para:
-- `localhost:9000/addon/calc/Calc.netuno?op=minus&x=5&y=2`
+- `http://localhost:9000/addon/calc/Calc.netuno?op=minus&x=5&y=2`
 
 Você receberá de volta:
 ```js
