@@ -9,7 +9,7 @@ Nesse tutorial vamos criar um serviço web multi-aplicacional para o Netuno. Iss
 
 O exemplo que vamos criar, seguindo os tutoriais anteriores, é o serviço `calc`, que é um serviço de exemplo que executa operações aritméticas simples.
 
-Para começar, primeiro é necessário criar a estrutura de pastas do projeto. Nesse exemplo vamos considerar que o projeto será criado dentro de uma pasta chamada `Calc`. Então é preciso a estrutura de pastas que espelha o nome da package (no nosso exemplo, `org.netuno.addon.calc`). A nosso estrutura de pastas será portanto:
+Para começar, primeiro é necessário criar a estrutura de pastas do projeto. Nesse exemplo vamos considerar que o projeto será criado dentro de uma pasta chamada `Calc`. Então é preciso criar a estrutura de pastas que espelha o nome da package (no nosso exemplo, `org.netuno.addon.calc`). A nosso estrutura de pastas será portanto:
 - `Calc/src/main/java/org/netuno/addon/calc/web/`
 
 Dentro dessa estrutura vamos criar uma classe Java chamada `CalcWeb`, que definirá o nosso serviço web personalizado.

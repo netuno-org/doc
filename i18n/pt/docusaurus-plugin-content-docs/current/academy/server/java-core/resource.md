@@ -9,7 +9,7 @@ Nesse tutorial vamos criar um recurso nativo para o Netuno. Isso significa que v
 
 O exemplo que vamos criar, seguindo os tutoriais anteriores, é o recurso `_calc`, que é um recurso de exemplo para executar operações aritméticas simples.
 
-Para começar, primeiro é necessário criar a estrutura de pastas do projeto. Nesse exemplo vamos considerar que o projeto será criado dentro de uma pasta chamada `Calc`. Então é preciso a estrutura de pastas que espelha o nome da package (no nosso exemplo, `org.netuno.addon.calc`). A nosso estrutura de pastas será portanto:
+Para começar, primeiro é necessário criar a estrutura de pastas do projeto. Nesse exemplo vamos considerar que o projeto será criado dentro de uma pasta chamada `Calc`. Então é preciso criar a estrutura de pastas que espelha o nome da package (no nosso exemplo, `org.netuno.addon.calc`). A nosso estrutura de pastas será portanto:
 - `Calc/src/main/java/org/netuno/addon/calc/resource/`
 
 Dentro dessa estrutura vamos criar uma classe Java chamada `CalcResource`, que definirá o nosso recurso nativo personalizado.
