@@ -20,7 +20,7 @@ Então a package definida dentro da classe será:
 package org.netuno.addon.calc.web;
 ```
 
-Para que a classe defina um serviço web multi-aplicacional personalizado, essa classe precisa extender a classe `org.netuno.tritao.Web`.
+Para que a classe defina um serviço web multi-aplicacional personalizado, essa classe precisa estender a classe `org.netuno.tritao.Web`.
 ```java
 import org.netuno.tritao.Web;
 

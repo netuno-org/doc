@@ -5,7 +5,7 @@ sidebar_label: Serviço Nativo
 sidebar_position: 5
 ---
 
-Nesse tutorial vamos criar um recurso nativo para o Netuno. Isso significa que vamos criar uma classe em Java que vai ficar no diretório base do Netuno e que poderá ser utilizado por qualquer aplicação dentro da pasta `apps` usando se a syntaxe `_foo.methodName(ars)`.
+Nesse tutorial vamos criar um recurso nativo para o Netuno. Isso significa que vamos criar uma classe em Java que vai ficar no diretório base do Netuno e que poderá ser utilizado por qualquer aplicação dentro da pasta `apps` usando se a sintaxe `_foo.methodName(ars)`.
 
 O exemplo que vamos criar, seguindo os tutoriais anteriores, é o recurso `_calc`, que é um recurso de exemplo para executar operações aritméticas simples.
 
@@ -20,7 +20,7 @@ Então a package definida dentro da classe será:
 package org.netuno.addon.calc.resource;
 ```
 
-Para que a classe defina um recurso nativo personalizado, essa classe precisa ser anotada com a annotation `org.netuno.tritao.ResourceBase`. O parâmetro `name` será o nome do recurso que pode ser acessado com um underscore (`_`) antes do nome (no nosso caso, `_calc`). O jeito mais fácil de criar o recurso é exentendo a classe `org.netuno.tritao.resource.ResourceBase`.
+Para que a classe defina um recurso nativo personalizado, essa classe precisa ser anotada com a annotation `org.netuno.tritao.ResourceBase`. O parâmetro `name` será o nome do recurso que pode ser acessado com um underscore (`_`) antes do nome (no nosso caso, `_calc`). O jeito mais fácil de criar o recurso é estendendo a classe `org.netuno.tritao.resource.ResourceBase`.
 ```java
 import org.netuno.tritao.resource.Resource;
 import org.netuno.tritao.resource.ResourceBase;
@@ -30,14 +30,14 @@ public class CalcResource extends ResourceBase {
 }
 ```
 
-Extender a classe `ResourceBase` nos poupa de ter que inicializar o recurso, bastando chamar `super` com os argumentos corretos.
+Estender a classe `ResourceBase` nos poupa de ter que inicializar o recurso, bastando chamar `super` com os argumentos corretos.
 ```java
 public CalcResource(Proteu proteu, Hili hili) {
     super(proteu, hili);
 }
 ```
 
-A função `init` é obgrigatória, e dentro dela vamos inicializar o recurso chamando o constructor da nossa classe com os getters da classe pai
+A função `init` é obrigatória, e dentro dela vamos inicializar o recurso chamando o construtor da nossa classe com os getters da classe pai
 ```java
  public CalcResource init() {
      return new CalcResource(getProteu(), getHili());
@@ -90,7 +90,7 @@ _calc.plus(120)
 _out.print(_calc.get() + "\n")
 ```
 
-Vamo iniciar a nossa aplicação
+Vamos iniciar a nossa aplicação
 ```bash
 ./netuno server app=calc
 ```
