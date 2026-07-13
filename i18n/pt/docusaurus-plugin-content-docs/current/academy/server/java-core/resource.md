@@ -20,7 +20,7 @@ Então a package definida dentro da classe será:
 package org.netuno.addon.calc.resource;
 ```
 
-Para que a classe defina um recurso nativo personalizado, essa classe precisa ser anotada com a annotation `org.netuno.tritao.ResourceBase`. O parâmetro `name` será o nome do recurso que pode ser acessado com um underscore (`_`) antes do nome (no nosso caso, `_calc`). O jeito mais fácil de criar o recurso é estendendo a classe `org.netuno.tritao.resource.ResourceBase`.
+Para que a classe defina um recurso nativo personalizado, essa classe precisa ser anotada com a annotation `org.netuno.tritao.ResourceBase`. O parâmetro `name` será o nome do recurso que pode ser acessado com um underscore (`_`) antes do nome (no nosso caso, `_calc`). O jeito mais fácil de criar o recurso é estendendo a classe `org.netuno.tritao.resource.ResourceBase`:
 ```java
 import org.netuno.tritao.resource.Resource;
 import org.netuno.tritao.resource.ResourceBase;
@@ -30,21 +30,21 @@ public class CalcResource extends ResourceBase {
 }
 ```
 
-Estender a classe `ResourceBase` nos poupa de ter que inicializar o recurso, bastando chamar `super` com os argumentos corretos.
+Estender a classe `ResourceBase` nos poupa de ter que inicializar o recurso, bastando chamar `super` com os argumentos corretos:
 ```java
 public CalcResource(Proteu proteu, Hili hili) {
     super(proteu, hili);
 }
 ```
 
-A função `init` é obrigatória, e dentro dela vamos inicializar o recurso chamando o construtor da nossa classe com os getters da classe pai
+A função `init` é obrigatória, e dentro dela vamos inicializar o recurso chamando o construtor da nossa classe com os getters da classe pai:
 ```java
  public CalcResource init() {
      return new CalcResource(getProteu(), getHili());
  }
 ```
 
-Depois disso vamos definir nossos próprios campos e funções
+Depois disso vamos definir nossos próprios campos e funções:
 ```java
 public double value = 0;
 
@@ -68,18 +68,19 @@ public double get() {
 }
 ```
 
-Agora é só compilar a classe, se certificando de que o arquivo `CalcResource.class` está na pasta
+Agora é só compilar a classe, se certificando de que o arquivo `CalcResource.class` está na pasta:
 - `netuno/core/web/WEB-INF/classes/org/netuno/addon/calc/resource/`
-ou o arquivo JAR produzido está na pasta
+
+Ou de que o arquivo JAR produzido está na pasta:
 - `netuno/lib/`
 
-Vamos criar uma aplicação de teste para usar esse recurso
+Vamos criar uma aplicação de teste para usar esse recurso:
 ```bash
 ./netuno app name=calc
 ```
 
 Vamos criar também um serviço nessa aplicação para usar o recurso.
-No exemplo, vamos criar o arquivo `netuno/apps/calc/server/services/calc-test.js`
+No exemplo, vamos criar o arquivo `netuno/apps/calc/server/services/calc-test.js`:
 ```js
 import { _calc, _out } from  "@netuno/server-types";
 
@@ -90,12 +91,12 @@ _calc.plus(120)
 _out.print(_calc.get() + "\n")
 ```
 
-Vamos iniciar a nossa aplicação
+Vamos iniciar a nossa aplicação:
 ```bash
 ./netuno server app=calc
 ```
 
-E agora, quando fizermos uma chamada para esse serviço
+E agora, quando fizermos uma chamada para esse serviço:
 - `localhost:9000/services/calc-test`
 
-Ele retornará o valor `130`
+Ele retornará o valor `130`.
