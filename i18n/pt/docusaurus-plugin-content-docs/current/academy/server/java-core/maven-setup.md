@@ -58,7 +58,7 @@ Cria a pasta do seu projeto, onde serão escritas as classes Java. Para o nosso 
 mkdir Calc
 ```
 
-Crie o arquivo `generate-pom.js`. Dentro desse arquivo, vamos começar definindo algumas variáveis que serão usadas ao longo do script. `NETUNO_DIR` precisa ser a pasta raiz onde você tem o Netuno instalado, `PROJECT_DIR` é o diretório onde você vai escrever suas classes de recursos e serviços globais e `PACKAGE` precisa ser igual ao nome do pacote como definido nos passos anteriores. Selecione também a versão do Java com `JAVA_VERSION`. Os caminhos precisam ser caminhos absolutos:
+Crie o arquivo `generate-pom.js`. Dentro desse arquivo, vamos começar definindo algumas variáveis que serão usadas ao longo do script. `NETUNO_DIR` precisa ser a pasta raiz onde você tem o Netuno instalado. `PROJECT_DIR` é o diretório onde você vai escrever suas classes de recursos e serviços globais. E `PACKAGE` precisa ser igual ao nome do pacote como definido nos passos anteriores. Selecione também a versão do Java com `JAVA_VERSION`. Os caminhos precisam ser caminhos absolutos:
 
 ```js
 const NETUNO_DIR = '/pasta/raíz/do/netuno';
@@ -94,7 +94,7 @@ let pomContent = `
 
 ### Dependências
 
-Depois, vamos criar a função que escaneia os diretórios e gera as tags `<dependency>` para cada arquivo JAR de dependência do Netuno:
+Depois, vamos criar a função que escaneia os diretórios e gera uma tag `<dependency>` para cada arquivo JAR de dependência do Netuno:
 ```js
 function mapDirectory(folder, groupSuffix) {
     let dependenciesXml = '';
@@ -227,7 +227,7 @@ Ou gerar arquivos JAR, o que facilita a distribuição do código para outras in
 mvn clean package
 ```
 
-Para limpar os arquivos gerados por `compile` e `package`:
+Para limpar os arquivos gerados pelos comandos `compile` e `package`:
 ```bash
 mvn clean
 ```
