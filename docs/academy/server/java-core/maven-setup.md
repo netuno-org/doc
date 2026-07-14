@@ -59,7 +59,7 @@ mkdir Calc
 Create a file named `generate-pom.js`. Inside this file, we will start by defining a few variables that will be used throughout the script. `NETUNO_DIR` must point to the root folder where you have Netuno installed. `PROJECT_DIR` is the directory where you will write your global resource and service classes. And `PACKAGE` must match the package name defined in the previous steps. Also, select the Java version using `JAVA_VERSION`. Note that the directory paths must be absolute paths:
 
 ```js
-const NETUNO_DIR = '/pasta/raíz/do/netuno';
+const NETUNO_DIR = '/netuno/root/dir';
 const PROJECT_DIR = '/Projects/Netuno/Calc';
 const PACKAGE = 'org.netuno.addon.calc';
 const JAVA_VERSION = 25;
