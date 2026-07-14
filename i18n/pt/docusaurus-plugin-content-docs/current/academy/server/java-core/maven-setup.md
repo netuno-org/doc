@@ -21,7 +21,7 @@ O seu `package` deve ser registrado no arquivo de configuração global do Netun
 
 - `netuno/config.js`
 
-Adicone no fim o seguinte código:
+Adicione no fim o seguinte código:
 
 ```javascript
 config.packagesScan.add("meu.projeto.java")
@@ -49,16 +49,16 @@ Após o `org.netuno.addon` adicione a identificação do seu projeto.
 
 ## Configuração do POM
 
-O Netuno possui muitas depedências no formato JAR, portanto é preciso definir essas dependências dentro do POM. Como o POM não dá suporte a incluir uma pasta inteira e escrever cada dependência seria trabalhoso e tedioso, faremos um script em JavaScript para gerar o POM.
+O Netuno possui muitas dependências no formato JAR, portanto é preciso definir essas dependências dentro do POM. Como o POM não dá suporte a incluir uma pasta inteira e escrever cada dependência seria trabalhoso e tedioso, faremos um script em JavaScript para gerar o POM.
 
 ### Preliminares
 
-Cria a pasta do seu projeto, onde serão escritas as classes Java. Para o nosso exemplo vamos utilizar `Calc`.
+Cria a pasta do seu projeto, onde serão escritas as classes Java. Para o nosso exemplo vamos utilizar `Calc`:
 ```bash
 mkdir Calc
 ```
 
-Crie o arquivo `generate-pom.js`. Dentro desse arquivo, vamos começar definindo algumas variáveis que serão usadas ao longo do script. `NETUNO_DIR` precisa ser a pasta raíz onde você tem o Netuno instalado, `PROJECT_DIR` é o diretório onde você vai escrever suas classes de recursos e serviços globais e `PACKAGE` precisa ser igual ao nome do pacote como definido nos passos anteriores. Selecione também a versão do Java com `JAVA_VERSION`. Os caminhos precisam ser caminhos absolutos.
+Crie o arquivo `generate-pom.js`. Dentro desse arquivo, vamos começar definindo algumas variáveis que serão usadas ao longo do script. `NETUNO_DIR` precisa ser a pasta raiz onde você tem o Netuno instalado. `PROJECT_DIR` é o diretório onde você vai escrever suas classes de recursos e serviços globais. E `PACKAGE` precisa ser igual ao nome do pacote como definido nos passos anteriores. Selecione também a versão do Java com `JAVA_VERSION`. Os caminhos precisam ser caminhos absolutos:
 
 ```js
 const NETUNO_DIR = '/pasta/raíz/do/netuno';
@@ -67,7 +67,7 @@ const PACKAGE = 'org.netuno.addon.calc';
 const JAVA_VERSION = 25;
 ```
 
-Agora vamos inicializar a estrutura base do `pom.xml`.
+Agora vamos inicializar a estrutura base do `pom.xml`:
 ```js
 const packageArray = PACKAGE.split(".");
 const ARTIFACT_ID = packageArray.slice(-1);
@@ -92,9 +92,9 @@ let pomContent = `
   `;
 ```
 
-### Dependencias
+### Dependências
 
-Depois, vamos criar a função que escaneia os diretórios e gera as tags `<dependency>` para cada arquivo JAR de dependência do Netuno,
+Depois, vamos criar a função que escaneia os diretórios e gera uma tag `<dependency>` para cada arquivo JAR de dependência do Netuno:
 ```js
 function mapDirectory(folder, groupSuffix) {
     let dependenciesXml = '';
@@ -121,13 +121,13 @@ function mapDirectory(folder, groupSuffix) {
 }
 ```
 
-usar essa função para mapear os dois diretório de dependências
+Vamos usar essa função para mapear os dois diretório de dependências:
 ```js
 const coreDependencies = mapDirectory(join(NETUNO_DIR, 'core', 'lib'), 'core');
 const webDependencies = mapDirectory(join(NETUNO_DIR, 'core', 'web', 'WEB-INF', 'lib'), 'web');
 ```
 
-e injetar as dependências no POM, junto com o `netuno.jar`.
+E injetar as dependências no POM, junto com o `netuno.jar`:
 ```js
 pomContent += `
     <dependencies>
@@ -144,7 +144,7 @@ pomContent += `
   `;
 ```
 
-Agora precisamos configurar o Maven para que o comando `mvn clean` apague os arquivos corretos quando invocado.
+Agora precisamos configurar o Maven para que o comando `mvn clean` apague os arquivos corretos quando invocado:
 ```js
 const PACKAGE_PATH = PACKAGE.replaceAll(".", "/");
 pomContent += `
@@ -200,7 +200,7 @@ pomContent += `
 </project>`;
 ```
 
-Por fim, vamos escrever o resultado no arquivo `pom.xml`.
+Por fim, vamos escrever o resultado no arquivo `pom.xml`:
 ```js
 try {
     writeFileSync(`${PROJECT_DIR}/pom.xml`, pomContent.trim() + '\n', 'utf8');
@@ -212,7 +212,7 @@ try {
 
 ## Compilação 
 
-Para gerar o POM, execute esse comando na pasta raíz do seu projeto:
+Para gerar o POM, execute esse comando na pasta raiz do seu projeto:
 ```bash
 bun generate-pom.js
 ```
@@ -227,7 +227,7 @@ Ou gerar arquivos JAR, o que facilita a distribuição do código para outras in
 mvn clean package
 ```
 
-Para limpar os arquivos gerados por `compile` e `package`:
+Para limpar os arquivos gerados pelos comandos `compile` e `package`:
 ```bash
 mvn clean
 ```
@@ -236,7 +236,7 @@ mvn clean
 
 O arquivo de JAR criado pode ser distribuído e colocado em qualquer outra plataforma do Netuno.
 
-Em qualquer plataforma do Netuno instalada este JAR deve ser colocado na pasta `lib` na raíz do Netuno:
+Em qualquer plataforma do Netuno instalada este JAR deve ser colocado na pasta `lib` na raiz do Netuno:
 
 - `netuno/lib`
 
@@ -246,12 +246,12 @@ Todos os JARs que se encontram nessa pasta são carregados automaticamente na pl
 
 ## Execução
 
-Para executar o projeto, inicie o Netuno normalmente
+Para executar o projeto, inicie o Netuno normalmente:
 ```bash
 ./netuno server app=calc
 ```
 
-A app deve ser criada antes com o comando: `./netuno app`
+A app deve ser criada antes com o comando: `./netuno app`.
 
 ## Conclusão
 
