@@ -79,9 +79,10 @@ function PolyglotCode({file, codes}) {
     };
     for (const code of codes) {
         if (code.lang !== 'javascript') {
+            code.code = code.code.replaceAll(/(.*);$/gm, "$1");
             code.code = code.code.replaceAll(/;(\s+)\/\/\s+/gm, "$1"+ langsComment[code.lang]);
         }
-        code.code = code.code.replaceAll(/(\s+)\/\/\s+/gm, "$1"+ langsComment[code.lang]);
+        code.code = code.code.replaceAll(/(\s*)\/\/\s+/gm, "$1"+ langsComment[code.lang]);
     }
     return (
         <div style={{marginBottom: '40px'}}>
