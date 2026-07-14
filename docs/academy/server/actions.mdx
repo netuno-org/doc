@@ -20,12 +20,12 @@ Data manipulation is performed all the time, and it's common to have rules such 
 Actions are used precisely for this purpose, injecting code to be executed in specific situations
 when data manipulation occurs.
 
-When inserting or changing information, the save (_save_) and save (_saved_) actions are executed:
+When inserting or changing information, the _save_ and _saved_ actions are executed:
 
 - `save`: Before executing the command in the database.
 - `saved`: After executing the command in the database.
 
-When **removing** or **deleting** information, the remove and remove actions are executed.
+When **removing** or **deleting** information, the _remove_ and _removed_ actions are executed.
 
 - `remove`: Before executing the database command.
 - `removed`: After executing the database command.
@@ -53,7 +53,7 @@ by Netuno, or when we execute database operations in the code using:
 - `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExits(...)`, `_db.insertMany(...)`, among others.
 
 - `_db.update(...)`, `_db.form(...).update()`, `_db.updateMany(...)`, among others.
-- `_db.delete(...)`, `_db.form(...).delete()`, `_db.insertMany(...)`, among others.
+- `_db.delete(...)`, `_db.form(...).delete()`, `_db.deleteMany(...)`, among others.
 
 In other words, when we use any mechanism from the polyglot low-code framework in our code to perform data 
 manipulation operations, the corresponding action will be executed if it exists.
