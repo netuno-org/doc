@@ -62,6 +62,7 @@ import java.io.IOException;
 
 @Path("/addon/calc/Calc")
 public class CalcWeb extends Web {
+    @Override
     public void run() throws IOException, ProteuException {
         // ...
     }
@@ -86,6 +87,7 @@ import java.io.IOException;
 
 @Path("/addon/calc/Calc")
 public class CalcWeb extends Web {
+    @Override
     public void run() throws IOException, ProteuException {
         Req req = resource(Req.class);
         Out out = resource(Out.class);
