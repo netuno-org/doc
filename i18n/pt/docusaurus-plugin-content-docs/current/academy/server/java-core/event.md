@@ -229,3 +229,5 @@ Agora é só compilar a classe, se certificando de que o arquivo `.class` está 
 Ou produzir um arquivo JAR, certificando-se de que ele está na pasta:
 
 - `netuno/lib/`
+
+Você pode ver os arquivos completos do projeto nesse [link](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/event).
