@@ -219,3 +219,11 @@ public class EventActionSave extends EventBase {
 
 }
 ```
+
+Now you just need to compile the class, making sure that the `.class` file is located in:
+
+- `netuno/core/web/WEB-INF/classes/org/netuno/addon/calc/event/`
+
+Or build a JAR file, making sure it is located in:
+
+- `netuno/lib/`
