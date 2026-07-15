@@ -167,3 +167,18 @@ E agora, quando fizermos uma chamada para esse serviço:
 - `http://localhost:9000/services/calc-test`
 
 Ele retornará o valor `130`.
+
+Para usar um recurso no código Java, algumas classes como `org.netuno.tritao.Web`
+e `org.netuno.tritao.event.EventBase` fornecem a função `resource`, que inicializa este recurso.
+Na classe que você quiser que use o recurso `calc`, faça:
+
+```java
+import org.netuno.addon.calc.resource.CalcResource;
+
+// ...
+    CalcResource calc = resource(CalcResource.class);
+    calc.set(10);
+    calc.plus(120);
+    System.out.println(calc.get());
+// ...
+```
