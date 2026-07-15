@@ -61,7 +61,7 @@ For reference, the complete list of all available event types can be found in:
 
 - [org.netuno.tritao.event.EventId](https://github.com/netuno-org/platform/blob/main/netuno.tritao/src/main/java/org/netuno/tritao/event/EventId.java)
 
-Returning to our code, we can complete the implementation by overriding the `run` method:
+Back to our code, we can complete the implementation by overriding the `run` method:
 
 ```java
 package org.netuno.addon.calc.event;
