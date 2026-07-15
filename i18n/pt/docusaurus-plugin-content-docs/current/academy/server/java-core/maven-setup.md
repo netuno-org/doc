@@ -144,6 +144,8 @@ pomContent += `
   `;
 ```
 
+### Clean
+
 Agora precisamos configurar o Maven para que o comando `mvn clean` apague os arquivos corretos quando invocado:
 ```js
 const PACKAGE_PATH = PACKAGE.replaceAll(".", "/");
@@ -176,6 +178,8 @@ pomContent += `
   `;
 ```
 
+### Profile
+
 Para que possamos escolher entre compilar o projeto gerando arquivos `.class` ou gerar arquivos `.jar`,
 precisamos criar um profile diferente e configurar o compilador com o caminho correto. E assim finalizamos o conteúdo do POM.
 ```js
@@ -200,6 +204,8 @@ pomContent += `
 </project>`;
 ```
 
+### Finalizando
+
 Por fim, vamos escrever o resultado no arquivo `pom.xml`:
 ```js
 try {
@@ -210,12 +216,14 @@ try {
 }
 ```
 
-## Compilação 
-
 Para gerar o POM, execute esse comando na pasta raiz do seu projeto:
 ```bash
 bun generate-pom.js
 ```
+
+Você pode ver o script de geração do POM completo nesse [link](https://github.com/netuno-org/maven/blob/main/Calc/generate-pom.js).
+
+## Compilação 
 
 Agora você pode compilar seu projeto com:
 ```bash

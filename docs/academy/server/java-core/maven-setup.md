@@ -145,6 +145,7 @@ pomContent += `
   `;
 ```
 
+### Clean
 
 Now we need to configure Maven so that the `mvn clean` command deletes the correct files when invoked:
 ```js
@@ -178,6 +179,8 @@ pomContent += `
   `;
 ```
 
+### Profile
+
 To allow choosing between compiling the project to generate `.class` files or packaging it into `.jar` files, we need to create a dedicated profile and configure the compiler plugin with the correct output directory path. With this, we finalize the POM content.
 ```js
 pomContent += `
@@ -201,6 +204,8 @@ pomContent += `
 </project>`;
 ```
 
+### Finalizing
+
 Finally, let's write the result out to the `pom.xml` file:
 ```js
 try {
@@ -215,6 +220,10 @@ To generate the `pom.xml` file, run this command in your project's root folder:
 ```bash
 bun generate-pom.js
 ```
+
+You can see the whole script for generating the POM in this [link](https://github.com/netuno-org/maven/blob/main/Calc/generate-pom.js).
+
+## Compiling
 
 Now you can compile your project using:
 ```bash
