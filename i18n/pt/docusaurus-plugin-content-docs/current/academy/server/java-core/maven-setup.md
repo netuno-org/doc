@@ -54,6 +54,7 @@ O Netuno possui muitas dependências no formato JAR, portanto é preciso definir
 ### Preliminares
 
 Cria a pasta do seu projeto, onde serão escritas as classes Java. Para o nosso exemplo vamos utilizar `Calc`:
+
 ```bash
 mkdir Calc
 ```
@@ -68,6 +69,7 @@ const JAVA_VERSION = 25;
 ```
 
 Agora vamos inicializar a estrutura base do `pom.xml`:
+
 ```js
 const packageArray = PACKAGE.split(".");
 const ARTIFACT_ID = packageArray.slice(-1);
@@ -95,6 +97,7 @@ let pomContent = `
 ### Dependências
 
 Depois, vamos criar a função que escaneia os diretórios e gera uma tag `<dependency>` para cada arquivo JAR de dependência do Netuno:
+
 ```js
 function mapDirectory(folder, groupSuffix) {
     let dependenciesXml = '';
@@ -122,12 +125,14 @@ function mapDirectory(folder, groupSuffix) {
 ```
 
 Vamos usar essa função para mapear os dois diretório de dependências:
+
 ```js
 const coreDependencies = mapDirectory(join(NETUNO_DIR, 'core', 'lib'), 'core');
 const webDependencies = mapDirectory(join(NETUNO_DIR, 'core', 'web', 'WEB-INF', 'lib'), 'web');
 ```
 
 E injetar as dependências no POM, junto com o `netuno.jar`:
+
 ```js
 pomContent += `
     <dependencies>
@@ -144,9 +149,29 @@ pomContent += `
   `;
 ```
 
-### Clean
+### Arquivo JAR
+
+Precisamos definir o diretório de destino para os arquivos JAR. Esta etapa é necessária para que tenhamos a opção de compilar nosso projeto em um arquivo JAR:
+
+```js
+pomContent += `
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <outputDirectory>${NETUNO_DIR}/lib</outputDirectory>
+                </configuration>
+            </plugin>
+  `;
+```
+
+### Limpeza 
 
 Agora precisamos configurar o Maven para que o comando `mvn clean` apague os arquivos corretos quando invocado:
+
 ```js
 const PACKAGE_PATH = PACKAGE.replaceAll(".", "/");
 pomContent += `
@@ -178,10 +203,11 @@ pomContent += `
   `;
 ```
 
-### Profile
+### Perfil 
 
 Para que possamos escolher entre compilar o projeto gerando arquivos `.class` ou gerar arquivos `.jar`,
-precisamos criar um profile diferente e configurar o compilador com o caminho correto. E assim finalizamos o conteúdo do POM.
+precisamos criar um profile diferente e configurar o compilador com o caminho correto. E assim finalizamos o conteúdo do POM:
+
 ```js
 pomContent += `
     <profiles>
@@ -207,6 +233,7 @@ pomContent += `
 ### Finalizando
 
 Por fim, vamos escrever o resultado no arquivo `pom.xml`:
+
 ```js
 try {
     writeFileSync(`${PROJECT_DIR}/pom.xml`, pomContent.trim() + '\n', 'utf8');
@@ -217,6 +244,7 @@ try {
 ```
 
 Para gerar o POM, execute esse comando na pasta raiz do seu projeto:
+
 ```bash
 bun generate-pom.js
 ```
@@ -226,21 +254,24 @@ Você pode ver o script de geração do POM completo nesse [link](https://github
 ## Compilação 
 
 Agora você pode compilar seu projeto com:
+
 ```bash
 mvn clean compile -Pdev
 ```
 
 Ou gerar arquivos JAR, o que facilita a distribuição do código para outras instâncias do Netuno que estão em outros computadores, com:
+
 ```bash
 mvn clean package
 ```
 
 Para limpar os arquivos gerados pelos comandos `compile` e `package`:
+
 ```bash
 mvn clean
 ```
 
-### Publicar Artefato
+### Publicar Arquivo JAR 
 
 O arquivo de JAR criado pode ser distribuído e colocado em qualquer outra plataforma do Netuno.
 
@@ -255,6 +286,7 @@ Todos os JARs que se encontram nessa pasta são carregados automaticamente na pl
 ## Execução
 
 Para executar o projeto, inicie o Netuno normalmente:
+
 ```bash
 ./netuno server app=calc
 ```
