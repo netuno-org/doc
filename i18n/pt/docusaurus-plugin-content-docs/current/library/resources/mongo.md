@@ -6,14 +6,6 @@ sidebar_label: MongoDB - Cliente
 
 Recurso para integrações com o MongoDB.
 
-```javascript
-// Exemplo de uso do cliente de IA com o fornecedor padrão
-const client = _ai.client();
-const response = client.chat('Hello, how can I help?');
-_log.info('Response: ' + response);
-
-```
-
 ---
 
 ## close

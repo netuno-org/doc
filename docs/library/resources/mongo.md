@@ -6,14 +6,6 @@ sidebar_label: MongoDB - Client
 
 Resource for MongoDB integrations.
 
-```javascript
-// Example using the AI client with the default provider
-const client = _ai.client();
-const response = client.chat('Hello, how can I help?');
-_log.info('Response: ' + response);
-
-```
-
 ---
 
 ## close
