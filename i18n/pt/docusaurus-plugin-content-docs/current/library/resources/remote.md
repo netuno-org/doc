@@ -989,7 +989,7 @@ Resultado se endereço está disponível.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>portListening</span>(<span style={{color: '#FF8000'}}>servidor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>porto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>portListening</span>(<span style={{color: '#FF8000'}}>servidor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>porto</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](/docs/library/objects/RemoteResponse)</span>
 ##### Descrição
 
 Verifica se a porta está disponível para um nome ou IP de servidor.
@@ -1003,7 +1003,7 @@ Verifica se a porta está disponível para um nome ou IP de servidor.
 
 ##### Retorno
 
-( _boolean_ )
+( _[RemoteResponse](/docs/library/objects/RemoteResponse)_ )
 
 Resultado se a porta está disponível.
 
