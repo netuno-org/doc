@@ -17,7 +17,7 @@ Este recurso utiliza a biblioteca [Apache Commons CSV](https://commons.apache.or
 #### _csv.format(nomeFormato: string) : org.apache.commons.csv.CSVFormat
 ##### Descrição
 
-Obtém o formatador do CSV, suporta:<ul><li>default</li><li>excel</li><li>informix-unload</li><li>informix-unload-csv</li><li>mysql</li><li>oracle</li><li>postgresql-csv</li><li>postgresql-text</li><li>rfc4180</li></ul>
+Obtém o formatador do CSV. Suporta:<ul><li>default</li><li>excel</li><li>informix-unload</li><li>informix-unload-csv</li><li>mysql</li><li>oracle</li><li>postgresql-csv</li><li>postgresql-text</li><li>rfc4180</li></ul>
 
 ##### Atributos
 

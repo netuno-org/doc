@@ -17,7 +17,7 @@ This feature uses the [Apache Commons CSV](https://commons.apache.org/proper/com
 #### _csv.format(formatName: string) : org.apache.commons.csv.CSVFormat
 ##### Description
 
-Gets the CSV formatter, supports:<ul><li>default</li><li>excel</li><li>informix-unload</li><li>informix-unload-csv</li><li>mysql</li><li>oracle</li><li>postgresql-csv</li><li>postgresql-text</li><li>rfc4180</li></ul>
+Gets the CSV formatter. Supports:<ul><li>default</li><li>excel</li><li>informix-unload</li><li>informix-unload-csv</li><li>mysql</li><li>oracle</li><li>postgresql-csv</li><li>postgresql-text</li><li>rfc4180</li></ul>
 
 ##### Attributes
 
