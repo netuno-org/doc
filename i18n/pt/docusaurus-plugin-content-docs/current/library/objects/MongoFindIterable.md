@@ -64,6 +64,24 @@ Processa as interações de pesquisas nas coleções do MongoDB.
 
 ---
 
+## hint
+
+---
+
+#### <span style={{color: '#008000'}}>hint</span>(<span style={{color: '#FF8000'}}>hint</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[MongoFindIterable](/docs/library/objects/MongoFindIterable)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **hint** | _org.bson.conversions.Bson_ |   |
+
+##### Retorno
+
+( _[MongoFindIterable](/docs/library/objects/MongoFindIterable)_ )
+
+
+---
+
 ## limit
 
 ---
@@ -74,6 +92,42 @@ Processa as interações de pesquisas nas coleções do MongoDB.
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **limit** | _int_ |   |
+
+##### Retorno
+
+( _[MongoFindIterable](/docs/library/objects/MongoFindIterable)_ )
+
+
+---
+
+## max
+
+---
+
+#### <span style={{color: '#008000'}}>max</span>(<span style={{color: '#FF8000'}}>max</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[MongoFindIterable](/docs/library/objects/MongoFindIterable)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **max** | _org.bson.conversions.Bson_ |   |
+
+##### Retorno
+
+( _[MongoFindIterable](/docs/library/objects/MongoFindIterable)_ )
+
+
+---
+
+## min
+
+---
+
+#### <span style={{color: '#008000'}}>min</span>(<span style={{color: '#FF8000'}}>min</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[MongoFindIterable](/docs/library/objects/MongoFindIterable)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **min** | _org.bson.conversions.Bson_ |   |
 
 ##### Retorno
 

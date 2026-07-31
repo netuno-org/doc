@@ -457,7 +457,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getHostAddress</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getHostAddress</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -466,7 +466,7 @@ Submission response, with status, header, content, etc.
 
 ##### Return
 
-( _string_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
 
 ---
@@ -583,7 +583,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>hostAddress</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>hostAddress</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Description
 
 Get the IP address of a host.
@@ -596,7 +596,7 @@ Get the IP address of a host.
 
 ##### Return
 
-( _string_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
 Host IP address.
 
@@ -946,7 +946,7 @@ Submission response, with status, header, content, etc.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>ping</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>ping</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Description
 
 Check whether the server name or IP is available.
@@ -959,13 +959,13 @@ Check whether the server name or IP is available.
 
 ##### Return
 
-( _boolean_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
-Result if address is available.
+Indicates whether the address is available.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>ping</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>timeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>ping</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>timeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Description
 
 Check whether the server name or IP is available.
@@ -979,9 +979,9 @@ Check whether the server name or IP is available.
 
 ##### Return
 
-( _boolean_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
-Result if address is available.
+Indicates whether the address is available.
 
 ---
 
@@ -989,7 +989,7 @@ Result if address is available.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>portListening</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>port</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>portListening</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>port</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
 ##### Description
 
 Checks if the port is available for a server name or IP.
@@ -1003,9 +1003,9 @@ Checks if the port is available for a server name or IP.
 
 ##### Return
 
-( _boolean_ )
+( _org.netuno.psamata.net.Remote$Response_ )
 
-Result if port is available.
+Indicates whether the port is available.
 
 ---
 

@@ -8,6 +8,38 @@ Definition of the changes in **Bson** that are used in data changes in MongoDB c
 
 ---
 
+## combine
+
+---
+
+#### <span style={{color: '#008000'}}>combine</span>(<span style={{color: '#FF8000'}}>updates</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **updates** | _java.util.List_ |   |
+
+##### Return
+
+( _org.bson.conversions.Bson_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>combine</span>(<span style={{color: '#FF8000'}}>updates</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **updates** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Return
+
+( _org.bson.conversions.Bson_ )
+
+
+---
+
 ## push
 
 ---

@@ -6,14 +6,6 @@ sidebar_label: MongoDB - Cliente
 
 Recurso para integrações com o MongoDB.
 
-```javascript
-// Exemplo de uso do cliente de IA com o fornecedor padrão
-const client = _ai.client();
-const response = client.chat('Hello, how can I help?');
-_log.info('Response: ' + response);
-
-```
-
 ---
 
 ## close
@@ -24,6 +16,18 @@ _log.info('Response: ' + response);
 ##### Retorno
 
 ( _void_ )
+
+
+---
+
+## countOptions
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_mongo</span>.<span style={{color: '#008000'}}>countOptions</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.mongodb.client.model.CountOptions</span>
+##### Retorno
+
+( _com.mongodb.client.model.CountOptions_ )
 
 
 ---
@@ -88,6 +92,30 @@ _log.info('Response: ' + response);
 
 ---
 
+## dropCollectionOptions
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_mongo</span>.<span style={{color: '#008000'}}>dropCollectionOptions</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.mongodb.client.model.DropCollectionOptions</span>
+##### Retorno
+
+( _com.mongodb.client.model.DropCollectionOptions_ )
+
+
+---
+
+## estimatedDocumentCountOptions
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_mongo</span>.<span style={{color: '#008000'}}>estimatedDocumentCountOptions</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.mongodb.client.model.EstimatedDocumentCountOptions</span>
+##### Retorno
+
+( _com.mongodb.client.model.EstimatedDocumentCountOptions_ )
+
+
+---
+
 ## filters
 
 ---
@@ -96,6 +124,18 @@ _log.info('Response: ' + response);
 ##### Retorno
 
 ( _[MongoFilters](/docs/library/objects/MongoFilters)_ )
+
+
+---
+
+## findOneAndDeleteOptions
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_mongo</span>.<span style={{color: '#008000'}}>findOneAndDeleteOptions</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.mongodb.client.model.FindOneAndDeleteOptions</span>
+##### Retorno
+
+( _com.mongodb.client.model.FindOneAndDeleteOptions_ )
 
 
 ---
@@ -120,6 +160,18 @@ _log.info('Response: ' + response);
 ##### Retorno
 
 ( _com.mongodb.client.model.FindOneAndUpdateOptions_ )
+
+
+---
+
+## indexes
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_mongo</span>.<span style={{color: '#008000'}}>indexes</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.resource.mongo.MongoIndexes</span>
+##### Retorno
+
+( _org.netuno.tritao.resource.mongo.MongoIndexes_ )
 
 
 ---
@@ -182,6 +234,18 @@ _log.info('Response: ' + response);
 ##### Retorno
 
 ( _com.mongodb.client.model.ReplaceOptions_ )
+
+
+---
+
+## textSearchOptions
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_mongo</span>.<span style={{color: '#008000'}}>textSearchOptions</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.mongodb.client.model.TextSearchOptions</span>
+##### Retorno
+
+( _com.mongodb.client.model.TextSearchOptions_ )
 
 
 ---

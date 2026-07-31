@@ -1,7 +1,7 @@
 ---
 id: ProcessLauncher
-title: Process
-sidebar_label: Process
+title: ProcessLauncher
+sidebar_label: ProcessLauncher
 ---
 
 Gerencia a execução de processos, permite executar programas externos e comandos de terminal.

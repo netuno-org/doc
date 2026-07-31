@@ -1,10 +1,10 @@
 ---
 id: ProcessLauncher
-title: Process
-sidebar_label: Process
+title: ProcessLauncher
+sidebar_label: ProcessLauncher
 ---
 
-Gerenciar a execução de processos permite executar programas externos e comandos de terminal.
+Managing process execution allows you to run external programs and terminal commands.
 
 ---
 

@@ -226,6 +226,23 @@ All data that was sent.
 
 ---
 
+## getHost
+
+---
+
+#### <span style={{color: '#008000'}}>getHost</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Get the host address.
+
+##### Return
+
+( _string_ )
+
+The server name.
+
+---
+
 ## getJSON
 
 ---
@@ -291,6 +308,18 @@ HTTP method code that was submitted.
 
 ---
 
+## getTime
+
+---
+
+#### <span style={{color: '#008000'}}>getTime</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
+##### Return
+
+( _long_ )
+
+
+---
+
 ## getURL
 
 ---
@@ -311,6 +340,37 @@ HTTP method code that was submitted.
 ##### Return
 
 ( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+## host
+
+---
+
+#### <span style={{color: '#008000'}}>host</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Get the host address.
+
+##### Return
+
+( _string_ )
+
+The server name.
+
+---
+
+#### <span style={{color: '#008000'}}>host</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **host** | _string_ |   |
+
+##### Return
+
+( _org.netuno.psamata.net.Remote$Response_ )
 
 
 ---
@@ -605,6 +665,24 @@ All query string parameters that were sent.
 
 ---
 
+## setHost
+
+---
+
+#### <span style={{color: '#008000'}}>setHost</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **host** | _string_ |   |
+
+##### Return
+
+( _org.netuno.psamata.net.Remote$Response_ )
+
+
+---
+
 ## setMethod
 
 ---
@@ -682,6 +760,24 @@ Remote connection submission response.
 
 ---
 
+## setTime
+
+---
+
+#### <span style={{color: '#008000'}}>setTime</span>(<span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](/docs/library/objects/RemoteResponse)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **time** | _long_ |   |
+
+##### Return
+
+( _[RemoteResponse](/docs/library/objects/RemoteResponse)_ )
+
+
+---
+
 ## setURL
 
 ---
@@ -708,6 +804,32 @@ Remote connection submission response.
 ##### Return
 
 ( _int_ )
+
+
+---
+
+## time
+
+---
+
+#### <span style={{color: '#008000'}}>time</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>
+##### Return
+
+( _long_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>time</span>(<span style={{color: '#FF8000'}}>time</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>long</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RemoteResponse](/docs/library/objects/RemoteResponse)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **time** | _long_ |   |
+
+##### Return
+
+( _[RemoteResponse](/docs/library/objects/RemoteResponse)_ )
 
 
 ---

@@ -8,6 +8,38 @@ Definição das alterações em **Bson** que são utilizadas nas alterações de
 
 ---
 
+## combine
+
+---
+
+#### <span style={{color: '#008000'}}>combine</span>(<span style={{color: '#FF8000'}}>updates</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;?&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **updates** | _java.util.List_ |   |
+
+##### Retorno
+
+( _org.bson.conversions.Bson_ )
+
+
+---
+
+#### <span style={{color: '#008000'}}>combine</span>(<span style={{color: '#FF8000'}}>updates</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **updates** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _org.bson.conversions.Bson_ )
+
+
+---
+
 ## push
 
 ---

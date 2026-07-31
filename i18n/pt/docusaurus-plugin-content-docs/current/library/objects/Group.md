@@ -8,37 +8,37 @@ Definição do objeto Group para agrupamento de resultados com Query.
 
 ---
 
-## getColumn
+## getColumns
 
 ---
 
-#### <span style={{color: '#008000'}}>getColumn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>getColumns</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;string&gt;</span>
 ##### Descrição
 
-Retorna a coluna que será usada na efetuar o agrupamento.
+Retorna as colunas que serão usadas na efetuar o agrupamento.
 
 ##### Retorno
 
-( _string_ )
+( _java.util.List_ )
 
-Nome da coluna.
-
----
-
-## setColumn
+Colunas.
 
 ---
 
-#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>coluna</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](/docs/library/objects/Group)</span>
+## setColumns
+
+---
+
+#### <span style={{color: '#008000'}}>setColumns</span>(<span style={{color: '#FF8000'}}>colunas</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;string&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](/docs/library/objects/Group)</span>
 ##### Descrição
 
-Define a coluna que será usada na efetuar o agrupamento.
+Define as colunas que serão usadas na efetuar o agrupamento.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **coluna** | _string_ | Nome da coluna. |
+| **colunas** | _java.util.List_ | Colunas. |
 
 ##### Retorno
 

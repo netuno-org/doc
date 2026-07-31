@@ -435,6 +435,23 @@ O HTML que vai ir no e-mail.
 
 ---
 
+## getKey
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>getKey</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém a chave da configuração de SMTP que está sendo utilizada.
+
+##### Retorno
+
+( _string_ )
+
+Nome da chave de configuração SMTP que está sendo utilizada.
+
+---
+
 ## getMultipartSubtype
 
 ---
@@ -632,6 +649,23 @@ Verifica se está habilitado.
 ( _boolean_ )
 
 Resultado se está ou não ativado.
+
+---
+
+## key
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>key</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém a chave da configuração de SMTP que está sendo utilizada.
+
+##### Retorno
+
+( _string_ )
+
+Nome da chave de configuração SMTP que está sendo utilizada.
 
 ---
 

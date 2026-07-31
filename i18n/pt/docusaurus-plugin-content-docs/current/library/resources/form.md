@@ -106,6 +106,74 @@ Responsável por realizar a gestão dos formulários da aplicação programatica
 
 ---
 
+## createField
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>createField</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formId** | _int_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>createField</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formNameOrUid** | _string_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+## createFieldIfNotExists
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>createFieldIfNotExists</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formId** | _int_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>createFieldIfNotExists</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formNameOrUid** | _string_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
 ## createIfNotExists
 
 ---
@@ -116,6 +184,116 @@ Responsável por realizar a gestão dos formulários da aplicação programatica
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **data** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+## dropFieldIfExists
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>dropFieldIfExists</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>fieldId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formId** | _int_ |   |
+| **fieldId** | _int_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>dropFieldIfExists</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>fieldNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formId** | _int_ |   |
+| **fieldNameOrUid** | _string_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>dropFieldIfExists</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fieldId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formNameOrUid** | _string_ |   |
+| **fieldId** | _int_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>dropFieldIfExists</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fieldNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formNameOrUid** | _string_ |   |
+| **fieldNameOrUid** | _string_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>dropFieldIfExists</span>(<span style={{color: '#FF8000'}}>fieldData</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **fieldData** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+## dropIfExists
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>dropIfExists</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **id** | _int_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>dropIfExists</span>(<span style={{color: '#FF8000'}}>nameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **nameOrUid** | _string_ |   |
 
 ##### Retorno
 
@@ -296,6 +474,100 @@ Responsável por realizar a gestão dos formulários da aplicação programatica
 
 ---
 
+## getField
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>getField</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formId** | _int_ |   |
+| **id** | _int_ |   |
+
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>getField</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>nameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formId** | _int_ |   |
+| **nameOrUid** | _string_ |   |
+
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>getField</span>(<span style={{color: '#FF8000'}}>formId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formId** | _int_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>getField</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formNameOrUid** | _string_ |   |
+| **id** | _int_ |   |
+
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>getField</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>nameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formNameOrUid** | _string_ |   |
+| **nameOrUid** | _string_ |   |
+
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>getField</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formNameOrUid** | _string_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+
+---
+
 ## mandatoryFields
 
 ---
@@ -324,6 +596,58 @@ Responsável por realizar a gestão dos formulários da aplicação programatica
 ##### Retorno
 
 ( _java.util.List_ )
+
+
+---
+
+## sync
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>sync</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+## syncField
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>syncField</span>(<span style={{color: '#FF8000'}}>tableId</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **tableId** | _int_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _boolean_ )
+
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_form</span>.<span style={{color: '#008000'}}>syncField</span>(<span style={{color: '#FF8000'}}>formNameOrUid</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formNameOrUid** | _string_ |   |
+| **data** | _[Values](/docs/library/objects/Values)_ |   |
+
+##### Retorno
+
+( _boolean_ )
 
 
 ---
