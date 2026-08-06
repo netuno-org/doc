@@ -235,6 +235,34 @@ Pode testar a conexão com a base de dados com o `ping()`, e listar todas as col
     ]}
 />
 
+Pode renomear uma coleção com o `renameCollection()`, passando o nome completo com a base de dados, ou o nome da base de dados e o novo nome da coleção em separado:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.renameCollection("products_db.product_archive")
+
+                collection.renameCollection("archive_db", "product_archive")
+            `
+        }
+    ]}
+/>
+
+Para remover uma coleção e todos os seus documentos, utilize o `drop()`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.drop()
+            `
+        }
+    ]}
+/>
+
 ## Inserir Documentos
 
 Os dados são representados com o recurso `_val`, através de `_val.map()` para documentos e `_val.list()` para listas de valores.
@@ -518,6 +546,9 @@ A factory `_mongo.filters()` oferece os principais operadores de consulta do Mon
 | `exists("campo")` | O campo existe no documento. |
 | `text("pesquisa")` | Pesquisa de texto. |
 | `type("campo", "tipo")` | O campo é do tipo especificado. |
+| `mod("campo", divisor, resto)` | O resto da divisão do campo pelo divisor é igual ao valor. |
+| `where("expressão")` | Corresponde aos documentos que satisfazem uma expressão JavaScript, por exemplo `"this.price > 100"`. |
+| `size("campo", n)` | O campo de matriz tem exatamente `n` elementos. |
 
 Por exemplo, para obter os produtos com preço superior a 50 e quantidade inferior a 30:
 
@@ -684,6 +715,20 @@ Para combinar várias projeções:
         }
     ]}
 />
+
+Os tipos de projeção disponíveis são os seguintes:
+
+| Projeção | Descrição |
+|---|---|
+| `include("campo", ...)` | Inclui apenas os campos especificados. |
+| `exclude("campo", ...)` | Exclui os campos especificados. |
+| `excludeId()` | Exclui o campo `_id`. |
+| `fields(projeção1, ...)` | Combina projeções. |
+| `slice("campo", n)` | Inclui apenas os primeiros `n` elementos do campo de matriz. |
+| `slice("campo", salto, n)` | Inclui `n` elementos do campo de matriz, a partir de depois dos primeiros `salto` elementos. |
+| `elemMatch("campo")` | Inclui apenas o primeiro elemento do campo de matriz. |
+| `elemMatch("campo", filtro)` | Inclui apenas o primeiro elemento da matriz que corresponde ao filtro. |
+| `computed("campo", expressão)` | Adiciona um campo calculado com base numa expressão de agregação. |
 
 ## Limites e Saltos
 
@@ -1030,6 +1075,30 @@ Pode indicar ao MongoDB qual o índice a utilizar numa consulta, com o `hint()`:
     ]}
 />
 
+Com `min()` e `max()` você limita a gama de valores do índice percorridos pela consulta:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 50)
+                        )
+                    )
+                    .all()
+            `
+        }
+    ]}
+/>
+
 ## Agregações
 
 Para análises mais avançadas, o `aggregate()` permite executar um pipeline de agregação, onde cada etapa é definida com a factory `_mongo.aggregates()` e os acumuladores com `_mongo.accumulators()`.
@@ -1172,6 +1241,29 @@ Por vezes é necessário converter entre os objetos `_val` do Netuno e documento
         }
     ]}
 />
+
+## Operações com Opções
+
+As factories `*Options()` do recurso `_mongo` devolvem os objetos de opções padrão do driver do MongoDB, e você pode encadear os seus métodos diretamente. Por exemplo, `upsert(true)` insere o documento quando o filtro não corresponde a nenhum documento existente:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "Monitor"),
+                    _mongo.updates().set("quantity", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        }
+    ]}
+/>
+
+Quando o documento é inserido, o `findOneAndUpdate()` devolve `null`.
+
+As factories de opções disponíveis são: `insertOneOptions()`, `insertManyOptions()`, `updateOptions()`, `findOneAndUpdateOptions()`, `replaceOptions()`, `findOneAndReplaceOptions()`, `deleteOptions()`, `findOneAndDeleteOptions()`, `countOptions()`, `estimatedDocumentCountOptions()`, `dropCollectionOptions()` e `textSearchOptions()`.
 
 ## Fechar a Conexão
 

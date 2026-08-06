@@ -235,6 +235,34 @@ You can test the database connection with `ping()`, and list all existing collec
     ]}
 />
 
+You can rename a collection with `renameCollection()`, passing the full name with the database, or the database name and the new collection name separately:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.renameCollection("products_db.product_archive")
+
+                collection.renameCollection("archive_db", "product_archive")
+            `
+        }
+    ]}
+/>
+
+To remove a collection and all its documents, use `drop()`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.drop()
+            `
+        }
+    ]}
+/>
+
 ## Inserting Documents
 
 Data is represented with the `_val` resource, using `_val.map()` for documents and `_val.list()` for lists of values.
@@ -518,6 +546,9 @@ The `_mongo.filters()` factory provides the main MongoDB query operators:
 | `exists("field")` | The field exists in the document. |
 | `text("search")` | Text search. |
 | `type("field", "type")` | The field is of the specified type. |
+| `mod("field", divisor, remainder)` | The field modulo the divisor equals the remainder. |
+| `where("expression")` | Matches documents using a JavaScript expression, for example `"this.price > 100"`. |
+| `size("field", n)` | The array field has exactly `n` elements. |
 
 For example, to get the products with price greater than 50 and quantity less than 30:
 
@@ -684,6 +715,20 @@ To combine projections:
         }
     ]}
 />
+
+The projection types available are the following:
+
+| Projection | Description |
+|---|---|
+| `include("field", ...)` | Includes only the specified fields. |
+| `exclude("field", ...)` | Excludes the specified fields. |
+| `excludeId()` | Excludes the `_id` field. |
+| `fields(projection1, ...)` | Combines projections. |
+| `slice("field", n)` | Includes only the first `n` elements of the array field. |
+| `slice("field", skip, n)` | Includes `n` elements of the array field, starting after the `skip` first elements. |
+| `elemMatch("field")` | Includes only the first element of the array field. |
+| `elemMatch("field", filter)` | Includes only the first array element that matches the filter. |
+| `computed("field", expression)` | Adds a computed field based on an aggregation expression. |
 
 ## Limits and Skips
 
@@ -1030,6 +1075,30 @@ You can tell MongoDB which index to use in a query with `hint()`:
     ]}
 />
 
+With `min()` and `max()` you constrain the range of index values scanned by the query:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 50)
+                        )
+                    )
+                    .all()
+            `
+        }
+    ]}
+/>
+
 ## Aggregations
 
 For more advanced analysis, `aggregate()` allows you to run an aggregation pipeline, where each stage is defined with the `_mongo.aggregates()` factory and the accumulators with `_mongo.accumulators()`.
@@ -1172,6 +1241,29 @@ Sometimes you need to convert between the Netuno `_val` objects and the MongoDB 
         }
     ]}
 />
+
+## Operations with Options
+
+The `*Options()` factories of the `_mongo` resource return the standard MongoDB driver options objects, and you can chain their methods directly. For example, `upsert(true)` inserts the document when the filter does not match any existing document:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "Monitor"),
+                    _mongo.updates().set("quantity", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        }
+    ]}
+/>
+
+When the document is inserted, `findOneAndUpdate()` returns `null`.
+
+The available options factories are: `insertOneOptions()`, `insertManyOptions()`, `updateOptions()`, `findOneAndUpdateOptions()`, `replaceOptions()`, `findOneAndReplaceOptions()`, `deleteOptions()`, `findOneAndDeleteOptions()`, `countOptions()`, `estimatedDocumentCountOptions()`, `dropCollectionOptions()` and `textSearchOptions()`.
 
 ## Closing the Connection
 
