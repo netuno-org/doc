@@ -155,6 +155,30 @@ Também pode inicializar a conexão diretamente com uma URL:
             code: `
                 const mongo = _mongo.init("mongodb://localhost:27017/products_db")
             `
+        },
+        {
+            lang: 'python',
+            code: `
+                mongo = _mongo.init("mongodb://localhost:27017/products_db")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                mongo = _mongo.init("mongodb://localhost:27017/products_db")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val mongo = _mongo.init("mongodb://localhost:27017/products_db")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def mongo = _mongo.init("mongodb://localhost:27017/products_db")
+            `
         }
     ]}
 />
@@ -230,6 +254,38 @@ Pode testar a conexão com a base de dados com o `ping()`, e listar todas as col
                 db.ping()
 
                 const names = db.collectionNames()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                db.ping()
+
+                names = db.collectionNames()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                db.ping()
+
+                names = db.collectionNames()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                db.ping()
+
+                val names = db.collectionNames()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                db.ping()
+
+                def names = db.collectionNames()
             `
         }
     ]}
@@ -474,6 +530,30 @@ Para obter todos os documentos da coleção:
             code: `
                 const docs = collection.find().all()
             `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().all()
+            `
         }
     ]}
 />
@@ -564,6 +644,50 @@ Por exemplo, para obter os produtos com preço superior a 50 e quantidade inferi
                     )
                 ).all()
             `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("price", 50),
+                        _mongo.filters().lt("quantity", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("price", 50),
+                        _mongo.filters().lt("quantity", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("price", 50),
+                        _mongo.filters().lt("quantity", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("price", 50),
+                        _mongo.filters().lt("quantity", 30)
+                    )
+                ).all()
+            `
         }
     ]}
 />
@@ -576,6 +700,38 @@ Ou para obter os produtos cujo nome corresponde a uma expressão regular:
             lang: 'javascript',
             code: `
                 const docs = collection.find(
+                    _mongo.filters().regex("name", "^[LS]")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find(
+                    _mongo.filters().regex("name", "^[LS]")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find(
+                    _mongo.filters().regex("name", "^[LS]")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find(
+                    _mongo.filters().regex("name", "^[LS]")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find(
                     _mongo.filters().regex("name", "^[LS]")
                 ).all()
             `
@@ -642,6 +798,38 @@ Você também pode percorrer os resultados com `forEach()` passando uma função
                     _out.println(doc.getString("name"))
                 )
             `
+        },
+        {
+            lang: 'python',
+            code: `
+                collection.find().forEach(
+                    lambda doc: _out.println(doc.getString("name"))
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                collection.find().forEach do |doc|
+                    _out.println(doc.getString("name"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                collection.find().forEach { doc ->
+                    _out.println(doc.getString("name"))
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                collection.find().forEach { doc ->
+                    _out.println(doc.getString("name"))
+                }
+            `
         }
     ]}
 />
@@ -659,6 +847,38 @@ Com a factory `_mongo.sorts()` você define a ordem dos resultados, de forma asc
                     _mongo.sorts().descending("price")
                 ).all()
             `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().sort(
+                    _mongo.sorts().descending("price")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().sort(
+                    _mongo.sorts().descending("price")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().sort(
+                    _mongo.sorts().descending("price")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().sort(
+                    _mongo.sorts().descending("price")
+                ).all()
+            `
         }
     ]}
 />
@@ -671,6 +891,50 @@ Para ordenar por vários campos, utilize `orderBy()`:
             lang: 'javascript',
             code: `
                 const docs = collection.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("price"),
+                        _mongo.sorts().ascending("quantity")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("price"),
+                        _mongo.sorts().ascending("quantity")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("price"),
+                        _mongo.sorts().ascending("quantity")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("price"),
+                        _mongo.sorts().ascending("quantity")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().sort(
                     _mongo.sorts().orderBy(
                         _mongo.sorts().descending("price"),
                         _mongo.sorts().ascending("quantity")
@@ -694,6 +958,38 @@ Com a factory `_mongo.projections()` você limita os campos devolvidos nos docum
                     _mongo.projections().include("name", "quantity")
                 ).all()
             `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().projection(
+                    _mongo.projections().include("name", "quantity")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().projection(
+                    _mongo.projections().include("name", "quantity")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().projection(
+                    _mongo.projections().include("name", "quantity")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().projection(
+                    _mongo.projections().include("name", "quantity")
+                ).all()
+            `
         }
     ]}
 />
@@ -706,6 +1002,50 @@ Para combinar várias projeções:
             lang: 'javascript',
             code: `
                 const docs = collection.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("name", "quantity"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("name", "quantity"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("name", "quantity"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("name", "quantity"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().projection(
                     _mongo.projections().fields(
                         _mongo.projections().include("name", "quantity"),
                         _mongo.projections().excludeId()
@@ -744,6 +1084,42 @@ Com `limit()` e `skip()` você controla a quantidade de resultados devolvidos:
                     .limit(2)
                     .all()
             `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
         }
     ]}
 />
@@ -756,62 +1132,6 @@ Com a factory `_mongo.updates()` você define as alterações a aplicar, e com `
     codes={[
         {
             lang: 'javascript',
-            code: `
-                collection.updateOne(
-                    _mongo.filters().eq("name", "Laptop"),
-                    _mongo.updates().set("quantity", 42)
-                )
-
-                collection.updateMany(
-                    _mongo.filters().eq("category", "computers"),
-                    _mongo.updates().set("category", "featured")
-                )
-            `
-        },
-        {
-            lang: 'python',
-            code: `
-                collection.updateOne(
-                    _mongo.filters().eq("name", "Laptop"),
-                    _mongo.updates().set("quantity", 42)
-                )
-
-                collection.updateMany(
-                    _mongo.filters().eq("category", "computers"),
-                    _mongo.updates().set("category", "featured")
-                )
-            `
-        },
-        {
-            lang: 'ruby',
-            code: `
-                collection.updateOne(
-                    _mongo.filters().eq("name", "Laptop"),
-                    _mongo.updates().set("quantity", 42)
-                )
-
-                collection.updateMany(
-                    _mongo.filters().eq("category", "computers"),
-                    _mongo.updates().set("category", "featured")
-                )
-            `
-        },
-        {
-            lang: 'kotlin',
-            code: `
-                collection.updateOne(
-                    _mongo.filters().eq("name", "Laptop"),
-                    _mongo.updates().set("quantity", 42)
-                )
-
-                collection.updateMany(
-                    _mongo.filters().eq("category", "computers"),
-                    _mongo.updates().set("category", "featured")
-                )
-            `
-        },
-        {
-            lang: 'groovy',
             code: `
                 collection.updateOne(
                     _mongo.filters().eq("name", "Laptop"),
@@ -854,6 +1174,62 @@ Para aplicar várias alterações de uma só vez, utilize `combine()`:
                     combined
                 )
             `
+        },
+        {
+            lang: 'python',
+            code: `
+                combined = _mongo.updates().combine(
+                    _mongo.updates().set("quantity", 42),
+                    _mongo.updates().rename("other", "more")
+                )
+
+                collection.updateOne(
+                    _mongo.filters().eq("name", "Laptop"),
+                    combined
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                combined = _mongo.updates().combine(
+                    _mongo.updates().set("quantity", 42),
+                    _mongo.updates().rename("other", "more")
+                )
+
+                collection.updateOne(
+                    _mongo.filters().eq("name", "Laptop"),
+                    combined
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val combined = _mongo.updates().combine(
+                    _mongo.updates().set("quantity", 42),
+                    _mongo.updates().rename("other", "more")
+                )
+
+                collection.updateOne(
+                    _mongo.filters().eq("name", "Laptop"),
+                    combined
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def combined = _mongo.updates().combine(
+                    _mongo.updates().set("quantity", 42),
+                    _mongo.updates().rename("other", "more")
+                )
+
+                collection.updateOne(
+                    _mongo.filters().eq("name", "Laptop"),
+                    combined
+                )
+            `
         }
     ]}
 />
@@ -868,6 +1244,42 @@ Com `findOneAndUpdate()` encontra e atualiza um documento de forma atómica, dev
             lang: 'javascript',
             code: `
                 const old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "Laptop"),
+                    _mongo.updates().set("quantity", 42)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "Laptop"),
+                    _mongo.updates().set("quantity", 42)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "Laptop"),
+                    _mongo.updates().set("quantity", 42)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "Laptop"),
+                    _mongo.updates().set("quantity", 42)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def old = collection.findOneAndUpdate(
                     _mongo.filters().eq("name", "Laptop"),
                     _mongo.updates().set("quantity", 42)
                 )
@@ -912,6 +1324,50 @@ Para encontrar e substituir de forma atómica, devolvendo o documento antigo, ut
                         .set("quantity", 50)
                 )
             `
+        },
+        {
+            lang: 'python',
+            code: `
+                old = collection.findOneAndReplace(
+                    _mongo.filters().eq("name", "Laptop"),
+                    _val.map()
+                        .set("name", "Laptop")
+                        .set("quantity", 50)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                old = collection.findOneAndReplace(
+                    _mongo.filters().eq("name", "Laptop"),
+                    _val.map()
+                        .set("name", "Laptop")
+                        .set("quantity", 50)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val old = collection.findOneAndReplace(
+                    _mongo.filters().eq("name", "Laptop"),
+                    _val.map()
+                        .set("name", "Laptop")
+                        .set("quantity", 50)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def old = collection.findOneAndReplace(
+                    _mongo.filters().eq("name", "Laptop"),
+                    _val.map()
+                        .set("name", "Laptop")
+                        .set("quantity", 50)
+                )
+            `
         }
     ]}
 />
@@ -933,54 +1389,6 @@ Com `deleteOne()` e `deleteMany()` exclui os documentos que correspondem ao filt
                     _mongo.filters().eq("category", "inactive")
                 )
             `
-        },
-        {
-            lang: 'python',
-            code: `
-                collection.deleteOne(
-                    _mongo.filters().eq("name", "Laptop")
-                )
-
-                collection.deleteMany(
-                    _mongo.filters().eq("category", "inactive")
-                )
-            `
-        },
-        {
-            lang: 'ruby',
-            code: `
-                collection.deleteOne(
-                    _mongo.filters().eq("name", "Laptop")
-                )
-
-                collection.deleteMany(
-                    _mongo.filters().eq("category", "inactive")
-                )
-            `
-        },
-        {
-            lang: 'kotlin',
-            code: `
-                collection.deleteOne(
-                    _mongo.filters().eq("name", "Laptop")
-                )
-
-                collection.deleteMany(
-                    _mongo.filters().eq("category", "inactive")
-                )
-            `
-        },
-        {
-            lang: 'groovy',
-            code: `
-                collection.deleteOne(
-                    _mongo.filters().eq("name", "Laptop")
-                )
-
-                collection.deleteMany(
-                    _mongo.filters().eq("category", "inactive")
-                )
-            `
         }
     ]}
 />
@@ -993,6 +1401,38 @@ Para encontrar e excluir um documento de forma atómica, devolvendo o documento 
             lang: 'javascript',
             code: `
                 const old = collection.findOneAndDelete(
+                    _mongo.filters().eq("name", "Tablet")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                old = collection.findOneAndDelete(
+                    _mongo.filters().eq("name", "Tablet")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                old = collection.findOneAndDelete(
+                    _mongo.filters().eq("name", "Tablet")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val old = collection.findOneAndDelete(
+                    _mongo.filters().eq("name", "Tablet")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def old = collection.findOneAndDelete(
                     _mongo.filters().eq("name", "Tablet")
                 )
             `
@@ -1029,6 +1469,54 @@ Com `countDocuments()` obtém o número de documentos da coleção, opcionalment
                 )
 
                 const estimated = collection.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                total = collection.countDocuments()
+
+                totalMain = collection.countDocuments(
+                    _mongo.filters().eq("category", "computers")
+                )
+
+                estimated = collection.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                total = collection.countDocuments()
+
+                totalMain = collection.countDocuments(
+                    _mongo.filters().eq("category", "computers")
+                )
+
+                estimated = collection.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val total = collection.countDocuments()
+
+                val totalMain = collection.countDocuments(
+                    _mongo.filters().eq("category", "computers")
+                )
+
+                val estimated = collection.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def total = collection.countDocuments()
+
+                def totalMain = collection.countDocuments(
+                    _mongo.filters().eq("category", "computers")
+                )
+
+                def estimated = collection.estimatedDocumentCount()
             `
         }
     ]}
@@ -1071,6 +1559,46 @@ Pode indicar ao MongoDB qual o índice a utilizar numa consulta, com o `hint()`:
                     )
                 ).all()
             `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("quantity", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("quantity", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("quantity", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("quantity", 1)
+                    )
+                ).all()
+            `
         }
     ]}
 />
@@ -1083,6 +1611,74 @@ Com `min()` e `max()` você limita a gama de valores do índice percorridos pela
             lang: 'javascript',
             code: `
                 const docs = collection.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find()
                     .min(
                         _mongo.valToDoc(
                             _val.map().set("quantity", 10)
@@ -1238,6 +1834,46 @@ Por vezes é necessário converter entre os objetos `_val` do Netuno e documento
 
                 const values = _mongo.docToVal(doc)
             `
+        },
+        {
+            lang: 'python',
+            code: `
+                doc = _mongo.valToDoc(
+                    _val.map().set("name", "Laptop")
+                )
+
+                values = _mongo.docToVal(doc)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                doc = _mongo.valToDoc(
+                    _val.map().set("name", "Laptop")
+                )
+
+                values = _mongo.docToVal(doc)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val doc = _mongo.valToDoc(
+                    _val.map().set("name", "Laptop")
+                )
+
+                val values = _mongo.docToVal(doc)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def doc = _mongo.valToDoc(
+                    _val.map().set("name", "Laptop")
+                )
+
+                def values = _mongo.docToVal(doc)
+            `
         }
     ]}
 />
@@ -1252,6 +1888,46 @@ As factories `*Options()` do recurso `_mongo` devolvem os objetos de opções pa
             lang: 'javascript',
             code: `
                 const old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "Monitor"),
+                    _mongo.updates().set("quantity", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "Monitor"),
+                    _mongo.updates().set("quantity", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "Monitor"),
+                    _mongo.updates().set("quantity", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "Monitor"),
+                    _mongo.updates().set("quantity", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def old = collection.findOneAndUpdate(
                     _mongo.filters().eq("name", "Monitor"),
                     _mongo.updates().set("quantity", 8),
                     _mongo.findOneAndUpdateOptions().upsert(true)
