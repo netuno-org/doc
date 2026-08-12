@@ -14,9 +14,45 @@ Bem-vindo ao guia de instalação do **Netuno**, a plataforma *low-code*, poligl
 
 Aqui você constrói aplicações full-stack robustas de forma ágil, combinando a velocidade do low-code com o poder da codificação tradicional.
 
-Antes de começar, verifique o que precisa ter instalado no seu computador.
+## Instalação via Script
+
+O jeito mais fácil de instalar o Netuno é através do script de instalação disponibilizado pela plataforma. Basta executar os comandos no terminal de acordo com o seu Sistema Operacional.
+
+### Linux
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/netuno-org/platform/refs/heads/main/install.sh)
+```
+
+### macOS
+```bash
+curl -fsSL https://raw.githubusercontent.com/netuno-org/platform/refs/heads/main/install.sh -o install.sh
+bash install.sh
+rm install.sh
+```
+
+## Instalação Manual
+
+Escolha a versão desejada. A seleção feita aqui se aplicará a todos os blocos de comando desta página.
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Versão Estável" default>
+
+A **Versão Estável** é a edição homologada do Netuno. Ela passou por testes rigorosos e está totalmente pronta para uso em ambientes de produção.
+
+</TabItem>
+  <TabItem value="testing" label="Versão Em Teste">
+
+:::danger NÃO USAR EM PRODUÇÃO
+A **Versão em Teste** contém as funcionalidades mais recentes e as implementações em andamento. Por ser experimental, pode apresentar instabilidades. Recomendamos seu uso apenas para conhecer novas funcionalidades, realizar testes ou contribuir com o ecossistema da plataforma.
+:::
+
+  </TabItem>
+</Tabs>
 
 ### Pré-requisitos
+
+Antes de começar, verifique o que precisa ter instalado no seu computador:
 
 - **Java** *(Apenas para o instalador)*
 
@@ -32,7 +68,7 @@ Para saber mais sobre a tecnologia, acesse: [GraalVM](https://www.graalvm.org/).
 A instalação de ferramentas de frontend (como Node.js, NPM ou Yarn) é totalmente opcional. Você só precisará configurá-las se o seu objetivo for desenvolver interfaces avançadas em modo full-stack.
 :::
 
-### Backend - Java
+#### Backend - Java
 
 Esta etapa garante que o ambiente esteja preparado para executar o instalador da plataforma. É necessário ter o **Java versão 11 ou superior** instalado.
 
@@ -52,11 +88,11 @@ Caso não esteja instalado, recomendamos a instalação do **Java open source**:
 apt install default-jdk-headless
 ```
 
-### Frontend - Bun
+#### Frontend - Bun
 
 Para desenvolver interfaces de usuário (UI / Frontend), recomendamos o uso do **Bun**, a ferramenta padrão oficial do ecossistema Netuno para compilação de frontend.
 
-#### Por que usar o Bun?
+##### Por que usar o Bun?
 
 O **Bun** é uma alternativa moderna e altamente otimizada ao Node.js. Ele se destaca no ambiente Netuno por oferecer:
 
@@ -71,70 +107,6 @@ O Netuno não engessa suas escolhas tecnológicas. Caso prefira, **é possível 
 :::tip MANTENHA AS FERRAMENTAS ATUALIZADAS
 Independentemente da tecnologia escolhida, utilize sempre as versões mais recentes para garantir compatibilidade, segurança e performance.
 :::
-
-## Instalação
-
-Escolha a versão desejada. A seleção feita aqui se aplicará a todos os blocos de comando desta página.
-
-<Tabs groupId="versao">
-  <TabItem value="stable" label="Versão Estável" default>
-
-A **Versão Estável** é a edição homologada do Netuno. Ela passou por testes rigorosos e está totalmente pronta para uso em ambientes de produção.
-
-</TabItem>
-  <TabItem value="testing" label="Versão Em Teste">
-
-:::danger NÃO USAR EM PRODUÇÃO
-A **Versão em Teste** contém as funcionalidades mais recentes e as implementações em andamento. Por ser experimental, pode apresentar instabilidades. Recomendamos seu uso apenas para conhecer novas funcionalidades, realizar testes ou contribuir com o ecossistema da plataforma.
-:::
-
-  </TabItem>
-</Tabs>
-
-
-### Comportamento 
-
-Antes de prosseguir, entenda como o script interage com o seu terminal:
-
-1. **Criação da pasta:** O script cria automaticamente uma pasta chamada `netuno`
-   no diretório onde o terminal está aberto.
-2. **Navegação automática:** Após a criação, o terminal é redirecionado para
-   dentro dessa pasta (equivalente a executar `cd netuno`).
-
-:::caution Recuperando uma instalação com falha
-Se a instalação for interrompida, o terminal já estará posicionado **dentro**
-da pasta com falha. Executar o comando novamente criará uma pasta dentro da outra.
-:::
-
-Para limpar o ambiente e recomeçar do zero:
-
-**1. Volte um nível no terminal:**
-
-```bash
-cd ..
-```
-
-**2. Remova a pasta com falha:**
-
-<Tabs groupId="os">
-  <TabItem value="linux-mac" label="Linux ou macOS" default>
-
-```bash
-rm -rf netuno
-```
-
-  </TabItem>
-  <TabItem value="windows" label="Windows">
-
-```powershell
-rmdir /s /q netuno
-```
-
-  </TabItem>
-</Tabs>
-
-**3. Reinicie a instalação**.
-
 
 ### Linux ou macOS
 
@@ -264,6 +236,37 @@ java -jar netuno-setup.jar install version=testing
 :::caution ATENÇÃO 
 A instalação padrão geralmente não exige privilégios elevados. Porém, se receber uma mensagem de "Acesso Negado", feche o PowerShell, reabra-o como **Administrador** e execute o comando novamente.
 :::
+
+### Recomeçando do Zero
+
+Para limpar o ambiente e recomeçar do zero:
+
+**1. Volte um nível no terminal:**
+
+```bash
+cd ..
+```
+
+**2. Remova a pasta com falha:**
+
+<Tabs groupId="os">
+  <TabItem value="linux-mac" label="Linux ou macOS" default>
+
+```bash
+rm -rf netuno
+```
+
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+rmdir /s /q netuno
+```
+
+  </TabItem>
+</Tabs>
+
+**3. Reinicie a instalação**.
 
 ## Iniciar a App DEMO
 

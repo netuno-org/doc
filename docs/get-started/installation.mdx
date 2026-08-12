@@ -4,7 +4,6 @@ id: installation
 title: Installation
 ---
 
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -14,64 +13,24 @@ Welcome to the **Netuno** installation guide, the *low-code*, polyglot, and *ope
 
 Here you build robust full-stack applications quickly, combining the speed of low-code with the power of traditional coding.
 
-Before you begin, check what you need to have installed on your computer.
+## Instalation via Script
 
-### Prerequisites
+The easiest way to install Netuno is through the installation script provided by the platform. Just run the commands in the terminal according to your Operating System.
 
-- **Java** *(Installer only)*
-
-  **Java** must be previously installed on your operating system. It will be used **exclusively** to run the initial Netuno installation script.
-
-- **GraalVM** *(Automatic Installation)*
-
-  During installation, the **GraalVM** engine is downloaded and configured automatically within the Netuno folder itself. From this point on, the isolated GraalVM Java will be used to run the platform, ensuring stability and high performance without interfering with your machine's global settings.
-
-To learn more about the technology, visit: [GraalVM](https://www.graalvm.org/).
-
-:::info FRONTEND REQUIREMENTS ARE OPTIONAL
-Installing frontend tools (such as Node.js, NPM, or Yarn) is entirely optional. You will only need to configure them if your goal is to develop advanced full-stack interfaces.
-:::
-
-### Backend - Java
-
-This step ensures the environment is prepared to run the platform installer. **Java version 11 or higher** must be installed.
-
-Check if Java is already installed by running the following command in your terminal:
+### Linux
 
 ```bash
-java -version
+bash <(curl -fsSL https://raw.githubusercontent.com/netuno-org/platform/refs/heads/main/install.sh)
 ```
 
-If it is not installed, we recommend installing the **open-source Java**:
-
-- Windows and macOS: [Java OpenJDK Eclipse Temurin](https://adoptium.net/en-US)
-- Linux (Ubuntu / Debian):
-
+### macOS
 ```bash
-apt install default-jdk-headless
+curl -fsSL https://raw.githubusercontent.com/netuno-org/platform/refs/heads/main/install.sh -o install.sh
+bash install.sh
+rm install.sh
 ```
 
-### Frontend - Bun
-
-To develop user interfaces (UI / Frontend), we recommend using **Bun** — the official standard tool in the Netuno ecosystem for frontend compilation.
-
-#### Why use Bun?
-
-**Bun** is a modern and highly optimized alternative to Node.js. It stands out in the Netuno environment by offering:
-
-- **High Performance:** Noticeably faster execution and dependency installation.
-- **Productivity:** Better performance in the daily workflow of interface development.
-- **Native Integration:** All Netuno example projects and templates come pre-configured to work with Bun.
-
-See the guide at: [Bun Installation](/docs/academy/website/bun).
-
-Netuno doesn't restrict your technological choices. If you prefer, **you can use Node.js with NPM, PNPM, Yarn**, or any other package manager. The choice of frontend stack is entirely up to you.
-
-:::tip KEEP YOUR TOOLS UPDATED
-Regardless of the technology chosen, always use the latest versions to ensure compatibility, security, and performance.
-:::
-
-## Installation
+## Manual Installation
 
 Choose your desired version. The selection made here will apply to all command blocks on this page.
 
@@ -90,45 +49,62 @@ The **Test Version** contains the latest features and ongoing implementations. B
   </TabItem>
 </Tabs>
 
-### Behavior
+### Prerequisites
 
-Before proceeding, understand how the script interacts with your terminal:
+Before you begin, check what you need to have installed on your computer:
 
-1. **Folder creation:** The script automatically creates a folder called `netuno` in the directory where the terminal is open.
-2. **Automatic navigation:** After creation, the terminal is redirected into that folder (equivalent to running `cd netuno`).
+- **Java** *(Installer only)*
 
-:::caution Recovering a Failed Installation
-If the installation is interrupted, the terminal will already be positioned **inside** the failed folder. Running the command again will create a folder inside another folder.
+  **Java** must be previously installed on your operating system. It will be used **exclusively** to run the initial Netuno installation script.
+
+- **GraalVM** *(Automatic Installation)*
+
+  During installation, the **GraalVM** engine is downloaded and configured automatically within the Netuno folder itself. From this point on, the isolated GraalVM Java will be used to run the platform, ensuring stability and high performance without interfering with your machine's global settings.
+
+To learn more about the technology, visit: [GraalVM](https://www.graalvm.org/).
+
+:::info FRONTEND REQUIREMENTS ARE OPTIONAL
+Installing frontend tools (such as Node.js, NPM, or Yarn) is entirely optional. You will only need to configure them if your goal is to develop advanced full-stack interfaces.
 :::
 
-To clear the environment and start over from scratch:
+#### Backend - Java
 
-**1. Go back one level in the terminal:**
+This step ensures the environment is prepared to run the platform installer. **Java version 11 or higher** must be installed.
 
-```bash
-cd ..
-```
-
-**2. Remove the failed folder:**
-
-<Tabs groupId="os">
-  <TabItem value="linux-mac" label="Linux or macOS" default>
+Check if Java is already installed by running the following command in your terminal:
 
 ```bash
-rm -rf netuno
+java -version
 ```
 
-  </TabItem>
-  <TabItem value="windows" label="Windows">
+If it is not installed, we recommend installing the **open-source Java**:
 
-```powershell
-rmdir /s /q netuno
+- Windows and macOS: [Java OpenJDK Eclipse Temurin](https://adoptium.net/en-US)
+- Linux (Ubuntu / Debian):
+
+```bash
+apt install default-jdk-headless
 ```
 
-  </TabItem>
-</Tabs>
+#### Frontend - Bun
 
-**3. Restart the installation**.
+To develop user interfaces (UI / Frontend), we recommend using **Bun** — the official standard tool in the Netuno ecosystem for frontend compilation.
+
+##### Why use Bun?
+
+**Bun** is a modern and highly optimized alternative to Node.js. It stands out in the Netuno environment by offering:
+
+- **High Performance:** Noticeably faster execution and dependency installation.
+- **Productivity:** Better performance in the daily workflow of interface development.
+- **Native Integration:** All Netuno example projects and templates come pre-configured to work with Bun.
+
+See the guide at: [Bun Installation](/docs/academy/website/bun).
+
+Netuno doesn't restrict your technological choices. If you prefer, **you can use Node.js with NPM, PNPM, Yarn**, or any other package manager. The choice of frontend stack is entirely up to you.
+
+:::tip KEEP YOUR TOOLS UPDATED
+Regardless of the technology chosen, always use the latest versions to ensure compatibility, security, and performance.
+:::
 
 ### Linux or macOS
 
@@ -258,6 +234,37 @@ java -jar netuno-setup.jar install version=testing
 :::caution ATTENTION 
 The standard installation usually does not require elevated privileges. However, if you receive an "Access Denied" message, close PowerShell, reopen it as **Administrator**, and run the command again.
 :::
+
+### Restarting from Scratch
+
+To clear the environment and start over from scratch:
+
+**1. Go back one level in the terminal:**
+
+```bash
+cd ..
+```
+
+**2. Remove the failed folder:**
+
+<Tabs groupId="os">
+  <TabItem value="linux-mac" label="Linux or macOS" default>
+
+```bash
+rm -rf netuno
+```
+
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+rmdir /s /q netuno
+```
+
+  </TabItem>
+</Tabs>
+
+**3. Restart the installation**.
 
 ## Start the App DEMO
 
