@@ -15,7 +15,7 @@ Don't know how to get to the Netuno folder? Check the [Installation](./installat
 
 ---
 
-### Start the server
+## Start the server
 
 Starts the server with the demo application.
 
@@ -25,7 +25,7 @@ Starts the server with the demo application.
 
 ---
 
-### Start the server with a specific application
+## Start the server with a specific application
 
 Starts the server with the application defined by the `app` parameter. Execute in a single line.
 
@@ -35,7 +35,7 @@ Starts the server with the application defined by the `app` parameter. Execute i
 
 ---
 
-### Create a new application
+## Create a new application
 
 Creates a new application in Netuno. You will be prompted for the application name and several initial configurations.
 
@@ -45,7 +45,7 @@ Creates a new application in Netuno. You will be prompted for the application na
 
 ---
 
-### List all commands
+## List all commands
 
 Lists all available commands and parameters with their respective descriptions.
 
@@ -55,7 +55,7 @@ Lists all available commands and parameters with their respective descriptions.
 
 ---
 
-### Display performance statistics
+## Display performance statistics
 
 Displays the most recent performance information, stored in `logs/stats-*`.
 
@@ -65,7 +65,7 @@ Displays the most recent performance information, stored in `logs/stats-*`.
 
 ---
 
-### Update to the stable version
+## Update to the stable version
 
 Updates Netuno to the latest stable version.
 
@@ -75,7 +75,7 @@ Updates Netuno to the latest stable version.
 
 ---
 
-### Update to the development version
+## Update to the development version
 
 Updates Netuno to the latest development version.
 

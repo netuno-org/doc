@@ -1,37 +1,16 @@
 ---
-sidebar_position: 1
-id: installation
-title: Instalação
-sidebar_label: Instalação
+sidebar_position: 2
+id: advanced-installation
+title: Instalação Avançada
+sidebar_label: Instalação Avançada
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Introdução
+# Instalação Avançada 
 
-Bem-vindo ao guia de instalação do **Netuno**, a plataforma *low-code*, poliglota e *open source* desenvolvida para acelerar a criação dos seus projetos e facilitar a configuração do ambiente de desenvolvimento.
-
-Aqui você constrói aplicações full-stack robustas de forma ágil, combinando a velocidade do low-code com o poder da codificação tradicional.
-
-## Instalação via Script
-
-O jeito mais fácil de instalar o Netuno é através do script de instalação disponibilizado pela plataforma. Basta executar os comandos no terminal de acordo com o seu Sistema Operacional.
-
-### Linux
-
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/netuno-org/platform/refs/heads/main/install.sh)
-```
-
-### macOS
-```bash
-curl -fsSL https://raw.githubusercontent.com/netuno-org/platform/refs/heads/main/install.sh -o install.sh
-bash install.sh
-rm install.sh
-```
-
-## Instalação Manual
+Caso haja algum problema com a instalação rápida via script, ou se queira ter um entendimento melhor de como a instalação do Netuno funciona, ou por qualquer outro motivo, pode-se fazer a instalação manual.
 
 Escolha a versão desejada. A seleção feita aqui se aplicará a todos os blocos de comando desta página.
 
@@ -50,7 +29,7 @@ A **Versão em Teste** contém as funcionalidades mais recentes e as implementa�
   </TabItem>
 </Tabs>
 
-### Pré-requisitos
+## Pré-requisitos
 
 Antes de começar, verifique o que precisa ter instalado no seu computador:
 
@@ -68,7 +47,7 @@ Para saber mais sobre a tecnologia, acesse: [GraalVM](https://www.graalvm.org/).
 A instalação de ferramentas de frontend (como Node.js, NPM ou Yarn) é totalmente opcional. Você só precisará configurá-las se o seu objetivo for desenvolver interfaces avançadas em modo full-stack.
 :::
 
-#### Backend - Java
+### Backend - Java
 
 Esta etapa garante que o ambiente esteja preparado para executar o instalador da plataforma. É necessário ter o **Java versão 11 ou superior** instalado.
 
@@ -88,11 +67,11 @@ Caso não esteja instalado, recomendamos a instalação do **Java open source**:
 apt install default-jdk-headless
 ```
 
-#### Frontend - Bun
+### Frontend - Bun
 
 Para desenvolver interfaces de usuário (UI / Frontend), recomendamos o uso do **Bun**, a ferramenta padrão oficial do ecossistema Netuno para compilação de frontend.
 
-##### Por que usar o Bun?
+#### Por que usar o Bun?
 
 O **Bun** é uma alternativa moderna e altamente otimizada ao Node.js. Ele se destaca no ambiente Netuno por oferecer:
 
@@ -108,7 +87,7 @@ O Netuno não engessa suas escolhas tecnológicas. Caso prefira, **é possível 
 Independentemente da tecnologia escolhida, utilize sempre as versões mais recentes para garantir compatibilidade, segurança e performance.
 :::
 
-### Linux ou macOS
+## Linux ou macOS
 
 A maioria das distribuições Linux e o macOS já incluem o **cURL** ou o **Wget** por padrão. Verifique qual está disponível:
 
@@ -189,7 +168,7 @@ sudo xattr -r -d com.apple.quarantine .
 
 O sistema solicitará a senha de administrador do seu Mac para confirmar.
 
-### Windows
+## Windows
 
 Utilizaremos o **PowerShell** para realizar o download e a instalação. Abra o PowerShell pelo menu Iniciar digitando `powershell`.
 
@@ -237,7 +216,7 @@ java -jar netuno-setup.jar install version=testing
 A instalação padrão geralmente não exige privilégios elevados. Porém, se receber uma mensagem de "Acesso Negado", feche o PowerShell, reabra-o como **Administrador** e execute o comando novamente.
 :::
 
-### Recomeçando do Zero
+## Recomeçando do Zero
 
 Para limpar o ambiente e recomeçar do zero:
 
@@ -268,47 +247,3 @@ rmdir /s /q netuno
 
 **3. Reinicie a instalação**.
 
-## Iniciar a App DEMO
-
-Ao concluir a instalação, execute o comando abaixo dentro da pasta `netuno` para iniciar o servidor com a aplicação de demonstração:
-
-```bash
-./netuno server
-```
-
-### Abrir a Aplicação no Browser
-
-Após a inicialização, o navegador será aberto automaticamente com o endereço do servidor local. Caso isso não aconteça, acesse manualmente um dos endereços abaixo:
-
-- [http://demo.local.netu.no:9000](http://demo.local.netu.no:9000)
-- [http://localhost:9000](http://localhost:9000)
-
-## Parar o Servidor
-
-Para encerrar o servidor pressione no terminal as teclas:
-
-#### CTRL + C
-
-Para iniciá-lo novamente, utilize o mesmo comando `./netuno server`.
-
-## Próximos Passos
-
-Algumas ideias do que pode fazer agora.
-
-#### Iniciante
-
-Se é novo no Netuno, comece criando o seu primeiro formulário:
-
-[Criar meu primeiro formulário](/docs/academy/demonstration/config)
-
-#### Tutoriais
-
-Explore tutoriais práticos de desenvolvimento com o Netuno:
-
-[Ver tutoriais de desenvolvimento](/docs/get-started/tutorials)
-
-#### Projetos
-
-Veja como aplicar o Netuno em projetos reais de negócio:
-
-[Explorar projetos e casos de uso](/docs/academy/understand/backoffice)

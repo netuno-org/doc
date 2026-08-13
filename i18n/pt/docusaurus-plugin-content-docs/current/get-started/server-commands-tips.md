@@ -15,7 +15,7 @@ Não sabe como chegar na pasta do Netuno? Consulte o guia de [Instalação](/doc
 
 ---
 
-### Iniciar o servidor
+## Iniciar o servidor
 
 Inicia o servidor com a aplicação de `demonstração`.
 
@@ -25,7 +25,7 @@ Inicia o servidor com a aplicação de `demonstração`.
 
 ---
 
-### Iniciar o servidor na APP
+## Iniciar o servidor na APP
 
 Inicia o servidor com a aplicação específica definida pelo parâmetro `app`. Caso nenhuma seja definida, será iniciada a aplicação de demonstração.
 
@@ -35,7 +35,7 @@ Inicia o servidor com a aplicação específica definida pelo parâmetro `app`. 
 
 ---
 
-### Nova Aplicação
+## Nova Aplicação
 
 Cria uma nova aplicação do zero, solicitando informações e configurações iniciais.
 
@@ -45,7 +45,7 @@ Cria uma nova aplicação do zero, solicitando informações e configurações i
 
 ---
 
-### Listar Comandos
+## Listar Comandos
 
 Lista todos os comandos e parametrizações disponíveis com as respectivas descrições.
 
@@ -55,7 +55,7 @@ Lista todos os comandos e parametrizações disponíveis com as respectivas desc
 
 ---
 
-### Estatísticas de Performance
+## Estatísticas de Performance
 
 Apresenta as informações de performance mais recentes, armazenadas em `logs/stats-*`.
 
@@ -65,7 +65,7 @@ Apresenta as informações de performance mais recentes, armazenadas em `logs/st
 
 ---
 
-### Atualização para a Versão Estável
+## Atualização para a Versão Estável
 
 Atualiza o Netuno para a versão estável mais recente.
 
@@ -75,7 +75,7 @@ Atualiza o Netuno para a versão estável mais recente.
 
 ---
 
-### Atualização para a Versão Em Teste
+## Atualização para a Versão Em Teste
 
 Atualiza o Netuno para a versão mais recente em desenvolvimento.
 
