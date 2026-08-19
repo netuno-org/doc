@@ -4,21 +4,35 @@ id: quick-installation
 title: Quick Installation
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Introduction
 
 Welcome to the **Netuno** installation guide, the *low-code*, polyglot, and *open-source* platform developed to accelerate the creation of your projects and facilitate the setup of your development environment.
 
 Here you build robust full-stack applications quickly, combining the speed of low-code with the power of traditional coding.
 
-## Instalation via Script
+## Installation via Script
 
 The easiest way to install Netuno is through the installation script provided by the platform. Just run the commands in the terminal according to your Operating System.
 
-### Linux or macOS
+<Tabs groupId="os">
+    <TabItem value="linux-mac" label="Linux or macOS" default>
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/netuno-org/platform/refs/heads/main/install.sh)
+bash <(curl -fsSL https://netu.no/install.sh)
 ```
+
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+
+```powershell
+powershell -c "irm https://netu.no/install.ps1|iex"
+```
+
+    </TabItem>
+</Tabs>
 
 ## Start the DEMO App
 
