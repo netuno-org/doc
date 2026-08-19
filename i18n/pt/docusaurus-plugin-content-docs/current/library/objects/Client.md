@@ -21,6 +21,70 @@ _out.json(result)
 
 ---
 
+## cancel
+
+---
+
+#### <span style={{color: '#008000'}}>cancel</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Cancela o streaming em curso deste cliente. Pode ser invocado dentro do próprio callback que recebe os tokens ou a partir de outro processo que tenha acesso a esta instância. O streaming é interrompido de imediato, a ligação é fechada e não são executadas mais chamadas a ferramentas.
+
+##### Como Usar
+
+```javascript
+// Interrompe o streaming a partir do próprio callback
+let total = 0
+
+client.stream(messages, (chunk) => {
+    _out.print(chunk.get('choices').get(0).get('delta').get('content'))
+
+    total++
+    if (total > 100) {
+        client.cancel()
+    }
+})
+```
+
+##### Retorno
+
+( _boolean_ )
+
+Verdadeiro se o cancelamento foi registado agora, falso se o streaming já tinha sido cancelado.
+
+---
+
+## cancelStream
+
+---
+
+#### <span style={{color: '#008000'}}>cancelStream</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Cancela o streaming registado com a chave indicada, mesmo que esteja a decorrer noutro pedido. A chave é definida com o método `streamKey` antes de iniciar o streaming.
+
+##### Como Usar
+
+```javascript
+// Serviço que para o streaming iniciado noutro pedido
+const cancelado = _ai.client().cancelStream('conversa-'+ _user.code())
+_out.json(_val.map().set('cancelled', cancelado))
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **chave** | _string_ | Chave do streaming definida previamente com `streamKey`. |
+
+##### Retorno
+
+( _boolean_ )
+
+Verdadeiro se existia um streaming ativo com essa chave e o cancelamento foi registado agora.
+
+---
+
 ## chat
 
 ---
@@ -45,7 +109,7 @@ _out.json(resposta.toJSON())
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **modelo** | _string_ | Identificador do modelo a usar nesta chamada. |
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
 
 ##### Retorno
 
@@ -77,8 +141,14 @@ _out.json(resposta.toJSON())
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **modelo** | _string_ | Identificador do modelo a usar nesta chamada. |
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
-| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
+| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais, com os mesmos nomes da API: |
+|   |   | - Geração: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (texto ou lista de textos) |
+|   |   | - Limites: `max_tokens`, `max_completion_tokens` |
+|   |   | - Raciocínio e formato: `reasoning_effort` (`none` a `max`), `verbosity` (`low`, `medium`, `high`), `response_format` para a resposta em JSON (`text`, `json_object` ou `json_schema`) |
+|   |   | - Ferramentas: `parallel_tool_calls`, ignorado se não houver ferramentas configuradas |
+|   |   | - Diagnóstico: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identificação e infraestrutura: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 
 ##### Retorno
 
@@ -113,8 +183,14 @@ _out.json(resposta.toJSON())
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **modelo** | _string_ | Identificador do modelo a usar nesta chamada. |
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
-| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
+| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais, com os mesmos nomes da API: |
+|   |   | - Geração: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (texto ou lista de textos) |
+|   |   | - Limites: `max_tokens`, `max_completion_tokens` |
+|   |   | - Raciocínio e formato: `reasoning_effort` (`none` a `max`), `verbosity` (`low`, `medium`, `high`), `response_format` para a resposta em JSON (`text`, `json_object` ou `json_schema`) |
+|   |   | - Ferramentas: `parallel_tool_calls`, ignorado se não houver ferramentas configuradas |
+|   |   | - Diagnóstico: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identificação e infraestrutura: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **callbackFerramenta** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invocado antes de cada execução de ferramenta. Retorne null para execução normal ou um Values para sobrepor o resultado. |
 
 ##### Retorno
@@ -148,7 +224,7 @@ _out.json(resposta.toJSON())
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **modelo** | _string_ | Identificador do modelo a usar nesta chamada. |
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
 | **callbackFerramenta** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invocado antes de cada execução de ferramenta. Retorne null para execução normal ou um Values para sobrepor o resultado. |
 
 ##### Retorno
@@ -180,6 +256,12 @@ _out.json(resposta.toJSON())
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. Cada mensagem deve ter os campos `role` (system, user, assistant) e `content`. |
+|   |   |  |
+|   |   | O `content` é normalmente texto, mas nas mensagens de `user` pode ser uma lista de partes, que é como se enviam imagens, ficheiros e áudio: |
+|   |   | - `type: 'text'` com o campo `text` |
+|   |   | - `type: 'image_url'` com o campo `image_url`, que leva o `url` e opcionalmente o `detail` (`low`, `high` ou `auto`). O `url` aceita um endereço público ou uma data URL com o conteúdo em base64 |
+|   |   | - `type: 'file'` com o campo `file`, que leva o `file_data` numa data URL, por exemplo um PDF, ou em alternativa o `file_id` de um ficheiro já carregado no fornecedor, e opcionalmente o `filename` |
+|   |   | - `type: 'input_audio'` com o campo `input_audio`, que leva o `data` em base64 simples, sem prefixo, e o `format`, `wav` ou `mp3` |
 
 ##### Retorno
 
@@ -212,8 +294,14 @@ _out.json(resposta.toJSON())
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
-| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
+| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais, com os mesmos nomes da API: |
+|   |   | - Geração: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (texto ou lista de textos) |
+|   |   | - Limites: `max_tokens`, `max_completion_tokens` |
+|   |   | - Raciocínio e formato: `reasoning_effort` (`none` a `max`), `verbosity` (`low`, `medium`, `high`), `response_format` para a resposta em JSON (`text`, `json_object` ou `json_schema`) |
+|   |   | - Ferramentas: `parallel_tool_calls`, ignorado se não houver ferramentas configuradas |
+|   |   | - Diagnóstico: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identificação e infraestrutura: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 
 ##### Retorno
 
@@ -247,8 +335,14 @@ _out.json(resposta.toJSON())
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
-| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
+| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais, com os mesmos nomes da API: |
+|   |   | - Geração: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (texto ou lista de textos) |
+|   |   | - Limites: `max_tokens`, `max_completion_tokens` |
+|   |   | - Raciocínio e formato: `reasoning_effort` (`none` a `max`), `verbosity` (`low`, `medium`, `high`), `response_format` para a resposta em JSON (`text`, `json_object` ou `json_schema`) |
+|   |   | - Ferramentas: `parallel_tool_calls`, ignorado se não houver ferramentas configuradas |
+|   |   | - Diagnóstico: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identificação e infraestrutura: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **callbackFerramenta** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invocado antes de cada execução de ferramenta. Retorne null para execução normal ou um Values para sobrepor o resultado. |
 
 ##### Retorno
@@ -281,7 +375,7 @@ _out.json(resposta.toJSON())
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
 | **callbackFerramenta** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invocado antes de cada execução de ferramenta. Retorne null para execução normal ou um Values para sobrepor o resultado. |
 
 ##### Retorno
@@ -531,6 +625,29 @@ Número máximo de ciclos de ferramentas.
 
 ---
 
+## getStreamKey
+
+---
+
+#### <span style={{color: '#008000'}}>getStreamKey</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém a chave que identifica o streaming deste cliente.
+
+##### Como Usar
+
+```javascript
+_out.print(client.getStreamKey())
+```
+
+##### Retorno
+
+( _string_ )
+
+Chave do streaming ou nulo se não estiver definida.
+
+---
+
 ## instance
 
 ---
@@ -573,6 +690,31 @@ Instância do cliente OpenAI.
 
 ---
 
+## isCancelled
+
+---
+
+#### <span style={{color: '#008000'}}>isCancelled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se o streaming em curso deste cliente foi cancelado. O estado é reposto sempre que um novo streaming é iniciado.
+
+##### Como Usar
+
+```javascript
+if (client.isCancelled()) {
+    _log.info('Streaming cancelado.')
+}
+```
+
+##### Retorno
+
+( _boolean_ )
+
+Verdadeiro se o streaming foi cancelado.
+
+---
+
 ## isInitialized
 
 ---
@@ -595,6 +737,62 @@ if (!client.isInitialized()) {
 ( _boolean_ )
 
 Verdadeiro se o cliente está inicializado.
+
+---
+
+## isStreaming
+
+---
+
+#### <span style={{color: '#008000'}}>isStreaming</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se existe um streaming ativo registado com a chave indicada.
+
+##### Como Usar
+
+```javascript
+if (client.isStreaming('conversa-'+ _user.code())) {
+    _log.info('Já existe um streaming a decorrer.')
+}
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **chave** | _string_ | Chave do streaming definida previamente com `streamKey`. |
+
+##### Retorno
+
+( _boolean_ )
+
+Verdadeiro se existe um streaming ativo com essa chave.
+
+---
+
+## isUsageTracking
+
+---
+
+#### <span style={{color: '#008000'}}>isUsageTracking</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se a contagem de tokens em streaming está ativa.
+
+##### Como Usar
+
+```javascript
+if (client.isUsageTracking()) {
+    _log.info('Os tokens do streaming vão ser contabilizados.')
+}
+```
+
+##### Retorno
+
+( _boolean_ )
+
+Verdadeiro se a contagem de tokens em streaming está ativa.
 
 ---
 
@@ -805,7 +1003,7 @@ client.stream('gpt-4o-mini', messages, (chunk) => {
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **modelo** | _string_ | Identificador do modelo a usar nesta chamada. |
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
 | **aoToken** | _java.util.function.Consumer_ | Callback invocado para cada token recebido, recebendo o fragmento da resposta como argumento. |
 
 ##### Retorno
@@ -839,7 +1037,7 @@ client.stream('gpt-4o-mini', messages, (chunk) => {
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **modelo** | _string_ | Identificador do modelo a usar nesta chamada. |
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
 | **aoToken** | _java.util.function.Consumer_ | Callback invocado para cada token recebido, recebendo o fragmento da resposta como argumento. |
 | **callbackFerramenta** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invocado antes de cada execução de ferramenta. Retorne null para execução normal ou um Values para sobrepor o resultado. |
 
@@ -873,8 +1071,14 @@ client.stream('gpt-4o-mini', messages, options, (chunk) => {
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **modelo** | _string_ | Identificador do modelo a usar nesta chamada. |
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
-| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
+| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais, com os mesmos nomes da API: |
+|   |   | - Geração: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (texto ou lista de textos) |
+|   |   | - Limites: `max_tokens`, `max_completion_tokens` |
+|   |   | - Raciocínio e formato: `reasoning_effort` (`none` a `max`), `verbosity` (`low`, `medium`, `high`), `response_format` para a resposta em JSON (`text`, `json_object` ou `json_schema`) |
+|   |   | - Ferramentas: `parallel_tool_calls`, ignorado se não houver ferramentas configuradas |
+|   |   | - Diagnóstico: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identificação e infraestrutura: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **aoToken** | _java.util.function.Consumer_ | Callback invocado para cada token recebido, recebendo o fragmento da resposta como argumento. |
 
 ##### Retorno
@@ -910,8 +1114,14 @@ client.stream('gpt-4o-mini', messages, options, (chunk) => {
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **modelo** | _string_ | Identificador do modelo a usar nesta chamada. |
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
-| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
+| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais, com os mesmos nomes da API: |
+|   |   | - Geração: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (texto ou lista de textos) |
+|   |   | - Limites: `max_tokens`, `max_completion_tokens` |
+|   |   | - Raciocínio e formato: `reasoning_effort` (`none` a `max`), `verbosity` (`low`, `medium`, `high`), `response_format` para a resposta em JSON (`text`, `json_object` ou `json_schema`) |
+|   |   | - Ferramentas: `parallel_tool_calls`, ignorado se não houver ferramentas configuradas |
+|   |   | - Diagnóstico: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identificação e infraestrutura: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **aoToken** | _java.util.function.Consumer_ | Callback invocado para cada token recebido, recebendo o fragmento da resposta como argumento. |
 | **callbackFerramenta** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invocado antes de cada execução de ferramenta. Retorne null para execução normal ou um Values para sobrepor o resultado. |
 
@@ -942,7 +1152,7 @@ client.stream(messages, (chunk) => {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
 | **aoToken** | _java.util.function.Consumer_ | Callback invocado para cada token recebido, recebendo o fragmento da resposta como argumento. |
 
 ##### Retorno
@@ -975,7 +1185,7 @@ client.stream(messages, (chunk) => {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
 | **aoToken** | _java.util.function.Consumer_ | Callback invocado para cada token recebido, recebendo o fragmento da resposta como argumento. |
 | **callbackFerramenta** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invocado antes de cada execução de ferramenta. Retorne null para execução normal ou um Values para sobrepor o resultado. |
 
@@ -1008,8 +1218,14 @@ client.stream(messages, options, (chunk) => {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
-| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
+| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais, com os mesmos nomes da API: |
+|   |   | - Geração: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (texto ou lista de textos) |
+|   |   | - Limites: `max_tokens`, `max_completion_tokens` |
+|   |   | - Raciocínio e formato: `reasoning_effort` (`none` a `max`), `verbosity` (`low`, `medium`, `high`), `response_format` para a resposta em JSON (`text`, `json_object` ou `json_schema`) |
+|   |   | - Ferramentas: `parallel_tool_calls`, ignorado se não houver ferramentas configuradas |
+|   |   | - Diagnóstico: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identificação e infraestrutura: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **aoToken** | _java.util.function.Consumer_ | Callback invocado para cada token recebido, recebendo o fragmento da resposta como argumento. |
 
 ##### Retorno
@@ -1044,8 +1260,14 @@ client.stream(messages, options, (chunk) => {
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. |
-| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **mensagens** | _[Values](/docs/library/objects/Values)_ | Lista de mensagens da conversa. O `content` pode ser texto ou, nas mensagens de `user`, uma lista de partes com `type` `text`, `image_url`, `file` ou `input_audio`. |
+| **opcoes** | _[Values](/docs/library/objects/Values)_ | Opções adicionais, com os mesmos nomes da API: |
+|   |   | - Geração: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (texto ou lista de textos) |
+|   |   | - Limites: `max_tokens`, `max_completion_tokens` |
+|   |   | - Raciocínio e formato: `reasoning_effort` (`none` a `max`), `verbosity` (`low`, `medium`, `high`), `response_format` para a resposta em JSON (`text`, `json_object` ou `json_schema`) |
+|   |   | - Ferramentas: `parallel_tool_calls`, ignorado se não houver ferramentas configuradas |
+|   |   | - Diagnóstico: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identificação e infraestrutura: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **aoToken** | _java.util.function.Consumer_ | Callback invocado para cada token recebido, recebendo o fragmento da resposta como argumento. |
 | **callbackFerramenta** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invocado antes de cada execução de ferramenta. Retorne null para execução normal ou um Values para sobrepor o resultado. |
 
@@ -1053,6 +1275,142 @@ client.stream(messages, options, (chunk) => {
 
 ( _void_ )
 
+
+---
+
+## streamKey
+
+---
+
+#### <span style={{color: '#008000'}}>streamKey</span>(<span style={{color: '#FF8000'}}>chave</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Client](/docs/library/objects/Client)</span>
+##### Descrição
+
+Define a chave que identifica o streaming deste cliente, permitindo cancelá-lo a partir de outro pedido ou processo através do método `cancelStream`. A chave é registada quando o streaming arranca e removida quando termina. Se já existir um streaming ativo com a mesma chave, esse streaming anterior é cancelado.
+
+##### Como Usar
+
+```javascript
+client.streamKey('conversa-'+ _user.code())
+
+client.stream(messages, (chunk) => {
+    _out.print(chunk.get('choices').get(0).get('delta').get('content'))
+})
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **chave** | _string_ | Chave única que identifica o streaming. Use nulo ou vazio para não registar o streaming. |
+
+##### Retorno
+
+( _[Client](/docs/library/objects/Client)_ )
+
+A própria instância do cliente, permitindo encadear chamadas.
+
+---
+
+## usage
+
+---
+
+#### <span style={{color: '#008000'}}>usage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Descrição
+
+Obtém os tokens consumidos na última execução de `chat`, `stream` ou `embeddings`, somando todos os pedidos feitos ao fornecedor, incluindo os ciclos de chamadas a ferramentas.
+
+Os contadores são normalizados e têm sempre o mesmo significado, independentemente do fornecedor:
+- `input`: tokens de entrada, incluindo sempre os que vieram da cache
+- `output`: tokens gerados
+- `cached`: tokens de entrada lidos da cache
+- `cache_write`: tokens de entrada escritos na cache
+- `reasoning`: tokens de raciocínio, já incluídos no `output`
+- `audio_input`: tokens de áudio enviados, já incluídos no `input`
+- `audio_output`: tokens de áudio gerados, já incluídos no `output`
+- `total`: total de tokens
+- `requests`: número de pedidos feitos ao fornecedor
+- `raw`: contadores originais tal como o fornecedor os devolveu no último pedido
+
+Em streaming os contadores só ficam disponíveis no fim, porque o fornecedor envia-os no último fragmento.
+
+##### Como Usar
+
+```javascript
+const resposta = client.chat(messages)
+
+const tokens = client.usage()
+_log.info('Entrada: '+ tokens.getLong('input')
+    +' | Saída: '+ tokens.getLong('output')
+    +' | Cache: '+ tokens.getLong('cached'))
+```
+
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+Objeto com os contadores de tokens normalizados da última execução.
+
+---
+
+#### <span style={{color: '#008000'}}>usage</span>(<span style={{color: '#FF8000'}}>resposta</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Descrição
+
+Normaliza os contadores de tokens de uma resposta devolvida por qualquer fornecedor, aceitando a resposta completa do `chat`, um fragmento do `stream`, a resposta dos `embeddings` ou apenas o objeto de contadores.
+
+Reconhece as várias formas usadas pelas APIs, por exemplo `prompt_tokens` e `completion_tokens` (OpenAI), `input_tokens` e `output_tokens` (Anthropic), `promptTokenCount` e `candidatesTokenCount` (Google) ou `prompt_eval_count` e `eval_count` (Ollama), assim como as várias formas de indicar a cache: `prompt_tokens_details.cached_tokens`, `cache_read_input_tokens`, `cachedContentTokenCount` ou `prompt_cache_hit_tokens`.
+
+##### Como Usar
+
+```javascript
+const resposta = client.chat(messages)
+const tokens = client.usage(resposta)
+
+_out.json(tokens.toJSON())
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **resposta** | _[Values](/docs/library/objects/Values)_ | Resposta, fragmento de streaming ou objeto de contadores a normalizar. |
+
+##### Retorno
+
+( _[Values](/docs/library/objects/Values)_ )
+
+Objeto com os contadores de tokens normalizados, todos a zero se a resposta não os incluir.
+
+---
+
+## usageTracking
+
+---
+
+#### <span style={{color: '#008000'}}>usageTracking</span>(<span style={{color: '#FF8000'}}>ativo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Client](/docs/library/objects/Client)</span>
+##### Descrição
+
+Ativa ou desativa a contagem de tokens em streaming, que por omissão está ativa.
+
+Quando está ativa é enviado o parâmetro `stream_options.include_usage` para que o fornecedor devolva os contadores no último fragmento. Desative apenas se o fornecedor não suportar esse parâmetro.
+
+##### Como Usar
+
+```javascript
+client.usageTracking(false)
+```
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **ativo** | _boolean_ | Verdadeiro para pedir os contadores de tokens em streaming. |
+
+##### Retorno
+
+( _[Client](/docs/library/objects/Client)_ )
+
+A própria instância do cliente, permitindo encadear chamadas.
 
 ---
 

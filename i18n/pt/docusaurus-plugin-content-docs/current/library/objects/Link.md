@@ -8,6 +8,18 @@ Definição da configuração do objeto Link para realcionamento entre formulari
 
 ---
 
+## getAlias
+
+---
+
+#### <span style={{color: '#008000'}}>getAlias</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
+
+
+---
+
 ## getForm
 
 ---
@@ -94,6 +106,21 @@ Objeto Link atual.
 
 ---
 
+#### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formLink** | _string_ |   |
+| **alias** | _string_ |   |
+
+##### Retorno
+
+( _[Link](/docs/library/objects/Link)_ )
+
+
+---
+
 #### <span style={{color: '#008000'}}>link</span>(<span style={{color: '#FF8000'}}>formLink</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
 ##### Descrição
 
@@ -110,6 +137,24 @@ Define um segundo nivel de relacionamento no objeto Link atual.
 ( _[Link](/docs/library/objects/Link)_ )
 
 Objeto Link atual.
+
+---
+
+## setAlias
+
+---
+
+#### <span style={{color: '#008000'}}>setAlias</span>(<span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Link](/docs/library/objects/Link)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **alias** | _string_ |   |
+
+##### Retorno
+
+( _[Link](/docs/library/objects/Link)_ )
+
 
 ---
 

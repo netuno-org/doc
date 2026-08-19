@@ -12,33 +12,43 @@ Definição dos filtros em **Bson** que são utilizados nas operações das cole
 
 ---
 
-#### <span style={{color: '#008000'}}>all</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>all</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o array do campo especificado contém todos os valores fornecidos.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **values** | _java.lang.Object[]_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valores** | _java.lang.Object[]_ | Valores que o array deve conter. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>all</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>all</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o array do campo especificado contém todos os valores fornecidos.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **values** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valores** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable | Valores que o array deve conter. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -46,31 +56,41 @@ Definição dos filtros em **Bson** que são utilizados nas operações das cole
 
 ---
 
-#### <span style={{color: '#008000'}}>and</span>(<span style={{color: '#FF8000'}}>filters</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>and</span>(<span style={{color: '#FF8000'}}>filtros</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que todas as condições fornecidas são verdadeiras (E lógico).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **filters** | _org.bson.conversions.Bson[]_ |   |
+| **filtros** | _org.bson.conversions.Bson[]_ | Filtros a serem combinados com E lógico. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>and</span>(<span style={{color: '#FF8000'}}>filters</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>and</span>(<span style={{color: '#FF8000'}}>filtros</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que todas as condições fornecidas são verdadeiras (E lógico).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **filters** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable |   |
+| **filtros** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable | Filtros a serem combinados com E lógico. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -79,10 +99,15 @@ Definição dos filtros em **Bson** que são utilizados nas operações das cole
 ---
 
 #### <span style={{color: '#008000'}}>empty</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro vazio que corresponde a todos os documentos na coleção.
+
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -90,32 +115,42 @@ Definição dos filtros em **Bson** que são utilizados nas operações das cole
 
 ---
 
-#### <span style={{color: '#008000'}}>eq</span>(<span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>eq</span>(<span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o valor é igual ao valor fornecido.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **value** | _java.lang.Object_ |   |
+| **valor** | _java.lang.Object_ | Valor a ser comparado. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>eq</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>eq</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o valor do campo especificado é igual ao valor fornecido.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **value** | _java.lang.Object_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valor** | _java.lang.Object_ | Valor a ser comparado. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -123,32 +158,42 @@ Definição dos filtros em **Bson** que são utilizados nas operações das cole
 
 ---
 
-#### <span style={{color: '#008000'}}>exists</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>exists</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o campo especificado existe.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>exists</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>exists</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>exists</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>existe</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o campo especificado existe ou não, de acordo com a flag fornecida.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **exists** | _boolean_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **existe** | _boolean_ | True para verificar se o campo existe, false para verificar se não existe. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -156,18 +201,23 @@ Definição dos filtros em **Bson** que são utilizados nas operações das cole
 
 ---
 
-#### <span style={{color: '#008000'}}>gt</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>gt</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o valor do campo especificado é maior que o valor fornecido.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **value** | _java.lang.Object_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valor** | _java.lang.Object_ | Valor a ser comparado. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -175,18 +225,23 @@ Definição dos filtros em **Bson** que são utilizados nas operações das cole
 
 ---
 
-#### <span style={{color: '#008000'}}>gte</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>gte</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o valor do campo especificado é maior ou igual ao valor fornecido.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **value** | _java.lang.Object_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valor** | _java.lang.Object_ | Valor a ser comparado. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -194,33 +249,43 @@ Definição dos filtros em **Bson** que são utilizados nas operações das cole
 
 ---
 
-#### <span style={{color: '#008000'}}>in</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>in</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o valor do campo especificado corresponde a qualquer um dos valores fornecidos.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **values** | _java.lang.Object[]_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valores** | _java.lang.Object[]_ | Valores a serem comparados. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>in</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>in</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o valor do campo especificado corresponde a qualquer um dos valores fornecidos na iterable.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **values** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valores** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable | Valores a serem comparados. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -228,18 +293,23 @@ Definição dos filtros em **Bson** que são utilizados nas operações das cole
 
 ---
 
-#### <span style={{color: '#008000'}}>lt</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>lt</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o valor do campo especificado é menor que o valor fornecido.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **value** | _java.lang.Object_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valor** | _java.lang.Object_ | Valor a ser comparado. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -247,18 +317,23 @@ Definição dos filtros em **Bson** que são utilizados nas operações das cole
 
 ---
 
-#### <span style={{color: '#008000'}}>lte</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>lte</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o valor do campo especificado é menor ou igual ao valor fornecido.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **value** | _java.lang.Object_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valor** | _java.lang.Object_ | Valor a ser comparado. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -297,18 +372,23 @@ Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>ne</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>ne</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o valor do campo especificado é diferente do valor fornecido.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **value** | _java.lang.Object_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valor** | _java.lang.Object_ | Valor a ser comparado. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -316,33 +396,43 @@ Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>nin</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>nin</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o valor do campo especificado não corresponde a nenhum dos valores fornecidos.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **values** | _java.lang.Object[]_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valores** | _java.lang.Object[]_ | Valores a serem comparados. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>nin</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>values</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>nin</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>valores</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o valor do campo especificado não corresponde a nenhum dos valores fornecidos na iterable.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **values** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **valores** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable | Valores a serem comparados. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -350,31 +440,41 @@ Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>nor</span>(<span style={{color: '#FF8000'}}>filters</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>nor</span>(<span style={{color: '#FF8000'}}>filtros</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que nenhuma das condições fornecidas é verdadeira (NÃO OU lógico).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **filters** | _org.bson.conversions.Bson[]_ |   |
+| **filtros** | _org.bson.conversions.Bson[]_ | Filtros a serem combinados com NÃO OU lógico. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>nor</span>(<span style={{color: '#FF8000'}}>filters</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>nor</span>(<span style={{color: '#FF8000'}}>filtros</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que nenhuma das condições fornecidas é verdadeira (NÃO OU lógico).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **filters** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable |   |
+| **filtros** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable | Filtros a serem combinados com NÃO OU lógico. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -382,17 +482,22 @@ Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>not</span>(<span style={{color: '#FF8000'}}>filter</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>not</span>(<span style={{color: '#FF8000'}}>filtro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que nega o filtro fornecido (NÃO lógico).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **filter** | _org.bson.conversions.Bson_ |   |
+| **filtro** | _org.bson.conversions.Bson_ | Filtro a ser negado. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -400,31 +505,41 @@ Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>or</span>(<span style={{color: '#FF8000'}}>filters</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>or</span>(<span style={{color: '#FF8000'}}>filtros</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que pelo menos uma das condições fornecidas é verdadeira (OU lógico).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **filters** | _org.bson.conversions.Bson[]_ |   |
+| **filtros** | _org.bson.conversions.Bson[]_ | Filtros a serem combinados com OU lógico. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>or</span>(<span style={{color: '#FF8000'}}>filters</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>or</span>(<span style={{color: '#FF8000'}}>filtros</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.lang.Iterable</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que pelo menos uma das condições fornecidas é verdadeira (OU lógico).
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **filters** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable |   |
+| **filtros** | _[Values](/docs/library/objects/Values)_ &#124; _[DataSchema](/docs/library/objects/DataSchema)_ | java.lang.Iterable | Filtros a serem combinados com OU lógico. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -488,20 +603,14 @@ Retorna um filtro no formato Bson.
 #### <span style={{color: '#008000'}}>regex</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>padrão</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.regex.Pattern</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
 ##### Descrição
 
-Cria um filtro que corresponde a todos os documentos em que o valor do campo corresponde ao padrão de expressão regular fornecido.
-
-##### Como Usar
-
-```javascript
-_mongo.filters().regex('fieldName', 'regex');
-```
+Cria um filtro que corresponde a todos os documentos em que o valor do campo especificado corresponde ao padrão de expressão regular fornecido.
 
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
 | **campo** | _string_ | Nome do campo do documento. |
-| **padrão** | _java.util.regex.Pattern_ | Expressão regular. |
+| **padrão** | _java.util.regex.Pattern_ | Padrão de expressão regular. |
 
 ##### Retorno
 
@@ -545,32 +654,42 @@ Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>text</span>(<span style={{color: '#FF8000'}}>search</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>text</span>(<span style={{color: '#FF8000'}}>busca</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos para os quais a expressão de busca em texto fornecida corresponde.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **search** | _string_ |   |
+| **busca** | _string_ | Texto a ser pesquisado. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>text</span>(<span style={{color: '#FF8000'}}>search</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>textSearchOptions</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.mongodb.client.model.TextSearchOptions</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>text</span>(<span style={{color: '#FF8000'}}>busca</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>opções</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.mongodb.client.model.TextSearchOptions</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos para os quais a expressão de busca em texto fornecida corresponde, com as opções de busca em texto especificadas.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **search** | _string_ |   |
-| **textSearchOptions** | _com.mongodb.client.model.TextSearchOptions_ |   |
+| **busca** | _string_ | Texto a ser pesquisado. |
+| **opções** | _com.mongodb.client.model.TextSearchOptions_ | Opções de busca em texto. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
@@ -578,33 +697,43 @@ Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>type</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>type</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o campo especificado é do tipo indicado pela string.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **type** | _string_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **tipo** | _string_ | Tipo do campo como string. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 
-#### <span style={{color: '#008000'}}>type</span>(<span style={{color: '#FF8000'}}>fieldName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.BsonType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+#### <span style={{color: '#008000'}}>type</span>(<span style={{color: '#FF8000'}}>campo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>tipo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.BsonType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.bson.conversions.Bson</span>
+##### Descrição
+
+Cria um filtro que corresponde a todos os documentos em que o campo especificado é do tipo Bson indicado.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **fieldName** | _string_ |   |
-| **type** | _org.bson.BsonType_ |   |
+| **campo** | _string_ | Nome do campo do documento. |
+| **tipo** | _org.bson.BsonType_ | Tipo Bson do campo. |
 
 ##### Retorno
 
 ( _org.bson.conversions.Bson_ )
 
+Retorna um filtro no formato Bson.
 
 ---
 

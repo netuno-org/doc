@@ -21,6 +21,70 @@ _out.json(result)
 
 ---
 
+## cancel
+
+---
+
+#### <span style={{color: '#008000'}}>cancel</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Cancels the ongoing streaming of this client. It can be invoked inside the callback that receives the tokens or from another process that has access to this instance. The streaming is interrupted immediately, the connection is closed and no more tool calls are executed.
+
+##### How To Use
+
+```javascript
+// Interrupts the streaming from the callback itself
+let total = 0
+
+client.stream(messages, (chunk) => {
+    _out.print(chunk.get('choices').get(0).get('delta').get('content'))
+
+    total++
+    if (total > 100) {
+        client.cancel()
+    }
+})
+```
+
+##### Return
+
+( _boolean_ )
+
+True if the cancellation was registered now, false if the streaming was already cancelled.
+
+---
+
+## cancelStream
+
+---
+
+#### <span style={{color: '#008000'}}>cancelStream</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Cancels the streaming registered with the given key, even if it is running in another request. The key is defined with the `streamKey` method before starting the streaming.
+
+##### How To Use
+
+```javascript
+// Service that stops the streaming started in another request
+const cancelled = _ai.client().cancelStream('conversation-'+ _user.code())
+_out.json(_val.map().set('cancelled', cancelled))
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **key** | _string_ | Streaming key previously defined with `streamKey`. |
+
+##### Return
+
+( _boolean_ )
+
+True if there was an active streaming with that key and the cancellation was registered now.
+
+---
+
 ## chat
 
 ---
@@ -45,7 +109,7 @@ _out.json(response.toJSON())
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **model** | _string_ | Identifier of the model to use in this call. |
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
 
 ##### Return
 
@@ -77,8 +141,14 @@ _out.json(response.toJSON())
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **model** | _string_ | Identifier of the model to use in this call. |
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
-| **options** | _[Values](/docs/library/objects/Values)_ | Additional options: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
+| **options** | _[Values](/docs/library/objects/Values)_ | Additional options, with the same names as the API: |
+|   |   | - Generation: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (text or list of texts) |
+|   |   | - Limits: `max_tokens`, `max_completion_tokens` |
+|   |   | - Reasoning and format: `reasoning_effort` (`none` to `max`), `verbosity` (`low`, `medium`, `high`), `response_format` for the answer in JSON (`text`, `json_object` or `json_schema`) |
+|   |   | - Tools: `parallel_tool_calls`, ignored when there are no tools configured |
+|   |   | - Diagnostics: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identification and infrastructure: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 
 ##### Return
 
@@ -113,8 +183,14 @@ _out.json(response.toJSON())
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **model** | _string_ | Identifier of the model to use in this call. |
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
-| **options** | _[Values](/docs/library/objects/Values)_ | Additional options: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
+| **options** | _[Values](/docs/library/objects/Values)_ | Additional options, with the same names as the API: |
+|   |   | - Generation: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (text or list of texts) |
+|   |   | - Limits: `max_tokens`, `max_completion_tokens` |
+|   |   | - Reasoning and format: `reasoning_effort` (`none` to `max`), `verbosity` (`low`, `medium`, `high`), `response_format` for the answer in JSON (`text`, `json_object` or `json_schema`) |
+|   |   | - Tools: `parallel_tool_calls`, ignored when there are no tools configured |
+|   |   | - Diagnostics: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identification and infrastructure: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **toolCallback** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invoked before each tool execution. Return null for normal execution or a Values to override the result. |
 
 ##### Return
@@ -148,7 +224,7 @@ _out.json(response.toJSON())
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **model** | _string_ | Identifier of the model to use in this call. |
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
 | **toolCallback** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invoked before each tool execution. Return null for normal execution or a Values to override the result. |
 
 ##### Return
@@ -180,6 +256,12 @@ _out.json(response.toJSON())
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. Each message must have the fields `role` (system, user, assistant) and `content`. |
+|   |   |  |
+|   |   | The `content` is usually text, but on the `user` messages it can be a list of parts, which is how images, files and audio are sent: |
+|   |   | - `type: 'text'` with the `text` field |
+|   |   | - `type: 'image_url'` with the `image_url` field, which takes the `url` and optionally the `detail` (`low`, `high` or `auto`). The `url` accepts a public address or a data URL with the content in base64 |
+|   |   | - `type: 'file'` with the `file` field, which takes the `file_data` in a data URL, a PDF for example, or instead the `file_id` of a file already uploaded to the provider, and optionally the `filename` |
+|   |   | - `type: 'input_audio'` with the `input_audio` field, which takes the `data` in plain base64, without a prefix, and the `format`, `wav` or `mp3` |
 
 ##### Return
 
@@ -212,8 +294,14 @@ _out.json(response.toJSON())
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
-| **options** | _[Values](/docs/library/objects/Values)_ | Additional options: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
+| **options** | _[Values](/docs/library/objects/Values)_ | Additional options, with the same names as the API: |
+|   |   | - Generation: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (text or list of texts) |
+|   |   | - Limits: `max_tokens`, `max_completion_tokens` |
+|   |   | - Reasoning and format: `reasoning_effort` (`none` to `max`), `verbosity` (`low`, `medium`, `high`), `response_format` for the answer in JSON (`text`, `json_object` or `json_schema`) |
+|   |   | - Tools: `parallel_tool_calls`, ignored when there are no tools configured |
+|   |   | - Diagnostics: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identification and infrastructure: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 
 ##### Return
 
@@ -247,8 +335,14 @@ _out.json(response.toJSON())
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
-| **options** | _[Values](/docs/library/objects/Values)_ | Additional options: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
+| **options** | _[Values](/docs/library/objects/Values)_ | Additional options, with the same names as the API: |
+|   |   | - Generation: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (text or list of texts) |
+|   |   | - Limits: `max_tokens`, `max_completion_tokens` |
+|   |   | - Reasoning and format: `reasoning_effort` (`none` to `max`), `verbosity` (`low`, `medium`, `high`), `response_format` for the answer in JSON (`text`, `json_object` or `json_schema`) |
+|   |   | - Tools: `parallel_tool_calls`, ignored when there are no tools configured |
+|   |   | - Diagnostics: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identification and infrastructure: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **toolCallback** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invoked before each tool execution. Return null for normal execution or a Values to override the result. |
 
 ##### Return
@@ -281,7 +375,7 @@ _out.json(response.toJSON())
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
 | **toolCallback** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invoked before each tool execution. Return null for normal execution or a Values to override the result. |
 
 ##### Return
@@ -531,6 +625,29 @@ Maximum number of tool loops.
 
 ---
 
+## getStreamKey
+
+---
+
+#### <span style={{color: '#008000'}}>getStreamKey</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Gets the key that identifies this client streaming.
+
+##### How To Use
+
+```javascript
+_out.print(client.getStreamKey())
+```
+
+##### Return
+
+( _string_ )
+
+Streaming key or null if it is not defined.
+
+---
+
 ## instance
 
 ---
@@ -573,6 +690,31 @@ OpenAI client instance.
 
 ---
 
+## isCancelled
+
+---
+
+#### <span style={{color: '#008000'}}>isCancelled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Checks whether the ongoing streaming of this client was cancelled. The state is reset whenever a new streaming is started.
+
+##### How To Use
+
+```javascript
+if (client.isCancelled()) {
+    _log.info('Streaming cancelled.')
+}
+```
+
+##### Return
+
+( _boolean_ )
+
+True if the streaming was cancelled.
+
+---
+
 ## isInitialized
 
 ---
@@ -595,6 +737,62 @@ if (!client.isInitialized()) {
 ( _boolean_ )
 
 True if the client is initialized.
+
+---
+
+## isStreaming
+
+---
+
+#### <span style={{color: '#008000'}}>isStreaming</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Checks whether there is an active streaming registered with the given key.
+
+##### How To Use
+
+```javascript
+if (client.isStreaming('conversation-'+ _user.code())) {
+    _log.info('There is already a streaming running.')
+}
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **key** | _string_ | Streaming key previously defined with `streamKey`. |
+
+##### Return
+
+( _boolean_ )
+
+True if there is an active streaming with that key.
+
+---
+
+## isUsageTracking
+
+---
+
+#### <span style={{color: '#008000'}}>isUsageTracking</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Checks whether the token counting on streaming is enabled.
+
+##### How To Use
+
+```javascript
+if (client.isUsageTracking()) {
+    _log.info('The streaming tokens will be counted.')
+}
+```
+
+##### Return
+
+( _boolean_ )
+
+True if the token counting on streaming is enabled.
 
 ---
 
@@ -805,7 +1003,7 @@ client.stream('gpt-4o-mini', messages, (chunk) => {
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **model** | _string_ | Identifier of the model to use in this call. |
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
 | **onToken** | _java.util.function.Consumer_ | Callback invoked for each token received, receiving the response chunk as argument. |
 
 ##### Return
@@ -839,7 +1037,7 @@ client.stream('gpt-4o-mini', messages, (chunk) => {
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **model** | _string_ | Identifier of the model to use in this call. |
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
 | **onToken** | _java.util.function.Consumer_ | Callback invoked for each token received, receiving the response chunk as argument. |
 | **toolCallback** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invoked before each tool execution. Return null for normal execution or a Values to override the result. |
 
@@ -873,8 +1071,14 @@ client.stream('gpt-4o-mini', messages, options, (chunk) => {
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **model** | _string_ | Identifier of the model to use in this call. |
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
-| **options** | _[Values](/docs/library/objects/Values)_ | Additional options: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
+| **options** | _[Values](/docs/library/objects/Values)_ | Additional options, with the same names as the API: |
+|   |   | - Generation: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (text or list of texts) |
+|   |   | - Limits: `max_tokens`, `max_completion_tokens` |
+|   |   | - Reasoning and format: `reasoning_effort` (`none` to `max`), `verbosity` (`low`, `medium`, `high`), `response_format` for the answer in JSON (`text`, `json_object` or `json_schema`) |
+|   |   | - Tools: `parallel_tool_calls`, ignored when there are no tools configured |
+|   |   | - Diagnostics: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identification and infrastructure: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **onToken** | _java.util.function.Consumer_ | Callback invoked for each token received, receiving the response chunk as argument. |
 
 ##### Return
@@ -910,8 +1114,14 @@ client.stream('gpt-4o-mini', messages, options, (chunk) => {
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
 | **model** | _string_ | Identifier of the model to use in this call. |
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
-| **options** | _[Values](/docs/library/objects/Values)_ | Additional options: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
+| **options** | _[Values](/docs/library/objects/Values)_ | Additional options, with the same names as the API: |
+|   |   | - Generation: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (text or list of texts) |
+|   |   | - Limits: `max_tokens`, `max_completion_tokens` |
+|   |   | - Reasoning and format: `reasoning_effort` (`none` to `max`), `verbosity` (`low`, `medium`, `high`), `response_format` for the answer in JSON (`text`, `json_object` or `json_schema`) |
+|   |   | - Tools: `parallel_tool_calls`, ignored when there are no tools configured |
+|   |   | - Diagnostics: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identification and infrastructure: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **onToken** | _java.util.function.Consumer_ | Callback invoked for each token received, receiving the response chunk as argument. |
 | **toolCallback** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invoked before each tool execution. Return null for normal execution or a Values to override the result. |
 
@@ -942,7 +1152,7 @@ client.stream(messages, (chunk) => {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
 | **onToken** | _java.util.function.Consumer_ | Callback invoked for each token received, receiving the response chunk as argument. |
 
 ##### Return
@@ -975,7 +1185,7 @@ client.stream(messages, (chunk) => {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
 | **onToken** | _java.util.function.Consumer_ | Callback invoked for each token received, receiving the response chunk as argument. |
 | **toolCallback** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invoked before each tool execution. Return null for normal execution or a Values to override the result. |
 
@@ -1008,8 +1218,14 @@ client.stream(messages, options, (chunk) => {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
-| **options** | _[Values](/docs/library/objects/Values)_ | Additional options: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
+| **options** | _[Values](/docs/library/objects/Values)_ | Additional options, with the same names as the API: |
+|   |   | - Generation: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (text or list of texts) |
+|   |   | - Limits: `max_tokens`, `max_completion_tokens` |
+|   |   | - Reasoning and format: `reasoning_effort` (`none` to `max`), `verbosity` (`low`, `medium`, `high`), `response_format` for the answer in JSON (`text`, `json_object` or `json_schema`) |
+|   |   | - Tools: `parallel_tool_calls`, ignored when there are no tools configured |
+|   |   | - Diagnostics: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identification and infrastructure: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **onToken** | _java.util.function.Consumer_ | Callback invoked for each token received, receiving the response chunk as argument. |
 
 ##### Return
@@ -1044,8 +1260,14 @@ client.stream(messages, options, (chunk) => {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. |
-| **options** | _[Values](/docs/library/objects/Values)_ | Additional options: `temperature` (0.0–2.0), `max_tokens`, `top_p`. |
+| **messages** | _[Values](/docs/library/objects/Values)_ | List of conversation messages. The `content` can be text or, on the `user` messages, a list of parts with `type` `text`, `image_url`, `file` or `input_audio`. |
+| **options** | _[Values](/docs/library/objects/Values)_ | Additional options, with the same names as the API: |
+|   |   | - Generation: `temperature` (0.0–2.0), `top_p`, `frequency_penalty` (-2.0–2.0), `presence_penalty` (-2.0–2.0), `seed`, `n`, `stop` (text or list of texts) |
+|   |   | - Limits: `max_tokens`, `max_completion_tokens` |
+|   |   | - Reasoning and format: `reasoning_effort` (`none` to `max`), `verbosity` (`low`, `medium`, `high`), `response_format` for the answer in JSON (`text`, `json_object` or `json_schema`) |
+|   |   | - Tools: `parallel_tool_calls`, ignored when there are no tools configured |
+|   |   | - Diagnostics: `logprobs`, `top_logprobs` (0–20) |
+|   |   | - Identification and infrastructure: `user`, `safety_identifier`, `prompt_cache_key`, `store`, `service_tier` |
 | **onToken** | _java.util.function.Consumer_ | Callback invoked for each token received, receiving the response chunk as argument. |
 | **toolCallback** | _org.netuno.tritao.ai.client.Client$ToolCallback_ | Callback invoked before each tool execution. Return null for normal execution or a Values to override the result. |
 
@@ -1053,6 +1275,142 @@ client.stream(messages, options, (chunk) => {
 
 ( _void_ )
 
+
+---
+
+## streamKey
+
+---
+
+#### <span style={{color: '#008000'}}>streamKey</span>(<span style={{color: '#FF8000'}}>key</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Client](/docs/library/objects/Client)</span>
+##### Description
+
+Sets the key that identifies this client streaming, allowing it to be cancelled from another request or process through the `cancelStream` method. The key is registered when the streaming starts and removed when it ends. If a streaming is already active with the same key, that previous streaming is cancelled.
+
+##### How To Use
+
+```javascript
+client.streamKey('conversation-'+ _user.code())
+
+client.stream(messages, (chunk) => {
+    _out.print(chunk.get('choices').get(0).get('delta').get('content'))
+})
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **key** | _string_ | Unique key that identifies the streaming. Use null or empty to not register the streaming. |
+
+##### Return
+
+( _[Client](/docs/library/objects/Client)_ )
+
+The client instance itself, allowing chained calls.
+
+---
+
+## usage
+
+---
+
+#### <span style={{color: '#008000'}}>usage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Description
+
+Gets the tokens consumed in the last `chat`, `stream` or `embeddings` execution, summing every request made to the provider, including the tool call loops.
+
+The counters are normalized and always have the same meaning, whatever the provider is:
+- `input`: input tokens, always including the ones that came from the cache
+- `output`: generated tokens
+- `cached`: input tokens read from the cache
+- `cache_write`: input tokens written to the cache
+- `reasoning`: reasoning tokens, already included in `output`
+- `audio_input`: audio tokens sent, already included in `input`
+- `audio_output`: audio tokens generated, already included in `output`
+- `total`: total tokens
+- `requests`: number of requests made to the provider
+- `raw`: original counters exactly as the provider returned them on the last request
+
+On streaming the counters are only available at the end, because the provider sends them in the last chunk.
+
+##### How To Use
+
+```javascript
+const response = client.chat(messages)
+
+const tokens = client.usage()
+_log.info('Input: '+ tokens.getLong('input')
+    +' | Output: '+ tokens.getLong('output')
+    +' | Cache: '+ tokens.getLong('cached'))
+```
+
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
+
+Object with the normalized token counters of the last execution.
+
+---
+
+#### <span style={{color: '#008000'}}>usage</span>(<span style={{color: '#FF8000'}}>response</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Description
+
+Normalizes the token counters of a response returned by any provider, accepting the full `chat` response, a `stream` chunk, the `embeddings` response or just the counters object.
+
+It recognizes the several forms used by the APIs, for example `prompt_tokens` and `completion_tokens` (OpenAI), `input_tokens` and `output_tokens` (Anthropic), `promptTokenCount` and `candidatesTokenCount` (Google) or `prompt_eval_count` and `eval_count` (Ollama), as well as the several forms of reporting the cache: `prompt_tokens_details.cached_tokens`, `cache_read_input_tokens`, `cachedContentTokenCount` or `prompt_cache_hit_tokens`.
+
+##### How To Use
+
+```javascript
+const response = client.chat(messages)
+const tokens = client.usage(response)
+
+_out.json(tokens.toJSON())
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **response** | _[Values](/docs/library/objects/Values)_ | Response, streaming chunk or counters object to normalize. |
+
+##### Return
+
+( _[Values](/docs/library/objects/Values)_ )
+
+Object with the normalized token counters, all zero if the response does not include them.
+
+---
+
+## usageTracking
+
+---
+
+#### <span style={{color: '#008000'}}>usageTracking</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Client](/docs/library/objects/Client)</span>
+##### Description
+
+Enables or disables the token counting on streaming, which is enabled by default.
+
+When enabled the `stream_options.include_usage` parameter is sent so that the provider returns the counters in the last chunk. Only disable it if the provider does not support that parameter.
+
+##### How To Use
+
+```javascript
+client.usageTracking(false)
+```
+
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **enabled** | _boolean_ | True to request the token counters on streaming. |
+
+##### Return
+
+( _[Client](/docs/library/objects/Client)_ )
+
+The client instance itself, allowing chained calls.
 
 ---
 

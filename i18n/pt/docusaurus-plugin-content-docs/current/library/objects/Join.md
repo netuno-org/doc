@@ -8,6 +8,18 @@ Definição da configuração do objeto Join para consultas simplificadas.
 
 ---
 
+## getAlias
+
+---
+
+#### <span style={{color: '#008000'}}>getAlias</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
+
+
+---
+
 ## getJoinType
 
 ---
@@ -73,6 +85,24 @@ Retorna o objeto Where com a configuração das condições para a tabela a rela
 ( _[Where](/docs/library/objects/Where)_ )
 
 Objeto Where com a configuração das condições
+
+---
+
+## setAlias
+
+---
+
+#### <span style={{color: '#008000'}}>setAlias</span>(<span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](/docs/library/objects/Join)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **alias** | _string_ |   |
+
+##### Retorno
+
+( _[Join](/docs/library/objects/Join)_ )
+
 
 ---
 
