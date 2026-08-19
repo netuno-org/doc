@@ -182,7 +182,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: ['ruby', 'groovy', 'java', 'bash']
+        additionalLanguages: ['ruby', 'groovy', 'java', 'http', 'bash', 'powershell']
       },
       algolia: {
         // The application ID provided by Algolia
