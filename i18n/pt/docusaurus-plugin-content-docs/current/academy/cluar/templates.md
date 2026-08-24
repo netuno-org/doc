@@ -37,8 +37,8 @@ O `info.json` do template Padrão, por exemplo:
 }
 ```
 
-:::info O select mostra o nome da pasta, não a etiqueta do `info.json`
-Ao contrário dos Tipos de Componente, o select de Template no formulário da página usa o **nome da pasta** como texto mostrado (não o `label` traduzido do `info.json`) — o serviço até devolve o `info.json`, mas o formulário não o usa para a etiqueta. Ou seja, o `info.json` do Template hoje não tem efeito visível nenhum; é preparação para uma tradução que ainda não foi ligada à interface.
+:::info O select usa a etiqueta traduzida do `info.json`
+Assim como nos Tipos de Componente, o select de Template no formulário da página mostra a etiqueta (`label`) traduzida do `info.json` — para isso, o pedido ao serviço envia o idioma atual (`Cluar.currentLanguage().locale`). O que é gravado no campo `template` da página continua a ser o nome da pasta (`Default`).
 :::
 
 Também há um serviço no servidor (`server/services/page/template/list/`) que varre as pastas em tempo real e devolve a lista de templates disponíveis — pelo mesmo motivo: **não é preciso reiniciar o servidor para adicionar um template novo**, só criar a pasta.
@@ -75,7 +75,7 @@ Repara que só existe uma verificação explícita (`"Default"`) — qualquer ou
 ## Como criar um novo template
 
 1. Cria uma nova pasta dentro de `website/src/pages/Template/` (ex.: `Template/Landing/`).
-2. Dentro dela, cria o `index.jsx` (o layout React do template), o `index.less` (estilos) e o `info.json` (label/descrição por idioma — ainda sem efeito visível na interface, ver nota acima, mas mantém-se pelo padrão).
+2. Dentro dela, cria o `index.jsx` (o layout React do template), o `index.less` (estilos) e o `info.json` (label/descrição por idioma — é essa etiqueta que aparece no select).
 3. No `index.jsx` do roteador (`Template/index.jsx`), importa o novo template e adiciona-o à condição que escolhe o template pelo campo `page.template`.
 4. O novo template passa a aparecer automaticamente no select de Template do formulário de edição da página, com o nome da pasta como valor gravado.
 

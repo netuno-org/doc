@@ -37,8 +37,8 @@ The Default template's `info.json`, for example:
 }
 ```
 
-:::info The select shows the folder name, not the `info.json` label
-Unlike Component Types, the Template select in the page form uses the **folder name** as the displayed text (not the translated `label` from `info.json`) — the service even returns the `info.json`, but the form doesn't use it for the label. In other words, the Template's `info.json` currently has no visible effect; it's groundwork for a translation that hasn't been wired up to the interface yet.
+:::info The select now uses the translated `info.json` label
+Just like Component Types, the Template select in the page form shows the translated `label` from `info.json` — to make this work, the request to the service sends the current language (`Cluar.currentLanguage().locale`). What's saved in the page's `template` field is still the folder name (`Default`).
 :::
 
 There's also a service on the server (`server/services/page/template/list/`) that scans the folders in real time and returns the list of available templates — for the same reason: **you don't need to restart the server to add a new template**, just create the folder.
@@ -75,7 +75,7 @@ Notice there's only one explicit check (`"Default"`) — any other `template` va
 ## How to create a new template
 
 1. Create a new folder inside `website/src/pages/Template/` (e.g., `Template/Landing/`).
-2. Inside it, create the `index.jsx` (the template's React layout), the `index.less` (styles) and the `info.json` (label/description per language — still with no visible effect on the interface, see the note above, but kept for consistency with the pattern).
+2. Inside it, create the `index.jsx` (the template's React layout), the `index.less` (styles) and the `info.json` (label/description per language — this label is what shows up in the select).
 3. In the router's `index.jsx` (`Template/index.jsx`), import the new template and add it to the condition that picks the template by the `page.template` field.
 4. The new template automatically shows up in the page edit form's Template select, with the folder name as the saved value.
 
