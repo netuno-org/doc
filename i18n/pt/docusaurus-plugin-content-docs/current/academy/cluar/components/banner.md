@@ -5,6 +5,8 @@ title: Banner
 sidebar_label: Banner
 ---
 
+O componente de destaque em grande formato, normalmente usado no topo da página.
+
 ## Introdução
 
 O **Banner** é o grande destaque de uma página — normalmente uma imagem que ocupa toda a largura, com um título em evidência por cima e, opcionalmente, um texto introdutório e ações (botões/links).

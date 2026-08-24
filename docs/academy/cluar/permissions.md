@@ -5,6 +5,8 @@ title: Permissions
 sidebar_label: Permissions
 ---
 
+How access to the backoffice is controlled through roles and organizations.
+
 ## Introduction
 
 CLUAR controls access to the backoffice through **roles** (groups), assigned to people within an **organization**. Every REST service on the server is classified into an access category, and only someone with the right role, within the right organization, can use it.

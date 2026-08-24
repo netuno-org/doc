@@ -5,8 +5,6 @@ title: Overview
 sidebar_label: Overview
 ---
 
-## Introduction
-
 A **Page** is CLUAR's central entity: it represents a website URL. Each page belongs to a single language — there's no single "multilingual" page; each language has its own page (with its own `link`, title, content, etc.), and they are only linked to each other through the [cloning](/docs/academy/cluar/pages/cloning) action.
 
 ## Fields

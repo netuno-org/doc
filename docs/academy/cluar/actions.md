@@ -5,6 +5,8 @@ title: Actions
 sidebar_label: Actions
 ---
 
+How to create and reuse CTAs (buttons/links) associated with components.
+
 ## Introduction
 
 An **Action** is, at its core, a reusable **CTA** (call-to-action) — a button/link with title, text, image and a destination (`link`) — that can be associated with [Components](/docs/academy/cluar/components/overview) such as Banner, Content, Listing, Slider (on its items) and Functionality.

@@ -5,8 +5,6 @@ title: Overview
 sidebar_label: Overview
 ---
 
-## Introduction
-
 **Components** are the content blocks that make up a [Page](/docs/academy/cluar/pages/overview), within a [Version](/docs/academy/cluar/pages/versions-publishing). There are 5 types:
 
 - **Banner**

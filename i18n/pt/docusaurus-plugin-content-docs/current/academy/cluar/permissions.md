@@ -5,6 +5,8 @@ title: Permissões
 sidebar_label: Permissões
 ---
 
+Como o acesso ao backoffice é controlado por papéis e organizações.
+
 ## Introdução
 
 O CLUAR controla o acesso ao backoffice através de **papéis** (grupos), atribuídos a pessoas dentro de uma **organização**. Cada serviço REST do servidor é classificado numa categoria de acesso, e só quem tiver o papel certo, dentro da organização certa, consegue usá-lo.

@@ -5,6 +5,8 @@ title: Funcionalidade
 sidebar_label: Funcionalidade
 ---
 
+As funcionalidades concretas disponíveis para incluir numa página, como formulários e mapas.
+
 ## Introdução
 
 A **Funcionalidade** é diferente dos outros componentes: em vez de variações visuais do mesmo conteúdo, cada tipo é uma **funcionalidade concreta** a incluir na página — hoje, um formulário de contacto ou um mapa.

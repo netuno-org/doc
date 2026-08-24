@@ -5,6 +5,8 @@ title: Content
 sidebar_label: Content
 ---
 
+CLUAR's most generic text and image component.
+
 ## Introduction
 
 **Content** is CLUAR's most generic text/image component — used for plain text blocks, text with an image alongside it, or just an image, depending on the chosen type.

@@ -5,6 +5,8 @@ title: Languages
 sidebar_label: Languages
 ---
 
+How CLUAR manages the website's languages and multilingual content.
+
 ## Introduction
 
 CLUAR is multilingual by default: each **Page** is associated with a language, and the website shows a selector for visitors to switch between the available languages.

@@ -5,9 +5,9 @@ title: Overview
 sidebar_label: Overview
 ---
 
-## Introduction
+CLUAR is an open source CMS, built on top of [Netuno](https://www.netuno.org/), for building multilingual websites. The pages' visual components (banners, listings, sliders, etc.) are developed in ReactJS, with [Ant Design](https://ant.design/) for the interface, [React Router](https://reactrouter.com/) for navigation and [Less](https://lesscss.org/) for styling — while the content (pages, text, images, languages, menus) is managed through a backoffice, with no need to code.
 
-CLUAR is an open source CMS, built on top of [Netuno](https://www.netuno.org/), for building multilingual websites. The visual components of the pages (banners, listings, sliders, etc.) are developed in ReactJS, while the content — pages, text, images, languages, menus — is managed through a backoffice, with no need to code.
+The code is available in the [CLUAR repository on GitHub](https://github.com/netuno-org/cluar) — contributions are welcome.
 
 ## Content model
 

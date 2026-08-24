@@ -5,6 +5,8 @@ title: Dictionaries
 sidebar_label: Dictionaries
 ---
 
+How to translate the website interface's fixed text.
+
 ## Introduction
 
 **Dictionaries** is the system for translating the website interface's fixed text — labels, messages, button text — things that aren't page content, but text "embedded" in the code, and which still needs to exist in every language.

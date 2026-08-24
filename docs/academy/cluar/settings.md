@@ -5,6 +5,8 @@ title: Settings
 sidebar_label: Settings
 ---
 
+The key/value parameter system managed by the content editor, without needing code.
+
 ## Introduction
 
 **Settings** is a key/value parameter system, managed by the content editor in the backoffice — designed for website values that change frequently or vary by language (e.g., phone number, address, social media links, a logo image), without needing to touch code.

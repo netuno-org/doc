@@ -5,6 +5,8 @@ title: Functionality
 sidebar_label: Functionality
 ---
 
+The concrete functionalities available to include on a page, such as forms and maps.
+
 ## Introduction
 
 **Functionality** is different from the other components: instead of visual variations of the same content, each type is a **concrete functionality** to include on the page — today, a contact form or a map.

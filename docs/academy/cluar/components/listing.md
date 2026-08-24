@@ -5,6 +5,8 @@ title: Listing
 sidebar_label: Listing
 ---
 
+How to present a series of related items — products, services, news, and so on.
+
 ## Introduction
 
 **Listing** is used to present a series of related items — products, services, references, news, and so on. Each Listing has its own title/introductory content, and groups several **Items**, managed separately in the backoffice (`Listing > Item`).

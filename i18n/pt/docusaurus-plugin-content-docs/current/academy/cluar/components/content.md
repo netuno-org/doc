@@ -5,6 +5,8 @@ title: Conteúdo
 sidebar_label: Conteúdo
 ---
 
+O componente de texto e imagem mais genérico do CLUAR.
+
 ## Introdução
 
 O **Conteúdo** é o componente de texto/imagem mais genérico do CLUAR — usado para blocos de texto simples, texto com imagem ao lado, ou só uma imagem, dependendo do tipo escolhido.

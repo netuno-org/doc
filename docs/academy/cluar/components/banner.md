@@ -5,6 +5,8 @@ title: Banner
 sidebar_label: Banner
 ---
 
+The large-format highlight component, usually used at the top of the page.
+
 ## Introduction
 
 The **Banner** is a page's big highlight — usually a full-width image, with a prominent title over it and, optionally, an introductory text and actions (buttons/links).

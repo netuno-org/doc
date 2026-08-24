@@ -5,6 +5,8 @@ title: Slider
 sidebar_label: Slider
 ---
 
+The carousel component, for presenting a sequence of featured items.
+
 ## Introduction
 
 The **Slider** presents a sequence of items in a carousel — each with a background image, title, text and, optionally, its own actions. It's rendered with the [Keen Slider](https://keen-slider.io/) library.

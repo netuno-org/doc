@@ -5,6 +5,8 @@ title: Idiomas
 sidebar_label: Idiomas
 ---
 
+Como o CLUAR gere os idiomas do website e o conteúdo multilíngue.
+
 ## Introdução
 
 O CLUAR é multilíngue por padrão: cada **Página** está associada a um idioma, e o website apresenta um seletor para o visitante trocar entre os idiomas disponíveis.

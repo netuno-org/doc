@@ -5,6 +5,8 @@ title: Configurações
 sidebar_label: Configurações
 ---
 
+O sistema de parâmetros chave/valor geridos pelo editor de conteúdo, sem precisar de código.
+
 ## Introdução
 
 **Configurações** é um sistema de parâmetros chave/valor, geridos pelo editor de conteúdo no backoffice — pensado para valores do website que mudam com frequência ou variam por idioma (ex.: número de telefone, morada, links de redes sociais, uma imagem de logótipo), sem precisar mexer em código.

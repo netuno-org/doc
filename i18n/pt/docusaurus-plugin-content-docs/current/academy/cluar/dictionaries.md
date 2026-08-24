@@ -5,6 +5,8 @@ title: Dicionários
 sidebar_label: Dicionários
 ---
 
+Como traduzir os textos fixos da interface do website.
+
 ## Introdução
 
 **Dicionários** é o sistema de traduções de textos fixos da interface do website — rótulos, mensagens, textos de botões — coisas que não são conteúdo de página, mas texto "embutido" no código, e que ainda assim precisa de existir em cada idioma.

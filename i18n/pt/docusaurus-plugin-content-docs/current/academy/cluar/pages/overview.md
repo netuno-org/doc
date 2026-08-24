@@ -5,8 +5,6 @@ title: Visão Geral
 sidebar_label: Visão Geral
 ---
 
-## Introdução
-
 A **Página** é a entidade central do CLUAR: representa um URL do website. Cada página pertence a um único idioma — não existe uma página "multilíngue" única, cada idioma tem a sua própria página (com o seu próprio `link`, título, conteúdo, etc.), e são ligadas entre si apenas pela ação de [clonagem](/docs/academy/cluar/pages/cloning).
 
 ## Campos

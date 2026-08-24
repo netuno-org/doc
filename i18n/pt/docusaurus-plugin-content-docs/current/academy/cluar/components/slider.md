@@ -5,6 +5,8 @@ title: Slider
 sidebar_label: Slider
 ---
 
+O componente de carrossel, para apresentar uma sequência de itens em destaque.
+
 ## Introdução
 
 O **Slider** apresenta uma sequência de itens em carrossel — cada um com imagem de fundo, título, texto e, opcionalmente, as suas próprias ações. É renderizado com a biblioteca [Keen Slider](https://keen-slider.io/).

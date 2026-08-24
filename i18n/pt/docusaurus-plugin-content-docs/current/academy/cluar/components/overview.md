@@ -5,8 +5,6 @@ title: Visão Geral
 sidebar_label: Visão Geral
 ---
 
-## Introdução
-
 **Componentes** são os blocos de conteúdo que compõem uma [Página](/docs/academy/cluar/pages/overview), dentro de uma [Versão](/docs/academy/cluar/pages/versions-publishing). Existem 5 tipos:
 
 - **Banner**

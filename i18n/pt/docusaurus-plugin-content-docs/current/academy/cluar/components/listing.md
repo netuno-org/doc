@@ -5,6 +5,8 @@ title: Listagem
 sidebar_label: Listagem
 ---
 
+Como apresentar uma série de itens relacionados — produtos, serviços, notícias, e por aí fora.
+
 ## Introdução
 
 A **Listagem** serve para apresentar uma série de itens relacionados — produtos, serviços, referências, notícias, e por aí fora. Cada Listagem tem um título/conteúdo introdutório próprio, e agrupa vários **Itens**, geridos à parte no backoffice (`Listagem > Item`).

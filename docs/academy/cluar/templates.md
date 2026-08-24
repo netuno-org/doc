@@ -5,6 +5,8 @@ title: Templates
 sidebar_label: Templates
 ---
 
+How a page's overall layout is defined, and how to create new templates.
+
 ## Introduction
 
 A **Template** defines a [Page](/docs/academy/cluar/pages/overview)'s overall layout — it's the value of the page's `template` field, and corresponds to a folder in `website/src/pages/Template/`.
@@ -26,6 +28,15 @@ website/src/pages/Template/
 
 Each folder inside `Template/` is a template selectable in the page edit form's **Template** field. The folder name (`Default`) is the value saved in the page's `template` field.
 
+The Default template's `info.json`, for example:
+
+```json
+{
+  "en": { "label": "Default", "description": "For pages that use generic styling." },
+  "pt": { "label": "Padrão", "description": "Para páginas que utilizam o estilo genérico." }
+}
+```
+
 :::info The select shows the folder name, not the `info.json` label
 Unlike Component Types, the Template select in the page form uses the **folder name** as the displayed text (not the translated `label` from `info.json`) — the service even returns the `info.json`, but the form doesn't use it for the label. In other words, the Template's `info.json` currently has no visible effect; it's groundwork for a translation that hasn't been wired up to the interface yet.
 :::
@@ -41,6 +52,25 @@ The **Default** template (`Default`) is what most pages use: it wraps the page c
 :::info Page with an unrecognized template
 If a page's `template` field doesn't match any existing folder (e.g., a misspelled name, or a deleted folder), CLUAR **doesn't fail or fall back to Default** — instead, it renders just the "bare" `Builder`, without the site's header or footer. This is different from what happens with Component Types, where an unrecognized type falls back to the Default type.
 :::
+
+This is decided by the router (`Template/index.jsx`):
+
+```jsx
+import Default from "./Default";
+import Builder from "../../common/Builder";
+
+const Template = ({ page }) => {
+  if (page.template === "Default") {
+    return <Default page={page} />;
+  } else {
+    return <Builder page={page} />;
+  }
+};
+
+export default Template;
+```
+
+Notice there's only one explicit check (`"Default"`) — any other `template` value, recognized or not, falls straight into the `else` and renders just the `Builder`.
 
 ## How to create a new template
 
