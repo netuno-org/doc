@@ -1,9 +1,8 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import CodeBlock from '@theme/CodeBlock';
 
 function PolyglotPath({files}) {
-    const langs = ['javascript', 'python', 'ruby', 'kotlin', 'groovy'];
+    const langs = ['javascript', 'typescript', 'python', 'ruby', 'kotlin', 'groovy'];
     return (
         <div style={{marginBottom: '40px'}}>
             <Tabs groupId="polyglot">
@@ -11,6 +10,8 @@ function PolyglotPath({files}) {
                     let extension = '';
                     if (lang === 'javascript') {
                         extension += 'js';
+                    } else if (lang === 'typescript') {
+                        extension += 'ts';
                     } else if (lang === 'python') {
                         extension += 'py';
                     } else if (lang === 'ruby') {
@@ -30,6 +31,12 @@ function PolyglotPath({files}) {
                     if (lang === 'javascript') {
                         return (
                             <TabItem value={lang} label="JavaScript" default>
+                                {list}
+                            </TabItem>
+                        );
+                    } else if (lang === 'typescript') {
+                        return (
+                            <TabItem value={lang} label="TypeScript" default>
                                 {list}
                             </TabItem>
                         );
