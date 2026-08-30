@@ -32,7 +32,7 @@ A camada de comunicação do servidor é disponibilizada por API REST. A disponi
 
 ## Camada de serviços poliglota
 
-Escreva serviços em <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="http://groovy-lang.org/" target="_blank">Groovy</a>, <a href="https://www.jython.org/" target="_blank">Python</a>, <a href="https://www.jruby.org/" target="_blank">Ruby</a>, <a href="https://kotlinlang.org/" target="_blank">Kotlin</a> ou em <a href="https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)" target="_blank">Java</a>, todas elas são válidas. O Netuno remove o isolamento entre linguagens de programação, a mesma aplicação suporta serviços a correr em simultâneo em múltiplas linguagens sem que tal aumente o peso de processamento.
+Escreva serviços em <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://groovy-lang.org/" target="_blank">Groovy</a>, <a href="https://www.jython.org/" target="_blank">Python</a>, <a href="https://www.jruby.org/" target="_blank">Ruby</a>, <a href="https://kotlinlang.org/" target="_blank">Kotlin</a> ou em <a href="https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)" target="_blank">Java</a>, todas elas são válidas. O Netuno remove o isolamento entre linguagens de programação, a mesma aplicação suporta serviços a correr em simultâneo em múltiplas linguagens sem que tal aumente o peso de processamento.
 
 ## Multi base de dados
 

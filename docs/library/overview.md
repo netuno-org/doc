@@ -32,7 +32,7 @@ The server's communication layer is provided by REST API. The provision of servi
 
 ### Polyglot service layer
 
-Write services in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="http://groovy-lang.org/" target="_blank">Groovy</a>, <a href="https://www.jython.org/" target="_blank">Python</a>, <a href="https://www.jruby.org/" target="_blank">Ruby</a>, <a href="https://kotlinlang.org/" target="_blank">Kotlin</a> or in <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">Java</a>, they're all valid. Netuno removes the isolation between programming languages, the same application supports services running simultaneously in multiple languages without increasing the processing weight.
+Write services in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://groovy-lang.org/" target="_blank">Groovy</a>, <a href="https://www.jython.org/" target="_blank">Python</a>, <a href="https://www.jruby.org/" target="_blank">Ruby</a>, <a href="https://kotlinlang.org/" target="_blank">Kotlin</a> or in <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">Java</a>, they're all valid. Netuno removes the isolation between programming languages, the same application supports services running simultaneously in multiple languages without increasing the processing weight.
 
 ### Multiple database support
 
