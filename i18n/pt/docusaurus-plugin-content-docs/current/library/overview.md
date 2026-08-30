@@ -32,11 +32,13 @@ A camada de comunicação do servidor é disponibilizada por API REST. A disponi
 
 ## Camada de serviços poliglota
 
-Escreva serviços em <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="http://groovy-lang.org/" target="_blank">Groovy</a>, <a href="https://www.jython.org/" target="_blank">Python</a>, <a href="https://www.jruby.org/" target="_blank">Ruby</a>, <a href="https://kotlinlang.org/" target="_blank">Kotlin</a> ou em <a href="https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)" target="_blank">Java</a>, todas elas são válidas. O Netuno remove o isolamento entre linguagens de programação, a mesma aplicação suporta serviços a correr em simultâneo em múltiplas linguagens sem que tal aumente o peso de processamento.
+Escreva serviços em <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="http://groovy-lang.org/" target="_blank">Groovy</a>, <a href="https://www.jython.org/" target="_blank">Python</a>, <a href="https://www.jruby.org/" target="_blank">Ruby</a>, <a href="https://kotlinlang.org/" target="_blank">Kotlin</a> ou em <a href="https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)" target="_blank">Java</a>, todas elas são válidas. O Netuno remove o isolamento entre linguagens de programação, a mesma aplicação suporta serviços a correr em simultâneo em múltiplas linguagens sem que tal aumente o peso de processamento.
 
 ## Multi base de dados
 
-Configure várias base de dados diferentes e use-as em simultâneo. Nativamente o Netuno suporta diversos motores de base de dados relacionais como <a href="https://www.h2database.com/html/main.html" target="_blank">H2DataBase</a>, <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>, <a href="https://mariadb.org/" target="_blank">MariaDB (_MySQL_)</a>, Microsoft SQL Server e Oracle. Conseguirá criar a sua aplicação usando, por exemplo, o PostgreSQL com uma base de dados principal e integrar com outras base de dados em MariaDB, e a meio de um projecto poder mudar para Microsoft SQL Server ou Oracle sem que tenha que realizar qualquer alteração de código. 
+Configure várias base de dados diferentes e use-as em simultâneo. Nativamente o Netuno suporta diversos motores de base de dados relacionais como <a href="https://www.h2database.com/html/main.html" target="_blank">H2DataBase</a>, <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> e CockroachDB, <a href="https://mariadb.org/" target="_blank">MariaDB (_MySQL_)</a>, Microsoft SQL Server e Oracle. Conseguirá criar a sua aplicação usando, por exemplo, o PostgreSQL com uma base de dados principal e integrar com outras base de dados em MariaDB, e a meio de um projecto poder mudar para Microsoft SQL Server ou Oracle sem que tenha que realizar qualquer alteração de código. 
+
+> Oferece suporte nativo à integração com o MongoDB.
 
 ## Serverless
 
