@@ -90,5 +90,29 @@
   "sidebar.librarySidebar.category.Objects.link.generated-index.description": {
     "message": "Principais objetos low-code disponíveis.",
     "description": "The generated-index page description for category Objects in sidebar librarySidebar"
+  },
+  "sidebar.academySidebar.category.CLUAR": {
+    "message": "CLUAR",
+    "description": "The label for category CLUAR in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.CLUAR.link.generated-index.description": {
+    "message": "Uma solução pronta a usar para gestão de conteúdo e websites multilíngues.",
+    "description": "The generated-index page description for category CLUAR in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Components": {
+    "message": "Componentes",
+    "description": "The label for category Components in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Components.link.generated-index.description": {
+    "message": "Tutoriais sobre os componentes de conteúdo do CLUAR — Banner, Conteúdo, Listagem, Slider e Funcionalidade.",
+    "description": "The generated-index page description for category Components in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Pages": {
+    "message": "Páginas",
+    "description": "The label for category Pages in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Pages.link.generated-index.description": {
+    "message": "Tutoriais sobre a entidade Página no CLUAR — campos, versionamento, publicação e clonagem.",
+    "description": "The generated-index page description for category Pages in sidebar academySidebar"
   }
 }
