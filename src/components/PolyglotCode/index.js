@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 
 function PolyglotCode({file, codes}) {
-    const langs = ['javascript', 'python', 'ruby', 'kotlin', 'groovy'];
+    const langs = ['javascript', 'typescript', 'python', 'ruby', 'kotlin', 'groovy'];
     for (const code of codes) {
         code.code = code.code.substring(code.code.indexOf('\n') + 1).trimEnd().split('\n')
             .reduce(({spaces, source}, line, index) => {
@@ -18,7 +18,9 @@ function PolyglotCode({file, codes}) {
     for (const l of langs) {
         if (!codes.find(({lang}) => l === lang)) {
             let code = null;
-            if (l === 'ruby') {
+            if (l === 'typescript') {
+                code = {...codes.find(({lang}) => 'javascript' === lang)};
+            } else if (l === 'ruby') {
                 code = {...codes.find(({lang}) => 'python' === lang)};
             } else if (l === 'python') {
                 code = {...codes.find(({lang}) => 'ruby' === lang)};
@@ -54,12 +56,14 @@ function PolyglotCode({file, codes}) {
     }
     const keywords = [{
         javascript: 'const ',
+        typescript: 'const ',
         python: '',
         ruby: '',
         kotlin: 'val ',
         groovy: 'final ',
     }, {
         javascript: 'let ',
+        typescript: 'let ',
         python: '',
         ruby: '',
         kotlin: 'var ',
@@ -72,13 +76,14 @@ function PolyglotCode({file, codes}) {
     }
     const langsComment = {
         javascript: '// ',
+        typescript: '// ',
         python: '# ',
         ruby: '# ',
         kotlin: '// ',
         groovy: '// ',
     };
     for (const code of codes) {
-        if (code.lang !== 'javascript') {
+        if (code.lang !== 'javascript' && code.lang !== 'typescript') {
             code.code = code.code.replaceAll(/(.*);$/gm, "$1");
             code.code = code.code.replaceAll(/;(\s+)\/\/\s+/gm, "$1"+ langsComment[code.lang]);
         }
@@ -87,11 +92,16 @@ function PolyglotCode({file, codes}) {
     return (
         <div style={{marginBottom: '40px'}}>
             <Tabs groupId="polyglot">
-                {codes.map(({lang, code}) => {
+                {langs.map((lang) => {
+                    const code = codes.find(({lang: l}) => {
+                        return lang === l
+                    }).code;
                     let title = file;
                     if (title) {
                         if (lang === 'javascript') {
                             title += '.js';
+                        } else if (lang === 'typescript') {
+                            title += '.ts';
                         } else if (lang === 'python') {
                             title += '.py';
                         } else if (lang === 'ruby') {
@@ -113,6 +123,12 @@ function PolyglotCode({file, codes}) {
                     if (lang === 'javascript') {
                         return (
                             <TabItem value={lang} label="JavaScript" default>
+                                {codeBlock}
+                            </TabItem>
+                        );
+                    } else if (lang === 'typescript') {
+                        return (
+                            <TabItem value={lang} label="TypeScript" default>
                                 {codeBlock}
                             </TabItem>
                         );
