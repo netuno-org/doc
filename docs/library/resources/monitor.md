@@ -17,6 +17,18 @@ It allows to obtain the performance data.
 
 Obtains performance data such as CPU, Memory and Disk utilization of the Neptune server process as well as the computer in general.
 
+##### How To Use
+
+```javascript
+// Checks the current, free, and maximum memory values:
+_log.info(
+    'Memory status',
+    _monitor.performanceData()
+        .getValues('memory')
+        .getValues('process')
+)
+```
+
 ##### Return
 
 ( _[Values](/docs/library/objects/Values)_ )

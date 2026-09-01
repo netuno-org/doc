@@ -224,7 +224,8 @@ Creates the new user.
 
 ```javascript
 // Create a new user:
-const group = _group.firstByCode("samle")_user.create(
+const group = _group.firstByCode("sample")
+_user.create(
     _val.map()
         .set("name", "Full Name")
         .set("mail", "user@sample.com")

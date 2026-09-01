@@ -120,7 +120,7 @@ Configuration object loaded from received data.
 #### _ftp.config(config: [FTPConfig](/docs/library/objects/FTPConfig)) : [FTP](/docs/library/resources/ftp)
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 
@@ -643,7 +643,7 @@ The current FTP resource.
 #### _ftp.setConfig(config: [FTPConfig](/docs/library/objects/FTPConfig)) : [FTP](/docs/library/resources/ftp)
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 

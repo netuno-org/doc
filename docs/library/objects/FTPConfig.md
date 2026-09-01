@@ -4,7 +4,7 @@ title: FTPConfig
 sidebar_label: FTPConfig
 ---
 
-Definição da configuração do FTP.
+Defines FTP connection settings.
 
 ---
 
@@ -168,7 +168,7 @@ Whether it is active or inactive on the current object.
 #### <span style={{color: '#008000'}}>isSecureImplicit</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
-Returns whether FTPS implícito is active on the current object.
+Returns whether implicit FTPS is active for the current configuration.
 
 ##### Return
 
@@ -386,7 +386,7 @@ Returns the current object.
 #### <span style={{color: '#008000'}}>setSecureImplicit</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>
 ##### Description
 
-Defines whether FTPS implícito is active or inactive on the current object.
+Enables or disables implicit FTPS for the current configuration.
 
 ##### Attributes
 

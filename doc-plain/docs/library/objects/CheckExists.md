@@ -4,7 +4,7 @@ title: CheckExists
 sidebar_label: CheckExists
 ---
 
-Verifica se sequências, tabelas, colunas e indexes existem na base de dados.
+Checks whether sequences, tables, columns, and indexes exist in the database.
 
 ```javascript
 if (!_db.checkExists().table("client")) {
@@ -22,12 +22,12 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### coalesce(params: java.lang.String[]) : string
+#### <span style={{color: '#008000'}}>coalesce</span>(<span style={{color: '#FF8000'}}>params</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **params** | _java.lang.String[]_ |   |
+| **params** | _string[]_ |   |
 
 ##### Return
 
@@ -40,7 +40,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### column(table: string, column: string) : boolean
+#### <span style={{color: '#008000'}}>column</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -59,7 +59,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### columnDataType(data: org.netuno.tritao.com.ComponentData) : [Column](/docs/library/objects/Column)
+#### <span style={{color: '#008000'}}>columnDataType</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.com.ComponentData</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Column](/docs/library/objects/Column)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -77,7 +77,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### concatenation(param1: string, param2: string) : string
+#### <span style={{color: '#008000'}}>concatenation</span>(<span style={{color: '#FF8000'}}>param1</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>param2</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -96,7 +96,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### getBuilder() : org.netuno.tritao.db.Builder
+#### <span style={{color: '#008000'}}>getBuilder</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>
 ##### Return
 
 ( _org.netuno.tritao.db.Builder_ )
@@ -108,7 +108,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### getDataValue(data: org.netuno.tritao.com.ComponentData) : string
+#### <span style={{color: '#008000'}}>getDataValue</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.com.ComponentData</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -122,7 +122,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### getDataValue(data: org.netuno.tritao.com.ComponentData, value: string) : string
+#### <span style={{color: '#008000'}}>getDataValue</span>(<span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.com.ComponentData</span>, <span style={{color: '#FF8000'}}>value</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -141,7 +141,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### getExecutor() : org.netuno.tritao.db.DBExecutor
+#### <span style={{color: '#008000'}}>getExecutor</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.DBExecutor</span>
 ##### Return
 
 ( _org.netuno.tritao.db.DBExecutor_ )
@@ -153,7 +153,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### getHili() : org.netuno.tritao.hili.Hili
+#### <span style={{color: '#008000'}}>getHili</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.hili.Hili</span>
 ##### Return
 
 ( _org.netuno.tritao.hili.Hili_ )
@@ -165,7 +165,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### getKey() : string
+#### <span style={{color: '#008000'}}>getKey</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Return
 
 ( _string_ )
@@ -177,7 +177,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### getManager() : org.netuno.tritao.db.manager.ManagerBase
+#### <span style={{color: '#008000'}}>getManager</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.manager.ManagerBase</span>
 ##### Return
 
 ( _org.netuno.tritao.db.manager.ManagerBase_ )
@@ -189,7 +189,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### getProteu() : org.netuno.proteu.Proteu
+#### <span style={{color: '#008000'}}>getProteu</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.proteu.Proteu</span>
 ##### Return
 
 ( _org.netuno.proteu.Proteu_ )
@@ -201,7 +201,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### index(index: string) : boolean
+#### <span style={{color: '#008000'}}>index</span>(<span style={{color: '#FF8000'}}>index</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -215,7 +215,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### index(tableName: string, columnName: string) : boolean
+#### <span style={{color: '#008000'}}>index</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>columnName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -234,7 +234,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### insertInto(tableName: string, data: [Values](/docs/library/objects/Values)) : int
+#### <span style={{color: '#008000'}}>insertInto</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>data</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -253,7 +253,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isH2() : boolean
+#### <span style={{color: '#008000'}}>isH2</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -261,7 +261,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isH2(builder: org.netuno.tritao.db.Builder) : boolean
+#### <span style={{color: '#008000'}}>isH2</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -279,7 +279,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isId(id: string) : boolean
+#### <span style={{color: '#008000'}}>isId</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -297,7 +297,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isMSSQL() : boolean
+#### <span style={{color: '#008000'}}>isMSSQL</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -305,7 +305,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isMSSQL(builder: org.netuno.tritao.db.Builder) : boolean
+#### <span style={{color: '#008000'}}>isMSSQL</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -323,7 +323,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isMariaDB() : boolean
+#### <span style={{color: '#008000'}}>isMariaDB</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -331,7 +331,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isMariaDB(builder: org.netuno.tritao.db.Builder) : boolean
+#### <span style={{color: '#008000'}}>isMariaDB</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -349,7 +349,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isPostgreSQL() : boolean
+#### <span style={{color: '#008000'}}>isPostgreSQL</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -357,7 +357,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### isPostgreSQL(builder: org.netuno.tritao.db.Builder) : boolean
+#### <span style={{color: '#008000'}}>isPostgreSQL</span>(<span style={{color: '#FF8000'}}>builder</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.Builder</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -375,7 +375,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### searchComparison(param: string) : string
+#### <span style={{color: '#008000'}}>searchComparison</span>(<span style={{color: '#FF8000'}}>param</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -393,7 +393,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### sequence() : boolean
+#### <span style={{color: '#008000'}}>sequence</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )
@@ -401,7 +401,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### sequence(name: string) : boolean
+#### <span style={{color: '#008000'}}>sequence</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -415,7 +415,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### sequence(tableName: string, columnName: string) : boolean
+#### <span style={{color: '#008000'}}>sequence</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>columnName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -434,7 +434,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### table(table: string) : boolean
+#### <span style={{color: '#008000'}}>table</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -452,7 +452,7 @@ if (!_db.checkExists().table("client")) {
 
 ---
 
-#### unaccent(input: string) : string
+#### <span style={{color: '#008000'}}>unaccent</span>(<span style={{color: '#FF8000'}}>input</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |

@@ -4,7 +4,7 @@ title: File
 sidebar_label: File
 ---
 
-O objeto File é utilizado para interagir com ficheiros e pastas.
+The File object interacts with files and folders.
 
 ---
 

@@ -46,7 +46,7 @@ With the code editor open, locate and open the Demo application directory: `📁
 
 This folder contains all the files and settings of the new application. All development will be done exclusively within this director.
 
-#### Next steps
+## Next steps
 
 With the server running and the files open in the code editor, the environment is ready. Proceed to the next step of the tutorial to begin exploring and modifying the application.
 

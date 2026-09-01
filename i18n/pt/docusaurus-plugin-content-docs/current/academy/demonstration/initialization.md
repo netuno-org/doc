@@ -40,11 +40,11 @@ Caso ainda não tenha um, recomendamos as seguintes opções gratuitas e de cód
 - WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
 
 
-#### Abra a pasta do projeto
+### Abra a pasta do projeto
 Com o editor de código aberto, localize e abra o diretório da aplicação Demo: `📁 apps/demo`.
 
 Esta pasta contém todos os arquivos e configurações da nova aplicação. É exclusivamente dentro deste diretório que todo o desenvolvimento será realizado.
 
-### Próximos passos
+## Próximos passos
 
 Com o servidor rodando e os arquivos abertos no editor de código, o ambiente está pronto. Avance para a próxima etapa do tutorial para começar a explorar e modificar a aplicação.

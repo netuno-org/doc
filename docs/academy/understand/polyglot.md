@@ -16,7 +16,7 @@ _Netuno_ also can integrated the most types of Database and be developed in diff
 
 Integrating different databases is very common to perform data integration when doing queries or changing data in another database system's.
 
-![Logos das Bases de Dados](/docs/assets/business/databases.jpg "Multiplas Bases de Dados")
+![Database logos](/docs/assets/business/databases.jpg "Multiple databases")
 
 Below the followinf list of database supported with _Netuno_:
 
@@ -41,7 +41,7 @@ Projects end up using multiple languages for six main reasons:
 
 With _Netuno_ none of the projects are wasted and if needed a new programming language because somehow the company strategy has changed or there is a lack of staff to develope technical projects or any other specific situation, any staff will be able to take the project and analyze and move foward with it as is a low-code solution, resources end up to be used in the same independent way and a very similar one to another.
 
-![Logos das Linguagens de Programação](/docs/assets/business/languages.jpg "Linguagens de programação")
+![Programming language logos](/docs/assets/business/languages.jpg "Programming languages")
 
 _Netuno_ offers developement with the following programming languages:
 

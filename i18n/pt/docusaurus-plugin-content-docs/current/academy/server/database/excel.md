@@ -4,6 +4,8 @@ title: Excel
 sidebar_label: Excel
 ---
 
+## Sobre o Excel
+
 Em qualquer tipo de negócio no geral é comum haver aqueles tais ficheiros em Excel ou qualquer outro tipo de folha de cálculos como a do Google Spreadsheets, do LibreOffice, OpenOffice, etc... são amplamente utilizadas, devido a sua forma simples de resolver a necessidade da organização da informação, análise e até a integração com outras folhas de cálculos.
 
 Portanto Excel e companhia resolvem bem o problema quando a estrutura de informação é relativamente pequena e a complexidade não é muita.

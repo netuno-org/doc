@@ -6,35 +6,31 @@ sidebar_label: MSSQL
 
 ## Configuração do MSSQL no Docker
 
-Assumindo que já tem instalado o Docker, basta efetuar o download da imagem do container a partir do Microsoft Container Registry com o seguinte comando:
+Certifique-se de que o Docker está instalado. O comando seguinte descarrega a imagem atual do SQL Server 2025 para Linux a partir do Microsoft Container Registry:
 
 ```
-sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
+docker pull mcr.microsoft.com/mssql/server:2025-latest
 ```
 
 E para iniciar o novo container execute o seguinte comando:
 
 ```
-docker run -d --name mssql_server -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Secret123' -p 1433:1433 microsoft/mssql-server-linux
+docker run -d --name mssql_server --hostname mssql_server -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=Secret123' -p 1433:1433 mcr.microsoft.com/mssql/server:2025-latest
 ```
 
-O parâmetro *-e 'SA\_PASSWORD=Secret123'* onde está o *Secret123* será a palavra-passe/senha do utilizador/usuário *sa*.
+Consulte o [guia oficial dos containers Linux do SQL Server](https://learn.microsoft.com/pt-pt/sql/linux/quickstart-install-connect-docker?view=sql-server-ver17).
 
-Atenção que a senha deverá conter pelo menos 8 caracteres para cumprir a norma mínima de segurança do MSSQL, caso contrário o container não será inicializado.
+O valor de `MSSQL_SA_PASSWORD` define a palavra-passe do utilizador `sa`.
 
-Após a inicialização do container certifique-se que o MSSQL está funcionando corretamente e para tal é possível instalar o comando *mssql* através do *NPM*:
+A palavra-passe deve ter entre 8 e 128 caracteres e conter caracteres de pelo menos três destes conjuntos: maiúsculas, minúsculas, dígitos e símbolos. Caso não cumpra esta política, o SQL Server para durante a configuração.
 
-```
-npm install mssql -g
-```
-
-Com isto poderá executar o comando para se conectar ao MSSQL através do terminal:
+Após a inicialização do container, conecte-se com a ferramenta `sqlcmd` incluída na imagem:
 
 ```
-mssql -u sa -p Secret123
+docker exec -it mssql_server /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "Secret123"
 ```
 
-Atenção! Caso tenha alterado a senha, substitua o *Secret123* pela senha do _sa_ configurada no container.
+Substitua `Secret123` pela palavra-passe do `sa` configurada ao criar o container. Não exponha uma palavra-passe de produção real no histórico da shell.
 
 ## Criar uma nova aplicação
 

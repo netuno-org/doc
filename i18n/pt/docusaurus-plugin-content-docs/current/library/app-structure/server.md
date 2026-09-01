@@ -108,7 +108,7 @@ controle de segurança no acesso ao serviço da API.
 
 É na pasta `📂 services` que são criados os serviços que formam a API aplicacional. 
 
-Os serviços podem ser escritos em diversas linguagens Javascript, Python, Java, Kotlin, Ruby ou Groovy.
+Os serviços podem ser escritos em JavaScript (`.js`, `.cjs`, `.mjs`), TypeScript (`.ts`), Python com GraalPy (`.py`), Ruby com JRuby (`.rb`), Kotlin (`.kts`), Groovy (`.groovy`) ou CajuScript (`.cj`).
 
 Como o Netuno é poliglota qualquer arquivo de script pode ser alterado para outra linguagem de programação
 suportada, basta ter a extensão dos arquivos de acordo com a linguagem.
@@ -130,7 +130,7 @@ De acordo com a construção da estrutura de dados o Netuno cria aqui na pasta d
 necessário para toda a estrutura de dados ser recriada em uma nova base de dados, ou recriar algo que falte em 
 outra base de dados que a aplicação seja eventualmente executada. 
 
- ## Templates
+## Templates
 
 A pasta `📂 templates` contém o contéudo HTML das páginas de backoffice da aplicação, que são geradas pelo servidor
 do Netuno.
@@ -145,7 +145,7 @@ O `dashboard.html` que está na raíz dos templates contém o HTML da área de t
 Na pasta `📂 _` qualquer template geral pode ser substituído, ou seja os templates padrão do Netuno podem ser 
 alterados.
 
-- [Aqui tem os templates nativos do Netuno.](https://github.com/netuno-org/platform/tree/main/bundle/base/web/netuno/templates/sbadmin)
+- [Aqui tem os templates nativos do Netuno.](https://github.com/netuno-org/platform/tree/main/bundle/base/core/web/netuno/templates/sbadmin)
 
 Se o nome de pastas e/ou de arquivos coincidir com os dos templates nativos dentro desta pasta, então é utilizado
 o template que encontra-se nesta pasta em vez do template nativo.

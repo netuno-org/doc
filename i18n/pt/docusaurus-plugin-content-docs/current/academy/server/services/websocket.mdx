@@ -550,13 +550,16 @@ Para realizar facilmente a integração com o frontend, é disponibilizado o mó
 
 Comando de instalação:
 
-- `bun install @netuno/ws-client`
+- `bun add @netuno/ws-client`
+
+Importe e configure o cliente:
 
 ```js
+import _ws from '@netuno/ws-client';
+
 _ws.config({
     url: 'ws://localhost:9000/ws/example/',
     servicesPrefix: '/services',
-    method: 'GET',
     autoReconnect: true,
     connect: (event) => {
         console.info('WebSocket Connected', event);
@@ -598,7 +601,7 @@ Antes de iniciar devemos criar um observador da resposta do serviço, por exempl
 
 ```js
 const listenerRef = _ws.addListener({
-    method: 'GET', // Opcional, por padrão é GET.
+    method: 'GET', // Opcional; omita para observar todos os métodos.
     service: 'caminho/do/meu/servico/aqui',
     success: (data) => {
         console.log('Resposta do serviço executado via WebSocket:', data);

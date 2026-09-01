@@ -4,7 +4,7 @@ title: Table
 sidebar_label: Table
 ---
 
-Realiza a manipulação de tabelas em base de dados.
+Manipulates database tables.
 
 ```javascript
 if (_db.checkExists().table("clients")) {

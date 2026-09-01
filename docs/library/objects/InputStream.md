@@ -4,7 +4,7 @@ title: InputStream
 sidebar_label: InputStream
 ---
 
-É utilizado para gerir a entrada do fluxo de dados.
+Provides access to an input data stream.
 
 ---
 

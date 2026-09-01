@@ -4,7 +4,7 @@ title: SSHExecResult
 sidebar_label: SSHExecResult
 ---
 
-Resultado gerado pelos comandos SSH depois que são executados.
+Contains the result of an executed SSH command.
 
 ---
 
@@ -12,7 +12,7 @@ Resultado gerado pelos comandos SSH depois que são executados.
 
 ---
 
-#### error() : string
+#### <span style={{color: '#008000'}}>error</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the command execution error for the current object (if any).
@@ -25,7 +25,7 @@ Error of executing the command.
 
 ---
 
-#### error(error: string) : [SSHExecResult](/docs/library/objects/SSHExecResult)
+#### <span style={{color: '#008000'}}>error</span>(<span style={{color: '#FF8000'}}>error</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](/docs/library/objects/SSHExecResult)</span>
 ##### Description
 
 Returns the error of executing the command for the current object.
@@ -48,7 +48,7 @@ The SSHExecResulte current object.
 
 ---
 
-#### exitErrorMessage() : string
+#### <span style={{color: '#008000'}}>exitErrorMessage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the command execution error message for the current object (if any).
@@ -61,7 +61,7 @@ Command execution error message.
 
 ---
 
-#### exitErrorMessage(errorMessage: string) : [SSHExecResult](/docs/library/objects/SSHExecResult)
+#### <span style={{color: '#008000'}}>exitErrorMessage</span>(<span style={{color: '#FF8000'}}>errorMessage</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](/docs/library/objects/SSHExecResult)</span>
 ##### Description
 
 Returns the command execution error message for the current object (if any).
@@ -84,7 +84,7 @@ The SSHExecResulte current object.
 
 ---
 
-#### exitStatus() : int
+#### <span style={{color: '#008000'}}>exitStatus</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Returns the exit code of the command that was executed.
@@ -97,7 +97,7 @@ The exit code of the command that was executed.
 
 ---
 
-#### exitStatus(exitStatus: int) : [SSHExecResult](/docs/library/objects/SSHExecResult)
+#### <span style={{color: '#008000'}}>exitStatus</span>(<span style={{color: '#FF8000'}}>exitStatus</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](/docs/library/objects/SSHExecResult)</span>
 ##### Description
 
 Returns the exit code of the command that was executed.
@@ -120,7 +120,7 @@ The SSHExecResulte current object.
 
 ---
 
-#### id() : int
+#### <span style={{color: '#008000'}}>id</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Returns the id of the current object.
@@ -133,7 +133,7 @@ The id of the current object.
 
 ---
 
-#### id(id: int) : [SSHExecResult](/docs/library/objects/SSHExecResult)
+#### <span style={{color: '#008000'}}>id</span>(<span style={{color: '#FF8000'}}>id</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](/docs/library/objects/SSHExecResult)</span>
 ##### Description
 
 Defines the id of the current object.
@@ -156,7 +156,7 @@ The SSHExecResulte current object.
 
 ---
 
-#### output() : string
+#### <span style={{color: '#008000'}}>output</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the result of executing the command for the current object.
@@ -169,7 +169,7 @@ Result of executing the command.
 
 ---
 
-#### output(output: string) : [SSHExecResult](/docs/library/objects/SSHExecResult)
+#### <span style={{color: '#008000'}}>output</span>(<span style={{color: '#FF8000'}}>output</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](/docs/library/objects/SSHExecResult)</span>
 ##### Description
 
 Returns the result of executing the command for the current object.

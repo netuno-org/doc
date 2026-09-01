@@ -64,7 +64,7 @@ Sets the spreadsheet that is active.
 
 ( _[XLS](/docs/library/resources/xls)_ )
 
-A instância atual do recurso XLS.
+The current XLS resource instance.
 
 ---
 

@@ -4,14 +4,14 @@ title: Index
 sidebar_label: Index
 ---
 
-Realiza a manipulação de indexes em base de dados.
+Manipulates database indexes.
 
 ```javascript
 if (!_db.checkExists().index("client", "name")) {
     _db.index().create(
-        "client", // Nome da Tabela
+    "client", // Table name
         "name" // Nome da Coluna
-    ); // O index client_name_idx será criado criado.
+); // Creates the client_name_idx index.
 }
 ```
 

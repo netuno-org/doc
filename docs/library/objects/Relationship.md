@@ -4,7 +4,7 @@ title: Relationship
 sidebar_label: Relationship
 ---
 
-Definição da configuração do objeto Relation para configurar relacionamentos entre tabelas com Join.
+Configures a relationship between tables for a DB Form join.
 
 ---
 

@@ -8,7 +8,7 @@ This section contains the vast majority of back-end logic about Netuno. You will
 
 > The Netuno platform is free, [start now](/docs/get-started/installation).
 
-### Tutorials
+## Tutorials
 
 Discover how to explore the development in Netuno:
 

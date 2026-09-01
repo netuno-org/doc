@@ -1631,13 +1631,13 @@ Returns the created font.
 #### _pdf.getDocument() : com.itextpdf.layout.Document
 ##### Description
 
-Obtém o objecto Document do iText para a estrutura do documento PDF.
+Gets the iText `Document` used to build the PDF content.
 
 ##### Return
 
 ( _com.itextpdf.layout.Document_ )
 
-Gere a estrutura do documento.
+Document content structure.
 
 ---
 
@@ -1648,7 +1648,7 @@ Gere a estrutura do documento.
 #### _pdf.getPdfDocument() : com.itextpdf.kernel.pdf.PdfDocument
 ##### Description
 
-Gets the PdfDocument object of the iText to build the PDf document.
+Gets the iText `PdfDocument` used to build the PDF document.
 
 ##### Return
 
@@ -1844,7 +1844,7 @@ Returns the line type, color and width inserted.
 #### _pdf.newDocument() : com.itextpdf.layout.Document
 ##### Description
 
-Cria um novo documento.
+Creates a new document.
 
 ##### Return
 

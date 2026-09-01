@@ -57,7 +57,7 @@ Também podemos definir configurações globais na aplicação, repare neste exe
       "json": true,
       "authorization": "Bearer AUTH-TOKEN-AQUI",
       "connectTimeout": 5000,
-      "readTimeout": 60000,
+      "readTimeout": 60000
     }
   },
   ...
@@ -308,7 +308,7 @@ Veja este exemplo de serviço completo:
         {
             lang: 'javascript',
             code: `
-                const download = _remote.asBinary()
+                const download = _remote.init().asBinary()
                   .get('https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png');
 
                 if (!download.ok()) {
@@ -330,7 +330,7 @@ Veja este exemplo de serviço completo:
         {
             lang: 'python',
             code: `
-                download = _remote.asBinary().get(
+                download = _remote.init().asBinary().get(
                     "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
                 );
 
@@ -352,7 +352,7 @@ Veja este exemplo de serviço completo:
         {
             lang: 'ruby',
             code: `
-                download = _remote.asBinary().get(
+                download = _remote.init().asBinary().get(
                     "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
                 );
 
@@ -375,7 +375,7 @@ Veja este exemplo de serviço completo:
         {
             lang: 'kotlin',
             code: `
-                val download = _remote.asBinary().get(
+                val download = _remote.init().asBinary().get(
                     "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
                 );
 
@@ -415,7 +415,7 @@ Veja o exemplo completo de um serviço:
             code: `
                 const file = _app.file("public/images/logo.png");
 
-                const upload = _remote.asMultipartFormData()
+                const upload = _remote.init().asMultipartFormData()
                   .post(
                     'http://localhost:9000/services/file-receiver',
                     _val.map()
@@ -437,7 +437,7 @@ Veja o exemplo completo de um serviço:
             code: `
                 file = _app.file("public/images/logo.png")
 
-                upload = _remote.asMultipartFormData().post(
+                upload = _remote.init().asMultipartFormData().post(
                     "http://localhost:9000/services/file-receiver",
                     _val.map().set("file", file)
                 );
@@ -456,7 +456,7 @@ Veja o exemplo completo de um serviço:
             code: `
                 file = _app.file("public/images/logo.png")
 
-                upload = _remote.asMultipartFormData().post(
+                upload = _remote.init().asMultipartFormData().post(
                     "http://localhost:9000/services/file-receiver",
                     _val.map().set("file", file)
                 );
@@ -476,7 +476,7 @@ Veja o exemplo completo de um serviço:
             code: `
                 val file = _app.file("public/images/logo.png")
 
-                val upload = _remote.asMultipartFormData().post(
+                val upload = _remote.init().asMultipartFormData().post(
                     "http://localhost:9000/services/file-receiver",
                     _val.map().set("file", file)
                 );

@@ -4,7 +4,7 @@ title: SMTPConfig
 sidebar_label: SMTPConfig
 ---
 
-Definição da configuração do SMTP.
+Defines SMTP connection settings.
 
 ---
 
@@ -12,7 +12,7 @@ Definição da configuração do SMTP.
 
 ---
 
-#### getAuthMechanisms() : string
+#### <span style={{color: '#008000'}}>getAuthMechanisms</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns which authentication mechanisms are being used in the current configuration.
@@ -29,7 +29,7 @@ Authentication mechanisms used in the current configuration.
 
 ---
 
-#### getAuthNTLMDomain() : string
+#### <span style={{color: '#008000'}}>getAuthNTLMDomain</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the NTLM domain used in the current configuration.
@@ -46,7 +46,7 @@ The NTLM domain.
 
 ---
 
-#### getBcc() : string
+#### <span style={{color: '#008000'}}>getBcc</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns email addresses in the BCC (Blind Carbon Copy) field.
@@ -63,7 +63,7 @@ The email addresses.
 
 ---
 
-#### getCc() : string
+#### <span style={{color: '#008000'}}>getCc</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns email addresses in the CC (Carbon Copy) field
@@ -80,7 +80,7 @@ The email addresses.
 
 ---
 
-#### getFrom() : string
+#### <span style={{color: '#008000'}}>getFrom</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the sender email address of the current configuration.
@@ -97,7 +97,7 @@ Email address.
 
 ---
 
-#### getHTML() : string
+#### <span style={{color: '#008000'}}>getHTML</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the HTML code of the email message.
@@ -114,7 +114,7 @@ The HTML code.
 
 ---
 
-#### getHost() : string
+#### <span style={{color: '#008000'}}>getHost</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the current configuration host.
@@ -131,7 +131,7 @@ Host of the current configuration.
 
 ---
 
-#### getMultipartSubtype() : string
+#### <span style={{color: '#008000'}}>getMultipartSubtype</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the subtype of the multipart email message.
@@ -148,7 +148,7 @@ Message subtype.
 
 ---
 
-#### getPassword() : string
+#### <span style={{color: '#008000'}}>getPassword</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the current configuration password.
@@ -165,7 +165,7 @@ Password.
 
 ---
 
-#### getPort() : int
+#### <span style={{color: '#008000'}}>getPort</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Returns the current configuration port.
@@ -182,7 +182,7 @@ Port of the current configuration.
 
 ---
 
-#### getProtocol() : string
+#### <span style={{color: '#008000'}}>getProtocol</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the protocol used in the current configuration.
@@ -199,7 +199,7 @@ Current configuration protocol name.
 
 ---
 
-#### getReplyTo() : string
+#### <span style={{color: '#008000'}}>getReplyTo</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the email addresses specified in the Reply-To field.
@@ -216,7 +216,7 @@ The email addresses.
 
 ---
 
-#### getSocketFactoryClass() : string
+#### <span style={{color: '#008000'}}>getSocketFactoryClass</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the socketFactory class of the current configuration.
@@ -233,7 +233,7 @@ Current configuration socketFactory class name
 
 ---
 
-#### getSocketFactoryPort() : int
+#### <span style={{color: '#008000'}}>getSocketFactoryPort</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
 Returns the socketFactory port of the current configuration.
@@ -250,7 +250,7 @@ Current configuration socketFactory port.
 
 ---
 
-#### getSubject() : string
+#### <span style={{color: '#008000'}}>getSubject</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the email message subject.
@@ -267,7 +267,7 @@ The email subject.
 
 ---
 
-#### getSubjectPrefix() : string
+#### <span style={{color: '#008000'}}>getSubjectPrefix</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the email message subject prefix.
@@ -284,7 +284,7 @@ The subject prefix.
 
 ---
 
-#### getText() : string
+#### <span style={{color: '#008000'}}>getText</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the text of the email message.
@@ -301,7 +301,7 @@ The text message.
 
 ---
 
-#### getTo() : string
+#### <span style={{color: '#008000'}}>getTo</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the recipient's email address from the current configuration.
@@ -318,7 +318,7 @@ Email address.
 
 ---
 
-#### getUsername() : string
+#### <span style={{color: '#008000'}}>getUsername</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the current configuration username.
@@ -335,7 +335,7 @@ Username.
 
 ---
 
-#### isDebug() : boolean
+#### <span style={{color: '#008000'}}>isDebug</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether the current object is in debug mode active.
@@ -352,7 +352,7 @@ Whether it is active or not.
 
 ---
 
-#### isEnabled() : boolean
+#### <span style={{color: '#008000'}}>isEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether the current configuration is active.
@@ -369,7 +369,7 @@ Whether it is active or not.
 
 ---
 
-#### isQuitWait() : boolean
+#### <span style={{color: '#008000'}}>isQuitWait</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether in the current configuration the client should wait for the server's response to the QUIT command before closing the connection.
@@ -386,7 +386,7 @@ Whether or not to wait for a response.
 
 ---
 
-#### isSSL() : boolean
+#### <span style={{color: '#008000'}}>isSSL</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether SSL is enabled in the current configuration.
@@ -403,7 +403,7 @@ Whether or not it is active.
 
 ---
 
-#### isSocketFactoryFallback() : boolean
+#### <span style={{color: '#008000'}}>isSocketFactoryFallback</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether the configuration should attempt to use the system default SocketFactory if the specified SocketFactory fails.
@@ -420,7 +420,7 @@ Whether or not it will be used.
 
 ---
 
-#### isTLS() : boolean
+#### <span style={{color: '#008000'}}>isTLS</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether TLS is enabled in the current configuration.
@@ -437,7 +437,7 @@ Whether or not it is active.
 
 ---
 
-#### setAuthMechanisms(authMechanisms: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setAuthMechanisms</span>(<span style={{color: '#FF8000'}}>authMechanisms</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines which authentication mechanisms will be used in the current configuration.
@@ -460,7 +460,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setAuthNTLMDomain(authNTLMDomain: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setAuthNTLMDomain</span>(<span style={{color: '#FF8000'}}>authNTLMDomain</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the NTLM domain in the current configuration.
@@ -483,7 +483,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setBcc(bcc: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setBcc</span>(<span style={{color: '#FF8000'}}>bcc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the email addresses in the BCC (Blind Carbon Copy) field.
@@ -506,7 +506,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setCc(cc: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setCc</span>(<span style={{color: '#FF8000'}}>cc</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines email addresses in the CC (Carbon Copy) field.
@@ -529,7 +529,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setDebug(debug: boolean) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setDebug</span>(<span style={{color: '#FF8000'}}>debug</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines whether the current object is in debug mode active.
@@ -552,7 +552,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setEnabled(enabled: boolean) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setEnabled</span>(<span style={{color: '#FF8000'}}>enabled</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines whether the current configuration is active.
@@ -575,7 +575,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setFrom(from: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setFrom</span>(<span style={{color: '#FF8000'}}>from</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the sender email address of the current configuration.
@@ -598,7 +598,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setHTML(html: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setHTML</span>(<span style={{color: '#FF8000'}}>html</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the HTML code that will build the body of the email message.
@@ -621,7 +621,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setHost(host: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setHost</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the host of the current configuration.
@@ -644,7 +644,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setMultipartSubtype(multipartSubtype: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setMultipartSubtype</span>(<span style={{color: '#FF8000'}}>multipartSubtype</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the subtype of the multipart email message.
@@ -667,7 +667,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setPassword(password: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setPassword</span>(<span style={{color: '#FF8000'}}>password</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the current configuration password.
@@ -690,7 +690,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setPort(port: int) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setPort</span>(<span style={{color: '#FF8000'}}>port</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the port of the current configuration.
@@ -713,7 +713,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setProtocol(protocol: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setProtocol</span>(<span style={{color: '#FF8000'}}>protocol</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the protocol used in the current configuration.
@@ -736,7 +736,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setQuitWait(quitWait: boolean) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setQuitWait</span>(<span style={{color: '#FF8000'}}>quitWait</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines whether in the current configuration the client must wait for the server's response to the QUIT command before closing the connection.
@@ -759,7 +759,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setReplyTo(replyTo: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setReplyTo</span>(<span style={{color: '#FF8000'}}>replyTo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the email addresses specified in the Reply-To field.
@@ -782,7 +782,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setSSL(ssl: boolean) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setSSL</span>(<span style={{color: '#FF8000'}}>ssl</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines whether SSL is enabled in the current configuration.
@@ -805,7 +805,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setSocketFactoryClass(socketFactoryClass: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setSocketFactoryClass</span>(<span style={{color: '#FF8000'}}>socketFactoryClass</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the name of the class to be used in the current configuration's SocketFactory.
@@ -828,7 +828,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setSocketFactoryFallback(ssl: boolean) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setSocketFactoryFallback</span>(<span style={{color: '#FF8000'}}>ssl</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines whether the configuration should attempt to use the system default SocketFactory if the specified SocketFactory fails.
@@ -851,7 +851,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setSocketFactoryPort(socketFactoryPort: int) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setSocketFactoryPort</span>(<span style={{color: '#FF8000'}}>socketFactoryPort</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the port to be used in the current configuration's SocketFactory.
@@ -874,7 +874,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setSubject(subject: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setSubject</span>(<span style={{color: '#FF8000'}}>subject</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the email message subject.
@@ -897,7 +897,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setSubjectPrefix(subjectPrefix: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setSubjectPrefix</span>(<span style={{color: '#FF8000'}}>subjectPrefix</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the email message subject prefix.
@@ -920,7 +920,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setTLS(ssl: boolean) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setTLS</span>(<span style={{color: '#FF8000'}}>ssl</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines whether TLS is enabled in the current configuration.
@@ -943,7 +943,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setText(text: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setText</span>(<span style={{color: '#FF8000'}}>text</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the text of the email message.
@@ -966,7 +966,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setTo(to: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setTo</span>(<span style={{color: '#FF8000'}}>to</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the recipient's email address of the current configuration.
@@ -989,7 +989,7 @@ Current SMTPConfig object.
 
 ---
 
-#### setUsername(username: string) : [SMTPConfig](/docs/library/objects/SMTPConfig)
+#### <span style={{color: '#008000'}}>setUsername</span>(<span style={{color: '#FF8000'}}>username</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>
 ##### Description
 
 Defines the current configuration username.

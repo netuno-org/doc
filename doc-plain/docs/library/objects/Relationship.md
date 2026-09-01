@@ -4,7 +4,19 @@ title: Relationship
 sidebar_label: Relationship
 ---
 
-Definição da configuração do objeto Relation para configurar relacionamentos entre tabelas com Join.
+Configures a relationship between tables for a DB Form join.
+
+---
+
+## getAlias
+
+---
+
+#### <span style={{color: '#008000'}}>getAlias</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Return
+
+( _string_ )
+
 
 ---
 
@@ -12,7 +24,7 @@ Definição da configuração do objeto Relation para configurar relacionamentos
 
 ---
 
-#### getColumn() : string
+#### <span style={{color: '#008000'}}>getColumn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the column that will be used in the relationship.
@@ -29,14 +41,14 @@ The name of the column.
 
 ---
 
-#### getSubRelations() : [Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map
+#### <span style={{color: '#008000'}}>getSubRelations</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
 ##### Description
 
 Returns the sub relationships of the current object.
 
 ##### Return
 
-( _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ )
+( _java.util.Map_ )
 
 The sub relationships
 
@@ -46,7 +58,7 @@ The sub relationships
 
 ---
 
-#### getTableName() : string
+#### <span style={{color: '#008000'}}>getTableName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the table to be related.
@@ -63,7 +75,7 @@ The name of the table.
 
 ---
 
-#### getType() : org.netuno.tritao.db.form.join.RelationshipType
+#### <span style={{color: '#008000'}}>getType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.RelationshipType</span>
 ##### Description
 
 Returns the type of the relationship.
@@ -80,7 +92,7 @@ The type of the relationship.
 
 ---
 
-#### getWhere() : [Where](/docs/library/objects/Where)
+#### <span style={{color: '#008000'}}>getWhere</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
 ##### Description
 
 Returns the filter settings.
@@ -97,7 +109,7 @@ The filter settings.
 
 ---
 
-#### join(relation: [Relationship](/docs/library/objects/Relationship)) : [Relationship](/docs/library/objects/Relationship)
+#### <span style={{color: '#008000'}}>join</span>(<span style={{color: '#FF8000'}}>relation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Description
 
 Defines a second level of INNER JOIN relationship on the current object.
@@ -120,7 +132,7 @@ Current Relation object.
 
 ---
 
-#### leftJoin(relation: [Relationship](/docs/library/objects/Relationship)) : [Relationship](/docs/library/objects/Relationship)
+#### <span style={{color: '#008000'}}>leftJoin</span>(<span style={{color: '#FF8000'}}>relation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Description
 
 Defines a second level of LEFT JOIN relationship on the current object.
@@ -143,7 +155,7 @@ Current Relation object.
 
 ---
 
-#### rightJoin(relation: [Relationship](/docs/library/objects/Relationship)) : [Relationship](/docs/library/objects/Relationship)
+#### <span style={{color: '#008000'}}>rightJoin</span>(<span style={{color: '#FF8000'}}>relation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Description
 
 Defines a second level of RIGHT JOIN relationship on the current object.
@@ -162,11 +174,29 @@ Current Relation object.
 
 ---
 
+## setAlias
+
+---
+
+#### <span style={{color: '#008000'}}>setAlias</span>(<span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **alias** | _string_ |   |
+
+##### Return
+
+( _[Relationship](/docs/library/objects/Relationship)_ )
+
+
+---
+
 ## setColumn
 
 ---
 
-#### setColumn(column: string) : [Relationship](/docs/library/objects/Relationship)
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Description
 
 Defines the name of the column that will be used in the relationship.
@@ -189,7 +219,7 @@ Current Relation object.
 
 ---
 
-#### setSubRelations(subRelations: [Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map) : [Relationship](/docs/library/objects/Relationship)
+#### <span style={{color: '#008000'}}>setSubRelations</span>(<span style={{color: '#FF8000'}}>subRelations</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Description
 
 Defines the sub relationships of the current object.
@@ -198,7 +228,7 @@ Defines the sub relationships of the current object.
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **subRelations** | _[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map_ | the sub relationships. |
+| **subRelations** | _java.util.Map_ | the sub relationships. |
 
 ##### Return
 
@@ -212,7 +242,7 @@ Current Relation object.
 
 ---
 
-#### setTableName(tableName: string) : [Relationship](/docs/library/objects/Relationship)
+#### <span style={{color: '#008000'}}>setTableName</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Description
 
 Defines the name of the table to be related.
@@ -235,7 +265,7 @@ Current Relation object.
 
 ---
 
-#### setType(type: org.netuno.tritao.db.form.join.RelationshipType) : [Relationship](/docs/library/objects/Relationship)
+#### <span style={{color: '#008000'}}>setType</span>(<span style={{color: '#FF8000'}}>type</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.RelationshipType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Description
 
 Defines the type of the relationship.
@@ -258,7 +288,7 @@ Current Relation object.
 
 ---
 
-#### setWhere(where: [Where](/docs/library/objects/Where)) : [Relationship](/docs/library/objects/Relationship)
+#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Description
 
 Defines the filter settings.
@@ -281,7 +311,7 @@ Current Relation object.
 
 ---
 
-#### where(where: [Where](/docs/library/objects/Where)) : [Relationship](/docs/library/objects/Relationship)
+#### <span style={{color: '#008000'}}>where</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Description
 
 Defines the filter settings.

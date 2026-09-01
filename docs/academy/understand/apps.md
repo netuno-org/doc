@@ -21,7 +21,7 @@ Imagine that you have an application to send a Newsletter, another to manage Boo
 
 So there is no reason to share the same database, although each one has its own database:
 
-![Decoupled applications.](/docs/assets/business/apps-db-en-decoupled.svg "Decoupled applications.")
+<img src="/docs/assets/business/apps-db-en-decoupled.svg" alt="Decoupled applications." />
 
 To summarize, none of the applications knows the data stored in the other applications, although its entire function is independent of the other existing applications.
 
@@ -43,7 +43,7 @@ Imagine the scenario in which one of you have an application for customer manage
 
 Therefore, the billing application needs to be integrated with both applications to obtain data from customers and suppliers in order to be able to relate invoices and manage collections and payments in different situations.
 
-![Coupled applications.](/docs/assets/business/apps-db-en-coupled.svg "Coupled applications.")
+<img src="/docs/assets/business/apps-db-en-coupled.svg" alt="Coupled applications." />
 
 To ensure that the applications do not interfere with each other's sensitive data, it is also recommended to use different database accesses for each application, and you can even control your access to the tables via the database to ensure that there is no unwanted interference.
 

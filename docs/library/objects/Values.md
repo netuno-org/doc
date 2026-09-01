@@ -4,7 +4,7 @@ title: Values
 sidebar_label: Values
 ---
 
-O Values um tipo de objecto que tanto pode ser um dicionário como uma lista.Suporta formatação em JSON e codificação para HTML e URL (query string).
+Values is a container that can behave as either a map or a list. It supports JSON formatting plus HTML and URL query-string encoding.
 
 ---
 

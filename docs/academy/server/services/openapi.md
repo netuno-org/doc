@@ -396,6 +396,12 @@ _dataSchema.set('type', 'object')
     )
 ```
 
+## Videos
+
+The following video demonstrates how to develop an API integrated with OpenAPI:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/SaeaMh_zwRg?si=oNt_rOcL8Xuu4qE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Summarize
 
 Therefore with OpenAPI support we can create validation rules using JSON Schema, which offers the following advantages:

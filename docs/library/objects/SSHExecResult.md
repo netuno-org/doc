@@ -4,7 +4,7 @@ title: SSHExecResult
 sidebar_label: SSHExecResult
 ---
 
-Resultado gerado pelos comandos SSH depois que são executados.
+Contains the result of an executed SSH command.
 
 ---
 

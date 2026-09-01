@@ -15,12 +15,12 @@ Interacts with the server and obtains configuration parameters specified in `con
 #### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>getHost</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
-Obtém o hostname de rede ou ip configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
+Gets the configured network hostname or IP address of the Netuno server.
 
 ##### How To Use
 
 ```javascript
-// Apresenta nos logs e no terminal o hostname ou IP do servidor:
+// Logs the server hostname or IP address:
 _log.info(
     _server.getHost()
 )
@@ -41,12 +41,12 @@ Network hostname or IP of the Netuno server.
 #### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>getName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
-Obtém o nome do servidor do Netuno, especificado no config.js na pasta raíz do Netuno.
+Gets the configured Netuno server name.
 
 ##### How To Use
 
 ```javascript
-// Apresenta no output do serviço o nome do servidor:
+// Writes the server name to the log:
 _log.info(
     _server.getName()
 )
@@ -67,14 +67,14 @@ Netuno server name.
 #### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>getPort</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
-Obtém o porto de rede configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
+Gets the configured network port of the Netuno server.
 
 ##### How To Use
 
 ```javascript
-// Apresenta nos logs e no terminal o porto do servidor:
+// Logs the server port:
 _log.info(
-    `Porto do servidor: ${_server.getPort()}`
+    `Server port: ${_server.getPort()}`
 )
 ```
 
@@ -93,12 +93,12 @@ Network port number of the Netuno server.
 #### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>host</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
-Obtém o hostname de rede ou ip configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
+Gets the configured network hostname or IP address of the Netuno server.
 
 ##### How To Use
 
 ```javascript
-// Apresenta nos logs e no terminal o hostname ou IP do servidor:
+// Logs the server hostname or IP address:
 _log.info(
     _server.host()
 )
@@ -119,12 +119,12 @@ Network hostname or IP of the Netuno server.
 #### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>name</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
-Obtém o nome do servidor do Netuno, especificado no config.js na pasta raíz do Netuno.
+Gets the configured Netuno server name.
 
 ##### How To Use
 
 ```javascript
-// Apresenta no output o nome do servidor:
+// Writes the server name to the response:
 _out.print(
     _server.name()
 )
@@ -145,14 +145,14 @@ Netuno server name.
 #### <span style={{fontWeight: 'normal'}}>_server</span>.<span style={{color: '#008000'}}>port</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
 ##### Description
 
-Obtém o porto de rede configurado do servidor do Netuno, fica especificado no config.js na pasta raíz do Netuno.
+Gets the configured network port of the Netuno server.
 
 ##### How To Use
 
 ```javascript
-// Apresenta nos logs e no terminal o porto do servidor:
+// Logs the server port:
 _log.info(
-    `Porto do servidor: ${_server.port()}`
+    `Server port: ${_server.port()}`
 )
 ```
 
@@ -239,7 +239,7 @@ Desliga o servidor do Netuno depois de alguns tempo.
 ##### How To Use
 
 ```javascript
-// Após 10 segundos finaliza completamente o Netuno:
+// Shuts Netuno down completely after 10 seconds:
 _server.shutdown(10000)
 ```
 

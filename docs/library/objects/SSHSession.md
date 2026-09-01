@@ -4,7 +4,7 @@ title: SSHSession
 sidebar_label: SSHSession
 ---
 
-Sessão SSH para executar comandos.
+Represents an SSH session used to execute commands.
 
 ---
 

@@ -49,7 +49,7 @@ _out.json(
 
 > In place of '?' (question marks) the corresponding parameter will be injected according to its order.
 
-### Query with PostgreSQL and H2DataBase parameters and types
+## Query with PostgreSQL and H2DataBase parameters and types
 
 H2Database and PostgreSQL support a simple conversion syntax, and so we can assign types to the parameters as follows:
 
@@ -139,7 +139,7 @@ if (!dbResult) {
 }
 ```
 
-### Validate the amount of records
+## Validate the amount of records
 
 When you make a database selection in which the result is unique, to access the data it is convenient to proceed as **follows**:
 

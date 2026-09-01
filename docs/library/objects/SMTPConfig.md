@@ -4,7 +4,7 @@ title: SMTPConfig
 sidebar_label: SMTPConfig
 ---
 
-Definição da configuração do SMTP.
+Defines SMTP connection settings.
 
 ---
 

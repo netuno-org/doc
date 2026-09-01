@@ -4,41 +4,41 @@ title: Group
 sidebar_label: Group
 ---
 
-Definição do objeto Group para agrupamento de resultados com Query.
+Defines result grouping for a DB Form operation.
 
 ---
 
-## getColumn
+## getColumns
 
 ---
 
-#### getColumn() : string
+#### <span style={{color: '#008000'}}>getColumns</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;string&gt;</span>
 ##### Description
 
-Returns the column that will be used to perform the grouping.
+Returns the columns that will be used to perform the grouping.
 
 ##### Return
 
-( _string_ )
+( _java.util.List_ )
 
-The name of the column.
-
----
-
-## setColumn
+Columns.
 
 ---
 
-#### setColumn(column: string) : [Group](/docs/library/objects/Group)
+## setColumns
+
+---
+
+#### <span style={{color: '#008000'}}>setColumns</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List&lt;string&gt;</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Group](/docs/library/objects/Group)</span>
 ##### Description
 
-Defines the column that will be used to perform the grouping.
+Defines the columns that will be used to perform the grouping.
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **column** | _string_ | The name of the column. |
+| **column** | _java.util.List_ | columns. |
 
 ##### Return
 

@@ -6,38 +6,41 @@ This is the source code of the official documentation online:
 
 - https://doc.netuno.org
 
-### Configuration
+## Prerequisites
 
-Copy the `docusaurus.config.sample.js` file to `docusaurus.config.js`, and adapt it.
+- Node.js 18 or newer
+- [pnpm](https://pnpm.io/installation)
 
-Here is the command:
+## Configuration
+
+Copy `docusaurus.config.sample.js` to the ignored local file `docusaurus.config.js`, then adapt it if necessary:
 
 ```
 cp docusaurus.config.sample.js docusaurus.config.js
 ```
 
-### Installation
+In PowerShell, use `Copy-Item docusaurus.config.sample.js docusaurus.config.js`.
 
-Use the [PNPM](https://pnpm.io/installation) because it is better.
-
-```
-$ pnpm install
-```
-
-### Start EN
+## Installation
 
 ```
-$ pnpm start
+pnpm install
 ```
 
-### Start PT
+## Start the English site
 
 ```
-$ pnpm run start --locale pt
+pnpm start
 ```
 
-### Build
+## Start the Portuguese site
 
 ```
-$ pnpm run build
+pnpm start --locale pt
+```
+
+## Build all locales
+
+```
+pnpm build
 ```

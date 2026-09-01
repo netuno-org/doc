@@ -255,7 +255,7 @@ Configuration object loaded from received data.
 #### _smtp.config(config: [SMTPConfig](/docs/library/objects/SMTPConfig)) : [SMTP](/docs/library/resources/smtp)
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 
@@ -782,7 +782,7 @@ Current SMTP object.
 #### _smtp.setConfig(config: [SMTPConfig](/docs/library/objects/SMTPConfig)) : [SMTP](/docs/library/resources/smtp)
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 

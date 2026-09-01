@@ -4,7 +4,7 @@ title: Operation
 sidebar_label: Operation
 ---
 
-Definição da configuração do objeto Operation para operações em base de dados.
+Builds DB Form query and data-change operations.
 
 ---
 

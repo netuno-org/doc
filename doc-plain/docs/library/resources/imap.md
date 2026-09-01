@@ -63,7 +63,7 @@ Configuration object loaded from received data.
 #### _imap.config(config: [IMAPConfig](/docs/library/objects/IMAPConfig)) : [IMAP](/docs/library/resources/imap)
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 
@@ -377,7 +377,7 @@ Current IMAP feature.
 #### _imap.setConfig(config: [IMAPConfig](/docs/library/objects/IMAPConfig)) : [IMAP](/docs/library/resources/imap)
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 

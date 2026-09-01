@@ -449,7 +449,7 @@ _convert.toDouble(3456)
 
 ( _double_ )
 
-Retorna o valor recebido em **double**.
+Returns the supplied value as a **double**.
 
 ---
 
@@ -474,7 +474,7 @@ _convert.toDouble(3456)
 
 ( _double_ )
 
-Retorna o valor recebido em **double**.
+Returns the supplied value as a **double**.
 
 ---
 
@@ -499,7 +499,7 @@ _convert.toDouble(3456)
 
 ( _double_ )
 
-Retorna o valor recebido em **double**.
+Returns the supplied value as a **double**.
 
 ---
 
@@ -524,7 +524,7 @@ _convert.toDouble(3456)
 
 ( _double_ )
 
-Retorna o valor recebido em **double**.
+Returns the supplied value as a **double**.
 
 ---
 
@@ -549,7 +549,7 @@ _convert.toDouble(3456)
 
 ( _double_ )
 
-Retorna o valor recebido em **double**.
+Returns the supplied value as a **double**.
 
 ---
 
@@ -671,7 +671,7 @@ _convert.toFloat(3456)
 
 ( _float_ )
 
-Retorna o valor recebido em **float**.
+Returns the supplied value as a **float**.
 
 ---
 
@@ -696,7 +696,7 @@ _convert.toFloat(3456)
 
 ( _float_ )
 
-Retorna o valor recebido em **float**.
+Returns the supplied value as a **float**.
 
 ---
 
@@ -721,7 +721,7 @@ _convert.toFloat(3456)
 
 ( _float_ )
 
-Retorna o valor recebido em **float**.
+Returns the supplied value as a **float**.
 
 ---
 
@@ -746,7 +746,7 @@ _convert.toFloat(3456)
 
 ( _float_ )
 
-Retorna o valor recebido em **float**.
+Returns the supplied value as a **float**.
 
 ---
 
@@ -771,7 +771,7 @@ _convert.toFloat(3456)
 
 ( _float_ )
 
-Retorna o valor recebido em **float**.
+Returns the supplied value as a **float**.
 
 ---
 
@@ -876,7 +876,7 @@ _convert.toInt(3456)
 
 ( _int_ )
 
-Retorna o valor recebido em **int**.
+Returns the supplied value as an **int**.
 
 ---
 
@@ -901,7 +901,7 @@ _convert.toInt(3456)
 
 ( _int_ )
 
-Retorna o valor recebido em **int**.
+Returns the supplied value as an **int**.
 
 ---
 
@@ -926,7 +926,7 @@ _convert.toInt(3456)
 
 ( _int_ )
 
-Retorna o valor recebido em **int**.
+Returns the supplied value as an **int**.
 
 ---
 
@@ -951,7 +951,7 @@ _convert.toInt(3456)
 
 ( _int_ )
 
-Retorna o valor recebido em **int**.
+Returns the supplied value as an **int**.
 
 ---
 
@@ -976,7 +976,7 @@ _convert.toInt(3456)
 
 ( _int_ )
 
-Retorna o valor recebido em **int**.
+Returns the supplied value as an **int**.
 
 ---
 
@@ -1035,7 +1035,7 @@ _convert.toLong(3456)
 
 ( _long_ )
 
-Retorna o valor recebido em **long**.
+Returns the supplied value as a **long**.
 
 ---
 
@@ -1060,7 +1060,7 @@ _convert.toLong(3456)
 
 ( _long_ )
 
-Retorna o valor recebido em **long**.
+Returns the supplied value as a **long**.
 
 ---
 
@@ -1085,7 +1085,7 @@ _convert.toLong(3456)
 
 ( _long_ )
 
-Retorna o valor recebido em **long**.
+Returns the supplied value as a **long**.
 
 ---
 
@@ -1110,7 +1110,7 @@ _convert.toLong(3456)
 
 ( _long_ )
 
-Retorna o valor recebido em **long**.
+Returns the supplied value as a **long**.
 
 ---
 
@@ -1135,7 +1135,7 @@ _convert.toLong(3456)
 
 ( _long_ )
 
-Retorna o valor recebido em **long**.
+Returns the supplied value as a **long**.
 
 ---
 
@@ -1286,7 +1286,7 @@ Returns the Throwable type error.
 #### _convert.toUUID(value: string) : java.util.UUID
 ##### Description
 
-Inicia um objeto de UUID com o conteúdo recebido.
+Creates a UUID object from the supplied content.
 
 ##### Attributes
 

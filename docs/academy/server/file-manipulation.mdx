@@ -21,9 +21,9 @@ This is useful when we need to automate a process that requires manipulating any
 
 The low-code polyglot programming features that allow you to manipulate files are:
 
-- `_app` - [Application](/docs/library/resources/App)
-- `_storage` - [Storage](/docs/library/resources/Storage)
-- `_os` - [Operating System](/docs/library/resources/OS)
+- `_app` - [Application](/docs/library/resources/app)
+- `_storage` - [Storage](/docs/library/resources/storage)
+- `_os` - [Operating System](/docs/library/resources/os)
 
 Through these resources we have the methods to:
 
@@ -407,7 +407,7 @@ To move a subfolder without changing its name, simply specify the new path in th
 
 Generating content into files is done using the `output` method, which provides an object of type [OutputStream](/docs/library/objects/OutputStream).
 
-To write the data to the `output`, we use the [printAndClose](/docs/library/objects/OutputStream#printandclosebytes-string--outputstream) method, which prints the content to the file and closes the file, saving the content.
+To write the data to the `output`, we use the [printAndClose](/docs/library/objects/OutputStream#printandclose) method, which prints the content to the file and closes the file, saving the content.
 
 #### Write Text File
 
@@ -464,7 +464,7 @@ that will be tabbed, for example `.toJSON(4)`.
 Retrieving content from files is done through the `input` method, which provides an object of type
 [InputStream](/docs/library/objects/InputStream).
 
-To read the data from the `input` we use the method [readAllAndClose](/docs/library/objects/InputStream#readAllAndClose),
+To read the data from the `input` we use the method [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
 which processes the reading of the content in the file and closes the file.
 
 #### Read Text File
@@ -521,7 +521,7 @@ When initializing storage for a file, we can perform writing using the [output](
 method, which obtains an instance of the [OutputStream](/docs/library/objects/OutputStream) object that allows
 processing and reading the data.
 
-So with `OutputStream` the method [printAndClose](/docs/library/objects/OutputStream#printandclosebytes-string--outputstream),
+So with `OutputStream` the method [printAndClose](/docs/library/objects/OutputStream#printandclose),
 writes text (`string`) to the file and closes it.
 
 See this example:

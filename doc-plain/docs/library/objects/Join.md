@@ -4,7 +4,19 @@ title: Join
 sidebar_label: Join
 ---
 
-Definição da configuração do objeto Join para consultas simplificadas.
+Configures a table join for a DB Form operation.
+
+---
+
+## getAlias
+
+---
+
+#### <span style={{color: '#008000'}}>getAlias</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Return
+
+( _string_ )
+
 
 ---
 
@@ -12,7 +24,7 @@ Definição da configuração do objeto Join para consultas simplificadas.
 
 ---
 
-#### getJoinType() : org.netuno.tritao.db.form.join.JoinType
+#### <span style={{color: '#008000'}}>getJoinType</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>
 ##### Description
 
 Returns the type of the joint or the relationship.
@@ -29,7 +41,7 @@ The type of the joint
 
 ---
 
-#### getRelation() : [Relationship](/docs/library/objects/Relationship)
+#### <span style={{color: '#008000'}}>getRelation</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>
 ##### Description
 
 Returns the object with the relationship configuration.
@@ -46,7 +58,7 @@ The object with the relationship configuration.
 
 ---
 
-#### getTable() : string
+#### <span style={{color: '#008000'}}>getTable</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the name of the relationship's main table.
@@ -63,7 +75,7 @@ The name of the relationship's main table.
 
 ---
 
-#### getWhere() : [Where](/docs/library/objects/Where)
+#### <span style={{color: '#008000'}}>getWhere</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>
 ##### Description
 
 Returns the Where object with the configuration of conditions for the table to be related.
@@ -76,11 +88,29 @@ The Where object with the configuration of conditions
 
 ---
 
+## setAlias
+
+---
+
+#### <span style={{color: '#008000'}}>setAlias</span>(<span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](/docs/library/objects/Join)</span>
+##### Attributes
+
+| NAME | TYPE | DESCRIPTION |
+|---|---|---|
+| **alias** | _string_ |   |
+
+##### Return
+
+( _[Join](/docs/library/objects/Join)_ )
+
+
+---
+
 ## setJoinType
 
 ---
 
-#### setJoinType(joinType: org.netuno.tritao.db.form.join.JoinType) : [Join](/docs/library/objects/Join)
+#### <span style={{color: '#008000'}}>setJoinType</span>(<span style={{color: '#FF8000'}}>joinType</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.db.form.join.JoinType</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](/docs/library/objects/Join)</span>
 ##### Description
 
 Defines the type of the joint or the relationship.
@@ -103,7 +133,7 @@ Current Join object.
 
 ---
 
-#### setRelation(ralation: [Relationship](/docs/library/objects/Relationship)) : [Join](/docs/library/objects/Join)
+#### <span style={{color: '#008000'}}>setRelation</span>(<span style={{color: '#FF8000'}}>ralation</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Relationship](/docs/library/objects/Relationship)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](/docs/library/objects/Join)</span>
 ##### Description
 
 Defines the object with the relationship configuration.
@@ -126,7 +156,7 @@ Current Join object.
 
 ---
 
-#### setTable(tableName: string) : [Join](/docs/library/objects/Join)
+#### <span style={{color: '#008000'}}>setTable</span>(<span style={{color: '#FF8000'}}>tableName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](/docs/library/objects/Join)</span>
 ##### Description
 
 Defines the name of the relationship's main table.
@@ -149,7 +179,7 @@ Current Join object.
 
 ---
 
-#### setWhere(where: [Where](/docs/library/objects/Where)) : [Join](/docs/library/objects/Join)
+#### <span style={{color: '#008000'}}>setWhere</span>(<span style={{color: '#FF8000'}}>where</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Where](/docs/library/objects/Where)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Join](/docs/library/objects/Join)</span>
 ##### Description
 
 Defines the Where object with the configuration of conditions for the table to be related.

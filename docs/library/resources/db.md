@@ -346,7 +346,7 @@ Performs the deletion of records in the database based on the UID.
 ##### How To Use
 
 ```javascript
-// Executa a eliminação através do uid
+// Deletes the record by UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
@@ -829,7 +829,7 @@ Example that demonstrates how to define columns, conditions, ordering and pagina
 
 ```javascript
 const list = _db.find(
-    "pessoa",
+    "person",
     _val.map()
         .set(
             "columns",
@@ -845,7 +845,7 @@ const list = _db.find(
         .set(
             "where",
             _val.map()
-                .set("grupo", 1)
+                .set("group", 1)
                 .set(
                     "email",
                     _val.map()
@@ -1167,7 +1167,7 @@ The version of the database in numeric format, for example: 10.5
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>index</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Index](/docs/library/objects/Index)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>index</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Index](/docs/library/objects/)</span>
 ##### Description
 
 Performs the manipulation of indexes in the database.
@@ -1185,7 +1185,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ##### Return
 
-( _[Index](/docs/library/objects/Index)_ )
+( _[Index](/docs/library/objects/)_ )
 
 
 ---
@@ -1612,7 +1612,7 @@ Returns a relationship with a form.
 
 ( _[Link](/docs/library/objects/Link)_ )
 
-Objeto Link.
+Link object.
 
 ---
 
@@ -1794,7 +1794,7 @@ Returns the object for pagination configuration when using Query's page() method
 
 ( _org.netuno.tritao.db.form.pagination.Pagination_ )
 
-Objeto Pagination.
+Pagination object.
 
 ---
 
@@ -1818,7 +1818,7 @@ Returns the object for pagination configuration when using Query's page() method
 
 ( _org.netuno.tritao.db.form.pagination.Pagination_ )
 
-Objeto Pagination.
+Pagination object.
 
 ---
 
@@ -2242,7 +2242,7 @@ Executes the insertion or update of a record in the database based on the UID.
 ##### How To Use
 
 ```javascript
-// Executa a eliminação através do uid
+// Deletes the record by UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
@@ -2283,7 +2283,7 @@ Executes the insertion or update of a record in the database based on the UID.
 ##### How To Use
 
 ```javascript
-// Executa a eliminação através do uid
+// Deletes the record by UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
@@ -2324,7 +2324,7 @@ Executes the insertion or update of a record in the database based on the UID.
 ##### How To Use
 
 ```javascript
-// Executa a eliminação através do uid
+// Deletes the record by UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
@@ -2365,7 +2365,7 @@ Executes the insertion or update of a record in the database based on the UID.
 ##### How To Use
 
 ```javascript
-// Executa a eliminação através do uid
+// Deletes the record by UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 

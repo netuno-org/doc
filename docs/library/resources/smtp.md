@@ -255,7 +255,7 @@ Configuration object loaded from received data.
 #### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 
@@ -816,7 +816,7 @@ Current SMTP object.
 #### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>setConfig</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTPConfig](/docs/library/objects/SMTPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 

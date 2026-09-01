@@ -4,7 +4,7 @@ title: Link
 sidebar_label: Link
 ---
 
-Definição da configuração do objeto Link para realcionamento entre formularios.
+Configures a relationship between Netuno Forms.
 
 ---
 

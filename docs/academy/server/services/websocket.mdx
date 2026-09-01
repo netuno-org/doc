@@ -548,13 +548,16 @@ To easily integrate with the frontend, the NPM module is available:
 
 Installation command:
 
-- `bun install @netuno/ws-client`
+- `bun add @netuno/ws-client`
+
+Import and configure the client:
 
 ```js
+import _ws from '@netuno/ws-client';
+
 _ws.config({
     url: 'ws://localhost:9000/ws/example',
     servicesPrefix: '/services',
-    method: 'GET',
     autoReconnect: true,
     connect: (event) => {
         console.info('WebSocket Connected', event);
@@ -580,7 +583,7 @@ _ws.config({
 >
 > `wss://[host][public][path]`
 
-A seguir pode iniciar a conexão:
+You can then open the connection:
 
 ```js
 _ws.connect();
@@ -595,13 +598,13 @@ Before starting, we must create an observer for the service response, for exampl
 
 ```js
 const listenerRef = _ws.addListener({
-    method: 'GET', // Optional, default is GET.
+    method: 'GET', // Optional; omit it to listen for every method.
     service: 'path/of/my/service/here',
     success: (data) => {
-        console.log('Resposta do serviço executado via WebSocket:', data);
+        console.log('Response from the service executed via WebSocket:', data);
     },
     fail: (error)=> {
-        console.log('O serviço executado via WebSocket falhou:', error);
+        console.log('The service executed via WebSocket failed:', error);
     }
 });
 ```

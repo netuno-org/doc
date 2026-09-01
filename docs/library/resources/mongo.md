@@ -331,7 +331,7 @@ The index factory.
 #### <span style={{fontWeight: 'normal'}}>_mongo</span>.<span style={{color: '#008000'}}>init</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Mongo](/docs/library/resources/mongo)</span>
 ##### Description
 
-Inicializa a conexão com o MongoDB utilizando a configuração padrão.
+Initializes a MongoDB connection with the default configuration.
 
 ##### Return
 

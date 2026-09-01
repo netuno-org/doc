@@ -11,7 +11,7 @@ Industry 4.0 or (Fourth Industrial Revolution) is the current trend of automatio
 
 One of the main effects of the Fourth Industrial Revolution is increased human productivity. With technologies like AI and automation augmenting our professional lives, we're able to make smart choices, faster than ever before.
 
-![Evolução da Indústria](/docs/assets/business/industry-diagram-1.jpg "Evolução da Indústria.")
+![Evolution of industry](/docs/assets/business/industry-diagram-1.jpg "Evolution of industry")
 
 ## Principles
 
@@ -24,7 +24,7 @@ As a result, researchers have identified six design principles that are crucial 
 * **Service Orientation**
 * **Modularity**
 
-[Design Principles](https://www.rmit.edu.au/news/c4de/industry-4-0-design-principles#:~:text=As%20a%20result%2C%20researchers%20have,service%20orientation%3B%20and%20modularity1)
+[Design Principles](https://www.mdpi.com/2071-1050/12/23/9927)
 
 ## Relevant Technologies
 
@@ -51,7 +51,7 @@ Research and development demands will offer opportunities for technically qualif
 
 Industry 4.0 Program is an initiative of the Portuguese Government that aims to accelerate the implementation of Industry 4.0 in Portugal.
 
-[i4.o Industry](https://www.iapmei.pt/Paginas/Industria-4-0.aspx)
+[Industry 4.0](https://www.iapmei.pt/pt/paginas/industria-40/)
 
 Main objectives:
 
@@ -92,7 +92,7 @@ _Netuno_ has conquers big companies and experienced developers every day.
 
 _Netuno_ is applicable to solve problems in all Business sectors, management data, and processes from the beginning till the final product.
 
-![Netuno da Matéria Prima até a Produção.](/docs/assets/business/industry-netuno-1.jpg "Netuno da Matéria Prima até a Produção.")
+![Netuno from raw material through production](/docs/assets/business/industry-netuno-1.jpg "Netuno from raw material through production")
 
 > _Netuno_ supports production by ensuring that there is less waste and reducing failures.
 
@@ -100,7 +100,7 @@ _Netuno_ is applicable to solve problems in all Business sectors, management dat
 
 _Netuno_ Assist in orchestrating the relationship with other critical stakeholders to ensure that the entire business flows as desired.
 
-![Netuno da Distribuição até a Venda.](/docs/assets/business/industry-netuno-2.jpg "Netuno da Distribuição até a Venda.")
+![Netuno from distribution through sales](/docs/assets/business/industry-netuno-2.jpg "Netuno from distribution through sales")
 
 > _Netuno_ guarantees improvement in the entire process.
 

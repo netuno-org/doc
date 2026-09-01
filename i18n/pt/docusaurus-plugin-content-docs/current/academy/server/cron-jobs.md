@@ -32,7 +32,7 @@ Para simplificar cada serviço agendado é um **job** à parte, que tem a sua pr
 
 Assim, a execução de cada job passa pela execução de um URL (_endereço web, link_), que tanto pode ser externo como interno da própria aplicação. Ao ser um link externo tanto pode ser de uma outra aplicação como de um URL qualquer externo na internet, na rede ou no computador.
 
-![Cron Diagram](/docs/assets/academy/server/cron.svg)
+<img src="/docs/assets/academy/server/cron.svg" alt="Diagrama do Cron" />
 
 No gráfico acima demonstra que o Netuno contém 2 aplicações, onde cada uma tem configurado 2 jobs (_serviços agendados_), que são executados em momentos diferentes, respectivos a uma configuração qualquer. 
 

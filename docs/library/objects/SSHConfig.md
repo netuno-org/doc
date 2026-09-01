@@ -4,7 +4,7 @@ title: SSHConfig
 sidebar_label: SSHConfig
 ---
 
-Definição da configuração do SSH.
+Defines SSH connection settings.
 
 ---
 

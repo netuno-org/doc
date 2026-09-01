@@ -4,7 +4,7 @@ title: SSHSession
 sidebar_label: SSHSession
 ---
 
-Sessão SSH para executar comandos.
+Represents an SSH session used to execute commands.
 
 ---
 
@@ -12,7 +12,7 @@ Sessão SSH para executar comandos.
 
 ---
 
-#### close() : void
+#### <span style={{color: '#008000'}}>close</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Closes the current session.
@@ -28,7 +28,7 @@ Closes the current session.
 
 ---
 
-#### closed() : boolean
+#### <span style={{color: '#008000'}}>closed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Checks if the session is still open.
@@ -45,7 +45,7 @@ True if it is open.
 
 ---
 
-#### exec(command: string) : [SSHExecResult](/docs/library/objects/SSHExecResult)
+#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](/docs/library/objects/SSHExecResult)</span>
 ##### Description
 
 Execute commands remotely via SSH on the server.
@@ -64,7 +64,7 @@ Command execution result.
 
 ---
 
-#### exec(command: string, timeout: int) : [SSHExecResult](/docs/library/objects/SSHExecResult)
+#### <span style={{color: '#008000'}}>exec</span>(<span style={{color: '#FF8000'}}>command</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>timeout</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHExecResult](/docs/library/objects/SSHExecResult)</span>
 ##### Description
 
 Execute commands remotely via SSH on the server.
@@ -88,7 +88,7 @@ Command execution result.
 
 ---
 
-#### isClosed() : boolean
+#### <span style={{color: '#008000'}}>isClosed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Return
 
 ( _boolean_ )

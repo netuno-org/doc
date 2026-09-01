@@ -50,7 +50,7 @@ because the command is executed directly in the database without being possible 
 Actions are executed when data manipulation occurs in the backoffice forms auto-generated
 by Netuno, or when we execute database operations in the code using:
 
-- `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExits(...)`, `_db.insertMany(...)`, among others.
+- `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExists(...)`, `_db.insertMany(...)`, among others.
 
 - `_db.update(...)`, `_db.form(...).update()`, `_db.updateMany(...)`, among others.
 - `_db.delete(...)`, `_db.form(...).delete()`, `_db.deleteMany(...)`, among others.
@@ -72,7 +72,7 @@ relationships that are being created, modified, or deleted.
 
 Through the `_dataItem` resource, we can access all the information and check details of the ongoing operation.
 
-> See the [DataItem](/docs/library/objects/DataItem) object documentation for more details on what
+> See the [DataItem](/docs/library/resources/dataItem) resource documentation for more details on what
 > the `_dataItem` resource supports.
 
 **Note:** The `_dataItem` resource is only available in the action code.

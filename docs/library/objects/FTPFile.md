@@ -4,7 +4,7 @@ title: FTPFile
 sidebar_label: FTPFile
 ---
 
-Os dados referente a um ficheiro FTP.
+Contains information about a file accessed over FTP.
 
 ---
 

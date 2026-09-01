@@ -10,7 +10,7 @@ Este guia apresenta os passos iniciais para configurar o idioma da aplicação D
 
 Todas as alterações são feitas no arquivo `_development.json` de configuração da aplicação **Demo**, localizado na pasta /apps/demo/**config**.
 
-### Pré-Requisitos
+## Pré-Requisitos
 
 Antes de editar a configuração, confirme estes pontos:
 

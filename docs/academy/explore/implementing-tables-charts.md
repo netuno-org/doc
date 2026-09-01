@@ -34,7 +34,7 @@ By following all the steps in this tutorial, you will build a functional dashboa
 
 ![product-final-pt.png](/docs/assets/academy/explore/implementing-tables-charts/product-final-pt.png)
 
-### Solution Architecture
+## Solution Architecture
 
 Before writing any code, it's important to understand how the pieces fit together. The solution is divided into **4 layers** that communicate from top to bottom:
 
@@ -139,7 +139,7 @@ _out.json(list);
 - **About the active = true filter:** The database has an **active** column in the **worker** and **record** tables. By filtering only active records, we ensure that archived or deactivated data does not appear in the table and graph.
 :::
 
-### ## Step 3: Frontend Environment (React)
+## Step 3: Frontend Environment (React)
 
 Now that the backend (database and services) is ready, let's prepare the visual interface.
 
@@ -241,7 +241,7 @@ The **columns** configuration tells Ant Design which title to display in the hea
 **index.less file:** Create the `index.less` file in the same folder. It can remain empty for now, as Ant Design already provides the basic table styling.
 
 
-### ## Step 5: ChartBar Component
+## Step 5: ChartBar Component
 
 We will create a Bar Chart to visualize the data using the **react-chartjs-2** library. This component will receive the data, transform it into the format that Chart.js understands, assign colors, and draw the chart on the screen.
 

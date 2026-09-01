@@ -4,14 +4,14 @@ title: Column
 sidebar_label: Column
 ---
 
-Realiza a manipulação de colunas em base de dados.
+Manipulates database columns.
 
 ```javascript
 if (!_db.checkExists().column("client", "description")) {
     _db.column().rename(
-        "client", // Tabela
-        "description", // Nome Antigo
-        "name" // Novo Nome
+        "client", // Table
+        "description", // Old name
+        "name" // New name
     );
 }
 ```

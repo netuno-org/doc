@@ -11,12 +11,11 @@ The Netuno technology ecosystem provides several modules on NPM, such as:
 
 - [Service Client](https://www.npmjs.com/package/@netuno/service-client)
 
-> See alo the [Service Client GIT](https://github.com/netuno-org/service-client).
+> See also the [Service Client Git repository](https://github.com/netuno-org/service-client).
 
-Este módulo serve para realizar as integrações com os serviços desenvolvidos no Netuno, ou seja, os endpoints 
-da API REST desenvolvidos no backend do Netuno, dentro da pasta `server/services` nas aplicações Netuno.
+This module integrates clients with the REST API endpoints developed in a Netuno application's `server/services` folder.
 
-É comum no desenvolvimento dos serviços utilizar programas como:
+During service development, you can test HTTP requests with tools such as:
 
 - [Pororoca](https://pororoca.io/) 
 - [Yaak](https://yaak.app/)
@@ -27,11 +26,9 @@ da API REST desenvolvidos no backend do Netuno, dentro da pasta `server/services
 - [Insomnia](https://insomnia.rest/)
 - [Postman](https://www.postman.com/)
 
-To perform HTTP request tests on services.
+Frontend code could call these services with `fetch`, Axios, or another HTTP client.
 
-In the frontend code to integrate these services, we could use fetch, requests, AXIOS, and many others.
-
-However, Netuno provides its own client, which works in both JavaScript frontend development and NodeJS backend development.
+Netuno's client works in both browser-based JavaScript and Node.js applications.
 
 The reason Netuno has its own HTTP client implementation for services is to provide greater practicality, simplifying code implementation and ensuring greater agility in development.
 

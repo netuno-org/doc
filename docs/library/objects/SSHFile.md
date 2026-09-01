@@ -4,7 +4,7 @@ title: SSHFile
 sidebar_label: SSHFile
 ---
 
-Dados de um ficheiro via SSH.
+Contains information about a file accessed over SSH.
 
 ---
 

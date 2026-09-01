@@ -4,7 +4,7 @@ title: Join
 sidebar_label: Join
 ---
 
-Definição da configuração do objeto Join para consultas simplificadas.
+Configures a table join for a DB Form operation.
 
 ---
 

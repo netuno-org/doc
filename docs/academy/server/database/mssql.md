@@ -6,44 +6,39 @@ sidebar_label: MSSQL
 
 ## MSSQL - Docker Setup
 
-Fot this step the user should have Docker already installed. The container image can be downloaded from Microsoft Container Registry through the following command:
+Make sure Docker is installed. The following command downloads the current SQL Server 2025 Linux image from Microsoft Container Registry:
 
 ```
-sudo docker pull mcr.microsoft.com/mssql/server:2019-latest
+docker pull mcr.microsoft.com/mssql/server:2025-latest
 ```
 
 To start the new container execute the following line command:
 
 ```
-docker run -d --name mssql_server -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Secret123' -p 1433:1433 microsoft/mssql-server-linux
-```
-[DOCKER (Install Containers for SQL Server on Linux)](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash).
-
-The parameter *-e 'SA\_PASSWORD=Secret123'* where *Secret123* is located will be the *sa*'s user password.
-
-Please note, that the password must contain at least 8 characters to comply with the MSSQL minimum security standard, otherwise the container will not restart.
-
-After restart the container make sure that MSSQL is working correctly and you can install the *mssql* command via *NPM*:
-
-```
-npm install mssql -g
+docker run -d --name mssql_server --hostname mssql_server -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=Secret123' -p 1433:1433 mcr.microsoft.com/mssql/server:2025-latest
 ```
 
-This step will allow you to execute the command to connect to MSSQL via the terminal:
+See Microsoft's [SQL Server Linux container quickstart](https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver17).
+
+The `MSSQL_SA_PASSWORD` value sets the password for the `sa` account.
+
+The password must be 8–128 characters long and contain characters from at least three of these sets: uppercase letters, lowercase letters, digits, and symbols. If it does not meet the policy, SQL Server stops during setup.
+
+After the container starts, connect with the `sqlcmd` tool included in the image:
 
 ```
-mssql -u sa -p Secret123
+docker exec -it mssql_server /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "Secret123"
 ```
 
-Attention! If you have changed the password, replace the *Secret123* with the _sa_ password configured in the container.
+Replace `Secret123` with the `sa` password configured when the container was created. Do not expose a real production password in shell history.
 
 ## Create a new application
 
-To create a new Netuno application connected to Microsoft SQL Server, and  just follow the previous steps to the new Netuno app choosing MSSQL database engine.
+To create a Netuno application connected to Microsoft SQL Server, follow the standard application-creation flow and choose the MSSQL database engine.
 
 The user should follow the steps of the tutorial: 
 
-After choosing the MSSQL database engine you will be asked to make the connection to the database in MSSQL.
+After choosing MSSQL, enter the database connection details.
 
 For example:
 
@@ -76,4 +71,24 @@ The configuration should be as follows:
     ...
 ```
 
-If the user wants to connect to a different database that is not main database, then change the _"default"_ to the desired name for this setup.
+To configure an additional connection instead of the application's main database, replace `default` with the desired connection name.
+
+## Instances
+
+To connect to a specific SQL Server instance, add the `instance` value to the connection configuration. For example:
+
+```
+    ...
+    "db": {
+        "default": {
+            "password": "Secret123",
+            "engine": "mssql",
+            "host": "localhost",
+            "instance": "my-instance-name",
+            "name": "netuno_test",
+            "username": "sa"
+        },
+        ...
+    },
+    ...
+```

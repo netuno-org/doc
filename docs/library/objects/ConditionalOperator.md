@@ -4,7 +4,7 @@ title: ConditionalOperator
 sidebar_label: ConditionalOperator
 ---
 
-Definição da configuração do objeto Condition para construção de condições com o objeto Where
+Configures a conditional operator used to build conditions with a `Where` object.
 
 ---
 

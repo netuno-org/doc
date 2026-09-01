@@ -1,85 +1,223 @@
 ---
 id: remote
-title: Remote
+title: Remote - HTTP Client
 ---
 
-## How to make HTTP calls
+## Introduction
 
-### Introduction
+Applications often need to call external HTTP services. Netuno's `_remote` resource provides an HTTP client for REST, JSON, SOAP, file downloads, and multipart uploads.
 
-Many times in our applications we need to make HTTP requests to external services. This can be done using **_remote**.
+> See the [`Remote` resource reference](/docs/library/resources/remote) for the complete method list.
 
-### HTTP Calls
+## Initialization
 
-#### Starting the request
+Start a separate client instance for each independently configured request:
 
-In order to make an HTTP call, we must first initiate it. To do this, we will use the _remote init method and then save the result of this operation in a variable called remote so that we can reference the request:
+```javascript
+// Sends form or query-string parameters by default.
+const remoteForm = _remote.init()
 
-```js
-const remote = _remote.init();
+// Sends POST and PUT data as JSON.
+const remoteJSON = _remote.init().asJSON()
 ```
 
-#### Indicado o método da requisição
+## Configuration
 
-We do not need to explicitly indicate the HTTP method in the call header, for this our call reference has a function for each HTTP method:
+Named clients can be defined in an application's environment configuration:
 
-```js
-const remote = _remote.init();
-
-remote.post(); // for POST calls
-remote.get(); // for GET calls
-remote.put(); // for PUT calls
-remote.delete(); // for DELETE calls
-```
-
-#### Editing HTTP Headers
-
-```js
-const remote = _remote.init();
-remote.getHeader().set("KEY", "VALUE");
-```
-
-#### Indicating the request URL
-
-To indicate the request URL, we simply need to pass it as the function's first parameter:
-
-```js
-const remote = _remote.init();
-
-remote.post("http://example.com"); // for POST calls
-remote.get("http://example.com"); // for GET calls
-remote.put("http://example.com"); // for PUT calls
-remote.delete("http://example.com"); // for DELETE calls
-```
-
-#### Adding data to the request
-
-If you need to add data to the body of the call, simply pass it as the function's second parameter:
-
-```js
-const remote = _remote.init();
-
-remote.post("http://example.com", {"user_id": 1}); // for POST calls
-remote.get("http://example.com", {"user_id": 1}); // for GET calls
-remote.put("http://example.com", {"user_id": 1}); // for PUT calls
-remote.delete("http://example.com", {"user_id": 1}); // for DELETE calls
-```
-
-#### Reading the request response
-
-After receiving the request response we can read its data using the **content** method:
-
-```js
-const remote = _remote.init();
-
-const response = remote.post("http://example.com", {"user_id": 1}); // for POST calls
-const response = remote.get("http://example.com", {"user_id": 1}); // for GET calls
-const response = remote.put("http://example.com", {"user_id": 1}); // for PUT calls
-const response = remote.delete("http://example.com", {"user_id": 1}); // for POST calls
-
-if (response.ok()) {
-    _log.info("response", response.content());
-} else {
-    _log.info("failed "+ response.statusCode(), response.content());
+```json
+{
+  "remote": {
+    "example-basic-auth": {
+      "url": "https://example.com/api/rest/example",
+      "form": true,
+      "authorization": {
+        "username": "admin",
+        "password": "pass"
+      },
+      "data": {
+        "param1": "value 1",
+        "param2": "value 2"
+      }
+    },
+    "example-auth-token": {
+      "urlPrefix": "https://example.com/api",
+      "json": true,
+      "authorization": "Bearer AUTH-TOKEN-HERE",
+      "connectTimeout": 5000,
+      "readTimeout": 60000
+    }
+  }
 }
 ```
+
+Use `urlPrefix` for a common base URL or `url` for one complete URL. A client can default to form or JSON data, use Basic authentication or an authorization-header value, include default `data`, and define connection and read timeouts in milliseconds.
+
+### How To Use
+
+Pass the configuration key to `init()`:
+
+```javascript
+const response = _remote.init('example-basic-auth').post()
+```
+
+With a URL prefix, pass the remaining path to the HTTP method:
+
+```javascript
+const remote = _remote.init('example-auth-token')
+const response = remote.post(
+  '/services/load-data',
+  _val.map()
+    .set('param1', 'value 1')
+    .set('param2', 'value 2')
+)
+```
+
+## HTTP Request
+
+The examples below show the main operations provided by the [`Remote` resource](/docs/library/resources/remote).
+
+### Sending JSON
+
+Call `asJSON()` before sending the request:
+
+```javascript
+const remote = _remote.init().asJSON()
+remote.setURL('https://example.com/save')
+
+const response = remote.post(
+  _val.map()
+    .set('data', 'example')
+    .set('json', true)
+)
+```
+
+By default, POST and PUT data is sent in the request body. GET and DELETE data is encoded in the query string; use the advanced `alwaysBodyData()` option only when the receiving API explicitly expects a body.
+
+### HTTP Methods
+
+Use the method that corresponds to the desired HTTP verb:
+
+```javascript
+const remote = _remote.init()
+remote.setURL('https://example.com')
+
+remote.get()
+remote.post()
+remote.put()
+remote.delete()
+```
+
+#### HTTP Header
+
+Set request headers through `getHeader()`:
+
+```javascript
+const remote = _remote.init()
+remote.getHeader().set('KEY', 'VALUE')
+```
+
+#### Request URL
+
+The URL can be passed directly as the first argument:
+
+```javascript
+const remote = _remote.init().asJSON()
+
+remote.get('https://example.com')
+remote.post('https://example.com')
+remote.put('https://example.com')
+remote.delete('https://example.com')
+```
+
+#### Adding Data to the Request
+
+Pass request data as the second argument:
+
+```javascript
+const remote = _remote.init().asJSON()
+const data = _val.map().set('user_id', 1)
+
+remote.get('https://example.com', data)
+remote.post('https://example.com', data)
+remote.put('https://example.com', data)
+remote.delete('https://example.com', data)
+```
+
+## Response
+
+Use `json()` for a JSON response and `content()` for raw text or HTML. `statusCode()` returns the HTTP status code, while `ok()` is true for codes from 200 through 299.
+
+```javascript
+const response = _remote.init().asJSON().post(
+  'https://example.com',
+  _val.map().set('user_id', 1)
+)
+
+if (response.ok()) {
+  _log.info('JSON response', response.json())
+} else {
+  _log.info(`Request failed with status ${response.statusCode()}`, response.content())
+}
+```
+
+## Download
+
+Use `asBinary()` to receive a file. The following service downloads an image and saves it through three supported file resources:
+
+```javascript
+const download = _remote.init().asBinary().get(
+  'https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png'
+)
+
+if (!download.ok()) {
+  _log.error(`File download status: ${download.statusCode()}\n${download.content()}`)
+  _header.status(500)
+  _out.json({ result: false, error: 'file-download-failed' })
+  _exec.stop()
+}
+
+const file = download.file()
+_log.info(`Downloaded file name: ${file.name()}`)
+
+file.save(_app.file(`storage/filesystem/server/${file.name()}`))
+file.save(_storage.filesystem('server', 'other.png').file())
+file.save(_os.file('/tmp/download.png'))
+_out.json({ result: true })
+```
+
+The three `file.save()` calls are intentional examples. See [File and Folder Manipulation](/docs/academy/server/file-manipulation) for the differences between `_app.file`, `_storage`, and `_os.file`.
+
+## Upload
+
+Use `asMultipartFormData()` to upload files as a multipart form:
+
+```javascript
+const file = _app.file('public/images/logo.png')
+const upload = _remote.init().asMultipartFormData().post(
+  'http://localhost:9000/services/file-receiver',
+  _val.map().set('file', file)
+)
+
+if (upload.ok()) {
+  _log.info(`Successfully uploaded: ${file.name()}`)
+  _out.json({ result: true })
+} else {
+  _log.error(`File upload status: ${upload.statusCode()}\n${upload.content()}`)
+  _header.status(500)
+  _out.json({ result: false, error: 'file-upload-failed' })
+}
+```
+
+The receiving Netuno service can obtain the uploaded file from the request:
+
+```javascript
+const file = _req.getFile('file')
+_log.info(`Received file name: ${file.name()}`)
+file.save(_storage.filesystem('server', 'received.png').file())
+_out.json({ result: true })
+```
+
+## Conclusion
+
+The [`Remote` resource](/docs/library/resources/remote) integrates external or internal APIs and supports data import, export, and synchronization, including services implemented with other technologies.

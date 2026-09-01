@@ -4,7 +4,7 @@ title: Where
 sidebar_label: Where
 ---
 
-Definição da configuração do objeto Where para construção de condições nas consultas com o recurso _db.form()
+Builds filter conditions for `_db.form()` operations.
 
 ---
 

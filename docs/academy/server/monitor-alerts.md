@@ -22,7 +22,7 @@ The general configuration allows you to activate the presentation of data in the
 
 The configuration of alerts is performed in each app, and allows you to have multiple alerts per application.
 
-## Logs and General Interval
+### Logs and General Interval
 
 Netuno stores the performance logs inside the `logs` folder which is inside the Netuno root folder.
 

@@ -14,43 +14,41 @@ Learn how Netuno further improves your programming experience so you may have a 
 
 > The Netuno platform is free, [start now](/docs/get-started/installation).
 
-### Forms and fields
+## Forms and fields
 
 The data model creation is eased by the web environment based forms engine. The form setup generates database tables and it's fields define database columns. It's possible to parametrize the data type, field properties as well as it's relations. The WEB construction suite offers multiple features such as database queries, Entity-Relationship Model visualization and many more features.
 
-### Access and permissions management
+## Access and permissions management
 
 User and permissions management are also configurable in the WEB environment and are assessable through backend services in Netuno. It's also possible to restrict user and group access to forms and reports.
 
-### Resource Library
+## Resource Library
 
 The resource library features a wide range of ready-to-use features. Among these you can find from integrators with PDF, Excel, Email, Firebase to task scheduling or report generator with Jasper.
 
-### API Rest
+## API Rest
 
 The server's communication layer is provided by REST API. The provision of services by JSON allows Netuno to communicate with multiple applications of different nature, for example, it can serve simultaneously WEB clients and mobile applications on the same interface.
 
-### Polyglot service layer
+## Polyglot service layer
 
-Write services in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://groovy-lang.org/" target="_blank">Groovy</a>, <a href="https://www.jython.org/" target="_blank">Python</a>, <a href="https://www.jruby.org/" target="_blank">Ruby</a>, <a href="https://kotlinlang.org/" target="_blank">Kotlin</a> or in <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">Java</a>, they're all valid. Netuno removes the isolation between programming languages, the same application supports services running simultaneously in multiple languages without increasing the processing weight.
+Write services in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://www.graalvm.org/python/" target="_blank">Python with GraalPy</a>, <a href="https://www.jruby.org/" target="_blank">Ruby with JRuby</a>, <a href="https://kotlinlang.org/" target="_blank">Kotlin</a>, <a href="https://groovy-lang.org/" target="_blank">Groovy</a>, or CajuScript. The same application can run services written in any combination of these supported languages.
 
-### Multiple database support
+## Multiple database support
 
-Configure several different databases and use them simultaneously. Natively Netuno supports several relational database engines like <a href="https://www.h2database.com/html/main.html" target="_blank">H2DataBase</a>, <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> and CockroachDB, <a href="https://mariadb.org/" target="_blank">MariaDB (_MySQL_)</a>, Microsoft SQL Server and Oracle. You will be able to create your application using, for example, PostgreSQL with a master database and integrate with other databases in MariaDB, and in the middle of a project you can switch to Microsoft SQL Server or Oracle without having to make any code changes. 
+Configure several different databases and use them simultaneously. Natively Netuno supports several relational database engines like <a href="https://www.h2database.com/html/main.html" target="_blank">H2DataBase</a>, <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>, <a href="https://mariadb.org/" target="_blank">MariaDB (_MySQL_)</a>, Microsoft SQL Server and Oracle. You will be able to create your application using, for example, PostgreSQL with a master database and integrate with other databases in MariaDB, and in the middle of a project you can switch to Microsoft SQL Server or Oracle without having to make any code changes.
 
-> Natively supports integration with MongoDB.
+## Serverless
 
-### Serverless
+Netuno is also your application server. With a command run your application without having to waste time on licensing, configuration and additional developments.
 
-Netuno is also your application server. With a command run your application without having to waste time on licensing, configuration and additional developments. 
+## Performance in development and execution
 
-### Performance in development and execution
+You don't need to learn how to work with new drag-and-drop development software or memorize another framework interface. With seven supported languages, a self-generated data layer, and libraries available on demand, Netuno's low-code environment helps meet tight deadlines.
 
-You don't need to learn how to work with a new development software by drag and drop, nor to memorize the interface of a new framework. With the possibility of programming in 6 different languages, having a self-generated data layer and with libraries available to use on-the-fly, Netuno's low-code is the best solution for your tight deadlines.
+Using code generators optimized for high performance and using the recent <a href="https://www.graalvm.org/" target="_blank">GraalVM</a>, the speed of the application server is also incredible, no matter what language it uses.
 
-Using code generators optimized for high performance and using the recent <a href="https://www.graalvm.org/" target="_blank">GraalVM</a>, the speed of the application server is also incredible, no matter what language it uses. 
-
-### Tutorials
+## Tutorials
 
 Discover how to explore the development in Netuno:
 

@@ -56,6 +56,20 @@ Esta seção descreve como localizar e atualizar as informações de um usuário
 - Clique no botão **Salvar** para confirmar a alteração.
 - Após esta ação, uma mensagem de sucesso será exibida.
 
+### 1 - Editar um utilizador existente
+
+Esta secção explica como localizar e atualizar os dados de um utilizador já registado no sistema.
+
+![edit-existing-user-en.png](/docs/assets/academy/ui/groups-users/edit-existing-user-en.png)
+
+**Como editar um utilizador:**
+
+- Selecione um utilizador registado e altere os dados existentes.
+- Clique no botão "Guardar" para confirmar a alteração.
+- Depois desta ação será apresentada uma mensagem de sucesso.
+
+**Adicionar novo utilizador:** Os campos básicos de identificação da conta são Nome, Utilizador, Palavra-passe, E-mail e Grupo.
+
 ### 2 - Adicionar novo usuário
 
 Esta seção permite registrar novos usuários, definindo suas credenciais de acesso e níveis de permissão dentro do sistema.
@@ -186,4 +200,4 @@ Preencha um ou mais campos "Filtros" para encontrar os registros de log que dese
 
 ## Sair
 
-Clique em “Sair” para encerrar a sua sessão no sistema de forma segura. 
+Clique em “Sair” para encerrar a sua sessão no sistema de forma segura.

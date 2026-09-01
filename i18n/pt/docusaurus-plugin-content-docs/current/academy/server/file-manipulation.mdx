@@ -20,9 +20,9 @@ internos da aplicação, mas também quaisquer arquivos e pastas do sistema no g
 
 Os recurso de programação poliglota low-code que permite manipular arquivos, são:
 
-- `_app` - [Aplicação](/docs/library/resources/App)
-- `_storage` - [Storage](/docs/library/resources/Storage)
-- `_os` - [Sistema Operacional](/docs/library/resources/OS)
+- `_app` - [Aplicação](/docs/library/resources/app)
+- `_storage` - [Storage](/docs/library/resources/storage)
+- `_os` - [Sistema Operacional](/docs/library/resources/os)
 
 Através destes recursos temos os métodos para:
 
@@ -410,7 +410,7 @@ E para mover uma subpasta sem mudar o seu nome, basta indicar o novo caminho no 
 A geração de conteúdos em arquivos é feita através do método `output` que fornece um objeto do tipo
 [OutputStream](/docs/library/objects/OutputStream).
 
-Para escrever os dados no `output` utilizamos o método [printAndClose](/docs/library/objects/OutputStream#printandclosebytes-string--outputstream),
+Para escrever os dados no `output` utilizamos o método [printAndClose](/docs/library/objects/OutputStream#printandclose),
 que imprime o conteúdo no arquivo e fecha o arquivo salvando o conteúdo.
 
 #### Escrever Arquivo de Texto
@@ -469,7 +469,7 @@ que será feita a tabulação por exemplo `.toJSON(4)`.
 A obtenção de conteúdos em arquivos é feita através do método `input` que fornece um objeto do tipo
 [InputStream](/docs/library/objects/InputStream).
 
-Para ler os dados no `input` utilizamos o método [readAllAndClose](/docs/library/objects/InputStream#readAllAndClose),
+Para ler os dados no `input` utilizamos o método [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
 que processa a leitura do conteúdo no arquivo e fecha o arquivo.
 
 #### Ler Arquivo de Texto
@@ -525,7 +525,7 @@ Isto quer dizer que não precisamos obter o `file` ou `path` para trabalhar com 
 Ao iniciar um storage para um arquivo podemos realizar a escrita utilizando o método [output](/docs/library/resources/storage#output), que obtém
 uma instância do objeto [OutputStream](/docs/library/objects/OutputStream) que permite processar e ler os dados.
 
-Então com o `OutputStream` o método [printAndClose](/docs/library/objects/OutputStream#printandclosebytes-string--outputstream),
+Então com o `OutputStream` o método [printAndClose](/docs/library/objects/OutputStream#printandclose),
 faz a escrita de texto (`string`) no arquivo e fecha-o.
 
 Veja este exemplo:

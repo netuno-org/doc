@@ -105,7 +105,7 @@ netuno.modal.create({
 });
 ```
 
-### Events
+## Events
 
 The form container (`[netuno-form]`) emits custom events that track the user interaction lifecycle. 
 
@@ -119,7 +119,7 @@ Using these events to trigger specific business logic in your frontend (such as 
 | netuno:back |Triggered after clicking the back button. |
 | netuno:delete | Triggered after deleting an item. |
 
-## Example: Intercepting Multiple Events
+### Example: Intercepting Multiple Events
 
 In this production-ready example, we create the modal and add listeners to track the success of user operations:
 

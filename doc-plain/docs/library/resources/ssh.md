@@ -64,7 +64,7 @@ Configuration object loaded from received data.
 #### _ssh.config(config: [SSHConfig](/docs/library/objects/SSHConfig)) : [SSH](/docs/library/resources/ssh)
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 
@@ -309,7 +309,7 @@ Result whether or not it is activated.
 #### _ssh.setConfig(config: [SSHConfig](/docs/library/objects/SSHConfig)) : [SSH](/docs/library/resources/ssh)
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 

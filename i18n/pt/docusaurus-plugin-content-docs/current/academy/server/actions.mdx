@@ -52,7 +52,7 @@ porque o comando é executado diretamente na base de dados sem ser possível int
 As ações são executadas quando acontece alguma manipulação de dados nos formulários de backoffice auto-gerado 
 pelo Netuno, ou quando executamos operações em base de dados no código utilizando:
 
-- `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExits(...)`, `_db.insertMany(...)`, entre outros. 
+- `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExists(...)`, `_db.insertMany(...)`, entre outros.
 - `_db.update(...)`, `_db.form(...).update()`, `_db.updateMany(...)`, entre outros.
 - `_db.delete(...)`, `_db.form(...).delete()`, `_db.deleteMany(...)`, entre outros.
 
@@ -74,7 +74,7 @@ que está a ser criado, alterado ou removido.
 Através do recurso `_dataItem` podemos aceder a toda a informação e verificar detalhes do processo da operação
 que está acontecendo. 
 
-> Veja a documentação do objeto [DataItem](/docs/library/objects/DataItem) para saber mais detalhes sobre o que
+> Veja a documentação do recurso [DataItem](/docs/library/resources/dataItem) para saber mais detalhes sobre o que
 > o recurso `_dataItem` suporta.
 
 **Atenção:** O recurso `_dataItem` apenas está disponível no código das ações (_actions_).

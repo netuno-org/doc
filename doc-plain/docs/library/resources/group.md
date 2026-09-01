@@ -15,12 +15,12 @@ Management of the application groups and obtaining the authenticated user's grou
 #### _group.all() : java.util.List
 ##### Description
 
-Obtém a lista de dados de todos os grupo.
+Gets the data for all groups.
 
 ##### How To Use
 
 ```javascript
-// Retorna todos os grupos existentes.
+// Returns all existing groups.
 _out.json(_group.all())
 ```
 
@@ -28,7 +28,7 @@ _out.json(_group.all())
 
 ( _java.util.List_ )
 
-Lista de todos os dados de todos os grupos.
+Data for all groups.
 
 ---
 
@@ -36,18 +36,18 @@ Lista de todos os dados de todos os grupos.
 
 ---
 
-#### _group.allByCode(codigo: string) : java.util.List
+#### _group.allByCode(code: string) : java.util.List
 ##### Description
 
-Obtém todos os grupos a partir do código alternativo.
+Gets all groups with the specified alternative code.
 
 ##### How To Use
 
 ```javascript
-// Lista em log os grupos que tem o código exemplo.
-const grupos = _group.allByCode("exemplo")
-for (const grupo of grupos) {
-    _log.info(`Grupo ${grupo.getString("name")}`)
+// Logs the groups with the sample code.
+const groups = _group.allByCode("example")
+for (const group of groups) {
+    _log.info(`Group ${group.getString("name")}`)
 }
 ```
 
@@ -55,13 +55,13 @@ for (const grupo of grupos) {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **codigo** | _string_ | Código alternativo que os grupos podem ter associado. |
+| **code** | _string_ | Alternative code associated with the groups. |
 
 ##### Return
 
 ( _java.util.List_ )
 
-Lista dos utilizadores encontrados para o código alternativo.
+Groups found with the alternative code.
 
 ---
 
@@ -72,20 +72,20 @@ Lista dos utilizadores encontrados para o código alternativo.
 #### _group.code() : string
 ##### Description
 
-Obtém o código alternativo do grupo do utilizador que está autenticado.
+Gets the alternative code of the authenticated user's group.
 
 ##### How To Use
 
 ```javascript
-// Código auxiliar do grupo do utilizador autenticado.
-_log.info(`Código do Utilizador: ${_group.code()}`)
+// Alternative code of the authenticated user's group.
+_log.info(`Group code: ${_group.code()}`)
 ```
 
 ##### Return
 
 ( _string_ )
 
-Código auxiliar do grupo do utilizador logado.
+Alternative code of the authenticated user's group.
 
 ---
 
@@ -93,21 +93,21 @@ Código auxiliar do grupo do utilizador logado.
 
 ---
 
-#### _group.create(dadosGrupo: [Values](/docs/library/objects/Values)) : int
+#### _group.create(groupData: [Values](/docs/library/objects/Values)) : int
 ##### Description
 
-Cria o novo grupo.
+Creates a new group.
 
 ##### How To Use
 
 ```javascript
-// Criar um novo grupo:
+// Creates a new group:
 _group.create(
     _val.map()
-        .set("name", "Exemplo")
-        .set("mail", "grupo@exemplo.com")
-        // É opcional definir um código alternativo auxiliar:
-        .set("code", "identificacao-alternativa-de-exemplo")
+        .set("name", "Example")
+        .set("mail", "group@example.com")
+        // Defining an alternative code is optional:
+        .set("code", "example-alternative-identification")
 )
 ```
 
@@ -115,13 +115,13 @@ _group.create(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **dadosGrupo** | _[Values](/docs/library/objects/Values)_ | Dados do grupo que vai ser criado. |
+| **groupData** | _[Values](/docs/library/objects/Values)_ | Data for the group to create. |
 
 ##### Return
 
 ( _int_ )
 
-ID do grupo que foi criado.
+ID of the created group.
 
 ---
 
@@ -129,21 +129,21 @@ ID do grupo que foi criado.
 
 ---
 
-#### _group.createIfNotExists(dadosGrupo: [Values](/docs/library/objects/Values)) : boolean
+#### _group.createIfNotExists(groupData: [Values](/docs/library/objects/Values)) : boolean
 ##### Description
 
-Cria o utilizador caso não exista ainda.
+Creates the group if it does not exist yet.
 
 ##### How To Use
 
 ```javascript
-// Criar um novo grupo caso não exista ainda:
+// Creates a new group if it does not exist yet:
 _group.createIfNotExists(
     _val.map()
-        .set("name", "Exemplo")
-        .set("mail", "grupo@exemplo.com")
-        // É opcional definir um código alternativo auxiliar:
-        .set("code", "identificacao-alternativa-de-exemplo")
+        .set("name", "Example")
+        .set("mail", "group@example.com")
+        // Defining an alternative code is optional:
+        .set("code", "example-alternative-identification")
 )
 ```
 
@@ -151,7 +151,7 @@ _group.createIfNotExists(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **dadosGrupo** | _[Values](/docs/library/objects/Values)_ | Dados do grupo que vai ser criado caso não exista ainda. |
+| **groupData** | _[Values](/docs/library/objects/Values)_ | Data for the group to create if it does not exist yet. |
 
 ##### Return
 
@@ -168,12 +168,12 @@ It was successfully created.
 #### _group.data() : [Values](/docs/library/objects/Values)
 ##### Description
 
-Obtém toda a informação de dados do grupo do utilizador que está autenticado.
+Gets all data for the authenticated user's group.
 
 ##### How To Use
 
 ```javascript
-// Toda informação do grupo do utilizador autenticado.
+// All data for the authenticated user's group.
 _out.json(_group.data())
 ```
 
@@ -181,7 +181,7 @@ _out.json(_group.data())
 
 ( _[Values](/docs/library/objects/Values)_ )
 
-Todos os dados do grupo do utilizador logado.
+All data for the authenticated user's group.
 
 ---
 
@@ -189,30 +189,30 @@ Todos os dados do grupo do utilizador logado.
 
 ---
 
-#### _group.firstByCode(codigo: string) : [Values](/docs/library/objects/Values)
+#### _group.firstByCode(code: string) : [Values](/docs/library/objects/Values)
 ##### Description
 
-Obtém os dados de um grupo a partir do código alternativo.
+Gets a group by its alternative code.
 
 ##### How To Use
 
 ```javascript
-// Grupo que tem o código exemplo.
-const grupo = _group.firstByCode("exemplo")
-_out.json(grupo)
+// Group with the sample code.
+const group = _group.firstByCode("example")
+_out.json(group)
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **codigo** | _string_ | Código alternativo que o grupo pode ter associado. |
+| **code** | _string_ | Alternative code associated with the group. |
 
 ##### Return
 
 ( _[Values](/docs/library/objects/Values)_ )
 
-Dados do grupo encontrado com o código alternativo.
+Data for the group found with the alternative code.
 
 ---
 
@@ -223,27 +223,27 @@ Dados do grupo encontrado com o código alternativo.
 #### _group.firstByMail(mail: string) : [Values](/docs/library/objects/Values)
 ##### Description
 
-Obtém os dados de um grupo a partir do e-mail.
+Gets a group by its email address.
 
 ##### How To Use
 
 ```javascript
-// Grupo obtido a partir do e-mail.
-const grupo = _group.firstByMail("grupo@exemplo.com")
-_out.json(grupo)
+// Group found by email address.
+const group = _group.firstByMail("group@example.com")
+_out.json(group)
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **mail** | _string_ | E-mail do grupo. |
+| **mail** | _string_ | Group email address. |
 
 ##### Return
 
 ( _[Values](/docs/library/objects/Values)_ )
 
-Dados do grupo encontrado com o e-mail.
+Data for the group found with the email address.
 
 ---
 
@@ -251,30 +251,30 @@ Dados do grupo encontrado com o e-mail.
 
 ---
 
-#### _group.firstByName(nome: string) : [Values](/docs/library/objects/Values)
+#### _group.firstByName(name: string) : [Values](/docs/library/objects/Values)
 ##### Description
 
-Obtém os dados de um grupo a partir do nome.
+Gets a group by its name.
 
 ##### How To Use
 
 ```javascript
-// Grupo que tem o nome.
-const grupo = _group.firstByName("Exemplo")
-_out.json(grupo)
+// Group with the specified name.
+const group = _group.firstByName("Example")
+_out.json(group)
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **nome** | _string_ | Nome do grupo. |
+| **name** | _string_ | Group name. |
 
 ##### Return
 
 ( _[Values](/docs/library/objects/Values)_ )
 
-Dados do utilizador encontrado com o nome.
+Data for the group found with the name.
 
 ---
 
@@ -285,54 +285,54 @@ Dados do utilizador encontrado com o nome.
 #### _group.get(id: int) : [Values](/docs/library/objects/Values)
 ##### Description
 
-Obtém os dados de um grupo a partir do ID (identificador numérico).
+Gets a group by its numeric ID.
 
 ##### How To Use
 
 ```javascript
-// Grupo obtido a partir do ID.
-const grupo = _group.get(1)
-_out.json(grupo)
+// Group found by ID.
+const group = _group.get(1)
+_out.json(group)
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **id** | _int_ | Identificador numérico do grupo. |
+| **id** | _int_ | Numeric group ID. |
 
 ##### Return
 
 ( _[Values](/docs/library/objects/Values)_ )
 
-Dados do grupo encontrado.
+Data for the group found.
 
 ---
 
-#### _group.get(idOuUid: string) : [Values](/docs/library/objects/Values)
+#### _group.get(idOrUid: string) : [Values](/docs/library/objects/Values)
 ##### Description
 
-Obtém os dados de um grupo a partir do ID (identificador numérico) ou do UUID (identificador único universal).
+Gets a group by its numeric ID or UUID.
 
 ##### How To Use
 
 ```javascript
-// Grupo obtido a partir do UID.
-const grupo = _group.get("0dd572b8-7841-4977-80de-abb9660a0df0")
-_out.json(grupo)
+// Group obtido a partir do UID.
+const group = _group.get("0dd572b8-7841-4977-80de-abb9660a0df0")
+_out.json(group)
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **idOuUid** | _string_ | Tanto pode ser um ID ou um UID do grupo. |
+| **idOrUid** | _string_ | Group ID or UID. |
 
 ##### Return
 
 ( _[Values](/docs/library/objects/Values)_ )
 
-Dados do grupo encontrado.
+Data for the group found.
 
 ---
 
@@ -343,7 +343,7 @@ Dados do grupo encontrado.
 #### _group.id() : int
 ##### Description
 
-Obtém o identificador numérico do grupo de quem está autenticado.
+Gets the numeric ID of the authenticated user's group.
 
 ##### How To Use
 
@@ -379,20 +379,20 @@ ID (numeric identifier) of the logged-in user's group.
 #### _group.name() : string
 ##### Description
 
-Obtém o nome completo do grupo do utilizador que está autenticado.
+Gets the name of the authenticated user's group.
 
 ##### How To Use
 
 ```javascript
-// Nome do grupo do utilizador autenticado.
-_log.info(`Nome do Grupo: ${_group.name()}`)
+// Name of the authenticated user's group.
+_log.info(`Group name: ${_group.name()}`)
 ```
 
 ##### Return
 
 ( _string_ )
 
-Nome do grupo do utilizador logado.
+Name of the authenticated user's group.
 
 ---
 
@@ -403,15 +403,15 @@ Nome do grupo do utilizador logado.
 #### _group.remove(id: int) : boolean
 ##### Description
 
-Remove o grupo refente ao ID passado.
+Removes the group with the specified ID.
 
 ##### How To Use
 
 ```javascript
-// Remove o grupo:
-const grupo = _group.firstByCode("exemplo")
+// Removes the group:
+const group = _group.firstByCode("example")
 _group.remove(
-    grupo.getInt("id")
+    group.getInt("id")
 )
 ```
 
@@ -419,7 +419,7 @@ _group.remove(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **id** | _int_ | O ID (identificador númerico) do grupo. |
+| **id** | _int_ | Numeric group ID. |
 
 ##### Return
 
@@ -433,18 +433,18 @@ It was successfully deleted.
 
 ---
 
-#### _group.search(termo: string) : java.util.List
+#### _group.search(term: string) : java.util.List
 ##### Description
 
-Pesquisa os grupos que tem alguma ocorrência nos dados com o texto de pesquisa passado.
+Searches group data for the specified text.
 
 ##### How To Use
 
 ```javascript
-// Pesquisa grupos com o nome "Exemplo".
-const grupos = _group.search("Exemplo")
-for (const grupo of grupos) {
-    _log.info(`Grupo encontrado ${grupo.getString("name")}`)
+// Searches for groups named "Example".
+const groups = _group.search("Example")
+for (const group of groups) {
+    _log.info(`Group found: ${group.getString("name")}`)
 }
 ```
 
@@ -452,13 +452,13 @@ for (const grupo of grupos) {
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **termo** | _string_ | Chave de pesquisa. |
+| **term** | _string_ | Search term. |
 
 ##### Return
 
 ( _java.util.List_ )
 
-Lista de dados dos grupos encontrados.
+Data for the groups found.
 
 ---
 
@@ -466,30 +466,30 @@ Lista de dados dos grupos encontrados.
 
 ---
 
-#### _group.searchFirst(termo: string) : [Values](/docs/library/objects/Values)
+#### _group.searchFirst(term: string) : [Values](/docs/library/objects/Values)
 ##### Description
 
-O primeiro resultado da pesquisa de grupos que tem alguma ocorrência nos dados do termo passado.
+Gets the first group whose data matches the search term.
 
 ##### How To Use
 
 ```javascript
-// O primeiro grupo que tem o e-mail com @exemplo.com.
-const grupo = _group.search("@exemplo.com")
-_out.json(grupo)
+// First group with an email address at @example.com.
+const group = _group.search("@example.com")
+_out.json(group)
 ```
 
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **termo** | _string_ | Chave de pesquisa. |
+| **term** | _string_ | Search term. |
 
 ##### Return
 
 ( _[Values](/docs/library/objects/Values)_ )
 
-Dados do grupo encontrado.
+Data for the group found.
 
 ---
 
@@ -500,20 +500,20 @@ Dados do grupo encontrado.
 #### _group.uid() : string
 ##### Description
 
-Obtém o identificador único universal do grupo de quem está autenticado.
+Gets the UUID of the authenticated user's group.
 
 ##### How To Use
 
 ```javascript
-// UUID do grupo do utilizador autenticado.
-_log.info(`UID do Grupo: ${_group.uid()}`)
+// UUID of the authenticated user's group.
+_log.info(`Group UID: ${_group.uid()}`)
 ```
 
 ##### Return
 
 ( _string_ )
 
-UUID (identificador único universal) do grupo do utilizador logado.
+UUID of the authenticated user's group.
 
 ---
 
@@ -521,20 +521,20 @@ UUID (identificador único universal) do grupo do utilizador logado.
 
 ---
 
-#### _group.update(id: int, dadosGrupo: [Values](/docs/library/objects/Values)) : boolean
+#### _group.update(id: int, groupData: [Values](/docs/library/objects/Values)) : boolean
 ##### Description
 
-Atualiza os dados do grupo referente ao ID passado.
+Updates the group with the specified ID.
 
 ##### How To Use
 
 ```javascript
-// Atualiza o grupo:
-const grupo = _group.firstByMail("grupo@exemplo.com")
-grupo.set("name", "Novo Nome")
+// Updates the group:
+const group = _group.firstByMail("group@example.com")
+group.set("name", "New Name")
 _group.update(
-    grupo.getInt("id"),
-    grupo
+    group.getInt("id"),
+    group
 )
 ```
 
@@ -542,8 +542,8 @@ _group.update(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **id** | _int_ | O ID (identificador númerico) do grupo. |
-| **dadosGrupo** | _[Values](/docs/library/objects/Values)_ | Dados do grupo para atualizar a informação armazenada em base de dados. |
+| **id** | _int_ | Numeric group ID. |
+| **groupData** | _[Values](/docs/library/objects/Values)_ | Group data to update in the database. |
 
 ##### Return
 
@@ -553,19 +553,19 @@ It was successfully updated.
 
 ---
 
-#### _group.update(dadosUtilizador: [Values](/docs/library/objects/Values)) : boolean
+#### _group.update(groupData: [Values](/docs/library/objects/Values)) : boolean
 ##### Description
 
-Atualiza os dados do grupo referente ao ID passado.
+Updates the group with the specified ID.
 
 ##### How To Use
 
 ```javascript
-// Atualiza o utilizador:
-const grupo = _group.firstByMail("grupo@exemplo.com")
-grupo.set("name", "Novo Nome")
+// Updates the group:
+const group = _group.firstByMail("group@example.com")
+group.set("name", "New Name")
 _group.update(
-    grupo
+    group
 )
 ```
 
@@ -573,7 +573,7 @@ _group.update(
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **dadosUtilizador** | _[Values](/docs/library/objects/Values)_ | Dados do grupo para atualizar a informação armazenada em base de dados. |
+| **groupData** | _[Values](/docs/library/objects/Values)_ | Group data to update in the database. |
 
 ##### Return
 

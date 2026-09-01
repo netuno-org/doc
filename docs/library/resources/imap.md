@@ -63,7 +63,7 @@ Configuration object loaded from received data.
 #### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](/docs/library/resources/imap)</span>
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 
@@ -377,7 +377,7 @@ Current IMAP feature.
 #### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>setConfig</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAPConfig](/docs/library/objects/IMAPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[IMAP](/docs/library/resources/imap)</span>
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 

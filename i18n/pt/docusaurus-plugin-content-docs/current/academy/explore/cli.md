@@ -86,7 +86,7 @@ Esta seção detalha os parâmetros que podem ser utilizados durante o processo 
 ./netuno install version='latest'
 ```
 
-##### Exemplo de como responder SIM para todas as perguntas: 
+#### Exemplo de como responder SIM para todas as perguntas:
 ```shell
 ./netuno install yes 
 ```
@@ -196,7 +196,7 @@ Esta seção detalha as ações disponíveis para configurar ou consultar sua li
 ```shell
 ./netuno license key
 ```
-##### Exemplo de como definir o seu e-mail e tipo de licença:
+#### Exemplo de como definir o seu e-mail e tipo de licença:
 
 ```shell
 ./netuno license mail='mail@gmail.com' type='community'

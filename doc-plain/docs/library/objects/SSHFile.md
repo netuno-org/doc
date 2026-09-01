@@ -4,7 +4,7 @@ title: SSHFile
 sidebar_label: SSHFile
 ---
 
-Dados de um ficheiro via SSH.
+Contains information about a file accessed over SSH.
 
 ---
 
@@ -12,7 +12,7 @@ Dados de um ficheiro via SSH.
 
 ---
 
-#### getName() : string
+#### <span style={{color: '#008000'}}>getName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the file name.
@@ -29,7 +29,7 @@ The file name.
 
 ---
 
-#### getParent() : string
+#### <span style={{color: '#008000'}}>getParent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns parent name of the file.
@@ -46,7 +46,7 @@ The parent name of the file.
 
 ---
 
-#### getPath() : string
+#### <span style={{color: '#008000'}}>getPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns path of the file.
@@ -63,7 +63,7 @@ Path of the file.
 
 ---
 
-#### isDirectory() : boolean
+#### <span style={{color: '#008000'}}>isDirectory</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether it is a directory.
@@ -80,7 +80,7 @@ Whether it is a directory or not.
 
 ---
 
-#### isRegularFile() : boolean
+#### <span style={{color: '#008000'}}>isRegularFile</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
 ##### Description
 
 Returns whether it is a regular file, that is, it is not a directory, symbolic link or any other type of special file.
@@ -97,7 +97,7 @@ Whether it is a regular file or not.
 
 ---
 
-#### setDirectory(directory: boolean) : void
+#### <span style={{color: '#008000'}}>setDirectory</span>(<span style={{color: '#FF8000'}}>directory</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Defines whether it is a directory.
@@ -119,7 +119,7 @@ Defines whether it is a directory.
 
 ---
 
-#### setName(name: string) : void
+#### <span style={{color: '#008000'}}>setName</span>(<span style={{color: '#FF8000'}}>name</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Defines the file name.
@@ -141,7 +141,7 @@ Defines the file name.
 
 ---
 
-#### setParent(parentName: string) : void
+#### <span style={{color: '#008000'}}>setParent</span>(<span style={{color: '#FF8000'}}>parentName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Defines the parent name of the file.
@@ -163,7 +163,7 @@ Defines the parent name of the file.
 
 ---
 
-#### setPath(path: string) : void
+#### <span style={{color: '#008000'}}>setPath</span>(<span style={{color: '#FF8000'}}>path</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Defines the path of the file.
@@ -185,7 +185,7 @@ Defines the path of the file.
 
 ---
 
-#### setRegularFile(directory: boolean) : void
+#### <span style={{color: '#008000'}}>setRegularFile</span>(<span style={{color: '#FF8000'}}>directory</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>void</span>
 ##### Description
 
 Defines whether it is a regular file, that is, it is not a directory, symbolic link or any other type of special file.

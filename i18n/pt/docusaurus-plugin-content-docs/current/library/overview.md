@@ -10,7 +10,7 @@ Reduz o esforço e tempo de desenvolvimento, assim como os custos de produção 
 
 ![Estrutura Netuno](/docs/assets/introducao1.png)
 
-Saiba como o Netuno favorece a sua experiência de programação para que tenha uma programação criativa e não repetitiva, mantendo os níveis de performance desde o desenvolvimento até à execução: 
+Saiba como o Netuno favorece a sua experiência de programação para que tenha uma programação criativa e não repetitiva, mantendo os níveis de performance desde o desenvolvimento até à execução:
 
 > A plataforma Netuno é gratuita, [comece já](/docs/get-started/installation).
 
@@ -32,23 +32,21 @@ A camada de comunicação do servidor é disponibilizada por API REST. A disponi
 
 ## Camada de serviços poliglota
 
-Escreva serviços em <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://groovy-lang.org/" target="_blank">Groovy</a>, <a href="https://www.jython.org/" target="_blank">Python</a>, <a href="https://www.jruby.org/" target="_blank">Ruby</a>, <a href="https://kotlinlang.org/" target="_blank">Kotlin</a> ou em <a href="https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)" target="_blank">Java</a>, todas elas são válidas. O Netuno remove o isolamento entre linguagens de programação, a mesma aplicação suporta serviços a correr em simultâneo em múltiplas linguagens sem que tal aumente o peso de processamento.
+Escreva serviços em <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://www.graalvm.org/python/" target="_blank">Python com GraalPy</a>, <a href="https://www.jruby.org/" target="_blank">Ruby com JRuby</a>, <a href="https://kotlinlang.org/" target="_blank">Kotlin</a>, <a href="https://groovy-lang.org/" target="_blank">Groovy</a> ou CajuScript. A mesma aplicação pode executar serviços escritos em qualquer combinação destas linguagens suportadas.
 
 ## Multi base de dados
 
-Configure várias base de dados diferentes e use-as em simultâneo. Nativamente o Netuno suporta diversos motores de base de dados relacionais como <a href="https://www.h2database.com/html/main.html" target="_blank">H2DataBase</a>, <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> e CockroachDB, <a href="https://mariadb.org/" target="_blank">MariaDB (_MySQL_)</a>, Microsoft SQL Server e Oracle. Conseguirá criar a sua aplicação usando, por exemplo, o PostgreSQL com uma base de dados principal e integrar com outras base de dados em MariaDB, e a meio de um projecto poder mudar para Microsoft SQL Server ou Oracle sem que tenha que realizar qualquer alteração de código. 
-
-> Oferece suporte nativo à integração com o MongoDB.
+Configure várias base de dados diferentes e use-as em simultâneo. Nativamente o Netuno suporta diversos motores de base de dados relacionais como <a href="https://www.h2database.com/html/main.html" target="_blank">H2DataBase</a>, <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>, <a href="https://mariadb.org/" target="_blank">MariaDB (_MySQL_)</a>, Microsoft SQL Server e Oracle. Conseguirá criar a sua aplicação usando, por exemplo, o PostgreSQL com uma base de dados principal e integrar com outras base de dados em MariaDB, e a meio de um projecto poder mudar para Microsoft SQL Server ou Oracle sem que tenha que realizar qualquer alteração de código.
 
 ## Serverless
 
-O Netuno é também o seu servidor aplicacional. Com um comando execute a sua aplicação sem que para isso tenha que perder tempo em licenciamentos, configurações e desenvolvimentos adicionais. 
+O Netuno é também o seu servidor aplicacional. Com um comando execute a sua aplicação sem que para isso tenha que perder tempo em licenciamentos, configurações e desenvolvimentos adicionais.
 
 ## Performance no desenvolvido e na execução
 
-Não precisa de aprender a trabalhar com um novo software de desenvolvimento por drag and drop, nem de memorizar a interface de uma nova framework. Com a possibilidade de programar em 6 linguagens diferentes, ter uma camada de dados auto gerada e com bibliotecas disponíveis para usar on-the-fly, o low-code do Netuno é a melhor solução para os seus prazos apertados.
+Não precisa de aprender a trabalhar com um novo software de desenvolvimento por *drag and drop*, nem de memorizar a interface de uma nova framework. Com sete linguagens suportadas, uma camada de dados gerada automaticamente e bibliotecas disponíveis a qualquer momento, o ambiente low-code do Netuno ajuda a cumprir prazos apertados.
 
-Utilizando geradores de código otimizados para grande performance e usando a recente <a href="https://www.graalvm.org/" target="_blank">GraalVM</a>, o servidor aplicacional torna-se incrivelmente rápido, independente da linguagem que utilize. 
+Utilizando geradores de código otimizados para grande performance e usando a recente <a href="https://www.graalvm.org/" target="_blank">GraalVM</a>, o servidor aplicacional torna-se incrivelmente rápido, independente da linguagem que utilize.
 
 ## Tutoriais
 

@@ -4,7 +4,7 @@ title: RelationalOperator
 sidebar_label: RelationalOperator
 ---
 
-Definição da configuração da relação do objeto Conditional.
+Configures the relational operator of a conditional expression.
 
 ---
 

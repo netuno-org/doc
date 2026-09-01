@@ -37,13 +37,13 @@ Os tutoriais desta seção são voltados para quem deseja criar e configurar apl
 
 | Tutorial | Objetivo | Nível |
 |---|---|---|
-| [Conheça a Interface Gráfica](/pt/docs/academy/ui/graphical-interface) | Entender a estrutura do painel, menus e recursos principais. | Iniciante |
-| [Formulários](/pt/docs/academy/ui/forms) | Criar e organizar formulários de forma visual. | Iniciante |
-| [Campos](/pt/docs/academy/ui/fields) | Configurar tipos de dados, validações e comportamento dos campos. | Iniciante |
-| [Relações entre Formulários](/pt/docs/academy/ui/relationships-between-forms) | Definir vínculos entre dados e relacionamentos entre formulários. | Intermediário |
-| [Grupos e Usuários](/pt/docs/academy/ui/groups-users) | Gerenciar permissões, perfis de acesso e organização de usuários. | Intermediário |
-| [Interface de Consultas](/pt/docs/academy/ui/queries-interface) | Criar consultas visuais para análise e extração de dados. | Intermediário |
-| [Formulário Modal](/pt/docs/academy/explore/modal-form) | Construir interações avançadas com janelas modais. | Avançado |
+| [Conheça a Interface Gráfica](/docs/academy/ui/graphical-interface) | Entender a estrutura do painel, menus e recursos principais. | Iniciante |
+| [Formulários](/docs/academy/ui/forms) | Criar e organizar formulários de forma visual. | Iniciante |
+| [Campos](/docs/academy/ui/fields) | Configurar tipos de dados, validações e comportamento dos campos. | Iniciante |
+| [Relações entre Formulários](/docs/academy/ui/relationships-between-forms) | Definir vínculos entre dados e relacionamentos entre formulários. | Intermediário |
+| [Grupos e Usuários](/docs/academy/ui/groups-users) | Gerenciar permissões, perfis de acesso e organização de usuários. | Intermediário |
+| [Interface de Consultas](/docs/academy/ui/queries-interface) | Criar consultas visuais para análise e extração de dados. | Intermediário |
+| [Formulário Modal](/docs/academy/explore/modal-form) | Construir interações avançadas com janelas modais. | Avançado |
 
 ## Backend
 
@@ -61,31 +61,31 @@ Antes de avançar para esta seção, é recomendado ter familiaridade com:
 
 | Tutorial | Objetivo | Nível |
 |---|---|---|
-| [Serviços Web REST](/pt/docs/academy/server/services/rest) | Criar e expor endpoints para consumo por aplicações e sistemas externos. | Intermediário |
-| [Envio de E-mails](/pt/docs/academy/server/services/sending-emails) | Configurar envio de e-mails transacionais via SMTP. | Intermediário |
+| [Serviços Web REST](/docs/academy/server/services/rest) | Criar e expor endpoints para consumo por aplicações e sistemas externos. | Intermediário |
+| [Envio de E-mails](/docs/academy/server/services/sending-emails) | Configurar envio de e-mails transacionais via SMTP. | Intermediário |
 
 ### Dados e persistência
 
 | Tutorial | Objetivo | Nível |
 |---|---|---|
-| [Queries Programaticamente](/pt/docs/academy/server/database/db-query-execute) | Executar consultas customizadas e interações diretas com o banco de dados. | Intermediário |
-| [Form e Operações de Banco de Dados](/pt/docs/academy/server/database/db-form-operations) | Controlar o ciclo de vida dos dados em inserções, atualizações e exclusões. | Intermediário |
-| [Gerar IDs Únicos (UID/GUID)](/pt/docs/academy/server/services/generate-uid-guid) | Implementar identificadores únicos com boas práticas. | Intermediário |
+| [Queries Programaticamente](/docs/academy/server/database/db-query-execute) | Executar consultas customizadas e interações diretas com o banco de dados. | Intermediário |
+| [Form e Operações de Banco de Dados](/docs/academy/server/database/db-form-operations) | Controlar o ciclo de vida dos dados em inserções, atualizações e exclusões. | Intermediário |
+| [Gerar IDs Únicos (UID/GUID)](/docs/academy/server/services/generate-uid-guid) | Implementar identificadores únicos com boas práticas. | Intermediário |
 
 ### Infraestrutura e bancos de dados
 
 | Tutorial | Objetivo | Nível |
 |---|---|---|
-| [Configuração do MSSQL](/pt/docs/academy/server/database/mssql) | Conectar e configurar o Netuno com Microsoft SQL Server. | Intermediário |
-| [Múltiplas Bases de Dados](/pt/docs/academy/server/database/multiple-databases) | Trabalhar com mais de uma base de dados no mesmo projeto. | Avançado |
+| [Configuração do MSSQL](/docs/academy/server/database/mssql) | Conectar e configurar o Netuno com Microsoft SQL Server. | Intermediário |
+| [Múltiplas Bases de Dados](/docs/academy/server/database/multiple-databases) | Trabalhar com mais de uma base de dados no mesmo projeto. | Avançado |
 
 ### Recursos avançados
 
 | Tutorial | Objetivo | Nível |
 |---|---|---|
-| [Templates](/pt/docs/academy/server/templates) | Criar estruturas reutilizáveis e dinâmicas para acelerar o desenvolvimento. | Avançado |
-| [JWT Token](/pt/docs/academy/server/services/jwt) | Implementar autenticação baseada em tokens. | Avançado |
-| [Desenvolvimento e Debug em Java](/pt/docs/academy/server/java-core/setup) | Configurar ambiente para depuração e extensões em Java. | Avançado |
+| [Templates](/docs/academy/server/templates) | Criar estruturas reutilizáveis e dinâmicas para acelerar o desenvolvimento. | Avançado |
+| [JWT Token](/docs/academy/server/services/jwt) | Implementar autenticação baseada em tokens. | Avançado |
+| [Desenvolvimento e Debug em Java](/docs/academy/server/java-core/intellij-setup) | Configurar ambiente para depuração e extensões em Java. | Avançado |
 
 :::tip Como escolher um tutorial
 

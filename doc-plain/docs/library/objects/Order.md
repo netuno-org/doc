@@ -4,7 +4,7 @@ title: Order
 sidebar_label: Order
 ---
 
-Definição do objeto Order para ordenação de resultados usando o Query.
+Defines result ordering for a DB Form operation.
 
 ---
 
@@ -12,7 +12,7 @@ Definição do objeto Order para ordenação de resultados usando o Query.
 
 ---
 
-#### getColumn() : string
+#### <span style={{color: '#008000'}}>getColumn</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the column that will be used in sorting.
@@ -29,7 +29,7 @@ The name of the column.
 
 ---
 
-#### getOrder() : string
+#### <span style={{color: '#008000'}}>getOrder</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
 ##### Description
 
 Returns the sorting direction.
@@ -46,7 +46,7 @@ The sorting direction.
 
 ---
 
-#### setColumn(column: string) : [Order](/docs/library/objects/Order)
+#### <span style={{color: '#008000'}}>setColumn</span>(<span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](/docs/library/objects/Order)</span>
 ##### Description
 
 Defines the column that will be used in sorting.
@@ -69,7 +69,7 @@ Current Order object.
 
 ---
 
-#### setOrder(order: string) : [Order](/docs/library/objects/Order)
+#### <span style={{color: '#008000'}}>setOrder</span>(<span style={{color: '#FF8000'}}>order</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Order](/docs/library/objects/Order)</span>
 ##### Description
 
 Defines the sorting direction.

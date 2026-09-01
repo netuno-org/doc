@@ -5,9 +5,13 @@ title: Interface Life Cycle Events
 sidebar_label: Life Cycle Events
 ---
 
+## User interface (`ui`)
+
+You can inject application-specific code into Netuno's data-management interface from the application's root `ui` folder.
+
 A page cannot be safely handled until the application is "ready". Netuno detects this state of readiness for you. 
 
-## addPageLoad()
+### addPageLoad()
 
 The method will be called when the page is loaded.
 
@@ -17,7 +21,7 @@ netuno.addPageLoad(() => {
 });
 ```
 
-## addContentLoad()
+### addContentLoad()
 
 Once a component is loaded, the method is called.
 

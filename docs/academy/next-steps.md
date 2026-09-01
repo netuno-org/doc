@@ -30,20 +30,21 @@ The construction of a well organized and optimized database makes all the differ
 
 ## Services
 
-If you already have some knowledge in any of the following programming languages like <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://www.jython.org/" target="_blank">Python</a>, <a href="https://www.jruby.org/" target="_blank">Ruby</a>, <a href="https://kotlinlang.org/" target="_blank">Kotlin</a> or <a href="https://groovy-lang.org/" target="_blank">Groovy</a>, you can quickly create complex and robust web services using the various features that Netuno provides for **low code** programming.
+If you already know one of Netuno's supported languages, you can quickly create robust web services using the platform's **low-code** resources.
 
 Inside the applications folder especially in the **server** folder, you can program in these various languages.
 
 Just use the corresponding extension:
 
-* **.js** &nbsp; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>
+* **.js**, **.cjs**, **.mjs** &nbsp; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>
 * **.ts** &nbsp; <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>
-* **.py** &nbsp; <a href="https://www.jython.org/" target="_blank">Python</a>
-* **.rb** &nbsp; <a href="https://www.jruby.org/" target="_blank">Ruby</a>
+* **.py** &nbsp; <a href="https://www.graalvm.org/python/" target="_blank">Python with GraalPy</a>
+* **.rb** &nbsp; <a href="https://www.jruby.org/" target="_blank">Ruby with JRuby</a>
 * **.kts** &nbsp; <a href="https://kotlinlang.org/" target="_blank">Kotlin</a>
 * **.groovy** &nbsp; <a href="https://groovy-lang.org/" target="_blank">Groovy</a>
+* **.cj** &nbsp; CajuScript
 
-Explore the examples of web services that come in the application **demo**_nstration_, at:
+Explore the web-service examples included in the **demo** application at:
 
 - `/apps/demo/server/services/samples`
 

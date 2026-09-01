@@ -4,7 +4,7 @@ title: OutputStream
 sidebar_label: OutputStream
 ---
 
-É utilizado para gerir a saída do fluxo de dados.
+Provides access to an output data stream.
 
 ---
 

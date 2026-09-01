@@ -20,7 +20,7 @@ Imagine que tem uma aplicação para o envio de Newsletter, outra para gerir Liv
 
 Assim, não há razão para partilharem a mesma base de dados e sim cada uma ter a sua própria base de dados:
 
-![Aplicações desacopladas.](/docs/assets/business/apps-db-pt-desacopladas.svg "Aplicações desacopladas.")
+<img src="/docs/assets/business/apps-db-pt-desacopladas.svg" alt="Aplicações desacopladas." />
 
 Desta forma nenhuma aplicação conhece a informação armazenada nas outras aplicações e todo o seu funcionamento é independente das outras aplicações existentes.
 
@@ -42,7 +42,7 @@ A aplicação de cliente não deve partilhar dados com a aplicação de forneced
 
 Mas a aplicação de faturação precisa integrar com ambas as aplicações para obter os dados da aplicação de clientes e de fornecedores para poder relacionar as faturas e gerir cobranças e pagamentos nas diveras situações.
 
-![Aplicações Acopladas.](/docs/assets/business/apps-db-pt-acopladas.svg "Aplicações Acopladas.")
+<img src="/docs/assets/business/apps-db-pt-acopladas.svg" alt="Aplicações acopladas." />
 
 Para garantir que as aplicações não interferem em dados sensíveis uma das outras recomenda-se também a utilização do acessos à base de dados distintos para cada aplicação, e pode-se ainda controlar via base de dados os seus acesso às tabelas para garantir que não haja interferência indesejada.
 

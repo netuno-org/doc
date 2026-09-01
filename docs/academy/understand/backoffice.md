@@ -23,7 +23,7 @@ Developing the backoffice often takes as much or more time spent than developing
 
 Also very common for the back office to provide the [REST API](/docs/academy/server/services/openapi) with web services that will allow the communication of datta business with the final application or the frontend.
 
-![Backoffice.](/docs/assets/business/business-backoffice.svg "Backoffice.")
+<img src="/docs/assets/business/business-backoffice.svg" alt="Backoffice." />
 
 _Netuno_ brings a powerful backoffice engine where without code it is possible to build the data structure generating forms integrated with the database for the most common manipulations such as `CREATE`, `SEARCH`, `EDIT` and `DELETE`.
 

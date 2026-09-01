@@ -104,7 +104,7 @@ The following scripts are executed in the processing flow of any application's A
 
 The services that make up the application API are created in the `📂 services` folder.
 
-Services can be written in various languages: Javascript, Python, Java, Kotlin, Ruby, or Groovy.
+Services can be written in JavaScript (`.js`, `.cjs`, `.mjs`), TypeScript (`.ts`), Python with GraalPy (`.py`), Ruby with JRuby (`.rb`), Kotlin (`.kts`), Groovy (`.groovy`), or CajuScript (`.cj`).
 
 Since Netuno is polyglot, any script file can be modified to another supported programming language;
 the file extension simply matches the language.
@@ -139,8 +139,24 @@ The `dashboard.html` folder, located in the templates root, contains the HTML fo
 In the `📂 _` folder, any general template can be replaced, meaning Netuno's default templates can be
 changed.
 
-- [Here are Netuno's native templates.](https://github.com/netuno-org/platform/tree/main/bundle/base/web/netuno/templates/sbadmin)
+- [Here are Netuno's native templates.](https://github.com/netuno-org/platform/tree/main/bundle/base/core/web/netuno/templates/sbadmin)
 
 If the folder and/or file names match those of the native templates within this folder, then the template found in this folder will be used instead of the native template.
 
 In other words, simply replicate the same structure of the native template within the `📂 _` folder to replace it.
+
+### Scripts
+
+The script templates inject JavaScript files at the end of pages for the following purposes:
+
+1. `scripts.html` adds JavaScript at the end of the **back-office** page.
+2. `scripts_dev.html` adds JavaScript at the end of the **developer workspace** page.
+3. `scripts_login.html` adds JavaScript at the end of the **login** page.
+
+### Styles
+
+The style templates inject CSS files at the beginning of pages for the following purposes:
+
+1. `styles.html` adds CSS at the beginning of the **back-office** page.
+2. `styles_dev.html` adds CSS at the beginning of the **developer workspace** page.
+3. `styles_login.html` adds CSS at the beginning of the **login** page.

@@ -205,9 +205,8 @@ module.exports = {
 To have the code autocomplete function with code validation integrated into the editors, we must install 
 the [Server Types](https://www.npmjs.com/package/@netuno/server-types) in the application's `📁 server` folder.
 
-> The server types (`@netuno/server-types`) define all the low-code polyglot programming features in TypeScript, 
-> allowing editors to detect everything that the Netuno low-code polyglot framework offers, but because it's 
-> TypeScript, it only serves to assist in JavaScript code.
+> The server types (`@netuno/server-types`) define Netuno's low-code polyglot programming features in TypeScript,
+> allowing editors to provide completion and validation for both JavaScript and TypeScript server code.
 
 Inside the `📁 server` folder, install the [Server Types](https://www.npmjs.com/package/@netuno/server-types):
 

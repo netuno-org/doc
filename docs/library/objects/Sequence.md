@@ -4,14 +4,14 @@ title: Sequence
 sidebar_label: Sequence
 ---
 
-Realiza a manipulação de sequências em base de dados.
+Manipulates database sequences.
 
 ```javascript
 if (!_db.checkExists().sequence("client", "name")) {
     _db.index().create(
-        "client", // Nome da Tabela
+    "client", // Table name
         "name" // Nome da Coluna
-    ); // O index client_name_idx será criado criado.
+); // Creates the client_name_idx sequence.
 }
 ```
 

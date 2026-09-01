@@ -4,7 +4,7 @@ title: RelationshipLink
 sidebar_label: RelationshipLink
 ---
 
-Definição da configuração do objeto RelationLink para configurar realcionamentos entre formularios.
+Configures linked relationships between Netuno Forms.
 
 ---
 

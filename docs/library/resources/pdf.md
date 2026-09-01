@@ -1663,13 +1663,13 @@ Returns the created font.
 #### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>getDocument</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
-Obtém o objecto Document do iText para a estrutura do documento PDF.
+Gets the iText `Document` used to build the PDF content.
 
 ##### Return
 
 ( _com.itextpdf.layout.Document_ )
 
-Gere a estrutura do documento.
+Document content structure.
 
 ---
 
@@ -1680,7 +1680,7 @@ Gere a estrutura do documento.
 #### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>getPdfDocument</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.kernel.pdf.PdfDocument</span>
 ##### Description
 
-Gets the PdfDocument object of the iText to build the PDf document.
+Gets the iText `PdfDocument` used to build the PDF document.
 
 ##### Return
 
@@ -1876,7 +1876,7 @@ Returns the line type, color and width inserted.
 #### <span style={{fontWeight: 'normal'}}>_pdf</span>.<span style={{color: '#008000'}}>newDocument</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>com.itextpdf.layout.Document</span>
 ##### Description
 
-Cria um novo documento.
+Creates a new document.
 
 ##### Return
 

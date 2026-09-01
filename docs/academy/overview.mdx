@@ -26,12 +26,13 @@ Netuno's **low-code** environment is polyglot, allowing you to choose the langua
 
 In all development options, you have native support for the following languages:
 
-* <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>
-* <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>
-* <a href="https://www.jython.org/" target="_blank">Python</a>
-* <a href="https://www.jruby.org/" target="_blank">Ruby</a>
-* <a href="https://kotlinlang.org/" target="_blank">Kotlin</a>
-* <a href="https://groovy-lang.org/" target="_blank">Groovy</a>
+* JavaScript
+* TypeScript
+* Python (GraalPy)
+* Ruby (JRuby)
+* Kotlin
+* Groovy
+* CajuScript
 
 ## Productivity at Work
 
@@ -106,11 +107,13 @@ It's possible to create several independent applications (projects) and, within 
 
 The platform automatically identifies which execution engine to use based on the file extension created in the server's services folder, for example:
 
-- `.js` - JavaScript
-- `.py` - Python
-- `.rb` - Ruby
+- `.js`, `.cjs`, `.mjs` - JavaScript
+- `.ts` - TypeScript
+- `.py` - Python (GraalPy)
+- `.rb` - Ruby (JRuby)
 - `.kts` - Kotlin Script
 - `.groovy` - Groovy
+- `.cj` - CajuScript
 
 ## Service Structure
 

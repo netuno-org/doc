@@ -4,7 +4,7 @@ title: Group
 sidebar_label: Group
 ---
 
-Definição do objeto Group para agrupamento de resultados com Query.
+Defines result grouping for a DB Form operation.
 
 ---
 

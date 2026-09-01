@@ -4,7 +4,7 @@ title: Order
 sidebar_label: Order
 ---
 
-Definição do objeto Order para ordenação de resultados usando o Query.
+Defines result ordering for a DB Form operation.
 
 ---
 

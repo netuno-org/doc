@@ -32,7 +32,7 @@ To simplify each scheduled service, it is a separate ** job **, which has its ow
 
 Furthermore, the execution of each **job** involves the execution of a URL (_web address, link_), which can be both external and internal to the application itself. When it is an external link, it can be from another application or any external URL on the internet, on the network or on the computer.
 
-![Cron Diagram](/docs/assets/academy/server/cron.svg)
+<img src="/docs/assets/academy/server/cron.svg" alt="Cron diagram" />
 
 The graph above shows that _Netuno_ contains 2 applications, where each one has configured 2 jobs (_scheduled services_), which are executed at different times, corresponding to any configuration.
 

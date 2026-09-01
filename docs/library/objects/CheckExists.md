@@ -4,7 +4,7 @@ title: CheckExists
 sidebar_label: CheckExists
 ---
 
-Verifica se sequências, tabelas, colunas e indexes existem na base de dados.
+Checks whether sequences, tables, columns, and indexes exist in the database.
 
 ```javascript
 if (!_db.checkExists().table("client")) {

@@ -211,9 +211,9 @@ module.exports = {
 Para ter a função de autocomtemplar o código com validação do código integrada nos editores, devemos na pasta
 `📁 server` da aplicação realizar a instalação dos [Tipos do Servidor](https://www.npmjs.com/package/@netuno/server-types).
 
-> Os tipos do servidor (`@netuno/server-types`) é a definição de todos os recursos de programação low-code 
-> poliglota em TypeScript, o que permite os editores detectar tudo que a framework low-code poliglota do 
-> Netuno oferece, mas por ser TypeScript apenas serve para auxiliar no código em JavaScript.
+> Os tipos do servidor (`@netuno/server-types`) definem em TypeScript os recursos de programação low-code
+> poliglota do Netuno, permitindo aos editores fornecer preenchimento e validação tanto para código de servidor
+> em JavaScript como em TypeScript.
 
 Dentro da pasta `📁 server` instale os [Tipos do Servidor](https://www.npmjs.com/package/@netuno/server-types):
 

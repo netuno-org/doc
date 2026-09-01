@@ -4,23 +4,80 @@ title: Form and Database Operations
 sidebar_label: DB Form
 ---
 
-## Before You Starting
+## Before You Start
 
-Before proceeding, check that there are notions of SQL, relationships between tables such as `Many To One`, `One To Many` and so on. Furthermore, prior knowledge of Netuno's Forms and how they are organized is necessary to get the most out of the Query object.
+Before proceeding, become familiar with SQL, table relationships such as one-to-many and many-to-one, and how Netuno Forms are organized. This background will help you use DB Form safely and effectively.
 
 ## Introduction
 
-In software development we often need to search for information in databases and doing this using pure SQL makes things massive and stressful. Query turns building SQL queries into an intuitive, stress-free experience. With it, you can create powerful queries using user-friendly methods that abstract the complexity of raw SQL delivering a query development approach that aligns with your flow of thought.
+Applications often need to query and modify database records. DB Form provides a fluent, object-oriented API for building these operations without writing every SQL statement directly.
 
-## How it works
+## How It Works
 
-At the heart of Query is the ability to structure SQL commands using objects and methods. Instead of writing raw SQL queries directly, Query allows you to use an object-oriented engine to programmatically define queries. Each query is represented as an object. You create instances of query classes that encapsulate different parts of SQL like selection, filtering, grouping, etc.
+Each DB Form operation starts from a Netuno Form, which represents a database table. Methods then add filters, relationships, selected columns, grouping, ordering, and other options before a terminal method queries or changes the matching records.
 
-## Practical Examples of Use
+## Initialization
+
+Pass the base Form name to `_db.form()`. For a Form named `people`:
+
+```javascript
+const dbFormPeople = _db.form('people')
+```
+
+## Simple Query
+
+The two most common retrieval methods are:
+
+- `all()` returns all matching records as a list.
+- `first()` returns the first matching record, or `null` when there is none.
+
+```javascript
+const people = _db.form('people').all()
+const person = _db.form('people').first()
+```
+
+## Filters and Conditions
+
+Use `where()` to restrict the records returned or changed by an operation:
+
+```javascript
+const person = _db.form('people')
+    .where(_db.where('people_user_id').equals(_user.id))
+    .first()
+```
+
+Conditions can be combined:
+
+```javascript
+const people = _db.form('people')
+    .where(
+        _db.where('type').in(_val.list().add('client').add('admin'))
+            .and('email').notEqual(null)
+    )
+    .all()
+```
+
+## Where Comparisons
+
+`_db.where()` returns a [Where object](/docs/library/objects/Where) with these comparison methods:
+
+- `equal(value)` or `equals(value)` — equals (`=`).
+- `notEqual(value)` or `notEquals(value)` — does not equal (`<>`).
+- `greaterThan(value)` — greater than (`>`).
+- `lessThan(value)` — less than (`<`).
+- `greaterOrEqualsThan(value)` — greater than or equal to (`>=`).
+- `lessOrEqualsThan(value)` — less than or equal to (`<=`).
+- `startsWith(text)` — matches `text%` with `LIKE`.
+- `endsWith(text)` — matches `%text` with `LIKE`.
+- `contains(text)` — matches `%text%` with `LIKE`.
+- `in(values)` — matches any value with `IN`.
+- `notIn(values)` — excludes all values with `NOT IN`.
+
+## Practical Query Examples
 
 The `DB Form` is accessible from the `_db.form("form")` resource, once invoked you have in your hands the base that can be configured using the methods and objects available in it.
 
-### Search All
+### Many-to-One Relationships and Distinct Results
 
 ```javascript
 const query = _db.form('people')
@@ -67,7 +124,7 @@ In the example above we make a query for the `people` table relating it to two o
 
 > The `link` method should only be used when the tables already have a relationship through Netuno's `Form`.
 
-### Get First Record
+### First Record with a Relationship and Ordering
 
 ```javascript
 const query = _db.form('people')
@@ -130,7 +187,7 @@ At the end of the example above, we invoke the `page()` method passing as a para
 }
 ```
 
-### Insert New Records
+## Insert Records
 
 To insert data into the database, we use the `insert` method, for example:
 
@@ -149,7 +206,7 @@ Therefore, in `dbPeopleInserted`, the ID of the inserted record is obtained as f
 _log.info("People ID Inserted: "+ dbPeopleInserted.getInt('id'))
 ```
 
-### Update Records
+## Update Records
 
 With DB Form you are able to update the records of a query in a simple way.
 
@@ -168,7 +225,7 @@ _db.form('people')
 
 > You can also use other methods to filter like `order()`, `limit()` to improve your queries.
 
-### Delete Records
+## Delete Records
 
 The Query object allows you to delete the records returned by the query in a simple and intuitive way.
 
@@ -183,21 +240,4 @@ _db.form('people')
 > `Warning`. The method `delete()` will delete all records of the query result.
 
 > You can also use other methods to filter like `order()`, `limit()` to improve your queries.
-
-
-## Where Comparisons
-
-The `_db.where` provides the [Where](/docs/library/objects/Where) object that supports the following comparison operations:
-
-- `equal('value')` or `equals('value')` - Checks for equality.
-- `startsWith('value')` - Starts with the given prefix.
-- `endsWith('value')` - Ends with the given suffix.
-- `contains('value')` - Contains the term.
-- `in(_val.list())` - Equals any value in the list.
-- `notIn(_val.list())` - Not equal to any value in the list.
-- `greaterThan(value)` - Greater than the passed value.
-- `lessThan(value)` - Less than the passed value.
-- `greaterOrEqualsThan(value)` - Greater than or equal to the passed value.
-- `lessOrEqualsThan(value)` - Less than or equal to the passed value.
-- `different(value)` - Different from the passed value.
 

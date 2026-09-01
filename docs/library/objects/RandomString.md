@@ -4,7 +4,7 @@ title: RandomString
 sidebar_label: RandomString
 ---
 
-O RandomString gera códigos alfanuméricos aleatórios.
+RandomString generates random alphanumeric values.
 
 ---
 

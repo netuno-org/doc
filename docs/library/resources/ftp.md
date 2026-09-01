@@ -120,7 +120,7 @@ Configuration object loaded from received data.
 #### <span style={{fontWeight: 'normal'}}>_ftp</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTP](/docs/library/resources/ftp)</span>
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 
@@ -643,7 +643,7 @@ The current FTP resource.
 #### <span style={{fontWeight: 'normal'}}>_ftp</span>.<span style={{color: '#008000'}}>setConfig</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTPConfig](/docs/library/objects/FTPConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[FTP](/docs/library/resources/ftp)</span>
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 

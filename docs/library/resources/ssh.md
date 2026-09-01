@@ -64,7 +64,7 @@ Configuration object loaded from received data.
 #### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>config</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](/docs/library/resources/ssh)</span>
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 
@@ -309,7 +309,7 @@ Result whether or not it is activated.
 #### <span style={{fontWeight: 'normal'}}>_ssh</span>.<span style={{color: '#008000'}}>setConfig</span>(<span style={{color: '#FF8000'}}>config</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSHConfig](/docs/library/objects/SSHConfig)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SSH](/docs/library/resources/ssh)</span>
 ##### Description
 
-Define outra configuração que deve ser utilizada.
+Sets the configuration to use.
 
 ##### Attributes
 

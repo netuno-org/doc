@@ -9,7 +9,7 @@ title: Form
 In this demonstration step, you will create the **Task** form and configure the first data field.
 
 :::info REFERENCE
-For a more detailed explanation of forms, see the [Interface Guide: Forms](doc/docs/academy/ui/forms.md).
+For a more detailed explanation of forms, see the [Interface Guide: Forms](/docs/academy/ui/forms).
 :::
 
 ## Objective

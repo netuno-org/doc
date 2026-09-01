@@ -181,7 +181,7 @@ if (!_db.checkExists().column("client", "description")) {
 ##### Description
 
 Gets the connection configuration to the database being used.
-The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/tutorials/multiple-databases) tutorial.
+The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -346,7 +346,7 @@ Performs the deletion of records in the database based on the UID.
 ##### How To Use
 
 ```javascript
-// Executa a eliminação através do uid
+// Deletes the record by UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
@@ -757,7 +757,7 @@ Example that demonstrates how to define columns, conditions, ordering and pagina
 
 ```javascript
 const list = _db.find(
-    "pessoa",
+    "person",
     _val.map()
         .set(
             "columns",
@@ -773,7 +773,7 @@ const list = _db.find(
         .set(
             "where",
             _val.map()
-                .set("grupo", 1)
+                .set("group", 1)
                 .set(
                     "email",
                     _val.map()
@@ -1012,7 +1012,7 @@ The item data found or null if it does not exist.
 ##### Description
 
 Gets the connection configuration to the database being used.
-The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/tutorials/multiple-databases) tutorial.
+The connection details are defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1043,7 +1043,7 @@ Configuration of the connection to the database being used.
 ##### Description
 
 Gets the name of the database connection configuration being used.
-The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
+The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1095,7 +1095,7 @@ The version of the database in numeric format, for example: 10.5
 
 ---
 
-#### _db.index() : [Index](/docs/library/objects/Index)
+#### _db.index() : [Index](/docs/library/objects/)
 ##### Description
 
 Performs the manipulation of indexes in the database.
@@ -1113,7 +1113,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ##### Return
 
-( _[Index](/docs/library/objects/Index)_ )
+( _[Index](/docs/library/objects/)_ )
 
 
 ---
@@ -1126,7 +1126,7 @@ if (!_db.checkExists().index("client", "name")) {
 ##### Description
 
 Starts a new DB resource for the connection name that is passed.
-The connection details must be defined in the application's environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
+The connection details must be defined in the application's environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1498,7 +1498,7 @@ If it is PostgreSQL.
 ##### Description
 
 Gets the name of the database connection configuration being used.
-The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](../../academy/server/database/multiple-databases) tutorial.
+The connection details must be defined in the application environment configuration document, more information in the [Multiple Databases](/docs/academy/server/database/multiple-databases) tutorial.
 
 ##### How To Use
 
@@ -1540,7 +1540,7 @@ Returns a relationship with a form.
 
 ( _[Link](/docs/library/objects/Link)_ )
 
-Objeto Link.
+Link object.
 
 ---
 
@@ -1675,7 +1675,7 @@ Returns the object for pagination configuration when using Query's page() method
 
 ( _org.netuno.tritao.db.form.pagination.Pagination_ )
 
-Objeto Pagination.
+Pagination object.
 
 ---
 
@@ -1699,7 +1699,7 @@ Returns the object for pagination configuration when using Query's page() method
 
 ( _org.netuno.tritao.db.form.pagination.Pagination_ )
 
-Objeto Pagination.
+Pagination object.
 
 ---
 
@@ -2123,7 +2123,7 @@ Executes the insertion or update of a record in the database based on the UID.
 ##### How To Use
 
 ```javascript
-// Executa a eliminação através do uid
+// Deletes the record by UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
@@ -2164,7 +2164,7 @@ Executes the insertion or update of a record in the database based on the UID.
 ##### How To Use
 
 ```javascript
-// Executa a eliminação através do uid
+// Deletes the record by UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
@@ -2205,7 +2205,7 @@ Executes the insertion or update of a record in the database based on the UID.
 ##### How To Use
 
 ```javascript
-// Executa a eliminação através do uid
+// Deletes the record by UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 
@@ -2246,7 +2246,7 @@ Executes the insertion or update of a record in the database based on the UID.
 ##### How To Use
 
 ```javascript
-// Executa a eliminação através do uid
+// Deletes the record by UID.
 
 const uid = "1d8722f4-fa28-4a08-8098-6dd5cab1b212";
 

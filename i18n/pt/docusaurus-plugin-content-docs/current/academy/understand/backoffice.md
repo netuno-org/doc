@@ -23,7 +23,7 @@ Por estas e por outras, desenvolver o backoffice muitas vezes dá tanto ou mais 
 
 Além que também é comum o backoffice fornecer a API REST com serviços web que vai permitir realizar a comunicação de dados de negócio com a aplicação final, ou frontend.
 
-![Backoffice.](/docs/assets/business/business-backoffice.svg "Backoffice.")
+<img src="/docs/assets/business/business-backoffice.svg" alt="Backoffice." />
 
 O Netuno traz um poderoso motor de backoffice, onde sem código é possível criar a estrutura de dados gerando formulários integrados com a base de dados para as manipulações mais comuns, como criar, pesquisar, editar e apagar.
 

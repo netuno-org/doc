@@ -196,8 +196,8 @@ To insert an image into the spreadsheet located at `storage/samples/export-excel
             code: `
                 excel.insertPicture(
                     _storage.filesystem("server", "samples/export-excel", "logo.png"),
-                    1, // Número da Coluna
-                    1  // Número da Linha
+                    1, // Column number
+                    1  // Row number
                 ).resize(2.3)
             `
         },
@@ -213,8 +213,8 @@ To insert an image that is in the application at `public/images/logo.png`:
             code: `
                 excel.insertPicture(
                     _app.file("public/images/logo.png"),
-                    10, // Número da Coluna
-                    1  // Número da Linha
+                    10, // Column number
+                    1  // Row number
                 ).resize(1.5)
             `
         },
@@ -258,8 +258,8 @@ To get the object that represents a cell:
         {
             lang: 'javascript',
             code: `
-                // Obtém a célula que está na coluna B e na linha 2:
-                const celula = excel.cell(1, 1)
+                // Gets the cell in column B, row 2:
+                const cell = excel.cell(1, 1)
             `
         },
     ]}
@@ -274,9 +274,9 @@ Example of how to show the cell formula into the output log:
         {
             lang: 'javascript',
             code: `
-                // Loga a fórmula da linha 2 e coluna B.
+                // Logs the formula in column B, row 2.
                 _log.info(
-                    "Fórmula Célula B2: "+ excel.cell(1, 1).getCellFormula()
+                    "Cell B2 formula: "+ excel.cell(1, 1).getCellFormula()
                 )
             `
         },
@@ -290,9 +290,9 @@ Example of how to get the text value of a cell:
         {
             lang: 'javascript',
             code: `
-                // Loga o valor de texto da célula da linha 2 e coluna B.
+                // Logs the text value in column B, row 2.
                 _log.info(
-                    "Valor Célula B2: "+ excel.cell(1, 1).getStringCellValue()
+                    "Cell B2 value: "+ excel.cell(1, 1).getStringCellValue()
                 )
             `
         },
@@ -812,7 +812,7 @@ Extracting data from Excel files is done using the `read` method.
         {
             lang: 'javascript',
             code: `
-                const dados = _xls.read(_app.file("file.xlsx"))
+                const data = _xls.read(_app.file("file.xlsx"))
             `
         },
     ]}
@@ -827,7 +827,7 @@ To visualize all the data, we can put as data output from the service:
         {
             lang: 'javascript',
             code: `
-                _out.json(dados)
+                _out.json(data)
             `
         },
     ]}
@@ -995,3 +995,9 @@ In the case of dates and times we have these additional parameters
 
 - `value` - Value in bytes of the generated error.
 - `code` - If there are errors in the calculation of the formula, provide here the code of the error that occurred.
+
+## Videos
+
+The following video demonstrates how to generate Excel/XLSX files programmatically:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
