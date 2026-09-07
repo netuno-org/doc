@@ -295,9 +295,13 @@ services.
 
 See how to customize the `auth-client` settings:
 
+In the ES-module build, `config()` is asynchronous. Await it before using the configured client:
+
 ```javascript
-_auth.config({
-    storage: 'local', // ession is the default value.
+import _auth from '@netuno/auth-client';
+
+await _auth.config({
+    storage: 'local', // session is the default value.
     onLogin: () => { alert("Logged in!"); },
     onLogout: () => { alert("Logged out!"); }
 });
@@ -433,7 +437,7 @@ more advanced operations and in this case, we have the `_auth` resource.
 The `_auth` resource is the main authentication resource; it manages configurations and has all operations
 related to the authentication process.
 
-> To learn more, see the [Auth] resource documentation (/docs/library/resources/auth).
+> To learn more, see the [Auth resource documentation](/docs/library/resources/auth).
 
 ## ReAuthKit
 
