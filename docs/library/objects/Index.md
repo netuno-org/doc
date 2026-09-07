@@ -1,7 +1,8 @@
 ---
-id: Index
+id: dbindex
 title: Index
 sidebar_label: Index
+slug: /library/objects/dbindex
 ---
 
 Realiza a manipulação de indexes em base de dados.
@@ -76,7 +77,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ---
 
-#### <span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Index](/docs/library/objects/Index)</span>
+#### <span style={{color: '#008000'}}>create</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>column</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Index](/docs/library/objects/dbindex)</span>
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
@@ -86,7 +87,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ##### Return
 
-( _[Index](/docs/library/objects/Index)_ )
+( _[Index](/docs/library/objects/dbindex)_ )
 
 
 ---

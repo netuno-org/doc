@@ -85,7 +85,7 @@ Before moving to this section, it is recommended that you are familiar with:
 |---|---|---|
 | [Templates](/docs/academy/server/templates) | Create reusable and dynamic structures to speed up development. | Advanced |
 | [JWT Authentication](/docs/academy/server/services/jwt) | Implement token-based authentication. | Advanced |
-| [Java Development and Debugging](/docs/academy/server/java-core/setup) | Set up your environment for debugging and Java extensions. | Advanced |
+| [Java Development and Debugging](/docs/academy/server/java-core/intellij-setup) | Set up your environment for debugging and Java extensions. | Advanced |
 
 :::tip How to Choose a Tutorial
 Use the **graphical interface** tutorials when your goal is to configure the application visually, structure data, and manage resources through the interface.
