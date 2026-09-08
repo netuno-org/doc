@@ -524,7 +524,7 @@ Se algum registro foi encontrado e eliminado.
 #### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>deleteMany</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>listaDados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Descrição
 
-Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
+Executa a eliminação de várias linhas numa tabela através de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será eliminado.
 
 ##### Como Usar
 
@@ -546,8 +546,8 @@ _out.json({dadosEliminados: dadosEliminados})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **listaDados** | _java.lang.Object[]_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados de onde os dados serão eliminados. |
+| **listaDados** | _java.lang.Object[]_ | Array ou lista de objetos com a identificação dos dados que serão eliminados. |
 
 ##### Retorno
 
@@ -560,7 +560,7 @@ Array com a quantidade de registos afetados pela eliminação para cada objeto d
 #### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>deleteMany</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>listaDados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Descrição
 
-Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
+Executa a eliminação de várias linhas numa tabela através de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será eliminado.
 
 ##### Como Usar
 
@@ -582,8 +582,8 @@ _out.json({dadosEliminados: dadosEliminados})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **listaDados** | _java.util.List_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados de onde os dados serão eliminados. |
+| **listaDados** | _java.util.List_ | Array ou lista de objetos com a identificação dos dados que serão eliminados. |
 
 ##### Retorno
 
@@ -596,7 +596,7 @@ Array com a quantidade de registos afetados pela eliminação para cada objeto d
 #### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>deleteMany</span>(<span style={{color: '#FF8000'}}>tabela</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>listaDados</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Descrição
 
-Executa a eliminação de várias linhas numa tabela atravás de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será alterado
+Executa a eliminação de várias linhas numa tabela através de um Array de Objetos ou uma Lista de Valores. É necessário que cada objeto possua o id ou uid do dado que será eliminado.
 
 ##### Como Usar
 
@@ -618,8 +618,8 @@ _out.json({dadosEliminados: dadosEliminados})
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **tabela** | _string_ | Nome da tabela na base de dados que deve receber os dados que serão inseridos. |
-| **listaDados** | _[Values](/docs/library/objects/Values)_ | Array ou lista de objetos com a estrutura de dados que será inserida. |
+| **tabela** | _string_ | Nome da tabela na base de dados de onde os dados serão eliminados. |
+| **listaDados** | _[Values](/docs/library/objects/Values)_ | Array ou lista de objetos com a identificação dos dados que serão eliminados. |
 
 ##### Retorno
 

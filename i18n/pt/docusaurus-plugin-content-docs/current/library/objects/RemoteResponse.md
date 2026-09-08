@@ -171,10 +171,15 @@ Todos os dados que foram enviados.
 ---
 
 #### <span style={{color: '#008000'}}>getDataSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Descrição
+
+Obtém os dados que foram enviados na conexão remota.
+
 ##### Retorno
 
 ( _[Values](/docs/library/objects/Values)_ )
 
+Todos os dados que foram enviados.
 
 ---
 
@@ -207,10 +212,15 @@ Todos os dados que foram enviados.
 ---
 
 #### <span style={{color: '#008000'}}>getFormDataSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Descrição
+
+Obtém os dados que foram enviados na conexão remota.
+
 ##### Retorno
 
 ( _[Values](/docs/library/objects/Values)_ )
 
+Todos os dados que foram enviados.
 
 ---
 
@@ -277,10 +287,15 @@ Código do método HTTP que foi submetido.
 ---
 
 #### <span style={{color: '#008000'}}>getQSSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Descrição
+
+Obtém os parâmetros de query string que foi enviada na conexão remota.
+
 ##### Retorno
 
 ( _[Values](/docs/library/objects/Values)_ )
 
+Todos os parâmetros de query string que foram enviados.
 
 ---
 
@@ -289,10 +304,15 @@ Código do método HTTP que foi submetido.
 ---
 
 #### <span style={{color: '#008000'}}>getQueryStringSent</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Descrição
+
+Obtém os parâmetros de query string que foi enviada na conexão remota.
+
 ##### Retorno
 
 ( _[Values](/docs/library/objects/Values)_ )
 
+Todos os parâmetros de query string que foram enviados.
 
 ---
 

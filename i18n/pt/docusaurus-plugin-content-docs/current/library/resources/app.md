@@ -317,10 +317,21 @@ Retorna o objeto de manipulação para o caminho.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathBase</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o caminho da aplicação para a diretoria base/home.
+
+##### Como Usar
+
+```javascript
+const caminhoRaiz = _app.pathBase();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização base da aplicação.
 
 ---
 
@@ -329,10 +340,21 @@ Retorna o objeto de manipulação para o caminho.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o caminho da aplicação para a pasta config.
+
+##### Como Usar
+
+```javascript
+const caminhoConfig = _app.pathConfig();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização da pasta de configuração.
 
 ---
 
@@ -341,10 +363,21 @@ Retorna o objeto de manipulação para o caminho.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathHome</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o caminho da aplicação para a diretoria home/base.
+
+##### Como Usar
+
+```javascript
+const caminhoRaiz = _app.pathHome();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização base da aplicação.
 
 ---
 
@@ -353,10 +386,21 @@ Retorna o objeto de manipulação para o caminho.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathPublic</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o caminho da aplicação para a pasta public.
+
+##### Como Usar
+
+```javascript
+const caminhoPublico = _app.pathPublic();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização da pasta public.
 
 ---
 
@@ -365,10 +409,21 @@ Retorna o objeto de manipulação para o caminho.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathServer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o caminho da aplicação para a pasta server.
+
+##### Como Usar
+
+```javascript
+const caminhoServer = _app.pathServer();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização da pasta server.
 
 ---
 
@@ -377,10 +432,21 @@ Retorna o objeto de manipulação para o caminho.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getPathStorage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o caminho da aplicação para a pasta storage.
+
+##### Como Usar
+
+```javascript
+const caminhoStorage = _app.pathStorage();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização da pasta storage.
 
 ---
 
@@ -464,10 +530,21 @@ Retorna o prefixo da localização definida na configuração.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlAdmin</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o url da aplicação para a interface de administração.
+
+##### Como Usar
+
+```javascript
+const urlAdmin = _app.urlAdmin();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna o prefixo da localização de administração.
 
 ---
 
@@ -476,10 +553,21 @@ Retorna o prefixo da localização definida na configuração.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlFileSystem</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o url da aplicação para a pasta filesystem.
+
+##### Como Usar
+
+```javascript
+const fsURL = _app.urlFileSystem();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização da pasta de filesystem.
 
 ---
 
@@ -488,10 +576,21 @@ Retorna o prefixo da localização definida na configuração.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlFileSystemPrivate</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o url da aplicação para a pasta private.
+
+##### Como Usar
+
+```javascript
+const fsURLPrivada = _app.urlFileSystemPrivate();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização da pasta private do filesystem.
 
 ---
 
@@ -500,10 +599,21 @@ Retorna o prefixo da localização definida na configuração.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlFileSystemPublic</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o url da aplicação para a pasta public do filesystem.
+
+##### Como Usar
+
+```javascript
+const fsURLPublica = _app.urlFileSystemPublic();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização da pasta public do filesystem.
 
 ---
 
@@ -512,10 +622,21 @@ Retorna o prefixo da localização definida na configuração.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlFileSystemServer</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o url da aplicação para a pasta server do filesystem.
+
+##### Como Usar
+
+```javascript
+const fsURLServidor = _app.urlFileSystemServer();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização da pasta server do filesystem.
 
 ---
 
@@ -524,10 +645,21 @@ Retorna o prefixo da localização definida na configuração.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlPublic</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o url da aplicação para a pasta public.
+
+##### Como Usar
+
+```javascript
+const urlPublicaDaApp = _app.urlPublic();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização da pasta public.
 
 ---
 
@@ -536,10 +668,21 @@ Retorna o prefixo da localização definida na configuração.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlServices</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o url da aplicação para a pasta services.
+
+##### Como Usar
+
+```javascript
+const urlServicos = _app.urlServices();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização dos serviços.
 
 ---
 
@@ -548,10 +691,21 @@ Retorna o prefixo da localização definida na configuração.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>getUrlStorage</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o url da aplicação para a pasta storage.
+
+##### Como Usar
+
+```javascript
+const urlDaApp = _app.urlStorage();
+```
+
 ##### Retorno
 
 ( _string_ )
 
+Retorna a localização da pasta storage.
 
 ---
 
@@ -560,10 +714,25 @@ Retorna o prefixo da localização definida na configuração.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_app</span>.<span style={{color: '#008000'}}>isConfigReloaded</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se a configuração da aplicação foi alterada.
+
+##### Como Usar
+
+```javascript
+// Valida se a configuração foi alterada.
+
+if (_app.configReloaded()) {
+  _out.println(`A config da app está atualizada.`);
+}
+```
+
 ##### Retorno
 
 ( _boolean_ )
 
+Retorna se a configuração foi alterada e recarregada.
 
 ---
 

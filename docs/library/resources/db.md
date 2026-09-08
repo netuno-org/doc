@@ -524,7 +524,7 @@ If any records were found and deleted.
 #### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>deleteMany</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dataItems</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.lang.Object[]</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Description
 
-Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
+Executes the deletion of multiple rows from a table using an Array of Objects or a List of Values. It's necessary that each object has the id or uid for the data that will be deleted.
 
 ##### How To Use
 
@@ -546,8 +546,8 @@ _out.json({deletedData: deletedData})
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **dataItems** | _java.lang.Object[]_ | Array or list of objects with the data structure to be inserted. |
+| **table** | _string_ | Name of the table in the database from which the data will be deleted. |
+| **dataItems** | _java.lang.Object[]_ | Array or list of objects identifying the data to be deleted. |
 
 ##### Return
 
@@ -560,7 +560,7 @@ Array with number of records affected by the deletion for each object inside the
 #### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>deleteMany</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dataItems</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.util.List</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Description
 
-Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
+Executes the deletion of multiple rows from a table using an Array of Objects or a List of Values. It's necessary that each object has the id or uid for the data that will be deleted.
 
 ##### How To Use
 
@@ -582,8 +582,8 @@ _out.json({deletedData: deletedData})
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **dataItems** | _java.util.List_ | Array or list of objects with the data structure to be inserted. |
+| **table** | _string_ | Name of the table in the database from which the data will be deleted. |
+| **dataItems** | _java.util.List_ | Array or list of objects identifying the data to be deleted. |
 
 ##### Return
 
@@ -596,7 +596,7 @@ Array with number of records affected by the deletion for each object inside the
 #### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>deleteMany</span>(<span style={{color: '#FF8000'}}>table</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>dataItems</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int[]</span>
 ##### Description
 
-Executes the update of multiple rows into a table of an Array of Objects or a List of Values. It's necessary that the object has id or uid for the data that will be updated.
+Executes the deletion of multiple rows from a table using an Array of Objects or a List of Values. It's necessary that each object has the id or uid for the data that will be deleted.
 
 ##### How To Use
 
@@ -618,8 +618,8 @@ _out.json({deletedData: deletedData})
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **table** | _string_ | Name of the table in the database that should receive the data to be entered. |
-| **dataItems** | _[Values](/docs/library/objects/Values)_ | Array or list of objects with the data structure to be inserted. |
+| **table** | _string_ | Name of the table in the database from which the data will be deleted. |
+| **dataItems** | _[Values](/docs/library/objects/Values)_ | Array or list of objects identifying the data to be deleted. |
 
 ##### Return
 

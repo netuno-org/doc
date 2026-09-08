@@ -248,10 +248,15 @@ Conteúdo de texto do arquivo remoto no servidor.
 ---
 
 #### <span style={{color: '#008000'}}>isClosed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se a sessão SFTP ainda está aberta.
+
 ##### Retorno
 
 ( _boolean_ )
 
+Verdadeiro se estiver aberta
 
 ---
 

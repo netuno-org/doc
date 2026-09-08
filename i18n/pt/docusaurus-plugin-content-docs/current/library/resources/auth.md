@@ -190,10 +190,15 @@ Todas as configurações dos provedores de autenticação.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Se está abilitado ou não o bloqueio automático de tentativas de autenticação falhadas.
+
 ##### Retorno
 
 ( _boolean_ )
 
+Retorna se o bloqueio automático de tentativas consecutivas falhadas na autenticação está ativo.
 
 ---
 
@@ -216,10 +221,15 @@ Todas as configurações dos provedores de autenticação.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsInterval</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Descrição
+
+Número em minutos para definir o intervalo de tempo para realizar o bloqueio da conta.
+
 ##### Retorno
 
 ( _int_ )
 
+Retorna o número de minutos para o intervalo de tempo para a conta bloqueada.
 
 ---
 
@@ -388,10 +398,24 @@ Retorna a encriptação da password segura.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getAllProvidersConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Descrição
+
+Obtém todas as configurações dos provedores de autenticação.
+
+##### Como Usar
+
+```javascript
+// Obtém as configurações dos provedores de autenticação.
+const allProvidersConfig = _auth.allProvidersConfig()
+_log.info('Authentication Providers Configuration', allProvidersConfig)
+
+```
+
 ##### Retorno
 
 ( _[Values](/docs/library/objects/Values)_ )
 
+Todas as configurações dos provedores de autenticação.
 
 ---
 
@@ -418,6 +442,10 @@ Retorna a encriptação da password segura.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getJWTAccessExpires</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Descrição
+
+Seta o tempo de expiração do token para o que está distipulado nas configs.
+
 ##### Retorno
 
 ( _int_ )
@@ -454,6 +482,10 @@ Retorna a encriptação da password segura.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getJWTRefreshExpires</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Descrição
+
+Atualiza o tempo de expiração do token para o que está distipulado nas configs.
+
 ##### Retorno
 
 ( _int_ )
@@ -477,17 +509,39 @@ Retorna a encriptação da password segura.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getProviderConfig</span>(<span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getProviderConfig</span>(<span style={{color: '#FF8000'}}>codigoProvedor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Descrição
+
+Obtém uma configuração específica de provedor de autenticação.
+
+##### Como Usar
+
+```javascript
+// Obtém a configuração do provedor de autenticação para cada provedor.
+_log.info('Google Provider Configuration', _auth.providerConfig('google'))
+_log.info('Microsoft Provider Configuration', _auth.providerConfig('microsoft'))
+_log.info('GitHub Provider Configuration', _auth.providerConfig('github'))
+_log.info('Discord Provider Configuration', _auth.providerConfig('discord'))
+_log.info('LDAP Provider Configuration', _auth.providerConfig('ldap'))
+
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **providerCode** | _string_ |   |
+| **codigoProvedor** | _string_ | Nome da chave de configuração do provedor, podendo ser: |
+|   |   | - google |
+|   |   | - microsoft |
+|   |   | - github |
+|   |   | - discord |
+|   |   | - ldap |
 
 ##### Retorno
 
 ( _[Values](/docs/library/objects/Values)_ )
 
+A configuração do provedor de autenticação.
 
 ---
 
@@ -734,17 +788,39 @@ Retorna se está ativado.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>isProviderEnabled</span>(<span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+#### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>isProviderEnabled</span>(<span style={{color: '#FF8000'}}>codigoProvedor</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se o provedor de autenticação está ativo.
+
+##### Como Usar
+
+```javascript
+// Checa os provedores de autenticação habilitados.
+_log.info('Google Provider Enabled', _auth.providerEnabled('google'))
+_log.info('Microsoft Provider Enabled', _auth.providerEnabled('microsoft'))
+_log.info('GitHub Provider Enabled', _auth.providerEnabled('github'))
+_log.info('Discord Provider Enabled', _auth.providerEnabled('discord'))
+_log.info('LDAP Provider Enabled', _auth.providerEnabled('ldap'))
+
+```
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **providerCode** | _string_ |   |
+| **codigoProvedor** | _string_ | Nome da chave de configuração do provedor, podendo ser: |
+|   |   | - google |
+|   |   | - microsoft |
+|   |   | - github |
+|   |   | - discord |
+|   |   | - ldap |
 
 ##### Retorno
 
 ( _boolean_ )
 
+Se o provedor de autenticação estiver ativo retorna _true_.
 
 ---
 
@@ -916,10 +992,15 @@ Retorna o conteúdo do utilizador inserido.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se o JWT está ativo.
+
 ##### Retorno
 
 ( _boolean_ )
 
+Retorna se está ativado.
 
 ---
 

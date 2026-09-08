@@ -458,16 +458,21 @@ Submission response, with status, header, content, etc.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_remote</span>.<span style={{color: '#008000'}}>getHostAddress</span>(<span style={{color: '#FF8000'}}>host</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.psamata.net.Remote$Response</span>
+##### Description
+
+Get the IP address of a host.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **host** | _string_ |   |
+| **host** | _string_ | Host name. |
 
 ##### Return
 
 ( _org.netuno.psamata.net.Remote$Response_ )
 
+Host IP address.
 
 ---
 

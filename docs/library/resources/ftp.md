@@ -374,10 +374,15 @@ Text content of the remote file in the server.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_ftp</span>.<span style={{color: '#008000'}}>enabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Checks if it is enabled.
+
 ##### Return
 
 ( _boolean_ )
 
+Result whether or not it is activated.
 
 ---
 

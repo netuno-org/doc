@@ -29,6 +29,10 @@ Returns the number of bytes required to read the file.
 ---
 
 #### <span style={{color: '#008000'}}>baseName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Returns the base name of the present file
+
 ##### Return
 
 ( _string_ )
@@ -579,6 +583,10 @@ Returns the path
 ---
 
 #### <span style={{color: '#008000'}}>getPhysicalPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Allows to get the path of the file.
+
 ##### Return
 
 ( _string_ )
@@ -657,6 +665,10 @@ Returns the name of the inserted file with a sequence number if the file already
 ---
 
 #### <span style={{color: '#008000'}}>inputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
+##### Description
+
+Returns the number of estimated bytes
+
 ##### Return
 
 ( _[InputStream](/docs/library/objects/InputStream)_ )
@@ -1020,12 +1032,16 @@ Saves the file in the inserted path
 ---
 
 #### <span style={{color: '#008000'}}>sequenceName</span>(<span style={{color: '#FF8000'}}>targetPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Returns the name of the inserted file with a sequence number if the file already exists with the original name
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **targetPath** | _java.io.File_ |   |
-| **fileName** | _string_ |   |
+| **targetPath** | _java.io.File_ | Path to the file/directory. |
+| **fileName** | _string_ | Name of the file. |
 
 ##### Return
 
@@ -1035,12 +1051,16 @@ Saves the file in the inserted path
 ---
 
 #### <span style={{color: '#008000'}}>sequenceName</span>(<span style={{color: '#FF8000'}}>targetPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Returns the name of the inserted file with a sequence number if the file already exists with the original name
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **targetPath** | _string_ |   |
-| **fileName** | _string_ |   |
+| **targetPath** | _string_ | Path to the file/directory. |
+| **fileName** | _string_ | Name of the file. |
 
 ##### Return
 

@@ -118,10 +118,15 @@ Size (in bytes) of deleted messages.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>enabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Checks if it is enabled.
+
 ##### Return
 
 ( _boolean_ )
 
+Result whether or not it is activated.
 
 ---
 

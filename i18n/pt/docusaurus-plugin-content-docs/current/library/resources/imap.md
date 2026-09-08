@@ -118,10 +118,15 @@ Tamanho (em bytes) das mensagens excluídas.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_imap</span>.<span style={{color: '#008000'}}>enabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se está habilitado.
+
 ##### Retorno
 
 ( _boolean_ )
 
+Resultado se está ou não ativado.
 
 ---
 

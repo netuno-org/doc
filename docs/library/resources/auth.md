@@ -190,10 +190,15 @@ All authentication providers settings.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Whether or not automatic blocking of failed authentication attempts is enabled.
+
 ##### Return
 
 ( _boolean_ )
 
+Returns whether automatic blocking of consecutive failed authentication attempts is enabled.
 
 ---
 
@@ -216,10 +221,15 @@ All authentication providers settings.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>attemptsInterval</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Description
+
+Number in minutes to set the time interval to perform account blocking.
+
 ##### Return
 
 ( _int_ )
 
+Returns the number of minutes for the time interval for the locked account.
 
 ---
 
@@ -388,10 +398,24 @@ Returns strong password encryption.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getAllProvidersConfig</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Description
+
+Gets all the authentication providers configuration.
+
+##### How To Use
+
+```javascript
+// Gets the Authentication Providers Settings.
+const allProvidersConfig = _auth.allProvidersConfig()
+_log.info('Authentication Providers Configuration', allProvidersConfig)
+
+```
+
 ##### Return
 
 ( _[Values](/docs/library/objects/Values)_ )
 
+All authentication providers settings.
 
 ---
 
@@ -418,6 +442,10 @@ Returns strong password encryption.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getJWTAccessExpires</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Description
+
+Sets the time of expiration of the token to the settings in configs.
+
 ##### Return
 
 ( _int_ )
@@ -454,6 +482,10 @@ Returns strong password encryption.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getJWTRefreshExpires</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Description
+
+Updates the time of expiration of the token to the settings in configs.
+
 ##### Return
 
 ( _int_ )
@@ -478,16 +510,38 @@ Returns strong password encryption.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>getProviderConfig</span>(<span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values)</span>
+##### Description
+
+Gets one specific authentication provider configuration.
+
+##### How To Use
+
+```javascript
+// Gets authentication provider setting to each provider.
+_log.info('Google Provider Configuration', _auth.providerConfig('google'))
+_log.info('Microsoft Provider Configuration', _auth.providerConfig('microsoft'))
+_log.info('GitHub Provider Configuration', _auth.providerConfig('github'))
+_log.info('Discord Provider Configuration', _auth.providerConfig('discord'))
+_log.info('LDAP Provider Configuration', _auth.providerConfig('ldap'))
+
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **providerCode** | _string_ |   |
+| **providerCode** | _string_ | Name of the provider configuration key, which can be: |
+|   |   | - google |
+|   |   | - microsoft |
+|   |   | - github |
+|   |   | - discord |
+|   |   | - ldap |
 
 ##### Return
 
 ( _[Values](/docs/library/objects/Values)_ )
 
+The authentication provider configuration.
 
 ---
 
@@ -735,16 +789,38 @@ Returns if is enabled.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>isProviderEnabled</span>(<span style={{color: '#FF8000'}}>providerCode</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Checks whether the authentication provider is active.
+
+##### How To Use
+
+```javascript
+// Checks enabled authentication providers.
+_log.info('Google Provider Enabled', _auth.providerEnabled('google'))
+_log.info('Microsoft Provider Enabled', _auth.providerEnabled('microsoft'))
+_log.info('GitHub Provider Enabled', _auth.providerEnabled('github'))
+_log.info('Discord Provider Enabled', _auth.providerEnabled('discord'))
+_log.info('LDAP Provider Enabled', _auth.providerEnabled('ldap'))
+
+```
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **providerCode** | _string_ |   |
+| **providerCode** | _string_ | Name of the provider configuration key, which can be: |
+|   |   | - google |
+|   |   | - microsoft |
+|   |   | - github |
+|   |   | - discord |
+|   |   | - ldap |
 
 ##### Return
 
 ( _boolean_ )
 
+If the authentication provider is active returns _true_.
 
 ---
 
@@ -916,10 +992,15 @@ Returns the content of the user inserted.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_auth</span>.<span style={{color: '#008000'}}>jwtEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Verify if the JWT is enable.
+
 ##### Return
 
 ( _boolean_ )
 
+Returns if is enabled.
 
 ---
 

@@ -280,10 +280,15 @@ Objeto de entrada de dados do Netuno para o storage em uso.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getInputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
+##### Descrição
+
+Obtém o objeto de entrada de dados do Java para o storage que está sendo utilizado.
+
 ##### Retorno
 
 ( _[InputStream](/docs/library/objects/InputStream)_ )
 
+Objeto de entrada de dados do Java para o storage em uso.
 
 ---
 
@@ -309,10 +314,15 @@ Objeto de saída de dados do Netuno para o storage em uso.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Descrição
+
+Obtém o objeto de saída de dados do Java para o storage que está sendo utilizado.
+
 ##### Retorno
 
 ( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
+Objeto de saída de dados do Java para o storage em uso.
 
 ---
 

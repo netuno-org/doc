@@ -290,10 +290,15 @@ Returns the values encoded.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>isEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Verify if the JWT is enable.
+
 ##### Return
 
 ( _boolean_ )
 
+Returns if is enabled.
 
 ---
 

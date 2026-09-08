@@ -29,6 +29,10 @@ Retorna o número de bytes para a leitura do arquivo.
 ---
 
 #### <span style={{color: '#008000'}}>baseName</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Retorna o nome base do presente ficheiro.
+
 ##### Retorno
 
 ( _string_ )
@@ -579,6 +583,10 @@ Retorna o caminho.
 ---
 
 #### <span style={{color: '#008000'}}>getPhysicalPath</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Permite obter o caminho do ficheiro.
+
 ##### Retorno
 
 ( _string_ )
@@ -657,6 +665,10 @@ Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro j
 ---
 
 #### <span style={{color: '#008000'}}>inputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
+##### Descrição
+
+Retorna o número estimado de bytes.
+
 ##### Retorno
 
 ( _[InputStream](/docs/library/objects/InputStream)_ )
@@ -1019,13 +1031,17 @@ Guarda o ficheiro no caminho inserido.
 
 ---
 
-#### <span style={{color: '#008000'}}>sequenceName</span>(<span style={{color: '#FF8000'}}>targetPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>sequenceName</span>(<span style={{color: '#FF8000'}}>caminhoDestino</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>java.io.File</span>, <span style={{color: '#FF8000'}}>nomeFicheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro já existir com o nome original.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **targetPath** | _java.io.File_ |   |
-| **fileName** | _string_ |   |
+| **caminhoDestino** | _java.io.File_ | Caminho onde guardar o ficheiro. |
+| **nomeFicheiro** | _string_ | Nome do Ficheiro. |
 
 ##### Retorno
 
@@ -1034,13 +1050,17 @@ Guarda o ficheiro no caminho inserido.
 
 ---
 
-#### <span style={{color: '#008000'}}>sequenceName</span>(<span style={{color: '#FF8000'}}>targetPath</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>fileName</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+#### <span style={{color: '#008000'}}>sequenceName</span>(<span style={{color: '#FF8000'}}>caminhoDestino</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>, <span style={{color: '#FF8000'}}>nomeFicheiro</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Retorna o nome do ficheiro inserido com um número de sequência se o ficheiro já existir com o nome original.
+
 ##### Atributos
 
 | NOME | TIPO | DESCRIÇÃO |
 |---|---|---|
-| **targetPath** | _string_ |   |
-| **fileName** | _string_ |   |
+| **caminhoDestino** | _string_ | Caminho onde guardar o ficheiro. |
+| **nomeFicheiro** | _string_ | Nome do Ficheiro. |
 
 ##### Retorno
 

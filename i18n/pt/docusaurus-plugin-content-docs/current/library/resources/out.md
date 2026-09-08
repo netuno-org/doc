@@ -334,10 +334,15 @@ A nova instância do recurso de Output.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>isClosed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se já foi encerrada a resposta do pedido HTTP.
+
 ##### Retorno
 
 ( _boolean_ )
 
+Se fechou a resposta do pedido HTTP.
 
 ---
 
@@ -346,10 +351,15 @@ A nova instância do recurso de Output.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>isStarted</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se já foi iniciada a resposta do pedido HTTP.
+
 ##### Retorno
 
 ( _boolean_ )
 
+Se iniciou a resposta do pedido HTTP e o cabeçalho (_header_) já foi enviado.
 
 ---
 

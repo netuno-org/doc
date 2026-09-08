@@ -156,10 +156,15 @@ Text content of the remote file in the server.
 ---
 
 #### <span style={{color: '#008000'}}>isClosed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Checks if the SCP session is still open.
+
 ##### Return
 
 ( _boolean_ )
 
+True if it is open.
 
 ---
 

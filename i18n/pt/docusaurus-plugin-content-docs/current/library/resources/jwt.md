@@ -290,10 +290,15 @@ Retorna os valores codificados.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_jwt</span>.<span style={{color: '#008000'}}>isEnabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Verifica se o JWT está ativo.
+
 ##### Retorno
 
 ( _boolean_ )
 
+Retorna se está ativado.
 
 ---
 

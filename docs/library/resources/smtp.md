@@ -288,10 +288,15 @@ Current SMTP object.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>enabled</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Checks if it is enabled.
+
 ##### Return
 
 ( _boolean_ )
 
+Result whether or not it is activated.
 
 ---
 
@@ -559,24 +564,34 @@ The recipient's e-mail address.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>html</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Gets the HTML of the e-mail body.
+
 ##### Return
 
 ( _string_ )
 
+The HTML that will go in the e-mail.
 
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>html</span>(<span style={{color: '#FF8000'}}>html</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
+##### Description
+
+Defines the HTML of the e-mail body.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **html** | _string_ |   |
+| **html** | _string_ | The HTML that will go in the e-mail. |
 
 ##### Return
 
 ( _[SMTP](/docs/library/resources/smtp)_ )
 
+Current SMTP object.
 
 ---
 
@@ -686,24 +701,34 @@ Name of the SMTP configuration key being used.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>multipartSubtype</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Gets the multipart subtype such as `mixed`,` alternative`, `digest` and` parallel`.
+
 ##### Return
 
 ( _string_ )
 
+The multipart subtype.
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>multipartSubtype</span>(<span style={{color: '#FF8000'}}>html</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
+#### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>multipartSubtype</span>(<span style={{color: '#FF8000'}}>multipartSubtype</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
+##### Description
+
+Defines the multipart subtype such as `mixed`,` alternative`, `digest` and` parallel`.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **html** | _string_ |   |
+| **multipartSubtype** | _string_ | The multipart subtype. |
 
 ##### Return
 
 ( _[SMTP](/docs/library/resources/smtp)_ )
 
+Current SMTP object.
 
 ---
 
@@ -712,24 +737,34 @@ Name of the SMTP configuration key being used.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>replyTo</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Gets who should receive the email reply.
+
 ##### Return
 
 ( _string_ )
 
+The e-mail of who will receive the e-mail as a reply.
 
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>replyTo</span>(<span style={{color: '#FF8000'}}>replyTo</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
+##### Description
+
+Defines who should be replied to the email.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **replyTo** | _string_ |   |
+| **replyTo** | _string_ | The e-mail of who will receive the e-mail as a reply. |
 
 ##### Return
 
 ( _[SMTP](/docs/library/resources/smtp)_ )
 
+Current SMTP object.
 
 ---
 
@@ -1080,24 +1115,34 @@ Current SMTP object.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>subjectPrefix</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Description
+
+Gets the prefix of the e-mail title.
+
 ##### Return
 
 ( _string_ )
 
+The prefix of the title that will go in the e-mail.
 
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_smtp</span>.<span style={{color: '#008000'}}>subjectPrefix</span>(<span style={{color: '#FF8000'}}>subjectPrefix</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[SMTP](/docs/library/resources/smtp)</span>
+##### Description
+
+Defines the prefix of the e-mail title.
+
 ##### Attributes
 
 | NAME | TYPE | DESCRIPTION |
 |---|---|---|
-| **subjectPrefix** | _string_ |   |
+| **subjectPrefix** | _string_ | The prefix of the title that will go in the e-mail. |
 
 ##### Return
 
 ( _[SMTP](/docs/library/resources/smtp)_ )
 
+Current SMTP object.
 
 ---
 

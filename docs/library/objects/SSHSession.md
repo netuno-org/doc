@@ -89,10 +89,15 @@ Command execution result.
 ---
 
 #### <span style={{color: '#008000'}}>isClosed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Checks if the session is still open.
+
 ##### Return
 
 ( _boolean_ )
 
+True if it is open.
 
 ---
 

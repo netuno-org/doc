@@ -280,10 +280,15 @@ Data input object from Netuno to the storage in use.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getInputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[InputStream](/docs/library/objects/InputStream)</span>
+##### Description
+
+Gets the Java input object for the storage being used.
+
 ##### Return
 
 ( _[InputStream](/docs/library/objects/InputStream)_ )
 
+Java data input object for the storage in use.
 
 ---
 
@@ -309,10 +314,15 @@ Data output object from Netuno to the storage in use.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_storage</span>.<span style={{color: '#008000'}}>getOutputStream</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[OutputStream](/docs/library/objects/OutputStream)</span>
+##### Description
+
+Gets the Java output object for the storage being used.
+
 ##### Return
 
 ( _[OutputStream](/docs/library/objects/OutputStream)_ )
 
+Java data output object for the storage in use.
 
 ---
 

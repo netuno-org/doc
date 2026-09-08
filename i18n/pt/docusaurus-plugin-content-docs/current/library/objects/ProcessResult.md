@@ -30,10 +30,15 @@ O número do código de conclusão do comando.
 ---
 
 #### <span style={{color: '#008000'}}>getExitCode</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>int</span>
+##### Descrição
+
+Obtém o código de conclusão do comando.
+
 ##### Retorno
 
 ( _int_ )
 
+O número do código de conclusão do comando.
 
 ---
 
@@ -59,10 +64,15 @@ Os dados obtidos como resultado da execução do comando.
 ---
 
 #### <span style={{color: '#008000'}}>getOutputError</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Obtém o conteúdo de erros gerado pela execução do comando.
+
 ##### Retorno
 
 ( _string_ )
 
+Os dados obtidos como resultado de erros da execução do comando.
 
 ---
 

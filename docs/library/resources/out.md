@@ -334,10 +334,15 @@ The new instance of the Output feature.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>isClosed</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Checks whether the response to the HTTP request has already been closed.
+
 ##### Return
 
 ( _boolean_ )
 
+The response to the HTTP request has been closed.
 
 ---
 
@@ -346,10 +351,15 @@ The new instance of the Output feature.
 ---
 
 #### <span style={{fontWeight: 'normal'}}>_out</span>.<span style={{color: '#008000'}}>isStarted</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Description
+
+Checks whether the response to the HTTP request has already started.
+
 ##### Return
 
 ( _boolean_ )
 
+The HTTP request response has started and the header has already been sent.
 
 ---
 
