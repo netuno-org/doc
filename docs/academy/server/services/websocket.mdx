@@ -551,10 +551,11 @@ Installation command:
 - `bun install @netuno/ws-client`
 
 ```js
+import _ws from '@netuno/ws-client';
+
 _ws.config({
     url: 'ws://localhost:9000/ws/example',
     servicesPrefix: '/services',
-    method: 'GET',
     autoReconnect: true,
     connect: (event) => {
         console.info('WebSocket Connected', event);
@@ -580,7 +581,7 @@ _ws.config({
 >
 > `wss://[host][public][path]`
 
-A seguir pode iniciar a conexão:
+Next, you can start the connection:
 
 ```js
 _ws.connect();
@@ -595,13 +596,13 @@ Before starting, we must create an observer for the service response, for exampl
 
 ```js
 const listenerRef = _ws.addListener({
-    method: 'GET', // Optional, default is GET.
+    method: 'GET', // Optional; omit it to listen for every method.
     service: 'path/of/my/service/here',
     success: (data) => {
-        console.log('Resposta do serviço executado via WebSocket:', data);
+        console.log('Response from the service executed via WebSocket:', data);
     },
     fail: (error)=> {
-        console.log('O serviço executado via WebSocket falhou:', error);
+        console.log('The service executed via WebSocket failed:', error);
     }
 });
 ```
@@ -611,7 +612,7 @@ created above. We execute the service like this:
 
 ```js
 _ws.sendService({
-    method: 'GET', // Optional, another HTTP method can be used.
+    method: 'GET', // Optional; requests default to GET when omitted.
     service: 'path/of/my/service/here',
     data: {
         message: 'Hi...'

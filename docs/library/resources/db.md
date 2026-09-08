@@ -1167,7 +1167,7 @@ The version of the database in numeric format, for example: 10.5
 
 ---
 
-#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>index</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Index](/docs/library/objects/Index)</span>
+#### <span style={{fontWeight: 'normal'}}>_db</span>.<span style={{color: '#008000'}}>index</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Index](/docs/library/objects/dbindex)</span>
 ##### Description
 
 Performs the manipulation of indexes in the database.
@@ -1185,7 +1185,7 @@ if (!_db.checkExists().index("client", "name")) {
 
 ##### Return
 
-( _[Index](/docs/library/objects/Index)_ )
+( _[Index](/docs/library/objects/dbindex)_ )
 
 
 ---

@@ -28,7 +28,7 @@ The project is divided into four parts:
 
 ## Next steps
 
-- [Installation](/docs/academy/cluar/install)
+- [Installation](/docs/academy/cluar/installation)
 - [Configuration](/docs/academy/cluar/configuration)
 - [Components](/docs/academy/cluar/components/overview)
 - [Pages](/docs/academy/cluar/pages/overview)

@@ -290,8 +290,12 @@ da aplicação Netuno.
 
 Veja como customizar as configurações do `auth-client`:
 
+Na versão ES module, `config()` é assíncrono. Aguarde a sua conclusão antes de utilizar o cliente configurado:
+
 ```javascript
-_auth.config({
+import _auth from '@netuno/auth-client';
+
+await _auth.config({
     storage: 'local', // session é o valor padrão.
     onLogin: () => { alert("Logged in!"); },
     onLogout: () => { alert("Logged out!"); }
