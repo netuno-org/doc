@@ -27,7 +27,7 @@ Using `_req.file` we can pass the field name and thus obtain the object from the
         {
             lang: 'javascript',
             code: `
-                const myFile = _req.file("file")
+                const myFile = _req.file("file");
             `
         },
     ]}
@@ -49,7 +49,7 @@ by the images.
         {
             lang: 'javascript',
             code: `
-                const myFile = _req.getFile("image")
+                const myFile = _req.getFile("image");
                 if (myFile != null
                     && (myFile.isExtension("jpeg")
                         || myFile.isExtension("jpg")
@@ -57,9 +57,9 @@ by the images.
                     )) {
                     const myImage = _image.init(myFile)
                         .resize(200, 200)
-                        .file(myFile.baseName() +".jpg", "jpeg")
-                    _header.contentTypeJPG()
-                    _out.copy(myImage)
+                        .file(myFile.baseName() +".jpg", "jpeg");
+                    _header.contentTypeJPG();
+                    _out.copy(myImage);
                 }
             `
         },
@@ -151,7 +151,7 @@ We can retrieve the uploaded file as follows:
         {
             lang: 'javascript',
             code: `
-                const myFile = _req.getFile("file")
+                const myFile = _req.getFile("file");
                 if (myFile != null) {
                     _out.json(
                         _val.map()
@@ -161,12 +161,12 @@ We can retrieve the uploaded file as follows:
                             .set("sizeKB", myFile.sizeKB())
                             .set("sizeMB", myFile.sizeMB())
                             .set("sizeGB", myFile.sizeGB())
-                    )
+                    );
                 } else {
                     _out.json(
                         _val.map()
                             .set("result", false)
-                    )
+                    );
                 }
             `
         },
@@ -246,7 +246,7 @@ It can be obtained as follows:
         {
             lang: 'javascript',
             code: `
-                const myFile = _req.getValues("person").getFile("avatar")
+                const myFile = _req.getValues("person").getFile("avatar");
             `
         },
     ]}
@@ -271,7 +271,7 @@ It can be obtained as follows:
         {
             lang: 'javascript',
             code: `
-                const myFile = _req.getValues("files").getFile(0)
+                const myFile = _req.getValues("files").getFile(0);
             `
         },
     ]}
@@ -352,36 +352,36 @@ Note the use of `_db.form`:
         {
             lang: 'javascript',
             code: `
-                const productUid = _req.getString("uid")
-                const productImage = _req.getFile("image")
+                const productUid = _req.getString("uid");
+                const productImage = _req.getFile("image");
 
                 if (productImage == null) {
-                    _header.status(400)
+                    _header.status(400);
                     _out.json(
                         _val.map()
                             .set("result", false)
                             .set("error", "image-required")
-                    )
-                    _exec.stop()
+                    );
+                    _exec.stop();
                 }
 
                 const dbResult = _db.form("product")
                     .set("image", productImage)
                     .where(_db.where("uid").equals(productUid))
-                    .update()
+                    .update();
 
                 if (dbResult.getInt("product") == 1) {
                     _out.json(
                         _val.map()
                             .set("result", true)
-                    )
+                    );
                 } else {
-                    _header.status(404)
+                    _header.status(404);
                     _out.json(
                         _val.map()
                             .set("result", false)
                             .set("error", "product-uid-not-found")
-                    )
+                    );
                 }
             `
         },
@@ -470,17 +470,17 @@ Note the use of `_db.update`:
         {
             lang: 'javascript',
             code: `
-                const productUid = _req.getString("uid")
-                const productImage = _req.getFile("image")
+                const productUid = _req.getString("uid");
+                const productImage = _req.getFile("image");
 
                 if (productImage == null) {
-                    _header.status(400)
+                    _header.status(400);
                     _out.json(
                         _val.map()
                             .set("result", false)
                             .set("error", "image-required")
-                    )
-                    _exec.stop()
+                    );
+                    _exec.stop();
                 }
 
                 const dbResult = _db.update(
@@ -488,20 +488,20 @@ Note the use of `_db.update`:
                     productUid,
                     _val.map()
                         .set("image", productImage)
-                )
+                );
 
                 if (dbResult == 1) {
                     _out.json(
                         _val.map()
                             .set("result", true)
-                    )
+                    );
                 } else {
-                    _header.status(404)
+                    _header.status(404);
                     _out.json(
                         _val.map()
                             .set("result", false)
                             .set("error", "product-uid-not-found")
-                    )
+                    );
                 }
             `
         },
@@ -607,42 +607,42 @@ To obtain the file, a service can be created that displays the product image fil
         {
             lang: 'javascript',
             code: `
-                const productUid = _req.getString("uid")
+                const productUid = _req.getString("uid");
 
                 // DB Form:
                 const dbProduct = _db.form("product")
                     .where(_db.where("uid").equals(productUid))
-                    .first()
+                    .first();
                 // Alternative with Classic DB:
                 // const dbProduct = _db.get("product", productUid)
 
                 if (dbProduct == null) {
-                    _header.status(404)
+                    _header.status(404);
                     _out.json(
                         _val.map()
                             .set("result", false)
                             .set("error", "product-not-found")
-                    )
-                    _exec.stop()
+                    );
+                    _exec.stop();
                 }
 
-                const dbProductImageName = dbProduct.getString("image")
+                const dbProductImageName = dbProduct.getString("image");
 
                 const storageProductImageFile = _storage.database(
                     "product",
                     "image",
                     dbProductImageName
-                )
+                );
 
                 if (storageProductImageFile.extension() == "jpg" || storageProductImageFile.extension() == "jpeg") {
-                    _header.contentTypeJPG()
+                    _header.contentTypeJPG();
                 } else {
-                    _header.contentTypePNG()
+                    _header.contentTypePNG();
                 }
 
-                _header.noCache()
+                _header.noCache();
 
-                _out.copy(storageProductImageFile.inputStream())
+                _out.copy(storageProductImageFile.inputStream());
             `
         },
         {
@@ -741,7 +741,7 @@ Note that the `_storage` ([Storage](/docs/library/resources/storage)) resource i
                     "product", // Form/table name.
                     "image", // Field/column name.
                     dbProductImageName // File name.
-                )
+                );
             `
         },
     ]}
@@ -765,9 +765,9 @@ the storage:
         {
             lang: 'javascript',
             code: `
-                const file = _req.getFile("file")
-                _storage.filesystem("server", "upload").ensurePath()
-                file.save(_storage.filesystem("server", "upload", file.name()))
+                const file = _req.getFile("file");
+                _storage.filesystem("server", "upload").ensurePath();
+                file.save(_storage.filesystem("server", "upload", file.name()));
             `
         },
     ]}
@@ -788,7 +788,7 @@ The file is stored in the application's `storage` folder, at:
                     "server", // Name of the subfolder in the filesystem.
                     "upload", // Name or path of the inner subfolder.
                     file.name() // Final file name.
-                )
+                );
             `
         },
     ]}
@@ -804,26 +804,26 @@ To download the file, this example demonstrates how the file bytes can be obtain
         {
             lang: 'javascript',
             code: `
-                const fileName = _req.getString("file")
+                const fileName = _req.getString("file");
 
                 const file = _storage.filesystem(
                     "server",
                     "upload",
                     fileName
-                ).file()
+                ).file();
 
                 if (file.exists() == false) {
-                    _header.status(404)
+                    _header.status(404);
                     _out.json(
                         _val.map()
                             .set("result", false)
                             .set("error", "file-not-found")
-                    )
-                    _exec.stop()
+                    );
+                    _exec.stop();
                 }
 
-                _header.downloadFile(file.name())
-                _out.copy(file.input())
+                _header.downloadFile(file.name());
+                _out.copy(file.input());
             `
         },
         {
@@ -900,12 +900,12 @@ folder within the application:
         {
             lang: 'javascript',
             code: `
-                const file = _req.getFile("file")
-                const folder = _app.folder("temp")
+                const file = _req.getFile("file");
+                const folder = _app.folder("temp");
                 if (folder.exists() == false) {
-                    folder.mkdir()
+                    folder.mkdir();
                 }
-                file.save(_app.file(\`temp/\${file.name()}\`))
+                file.save(_app.file(\`temp/\${file.name()}\`));
             `
         },
         {
@@ -964,21 +964,21 @@ To download the file, this example demonstrates how the file's bytes can be obta
         {
             lang: 'javascript',
             code: `
-                const fileName = _req.getString("file")
-                const file = _app.file(\`temp/\${fileName}\`)
+                const fileName = _req.getString("file");
+                const file = _app.file(\`temp/\${fileName}\`);
 
                 if (file.exists() == false) {
-                    _header.status(404)
+                    _header.status(404);
                     _out.json(
                         _val.map()
                             .set("result", false)
                             .set("error", "file-not-found")
-                    )
-                    _exec.stop()
+                    );
+                    _exec.stop();
                 }
 
-                _header.downloadFile(file.name())
-                _out.copy(file.input())
+                _header.downloadFile(file.name());
+                _out.copy(file.input());
             `
         },
         {
