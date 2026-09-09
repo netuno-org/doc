@@ -4,6 +4,8 @@ title: Altcha
 sidebar_label: Altcha
 ---
 
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
 Alternativa open-source equivalente ao reCaptcha.
 
 ## Introdução
@@ -98,8 +100,8 @@ parametrização do desafio.
 
 ## Autenticação Externa
 
-Para ativar o [Altcha](https://altcha.org/) na autenticação, que normalmente é implementada e segura com JWT, utiliza-se o serviço
-padrão da API REST para autenticação, o qual costuma ser:
+A autenticação normalmente implementada e segura com JWT, utiliza-se o serviço padrão da API REST para
+autenticação, o qual costuma ser:
 
 - `http://localhost:9000/services/_auth`
 
@@ -214,7 +216,7 @@ Repare que o `altchaPayload` é o estado que tem a chave do resultado de desafio
 
 Exemplo completo na página de Login do ReAuthKit:
 
-- [Código-fonte da página de Login do ReAuthKit](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Login/index.jsx)
+- [Código-fonte da página de Login do ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Login/index.jsx)
 
 ## Integração em Serviços
 
@@ -267,29 +269,66 @@ Repare que o `altchaPayload` é o estado que tem a chave do resultado de desafio
 
 Exemplo completo na página de Registro do ReAuthKit:
 
-- [Código-fonte da página de Registro do ReAuthKit](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Register/index.jsx)
+- [Código-fonte da página de Registro do ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Register/index.jsx)
 
 ### Backend
 
 Com o payload sendo enviado para o serviço da API REST, então no código do serviço, no lado do backend temos
 que validá-lo, veja como:
 
-```js title="server/services/register/post.js"
-const altchaPayload = _req.getString("altcha");
+<PolyglotCode
+    file="server/services/register/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+            const altchaPayload = _req.getString("altcha");
 
-if (_auth.altchaEnabled() && !_altcha.verifySolution(altchaPayload)) {
-    _header.status(409);
-    _out.json(
-        _val.map()
-            .set("error", `invalid-altcha-payload`)
-    );
-    _exec.stop();
-}
-```
+            if (_auth.altchaEnabled() && !_altcha.verifySolution(altchaPayload)) {
+              _header.status(409);
+              _out.json(
+                _val.map()
+                  .set("error", "invalid-altcha-payload")
+              );
+              _exec.stop();
+            }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+            altchaPayload = _req.getString("altcha")
+
+            if _auth.altchaEnabled() and _altcha.verifySolution(altchaPayload) == False:
+                _header.status(409)
+                _out.json(
+                    _val.map()
+                        .set("error", "invalid-altcha-payload")
+                )
+                _exec.stop()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                altchaPayload = _req.getString("altcha")
+
+                if _auth.altchaEnabled() and _altcha.verifySolution(altchaPayload) == false
+                    _header.status(409)
+                    _out.json(
+                        _val.map()
+                            .set("error", "invalid-altcha-payload")
+                    )
+                    _exec.stop()
+                end
+            `
+        },
+    ]}
+/>
 
 Exemplo completo do serviço de Registro do ReAuthKit:
 
-- [Código-fonte do serviço de Registro do ReAuthKit](https://github.com/netuno-org/reauthkit/blob/main/server/services/profile/post.js)
+- [Código-fonte do serviço de Registro do ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/server/services/profile/post.js)
 
 Veja mais sobre os recursos de programação low-code e poliglota:
 
