@@ -28,21 +28,25 @@ function PolyglotCode({file, codes}) {
             if (!code || Object.keys(code).length === 0) {
                 code = {...codes[0]};
                 code.code = code.code.split('\n')
-                    .reduce(({spaces, indents, source}, line, index) => {
+                    .reduce(({ident, source}, line, index) => {
                         const lineSpaces = line.search(/\S/);
-                        if (lineSpaces > spaces) {
-                            indents++;
-                        } else if (lineSpaces < spaces) {
-                            indents--;
+                        if (ident === 0) {
+                            if (lineSpaces > 0) {
+                                console.log(lineSpaces % 4)
+                                if (lineSpaces % 4 === 0) {
+                                    ident = 1;
+                                } else {
+                                    ident = 2;
+                                }
+                            }
                         }
                         line = line.trim();
-                        for (let i = 0; i < indents; i++) {
-                            line = '    ' + line;
+                        for (let i = 0; i < (lineSpaces * ident); i++) {
+                            line = ' ' + line;
                         }
                         source += line + '\n';
-                        spaces = lineSpaces;
-                        return {spaces, indents, source};
-                    }, {spaces: 0, indents: 0, source: ''}
+                        return {ident, source};
+                    }, {ident: 0, source: ''}
                 ).source;
             }
             code.lang = l;
@@ -71,7 +75,7 @@ function PolyglotCode({file, codes}) {
     }];
     for (const code of codes) {
         for (const keyword of keywords) {
-            code.code = code.code.replaceAll(new RegExp("$(\\s*([#/]*)\\s+)"+ keyword.javascript.trim() +"\\s+", "gm"), "$1"+ keyword[code.lang]);
+            code.code = code.code.replaceAll(new RegExp("^(\\s*([#\/]*)\\s+)?"+ keyword.javascript.trim() +"\\s+", "gm"), "$1"+ keyword[code.lang]);
         }
     }
     const langsComment = {
