@@ -1,0 +1,83 @@
+import path from "node:path";
+import { mkdir } from "node:fs/promises";
+
+import discovery from "./discovery";
+import { selectLanguage } from "./menu";
+import translate from "./llm";
+
+const CONCURRENCY = 30;
+
+const sourceBasePath = path.resolve(
+  process.cwd(),
+  "../i18n/pt",
+);
+
+const files = await discovery(
+  sourceBasePath,
+  [".md", ".mdx", ".json"],
+  [
+    "docusaurus-plugin-content-docs\\current\\library\\objects",
+    "docusaurus-plugin-content-docs\\current\\library\\resources",
+  ],
+);
+
+const language = selectLanguage();
+
+const currentPath = path.resolve(process.cwd(), "..");
+
+const destinationBasePath = path.join(
+  currentPath,
+  "i18n",
+  language.code,
+);
+
+async function processFile(sourceFilePath: string) {
+  const content = await Bun.file(sourceFilePath).text();
+
+  const translatedContent = await translate({
+    content,
+    language: language.label,
+  });
+
+  const relativePath = path.relative(
+    sourceBasePath,
+    sourceFilePath,
+  );
+
+  const destinationFilePath = path.join(
+    destinationBasePath,
+    relativePath,
+  );
+
+  await mkdir(path.dirname(destinationFilePath), {
+    recursive: true,
+  });
+
+  await Bun.write(
+    destinationFilePath,
+    translatedContent,
+  );
+
+  console.log(`${relativePath} -> ${language.code}`);
+}
+
+async function worker() {
+  while (files.length > 0) {
+    const file = files.shift();
+
+    if (!file) {
+      return;
+    }
+
+    await processFile(file);
+  }
+}
+
+const workers = Array.from(
+  { length: Math.min(CONCURRENCY, files.length) },
+  () => worker(),
+);
+
+await Promise.all(workers);
+
+console.log("Tradução concluída.");
