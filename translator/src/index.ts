@@ -20,6 +20,8 @@ const files = await discovery(
   [
     "library/objects",
     "library/resources",
+    "docusaurus-plugin-content-docs\\current\\library\\objects",
+    "docusaurus-plugin-content-docs\\current\\library\\resources",
   ],
 );
 
