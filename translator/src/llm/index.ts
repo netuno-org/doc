@@ -10,13 +10,72 @@ type Props = {
   language: string;
 };
 
+// Fenced code blocks are left untouched by the protection step,
+// so example paths inside code are still translated by the model.
+const FENCE = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g;
+
+// References to real files/pages that must never change.
+const PROTECT_PATTERNS: RegExp[] = [
+  /(?<=\]\()[^)\s]+/g,                                   // ![alt](url) and [label](url)
+  /(?<=^[ \t]*\[[^\]]+\]:[ \t]*)\S+/gm,                  // [ref]: url
+  /(?<=\b(?:src|href)=\{?["'])[^"']+(?=["'])/g,          // <img src="..."> / <a href="...">
+  /(?<=^[ \t]*import\s[^;\n]*?\bfrom\s+["'])[^"']+/gm,   // MDX: import X from '...'
+  /(?<=^[ \t]*import\s+["'])[^"']+/gm,                   // MDX: import '...'
+  /(?<=require\(\s*["'])[^"']+(?=["'])/g,                // require('...')
+];
+
+const PLACEHOLDER = /%%URL_(\d+)%%/g;
+
+function protectReferences(content: string) {
+  const references: string[] = [];
+
+  const protectedContent = content
+    .split(FENCE)
+    .map((part, index) => {
+      // split() with a capture group puts the fenced blocks at odd indexes
+      if (index % 2 === 1) return part;
+
+      return PROTECT_PATTERNS.reduce(
+        (text, pattern) =>
+          text.replace(pattern, (match) => {
+            references.push(match);
+            return `%%URL_${references.length - 1}%%`;
+          }),
+        part,
+      );
+    })
+    .join("");
+
+  return { protectedContent, references };
+}
+
+function restoreReferences(content: string, references: string[]) {
+  const missing = references
+    .map((_, index) => `%%URL_${index}%%`)
+    .filter((placeholder) => !content.includes(placeholder));
+
+  if (missing.length > 0) {
+    throw new Error(
+      `A tradução perdeu referências protegidas: ${missing.join(", ")}`,
+    );
+  }
+
+  return content.replace(
+    PLACEHOLDER,
+    (match: string, index: string) => references[Number(index)] ?? match,
+  );
+}
+
 async function translate({
   content,
   language,
 }: Props): Promise<string> {
+  const { protectedContent, references } = protectReferences(content);
+
   const response = await deepseek.chat.completions.create({
     model: "deepseek-flash",
     reasoning_effort: "low",
+    temperature: 0.1,
     messages: [
       {
         role: "system",
@@ -28,6 +87,14 @@ Translate ALL applicable content to ${language}.
 Your goal is to produce documentation that looks as if it was originally
 written in ${language}, including example names used inside commands,
 code examples, paths, variables, functions, tables, and identifiers.
+
+PROTECTED PLACEHOLDERS (HIGHEST PRIORITY):
+The document contains placeholders in the form %%URL_<number>%%
+(for example %%URL_0%%, %%URL_12%%).
+They stand for real files, images and pages that exist on disk.
+- Copy every placeholder EXACTLY as it is, in the same position.
+- Never translate, rename, reformat, merge, split or remove a placeholder.
+- Never replace a placeholder with a URL or a path.
 
 GENERAL RULES:
 - Translate all human-readable text naturally.
@@ -46,12 +113,19 @@ Translate:
 - table headers
 - captions
 - admonitions
-- link labels
-- image alt text
+- link labels (the text inside [ ], never the target inside ( ))
+- image alt text (the text inside ![ ], never the target inside ( ))
 - bold and italic text
 - inline code when it contains user-defined examples
 - example identifiers written inside backticks
 - example identifiers written inside bold text
+
+Do NOT translate:
+- link and image targets
+- src / href attribute values
+- MDX import / require paths
+- front matter keys and the values of: id, slug, sidebar_position, image
+- heading anchors written as {#anchor}
 
 USER-DEFINED EXAMPLES:
 User-defined example names MUST also be translated.
@@ -126,9 +200,9 @@ Here:
 - "minha_aplicacao" MUST be translated because it is a user-defined value
 
 PATHS:
-Do NOT automatically preserve every path.
-
-Translate user-defined/example directory and file names.
+Paths shown as examples (in prose, inline code, code blocks and commands)
+describe what the reader will create, so their user-defined segments
+are translated.
 
 Example:
 
@@ -142,6 +216,13 @@ Preserve framework-defined or system-defined path segments.
 
 If "apps" is a framework directory, keep "apps".
 If "minhaapp" is the example application name, translate "minhaapp".
+
+Paths that reference files of THIS documentation site (images, assets,
+other pages, imports) are real files and must NEVER change. These are
+normally already replaced by %%URL_n%% placeholders; if any such path
+is still visible (for example starting with /docs/, /img/, @site/,
+./ or ../ and ending in .png, .jpg, .jpeg, .gif, .svg, .webp, .md,
+.mdx, .js, .jsx, .ts, .tsx or .json), copy it unchanged.
 
 EXTERNAL / FRAMEWORK IDENTIFIERS:
 Do NOT translate:
@@ -211,22 +292,24 @@ For example, if:
 minha_aplicacao -> my_application
 
 then every occurrence of "minha_aplicacao" in prose, code, inline code,
-commands and paths must become "my_application".
+commands and example paths must become "my_application".
 
 IMPORTANT:
 Do not assume that text inside backticks, code fences, paths, snake_case,
 kebab-case or camelCase must be preserved.
 
 Determine whether it is:
-1. a framework/system/external identifier -> preserve it
-2. a user-defined example identifier -> translate it
+1. a placeholder %%URL_n%% -> copy it exactly
+2. a reference to a real file of this site -> preserve it
+3. a framework/system/external identifier -> preserve it
+4. a user-defined example identifier -> translate it
 
 Return ONLY the translated content.
         `.trim(),
       },
       {
         role: "user",
-        content,
+        content: protectedContent,
       },
     ],
   });
@@ -238,7 +321,7 @@ Return ONLY the translated content.
     throw new Error("DeepSeek não retornou conteúdo.");
   }
 
-  return translatedContent;
+  return restoreReferences(translatedContent, references);
 }
 
 export default translate;
