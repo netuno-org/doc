@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "openai": "^7.28.0"
+  },
+  "scripts": {
+    "translate": "bun run src/index.ts"
   }
 }
