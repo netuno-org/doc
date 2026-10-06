@@ -16,13 +16,8 @@ async function translate({
 }: Props): Promise<string> {
   const response = await deepseek.chat.completions.create({
     model: "deepseek-flash",
-
-    // Desliga reasoning
     reasoning_effort: "low",
-
-    // Mais baixo = resposta mais determinística
     temperature: 0.1,
-
     messages: [
       {
         role: "system",

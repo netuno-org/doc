@@ -7,25 +7,26 @@ import translate from "./llm";
 
 const CONCURRENCY = 30;
 
+const language = selectLanguage();
+
 const sourceBasePath = path.resolve(
   process.cwd(),
-  "../i18n/pt",
+  language.code === 'en' ? "../i18n/pt/docusaurus-plugin-content-docs/current" : "../i18n/pt",
 );
 
 const files = await discovery(
   sourceBasePath,
   [".md", ".mdx", ".json"],
   [
-    "docusaurus-plugin-content-docs\\current\\library\\objects",
-    "docusaurus-plugin-content-docs\\current\\library\\resources",
+    "library/objects",
+    "library/resources",
   ],
 );
 
-const language = selectLanguage();
 
 const currentPath = path.resolve(process.cwd(), "..");
 
-const destinationBasePath = path.join(
+const destinationBasePath = language.code === 'en' ? path.join(currentPath, "docs") : path.join(
   currentPath,
   "i18n",
   language.code,
