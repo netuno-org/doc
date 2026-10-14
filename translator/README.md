@@ -84,12 +84,49 @@ Portuguese is always the source language.
 | Others | `i18n/pt/` | `i18n/<code>/` |
 
 - `.md`, `.mdx` and `.json` files are translated.
-- The `library/objects` and `library/resources` folders are skipped.
+- The `library/objects` and `library/resources` folders are not translated:
+  they are copied from a reference folder (see
+  [Library (objects and resources)](#library-objects-and-resources)).
 - Only files whose source changed are rewritten, and they are **overwritten**
   without confirmation. Commit before running, so you can review the changes
   with `git diff`.
 - Do not choose `Português`: source and destination would be the same folder,
   and the original files would be rewritten.
+
+## Library (objects and resources)
+
+The `library/objects` and `library/resources` pages are generated from the
+Netuno API, so they are copied instead of translated. The reference copies
+live in `library/`, one folder per language:
+
+```
+library/
+  en/objects/
+  en/resources/
+  pt/objects/
+  pt/resources/
+```
+
+On every run, for each of `objects` and `resources`, the script uses
+`library/<code>/<folder>` if it exists, or `library/en/<folder>` otherwise,
+and copies it to:
+
+| Language | Destination |
+|---|---|
+| English | `docs/library/<folder>` |
+| Others | `i18n/<code>/docusaurus-plugin-content-docs/current/library/<folder>` |
+
+- The destination folder is **deleted and replaced**, so it always matches the
+  reference folder. Make changes in `library/<code>/`, not in the
+  destination, or they are lost on the next run.
+- To give a language its own version, create `library/<code>/objects` and/or
+  `library/<code>/resources`. A missing folder falls back to `en`.
+- `library/pt/` is the Portuguese reference. The script never writes to
+  `i18n/pt`.
+- If neither `library/<code>/<folder>` nor `library/en/<folder>` exists, the
+  script stops with `Pasta de consulta não encontrada` before deleting
+  anything.
+- These files don't use the translation hashes: copying doesn't call the API.
 
 ## Incremental translation
 
@@ -155,7 +192,9 @@ references").
 | What | Where |
 |---|---|
 | Available languages | `src/menu/index.ts` |
-| Source and destination folders, skipped folders | `src/index.ts` |
+| Source and destination folders | `src/index.ts` |
+| Copied library folders (`LIBRARY_FOLDERS`) | `src/library/index.ts` |
+| Reference library folders | `library/<code>/` |
 | Number of files translated in parallel (`CONCURRENCY`, 30) | `src/index.ts` |
 | Model and prompt | `src/llm/index.ts` |
 | Translation hashes | `hashes/<code>.json` |

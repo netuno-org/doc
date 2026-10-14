@@ -1,0 +1,137 @@
+---
+id: RelationshipLink
+title: RelationshipLink
+sidebar_label: RelationshipLink
+---
+
+Definição da configuração do objeto RelationLink para configurar realcionamentos entre formularios.
+
+---
+
+## getAlias
+
+---
+
+#### <span style={{color: '#008000'}}>getAlias</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Retorno
+
+( _string_ )
+
+
+---
+
+## getFormLink
+
+---
+
+#### <span style={{color: '#008000'}}>getFormLink</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Descrição
+
+Retorna o nome do formulario a ser relacionado.
+
+##### Retorno
+
+( _string_ )
+
+Nome do formulario.
+
+---
+
+## getSubLinks
+
+---
+
+#### <span style={{color: '#008000'}}>getSubLinks</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>
+##### Descrição
+
+Retorna os sub relacionamentos.
+
+##### Retorno
+
+( _java.util.Map_ )
+
+Sub relacionamentos.
+
+---
+
+## hasSubLinks
+
+---
+
+#### <span style={{color: '#008000'}}>hasSubLinks</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Descrição
+
+Retorna se o objeto atual possui sub relacionamentos.
+
+##### Retorno
+
+( _boolean_ )
+
+Se possui ou não.
+
+---
+
+## setAlias
+
+---
+
+#### <span style={{color: '#008000'}}>setAlias</span>(<span style={{color: '#FF8000'}}>alias</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](/docs/library/objects/RelationshipLink)</span>
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **alias** | _string_ |   |
+
+##### Retorno
+
+( _[RelationshipLink](/docs/library/objects/RelationshipLink)_ )
+
+
+---
+
+## setFormLink
+
+---
+
+#### <span style={{color: '#008000'}}>setFormLink</span>(<span style={{color: '#FF8000'}}>formulario</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](/docs/library/objects/RelationshipLink)</span>
+##### Descrição
+
+Define o nome do formulario a ser relacionado.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **formulario** | _string_ | Nome do formulario. |
+
+##### Retorno
+
+( _[RelationshipLink](/docs/library/objects/RelationshipLink)_ )
+
+Objeto RelationLink atual.
+
+---
+
+## setSubLinks
+
+---
+
+#### <span style={{color: '#008000'}}>setSubLinks</span>(<span style={{color: '#FF8000'}}>subRelacionamentos</span>: <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[Values](/docs/library/objects/Values) &#124; [DataSchema](/docs/library/objects/DataSchema) | java.util.Map</span>) : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>[RelationshipLink](/docs/library/objects/RelationshipLink)</span>
+##### Descrição
+
+Define os sub relacionamentos.
+
+##### Atributos
+
+| NOME | TIPO | DESCRIÇÃO |
+|---|---|---|
+| **subRelacionamentos** | _java.util.Map_ | Sub relacionamentos. |
+
+##### Retorno
+
+( _[RelationshipLink](/docs/library/objects/RelationshipLink)_ )
+
+Objeto RelationLink atual.
+
+---
+

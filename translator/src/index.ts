@@ -3,6 +3,7 @@ import { mkdir } from "node:fs/promises";
 
 import discovery from "./discovery";
 import { hashContent, loadHashes, saveHashes } from "./hashes";
+import { copyLibrary, LIBRARY_FOLDERS } from "./library";
 import { selectLanguage } from "./menu";
 import translate from "./llm";
 
@@ -18,15 +19,16 @@ const sourceBasePath = path.resolve(
   language.code === 'en' ? "../i18n/pt/docusaurus-plugin-content-docs/current" : "../i18n/pt",
 );
 
+// "library" for English, "docusaurus-plugin-content-docs/current/library" for the others
+const libraryRelativePath = path.relative(
+  sourceBasePath,
+  path.resolve(process.cwd(), "../i18n/pt/docusaurus-plugin-content-docs/current/library"),
+);
+
 const files = await discovery(
   sourceBasePath,
   [".md", ".mdx", ".json"],
-  [
-    "library/objects",
-    "library/resources",
-    "docusaurus-plugin-content-docs\\current\\library\\objects",
-    "docusaurus-plugin-content-docs\\current\\library\\resources",
-  ],
+  LIBRARY_FOLDERS.map((folder) => path.join(libraryRelativePath, folder)),
 );
 
 
@@ -37,6 +39,16 @@ const destinationBasePath = language.code === 'en' ? path.join(currentPath, "doc
   "i18n",
   language.code,
 );
+
+const librarySources = await copyLibrary(
+  path.join(process.cwd(), "library"),
+  language.code,
+  path.join(destinationBasePath, libraryRelativePath),
+);
+
+for (const [folder, code] of Object.entries(librarySources)) {
+  console.log(`library/${folder} copiada de library/${code}.`);
+}
 
 const hashesFilePath = path.join(
   process.cwd(),
