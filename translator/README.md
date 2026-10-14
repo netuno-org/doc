@@ -54,9 +54,21 @@ Escolha o idioma de destino:
 Idioma:
 ```
 
-Type the language number and press Enter. Each translated file is printed to
-the terminal, and `Tradução concluída.` ("Translation complete.") is shown at
-the end.
+Type the language number and press Enter. The script prints how many files
+need translating (`X de Y ficheiros para traduzir.`), then each translated
+file, and `Tradução concluída.` ("Translation complete.") at the end.
+
+Only files whose Portuguese source changed since the last run are translated
+(see [Incremental translation](#incremental-translation)). To translate every
+file again, add `--force`:
+
+```bash
+npm run translate -- --force
+```
+
+```bash
+bun run translate --force
+```
 
 The script must run with `translator/` as the current directory, because the
 source and destination paths are resolved relative to it. Both commands above
@@ -73,10 +85,40 @@ Portuguese is always the source language.
 
 - `.md`, `.mdx` and `.json` files are translated.
 - The `library/objects` and `library/resources` folders are skipped.
-- Destination files are **overwritten** without confirmation. Commit before
-  running, so you can review the changes with `git diff`.
+- Only files whose source changed are rewritten, and they are **overwritten**
+  without confirmation. Commit before running, so you can review the changes
+  with `git diff`.
 - Do not choose `Português`: source and destination would be the same folder,
   and the original files would be rewritten.
+
+## Incremental translation
+
+For each language, `hashes/<code>.json` (for example `hashes/ro.json`) maps
+every source file to the SHA-256 hash of its Portuguese content. A file is
+translated only when:
+
+- its hash differs from the one in the table (the Portuguese file changed),
+- it isn't in the table yet (new file), or
+- its translated file doesn't exist.
+
+Notes:
+
+- Commit `hashes/<code>.json` together with the translations. Otherwise, the
+  next run on another machine translates everything again.
+- The first run for a language has no table, so it translates every file.
+- Changing the prompt or the model in `src/llm/index.ts` doesn't change the
+  hashes. Run with `--force` (or delete `hashes/<code>.json`) to translate
+  everything again.
+- Manual fixes to a translated file are kept until its Portuguese source
+  changes.
+- If a file fails (for example `A tradução perdeu referências protegidas`),
+  the other files are still translated. The failed file isn't recorded in the
+  table, so the next run retries only it. The script lists the failed files
+  and exits with code 1.
+- The table is saved after each file, so stopping the script with Ctrl+C
+  keeps the progress made so far.
+- When a source file is renamed or deleted, its entry is removed from the
+  table and a warning is printed. The old translated file is **not** deleted.
 
 ## What is and isn't translated
 
@@ -116,3 +158,4 @@ references").
 | Source and destination folders, skipped folders | `src/index.ts` |
 | Number of files translated in parallel (`CONCURRENCY`, 30) | `src/index.ts` |
 | Model and prompt | `src/llm/index.ts` |
+| Translation hashes | `hashes/<code>.json` |
