@@ -1,0 +1,58 @@
+{
+  "link.title.Open Source": {
+    "message": "Open Source",
+    "description": "Le titre de la colonne de liens de pied de page avec title=Open Source dans le pied de page"
+  },
+  "link.title.Community": {
+    "message": "Communauté",
+    "description": "Le titre de la colonne de liens de pied de page avec title=Community dans le pied de page"
+  },
+  "link.title.More": {
+    "message": "Plus",
+    "description": "Le titre de la colonne de liens de pied de page avec title=More dans le pied de page"
+  },
+  "link.item.label.Installation": {
+    "message": "Installation",
+    "description": "Le libellé du lien de pied de page avec label=Installation pointant vers /docs/get-started/installation"
+  },
+  "link.item.label.Releases": {
+    "message": "Versions",
+    "description": "Le libellé du lien de pied de page avec label=Releases pointant vers https://github.com/netuno-org/platform/releases"
+  },
+  "link.item.label.Documentation": {
+    "message": "Documentation",
+    "description": "Le libellé du lien de pied de page avec label=Documentation pointant vers https://github.com/netuno-org/doc"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "Le libellé du lien de pied de page avec label=YouTube pointant vers https://www.youtube.com/channel/UCYY1Nz6T2NJtP29vba2fqkg"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "Le libellé du lien de pied de page avec label=Discord pointant vers https://discord.gg/4sfXG6YWFu"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "Le libellé du lien de pied de page avec label=LinkedIn pointant vers https://www.linkedin.com/company/netuno-org/"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "Le libellé du lien de pied de page avec label=Instagram pointant vers https://www.instagram.com/netuno_org/"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Le libellé du lien de pied de page avec label=GitHub pointant vers https://github.com/netuno-org/"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "Le libellé du lien de pied de page avec label=Twitter pointant vers https://twitter.com/netuno_org"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "Le libellé du lien de pied de page avec label=Facebook pointant vers https://www.facebook.com/netuno.org/"
+  },
+  "copyright": {
+    "message": "Droits d'auteur © 2025 <a target=\"_blank\" href=\"https://www.sitana.pt/pt\">Sitana</a>",
+    "description": "Les droits d'auteur du pied de page"
+  }
+}

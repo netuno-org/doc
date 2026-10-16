@@ -1,0 +1,248 @@
+---
+sidebar_position: 2
+id: advanced
+title: Instalare Avansată
+sidebar_label: Instalare Avansată
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Instalare Avansată 
+
+Dacă există vreo problemă cu instalarea rapidă prin script, sau dacă doriți să înțelegeți mai bine cum funcționează instalarea Netuno, sau din orice alt motiv, puteți face instalarea manuală.
+
+Alegeți versiunea dorită. Selecția făcută aici se va aplica tuturor blocurilor de comandă din această pagină.
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Versiune Stabilă" default>
+
+**Versiunea Stabilă** este ediția omologată a Netuno. A trecut prin teste riguroase și este complet pregătită pentru utilizare în medii de producție.
+
+</TabItem>
+  <TabItem value="testing" label="Versiune de Test">
+
+:::danger A NU SE FOLOSI ÎN PRODUCȚIE
+**Versiunea de Test** conține cele mai recente funcționalități și implementările în curs. Fiind experimentală, poate prezenta instabilități. Recomandăm utilizarea ei doar pentru a cunoaște funcționalități noi, a realiza teste sau a contribui la ecosistemul platformei.
+:::
+
+  </TabItem>
+</Tabs>
+
+## Cerințe preliminare
+
+Înainte de a începe, verificați ce trebuie să aveți instalat pe computer:
+
+- **Java** *(Doar pentru instalator)*
+
+Este necesar să aveți **Java** instalat anterior pe sistemul de operare. Acesta va fi folosit **exclusiv** pentru a rula scriptul inițial de instalare al Netuno.
+
+- **GraalVM** *(Instalare automată)* 
+
+În timpul instalării, motorul **GraalVM** este descărcat și configurat automat în folderul Netuno. De la acest punct, Java-ul GraalVM izolat va fi utilizat pentru a rula platforma, garantând stabilitate și performanță înaltă fără a interfera cu setările globale ale mașinii dumneavoastră.
+
+Pentru a afla mai multe despre tehnologie, accesați: [GraalVM](https://www.graalvm.org/).
+
+:::info Cerințele de Frontend sunt Opționale
+Instalarea instrumentelor de frontend (cum ar fi Node.js, NPM sau Yarn) este complet opțională. Va trebui să le configurați doar dacă obiectivul dumneavoastră este să dezvoltați interfețe avansate în modul full-stack.
+:::
+
+### Backend - Java
+
+Acest pas asigură că mediul este pregătit pentru a executa instalatorul platformei. Este necesar să aveți **Java versiunea 11 sau superioară** instalată.
+
+Verificați dacă Java este deja instalat executând comanda de mai jos în terminal:
+
+```bash
+java -version
+```
+
+Dacă nu este instalat, recomandăm instalarea **Java open source**:
+
+- Windows și macOS: [Java OpenJDK Eclipse Temurin](https://adoptium.net/pt-BR)
+
+- Linux (Ubuntu / Debian):
+
+```bash
+apt install default-jdk-headless
+```
+
+### Frontend - Bun
+
+Pentru a dezvolta interfețe de utilizator (UI / Frontend), recomandăm utilizarea **Bun**, instrumentul standard oficial al ecosistemului Netuno pentru compilarea frontend-ului.
+
+#### De ce să folosiți Bun?
+
+**Bun** este o alternativă modernă și foarte optimizată la Node.js. Se remarcă în mediul Netuno prin faptul că oferă:
+
+- **Performanță ridicată:** Execuție și instalare a dependențelor vizibil mai rapide.
+- **Productivitate:** Performanță mai bună în fluxul zilnic de dezvoltare a interfețelor.
+- **Integrare nativă:** Toate proiectele exemplu și șabloanele Netuno vin deja preconfigurate pentru a funcționa cu Bun.
+
+Accesați ghidul la: [Instalarea Bun](/docs/academy/website/bun)
+
+Netuno nu vă restricționează alegerile tehnologice. Dacă preferați, **este posibil să utilizați Node.js cu NPM, PNPM, Yarn** sau orice alt manager de pachete. Alegerea stack-ului de frontend rămâne în întregime la latitudinea dumneavoastră.
+
+:::tip PĂSTRAȚI INSTRUMENTELE ACTUALIZATE
+Indiferent de tehnologia aleasă, utilizați întotdeauna cele mai recente versiuni pentru a garanta compatibilitate, securitate și performanță.
+:::
+
+## Linux sau macOS
+
+Majoritatea distribuțiilor Linux și macOS includ deja **cURL** sau **Wget** în mod implicit. Verificați care este disponibil:
+
+```bash
+curl --version
+```
+```bash
+wget --version
+```
+
+Urmați pașii de mai jos:
+
+**1. Creați folderul și accesați-l:**
+
+```bash
+mkdir -p netuno && cd netuno
+```
+
+**2. Descărcați instalatorul** (alegeți o singură metodă):
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Versiune Stabilă" default>
+
+**Cu cURL:**
+```bash
+curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -o netuno-setup.jar
+```
+
+**Cu Wget:**
+```bash
+wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Versiune de Test">
+
+**Cu cURL:**
+```bash
+curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -o netuno-setup.jar
+```
+
+**Cu Wget:**
+```bash
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
+```
+
+  </TabItem>
+</Tabs>
+
+**3. Executați instalarea:**
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Versiune Stabilă" default>
+
+```bash
+java -jar netuno-setup.jar install
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Versiune de Test">
+
+```bash
+java -jar netuno-setup.jar install version=testing
+```
+
+  </TabItem>
+</Tabs>
+
+:::caution ATENȚIE 
+macOS are un mecanism de securitate nativ (Gatekeeper) care poate bloca aplicațiile descărcate prin terminal.
+:::
+
+Pe **macOS**, pentru a vă asigura că Netuno funcționează fără erori de permisiune, executați comanda de mai jos imediat după pasul 3, încă în folderul `netuno`.
+
+```bash
+sudo xattr -r -d com.apple.quarantine .
+```
+
+Sistemul va solicita parola de administrator a Mac-ului dumneavoastră pentru confirmare.
+
+## Windows
+
+Vom folosi **PowerShell** pentru a efectua descărcarea și instalarea. Deschideți PowerShell din meniul Start tastând `powershell`.
+
+**1. Creați folderul, accesați-l și descărcați instalatorul**. Copiați blocul complet și apăsați Enter:
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Versiune Stabilă" default>
+
+```powershell
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar" -OutFile "netuno-setup.jar"
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Versiune de Test">
+
+```powershell
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar" -OutFile "netuno-setup.jar"
+```
+
+  </TabItem>
+</Tabs>
+
+**2. Executați instalarea:**
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Versiune Stabilă" default>
+
+```powershell
+java -jar netuno-setup.jar install
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Versiune de Test">
+
+```powershell
+java -jar netuno-setup.jar install version=testing
+```
+
+  </TabItem>
+</Tabs>
+
+:::caution ATENȚIE 
+Instalarea standard, de obicei, nu necesită privilegii ridicate. Totuși, dacă primiți un mesaj de "Acces refuzat", închideți PowerShell, redeschideți-l ca **Administrator** și executați comanda din nou.
+:::
+
+## Reînceperea de la zero
+
+Pentru a curăța mediul și a reîncepe de la zero:
+
+**1. Reveniți un nivel în terminal:**
+
+```bash
+cd ..
+```
+
+**2. Ștergeți folderul cu eroare:**
+
+<Tabs groupId="os">
+  <TabItem value="linux-mac" label="Linux sau macOS" default>
+
+```bash
+rm -rf netuno
+```
+
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+rmdir /s /q netuno
+```
+
+  </TabItem>
+</Tabs>
+
+**3. Reporniți instalarea**.

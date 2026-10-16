@@ -1,0 +1,8 @@
+{
+  "label": "Commencez maintenant",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Guide d'installation."
+  }
+}

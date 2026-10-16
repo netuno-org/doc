@@ -1,0 +1,186 @@
+---
+id: resource 
+title: Recurso políglota low-code 
+sidebar_label: Recurso 
+sidebar_position: 5
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+En este tutorial vamos a crear un recurso nativo para Netuno. Esto significa que vamos a crear una clase en Java que estará en el directorio base de Netuno y que podrá ser utilizada por cualquier aplicación dentro de la carpeta `apps` usando la sintaxis `_foo.methodName(ars)`.
+
+El ejemplo que vamos a crear, siguiendo los tutoriales anteriores, es el recurso `_calculadora`, que es un recurso de ejemplo para ejecutar operaciones aritméticas simples.
+
+Para empezar, primero es necesario crear la estructura de carpetas del proyecto. En este ejemplo vamos a considerar que el proyecto se creará dentro de una carpeta llamada `Calculadora`. Entonces es necesario crear la estructura de carpetas que refleja el nombre del paquete (en nuestro ejemplo, `org.netuno.addon.calc`). Nuestra estructura de carpetas será por tanto:
+
+- `Calculadora/src/main/java/org/netuno/addon/calc/resource/`
+
+Dentro de esta estructura vamos a crear una clase Java llamada `CalculadoraResource`, que definirá nuestro recurso nativo personalizado.
+
+- ` Calculadora/src/main/java/org/netuno/addon/calc/resource/CalculadoraResource.java`
+
+Entonces el paquete definido dentro de la clase será:
+
+```java
+package org.netuno.addon.calc.resource;
+```
+
+Para que la clase defina un recurso nativo personalizado, esa clase debe ser anotada con la anotación `org.netuno.tritao.ResourceBase`. El parámetro `name` será el nombre del recurso que se puede acceder con un guion bajo (`_`) antes del nombre (en nuestro caso, `_calculadora`). La forma más fácil de crear el recurso es extendiendo la clase `org.netuno.tritao.resource.ResourceBase`:
+
+```java
+package org.netuno.addon.calc.resource;
+
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calculadora")
+public class CalculadoraResource extends ResourceBase {
+    // ...
+}
+```
+
+Extender la clase `ResourceBase` nos ahorra tener que inicializar el recurso, bastando con llamar a `super` con los argumentos correctos:
+
+```java
+package org.netuno.addon.calc.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calculadora")
+public class CalculadoraResource extends ResourceBase {
+    // ...
+    public CalculadoraResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+}
+```
+
+La función `init` es obligatoria, y dentro de ella vamos a inicializar el recurso llamando al constructor de nuestra clase con los getters de la clase padre:
+
+```java
+package org.netuno.addon.calc.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calculadora")
+public class CalculadoraResource extends ResourceBase {
+    // ...
+    public CalculadoraResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public CalculadoraResource init() {
+        return new CalculadoraResource(getProteu(), getHili());
+    }
+}
+```
+
+Después de eso vamos a definir nuestros propios campos y funciones:
+
+```java
+package org.netuno.addon.calc.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calculadora")
+public class CalculadoraResource extends ResourceBase {
+    public double valor = 0;
+
+    public CalculadoraResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public CalculadoraResource init() {
+        return new CalculadoraResource(getProteu(), getHili());
+    }
+
+    public CalculadoraResource establecer(double v) {
+        valor = v;
+        return this;
+    }
+
+    public CalculadoraResource sumar(double v) {
+        valor += v;
+        return this;
+    }
+
+    public CalculadoraResource restar(double v) {
+        valor -= v;
+        return this;
+    }
+
+    public double obtener() {
+        return valor;
+    }
+}
+```
+
+Ahora solo hay que compilar la clase, asegurándose de que el archivo `CalculadoraResource.class` está en la carpeta:
+
+- `netuno/core/web/WEB-INF/classes/org/netuno/addon/calc/resource/`
+
+O producir un archivo JAR, asegurándose de que está en la carpeta:
+
+- `netuno/lib/`
+
+Vamos a crear una aplicación de prueba para usar este recurso:
+
+```bash
+./netuno app name=calculadora
+```
+
+Vamos a crear también un servicio en esa aplicación para usar el recurso.
+En el ejemplo, vamos a crear el archivo `netuno/apps/calculadora/server/services/calculadora-test.js`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _calculadora.establecer(10);
+
+                _calculadora.sumar(120);
+
+                _out.println(_calculadora.obtener());
+            `
+        },
+    ]}
+/>
+
+Vamos a iniciar nuestra aplicación:
+
+```bash
+./netuno server app=calculadora
+```
+
+Y ahora, cuando hagamos una llamada a ese servicio:
+
+- `http://localhost:9000/services/calculadora-test`
+
+Devolverá el valor `130`.
+
+Para usar un recurso en el código Java, algunas clases como `org.netuno.tritao.Web`
+y `org.netuno.tritao.event.EventBase` proporcionan la función `resource`, que inicializa este recurso.
+En la clase en la que quieras que use el recurso `calculadora`, haz:
+
+```java
+import org.netuno.addon.calc.resource.CalculadoraResource;
+
+// ...
+    CalculadoraResource calculadora = resource(CalculadoraResource.class);
+    calculadora.establecer(10);
+    calculadora.sumar(120);
+    System.out.println(calculadora.obtener());
+// ...
+```
+
+Puedes ver los archivos completos del proyecto en este [enlace](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/resource).

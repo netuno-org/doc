@@ -1,0 +1,8 @@
+{
+  "label": "Carpetas de la aplicación",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Las carpetas y archivos de la aplicación en detalle."
+  }
+}

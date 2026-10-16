@@ -1,0 +1,324 @@
+---
+id: altcha
+title: Altcha
+sidebar_label: Altcha
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Alternativa open-source echivalentă cu reCaptcha.
+
+## Introducere
+
+Implementarea mecanismului de securitate cu captcha este de importanță extremă; iată câteva motive relevante:
+
+- Evitarea accesărilor automate ale roboților la adresele API.
+- Garantarea că accesul este realizat de o persoană reală.
+- De asemenea, garantează că accesul a fost realizat dintr-un browser.
+
+Mult timp, mecanismul captcha oferea o provocare pe care utilizatorul trebuia să o completeze.
+
+În zilele noastre acest lucru nu mai este necesar, deoarece se folosește un mecanism de chei criptate combinat cu o provocare care trebuie rezolvată de un algoritm ce utilizează interacțiunea din browser, detectând astfel dacă este o interacțiune umană sau robotizată.
+
+> Această metodă este ingenioasă și fiabilă; cu un singur click se detectează dacă este om sau robot.
+
+[Altcha](https://altcha.org/) este un proiect open-source care implementează acest proces de securitate, cu un widget de frontend care se integrează și cu React, și cu o resursă de backend oferită de Netuno.
+
+## Limitări
+
+[Altcha](https://altcha.org/) utilizează [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API), funcționează doar pe adrese HTTPS sigure cu certificat SSL, sau local.
+
+> În frontend, dacă domeniul nu este `localhost`, URL-ul trebuie obligatoriu să fie HTTPS sigur cu certificat SSL.
+
+Când frontend-ul este accesat local, browserele permit utilizarea [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API) doar pe adresa locală, obligatoriu `localhost`, altfel se impune HTTPS sigur cu certificat SSL.
+
+## Backoffice
+
+Pentru a activa autentificarea cu [Altcha](https://altcha.org/) în backoffice-ul aplicației dvs. Netuno, utilizați următoarea configurație în aplicație:
+
+```json title="config/_[MEDIU].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "admin": {
+        "enabled": true
+      }
+    }
+  },
+  ...
+}
+```
+
+Gata, acum trebuie doar să accesați ecranul de autentificare al backoffice-ului și veți vedea _checkbox_-ul [Altcha](https://altcha.org/) în deplină funcțiune.
+
+### Cum Funcționează
+
+Netuno oferă în API-ul REST un serviciu standard care furnizează parametrii [Altcha](https://altcha.org/) către frontend; de obicei, adresa acestui serviciu este:
+
+- `http://localhost:9000/services/_altcha`
+
+Cu parametrii, widget-ul [Altcha](https://altcha.org/) din frontend generează rezultatul provocării semnat digital, care este trimis către backend în câmpul ascuns `altcha` al formularului.
+
+În backend se validează dacă rezultatul și semnătura digitală sunt într-adevăr corecte.
+
+### Widget în HTML
+
+Exemplu de integrare a widget-ului în HTML-ul de autentificare al backoffice-ului:
+
+```html title="autentificare.html"
+<script type="text/javascript" src="/scripts/plugins/altcha/altcha.i18n.umd.min.cjs"></script>
+<form ...>
+  <input id="campAltcha" type="hidden" name="altcha" value="">
+  <altcha-widget id="widgetAltcha"
+    challenge="/services/_altcha" language="ro"
+    hideLogo hideFooter></altcha-widget>
+  <script>
+    document.getElementById("widgetAltcha").addEventListener("statechange", function (eveniment) {
+      if (eveniment.detail.state === "verified") {
+        document.getElementById("campAltcha").value = eveniment.detail.payload;
+      }
+    }, false);
+  </script>
+  ...
+</form>
+```
+
+Observați că URL-ul utilizat în atributul `challenge` al widget-ului este serviciul autogenerat de Netuno cu parametrizarea provocării.
+
+## Autentificare Externă
+
+Autentificarea implementată în mod normal și sigură cu JWT folosește serviciul standard al API-ului REST pentru autentificare, care de obicei este:
+
+- `http://localhost:9000/services/_auth`
+
+Acest serviciu autogenerat de Netuno permite garantarea securității pentru autentificarea externă cu JWT nativ, dar face și validarea rezultatului provocării widget-ului captcha.
+
+Pentru a activa [Altcha](https://altcha.org/) la autentificare, adăugați configurația:
+
+```json title="config/_[MEDIU].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "enabled": true
+    }
+  },
+  ...
+}
+```
+
+Astfel, doar cererile de autentificare, adică login-urile care trimit cheia rezultatului provocării generat de [Altcha](https://altcha.org/) și care este validă vor putea autentifica cu succes; în caz contrar, login-ul va fi blocat.
+
+> Trebuie integrat în frontend widget-ul [Altcha](https://altcha.org/) și trimisă cheia rezultatului provocării în câmpul `altcha`.
+
+### Widget în React
+
+Vedeți mai jos cum să integrați widget-ul în React:
+
+Adăugați dependența [Altcha](https://altcha.org/):
+
+- `bun add altcha`
+
+Importați [Altcha](https://altcha.org/) în cod:
+
+```jsx title="website/src/pages/Autentificare/index.jsx"
+import "altcha/i18n";
+```
+
+Creați starea pentru stocarea cheii rezultatului provocării:
+
+```jsx title="website/src/pages/Autentificare/index.jsx"
+const [payloadAltcha, setPayloadAltcha] = useState(null);
+```
+
+Creați o referință internă în componenta React pentru widget:
+
+```jsx title="website/src/pages/Autentificare/index.jsx"
+const altcha = useRef(null);
+```
+
+Adăugați efectul de încărcare al componentei care utilizează referința widget-ului, cu evenimentul care observă când checkbox-ul widget-ului este bifat pentru a încărca cheia rezultatului provocării în stare:
+
+```jsx title="website/src/pages/Autentificare/index.jsx"
+useEffect(() => {
+  if (altcha && altcha.current) {
+    function altchaVerificat(eveniment) {
+      if (eveniment.detail.state === "verified") {
+        setPayloadAltcha(eveniment.detail.payload);
+      }
+    }
+    altcha.current.addEventListener("statechange", altchaVerificat, false);
+    return () => {
+      if (altcha.current != null) {
+        altcha.current.removeEventListener("statechange", altchaVerificat, false);
+      }
+    }
+  }
+}, [altcha]);
+```
+
+Exemplu de widget în „HTML”-ul componentei React:
+
+```jsx title="website/src/pages/Autentificare/index.jsx"
+<altcha-widget
+    ref={altcha}
+    challenge={_service.url('/_altcha')}
+    language="ro"
+    delay={1}
+    hideLogo={true}
+    hideFooter={true}
+></altcha-widget>
+```
+
+### Auth Client
+
+Vedeți cum să integrați [Altcha](https://altcha.org/) în [Auth Client](https://www.npmjs.com/package/@netuno/auth-client).
+
+Utilizați codul de mai jos în evenimentul care trimite datele formularului de autentificare către backend, cum ar fi evenimentele `onSubmit`, `onClick` sau `onFinish` ale formularelor Ant.Design:
+
+```jsx title="website/src/pages/Autentificare/index.jsx"
+_auth.login({
+  username,
+  password,
+  data: (data) => {
+    data.altcha = payloadAltcha;
+    return data;
+  },
+  success: ({json}) => {
+    ...
+  },
+  fail: (data) => {
+    ...
+  }
+});
+```
+
+Observați că `payloadAltcha` este starea care conține cheia rezultatului provocării captcha.
+
+Exemplu complet în pagina de Autentificare a ReAuthKit:
+
+- [Codul sursă al paginii de Autentificare din ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Login/index.jsx)
+
+## Integrare în Servicii
+
+Pe lângă autentificarea prezentată mai sus, în orice alt tip de serviciu poate fi integrat mecanismul captcha cu [Altcha](https://altcha.org/).
+
+Se recomandă integrarea captcha în orice serviciu public care poate fi țintă de atacuri, cum ar fi automatizarea exhaustivă a roboților pentru înregistrarea masivă de date.
+
+În frontend, în ecranul în care serviciul API REST este integrat trebuie implementat și widget-ul de securitate [Altcha](https://altcha.org/), adică acolo unde serviciul este apelat trebuie utilizat widget-ul.
+
+### Service Client
+
+Vedeți în continuare cum să integrați [Altcha](https://altcha.org/) în [Service Client](https://www.npmjs.com/package/@netuno/service-client).
+
+Integrarea widget-ului în frontend este similară cu cea explicată mai sus în:
+
+- [Widget în HTML](#widget-no-html)
+- [Widget în React](#widget-no-react)
+
+Trebuie să obținem payload-ul widget-ului, exact așa cum s-a exemplificat mai sus, urmând același proces ca la autentificarea login.
+
+Payload-ul este trimis către backend printr-un parametru în URL, câmp din formular, sau ca proprietate în JSON, în funcție de metoda HTTP și de modul de implementare a serviciului.
+
+Exemplu de trimitere a payload-ului către serviciul de înregistrare, sau creare a unui cont nou de utilizator:
+
+```jsx title="pages/Inregistrare/index.jsx"
+_service({
+  method: 'POST',
+  url: 'inregistrare',
+  data: {
+    nume,
+    email,
+    parola,
+    altcha: payloadAltcha
+  },
+  success: (raspuns) => {
+    ...
+  },
+  fail: (eroare) => {
+    ...
+  }
+});
+```
+
+Observați că `payloadAltcha` este starea care conține cheia rezultatului provocării captcha.
+
+Exemplu complet în pagina de Înregistrare a ReAuthKit:
+
+- [Codul sursă al paginii de Înregistrare din ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Register/index.jsx)
+
+### Backend
+
+Cu payload-ul fiind trimis către serviciul API REST, atunci în codul serviciului, pe partea de backend, trebuie să îl validăm; vedeți cum:
+
+<PolyglotCode
+    file="server/services/inregistrare/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+            const payloadAltcha = _req.getString("altcha");
+
+            if (_auth.altchaEnabled() && !_altcha.verifySolution(payloadAltcha)) {
+              _header.status(409);
+              _out.json(
+                _val.map()
+                  .set("error", "payload-altcha-invalid")
+              );
+              _exec.stop();
+            }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+            payloadAltcha = _req.getString("altcha")
+
+            if _auth.altchaEnabled() and _altcha.verifySolution(payloadAltcha) == False:
+                _header.status(409)
+                _out.json(
+                    _val.map()
+                        .set("error", "payload-altcha-invalid")
+                )
+                _exec.stop()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                payloadAltcha = _req.getString("altcha")
+
+                if _auth.altchaEnabled() and _altcha.verifySolution(payloadAltcha) == false
+                    _header.status(409)
+                    _out.json(
+                        _val.map()
+                            .set("error", "payload-altcha-invalid")
+                    )
+                    _exec.stop()
+                end
+            `
+        },
+    ]}
+/>
+
+Exemplu complet al serviciului de Înregistrare din ReAuthKit:
+
+- [Codul sursă al serviciului de Înregistrare din ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/server/services/profile/post.js)
+
+Vedeți mai multe despre resursele de programare low-code și poliglotă:
+
+- [Altcha](/docs/library/resources/altcha)
+- [Auth](/docs/library/resources/auth)
+
+## Concluzie
+
+Într-un mod destul de simplificat, putem crea un mecanism de securitate în serviciile API pentru a evita roboții și a garanta interacțiunea umană în browser.
+
+> Se recomandă utilizarea mecanismului captcha cu [Altcha](https://altcha.org/) în serviciile publice cele mai sensibile, cum ar fi serviciile de înregistrare și autentificare.
+
+Cu implementarea nativă oferită de Netuno, devine foarte simplu să activați și să utilizați acest mecanism în orice serviciu al API-ului REST.
+
+> Se recomandă ca backoffice-ul autogenerat al Netuno să aibă întotdeauna autentificarea cu [Altcha](https://altcha.org/) activată în producție și cu HTTPS și certificat SSL.
+
+Ori de câte ori este posibil, utilizați [Altcha](https://altcha.org/) pentru a garanta securitatea și robustețea serviciilor publice ale API-ului dvs.

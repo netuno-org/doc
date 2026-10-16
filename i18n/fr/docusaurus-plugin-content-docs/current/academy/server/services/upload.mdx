@@ -1,0 +1,1075 @@
+---
+id: upload
+title: Téléversement
+sidebar_label: Téléversement
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Envoyer des fichiers vers l'API et les enregistrer dans un dossier ou dans la base de données.
+
+## Introduction
+
+Lorsque nous devons envoyer des fichiers vers les services de l'API REST, nous avons plusieurs façons de réaliser ce développement dans Netuno.
+
+Normalement, les fichiers sont envoyés dans le corps de la requête HTTP structurés au format multipart, c'est la procédure la plus courante dans le frontend, par exemple lorsque nous remplissons un formulaire et qu'il y a ce champ pour choisir un fichier.
+
+En alternative, nous pouvons envoyer les octets des fichiers encodés en Base64 comme valeur dans un objet JSON, lorsque nous voulons une API REST 100% JSON.
+
+## Fichiers
+
+Grâce à `_req.file`, nous pouvons passer le nom du champ et ainsi obtenir l'objet du fichier qui a été envoyé, voyez comment :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const monFichier = _req.file("fichier");
+            `
+        },
+    ]}
+/>
+
+C'est-à-dire, le `_req` a toutes les données que nous recevons dans le corps de la requête HTTP.
+
+Et grâce à la méthode `file`, il permet d'obtenir l'objet qui représente le fichier qui a été envoyé.
+
+La valeur obtenue peut être `null` s'il n'y a aucun fichier.
+
+## Images
+
+Lorsque nous recevons des images, il est courant de devoir les redimensionner, pour garantir l'uniformité et pour réduire l'espace occupé par les images.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const monFichier = _req.getFile("image");
+                if (monFichier != null
+                    && (monFichier.isExtension("jpeg")
+                        || monFichier.isExtension("jpg")
+                        || monFichier.isExtension("png")
+                    )) {
+                    const monImage = _image.init(monFichier)
+                        .resize(200, 200)
+                        .file(monFichier.baseName() +".jpg", "jpeg");
+                    _header.contentTypeJPG();
+                    _out.copy(monImage);
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                monFichier = _req.getFile("image")
+                if monFichier is not None and (
+                    monFichier.isExtension("jpeg")
+                    or monFichier.isExtension("jpg")
+                    or monFichier.isExtension("png")):
+                    monImage = (
+                        _image.init(monFichier)
+                            .resize(200, 200)
+                            .file(monFichier.baseName() +".jpg", "jpeg")
+                    )
+                    _header.contentTypeJPG()
+                    _out.copy(monImage)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                mon_fichier = _req.getFile("image")
+                if !mon_fichier.nil? && (
+                    mon_fichier.isExtension("jpeg") ||
+                    mon_fichier.isExtension("jpg") ||
+                    mon_fichier.isExtension("png")
+                )
+                    mon_image = _image.init(mon_fichier)
+                        .resize(200, 200)
+                        .file(mon_fichier.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(mon_image)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val monFichier = _req.getFile("image")
+                if (monFichier != null
+                    && (monFichier.isExtension("jpeg")
+                        || monFichier.isExtension("jpg")
+                        || monFichier.isExtension("png")
+                    )) {
+                    val monImage = _image.init(monFichier.input())
+                        .resize(200, 200)
+                        .file(monFichier.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(monImage.input())
+                }
+            `
+        }
+    ]}
+/>
+
+Avec la ressource de programmation low-code polyglotte [Image](/docs/library/resources/image),
+nous pouvons manipuler des images, couper, redimensionner, en créer de nouvelles, etc.
+
+## Comment Base64 dans le JSON
+
+Pour effectuer le téléversement d'un fichier dans le JSON envoyé au service, nous pouvons définir une propriété avec la valeur :
+
+`data:image/png;base64,...`
+
+Où dans les `...` suit la séquence des octets du fichier encodés en Base64.
+
+Étant donné que le type du fichier suit le `data`, par exemple :
+
+- PNG : `image/png`.
+- JPG : `image/jpeg`
+- TXT : `text/plain`
+- PDF : `application/pdf`
+- XLSX : `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+
+Voyez l'exemple d'un fichier d'une petite image PNG envoyée dans le JSON à un service :
+
+```json
+{
+  "fichier": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpDb2xvclNwYWNlPSIxIgogICBleGlmOlBpeGVsWERpbWVuc2lvbj0iMyIKICAgZXhpZjpQaXhlbFlEaW1lbnNpb249IjMiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMyIKICAgdGlmZjpJbWFnZVdpZHRoPSIzIgogICB0aWZmOlJlc29sdXRpb25Vbml0PSIyIgogICB0aWZmOlhSZXNvbHV0aW9uPSI3Mi8xIgogICB0aWZmOllSZXNvbHV0aW9uPSI3Mi8xIgogICB4bXA6TWV0YWRhdGFEYXRlPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMTItMjlUMTk6MTI6MjdaIj4KICAgPHhtcE1NOkhpc3Rvcnk+CiAgICA8cmRmOlNlcT4KICAgICA8cmRmOmxpCiAgICAgIHhtcE1NOmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHhtcE1NOnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IERlc2lnbmVyIDEuMTAuNSIKICAgICAgeG1wTU06d2hlbj0iMjAyNS0wMi0yM1QyMjoxNDozM1oiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IDMuMC4xIgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+UGhcxwAAAYFpQ0NQc1JHQiBJRUM2MTk2Ni0yLjEAACiRdZG7SwNBEIe/JEqCRhS0sFAIEq3iG4I2ggmigkiIEXw1yZmHkMdxlyDBVrANKIg2vgr9C7QVrAVBUQSx1lbRRuWc84QEMbPMzre/3Rl2Z8EeSSsZvaYPMtm8Fh4PeObmFzzOZ9y004yL3qiiq6Oh0BRV7f0Wmxmvu81a1c/9a/XLcV0Bm0t4RFG1vPCE8NRqXjV5S7hFSUWXhU+EfZpcUPjG1GMWP5mctPjTZC0SDoK9SdiTrOBYBSspLSMsL8ebSReU3/uYL3HHs7MzEjvE29AJM04AD5OMEcRPP8My++lmgB5ZUSW/7yd/mpzkKjKrFNFYIUmKPD5RC1I9LjEhelxGmqLZ/7991RODA1Z1dwBqHw3jtROcm/BVMoyPA8P4OgTHA5xny/m5fRh6E71U1rx70LgOpxdlLbYNZxvQeq9GteiP5BC3JxLwcgwN89B8BXWLVs9+9zm6g8iafNUl7OxCl5xvXPoGe8Rn71E5kqUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAySURBVAiZAScA2P8BJYrEogr//l3h5+qlBP4HCF3n/AAA/wP7WwLu7PKk+eHWAPzWyKSmfRbbIj23ZQAAAABJRU5ErkJggg=="
+}
+```
+
+Nous pouvons obtenir le fichier envoyé de la manière suivante :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const monFichier = _req.getFile("fichier");
+                if (monFichier != null) {
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                            .set("name", monFichier.name())
+                            .set("sizeBytes", monFichier.size())
+                            .set("sizeKB", monFichier.sizeKB())
+                            .set("sizeMB", monFichier.sizeMB())
+                            .set("sizeGB", monFichier.sizeGB())
+                    );
+                } else {
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                monFichier = _req.getFile("fichier")
+                if monFichier is not None:
+                    _out.json(
+                        _val.map()
+                            .set("result", True)
+                            .set("name", monFichier.name())
+                            .set("sizeBytes", monFichier.size())
+                            .set("sizeKB", monFichier.sizeKB())
+                            .set("sizeMB", monFichier.sizeMB())
+                            .set("sizeGB", monFichier.sizeGB())
+                    )
+                else:
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                mon_fichier = _req.getFile("fichier")
+                if mon_fichier.nil?
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                            .set("name", mon_fichier.name())
+                            .set("sizeBytes", mon_fichier.size())
+                            .set("sizeKB", mon_fichier.sizeKB())
+                            .set("sizeMB", mon_fichier.sizeMB())
+                            .set("sizeGB", mon_fichier.sizeGB())
+                    )
+                else
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                    )
+                end
+            `
+        },
+    ]}
+/>
+
+Exemple de sortie générée par le service ci-dessus :
+
+```json
+{
+  "name": "fichier.png",
+  "result": true,
+  "size": 1849,
+  "sizeKB": 1
+}
+```
+
+### Objet
+
+Si le fichier se trouve dans une structure interne du JSON dans le sous-objet :
+
+```json
+{
+  "personne": {
+    "fichier": "data:image/png;base64,..."
+  }
+}
+```
+
+Peut être obtenu de la manière suivante :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const monFichier = _req.getValues("personne").getFile("avatar");
+            `
+        },
+    ]}
+/>
+
+### Tableau
+
+Si le fichier se trouve dans une structure interne du JSON dans le tableau :
+
+```json
+{
+  "fichiers": [
+    "data:image/png;base64,..."
+  ]
+}
+```
+
+Peut être obtenu de la manière suivante :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const monFichier = _req.getValues("fichiers").getFile(0);
+            `
+        },
+    ]}
+/>
+
+## OpenAPI
+
+Netuno prend en charge l'intégration avec OpenAPI et utilise la définition OpenAPI pour valider la requête HTTP.
+
+> Plus d'informations sur [OpenAPI dans Netuno](/docs/academy/server/services/openapi).
+
+Avec le type `file`, Netuno valide si la valeur commence par le format de fichier dans le JSON, par exemple :
+
+- `data:image/png;base64,...`
+
+Pour valider si un fichier est reçu dans une propriété de l'objet JSON :
+
+```json title="post.in.json"
+{
+  "summary": "Téléversement de Fichier",
+  "description": "Service qui reçoit un fichier dans l'objet JSON.",
+  "type": "object",
+  "properties": {
+    "fichier": {
+      "type": "file"
+    }
+  },
+  "required": [
+    "fichier"
+  ]
+}
+```
+
+Pour valider si une liste de fichiers est reçue en tableau dans le JSON :
+
+```json title="post.in.json"
+{
+  "summary": "Téléversement de Fichiers",
+  "description": "Service qui reçoit une liste de fichiers en tableau dans le JSON.",
+  "properties": {
+    "fichiers": {
+      "type": "array",
+      "items": {
+        "type": "file"
+      }
+    }
+  },
+  "required": [
+    "fichiers"
+  ]
+}
+```
+
+## Enregistrer le Fichier
+
+Normalement, lorsque nous recevons un fichier dans le service, nous devons l'enregistrer, par exemple :
+
+- **Base de données** : Fichier lié à un enregistrement, comme celui d'un utilisateur.
+- **Stockage** : Dossier interne de l'application qui sert à gérer des fichiers en général.
+- **Dossier** : Placer le fichier dans un dossier quelconque du système.
+
+### Base de Données
+
+Dans la gestion des champs des formulaires, Netuno prend en charge le type `image` et `file`, à savoir :
+
+- **Image** : Fichiers image en général, JPG et PNG.
+- **File** : Tout type de fichier.
+
+Imaginez que vous avez un champ Image dans le formulaire Produit, nous pouvons enregistrer le fichier envoyé via téléversement de la manière suivante :
+
+#### Exemple utilisant le DB Form :
+
+Remarquez l'utilisation de `_db.form` :
+
+<PolyglotCode
+    file="services/produit/image/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produitUid = _req.getString("uid");
+                const produitImage = _req.getFile("image");
+
+                if (produitImage == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "image-obligatoire")
+                    );
+                    _exec.stop();
+                }
+
+                const dbResultat = _db.form("produit")
+                    .set("image", produitImage)
+                    .where(_db.where("uid").equals(produitUid))
+                    .update();
+
+                if (dbResultat.getInt("produit") == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "uid-produit-n-existe-pas")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produitUid = _req.getString("uid")
+                produitImage = _req.getFile("image")
+
+                if produitImage is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "image-obligatoire")
+                    )
+                    _exec.stop()
+
+                dbResultat = (
+                    _db.form("produit")
+                        .set("image", produitImage)
+                        .where(_db.where("uid").equals(produitUid))
+                        .update()
+                )
+
+                if dbResultat.getInt("produit") == 1:
+                    _out.json(
+                        _val.map()
+                            .set("result", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "uid-produit-n-existe-pas")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produit_uid = _req.getString("uid")
+                produit_image = _req.getFile("image")
+
+                if produit_image.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "image-obligatoire")
+                  )
+                  _exec.stop
+                end
+
+                db_resultat = _db.form("produit")
+                  .set("image", produit_image)
+                  .where(_db.where("uid").equals(produit_uid))
+                  .update()
+
+                if db_resultat.getInt("produit") == 1
+                  _out.json(
+                    _val.map()
+                      .set("result", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "uid-produit-n-existe-pas")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Exemple utilisant la mise à jour classique :
+
+Remarquez l'utilisation de `_db.update` :
+
+<PolyglotCode
+    file="services/produit/image/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produitUid = _req.getString("uid");
+                const produitImage = _req.getFile("image");
+
+                if (produitImage == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "image-obligatoire")
+                    );
+                    _exec.stop();
+                }
+
+                const dbResultat = _db.update(
+                    "produit",
+                    produitUid,
+                    _val.map()
+                        .set("image", produitImage)
+                );
+
+                if (dbResultat == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "uid-produit-n-existe-pas")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produitUid = _req.getString("uid")
+                produitImage = _req.getFile("image")
+
+                if produitImage is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "image-obligatoire")
+                    )
+                    _exec.stop()
+
+                dbResultat = (
+                    _db.update(
+                        "produit",
+                        produitUid,
+                        _val.map()
+                            .set("image", produitImage)
+                    )
+                )
+
+                if dbResultat == 1:
+                    _out.json(
+                        _val.map()
+                            .set("result", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "uid-produit-n-existe-pas")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produit_uid = _req.getString("uid")
+                produit_image = _req.getFile("image")
+
+                if produit_image.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "image-obligatoire")
+                  )
+                  _exec.stop
+                end
+
+                db_resultat = _db.update(
+                  "produit",
+                  produit_uid,
+                  _val.map()
+                    .set("image", produit_image)
+                )
+
+                if db_resultat == 1
+                  _out.json(
+                    _val.map()
+                      .set("result", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "uid-produit-n-existe-pas")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Téléchargement du Fichier depuis la Base de Données
+
+Pour présenter le fichier stocké, nous devons créer un service qui fournit les octets du fichier.
+
+Étant donné que les fichiers enregistrés dans la base de données, comme dans l'exemple ci-dessus, le fichier lui-même est placé dans le stockage de l'application et seule la nom final du fichier est stocké dans la base de données.
+
+> Le stockage de l'application est un dossier destiné à stocker et organiser des structures de fichiers génériques.
+
+Par conséquent, dans l'exemple ci-dessus, les fichiers de base de données du formulaire `Produit` et du champ `Image` sont stockés dans :
+
+- `storage/database/produit/image/*`
+
+> Netuno gère automatiquement le nom du fichier stocké pour éviter les noms de fichiers en double.
+
+Pour obtenir le fichier, un service peut être créé qui présente le fichier image du produit, par exemple :
+
+<PolyglotCode
+    file="services/produit/image/get"
+    codes={[
+    {
+        lang: 'javascript',
+        code: `
+            const produitUid = _req.getString("uid");
+
+            // Formulaire DB :
+            const dbProduit = _db.form("produit")
+                .where(_db.where("uid").equals(produitUid))
+                .first();
+            // Alternative avec DB Classique :
+            // const dbProduit = _db.get("produit", produitUid)
+
+            if (dbProduit == null) {
+                _header.status(404);
+                _out.json(
+                    _val.map()
+                        .set("result", false)
+                        .set("error", "produit-non-trouve")
+                );
+                _exec.stop();
+            }
+
+            const dbProduitImageNom = dbProduit.getString("image");
+
+            const stockageProduitImageFichier = _storage.database(
+                "produit",
+                "image",
+                dbProduitImageNom
+            );
+
+            if (stockageProduitImageFichier.extension() == "jpg" || stockageProduitImageFichier.extension() == "jpeg") {
+                _header.contentTypeJPG();
+            } else {
+                _header.contentTypePNG();
+            }
+
+            _header.noCache();
+
+            _out.copy(stockageProduitImageFichier.inputStream());
+        `
+    },
+    {
+        lang: 'python',
+        code: `
+            produitUid = _req.getString("uid")
+
+            # Formulaire DB :
+            dbProduit = (
+                _db.form("produit")
+                    .where(_db.where("uid").equals(produitUid))
+                    .first()
+            )
+            # Alternative avec DB Classique :
+            # dbProduit = _db.get("produit", produitUid)
+
+            if dbProduit is None:
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("result", False)
+                        .set("error", "produit-non-trouve")
+                )
+                _exec.stop()
+
+            dbProduitImageNom = dbProduit.getString("image")
+
+            stockageProduitImageFichier = _storage.database(
+                "produit",
+                "image",
+                dbProduitImageNom
+            )
+
+            if stockageProduitImageFichier.extension() == "jpg" or stockageProduitImageFichier.extension() == "jpeg":
+                _header.contentTypeJPG()
+            else:
+                _header.contentTypePNG()
+
+            _header.noCache()
+
+            _out.copy(stockageProduitImageFichier.inputStream())
+        `
+    },
+    {
+        lang: 'ruby',
+        code: `
+            produitUid = _req.getString("uid")
+
+            # Formulaire DB :
+            dbProduit = _db.form("produit")
+                .where(_db.where("uid").equals(produitUid))
+                .first()
+            # Alternative avec DB Classique :
+            # dbProduit = _db.get("produit", produitUid)
+
+            if dbProduit.nil?
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("result", false)
+                        .set("error", "produit-non-trouve")
+                )
+                _exec.stop()
+            end
+
+            dbProduitImageNom = dbProduit.getString("image")
+
+            stockageProduitImageFichier = _storage.database(
+                "produit",
+                "image",
+                dbProduitImageNom
+            )
+
+            if stockageProduitImageFichier.extension() == "jpg" || stockageProduitImageFichier.extension() == "jpeg"
+                _header.contentTypeJPG()
+            else
+                _header.contentTypePNG()
+            end
+
+            _header.noCache()
+
+            _out.copy(stockageProduitImageFichier.inputStream())
+        `
+    },
+]}
+/>
+
+Remarquez que la ressource `_storage` ([Storage](/docs/library/resources/storage)) est utilisée pour obtenir le fichier :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.database(
+                    "produit", // Nom du formulaire/table.
+                    "image", // Nom du champ/colonne.
+                    dbProduitImageNom // Nom du fichier.
+                );
+            `
+        },
+    ]}
+/>
+
+Dans la base de données, seul le nom du fichier est stocké, et grâce à `_storage.database`, nous pouvons obtenir le fichier lui-même.
+
+### Stockage
+
+Nous pouvons enregistrer un fichier directement dans le `stockage` de l'application.
+
+Pour ne pas mélanger avec les fichiers de base de données, nous devons utiliser le dossier `filesystem`, qui a pour finalité de stocker des fichiers génériques qui ne sont pas associés à la base de données.
+
+Pour recevoir le fichier, dans cet exemple, il est démontré comment un fichier envoyé dans le service `POST` est stocké directement dans le stockage :
+
+<PolyglotCode
+    file="services/fichier/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fichier = _req.getFile("fichier");
+                _storage.filesystem("serveur", "televersement").ensurePath();
+                fichier.save(_storage.filesystem("serveur", "televersement", fichier.name()));
+            `
+        },
+    ]}
+/>
+
+Le fichier est stocké dans le dossier `storage` de l'application, dans :
+
+- `storage/filesystem/serveur/televersement/*`
+
+> La ressource [Storage](/docs/library/resources/storage) est utilisée pour obtenir le chemin du dossier et du fichier :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.filesystem(
+                    "serveur", // Nom du sous-dossier dans le filesystem.
+                    "televersement", // Nom ou chemin du sous-dossier interne.
+                    fichier.name() // Nom final du fichier.
+                );
+            `
+        },
+    ]}
+/>
+
+> Voir plus sur la documentation de [Storage](/docs/library/resources/storage).
+
+Pour télécharger le fichier, dans cet exemple, il est démontré comment les octets du fichier peuvent être obtenus via le service `GET` :
+
+<PolyglotCode
+    file="services/fichier/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nomFichier = _req.getString("fichier");
+
+                const fichier = _storage.filesystem(
+                    "serveur",
+                    "televersement",
+                    nomFichier
+                ).file();
+
+                if (fichier.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fichier-n-existe-pas")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(fichier.name());
+                _out.copy(fichier.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                nomFichier = _req.getString("fichier")
+
+                fichier = _storage.filesystem(
+                    "serveur",
+                    "televersement",
+                    nomFichier
+                ).file()
+
+                if fichier.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "fichier-n-existe-pas")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(fichier.name())
+                _out.copy(fichier.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                nom_fichier = _req.getString("fichier")
+
+                fichier = _storage.filesystem(
+                    "serveur",
+                    "televersement",
+                    nom_fichier
+                ).file()
+
+                if fichier.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fichier-n-existe-pas")
+                    )
+                    _exec.stop
+                end
+
+                _header.downloadFile(fichier.name())
+                _out.copy(fichier.input())
+            `
+        },
+    ]}
+/>
+
+### Dossier
+
+Nous pouvons enregistrer un fichier directement dans n'importe quel dossier de l'ordinateur.
+
+Il y a deux ressources qui sont très utiles dans ces cas :
+
+- `_app` - Nous pouvons récupérer n'importe quel dossier ou fichier dans l'application.
+- `_os` - Nous pouvons récupérer n'importe quel dossier ou fichier dans l'ordinateur.
+
+> Voir la documentation des ressources respectives [App](/docs/library/resources/app) et [OS](/docs/library/resources/os),
+> les deux ressources ont les méthodes `folder` et `file`, qui permettent d'indiquer le chemin du dossier ou du fichier
+> respectivement.
+
+Pour recevoir le fichier, dans cet exemple, il est démontré comment un fichier envoyé dans le service
+`POST` est stocké directement dans un dossier de l'application :
+
+<PolyglotCode
+    file="services/fichier/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fichier = _req.getFile("fichier");
+                const dossier = _app.folder("temporaire");
+                if (dossier.exists() == false) {
+                    dossier.mkdir();
+                }
+                fichier.save(_app.file(\`temporaire/\${fichier.name()}\`));
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fichier = _req.getFile("fichier")
+                dossier = _app.folder("temporaire")
+                if dossier.exists() == False:
+                    dossier.mkdir()
+
+                fichier.save(_app.file(f"temporaire/{fichier.name()}"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fichier = _req.getFile("fichier")
+                dossier = _app.folder("temporaire")
+                if dossier.exists() == false
+                    dossier.mkdir()
+                end
+                fichier.save(_app.file("temporaire/#{fichier.name()}"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fichier = _req.getFile("fichier")
+                val dossier = _app.folder("temporaire")
+                if (dossier.exists() == false) {
+                    dossier.mkdir()
+                }
+                fichier.save(_app.file("temporaire/\${fichier.name()}"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final fichier = _req.getFile("fichier")
+                final dossier = _app.folder("temporaire")
+                if (dossier.exists() == false) {
+                    dossier.mkdir()
+                }
+                fichier.save(_app.file("temporaire/\${fichier.name()}"))
+            `
+        },
+    ]}
+/>
+
+Le code ci-dessus va créer le dossier `temporaire` dans l'application et enregistrer le fichier reçu
+dans ce dossier.
+
+Pour télécharger le fichier, dans cet exemple, il est démontré comment les octets du fichier
+peuvent être obtenus via le service `GET` :
+
+<PolyglotCode
+    file="services/fichier/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nomFichier = _req.getString("fichier");
+                const fichier = _app.file(\`temporaire/\${nomFichier}\`);
+
+                if (fichier.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fichier-n-existe-pas")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(fichier.name());
+                _out.copy(fichier.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                nomFichier = _req.getString("fichier")
+                fichier = _app.file(f"temporaire/{nomFichier}")
+
+                if fichier.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "fichier-n-existe-pas")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(fichier.name())
+                _out.copy(fichier.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                nom_fichier = _req.getString("fichier")
+                fichier = _app.file("temporaire/#{nom_fichier}")
+
+                if fichier.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fichier-n-existe-pas")
+                    )
+                    _exec.stop
+                end
+
+                _header.downloadFile(fichier.name())
+                _out.copy(fichier.input())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val nomFichier = _req.getString("fichier")
+                val fichier = _app.file("temporaire/\${nomFichier}")
+
+                if (fichier.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fichier-n-existe-pas")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(fichier.name())
+                _out.copy(fichier.input())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final nomFichier = _req.getString("fichier")
+                final fichier = _app.file("temporaire/\${nomFichier}")
+
+                if (fichier.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fichier-n-existe-pas")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(fichier.name())
+                _out.copy(fichier.input())
+            `
+        },
+    ]}
+/>
+
+## Conclusion
+
+Comme on peut le voir, nous pouvons intégrer le téléversement de fichiers dans les services de l'API REST, y compris intégré avec la OpenAPI.
+
+Nous pouvons enregistrer le fichier dans la base de données, dans le dossier `storage` de l'application ou dans n'importe quel dossier de l'ordinateur.
+
+Voir la documentation des ressources utilisées dans ce tutoriel qui permettent de manipuler les fichiers :
+
+- [Storage](/docs/library/resources/storage)
+- [App](/docs/library/resources/app)
+- [OS](/docs/library/resources/os)
+
+Dans la base de données, nous pouvons enregistrer des images dans des champs de type `image`, et nous pouvons enregistrer n'importe quel type de fichier dans des champs de type `file`, la façon dont nous enregistrons ou obtenons des fichiers est la même dans tous les cas, qu'il s'agisse d'une image ou d'un fichier générique.

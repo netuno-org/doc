@@ -4,9 +4,11 @@ type Language = {
 };
 
 const languages: Language[] = [
-  { code: "en", label: "English" },
-  { code: "pt", label: "Português" },
-  { code: "es", label: "Español" },
+  { code: "en", label: "English (US)" },
+  { code: "en-GB", label: "English (UK)" },
+  { code: "pt", label: "Português (Portugal)" },
+  { code: "pt-BR", label: "Português (Brasil)" },
+  { code: "es", label: "Español (España)" },
   { code: "fr", label: "Français" },
   { code: "de", label: "Deutsch" },
   { code: "it", label: "Italiano" },
@@ -14,6 +16,9 @@ const languages: Language[] = [
   { code: "pl", label: "Polski" },
   { code: "ru", label: "Русский" },
   { code: "ro", label: "Română" },
+  { code: "ja", label: "日本語" },
+  { code: "ko", label: "한국어" },
+  { code: "zh-CN", label: "简体中文" },
 ];
 
 export function selectLanguage(): Language {

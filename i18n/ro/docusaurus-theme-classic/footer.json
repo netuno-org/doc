@@ -1,0 +1,58 @@
+{
+  "link.title.Open Source": {
+    "message": "Open Source",
+    "description": "Titlul coloanei de linkuri din footer cu title=Open Source în footer"
+  },
+  "link.title.Community": {
+    "message": "Comunitate",
+    "description": "Titlul coloanei de linkuri din footer cu title=Community în footer"
+  },
+  "link.title.More": {
+    "message": "Mai multe",
+    "description": "Titlul coloanei de linkuri din footer cu title=More în footer"
+  },
+  "link.item.label.Installation": {
+    "message": "Instalare",
+    "description": "Eticheta linkului din footer cu label=Installation care face legătura către /docs/get-started/installation"
+  },
+  "link.item.label.Releases": {
+    "message": "Versiuni",
+    "description": "Eticheta linkului din footer cu label=Releases care face legătura către https://github.com/netuno-org/platform/releases"
+  },
+  "link.item.label.Documentation": {
+    "message": "Documentație",
+    "description": "Eticheta linkului din footer cu label=Documentation care face legătura către https://github.com/netuno-org/doc"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "Eticheta linkului din footer cu label=YouTube care face legătura către https://www.youtube.com/channel/UCYY1Nz6T2NJtP29vba2fqkg"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "Eticheta linkului din footer cu label=Discord care face legătura către https://discord.gg/4sfXG6YWFu"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "Eticheta linkului din footer cu label=LinkedIn care face legătura către https://www.linkedin.com/company/netuno-org/"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "Eticheta linkului din footer cu label=Instagram care face legătura către https://www.instagram.com/netuno_org/"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Eticheta linkului din footer cu label=GitHub care face legătura către https://github.com/netuno-org/"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "Eticheta linkului din footer cu label=Twitter care face legătura către https://twitter.com/netuno_org"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "Eticheta linkului din footer cu label=Facebook care face legătura către https://www.facebook.com/netuno.org/"
+  },
+  "copyright": {
+    "message": "Drepturi de autor © 2025 <a target=\"_blank\" href=\"https://www.sitana.pt/pt\">Sitana</a>",
+    "description": "Drepturile de autor din footer"
+  }
+}

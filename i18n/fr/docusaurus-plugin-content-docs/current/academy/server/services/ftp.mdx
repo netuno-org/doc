@@ -1,0 +1,382 @@
+---
+id: ftp
+title: Client FTP
+sidebar_label: Client FTP
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Téléverser et télécharger des fichiers, gérer des dossiers distants.
+
+## Introduction
+
+Netuno intègre dans son framework low-code un client FTP, qui permet de se connecter à des serveurs, d'envoyer et de recevoir des fichiers, de modifier des dossiers, entre autres opérations distantes.
+
+Il prend en charge plusieurs connexions simultanées, ainsi que FTPS.
+
+Cela est possible grâce à l'implémentation Java et open-source [Apache Commons Net](https://github.com/apache/commons-net), qui permet à Netuno de fournir ces fonctionnalités dans tous les langages de _script_ via la ressource `_ftp`.
+
+> En savoir plus sur la ressource [FTP](/docs/library/resources/ftp) de Netuno.
+
+## Configuration
+
+La première étape consiste à configurer les données d'accès FTP que Netuno utilisera pour établir la connexion.
+
+Naviguez dans l'application que vous développez jusqu'au fichier de configuration d'environnement. Dans cet exemple,
+nous utiliserons le fichier d'environnement de développement situé dans :
+
+- `config/_development.json`
+
+Vérifiez s'il ne contient pas déjà les configurations pour FTP ; s'il n'en existe pas encore, ajoutez les paramètres de configuration FTP à la fin du fichier de configuration (au format JSON) :
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "mon.serveur.net",
+      "port": 21,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+Après avoir enregistré les modifications, il suffit de redémarrer Netuno pour prendre en compte les modifications de configuration. Il s'agit des configurations par défaut pour la connexion, comme l'indique le nom `default`.
+
+Vous pouvez ajouter d'autres configurations de connexion FTP, mais une seule pourra être définie comme configuration par défaut.
+
+Pour ajouter d'autres configurations de connexion FTP, il suffit de répéter le bloc de configuration par défaut et de remplacer le nom
+`default` par un autre nom de votre choix, voir l'exemple :
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "mon.serveur.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    },
+    "autre": {
+      "enabled": true,
+      "host": "mon.autre-serveur.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+Une configuration semblable à l'exemple ci-dessus permettra d'utiliser le compte par défaut lorsqu'elle est appelée de la manière suivante dans le code :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftp = _ftp.init()
+            `
+        },
+    ]}
+/>
+
+Et pour utiliser la configuration `autre`, il suffit d'ajouter le nom de la configuration comme paramètre à la fonction
+`_ftp.init()` de la manière suivante :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftpAutre = _ftp.init("autre")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftpAutre = _ftp.init("autre")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftpAutre = _ftp.init("autre")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftpAutre = _ftp.init("autre")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftpAutre = _ftp.init("autre")
+            `
+        },
+    ]}
+/>
+
+> Si vous n'ajoutez pas de nom de configuration comme paramètre, le compte par défaut sera toujours utilisé.
+
+## Connexion
+
+Avant toute chose, il est nécessaire d'initialiser la connexion FTP :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.connect()
+            `
+        },
+    ]}
+/>
+
+## Dossier de travail
+
+Lors de l'exécution d'opérations sur le FTP, il est nécessaire de définir quel dossier sera utilisé.
+
+En définissant le dossier de travail, nous pourrons effectuer les différentes manipulations à partir de ce dossier de base.
+
+Pour changer le dossier de travail :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.changeWorkingDirectory("mon/dossier/base")
+            `
+        },
+    ]}
+/>
+
+Désormais, toute opération sera effectuée dans ce dossier ou à partir de celui-ci.
+
+## Créer et supprimer des dossiers
+
+Pour créer un dossier, il suffit d'indiquer le chemin de ce dossier :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.createDirectory("dossier-temporaire")
+                ftp.createDirectory("dossier-temporaire/sous-dossier")
+            `
+        },
+    ]}
+/>
+
+Pour supprimer ou effacer des dossiers :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.deleteDirectory("dossier-temporaire/sous-dossier")
+                ftp.deleteDirectory("dossier-temporaire")
+            `
+        },
+    ]}
+/>
+
+## Renommer
+
+Il est possible de renommer des fichiers ou des dossiers ; on passe l'ancien chemin puis le nouveau chemin :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.rename("ancien-nom", "nouveau-nom")
+            `
+        },
+    ]}
+/>
+
+## Envoyer des fichiers
+
+Pour téléverser un fichier texte :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.uploadText("mon-fichier.txt", "Bonjour FTP ! Ceci est mon contenu...")
+            `
+        },
+    ]}
+/>
+
+## Recevoir des fichiers
+
+Pour obtenir un fichier texte :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const contenuFichier = ftp.downloadText("mon-fichier.txt")
+                _out.println(contenuFichier)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                contenuFichier = ftp.downloadText("mon-fichier.txt")
+                _out.println(contenuFichier)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                contenuFichier = ftp.downloadText("mon-fichier.txt")
+                _out.println(contenuFichier)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val contenuFichier = ftp.downloadText("mon-fichier.txt")
+                _out.println(contenuFichier)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def contenuFichier = ftp.downloadText("mon-fichier.txt")
+                _out.println(contenuFichier)
+            `
+        },
+    ]}
+/>
+
+## Lister les éléments dans le dossier
+
+Liste tout le contenu d'un dossier :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of ftp.list("chemin/dossier")) {
+                    if (i.isDirectory()) {
+                        _out.print("Dossier : ")
+                    } else if (i.isFile()) {
+                        _out.print("Fichier : ")
+                    } else {
+                        _out.print("Autre : ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in ftp.list("chemin/dossier"):
+                    if i.isDirectory():
+                        _out.print("Dossier : ")
+                    elif i.isFile():
+                        _out.print("Fichier : ")
+                    else:
+                        _out.print("Autre : ")
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp.list("chemin/dossier").each do |i|
+                    if i.isDirectory()
+                        _out.print("Dossier : ")
+                    elsif i.isFile()
+                        _out.print("Fichier : ")
+                    else
+                        _out.print("Autre : ")
+                    end
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                ftp.list("chemin/dossier").forEach {
+                    if (it.isDirectory()) {
+                        _out.print("Dossier : ")
+                    } else if (it.isFile()) {
+                        _out.print("Fichier : ")
+                    } else {
+                        _out.print("Autre : ")
+                    }
+                    _out.println(it.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in ftp.list("chemin/dossier")) {
+                    if (i.isDirectory()) {
+                        _out.print("Dossier : ")
+                    } else if (i.isFile()) {
+                        _out.print("Fichier : ")
+                    } else {
+                        _out.print("Autre : ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> Retourne une liste d'objets de type [FTPFile](/docs/library/objects/FTPFile).

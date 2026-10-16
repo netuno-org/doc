@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Netuno",
+    "description": "Titlul din bara de navigare"
+  },
+  "logo.alt": {
+    "message": "Documentația Netuno",
+    "description": "Textul alternativ al logo-ului din bara de navigare"
+  },
+  "item.label.Get Started": {
+    "message": "Începeți",
+    "description": "Element din bara de navigare cu eticheta Începeți"
+  },
+  "item.label.Academy": {
+    "message": "Academie",
+    "description": "Element din bara de navigare cu eticheta Academie"
+  },
+  "item.label.Library": {
+    "message": "Bibliotecă",
+    "description": "Element din bara de navigare cu eticheta Bibliotecă"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Element din bara de navigare cu eticheta GitHub"
+  }
+}

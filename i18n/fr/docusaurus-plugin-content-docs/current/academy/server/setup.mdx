@@ -1,0 +1,260 @@
+---
+id: setup
+title: Configuration des Données
+sidebar_label: Configuration des Données
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+## Introduction
+
+Avec Netuno, le développement des applications passe d'abord par la construction de la base de données, via la
+construction des formulaires et des champs.
+
+Et lorsque l'on travaille en équipe ou qu'il faut transférer le développement de l'application vers un autre environnement, il est
+nécessaire de créer une sauvegarde de la base de données accompagnée du code.
+
+Ainsi, sur la destination, il faudra reconfigurer la base de données et l'application pourra être exécutée
+comme elle a été développée à l'origine.
+
+Le problème de ce processus est l'effort de toujours se rappeler de créer une nouvelle sauvegarde à chaque
+modification de la base de données. Et plus il y a de personnes impliquées dans le développement et/ou plus il y a
+d'environnements pour publier l'application, plus ce processus devient compliqué.
+
+Donc, pour résoudre ce problème, Netuno apporte un système de *setup* des applications, qui génère automatiquement
+la structure de la base de données (*schéma*), et permet en plus de programmer manuellement le chargement des
+données initiales via des *scripts* supplémentaires.
+
+Il permet également de changer le type de serveur de base de données en garantissant que le *setup* sera exécuté
+normalement et l'application sans aucun problème. Cela signifie que l'application peut être développée sur
+H2DataBase et, avec les schémas générés automatiquement, il sera possible de changer la connexion de base de données de l'application vers
+PostgreSQL ou MariaDB. À la première exécution de l'application sur la nouvelle base de données, tout sera reconstruit,
+indépendamment du changement de type de serveur de base de données.
+
+Il permet donc que la base de données soit complètement modifiée sans impact sur le développement déjà réalisé.
+
+Les fichiers de programmation du _setup_ se trouvent dans le dossier de l'application à :
+
+- `server/setup`
+
+## Configuration du setup
+
+Dans les configurations d'environnement des applications situées dans :
+
+- `/apps/MON_APP/config/_development.json`
+- `/apps/MON_APP/config/_production.json`
+
+Vous pourrez manipuler le comportement du 'setup' via les configurations :
+
+```json
+    ...
+    "setup": {
+        "enabled": true,
+        "schema": {
+            "auto_create": true,
+            "execution": true
+        },
+        "scripts": {
+            "execution": true
+        }
+    },
+    ...
+```
+
+##### `enabled`: boolean > _default true_
+
+Définit si le setup est actif ou non, et active ou désactive ainsi, lors de la première exécution de l'application,
+l'exécution des opérations de setup des données.
+
+##### `schema.auto_create`: boolean > _default true_
+
+Permet à Netuno de savoir s'il doit ou non générer les fichiers de schéma de base de données chaque fois qu'un formulaire ou un champ est créé ou
+modifié.
+
+##### `schema.execution`: boolean > _default true_
+
+Contrôle si le schéma doit être exécuté ou non pendant les opérations de setup réalisées lors de la première exécution de
+l'application.
+
+##### `scripts.execution`: boolean > _default true_
+
+Active ou désactive l'exécution des scripts supplémentaires pendant les opérations de setup réalisées lors de la première exécution
+de l'application.
+
+## Schéma
+
+Pendant la création ou la modification des formulaires et champs dans l'interface web de Netuno, les fichiers de
+schéma seront générés dans le dossier setup de la manière suivante :
+
+<PolyglotPath files={[
+    "server/setup/_schema-NOM_DU_FORMULAIRE"
+]} />
+
+Où il y aura un fichier `_schema-***` pour chaque formulaire existant dans l'application.
+
+Ces fichiers ne doivent pas être modifiés manuellement car ils sont générés automatiquement par Netuno.
+
+Ainsi, si vous modifiez le contenu de ces fichiers, lors d'une prochaine génération des schémas, ils seront automatiquement remplacés
+et les modifications effectuées directement dans les fichiers seront perdues.
+
+Pour que la génération automatique du schéma de base de données soit exécutée, il faut s'assurer que la configuration
+__schema.auto_create__ est active, et que le dossier __setup__ existe dans le dossier __server__.
+
+## Scripts
+
+Les scripts de code programmés sur mesure sont des fichiers localisés dans le dossier __setup__ qui ne commencent pas par `_`.
+
+L'objectif principal de ces scripts est de charger les données en garantissant que la base de données contient les informations minimales
+nécessaires au bon fonctionnement de l'application.
+
+Ainsi, lorsque l'application sera reconfigurée dans un autre environnement, elle sera automatiquement chargée avec les données initiales
+et prête à être utilisée.
+
+Pour réaliser ces opérations de chargement de données, vous devrez utiliser les fonctions de la ressource *_db*.
+
+Les __scripts__ sont exécutés après l'exécution des __schémas__ par ordre alphanumérique du nom des fichiers
+qui ne commencent pas par `_`.
+
+> Commencer le nom des fichiers par une séquence numérique est idéal pour définir l'ordre d'exécution, donc les
+> scripts personnalisés sont exécutés dans l'ordre du nom des fichiers qui ne commencent pas par `_`.
+
+### Insérer des Données Personnalisées
+
+Et, pour épargner le travail de réaliser des requêtes dans la base de données afin de vérifier si l'__insertion__
+de données peut être effectuée ou non, Netuno met à disposition la fonction `insertIfNotExists`.
+
+Cette fonction vérifie si les données existent exactement telles qu'elles sont définies dans la base de données ; si elles n'existent pas,
+alors elle réalise leur création.
+
+Un exemple de son utilisation sera de charger les champs __Code__ et __Nom__ du formulaire __Type de Territoire__,
+où le nom de la table est __type\_territoire__ et possède les colonnes __code__ et __nom__, pour cela il suffira de créer le
+fichier avec le contenu suivant :
+
+<PolyglotCode
+    file="server/setup/001-type_territoire"
+    codes={[{
+        lang: 'javascript',
+        code: `
+            _db.insertIfNotExists("type_territoire", _val.map()
+                .set("code", "1001")
+                .set("nom", "Continental")
+            );
+            _db.insertIfNotExists("type_territoire", _val.map()
+                .set("code", "1002")
+                .set("nom", "Archipélagique")
+            );
+            _db.insertIfNotExists("type_territoire", _val.map()
+                .set("code", "2003")
+                .set("nom", "Maritime")
+            );
+            _db.insertIfNotExists("type_territoire", _val.map()
+                .set("code", "3004")
+                .set("nom", "Aérien")
+            );
+        `
+    }]}
+/>
+
+## Cycle de Traitement
+
+Comme déjà expliqué, le *setup* n'est exécuté qu'à la première exécution de l'application.
+
+Et l'ordre d'exécution est :
+
+1. `_start` - exécute le fichier d'initialisation qui peut contenir tout type de programmation personnalisée :
+    <PolyglotPath files={["MON_APP/server/setup/_start"]} />
+2. `_cleanup` - exécute la suppression de formulaires, rapports et leurs champs respectifs de manière programmatique :
+    <PolyglotPath files={["MON_APP/server/setup/_cleanup"]} />
+3. `_schema-*` - exécute tous les scripts avec le préfixe *_schema-*, contient les commandes de création des
+  formulaires, rapports et leurs champs respectifs :
+    <PolyglotPath files={[
+        "MON_APP/server/setup/_schema-structure_auto_generee",
+        "MON_APP/server/setup/_schema-categorie",
+        "MON_APP/server/setup/_schema-produit",
+        "MON_APP/server/setup/_schema-client",
+    ]} />
+4. `001-autres_scripts` - exécute les fichiers de *scripts* programmés sur mesure, ce sont tous les fichiers qui ne
+  commencent pas par `_` et qui contiendront probablement les __insertions__ de données initiales nécessaires ou d'autres
+  développements personnalisés, par exemple :
+    <PolyglotPath files={[
+        "MON_APP/server/setup/001-insere_donnees_personnalisees",
+        "MON_APP/server/setup/002-categorie",
+        "MON_APP/server/setup/003-produit",
+        "MON_APP/server/setup/004-client",
+    ]} />
+5. *_end* - exécute le fichier de finalisation qui peut contenir tout type de programmation personnalisée :
+    <PolyglotPath files={["MON_APP/server/setup/_end"]} />
+
+C'est-à-dire que la création de code sur mesure dans les scripts *start* et *end* est autorisée pour réaliser certaines opérations
+qui ont du sens à être exécutées avant le setup ou même lorsqu'il est terminé.
+
+Il convient de renforcer que ce cycle de traitement est exécuté chaque fois que l'application est exécutée pour la première fois,
+c'est pourquoi il est nécessaire de garantir la vérification de l'existence des données avant de réaliser leur création.
+
+Assurez-vous que les *configurations* d'environnement suivantes sont actives pour permettre l'exécution de ce
+processus dans les fichiers `MON_APP/config/_development.json` ou `MON_APP/config/_production.json` selon
+l'environnement :
+
+* Active ou désactive complètement l'exécution de toute opération de setup :
+
+  `setup.enabled = true|false`
+
+* Active ou désactive l'exécution des *_schemas-* :
+
+  `setup.schema.execution = true|false`
+
+* Active ou désactive l'exécution des *scripts* :
+
+  `setup.scripts.execution = true|false`
+
+## Nettoyage
+
+Pour programmer la suppression de formulaires et de champs, nous devons utiliser le script `_cleanup.js`, ce qui garantit
+que tous les environnements qui synchronisent les fichiers du projet, lors de l'exécution du setup, la structure sera supprimée,
+si elle existe.
+
+Exemple du script de nettoyage :
+
+<PolyglotCode file="server/setup/_cleanup"
+    codes={[{
+        lang: 'javascript',
+        code: `
+            // Supprime le formulaire zone :
+            _form.dropIfExists("zone");
+            // Supprime le champ sous_aire_id du formulaire aire :
+            _form.dropFieldIfExists("aire", "sous_aire_id");
+        `
+    }]}
+/>
+
+## DBML
+
+Chaque fois que Netuno exécute le setup des données, le fichier suivant est généré :
+
+- `server/setup/_db-schema.dbml`
+
+C'est le fichier contenant toute la structure de données qui peut être utilisé avec l'Intelligence Artificielle.
+
+À partir du contenu DBML, l'Intelligence Artificielle comprend la structure de données et peut générer des requêtes SQL
+précises.
+
+Essayez d'utiliser ce fichier en pièce jointe dans le prompt et demandez de générer des requêtes SQL complexes, vous obtiendrez
+de bons résultats.
+
+## Conclusion
+
+Le processus de *setup* des applications dans Netuno a comme principales fonctions :
+
+* *_schema-* : génère automatiquement toute la structure de formulaires et rapports avec leurs champs respectifs,
+ce qui permet de garantir toute la cohérence de la structure de la base de données de l'application, principalement lorsque
+l'application est exécutée avec une nouvelle base de données vide.
+* *scripts* : réaliser des opérations de base de données pour garantir que l'application contient les données obligatoires
+préalablement chargées chaque fois qu'elle est exécutée pour la première fois.
+
+De cette manière, Netuno permet aux applications de fonctionner dans de nouveaux environnements, même en changeant le type de base
+de données, en garantissant le bon fonctionnement de l'application sans la nécessité de réaliser des __sauvegardes__ et des __restaurations__
+des bases de données.
+
+Permettant en outre que tout le code de configuration généré de manière automatique et manuelle soit versionné
+avec Git, par exemple.

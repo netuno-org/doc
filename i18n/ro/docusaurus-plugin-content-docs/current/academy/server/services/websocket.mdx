@@ -1,0 +1,678 @@
+---
+id: websocket
+title: WebSocket
+sidebar_label: WebSocket
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Mesaje instantanee între server și client.
+
+## Introducere
+
+Cu WebSocket este posibil să se stabilească o conexiune permanentă între server și browserul clientului.
+
+Aceasta înseamnă că în orice moment browserul va putea folosi conexiunea stabilită prin WebSocket pentru a trimite
+date către server, fără a fi obligatoriu să obțină un răspuns. Același lucru este valabil și pentru server, care va
+putea contacta browserul clientului trimițând date imediat.
+
+> Comunicarea se realizează instantaneu și în orice moment este posibil să se transfere date dintr-o parte în alta
+în mod independent și imediat.
+
+Este foarte util pentru a realiza operațiuni în timp real cu comunicări imediate; este ca un chat, o conversație
+între browser și server, în orice moment oricare dintre părți poate trimite un mesaj, iar cealaltă îl primește.
+
+De exemplu, este foarte utilizat de la soluții de chat în general până la jocuri; îl folosim și pentru a afișa
+modificări de date în timp real, adică atunci când există nevoia de a realiza o comunicare cât mai imediată posibil.
+
+Într-o formă simplificată, diferența dintre comunicarea clasică HTTP și WebSocket:
+
+![http-clasic-vs-websocket](/docs/assets/academy/server/services/websocket/comparison-pt.png)
+
+Pe partea de server se creează un `endpoint`, adresă care permite stabilirea conexiunilor cu WebSocket.
+
+Serverul are capacitatea de a trimite date doar către o conexiune specifică, adică este posibil să trimită mesaje
+noi către un participant anume dintr-un chat.
+
+De asemenea, serverul poate face `broadcast`, care este trimiterea de date către toate conexiunile active de la o
+anumită adresă, adică atunci când se trimite un mesaj către toți participanții chatului care se află într-o cameră
+sau într-un grup.
+
+## Activare și configurare
+
+Pentru a activa și configura WebSocket în aplicația dvs. Netuno, este necesar să editați fișierul de configurare al
+aplicației pentru mediul care este utilizat, cum ar fi:
+
+- `📂 config/_development.json`
+- `📂 config/_production.json`
+
+Introduceți și ajustați următorii parametri:
+
+```json
+    ...
+    "ws": {
+        "hosts": [...], "<-- OPȚIONAL": "mai multe în documentația de mai jos.",
+        "endpoints": [
+            {
+                "name": "grup",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/grup",
+                "path": "/",
+                "service": "/services/ws/grup"
+            },
+            {
+                "name": "camera",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/camera",
+                "path": "/{uid}",
+                "service": "/services/ws/camera"
+            }
+        ]
+    },
+    ...
+```
+
+#### endpoints
+
+Este un array care permite definirea faptului că serverul va suporta WebSocket prin multiplele adrese publice
+specificate (_endpoints_); astfel, fiecare endpoint este o adresă publică ce suportă primirea conexiunilor prin
+WebSockets de la browsere.
+
+#### name
+
+Numele de identificare al endpoint-ului.
+
+#### enabled
+
+Permite activarea și dezactivarea endpoint-ului; valoarea implicită este `true` (activ).
+
+#### sendTimeout
+
+Limita maximă de timp pentru a trimite un mesaj către clienți; valoarea implicită este `60000` milisecunde, adică
+echivalează cu 1 minut.
+
+#### idleTimeout
+
+Limita maximă de timp pentru inactivitatea conexiunii; valoarea implicită este `300000` milisecunde, adică
+echivalează cu 5 minute.
+
+#### maxText
+
+Limită în bytes pentru dimensiunea maximă a lungimii mesajului; valoarea implicită este `1048576`, echivalentă cu
+1 megabyte.
+
+#### public
+
+Definește baza adresei publice care va permite primirea conexiunilor prin WebSocket venite de la browsere.
+
+Adresa finală este constituită din valoarea configurației `public` urmată de ceea ce este definit în `path`.
+
+#### path
+
+Definește partea finală a căii adresei publice; poate fi dinamic, ceea ce permite crearea, de exemplu, a multiple
+canale separate, de pildă este util pentru a crea multiple camere.
+
+> Atenție: `path` trebuie să înceapă întotdeauna cu `/`, iar în configurația de conexiune din front-end este foarte
+important să conțină bara exact așa cum este definită în `path`.
+
+În front-end, adresa finală va fi `public` + `path`; vedeți exemplul:
+
+```json
+    ...
+    "public": "/ws/grup",
+    "path": "/",
+    ...
+```
+
+Atunci adresa finală în front-end va fi `/ws/grup/`, cu bara la final.
+
+##### service
+
+Adresa de bază a serviciului de back-end al aplicației care procesează conexiunile și comunicarea prin WebSocket.
+
+#### hosts
+
+Opțional, putem defini hosturile la care endpoint-urile noastre sunt disponibile; adică, la conexiune vine adresa
+Host în headerul HTTP, iar acest host este considerat doar prin informația de domeniu sau IP, ignorându-se
+indicarea portului; aceasta este folosită pentru a asocia și găsi endpoint-ul corespunzător.
+
+> Prin urmare, endpoint-ul, pentru a funcționa corect, trebuie să combine `host` și `public` + `path`, în felul
+> următor:
+>
+> `ws://[host]:9000[public][path]`
+>
+> În producție cu NGINX, proxy invers și SSL, ar trebui să arate astfel:
+>
+> `wss://[host][public][path]`
+
+Netuno definește unele domenii locale cu prefixul numelui aplicației, pe care le asociază automat ca valoare
+implicită pentru hosturile endpoint-urilor; în plus, în aplicația în dezvoltare adaugă și `localhost` și
+`127.0.0.1` la hosturile implicite, de aceea definirea hosturilor este opțională, pentru că există această
+configurare automată.
+
+Următoarele hosturi sunt definite automat pentru endpoint-uri, în cazul în care numele aplicației este
+`aplicatiamia`:
+
+- Acesta direcționează direct către IP-ul local 127.0.0.1:
+  - `aplicatiamia.local.netu.no`
+- Acestea, pentru a funcționa, trebuie înregistrate în fișierul hosts al sistemului de operare:
+  - `aplicatiamia.localhost`
+  - `aplicatiamia.local`
+
+În cazul în care numele aplicației este `aplicatia_mea`, atunci acestea devin hosturile automate:
+
+- Acesta direcționează direct către IP-ul local 127.0.0.1:
+  - `aplicatia-mea.local.netu.no`
+- Acestea, pentru a funcționa, trebuie înregistrate în fișierul hosts al sistemului de operare:
+  - `aplicatia-mea.localhost`
+  - `aplicatia-mea.local`
+
+> În domeniu nu este permis `_` (underscore), iar în numele aplicațiilor nu este permis `-` (cratimă); de aceea,
+> extern folosim `-` (cratimă) în adresă, dar Netuno transformă automat `-` (cratimă) în `_` (underscore) pentru a
+> găsi aplicația corectă.
+
+Aplicația implicită sau aplicația definită la inițializarea serverului Netuno are în plus următoarele hosturi:
+
+- `localhost`
+- `127.0.0.1`
+
+Pentru a defini hosturi personalizate, folosim următoarele configurații:
+
+```json
+    ...
+    "ws": {
+        "endpoints": [
+            {
+                "hosts": ["domeniul-meu1.com", "www.domeniul-meu1.com"],
+                ...
+            },
+            {
+                "hosts": ["domeniul-meu2.com", "www.domeniul-meu2.com"],
+                ...
+            }
+        ]
+    },
+    ...
+```
+
+În cazul în care toate endpoint-urile funcționează pentru aceleași hosturi, atunci putem defini global în acest
+mod:
+
+```json
+    ...
+    "ws": {
+        "hosts": ["domeniul-meu.com", "www.domeniul-meu1.com"],
+        "endpoints": [
+            ...
+        ]
+    },
+    ...
+```
+
+Asigurați-vă că în adresa finală a WebSocket utilizați întotdeauna un domeniu sau IP care este un host valid; în
+caz contrar, nu va funcționa, deoarece endpoint-ul nu va putea fi găsit intern.
+
+## Serviciu pentru endpoint-uri
+
+### POST = conexiune nouă
+
+Serviciul configurat este executat cu metoda `POST` atunci când este stabilită o conexiune nouă, de exemplu:
+
+<PolyglotCode
+    file="server/services/ws/camera/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uidCamera = _ws.path().getString("uid")
+                const dbCamera = _db.get("camera", uidCamera)
+
+                if (dbCamera == null) {
+                    _log.warn(\`Cameră invalidă \${uidCamera}.\`)
+                    _ws.close()
+                } else {
+                    _log.info(\`Sesiune WebSocket nouă: \${_ws.sessionId()}\`)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                uidCamera = _ws.path().getString("uid")
+                dbCamera = _db.get("camera", uidCamera)
+
+                if dbCamera == null:
+                    _log.warn(f"Cameră invalidă {uidCamera}.")
+                    _ws.close()
+                else:
+                    _log.info(f"Sesiune WebSocket nouă: {_ws.sessionId()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                uidCamera = _ws.path().getString("uid")
+                dbCamera = _db.get("camera", uidCamera)
+
+                if dbCamera == null
+                    _log.warn("Cameră invalidă #{uidCamera}.")
+                    _ws.close()
+                else
+                    _log.info("Sesiune WebSocket nouă: #{_ws.sessionId()}")
+                end
+`
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val uidCamera = _ws.path().getString("uid")
+                val dbCamera = _db.get("camera", uidCamera)
+
+                if (dbCamera == null) {
+                    _log.warn("Cameră invalidă \${uidCamera}.")
+                    _ws.close()
+                } else {
+                    _log.info("Sesiune WebSocket nouă: \${_ws.sessionId()}")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def uidCamera = _ws.path().getString("uid")
+                def dbCamera = _db.get("camera", uidCamera)
+
+                if (dbCamera == null) {
+                    _log.warn("Cameră invalidă \${uidCamera}.")
+                    _ws.close()
+                } else {
+                    _log.info("Sesiune WebSocket nouă: \${_ws.sessionId()}")
+                }
+            `
+        },
+    ]}
+/>
+
+> De obicei, `_ws.sessionId()` este salvat în baza de date pentru a fi utilizat în comunicări viitoare.
+
+### PUT = mesaj nou
+
+Dacă mesajul primit nu este în format JSON sau dacă este un JSON care nu se află în formatul suportat pentru
+executarea unui serviciu specific (`service`), atunci va fi executat acest serviciu generic:
+
+<PolyglotCode
+    file="server/services/ws/camera/put"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`Sesiunea \${_ws.sessionId()} a trimis acest mesaj: \${_ws.message()}\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"Sesiunea {_ws.sessionId()} a trimis acest mesaj: {_ws.message()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("Sesiunea #{_ws.sessionId()} a trimis acest mesaj: #{_ws.message()}")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("Sesiunea \${_ws.sessionId()} a trimis acest mesaj: \${_ws.message()}")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("Sesiunea \${_ws.sessionId()} a trimis acest mesaj: \${_ws.message()}")
+            `
+        },
+    ]}
+/>
+
+### DELETE = conexiune închisă
+
+Este executat atunci când are loc o deconectare a browserului clientului.
+
+<PolyglotCode
+    file="server/services/ws/camera/delete"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`Sesiunea \${_ws.sessionId()} s-a deconectat.\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"Sesiunea {_ws.sessionId()} s-a deconectat.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("Sesiunea #{_ws.sessionId()} s-a deconectat.")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("Sesiunea \${_ws.sessionId()} s-a deconectat.")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("Sesiunea \${_ws.sessionId()} s-a deconectat.")
+            `
+        },
+    ]}
+/>
+
+
+### GET = flux continuu de mesaje
+
+Începe execuția atunci când are loc o conexiune nouă a browserului clientului, iar execuția este menținută până la
+finalizarea conexiunii.
+
+Adică, serviciul pentru metoda HTTP `GET` primește continuu mesajele care vin de la client în `stream`; altfel
+spus, este un flux deschis și continuu de mesaje care atât poate primi, cât și trimite.
+
+<PolyglotCode
+    file="server/services/ws/camera/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_ws.isStream()) {
+                    while (_ws.awaitStream()) {
+                        if (_ws.isBinaryStreamed()) {
+                            _log.info("Mesaj binar nou primit: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        } else if (_ws.isTextStreamed()) {
+                            _log.info("Mesaj text nou primit: "+ _ws.textStreamed())
+                        }
+                        _ws.sendText("Ok! Mesajul a fost primit cu succes.")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _ws.isStream():
+                    while _ws.awaitStream():
+                        if _ws.isBinaryStreamed():
+                            _log.info("Mesaj binar nou primit: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elif _ws.isTextStreamed():
+                            _log.info("Mesaj text nou primit: "+ _ws.textStreamed())
+                        _ws.sendText("Ok! Mesajul a fost primit cu succes.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _ws.isStream()
+                    while _ws.awaitStream()
+                        if _ws.isBinaryStreamed()
+                            _log.info("Mesaj binar nou primit: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elsif _ws.isTextStreamed()
+                            _log.info("Mesaj text nou primit: "+ _ws.textStreamed())
+                        end
+                        _ws.sendText("Ok! Mesajul a fost primit cu succes.")
+                    end
+                end
+            `
+        },
+    ]}
+/>
+
+`if`-ul cu `_ws.isStream()` face ca să se verifice dacă este într-adevăr o cerere internă gestionată de WebSocket
+pentru a realiza stream-ul.
+
+În `while`-ul cu `_ws.awaitStream()` se așteaptă să sosească un nou flux de mesaje, adică se așteaptă sosirea unui
+mesaj nou. Imediat ce există un mesaj nou, se execută codul intern al `while`-ului.
+
+> `_ws.awaitStream()` funcționează ca o buclă infinită care așteaptă un mesaj nou.
+
+Apoi, în `if`-urile interne ale `while`-ului este verificat tipul mesajului: dacă mesajul este binar sau text; în
+ambele cazuri, conținutul acestor mesaje este afișat în loguri. Observați că poate fi utilizat orice format de
+mesaj, putând fi procesate în orice mod convenabil.
+
+În final, în `_ws.sendText` este trimis un mesaj de răspuns către client, care confirmă recepția.
+
+> Fiecare execuție a serviciului `GET` va fi o conexiune activă.
+
+Când conexiunea cu endpoint-ul WebSocket este finalizată, atunci execuția acestui serviciu este finalizată intern.
+
+## Comunicare
+
+### sendService
+
+Execută serviciul și trimite output-ul generat către un client specific conectat prin WebSocket; utilizează ID-ul
+de conexiune al clientului (`sessionId`).
+
+#### Exemplu de apelare a serviciului
+
+Codul de mai jos poate fi utilizat în serviciul de metodă PUT al endpoint-ului (`service`); observați că este
+utilizat `_ws.sessionId()`, care obține ID-ul sesiunii de conexiune a clientului. Dacă identificatorul sesiunii
+este salvat în baza de date, `sendService` ar putea fi executat în orice alt serviciu, în orice moment.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uid = _ws.path().getString("uid")
+                _ws.sendService(
+                    _ws.sessionId(), // Identificarea conexiunii WebSocket curente.
+                    _val.map() // Parametrizarea serviciului care va fi executat.
+                        .set("method", "POST")
+                        .set("service", "/services/camera/participant/nou")
+                        .set(
+                            "data", // Parametrii care vor fi trimiși serviciului și primiți prin _req.
+                            _val.map()
+                                .set("uid", uid)
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+Adică, în configurație `path`-ul configurat în `endpoint` are valoarea `/{uid}`, astfel încât permite clientului să
+se conecteze prin adresa publică:
+
+- `/ws/camera/d641f095-30eb-4025-a39c-b2e3e497eab7`
+
+Atunci valoarea lui `uid` va fi `d641f095-30eb-4025-a39c-b2e3e497eab7`.
+
+Apoi va fi executat serviciul care se află la URL-ul `/services/camera/participant/nou`, iar valoarea lui `uid`
+este transmisă.
+
+`uid` poate fi obținut în codul serviciului care este executat, ca parametru al cererii HTTP; vedeți un exemplu:
+
+<PolyglotCode
+    file="/server/services/camera/participant/nou"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // UID-ul trimis este obținut direct din cerere.
+                const uid = _req.getString('uid')
+            `
+        },
+    ]}
+/>
+
+### broadcastService
+
+Pentru a realiza broadcast, este necesar numele endpoint-ului WebSocket, definirea căii (`path`) dacă este
+aplicabil, și serviciul care va fi executat.
+
+> Output-ul serviciului va fi trimis către toate conexiunile active din `endpoint`-ul specificat.
+
+#### Exemplu de broadcast
+
+<PolyglotCode
+    file="/server/services/camera/participant/nou"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _ws.broadcastService(
+                    "admin", // Numele endpoint-ului WebSocket.
+                    "/", // Calea configurată în endpoint (path).
+                    _val.map() // Parametrizarea serviciului care va fi executat.
+                        .set("service", "/services/camera/participant/lista")
+                )
+            `
+        },
+    ]}
+/>
+
+În acest exemplu, conținutul output-ului generat de serviciul `camera/participant/lista` va fi trimis tuturor celor
+care sunt conectați la endpoint-ul `admin`.
+
+## Client WS - NPM
+
+Pentru a realiza cu ușurință integrarea cu frontend-ul, este disponibil modulul NPM:
+
+- https://www.npmjs.com/package/@netuno/ws-client
+
+Comandă de instalare:
+
+- `bun install @netuno/ws-client`
+
+```js
+import _ws from '@netuno/ws-client';
+
+_ws.config({
+    url: 'ws://localhost:9000/ws/exemplu/',
+    servicesPrefix: '/services',
+    autoReconnect: true,
+    connect: (event) => {
+        console.info('WebSocket conectat', event);
+    },
+    close: (event) => {
+        console.warn('WebSocket închis', event);
+    },
+    error: (error) => {
+        console.error('Eroare WebSocket', error);
+    },
+    message: (data, event) => {
+        console.debug('Mesaj WebSocket', data);
+    }
+});
+```
+
+> Asigurați-vă că URL-ul combină corect valorile configurate în endpoint pentru `host` și `public` + `path`, în
+> felul următor:
+>
+> `ws://[host]:9000[public][path]`
+>
+> Iar URL-ul de producție cu integrarea NGINX, proxy invers și SSL va fi probabil astfel:
+>
+> `wss://[host][public][path]`
+
+În continuare, puteți iniția conexiunea:
+
+```js
+_ws.connect();
+```
+
+### Executarea unui serviciu prin WebSocket
+
+Putem executa servicii ale API-ului REST prin conexiunea WebSocket; aceasta înseamnă că nu va fi realizată nicio
+cerere HTTP, astfel încât datele cererii sunt trimise ca mesaj, iar răspunsul serviciului este obținut ca mesaj
+primit înapoi.
+
+Înainte de a începe, trebuie să creăm un observator pentru răspunsul serviciului, de exemplu:
+
+```js
+const listenerRef = _ws.addListener({
+    method: 'GET', // Opțional; omite pentru a asculta toate metodele.
+    service: 'calea/serviciului/meu/aici',
+    success: (data) => {
+        console.log('Răspunsul serviciului executat prin WebSocket:', data);
+    },
+    fail: (error)=> {
+        console.log('Serviciul executat prin WebSocket a eșuat:', error);
+    }
+});
+```
+
+Acum putem trimite o cerere de executare a serviciului, iar răspunsul serviciului va fi obținut în observatorul
+creat mai sus; executăm serviciul astfel:
+
+```js
+_ws.sendService({
+    method: 'GET', // Opțional; cererile folosesc GET când este omis.
+    service: 'calea/serviciului/meu/aici',
+    data: {
+        message: 'Salut...'
+    }
+});
+```
+
+Pentru a elimina observatorul adăugat, utilizați:
+
+```js
+_ws.removeListener(listenerRef);
+```
+
+Și pentru a închide conexiunea WebSocket:
+
+```js
+_ws.close();
+```
+
+## NGINX Proxy invers
+
+În NGINX, proxy-ul invers poate fi configurat astfel:
+
+```
+    location /ws {
+        proxy_pass http://localhost:9000;
+        proxy_set_header Host aplicatia-mea.local.netu.no;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+```
+
+> La linia 3, unde este definit `Host`, partea `aplicatia-mea` trebuie ajustată la numele corespunzător al
+> aplicației Netuno. Dacă există `_` în numele aplicației, atunci în adresa `Host` acesta va fi înlocuit cu `-`;
+> de exemplu, aplicația `aplicatia_mea` va avea valoarea `Host` astfel: `aplicatia-mea.local.netu.no`.
+
+Reinițiați NGINX pentru ca configurația să intre în vigoare.
+
+Domeniile configurate în NGINX, adică parametrizarea `server_name`, nu trebuie să se afle în hosturile
+endpoint-ului din aplicația Netuno, deoarece în configurația de proxy de mai sus Host-ul din headerul HTTP este
+modificat către o adresă implicită care este întotdeauna configurată automat de Netuno, atât timp cât prefixul cu
+numele aplicației este corect.
+
+Dacă serverul NGINX utilizează portul 80, atunci URL-ul final va fi:
+
+- `ws://[host][public][path]`
+
+Iar cu SSL/HTTPS, dacă serverul NGINX utilizează portul 443, atunci URL-ul final va fi:
+
+- `wss://[host][public][path]`

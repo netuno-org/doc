@@ -1,0 +1,196 @@
+---
+id: debug
+title: Débogage (Debug)
+sidebar_label: Déboguer
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Permet d'analyser l'exécution du code en temps réel.
+
+## Introduction
+
+Pendant le codage, il arrive souvent qu'il soit nécessaire d'analyser l'exécution du code.
+
+Dans le cas de Netuno, nous pouvons utiliser :
+
+- `_out.print` - Pour afficher certaines informations dans la sortie de données (_output_).
+- `_log.info` - Pour afficher certaines informations dans le terminal du serveur Netuno.
+
+Mais il arrive aussi qu'il y ait des scénarios plus complexes où nous voulons analyser plus en profondeur, par exemple
+vérifier plusieurs valeurs d'objets et de variables en même temps, tester l'exécution d'un code spécifique dans ce
+contexte, tout cela pour mieux comprendre le comportement.
+
+Il est toujours possible d'utiliser dans ces cas plus complexes les méthodes montrées ci-dessus comme `_out.print` et
+`_log.info`, mais nous pouvons tomber dans un processus très laborieux et confus pour parvenir à une bonne
+compréhension de ce qui se passe.
+
+Le débogage (_debug_) sert justement à fournir une bonne compréhension de ce qui se passe, en particulier dans
+des situations plus complexes.
+
+> Le débogage (en anglais : _debugging_, _debug_) est le processus utilisé dans le développement pour trouver et réduire
+> les défauts, les pannes, les comportements erronés, etc.
+
+Le débogage peut être divisé en 3 mécanismes importants :
+
+- Point d'arrêt (_Breakpoint_) : Arrête l'exécution du code, nous pouvons alors commencer l'investigation là où
+le code est arrêté.
+- Observation (_Watch_) : Permet d'observer les valeurs des variables là où le code est arrêté.
+- Exécution de code (_Code Execution_) : Nous pouvons exécuter n'importe quel code temporairement, pour effectuer un
+test au point où l'exécution est arrêtée pour le débogage.
+
+## Point d'arrêt (_Breakpoint_)
+
+Le point d'arrêt (_breakpoint_) est l'endroit dans le code où l'exécution doit être mise en pause pour démarrer le
+processus de débogage.
+
+Pour démarrer le débogage dans n'importe quel code et dans n'importe quel langage pris en charge par Netuno, comme JavaScript, Python,
+Ruby, Kotlin ou Groovy, à l'endroit où vous souhaitez démarrer le débogage, placez le code suivant :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _exec.debug()
+            `
+        },
+    ]}
+/>
+
+> Comme Netuno est polyglotte, il fonctionne avec n'importe quel langage pris en charge, comme : JavaScript, Python, Kotlin, Ruby,
+> ou Groovy.
+
+Maintenant, pour démarrer le débogage, exécutez le code et l'exécution sera bloquée, en pause.
+
+Ensuite, allons dans l'interface de développement, dans le back-office, dans `Construire`, et dans le menu de gauche nous avons l'option :
+
+- **Déboguer**
+
+Où nous pouvons trouver la double flèche verte qui indique qu'en cliquant dessus, l'exécution pourra continuer :
+
+![Débogage - Continuer](/docs/assets/academy/server/debug/step-over-pt.jpg "Débogage - Continuer")
+
+> La double flèche verte interrompt la pause du débogage en faisant en sorte que l'exécution du code continue normalement à partir du
+> point où elle s'est arrêtée.
+
+## Observer (_Watch_)
+
+Pour voir la valeur des variables, nous utilisons la loupe jaune.
+
+En cliquant sur la loupe jaune, nous pouvons saisir le nom de la variable dont nous voulons observer la valeur.
+
+![Débogage - Observer](/docs/assets/academy/server/debug/watch-pt.jpg "Débogage - Observer")
+
+Le nom de la variable et sa valeur actuelle apparaissent dans la liste, nous pouvons observer la valeur de plusieurs variables, si une
+variable n'existe pas alors il n'y aura pas de valeur.
+
+## Exécuter le code (_Execute Code_)
+
+Nous pouvons injecter du code à exécuter dans le contexte du point d'arrêt, c'est-à-dire là où le débogage se produit.
+
+Nous cliquons sur le symbole de code bleu et nous pouvons placer le code que nous souhaitons exécuter.
+
+![Débogage - Exécuter le code](/docs/assets/academy/server/debug/execute-code-pt.jpg "Débogage - Exécuter le code")
+
+Le code exécuté est présenté dans la liste ci-dessous avec l'indication que le code a été exécuté avec succès, s'il
+y a une erreur, le message d'erreur est présenté avec le code.
+
+## Configuration pour le débogage à distance
+
+Lors de l'exécution de Netuno localement, aucune configuration ne devrait être nécessaire.
+
+Car en développement local, le `host` de l'adresse du WebSocket est configuré automatiquement.
+
+Les adresses locales utilisent normalement ces valeurs comme `host` :
+
+- `localhost`
+- `127.0.0.1`
+- `192.168.1.*` - Exemple de n'importe quel IP de réseau local.
+- `mon-app.local.netu.no`
+
+> Les adresses locales n'ont pas besoin de configuration, cette étape peut donc être ignorée.
+
+En production ou en développement distant, comme dans un conteneur ou un VPN, il pourra être nécessaire de définir l'adresse
+externe (IP ou domaine) qui est utilisée pour la connexion WebSocket.
+
+Dans ce cas, naviguez dans l'application en cours de développement jusqu'au fichier de configuration d'environnement.
+Dans cet exemple, nous allons utiliser le fichier d'environnement de développement, qui se trouve dans :
+
+- 📂 `config/_development.json`
+
+Vérifiez si la configuration n'existe pas déjà, si elle n'existe pas, ajoutez à la fin du fichier de configuration
+(au format JSON) les paramètres de configuration de l'adresse externe à utiliser pour la connexion WebSocket,
+par exemple :
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": "dev.netuno.org"
+        }
+    },
+    ...
+}
+```
+
+> L'information du port ne doit pas être ajoutée à l'adresse de `host` dans le WebSocket.
+
+Il est également possible de passer plusieurs adresses de `host` dans un tableau :
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": [ "mon-conteneur.dev.netuno.org", "mon-projet.com" ]
+        }
+    },
+    ...
+}
+```
+
+### Proxy en production (NGINX)
+
+En production, il est courant d'utiliser un serveur web qui fait proxy inverse, comme NGINX.
+
+Pour que le débogage fonctionne à travers un proxy, il est alors nécessaire d'ajouter une configuration spécifique pour
+transférer le trafic lié à l'adresse WebSocket :
+
+```
+server {
+    listen 443 ssl;
+    server_name mon-projet.com;
+    
+    ...
+    
+    location /dev/ws/ {
+        proxy_pass http://127.0.0.1:9000;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+}
+```
+
+## Conclusion
+
+Avec l'interface de débogage et la commande `_exec.debug()`, nous pouvons réaliser une investigation approfondie de ce qui se
+passe.
+
+Dans la plupart des langages et technologies back-end, en particulier les technologies de script, le débogage est souvent
+impossible ou complexe.
+
+Netuno offre un moyen simple de déboguer le code polyglotte qui fonctionne dans les différents langages pris en charge
+comme JavaScript, Python, Ruby, Kotlin et Groovy.
+
+> Permet le débogage polyglotte dans des environnements distants et en production.
+
+Utiliser le débogage accélère considérablement le développement en offrant une plus grande précision pour résoudre les problèmes et devient
+un outil essentiel, essayez.

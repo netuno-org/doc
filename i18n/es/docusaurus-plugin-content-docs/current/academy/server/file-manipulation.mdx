@@ -1,0 +1,608 @@
+---
+id: files-manipulation
+title: Manipulación de Archivos y Carpetas
+sidebar_label: Manipulación de Archivos y Carpetas
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+## Introducción
+
+En el código de backend políglota de la plataforma Netuno, podemos manipular cualquier archivo o carpeta.
+
+La manipulación consiste en poder crear, renombrar y eliminar archivos y carpetas, alterar el contenido de archivos
+y listar el contenido de carpetas. En general, estas son las operaciones que normalmente necesitamos hacer programáticamente.
+
+En la plataforma Netuno hay recursos de programación low-code que permiten manipular las carpetas y los archivos
+internos de la aplicación, pero también cualquier archivo y carpeta del sistema en general, es decir, fuera de la aplicación.
+
+Es útil cuando necesitamos automatizar algún proceso que necesita tocar algún archivo cualquiera; veamos cómo.
+
+Los recursos de programación políglota low-code que permiten manipular archivos son:
+
+- `_app` - [Aplicación](/docs/library/resources/app)
+- `_storage` - [Almacenamiento](/docs/library/resources/storage)
+- `_os` - [Sistema Operativo](/docs/library/resources/os)
+
+A través de estos recursos tenemos los métodos para:
+
+- `.file` - Archivo existente.
+- `.folder` - Carpeta existente.
+- `.path` - Ruta genérica, que puede ser un archivo o una carpeta, que existe o no existe.
+
+Con estos métodos obtenemos un objeto de tipo [File](/docs/library/objects/File), que proporciona todos los medios para
+manipular archivos, carpetas y rutas en general, lo que permite realizar operaciones como:
+
+- Crear archivos y carpetas.
+- Borrar archivos y carpetas.
+- Listar el contenido de las carpetas.
+- Renombrar archivos y carpetas.
+- Leer y escribir datos en archivos.
+- Eliminar carpetas y sus respectivas subcarpetas y archivos recursivamente.
+
+## Aplicación
+
+Para realizar las operaciones principales de manipulación de archivos y carpetas dentro de la estructura de la aplicación,
+utilizamos el recurso `_app`:
+
+#### Carpetas en la Aplicación
+
+Garantiza que se obtiene una carpeta que existe, por ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const miCarpeta = _app.folder("mi/carpeta")
+            `
+        },
+    ]}
+/>
+
+#### Archivos en la Aplicación
+
+Garantiza que se obtiene un archivo que existe, por ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const miArchivo = _app.file("mi/carpeta/archivo.txt")
+            `
+        },
+    ]}
+/>
+
+#### Rutas en la Aplicación
+
+Obtiene una ruta de archivo o carpeta, independientemente de si existe o no, por ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nuevoArchivo = _app.path("mi/carpeta/nuevo-archivo.txt")
+            `
+        },
+    ]}
+/>
+
+## Almacenamiento
+
+Para realizar las operaciones principales de manipulación de archivos y carpetas dentro de la carpeta `📁 storage` de la aplicación,
+utilizamos el recurso `_storage`:
+
+#### Carpetas en el Almacenamiento
+
+Garantiza que se obtiene una carpeta que existe, por ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // La ruta real de la carpeta será:
+                // storage/filesystem/server/mi/carpeta
+                const almacenamientoMiCarpeta = _storage.filesystem("server", "mi/carpeta")
+                const miCarpeta = almacenamientoMiCarpeta.folder()
+            `
+        },
+    ]}
+/>
+
+#### Archivos en el Almacenamiento
+
+Garantiza que se obtiene un archivo que existe, por ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // La ruta real del archivo será:
+                // storage/filesystem/server/mi/carpeta/archivo.txt
+                const almacenamientoArchivo = _storage.filesystem("server", "mi/carpeta", "archivo.txt")
+                const archivo = almacenamientoArchivo.file()
+            `
+        },
+    ]}
+/>
+
+#### Rutas en el Almacenamiento
+
+Obtiene una ruta de archivo o carpeta, independientemente de si existe o no, por ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // La ruta real de la nueva carpeta será:
+                // storage/filesystem/server/mi/nueva-carpeta
+                const almacenamientoCarpeta = _storage.filesystem("server", "mi/nueva-carpeta")
+                const carpeta = almacenamientoCarpeta.path()
+
+                // La ruta real del nuevo archivo será:
+                // storage/filesystem/server/mi/carpeta/nuevo-archivo.txt
+                const almacenamientoArchivo = _storage.filesystem("server", "mi/carpeta", "nuevo-archivo.txt")
+                const archivo = almacenamientoArchivo.path()
+            `
+        },
+    ]}
+/>
+
+## Sistema Operativo
+
+Para realizar las operaciones principales de manipulación de archivos y carpetas en cualquier lugar del sistema operativo,
+utilizamos el recurso `_os`:
+
+#### Carpetas en el Sistema Operativo
+
+Garantiza que se obtiene una carpeta que existe, por ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const miCarpeta = _os.folder("/tmp/mi/carpeta")
+            `
+        },
+    ]}
+/>
+
+#### Archivos en el Sistema Operativo
+
+Garantiza que se obtiene un archivo que existe, por ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const miArchivo = _os.file("/tmp/mi/carpeta/archivo.txt")
+            `
+        },
+    ]}
+/>
+
+#### Rutas en el Sistema Operativo
+
+Obtiene una ruta de archivo o carpeta, independientemente de si existe o no, por ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nuevoArchivo = _os.path("/tmp/mi/carpeta/nuevo-archivo.txt")
+            `
+        },
+    ]}
+/>
+
+## Crear Carpetas
+
+El método `mkdir` crea una carpeta.
+
+En el siguiente ejemplo se crea la carpeta específica en la raíz de la aplicación:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const carpeta = _app.path("temp")
+                carpeta.mkdir()
+            `
+        },
+    ]}
+/>
+
+Para crear una subcarpeta dentro de la carpeta existente, indique la ruta completa separando la jerarquía de
+carpetas con `/`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const subcarpeta = _app.path("temp/otra")
+                subcarpeta.mkdir()
+            `
+        },
+    ]}
+/>
+
+El `mkdirs`, en cambio, crea las carpetas anteriores y/o las subcarpetas en caso de que no existan, por lo que permite crear una estructura
+de carpetas en la aplicación, por ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const rutaCarpetas = _app.path("temp/a/b/c")
+                rutaCarpetas.mkdirs()
+            `
+        },
+    ]}
+/>
+
+El recurso `_storage` tiene el método [ensurePath](/docs/library/resources/storage#ensurepath) que verifica si la
+ruta existe; en caso de que no exista, entonces la crea:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const archivo = _storage.filesystem(
+                    "public",
+                    "temp/subcarpeta",
+                    "archivo.txt"
+                )
+                // Crea la estructura de carpetas en caso de que no exista:
+                archivo.ensurePath()
+            `
+        },
+    ]}
+/>
+
+Por lo tanto, `ensurePath` garantiza que la estructura de carpetas exista.
+
+## Eliminar Archivos y Carpetas
+
+Con el método `delete` podemos eliminar tanto carpetas como archivos, teniendo en cuenta que las carpetas deben estar vacías;
+vea el ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Elimina una carpeta vacía:
+                const carpetaVacia = _app.folder("carpeta/vacia")
+                carpetaVacia.delete()
+
+                // Elimina un archivo:
+                const archivo = _app.file("carpeta/archivo.txt")
+                archivo.delete()
+
+                // Elimina una ruta, carpeta vacía o archivo:
+                const ruta = _app.path("carpeta1/archivo-o-carpeta-vacia")
+                ruta.delete()
+            `
+        },
+    ]}
+/>
+
+Con `deleteAll` permite eliminar todo, es decir, todos los archivos, carpetas y subcarpetas recursivamente:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Elimina la carpeta y todo el contenido recursivamente:
+                const carpetaVacia = _app.folder("carpeta/ejemplo")
+                carpetaVacia.deleteAll()
+
+                // Elimina la ruta de una carpeta y todo su contenido interno,
+                // incluyendo subcarpetas y archivos:
+                const ruta = _app.path("ruta/carpeta")
+                ruta.deleteAll()
+            `
+        },
+    ]}
+/>
+
+Para eliminar solo los archivos dentro de la carpeta y no borrar nada en las subcarpetas, tenemos `deleteFiles`, que permite
+recibir una extensión en caso de que se quiera eliminar solo archivos con una extensión específica:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Elimina los archivos solo dentro de la carpeta:
+                const carpeta = _app.folder("carpeta/ejemplo")
+                carpeta.deleteFiles()
+
+                // Elimina los archivos con la extensión JPG solo dentro de la carpeta:
+                const ruta = _app.path("ruta/carpeta")
+                ruta.deleteFiles("jpg")
+`
+        },
+    ]}
+/>
+
+Para eliminar solo los archivos recursivamente y mantener la estructura de carpetas, tenemos `deleteAllFiles`, que
+también permite recibir una extensión en caso de que se quiera eliminar solo un tipo de archivo específico; vea estos dos
+ejemplos:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Elimina todos los archivos dentro de la carpeta y subcarpetas:
+                const carpeta = _app.folder("carpeta/ejemplo")
+                carpeta.deleteAllFiles()
+
+                // Elimina todos los archivos con la extensión JPG dentro de la carpeta y subcarpetas:
+                const ruta = _app.path("ruta/carpeta")
+                ruta.deleteAllFiles("jpg")
+            `
+        },
+    ]}
+/>
+
+## Renombrar o Mover
+
+Para mover una carpeta, es lo mismo que renombrarla:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const carpeta = _app.folder("temp")
+                carpeta.renameTo("prueba")
+            `
+        },
+    ]}
+/>
+
+Para renombrar una carpeta y cambiarla de nivel en la jerarquía de carpetas, es lo mismo que mover la carpeta:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const carpeta = _app.folder("temp/a/b")
+                carpeta.renameTo("prueba/z")
+            `
+        },
+    ]}
+/>
+
+Y para mover una subcarpeta sin cambiar su nombre, basta con indicar la nueva ruta en el método `renameTo`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const carpeta = _app.folder("prueba/otra")
+                carpeta.renameTo("otra")
+            `
+        },
+    ]}
+/>
+
+## Guardar Contenidos en Archivos
+
+La generación de contenidos en archivos se realiza a través del método `output`, que proporciona un objeto de tipo
+[OutputStream](/docs/library/objects/OutputStream).
+
+Para escribir los datos en el `output`, utilizamos el método [printAndClose](/docs/library/objects/OutputStream#printandclose),
+que imprime el contenido en el archivo y cierra el archivo guardando el contenido.
+
+#### Escribir Archivo de Texto
+
+Vea el ejemplo de cómo crear un archivo con contenido de texto:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("temp").mkdir()
+                const escritura = _app.path("temp/archivo.txt").output()
+                escritura.printAndClose("Mi texto aquí...")
+            `
+        },
+    ]}
+/>
+
+> Siempre que utilizamos el `output` se genera un nuevo archivo; por lo tanto, si se ejecuta el código de nuevo, el archivo
+> se volverá a crear.
+
+#### Escribir archivo JSON
+
+Vea cómo podemos guardar datos JSON en archivos:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("temp").mkdir()
+                const escritura = _app.path("temp/cliente.json").output()
+                escritura.printAndClose(
+                    _val.map()
+                        .set("nombre", "María Joaquina")
+                        .set(
+                            "registros",
+                            _val.list()
+                                .add(1).add(2).add(3)
+                        )
+                        .toJSON()
+                )
+            `
+        },
+    ]}
+/>
+
+Para generar el JSON indentado, es decir, formateado en varias líneas y tabulado, podemos pasar el número de espacios
+que se utilizará para la tabulación, por ejemplo `.toJSON(4)`.
+
+> Más detalles sobre el método [toJSON en Values](/docs/library/objects/Values#tojsonindentfactor-int--string).
+
+## Leer Contenidos en Archivos
+
+La obtención de contenidos en archivos se realiza a través del método `input`, que proporciona un objeto de tipo
+[InputStream](/docs/library/objects/InputStream).
+
+Para leer los datos en el `input`, utilizamos el método [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
+que procesa la lectura del contenido en el archivo y cierra el archivo.
+
+#### Leer Archivo de Texto
+
+Vea el ejemplo de cómo leer un archivo y obtener el contenido de texto:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const archivo = _app.file("temp/archivo.txt")
+                const lectura = archivo.input()
+                _log.info(lectura.readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### Leer archivo JSON
+
+Vea cómo podemos procesar datos JSON obtenidos en archivos:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const archivo = _app.file("temp/archivo.txt")
+                const lectura = archivo.input()
+                const datos = _val.fromJSON(lectura.readAllAndClose())
+                _log.info("Datos del Archivo:", datos)
+            `
+        },
+    ]}
+/>
+
+> Más detalles sobre el método [fromJSON del recurso Val](/docs/library/resources/val#fromjson).
+
+## Particularidades del Almacenamiento
+
+El recurso de almacenamiento tiene algunos métodos para su utilización directa.
+
+Por ejemplo, podemos acceder a través del almacenamiento:
+
+- [Storage Output](/docs/library/resources/storage#output)
+- [Storage Input](/docs/library/resources/storage#input)
+
+Esto quiere decir que no necesitamos obtener el `file` o `path` para trabajar con el `input` o `output`.
+
+#### Escribir Archivo de Texto en el Almacenamiento
+
+Al iniciar un almacenamiento para un archivo, podemos realizar la escritura utilizando el método [output](/docs/library/resources/storage#output), que obtiene
+una instancia del objeto [OutputStream](/docs/library/objects/OutputStream) que permite procesar y leer los datos.
+
+Entonces, con el `OutputStream`, el método [printAndClose](/docs/library/objects/OutputStream#printandclose),
+realiza la escritura de texto (`string`) en el archivo y lo cierra.
+
+Vea este ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const txt = _storage.filesystem("server", "temp", "archivo.txt")
+                txt.ensurePath()
+                txt.output().printAndClose("Mi texto aquí...")
+            `
+        },
+    ]}
+/>
+
+#### Leer Archivo de Texto en el Almacenamiento
+
+Al iniciar un almacenamiento para un archivo, podemos realizar la lectura utilizando el método [input](/docs/library/resources/storage#input), que obtiene
+una instancia del objeto [InputStream](/docs/library/objects/InputStream) que permite procesar y leer los datos.
+
+Entonces, con el `InputStream`, el método [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
+realiza la lectura de todo el archivo y lo cierra, retornando los datos como texto (`string`).
+
+Vea este ejemplo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const txt = _storage.filesystem("server", "temp", "archivo.txt")
+                _log.info(txt.input().readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### Crear archivo aleatorio en el Almacenamiento
+
+El recurso `_storage` permite generar nombres de archivos aleatorios con el método [newRandomFile](/docs/library/resources/storage#newrandomfile).
+
+Se debe iniciar un almacenamiento para la ruta de una carpeta, y al ejecutar el método `newRandomFile` se pasa la extensión del
+archivo deseado.
+
+El método retorna una nueva instancia del almacenamiento para el archivo aleatorio generado automáticamente para ser
+utilizado en la carpeta inicial.
+
+Vea cómo generar un archivo con extensión `TXT` con nombre aleatorio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const carpeta = _storage.filesystem("server", "temp")
+                const archivo = carpeta.newRandomFile("txt")
+                archivo.output().printAndClose("Mi texto aquí...")
+            `
+        },
+    ]}
+/>
+
+## Conclusión
+
+Con el framework low-code políglota de Netuno podemos realizar todas las operaciones principales de carpetas y archivos
+directamente.
+
+Al utilizar los recursos específicos para manipular archivos y carpetas en la:
+
+- `_app` - Aplicación
+- `_storage` - Almacenamiento de la Aplicación
+- `_os` - Sistema Operativo
+
+> Por cuestiones de buenas prácticas y organización, debemos priorizar la utilización del **almacenamiento**; las excepciones deben ser
+> solo casos puntuales y estrictamente necesarios.
+
+Netuno procesa el cierre automático de los inputs y outputs al final del procesamiento de los servicios, pero por buenas
+prácticas debemos intentar cerrarlos siempre.

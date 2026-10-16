@@ -1,0 +1,196 @@
+---
+id: debug
+title: Depanare (Debug)
+sidebar_label: Depanare
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Permite analizarea execuției codului în timp real.
+
+## Introducere 
+
+În timpul codării, de multe ori este necesar să analizăm execuția codului.
+
+În cazul Netuno putem folosi:
+
+- `_out.print` - Pentru a afișa informații în ieșirea de date (_output_).
+- `_log.info` - Pentru a afișa informații în terminalul serverului Netuno.
+
+Totuși, există și scenarii mai complexe în care dorim să analizăm mai în profunzime, de exemplu
+să verificăm mai multe valori ale obiectelor și variabilelor în același timp, să testăm execuția unui cod specific în acest
+context, toate pentru a înțelege mai bine comportamentul.
+
+În aceste cazuri mai complexe este întotdeauna posibil să folosim metodele prezentate mai sus, cum ar fi `_out.print` și
+`_log.info`, însă putem ajunge la un proces foarte laborios și confuz pentru a obține o bună
+înțelegere a ceea ce se întâmplă.
+
+Depanarea (_debug_) servește exact pentru a oferi o bună înțelegere a ceea ce se întâmplă, în special în
+situații mai complexe.
+
+> Depanarea (în engleză: _debugging_, _debug_) este procesul utilizat în dezvoltare pentru a găsi și reduce
+> defecte, erori, comportamente greșite etc.
+
+Depanarea poate fi împărțită în 3 mecanisme importante:
+
+- Punct de întrerupere (_Break Point_): Face ca execuția codului să se oprească; putem apoi începe investigația acolo
+unde codul este oprit.
+- Urmărire (_Watch_): Permite urmărirea valorilor variabilelor acolo unde codul este oprit.
+- Executare de cod (_Code Execution_): Putem executa orice cod temporar, pentru a efectua un test
+în punctul în care execuția este oprită pentru depanare.
+
+## Punct de întrerupere (_Breakpoint_)
+
+Punctul de întrerupere (_breakpoint_) este locul din cod unde execuția trebuie pusă pe pauză pentru a începe procesul de
+depanare.
+
+Pentru a începe depanarea în orice cod și în orice limbaj acceptat de Netuno, cum ar fi JavaScript, Python,
+Ruby, Kotlin sau Groovy, în locul în care doriți să începeți depanarea, puneți următorul cod:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _exec.debug()
+            `
+        },
+    ]}
+/>
+
+> Deoarece Netuno este poliglot, funcționează cu orice limbaj acceptat, cum ar fi: JavaScript, Python, Kotlin, Ruby,
+> sau Groovy.
+
+Acum, pentru a începe depanarea, executați codul, iar execuția va rămâne blocată, în pauză.
+
+Apoi mergem în interfața de dezvoltare, în backoffice la `Construire`, iar în meniul din stânga avem opțiunea:
+
+- **Depanare**
+
+Unde putem găsi săgeata dublă verde care indică faptul că, făcând clic pe ea, execuția poate continua:
+
+![Depanare - Continuă](/docs/assets/academy/server/debug/step-over-pt.jpg "Depanare - Continuă")
+
+> Săgeata dublă verde întrerupe pauza depanării, făcând ca execuția codului să continue normal din
+> punctul în care s-a oprit.
+
+## Urmărire (_Watch_)
+
+Pentru a vedea valoarea variabilelor folosim lupa galbenă.
+
+Când facem clic pe lupa galbenă, putem introduce numele variabilei a cărei valoare dorim să o urmărim.
+
+![Depanare - Urmărire](/docs/assets/academy/server/debug/watch-pt.jpg "Depanare - Urmărire")
+
+Numele variabilei și valoarea ei actuală apar în listă; putem urmări valoarea mai multor variabile; dacă o
+variabilă nu există, atunci nu va exista nicio valoare.
+
+## Executare cod (_Execute Code_)
+
+Putem injecta cod pentru a fi executat în contextul punctului de întrerupere, adică acolo unde are loc depanarea.
+
+Facem clic pe simbolul de cod albastru și putem introduce codul pe care dorim să îl executăm.
+
+![Depanare - Executare cod](/docs/assets/academy/server/debug/execute-code-pt.jpg "Depanare - Executare cod")
+
+Codul executat este afișat în lista de mai jos, cu indicarea faptului că codul a fost executat cu succes; dacă
+există vreo eroare, atunci mesajul de eroare este afișat împreună cu codul.
+
+## Configurare pentru depanare la distanță
+
+Când rulați Netuno local, nu ar trebui să fie necesară nicio configurare.
+
+Deoarece în dezvoltarea locală, `host`-ul adresei WebSocket este configurat automat.
+
+În adresele locale se folosesc de obicei aceste valori ca `host`:
+
+- `localhost`
+- `127.0.0.1`
+- `192.168.1.*` - Exemplu de orice IP de rețea locală.
+- `aplicatia-mea.local.netu.no`
+
+> Adresele locale nu necesită nicio configurare, așadar acest pas poate fi omis.
+
+În schimb, în producție sau în dezvoltarea la distanță, cum ar fi într-un container sau VPN, poate fi necesar să definiți adresa
+externă (IP sau domeniu) care este utilizată pentru conexiunea WebSocket.
+
+În acest caz, navigați în cadrul aplicației care este dezvoltată până la fișierul de configurare a mediului.
+În acest exemplu, vom folosi fișierul de mediu de dezvoltare, care se află în:
+
+- 📂 `config/_development.json`
+
+Verificați dacă nu cumva există deja configurarea; dacă nu există, adăugați la sfârșitul fișierului de configurare
+(în format JSON) parametrii de configurare ai adresei externe care urmează să fie utilizați la conexiunea WebSocket,
+de exemplu:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": "dev.netuno.org"
+        }
+    },
+    ...
+}
+```
+
+> Informația despre port nu trebuie adăugată la adresa `host` din WebSocket.
+
+De asemenea, pot fi transmise mai multe adrese `host` într-un array:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": [ "containerul-meu.dev.netuno.org", "proiectul-meu.com" ]
+        }
+    },
+    ...
+}
+```
+
+### Proxy în producție (NGINX)
+
+În producție, este obișnuit să se folosească un server web care face proxy invers, cum ar fi NGINX.
+
+Pentru ca depanarea să funcționeze prin proxy, este necesar să adăugați o configurare specifică pentru
+a direcționa traficul legat de adresa WebSocket:
+
+```
+server {
+    listen 443 ssl;
+    server_name proiectul-meu.com;
+    
+    ...
+    
+    location /dev/ws/ {
+        proxy_pass http://127.0.0.1:9000;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+}
+```
+
+## Concluzie
+
+Cu interfața de depanare și comanda `_exec.debug()` putem realiza o investigație profundă a ceea ce se
+întâmplă.
+
+În majoritatea limbajelor și tehnologiilor de backend, în special în tehnologiile de script, depanarea este de obicei
+imposibilă sau complexă.
+
+Netuno oferă o modalitate simplă de a depana codul poliglot care funcționează în diversele limbaje acceptate,
+cum ar fi JavaScript, Python, Ruby, Kotlin și Groovy.
+
+> Permite depanarea poliglotă în medii la distanță și în producție.
+
+Utilizarea depanării accelerează mult dezvoltarea, oferind o mai mare precizie pentru rezolvarea problemelor și devine
+un instrument esențial; încercați.

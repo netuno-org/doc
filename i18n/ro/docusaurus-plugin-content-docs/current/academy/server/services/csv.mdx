@@ -1,0 +1,209 @@
+---
+id: csv
+title: CSV
+sidebar_label: CSV
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Procesarea fișierelor PDF personalizate.
+
+## Introducere
+
+Netuno generează fișiere CSV prin intermediul resursei [CSV](/docs/library/resources/csv) care permite o abstractizare low-code a [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) pentru diversele limbaje de programare acceptate de Netuno.
+
+Aplicația care vine cu Netuno, denumită **demo** (aplicație demonstrativă), conține numeroase exemple de posibile implementări de cod în diverse limbaje, inclusiv demonstrația exportului către CSV prin serviciul `csv` care se află la:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/csv`
+]} />
+
+## Crearea unui fișier CSV
+
+Pentru a crea un fișier CSV, mai întâi este necesar să inițializați un `CSVPrinter` din `Apache Commons CSV`.
+Pentru aceasta, trebuie să transmitem numele folderului și numele fișierului, precum și formatul CSV.
+În exemplu, vom genera fișierul în interiorul `storage` al aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const imprimantaCsv = _csv.printer(
+                  _storage.filesystem("server", "date.csv"),
+                  _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                imprimanta_csv = _csv.printer(
+                    _storage.filesystem("server", "date.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                imprimanta_csv = _csv.printer(
+                    _storage.filesystem("server", "date.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val imprimantaCsv = _csv.printer(
+                    _storage.filesystem("server", "date.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def imprimantaCsv = _csv.printer(
+                    _storage.filesystem("server", "date.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        }
+    ]}
+/>
+
+Formatele acceptate sunt descrise [aici](https://doc.netuno.org/pt/docs/library/resources/csv/#format).
+
+### Scriere
+
+Pentru a scrie rânduri în fișierul CSV:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                imprimantaCsv.printRecord("id", "numeUtilizator", "prenume", "numeFamilie", "dataNasterii")
+                imprimantaCsv.printRecord(1, "ion73", "Ion", "Popescu", 123)
+            `
+        }
+    ]}
+/>
+
+### Închidere
+
+La final, este necesar să închideți `CSVPrinter`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                imprimantaCsv.close()
+            `
+        }
+    ]}
+/>
+
+
+## Citirea unui fișier CSV
+
+Pentru a citi un fișier CSV, mai întâi este necesar să inițializați un `CSVParser` din `Apache Commons CSV`.
+Pentru aceasta, trebuie să transmitem numele folderului și numele fișierului.
+În exemplu, vom citi fișierul în interiorul `storage` al aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const parserCsv = _csv.parser(_storage.filesystem("server", "date.csv"))
+            `
+        }
+    ]}
+/>
+
+### Rânduri
+
+Acum este posibil să iterați peste `CSVRecord` din `Apache Commons CSV`, care reprezintă fiecare rând al fișierului CSV:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const inregistrare of parserCsv) {
+                    const coloanaUnu = inregistrare.get(0)
+                    const coloanaDoi = inregistrare.get(1)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for inregistrare in parserCsv:
+                    coloana_unu = inregistrare.get(0)
+                    coloana_doi = inregistrare.get(1)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                parserCsv.each do |inregistrare|
+                    coloana_unu = inregistrare.get(0)
+                    coloana_doi = inregistrare.get(1)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                for (inregistrare in parserCsv) {
+                    val coloanaUnu = inregistrare.get(0)
+                    val coloanaDoi = inregistrare.get(1)
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (inregistrare in parserCsv) {
+                    def coloanaUnu = inregistrare.get(0)
+                    def coloanaDoi = inregistrare.get(1)
+                }
+            `
+        },
+    ]}
+/>
+
+Sau obțineți fiecare rând cu metoda `getRecord` din `Apache Commons CSV`.
+În acest exemplu, primul `get` ia primul rând. Al doilea `get` ia primul câmp/valoare al acelui rând:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                parserCsv.getRecords().get(0).get(0)
+            `
+        }
+    ]}
+/>
+
+### Închidere
+
+La final, este necesar să închideți `CSVParser`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                parserCsv.close()
+            `
+        }
+    ]}
+/>

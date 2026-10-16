@@ -1,6 +1,7 @@
 import path from "node:path";
 import { mkdir } from "node:fs/promises";
 
+import { addLocale } from "./config";
 import discovery from "./discovery";
 import { hashContent, loadHashes, saveHashes } from "./hashes";
 import { copyLibrary, LIBRARY_FOLDERS } from "./library";
@@ -48,6 +49,10 @@ const librarySources = await copyLibrary(
 
 for (const [folder, code] of Object.entries(librarySources)) {
   console.log(`library/${folder} copiada de library/${code}.`);
+}
+
+for (const fileName of await addLocale(currentPath, language.code)) {
+  console.log(`Idioma ${language.code} adicionado a ${fileName}.`);
 }
 
 const hashesFilePath = path.join(
